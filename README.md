@@ -1,4 +1,4 @@
-# minetest-game-antum
+# Antum
 A custom game for Minetest/Freeminer
 
 The game includes the mods from the default [minetest_game](https://github.com/minetest/minetest_game/tree/master/mods)
@@ -23,7 +23,7 @@ The following mods are also included:
 * lib/
     * [biome_lib][] ([WTFPL](mods/lib/biome_lib/README.md))
 * player/
-    * 3d_armor ([3d_armor modpack][3d_armor]) ([LGPL/WTFPL/CC-BY-SA](mods/player/3d_armor/LICENSE.md))
+    * 3d_armor ([3d_armor modpack][3d_armor]) ([LGPL/WTFPL/CC-BY-SA](doc/modpacks/3d_armor/LICENSE.md))
     * 3d_armor_stand ([3d_armor modpack][3d_armor])
     * [character_creator][] (WTFPL/CC-BY-SA)
     * hazmat_suit ([3d_armor modpack][3d_armor])
