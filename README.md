@@ -51,6 +51,7 @@ The following mods are also included:
 * tools/
     * [torches][] ([LGPL/CC-BY-SA](mods/tools/torches/README.txt))
 * weather/
+    * [lightning][] ([LGPL/CC-BY-SA](mods/weather/lightning/README.md))
     * [weather][] ([LGPL/WTFPL/CC-BY-SA](mods/weather/weather/README))
 
 
@@ -63,6 +64,7 @@ The following mods are also included:
 [farming_plus]: https://forum.minetest.net/viewtopic.php?t=2787
 [fort_spikes]: https://forum.minetest.net/viewtopic.php?t=14574
 [homedecor]: https://forum.minetest.net/viewtopic.php?t=2041
+[lightning]: https://forum.minetest.net/viewtopic.php?t=13886
 [mesecons]: https://forum.minetest.net/viewtopic.php?t=628
 [moreblocks]: https://forum.minetest.net/viewtopic.php?t=509
 [moreores]: https://forum.minetest.net/viewtopic.php?t=549
