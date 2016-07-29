@@ -18,10 +18,24 @@ The following mods are also included:
     * lrfurn ([homedecor_modpack][homedecor])
     * [moreblocks][] ([zlib](mods/building/moreblocks/LICENSE.md))
     * plasmascreen ([homedecor_modpack][homedecor])
+    * [stairsplus][] (zlib)
 * crafting/
     * [craftguide][] ([GPL/WTFPL](mods/crafting/craftguide/LICENSE))
+* farming/
+	* [farming_plus][] (WTFPL)
 * lib/
     * [biome_lib][] ([WTFPL](mods/lib/biome_lib/README.md))
+	* [signs_lib][] (BSD/WTFPL)
+* materials/
+	* [moreores][] (zlib/CC-BY-SA)
+	* [quartz][] (MIT)
+* [mesecons (modpack)][] (LGPL/CC-BY-SA)
+* [pipeworks][] (WTFPL)
+* plantlife/
+    * [plantlife_modpack][] (WTFPL/CC-BY-SA)
+    * [moretrees][] (WTFPL/CC-BY-SA)
+    * [trees (Tiny Trees)][trees] (WTFPL)
+    * [vines][] (WTFPL/CC-BY-SA)
 * player/
     * 3d_armor ([3d_armor modpack][3d_armor]) ([LGPL/WTFPL/CC-BY-SA](doc/modpacks/3d_armor/LICENSE.md))
     * 3d_armor_stand ([3d_armor modpack][3d_armor])
@@ -31,22 +45,11 @@ The following mods are also included:
     * shields ([3d_armor modpack][3d_armor])
     * technic_armor ([3d_armor modpack][3d_armor])
     * wieldview ([3d_armor modpack][3d_armor])
+* [technic (modpack)][technic] (LGPL)
+* [tnt][] (WTFPL)
 * weather/
     * [weather][] (LGPL/WTFPL/CC-BY-SA)
 
-* [farming_plus][] (WTFPL)
-* [moreores][] (zlib/CC-BY-SA)
-* [moretrees][] (WTFPL/CC-BY-SA)
-* [mesecons (modpack)][] (LGPL/CC-BY-SA)
-* [pipeworks][] (WTFPL)
-* [plantlife_modpack][] (WTFPL/CC-BY-SA)
-* [quartz][] (MIT)
-* [signs_lib][] (BSD/WTFPL)
-* [stairsplus][] (zlib)
-* [technic (modpack)][technic] (LGPL)
-* [tnt][] (WTFPL)
-* [trees (Tiny Trees)][trees] (WTFPL)
-* [vines][] (WTFPL/CC-BY-SA)
 
 
 [3d_armor]: https://forum.minetest.net/viewtopic.php?t=4654
