@@ -5,6 +5,8 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 The following mods are also included:
 * [awards](https://forum.minetest.net/viewtopic.php?t=4870) ([LGPL](mods/awards/LICENSE.txt))
+* blocks/
+    * [moreblocks](https://forum.minetest.net/viewtopic.php?t=509) ([zlib](mods/blocks/moreblocks/LICENSE.md))
 * crafting/
     * [craftguide](https://forum.minetest.net/viewtopic.php?f=11&t=14088) ([GPL/WTFPL](mods/crafting/craftguide/LICENSE))
 * lib/
@@ -19,7 +21,6 @@ The following mods are also included:
     * technic_armor (3d_armor modpack)
     * wieldview (3d_armor modpack)
 * [farming_plus](https://forum.minetest.net/viewtopic.php?t=2787) (WTFPL)
-* [moreblocks](https://forum.minetest.net/viewtopic.php?t=509) (zlib)
 * [moreores](https://forum.minetest.net/viewtopic.php?t=549) (zlib/CC-BY-SA)
 * [moretrees](https://forum.minetest.net/viewtopic.php?t=4394) (WTFPL/CC-BY-SA)
 * [homedecor_modpack](https://forum.minetest.net/viewtopic.php?t=2041) (LGPL/WTFPL/CC-BY-SA):
