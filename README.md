@@ -29,6 +29,10 @@ The following mods are also included:
 * friendlies/
     * chicken ([Creatures MOB-Engine][cme])
     * sheep ([Creatures MOB-Engine][cme])
+* hostils/
+    * ghost ([Creatures MOB-Engine][cme])
+    * oerrki ([Creatures MOB-Engine][cme])
+    * zombie ([Creatures MOB-Engine][cme])
 * lib/
     * [biome_lib][] ([WTFPL](mods/lib/biome_lib/README.md))
 	* [signs_lib][] ([BSD/WTFPL](mods/lib/signs_lib/copyright.txt))
