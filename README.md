@@ -24,7 +24,7 @@ The following mods are also included:
 * [moreores](https://forum.minetest.net/viewtopic.php?t=549) (zlib/CC-BY-SA)
 * [moretrees](https://forum.minetest.net/viewtopic.php?t=4394) (WTFPL/CC-BY-SA)
 * [homedecor_modpack](https://forum.minetest.net/viewtopic.php?t=2041) (LGPL/WTFPL/CC-BY-SA):
-    * building_blocks
+    * building_blocks ([homedecor_modpack](https://forum.minetest.net/viewtopic.php?t=2041)) ([LGPL/WTFPL/CC-BY-SA](doc/modpacks/homedecor/LICENSE))
     * chains
     * computer
     * fake_fire
