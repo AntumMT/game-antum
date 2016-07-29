@@ -245,6 +245,7 @@ if rawget(_G, "unified_inventory") then
 	unified_inventory.register_button("character_creator", {
 		type = "image",
 		image = "inventory_plus_character_creator.png",
+		tooltip = unified_inventory.gettext("Character Creator"),
 		action = function(player)
 			show_formspec(player:get_player_name())
 		end
