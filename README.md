@@ -5,13 +5,19 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 The following mods are also included:
 * [awards](https://forum.minetest.net/viewtopic.php?t=4870) ([LGPL](mods/awards/LICENSE.txt))
+* crafting/
+    * [craftguide](https://forum.minetest.net/viewtopic.php?f=11&t=14088) ([GPL/WTFPL](mods/crafting/craftguide/LICENSE))
 * lib/
     * [biome_lib](https://forum.minetest.net/viewtopic.php?f=11&t=12999) ([WTFPL](mods/lib/biome_lib/README.md))
 * player/
-    * [3d_armor (modpack)](https://forum.minetest.net/viewtopic.php?t=4654) ([LGPL/WTFPL/CC-BY-SA](mods/player/3d_armor/LICENSE.md))
+    * 3d_armor ([3d_armor modpack](https://forum.minetest.net/viewtopic.php?t=4654)) ([LGPL/WTFPL/CC-BY-SA](mods/player/3d_armor/LICENSE.md))
+    * 3d_armor_stand (3d_armor modpack)
+    * [character_creator](https://forum.minetest.net/viewtopic.php?f=9&t=13138) (WTFPL/CC-BY-SA)
+    * hazmat_suit (3d_armor modpack)
     * [playeranim](https://forum.minetest.net/viewtopic.php?t=12189) (WTFPL/BSD)/
-* [character_creator](https://forum.minetest.net/viewtopic.php?f=9&t=13138) (WTFPL/CC-BY-SA)
-* [craftguide](https://forum.minetest.net/viewtopic.php?f=11&t=14088) (GPL/WTFPL)
+    * shields (3d_armor modpack)
+    * technic_armor (3d_armor modpack)
+    * wieldview (3d_armor modpack)
 * [farming_plus](https://forum.minetest.net/viewtopic.php?t=2787) (WTFPL)
 * [moreblocks](https://forum.minetest.net/viewtopic.php?t=509) (zlib)
 * [moreores](https://forum.minetest.net/viewtopic.php?t=549) (zlib/CC-BY-SA)
