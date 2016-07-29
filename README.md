@@ -32,7 +32,7 @@ The following mods are also included:
 * [mesecons (modpack)][mesecons] ([LGPL/CC-BY-SA](mods/mesecons/COPYING.txt))
 * [pipeworks][] ([WTFPL](mods/pipeworks/LICENSE))
 * plantlife/
-    * [plantlife_modpack][] ([WTFPL/CC-BY-SA](doc/mods/plantlife/LICENSE))
+    * [plantlife_modpack][] ([WTFPL/CC-BY-SA](doc/modpacks/plantlife/LICENSE))
     * [moretrees][] ([WTFPL/CC-BY-SA](mods/plantlife/moretrees/LICENSE))
     * [trees (Tiny Trees)][trees] ([WTFPL](mods/plantlife/trees/readme.txt))
     * [vines][] ([WTFPL/CC-BY-SA](mods/plantlife/vines/LICENSE.md))
