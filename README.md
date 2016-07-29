@@ -4,8 +4,12 @@ A custom game for Minetest/Freeminer
 The game includes the mods from the default [minetest_game](https://github.com/minetest/minetest_game/tree/master/mods)
 
 The following mods are also included:
-* [3d_armor (modpack)](https://forum.minetest.net/viewtopic.php?t=4654) (LGPL/WTFPL/CC-BY-SA)
-* [biome_lib](https://forum.minetest.net/viewtopic.php?f=11&t=12999) (WTFPL)
+* lib/
+    * [biome_lib](https://forum.minetest.net/viewtopic.php?f=11&t=12999) ([WTFPL][blob/master/lib/biome_lib/README.md))
+* player/
+    * [3d_armor (modpack)](https://forum.minetest.net/viewtopic.php?t=4654) ([LGPL/WTFPL/CC-BY-SA](blob/master/player/3d_armor/LICENSE.md))
+    * [playeranim](https://forum.minetest.net/viewtopic.php?t=12189) (WTFPL/BSD)/
+* [awards](https://forum.minetest.net/viewtopic.php?t=4870) (LGPL)
 * [character_creator](https://forum.minetest.net/viewtopic.php?f=9&t=13138) (WTFPL/CC-BY-SA)
 * [craftguide](https://forum.minetest.net/viewtopic.php?f=11&t=14088) (GPL/WTFPL)
 * [farming_plus](https://forum.minetest.net/viewtopic.php?t=2787) (WTFPL)
@@ -34,3 +38,6 @@ The following mods are also included:
 * [tnt](https://forum.minetest.net/viewtopic.php?id=2902) (WTFPL)
 * [trees (Tiny Trees)](https://forum.minetest.net/viewtopic.php?f=11&t=5713) (WTFPL)
 * [vines](https://forum.minetest.net/viewtopic.php?f=11&t=2344) (WTFPL/CC-BY-SA)
+* weather/
+    * [weather](https://forum.minetest.net/viewtopic.php?t=5245) (LGPL/WTFPL/CC-BY-SA)
+
