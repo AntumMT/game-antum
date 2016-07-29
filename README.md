@@ -28,7 +28,7 @@ The following mods are also included:
 	* [signs_lib][] ([BSD/WTFPL](mods/lib/signs_lib/copyright.txt))
 * materials/
 	* [moreores][] ([zlib/CC-BY-SA](mods/materials/moreores/README.md))
-	* [quartz][] ([MIT](mods/materials/quartz/README.txt))
+	* [quartz][] ([MIT](mods/materials/quartz/LICENSE.txt))
 * [mesecons (modpack)][] ([LGPL/CC-BY-SA](mods/mesecons/COPYING.txt))
 * [pipeworks][] ([WTFPL](mods/pipeworks/LICENSE))
 * plantlife/
