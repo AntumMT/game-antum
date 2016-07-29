@@ -18,37 +18,37 @@ The following mods are also included:
     * lrfurn ([homedecor_modpack][homedecor])
     * [moreblocks][] ([zlib](mods/building/moreblocks/LICENSE.md))
     * plasmascreen ([homedecor_modpack][homedecor])
-    * [stairsplus][] (zlib)
+    * [stairsplus][] ([zlib](mods/buildings/stairsplus/LICENSE.txt))
 * crafting/
     * [craftguide][] ([GPL/WTFPL](mods/crafting/craftguide/LICENSE))
 * farming/
-	* [farming_plus][] (WTFPL)
+	* [farming_plus][] ([WTFPL](mods/farming/farming_plus/README.txt))
 * lib/
     * [biome_lib][] ([WTFPL](mods/lib/biome_lib/README.md))
-	* [signs_lib][] (BSD/WTFPL)
+	* [signs_lib][] ([BSD/WTFPL](mods/lib/signs_lib/copyright.txt))
 * materials/
-	* [moreores][] (zlib/CC-BY-SA)
-	* [quartz][] (MIT)
-* [mesecons (modpack)][] (LGPL/CC-BY-SA)
-* [pipeworks][] (WTFPL)
+	* [moreores][] ([zlib/CC-BY-SA](mods/materials/moreores/README.md))
+	* [quartz][] ([MIT](mods/materials/quartz/README.txt))
+* [mesecons (modpack)][] ([LGPL/CC-BY-SA](mods/mesecons/COPYING.txt))
+* [pipeworks][] ([WTFPL](mods/pipeworks/LICENSE))
 * plantlife/
-    * [plantlife_modpack][] (WTFPL/CC-BY-SA)
-    * [moretrees][] (WTFPL/CC-BY-SA)
-    * [trees (Tiny Trees)][trees] (WTFPL)
-    * [vines][] (WTFPL/CC-BY-SA)
+    * [plantlife_modpack][] ([WTFPL/CC-BY-SA](doc/mods/plantlife/LICENSE))
+    * [moretrees][] ([WTFPL/CC-BY-SA](mods/plantlife/moretrees/LICENSE))
+    * [trees (Tiny Trees)][trees] ([WTFPL](mods/plantlife/trees/readme.txt))
+    * [vines][] ([WTFPL/CC-BY-SA](mods/plantlife/vines/LICENSE.md))
 * player/
     * 3d_armor ([3d_armor modpack][3d_armor]) ([LGPL/WTFPL/CC-BY-SA](doc/modpacks/3d_armor/LICENSE.md))
     * 3d_armor_stand ([3d_armor modpack][3d_armor])
-    * [character_creator][] (WTFPL/CC-BY-SA)
+    * [character_creator][] ([WTFPL/CC-BY-SA](mods/player/character_creator/LICENSE.md))
     * hazmat_suit ([3d_armor modpack][3d_armor])
-    * [playeranim][] (WTFPL/BSD)/
+    * [playeranim][] ([WTFPL](mods/player/playeranim/LICENSE.txt)/[BSD](mods/player/playeranim/LICENSE-original.txt))
     * shields ([3d_armor modpack][3d_armor])
     * technic_armor ([3d_armor modpack][3d_armor])
     * wieldview ([3d_armor modpack][3d_armor])
-* [technic (modpack)][technic] (LGPL)
-* [tnt][] (WTFPL)
+* [technic (modpack)][technic] ([LGPL](mods/technic/README.md))
+* [tnt][] ([WTFPL](mods/tnt/README.txt))
 * weather/
-    * [weather][] (LGPL/WTFPL/CC-BY-SA)
+    * [weather][] ([LGPL/WTFPL/CC-BY-SA](mods/weather/weather/README))
 
 
 
