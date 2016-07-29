@@ -5,8 +5,19 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 The following mods are also included:
 * [awards](https://forum.minetest.net/viewtopic.php?t=4870) ([LGPL](mods/awards/LICENSE.txt))
-* blocks/
-    * [moreblocks](https://forum.minetest.net/viewtopic.php?t=509) ([zlib](mods/blocks/moreblocks/LICENSE.md))
+* building/
+    * building_blocks ([homedecor_modpack](https://forum.minetest.net/viewtopic.php?t=2041)) ([LGPL/WTFPL/CC-BY-SA](doc/modpacks/homedecor/LICENSE))
+    * chains ([homedecor_modpack][homedecor])
+    * computer ([homedecor_modpack][homedecor])
+    * fake_fire ([homedecor_modpack][homedecor])
+    * homedecor([homedecor_modpack][homedecor])
+    * homedecor_3d_extras ([homedecor_modpack][homedecor])
+    * inbox ([homedecor_modpack][homedecor])
+    * itemframes ([homedecor_modpack][homedecor])
+    * lavalamp ([homedecor_modpack][homedecor])
+    * lrfurn ([homedecor_modpack][homedecor])
+    * [moreblocks](https://forum.minetest.net/viewtopic.php?t=509) ([zlib](mods/building/moreblocks/LICENSE.md))
+    * plasmascreen ([homedecor_modpack][homedecor])
 * crafting/
     * [craftguide](https://forum.minetest.net/viewtopic.php?f=11&t=14088) ([GPL/WTFPL](mods/crafting/craftguide/LICENSE))
 * lib/
@@ -23,18 +34,6 @@ The following mods are also included:
 * [farming_plus](https://forum.minetest.net/viewtopic.php?t=2787) (WTFPL)
 * [moreores](https://forum.minetest.net/viewtopic.php?t=549) (zlib/CC-BY-SA)
 * [moretrees](https://forum.minetest.net/viewtopic.php?t=4394) (WTFPL/CC-BY-SA)
-* [homedecor_modpack](https://forum.minetest.net/viewtopic.php?t=2041) (LGPL/WTFPL/CC-BY-SA):
-    * building_blocks ([homedecor_modpack](https://forum.minetest.net/viewtopic.php?t=2041)) ([LGPL/WTFPL/CC-BY-SA](doc/modpacks/homedecor/LICENSE))
-    * chains
-    * computer
-    * fake_fire
-    * homedecor
-    * homedecor_3d_extras
-    * inbox
-    * itemframes
-    * lavalamp
-    * lrfurn
-    * plasmascreen
 * [mesecons (modpack)](https://forum.minetest.net/viewtopic.php?t=628) (LGPL/CC-BY-SA)
 * [pipeworks](https://forum.minetest.net/viewtopic.php?t=2155) (WTFPL)
 * [plantlife_modpack](https://forum.minetest.net/viewtopic.php?f=11&t=3898) (WTFPL/CC-BY-SA)
@@ -48,3 +47,4 @@ The following mods are also included:
 * weather/
     * [weather](https://forum.minetest.net/viewtopic.php?t=5245) (LGPL/WTFPL/CC-BY-SA)
 
+[homedecor]: https://forum.minetest.net/viewtopic.php?t=2041 
