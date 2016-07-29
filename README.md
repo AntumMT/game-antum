@@ -50,6 +50,7 @@ The following mods are also included:
 * tools/
     * [tnt][] ([WTFPL](mods/tools/tnt/README.txt))
     * [torches][] ([LGPL/CC-BY-SA](mods/tools/torches/README.txt))
+    * [workbench][] ([GPL/WTFPL](mods/tools/workbench/LICENSE))
 * weather/
     * [lightning][] ([LGPL/CC-BY-SA](mods/weather/lightning/README.md))
     * [weather][] ([LGPL/WTFPL/CC-BY-SA](mods/weather/weather/README))
@@ -81,3 +82,4 @@ The following mods are also included:
 [trees]: https://forum.minetest.net/viewtopic.php?f=11&t=5713
 [vines]: https://forum.minetest.net/viewtopic.php?f=11&t=2344
 [weather]: https://forum.minetest.net/viewtopic.php?t=5245
+[workbench]: https://forum.minetest.net/viewtopic.php?t=14085
