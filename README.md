@@ -48,6 +48,8 @@ The following mods are also included:
     * wieldview ([3d_armor modpack][3d_armor])
 * [technic (modpack)][technic] ([LGPL](mods/technic/README.md))
 * [tnt][] ([WTFPL](mods/tnt/README.txt))
+* tools/
+    * [torches][] ([LGPL/CC-BY-SA](mods/tools/torches/README.txt))
 * weather/
     * [weather][] ([LGPL/WTFPL/CC-BY-SA](mods/weather/weather/README))
 
@@ -73,6 +75,7 @@ The following mods are also included:
 [stairsplus]: https://forum.minetest.net/viewtopic.php?id=6140
 [technic]: https://forum.minetest.net/viewtopic.php?t=2538
 [tnt]: https://forum.minetest.net/viewtopic.php?id=2902
+[torches]: https://forum.minetest.net/viewtopic.php?t=6099
 [trees]: https://forum.minetest.net/viewtopic.php?f=11&t=5713
 [vines]: https://forum.minetest.net/viewtopic.php?f=11&t=2344
 [weather]: https://forum.minetest.net/viewtopic.php?t=5245
