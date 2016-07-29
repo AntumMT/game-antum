@@ -47,8 +47,8 @@ The following mods are also included:
     * technic_armor ([3d_armor modpack][3d_armor])
     * wieldview ([3d_armor modpack][3d_armor])
 * [technic (modpack)][technic] ([LGPL](mods/technic/README.md))
-* [tnt][] ([WTFPL](mods/tnt/README.txt))
 * tools/
+    * [tnt][] ([WTFPL](mods/tools/tnt/README.txt))
     * [torches][] ([LGPL/CC-BY-SA](mods/tools/torches/README.txt))
 * weather/
     * [lightning][] ([LGPL/CC-BY-SA](mods/weather/lightning/README.md))
