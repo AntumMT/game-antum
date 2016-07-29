@@ -26,6 +26,9 @@ The following mods are also included:
     * [creatures (Creatures MOB-Engine)][cme] ([zlib/CC-BY-SA](doc/modpacks/cme/README.txt))
 * farming/
 	* [farming_plus][] ([WTFPL](mods/farming/farming_plus/README.txt))
+* friendlies/
+    * chicken ([Creatures MOB-Engine][cme])
+    * sheep ([Creatures MOB-Engine][cme])
 * lib/
     * [biome_lib][] ([WTFPL](mods/lib/biome_lib/README.md))
 	* [signs_lib][] ([BSD/WTFPL](mods/lib/signs_lib/copyright.txt))
