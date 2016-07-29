@@ -22,6 +22,8 @@ The following mods are also included:
     * [stairsplus][] ([zlib](mods/buildings/stairsplus/LICENSE.txt))
 * crafting/
     * [craftguide][] ([GPL/WTFPL](mods/crafting/craftguide/LICENSE))
+* engines/
+    * [creatures (Creatures MOB-Engine)][cme] ([zlib/CC-BY-SA](doc/modpacks/cme/README.txt))
 * farming/
 	* [farming_plus][] ([WTFPL](mods/farming/farming_plus/README.txt))
 * lib/
@@ -63,6 +65,7 @@ The following mods are also included:
 [awards]: https://forum.minetest.net/viewtopic.php?t=4870
 [biome_lib]: https://forum.minetest.net/viewtopic.php?f=11&t=12999
 [character_creator]: https://forum.minetest.net/viewtopic.php?f=9&t=13138
+[cme]: https://forum.minetest.net/viewtopic.php?t=8638
 [craftguide]: https://forum.minetest.net/viewtopic.php?f=11&t=14088
 [farming_plus]: https://forum.minetest.net/viewtopic.php?t=2787
 [fort_spikes]: https://forum.minetest.net/viewtopic.php?t=14574
