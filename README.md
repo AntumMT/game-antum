@@ -54,6 +54,8 @@ The following mods are also included:
 * weather/
     * [lightning][] ([LGPL/CC-BY-SA](mods/weather/lightning/README.md))
     * [weather][] ([LGPL/WTFPL/CC-BY-SA](mods/weather/weather/README))
+* world/
+    * [worldedge][] ([DWYWPL](mods/world/worldedge/licence.txt))
 
 
 
@@ -83,3 +85,4 @@ The following mods are also included:
 [vines]: https://forum.minetest.net/viewtopic.php?f=11&t=2344
 [weather]: https://forum.minetest.net/viewtopic.php?t=5245
 [workbench]: https://forum.minetest.net/viewtopic.php?t=14085
+[worldedge]: https://forum.minetest.net/viewtopic.php?t=10753
