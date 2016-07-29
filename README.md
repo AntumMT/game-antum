@@ -16,7 +16,7 @@ The following mods are also included:
     * itemframes ([homedecor_modpack][homedecor])
     * lavalamp ([homedecor_modpack][homedecor])
     * lrfurn ([homedecor_modpack][homedecor])
-    * [moreblocks][] ([zlib](mods/building/moreblocks/LICENSE.md))
+    * [moreblocks][] ([zlib](mods/buildings/moreblocks/LICENSE.md))
     * plasmascreen ([homedecor_modpack][homedecor])
     * [stairsplus][] ([zlib](mods/buildings/stairsplus/LICENSE.txt))
 * crafting/
