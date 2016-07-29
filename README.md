@@ -5,11 +5,12 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 The following mods are also included:
 * [awards][] ([LGPL](mods/awards/LICENSE.txt))
-* building/
+* buildings/
     * building_blocks ([homedecor_modpack][homedecor]) ([LGPL/WTFPL/CC-BY-SA](doc/modpacks/homedecor/LICENSE))
     * chains ([homedecor_modpack][homedecor])
     * computer ([homedecor_modpack][homedecor])
     * fake_fire ([homedecor_modpack][homedecor])
+    * [fort_spikes][] ([MIT/CC0](mods/buildings/fort_spikes/LICENSE))
     * homedecor([homedecor_modpack][homedecor])
     * homedecor_3d_extras ([homedecor_modpack][homedecor])
     * inbox ([homedecor_modpack][homedecor])
@@ -58,6 +59,7 @@ The following mods are also included:
 [character_creator]: https://forum.minetest.net/viewtopic.php?f=9&t=13138
 [craftguide]: https://forum.minetest.net/viewtopic.php?f=11&t=14088
 [farming_plus]: https://forum.minetest.net/viewtopic.php?t=2787
+[fort_spikes]: https://forum.minetest.net/viewtopic.php?t=14574
 [homedecor]: https://forum.minetest.net/viewtopic.php?t=2041
 [mesecons]: https://forum.minetest.net/viewtopic.php?t=628
 [moreblocks]: https://forum.minetest.net/viewtopic.php?t=509
