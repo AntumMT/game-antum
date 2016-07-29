@@ -33,12 +33,15 @@ unified_inventory.register_button("craft", {
 	tooltip = S("Crafting Grid")
 })
 
+--[[
 unified_inventory.register_button("craftguide", {
 	type = "image",
 	image = "ui_craftguide_icon.png",
 	tooltip = S("Crafting Guide")
 })
+--]]
 
+--[[
 unified_inventory.register_button("home_gui_set", {
 	type = "image",
 	image = "ui_sethome_icon.png",
@@ -61,7 +64,9 @@ unified_inventory.register_button("home_gui_set", {
 		end
 	end,
 })
+--]]
 
+--[[
 unified_inventory.register_button("home_gui_go", {
 	type = "image",
 	image = "ui_gohome_icon.png",
@@ -79,7 +84,9 @@ unified_inventory.register_button("home_gui_go", {
 		end
 	end,
 })
+--]]
 
+--[[
 unified_inventory.register_button("misc_set_day", {
 	type = "image",
 	image = "ui_sun_icon.png",
@@ -99,7 +106,9 @@ unified_inventory.register_button("misc_set_day", {
 		end
 	end,
 })
+--]]
 
+--[[
 unified_inventory.register_button("misc_set_night", {
 	type = "image",
 	image = "ui_moon_icon.png",
@@ -119,7 +128,9 @@ unified_inventory.register_button("misc_set_night", {
 		end
 	end,
 })
+--]]
 
+--[[
 unified_inventory.register_button("clear_inv", {
 	type = "image",
 	image = "ui_trash_icon.png",
@@ -140,6 +151,7 @@ unified_inventory.register_button("clear_inv", {
 				{to_player=player_name, gain = 1.0})
 	end,
 })
+--]]
 
 unified_inventory.register_page("craft", {
 	get_formspec = function(player, perplayer_formspec)
