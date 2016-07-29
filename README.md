@@ -29,7 +29,7 @@ The following mods are also included:
 * materials/
 	* [moreores][] ([zlib/CC-BY-SA](mods/materials/moreores/README.md))
 	* [quartz][] ([MIT](mods/materials/quartz/LICENSE.txt))
-* [mesecons (modpack)][] ([LGPL/CC-BY-SA](mods/mesecons/COPYING.txt))
+* [mesecons (modpack)][mesecons] ([LGPL/CC-BY-SA](mods/mesecons/COPYING.txt))
 * [pipeworks][] ([WTFPL](mods/pipeworks/LICENSE))
 * plantlife/
     * [plantlife_modpack][] ([WTFPL/CC-BY-SA](doc/mods/plantlife/LICENSE))
