@@ -47,6 +47,7 @@ The following mods are also included:
     * 3d_armor_stand ([3d_armor modpack][3d_armor])
     * [character_creator][] ([WTFPL/CC-BY-SA](mods/player/character_creator/LICENSE.md))
     * hazmat_suit ([3d_armor modpack][3d_armor])
+    * [playeranim][] ([WFTLPL](mods/player/playeranim/LICENSE.txt) / [BSD](mods/player/playeranim/LICENSE-original.txt))
     * shields ([3d_armor modpack][3d_armor])
     * technic_armor ([3d_armor modpack][3d_armor])
     * [unified_inventory][] ([LGPL/WTFPL](mods/player/unified_inventory/README.md))
