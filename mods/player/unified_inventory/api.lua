@@ -209,15 +209,14 @@ function unified_inventory.register_page(name, def)
 end
 
 
-function unified_inventory.register_button(name, def, index)
-	index = index or 0
+function unified_inventory.register_button(name, def)
 	if not def.action then
 		def.action = function(player)
 			unified_inventory.set_inventory_formspec(player, name)
 		end
 	end
 	def.name = name
-	table.insert(unified_inventory.buttons, index, def)
+	table.insert(unified_inventory.buttons, def)
 end
 
 
