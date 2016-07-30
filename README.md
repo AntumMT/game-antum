@@ -61,7 +61,7 @@ The following mods are also included:
     * [torches][] ([LGPL/CC-BY-SA](mods/tools/torches/README.txt))
     * [workbench][] ([GPL/WTFPL](mods/tools/workbench/LICENSE))
 * transport/
-    * [carts][] ([WTFPL/CC0](mods/transport/README.txt))
+    * [carts][] ([WTFPL/CC0](mods/transport/carts/README.txt))
 * weather/
     * [lightning][] ([LGPL/CC-BY-SA](mods/weather/lightning/README.md))
     * [weather][] ([LGPL/WTFPL/CC-BY-SA](mods/weather/weather/README))
