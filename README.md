@@ -42,10 +42,6 @@ The following mods are also included:
 * [mesecons (modpack)][mesecons] ([LGPL/CC-BY-SA](mods/mesecons/COPYING.txt))
 * [pipeworks][] ([WTFPL](mods/pipeworks/LICENSE))
 * plantlife/
-    * [plantlife_modpack][] ([WTFPL/CC-BY-SA](doc/modpacks/plantlife/LICENSE))
-    * [moretrees][] ([WTFPL/CC-BY-SA](mods/plantlife/moretrees/LICENSE))
-    * [trees (Tiny Trees)][trees] ([WTFPL](mods/plantlife/trees/readme.txt))
-    * [vines][] ([WTFPL/CC-BY-SA](mods/plantlife/vines/LICENSE.md))
 * player/
     * 3d_armor ([3d_armor modpack][3d_armor]) ([LGPL/WTFPL/CC-BY-SA](doc/modpacks/3d_armor/LICENSE.md))
     * 3d_armor_stand ([3d_armor modpack][3d_armor])
