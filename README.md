@@ -73,6 +73,7 @@ The following mods are also included:
 [3d_armor]: https://forum.minetest.net/viewtopic.php?t=4654
 [awards]: https://forum.minetest.net/viewtopic.php?t=4870
 [biome_lib]: https://forum.minetest.net/viewtopic.php?f=11&t=12999
+[carts]: https://forum.minetest.net/viewtopic.php?t=2451
 [character_creator]: https://forum.minetest.net/viewtopic.php?f=9&t=13138
 [cme]: https://forum.minetest.net/viewtopic.php?t=8638
 [craftguide]: https://forum.minetest.net/viewtopic.php?f=11&t=14088
