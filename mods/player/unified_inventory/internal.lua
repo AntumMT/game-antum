@@ -127,7 +127,7 @@ function unified_inventory.get_formspec(player, page)
 	if fsdata.draw_item_list == false then
 		return table.concat(formspec, "")
 	end
-
+--[[
 	-- Controls to flip items pages
 	local start_x = 9.2
 
@@ -169,6 +169,7 @@ function unified_inventory.get_formspec(player, page)
 				.. ",5.8;.8,.8;ui_skip_forward_icon.png;end_list;]"
 			.. "tooltip[end_list;" .. minetest.formspec_escape(S("Last page")) .. "]"
 	end
+	
 	n = n+1
 
 	-- Search box
@@ -220,7 +221,7 @@ function unified_inventory.get_formspec(player, page)
 			.. S("%s of %s"):format(page,pagemax).."]"
 	end
 	n= n+1
-
+--]]
 	if unified_inventory.activefilter[player_name] ~= "" then
 		formspec[n] = "label[8.2,"..(ui_peruser.form_header_y + 0.4)..";" .. S("Filter") .. ":]"
 		formspec[n+1] = "label[9.1,"..(ui_peruser.form_header_y + 0.4)..";"..minetest.formspec_escape(unified_inventory.activefilter[player_name]).."]"
