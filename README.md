@@ -51,6 +51,7 @@ The following mods are also included:
     * shields ([3d_armor modpack][3d_armor])
     * technic_armor ([3d_armor modpack][3d_armor])
     * [unified_inventory][] ([LGPL/WTFPL](mods/player/unified_inventory/README.md))
+    * [wardrobe][] ([WTFPL](mods/player/wardrobe/README.txt))
     * wieldview ([3d_armor modpack][3d_armor])
 * [technic (modpack)][technic] ([LGPL](mods/technic/README.md))
 * tools/
@@ -94,6 +95,7 @@ The following mods are also included:
 [trees]: https://forum.minetest.net/viewtopic.php?f=11&t=5713
 [unified_inventory]: https://forum.minetest.net/viewtopic.php?id=3933
 [vines]: https://forum.minetest.net/viewtopic.php?f=11&t=2344
+[wardrobe]: https://forum.minetest.net/viewtopic.php?id=9680
 [weather]: https://forum.minetest.net/viewtopic.php?t=5245
 [workbench]: https://forum.minetest.net/viewtopic.php?t=14085
 [worldedge]: https://forum.minetest.net/viewtopic.php?t=10753
