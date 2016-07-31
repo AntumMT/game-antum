@@ -21,6 +21,7 @@ The following mods are also included:
     * plasmascreen ([homedecor_modpack][homedecor])
     * [stairsplus][] ([zlib](mods/buildings/stairsplus/LICENSE.txt))
 * chat/
+    * [away][] ([GPL](mods/chat/away/COPYING))
     * [chatlog][] ([CC0](mods/chat/chatlog/Readme.txt))
 * crafting/
     * [craftguide][] ([GPL/WTFPL](mods/crafting/craftguide/LICENSE))
@@ -72,6 +73,7 @@ The following mods are also included:
 
 [3d_armor]: https://forum.minetest.net/viewtopic.php?t=4654
 [awards]: https://forum.minetest.net/viewtopic.php?t=4870
+[away]: https://forum.minetest.net/viewtopic.php?t=1211
 [biome_lib]: https://forum.minetest.net/viewtopic.php?f=11&t=12999
 [carts]: https://forum.minetest.net/viewtopic.php?t=2451
 [character_creator]: https://forum.minetest.net/viewtopic.php?f=9&t=13138
