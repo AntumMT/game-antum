@@ -1,0 +1,18 @@
+diff -ruN worldedge.orig/init.lua worldedge/init.lua
+--- worldedge.orig/init.lua	2016-03-23 14:30:23.000000000 -0700
++++ worldedge/init.lua	2016-07-30 20:41:49.909486025 -0700
+@@ -2,11 +2,13 @@
+ -- TODO: Check for terrain height
+ 
+ -- Defines the edge of a world
+-local edge = 30000
++local edge = tonumber(minetest.setting_get("world_edge")) or 30000
+ -- Radius which should be checked for a good teleportation place
+ local radius = 2
+ --------------
+ 
++core.log("action", "World edge: " .. edge)
++
+ local count = 0
+ local waiting_list = {}
+ --[[ Explanation of waiting_list table
