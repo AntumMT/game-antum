@@ -20,6 +20,8 @@ The following mods are also included:
     * [moreblocks][] ([zlib](mods/buildings/moreblocks/LICENSE.md))
     * plasmascreen ([homedecor_modpack][homedecor])
     * [stairsplus][] ([zlib](mods/buildings/stairsplus/LICENSE.txt))
+* chat/
+    * [chatlog][] ([CC0](mods/chat/chatlog/Readme.txt))
 * crafting/
     * [craftguide][] ([GPL/WTFPL](mods/crafting/craftguide/LICENSE))
 * engines/
@@ -73,6 +75,7 @@ The following mods are also included:
 [biome_lib]: https://forum.minetest.net/viewtopic.php?f=11&t=12999
 [carts]: https://forum.minetest.net/viewtopic.php?t=2451
 [character_creator]: https://forum.minetest.net/viewtopic.php?f=9&t=13138
+[chatlog]: https://forum.minetest.net/viewtopic.php?id=6220
 [cme]: https://forum.minetest.net/viewtopic.php?t=8638
 [craftguide]: https://forum.minetest.net/viewtopic.php?f=11&t=14088
 [farming_plus]: https://forum.minetest.net/viewtopic.php?t=2787
