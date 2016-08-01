@@ -42,6 +42,7 @@ The following mods are also included:
 * materials/
 	* [moreores][] ([zlib/CC-BY-SA](mods/materials/moreores/README.md))
 	* [quartz][] ([MIT](mods/materials/quartz/LICENSE.txt))
+	* [unifieddyes][] ([GPL](mods/materials/unifieddyes/LICENSE))
 * [mesecons (modpack)][mesecons] ([LGPL/CC-BY-SA](mods/mesecons/COPYING.txt))
 * [pipeworks][] ([WTFPL](mods/pipeworks/LICENSE))
 * plantlife/
@@ -99,6 +100,7 @@ The following mods are also included:
 [torches]: https://forum.minetest.net/viewtopic.php?t=6099
 [trees]: https://forum.minetest.net/viewtopic.php?f=11&t=5713
 [unified_inventory]: https://forum.minetest.net/viewtopic.php?id=3933
+[unifieddyes]: https://forum.minetest.net/viewtopic.php?t=2178
 [vines]: https://forum.minetest.net/viewtopic.php?f=11&t=2344
 [wardrobe]: https://forum.minetest.net/viewtopic.php?id=9680
 [weather]: https://forum.minetest.net/viewtopic.php?t=5245
