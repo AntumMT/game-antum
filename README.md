@@ -4,6 +4,7 @@ A custom game for Minetest/Freeminer
 The game includes the mods from the default [minetest_game](https://github.com/minetest/minetest_game/tree/master/mods)
 
 The following mods are also included:
+* [adv_spawning][] ([???](mods/adv_spawning/README.txt))
 * [animalmaterials (modpack)][animalmaterials] (CC-BY-SA / CC0)
 * [awards][] ([LGPL](mods/awards/LICENSE.txt))
 * buildings/
@@ -80,6 +81,7 @@ The following mods are also included:
 
 
 [3d_armor]: https://forum.minetest.net/viewtopic.php?t=4654
+[adv_spawning]: https://github.com/sapier/adv_spawning
 [animalmaterials]: https://github.com/sapier/animalmaterials
 [animals_modpack]: https://forum.minetest.net/viewtopic.php?t=629
 [awards]: https://forum.minetest.net/viewtopic.php?t=4870
