@@ -47,6 +47,8 @@ The following mods are also included:
     * [creatures (Creatures MOB-Engine)][cme] ([zlib/CC-BY-SA](doc/modpacks/cme/README.txt))
     * mobf ([mobf_core modpack][mobf]) ([CC-BY-SA](doc/modpacks/mobf_core/License.txt))
     * mobf_settings ([mobf_core modpack][mobf]) ([CC-BY-SA](doc/modpacks/mobf_core/License.txt))
+* mobs/
+    * animal_creeper ([animals_modpack][]) ([CC-BY-SA](mods/mobs/animal_creeper/License.txt))
 * [pipeworks][] ([WTFPL](mods/pipeworks/LICENSE))
 * plantlife/
 * player/
@@ -76,6 +78,7 @@ The following mods are also included:
 
 
 [3d_armor]: https://forum.minetest.net/viewtopic.php?t=4654
+[animals_modpack]: https://forum.minetest.net/viewtopic.php?t=629
 [awards]: https://forum.minetest.net/viewtopic.php?t=4870
 [away]: https://forum.minetest.net/viewtopic.php?t=1211
 [biome_lib]: https://forum.minetest.net/viewtopic.php?f=11&t=12999
