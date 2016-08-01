@@ -25,8 +25,6 @@ The following mods are also included:
     * [chatlog][] ([CC0](mods/chat/chatlog/Readme.txt))
 * crafting/
     * [craft_guide][] ([BSD 3-Clause](mods/crafting/craft_guide/LICENSE))
-* engines/
-    * [creatures (Creatures MOB-Engine)][cme] ([zlib/CC-BY-SA](doc/modpacks/cme/README.txt))
 * farming/
 	* [farming_plus][] ([WTFPL](mods/farming/farming_plus/README.txt))
 * friendlies/
@@ -44,6 +42,9 @@ The following mods are also included:
 	* [quartz][] ([MIT](mods/materials/quartz/LICENSE.txt))
 	* [unifieddyes][] ([GPL](mods/materials/unifieddyes/LICENSE))
 * [mesecons (modpack)][mesecons] ([LGPL/CC-BY-SA](mods/mesecons/COPYING.txt))
+* mob_engines/
+    * [creatures (Creatures MOB-Engine)][cme] ([zlib/CC-BY-SA](doc/modpacks/cme/README.txt))
+    * [mobf (MOB Framework core)][mobf] ([CC-BY-SA](mods/mob_engines/mobf/License.txt))
 * [pipeworks][] ([WTFPL](mods/pipeworks/LICENSE))
 * plantlife/
 * player/
@@ -86,6 +87,7 @@ The following mods are also included:
 [homedecor]: https://forum.minetest.net/viewtopic.php?t=2041
 [lightning]: https://forum.minetest.net/viewtopic.php?t=13886
 [mesecons]: https://forum.minetest.net/viewtopic.php?t=628
+[mobf]: https://github.com/sapier/mobf_core
 [moreblocks]: https://forum.minetest.net/viewtopic.php?t=509
 [moreores]: https://forum.minetest.net/viewtopic.php?t=549
 [moretrees]: https://forum.minetest.net/viewtopic.php?t=4394
