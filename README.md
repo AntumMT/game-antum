@@ -6,6 +6,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 The following mods are also included:
 * [awards][] ([LGPL](mods/awards/LICENSE.txt))
 * buildings/
+    * barn ([mobf_core modpack][mobf]) ([CC-BY-SA](doc/modpacks/mobf_core/License.txt))
     * building_blocks ([homedecor_modpack][homedecor]) ([LGPL/WTFPL/CC-BY-SA](doc/modpacks/homedecor/LICENSE))
     * chains ([homedecor_modpack][homedecor])
     * computer ([homedecor_modpack][homedecor])
@@ -44,8 +45,8 @@ The following mods are also included:
 * [mesecons (modpack)][mesecons] ([LGPL/CC-BY-SA](mods/mesecons/COPYING.txt))
 * mob_engines/
     * [creatures (Creatures MOB-Engine)][cme] ([zlib/CC-BY-SA](doc/modpacks/cme/README.txt))
-    * [mobf (mobf_core modpack)][mobf] ([CC-BY-SA](doc/modpacks/mobf_core/License.txt))
-    * [mobf_settings (mobf_core modpack)][mobf]
+    * mobf ([mobf_core modpack][mobf]) ([CC-BY-SA](doc/modpacks/mobf_core/License.txt))
+    * mobf_settings ([mobf_core modpack][mobf]) ([CC-BY-SA](doc/modpacks/mobf_core/License.txt))
 * [pipeworks][] ([WTFPL](mods/pipeworks/LICENSE))
 * plantlife/
 * player/
