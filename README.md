@@ -34,6 +34,7 @@ The following mods are also included:
     * chicken ([Creatures MOB-Engine][cme])
     * sheep ([Creatures MOB-Engine][cme])
 * hostils/
+    * animal_creeper ([animals_modpack][]) ([CC-BY-SA](mods/hostils/animal_creeper/License.txt))
     * ghost ([Creatures MOB-Engine][cme])
     * mob_shark ([animals_modpack][]) ([CC-BY-SA](mods/hostils/mob_shark/License.txt))
     * [mobs_goblins][] ([CC-BY-SA / CC-BY / CC0](mods/hostils/mobs_goblins/README.md))
@@ -52,7 +53,6 @@ The following mods are also included:
     * mobf ([mobf_core modpack][mobf]) ([CC-BY-SA](doc/modpacks/mobf_core/License.txt))
     * mobf_settings ([mobf_core modpack][mobf]) ([CC-BY-SA](doc/modpacks/mobf_core/License.txt))
 * mobs/
-    * animal_creeper ([animals_modpack][]) ([CC-BY-SA](mods/mobs/animal_creeper/License.txt))
     * [kpgmobs][] ([MIT](mods/mobs/kpgmobs/README.txt))
 * [pipeworks][] ([WTFPL](mods/pipeworks/LICENSE))
 * plantlife/
