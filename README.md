@@ -35,6 +35,7 @@ The following mods are also included:
     * sheep ([Creatures MOB-Engine][cme])
 * hostils/
     * ghost ([Creatures MOB-Engine][cme])
+    * mob_shark ([animals_modpack][]) ([CC-BY-SA](mods/hostils/mob_shark/License.txt))
     * [mobs_goblins][] ([CC-BY-SA / CC-BY / CC0](mods/hostils/mobs_goblins/README.md))
     * oerrki ([Creatures MOB-Engine][cme])
     * zombie ([Creatures MOB-Engine][cme])
