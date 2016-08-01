@@ -49,6 +49,7 @@ The following mods are also included:
     * mobf_settings ([mobf_core modpack][mobf]) ([CC-BY-SA](doc/modpacks/mobf_core/License.txt))
 * mobs/
     * animal_creeper ([animals_modpack][]) ([CC-BY-SA](mods/mobs/animal_creeper/License.txt))
+    * [kpgmobs][] ([MIT](mods/mobs/kpgmobs/README.txt))
 * [pipeworks][] ([WTFPL](mods/pipeworks/LICENSE))
 * plantlife/
 * player/
@@ -90,6 +91,7 @@ The following mods are also included:
 [farming_plus]: https://forum.minetest.net/viewtopic.php?t=2787
 [fort_spikes]: https://forum.minetest.net/viewtopic.php?t=14574
 [homedecor]: https://forum.minetest.net/viewtopic.php?t=2041
+[kpgmobs]: https://forum.minetest.net/viewtopic.php?t=8798
 [lightning]: https://forum.minetest.net/viewtopic.php?t=13886
 [mesecons]: https://forum.minetest.net/viewtopic.php?t=628
 [mobf]: https://github.com/sapier/mobf_core
