@@ -65,6 +65,7 @@ The following mods are also included:
     * shields ([3d_armor modpack][3d_armor])
     * technic_armor ([3d_armor modpack][3d_armor])
     * [unified_inventory][] ([LGPL/WTFPL](mods/player/unified_inventory/README.md))
+    * [walking_light][] ([WTFPL / CC-BY-SA](mods/player/walking_light/README.md))
     * [wardrobe][] ([WTFPL](mods/player/wardrobe/README.txt))
     * wieldview ([3d_armor modpack][3d_armor])
 * [technic (modpack)][technic] ([LGPL](mods/technic/README.md))
@@ -118,6 +119,7 @@ The following mods are also included:
 [unified_inventory]: https://forum.minetest.net/viewtopic.php?id=3933
 [unifieddyes]: https://forum.minetest.net/viewtopic.php?t=2178
 [vines]: https://forum.minetest.net/viewtopic.php?f=11&t=2344
+[walking_light]: https://github.com/petermaloney/walking_light
 [wardrobe]: https://forum.minetest.net/viewtopic.php?id=9680
 [weather]: https://forum.minetest.net/viewtopic.php?t=5245
 [workbench]: https://forum.minetest.net/viewtopic.php?t=14085
