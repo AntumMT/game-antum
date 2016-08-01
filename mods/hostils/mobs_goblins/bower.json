@@ -1,0 +1,15 @@
+{
+    "name": "mobs_goblins",
+    "description": "goblins for minetest",
+    "keywords": [
+        "mobs_goblins"
+    ],
+    "homepage": "https://github.com/FreeLikeGNU/mobs_goblins",
+    "screenshots": [
+        "https://cloud.githubusercontent.com/assets/51875/9214313/50cbf752-40db-11e5-8661-ce8be773bc92.png"
+    ],
+    "authors": [
+        "FreeLikeGNU"
+    ],
+    "license": "CC-BY-SA-3.0"
+}

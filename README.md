@@ -35,6 +35,7 @@ The following mods are also included:
     * sheep ([Creatures MOB-Engine][cme])
 * hostils/
     * ghost ([Creatures MOB-Engine][cme])
+    * [mobs_goblins][] ([CC-BY-SA / CC-BY / CC0](mobs/hostils/mobs_goblins/README.md))
     * oerrki ([Creatures MOB-Engine][cme])
     * zombie ([Creatures MOB-Engine][cme])
 * lib/
@@ -99,6 +100,7 @@ The following mods are also included:
 [lightning]: https://forum.minetest.net/viewtopic.php?t=13886
 [mesecons]: https://forum.minetest.net/viewtopic.php?t=628
 [mobf]: https://github.com/sapier/mobf_core
+[mobs_goblins]: https://forum.minetest.net/viewtopic.php?t=13004
 [moreblocks]: https://forum.minetest.net/viewtopic.php?t=509
 [moreores]: https://forum.minetest.net/viewtopic.php?t=549
 [moretrees]: https://forum.minetest.net/viewtopic.php?t=4394
