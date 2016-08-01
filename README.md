@@ -24,7 +24,7 @@ The following mods are also included:
     * [away][] ([GPL](mods/chat/away/COPYING))
     * [chatlog][] ([CC0](mods/chat/chatlog/Readme.txt))
 * crafting/
-    * [craftguide][] ([GPL/WTFPL](mods/crafting/craftguide/LICENSE))
+    * [craft_guide][] ([BSD 3-Clause](mods/crafting/craft_guide/LICENSE))
 * engines/
     * [creatures (Creatures MOB-Engine)][cme] ([zlib/CC-BY-SA](doc/modpacks/cme/README.txt))
 * farming/
@@ -79,7 +79,7 @@ The following mods are also included:
 [character_creator]: https://forum.minetest.net/viewtopic.php?f=9&t=13138
 [chatlog]: https://forum.minetest.net/viewtopic.php?id=6220
 [cme]: https://forum.minetest.net/viewtopic.php?t=8638
-[craftguide]: https://forum.minetest.net/viewtopic.php?f=11&t=14088
+[craft_guide]: https://forum.minetest.net/viewtopic.php?t=2334
 [farming_plus]: https://forum.minetest.net/viewtopic.php?t=2787
 [fort_spikes]: https://forum.minetest.net/viewtopic.php?t=14574
 [homedecor]: https://forum.minetest.net/viewtopic.php?t=2041
