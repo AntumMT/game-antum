@@ -44,7 +44,8 @@ The following mods are also included:
 * [mesecons (modpack)][mesecons] ([LGPL/CC-BY-SA](mods/mesecons/COPYING.txt))
 * mob_engines/
     * [creatures (Creatures MOB-Engine)][cme] ([zlib/CC-BY-SA](doc/modpacks/cme/README.txt))
-    * [mobf (MOB Framework core)][mobf] ([CC-BY-SA](doc/modpacks/mobf_core/License.txt))
+    * [mobf (mobf_core modpack)][mobf] ([CC-BY-SA](doc/modpacks/mobf_core/License.txt))
+    * [mobf_settings (mobf_core modpack)][mobf]
 * [pipeworks][] ([WTFPL](mods/pipeworks/LICENSE))
 * plantlife/
 * player/
