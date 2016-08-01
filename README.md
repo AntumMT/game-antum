@@ -4,6 +4,7 @@ A custom game for Minetest/Freeminer
 The game includes the mods from the default [minetest_game](https://github.com/minetest/minetest_game/tree/master/mods)
 
 The following mods are also included:
+* [animalmaterials (modpack)][animalmaterials] (CC-BY-SA / CC0)
 * [awards][] ([LGPL](mods/awards/LICENSE.txt))
 * buildings/
     * barn ([mobf_core modpack][mobf]) ([CC-BY-SA](doc/modpacks/mobf_core/License.txt))
@@ -79,6 +80,7 @@ The following mods are also included:
 
 
 [3d_armor]: https://forum.minetest.net/viewtopic.php?t=4654
+[animalmaterials]: https://github.com/sapier/animalmaterials
 [animals_modpack]: https://forum.minetest.net/viewtopic.php?t=629
 [awards]: https://forum.minetest.net/viewtopic.php?t=4870
 [away]: https://forum.minetest.net/viewtopic.php?t=1211
