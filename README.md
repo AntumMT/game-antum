@@ -31,6 +31,7 @@ The following mods are also included:
 * farming/
 	* [farming_plus][] ([WTFPL](mods/farming/farming_plus/README.txt))
 * friendlies/
+    * animals_clownfish ([animals_modpack][]) ([CC-BY-SA](mods/friendlies/animal_clownfish/License.txt))
     * chicken ([Creatures MOB-Engine][cme])
     * sheep ([Creatures MOB-Engine][cme])
 * hostils/
