@@ -40,6 +40,7 @@ The following mods are also included:
     * mob_bear ([animals_modpack][]) ([CC-BY-SA / CC0](mods/hostils/mob_bear/License.txt))
     * mob_guard ([animals_modpack][]) ([CC-BY-SA / CC0](mods/hostils/mob_guard/License.txt))
     * mob_shark ([animals_modpack][]) ([CC-BY-SA](mods/hostils/mob_shark/License.txt))
+    * mob_slime ([animals_modpack][]) ([CC-BY / CC-BY-SA / CC0](mods/hostils/mob_slime/License.txt))
     * [mobs_goblins][] ([CC-BY-SA / CC-BY / CC0](mods/hostils/mobs_goblins/README.md))
     * oerrki ([Creatures MOB-Engine][cme])
     * zombie ([Creatures MOB-Engine][cme])
