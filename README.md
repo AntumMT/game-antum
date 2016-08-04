@@ -89,6 +89,7 @@ The following mods are also included:
     * [weather][] ([LGPL/WTFPL/CC-BY-SA](mods/weather/weather/README))
 * world/
     * [areas][] ([LGPL](mods/world/areas/LICENSE.txt))
+    * [glow][] (GPL)
     * [worldedge][] ([DWYWPL](mods/world/worldedge/licence.txt))
 
 
@@ -108,6 +109,7 @@ The following mods are also included:
 [craft_guide]: https://forum.minetest.net/viewtopic.php?t=2334
 [farming_plus]: https://forum.minetest.net/viewtopic.php?t=2787
 [fort_spikes]: https://forum.minetest.net/viewtopic.php?t=14574
+[glow]: https://forum.minetest.net/viewtopic.php?t=6300
 [helicopter]: https://forum.minetest.net/viewtopic.php?t=6183
 [homedecor]: https://forum.minetest.net/viewtopic.php?t=2041
 [kpgmobs]: https://forum.minetest.net/viewtopic.php?t=8798
