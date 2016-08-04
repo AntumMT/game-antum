@@ -33,6 +33,7 @@ The following mods are also included:
 * friendlies/
     * animal_clownfish ([animals_modpack][]) ([CC-BY-SA](mods/friendlies/animal_clownfish/License.txt))
     * animal_fish_blue_white ([animals_modpack][]) ([CC-BY-SA](mods/friendlies/animal_fish_blue_white/License.txt))
+    * animal_gull ([animals_modpack][]) ([CC-BY-SA](mods/friendlies/animal_gull/License.txt))
     * chicken ([Creatures MOB-Engine][cme])
     * sheep ([Creatures MOB-Engine][cme])
 * hostils/
