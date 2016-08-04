@@ -75,6 +75,7 @@ The following mods are also included:
     * [workbench][] ([GPL/WTFPL](mods/tools/workbench/LICENSE))
 * transport/
     * [carts][] ([WTFPL/CC0](mods/transport/carts/README.txt))
+    * [helicopter][] ([GPL](mods/transport/helicopter/LICENSE) / [CC-BY-NC](mods/transport/helicopter/README.md))
 * weather/
     * [lightning][] ([LGPL/CC-BY-SA](mods/weather/lightning/README.md))
     * [weather][] ([LGPL/WTFPL/CC-BY-SA](mods/weather/weather/README))
@@ -99,6 +100,7 @@ The following mods are also included:
 [craft_guide]: https://forum.minetest.net/viewtopic.php?t=2334
 [farming_plus]: https://forum.minetest.net/viewtopic.php?t=2787
 [fort_spikes]: https://forum.minetest.net/viewtopic.php?t=14574
+[helicopter]: https://forum.minetest.net/viewtopic.php?t=6183
 [homedecor]: https://forum.minetest.net/viewtopic.php?t=2041
 [kpgmobs]: https://forum.minetest.net/viewtopic.php?t=8798
 [lightning]: https://forum.minetest.net/viewtopic.php?t=13886
