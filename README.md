@@ -63,6 +63,7 @@ The following mods are also included:
     * mobf_settings ([mobf_core modpack][mobf]) ([CC-BY-SA](doc/modpacks/mobf_core/License.txt))
 * mobs/
     * [kpgmobs][] ([MIT](mods/mobs/kpgmobs/README.txt))
+* [mydoors (modpack)][mydoors] ([CC-BY / CC-BY-SA / WTFPL](mods/mydoors/mydoors/README.txt))
 * [pipeworks][] ([WTFPL](mods/pipeworks/LICENSE))
 * plantlife/
 * player/
@@ -122,6 +123,7 @@ The following mods are also included:
 [moreblocks]: https://forum.minetest.net/viewtopic.php?t=509
 [moreores]: https://forum.minetest.net/viewtopic.php?t=549
 [moretrees]: https://forum.minetest.net/viewtopic.php?t=4394
+[mydoors]: https://forum.minetest.net/viewtopic.php?t=10626
 [pipeworks]: https://forum.minetest.net/viewtopic.php?t=2155
 [plantlife_modpack]: https://forum.minetest.net/viewtopic.php?f=11&t=3898
 [playeranim]: https://forum.minetest.net/viewtopic.php?t=12189
