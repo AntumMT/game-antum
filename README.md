@@ -48,6 +48,7 @@ The following mods are also included:
     * mob_slime ([animals_modpack][]) ([CC-BY / CC-BY-SA / CC0](mods/hostils/mob_slime/License.txt))
     * [mobs_goblins][] ([CC-BY-SA / CC-BY / CC0](mods/hostils/mobs_goblins/README.md))
     * oerrki ([Creatures MOB-Engine][cme])
+    * [spidermob][] ([CC-BY-SA / WTFPL / CC0](mods/hostils/spidermob/LICENSE))
     * zombie ([Creatures MOB-Engine][cme])
 * lib/
     * [biome_lib][] ([WTFPL](mods/lib/biome_lib/README.md))
@@ -129,6 +130,7 @@ The following mods are also included:
 [playeranim]: https://forum.minetest.net/viewtopic.php?t=12189
 [quartz]: https://forum.minetest.net/viewtopic.php?t=5682
 [signs_lib]: https://forum.minetest.net/viewtopic.php?f=11&t=13762
+[spidermob]: https://forum.minetest.net/viewtopic.php?t=10045
 [stairsplus]: https://forum.minetest.net/viewtopic.php?id=6140
 [technic]: https://forum.minetest.net/viewtopic.php?t=2538
 [tnt]: https://forum.minetest.net/viewtopic.php?id=2902
