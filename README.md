@@ -39,6 +39,7 @@ The following mods are also included:
     * sheep ([Creatures MOB-Engine][cme])
 * hostils/
     * animal_creeper ([animals_modpack][]) ([CC-BY-SA](mods/hostils/animal_creeper/License.txt))
+    * [creeper][] ([WTFPL](mods/hostils/creeper/LICENSE.md))
     * ghost ([Creatures MOB-Engine][cme])
     * mob_archer ([animals_modpack][]) ([CC-BY-SA / CC0](mods/hostils/mob_archer/License.txt))
     * mob_bear ([animals_modpack][]) ([CC-BY-SA / CC0](mods/hostils/mob_bear/License.txt))
@@ -107,6 +108,7 @@ The following mods are also included:
 [chatlog]: https://forum.minetest.net/viewtopic.php?id=6220
 [cme]: https://forum.minetest.net/viewtopic.php?t=8638
 [craft_guide]: https://forum.minetest.net/viewtopic.php?t=2334
+[creeper]: https://forum.minetest.net/viewtopic.php?t=11891
 [farming_plus]: https://forum.minetest.net/viewtopic.php?t=2787
 [fort_spikes]: https://forum.minetest.net/viewtopic.php?t=14574
 [glow]: https://forum.minetest.net/viewtopic.php?t=6300
