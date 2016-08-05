@@ -29,6 +29,8 @@ The following mods are also included:
     * [chatlog][] ([CC0](mods/chat/chatlog/Readme.txt))
 * crafting/
     * [craft_guide][] ([BSD 3-Clause](mods/crafting/craft_guide/LICENSE))
+* display/
+    * [inventory_plus][] ([BSD 3-Clause](mods/display/inventory_plus/LICENSE))
 * farming/
 	* [farming_plus][] ([WTFPL](mods/farming/farming_plus/README.txt))
 * friendlies/
@@ -89,6 +91,7 @@ The following mods are also included:
     * [carts][] ([WTFPL/CC0](mods/transport/carts/README.txt))
     * [helicopter][] ([GPL](mods/transport/helicopter/LICENSE) / [CC-BY-NC](mods/transport/helicopter/README.md))
 * ui/
+    * [bags][] ([BSD 3-Clause](mods/display/bags/LICENSE))
     * [compass][] (CC-BY-SA / WTFPL)
 * weather/
     * [lightning][] ([LGPL/CC-BY-SA](mods/weather/lightning/README.md))
@@ -109,6 +112,7 @@ The following mods are also included:
 [areas]: https://forum.minetest.net/viewtopic.php?t=7239
 [awards]: https://forum.minetest.net/viewtopic.php?t=4870
 [away]: https://forum.minetest.net/viewtopic.php?t=1211
+[bags]: 
 [biome_lib]: https://forum.minetest.net/viewtopic.php?f=11&t=12999
 [carts]: https://forum.minetest.net/viewtopic.php?t=2451
 [character_creator]: https://forum.minetest.net/viewtopic.php?f=9&t=13138
@@ -123,6 +127,7 @@ The following mods are also included:
 [glow]: https://forum.minetest.net/viewtopic.php?t=6300
 [helicopter]: https://forum.minetest.net/viewtopic.php?t=6183
 [homedecor]: https://forum.minetest.net/viewtopic.php?t=2041
+[inventory_plus]: https://forum.minetest.net/viewtopic.php?t=3100
 [kpgmobs]: https://forum.minetest.net/viewtopic.php?t=8798
 [lightning]: https://forum.minetest.net/viewtopic.php?t=13886
 [mesecons]: https://forum.minetest.net/viewtopic.php?t=628
