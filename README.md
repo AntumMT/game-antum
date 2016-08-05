@@ -87,6 +87,8 @@ The following mods are also included:
 * transport/
     * [carts][] ([WTFPL/CC0](mods/transport/carts/README.txt))
     * [helicopter][] ([GPL](mods/transport/helicopter/LICENSE) / [CC-BY-NC](mods/transport/helicopter/README.md))
+* ui/
+    * [compass][] (CC-BY-SA / WTFPL)
 * weather/
     * [lightning][] ([LGPL/CC-BY-SA](mods/weather/lightning/README.md))
     * [weather][] ([LGPL/WTFPL/CC-BY-SA](mods/weather/weather/README))
@@ -109,6 +111,7 @@ The following mods are also included:
 [character_creator]: https://forum.minetest.net/viewtopic.php?f=9&t=13138
 [chatlog]: https://forum.minetest.net/viewtopic.php?id=6220
 [cme]: https://forum.minetest.net/viewtopic.php?t=8638
+[compass]: https://forum.minetest.net/viewtopic.php?t=3785
 [craft_guide]: https://forum.minetest.net/viewtopic.php?t=2334
 [creeper]: https://forum.minetest.net/viewtopic.php?t=11891
 [farming_plus]: https://forum.minetest.net/viewtopic.php?t=2787
