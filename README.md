@@ -11,6 +11,7 @@ The following mods are also included:
     * barn ([mobf_core modpack][mobf]) ([CC-BY-SA](doc/modpacks/mobf_core/License.txt))
     * building_blocks ([homedecor_modpack][homedecor]) ([LGPL/WTFPL/CC-BY-SA](doc/modpacks/homedecor/LICENSE))
     * chains ([homedecor_modpack][homedecor])
+    * [christmas][] ([MIT](mods/buildsings/christmas/LICENSE.txt))
     * computer ([homedecor_modpack][homedecor])
     * fake_fire ([homedecor_modpack][homedecor])
     * [fort_spikes][] ([MIT/CC0](mods/buildings/fort_spikes/LICENSE))
@@ -100,18 +101,19 @@ The following mods are also included:
 
 
 
-[ambience_ultralite]: https://forum.minetest.net/viewtopic.php?p=151166#p151166
-[areas]: https://forum.minetest.net/viewtopic.php?t=7239
 [3d_armor]: https://forum.minetest.net/viewtopic.php?t=4654
 [adv_spawning]: https://github.com/sapier/adv_spawning
+[ambience_ultralite]: https://forum.minetest.net/viewtopic.php?p=151166#p151166
 [animalmaterials]: https://github.com/sapier/animalmaterials
 [animals_modpack]: https://forum.minetest.net/viewtopic.php?t=629
+[areas]: https://forum.minetest.net/viewtopic.php?t=7239
 [awards]: https://forum.minetest.net/viewtopic.php?t=4870
 [away]: https://forum.minetest.net/viewtopic.php?t=1211
 [biome_lib]: https://forum.minetest.net/viewtopic.php?f=11&t=12999
 [carts]: https://forum.minetest.net/viewtopic.php?t=2451
 [character_creator]: https://forum.minetest.net/viewtopic.php?f=9&t=13138
 [chatlog]: https://forum.minetest.net/viewtopic.php?id=6220
+[christmas]: https://forum.minetest.net/viewtopic.php?t=3950
 [cme]: https://forum.minetest.net/viewtopic.php?t=8638
 [compass]: https://forum.minetest.net/viewtopic.php?t=3785
 [craft_guide]: https://forum.minetest.net/viewtopic.php?t=2334
