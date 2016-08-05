@@ -63,7 +63,7 @@ The following mods are also included:
     * mobf_settings ([mobf_core modpack][mobf]) ([CC-BY-SA](doc/modpacks/mobf_core/License.txt))
 * mobs/
     * [kpgmobs][] ([MIT](mods/mobs/kpgmobs/README.txt))
-* [mydoors (modpack)][mydoors] ([CC-BY / CC-BY-SA / WTFPL](mods/mydoors/mydoors/README.txt))
+* [mydoors (modpack)][mydoors] ([CC-BY / CC-BY-SA / WTFPL](mods/mydoors/mdoors/README.txt))
 * [pipeworks][] ([WTFPL](mods/pipeworks/LICENSE))
 * plantlife/
 * player/
