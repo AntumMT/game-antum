@@ -1,5 +1,5 @@
 skin_character.png: Default Skin
-Ashley_by_loupicate.png:  Ashley
+Ashley_by_loupicate.png: Ashley
 BlueZ_Sam_II_by_philipbenr.png: BlueZ Sam II 
 CaligoPL_by_CaligoPL.png: CaligoPL
 Charizard_by_Ferdi_Napoli.png: Charizard
