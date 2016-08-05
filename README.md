@@ -93,12 +93,14 @@ The following mods are also included:
     * [lightning][] ([LGPL/CC-BY-SA](mods/weather/lightning/README.md))
     * [weather][] ([LGPL/WTFPL/CC-BY-SA](mods/weather/weather/README))
 * world/
+    * [ambience][ambience_ultralite] (WTFPL / [CC-BY / CC-BY-SA / CC-BY-NC-SA / CC0](mods/world/ambience/sounds/SoundLicenses.txt))
     * [areas][] ([LGPL](mods/world/areas/LICENSE.txt))
     * [glow][] (GPL)
     * [worldedge][] ([DWYWPL](mods/world/worldedge/licence.txt))
 
 
 
+[ambience_ultralite]: https://forum.minetest.net/viewtopic.php?p=151166#p151166
 [areas]: https://forum.minetest.net/viewtopic.php?t=7239
 [3d_armor]: https://forum.minetest.net/viewtopic.php?t=4654
 [adv_spawning]: https://github.com/sapier/adv_spawning

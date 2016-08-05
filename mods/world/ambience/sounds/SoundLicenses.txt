@@ -1,0 +1,60 @@
+--------------Music Lic:
+Amethystium:
+--Avalon
+--Ethereal
+--Faraway
+--Strangely Beautiful
+
+"I can't give you a formal license (legal paperwork) for it, but as long as it's non-commercial I can give you my personal blessing and guarantee that you won't get in trouble for using it :) If that's enough just feel free to use any of my tracks. Please credit the music properly though, and include a link to www.amethystium.com and www.am.mu (it's the same site right now, but the latter will be a label/music store site soon).
+Best regards,
+Øystein Ramfjord"
+
+Jordach:
+--dark_ambiance
+--eastern_feeling
+These sounds are used for the Mod for Minetest; Ambiance.
+The included sounds are http://creativecommons.org/licenses/by-nc-sa/3.0/ 
+Not Used:--mtest
+
+-----------Sound Lic:
+--Nightime Sound, Recorded by Mike Koenig, License: Attribution 3.0 http://soundbible.com/951-Nightime.html
+--Crickets At Night Sound, License: Attribution 3.0 | Recorded by Mike Koenig |http://soundbible.com/365-Crickets-At-Night.html
+
+--Medium Pack Of Wolves Howling, License: Public Domain | Recorded by fws.gov, http://soundbible.com/277-Medium-Pack-Of-Wolves-Howling.html
+
+--Horned Owl Sound, License: Attribution 3.0 | Recorded by Mike Koenig , http://soundbible.com/1851-Horned-Owl.html
+
+-- Single Water Droplet Sound, License: Attribution 3.0 | Recorded by Mike Koenig, http://soundbible.com/384-Single-Water-Droplet.html
+
+--HollowWind, Black Boe, Creative Commons 0 License, http://www.freesound.org/people/Black%20Boe/sounds/22331/
+
+--drippingwater*.ogg sounds: CC0, Dripping Water Mod, by kddekadenz, http://minetest.net/forum/viewtopic.php?id=1688
+
+--birdsongnl: the Attribution License, HerbertBoland, http://www.freesound.org/people/HerbertBoland/sounds/28312/  (end)
+
+--robin2:  Attribution License, reinsamba, http://www.freesound.org/people/reinsamba/sounds/32479/  (end)
+
+--scuba1*.ogg- digifishmusic, Attribution License, http://www.freesound.org/people/digifishmusic/sounds/45521/
+
+ComboWind uses:
+--wind-in-the-trees -Attribution License, laurent, http://www.freesound.org/people/laurent/sounds/16995/
+--drygrassInWind- Creative Commons 0 License, felix.blume, http://www.freesound.org/people/felix.blume/sounds/146436/
+
+--Splash: Attribution 3.0 | Recorded by BlastwaveFx.com, http://soundbible.com/546-Fish-Splashing.html
+
+--small_waterfall Attribution License, volivieri, http://www.freesound.org/people/volivieri/sounds/38390/
+
+--Lake_Waves_2*, Attribution License, Benboncan, http://www.freesound.org/people/Benboncan/sounds/67884/
+
+--water_swimming_splashing*, Attribution Noncommercial License, Robinhood76, http://www.freesound.org/people/Robinhood76/sounds/79657/
+
+--earth01a, Creative Commons 0 License., Halion , http://www.freesound.org/people/Halion/sounds/17785
+
+-- Beach, Public Domain,  blastwavefx's , http://www.freesfx.co.uk/info/eula/
+
+--seagull, Attribution Noncommercial License., hazure,  http://www.freesound.org/people/hazure/sounds/23707/,
+
+desert:
+coyote2, Attribution License, rogerforeman, http://www.freesound.org/people/rogerforeman/sounds/68068/
+http://www.freesound.org/people/Proxima4/sounds/104319/
+Desert Monolith.wav, Creative Commons 0 License, Proxima4, http://www.freesound.org/people/Proxima4/sounds/104319/
