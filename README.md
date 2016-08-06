@@ -121,7 +121,7 @@ The following mods are also included:
 [christmas]: https://forum.minetest.net/viewtopic.php?t=3950
 [cme]: https://forum.minetest.net/viewtopic.php?t=8638
 [compass]: https://forum.minetest.net/viewtopic.php?t=3785
-[craft_guide]: https://forum.minetest.net/viewtopic.php?t=2334
+[craft_guide]: https://cornernote.github.io/minetest-craft_guide/
 [creeper]: https://forum.minetest.net/viewtopic.php?t=11891
 [farming_plus]: https://forum.minetest.net/viewtopic.php?t=2787
 [fort_spikes]: https://forum.minetest.net/viewtopic.php?t=14574
