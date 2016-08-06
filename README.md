@@ -30,6 +30,9 @@ The following mods are also included:
 * crafting/
     * [craft_guide][] ([BSD 3-Clause](mods/crafting/craft_guide/LICENSE))
 * display/
+    * [bags][] ([BSD 3-Clause](mods/display/bags/LICENSE))
+    * [compass][] (CC-BY-SA / WTFPL)
+    * [home_gui][] ([BSD 3-Clause](mods/display/home_gui/README.md))
     * [inventory_plus][] ([BSD 3-Clause](mods/display/inventory_plus/LICENSE))
 * farming/
 	* [farming_plus][] ([WTFPL](mods/farming/farming_plus/README.txt))
@@ -93,8 +96,6 @@ The following mods are also included:
     * [carts][] ([WTFPL/CC0](mods/transport/carts/README.txt))
     * [helicopter][] ([GPL](mods/transport/helicopter/LICENSE) / [CC-BY-NC](mods/transport/helicopter/README.md))
 * ui/
-    * [bags][] ([BSD 3-Clause](mods/display/bags/LICENSE))
-    * [compass][] (CC-BY-SA / WTFPL)
 * weather/
     * [lightning][] ([LGPL/CC-BY-SA](mods/weather/lightning/README.md))
     * [weather][] ([LGPL/WTFPL/CC-BY-SA](mods/weather/weather/README))
@@ -128,6 +129,7 @@ The following mods are also included:
 [fort_spikes]: https://forum.minetest.net/viewtopic.php?t=14574
 [glow]: https://forum.minetest.net/viewtopic.php?t=6300
 [helicopter]: https://forum.minetest.net/viewtopic.php?t=6183
+[home_gui]: http://cornernote.github.io/minetest-home_gui/
 [homedecor]: https://forum.minetest.net/viewtopic.php?t=2041
 [intllib]: https://forum.minetest.net/viewtopic.php?t=4929
 [inventory_plus]: https://forum.minetest.net/viewtopic.php?t=3100
