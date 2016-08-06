@@ -4,6 +4,8 @@ A custom game for Minetest/Freeminer
 The game includes the mods from the default [minetest_game](https://github.com/minetest/minetest_game/tree/master/mods)
 
 The following mods are also included:
+* admin/
+    * [invisible][] ([LGPL / CC BY-SA](mods/admin/invisible/readme.txt))
 * [adv_spawning][] ([???](mods/adv_spawning/README.txt))
 * [animalmaterials (modpack)][animalmaterials] (CC-BY-SA / CC0)
 * [awards][] ([LGPL](mods/awards/LICENSE.txt))
@@ -133,6 +135,7 @@ The following mods are also included:
 [home_gui]: http://cornernote.github.io/minetest-home_gui/
 [homedecor]: https://forum.minetest.net/viewtopic.php?t=2041
 [intllib]: https://forum.minetest.net/viewtopic.php?t=4929
+[invisible]: https://forum.minetest.net/viewtopic.php?t=14399
 [inventory_plus]: https://forum.minetest.net/viewtopic.php?t=3100
 [jumping]: https://forum.minetest.net/viewtopic.php?t=2957
 [kpgmobs]: https://forum.minetest.net/viewtopic.php?t=8798
