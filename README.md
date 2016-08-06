@@ -83,6 +83,7 @@ The following mods are also included:
     * [playeranim][] ([WFTLPL](mods/player/playeranim/LICENSE.txt) / [BSD](mods/player/playeranim/LICENSE-original.txt))
     * shields ([3d_armor modpack][3d_armor])
     * technic_armor ([3d_armor modpack][3d_armor])
+    * [throwing][] (WTFPL)
     * [unified_inventory][] ([LGPL/WTFPL](mods/player/unified_inventory/README.md))
     * [walking_light][] ([WTFPL / CC-BY-SA](mods/player/walking_light/README.md))
     * [wardrobe][] ([WTFPL](mods/player/wardrobe/README.txt))
@@ -151,6 +152,7 @@ The following mods are also included:
 [spidermob]: https://forum.minetest.net/viewtopic.php?t=10045
 [stairsplus]: https://forum.minetest.net/viewtopic.php?id=6140
 [technic]: https://forum.minetest.net/viewtopic.php?t=2538
+[throwing]: https://forum.minetest.net/viewtopic.php?t=687
 [tnt]: https://forum.minetest.net/viewtopic.php?id=2902
 [torches]: https://forum.minetest.net/viewtopic.php?t=6099
 [trees]: https://forum.minetest.net/viewtopic.php?f=11&t=5713
