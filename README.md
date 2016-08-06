@@ -53,6 +53,7 @@ The following mods are also included:
     * oerrki ([Creatures MOB-Engine][cme])
     * [spidermob][] ([CC-BY-SA / WTFPL / CC0](mods/hostils/spidermob/LICENSE))
     * zombie ([Creatures MOB-Engine][cme])
+* [intllib][] (WTFPL)
 * lib/
     * [biome_lib][] ([WTFPL](mods/lib/biome_lib/README.md))
 	* [signs_lib][] ([BSD/WTFPL](mods/lib/signs_lib/copyright.txt))
@@ -127,6 +128,7 @@ The following mods are also included:
 [glow]: https://forum.minetest.net/viewtopic.php?t=6300
 [helicopter]: https://forum.minetest.net/viewtopic.php?t=6183
 [homedecor]: https://forum.minetest.net/viewtopic.php?t=2041
+[intllib]: https://forum.minetest.net/viewtopic.php?t=4929
 [inventory_plus]: https://forum.minetest.net/viewtopic.php?t=3100
 [kpgmobs]: https://forum.minetest.net/viewtopic.php?t=8798
 [lightning]: https://forum.minetest.net/viewtopic.php?t=13886
