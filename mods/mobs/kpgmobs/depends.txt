@@ -1,2 +1,3 @@
 default
+animalmaterials
 craft_guide?
