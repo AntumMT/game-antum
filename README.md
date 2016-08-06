@@ -11,7 +11,7 @@ The following mods are also included:
     * barn ([mobf_core modpack][mobf]) ([CC-BY-SA](doc/modpacks/mobf_core/License.txt))
     * building_blocks ([homedecor_modpack][homedecor]) ([LGPL/WTFPL/CC-BY-SA](doc/modpacks/homedecor/LICENSE))
     * chains ([homedecor_modpack][homedecor])
-    * [christmas][] ([MIT](mods/buildsings/christmas/LICENSE.txt))
+    * [christmas][] ([MIT](mods/buildings/christmas/LICENSE.txt))
     * computer ([homedecor_modpack][homedecor])
     * fake_fire ([homedecor_modpack][homedecor])
     * [fort_spikes][] ([MIT/CC0](mods/buildings/fort_spikes/LICENSE))
