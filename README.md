@@ -76,6 +76,7 @@ The following mods are also included:
     * 3d_armor_stand ([3d_armor modpack][3d_armor])
     * [character_creator][] ([WTFPL/CC-BY-SA](mods/player/character_creator/LICENSE.md))
     * hazmat_suit ([3d_armor modpack][3d_armor])
+    * [jumping][] ([GPL](mods/player/jumping/README.md))
     * [playeranim][] ([WFTLPL](mods/player/playeranim/LICENSE.txt) / [BSD](mods/player/playeranim/LICENSE-original.txt))
     * shields ([3d_armor modpack][3d_armor])
     * technic_armor ([3d_armor modpack][3d_armor])
@@ -130,6 +131,7 @@ The following mods are also included:
 [homedecor]: https://forum.minetest.net/viewtopic.php?t=2041
 [intllib]: https://forum.minetest.net/viewtopic.php?t=4929
 [inventory_plus]: https://forum.minetest.net/viewtopic.php?t=3100
+[jumping]: https://forum.minetest.net/viewtopic.php?t=2957
 [kpgmobs]: https://forum.minetest.net/viewtopic.php?t=8798
 [lightning]: https://forum.minetest.net/viewtopic.php?t=13886
 [mesecons]: https://forum.minetest.net/viewtopic.php?t=628
