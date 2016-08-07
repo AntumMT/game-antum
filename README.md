@@ -68,6 +68,7 @@ The following mods are also included:
 * materials/
 	* [moreores][] ([zlib/CC-BY-SA](mods/materials/moreores/README.md))
 	* [quartz][] ([MIT](mods/materials/quartz/LICENSE.txt))
+	* [stained_wood][] ([MIT](mods/materials/stained_wood/init.lua))
 	* [unifieddyes][] ([GPL](mods/materials/unifieddyes/LICENSE))
 * [mesecons (modpack)][mesecons] ([LGPL/CC-BY-SA](mods/mesecons/COPYING.txt))
 * mob_engines/
@@ -156,6 +157,7 @@ The following mods are also included:
 [quartz]: https://forum.minetest.net/viewtopic.php?t=5682
 [signs_lib]: https://forum.minetest.net/viewtopic.php?f=11&t=13762
 [spidermob]: https://forum.minetest.net/viewtopic.php?t=10045
+[stained_wood]: mods/materials/stained_wood
 [stairsplus]: https://forum.minetest.net/viewtopic.php?id=6140
 [technic]: https://forum.minetest.net/viewtopic.php?t=2538
 [throwing]: https://forum.minetest.net/viewtopic.php?t=687
