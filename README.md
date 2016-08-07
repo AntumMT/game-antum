@@ -46,6 +46,8 @@ The following mods are also included:
     * animal_rat ([animals_modpack][]) ([CC-BY-SA / CC0](mods/friendlies/animal_rat/License.txt))
     * chicken ([Creatures MOB-Engine][cme])
     * sheep ([Creatures MOB-Engine][cme])
+* furniture/
+    * [trampoline][] ([GPL](mods/furniture/trampoline/LICENSE.txt))
 * hostils/
     * animal_creeper ([animals_modpack][]) ([CC-BY-SA](mods/hostils/animal_creeper/License.txt))
     * [creeper][] ([WTFPL](mods/hostils/creeper/LICENSE.md))
@@ -82,7 +84,6 @@ The following mods are also included:
     * 3d_armor_stand ([3d_armor modpack][3d_armor])
     * [character_creator][] ([WTFPL/CC-BY-SA](mods/player/character_creator/LICENSE.md))
     * hazmat_suit ([3d_armor modpack][3d_armor])
-    * [jumping][] ([GPL](mods/player/jumping/README.md))
     * [playeranim][] ([WFTLPL](mods/player/playeranim/LICENSE.txt) / [BSD](mods/player/playeranim/LICENSE-original.txt))
     * shields ([3d_armor modpack][3d_armor])
     * technic_armor ([3d_armor modpack][3d_armor])
@@ -160,6 +161,7 @@ The following mods are also included:
 [throwing]: https://forum.minetest.net/viewtopic.php?t=687
 [tnt]: https://forum.minetest.net/viewtopic.php?id=2902
 [torches]: https://forum.minetest.net/viewtopic.php?t=6099
+[trampoline]: mods/furniture/trampoline
 [trees]: https://forum.minetest.net/viewtopic.php?f=11&t=5713
 [unified_inventory]: https://forum.minetest.net/viewtopic.php?id=3933
 [unifieddyes]: https://forum.minetest.net/viewtopic.php?t=2178
