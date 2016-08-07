@@ -11,60 +11,59 @@ License: [GPLv3](LICENSE.txt)
 
 
 ### Crafting:
-
-DL = default:leaves
-DW = default:wood
-DS = default:stick
-WR = my_wood_door:wood_red
-WB = my_wood_door:wood_brown
+* DL = default:leaves
+* DW = default:wood
+* DS = default:stick
+* WR = my_wood_door:wood_red
+* WB = my_wood_door:wood_brown
 
 
 #### Trampoline
 
- -----------------------
-|		|		|		|
-|  DL	|  DL	|  DL	|
-|		|		|		|
-|-----------------------|
-|		|		|		|
-|  DW	|  DW	|  DW	|
-|		|		|		|
-|-----------------------|
-|		|		|		|
-|  DS	|  DS	|  DS	|
-|		|		|		|
+ -----------------------<br>
+|		|		|		|<br>
+|  DL	|  DL	|  DL	|<br>
+|		|		|		|<br>
+|-----------------------|<br>
+|		|		|		|<br>
+|  DW	|  DW	|  DW	|<br>
+|		|		|		|<br>
+|-----------------------|<br>
+|		|		|		|<br>
+|  DS	|  DS	|  DS	|<br>
+|		|		|		|<br>
  -----------------------
 
 
 #### Red Trampoline
 
- -----------------------
-|		|		|		|
-|  DL	|  DL	|  DL	|
-|		|		|		|
-|-----------------------|
-|		|		|		|
-|  WR	|  WR	|  WR	|
-|		|		|		|
-|-----------------------|
-|		|		|		|
-|  DS	|  DS	|  DS	|
-|		|		|		|
+ -----------------------<br>
+|		|		|		|<br>
+|  DL	|  DL	|  DL	|<br>
+|		|		|		|<br>
+|-----------------------|<br>
+|		|		|		|<br>
+|  WR	|  WR	|  WR	|<br>
+|		|		|		|<br>
+|-----------------------|<br>
+|		|		|		|<br>
+|  DS	|  DS	|  DS	|<br>
+|		|		|		|<br>
  -----------------------
 
 
 #### Brown Trampoline
 
- -----------------------
-|		|		|		|
-|  DL	|  DL	|  DL	|
-|		|		|		|
-|-----------------------|
-|		|		|		|
-|  WB	|  WB	|  WB	|
-|		|		|		|
-|-----------------------|
-|		|		|		|
-|  DS	|  DS	|  DS	|
-|		|		|		|
+ -----------------------<br>
+|		|		|		|<br>
+|  DL	|  DL	|  DL	|<br>
+|		|		|		|<br>
+|-----------------------|<br>
+|		|		|		|<br>
+|  WB	|  WB	|  WB	|<br>
+|		|		|		|<br>
+|-----------------------|<br>
+|		|		|		|<br>
+|  DS	|  DS	|  DS	|<br>
+|		|		|		|<br>
  -----------------------
