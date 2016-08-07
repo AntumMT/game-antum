@@ -35,9 +35,9 @@ addColoredTrampNode = function(color, bounce)
 		paramtype = "light",
 		on_punch = trampoline_punch,
 		tiles = {
-			"jumping_trampoline_top.png",
-			"jumping_trampoline_bottom.png",
-			"jumping_trampoline_sides.png^trampoline_sides_overlay_" .. color .. ".png"
+			"top.png",
+			"bottom.png",
+			"sides.png^sides_overlay_" .. color .. ".png"
 		},
 		groups = {dig_immediate=2, bouncy=bounce, fall_damage_add_percent=-70},
 	})
@@ -64,9 +64,9 @@ minetest.register_node("trampoline:trampoline", {
 	paramtype = "light",
 	on_punch = trampoline_punch,
 	tiles = {
-		"jumping_trampoline_top.png",
-		"jumping_trampoline_bottom.png",
-		"jumping_trampoline_sides.png^jumping_trampoline_sides_overlay.png"
+		"top.png",
+		"bottom.png",
+		"sides.png^sides_overlay.png"
 	},
 	groups = {dig_immediate=2, bouncy=20+20, fall_damage_add_percent=-70},
 })
