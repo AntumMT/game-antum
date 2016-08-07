@@ -1,5 +1,5 @@
 
-local modname = "jumping"
+local modname = "trampoline"
 
 core.log("action", "[MOD] Loading '" .. modname .. "' ...")
 
@@ -42,7 +42,7 @@ local default_bounce = 20
 addColoredTrampNode = function(color, bounce)
 	local bounce = default_bounce * bounce
 	
-	minetest.register_node("jumping:trampoline_" .. color, {
+	minetest.register_node("trampoline::trampoline_" .. color, {
 		description = color:gsub("^%l", string.upper) .. " trampoline",
 		drawtype = "nodebox",
 		node_box = trampolinebox,
@@ -60,7 +60,7 @@ end
 
 addColoredTrampCraft = function(color)
 	minetest.register_craft({
-		output = "jumping:trampoline_" .. color,
+		output = "trampoline:trampoline_" .. color,
 		recipe = {
 			{"default:leaves", "default:leaves", "default:leaves"},
 			{"my_door_wood:wood_" .. color, "my_door_wood:wood_" .. color, "my_door_wood:wood_" .. color},
@@ -71,7 +71,7 @@ end
 
 
 
-minetest.register_node("jumping:trampoline", {
+minetest.register_node("trampoline:trampoline", {
 	description = "Trampoline",
 	drawtype = "nodebox",
 	node_box = trampolinebox,
@@ -87,7 +87,7 @@ minetest.register_node("jumping:trampoline", {
 })
 
 minetest.register_craft({
-	output = "jumping:trampoline",
+	output = "trampoline:trampoline",
 	recipe = {
 		{"default:leaves", "default:leaves", "default:leaves"},
 		{"default:wood", "default:wood", "default:wood"},
@@ -117,65 +117,5 @@ if minetest.get_modpath("my_door_wood") ~= nil then
 	end
 end
 
---[[
 
-for i = 1, 6 do
-	minetest.register_node("jumping:trampoline_"..trampoline_colors[i], {
-		description = "Trampoline",
-		drawtype = "nodebox",
-		node_box = trampolinebox,
-		selection_box = trampolinebox,
-		paramtype = "light",
-		on_punch = trampoline_punch,
-		tiles = {
-			"jumping_trampoline_top.png",
-			"jumping_trampoline_bottom.png",
-			"jumping_trampoline_sides.png^jumping_trampoline_sides_overlay"..i..".png"
-		},
-		groups = {dig_immediate=2, bouncy=20+i*20, fall_damage_add_percent=-70},
-	})
-end
---]]
-
---[[
-for i = 1, 6 do
-	tcolor = trampoline_colors[i]
-	twood = "my_door_wood:wood_" .. tcolor
-	minetest.register_craft({
-		output = "jumping:trampoline_" .. tcolor,
-		recipe = {
-			{twood, twood, twood},
-			{"default:leaves", "default:leaves", "default:leaves"},
-			{"default:stick", "default:stick", "default:stick"}
-		}
-	})
-end
-tcolor = nil
-twood = nil
---]]
-
-minetest.register_node("jumping:cushion", {
-	description = "Cushion",
-	drawtype = "nodebox",
-	node_box = cushionbox,
-	selection_box = cushionbox,
-	paramtype = "light",
-	tiles = {
-		"jumping_cushion_tb.png",
-		"jumping_cushion_tb.png",
-		"jumping_cushion_sides.png"
-	},
-	groups = {dig_immediate=2, disable_jump=1, fall_damage_add_percent=-100},
-})
-
-minetest.register_craft({
-	output = "jumping:cushion",
-	recipe = {
-		{"default:leaves", "default:leaves", "default:leaves"},
-		{"default:leaves", "default:leaves", "default:leaves"},
-		{"default:stick", "default:stick", "default:stick"}
-	}
-})
-
-
-core.log("action", "[MOD] 'jumping' loaded")
+core.log("action", "[MOD] '.. modname .. "' loaded")
