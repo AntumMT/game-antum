@@ -1,3 +1,14 @@
+
+local modname = "jumping"
+
+core.log("action", "[MOD] Loading '" .. modname .. "' ...")
+
+
+logMessage = function(message)
+	core.log("action", "[" .. modname .. "] " .. message)
+end
+
+
 local trampolinebox = {
 	type = "fixed",
 	fixed = {
@@ -24,6 +35,42 @@ local trampoline_punch = function(pos, node)
 	minetest.add_node(pos, {name = string.sub(node.name, 1, #node.name - 1)})
 end
 
+
+
+local default_bounce = 20
+
+addColoredTrampNode = function(color, bounce)
+	local bounce = default_bounce * bounce
+	
+	minetest.register_node("jumping:trampoline_" .. color, {
+		description = color:gsub("^%l", string.upper) .. " trampoline",
+		drawtype = "nodebox",
+		node_box = trampolinebox,
+		selection_box = trampolinebox,
+		paramtype = "light",
+		on_punch = trampoline_punch,
+		tiles = {
+			"jumping_trampoline_top.png",
+			"jumping_trampoline_bottom.png",
+			"jumping_trampoline_sides.png^trampoline_sides_overlay_" .. color .. ".png"
+		},
+		groups = {dig_immediate=2, bouncy=bounce, fall_damage_add_percent=-70},
+	})
+end
+
+addColoredTrampCraft = function(color)
+	minetest.register_craft({
+		output = "jumping:trampoline_" .. color,
+		recipe = {
+			{"default:leaves", "default:leaves", "default:leaves"},
+			{"my_door_wood:wood_" .. color, "my_door_wood:wood_" .. color, "my_door_wood:wood_" .. color},
+			{"default:stick", "default:stick", "default:stick"}
+		}
+	})
+end
+
+
+
 minetest.register_node("jumping:trampoline", {
 	description = "Trampoline",
 	drawtype = "nodebox",
@@ -42,15 +89,35 @@ minetest.register_node("jumping:trampoline", {
 minetest.register_craft({
 	output = "jumping:trampoline",
 	recipe = {
-		{"group:wood", "group:wood", "group:wood"},
 		{"default:leaves", "default:leaves", "default:leaves"},
+		{"default:wood", "default:wood", "default:wood"},
 		{"default:stick", "default:stick", "default:stick"}
 	}
 })
 
--- Colored trampolines
+
+-- *** Colored Trampolines ***
+
+if minetest.get_modpath("my_door_wood") ~= nil then
+	local color_count = 0
+	local mydoor_colors = {"red", "brown"}
+	
+	-- Get the number of tramp colors available
+	for _ in pairs(mydoor_colors) do
+		color_count = color_count + 1
+	end
+	
+	-- Add all available trampoline colors
+	for i = 1, color_count do
+		addColoredTrampNode(mydoor_colors[i], i+1)
+		
+		addColoredTrampCraft(mydoor_colors[i])
+		
+		logMessage("Registered '" .. mydoor_colors[i]:gsub("^%l", string.upper) .. " trampoline'")
+	end
+end
+
 --[[
-trampoline_colors = {"purple", "blue", "yellow", "brown", "red", "green"}
 
 for i = 1, 6 do
 	minetest.register_node("jumping:trampoline_"..trampoline_colors[i], {
@@ -109,3 +176,6 @@ minetest.register_craft({
 		{"default:stick", "default:stick", "default:stick"}
 	}
 })
+
+
+core.log("action", "[MOD] 'jumping' loaded")
