@@ -67,3 +67,7 @@ License: [GPLv3](LICENSE.txt)
 |  DS	|  DS	|  DS	|<br>
 |		|		|		|<br>
  -----------------------
+
+### Known Bugs:
+
+* Colored trampolines do not bounce higher than default like intended
