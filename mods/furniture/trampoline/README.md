@@ -1,4 +1,4 @@
-* Trampoline
+# Trampoline
 
 Forked from [Jeija's jumping mod](https://forum.minetest.net/viewtopic.php?t=2957).
 
