@@ -18,14 +18,42 @@ local cushionbox = {
 }
 
 local trampoline_punch = function(pos, node)
-	local id = string.sub(node.name, #node.name)
-	id = id + 1
-	if id == 7 then id = 1 end
-	minetest.add_node(pos, {name = string.sub(node.name, 1, #node.name - 1)..id})
+--	local id = string.sub(node.name, #node.name)
+--	id = id + 1
+--	if id == 7 then id = 1 end
+	minetest.add_node(pos, {name = string.sub(node.name, 1, #node.name - 1)})
 end
 
+minetest.register_node("jumping:trampoline", {
+	description = "Trampoline",
+	drawtype = "nodebox",
+	node_box = trampolinebox,
+	selection_box = trampolinebox,
+	paramtype = "light",
+	on_punch = trampoline_punch,
+	tiles = {
+		"jumping_trampoline_top.png",
+		"jumping_trampoline_bottom.png",
+		"jumping_trampoline_sides.png^jumping_trampoline_sides_overlay.png"
+	},
+	groups = {dig_immediate=2, bouncy=20+20, fall_damage_add_percent=-70},
+})
+
+minetest.register_craft({
+	output = "jumping:trampoline",
+	recipe = {
+		{"group:wood", "group:wood", "group:wood"},
+		{"default:leaves", "default:leaves", "default:leaves"},
+		{"default:stick", "default:stick", "default:stick"}
+	}
+})
+
+-- Colored trampolines
+--[[
+trampoline_colors = {"purple", "blue", "yellow", "brown", "red", "green"}
+
 for i = 1, 6 do
-	minetest.register_node("jumping:trampoline"..i, {
+	minetest.register_node("jumping:trampoline_"..trampoline_colors[i], {
 		description = "Trampoline",
 		drawtype = "nodebox",
 		node_box = trampolinebox,
@@ -40,6 +68,24 @@ for i = 1, 6 do
 		groups = {dig_immediate=2, bouncy=20+i*20, fall_damage_add_percent=-70},
 	})
 end
+--]]
+
+--[[
+for i = 1, 6 do
+	tcolor = trampoline_colors[i]
+	twood = "my_door_wood:wood_" .. tcolor
+	minetest.register_craft({
+		output = "jumping:trampoline_" .. tcolor,
+		recipe = {
+			{twood, twood, twood},
+			{"default:leaves", "default:leaves", "default:leaves"},
+			{"default:stick", "default:stick", "default:stick"}
+		}
+	})
+end
+tcolor = nil
+twood = nil
+--]]
 
 minetest.register_node("jumping:cushion", {
 	description = "Cushion",
@@ -53,15 +99,6 @@ minetest.register_node("jumping:cushion", {
 		"jumping_cushion_sides.png"
 	},
 	groups = {dig_immediate=2, disable_jump=1, fall_damage_add_percent=-100},
-})
-
-minetest.register_craft({
-	output = "jumping:trampoline1",
-	recipe = {
-		{"default:wood", "default:wood", "default:wood"},
-		{"default:leaves", "default:leaves", "default:leaves"},
-		{"default:stick", "default:stick", "default:stick"}
-	}
 })
 
 minetest.register_craft({
