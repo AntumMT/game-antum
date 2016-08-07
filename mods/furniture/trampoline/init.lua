@@ -28,21 +28,12 @@ local cushionbox = {
 		}
 }
 
-local trampoline_punch = function(pos, node)
---	local id = string.sub(node.name, #node.name)
---	id = id + 1
---	if id == 7 then id = 1 end
-	minetest.add_node(pos, {name = string.sub(node.name, 1, #node.name - 1)})
-end
-
-
-
 local default_bounce = 20
 
 addColoredTrampNode = function(color, bounce)
 	local bounce = default_bounce * bounce
 	
-	minetest.register_node("trampoline::trampoline_" .. color, {
+	minetest.register_node("trampoline:trampoline_" .. color, {
 		description = color:gsub("^%l", string.upper) .. " trampoline",
 		drawtype = "nodebox",
 		node_box = trampolinebox,
@@ -118,4 +109,4 @@ if minetest.get_modpath("my_door_wood") ~= nil then
 end
 
 
-core.log("action", "[MOD] '.. modname .. "' loaded")
+core.log("action", "[MOD] '" .. modname .. "' loaded")
