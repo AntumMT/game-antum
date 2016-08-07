@@ -1,7 +1,5 @@
-Jumping
+* Trampoline
 
-Jumping is a mod for minetest that adds trampolines, cushions, ...
+Forked from [Jeija's jumping mod](https://forum.minetest.net/viewtopic.php?t=2957).
 
-License: GPLv3
-
-Creator: Jeija
+License: [GPLv3](LICENSE.txt)
