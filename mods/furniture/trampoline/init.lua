@@ -21,12 +21,6 @@ local trampolinebox = {
 		}
 }
 
-local cushionbox = {
-	type = "fixed",
-	fixed = {
-		{-0.5, -0.5, -0.5,  0.5, -0.3,  0.5},
-		}
-}
 
 local default_bounce = 20
 
