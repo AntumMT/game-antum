@@ -26,6 +26,7 @@ The following mods are also included:
     * [moreblocks][] ([zlib](mods/buildings/moreblocks/LICENSE.md))
     * plasmascreen ([homedecor_modpack][homedecor])
     * [stairsplus][] ([zlib](mods/buildings/stairsplus/LICENSE.txt))
+* [campfire][] (WTFPL)
 * chat/
     * [away][] ([GPL](mods/chat/away/COPYING))
     * [chatlog][] ([CC0](mods/chat/chatlog/Readme.txt))
@@ -120,6 +121,7 @@ The following mods are also included:
 [away]: https://forum.minetest.net/viewtopic.php?t=1211
 [bags]: http://cornernote.github.io/minetest-bags/
 [biome_lib]: https://forum.minetest.net/viewtopic.php?f=11&t=12999
+[campfire]: https://forum.minetest.net/viewtopic.php?t=3794
 [carts]: https://forum.minetest.net/viewtopic.php?t=2451
 [character_creator]: https://forum.minetest.net/viewtopic.php?f=9&t=13138
 [chatlog]: https://forum.minetest.net/viewtopic.php?id=6220
