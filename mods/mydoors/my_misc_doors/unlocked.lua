@@ -38,9 +38,9 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "my_misc_doors:door2 1",
 	recipe = {
-		{"stained_wood:grey", "stained_wood:grey", ""},
-		{"stained_wood:grey", "stained_wood:grey", ""},
-		{"stained_wood:grey", "stained_wood:grey", ""}
+		{"stained_wood:gray", "stained_wood:gray", ""},
+		{"stained_wood:gray", "stained_wood:gray", ""},
+		{"stained_wood:gray", "stained_wood:gray", ""}
 	}
 })
 minetest.register_craft({

@@ -39,9 +39,9 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "my_misc_doors:door2_locked 1",
 	recipe = {
-		{"stained_wood:grey", "stained_wood:grey", ""},
-		{"stained_wood:grey", "stained_wood:grey", "default:steel_ingot"},
-		{"stained_wood:grey", "stained_wood:grey", ""}
+		{"stained_wood:gray", "stained_wood:gray", ""},
+		{"stained_wood:gray", "stained_wood:gray", "default:steel_ingot"},
+		{"stained_wood:gray", "stained_wood:gray", ""}
 	}
 })
 minetest.register_craft({
