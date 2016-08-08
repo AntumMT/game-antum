@@ -15,6 +15,7 @@ The following mods are also included:
     * chains ([homedecor_modpack][homedecor])
     * [christmas][] ([MIT](mods/buildings/christmas/LICENSE.txt))
     * computer ([homedecor_modpack][homedecor])
+    * [elevator][] ([WTFPL](mods/buildings/elevator/readme.txt))
     * fake_fire ([homedecor_modpack][homedecor])
     * [fort_spikes][] ([MIT/CC0](mods/buildings/fort_spikes/LICENSE))
     * homedecor([homedecor_modpack][homedecor])
@@ -138,6 +139,7 @@ The following mods are also included:
 [compassgps]: https://forum.minetest.net/viewtopic.php?t=9373
 [craft_guide]: https://cornernote.github.io/minetest-craft_guide/
 [creeper]: https://forum.minetest.net/viewtopic.php?t=11891
+[elevator]: https://forum.minetest.net/viewtopic.php?t=12944
 [farming_plus]: https://forum.minetest.net/viewtopic.php?t=2787
 [fort_spikes]: https://forum.minetest.net/viewtopic.php?t=14574
 [glow]: https://forum.minetest.net/viewtopic.php?t=6300
