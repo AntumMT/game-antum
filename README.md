@@ -37,7 +37,6 @@ The following mods are also included:
     * [craft_guide][] ([BSD 3-Clause](mods/crafting/craft_guide/LICENSE))
 * display/
     * [bags][] ([BSD 3-Clause](mods/display/bags/LICENSE))
-    * [compass][] (CC-BY-SA / WTFPL)
     * [home_gui][] ([BSD 3-Clause](mods/display/home_gui/README.md))
     * [inventory_plus][] ([BSD 3-Clause](mods/display/inventory_plus/LICENSE))
 * farming/
@@ -98,6 +97,7 @@ The following mods are also included:
     * wieldview ([3d_armor modpack][3d_armor])
 * [technic (modpack)][technic] ([LGPL](mods/technic/README.md))
 * tools/
+	* [compassgps][] ([WTFPL / CC0 / CC BY-SA](mods/tools/compassgps/README.md))
     * [tnt][] ([WTFPL](mods/tools/tnt/README.txt))
     * [torches][] ([LGPL/CC-BY-SA](mods/tools/torches/README.txt))
     * [workbench][] ([GPL/WTFPL](mods/tools/workbench/LICENSE))
@@ -133,6 +133,7 @@ The following mods are also included:
 [christmas]: https://forum.minetest.net/viewtopic.php?t=3950
 [cme]: https://forum.minetest.net/viewtopic.php?t=8638
 [compass]: https://forum.minetest.net/viewtopic.php?t=3785
+[compassgps]: https://forum.minetest.net/viewtopic.php?t=9373
 [craft_guide]: https://cornernote.github.io/minetest-craft_guide/
 [creeper]: https://forum.minetest.net/viewtopic.php?t=11891
 [farming_plus]: https://forum.minetest.net/viewtopic.php?t=2787
