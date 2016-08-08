@@ -60,7 +60,7 @@ end
 
 -- Set stained wood colors
 wood_colors = {
-	"black", "blue", "brown", "gray", "green", "violet", "red",
+	"black", "blue", "brown", "gray", "green", "red", "violet",
 	"white", "yellow"}
 
 wood_colors_count = getWoodColorsCount(wood_colors)
