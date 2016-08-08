@@ -28,11 +28,6 @@ addStainedWoodCraft = function(color)
 	local node_name = "stained_wood:" .. color
 	local dye_name = "dye:" .. color
 	
-	-- FIXME: Change stained wood name to "stained_wood:violet"?
-	if color == "purple" then
-		dye_name = "dye:violet"
-	end
-	
 	minetest.register_craft({
 		type = "shapeless",
 		output = node_name,
