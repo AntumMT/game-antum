@@ -31,4 +31,4 @@ License: [GPLv3](LICENSE.txt)
 |		|		|		|
  -----------------------
 </pre>
-<pre>To craft colored trampolines, replace "default:wood" with "stained_wood:<color>".</pre>
+To craft colored trampolines, replace "default:wood" with "stained_wood:[color]".
