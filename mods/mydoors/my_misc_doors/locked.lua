@@ -30,18 +30,18 @@ end
 minetest.register_craft({
 	output = "my_misc_doors:door1_locked 1",
 	recipe = {
-		{"my_door_wood:wood_white", "my_door_wood:wood_white", ""},
-		{"my_door_wood:wood_white", "my_door_wood:wood_white", "default:steel_ingot"},
-		{"my_door_wood:wood_white", "my_door_wood:wood_white", ""}
+		{"stained_wood:white", "stained_wood:white", ""},
+		{"stained_wood:white", "stained_wood:white", "default:steel_ingot"},
+		{"stained_wood:white", "stained_wood:white", ""}
 	}
 })
 
 minetest.register_craft({
 	output = "my_misc_doors:door2_locked 1",
 	recipe = {
-		{"my_door_wood:wood_grey", "my_door_wood:wood_grey", ""},
-		{"my_door_wood:wood_grey", "my_door_wood:wood_grey", "default:steel_ingot"},
-		{"my_door_wood:wood_grey", "my_door_wood:wood_grey", ""}
+		{"stained_wood:grey", "stained_wood:grey", ""},
+		{"stained_wood:grey", "stained_wood:grey", "default:steel_ingot"},
+		{"stained_wood:grey", "stained_wood:grey", ""}
 	}
 })
 minetest.register_craft({
@@ -63,9 +63,9 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "my_misc_doors:door5_locked 1",
 	recipe = {
-		{"my_door_wood:wood_white", "wool:red", ""},
-		{"my_door_wood:wood_white", "my_door_wood:wood_white", "default:steel_ingot"},
-		{"my_door_wood:wood_white", "wool:red", ""}
+		{"stained_wood:white", "wool:red", ""},
+		{"stained_wood:white", "stained_wood:white", "default:steel_ingot"},
+		{"stained_wood:white", "wool:red", ""}
 	}
 })
 minetest.register_craft({
