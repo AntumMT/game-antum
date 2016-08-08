@@ -7,7 +7,7 @@ A set of colored wood meant to replace & add to [my_door_wood][] from the
 Dyed woods are derived from default_aspen_wood which is dereived from default_pine_wood.
 
 [default_aspen_wood][]:
-* Copyright [sofar][]
+* Created by [sofar][]
 * [CC BY-SA 3.0][]
 
 [default_pine_wood][]:
