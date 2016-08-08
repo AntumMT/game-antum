@@ -1,2 +1,3 @@
 default
-craft_guide?
+fire
+wool
