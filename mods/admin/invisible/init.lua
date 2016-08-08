@@ -57,7 +57,7 @@ end
 
 minetest.register_tool("invisible:tool", {
 	description = "invisible",
-	inventory_image = "default_stick.png",
+	inventory_image = "wand.png",
 	groups = {not_in_creative_inventory=1},
 	on_use = function(itemstack, user, pointed_thing)
 		if minetest.check_player_privs(user:get_player_name(), {invisible=true}) then
