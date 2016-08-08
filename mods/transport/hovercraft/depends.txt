@@ -1,4 +1,5 @@
 default
 wool
 dye
+technic
 craft_guide?

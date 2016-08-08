@@ -51,7 +51,7 @@ hover:register_hovercraft("hovercraft:hover_yellow" ,{
 minetest.register_craft({
 	output = 'hovercraft:hover_red',
 	recipe = {
-		{'', '', 'default:steelblock'},
+		{'', 'technic:motor', 'default:steelblock'},
 		{'wool:red', 'wool:red', 'wool:red'},
 		{'wool:black', 'wool:black', 'wool:black'},
 	}
@@ -60,7 +60,7 @@ minetest.register_craft({
 minetest.register_craft({
 	output = 'hovercraft:hover_blue',
 	recipe = {
-		{'', '', 'default:steelblock'},
+		{'', 'technic:motor', 'default:steelblock'},
 		{'wool:blue', 'wool:blue', 'wool:blue'},
 		{'wool:black', 'wool:black', 'wool:black'},
 	}
@@ -69,7 +69,7 @@ minetest.register_craft({
 minetest.register_craft({
 	output = 'hovercraft:hover_green',
 	recipe = {
-		{'', '', 'default:steelblock'},
+		{'', 'technic:motor', 'default:steelblock'},
 		{'wool:green', 'wool:green', 'wool:green'},
 		{'wool:black', 'wool:black', 'wool:black'},
 	}
@@ -78,7 +78,7 @@ minetest.register_craft({
 minetest.register_craft({
 	output = 'hovercraft:hover_yellow',
 	recipe = {
-		{'', '', 'default:steelblock'},
+		{'', 'technic:motor', 'default:steelblock'},
 		{'wool:yellow', 'wool:yellow', 'wool:yellow'},
 		{'wool:black', 'wool:black', 'wool:black'},
 	}
