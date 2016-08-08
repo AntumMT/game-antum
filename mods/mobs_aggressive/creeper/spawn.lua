@@ -1,8 +1,8 @@
 minetest.register_abm({
 	nodenames = {"default:dirt_with_grass","default:stone"},
 	neighbors = {"air"},
-	interval = 15,
-	chance = 4500,
+	interval = 60,
+	chance = 2250,
 	action = function(pos, node, _, active_object_count_wider)
 		if active_object_count_wider > 5 then
 			return
