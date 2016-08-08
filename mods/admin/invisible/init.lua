@@ -1,7 +1,5 @@
 -- Code by UjEdwin
 
-minetest.register_alias("i", "invisible:tool")
-
 invisible={time=0,armor=minetest.get_modpath("3d_armor")}
 minetest.register_privilege("invisible", {
 	description = "Be invisible",
@@ -55,8 +53,8 @@ invisible.toogle=function(user,sneak)
 	end
 end
 
-minetest.register_tool("invisible:tool", {
-	description = "invisible",
+minetest.register_tool("invisible:wand", {
+	description = "Invisibility Wand",
 	inventory_image = "wand.png",
 	groups = {not_in_creative_inventory=1},
 	on_use = function(itemstack, user, pointed_thing)
