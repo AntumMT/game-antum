@@ -22,33 +22,26 @@
 --  SOFTWARE.
 
 
-local modname = "stained_wood"
 
-core.log("action", "[MOD] Loading '" .. modname .. "' ...")
-
-
-logMessage = function(message)
-	core.log("action", "[" .. modname .. "] " .. message)
+-- Define function for adding a craft recipe for stained woods
+addStainedWoodCraft = function(color)
+	local node_name = "stained_wood:" .. color
+	local dye_name = "dye:" .. color
+	
+	-- FIXME: Change stained wood name to "stained_wood:violet"?
+	if color == "purple" then
+		dye_name = "violet"
+	end
+	
+	minetest.register_craft({
+		type = "shapeless",
+		output = node_name,
+		recipe = {"default:wood", dye_name},
+	})
 end
 
 
--- Get stained_wood mod path
-local modpath = minetest.get_modpath("stained_wood")
-
--- Initialize stained_wood
-stained_wood = {}
-
-
--- Define function to titleize labels (for description purposes)
-titleize = function(string)
-	local string = string:gsub("^%l", string.upper)
-	return string
+-- Register all stained wood craft recipes
+for i = 1, wood_colors_count do
+	addStainedWoodCraft(wood_colors[i])
 end
-
-
--- Load sub-scripts
-dofile(modpath .. "/nodes.lua")
-dofile(modpath .. "/crafting.lua")
-
-
-core.log("action", "[MOD] '" .. modname .. "' loaded")

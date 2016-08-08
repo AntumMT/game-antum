@@ -51,24 +51,6 @@ addStainedWood = function(color)
 end
 
 
--- Define function for adding a craft recipe for stained woods
-addStainedWoodCraft = function(color)
-	local node_name = "stained_wood:" .. color
-	local dye_name = "dye:" .. color
-	
-	-- FIXME: Change stained wood name to "stained_wood:violet"?
-	if color == "purple" then
-		dye_name = "violet"
-	end
-	
-	minetest.register_craft({
-		type = "shapeless",
-		output = node_name,
-		recipe = {"default:wood", dye_name},
-	})
-end
-
-
 local wood_colors = {"blue", "brown", "gray", "green", "purple", "red",
 	"white", "yellow"}
 
@@ -79,10 +61,4 @@ logMessage("nodes.lua: " .. wood_colors_count .. " wood colors loaded")
 -- Register all stained wood
 for i = 1, wood_colors_count do
 	addStainedWood(wood_colors[i])
-end
-
-
--- Register all stained wood craft recipes
-for i = 1, wood_colors_count do
-	addStainedWoodCraft(wood_colors[i])
 end
