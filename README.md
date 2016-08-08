@@ -24,6 +24,9 @@ The following mods are also included:
     * lavalamp ([homedecor_modpack][homedecor])
     * lrfurn ([homedecor_modpack][homedecor])
     * [moreblocks][] ([zlib](mods/buildings/moreblocks/LICENSE.md))
+    * mdoors ([mydoors modpack][mydoors]) ([CC-BY / CC-BY-SA / WTFPL](mods/buildings/mdoors/README.txt) / [DWYWFPL](doc/modpacks/mydoors/licence.txt))
+    * my_*_doors ([mydoors modpack][mydoors])
+    * my_garage_door ([mydoors modpack][mydoors])
     * plasmascreen ([homedecor_modpack][homedecor])
     * [stairsplus][] ([zlib](mods/buildings/stairsplus/LICENSE.txt))
 * [campfire][] ([GPL / CC BY-SA / WTFPL](mods/campfire/README.md))
@@ -78,7 +81,6 @@ The following mods are also included:
     * mobf_settings ([mobf_core modpack][mobf]) ([CC-BY-SA](doc/modpacks/mobf_core/License.txt))
 * mobs/
     * [kpgmobs][] ([MIT](mods/mobs/kpgmobs/README.txt))
-* [mydoors (modpack)][mydoors] ([CC-BY / CC-BY-SA / WTFPL](mods/mydoors/mdoors/README.txt) / [DWYWFPL](doc/modpacks/mydoors/licence.txt))
 * [pipeworks][] ([WTFPL](mods/pipeworks/LICENSE))
 * plantlife/
 * player/
