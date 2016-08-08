@@ -39,8 +39,8 @@ minetest.register_craft({
 	output = "my_castle_doors:door1_locked 1",
 	recipe = {
 		{"default:steel_ingot", "default:glass", ""},
-		{"my_door_wood:wood_dark_grey", "my_door_wood:wood_dark_grey", "default:steel_ingot"},
-		{"my_door_wood:wood_dark_grey", "default:steel_ingot", ""}
+		{"stained_wood:gray_dark", "stained_wood:gray_dark", "default:steel_ingot"},
+		{"stained_wood:gray_dark", "default:steel_ingot", ""}
 	}
 })
 
@@ -48,96 +48,96 @@ minetest.register_craft({
 	output = "my_castle_doors:door2_locked 1",
 	recipe = {
 		{"default:steel_ingot", "default:glass", ""},
-		{"my_door_wood:wood_red", "my_door_wood:wood_red", "default:steel_ingot"},
-		{"my_door_wood:wood_red", "default:steel_ingot", ""}
+		{"stained_wood:red", "stained_wood:red", "default:steel_ingot"},
+		{"stained_wood:red", "default:steel_ingot", ""}
 	}
 })
 minetest.register_craft({
 	output = "my_castle_doors:door3_locked 1",
 	recipe = {
-		{"my_door_wood:wood_yellow", "default:steel_ingot", ""},
-		{"my_door_wood:wood_yellow", "my_door_wood:wood_yellow", "default:steel_ingot"},
-		{"my_door_wood:wood_yellow", "my_door_wood:wood_yellow", ""}
+		{"stained_wood:yellow", "default:steel_ingot", ""},
+		{"stained_wood:yellow", "stained_wood:yellow", "default:steel_ingot"},
+		{"stained_wood:yellow", "stained_wood:yellow", ""}
 	}
 })
 minetest.register_craft({
 	output = "my_castle_doors:door4_locked 1",
 	recipe = {
-		{"my_door_wood:wood_brown", "default:steel_ingot", ""},
-		{"my_door_wood:wood_brown", "my_door_wood:wood_brown", "default:steel_ingot"},
-		{"my_door_wood:wood_brown", "my_door_wood:wood_brown", ""}
+		{"stained_wood:brown", "default:steel_ingot", ""},
+		{"stained_wood:brown", "stained_wood:brown", "default:steel_ingot"},
+		{"stained_wood:brown", "stained_wood:brown", ""}
 	}
 })
 minetest.register_craft({
 	output = "my_castle_doors:door5_locked 1",
 	recipe = {
-		{"my_door_wood:wood_yellow", "default:steel_ingot", ""},
-		{"my_door_wood:wood_white", "my_door_wood:wood_yellow", "default:steel_ingot"},
-		{"my_door_wood:wood_yellow", "my_door_wood:wood_yellow", ""}
+		{"stained_wood:yellow", "default:steel_ingot", ""},
+		{"stained_wood:white", "stained_wood:yellow", "default:steel_ingot"},
+		{"stained_wood:yellow", "stained_wood:yellow", ""}
 	}
 })
 minetest.register_craft({
 	output = "my_castle_doors:door6_locked 1",
 	recipe = {
-		{"my_door_wood:wood_grey", "my_door_wood:wood_grey", ""},
-		{"my_door_wood:wood_grey", "default:steel_ingot", "default:steel_ingot"},
-		{"my_door_wood:wood_grey", "my_door_wood:wood_grey", ""}
+		{"stained_wood:gray", "stained_wood:gray", ""},
+		{"stained_wood:gray", "default:steel_ingot", "default:steel_ingot"},
+		{"stained_wood:gray", "stained_wood:gray", ""}
 	}
 })
 minetest.register_craft({
 	output = "my_castle_doors:door7_locked 1",
 	recipe = {
-		{"my_door_wood:wood_red", "my_door_wood:wood_red", ""},
-		{"my_door_wood:wood_red", "default:steel_ingot", "default:steel_ingot"},
-		{"my_door_wood:wood_red", "my_door_wood:wood_red", ""}
+		{"stained_wood:red", "stained_wood:red", ""},
+		{"stained_wood:red", "default:steel_ingot", "default:steel_ingot"},
+		{"stained_wood:red", "stained_wood:red", ""}
 	}
 })
 minetest.register_craft({
 	output = "my_castle_doors:door8_locked 1",
 	recipe = {
 		{"default:steel_ingot", "default:steel_ingot", ""},
-		{"my_door_wood:wood_dark_grey", "my_door_wood:wood_dark_grey", "default:steel_ingot"},
+		{"stained_wood:gray_dark", "stained_wood:gray_dark", "default:steel_ingot"},
 		{"default:steel_ingot", "default:steel_ingot", ""}
 	}
 })
 minetest.register_craft({
 	output = "my_castle_doors:door9_locked 1",
 	recipe = {
-		{"default:steel_ingot", "my_door_wood:wood_yellow", ""},
-		{"my_door_wood:wood_yellow", "my_door_wood:wood_yellow", "default:steel_ingot"},
-		{"my_door_wood:wood_yellow", "my_door_wood:wood_yellow", ""}
+		{"default:steel_ingot", "stained_wood:yellow", ""},
+		{"stained_wood:yellow", "stained_wood:yellow", "default:steel_ingot"},
+		{"stained_wood:yellow", "stained_wood:yellow", ""}
 	}
 })
 minetest.register_craft({
 	output = "my_castle_doors:door10_locked 1",
 	recipe = {
-		{"my_door_wood:wood_red", "default:steel_ingot", ""},
-		{"my_door_wood:wood_red", "my_door_wood:wood_red", "default:steel_ingot"},
-		{"my_door_wood:wood_red", "my_door_wood:wood_red", ""}
+		{"stained_wood:red", "default:steel_ingot", ""},
+		{"stained_wood:red", "stained_wood:red", "default:steel_ingot"},
+		{"stained_wood:red", "stained_wood:red", ""}
 	}
 })
 minetest.register_craft({
 	output = "my_castle_doors:door11_locked 1",
 	recipe = {
-		{"my_door_wood:wood_brown", "default:steel_ingot", ""},
-		{"my_door_wood:wood_brown", "my_door_wood:wood_brown", "default:steel_ingot"},
-		{"my_door_wood:wood_brown", "my_door_wood:wood_brown", ""}
+		{"stained_wood:brown", "default:steel_ingot", ""},
+		{"stained_wood:brown", "stained_wood:brown", "default:steel_ingot"},
+		{"stained_wood:brown", "stained_wood:brown", ""}
 	}
 })
 minetest.register_craft({
 	output = "my_castle_doors:door12_locked 1",
 	recipe = {
-		{"my_door_wood:wood_brown", "default:steel_ingot", ""},
-		{"my_door_wood:wood_grey", "my_door_wood:wood_brown", "default:steel_ingot"},
-		{"my_door_wood:wood_brown", "my_door_wood:wood_brown", ""}
+		{"stained_wood:brown", "default:steel_ingot", ""},
+		{"stained_wood:gray", "stained_wood:brown", "default:steel_ingot"},
+		{"stained_wood:brown", "stained_wood:brown", ""}
 	}
 })
 minetest.register_craft({
 	output = "my_castle_doors:door13_locked 1",
 	recipe = {
-		{"my_door_wood:wood_brown", "my_door_wood:wood_brown", "default:steel_ingot"},
-		{"my_door_wood:wood_brown", "my_door_wood:wood_brown", "default:steel_ingot"},
-		{"my_door_wood:wood_brown", "my_door_wood:wood_brown", "default:steel_ingot"}
+		{"stained_wood:brown", "stained_wood:brown", "default:steel_ingot"},
+		{"stained_wood:brown", "stained_wood:brown", "default:steel_ingot"},
+		{"stained_wood:brown", "stained_wood:brown", "default:steel_ingot"}
 	}
 })
 
