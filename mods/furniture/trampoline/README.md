@@ -6,7 +6,7 @@ License: [GPLv3](LICENSE.txt)
 
 
 ### Depends on:
-* my_door_wood?
+* stained_wood?
 * craft_guide?
 
 
@@ -14,8 +14,6 @@ License: [GPLv3](LICENSE.txt)
 * DL = default:leaves
 * DW = default:wood
 * DS = default:stick
-* WR = my_wood_door:wood_red
-* WB = my_wood_door:wood_brown
 
 
 #### Trampoline
@@ -32,42 +30,6 @@ License: [GPLv3](LICENSE.txt)
 |		|		|		|<br>
 |  DS	|  DS	|  DS	|<br>
 |		|		|		|<br>
- -----------------------
-
-
-#### Red Trampoline
-
  -----------------------<br>
-|		|		|		|<br>
-|  DL	|  DL	|  DL	|<br>
-|		|		|		|<br>
-|-----------------------|<br>
-|		|		|		|<br>
-|  WR	|  WR	|  WR	|<br>
-|		|		|		|<br>
-|-----------------------|<br>
-|		|		|		|<br>
-|  DS	|  DS	|  DS	|<br>
-|		|		|		|<br>
- -----------------------
 
-
-#### Brown Trampoline
-
- -----------------------<br>
-|		|		|		|<br>
-|  DL	|  DL	|  DL	|<br>
-|		|		|		|<br>
-|-----------------------|<br>
-|		|		|		|<br>
-|  WB	|  WB	|  WB	|<br>
-|		|		|		|<br>
-|-----------------------|<br>
-|		|		|		|<br>
-|  DS	|  DS	|  DS	|<br>
-|		|		|		|<br>
- -----------------------
-
-### Known Bugs:
-
-* Colored trampolines do not bounce higher than default like intended
+To craft colored trampolines, replace "default:wood" with "stained_wood:<color>".
