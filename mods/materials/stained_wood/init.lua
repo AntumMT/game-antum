@@ -21,3 +21,15 @@
 --  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 --  SOFTWARE.
 
+
+local modname = "stained_wood"
+
+core.log("action", "[MOD] Loading '" .. modname .. "' ...")
+
+
+logMessage = function(message)
+	core.log("action", "[" .. modname .. "] " .. message)
+end
+
+
+core.log("action", "[MOD] '" .. modname .. "' loaded")
