@@ -4,13 +4,9 @@ A set of colored wood meant to replace & add to [my_door_wood][] from the
 [mydoors modpack][mydoors].
 
 ### License of Textures:
-Dyed woods are derived from default_aspen_wood which is dereived from default_pine_wood.
+Dyed woods are derived from [default_pine_wood][].
 
-[default_aspen_wood][]:
-* Created by [sofar][]
-* [CC BY-SA 3.0][]
-
-[default_pine_wood][]:
+default_pine_wood:
 * Created by [paramat][]
 * [CC BY-SA 3.0][]
 
@@ -18,7 +14,6 @@ Dyed woods are derived from default_aspen_wood which is dereived from default_pi
 [my_door_wood]: https://github.com/minetest-mods/mydoors/tree/master/my_door_wood
 
 
-[default_aspen_wood]: https://github.com/minetest/minetest_game/blob/master/mods/default/textures/default_aspen_wood.png
 [default_pine_wood]: https://github.com/minetest/minetest_game/blob/master/mods/default/textures/default_pine_wood.png
 [sofar]: https://github.com/sofar
 [paramat]: https://github.com/paramat
