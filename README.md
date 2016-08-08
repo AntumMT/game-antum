@@ -41,29 +41,9 @@ The following mods are also included:
     * [inventory_plus][] ([BSD 3-Clause](mods/display/inventory_plus/LICENSE))
 * farming/
 	* [farming_plus][] ([WTFPL](mods/farming/farming_plus/README.txt))
-* friendlies/
-    * animal_clownfish ([animals_modpack][]) ([CC-BY-SA](mods/friendlies/animal_clownfish/License.txt))
-    * animal_fish_blue_white ([animals_modpack][]) ([CC-BY-SA](mods/friendlies/animal_fish_blue_white/License.txt))
-    * animal_gull ([animals_modpack][]) ([CC-BY-SA](mods/friendlies/animal_gull/License.txt))
-    * animal_rat ([animals_modpack][]) ([CC-BY-SA / CC0](mods/friendlies/animal_rat/License.txt))
-    * chicken ([Creatures MOB-Engine][cme])
-    * sheep ([Creatures MOB-Engine][cme])
 * furniture/
     * [trampoline][] ([GPL](mods/furniture/trampoline/LICENSE.txt))
     * [trash_can][] ([MIT](mods/furniture/trash_can/LICENSE.txt))
-* hostils/
-    * animal_creeper ([animals_modpack][]) ([CC-BY-SA](mods/hostils/animal_creeper/License.txt))
-    * [creeper][] ([WTFPL](mods/hostils/creeper/LICENSE.md))
-    * ghost ([Creatures MOB-Engine][cme])
-    * mob_archer ([animals_modpack][]) ([CC-BY-SA / CC0](mods/hostils/mob_archer/License.txt))
-    * mob_bear ([animals_modpack][]) ([CC-BY-SA / CC0](mods/hostils/mob_bear/License.txt))
-    * mob_guard ([animals_modpack][]) ([CC-BY-SA / CC0](mods/hostils/mob_guard/License.txt))
-    * mob_shark ([animals_modpack][]) ([CC-BY-SA](mods/hostils/mob_shark/License.txt))
-    * mob_slime ([animals_modpack][]) ([CC-BY / CC-BY-SA / CC0](mods/hostils/mob_slime/License.txt))
-    * [mobs_goblins][] ([CC-BY-SA / CC-BY / CC0](mods/hostils/mobs_goblins/README.md))
-    * oerrki ([Creatures MOB-Engine][cme])
-    * [spidermob][] ([CC-BY-SA / WTFPL / CC0](mods/hostils/spidermob/LICENSE))
-    * zombie ([Creatures MOB-Engine][cme])
 * [intllib][] (WTFPL)
 * lib/
     * [biome_lib][] ([WTFPL](mods/lib/biome_lib/README.md))
@@ -74,12 +54,31 @@ The following mods are also included:
 	* [stained_wood][] ([MIT](mods/materials/stained_wood/init.lua))
 	* [unifieddyes][] ([GPL](mods/materials/unifieddyes/LICENSE))
 * [mesecons (modpack)][mesecons] ([LGPL/CC-BY-SA](mods/mesecons/COPYING.txt))
-* mob_engines/
+* mobs/
     * [creatures (Creatures MOB-Engine)][cme] ([zlib/CC-BY-SA](doc/modpacks/cme/README.txt))
+    * [kpgmobs][] ([MIT](mods/mobs/kpgmobs/README.txt))
     * mobf ([mobf_core modpack][mobf]) ([CC-BY-SA](doc/modpacks/mobf_core/License.txt))
     * mobf_settings ([mobf_core modpack][mobf]) ([CC-BY-SA](doc/modpacks/mobf_core/License.txt))
-* mobs/
-    * [kpgmobs][] ([MIT](mods/mobs/kpgmobs/README.txt))
+* mobs_aggressive/
+    * animal_creeper ([animals_modpack][]) ([CC-BY-SA](mods/mobs_aggressive/animal_creeper/License.txt))
+    * [creeper][] ([WTFPL](mods/mobs_aggressive/creeper/LICENSE.md))
+    * ghost ([Creatures MOB-Engine][cme])
+    * mob_archer ([animals_modpack][]) ([CC-BY-SA / CC0](mods/mobs_aggressive/mob_archer/License.txt))
+    * mob_bear ([animals_modpack][]) ([CC-BY-SA / CC0](mods/mobs_aggressive/mob_bear/License.txt))
+    * mob_guard ([animals_modpack][]) ([CC-BY-SA / CC0](mods/mobs_aggressive/mob_guard/License.txt))
+    * mob_shark ([animals_modpack][]) ([CC-BY-SA](mods/mobs_aggressive/mob_shark/License.txt))
+    * mob_slime ([animals_modpack][]) ([CC-BY / CC-BY-SA / CC0](mods/mobs_aggressive/mob_slime/License.txt))
+    * [mobs_goblins][] ([CC-BY-SA / CC-BY / CC0](mods/mobs_aggressive/mobs_goblins/README.md))
+    * oerrki ([Creatures MOB-Engine][cme])
+    * [spidermob][] ([CC-BY-SA / WTFPL / CC0](mods/mobs_aggressive/spidermob/LICENSE))
+    * zombie ([Creatures MOB-Engine][cme])
+* mobs_passive/
+    * animal_clownfish ([animals_modpack][]) ([CC-BY-SA](mods/mobs_passive/animal_clownfish/License.txt))
+    * animal_fish_blue_white ([animals_modpack][]) ([CC-BY-SA](mods/mobs_passive/animal_fish_blue_white/License.txt))
+    * animal_gull ([animals_modpack][]) ([CC-BY-SA](mods/mobs_passive/animal_gull/License.txt))
+    * animal_rat ([animals_modpack][]) ([CC-BY-SA / CC0](mods/mobs_passive/animal_rat/License.txt))
+    * chicken ([Creatures MOB-Engine][cme])
+    * sheep ([Creatures MOB-Engine][cme])
 * [pipeworks][] ([WTFPL](mods/pipeworks/LICENSE))
 * plantlife/
 * player/
