@@ -16,20 +16,19 @@ License: [GPLv3](LICENSE.txt)
 * DS = default:stick
 
 
-#### Trampoline
-
- -----------------------<br>
-|		|		|		|<br>
-|  DL	|  DL	|  DL	|<br>
-|		|		|		|<br>
-|-----------------------|<br>
-|		|		|		|<br>
-|  DW	|  DW	|  DW	|<br>
-|		|		|		|<br>
-|-----------------------|<br>
-|		|		|		|<br>
-|  DS	|  DS	|  DS	|<br>
-|		|		|		|<br>
- -----------------------<br>
-
+<pre>
+ -----------------------
+|		|		|		|
+|  DL	|  DL	|  DL	|
+|		|		|		|
+|-----------------------|
+|		|		|		|
+|  DW	|  DW	|  DW	|
+|		|		|		|
+|-----------------------|
+|		|		|		|
+|  DS	|  DS	|  DS	|
+|		|		|		|
+ -----------------------
+</pre>
 To craft colored trampolines, replace "default:wood" with "stained_wood:<color>".
