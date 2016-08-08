@@ -46,6 +46,26 @@ titleize = function(string)
 end
 
 
+-- Define function to retrieve total number of stained wood colors
+getWoodColorsCount = function(colors)
+	local color_count = 0
+	
+	for _ in pairs(colors) do
+		color_count = color_count + 1
+	end
+	
+	return color_count
+end
+
+
+-- Set stained wood colors
+wood_colors = {"blue", "brown", "gray", "green", "purple", "red",
+	"white", "yellow"}
+
+wood_colors_count = getWoodColorsCount(wood_colors)
+logMessage("nodes.lua: " .. wood_colors_count .. " wood colors loaded")
+
+
 -- Load sub-scripts
 dofile(modpath .. "/nodes.lua")
 dofile(modpath .. "/crafting.lua")

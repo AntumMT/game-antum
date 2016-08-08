@@ -23,18 +23,6 @@
 
 
 
--- Define function to retrieve total number of stained wood colors
-getWoodColorsCount = function(colors)
-	local color_count = 0
-	
-	for _ in pairs(colors) do
-		color_count = color_count + 1
-	end
-	
-	return color_count
-end
-
-
 -- Define function for adding a stained wood
 addStainedWood = function(color)
 	local node_name = "stained_wood:" .. color
@@ -49,13 +37,6 @@ addStainedWood = function(color)
 	
 	logMessage("nodes.lua: Registered node '" .. node_name .. "'")
 end
-
-
-local wood_colors = {"blue", "brown", "gray", "green", "purple", "red",
-	"white", "yellow"}
-
-local wood_colors_count = getWoodColorsCount(wood_colors)
-logMessage("nodes.lua: " .. wood_colors_count .. " wood colors loaded")
 
 
 -- Register all stained wood
