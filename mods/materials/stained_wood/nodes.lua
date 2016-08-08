@@ -26,9 +26,14 @@
 -- Define function for adding a stained wood
 addStainedWood = function(color)
 	local node_name = "stained_wood:" .. color
+	local description = titleize(color) .. " Stained Wood"
+	
+	if color == "gray_dark" then
+		description = "Dark Gray Stained Wood"
+	end
 	
 	minetest.register_node(node_name, {
-		description = titleize(color) .. " Stained Wood",
+		description = description,
 		tiles = {"wood_" .. color .. ".png"},
 		is_ground_content = false,
 		groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 3, wood = 1},
