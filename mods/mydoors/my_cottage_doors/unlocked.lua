@@ -27,18 +27,18 @@ end
 minetest.register_craft({
 	output = "my_cottage_doors:door1 1",
 	recipe = {
-		{"my_door_wood:wood_yellow", "my_door_wood:wood_yellow", "default:steel_ingot"},
-		{"my_door_wood:wood_yellow", "my_door_wood:wood_yellow", ""},
-		{"my_door_wood:wood_yellow", "my_door_wood:wood_yellow", "default:steel_ingot"}
+		{"stained_wood:yellow", "stained_wood:yellow", "default:steel_ingot"},
+		{"stained_wood:yellow", "stained_wood:yellow", ""},
+		{"stained_wood:yellow", "stained_wood:yellow", "default:steel_ingot"}
 	}
 })
 
 minetest.register_craft({
 	output = "my_cottage_doors:door2 1",
 	recipe = {
-		{"my_door_wood:wood_red", "my_door_wood:wood_red", ""},
-		{"my_door_wood:wood_red", "my_door_wood:wood_red", ""},
-		{"my_door_wood:wood_red", "my_door_wood:wood_red", ""}
+		{"stained_wood:red", "stained_wood:red", ""},
+		{"stained_wood:red", "stained_wood:red", ""},
+		{"stained_wood:red", "stained_wood:red", ""}
 	}
 })
 
