@@ -182,9 +182,9 @@ minetest.register_node("my_future_doors:door1d_"..col, {
 minetest.register_craft({
 	output = "my_future_doors:door1a_"..col.." 1",
 	recipe = {
-		{"my_door_wood:wood_"..col, "wool:"..col, "my_door_wood:wood_"..col},
-		{"wool:"..col, "my_door_wood:wood_"..col, "wool:"..col},
-		{"my_door_wood:wood_"..col, "wool:"..col, "my_door_wood:wood_"..col}
+		{"stained_wood:"..col, "wool:"..col, "stained_wood:"..col},
+		{"wool:"..col, "stained_wood:"..col, "wool:"..col},
+		{"stained_wood:"..col, "wool:"..col, "stained_wood:"..col}
 	}
 })
 end
