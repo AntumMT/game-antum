@@ -104,6 +104,7 @@ The following mods are also included:
 * transport/
     * [carts][] ([WTFPL/CC0](mods/transport/carts/README.txt))
     * [helicopter][] ([GPL](mods/transport/helicopter/LICENSE) / [CC-BY-NC](mods/transport/helicopter/README.md))
+    * [hovercraft][] ([LGPL / CC BY-SA / CC0](mods/transport/hovercraft/LICENSE.txt))
 * ui/
 * weather/
     * [lightning][] ([LGPL/CC-BY-SA](mods/weather/lightning/README.md))
@@ -142,6 +143,7 @@ The following mods are also included:
 [helicopter]: https://forum.minetest.net/viewtopic.php?t=6183
 [home_gui]: http://cornernote.github.io/minetest-home_gui/
 [homedecor]: https://forum.minetest.net/viewtopic.php?t=2041
+[hovercraft]: https://forum.minetest.net/viewtopic.php?t=6722
 [intllib]: https://forum.minetest.net/viewtopic.php?t=4929
 [invisible]: https://forum.minetest.net/viewtopic.php?t=14399
 [inventory_plus]: https://forum.minetest.net/viewtopic.php?t=3100
