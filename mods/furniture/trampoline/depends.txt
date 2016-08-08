@@ -1,2 +1,2 @@
-my_door_wood?
+stained_wood?
 craft_guide?

@@ -24,6 +24,7 @@ local trampolinebox = {
 
 local default_bounce = 20
 
+-- Define function to add a colored trampoline
 addColoredTrampNode = function(color, bounce)
 	local bounce = default_bounce * bounce
 	
@@ -43,12 +44,13 @@ addColoredTrampNode = function(color, bounce)
 	})
 end
 
+-- Define function to add a colored trampoline craft recipe
 addColoredTrampCraft = function(color)
 	minetest.register_craft({
 		output = "trampoline:trampoline_" .. color,
 		recipe = {
 			{"default:leaves", "default:leaves", "default:leaves"},
-			{"my_door_wood:wood_" .. color, "my_door_wood:wood_" .. color, "my_door_wood:wood_" .. color},
+			{"stained_wood:" .. color, "stained_wood:" .. color, "stained_wood:" .. color},
 			{"default:stick", "default:stick", "default:stick"}
 		}
 	})
@@ -83,22 +85,22 @@ minetest.register_craft({
 
 -- *** Colored Trampolines ***
 
-if minetest.get_modpath("my_door_wood") ~= nil then
+if minetest.get_modpath("stained_wood") ~= nil then
 	local color_count = 0
-	local mydoor_colors = {"red", "brown"}
+	local tramp_colors = {"red", "brown"}
 	
 	-- Get the number of tramp colors available
-	for _ in pairs(mydoor_colors) do
+	for _ in pairs(tramp_colors) do
 		color_count = color_count + 1
 	end
 	
 	-- Add all available trampoline colors
 	for i = 1, color_count do
-		addColoredTrampNode(mydoor_colors[i], i+1)
+		addColoredTrampNode(tramp_colors[i], i+1)
 		
-		addColoredTrampCraft(mydoor_colors[i])
+		addColoredTrampCraft(tramp_colors[i])
 		
-		logMessage("Registered '" .. mydoor_colors[i]:gsub("^%l", string.upper) .. " trampoline'")
+		logMessage("Registered '" .. tramp_colors[i]:gsub("^%l", string.upper) .. " trampoline'")
 	end
 end
 
