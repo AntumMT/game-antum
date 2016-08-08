@@ -29,7 +29,7 @@ addColoredTrampNode = function(color, bounce)
 	local bounce = default_bounce * bounce
 	
 	minetest.register_node("trampoline:trampoline_" .. color, {
-		description = color:gsub("^%l", string.upper) .. " trampoline",
+		description = color:gsub("^%l", string.upper) .. " Trampoline",
 		drawtype = "nodebox",
 		node_box = trampolinebox,
 		selection_box = trampolinebox,
@@ -87,7 +87,7 @@ minetest.register_craft({
 
 if minetest.get_modpath("stained_wood") ~= nil then
 	local color_count = 0
-	local tramp_colors = {"red", "brown"}
+	local tramp_colors = {"blue", "brown", "green", "red", "violet", "yellow"}
 	
 	-- Get the number of tramp colors available
 	for _ in pairs(tramp_colors) do
