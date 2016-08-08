@@ -22,32 +22,42 @@
 --  SOFTWARE.
 
 
-local modname = "stained_wood"
 
-core.log("action", "[MOD] Loading '" .. modname .. "' ...")
-
-
-logMessage = function(message)
-	core.log("action", "[" .. modname .. "] " .. message)
+-- Define function to retrieve total number of stained wood colors
+getWoodColorsCount = function(colors)
+	local color_count = 0
+	
+	for _ in pairs(colors) do
+		color_count = color_count + 1
+	end
+	
+	return color_count
 end
 
 
--- Get stained_wood mod path
-local modpath = minetest.get_modpath("stained_wood")
-
--- Initialize stained_wood
-stained_wood = {}
-
-
--- Define function to titleize labels (for description purposes)
-titleize = function(string)
-	local string = string:gsub("^%l", string.upper)
-	return string
+-- Define function for adding a stained wood
+addStainedWood = function(color)
+	local node_name = "stained_wood:" .. color
+	
+	minetest.register_node(node_name, {
+		description = titleize(color) .. " Stained Wood",
+		tiles = {"wood_" .. color .. ".png"},
+		is_ground_content = false,
+		groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 3, wood = 1},
+		sounds = default.node_sound_wood_defaults(),
+	})
+	
+	logMessage("nodes.lua: Registered node '" .. node_name .. "'")
 end
 
 
--- Load sub-scripts
-dofile(modpath .. "/nodes.lua")
+local wood_colors = {"blue", "brown", "gray", "green", "purple", "red",
+	"white", "yellow"}
 
+local wood_colors_count = getWoodColorsCount(wood_colors)
+logMessage("nodes.lua: " .. wood_colors_count .. " wood colors loaded")
 
-core.log("action", "[MOD] '" .. modname .. "' loaded")
+-- Register all stained wood
+for i = 1, wood_colors_count do
+	addStainedWood(wood_colors[i])
+end
