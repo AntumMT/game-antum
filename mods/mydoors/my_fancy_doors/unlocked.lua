@@ -32,34 +32,34 @@ end
 minetest.register_craft({
 	output = "my_fancy_doors:door1 1",
 	recipe = {
-		{"my_door_wood:wood_yellow", "default:glass", ""},
-		{"my_door_wood:wood_yellow", "my_door_wood:wood_yellow", ""},
-		{"my_door_wood:wood_yellow", "default:glass", ""}
+		{"stained_wood:yellow", "default:glass", ""},
+		{"stained_wood:yellow", "stained_wood:yellow", ""},
+		{"stained_wood:yellow", "default:glass", ""}
 	}
 })
 
 minetest.register_craft({
 	output = "my_fancy_doors:door2 1",
 	recipe = {
-		{"my_door_wood:wood_yellow", "default:glass", ""},
-		{"my_door_wood:wood_yellow", "default:steel_ingot", ""},
-		{"my_door_wood:wood_yellow", "default:glass", ""}
+		{"stained_wood:yellow", "default:glass", ""},
+		{"stained_wood:yellow", "default:steel_ingot", ""},
+		{"stained_wood:yellow", "default:glass", ""}
 	}
 })
 minetest.register_craft({
 	output = "my_fancy_doors:door3 1",
 	recipe = {
-		{"my_door_wood:wood_white", "default:glass", ""},
-		{"my_door_wood:wood_white", "my_door_wood:wood_white", ""},
-		{"my_door_wood:wood_white", "default:glass", ""}
+		{"stained_wood:white", "default:glass", ""},
+		{"stained_wood:white", "stained_wood:white", ""},
+		{"stained_wood:white", "default:glass", ""}
 	}
 })
 minetest.register_craft({
 	output = "my_fancy_doors:door4 1",
 	recipe = {
-		{"my_door_wood:wood_red", "my_door_wood:wood_dark_grey", ""},
-		{"my_door_wood:wood_red", "my_door_wood:wood_red", ""},
-		{"my_door_wood:wood_red", "my_door_wood:wood_dark_grey", ""}
+		{"stained_wood:red", "stained_wood:gray_dark", ""},
+		{"stained_wood:red", "stained_wood:red", ""},
+		{"stained_wood:red", "stained_wood:gray_dark", ""}
 	}
 })
 
