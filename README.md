@@ -105,6 +105,7 @@ The following mods are also included:
     * [helicopter][] ([GPL](mods/transport/helicopter/LICENSE) / [CC-BY-NC](mods/transport/helicopter/README.md))
     * [hovercraft][] ([LGPL / CC BY-SA / CC0](mods/transport/hovercraft/LICENSE.txt))
 * ui/
+    * [hud][] ([LGPL / CC BY-SA / WTFPL](mods/ui/hud/README.txt))
 * weather/
     * [lightning][] ([LGPL/CC-BY-SA](mods/weather/lightning/README.md))
     * [weather][] ([LGPL/WTFPL/CC-BY-SA](mods/weather/weather/README))
@@ -143,6 +144,7 @@ The following mods are also included:
 [home_gui]: http://cornernote.github.io/minetest-home_gui/
 [homedecor]: https://forum.minetest.net/viewtopic.php?t=2041
 [hovercraft]: https://forum.minetest.net/viewtopic.php?t=6722
+[hud]: https://github.com/BlockMen/hud
 [intllib]: https://forum.minetest.net/viewtopic.php?t=4929
 [invisible]: https://forum.minetest.net/viewtopic.php?t=14399
 [inventory_plus]: https://forum.minetest.net/viewtopic.php?t=3100
