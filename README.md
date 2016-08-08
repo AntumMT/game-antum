@@ -48,6 +48,7 @@ The following mods are also included:
     * sheep ([Creatures MOB-Engine][cme])
 * furniture/
     * [trampoline][] ([GPL](mods/furniture/trampoline/LICENSE.txt))
+    * [trash_can][] ([MIT](mods/furniture/trash_can/LICENSE.txt))
 * hostils/
     * animal_creeper ([animals_modpack][]) ([CC-BY-SA](mods/hostils/animal_creeper/License.txt))
     * [creeper][] ([WTFPL](mods/hostils/creeper/LICENSE.md))
@@ -164,6 +165,7 @@ The following mods are also included:
 [tnt]: https://forum.minetest.net/viewtopic.php?id=2902
 [torches]: https://forum.minetest.net/viewtopic.php?t=6099
 [trampoline]: mods/furniture/trampoline
+[trash_can]: https://forum.minetest.net/viewtopic.php?t=6315
 [trees]: https://forum.minetest.net/viewtopic.php?f=11&t=5713
 [unified_inventory]: https://forum.minetest.net/viewtopic.php?id=3933
 [unifieddyes]: https://forum.minetest.net/viewtopic.php?t=2178
