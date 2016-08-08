@@ -30,7 +30,7 @@ addStainedWoodCraft = function(color)
 	
 	-- FIXME: Change stained wood name to "stained_wood:violet"?
 	if color == "purple" then
-		dye_name = "violet"
+		dye_name = "dye:violet"
 	end
 	
 	minetest.register_craft({
