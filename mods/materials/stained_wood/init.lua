@@ -63,7 +63,6 @@ wood_colors = {"blue", "brown", "gray", "green", "purple", "red",
 	"white", "yellow"}
 
 wood_colors_count = getWoodColorsCount(wood_colors)
-logMessage("nodes.lua: " .. wood_colors_count .. " wood colors loaded")
 
 
 -- Load sub-scripts
