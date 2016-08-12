@@ -34,7 +34,6 @@ addColoredTrampNode = function(color, bounce)
 		node_box = trampolinebox,
 		selection_box = trampolinebox,
 		paramtype = "light",
-		on_punch = trampoline_punch,
 		tiles = {
 			"top.png",
 			"bottom.png",
@@ -64,7 +63,6 @@ minetest.register_node("trampoline:trampoline", {
 	node_box = trampolinebox,
 	selection_box = trampolinebox,
 	paramtype = "light",
-	on_punch = trampoline_punch,
 	tiles = {
 		"top.png",
 		"bottom.png",
