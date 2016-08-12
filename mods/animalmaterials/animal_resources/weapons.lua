@@ -460,11 +460,8 @@ core.register_node("animal_resources:arrow_box", {
 	groups = {not_in_creative_inventory=1},
 })
 
-local mods = core.get_modnames()
-
-for i,v in ipairs(mods) do
-	if v == element then
-		print("AR: throwing mod found!")
-		core.register_alias("animal_resources:arrow", "throwing:arrow")
-	end
+local THROWINGDIR = minetest.get_modpath("throwing")
+if THROWINGDIR then
+	print("AR: throwing mod found!")
+	core.register_alias("animal_resources:arrow", "throwing:arrow")
 end
