@@ -51,13 +51,15 @@ local function register_recipe(typename, data)
 	end
 	
 	technic.recipes[typename].recipes[index] = recipe
-	if unified_inventory and technic.recipes[typename].output_size == 1 then
-		unified_inventory.register_craft({
-			type = typename,
-			output = data.output,
-			items = data.input,
-			width = 0,
-		})
+	if minetest.get_modpath("unified_inventory") then
+		if unified_inventory and technic.recipes[typename].output_size == 1 then
+			unified_inventory.register_craft({
+				type = typename,
+				output = data.output,
+				items = data.input,
+				width = 0,
+			})
+		end
 	end
 end
 
