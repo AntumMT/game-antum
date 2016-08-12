@@ -200,9 +200,11 @@ mobf_spawner_register("bear_spawner_1",bear_name,
 	collisionbox = selectionbox_bear
 	})
 
-if factions~= nil and
-	type(factions.set_base_reputation) == "function" then
-	factions.set_base_reputation("bears","players",-25)
+local FACTIONSDIR = minetest.get_modpath("factions")
+if FACTIONSDIR then
+	if factions~= nil and type(factions.set_base_reputation) == "function" then
+		factions.set_base_reputation("bears","players",-25)
+	end
 end
 
 minetest.log("action","\tadding mob "..bear_prototype.name)
