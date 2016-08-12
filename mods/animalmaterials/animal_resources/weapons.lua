@@ -12,7 +12,7 @@
 --
 -- Contact sapier a t gmx net
 -------------------------------------------------------------------------------
-assert(weapons_spacer == nil)
+--assert(weapons_spacer == nil)
 local weapons_spacer = {} --unused to fix lua doxygen bug only
 
 -------------------------------------------------------------------------------
