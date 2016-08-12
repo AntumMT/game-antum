@@ -1,0 +1,36 @@
+diff -ruN walking_light.orig/init.lua walking_light/init.lua
+--- walking_light.orig/init.lua	2015-09-14 10:37:23.000000000 -0700
++++ walking_light/init.lua	2016-08-11 21:00:22.479538114 -0700
+@@ -450,13 +450,12 @@
+ 
+ minetest.register_node("walking_light:clear", {
+ 	drawtype = "glasslike",
+-	tile_images = {"walking_light.png"},
+-	-- tile_images = {"walking_light_debug.png"},
++	tiles = {"walking_light.png"},
++	-- tiles = {"walking_light_debug.png"},
+ 	--inventory_image = minetest.inventorycube("walking_light.png"),
+-	--paramtype = "light",
++	paramtype = "light",
+ 	walkable = false,
+ 	--is_ground_content = true,
+-	light_propagates = true,
+ 	sunlight_propagates = true,
+ 	--light_source = 13,
+ 	selection_box = {
+@@ -467,13 +466,12 @@
+ 
+ minetest.register_node("walking_light:light", {
+ 	drawtype = "glasslike",
+-	tile_images = {"walking_light.png"},
+-	-- tile_images = {"walking_light_debug.png"},
++	tiles = {"walking_light.png"},
++	-- tiles = {"walking_light_debug.png"},
+ 	inventory_image = minetest.inventorycube("walking_light.png"),
+ 	paramtype = "light",
+ 	walkable = false,
+ 	is_ground_content = true,
+-	light_propagates = true,
+ 	sunlight_propagates = true,
+ 	light_source = 13,
+ 	selection_box = {
