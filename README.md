@@ -61,7 +61,6 @@ The following mods are also included:
     * mobf ([mobf_core modpack][mobf]) ([CC-BY-SA](doc/modpacks/mobf_core/License.txt))
     * mobf_settings ([mobf_core modpack][mobf]) ([CC-BY-SA](doc/modpacks/mobf_core/License.txt))
 * mobs_aggressive/
-    * animal_creeper ([animals_modpack][]) ([CC-BY-SA](mods/mobs_aggressive/animal_creeper/License.txt))
     * [creeper][] ([WTFPL](mods/mobs_aggressive/creeper/LICENSE.md))
     * ghost ([Creatures MOB-Engine][cme])
     * mob_archer ([animals_modpack][]) ([CC-BY-SA / CC0](mods/mobs_aggressive/mob_archer/License.txt))
@@ -98,7 +97,6 @@ The following mods are also included:
 * [technic (modpack)][technic] ([LGPL](mods/technic/README.md))
 * tools/
 	* [compassgps][] ([WTFPL / CC0 / CC BY-SA](mods/tools/compassgps/README.md))
-    * [tnt][] ([WTFPL](mods/tools/tnt/README.txt))
     * [torches][] ([LGPL/CC-BY-SA](mods/tools/torches/README.txt))
     * [workbench][] ([GPL/WTFPL](mods/tools/workbench/LICENSE))
 * transport/
