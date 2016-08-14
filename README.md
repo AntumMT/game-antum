@@ -79,6 +79,7 @@ The following mods are also included:
     * animal_rat ([animals_modpack][]) ([CC-BY-SA / CC0](mods/mobs_passive/animal_rat/License.txt))
     * chicken ([Creatures MOB-Engine][cme])
     * sheep ([Creatures MOB-Engine][cme])
+* [moremesecons][] ([GPL](mods/moremesecons/LICENSE.txt))
 * [pipeworks][] ([WTFPL](mods/pipeworks/LICENSE))
 * plantlife/
 * player/
@@ -158,6 +159,7 @@ The following mods are also included:
 [mobf]: https://github.com/sapier/mobf_core
 [mobs_goblins]: https://forum.minetest.net/viewtopic.php?t=13004
 [moreblocks]: https://forum.minetest.net/viewtopic.php?t=509
+[moremesecons]: https://forum.minetest.net/viewtopic.php?t=13150
 [moreores]: https://forum.minetest.net/viewtopic.php?t=549
 [moretrees]: https://forum.minetest.net/viewtopic.php?t=4394
 [mydoors]: https://forum.minetest.net/viewtopic.php?t=10626
