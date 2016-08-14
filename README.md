@@ -106,6 +106,7 @@ The following mods are also included:
 * ui/
     * [hud][] ([LGPL / CC BY-SA / WTFPL](mods/ui/hud/README.txt))
     * [hudmap][] ([LGPL / WTFPL](mods/ui/hudmap/README.txt))
+* [vector_extras][] ([WTFPL](mods/vector_extras/LICENSE.txt))
 * weather/
     * [lightning][] ([LGPL/CC-BY-SA](mods/weather/lightning/README.md))
     * [weather][] ([LGPL/WTFPL/CC-BY-SA](mods/weather/weather/README))
@@ -177,6 +178,7 @@ The following mods are also included:
 [trees]: https://forum.minetest.net/viewtopic.php?f=11&t=5713
 [unified_inventory]: https://forum.minetest.net/viewtopic.php?id=3933
 [unifieddyes]: https://forum.minetest.net/viewtopic.php?t=2178
+[vector_extras]: https://forum.minetest.net/viewtopic.php?t=8533
 [vines]: https://forum.minetest.net/viewtopic.php?f=11&t=2344
 [walking_light]: https://github.com/petermaloney/walking_light
 [wardrobe]: https://forum.minetest.net/viewtopic.php?id=9680
