@@ -104,7 +104,6 @@ The following mods are also included:
     * [workbench][] ([GPL/WTFPL](mods/tools/workbench/LICENSE))
 * transport/
     * [carts][] ([WTFPL/CC0](mods/transport/carts/README.txt))
-    * [helicopter][] ([GPL](mods/transport/helicopter/LICENSE) / [CC-BY-NC](mods/transport/helicopter/README.md))
     * [hovercraft][] ([LGPL / CC BY-SA / CC0](mods/transport/hovercraft/LICENSE.txt))
 * ui/
     * [hud][] ([LGPL / CC BY-SA / WTFPL](mods/ui/hud/README.txt))
