@@ -5,6 +5,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 The following mods are also included:
 * admin/
+    * [clean][] (WTFPL)
     * [invisible][] ([LGPL / CC BY-SA](mods/admin/invisible/readme.txt))
 * [adv_spawning][] ([???](mods/adv_spawning/README.txt))
 * [animalmaterials (modpack)][animalmaterials] (CC-BY-SA / CC0)
@@ -136,6 +137,7 @@ The following mods are also included:
 [character_creator]: https://forum.minetest.net/viewtopic.php?f=9&t=13138
 [chatlog]: https://forum.minetest.net/viewtopic.php?id=6220
 [christmas]: https://forum.minetest.net/viewtopic.php?t=3950
+[clean]: https://forum.minetest.net/viewtopic.php?t=2777
 [cme]: https://forum.minetest.net/viewtopic.php?t=8638
 [compass]: https://forum.minetest.net/viewtopic.php?t=3785
 [compassgps]: https://forum.minetest.net/viewtopic.php?t=9373
