@@ -118,6 +118,7 @@ The following mods are also included:
 * world/
     * [ambience][ambience_ultralite] (WTFPL / [CC-BY / CC-BY-SA / CC-BY-NC-SA / CC0](mods/world/ambience/sounds/SoundLicenses.txt))
     * [areas][] ([LGPL](mods/world/areas/LICENSE.txt))
+    * [ethereal][] ([WTFPL](mods/world/ethereal/license.txt))
     * [glow][] (GPL)
     * [nether][] ([WTFPL / CC BY-SA](mods/world/nether/README.md))
     * [worldedge][] ([DWYWPL](mods/world/worldedge/licence.txt))
@@ -146,6 +147,7 @@ The following mods are also included:
 [craft_guide]: https://cornernote.github.io/minetest-craft_guide/
 [creeper]: https://forum.minetest.net/viewtopic.php?t=11891
 [elevator]: https://forum.minetest.net/viewtopic.php?t=12944
+[ethereal]: https://forum.minetest.net/viewtopic.php?t=14638
 [farming_plus]: https://forum.minetest.net/viewtopic.php?t=2787
 [fort_spikes]: https://forum.minetest.net/viewtopic.php?t=14574
 [glow]: https://forum.minetest.net/viewtopic.php?t=6300
