@@ -31,6 +31,7 @@ The following mods are also included:
     * my_garage_door ([mydoors modpack][mydoors])
     * plasmascreen ([homedecor_modpack][homedecor])
     * [stairsplus][] ([zlib](mods/buildings/stairsplus/LICENSE.txt))
+    * [windmill][] ([WTFPL](mods/buildings/windmill/README.md))
 * [campfire][] ([GPL / CC BY-SA / WTFPL](mods/campfire/README.md))
 * chat/
     * [away][] ([GPL](mods/chat/away/COPYING))
@@ -193,5 +194,6 @@ The following mods are also included:
 [walking_light]: https://github.com/petermaloney/walking_light
 [wardrobe]: https://forum.minetest.net/viewtopic.php?id=9680
 [weather]: https://forum.minetest.net/viewtopic.php?t=5245
+[windmill]: https://forum.minetest.net/viewtopic.php?id=7440
 [workbench]: https://forum.minetest.net/viewtopic.php?t=14085
 [worldedge]: https://forum.minetest.net/viewtopic.php?t=10753
