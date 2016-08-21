@@ -83,6 +83,7 @@ The following mods are also included:
 * [moremesecons][] ([GPL](mods/moremesecons/LICENSE.txt))
 * npc/
     * [peaceful_npc][] (WTFPL)
+* [painting][] (???)
 * [pipeworks][] ([WTFPL](mods/pipeworks/LICENSE))
 * plantlife/
 * player/
@@ -168,6 +169,7 @@ The following mods are also included:
 [moretrees]: https://forum.minetest.net/viewtopic.php?t=4394
 [mydoors]: https://forum.minetest.net/viewtopic.php?t=10626
 [nether]: https://forum.minetest.net/viewtopic.php?t=5790
+[painting]: https://github.com/minetest-mods/painting
 [peaceful_npc]: https://forum.minetest.net/viewtopic.php?t=4167
 [pipeworks]: https://forum.minetest.net/viewtopic.php?t=2155
 [plantlife_modpack]: https://forum.minetest.net/viewtopic.php?f=11&t=3898
