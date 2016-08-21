@@ -110,6 +110,7 @@ The following mods are also included:
     * [carts][] ([WTFPL/CC0](mods/transport/carts/README.txt))
     * [hovercraft][] ([LGPL / CC BY-SA / CC0](mods/transport/hovercraft/LICENSE.txt))
 * ui/
+    * [bookmarks_gui][] ([BSD 3-Clause](mods/ui/bookmarks_gui/LICENSE))
     * [hud][] ([LGPL / CC BY-SA / WTFPL](mods/ui/hud/README.txt))
     * [hudmap][] ([LGPL / WTFPL](mods/ui/hudmap/README.txt))
 * [vector_extras][] ([WTFPL](mods/vector_extras/LICENSE.txt))
@@ -136,6 +137,7 @@ The following mods are also included:
 [away]: https://forum.minetest.net/viewtopic.php?t=1211
 [bags]: http://cornernote.github.io/minetest-bags/
 [biome_lib]: https://forum.minetest.net/viewtopic.php?f=11&t=12999
+[bookmarks_gui]: http://cornernote.github.io/minetest-bookmarks_gui/
 [campfire]: https://forum.minetest.net/viewtopic.php?t=10569
 [carts]: https://forum.minetest.net/viewtopic.php?t=2451
 [character_creator]: https://forum.minetest.net/viewtopic.php?f=9&t=13138
