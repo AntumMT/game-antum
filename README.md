@@ -116,6 +116,7 @@ The following mods are also included:
     * [ambience][ambience_ultralite] (WTFPL / [CC-BY / CC-BY-SA / CC-BY-NC-SA / CC0](mods/world/ambience/sounds/SoundLicenses.txt))
     * [areas][] ([LGPL](mods/world/areas/LICENSE.txt))
     * [glow][] (GPL)
+    * [nether][] ([WTFPL / CC BY-SA](mods/world/nether/README.md))
     * [worldedge][] ([DWYWPL](mods/world/worldedge/licence.txt))
 
 
@@ -164,6 +165,7 @@ The following mods are also included:
 [moreores]: https://forum.minetest.net/viewtopic.php?t=549
 [moretrees]: https://forum.minetest.net/viewtopic.php?t=4394
 [mydoors]: https://forum.minetest.net/viewtopic.php?t=10626
+[nether]: https://forum.minetest.net/viewtopic.php?t=5790
 [peaceful_npc]: https://forum.minetest.net/viewtopic.php?t=4167
 [pipeworks]: https://forum.minetest.net/viewtopic.php?t=2155
 [plantlife_modpack]: https://forum.minetest.net/viewtopic.php?f=11&t=3898
