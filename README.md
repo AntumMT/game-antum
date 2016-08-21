@@ -62,6 +62,7 @@ The following mods are also included:
     * [kpgmobs][] ([MIT](mods/mobs/kpgmobs/README.txt))
     * mobf ([mobf_core modpack][mobf]) ([CC-BY-SA](doc/modpacks/mobf_core/License.txt))
     * mobf_settings ([mobf_core modpack][mobf]) ([CC-BY-SA](doc/modpacks/mobf_core/License.txt))
+    * [mobs_redo][] ([MIT](mods/mobs/mobs_redo/license.txt))
 * mobs_aggressive/
     * [creeper][] ([WTFPL](mods/mobs_aggressive/creeper/LICENSE.md))
     * ghost ([Creatures MOB-Engine][cme])
@@ -166,6 +167,7 @@ The following mods are also included:
 [mesecons]: https://forum.minetest.net/viewtopic.php?t=628
 [mobf]: https://github.com/sapier/mobf_core
 [mobs_goblins]: https://forum.minetest.net/viewtopic.php?t=13004
+[mobs_redo]: https://forum.minetest.net/viewtopic.php?t=9917
 [moreblocks]: https://forum.minetest.net/viewtopic.php?t=509
 [moremesecons]: https://forum.minetest.net/viewtopic.php?t=13150
 [moreores]: https://forum.minetest.net/viewtopic.php?t=549
