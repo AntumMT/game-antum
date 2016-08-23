@@ -38,6 +38,7 @@ The following mods are also included:
     * [chatlog][] ([CC0](mods/chat/chatlog/Readme.txt))
 * crafting/
     * [craft_guide][] ([BSD 3-Clause](mods/crafting/craft_guide/LICENSE))
+* [currency][] ([WTFPL](https://forum.minetest.net/viewtopic.php?t=7002))
 * display/
     * [bags][] ([BSD 3-Clause](mods/display/bags/LICENSE))
     * [home_gui][] ([BSD 3-Clause](mods/display/home_gui/README.md))
@@ -149,6 +150,7 @@ The following mods are also included:
 [compassgps]: https://forum.minetest.net/viewtopic.php?t=9373
 [craft_guide]: https://cornernote.github.io/minetest-craft_guide/
 [creeper]: https://forum.minetest.net/viewtopic.php?t=11891
+[currency]: https://github.com/minetest-mods/currency
 [elevator]: https://forum.minetest.net/viewtopic.php?t=12944
 [ethereal]: https://forum.minetest.net/viewtopic.php?t=14638
 [farming_plus]: https://forum.minetest.net/viewtopic.php?t=2787
