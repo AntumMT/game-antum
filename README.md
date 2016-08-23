@@ -38,7 +38,7 @@ The following mods are also included:
     * [chatlog][] ([CC0](mods/chat/chatlog/Readme.txt))
 * crafting/
     * [craft_guide][] ([BSD 3-Clause](mods/crafting/craft_guide/LICENSE))
-* [currency][] ([WTFPL](https://forum.minetest.net/viewtopic.php?t=7002))
+* [currency][] ([WTFPL](https://forum.minetest.net/viewtopic.php?t=7002)) [Git d2ea7c3](https://github.com/minetest-mods/currency/tree/d2ea7c352ada7646e019f55a365a506d132f301a)
 * display/
     * [bags][] ([BSD 3-Clause](mods/display/bags/LICENSE))
     * [home_gui][] ([BSD 3-Clause](mods/display/home_gui/README.md))
