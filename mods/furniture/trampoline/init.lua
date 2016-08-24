@@ -41,6 +41,8 @@ addColoredTrampNode = function(color, bounce)
 		},
 		groups = {dig_immediate=2, bouncy=bounce, fall_damage_add_percent=-70},
 	})
+	
+	minetest.register_alias(color .. "_trampoline", "trampoline:trampoline_" .. color)
 end
 
 -- Define function to add a colored trampoline craft recipe
@@ -71,6 +73,8 @@ minetest.register_node("trampoline:trampoline", {
 	groups = {dig_immediate=2, bouncy=20+20, fall_damage_add_percent=-70},
 })
 
+minetest.register_alias("trampoline", "trampoline:trampoline")
+
 minetest.register_craft({
 	output = "trampoline:trampoline",
 	recipe = {
@@ -98,6 +102,8 @@ minetest.register_node("trampoline:trampoline_brown", {
 	},
 	groups = {dig_immediate=2, bouncy=20+20, fall_damage_add_percent=-70},
 })
+
+minetest.register_alias("brown_trampoline", "trampoline:trampoline_brown")
 
 minetest.register_craft({
 	output = "trampoline:trampoline_brown",
