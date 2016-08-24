@@ -6,13 +6,16 @@ License: [GPLv3](LICENSE.txt)
 
 
 ### Depends on:
-* stained_wood?
+* default
+* technic
+* coloredwood?
 * craft_guide?
 
 
 ### Crafting:
-* DL = default:leaves
+* TR = technic:rubber
 * DW = default:wood
+* JW = default:junglewood
 * DS = default:stick
 
 
@@ -31,4 +34,24 @@ License: [GPLv3](LICENSE.txt)
 |		|		|		|
  -----------------------
 </pre>
-To craft colored trampolines, replace "default:wood" with "stained_wood:[color]".
+
+
+Crafting a brown trampoline:
+<pre>
+ -----------------------
+|		|		|		|
+|  DL	|  DL	|  DL	|
+|		|		|		|
+|-----------------------|
+|		|		|		|
+|  JW	|  JW	|  JW	|
+|		|		|		|
+|-----------------------|
+|		|		|		|
+|  DS	|  DS	|  DS	|
+|		|		|		|
+ -----------------------
+</pre>
+
+
+To craft colored trampolines, replace "default:wood" with "colored_wood:wood_[color]".
