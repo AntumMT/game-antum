@@ -1,2 +1,2 @@
-stained_wood?
+coloredwood?
 craft_guide?

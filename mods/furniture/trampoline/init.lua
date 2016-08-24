@@ -49,7 +49,7 @@ addColoredTrampCraft = function(color)
 		output = "trampoline:trampoline_" .. color,
 		recipe = {
 			{"default:leaves", "default:leaves", "default:leaves"},
-			{"stained_wood:" .. color, "stained_wood:" .. color, "stained_wood:" .. color},
+			{"coloredwood:wood_" .. color, "coloredwood:wood_" .. color, "coloredwood:wood_" .. color},
 			{"default:stick", "default:stick", "default:stick"}
 		}
 	})
@@ -83,9 +83,35 @@ minetest.register_craft({
 
 -- *** Colored Trampolines ***
 
-if minetest.get_modpath("stained_wood") ~= nil then
+-- BROWN TRAMP
+
+minetest.register_node("trampoline:trampoline_brown", {
+	description = "Brown Trampoline",
+	drawtype = "nodebox",
+	node_box = trampolinebox,
+	selection_box = trampolinebox,
+	paramtype = "light",
+	tiles = {
+		"top.png",
+		"bottom.png",
+		"sides.png^sides_overlay_brown.png"
+	},
+	groups = {dig_immediate=2, bouncy=20+20, fall_damage_add_percent=-70},
+})
+
+minetest.register_craft({
+	output = "trampoline:trampoline_brown",
+	recipe = {
+		{"default:leaves", "default:leaves", "default:leaves"},
+		{"default:junglewood", "default:junglewood", "default:junglewood"},
+		{"default:stick", "default:stick", "default:stick"}
+	}
+})
+
+
+if minetest.get_modpath("coloredwood") ~= nil then
 	local color_count = 0
-	local tramp_colors = {"blue", "brown", "green", "red", "violet", "yellow"}
+	local tramp_colors = {"blue", "green", "red", "violet", "yellow"}
 	
 	-- Get the number of tramp colors available
 	for _ in pairs(tramp_colors) do
