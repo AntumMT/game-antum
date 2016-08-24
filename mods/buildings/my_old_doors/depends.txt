@@ -1,3 +1,3 @@
 default
 mdoors
-stained_wood
+coloredwood
