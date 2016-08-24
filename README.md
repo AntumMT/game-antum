@@ -37,6 +37,7 @@ The following mods are also included:
 * chat/
     * [away][] ([GPL](mods/chat/away/COPYING))
     * [chatlog][] ([CC0](mods/chat/chatlog/Readme.txt))
+* [coloredwood][] ([LGPL](mods/coloredwood/LICENSE)) Version: Git [7b177f3][coloredwood version]
 * crafting/
     * [craft_guide][] ([BSD 3-Clause](mods/crafting/craft_guide/LICENSE))
 * [currency][] ([WTFPL](https://forum.minetest.net/viewtopic.php?t=7002)) [Git d2ea7c3](https://github.com/minetest-mods/currency/tree/d2ea7c352ada7646e019f55a365a506d132f301a)
@@ -148,6 +149,8 @@ The following mods are also included:
 [christmas]: https://forum.minetest.net/viewtopic.php?t=3950
 [clean]: https://forum.minetest.net/viewtopic.php?t=2777
 [cme]: https://forum.minetest.net/viewtopic.php?t=8638
+[coloredwood]: https://forum.minetest.net/viewtopic.php?t=2411
+[coloredwood version]: https://github.com/minetest-mods/coloredwood/tree/7b177f3082da84faf14fef38274358e3768a99b1
 [compass]: https://forum.minetest.net/viewtopic.php?t=3785
 [compassgps]: https://forum.minetest.net/viewtopic.php?t=9373
 [craft_guide]: https://cornernote.github.io/minetest-craft_guide/
