@@ -2,3 +2,4 @@ default
 mdoors
 coloredwood
 wool
+craft_guide?
