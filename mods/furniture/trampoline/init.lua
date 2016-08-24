@@ -48,7 +48,7 @@ addColoredTrampCraft = function(color)
 	minetest.register_craft({
 		output = "trampoline:trampoline_" .. color,
 		recipe = {
-			{"default:leaves", "default:leaves", "default:leaves"},
+			{"technic:rubber", "technic:rubber", "technic:rubber"},
 			{"coloredwood:wood_" .. color, "coloredwood:wood_" .. color, "coloredwood:wood_" .. color},
 			{"default:stick", "default:stick", "default:stick"}
 		}
@@ -74,7 +74,7 @@ minetest.register_node("trampoline:trampoline", {
 minetest.register_craft({
 	output = "trampoline:trampoline",
 	recipe = {
-		{"default:leaves", "default:leaves", "default:leaves"},
+		{"technic:rubber", "technic:rubber", "technic:rubber"},
 		{"default:wood", "default:wood", "default:wood"},
 		{"default:stick", "default:stick", "default:stick"}
 	}
@@ -102,7 +102,7 @@ minetest.register_node("trampoline:trampoline_brown", {
 minetest.register_craft({
 	output = "trampoline:trampoline_brown",
 	recipe = {
-		{"default:leaves", "default:leaves", "default:leaves"},
+		{"technic:rubber", "technic:rubber", "technic:rubber"},
 		{"default:junglewood", "default:junglewood", "default:junglewood"},
 		{"default:stick", "default:stick", "default:stick"}
 	}
