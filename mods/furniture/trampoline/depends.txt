@@ -1,2 +1,3 @@
+default
 coloredwood?
 craft_guide?
