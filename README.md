@@ -7,6 +7,7 @@ The following mods are also included:
 * admin/
     * [clean][] (WTFPL)
     * [invisible][] ([LGPL / CC BY-SA](mods/admin/invisible/readme.txt))
+    * [privs][] ([CC0](mods/admin/privs/init.lua))
 * [adv_spawning][] ([???](mods/adv_spawning/README.txt))
 * [animalmaterials (modpack)][animalmaterials] (CC-BY-SA / CC0)
 * [awards][] ([LGPL](mods/awards/LICENSE.txt))
@@ -183,6 +184,7 @@ The following mods are also included:
 [pipeworks]: https://forum.minetest.net/viewtopic.php?t=2155
 [plantlife_modpack]: https://forum.minetest.net/viewtopic.php?f=11&t=3898
 [playeranim]: https://forum.minetest.net/viewtopic.php?t=12189
+[privs]: mods/admin/privs
 [quartz]: https://forum.minetest.net/viewtopic.php?t=5682
 [signs_lib]: https://forum.minetest.net/viewtopic.php?f=11&t=13762
 [spidermob]: https://forum.minetest.net/viewtopic.php?t=10045
