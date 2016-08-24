@@ -104,6 +104,7 @@ The following mods are also included:
     * [wardrobe][] ([WTFPL](mods/player/wardrobe/README.txt))
     * wieldview ([3d_armor modpack][3d_armor])
 * [technic (modpack)][technic] ([LGPL](mods/technic/README.md))
+* [tnt][] ([WTFPL](mods/tnt/README.txt)) (Git [d6a0b7d][tnt version])
 * tools/
 	* [compassgps][] ([WTFPL / CC0 / CC BY-SA](mods/tools/compassgps/README.md))
     * [torches][] ([LGPL/CC-BY-SA](mods/tools/torches/README.txt))
@@ -193,6 +194,7 @@ The following mods are also included:
 [technic]: https://forum.minetest.net/viewtopic.php?t=2538
 [throwing]: https://forum.minetest.net/viewtopic.php?t=687
 [tnt]: https://forum.minetest.net/viewtopic.php?id=2902
+[tnt version]: https://github.com/PilzAdam/TNT/tree/d6a0b7dfec33c647414ed4c2dadf32b9347b7508
 [torches]: https://forum.minetest.net/viewtopic.php?t=6099
 [trampoline]: mods/furniture/trampoline
 [trash_can]: https://forum.minetest.net/viewtopic.php?t=6315
