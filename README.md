@@ -123,7 +123,6 @@ The following mods are also included:
 * [vector_extras][] ([WTFPL](mods/vector_extras/LICENSE.txt))
 * weather/
     * [lightning][] ([LGPL/CC-BY-SA](mods/weather/lightning/README.md))
-    * [weather][] ([LGPL/WTFPL/CC-BY-SA](mods/weather/weather/README))
 * world/
     * [ambience][ambience_ultralite] (WTFPL / [CC-BY / CC-BY-SA / CC-BY-NC-SA / CC0](mods/world/ambience/sounds/SoundLicenses.txt))
     * [areas][] ([LGPL](mods/world/areas/LICENSE.txt))
