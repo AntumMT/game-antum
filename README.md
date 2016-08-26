@@ -10,6 +10,8 @@ The following mods are also included:
     * [privs][] ([CC0](mods/admin/privs/init.lua))
 * [adv_spawning][] ([???](mods/adv_spawning/README.txt))
 * [animalmaterials (modpack)][animalmaterials] (CC-BY-SA / CC0)
+* antum/
+	* overrides (MIT)
 * [awards][] ([LGPL](mods/awards/LICENSE.txt))
 * buildings/
     * barn ([mobf_core modpack][mobf]) ([CC-BY-SA](doc/modpacks/mobf_core/License.txt))
