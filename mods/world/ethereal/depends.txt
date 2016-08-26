@@ -6,4 +6,3 @@ doors
 bakedclay?
 moreblocks?
 intllib?
-craft_guide?
