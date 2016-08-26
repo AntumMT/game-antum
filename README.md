@@ -118,6 +118,7 @@ The following mods are also included:
     * [hovercraft][] ([LGPL / CC BY-SA / CC0](mods/transport/hovercraft/LICENSE.txt))
 * ui/
     * [bookmarks_gui][] ([BSD 3-Clause](mods/ui/bookmarks_gui/LICENSE))
+    * [home_gui][] ([BSD 3-Clause](mods/ui/home_gui/LICENSE)) Installed version: [f6b5001][home_gui version] (Git)
     * [hud][] ([LGPL / CC BY-SA / WTFPL](mods/ui/hud/README.txt))
     * [hudmap][] ([LGPL / WTFPL](mods/ui/hudmap/README.txt))
 * [vector_extras][] ([WTFPL](mods/vector_extras/LICENSE.txt))
@@ -167,6 +168,7 @@ The following mods are also included:
 [glow]: https://forum.minetest.net/viewtopic.php?t=6300
 [helicopter]: https://forum.minetest.net/viewtopic.php?t=6183
 [home_gui]: http://cornernote.github.io/minetest-home_gui/
+[home_gui version]: https://github.com/cornernote/minetest-home_gui/tree/f6b500164f95a85c4f2fab9a150983887bad143f
 [homedecor]: https://forum.minetest.net/viewtopic.php?t=2041
 [hovercraft]: https://forum.minetest.net/viewtopic.php?t=6722
 [hud]: https://github.com/BlockMen/hud
