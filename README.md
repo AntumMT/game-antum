@@ -40,6 +40,7 @@ The following mods are also included:
 * [coloredwood][] ([LGPL](mods/coloredwood/LICENSE)) Version: Git [7b177f3][coloredwood version]
 * crafting/
     * [craft_guide][] ([BSD 3-Clause](mods/crafting/craft_guide/LICENSE))
+    * [craftguide][] ([GPL / WTFPL](mods/crafting/craftguide/LICENSE)) Installed version: [51a00b9][craftguide version] (Git)
 * [currency][] ([WTFPL](https://forum.minetest.net/viewtopic.php?t=7002)) [Git d2ea7c3](https://github.com/minetest-mods/currency/tree/d2ea7c352ada7646e019f55a365a506d132f301a)
 * display/
     * [bags][] ([BSD 3-Clause](mods/display/bags/LICENSE))
@@ -153,6 +154,8 @@ The following mods are also included:
 [compass]: https://forum.minetest.net/viewtopic.php?t=3785
 [compassgps]: https://forum.minetest.net/viewtopic.php?t=9373
 [craft_guide]: https://cornernote.github.io/minetest-craft_guide/
+[craftguide]: https://forum.minetest.net/viewtopic.php?t=14088
+[craftguide version]: https://github.com/minetest-mods/craftguide/tree/51a00b957e81428aa5af1b0b5eddbfdd57729d77
 [creeper]: https://forum.minetest.net/viewtopic.php?t=11891
 [currency]: https://github.com/minetest-mods/currency
 [elevator]: https://forum.minetest.net/viewtopic.php?t=12944
