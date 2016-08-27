@@ -19,7 +19,7 @@
 -- 3. This notice may not be removed or altered from any source distribution.
 --
 
-
+--[[
 core.register_craftitem("creatures:flesh", {
 	description = "Flesh",
 	inventory_image = "creatures_flesh.png",
@@ -36,4 +36,4 @@ core.register_craft({
 	type = "cooking",
 	output = "creatures:meat",
 	recipe = "creatures:flesh",
-})
+})--]]
