@@ -111,8 +111,9 @@ The following mods are also included:
 * [tnt][] ([WTFPL](mods/tnt/README.txt)) (Git [d6a0b7d][tnt version])
 * tools/
 	* [compassgps][] ([WTFPL / CC0 / CC BY-SA](mods/tools/compassgps/README.md))
-    * [torches][] ([LGPL/CC-BY-SA](mods/tools/torches/README.txt))
-    * [workbench][] ([GPL/WTFPL](mods/tools/workbench/LICENSE))
+    * [torches][] ([LGPL / CC-BY-SA](mods/tools/torches/README.txt))
+    * [workbench][] ([GPL / WTFPL](mods/tools/workbench/LICENSE))
+    * [tools_obsidian][] ([LGPL / CC BY-SA](mods/tools/tools_obsidian/README.md)) -- version: [f77fd79][obsidian_tools version]
 * transport/
     * [carts][] ([WTFPL/CC0](mods/transport/carts/README.txt))
     * [hovercraft][] ([LGPL / CC BY-SA / CC0](mods/transport/hovercraft/LICENSE.txt))
@@ -204,6 +205,8 @@ The following mods are also included:
 [tnt]: https://forum.minetest.net/viewtopic.php?id=2902
 [tnt version]: https://github.com/PilzAdam/TNT/tree/d6a0b7dfec33c647414ed4c2dadf32b9347b7508
 [torches]: https://forum.minetest.net/viewtopic.php?t=6099
+[tools_obsidian]: https://forum.minetest.net/viewtopic.php?t=14236
+[tools_obsidian version]: https://github.com/Dragonop/tools_obsidian/tree/f77fd79d76a85c07e08ca965708a75f500be32d6
 [trampoline]: mods/furniture/trampoline
 [trash_can]: https://forum.minetest.net/viewtopic.php?t=6315
 [trees]: https://forum.minetest.net/viewtopic.php?f=11&t=5713
