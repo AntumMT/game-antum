@@ -25,9 +25,15 @@
 --]]
 
 
-antum.clearCraft = function(craftname)
+antum.clearCraftOutput = function(o)
 	minetest.clear_craft({
-		output = craftname,
+		output = o,
+	})
+end
+
+antum.clearCraftRecipe = function(r)
+	minetest.clear_craft({
+		recipe = r,
 	})
 end
 
@@ -39,4 +45,15 @@ local overrideModCrafts = function(modname)
 	end
 end
 
-overrideModCrafts("helicopter")
+
+local modoverrides = {
+	"coloredwood",
+	"helicopter"
+	}
+
+for I in pairs(modoverrides) do
+	local modname = modoverrides[I]
+	if minetest.get_modpath(modname) then
+		overrideModCrafts(modname)
+	end
+end

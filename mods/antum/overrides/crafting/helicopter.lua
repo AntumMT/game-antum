@@ -25,7 +25,7 @@
 --]]
 
 
-antum.clearCraft("helicopter:cabin")
+antum.clearCraftOutput("helicopter:cabin")
 
 minetest.register_craft({
 	output = 'helicopter:cabin',
