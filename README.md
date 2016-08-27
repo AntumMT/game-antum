@@ -113,7 +113,7 @@ The following mods are also included:
 	* [compassgps][] ([WTFPL / CC0 / CC BY-SA](mods/tools/compassgps/README.md))
     * [torches][] ([LGPL / CC-BY-SA](mods/tools/torches/README.txt))
     * [workbench][] ([GPL / WTFPL](mods/tools/workbench/LICENSE))
-    * [tools_obsidian][] ([LGPL / CC BY-SA](mods/tools/tools_obsidian/README.md)) -- version: [f77fd79][obsidian_tools version]
+    * [tools_obsidian][] ([LGPL / CC BY-SA](mods/tools/tools_obsidian/README.md)) -- version: [f77fd79][tools_obsidian version]
 * transport/
     * [carts][] ([WTFPL/CC0](mods/transport/carts/README.txt))
     * [hovercraft][] ([LGPL / CC BY-SA / CC0](mods/transport/hovercraft/LICENSE.txt))
