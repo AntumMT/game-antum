@@ -1,4 +1,5 @@
 default
 creatures
+animalmaterials
 farming?
 wool?
