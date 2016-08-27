@@ -2,3 +2,4 @@ default
 coloredwood?
 helicopter?
 craft_guide?
+craftguide?

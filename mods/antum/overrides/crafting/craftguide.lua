@@ -25,36 +25,31 @@
 --]]
 
 
-antum.clearCraftOutput = function(o)
-	minetest.clear_craft({
-		output = o,
-	})
-end
+local depends = {}
+depends.craft_guide = "craft_guide"
 
-antum.clearCraftRecipe = function(r)
-	minetest.clear_craft({
-		recipe = r,
-	})
-end
+local dependencies = {depends.craft_guide}
 
-local craftdir = antum_overrides_path .. "/crafting"
-
-local overrideModCrafts = function(modname)
-	if minetest.get_modpath(modname) then
-		dofile(craftdir .. "/" .. modname .. ".lua")
+depends.satisfied = false
+for D in pairs(dependencies) do
+	if minetest.get_modpath(dependencies[D]) then
+		depends.satisfied = true
 	end
 end
 
-
-local modoverrides = {
-	"coloredwood",
-	"craftguide",
-	"helicopter",
-	}
-
-for I in pairs(modoverrides) do
-	local modname = modoverrides[I]
-	if minetest.get_modpath(modname) then
-		overrideModCrafts(modname)
+if depends.satisfied then
+	antum.clearCraftOutput("xdecor:crafting_guide")
+	
+	minetest.register_alias("craftguide:craftguide", "xdecor:crafting_guide")
+	--minetest.register_alias("craftguide", "xdecor:crafting_guide") -- Alias already taken by "craft_guide:sign_wall"
+	
+	if minetest.get_modpath(depends.craft_guide) then
+		minetest.register_craft({
+			type = "shapeless",
+			output = "craftguide:craftguide",
+			recipe = {
+				"default:book", "craft_guide:sign_wall",
+			}
+		})
 	end
 end
