@@ -9,7 +9,7 @@ The following mods are also included:
     * [clean][] (WTFPL)
     * [invisible][] ([LGPL / CC BY-SA](mods/admin/invisible/readme.txt))
     * [privs][] ([CC0](mods/admin/privs/init.lua))
-    * [spectator_mode][] ([WTFPL][spectator_mode lic]) version: [3459db4][spectator_mode version]
+    * [spectator_mode][] ([WTFPL][spectator_mode lic]) - version: [3459db4][spectator_mode version]
 * [adv_spawning][] ([???](mods/adv_spawning/README.txt))
 * [animalmaterials (modpack)][animalmaterials] (CC-BY-SA / CC0)
 * antum/
