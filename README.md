@@ -99,7 +99,7 @@ The following mods are also included:
     * 3d_armor_stand ([3d_armor modpack][3d_armor])
     * [character_creator][] ([WTFPL/CC-BY-SA](mods/player/character_creator/LICENSE.md))
     * hazmat_suit ([3d_armor modpack][3d_armor])
-    * [playeranim][] ([WFTLPL](mods/player/playeranim/LICENSE.txt) / [BSD](mods/player/playeranim/LICENSE-original.txt))
+    * [playeranim][] ([WFTLPL](mods/player/playeranim/LICENSE.txt) / [BSD](mods/player/playeranim/LICENSE-original.txt)) - version [f1c542e][playeranim version]
     * shields ([3d_armor modpack][3d_armor])
     * technic_armor ([3d_armor modpack][3d_armor])
     * [throwing][] (WTFPL)
@@ -198,6 +198,7 @@ The following mods are also included:
 [pipeworks]: https://forum.minetest.net/viewtopic.php?t=2155
 [plantlife_modpack]: https://forum.minetest.net/viewtopic.php?f=11&t=3898
 [playeranim]: https://forum.minetest.net/viewtopic.php?t=12189
+[playeranim version]: https://github.com/minetest-mods/playeranim/tree/f1c542e5284711ab0867bbe28316cfd27bbe610c
 [privs]: mods/admin/privs
 [quartz]: https://forum.minetest.net/viewtopic.php?t=5682
 [signs_lib]: https://forum.minetest.net/viewtopic.php?f=11&t=13762

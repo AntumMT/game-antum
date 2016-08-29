@@ -172,7 +172,7 @@ local animations = {
 }
 
 local function update_look_pitch(player)
-	local pitch = player:get_look_pitch() * 180 / math_pi
+	local pitch = -player:get_look_vertical() * 180 / math_pi
 
 	if look_pitch[player] ~= pitch then
 		look_pitch[player] = pitch
@@ -200,7 +200,7 @@ end
 local previous_yaw = {}
 
 local function body_moving(player, sneak, no_rotate_body)
-	local yaw = player:get_look_yaw()
+	local yaw = player:get_look_horizontal()
 
 	local player_previous_yaw = previous_yaw[player]
 	local index = #player_previous_yaw + 1
