@@ -13,7 +13,8 @@ The following mods are also included:
 * [adv_spawning][] ([???](mods/adv_spawning/README.txt))
 * [animalmaterials (modpack)][animalmaterials] (CC-BY-SA / CC0)
 * antum/
-	* overrides (MIT)
+    * [antum][] ([MIT][antum lic])
+	* overrides ([MIT][antum lic])
 * [awards][] ([LGPL](mods/awards/LICENSE.txt))
 * buildings/
     * barn ([mobf_core modpack][mobf]) ([CC-BY-SA](doc/modpacks/mobf_core/License.txt))
@@ -142,6 +143,8 @@ The following mods are also included:
 [ambience_ultralite]: https://forum.minetest.net/viewtopic.php?p=151166#p151166
 [animalmaterials]: https://github.com/sapier/animalmaterials
 [animals_modpack]: https://forum.minetest.net/viewtopic.php?t=629
+[antum]: mods/antum/antum
+[antum lic]: mods/antum/LICENSE.txt
 [areas]: https://forum.minetest.net/viewtopic.php?t=7239
 [awards]: https://forum.minetest.net/viewtopic.php?t=4870
 [away]: https://forum.minetest.net/viewtopic.php?t=1211
