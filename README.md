@@ -9,6 +9,7 @@ The following mods are also included:
     * [clean][] (WTFPL)
     * [invisible][] ([LGPL / CC BY-SA](mods/admin/invisible/readme.txt))
     * [privs][] ([CC0](mods/admin/privs/init.lua))
+    * [spectator_mode][] ([WTFPL][spectator_mode lic]) version: [3459db4][spectator_mode version]
 * [adv_spawning][] ([???](mods/adv_spawning/README.txt))
 * [animalmaterials (modpack)][animalmaterials] (CC-BY-SA / CC0)
 * antum/
@@ -202,6 +203,9 @@ The following mods are also included:
 [privs]: mods/admin/privs
 [quartz]: https://forum.minetest.net/viewtopic.php?t=5682
 [signs_lib]: https://forum.minetest.net/viewtopic.php?f=11&t=13762
+[spectator_mode]: https://forum.minetest.net/viewtopic.php?t=13718
+[spectator_mode lic]: mods/admin/spectator_mode/LICENSE
+[spectator_mode version]: https://github.com/minetest-mods/spectator_mode/tree/3459db48e1b507388ee5d24ba1531ea494e64dea
 [spidermob]: https://forum.minetest.net/viewtopic.php?t=10045
 [stairsplus]: https://forum.minetest.net/viewtopic.php?id=6140
 [technic]: https://forum.minetest.net/viewtopic.php?t=2538
