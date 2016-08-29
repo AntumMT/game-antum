@@ -1,5 +1,5 @@
 # Antum
-A custom game for Minetest/Freeminer
+A custom game for [Minetest](http://www.minetest.net/) / [Freeminer](http://freeminer.org/)
 Requires a current development release of Minetest: 0.4.14-dev-281e9f3 or above
 
 The game includes the mods from the default [minetest_game](https://github.com/minetest/minetest_game/tree/master/mods)
