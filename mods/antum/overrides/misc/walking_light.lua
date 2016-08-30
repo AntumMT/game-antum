@@ -32,10 +32,27 @@ local addLightItems = function(mod, itemlist)
 end
 
 
--- Add glow_glass & super_glow_glass to walking_light items
+-- Illuminate glow_glass & super_glow_glass
 if minetest.get_modpath('moreblocks') then
-	local moreblocks = 'moreblocks'
-	local moreblocks_items = {'glow_glass', 'super_glow_glass'}
+	local mod = 'moreblocks'
+	local mod_items = {'glow_glass', 'super_glow_glass'}
 	
-	addLightItems(moreblocks, moreblocks_items)
+	addLightItems(mod, mod_items)
+end
+
+
+-- Illuminate homedecor candles
+if minetest.get_modpath('homedecor') then
+	local mod = 'homedecor'
+	local mod_items = {
+		'candle', 'candle_thin', 'candlestick_brass',
+		'candlestick_wrought_iron',
+	}
+	
+	addLightItems(mod, mod_items)
+end
+
+local light_items = walking_light.getLightItems()
+for I in pairs(light_items) do
+	minetest.log('warning', '[walking_light] Light item: \"' .. light_items[I] .. '\"')
 end

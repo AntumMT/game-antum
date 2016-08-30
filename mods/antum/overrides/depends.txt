@@ -6,6 +6,7 @@ craft_guide?
 craftguide?
 farming?
 helicopter?
+homedecor?
 moreblocks?
 walking_light?
 wool?
