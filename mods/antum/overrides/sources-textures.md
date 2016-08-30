@@ -1,12 +1,12 @@
 [antum_fish_cooked.png] & [antum_fish_raw.png][]:
-	License: CC0
-	Author: gnokii
-	Source: [OpenClipart Library][OCL fish]
+* License: CC0
+* Author: gnokii
+* Source: [OpenClipart Library][OCL fish]
 
 [antum_meat_cooked.png][] & [antum_meat_raw.png][]:
-	License: CC0
-	Author: marauder
-	Source: [OpenClipart Library][OCL meat]
+* License: CC0
+* Author: marauder
+* Source: [OpenClipart Library][OCL meat]
 
 
 [OCL fish]: https://openclipart.org/detail/133141/sashimi
