@@ -24,10 +24,16 @@
   
 --]]
 
-antum.overrides = {}
-antum.overrides.modname = minetest.get_current_modname()
-antum.overrides.modpath = minetest.get_modpath(antum.overrides.modname)
 
-dofile(antum.overrides.modpath .. '/crafting.lua')
-dofile(antum.overrides.modpath .. '/items.lua')
-dofile(antum.overrides.modpath .. '/misc.lua')
+local miscdir = antum.overrides.modpath .. "/misc"
+
+local modoverrides = {
+	"walking_light",
+}
+
+for I in pairs(modoverrides) do
+	local modname = modoverrides[I]
+	if minetest.get_modpath(modname) then
+		dofile(miscdir .. "/" .. modname .. ".lua")
+	end
+end

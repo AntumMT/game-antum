@@ -24,10 +24,18 @@
   
 --]]
 
-antum.overrides = {}
-antum.overrides.modname = minetest.get_current_modname()
-antum.overrides.modpath = minetest.get_modpath(antum.overrides.modname)
 
-dofile(antum.overrides.modpath .. '/crafting.lua')
-dofile(antum.overrides.modpath .. '/items.lua')
-dofile(antum.overrides.modpath .. '/misc.lua')
+local addLightItems = function(mod, itemlist)
+	for I in pairs(itemlist) do
+		walking_light.addLightItem(mod .. ':' .. itemlist[I])
+	end
+end
+
+
+-- Add glow_glass & super_glow_glass to walking_light items
+if minetest.get_modpath('moreblocks') then
+	local moreblocks = 'moreblocks'
+	local moreblocks_items = {'glow_glass', 'super_glow_glass'}
+	
+	addLightItems(moreblocks, moreblocks_items)
+end
