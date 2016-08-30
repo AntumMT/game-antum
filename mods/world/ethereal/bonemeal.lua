@@ -1,17 +1,22 @@
 
 local S = ethereal.intllib
 
--- bone item
-minetest.register_craftitem("ethereal:bone", {
-	description = S("Bone"),
-	inventory_image = "bone.png",
-})
+-- bone item (use "animalmaterials:bone" if available)
+local ethereal_bone = 'ethereal:bone'
+if minetest.get_modpath('animalmaterials') then
+	ethereal_bone = 'animalmaterials:bone'
+else
+	minetest.register_craftitem("ethereal:bone", {
+		description = S("Bone"),
+		inventory_image = "bone.png",
+	})
+end
 
 -- bonemeal recipes
 minetest.register_craft({
 	type = "shapeless",
 	output = 'ethereal:bonemeal 2',
-	recipe = {'ethereal:bone'},
+	recipe = {ethereal_bone},
 })
 
 minetest.register_craft({
@@ -32,7 +37,7 @@ minetest.override_item("default:dirt", {
 		max_items = 1,
 		items = {
 			{
-				items = {'ethereal:bone', 'default:dirt'},
+				items = {ethereal_bone, 'default:dirt'},
 				rarity = 30,
 			},
 			{
