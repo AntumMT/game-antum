@@ -30,5 +30,13 @@ minetest.register_craftitem(":animalmaterials:fish_bluewhite", {
 	image = "antum_fish_raw.png",
 	on_use = minetest.item_eat(1),
 	groups = { meat=1, eatable=1 },
-	stack_max=25
+	stack_max = 25
+})
+
+minetest.register_craftitem(":animalmaterials:fish_clownfish", {
+	description = "Raw Clownfish",
+	image = "antum_fish_raw.png",
+	on_use = minetest.item_eat(1),
+	groups = { meat=1, eatable=1 },
+	stack_max = 25
 })
