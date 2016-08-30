@@ -28,5 +28,5 @@ antum.overrides = {}
 antum.overrides.modname = minetest.get_current_modname()
 antum.overrides.modpath = minetest.get_modpath(antum.overrides.modname)
 
-dofile(modpath .. "/crafting.lua")
-dofile(modpath .. "/items.lua")
+dofile(antum.overrides.modpath .. "/crafting.lua")
+dofile(antum.overrides.modpath .. "/items.lua")
