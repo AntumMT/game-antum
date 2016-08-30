@@ -37,14 +37,7 @@ antum.clearCraftRecipe = function(r)
 	})
 end
 
-local craftdir = antum_overrides_path .. "/crafting"
-
-local overrideModCrafts = function(modname)
-	if minetest.get_modpath(modname) then
-		dofile(craftdir .. "/" .. modname .. ".lua")
-	end
-end
-
+local craftdir = antum.overrides.modpath .. "/crafting"
 
 local modoverrides = {
 	"coloredwood",
@@ -56,6 +49,6 @@ local modoverrides = {
 for I in pairs(modoverrides) do
 	local modname = modoverrides[I]
 	if minetest.get_modpath(modname) then
-		overrideModCrafts(modname)
+		dofile(craftdir .. "/" .. modname .. ".lua")
 	end
 end

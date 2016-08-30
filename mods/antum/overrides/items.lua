@@ -25,11 +25,7 @@
 --]]
 
 
-local itemsdir = antum_overrides_path .. "/items"
-
-local overrideModItems = function(modname)
-	
-end
+local itemsdir = antum.overrides.modpath .. "/items"
 
 local modoverrides = {
 	"creatures",
