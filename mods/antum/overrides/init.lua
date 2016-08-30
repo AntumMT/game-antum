@@ -24,9 +24,9 @@
   
 --]]
 
-antum_overrides = {}
-local modname = "antum_overrides"
-local modpath = minetest.get_modpath(modname)
+antum.overrides = {}
+antum.overrides.modname = minetest.get_current_modname()
+antum.overrides.modpath = minetest.get_modpath(antum.overrides.modname)
 antum_overrides_path = modpath
 antum.overrides_path = modpath
 
