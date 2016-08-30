@@ -26,3 +26,5 @@
 
 
 antum = {}
+antum.modname = minetest.get_current_modname()
+antum.modpath = minetest.get_modpath(antum.modname)
