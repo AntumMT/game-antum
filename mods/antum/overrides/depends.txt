@@ -4,6 +4,7 @@ animalmaterials?
 coloredwood?
 craft_guide?
 craftguide?
+ethereal?
 farming?
 helicopter?
 homedecor?
