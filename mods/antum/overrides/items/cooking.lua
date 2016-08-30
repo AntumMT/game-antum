@@ -25,16 +25,10 @@
 --]]
 
 
-local itemsdir = antum.overrides.modpath .. "/items"
-
-local modoverrides = {
-	"animalmaterials",
-	"cooking",
-}
-
-for I in pairs(modoverrides) do
-	local modname = modoverrides[I]
-	if minetest.get_modpath(modname) then
-		dofile(itemsdir .. "/" .. modname .. ".lua")
-	end
-end
+minetest.register_craftitem(":cooking:fish_bluewhite_cooked", {
+	description = "Cooked Bluewhite Fish",
+	image = "antum_fish_cooked.png",
+	on_use = core.item_eat(6),
+	groups = { meat=1 , eatable=1},
+	stack_max = 25
+})
