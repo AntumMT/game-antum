@@ -6,3 +6,4 @@ doors
 bakedclay?
 moreblocks?
 intllib?
+animalmaterials?
