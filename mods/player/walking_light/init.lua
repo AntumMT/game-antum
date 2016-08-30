@@ -7,6 +7,32 @@ local light_positions = {}
 -- last item seen wielded by players
 local last_wielded = {}
 
+
+-- initialize walking light
+walking_light = {}
+
+-- list of items that use walking light
+local light_items = {
+	"default:torch", "walking_light:pick_mese",
+	"walking_light:helmet_diamond", "walking_light:megatorch"
+}
+
+function walking_light.addLightItem(item)
+	for I in pairs(light_items) do
+		if item == light_items[I] then
+			minetest.log("warning", "[walking_light] \"" .. item .. "\" is already light item.")
+			return
+		end
+	end
+	
+	table.insert(light_items, -1, item)
+end
+
+function walking_light.getLightItems()
+	return light_items
+end
+
+
 -- from http://lua-users.org/wiki/IteratorsTutorial
 -- useful for removing things from a table because removing from the middle makes it skip elements otherwise
 function ripairs(t)
@@ -378,10 +404,10 @@ end
 
 -- return true if item is a light item
 function is_light_item(item)
-	if item == "default:torch" or item == "walking_light:pick_mese" 
-			or item == "walking_light:helmet_diamond"
-			or item == "walking_light:megatorch" then
-		return true
+	for I in pairs(light_items) do
+		if item == light_items[I] then
+			return true
+		end
 	end
 	return false
 end
