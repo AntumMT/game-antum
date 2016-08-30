@@ -52,9 +52,9 @@ addLightItems('ethereal', {
 		'candle',
 })
 
---[[ DEBUG --]]
+--[[ DEBUG
 local light_items = walking_light.getLightItems()
 for I in pairs(light_items) do
-	minetest.log('warning', '[walking_light] Light item: \"' .. light_items[I] .. '\"')
+	minetest.log('action', '[walking_light] Light item: \"' .. light_items[I] .. '\"')
 end
-
+--]]
