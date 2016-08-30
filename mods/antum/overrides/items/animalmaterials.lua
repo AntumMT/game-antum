@@ -26,7 +26,7 @@
 
 
 minetest.register_craftitem(":animalmaterials:fish_bluewhite", {
-	description = "Fish (bluewhite)",
+	description = "Raw Bluewhite Fish",
 	image = "antum_fish_raw.png",
 	on_use = minetest.item_eat(1),
 	groups = { meat=1, eatable=1 },
