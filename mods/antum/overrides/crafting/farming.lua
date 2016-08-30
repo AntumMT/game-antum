@@ -25,37 +25,27 @@
 --]]
 
 
-antum.clearCraftOutput = function(o)
-	minetest.clear_craft({
-		output = o,
-	})
-end
+local cotton = {}
+cotton.dependencies = {"wool"}
+cotton.aliases = {"thread", "string"}
 
-antum.clearCraftRecipe = function(r)
-	minetest.clear_craft({
-		recipe = r,
-	})
-end
-
-local craftdir = antum_overrides_path .. "/crafting"
-
-local overrideModCrafts = function(modname)
-	if minetest.get_modpath(modname) then
-		dofile(craftdir .. "/" .. modname .. ".lua")
+cotton.dependencies.satisfied = false
+for dep in pairs(cotton.dependencies) do
+	if minetest.get_modpath(dep) then
+		cotton.dependencies.satisfied = true
 	end
 end
 
-
-local modoverrides = {
-	"coloredwood",
-	"craftguide",
-	"farming",
-	"helicopter",
-	}
-
-for I in pairs(modoverrides) do
-	local modname = modoverrides[I]
-	if minetest.get_modpath(modname) then
-		overrideModCrafts(modname)
+if cotton.dependencies.satisfied then
+	-- Craft cotton from white wool
+	minetest.register_craft({
+		output = "farming:cotton 4",
+		type = "shapeless",
+		recipe = {"wool:white"},
+	})
+	
+	-- Add aliases for cotton
+	for alias in pairs(cotton.aliases) do
+		minetest.register_alias("farming:" .. alias, "farming:cotton")
 	end
 end

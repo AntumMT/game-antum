@@ -4,4 +4,6 @@ coloredwood?
 craft_guide?
 craftguide?
 creatures?
+farming?
 helicopter?
+wool?
