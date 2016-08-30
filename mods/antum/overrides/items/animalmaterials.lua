@@ -33,6 +33,8 @@ minetest.register_craftitem(":animalmaterials:fish_bluewhite", {
 	stack_max = 25
 })
 
+minetest.register_alias("fish_bluewhite_raw", "animalmaterials:fish_bluewhite")
+
 minetest.register_craftitem(":animalmaterials:fish_clownfish", {
 	description = "Raw Clownfish",
 	image = "antum_fish_raw.png",
@@ -40,3 +42,5 @@ minetest.register_craftitem(":animalmaterials:fish_clownfish", {
 	groups = { meat=1, eatable=1 },
 	stack_max = 25
 })
+
+minetest.register_alias("clownfish_raw", "animalmaterials:fish_clownfish")
