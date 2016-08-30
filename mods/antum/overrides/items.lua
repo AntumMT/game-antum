@@ -28,7 +28,7 @@
 local itemsdir = antum.overrides.modpath .. "/items"
 
 local modoverrides = {
-	"creatures",
+	"animalmaterials",
 }
 
 for I in pairs(modoverrides) do
