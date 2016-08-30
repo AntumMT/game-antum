@@ -30,4 +30,3 @@ antum.overrides.modpath = minetest.get_modpath(antum.overrides.modname)
 
 dofile(antum.overrides.modpath .. "/crafting.lua")
 dofile(antum.overrides.modpath .. "/items.lua")
-dofile(antum.overrides.modpath .. "/aliases.lua")
