@@ -134,7 +134,7 @@ The following mods are also included:
     * [ethereal][] ([WTFPL](mods/world/ethereal/license.txt))
     * [glow][] (GPL)
     * [nether][] ([WTFPL / CC BY-SA](mods/world/nether/README.md))
-    * [simple_protection][] ([WTFPL](mods/world/simple_protection/README.md)) -- version [c822e56 Git][ver.simpled_protection]
+    * [simple_protection][] ([WTFPL](mods/world/simple_protection/README.md)) -- version [c822e56 Git][ver.simple_protection]
     * [worldedge][] ([DWYWPL](mods/world/worldedge/licence.txt))
 
 
