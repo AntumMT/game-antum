@@ -13,7 +13,7 @@ The following mods are also included:
 * [animalmaterials (modpack)][animalmaterials] (CC-BY-SA / CC0)
 * antum/
     * [antum][] ([MIT][lic.antum])
-    * [glass][[antum_glass] ([MIT][lic.antum])
+    * [glass][antum_glass] ([MIT][lic.antum])
 	* [overrides][antum_overrides] ([MIT][lic.antum])
 * [awards][] ([LGPL](mods/awards/LICENSE.txt))
 * buildings/
