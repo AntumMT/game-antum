@@ -20,7 +20,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [elevator][] ([WTFPL](mods/buildings/elevator/readme.txt))
     * [fort_spikes][] ([MIT/CC0](mods/buildings/fort_spikes/LICENSE))
     * [moreblocks][] ([zlib](mods/buildings/moreblocks/LICENSE.md))
-    * my_*_doors ([mydoors modpack][mydoors])
     * my_garage_door ([mydoors modpack][mydoors])
     * [stairsplus][] ([zlib](mods/buildings/stairsplus/LICENSE.txt))
     * [windmill][] ([WTFPL](mods/buildings/windmill/README.md))
@@ -169,6 +168,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [mydoors][] -- version: 1.0
 	* mydoors/
 		* mdoors ([CC-BY / CC-BY-SA / WTFPL][lic.mdoors.1] / [DWYWFPL][lic.mdoors.2])
+		* my_*_doors
 
 
 
