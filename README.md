@@ -20,7 +20,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * computer ([homedecor_modpack][homedecor])
     * [elevator][] ([WTFPL](mods/buildings/elevator/readme.txt))
     * [fort_spikes][] ([MIT/CC0](mods/buildings/fort_spikes/LICENSE))
-    * itemframes ([homedecor_modpack][homedecor])
     * lavalamp ([homedecor_modpack][homedecor])
     * lrfurn ([homedecor_modpack][homedecor])
     * [moreblocks][] ([zlib](mods/buildings/moreblocks/LICENSE.md))
@@ -139,30 +138,31 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [animals_modpack][] -- version: 2.5.0
 	* animals_modpack/
 		* animal_chicken [CC BY-SA / CC0][lic.amp_chicken]
-	    * animal_clownfish ([CC BY-SA][lic.amp_clownfish])
+		* animal_clownfish ([CC BY-SA][lic.amp_clownfish])
 		* animal_cow ([CC BY-SA / GFDL / WTFPL][lic.amp_cow])
 		* animal_deer ([CC BY-SA][lic.amp_deer])
 		* animal_dm ([CC0 / CC BY-SA][lic.amp_dm])
-	    * animal_fish_blue_white ([CC-BY-SA][lic.amp_fish_blue_white])
-	    * animal_gull ([CC BY-SA][lic.amp_gull])
-	    * animal_rat ([CC0 / CC-BY-SA][lic.amp_rat])
+		* animal_fish_blue_white ([CC-BY-SA][lic.amp_fish_blue_white])
+		* animal_gull ([CC BY-SA][lic.amp_gull])
+		* animal_rat ([CC0 / CC-BY-SA][lic.amp_rat])
 		* animal_sheep ([CC BY-SA / GFDL][lic.amp_sheep])
-	    * mob_bear ([CC0 / CC-BY-SA][lic.amp_bear])
+		* mob_bear ([CC0 / CC-BY-SA][lic.amp_bear])
 		* mob_ghost ([CC BY-SA][lic.amp_ghost])
 		* mob_oerkki ([CC0 / CC BY-SA][lic.amp_oerkki])
 		* mob_ostrich ([CC BY-SA][lic.amp_ostrich])
-	    * mob_shark ([CC BY-SA][lic.amp_shark])
-	    * mob_slime ([CC0 / CC BY / CC BY-SA / CC0][lic.amp_slime])
+		* mob_shark ([CC BY-SA][lic.amp_shark])
+		* mob_slime ([CC0 / CC BY / CC BY-SA / CC0][lic.amp_slime])
 		* mob_warthog ([CC BY / CC BY-SA][lic.amp_warthog])
 * [homedecor_modpack][homedecor] ([LGPL / WTFPL / CC BY-SA / CC0][lic.homedecor]) -- version: [b33428b Git][ver.homedecor]
 	* NOTE: New version available: 02a4d14
 	* homedecor_modpack/
-	    * building_blocks
-	    * chains
-	    * fake_fire
-	    * homedecor
-    	* homedecor_3d_extras
-	    * inbox
+		* building_blocks
+		* chains
+		* fake_fire
+		* homedecor
+		* homedecor_3d_extras
+		* inbox
+		* itemframes
 * [mobf_core][animals_modpack] (part of animals_modpack) -- version: 2.5.1
 	* mobf_core/
 	    * barn ([CC-BY-SA][lic.mobf])
