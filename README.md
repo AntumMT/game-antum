@@ -10,24 +10,6 @@ The following mods are also included:
     * [invisible][] ([LGPL / CC BY-SA](mods/admin/invisible/readme.txt))
     * [privs][] ([CC0](mods/admin/privs/init.lua))
     * [spectator_mode][] ([WTFPL][spectator_mode lic]) - version: [3459db4][spectator_mode version]
-* [animalmaterials (modpack)][animalmaterials] (CC BY-SA / CC0)
-* [animals_modpack][]/
-	* animal_chicken
-    * animal_clownfish ([animals_modpack][]) ([CC BY-SA][lic.animal_clownfish])
-	* animal_cow
-	* animal_deer
-	* animal_dm
-    * animal_fish_blue_white ([animals_modpack][]) ([CC-BY-SA][lic.animal_fish_blue_white])
-    * animal_gull ([animals_modpack][]) ([CC BY-SA][lic.animal_gull])
-    * animal_rat ([animals_modpack][]) ([CC-BY-SA / CC0][lic.animal_rat])
-	* animal_sheep
-    * mob_bear ([animals_modpack][]) ([CC-BY-SA / CC0][lic.mob_bear])
-	* mob_ghost
-	* mob_oerkki
-	* mob_ostrich
-    * mob_shark ([animals_modpack][]) ([CC-BY-SA][lic.mob_shark])
-    * mob_slime ([animals_modpack][]) ([CC-BY / CC-BY-SA / CC0][lic.mob_slime])
-	* mob_warthog
 * antum/
     * [antum][] ([MIT][lic.antum])
     * [glass][antum_glass] ([MIT][lic.antum])
@@ -156,6 +138,34 @@ The following mods are also included:
 
 
 
+This is a list of installed 3rd-party modpacks & their components (trying to keep them separate & in an organized fashion):
+* [animalmaterials][] (part of animals_modpack)
+	* animalmaterials/
+		* animal_resources ([CC0][lic.amp_animal_resources])
+		* animalmaterials ([CC BY-SA][lic.amp_animalmaterials])
+		* cooking ([CC BY-SA][lic.amp_cooking]
+		* mob_environments ([???][lic.amp_mob_environments)
+* [animals_modpack][]
+	* animals_modpack/
+		* animal_chicken [CC BY-SA / CC0][lic.amp_chicken]
+	    * animal_clownfish ([CC BY-SA][lic.amp_clownfish])
+		* animal_cow ([CC BY-SA / GFDL / WTFPL][lic.amp_cow])
+		* animal_deer ([CC BY-SA][lic.amp_deer])
+		* animal_dm ([CC0 / CC BY-SA][lic.amp_dm])
+	    * animal_fish_blue_white ([CC-BY-SA][lic.amp_fish_blue_white])
+	    * animal_gull ([CC BY-SA][lic.amp_gull])
+	    * animal_rat ([CC0 / CC-BY-SA][lic.amp_rat])
+		* animal_sheep ([CC BY-SA / GFDL][lic.amp_sheep])
+	    * mob_bear ([CC0 / CC-BY-SA][lic.amp_bear])
+		* mob_ghost ([CC BY-SA][lic.amp_ghost])
+		* mob_oerkki ([CC0 / CC BY-SA][lic.amp_oerkki])
+		* mob_ostrich ([CC BY-SA][lic.amp_ostrich])
+	    * mob_shark ([CC BY-SA][lic.amp_shark])
+	    * mob_slime ([CC0 / CC BY / CC BY-SA / CC0][lic.amp_slime])
+		* mob_warthog ([CC BY / CC BY-SA][lic.amp_warthog])
+
+
+
 [3d_armor]: https://forum.minetest.net/viewtopic.php?t=4654
 [adv_spawning]: https://github.com/sapier/adv_spawning
 [ambience_ultralite]: https://forum.minetest.net/viewtopic.php?p=151166#p151166
@@ -257,21 +267,32 @@ The following mods are also included:
 [lic.adv_spawning]: mods/spawning/adv_spawning/README.txt
 [lic.ambience_ultralite.1]: https://forum.minetest.net/viewtopic.php?t=2807
 [lic.ambience_ultralite.2]: mods/sound/ambience/sounds/SoundLicenses.txt
-[lic.animal_clownfish]: mods/animals_modpack/animal_clownfish/License.txt
-[lic.animal_fish_blue_white]: mods/animals_modpack/animal_fish_blue_white/License.txt
-[lic.animal_gull]: mods/animals_modpack/animal_gull/License.txt
-[lic.animal_rat]: mods/animals_modpack/animal_rat/License.txt
+[lic.amp_animal_resources]: mods/animalmaterials/animal_resources/License.txt
+[lic.amp_animalmaterials]: mods/animalmaterials/animalmaterisl/License.txt
+[lic.amp_bear]: mods/animals_modpack/mob_bear/License.txt
+[lic.amp_chicken]: mods/animals_modpack/animal_chicken/License.txt
+[lic.amp_clownfish]: mods/animals_modpack/animal_clownfish/License.txt
+[lic.amp_cooking]: mods/animalmaterials/cooking/License.txt
+[lic.amp_cow]: mods/animals_modpack/animal_cow/License.txt
+[lic.amp_deer]: mods/animals_modpack/animal_deer/License.txt
+[lic.amp_dm]: mods/animals_modpack/animal_dm/License.txt
+[lic.amp_fish_blue_white]: mods/animals_modpack/animal_fish_blue_white/License.txt
+[lic.amp_ghost]: mods/animals_modpack/mob_ghost/License.txt
+[lic.amp_gull]: mods/animals_modpack/animal_gull/License.txt
+[lic.amp_mob_environments]: mods/animalmaterials/mob_environments/README
+[lic.amp_oerkki]: mods/animals_modpack/mob_oerkki/License.txt
+[lic.amp_ostrich]: mods/animals_modpack/mob_ostrich/License.txt
+[lic.amp_rat]: mods/animals_modpack/animal_rat/License.txt
+[lic.amp_shark]: mods/animals_modpack/mob_shark/License.txt
+[lic.amp_sheep]: mods/animals_modpack/License information.txt
+[lic.amp_slime]: mods/animals_modpack/mob_slime/License.txt
+[lic.amp_warthog]: mods/animals_modpack/mob_warthog/License.txt
 [lic.antum]: mods/antum/LICENSE.txt
 [lic.areas]: mods/protection/areas/LICENSE.txt
 [lic.awards]: mods/awards/LICENSE.txt
 [lic.character_creator]: mods/player_visuals/character_creator/LICENSE.md
 [lic.creeper]: mods/mobs_aggressive/creeper/LICENSE.md
 [lic.ilights]: mods/lighting/ilights/init.lua
-[lic.mob_archer]: mods/animals_modpack/mob_archer/License.txt
-[lic.mob_bear]: mods/animals_modpack/mob_bear/License.txt
-[lic.mob_guard]: mods/animals_modpack/mob_guard/License.txt
-[lic.mob_shark]: mods/animals_modpack/mob_shark/License.txt
-[lic.mob_slime]: mods/animals_modpack/mob_slime/License.txt
 [lic.playeranim.1]: mods/player_visuals/playeranim/LICENSE.txt
 [lic.playeranim.2]: mods/player_visuals/playeranim/LICENSE-original.txt
 [lic.simple_protection]: mods/protection/simple_protection/README.md
