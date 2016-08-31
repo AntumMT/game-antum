@@ -21,6 +21,7 @@ The following mods are also included:
 	* animal_dm
     * animal_fish_blue_white ([animals_modpack][]) ([CC-BY-SA][lic.animal_fish_blue_white])
     * animal_gull ([animals_modpack][]) ([CC BY-SA][lic.animal_gull])
+    * animal_rat ([animals_modpack][]) ([CC-BY-SA / CC0][lic.animal_rat])
 	* animal_sheep
 	* animal_vombie
 	* animal_wolf
@@ -106,7 +107,6 @@ The following mods are also included:
     * [spidermob][] ([CC-BY-SA / WTFPL / CC0](mods/mobs_aggressive/spidermob/LICENSE))
     * zombie ([Creatures MOB-Engine][cme])
 * mobs_passive/
-    * animal_rat ([animals_modpack][]) ([CC-BY-SA / CC0](mods/mobs_passive/animal_rat/License.txt))
     * chicken ([Creatures MOB-Engine][cme])
     * sheep ([Creatures MOB-Engine][cme])
 * [moremesecons][] ([GPL](mods/moremesecons/LICENSE.txt))
@@ -268,6 +268,7 @@ The following mods are also included:
 [lic.animal_clownfish]: mods/animals_modpack/animal_clownfish/License.txt
 [lic.animal_fish_blue_white]: mods/animals_modpack/animal_fish_blue_white/License.txt
 [lic.animal_gull]: mods/animals_modpack/animal_gull/License.txt
+[lic.animal_rat]: mods/animals_modpack/animal_rat/License.txt
 [lic.antum]: mods/antum/LICENSE.txt
 [lic.areas]: mods/protection/areas/LICENSE.txt
 [lic.awards]: mods/awards/LICENSE.txt
