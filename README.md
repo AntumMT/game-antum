@@ -109,6 +109,7 @@ The following mods are also included:
     * [walking_light][] ([WTFPL / CC-BY-SA](mods/player/walking_light/README.md))
     * [wardrobe][] ([WTFPL](mods/player/wardrobe/README.txt))
     * wieldview ([3d_armor modpack][3d_armor])
+* [spawneggs][] ([WTFPL][lic.spawneggs]) -- version [4650370 Git][ver.spawneggs]
 * [technic (modpack)][technic] ([LGPL](mods/technic/README.md))
 * [tnt][] ([WTFPL](mods/tnt/README.txt)) (Git [d6a0b7d][tnt version])
 * tools/
@@ -209,6 +210,7 @@ The following mods are also included:
 [quartz]: https://forum.minetest.net/viewtopic.php?t=5682
 [signs_lib]: https://forum.minetest.net/viewtopic.php?f=11&t=13762
 [simple_protection]: https://forum.minetest.net/viewtopic.php?t=9035
+[spawneggs]: https://forum.minetest.net/viewtopic.php?t=6214
 [spectator_mode]: https://forum.minetest.net/viewtopic.php?t=13718
 [spectator_mode lic]: mods/admin/spectator_mode/LICENSE
 [spectator_mode version]: https://github.com/minetest-mods/spectator_mode/tree/3459db48e1b507388ee5d24ba1531ea494e64dea
@@ -236,6 +238,8 @@ The following mods are also included:
 [worldedge]: https://forum.minetest.net/viewtopic.php?t=10753
 
 [lic.creeper]: mods/mobs_aggressive/creeper/LICENSE.md
+[lic.spawneggs]: mods/spawneggs/README.txt
 
 [ver.creeper]: https://github.com/Rui-Minetest/creeper/tree/036666e2ccd26632a0c11585af0345c6eaa8c72d
 [ver.simple_protection]: https://github.com/SmallJoker/simple_protection/tree/c822e561e0349f02b70bf6a8c28059515603a0be
+[ver.spawneggs]: https://github.com/thefamilygrog66/spawneggs/tree/46503709bb0a1bff586cd345aac6b36936c4c311
