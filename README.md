@@ -19,7 +19,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [christmas][] ([MIT](mods/buildings/christmas/LICENSE.txt))
     * [elevator][] ([WTFPL](mods/buildings/elevator/readme.txt))
     * [fort_spikes][] ([MIT/CC0](mods/buildings/fort_spikes/LICENSE))
-    * lavalamp ([homedecor_modpack][homedecor])
     * [moreblocks][] ([zlib](mods/buildings/moreblocks/LICENSE.md))
     * mdoors ([mydoors modpack][mydoors]) ([CC-BY / CC-BY-SA / WTFPL](mods/buildings/mdoors/README.txt) / [DWYWFPL](doc/modpacks/mydoors/licence.txt))
     * my_*_doors ([mydoors modpack][mydoors])
@@ -162,6 +161,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* homedecor_3d_extras
 		* inbox
 		* itemframes
+		* lavalamp
 		* lrfurn
 * [mobf_core][animals_modpack] (part of animals_modpack) -- version: 2.5.1
 	* mobf_core/
