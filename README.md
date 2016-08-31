@@ -63,7 +63,7 @@ The following mods are also included:
 	* [signs_lib][] ([BSD/WTFPL](mods/lib/signs_lib/copyright.txt))
 * lighting/
 	* [ilights][] ([CC BY-SA][lic.ilights]) -- version [d5f6900 Git][ver.ilights]
-    * walking_light [petermalone fork][walking_light] ([WTFPL / CC-BY-SA][lic.walking_light]) -- version: [93de9b7 Git][ver.walking_light]
+    * walking_light ([petermalone fork][walking_light]) ([WTFPL / CC-BY-SA][lic.walking_light]) -- version: [93de9b7 Git][ver.walking_light]
 * materials/
 	* [moreores][] ([zlib/CC-BY-SA](mods/materials/moreores/README.md))
 	* [quartz][] ([MIT](mods/materials/quartz/LICENSE.txt))
