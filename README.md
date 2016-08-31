@@ -61,6 +61,8 @@ The following mods are also included:
 * lib/
     * [biome_lib][] ([WTFPL](mods/lib/biome_lib/README.md))
 	* [signs_lib][] ([BSD/WTFPL](mods/lib/signs_lib/copyright.txt))
+* lighting/
+	* [ilights][] ([CC BY-SA][lic.ilights]) -- version [d5f6900 Git][ver.ilights]
 * materials/
 	* [moreores][] ([zlib/CC-BY-SA](mods/materials/moreores/README.md))
 	* [quartz][] ([MIT](mods/materials/quartz/LICENSE.txt))
@@ -183,6 +185,7 @@ The following mods are also included:
 [hovercraft]: https://forum.minetest.net/viewtopic.php?t=6722
 [hud]: https://github.com/BlockMen/hud
 [hudmap]: https://github.com/stujones11/hudmap
+[ilights]: https://forum.minetest.net/viewtopic.php?t=12200
 [intllib]: https://forum.minetest.net/viewtopic.php?t=4929
 [invisible]: https://forum.minetest.net/viewtopic.php?t=14399
 [inventory_plus]: https://forum.minetest.net/viewtopic.php?t=3100
@@ -239,9 +242,11 @@ The following mods are also included:
 [worldedge]: https://forum.minetest.net/viewtopic.php?t=10753
 
 [lic.antum]: mods/antum/LICENSE.txt
+[lic.ilights]: mods/lighting/ilights/init.lua
 [lic.creeper]: mods/mobs_aggressive/creeper/LICENSE.md
 [lic.spawneggs]: mods/spawneggs/README.txt
 
 [ver.creeper]: https://github.com/Rui-Minetest/creeper/tree/036666e2ccd26632a0c11585af0345c6eaa8c72d
+[ver.ilights]: https://github.com/minetest-mods/ilights/tree/d5f6900b5a6510f5922a7517ad613633861ce4df
 [ver.simple_protection]: https://github.com/SmallJoker/simple_protection/tree/c822e561e0349f02b70bf6a8c28059515603a0be
 [ver.spawneggs]: https://github.com/thefamilygrog66/spawneggs/tree/46503709bb0a1bff586cd345aac6b36936c4c311
