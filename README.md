@@ -20,7 +20,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [elevator][] ([WTFPL](mods/buildings/elevator/readme.txt))
     * [fort_spikes][] ([MIT/CC0](mods/buildings/fort_spikes/LICENSE))
     * [moreblocks][] ([zlib](mods/buildings/moreblocks/LICENSE.md))
-    * mdoors ([mydoors modpack][mydoors]) ([CC-BY / CC-BY-SA / WTFPL](mods/buildings/mdoors/README.txt) / [DWYWFPL](doc/modpacks/mydoors/licence.txt))
     * my_*_doors ([mydoors modpack][mydoors])
     * my_garage_door ([mydoors modpack][mydoors])
     * [stairsplus][] ([zlib](mods/buildings/stairsplus/LICENSE.txt))
@@ -167,6 +166,9 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	    * barn
 	    * mobf
     	* mobf_settings
+* [mydoors][] -- version: 1.0
+	* mydoors/
+		* mdoors ([CC-BY / CC-BY-SA / WTFPL][lic.mdoors.1] / [DWYWFPL][lic.mdoors.2])
 
 
 
@@ -295,6 +297,8 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.creeper]: mods/mobs_aggressive/creeper/LICENSE.md
 [lic.homedecor]: mods/homedecor_modpack/LICENSE
 [lic.ilights]: mods/lighting/ilights/init.lua
+[lic.mdoors.1]: mods/mydoors/mdoors/README.txt
+[lic.mdoors.2]: doc/modpacks/mydoors/licence.txt
 [lic.mobf]: mods/mobf_core/License.txt
 [lic.playeranim.1]: mods/player_visuals/playeranim/LICENSE.txt
 [lic.playeranim.2]: mods/player_visuals/playeranim/LICENSE-original.txt
