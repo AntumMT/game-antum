@@ -118,7 +118,7 @@ The following mods are also included:
     * [areas][] ([LGPL][lic.areas]) -- version [67507c7 Git][ver.areas]
     * [simple_protection][] ([WTFPL][lic.simple_protection]) -- version [c822e56 Git][ver.simple_protection]
 * sound/
-    * [ambience][ambience_ultralite] ([WTFPL][lic.amb ience_ultralite.1] / [CC-BY / CC-BY-SA / CC-BY-NC-SA / CC0][lic.ambience_ultralite.2]) -- version: 0.36
+    * [ambience][ambience_ultralite] ([WTFPL][lic.amb ience_ultralite.1] / [CC-BY / CC-BY-SA / CC-BY-NC-SA / CC0][lic.ambience_ultralite.2]) -- version:
 * [spawneggs][] ([WTFPL][lic.spawneggs]) -- version [4650370 Git][ver.spawneggs]
 * [technic (modpack)][technic] ([LGPL](mods/technic/README.md))
 * [tnt][] ([WTFPL](mods/tnt/README.txt)) (Git [d6a0b7d][tnt version])
@@ -245,7 +245,7 @@ The following mods are also included:
 [worldedge]: https://forum.minetest.net/viewtopic.php?t=10753
 
 [lic.3d_armor]: doc/modpacks/3d_armor/LICENSE.md
-[lic.ambience_ultralite.1]:
+[lic.ambience_ultralite.1]: https://forum.minetest.net/viewtopic.php?t=2807
 [lic.ambience_ultralite.2]: mods/sound/ambience/sounds/SoundLicenses.txt
 [lic.antum]: mods/antum/LICENSE.txt
 [lic.areas]: mods/protection/areas/LICENSE.txt
