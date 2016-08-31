@@ -16,7 +16,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [overrides][antum_overrides] ([MIT][lic.antum])
 * [awards][] ([LGPL][lic.awards]) -- version: [2.3.0-14-92c43d1 Git][ver.awards]
 * buildings/
-    * building_blocks ([homedecor_modpack][homedecor]) ([LGPL/WTFPL/CC-BY-SA](doc/modpacks/homedecor/LICENSE))
     * chains ([homedecor_modpack][homedecor])
     * [christmas][] ([MIT](mods/buildings/christmas/LICENSE.txt))
     * computer ([homedecor_modpack][homedecor])
@@ -160,6 +159,9 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	    * mob_shark ([CC BY-SA][lic.amp_shark])
 	    * mob_slime ([CC0 / CC BY / CC BY-SA / CC0][lic.amp_slime])
 		* mob_warthog ([CC BY / CC BY-SA][lic.amp_warthog])
+* [homedecor_modpack][homedecor]
+	* homedecor_modpack/
+	    * building_blocks ([LGPL / WTFPL / CC-BY-SA][lic.homedecor])
 * [mobf_core][animals_modpack] (part of animals_modpack) -- version: 2.5.1
 	* mobf_core/
 	    * barn ([CC-BY-SA][lic.mobf])
@@ -291,6 +293,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.awards]: mods/awards/LICENSE.txt
 [lic.character_creator]: mods/player_visuals/character_creator/LICENSE.md
 [lic.creeper]: mods/mobs_aggressive/creeper/LICENSE.md
+[lic.homedecor]: mods/homedecor_modpack/LICENSE
 [lic.ilights]: mods/lighting/ilights/init.lua
 [lic.mobf]: doc/modpacks/mobf_core/License.txt
 [lic.playeranim.1]: mods/player_visuals/playeranim/LICENSE.txt
