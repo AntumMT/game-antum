@@ -70,8 +70,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * mobs/
     * [creatures (Creatures MOB-Engine)][cme] ([zlib/CC-BY-SA](doc/modpacks/cme/README.txt))
     * [kpgmobs][] ([MIT](mods/mobs/kpgmobs/README.txt))
-    * mobf ([mobf_core modpack][mobf]) ([CC-BY-SA](doc/modpacks/mobf_core/License.txt))
-    * mobf_settings ([mobf_core modpack][mobf]) ([CC-BY-SA](doc/modpacks/mobf_core/License.txt))
     * [mobs_redo][] ([MIT](mods/mobs/mobs_redo/license.txt))
 * mobs_aggressive/
     * [creeper][] ([WTFPL][lic.creeper]) -- version [036666e Git][ver.creeper]
@@ -163,6 +161,10 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	    * mob_shark ([CC BY-SA][lic.amp_shark])
 	    * mob_slime ([CC0 / CC BY / CC BY-SA / CC0][lic.amp_slime])
 		* mob_warthog ([CC BY / CC BY-SA][lic.amp_warthog])
+* [mobf_core][animals_modpack] (part of animals_modpack) -- version: 2.5.1
+	* mobf_core/
+	    * mobf ([CC-BY-SA][lic.mobf])
+    	* mobf_settings ([CC-BY-SA][lic.mobf])
 
 
 
@@ -216,7 +218,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [markers]: https://forum.minetest.net/viewtopic.php?id=8175
 [markers version]: https://github.com/Sokomine/markers/tree/52d1b90b8906b28d4b5ba93cd271b3865b316d00
 [mesecons]: https://forum.minetest.net/viewtopic.php?t=628
-[mobf]: https://github.com/sapier/mobf_core
 [mobs_goblins]: https://forum.minetest.net/viewtopic.php?t=13004
 [mobs_redo]: https://forum.minetest.net/viewtopic.php?t=9917
 [moreblocks]: https://forum.minetest.net/viewtopic.php?t=509
@@ -291,6 +292,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.character_creator]: mods/player_visuals/character_creator/LICENSE.md
 [lic.creeper]: mods/mobs_aggressive/creeper/LICENSE.md
 [lic.ilights]: mods/lighting/ilights/init.lua
+[lic.mobf]: doc/modpacks/mobf_core/License.txt
 [lic.playeranim.1]: mods/player_visuals/playeranim/LICENSE.txt
 [lic.playeranim.2]: mods/player_visuals/playeranim/LICENSE-original.txt
 [lic.simple_protection]: mods/protection/simple_protection/README.md
