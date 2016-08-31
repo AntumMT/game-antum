@@ -139,7 +139,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 
 ### This is a list of installed modpacks & their components (trying to keep them listed separate for sake of organization):
-* [animalmaterials][] (part of animals_modpack)
+* [animalmaterials][animals_modpack] (part of animals_modpack) -- version: 0.1.3
 	* animalmaterials/
 		* animal_resources ([CC0][lic.amp_animal_resources])
 		* animalmaterials ([CC BY-SA][lic.amp_animalmaterials])
@@ -169,7 +169,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [3d_armor]: https://forum.minetest.net/viewtopic.php?t=4654
 [adv_spawning]: https://github.com/sapier/adv_spawning
 [ambience_ultralite]: https://forum.minetest.net/viewtopic.php?p=151166#p151166
-[animalmaterials]: https://github.com/sapier/animalmaterials
 [animals_modpack]: https://forum.minetest.net/viewtopic.php?t=629
 [antum]: mods/antum/antum
 [antum_glass]: mods/antum/glass
