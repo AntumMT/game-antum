@@ -107,11 +107,12 @@ The following mods are also included:
     * [playeranim][] ([WFTLPL](mods/player/playeranim/LICENSE.txt) / [BSD](mods/player/playeranim/LICENSE-original.txt)) - version [f1c542e][playeranim version]
     * shields ([3d_armor modpack][3d_armor])
     * technic_armor ([3d_armor modpack][3d_armor])
-    * [throwing][] (WTFPL)
     * [unified_inventory][] ([LGPL/WTFPL](mods/player/unified_inventory/README.md))
     * [walking_light][] ([WTFPL / CC-BY-SA](mods/player/walking_light/README.md))
     * [wardrobe][] ([WTFPL](mods/player/wardrobe/README.txt))
     * wieldview ([3d_armor modpack][3d_armor])
+* player_action/
+    * [throwing][] ([WTFPL][lic.throwing]) -- version: [0.14-79ad788 Git][ver.throwing]
 * protection/
     * [areas][] ([LGPL][lic.areas]) -- version [67507c7 Git][ver.areas]
     * [simple_protection][] ([WTFPL][lic.simple_protection]) -- version [c822e56 Git][ver.simple_protection]
@@ -248,9 +249,11 @@ The following mods are also included:
 [lic.ilights]: mods/lighting/ilights/init.lua
 [lic.simple_protection]: mods/protection/simple_protection/README.md
 [lic.spawneggs]: mods/spawneggs/README.txt
+[lic.throwing]: https://forum.minetest.net/viewtopic.php?t=687#p5739
 
 [ver.areas]: https://github.com/ShadowNinja/areas/tree/67507c75918f8a60ad218cdcb69cc8d39e4a55ed
 [ver.creeper]: https://github.com/Rui-Minetest/creeper/tree/036666e2ccd26632a0c11585af0345c6eaa8c72d
 [ver.ilights]: https://github.com/minetest-mods/ilights/tree/d5f6900b5a6510f5922a7517ad613633861ce4df
 [ver.simple_protection]: https://github.com/SmallJoker/simple_protection/tree/c822e561e0349f02b70bf6a8c28059515603a0be
 [ver.spawneggs]: https://github.com/thefamilygrog66/spawneggs/tree/46503709bb0a1bff586cd345aac6b36936c4c311
+[ver.throwing]: https://github.com/Jeija/minetest-mod-throwing/tree/79ad788b9f415b68793dc44128870fbfa6a4d064
