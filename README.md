@@ -12,25 +12,17 @@ The following mods are also included:
     * [spectator_mode][] ([WTFPL][spectator_mode lic]) - version: [3459db4][spectator_mode version]
 * [animalmaterials (modpack)][animalmaterials] (CC BY-SA / CC0)
 * [animals_modpack][]/
-	* animal_big_red
 	* animal_chicken
     * animal_clownfish ([animals_modpack][]) ([CC BY-SA][lic.animal_clownfish])
 	* animal_cow
-	* animal_creeper
 	* animal_deer
 	* animal_dm
     * animal_fish_blue_white ([animals_modpack][]) ([CC-BY-SA][lic.animal_fish_blue_white])
     * animal_gull ([animals_modpack][]) ([CC BY-SA][lic.animal_gull])
     * animal_rat ([animals_modpack][]) ([CC-BY-SA / CC0][lic.animal_rat])
 	* animal_sheep
-	* animal_vombie
-	* animal_wolf
-    * mob_archer ([animals_modpack][]) ([CC-BY-SA / CC0][lic.mob_archer])
     * mob_bear ([animals_modpack][]) ([CC-BY-SA / CC0][lic.mob_bear])
 	* mob_ghost
-    * mob_guard ([animals_modpack][]) ([CC-BY-SA / CC0][lic.mob_guard])
-	* mob_miner
-	* mob_npc
 	* mob_oerkki
 	* mob_ostrich
     * mob_shark ([animals_modpack][]) ([CC-BY-SA][lic.mob_shark])
