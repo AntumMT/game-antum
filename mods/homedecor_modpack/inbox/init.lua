@@ -57,12 +57,14 @@ minetest.register_node("inbox:empty", {
 				"default:chest_locked",
 				inbox.get_inbox_insert_formspec(pos))
 		end
+		return itemstack
 	end,
 	can_dig = function(pos,player)
 		local meta = minetest.get_meta(pos);
+		local name = player and player:get_player_name()
 		local owner = meta:get_string("owner")
 		local inv = meta:get_inventory()
-		return player:get_player_name() == owner and inv:is_empty("main")
+		return name == owner and inv:is_empty("main")
 	end,
 	on_metadata_inventory_put = function(pos, listname, index, stack, player)
 		local meta = minetest.get_meta(pos)
@@ -93,7 +95,8 @@ function inbox.get_inbox_formspec(pos)
 	local formspec =
 		"size[8,9]"..
 		"list[nodemeta:".. spos .. ";main;0,0;8,4;]"..
-		"list[current_player;main;0,5;8,4;]"
+		"list[current_player;main;0,5;8,4;]" ..
+		"listring[]"
 	return formspec
 end
 
@@ -102,6 +105,7 @@ function inbox.get_inbox_insert_formspec(pos)
 	local formspec =
 		"size[8,9]"..
 		"list[nodemeta:".. spos .. ";drop;3.5,2;1,1;]"..
-		"list[current_player;main;0,5;8,4;]"
+		"list[current_player;main;0,5;8,4;]"..
+		"listring[]"
 	return formspec
 end

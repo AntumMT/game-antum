@@ -149,8 +149,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* mob_shark ([CC BY-SA][lic.amp_shark])
 		* mob_slime ([CC0 / CC BY / CC BY-SA / CC0][lic.amp_slime])
 		* mob_warthog ([CC BY / CC BY-SA][lic.amp_warthog])
-* [homedecor_modpack][homedecor] ([LGPL / WTFPL / CC BY-SA / CC0][lic.homedecor]) -- version: [b33428b Git][ver.homedecor]
-	* NOTE: New version available: 02a4d14
+* [homedecor_modpack][homedecor] ([LGPL / WTFPL / CC BY-SA / CC0][lic.homedecor]) -- version: [02a4d14 Git][ver.homedecor]
 	* homedecor_modpack/
 		* building_blocks
 		* chains
@@ -310,7 +309,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.awards]: https://github.com/minetest-mods/awards/tree/92c43d1
 [ver.character_creator]: https://github.com/Rui-Minetest/character_creator/tree/5e8fec2
 [ver.creeper]: https://github.com/Rui-Minetest/creeper/tree/036666e2ccd26632a0c11585af0345c6eaa8c72d
-[ver.homedecor]: https://github.com/minetest-mods/homedecor_modpack/tree/b33428b
+[ver.homedecor]: https://github.com/minetest-mods/homedecor_modpack/tree/02a4d14
 [ver.ilights]: https://github.com/minetest-mods/ilights/tree/d5f6900b5a6510f5922a7517ad613633861ce4df
 [ver.playeranim]: https://github.com/minetest-mods/playeranim/tree/f1c542e
 [ver.simple_protection]: https://github.com/SmallJoker/simple_protection/tree/c822e561e0349f02b70bf6a8c28059515603a0be
