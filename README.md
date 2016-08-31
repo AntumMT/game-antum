@@ -26,6 +26,7 @@ The following mods are also included:
 	* animal_vombie
 	* animal_wolf
     * mob_archer ([animals_modpack][]) ([CC-BY-SA / CC0][lic.mob_archer])
+    * mob_bear ([animals_modpack][]) ([CC-BY-SA / CC0][lic.mob_bear])
 	* mob_ghost
 	* mob_miner
 	* mob_npc
@@ -98,7 +99,6 @@ The following mods are also included:
 * mobs_aggressive/
     * [creeper][] ([WTFPL][lic.creeper]) -- version [036666e Git][ver.creeper]
     * ghost ([Creatures MOB-Engine][cme])
-    * mob_bear ([animals_modpack][]) ([CC-BY-SA / CC0](mods/mobs_aggressive/mob_bear/License.txt))
     * mob_guard ([animals_modpack][]) ([CC-BY-SA / CC0](mods/mobs_aggressive/mob_guard/License.txt))
     * mob_shark ([animals_modpack][]) ([CC-BY-SA](mods/mobs_aggressive/mob_shark/License.txt))
     * mob_slime ([animals_modpack][]) ([CC-BY / CC-BY-SA / CC0](mods/mobs_aggressive/mob_slime/License.txt))
@@ -276,6 +276,7 @@ The following mods are also included:
 [lic.creeper]: mods/mobs_aggressive/creeper/LICENSE.md
 [lic.ilights]: mods/lighting/ilights/init.lua
 [lic.mob_archer]: mods/animals_modpack/mob_archer/License.txt
+[lic.mob_bear]: mods/animals_modpack/mob_bear/License.txt
 [lic.playeranim.1]: mods/player_visuals/playeranim/LICENSE.txt
 [lic.playeranim.2]: mods/player_visuals/playeranim/LICENSE-original.txt
 [lic.simple_protection]: mods/protection/simple_protection/README.md
