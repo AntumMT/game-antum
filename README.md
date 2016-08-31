@@ -11,6 +11,22 @@ The following mods are also included:
     * [privs][] ([CC0](mods/admin/privs/init.lua))
     * [spectator_mode][] ([WTFPL][spectator_mode lic]) - version: [3459db4][spectator_mode version]
 * [animalmaterials (modpack)][animalmaterials] (CC-BY-SA / CC0)
+* [animals_modpack][]/
+	* animal_big_red
+	* animal_chicken
+	* animal_cow
+	* animal_creeper
+	* animal_deer
+	* animal_dm
+	* animal_sheep
+	* animal_vombie
+	* animal_wolf
+	* mob_ghost
+	* mob_miner
+	* mob_npc
+	* mob_oerkki
+	* mob_ostrich
+	* mob_warthog
 * antum/
     * [antum][] ([MIT][lic.antum])
     * [glass][antum_glass] ([MIT][lic.antum])
