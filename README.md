@@ -160,6 +160,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	    * mob_slime ([CC0 / CC BY / CC BY-SA / CC0][lic.amp_slime])
 		* mob_warthog ([CC BY / CC BY-SA][lic.amp_warthog])
 * [homedecor_modpack][homedecor] ([LGPL / WTFPL / CC BY-SA / CC0][lic.homedecor]) -- version: [b33428b Git][ver.homedecor]
+	* NOTE: New version available: 02a4d14
 	* homedecor_modpack/
 	    * building_blocks
 * [mobf_core][animals_modpack] (part of animals_modpack) -- version: 2.5.1
