@@ -23,7 +23,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * mdoors ([mydoors modpack][mydoors]) ([CC-BY / CC-BY-SA / WTFPL](mods/buildings/mdoors/README.txt) / [DWYWFPL](doc/modpacks/mydoors/licence.txt))
     * my_*_doors ([mydoors modpack][mydoors])
     * my_garage_door ([mydoors modpack][mydoors])
-    * plasmascreen ([homedecor_modpack][homedecor])
     * [stairsplus][] ([zlib](mods/buildings/stairsplus/LICENSE.txt))
     * [windmill][] ([WTFPL](mods/buildings/windmill/README.md))
 * [campfire][] ([GPL / CC BY-SA / WTFPL](mods/campfire/README.md))
@@ -163,6 +162,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* itemframes
 		* lavalamp
 		* lrfurn
+		* plasmascreen
 * [mobf_core][animals_modpack] (part of animals_modpack) -- version: 2.5.1
 	* mobf_core/
 	    * barn ([CC-BY-SA][lic.mobf])
