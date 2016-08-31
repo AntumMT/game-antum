@@ -163,11 +163,11 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* lavalamp
 		* lrfurn
 		* plasmascreen
-* [mobf_core][animals_modpack] (part of animals_modpack) -- version: 2.5.1
+* [mobf_core][animals_modpack] (part of animals_modpack) ([CC-BY-SA][lic.mobf]) -- version: 2.5.1
 	* mobf_core/
-	    * barn ([CC-BY-SA][lic.mobf])
-	    * mobf ([CC-BY-SA][lic.mobf])
-    	* mobf_settings ([CC-BY-SA][lic.mobf])
+	    * barn
+	    * mobf
+    	* mobf_settings
 
 
 
