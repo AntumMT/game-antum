@@ -20,8 +20,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * computer ([homedecor_modpack][homedecor])
     * [elevator][] ([WTFPL](mods/buildings/elevator/readme.txt))
     * [fort_spikes][] ([MIT/CC0](mods/buildings/fort_spikes/LICENSE))
-    * homedecor([homedecor_modpack][homedecor])
-    * homedecor_3d_extras ([homedecor_modpack][homedecor])
     * inbox ([homedecor_modpack][homedecor])
     * itemframes ([homedecor_modpack][homedecor])
     * lavalamp ([homedecor_modpack][homedecor])
@@ -163,6 +161,8 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	    * building_blocks
 	    * chains
 	    * fake_fire
+	    * homedecor
+    	* homedecor_3d_extras
 * [mobf_core][animals_modpack] (part of animals_modpack) -- version: 2.5.1
 	* mobf_core/
 	    * barn ([CC-BY-SA][lic.mobf])
