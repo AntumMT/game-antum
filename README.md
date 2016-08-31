@@ -283,7 +283,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.amp_ostrich]: mods/animals_modpack/mob_ostrich/License.txt
 [lic.amp_rat]: mods/animals_modpack/animal_rat/License.txt
 [lic.amp_shark]: mods/animals_modpack/mob_shark/License.txt
-[lic.amp_sheep]: "mods/animals_modpack/License information.txt"
+[lic.amp_sheep]: mods/animals_modpack/License.txt
 [lic.amp_slime]: mods/animals_modpack/mob_slime/License.txt
 [lic.amp_warthog]: mods/animals_modpack/mob_warthog/License.txt
 [lic.antum]: mods/antum/LICENSE.txt
