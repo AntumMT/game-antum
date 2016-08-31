@@ -118,7 +118,7 @@ The following mods are also included:
     * [areas][] ([LGPL][lic.areas]) -- version [67507c7 Git][ver.areas]
     * [simple_protection][] ([WTFPL][lic.simple_protection]) -- version [c822e56 Git][ver.simple_protection]
 * sound/
-    * [ambience][ambience_ultralite] ([WTFPL][lic.amb ience_ultralite.1] / [CC-BY / CC-BY-SA / CC-BY-NC-SA / CC0][lic.ambience_ultralite.2]) -- version:
+    * [ambience][ambience_ultralite] ([WTFPL][lic.ambience_ultralite.1] / [CC-BY / CC-BY-SA / CC-BY-NC-SA / CC0][lic.ambience_ultralite.2]) -- version:
 * [spawneggs][] ([WTFPL][lic.spawneggs]) -- version [4650370 Git][ver.spawneggs]
 * [technic (modpack)][technic] ([LGPL](mods/technic/README.md))
 * [tnt][] ([WTFPL](mods/tnt/README.txt)) (Git [d6a0b7d][tnt version])
