@@ -52,7 +52,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [moreores][] ([zlib/CC-BY-SA](mods/materials/moreores/README.md))
 	* [quartz][] ([MIT](mods/materials/quartz/LICENSE.txt))
 	* [unifieddyes][] ([GPL](mods/materials/unifieddyes/LICENSE))
-* [mesecons (modpack)][mesecons] ([LGPL/CC-BY-SA](mods/mesecons/COPYING.txt))
 * mobs/
     * [creatures (Creatures MOB-Engine)][cme] ([zlib/CC-BY-SA](doc/modpacks/cme/README.txt))
     * [kpgmobs][] ([MIT](mods/mobs/kpgmobs/README.txt))
@@ -67,7 +66,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * mobs_passive/
     * chicken ([Creatures MOB-Engine][cme])
     * sheep ([Creatures MOB-Engine][cme])
-* [moremesecons][] ([GPL](mods/moremesecons/LICENSE.txt))
 * npc/
     * [peaceful_npc][] (WTFPL)
 * [painting][] (???)
@@ -95,7 +93,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * spawning/
 	* [adv_spawning][[animals_modpack] (part of animals_modpack) ([???][lic.amp_adv_spawning]) -- version: 0.0.13
 	* [spawneggs][] ([WTFPL][lic.spawneggs]) -- version [4650370 Git][ver.spawneggs]
-* [technic (modpack)][technic] ([LGPL](mods/technic/README.md))
 * [tnt][] ([WTFPL](mods/tnt/README.txt)) (Git [d6a0b7d][tnt version])
 * tools/
 	* [compassgps][] ([WTFPL / CC0 / CC BY-SA](mods/tools/compassgps/README.md))
@@ -124,13 +121,13 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 ### This is a list of installed modpacks & their components (trying to keep them listed separate for sake of organization):
 * [animalmaterials][animals_modpack] (part of animals_modpack) -- version: 0.1.3
-	* animalmaterials/
+	* mp_animalmaterials/
 		* animal_resources ([CC0][lic.amp_animal_resources])
 		* animalmaterials ([CC BY-SA][lic.amp_animalmaterials])
 		* cooking ([CC BY-SA][lic.amp_cooking]
 		* mob_environments ([???][lic.amp_mob_environments)
 * [animals_modpack][] -- version: 2.5.0
-	* animals_modpack/
+	* mp_animals_modpack/
 		* animal_chicken [CC BY-SA / CC0][lic.amp_chicken]
 		* animal_clownfish ([CC BY-SA][lic.amp_clownfish])
 		* animal_cow ([CC BY-SA / GFDL / WTFPL][lic.amp_cow])
@@ -148,7 +145,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* mob_slime ([CC0 / CC BY / CC BY-SA / CC0][lic.amp_slime])
 		* mob_warthog ([CC BY / CC BY-SA][lic.amp_warthog])
 * [homedecor_modpack][homedecor] ([LGPL / WTFPL / CC BY-SA / CC0][lic.homedecor]) -- version: [02a4d14 Git][ver.homedecor]
-	* homedecor_modpack/
+	* mp_homedecor_modpack/
 		* building_blocks
 		* chains
 		* computer
@@ -160,15 +157,21 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* lavalamp
 		* lrfurn
 		* plasmascreen
+* [mesecons)][] ([LGPL/CC-BY-SA](mods/mesecons/COPYING.txt))
+	* mp_mesecons/
 * [mobf_core][animals_modpack] (part of animals_modpack) ([CC-BY-SA][lic.mobf]) -- version: 2.5.1
-	* mobf_core/
-	    * barn
-	    * mobf
-    	* mobf_settings
+	* mp_mobf_core/
+		* barn
+		* mobf
+		* mobf_settings
+* [moremesecons][] ([GPL](mods/moremesecons/LICENSE.txt))
+	* mp_moremesecons/
 * [mydoors][] -- version: 1.0
-	* mydoors/
+	* mp_mydoors/
 		* mdoors ([CC-BY / CC-BY-SA / WTFPL][lic.mdoors.1] / [DWYWFPL][lic.mdoors.2])
 		* my_*_doors
+* [technic)][] ([LGPL](mods/technic/README.md))
+	* mp_technic/
 
 
 
