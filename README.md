@@ -109,7 +109,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * sound/
     * [ambience][ambience_ultralite] ([WTFPL][lic.ambience_ultralite.1] / [CC-BY / CC-BY-SA / CC-BY-NC-SA / CC0][lic.ambience_ultralite.2]) -- version: 0.36
 * spawning/
-	* [adv_spawning][] (animals_modpack???) ([???][lic.adv_spawning]) -- version: 0.0.13
+	* [adv_spawning][[animals_modpack] (part of animals_modpack) ([???][lic.amp_adv_spawning]) -- version: 0.0.13
 	* [spawneggs][] ([WTFPL][lic.spawneggs]) -- version [4650370 Git][ver.spawneggs]
 * [technic (modpack)][technic] ([LGPL](mods/technic/README.md))
 * [tnt][] ([WTFPL](mods/tnt/README.txt)) (Git [d6a0b7d][tnt version])
@@ -167,7 +167,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 
 [3d_armor]: https://forum.minetest.net/viewtopic.php?t=4654
-[adv_spawning]: https://github.com/sapier/adv_spawning
 [ambience_ultralite]: https://forum.minetest.net/viewtopic.php?p=151166#p151166
 [animals_modpack]: https://forum.minetest.net/viewtopic.php?t=629
 [antum]: mods/antum/antum
@@ -263,9 +262,9 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [worldedge]: https://forum.minetest.net/viewtopic.php?t=10753
 
 [lic.3d_armor]: doc/modpacks/3d_armor/LICENSE.md
-[lic.adv_spawning]: mods/spawning/adv_spawning/README.txt
 [lic.ambience_ultralite.1]: https://forum.minetest.net/viewtopic.php?t=2807
 [lic.ambience_ultralite.2]: mods/sound/ambience/sounds/SoundLicenses.txt
+[lic.amp_adv_spawning]: mods/spawning/adv_spawning/README.txt
 [lic.amp_animal_resources]: mods/animalmaterials/animal_resources/License.txt
 [lic.amp_animalmaterials]: mods/animalmaterials/animalmaterisl/License.txt
 [lic.amp_bear]: mods/animals_modpack/mob_bear/License.txt
