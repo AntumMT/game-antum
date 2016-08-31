@@ -112,6 +112,9 @@ The following mods are also included:
     * [walking_light][] ([WTFPL / CC-BY-SA](mods/player/walking_light/README.md))
     * [wardrobe][] ([WTFPL](mods/player/wardrobe/README.txt))
     * wieldview ([3d_armor modpack][3d_armor])
+* protection/
+    * [areas][] ([LGPL][lic.areas]) -- version [67507c7 Git][ver.areas]
+    * [simple_protection][] ([WTFPL][lic.simple_protection]) -- version [c822e56 Git][ver.simple_protection]
 * [spawneggs][] ([WTFPL][lic.spawneggs]) -- version [4650370 Git][ver.spawneggs]
 * [technic (modpack)][technic] ([LGPL](mods/technic/README.md))
 * [tnt][] ([WTFPL](mods/tnt/README.txt)) (Git [d6a0b7d][tnt version])
@@ -134,11 +137,9 @@ The following mods are also included:
     * [lightning][] ([LGPL/CC-BY-SA](mods/weather/lightning/README.md))
 * world/
     * [ambience][ambience_ultralite] (WTFPL / [CC-BY / CC-BY-SA / CC-BY-NC-SA / CC0](mods/world/ambience/sounds/SoundLicenses.txt))
-    * [areas][] ([LGPL](mods/world/areas/LICENSE.txt))
     * [ethereal][] ([WTFPL](mods/world/ethereal/license.txt))
     * [glow][] (GPL)
     * [nether][] ([WTFPL / CC BY-SA](mods/world/nether/README.md))
-    * [simple_protection][] ([WTFPL](mods/world/simple_protection/README.md)) -- version [c822e56 Git][ver.simple_protection]
     * [worldedge][] ([DWYWPL](mods/world/worldedge/licence.txt))
 
 
@@ -242,10 +243,13 @@ The following mods are also included:
 [worldedge]: https://forum.minetest.net/viewtopic.php?t=10753
 
 [lic.antum]: mods/antum/LICENSE.txt
-[lic.ilights]: mods/lighting/ilights/init.lua
+[lic.areas]: mods/protection/areas/LICENSE.txt
 [lic.creeper]: mods/mobs_aggressive/creeper/LICENSE.md
+[lic.ilights]: mods/lighting/ilights/init.lua
+[lic.simple_protection]: mods/protection/simple_protection/README.md
 [lic.spawneggs]: mods/spawneggs/README.txt
 
+[ver.areas]: https://github.com/ShadowNinja/areas/tree/67507c75918f8a60ad218cdcb69cc8d39e4a55ed
 [ver.creeper]: https://github.com/Rui-Minetest/creeper/tree/036666e2ccd26632a0c11585af0345c6eaa8c72d
 [ver.ilights]: https://github.com/minetest-mods/ilights/tree/d5f6900b5a6510f5922a7517ad613633861ce4df
 [ver.simple_protection]: https://github.com/SmallJoker/simple_protection/tree/c822e561e0349f02b70bf6a8c28059515603a0be
