@@ -21,6 +21,13 @@ awards.register_trigger("dig", function(def)
 		target = def.trigger.target
 	}
 	table.insert(awards.on.dig, tmp)
+	def.getProgress = function(self, data)
+		local itemcount = awards.get_item_count(data, "count", tmp.node) or 0
+		return {
+			perc = itemcount / tmp.target,
+			label = itemcount .. " / " .. tmp.target .. " dug"  -- TODO: translation
+		}
+	end
 end)
 
 awards.register_trigger("place", function(def)
@@ -30,6 +37,13 @@ awards.register_trigger("place", function(def)
 		target = def.trigger.target
 	}
 	table.insert(awards.on.place, tmp)
+	def.getProgress = function(self, data)
+		local itemcount = awards.get_item_count(data, "place", tmp.node) or 0
+		return {
+			perc = itemcount / tmp.target,
+			label = itemcount .. " / " .. tmp.target .. " placed"  -- TODO: translation
+		}
+	end
 end)
 
 awards.register_trigger("death", function(def)
@@ -38,6 +52,13 @@ awards.register_trigger("death", function(def)
 		target = def.trigger.target
 	}
 	table.insert(awards.on.death, tmp)
+	def.getProgress = function(self, data)
+		local itemcount = data.deaths or 0
+		return {
+			perc = itemcount / tmp.target,
+			label = itemcount .. " deaths, need " .. tmp.target  -- TODO: translation
+		}
+	end
 end)
 
 awards.register_trigger("chat", function(def)
@@ -46,6 +67,13 @@ awards.register_trigger("chat", function(def)
 		target = def.trigger.target
 	}
 	table.insert(awards.on.chat, tmp)
+	def.getProgress = function(self, data)
+		local itemcount = data.chats or 0
+		return {
+			perc = itemcount / tmp.target,
+			label = itemcount .. " / " .. tmp.target .. " line of chat"  -- TODO: translation
+		}
+	end
 end)
 
 awards.register_trigger("join", function(def)
@@ -54,6 +82,14 @@ awards.register_trigger("join", function(def)
 		target = def.trigger.target
 	}
 	table.insert(awards.on.join, tmp)
+
+	def.getProgress = function(self, data)
+		local itemcount = data.joins or 0
+		return {
+			perc = itemcount / tmp.target,
+			label = itemcount .. " game joins, need " .. tmp.target  -- TODO: translation
+		}
+	end
 end)
 
 awards.register_trigger("craft", function(def)
@@ -63,6 +99,13 @@ awards.register_trigger("craft", function(def)
 		target = def.trigger.target
 	}
 	table.insert(awards.on.craft, tmp)
+	def.getProgress = function(self, data)
+		local itemcount = awards.get_item_count(data, "craft", tmp.item) or 0
+		return {
+			perc = itemcount / tmp.target,
+			label = itemcount .. " / " .. tmp.target .. " crafted"  -- TODO: translation
+		}
+	end
 end)
 
 -- Backwards compatibility
@@ -78,7 +121,8 @@ minetest.register_on_dignode(function(pos, oldnode, digger)
 	if not digger or not pos or not oldnode then
 		return
 	end
-	local data = awards.players[playern]
+
+	local data = awards.players[digger:get_player_name()]
 	if not awards.increment_item_counter(data, "count", oldnode.name) then
 		return
 	end
@@ -100,7 +144,7 @@ minetest.register_on_placenode(function(pos, node, digger)
 	if not digger or not pos or not node or not digger:get_player_name() or digger:get_player_name()=="" then
 		return
 	end
-	local data = awards.players[playern]
+	local data = awards.players[digger:get_player_name()]
 	if not awards.increment_item_counter(data, "place", node.name) then
 		return
 	end
@@ -124,8 +168,8 @@ minetest.register_on_craft(function(itemstack, player, old_craft_grid, craft_inv
 		return
 	end
 
-	local data = awards.players[playern]
-	if not awards.increment_item_counter(data, "craft", itemstack:get_name()) then
+	local data = awards.players[player:get_player_name()]
+	if not awards.increment_item_counter(data, "craft", itemstack:get_name(), itemstack:get_count()) then
 		return
 	end
 

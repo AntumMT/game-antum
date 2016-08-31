@@ -15,7 +15,7 @@ The following mods are also included:
     * [antum][] ([MIT][lic.antum])
     * [glass][antum_glass] ([MIT][lic.antum])
 	* [overrides][antum_overrides] ([MIT][lic.antum])
-* [awards][] ([LGPL](mods/awards/LICENSE.txt))
+* [awards][] ([LGPL][lic.awards]) -- version: [2.3.0-14-92c43d1 Git][ver.awards]
 * buildings/
     * barn ([mobf_core modpack][mobf]) ([CC-BY-SA](doc/modpacks/mobf_core/License.txt))
     * building_blocks ([homedecor_modpack][homedecor]) ([LGPL/WTFPL/CC-BY-SA](doc/modpacks/homedecor/LICENSE))
@@ -251,6 +251,7 @@ The following mods are also included:
 [lic.ambience_ultralite.2]: mods/sound/ambience/sounds/SoundLicenses.txt
 [lic.antum]: mods/antum/LICENSE.txt
 [lic.areas]: mods/protection/areas/LICENSE.txt
+[lic.awards]: mods/awards/LICENSE.txt
 [lic.character_creator]: mods/player_visuals/character_creator/LICENSE.md
 [lic.creeper]: mods/mobs_aggressive/creeper/LICENSE.md
 [lic.ilights]: mods/lighting/ilights/init.lua
@@ -264,6 +265,7 @@ The following mods are also included:
 
 [ver.3d_armor]: https://github.com/stujones11/minetest-3d_armor/tree/456c84e
 [ver.areas]: https://github.com/ShadowNinja/areas/tree/67507c75918f8a60ad218cdcb69cc8d39e4a55ed
+[ver.awards]: https://github.com/minetest-mods/awards/tree/92c43d1
 [ver.character_creator]: https://github.com/Rui-Minetest/character_creator/tree/5e8fec2
 [ver.creeper]: https://github.com/Rui-Minetest/creeper/tree/036666e2ccd26632a0c11585af0345c6eaa8c72d
 [ver.ilights]: https://github.com/minetest-mods/ilights/tree/d5f6900b5a6510f5922a7517ad613633861ce4df
