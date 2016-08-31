@@ -13,8 +13,9 @@ The following mods are also included:
 * [adv_spawning][] ([???](mods/adv_spawning/README.txt))
 * [animalmaterials (modpack)][animalmaterials] (CC-BY-SA / CC0)
 * antum/
-    * [antum][] ([MIT][antum lic])
-	* [overrides][antum_overrides] ([MIT][antum lic])
+    * [antum][] ([MIT][lic.antum])
+    * [glass][[antum_glass] ([MIT][lic.antum])
+	* [overrides][antum_overrides] ([MIT][lic.antum])
 * [awards][] ([LGPL](mods/awards/LICENSE.txt))
 * buildings/
     * barn ([mobf_core modpack][mobf]) ([CC-BY-SA](doc/modpacks/mobf_core/License.txt))
@@ -146,7 +147,7 @@ The following mods are also included:
 [animalmaterials]: https://github.com/sapier/animalmaterials
 [animals_modpack]: https://forum.minetest.net/viewtopic.php?t=629
 [antum]: mods/antum/antum
-[antum lic]: mods/antum/LICENSE.txt
+[antum_glass]: mods/antum/glass
 [antum_overrides]: mods/antum/overrides
 [areas]: https://forum.minetest.net/viewtopic.php?t=7239
 [awards]: https://forum.minetest.net/viewtopic.php?t=4870
@@ -237,6 +238,7 @@ The following mods are also included:
 [workbench]: https://forum.minetest.net/viewtopic.php?t=14085
 [worldedge]: https://forum.minetest.net/viewtopic.php?t=10753
 
+[lic.antum]: mods/antum/LICENSE.txt
 [lic.creeper]: mods/mobs_aggressive/creeper/LICENSE.md
 [lic.spawneggs]: mods/spawneggs/README.txt
 
