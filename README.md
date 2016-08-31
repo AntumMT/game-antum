@@ -10,7 +10,6 @@ The following mods are also included:
     * [invisible][] ([LGPL / CC BY-SA](mods/admin/invisible/readme.txt))
     * [privs][] ([CC0](mods/admin/privs/init.lua))
     * [spectator_mode][] ([WTFPL][spectator_mode lic]) - version: [3459db4][spectator_mode version]
-* [adv_spawning][] ([???](mods/adv_spawning/README.txt))
 * [animalmaterials (modpack)][animalmaterials] (CC-BY-SA / CC0)
 * antum/
     * [antum][] ([MIT][lic.antum])
@@ -119,7 +118,9 @@ The following mods are also included:
     * [simple_protection][] ([WTFPL][lic.simple_protection]) -- version [c822e56 Git][ver.simple_protection]
 * sound/
     * [ambience][ambience_ultralite] ([WTFPL][lic.ambience_ultralite.1] / [CC-BY / CC-BY-SA / CC-BY-NC-SA / CC0][lic.ambience_ultralite.2]) -- version: 0.36
-* [spawneggs][] ([WTFPL][lic.spawneggs]) -- version [4650370 Git][ver.spawneggs]
+* spawning/
+	* [adv_spawning][] (animals_modpack???) ([???][lic.adv_spawning]) -- version: 0.0.13
+	* [spawneggs][] ([WTFPL][lic.spawneggs]) -- version [4650370 Git][ver.spawneggs]
 * [technic (modpack)][technic] ([LGPL](mods/technic/README.md))
 * [tnt][] ([WTFPL](mods/tnt/README.txt)) (Git [d6a0b7d][tnt version])
 * tools/
@@ -245,6 +246,7 @@ The following mods are also included:
 [worldedge]: https://forum.minetest.net/viewtopic.php?t=10753
 
 [lic.3d_armor]: doc/modpacks/3d_armor/LICENSE.md
+[lic.adv_spawning]: mods/spawning/adv_spawning/README.txt
 [lic.ambience_ultralite.1]: https://forum.minetest.net/viewtopic.php?t=2807
 [lic.ambience_ultralite.2]: mods/sound/ambience/sounds/SoundLicenses.txt
 [lic.antum]: mods/antum/LICENSE.txt
@@ -255,7 +257,7 @@ The following mods are also included:
 [lic.playeranim.1]: mods/player_visuals/playeranim/LICENSE.txt
 [lic.playeranim.2]: mods/player_visuals/playeranim/LICENSE-original.txt
 [lic.simple_protection]: mods/protection/simple_protection/README.md
-[lic.spawneggs]: mods/spawneggs/README.txt
+[lic.spawneggs]: mods/spawning/spawneggs/README.txt
 [lic.throwing]: https://forum.minetest.net/viewtopic.php?t=687#p5739
 [lic.walking_light]: mods/lighting/walking_light/README.md
 [lic.wardrobe]: mods/player_visuals/wardrobe/README.txt
