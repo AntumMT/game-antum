@@ -63,6 +63,7 @@ The following mods are also included:
 	* [signs_lib][] ([BSD/WTFPL](mods/lib/signs_lib/copyright.txt))
 * lighting/
 	* [ilights][] ([CC BY-SA][lic.ilights]) -- version [d5f6900 Git][ver.ilights]
+    * walking_light [petermalone fork][walking_light] ([WTFPL / CC-BY-SA][lic.walking_light]) -- version: [93de9b7 Git][ver.walking_light]
 * materials/
 	* [moreores][] ([zlib/CC-BY-SA](mods/materials/moreores/README.md))
 	* [quartz][] ([MIT](mods/materials/quartz/LICENSE.txt))
@@ -108,7 +109,6 @@ The following mods are also included:
     * shields ([3d_armor modpack][3d_armor])
     * technic_armor ([3d_armor modpack][3d_armor])
     * [unified_inventory][] ([LGPL/WTFPL](mods/player/unified_inventory/README.md))
-    * [walking_light][] ([WTFPL / CC-BY-SA](mods/player/walking_light/README.md))
     * [wardrobe][] ([WTFPL](mods/player/wardrobe/README.txt))
     * wieldview ([3d_armor modpack][3d_armor])
 * player_action/
@@ -250,6 +250,7 @@ The following mods are also included:
 [lic.simple_protection]: mods/protection/simple_protection/README.md
 [lic.spawneggs]: mods/spawneggs/README.txt
 [lic.throwing]: https://forum.minetest.net/viewtopic.php?t=687#p5739
+[lic.walking_light]: mods/lighting/walking_light/README.md
 
 [ver.areas]: https://github.com/ShadowNinja/areas/tree/67507c75918f8a60ad218cdcb69cc8d39e4a55ed
 [ver.creeper]: https://github.com/Rui-Minetest/creeper/tree/036666e2ccd26632a0c11585af0345c6eaa8c72d
@@ -257,3 +258,4 @@ The following mods are also included:
 [ver.simple_protection]: https://github.com/SmallJoker/simple_protection/tree/c822e561e0349f02b70bf6a8c28059515603a0be
 [ver.spawneggs]: https://github.com/thefamilygrog66/spawneggs/tree/46503709bb0a1bff586cd345aac6b36936c4c311
 [ver.throwing]: https://github.com/Jeija/minetest-mod-throwing/tree/79ad788b9f415b68793dc44128870fbfa6a4d064
+[ver.walking_light]: https://github.com/petermaloney/walking_light/tree/93de9b7b4af6c9d2811ef7fd3f91feaf90b7875c
