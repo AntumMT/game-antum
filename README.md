@@ -296,7 +296,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.creeper]: mods/mobs_aggressive/creeper/LICENSE.md
 [lic.homedecor]: mods/homedecor_modpack/LICENSE
 [lic.ilights]: mods/lighting/ilights/init.lua
-[lic.mobf]: doc/modpacks/mobf_core/License.txt
+[lic.mobf]: mods/mobf_core/License.txt
 [lic.playeranim.1]: mods/player_visuals/playeranim/LICENSE.txt
 [lic.playeranim.2]: mods/player_visuals/playeranim/LICENSE-original.txt
 [lic.simple_protection]: mods/protection/simple_protection/README.md
