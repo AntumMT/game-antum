@@ -145,7 +145,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* animalmaterials ([CC BY-SA][lic.amp_animalmaterials])
 		* cooking ([CC BY-SA][lic.amp_cooking]
 		* mob_environments ([???][lic.amp_mob_environments)
-* [animals_modpack][]
+* [animals_modpack][] -- version: 2.5.0
 	* animals_modpack/
 		* animal_chicken [CC BY-SA / CC0][lic.amp_chicken]
 	    * animal_clownfish ([CC BY-SA][lic.amp_clownfish])
