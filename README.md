@@ -16,7 +16,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [overrides][antum_overrides] ([MIT][lic.antum])
 * [awards][] ([LGPL][lic.awards]) -- version: [2.3.0-14-92c43d1 Git][ver.awards]
 * buildings/
-    * barn ([mobf_core modpack][mobf]) ([CC-BY-SA](doc/modpacks/mobf_core/License.txt))
     * building_blocks ([homedecor_modpack][homedecor]) ([LGPL/WTFPL/CC-BY-SA](doc/modpacks/homedecor/LICENSE))
     * chains ([homedecor_modpack][homedecor])
     * [christmas][] ([MIT](mods/buildings/christmas/LICENSE.txt))
@@ -163,6 +162,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* mob_warthog ([CC BY / CC BY-SA][lic.amp_warthog])
 * [mobf_core][animals_modpack] (part of animals_modpack) -- version: 2.5.1
 	* mobf_core/
+	    * barn ([CC-BY-SA][lic.mobf])
 	    * mobf ([CC-BY-SA][lic.mobf])
     	* mobf_settings ([CC-BY-SA][lic.mobf])
 
