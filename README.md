@@ -17,7 +17,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [awards][] ([LGPL][lic.awards]) -- version: [2.3.0-14-92c43d1 Git][ver.awards]
 * buildings/
     * [christmas][] ([MIT](mods/buildings/christmas/LICENSE.txt))
-    * computer ([homedecor_modpack][homedecor])
     * [elevator][] ([WTFPL](mods/buildings/elevator/readme.txt))
     * [fort_spikes][] ([MIT/CC0](mods/buildings/fort_spikes/LICENSE))
     * lavalamp ([homedecor_modpack][homedecor])
@@ -157,6 +156,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* homedecor_modpack/
 		* building_blocks
 		* chains
+		* computer
 		* fake_fire
 		* homedecor
 		* homedecor_3d_extras
