@@ -101,18 +101,19 @@ The following mods are also included:
 * [pipeworks][] ([WTFPL](mods/pipeworks/LICENSE))
 * plantlife/
 * player/
-    * 3d_armor ([3d_armor modpack][3d_armor]) ([LGPL/WTFPL/CC-BY-SA](doc/modpacks/3d_armor/LICENSE.md))
     * 3d_armor_stand ([3d_armor modpack][3d_armor])
-    * [character_creator][] ([WTFPL/CC-BY-SA](mods/player/character_creator/LICENSE.md))
     * hazmat_suit ([3d_armor modpack][3d_armor])
-    * [playeranim][] ([WFTLPL](mods/player/playeranim/LICENSE.txt) / [BSD](mods/player/playeranim/LICENSE-original.txt)) - version [f1c542e][playeranim version]
     * shields ([3d_armor modpack][3d_armor])
     * technic_armor ([3d_armor modpack][3d_armor])
     * [unified_inventory][] ([LGPL/WTFPL](mods/player/unified_inventory/README.md))
-    * [wardrobe][] ([WTFPL](mods/player/wardrobe/README.txt))
-    * wieldview ([3d_armor modpack][3d_armor])
 * player_action/
     * [throwing][] ([WTFPL][lic.throwing]) -- version: [0.14-79ad788 Git][ver.throwing]
+* player_visuals/
+    * 3d_armor ([3d_armor modpack][3d_armor]) ([LGPL / WTFPL / CC-BY-SA][lic.3d_armor]) -- version: [0.4.4-41-456c84e Git][ver.3d_armor]
+    * [character_creator][] ([WTFPL / CC-BY-SA][lic.character_creator]) -- version: [5e8fec2 Git][ver.character_creator]
+    * [playeranim][] ([WFTLPL][lic.playeranim.1]) / [BSD][lic.playeranim.2]) - version [f1c542e Git][ver.playeranim]
+    * [wardrobe][] ([WTFPL][lic.wardrobe]) -- version: [1.1-2-c48b011 Git][ver.wardrobe]
+    * wieldview ([3d_armor modpack][3d_armor])  ([LGPL / WTFPL / CC-BY-SA][lic.3d_armor]) -- version: [0.4.4-41-456c84e Git][ver.3d_armor]
 * protection/
     * [areas][] ([LGPL][lic.areas]) -- version [67507c7 Git][ver.areas]
     * [simple_protection][] ([WTFPL][lic.simple_protection]) -- version [c822e56 Git][ver.simple_protection]
@@ -211,7 +212,6 @@ The following mods are also included:
 [pipeworks]: https://forum.minetest.net/viewtopic.php?t=2155
 [plantlife_modpack]: https://forum.minetest.net/viewtopic.php?f=11&t=3898
 [playeranim]: https://forum.minetest.net/viewtopic.php?t=12189
-[playeranim version]: https://github.com/minetest-mods/playeranim/tree/f1c542e5284711ab0867bbe28316cfd27bbe610c
 [privs]: mods/admin/privs
 [quartz]: https://forum.minetest.net/viewtopic.php?t=5682
 [signs_lib]: https://forum.minetest.net/viewtopic.php?f=11&t=13762
@@ -237,25 +237,34 @@ The following mods are also included:
 [vector_extras]: https://forum.minetest.net/viewtopic.php?t=8533
 [vines]: https://forum.minetest.net/viewtopic.php?f=11&t=2344
 [walking_light]: https://github.com/petermaloney/walking_light
-[wardrobe]: https://forum.minetest.net/viewtopic.php?id=9680
+[wardrobe]: https://forum.minetest.net/viewtopic.php?t=9680
 [weather]: https://forum.minetest.net/viewtopic.php?t=5245
 [windmill]: https://forum.minetest.net/viewtopic.php?id=7440
 [workbench]: https://forum.minetest.net/viewtopic.php?t=14085
 [worldedge]: https://forum.minetest.net/viewtopic.php?t=10753
 
+[lic.3d_armor]: doc/modpacks/3d_armor/LICENSE.md
 [lic.antum]: mods/antum/LICENSE.txt
 [lic.areas]: mods/protection/areas/LICENSE.txt
+[lic.character_creator]: mods/player_visuals/character_creator/LICENSE.md
 [lic.creeper]: mods/mobs_aggressive/creeper/LICENSE.md
 [lic.ilights]: mods/lighting/ilights/init.lua
+[lic.playeranim.1]: mods/player_visuals/playeranim/LICENSE.txt
+[lic.playeranim.2]: mods/player_visuals/playeranim/LICENSE-original.txt
 [lic.simple_protection]: mods/protection/simple_protection/README.md
 [lic.spawneggs]: mods/spawneggs/README.txt
 [lic.throwing]: https://forum.minetest.net/viewtopic.php?t=687#p5739
 [lic.walking_light]: mods/lighting/walking_light/README.md
+[lic.wardrobe]: mods/player_visuals/wardrobe/README.txt
 
+[ver.3d_armor]: https://github.com/stujones11/minetest-3d_armor/tree/456c84e
 [ver.areas]: https://github.com/ShadowNinja/areas/tree/67507c75918f8a60ad218cdcb69cc8d39e4a55ed
+[ver.character_creator]: https://github.com/Rui-Minetest/character_creator/tree/5e8fec2
 [ver.creeper]: https://github.com/Rui-Minetest/creeper/tree/036666e2ccd26632a0c11585af0345c6eaa8c72d
 [ver.ilights]: https://github.com/minetest-mods/ilights/tree/d5f6900b5a6510f5922a7517ad613633861ce4df
+[ver.playeranim]: https://github.com/minetest-mods/playeranim/tree/f1c542e
 [ver.simple_protection]: https://github.com/SmallJoker/simple_protection/tree/c822e561e0349f02b70bf6a8c28059515603a0be
 [ver.spawneggs]: https://github.com/thefamilygrog66/spawneggs/tree/46503709bb0a1bff586cd345aac6b36936c4c311
 [ver.throwing]: https://github.com/Jeija/minetest-mod-throwing/tree/79ad788b9f415b68793dc44128870fbfa6a4d064
 [ver.walking_light]: https://github.com/petermaloney/walking_light/tree/93de9b7b4af6c9d2811ef7fd3f91feaf90b7875c
+[ver.wardrobe]: https://github.com/prestidigitator/minetest-mod-wardrobe/tree/c48b011
