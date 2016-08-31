@@ -4,7 +4,7 @@ Requires a current development release of Minetest: 0.4.14-dev-281e9f3 or above
 
 The game includes the mods from the default [minetest_game](https://github.com/minetest/minetest_game/tree/master/mods)
 
-The following mods are also included:
+### The following mods are also included:
 * admin/
     * [clean][] (WTFPL)
     * [invisible][] ([LGPL / CC BY-SA](mods/admin/invisible/readme.txt))
@@ -138,7 +138,7 @@ The following mods are also included:
 
 
 
-This is a list of installed 3rd-party modpacks & their components (trying to keep them separate & in an organized fashion):
+### This is a list of installed 3rd-party modpacks & their components (trying to keep them separate & in an organized fashion):
 * [animalmaterials][] (part of animals_modpack)
 	* animalmaterials/
 		* animal_resources ([CC0][lic.amp_animal_resources])
