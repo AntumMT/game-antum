@@ -34,6 +34,7 @@ The following mods are also included:
 	* mob_oerkki
 	* mob_ostrich
     * mob_shark ([animals_modpack][]) ([CC-BY-SA][lic.mob_shark])
+    * mob_slime ([animals_modpack][]) ([CC-BY / CC-BY-SA / CC0][lic.mob_slime])
 	* mob_warthog
 * antum/
     * [antum][] ([MIT][lic.antum])
@@ -101,7 +102,6 @@ The following mods are also included:
 * mobs_aggressive/
     * [creeper][] ([WTFPL][lic.creeper]) -- version [036666e Git][ver.creeper]
     * ghost ([Creatures MOB-Engine][cme])
-    * mob_slime ([animals_modpack][]) ([CC-BY / CC-BY-SA / CC0](mods/mobs_aggressive/mob_slime/License.txt))
     * [mobs_goblins][] ([CC-BY-SA / CC-BY / CC0](mods/mobs_aggressive/mobs_goblins/README.md))
     * oerrki ([Creatures MOB-Engine][cme])
     * [spidermob][] ([CC-BY-SA / WTFPL / CC0](mods/mobs_aggressive/spidermob/LICENSE))
@@ -279,6 +279,7 @@ The following mods are also included:
 [lic.mob_bear]: mods/animals_modpack/mob_bear/License.txt
 [lic.mob_guard]: mods/animals_modpack/mob_guard/License.txt
 [lic.mob_shark]: mods/animals_modpack/mob_shark/License.txt
+[lic.mob_slime]: mods/animals_modpack/mob_slime/License.txt
 [lic.playeranim.1]: mods/player_visuals/playeranim/LICENSE.txt
 [lic.playeranim.2]: mods/player_visuals/playeranim/LICENSE-original.txt
 [lic.simple_protection]: mods/protection/simple_protection/README.md
