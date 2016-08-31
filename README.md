@@ -134,6 +134,7 @@ The following mods are also included:
     * [ethereal][] ([WTFPL](mods/world/ethereal/license.txt))
     * [glow][] (GPL)
     * [nether][] ([WTFPL / CC BY-SA](mods/world/nether/README.md))
+    * [simple_protection][] ([WTFPL](mods/world/simple_protection/README.md)) -- version [c822e56 Git][ver.simpled_protection]
     * [worldedge][] ([DWYWPL](mods/world/worldedge/licence.txt))
 
 
@@ -207,6 +208,7 @@ The following mods are also included:
 [privs]: mods/admin/privs
 [quartz]: https://forum.minetest.net/viewtopic.php?t=5682
 [signs_lib]: https://forum.minetest.net/viewtopic.php?f=11&t=13762
+[simple_protection]: https://forum.minetest.net/viewtopic.php?t=9035
 [spectator_mode]: https://forum.minetest.net/viewtopic.php?t=13718
 [spectator_mode lic]: mods/admin/spectator_mode/LICENSE
 [spectator_mode version]: https://github.com/minetest-mods/spectator_mode/tree/3459db48e1b507388ee5d24ba1531ea494e64dea
@@ -232,3 +234,5 @@ The following mods are also included:
 [windmill]: https://forum.minetest.net/viewtopic.php?id=7440
 [workbench]: https://forum.minetest.net/viewtopic.php?t=14085
 [worldedge]: https://forum.minetest.net/viewtopic.php?t=10753
+
+[ver.simple_protection]: https://github.com/SmallJoker/simple_protection/tree/c822e561e0349f02b70bf6a8c28059515603a0be
