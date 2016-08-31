@@ -10,16 +10,17 @@ The following mods are also included:
     * [invisible][] ([LGPL / CC BY-SA](mods/admin/invisible/readme.txt))
     * [privs][] ([CC0](mods/admin/privs/init.lua))
     * [spectator_mode][] ([WTFPL][spectator_mode lic]) - version: [3459db4][spectator_mode version]
-* [animalmaterials (modpack)][animalmaterials] (CC-BY-SA / CC0)
+* [animalmaterials (modpack)][animalmaterials] (CC BY-SA / CC0)
 * [animals_modpack][]/
 	* animal_big_red
 	* animal_chicken
-    * animal_clownfish ([animals_modpack][]) ([CC-BY-SA][lic.animal_clownfish])
+    * animal_clownfish ([animals_modpack][]) ([CC BY-SA][lic.animal_clownfish])
 	* animal_cow
 	* animal_creeper
 	* animal_deer
 	* animal_dm
     * animal_fish_blue_white ([animals_modpack][]) ([CC-BY-SA][lic.animal_fish_blue_white])
+    * animal_gull ([animals_modpack][]) ([CC BY-SA][lic.animal_gull])
 	* animal_sheep
 	* animal_vombie
 	* animal_wolf
@@ -105,7 +106,6 @@ The following mods are also included:
     * [spidermob][] ([CC-BY-SA / WTFPL / CC0](mods/mobs_aggressive/spidermob/LICENSE))
     * zombie ([Creatures MOB-Engine][cme])
 * mobs_passive/
-    * animal_gull ([animals_modpack][]) ([CC-BY-SA](mods/mobs_passive/animal_gull/License.txt))
     * animal_rat ([animals_modpack][]) ([CC-BY-SA / CC0](mods/mobs_passive/animal_rat/License.txt))
     * chicken ([Creatures MOB-Engine][cme])
     * sheep ([Creatures MOB-Engine][cme])
@@ -267,6 +267,7 @@ The following mods are also included:
 [lic.ambience_ultralite.2]: mods/sound/ambience/sounds/SoundLicenses.txt
 [lic.animal_clownfish]: mods/animals_modpack/animal_clownfish/License.txt
 [lic.animal_fish_blue_white]: mods/animals_modpack/animal_fish_blue_white/License.txt
+[lic.animal_gull]: mods/animals_modpack/animal_gull/License.txt
 [lic.antum]: mods/antum/LICENSE.txt
 [lic.areas]: mods/protection/areas/LICENSE.txt
 [lic.awards]: mods/awards/LICENSE.txt
