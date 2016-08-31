@@ -162,7 +162,7 @@ The following mods are also included:
 [bookmarks_gui]: http://cornernote.github.io/minetest-bookmarks_gui/
 [campfire]: https://forum.minetest.net/viewtopic.php?t=10569
 [carts]: https://forum.minetest.net/viewtopic.php?t=2451
-[character_creator]: https://forum.minetest.net/viewtopic.php?f=9&t=13138
+[character_creator]: https://forum.minetest.net/viewtopic.php?t=13138
 [chatlog]: https://forum.minetest.net/viewtopic.php?id=6220
 [christmas]: https://forum.minetest.net/viewtopic.php?t=3950
 [clean]: https://forum.minetest.net/viewtopic.php?t=2777
