@@ -138,7 +138,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 
 
-### This is a list of installed 3rd-party modpacks & their components (trying to keep them separate & in an organized fashion):
+### This is a list of installed modpacks & their components (trying to keep them listed separate for sake of organization):
 * [animalmaterials][] (part of animals_modpack)
 	* animalmaterials/
 		* animal_resources ([CC0][lic.amp_animal_resources])
