@@ -161,7 +161,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* mob_warthog ([CC BY / CC BY-SA][lic.amp_warthog])
 * [homedecor_modpack][homedecor]
 	* homedecor_modpack/
-	    * building_blocks ([LGPL / WTFPL / CC-BY-SA][lic.homedecor])
+	    * building_blocks ([LGPL / WTFPL / CC BY-SA / CC0][lic.homedecor])
 * [mobf_core][animals_modpack] (part of animals_modpack) -- version: 2.5.1
 	* mobf_core/
 	    * barn ([CC-BY-SA][lic.mobf])
