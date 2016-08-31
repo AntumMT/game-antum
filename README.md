@@ -72,7 +72,7 @@ The following mods are also included:
     * mobf_settings ([mobf_core modpack][mobf]) ([CC-BY-SA](doc/modpacks/mobf_core/License.txt))
     * [mobs_redo][] ([MIT](mods/mobs/mobs_redo/license.txt))
 * mobs_aggressive/
-    * [creeper][] ([WTFPL](mods/mobs_aggressive/creeper/LICENSE.md))
+    * [creeper][] ([WTFPL][lic.creeper]) -- version [036666e Git][ver.creeper]
     * ghost ([Creatures MOB-Engine][cme])
     * mob_archer ([animals_modpack][]) ([CC-BY-SA / CC0](mods/mobs_aggressive/mob_archer/License.txt))
     * mob_bear ([animals_modpack][]) ([CC-BY-SA / CC0](mods/mobs_aggressive/mob_bear/License.txt))
@@ -235,4 +235,7 @@ The following mods are also included:
 [workbench]: https://forum.minetest.net/viewtopic.php?t=14085
 [worldedge]: https://forum.minetest.net/viewtopic.php?t=10753
 
+[lic.creeper]: mods/mobs_aggressive/creeper/LICENSE.md
+
+[ver.creeper]: https://github.com/Rui-Minetest/creeper/tree/036666e2ccd26632a0c11585af0345c6eaa8c72d
 [ver.simple_protection]: https://github.com/SmallJoker/simple_protection/tree/c822e561e0349f02b70bf6a8c28059515603a0be
