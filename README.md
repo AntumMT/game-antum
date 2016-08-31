@@ -19,6 +19,7 @@ The following mods are also included:
 	* animal_creeper
 	* animal_deer
 	* animal_dm
+    * animal_fish_blue_white ([animals_modpack][]) ([CC-BY-SA][lic.animal_fish_blue_white])
 	* animal_sheep
 	* animal_vombie
 	* animal_wolf
@@ -104,7 +105,6 @@ The following mods are also included:
     * [spidermob][] ([CC-BY-SA / WTFPL / CC0](mods/mobs_aggressive/spidermob/LICENSE))
     * zombie ([Creatures MOB-Engine][cme])
 * mobs_passive/
-    * animal_fish_blue_white ([animals_modpack][]) ([CC-BY-SA](mods/mobs_passive/animal_fish_blue_white/License.txt))
     * animal_gull ([animals_modpack][]) ([CC-BY-SA](mods/mobs_passive/animal_gull/License.txt))
     * animal_rat ([animals_modpack][]) ([CC-BY-SA / CC0](mods/mobs_passive/animal_rat/License.txt))
     * chicken ([Creatures MOB-Engine][cme])
@@ -266,6 +266,7 @@ The following mods are also included:
 [lic.ambience_ultralite.1]: https://forum.minetest.net/viewtopic.php?t=2807
 [lic.ambience_ultralite.2]: mods/sound/ambience/sounds/SoundLicenses.txt
 [lic.animal_clownfish]: mods/animals_modpack/animal_clownfish/License.txt
+[lic.animal_fish_blue_white]: mods/animals_modpack/animal_fish_blue_white/License.txt
 [lic.antum]: mods/antum/LICENSE.txt
 [lic.areas]: mods/protection/areas/LICENSE.txt
 [lic.awards]: mods/awards/LICENSE.txt
