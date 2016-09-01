@@ -474,6 +474,7 @@ end
 
 --END HORSE
 
+--[[ DISABLE sheep (using sheep from creatures_mod_engine)
 kpgmobs:register_mob("kpgmobs:sheep", {
 	type = "animal",
 	hp_max = 5,
@@ -546,6 +547,7 @@ kpgmobs:register_mob("kpgmobs:sheep", {
 	end,
 })
 kpgmobs:register_spawn("kpgmobs:sheep", {"default:dirt_with_grass"}, 20, 8, 9000, 1, 31000)
+--]]
 
 
 minetest.register_craftitem("kpgmobs:meat_raw", {
