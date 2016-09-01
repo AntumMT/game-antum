@@ -57,7 +57,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [mobs_redo][] ([MIT](mods/mobs/mobs_redo/license.txt))
 * mobs_aggressive/
     * [creeper][] ([WTFPL][lic.creeper]) -- version [036666e Git][ver.creeper]
-    * ghost ([Creatures MOB-Engine][cme]) -- version: [2.3.1-0-e3502a1 Git][ver.cme]
     * [mobs_goblins][] ([CC-BY-SA / CC-BY / CC0](mods/mobs_aggressive/mobs_goblins/README.md))
     * oerrki ([Creatures MOB-Engine][cme])
     * [spidermob][] ([CC-BY-SA / WTFPL / CC0](mods/mobs_aggressive/spidermob/LICENSE))
@@ -141,10 +140,11 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* mob_shark ([CC BY-SA][lic.amp_shark])
 		* mob_slime ([CC0 / CC BY / CC BY-SA / CC0][lic.amp_slime])
 		* mob_warthog ([CC BY / CC BY-SA][lic.amp_warthog])
-* [Creatures MOB-Engine][cme] ([zlib/CC-BY-SA][lic.cme])
+* [Creatures MOB-Engine][cme] ([zlib/CC-BY-SA][lic.cme]) -- version: [2.3.1-0-e3502a1 Git][ver.cme]
 	* mp_cme/
 		* chicken
 		* creatures
+		* ghost
 		* sheep
 * [homedecor_modpack][homedecor] ([LGPL / WTFPL / CC BY-SA / CC0][lic.homedecor]) -- version: [02a4d14 Git][ver.homedecor]
 	* mp_homedecor_modpack/
