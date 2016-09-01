@@ -70,6 +70,7 @@ minetest.register_craft({
 	}
 })
 
+--[[ DISABLE shears that don't work with sheep from creatures_mob_engine
 -- shears (right click to shear animal)
 minetest.register_tool("mobs:shears", {
 	description = S("Steel Shears (right-click to shear)"),
@@ -82,4 +83,4 @@ minetest.register_craft({
 		{'', 'default:steel_ingot', ''},
 		{'', 'group:stick', 'default:steel_ingot'},
 	}
-})
+})--]]
