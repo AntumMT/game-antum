@@ -27,7 +27,7 @@
 
 minetest.register_craftitem(":cooking:fish_bluewhite_cooked", {
 	description = "Cooked Bluewhite Fish",
-	image = "antum_fish_cooked.png",
+	image = "food/fish_cooked",
 	on_use = core.item_eat(6),
 	groups = { meat=1 , eatable=1},
 	stack_max = 25
@@ -37,7 +37,7 @@ minetest.register_alias("fish_bluewhite_cooked", "cooking:fish_bluewhite_cooked"
 
 minetest.register_craftitem(":cooking:fish_clownfish_cooked", {
 	description = "Cooked Clownfish",
-	image = "antum_fish_cooked.png",
+	image = "food/fish_cooked",
 	on_use = core.item_eat(6),
 	groups = { meat=1 , eatable=1},
 	stack_max = 25
