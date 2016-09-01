@@ -191,7 +191,7 @@ mobf_spawner_register("warthog_spawner_1",warthog_name,
 	collisionbox = selectionbox_warthog
 	})
 
-if factions~= nil and
+if minetest.get_modpath('factions') and
 	type(factions.set_base_reputation) == "function" then
 	factions.set_base_reputation("warthogs","players",-5)
 end
