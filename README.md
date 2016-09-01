@@ -53,7 +53,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [quartz][] ([MIT](mods/materials/quartz/LICENSE.txt))
 	* [unifieddyes][] ([GPL](mods/materials/unifieddyes/LICENSE))
 * mobs/
-    * [creatures (Creatures MOB-Engine)][cme] ([zlib/CC-BY-SA](doc/modpacks/cme/README.txt))
     * [kpgmobs][] ([MIT](mods/mobs/kpgmobs/README.txt))
     * [mobs_redo][] ([MIT](mods/mobs/mobs_redo/license.txt))
 * mobs_aggressive/
@@ -142,9 +141,10 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* mob_shark ([CC BY-SA][lic.amp_shark])
 		* mob_slime ([CC0 / CC BY / CC BY-SA / CC0][lic.amp_slime])
 		* mob_warthog ([CC BY / CC BY-SA][lic.amp_warthog])
-* [creatures_mob_engine][cme]
+* [Creatures MOB-Engine][cme] ([zlib/CC-BY-SA][lic.cme])
 	* mp_cme/
 		* chicken
+		* creatures
 		* sheep
 * [homedecor_modpack][homedecor] ([LGPL / WTFPL / CC BY-SA / CC0][lic.homedecor]) -- version: [02a4d14 Git][ver.homedecor]
 	* mp_homedecor_modpack/
@@ -299,6 +299,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.areas]: mods/protection/areas/LICENSE.txt
 [lic.awards]: mods/awards/LICENSE.txt
 [lic.character_creator]: mods/player_visuals/character_creator/LICENSE.md
+[lic.cme]: mods/mp_cme/LICENSE.txt
 [lic.creeper]: mods/mobs_aggressive/creeper/LICENSE.md
 [lic.homedecor]: mods/homedecor_modpack/LICENSE
 [lic.ilights]: mods/lighting/ilights/init.lua
