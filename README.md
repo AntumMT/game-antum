@@ -64,7 +64,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [spidermob][] ([CC-BY-SA / WTFPL / CC0](mods/mobs_aggressive/spidermob/LICENSE))
     * zombie ([Creatures MOB-Engine][cme])
 * mobs_passive/
-    * sheep ([Creatures MOB-Engine][cme])
 * npc/
     * [peaceful_npc][] (WTFPL)
 * [painting][] (???)
@@ -146,6 +145,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [creatures_mob_engine][cme]
 	* mp_cme/
 		* chicken
+		* sheep
 * [homedecor_modpack][homedecor] ([LGPL / WTFPL / CC BY-SA / CC0][lic.homedecor]) -- version: [02a4d14 Git][ver.homedecor]
 	* mp_homedecor_modpack/
 		* building_blocks
