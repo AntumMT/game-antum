@@ -58,13 +58,12 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [mobs_redo][] ([MIT](mods/mobs/mobs_redo/license.txt))
 * mobs_aggressive/
     * [creeper][] ([WTFPL][lic.creeper]) -- version [036666e Git][ver.creeper]
-    * ghost ([Creatures MOB-Engine][cme])
+    * ghost ([Creatures MOB-Engine][cme]) -- version: [2.3.1-0-e3502a1 Git][ver.cme]
     * [mobs_goblins][] ([CC-BY-SA / CC-BY / CC0](mods/mobs_aggressive/mobs_goblins/README.md))
     * oerrki ([Creatures MOB-Engine][cme])
     * [spidermob][] ([CC-BY-SA / WTFPL / CC0](mods/mobs_aggressive/spidermob/LICENSE))
     * zombie ([Creatures MOB-Engine][cme])
 * mobs_passive/
-    * chicken ([Creatures MOB-Engine][cme])
     * sheep ([Creatures MOB-Engine][cme])
 * npc/
     * [peaceful_npc][] (WTFPL)
@@ -144,6 +143,9 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* mob_shark ([CC BY-SA][lic.amp_shark])
 		* mob_slime ([CC0 / CC BY / CC BY-SA / CC0][lic.amp_slime])
 		* mob_warthog ([CC BY / CC BY-SA][lic.amp_warthog])
+* [creatures_mob_engine][cme]
+	* mp_cme/
+		* chicken
 * [homedecor_modpack][homedecor] ([LGPL / WTFPL / CC BY-SA / CC0][lic.homedecor]) -- version: [02a4d14 Git][ver.homedecor]
 	* mp_homedecor_modpack/
 		* building_blocks
@@ -315,6 +317,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.areas]: https://github.com/ShadowNinja/areas/tree/67507c75918f8a60ad218cdcb69cc8d39e4a55ed
 [ver.awards]: https://github.com/minetest-mods/awards/tree/92c43d1
 [ver.character_creator]: https://github.com/Rui-Minetest/character_creator/tree/5e8fec2
+[ver.cme]: https://github.com/BlockMen/cme/tree/e3502a1
 [ver.creeper]: https://github.com/Rui-Minetest/creeper/tree/036666e2ccd26632a0c11585af0345c6eaa8c72d
 [ver.homedecor]: https://github.com/minetest-mods/homedecor_modpack/tree/02a4d14
 [ver.ilights]: https://github.com/minetest-mods/ilights/tree/d5f6900b5a6510f5922a7517ad613633861ce4df
