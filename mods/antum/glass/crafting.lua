@@ -25,14 +25,14 @@
 --]]
 
 
-minetest.register_craftitem("glass:green", {
-	description = "Green Glass",
+minetest.register_craftitem('glass:green', {
+	description = 'Green Glass',
 	}
 )
 
 minetest.register_craft({
-	output = "glass:green",
-	type = "shapeless",
-	recipe = {"default:glass", "dye:green"},
+	output = 'glass:green',
+	type = 'shapeless',
+	recipe = {'default:glass', 'dye:green'},
 	}
 )

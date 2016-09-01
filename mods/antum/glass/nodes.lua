@@ -24,25 +24,14 @@
   
 --]]
 
-minetest.register_node("glass:green", {
-	description = "Green Glass",
-	drawtype = "glasslike_framed_optional",
-	tiles = {"glass_green.png", "glass_green_detail.png"},
-	paramtype = "light",
+minetest.register_node('glass:green', {
+	description = 'Green Glass',
+	drawtype = 'glasslike_framed_optional',
+	tiles = {'glass/green', 'glass/green_detail'},
+	paramtype = 'light',
 	sunlight_propagates = true,
 	is_ground_content = false,
 	groups = {cracky = 3, oddly_breakable_by_hand = 3},
 	sounds = default.node_sound_glass_defaults(),
-	}
-)
-
-minetest.register_node("glass:test", {
-	description = "glass testing",
-	drawtype = "glasslike_framed_optional",
-	tiles = "glass_green.png",
-	paramtype = "light",
-	sunlight_propagates = true,
-	is_ground_content = false,
-	groups = {crumbly = 3},
 	}
 )
