@@ -148,7 +148,8 @@ local def = {
 	},
 
 	on_punch = function(self, puncher)
-		shear(self)
+		-- DISABLE shearing sheep when punched
+		--shear(self)
 	end,
 
 	get_staticdata = function(self)
