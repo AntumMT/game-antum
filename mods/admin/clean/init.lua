@@ -2,7 +2,7 @@
 -- Copyright: PilzAdam
 
 local old_nodes = {"mod:a", "mod:b"}
-local old_entities = {}
+local old_entities = {'mobs_mc:skeleton', 'mobs_mc:creeper', 'kpgmobs:sheep'}
 
 for _,node_name in ipairs(old_nodes) do
     minetest.register_node(":"..node_name, {
