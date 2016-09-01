@@ -1,0 +1,22 @@
+
+Recipes with undefined ingredients:
+* dye:brown
+* dye:black
+* dye:cyan
+* dye:dark_green
+* dye:dark_grey
+* dye:green
+* dye:grey
+* dye:magenta
+* dye:pink
+
+Recipes that are redefined & overridden:
+* sliding doors (all use same recipe):
+	* Sliding Door (my_misc_doors:door2a)
+	* Steel Sliding Door (my_future_doors:door2a)
+	* Squared Sliding Door (my_future_doors:door3a)
+	* Dark Sliding Door (my_future_doors:door4a)
+	* Points Sliding Door (my_future_doors:door6a)
+	* Snow Flake Sliding Door (my_future_doors:door7a)
+
+Duplicate recipes:
