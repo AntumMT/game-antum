@@ -14,14 +14,14 @@
 	* dye:pink
 
 #### Recipes that are unusable due to redefinition or override:
-* my_misc_doors (sliding doors all use same recipe)
-	* Sliding Door (my_misc_doors:door2a)
 * my_future_doors (sliding doors all use same recipe)
-	* Steel Sliding Door (my_future_doors:door2a)
-	* Squared Sliding Door (my_future_doors:door3a)
-	* Dark Sliding Door (my_future_doors:door4a)
-	* Points Sliding Door (my_future_doors:door6a)
-	* Snow Flake Sliding Door (my_future_doors:door7a)
+	* my_future_doors:door2a (Steel Sliding Door)
+	* my_future_doors:door3a (Squared Sliding Door)
+	* my_future_doors:door4a (Dark Sliding Door)
+	* my_future_doors:door6a (Points Sliding Door)
+	* my_future_doors:door7a (Snow Flake Sliding Door)
+* my_misc_doors (sliding doors all use same recipe)
+	* my_misc_doors:door2a (Sliding Door)
 
 #### Duplicate recipes:
 
