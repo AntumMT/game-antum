@@ -46,8 +46,6 @@
 	* my_future_doors:door7a
 * my_misc_doors
 	* my_misc_doors:door2a
-* simple_protection
-	* Add alias for 'simple_protection:claim'
 
 #### Craft items that need new descriptions
 
