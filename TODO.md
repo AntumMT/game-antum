@@ -2,15 +2,16 @@
 
 
 #### Recipes with undefined ingredients:
-* dye:brown
-* dye:black
-* dye:cyan
-* dye:dark_green
-* dye:dark_grey
-* dye:green
-* dye:grey
-* dye:magenta
-* dye:pink
+# mod: dye
+	* dye:brown
+	* dye:black
+	* dye:cyan
+	* dye:dark_green
+	* dye:dark_grey
+	* dye:green
+	* dye:grey
+	* dye:magenta
+	* dye:pink
 
 #### Recipes that are redefined & overridden:
 * sliding doors (all use same recipe):
