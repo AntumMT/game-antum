@@ -2,7 +2,7 @@
 
 
 #### Recipes with undefined ingredients:
-# mod: dye
+# dye
 	* dye:brown
 	* dye:black
 	* dye:cyan
@@ -13,10 +13,10 @@
 	* dye:magenta
 	* dye:pink
 
-#### Recipes that are redefined & overridden:
-* mod: my_misc_doors (sliding doors all use same recipe)
+#### Recipes that are unusable due to redefinition or override:
+* my_misc_doors (sliding doors all use same recipe)
 	* Sliding Door (my_misc_doors:door2a)
-* mod: my_future_doors (sliding doors all use same recipe)
+* my_future_doors (sliding doors all use same recipe)
 	* Steel Sliding Door (my_future_doors:door2a)
 	* Squared Sliding Door (my_future_doors:door3a)
 	* Dark Sliding Door (my_future_doors:door4a)
@@ -38,5 +38,13 @@
 	* stairs:stair_cobble -> moreblocks:stair_cobble
 
 #### Aliases to add
-* simple_protection mod
+* my_future_doors
+	* my_future_doors:door2a
+	* my_future_doors:door3a
+	* my_future_doors:door4a
+	* my_future_doors:door6a
+	* my_future_doors:door7a
+* my_misc_doors
+	* my_misc_doors:door2a
+* simple_protection
 	* Add alias for 'simple_protection:claim'
