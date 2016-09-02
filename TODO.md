@@ -1,5 +1,7 @@
+## A list of changes to make for Antum game
 
-Recipes with undefined ingredients:
+
+#### Recipes with undefined ingredients:
 * dye:brown
 * dye:black
 * dye:cyan
@@ -10,7 +12,7 @@ Recipes with undefined ingredients:
 * dye:magenta
 * dye:pink
 
-Recipes that are redefined & overridden:
+#### Recipes that are redefined & overridden:
 * sliding doors (all use same recipe):
 	* Sliding Door (my_misc_doors:door2a)
 	* Steel Sliding Door (my_future_doors:door2a)
@@ -19,13 +21,13 @@ Recipes that are redefined & overridden:
 	* Points Sliding Door (my_future_doors:door6a)
 	* Snow Flake Sliding Door (my_future_doors:door7a)
 
-Duplicate recipes:
+#### Duplicate recipes:
 
-Recipes to override:
+#### Recipes to override:
 	* default:furnace
 		* Add coal or something similar to recipe
 
-Aliases that do not register:
+#### Aliases that do not register:
 * farming_plus:
 	* farming:cotton -> farming:cotton_3
 * moreblocks:
@@ -33,5 +35,6 @@ Aliases that do not register:
 	* stairs:slab_stone -> moreblocks:slab_stone
 	* stairs:stair_cobble -> moreblocks:stair_cobble
 
+#### Aliases to add
 * simple_protection mod
 	* Add alias for 'simple_protection:claim'
