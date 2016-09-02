@@ -11,5 +11,6 @@ helicopter?
 homedecor?
 kpgmobs?
 moreblocks?
+simple_protection?
 walking_light?
 wool?

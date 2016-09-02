@@ -25,18 +25,8 @@
 --]]
 
 
-local itemsdir = antum.overrides.modpath .. '/items'
+local sp = 'simple_protection'
+local sp_claim = sp .. ':claim'
 
-local modoverrides = {
-	'animalmaterials',
-	'cooking',
-	'kpgmobs',
-	'simple_protection',
-}
-
-for I in pairs(modoverrides) do
-	local modname = modoverrides[I]
-	if minetest.get_modpath(modname) then
-		dofile(itemsdir .. '/' .. modname .. '.lua')
-	end
-end
+minetest.register_alias(sp .. ':claim_stick', sp_claim)
+minetest.register_alias('claim_stick', sp_claim)
