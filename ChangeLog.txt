@@ -1,3 +1,4 @@
 0.1.0:
 - Disabled shearing of sheep when punched (player must use shears to get wool)
 - Disabled kpgmobs:sheep (use only sheep from creatures_mob_engine)
+- Moved some textures specifically for Antum game to separate texture pack
