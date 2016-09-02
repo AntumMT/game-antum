@@ -21,6 +21,10 @@ Recipes that are redefined & overridden:
 
 Duplicate recipes:
 
+Recipes to override:
+	* default:furnace
+		* Add coal or something similar to recipe
+
 Aliases that do not register:
 * farming_plus:
 	* farming:cotton -> farming:cotton_3
