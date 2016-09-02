@@ -48,3 +48,9 @@
 	* my_misc_doors:door2a
 * simple_protection
 	* Add alias for 'simple_protection:claim'
+
+#### Change inventory textures
+* kpgmobs
+	* kpgmobs:horsearah1 (HorseBlack)
+	* kpgmobs:horseh1 (Horse)
+	* kpgmobs:horsepegh1 (HorseWhite)
