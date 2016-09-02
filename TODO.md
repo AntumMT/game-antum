@@ -59,7 +59,7 @@
 	* kpgmobs:horseh1 (Horse)
 	* kpgmobs:horsepegh1 (HorseWhite)
 
-#### Change inventory textures
+#### Craft items that need new inventory textures
 * kpgmobs
 	* kpgmobs:horsearah1 (HorseBlack)
 	* kpgmobs:horseh1 (Horse)
