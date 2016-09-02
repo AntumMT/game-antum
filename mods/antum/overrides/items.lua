@@ -25,16 +25,17 @@
 --]]
 
 
-local itemsdir = antum.overrides.modpath .. "/items"
+local itemsdir = antum.overrides.modpath .. '/items'
 
 local modoverrides = {
-	"animalmaterials",
-	"cooking",
+	'animalmaterials',
+	'cooking',
+	'kpgmobs',
 }
 
 for I in pairs(modoverrides) do
 	local modname = modoverrides[I]
 	if minetest.get_modpath(modname) then
-		dofile(itemsdir .. "/" .. modname .. ".lua")
+		dofile(itemsdir .. '/' .. modname .. '.lua')
 	end
 end

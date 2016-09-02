@@ -38,10 +38,6 @@
 	* stairs:stair_cobble -> moreblocks:stair_cobble
 
 #### Craft items that need new aliases
-* kpgmobs
-	* kpgmobs:horsearah1 (HorseBlack)
-	* kpgmobs:horseh1 (Horse)
-	* kpgmobs:horsepegh1 (HorseWhite)
 * my_future_doors
 	* my_future_doors:door2a
 	* my_future_doors:door3a
@@ -54,13 +50,5 @@
 	* Add alias for 'simple_protection:claim'
 
 #### Craft items that need new descriptions
-* kpgmobs
-	* kpgmobs:horsearah1 (HorseBlack)
-	* kpgmobs:horseh1 (Horse)
-	* kpgmobs:horsepegh1 (HorseWhite)
 
 #### Craft items that need new inventory textures
-* kpgmobs
-	* kpgmobs:horsearah1 (HorseBlack)
-	* kpgmobs:horseh1 (Horse)
-	* kpgmobs:horsepegh1 (HorseWhite)
