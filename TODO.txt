@@ -28,3 +28,6 @@ Aliases that do not register:
 	* stairs:stair_stone -> moreblocks:stair_stone
 	* stairs:slab_stone -> moreblocks:slab_stone
 	* stairs:stair_cobble -> moreblocks:stair_cobble
+
+* simple_protection mod
+	* Add alias for 'simple_protection:claim'
