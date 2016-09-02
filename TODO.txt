@@ -20,3 +20,11 @@ Recipes that are redefined & overridden:
 	* Snow Flake Sliding Door (my_future_doors:door7a)
 
 Duplicate recipes:
+
+Aliases that do not register:
+* farming_plus:
+	* farming:cotton -> farming:cotton_3
+* moreblocks:
+	* stairs:stair_stone -> moreblocks:stair_stone
+	* stairs:slab_stone -> moreblocks:slab_stone
+	* stairs:stair_cobble -> moreblocks:stair_cobble
