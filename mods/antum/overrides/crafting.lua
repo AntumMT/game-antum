@@ -26,29 +26,48 @@
 
 
 antum.clearCraftOutput = function(o)
+	minetest.log('warning', '[' .. antum.overrides.modname .. '] Clearing craft by output: ' .. o)
 	minetest.clear_craft({
-		output = o,
+		output = o
 	})
 end
 
 antum.clearCraftRecipe = function(r)
+	local recipe_string = ''
+	local icount = 0
+	for I in pairs(r) do
+		icount = icount + 1
+	end
+	
+	for I in pairs(r) do
+		if I == icount then
+			recipe_string = recipe_string .. ' ' .. r[I]
+		elseif I > 1 then
+			recipe_string = recipe_string .. ' + ' .. r[I]
+		else
+			recipe_string = r[I]
+		end
+	end
+	
+	minetest.log('warning', '[' .. antum.overrides.modname .. '] Clearing craft by recipe: ' .. recipe_string)
 	minetest.clear_craft({
-		recipe = r,
+		recipe = {r}
 	})
 end
 
-local craftdir = antum.overrides.modpath .. "/crafting"
+local craftdir = antum.overrides.modpath .. '/crafting'
 
 local modoverrides = {
-	"coloredwood",
-	"craftguide",
-	"farming",
-	"helicopter",
-	}
+	'coloredwood',
+	'craftguide',
+	'dye',
+	'farming',
+	'helicopter',
+}
 
 for I in pairs(modoverrides) do
 	local modname = modoverrides[I]
 	if minetest.get_modpath(modname) then
-		dofile(craftdir .. "/" .. modname .. ".lua")
+		dofile(craftdir .. '/' .. modname .. '.lua')
 	end
 end
