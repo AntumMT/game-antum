@@ -1,9 +1,10 @@
+craft_guide?
+craftguide?
 antum
 default
 animalmaterials?
 coloredwood?
-craft_guide?
-craftguide?
+dye?
 ethereal?
 farming?
 helicopter?
