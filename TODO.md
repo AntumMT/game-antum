@@ -14,8 +14,9 @@
 	* dye:pink
 
 #### Recipes that are redefined & overridden:
-* sliding doors (all use same recipe):
+* mod: my_misc_doors (sliding doors all use same recipe)
 	* Sliding Door (my_misc_doors:door2a)
+* mod: my_future_doors (sliding doors all use same recipe)
 	* Steel Sliding Door (my_future_doors:door2a)
 	* Squared Sliding Door (my_future_doors:door3a)
 	* Dark Sliding Door (my_future_doors:door4a)
