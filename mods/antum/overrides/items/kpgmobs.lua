@@ -30,7 +30,7 @@ local tdir = 'animal_inventory'
 
 minetest.register_craftitem(':kpgmobs:horseh1', {
 	description = 'Brown Horse',
-	inventory_image = tdir .. '/horse_brown',
+	inventory_image = 'horse_brown.png',
 	
 	on_place = function(itemstack, placer, pointed_thing)
 		if pointed_thing.above then
@@ -45,7 +45,7 @@ minetest.register_alias('brown_horse', 'kpgmobs:horseh1')
 
 minetest.register_craftitem(':kpgmobs:horsepegh1', {
 	description = 'White Horse',
-	inventory_image = tdir .. '/horse_white',
+	inventory_image = 'horse_white.png',
 	
 	on_place = function(itemstack, placer, pointed_thing)
 		if pointed_thing.above then
@@ -60,7 +60,7 @@ minetest.register_alias('white_horse', 'kpgmobs:horsepegh1')
 
 minetest.register_craftitem(':kpgmobs:horsearah1', {
 	description = 'Black Horse',
-	inventory_image = tdir .. '/horse_black',
+	inventory_image = 'horse_black.png',
 	
 	on_place = function(itemstack, placer, pointed_thing)
 		if pointed_thing.above then

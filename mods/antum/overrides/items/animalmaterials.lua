@@ -25,22 +25,22 @@
 --]]
 
 
-minetest.register_craftitem(":animalmaterials:fish_bluewhite", {
-	description = "Raw Bluewhite Fish",
-	image = "food/fish_raw",
+minetest.register_craftitem(':animalmaterials:fish_bluewhite', {
+	description = 'Raw Bluewhite Fish',
+	image = 'fish_raw.png',
 	on_use = minetest.item_eat(1),
 	groups = { meat=1, eatable=1 },
 	stack_max = 25
 })
 
-minetest.register_alias("fish_bluewhite_raw", "animalmaterials:fish_bluewhite")
+minetest.register_alias('fish_bluewhite_raw', 'animalmaterials:fish_bluewhite')
 
-minetest.register_craftitem(":animalmaterials:fish_clownfish", {
-	description = "Raw Clownfish",
-	image = "food/fish_raw",
+minetest.register_craftitem(':animalmaterials:fish_clownfish', {
+	description = 'Raw Clownfish',
+	image = 'fish_raw.png',
 	on_use = minetest.item_eat(1),
 	groups = { meat=1, eatable=1 },
 	stack_max = 25
 })
 
-minetest.register_alias("clownfish_raw", "animalmaterials:fish_clownfish")
+minetest.register_alias('clownfish_raw', 'animalmaterials:fish_clownfish')
