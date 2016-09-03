@@ -30,6 +30,6 @@ function antum.entities.addStaticEntity(name, def)
 end
 
 
-function antum.entities.addSpawnEntity(name, def)
+function antum.entities.addSpawnEntity(name, def, abm)
 	
 end
