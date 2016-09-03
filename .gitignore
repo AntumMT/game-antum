@@ -1,4 +1,5 @@
 /.project
 /textures
+*.db
 *.orig
 debug.txt
