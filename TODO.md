@@ -52,3 +52,8 @@
 #### Craft items that need new inventory textures
 
 #### Items that do not function correctly
+* moreblocks:glow_glass & moreblocks:super_glow_glass
+	* Make work with connected glass setting
+
+#### Items to make work with walking_light
+* ethereal:candle
