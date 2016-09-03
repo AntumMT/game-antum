@@ -1,4 +1,11 @@
 antum
 spawneggs
+animal_chicken?
+chicken?
+default?
+kpgmobs?
+mobs?
+mobs_monster?
+oerrki?
 sheep?
 wool?
