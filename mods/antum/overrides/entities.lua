@@ -25,17 +25,4 @@
 --]]
 
 
--- NOTE: This mod depends on the method 'minetest.unregister_item()' by paly2.
---       As of writing, the Mineteset main branch does not include it.
-
-antum.overrides = {}
-antum.overrides.modname = minetest.get_current_modname()
-antum.overrides.modpath = minetest.get_modpath(antum.overrides.modname)
-
-local scripts = {
-	'crafting', 'items', 'entities', 'misc',
-}
-
-for I in pairs(scripts) do
-	dofile(antum.overrides.modpath .. '/' .. scripts[I] .. '.lua')
-end
+-- Entities is another term for mobs
