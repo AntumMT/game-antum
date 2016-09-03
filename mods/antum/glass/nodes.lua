@@ -24,14 +24,18 @@
   
 --]]
 
-minetest.register_node('glass:green', {
-	description = 'Green Glass',
-	drawtype = 'glasslike_framed_optional',
-	tiles = {'glass/green', 'glass/green_detail'},
-	paramtype = 'light',
-	sunlight_propagates = true,
-	is_ground_content = false,
-	groups = {cracky = 3, oddly_breakable_by_hand = 3},
-	sounds = default.node_sound_glass_defaults(),
-	}
-)
+
+for I in pairs(antum.glass.colors) do
+	local color = antum.glass.colors[I]
+	
+	minetest.register_node(':glass:' .. color, {
+		description = color:gsub('^%l', string.upper) .. ' Glass',
+		drawtype = 'glasslike_framed_optional',
+		tiles = {'glass_' .. color .. '.png', 'glass_' .. color .. '_detail.png'},
+		paramtype = 'light',
+		sunlight_propagates = true,
+		is_ground_content = false,
+		groups = {cracky = 3, oddly_breakable_by_hand = 3},
+		sounds = default.node_sound_glass_defaults(),
+	})
+end

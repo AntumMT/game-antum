@@ -25,15 +25,12 @@
 --]]
 
 
--- DISABLED
-do return end
-
-
 antum.glass = {}
 
-antum.glass.modpath = minetest.get_current_modpath()
+antum.glass.modname = minetest.get_current_modname()
+antum.glass.modpath = minetest.get_modpath(antum.glass.modname)
 
-local colors = {"green"}
+antum.glass.colors = {"green"}
 
-dofile(modpath .. "/nodes.lua")
-dofile(modpath .. "/crafting.lua")
+dofile(antum.glass.modpath .. "/nodes.lua")
+dofile(antum.glass.modpath .. "/crafting.lua")

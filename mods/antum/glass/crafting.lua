@@ -25,14 +25,12 @@
 --]]
 
 
-minetest.register_craftitem('glass:green', {
-	description = 'Green Glass',
-	}
-)
-
-minetest.register_craft({
-	output = 'glass:green',
-	type = 'shapeless',
-	recipe = {'default:glass', 'dye:green'},
-	}
-)
+for I in pairs(antum.glass.colors) do
+	local color = antum.glass.colors[I]
+	
+	minetest.register_craft({
+		output = 'glass:' .. color,
+		type = 'shapeless',
+		recipe = {'default:glass', 'dye:' .. color},
+	})
+end
