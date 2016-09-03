@@ -87,11 +87,6 @@ end
 -- Chicken spawnegg
 if minetest.get_modpath('chicken') then
 	antum.spawneggs.addEgg('chicken', 'creatures:chicken', {'creatures:feather'})
-	
-	-- Alternate recipe
-	if minetest.get_modpath('chicken') and minetest.get_modpath('animalmaterials') then
-		antum.spawneggs.addEggRecipe('chicken', 'creatures:chicken', {'animalmaterials:feather'})
-	end
 end
 
 -- Cow spawnegg
