@@ -325,19 +325,31 @@ end
 
 minetest.register_entity("creeper:creeper",def)
 
-minetest.register_craftitem("creeper:spawnegg",{
-	description = "Creeper Spawn Egg",
-	inventory_image = "creeper_spawnegg.png",
-	stack_max = 64,
-	on_place = function(itemstack,placer,pointed_thing)
-		if pointed_thing.type == "node" then
-			local pos = pointed_thing.above
-			pos.y = pos.y+1
-			minetest.add_entity(pos,"creeper:creeper")
-			if not minetest.setting_getbool("creative_mode") then
-				itemstack:take_item()
+if minetest.get_modpath('spawneggs') and minetest.get_modpath('tnt') then
+	minetest.register_craftitem("creeper:spawnegg",{
+		description = "Creeper Spawn Egg",
+		inventory_image = "creeper_spawnegg.png",
+		stack_max = 64,
+		on_place = function(itemstack,placer,pointed_thing)
+			if pointed_thing.type == "node" then
+				local pos = pointed_thing.above
+				pos.y = pos.y+1
+				minetest.add_entity(pos,"creeper:creeper")
+				if not minetest.setting_getbool("creative_mode") then
+					itemstack:take_item()
+				end
+				return itemstack
 			end
-			return itemstack
 		end
-	end
-})
+	})
+	
+	minetest.register_craft({
+		output = 'creeper:spawnegg',
+		type = 'shapeless',
+		recipe = {
+			'spawneggs:egg', 'tnt:tnt',
+		},
+	})
+	
+	minetest.register_alias('spawneggs:creeper', 'creeper:spawnegg')
+end
