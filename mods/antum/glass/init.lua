@@ -30,7 +30,7 @@ antum.glass = {}
 antum.glass.modname = minetest.get_current_modname()
 antum.glass.modpath = minetest.get_modpath(antum.glass.modname)
 
-antum.glass.colors = {"green"}
+antum.glass.colors = {'green', 'red'}
 
-dofile(antum.glass.modpath .. "/nodes.lua")
-dofile(antum.glass.modpath .. "/crafting.lua")
+dofile(antum.glass.modpath .. '/nodes.lua')
+dofile(antum.glass.modpath .. '/crafting.lua')
