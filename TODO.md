@@ -50,3 +50,5 @@
 #### Craft items that need new descriptions
 
 #### Craft items that need new inventory textures
+
+#### Items that do not function correctly
