@@ -74,30 +74,29 @@ if minetest.get_modpath('spawneggs') then
 end
 
 
-local eggs = {}
-local addLocalEgg = function(name, spawn, ingredient)
-	table.insert(eggs, -1, {name, spawn, ingredient})
-end
-
-
 -- Sheep spawnegg
 if minetest.get_modpath('sheep') and minetest.get_modpath('wool') then
-	addLocalEgg('sheep', 'creatures:sheep', 'group:wool')
+	antum.spawneggs.addEgg('sheep', 'creatures:sheep', {'group:wool'})
 end
 
 -- Oerrki spawnegg
 if minetest.get_modpath('oerrki') and minetest.get_modpath('default') then
-	addLocalEgg('oerrki', 'creatures:oerrki', 'default:obsidian')
+	antum.spawneggs.addEgg('oerrki', 'creatures:oerrki', {'default:obsidian'})
 end
 
 -- Chicken spawnegg
 if minetest.get_modpath('chicken') then
-	addLocalEgg('chicken', 'creatures:chicken', 'creatures:feather')
+	antum.spawneggs.addEgg('chicken', 'creatures:chicken', {'creatures:feather'})
+	
+	-- Alternate recipe
+	if minetest.get_modpath('chicken') and minetest.get_modpath('animalmaterials') then
+		antum.spawneggs.addEggRecipe('chicken', 'creatures:chicken', {'animalmaterials:feather'})
+	end
 end
 
 -- Cow spawnegg
 if minetest.get_modpath('kpgmobs') and minetest.get_modpath('mobs') then
-	addLocalEgg('cow', 'kpgmobs:cow', 'mobs:leather')
+	antum.spawneggs.addEgg('cow', 'kpgmobs:cow', {'mobs:leather'})
 end
 
 -- mobs_redo monsters
@@ -126,20 +125,4 @@ if minetest.get_modpath('mobs_monster') and minetest.get_modpath('default') then
 	
 	-- Tree monster
 	antum.spawneggs.addEgg('tree_monster', 'mobs_monster:tree_monster', {'default:sapling'})
-end
-
-
-for I in pairs(eggs) do
-	local name = eggs[I][1]
-	local spawn = eggs[I][2]
-	local ingredients = {eggs[I][3]}
-	
-	antum.spawneggs.addEgg(name, spawn, ingredients)
-end
-
-
-
--- Alternate recipes
-if minetest.get_modpath('chicken') and minetest.get_modpath('animalmaterials') then
-	antum.spawneggs.addEggRecipe('chicken', 'creatures:chicken', {'spawneggs:egg', 'animalmaterials:feather'})
 end
