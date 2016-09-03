@@ -58,6 +58,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * mobs_aggressive/
     * [creeper][] ([WTFPL][lic.creeper]) -- version [036666e Git][ver.creeper]
     * [mobs_goblins][] ([CC-BY-SA / CC-BY / CC0](mods/mobs_aggressive/mobs_goblins/README.md))
+    * [mobs_monster][] ([MIT][lic.mobs_monster]) -- version: [91cbcf7 Git][ver.mobs_monster]
     * [spidermob][] ([CC-BY-SA / WTFPL / CC0](mods/mobs_aggressive/spidermob/LICENSE))
 * mobs_passive/
 * npc/
@@ -228,6 +229,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [markers version]: https://github.com/Sokomine/markers/tree/52d1b90b8906b28d4b5ba93cd271b3865b316d00
 [mesecons]: https://forum.minetest.net/viewtopic.php?t=628
 [mobs_goblins]: https://forum.minetest.net/viewtopic.php?t=13004
+[mobs_monster]: https://github.com/tenplus1/mobs_monster
 [mobs_redo]: https://forum.minetest.net/viewtopic.php?t=9917
 [moreblocks]: https://forum.minetest.net/viewtopic.php?t=509
 [moremesecons]: https://forum.minetest.net/viewtopic.php?t=13150
@@ -306,6 +308,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.mdoors.1]: mods/mydoors/mdoors/README.txt
 [lic.mdoors.2]: doc/modpacks/mydoors/licence.txt
 [lic.mobf]: mods/mobf_core/License.txt
+[lic.mobs_monster]: mods/mobs_aggressive/mobs_monster/license.txt
 [lic.playeranim.1]: mods/player_visuals/playeranim/LICENSE.txt
 [lic.playeranim.2]: mods/player_visuals/playeranim/LICENSE-original.txt
 [lic.simple_protection]: mods/protection/simple_protection/README.md
@@ -322,6 +325,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.creeper]: https://github.com/Rui-Minetest/creeper/tree/036666e2ccd26632a0c11585af0345c6eaa8c72d
 [ver.homedecor]: https://github.com/minetest-mods/homedecor_modpack/tree/02a4d14
 [ver.ilights]: https://github.com/minetest-mods/ilights/tree/d5f6900b5a6510f5922a7517ad613633861ce4df
+[ver.mobs_monster]: https://github.com/tenplus1/mobs_monster/tree/91cbcf7
 [ver.playeranim]: https://github.com/minetest-mods/playeranim/tree/f1c542e
 [ver.simple_protection]: https://github.com/SmallJoker/simple_protection/tree/c822e561e0349f02b70bf6a8c28059515603a0be
 [ver.spawneggs]: https://github.com/thefamilygrog66/spawneggs/tree/46503709bb0a1bff586cd345aac6b36936c4c311
