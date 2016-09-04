@@ -35,3 +35,11 @@ antum.def.movement.walking = {
 antum.def.movement.flying = {
 	footsteps = false,
 }
+
+
+-- TESTING
+antum.def.movement.creeper = {
+	footsteps = true,
+	speed = 1.5,
+	jump = 5,
+}

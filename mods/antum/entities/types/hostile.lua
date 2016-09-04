@@ -25,31 +25,44 @@
 --]]
 
 
-function antum.createHostileEntity(name, def)
-	-- def must have visual, battle,
-	local visual_def = def.visual
-	local movement_def = def.movement
-	local battle_def = def.battle
+function antum.createHostileEntity(def)
+	-- def must have name, visual, movement, battle,
+	local name = def.name
+	local vi = def.visual
+	local mo = def.movement
+	local ba = def.battle
+	local tex = def.textures
 	
 	local def = {
-		--physical = , -- FIXME
-		collisionbox = visual_def.collisionbox,
-		visual = visual_def.type,
-		makes_footstep_sound = behavior_def.footsteps,
-		animation = visual_def.anim,
-		animation_speed = visual_def.anim_speed,
-		walk_speed = behavior_def.speed,
-		jump_height = behavior_def.jump,
+		-- Visuals
+		collisionbox = vi.collisionbox,
+		visual = vi.visual,
+		animation = vi.animation,
+		animation_speed = vi.animation_speed,
+		textures = tex,
+		
+		-- Movement
+		makes_footstep_sound = mo.footsteps,
+		walk_speed = mo.speed,
+		jump_height = mo.jump,
 		
 		-- Battle definitions
-		hp_max = battle_def.hp,
-		knockback_level = battle_def.knockback,
-		
-		--local function on_activate = ,
+		hp_max = ba.hp,
+		physical = ba.physical,
+		knockback_level = ba.knockback,
 	}
+	
+	minetest.register_entity(name, def)
 end
 
--- Creates an entity using mesh visuals
-function antum.createHostileEntityMesh(name, def)
-	
-end
+-- TESTING
+--[[
+local creeper = {
+	name = ':antum:creeper',
+	visual = antum.def.visual.creeper,
+	movement = antum.def.movement.creeper,
+	battle = antum.def.battle.creeper,
+	textures = {'creeper.png'},
+}
+
+antum.createHostileEntity(creeper)--]]

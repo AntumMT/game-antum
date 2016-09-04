@@ -25,3 +25,18 @@
 --]]
 
 
+antum.def.visual = {}
+
+-- TESTING
+antum.def.visual.creeper = {
+	collisionbox = {-0.25,-0.7,-0.25, 0.25,0.8,0.25},
+	visual = 'mesh',
+	mesh = 'character.b3d',
+	animation = {
+		stand_START = 0,
+		stand_END = 79,
+		walk_START = 168,
+		walk_END = 187
+	},
+	animation_speed = 30,
+}

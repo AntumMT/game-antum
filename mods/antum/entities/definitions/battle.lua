@@ -49,3 +49,10 @@ antum.def.battle.weak = {
 	hp = 10,
 	knockback = 4,
 }
+
+-- TESTING
+antum.def.battle.creeper = {
+	hp = 20,
+	physical = true,
+	knockback = 2,
+}
