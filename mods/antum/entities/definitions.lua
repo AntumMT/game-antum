@@ -25,14 +25,3 @@
 --]]
 
 
-antum.entities = {}
-antum.entities.modname = minetest.get_current_modname()
-antum.entities.modpath = minetest.get_modpath(antum.entities.modname)
-
-local scripts = {
-	'definitions', 'base', 'peaceful', 'hostile', 'npc'
-}
-
-for I in pairs(scripts) do
-	dofile(antum.entities.modpath .. '/' .. scripts[I] .. '.lua')
-end
