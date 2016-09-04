@@ -29,10 +29,31 @@ antum.entities = {}
 antum.entities.modname = minetest.get_current_modname()
 antum.entities.modpath = minetest.get_modpath(antum.entities.modname)
 
-local scripts = {
-	'definitions', 'base', 'peaceful', 'hostile', 'npc'
+
+local function logAction(message)
+	minetest.log('action', '[' .. antum.entities.modname .. '] ' .. message)
+end
+
+
+-- Loading entity definitions
+logAction('Loading entity definitions ...')
+
+antum.def = {}
+local defs = {
+	'visual', 'movement', 'battle',
 }
 
-for I in pairs(scripts) do
-	dofile(antum.entities.modpath .. '/' .. scripts[I] .. '.lua')
+for I in pairs(defs) do
+	dofile(antum.entities.modpath .. '/definitions/' .. defs[I] .. '.lua')
+end
+
+
+-- Loading entity types
+logAction('Loading entity types ...')
+local types = {
+	'hostile', 'peaceful', 'npc',
+}
+
+for I in pairs(types) do
+	dofile(antum.entities.modpath .. '/types/' .. types[I] .. '.lua')
 end

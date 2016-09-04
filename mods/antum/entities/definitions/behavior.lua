@@ -25,13 +25,4 @@
 --]]
 
 
-antum.behavior = {}
-
-antum.behavior.movement = {
-	flying = {
-		makes_footstep_sound = false,
-	},
-	walking = {
-		makes_footstep_sound = true,
-	},
-}
+antum.def.behavior = {}

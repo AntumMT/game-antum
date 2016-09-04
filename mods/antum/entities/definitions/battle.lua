@@ -25,34 +25,27 @@
 --]]
 
 
-antum.battle = {}
+-- Battle defines hp, knockback level, ....
+antum.def.battle = {}
 
 
 -- HP defines how durable the entity is when attacked
-antum.battle.hp = {
-	high = {
-		hp_max = 40,
-	},
-	med = {
-		hp_max = 20,
-	},
-	low = {
-		hp_max = 10,
-	},
+antum.def.battle.sturdy = {
+	hp = 40,
+	knockback = 0,
 }
 
--- Weight defines how far back the entity will be pushed when attacked
-antum.battle.weight = {
-	unmovable = {
-		knockback_level = 0,
-	},
-	heavy = {
-		knockback_level = 1,
-	},
-	average = {
-		knockback_level = 2,
-	},
-	light = {
-		knockback_level = 4,
-	},
+antum.def.battle.strong = {
+	hp = 40,
+	knockback = 1,
+}
+
+antum.def.battle.average = {
+	hp = 20,
+	knockback = 2,
+}
+
+antum.def.battle.weak = {
+	hp = 10,
+	knockback = 4,
 }

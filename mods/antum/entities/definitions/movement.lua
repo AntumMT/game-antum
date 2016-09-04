@@ -25,3 +25,13 @@
 --]]
 
 
+-- Movement defines footstep sounds
+antum.def.movement = {}
+
+antum.def.movement.walking = {
+	footsteps = true,
+}
+
+antum.def.movement.flying = {
+	footsteps = false,
+}
