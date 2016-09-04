@@ -23,3 +23,8 @@
   SOFTWARE.
   
 --]]
+
+
+function antum.createHostileEntity(name, behavior_def, battle_def)
+	
+end
