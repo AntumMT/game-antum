@@ -1,6 +1,10 @@
 ## A list of changes to make for Antum game
 
 
+#### Craft recipes to make
+* dye:brown
+	* flowers:mushroom_brown
+
 #### Recipes with undefined ingredients:
 # dye
 	* dye:brown
