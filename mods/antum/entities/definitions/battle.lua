@@ -27,6 +27,8 @@
 
 antum.battle = {}
 
+
+-- HP defines how durable the entity is when attacked
 antum.battle.hp = {
 	high = {
 		hp_max = 40,
@@ -36,5 +38,21 @@ antum.battle.hp = {
 	},
 	low = {
 		hp_max = 10,
+	},
+}
+
+-- Weight defines how far back the entity will be pushed when attacked
+antum.battle.weight = {
+	unmovable = {
+		knockback_level = 0,
+	},
+	heavy = {
+		knockback_level = 1,
+	},
+	average = {
+		knockback_level = 2,
+	},
+	light = {
+		knockback_level = 4,
 	},
 }
