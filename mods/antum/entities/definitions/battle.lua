@@ -26,3 +26,15 @@
 
 
 antum.battle = {}
+
+antum.battle.hp = {
+	high = {
+		hp_max = 40,
+	},
+	med = {
+		hp_max = 20,
+	},
+	low = {
+		hp_max = 10,
+	},
+}
