@@ -30,13 +30,17 @@
 #### Duplicate recipes:
 
 #### Craft recipes to override:
-	* bags:small
+* bags:
+	* small
 		* Use leather & thread
-	* bags:medium
+	* medium
 		* Use 9 small bags
-	* bags:large
+	* large
 		* Use 9 mediaum bags
-	* default:furnace
+* default:
+	* book
+		* 3 paper, 3 ???
+	* furnace
 		* Add coal or something similar to recipe
 
 #### Aliases that do not register:
