@@ -63,3 +63,6 @@
 
 #### Items to make work with walking_light
 * ethereal:candle
+
+#### Nodes that are too common in game
+* spawneggs:egg
