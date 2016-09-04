@@ -25,3 +25,10 @@
 --]]
 
 
+local def_scripts = {
+	'battle', 'behavior',
+}
+
+for I in pairs(def_scripts) do
+	dofile(antum.entities.modpath .. '/definitions/' .. def_scripts[I] .. '.lua')
+end
