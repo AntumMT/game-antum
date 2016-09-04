@@ -80,9 +80,3 @@
 	* door*a
 
 #### Glass nodes to make connected
-* moreblocks:
-	* clean_glass
-	* coal_glass
-	* glow_glass
-	* iron_glass
-	* super_glow_glass
