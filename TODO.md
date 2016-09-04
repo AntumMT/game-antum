@@ -25,7 +25,13 @@
 
 #### Duplicate recipes:
 
-#### Recipes to override:
+#### Craft recipes to override:
+	* bags:small
+		* Use leather & thread
+	* bags:medium
+		* Use 9 small bags
+	* bags:large
+		* Use 9 mediaum bags
 	* default:furnace
 		* Add coal or something similar to recipe
 
