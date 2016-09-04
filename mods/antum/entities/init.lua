@@ -27,7 +27,7 @@
 
 antum.entities = {}
 antum.entities.modname = minetest.get_current_modname()
-antum.entities.modpath = minetest.get_modpath(antum.modname)
+antum.entities.modpath = minetest.get_modpath(antum.entities.modname)
 
 local scripts = {
 	'base', 'peaceful', 'hostile', 'npc'
