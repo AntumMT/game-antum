@@ -75,6 +75,10 @@
 #### Nodes that are too common in game
 * spawneggs:egg
 
+#### Nodes that do not work right
+* my_future_doors:
+	* door*a
+
 #### Glass nodes to make connected
 * moreblocks:
 	* clean_glass
