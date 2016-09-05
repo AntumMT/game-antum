@@ -72,13 +72,6 @@ minetest.register_craft({
 	}
 })
 
-minetest.register_craft({
-	output = 'compassgps:cgpsmap',
-	recipe = {
-		{'compassgps:cgpsmap_marked'},
-	}
-})
-
 minetest.register_craftitem("compassgps:cgpsmap", {
 	description = S("CompassGPS Map (blank)"),
 	inventory_image = "cgpsmap-blank.png",
@@ -347,4 +340,12 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
 			player:set_wielded_item(selected_cgpsmap[playername]) --new name is saved in marked cpgsmap
 			end
 		end
-	end)
+	end
+)
+
+minetest.register_craft({
+	output = 'compassgps:cgpsmap',
+	recipe = {
+		{'compassgps:cgpsmap_marked'},
+	}
+})
