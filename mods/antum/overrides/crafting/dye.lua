@@ -60,7 +60,7 @@ end
 local dye_defs = {}
 
 if minetest.get_modpath('flowers') then
-	table.insert(dye_defs, -1, {'brown', {'flowers:mushroom_brown'}})
+	table.insert(dye_defs, -1, {'brown 4', {'flowers:mushroom_brown'}})
 end
 
 registerDyeRecipes(dye_defs)
