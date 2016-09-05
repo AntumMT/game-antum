@@ -23,49 +23,6 @@ else
 	steel_ingot = "default:steel_ingot"
 end
 
-minetest.register_craft({
-	output = 'technic:rebar 6',
-	recipe = {
-		{'','', steel_ingot},
-		{'',steel_ingot,''},
-		{steel_ingot, '', ''},
-	}
-})
-
-minetest.register_craft({
-	output = 'technic:concrete 5',
-	recipe = {
-		{'default:stone','technic:rebar','default:stone'},
-		{'technic:rebar','default:stone','technic:rebar'},
-		{'default:stone','technic:rebar','default:stone'},
-	}
-})
-
-minetest.register_craft({
-	output = 'technic:concrete_post_platform 6',
-	recipe = {
-		{'technic:concrete','technic:concrete_post','technic:concrete'},
-	}
-})
-
-minetest.register_craft({
-	output = 'technic:concrete_post 12',
-	recipe = {
-		{'default:stone','technic:rebar','default:stone'},
-		{'default:stone','technic:rebar','default:stone'},
-		{'default:stone','technic:rebar','default:stone'},
-	}
-})
-
-minetest.register_craft({
-	output = 'technic:blast_resistant_concrete 5',
-	recipe = {
-		{'technic:concrete','technic:composite_plate','technic:concrete'},
-		{'technic:composite_plate','technic:concrete','technic:composite_plate'},
-		{'technic:concrete','technic:composite_plate','technic:concrete'},
-	}
-})
-
 minetest.register_craftitem(":technic:rebar", {
 	description = S("Rebar"),
 	inventory_image = "technic_rebar.png",
@@ -154,3 +111,45 @@ for platform = 0, 1 do
 	})
 end
 
+minetest.register_craft({
+	output = 'technic:rebar 6',
+	recipe = {
+		{'','', steel_ingot},
+		{'',steel_ingot,''},
+		{steel_ingot, '', ''},
+	}
+})
+
+minetest.register_craft({
+	output = 'technic:concrete 5',
+	recipe = {
+		{'default:stone','technic:rebar','default:stone'},
+		{'technic:rebar','default:stone','technic:rebar'},
+		{'default:stone','technic:rebar','default:stone'},
+	}
+})
+
+minetest.register_craft({
+	output = 'technic:concrete_post_platform 6',
+	recipe = {
+		{'technic:concrete','technic:concrete_post','technic:concrete'},
+	}
+})
+
+minetest.register_craft({
+	output = 'technic:concrete_post 12',
+	recipe = {
+		{'default:stone','technic:rebar','default:stone'},
+		{'default:stone','technic:rebar','default:stone'},
+		{'default:stone','technic:rebar','default:stone'},
+	}
+})
+
+minetest.register_craft({
+	output = 'technic:blast_resistant_concrete 5',
+	recipe = {
+		{'technic:concrete','technic:composite_plate','technic:concrete'},
+		{'technic:composite_plate','technic:concrete','technic:composite_plate'},
+		{'technic:concrete','technic:composite_plate','technic:concrete'},
+	}
+})
