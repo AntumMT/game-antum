@@ -39,6 +39,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * farming/
 	* [farming_plus][] ([WTFPL](mods/farming/farming_plus/README.txt))
 * furniture/
+	* [jukebox][] ([WTFPL / CC0][lic.jukebox]) -- version: [e6a507f Git][ver.jukebox]
     * [trampoline][] ([GPL](mods/furniture/trampoline/LICENSE.txt))
     * [trash_can][] ([MIT](mods/furniture/trash_can/LICENSE.txt))
 * [intllib][] (WTFPL)
@@ -222,6 +223,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [intllib]: https://forum.minetest.net/viewtopic.php?t=4929
 [invisible]: https://forum.minetest.net/viewtopic.php?t=14399
 [inventory_plus]: https://forum.minetest.net/viewtopic.php?t=3100
+[jukebox]: https://forum.minetest.net/viewtopic.php?t=13505
 [jumping]: https://forum.minetest.net/viewtopic.php?t=2957
 [kpgmobs]: https://forum.minetest.net/viewtopic.php?t=8798
 [lightning]: https://forum.minetest.net/viewtopic.php?t=13886
@@ -305,6 +307,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.creeper]: mods/mobs_aggressive/creeper/LICENSE.md
 [lic.homedecor]: mods/homedecor_modpack/LICENSE
 [lic.ilights]: mods/lighting/ilights/init.lua
+[lic.jukebox]: mods/furniture/jukebox/README.txt
 [lic.mdoors.1]: mods/mydoors/mdoors/README.txt
 [lic.mdoors.2]: doc/modpacks/mydoors/licence.txt
 [lic.mobf]: mods/mobf_core/License.txt
@@ -318,17 +321,18 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.wardrobe]: mods/player_visuals/wardrobe/README.txt
 
 [ver.3d_armor]: https://github.com/stujones11/minetest-3d_armor/tree/456c84e
-[ver.areas]: https://github.com/ShadowNinja/areas/tree/67507c75918f8a60ad218cdcb69cc8d39e4a55ed
+[ver.areas]: https://github.com/ShadowNinja/areas/tree/67507c7
 [ver.awards]: https://github.com/minetest-mods/awards/tree/92c43d1
 [ver.character_creator]: https://github.com/Rui-Minetest/character_creator/tree/5e8fec2
 [ver.cme]: https://github.com/BlockMen/cme/tree/e3502a1
-[ver.creeper]: https://github.com/Rui-Minetest/creeper/tree/036666e2ccd26632a0c11585af0345c6eaa8c72d
+[ver.creeper]: https://github.com/Rui-Minetest/creeper/tree/036666e
 [ver.homedecor]: https://github.com/minetest-mods/homedecor_modpack/tree/02a4d14
-[ver.ilights]: https://github.com/minetest-mods/ilights/tree/d5f6900b5a6510f5922a7517ad613633861ce4df
+[ver.ilights]: https://github.com/minetest-mods/ilights/tree/d5f6900
+[ver.jukebox]: https://github.com/minetest-mods/jukebox/tree/e6a507f
 [ver.mobs_monster]: https://github.com/tenplus1/mobs_monster/tree/91cbcf7
 [ver.playeranim]: https://github.com/minetest-mods/playeranim/tree/f1c542e
-[ver.simple_protection]: https://github.com/SmallJoker/simple_protection/tree/c822e561e0349f02b70bf6a8c28059515603a0be
-[ver.spawneggs]: https://github.com/thefamilygrog66/spawneggs/tree/46503709bb0a1bff586cd345aac6b36936c4c311
-[ver.throwing]: https://github.com/Jeija/minetest-mod-throwing/tree/79ad788b9f415b68793dc44128870fbfa6a4d064
-[ver.walking_light]: https://github.com/petermaloney/walking_light/tree/93de9b7b4af6c9d2811ef7fd3f91feaf90b7875c
+[ver.simple_protection]: https://github.com/SmallJoker/simple_protection/tree/c822e56
+[ver.spawneggs]: https://github.com/thefamilygrog66/spawneggs/tree/4650370
+[ver.throwing]: https://github.com/Jeija/minetest-mod-throwing/tree/79ad788
+[ver.walking_light]: https://github.com/petermaloney/walking_light/tree/93de9b7
 [ver.wardrobe]: https://github.com/prestidigitator/minetest-mod-wardrobe/tree/c48b011
