@@ -25,6 +25,31 @@
 --]]
 
 
+local function registerGroupAliases(group)
+	for I in pairs(group) do
+		local source = group[I][1]
+		local alias = group[I][2]
+		-- DEBUG
+		minetest.log('action', '[antum_glass] Registering alias: ' .. alias .. ' -> ' .. source)
+		minetest.register_alias(alias, source)
+	end
+end
+
+
+local group_glass = {} -- Local glass is already in this group
+local group_panes = {}
+
+local function appendGroupGlass(source, suffix)
+	local suffix = 'glass:' .. suffix
+	table.insert(group_glass, -1, {source, suffix})
+end
+
+local function appendGroupPanes(source, suffix)
+	local suffix = 'glass_panes:' .. suffix
+	table.insert(group_panes, -1, {source, suffix})
+end
+
+
 for I in pairs(antum.glass.colors) do
 	local color = antum.glass.colors[I]
 	
@@ -39,3 +64,70 @@ for I in pairs(antum.glass.colors) do
 		sounds = default.node_sound_glass_defaults(),
 	})
 end
+
+-- Local glass is already part of 'glass' group
+for I in pairs(antum.glass.colors) do
+	--table.insert(group_panes, -1, {'glass:' .. antum.glass.colors[I], 'glass_panes:' .. antum.glass.colors[I]})
+	local source = 'glass:' .. antum.glass.colors[I]
+	local suffix = antum.glass.colors[I]
+	appendGroupPanes(source, suffix)
+end
+
+if minetest.get_modpath('default') then
+	local source = 'default:glass'
+	local suffix = 'glass'
+	appendGroupGlass(source, suffix)
+	appendGroupPanes(source, suffix)
+end
+
+if minetest.get_modpath('moreblocks') then
+	local panes = {
+		'clean', 'coal', 'glow', 'iron', 'super_glow',
+		'trap', 'trap_glow', 'trap_super_glow',
+	}
+	
+	for I in pairs(panes) do
+		local source = 'moreblocks:' .. panes[I] .. '_glass'
+		local suffix = panes[I]
+		
+		appendGroupGlass(source, suffix)
+		appendGroupPanes(source, suffix)
+	end
+	
+--[[	-- Clean glass
+	local source = 'moreblocks:clean_glass
+	table.insert(group_glass, -1, {'moreblocks:clean_glass', 'glass:clean'})
+	table.insert(group_panes, -1, {'moreblocks:clean_glass', 'glass_panes:clean'})
+	
+	-- Coal glass
+	table.insert(group_glass, -1, {'moreblocks:coal_glass', 'glass:coal'})
+	table.insert(group_panes, -1, {'moreblocks:coal_glass', 'glass_panes:coal'})
+	
+	-- Glow glass
+	table.insert(group_glass, -1, {'moreblocks:glow_glass', 'glass:glow'})
+	table.insert(group_panes, -1, {'moreblocks:glow_glass', 'glass_panes:glow'})
+	
+	-- Iron glass
+	table.insert(group_glass, -1, {'moreblocks:iron_glass', 'glass:iron'})
+	table.insert(group_panes, -1, {'moreblocks:iron_glass', 'glass_panes:iron'})
+	
+	-- Super glow glass
+	table.insert(group_glass, -1, {'moreblocks:super_glow_glass', 'glass:super_glow'})
+	table.insert(group_panes, -1, {'moreblocks:super_glow_glass', 'glass_panes:super_glow'})
+	
+	-- Trap glass
+	table.insert(group_glass, -1, {'moreblocks:trap_glass', 'glass:trap'})
+	table.insert(group_panes, -1, {'moreblocks:trap_glass', 'glass_panes:trap'})
+	
+	-- Trap glow glass
+	table.insert(group_glass, -1, {'moreblocks:trap_glow_glass', 'glass:trap_glow'})
+	table.insert(group_panes, -1, {'moreblocks:trap_glow_glass', 'glass_panes:trap_glow'})
+	
+	-- Trap super glow glass
+	table.insert(group_glass, -1, {'moreblocks:trap_super_glow_glass', 'glass:trap_super_glow'})
+	table.insert(group_panes, -1, {'moreblocks:trap_super_glow_glass', 'glass_panes:trap_super_glow'})
+	--]]
+end
+
+registerGroupAliases(group_glass)
+registerGroupAliases(group_panes)
