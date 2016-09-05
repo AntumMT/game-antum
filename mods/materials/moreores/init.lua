@@ -94,6 +94,29 @@ local function add_ore(modname, description, mineral_name, oredef)
 	local lump_item = item_base .. "_lump"
 	local ingotcraft = ingot
 
+	if oredef.makes.lump then
+		minetest.register_craftitem(lump_item, {
+			description = S("%s Lump"):format(S(description)),
+			inventory_image = img_base .. "_lump.png",
+		})
+		minetest.register_alias(mineral_name .. "_lump", lump_item)
+		if oredef.makes.ingot then
+			minetest.register_craft({
+				type = "cooking",
+				output = ingot,
+				recipe = lump_item
+			})
+		end
+	end
+
+	if oredef.makes.ingot then
+		minetest.register_craftitem(ingot, {
+			description = S("%s Ingot"):format(S(description)),
+			inventory_image = img_base .. "_ingot.png",
+		})
+		minetest.register_alias(mineral_name .. "_ingot", ingot)
+	end
+
 	if oredef.makes.ore then
 		minetest.register_node(modname .. ":mineral_" .. mineral_name, {
 			description = S("%s Ore"):format(S(description)),
@@ -125,29 +148,6 @@ local function add_ore(modname, description, mineral_name, oredef)
 				}
 			})
 		end
-	end
-
-	if oredef.makes.lump then
-		minetest.register_craftitem(lump_item, {
-			description = S("%s Lump"):format(S(description)),
-			inventory_image = img_base .. "_lump.png",
-		})
-		minetest.register_alias(mineral_name .. "_lump", lump_item)
-		if oredef.makes.ingot then
-			minetest.register_craft({
-				type = "cooking",
-				output = ingot,
-				recipe = lump_item
-			})
-		end
-	end
-
-	if oredef.makes.ingot then
-		minetest.register_craftitem(ingot, {
-			description = S("%s Ingot"):format(S(description)),
-			inventory_image = img_base .. "_ingot.png",
-		})
-		minetest.register_alias(mineral_name .. "_ingot", ingot)
 	end
 
 	if oredef.makes.chest then
