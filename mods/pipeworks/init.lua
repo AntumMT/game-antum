@@ -94,7 +94,6 @@ dofile(pipeworks.modpath.."/autoplace_tubes.lua")
 dofile(pipeworks.modpath.."/luaentity.lua")
 dofile(pipeworks.modpath.."/item_transport.lua")
 dofile(pipeworks.modpath.."/flowing_logic.lua")
-dofile(pipeworks.modpath.."/crafts.lua")
 dofile(pipeworks.modpath.."/tube_registration.lua")
 dofile(pipeworks.modpath.."/routing_tubes.lua")
 dofile(pipeworks.modpath.."/sorting_tubes.lua")
@@ -110,6 +109,8 @@ if pipeworks.enable_teleport_tube then dofile(pipeworks.modpath.."/teleport_tube
 if pipeworks.enable_pipe_devices then dofile(pipeworks.modpath.."/devices.lua") end
 if pipeworks.enable_redefines then dofile(pipeworks.modpath.."/compat.lua") end
 if pipeworks.enable_autocrafter then dofile(pipeworks.modpath.."/autocrafter.lua") end
+
+dofile(pipeworks.modpath.."/crafts.lua")
 
 minetest.register_alias("pipeworks:pipe", "pipeworks:pipe_110000_empty")
 
