@@ -1,3 +1,8 @@
+local egg_interval = tonumber(minetest.setting_get('spawneggs_egg_interval')) or 600
+local egg_chance = tonumber(minetest.setting_get('spawneggs_egg_chance')) or 3000
+local grass_interval = tonumber(minetest.setting_get('spawneggs_grass_interval')) or 600
+local grass_chance = tonumber(minetest.setting_get('spawneggs_grass_chance')) or 3000
+
 local spawneggs_list = {
 	{ "Spawn Dirt Monster", "dirt_monster", "default:dirt"},
 	{ "Spawn Dungeon Master", "dungeon_master", "default:mese"},	
@@ -69,8 +74,8 @@ minetest.register_craft({
 -- Egg Spawning and De-spawning
 minetest.register_abm(
 	{nodenames = {"default:grass_1"},
-	interval = 600,
-	chance = 3000,
+	interval = grass_interval,
+	chance = grass_chance,
 	action = function(pos)
 	minetest.env:add_node(pos, {name="spawneggs:egg"})
 	end,
@@ -78,10 +83,9 @@ minetest.register_abm(
 
 minetest.register_abm(
 	{nodenames = {"spawneggs:egg"},
-	interval = 600,
-	chance = 3000,
+	interval = egg_interval,
+	chance = egg_chance,
 	action = function(pos)
 	minetest.env:add_node(pos, {name="air"})
 	end,
 })
-
