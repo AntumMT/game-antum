@@ -26,7 +26,7 @@
 
 
 antum.clearCraftOutput = function(o)
-	minetest.log('warning', '[' .. antum.overrides.modname .. '] Clearing craft by output: ' .. o)
+	minetest.log('action', '[' .. antum.overrides.modname .. '] Clearing craft by output: ' .. o)
 	minetest.clear_craft({
 		output = o
 	})
@@ -49,7 +49,7 @@ antum.clearCraftRecipe = function(r)
 		end
 	end
 	
-	minetest.log('warning', '[' .. antum.overrides.modname .. '] Clearing craft by recipe: ' .. recipe_string)
+	minetest.log('action', '[' .. antum.overrides.modname .. '] Clearing craft by recipe: ' .. recipe_string)
 	minetest.clear_craft({
 		recipe = {r}
 	})
