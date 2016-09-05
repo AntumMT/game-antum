@@ -25,17 +25,15 @@
 --]]
 
 
--- NOTE: This mod depends on the method 'minetest.unregister_item()' by paly2.
---       As of writing, the Mineteset main branch does not include it.
+local nodedir = antum.overrides.modpath .. '/nodes'
 
-antum.overrides = {}
-antum.overrides.modname = minetest.get_current_modname()
-antum.overrides.modpath = minetest.get_modpath(antum.overrides.modname)
-
-local scripts = {
-	'crafting', 'items', 'entities', 'misc', 'nodes',
+local modoverrides = {
+	'ethereal',
 }
 
-for I in pairs(scripts) do
-	dofile(antum.overrides.modpath .. '/' .. scripts[I] .. '.lua')
+for I in pairs(modoverrides) do
+	local modname = modoverrides[I]
+	if minetest.get_modpath(modname) then
+		dofile(nodedir .. '/' .. modname .. '.lua')
+	end
 end
