@@ -1,4 +1,5 @@
 default
+homedecor
 mesecons?
 mesecons_mvps?
 digilines?
