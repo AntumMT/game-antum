@@ -21,13 +21,6 @@ minetest.register_node("kpgmobs:uley", {
 	
 })
 
-minetest.register_craft({
-	output = 'kpgmobs:uley',
-	recipe = {
-		{'kpgmobs:bee','kpgmobs:bee','kpgmobs:bee'},
-	}
-})
-
 
 --HORSE go go goooo :)
 local horse = {
@@ -672,6 +665,13 @@ minetest.register_craftitem("kpgmobs:med_cooked", {
 	on_use = minetest.item_eat(6),
 })
 
+
+minetest.register_craft({
+	output = 'kpgmobs:uley',
+	recipe = {
+		{'kpgmobs:bee','kpgmobs:bee','kpgmobs:bee'},
+	}
+})
 
 minetest.register_craft({
 	type = "cooking",
