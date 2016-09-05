@@ -77,5 +77,7 @@
 #### Nodes that do not work right
 * my_future_doors:
 	* door*a
+* jukebox:
+	* box
 
 #### Glass nodes to make connected
