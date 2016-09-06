@@ -78,6 +78,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * player_visuals/
     * 3d_armor ([3d_armor modpack][3d_armor]) ([LGPL / WTFPL / CC-BY-SA][lic.3d_armor]) -- version: [0.4.4-41-456c84e Git][ver.3d_armor]
     * [character_creator][] ([WTFPL / CC-BY-SA][lic.character_creator]) -- version: [5e8fec2 Git][ver.character_creator]
+    * [invisibility][] ([MIT][lic.invisibility]) -- version: [bf4156b Git][ver.invisibility]
     * [playeranim][] ([WFTLPL][lic.playeranim.1]) / [BSD][lic.playeranim.2]) - version [f1c542e Git][ver.playeranim]
     * [wardrobe][] ([WTFPL][lic.wardrobe]) -- version: [1.1-2-c48b011 Git][ver.wardrobe]
     * wieldview ([3d_armor modpack][3d_armor])  ([LGPL / WTFPL / CC-BY-SA][lic.3d_armor]) -- version: [0.4.4-41-456c84e Git][ver.3d_armor]
@@ -221,6 +222,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [hudmap]: https://github.com/stujones11/hudmap
 [ilights]: https://forum.minetest.net/viewtopic.php?t=12200
 [intllib]: https://forum.minetest.net/viewtopic.php?t=4929
+[invisibility]: https://forum.minetest.net/viewtopic.php?t=14846
 [invisible]: https://forum.minetest.net/viewtopic.php?t=14399
 [inventory_plus]: https://forum.minetest.net/viewtopic.php?t=3100
 [jukebox]: https://forum.minetest.net/viewtopic.php?t=13505
@@ -307,6 +309,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.creeper]: mods/mobs_aggressive/creeper/LICENSE.md
 [lic.homedecor]: mods/homedecor_modpack/LICENSE
 [lic.ilights]: mods/lighting/ilights/init.lua
+[lic.invisibility]: mods/player_visuals/invisibility/license.txt
 [lic.jukebox]: mods/furniture/jukebox/README.txt
 [lic.mdoors.1]: mods/mydoors/mdoors/README.txt
 [lic.mdoors.2]: doc/modpacks/mydoors/licence.txt
@@ -328,6 +331,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.creeper]: https://github.com/Rui-Minetest/creeper/tree/036666e
 [ver.homedecor]: https://github.com/minetest-mods/homedecor_modpack/tree/02a4d14
 [ver.ilights]: https://github.com/minetest-mods/ilights/tree/d5f6900
+[ver.invisibility]: https://github.com/tenplus1/invisibility/tree/bf4156b
 [ver.jukebox]: https://github.com/minetest-mods/jukebox/tree/e6a507f
 [ver.mobs_monster]: https://github.com/tenplus1/mobs_monster/tree/91cbcf7
 [ver.playeranim]: https://github.com/minetest-mods/playeranim/tree/f1c542e
