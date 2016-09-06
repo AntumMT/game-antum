@@ -25,6 +25,10 @@ minetest.register_alias("flowers:flower_geranium", "flowers:geranium")
 minetest.register_alias("flowers:flower_viola", "flowers:viola")
 minetest.register_alias("flowers:flower_dandelion_white", "flowers:dandelion_white")
 
+-- Available flower colors (used by dye mod)
+flowers.colors = {
+	'blue', 'orange', 'red', 'violet', 'white', 'yellow',
+}
 
 -- Flower registration
 
