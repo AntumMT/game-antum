@@ -3,3 +3,4 @@
 *.db
 *.orig
 debug.txt
+server.log
