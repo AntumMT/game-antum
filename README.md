@@ -9,7 +9,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [clean][] (WTFPL)
     * [invisible][] ([LGPL / CC BY-SA](mods/admin/invisible/readme.txt))
     * [privs][] ([CC0](mods/admin/privs/init.lua))
-    * [spectator_mode][] ([WTFPL][spectator_mode lic]) - version: [3459db4][spectator_mode version]
+    * [spectator_mode][] ([WTFPL][lic.spectator_mode]) -- version: [3459db4 Git][ver.spectator_mode]
 * antum/
     * [antum][] ([MIT][lic.antum])
     * [glass][antum_glass] ([MIT][lic.antum])
@@ -36,6 +36,8 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [bags][] ([BSD 3-Clause](mods/display/bags/LICENSE))
     * [home_gui][] ([BSD 3-Clause](mods/display/home_gui/README.md))
     * [inventory_plus][] ([BSD 3-Clause](mods/display/inventory_plus/LICENSE))
+* engine/
+    * [priviligeareas][] ([WTFPL / CC0][lic.privilegeareas]) -- version: [aebaa00 Git][ver.privilegeareas]
 * farming/
 	* [farming_plus][] ([WTFPL](mods/farming/farming_plus/README.txt))
 * furniture/
@@ -246,14 +248,13 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [pipeworks]: https://forum.minetest.net/viewtopic.php?t=2155
 [plantlife_modpack]: https://forum.minetest.net/viewtopic.php?f=11&t=3898
 [playeranim]: https://forum.minetest.net/viewtopic.php?t=12189
+[privilegeareas]: https://forum.minetest.net/viewtopic.php?t=5545
 [privs]: mods/admin/privs
 [quartz]: https://forum.minetest.net/viewtopic.php?t=5682
 [signs_lib]: https://forum.minetest.net/viewtopic.php?f=11&t=13762
 [simple_protection]: https://forum.minetest.net/viewtopic.php?t=9035
 [spawneggs]: https://forum.minetest.net/viewtopic.php?t=6214
 [spectator_mode]: https://forum.minetest.net/viewtopic.php?t=13718
-[spectator_mode lic]: mods/admin/spectator_mode/LICENSE
-[spectator_mode version]: https://github.com/minetest-mods/spectator_mode/tree/3459db48e1b507388ee5d24ba1531ea494e64dea
 [spidermob]: https://forum.minetest.net/viewtopic.php?t=10045
 [stairsplus]: https://forum.minetest.net/viewtopic.php?id=6140
 [technic]: https://forum.minetest.net/viewtopic.php?t=2538
@@ -317,8 +318,10 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.mobs_monster]: mods/mobs_aggressive/mobs_monster/license.txt
 [lic.playeranim.1]: mods/player_visuals/playeranim/LICENSE.txt
 [lic.playeranim.2]: mods/player_visuals/playeranim/LICENSE-original.txt
+[lic.privilegeareas]: mods/engine/privilegeareas/README.md
 [lic.simple_protection]: mods/protection/simple_protection/README.md
 [lic.spawneggs]: mods/spawning/spawneggs/README.txt
+[lic.spectator_mode]: mods/admin/spectator_mode/LICENSE
 [lic.throwing]: https://forum.minetest.net/viewtopic.php?t=687#p5739
 [lic.walking_light]: mods/lighting/walking_light/README.md
 [lic.wardrobe]: mods/player_visuals/wardrobe/README.txt
@@ -335,8 +338,10 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.jukebox]: https://github.com/minetest-mods/jukebox/tree/e6a507f
 [ver.mobs_monster]: https://github.com/tenplus1/mobs_monster/tree/91cbcf7
 [ver.playeranim]: https://github.com/minetest-mods/playeranim/tree/f1c542e
+[ver.privilegeareas]: https://github.com/minetest-mods/privilegeareas/tree/aebaa00
 [ver.simple_protection]: https://github.com/SmallJoker/simple_protection/tree/c822e56
 [ver.spawneggs]: https://github.com/thefamilygrog66/spawneggs/tree/4650370
+[ver.spectator_mode]: https://github.com/minetest-mods/spectator_mode/tree/3459db48e1b507388ee5d24ba1531ea494e64dea
 [ver.throwing]: https://github.com/Jeija/minetest-mod-throwing/tree/79ad788
 [ver.walking_light]: https://github.com/petermaloney/walking_light/tree/93de9b7
 [ver.wardrobe]: https://github.com/prestidigitator/minetest-mod-wardrobe/tree/c48b011
