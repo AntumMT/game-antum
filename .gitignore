@@ -2,5 +2,6 @@
 /textures
 *.db
 *.orig
+*.new
 debug.txt
 server.log
