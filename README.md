@@ -37,7 +37,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [home_gui][] ([BSD 3-Clause](mods/display/home_gui/README.md))
     * [inventory_plus][] ([BSD 3-Clause](mods/display/inventory_plus/LICENSE))
 * engine/
-    * [priviligeareas][] ([WTFPL / CC0][lic.privilegeareas]) -- version: [aebaa00 Git][ver.privilegeareas]
+    * [privilegeareas][] ([WTFPL / CC0][lic.privilegeareas]) -- version: [aebaa00 Git][ver.privilegeareas]
 * farming/
 	* [farming_plus][] ([WTFPL](mods/farming/farming_plus/README.txt))
 * furniture/
