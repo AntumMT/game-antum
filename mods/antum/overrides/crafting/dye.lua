@@ -25,20 +25,6 @@
 --]]
 
 
--- Remove dye recipes that do not have a matching flower color
-
-local rcolors = {
-	'black', 'brown', 'cyan', 'dark_green', 'dark_grey', 'green', 'grey',
-	'magenta', 'pink',
-}
-
-for I in pairs(rcolors) do
-	antum.clearCraftRecipe(
-		{'group:flower,color_' .. rcolors[I]}
-	)
-end
-
-
 local function registerDyeRecipes(def)
 	for I, T in pairs(def) do
 		local dye = 'dye:' .. T[1]
