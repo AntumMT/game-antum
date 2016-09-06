@@ -26,61 +26,68 @@
 
 
 local registerCWoodCraft = function(color)
+	local dye_color = 'dye:' .. color
+	-- Don't register crafts with non-registered ingredients
+	if minetest.registered_items[dye_color] == nil then
+		return
+	end
+	
 	minetest.register_craft({
-		type = "shapeless",
-		output = "coloredwood:wood_" .. color,
+		type = 'shapeless',
+		output = 'coloredwood:wood_' .. color,
 		recipe = {
-			"group:wood", "dye:" .. color,
+			'group:wood', dye_color,
 		},
 	})
 end
 
 
-local shadeless_colors = {
-	"black",
-	"grey", "darkgrey", "lightgrey"
-}
+minetest.register_alias('dye:darkgrey', 'dye:dark_grey')
+minetest.register_alias('dye:lightgrey', 'dye:light_grey')
 
-minetest.register_alias("dye:darkgrey", "dye:dark_grey")
-minetest.register_alias("dye:lightgrey", "dye:light_grey")
+
+local shadeless_colors = {
+	'black',
+	'grey', 'darkgrey', 'lightgrey'
+}
 
 for I in pairs(shadeless_colors) do
 	local color = shadeless_colors[I]
-	antum.clearCraftOutput("coloredwood:wood_" .. color)
-	registerCWoodCraft(color, "coloredwood:wood_" .. color)
+	antum.clearCraftOutput('coloredwood:wood_' .. color)
+	registerCWoodCraft(color)
 end
 
 
 local base_colors = {
-	"aqua",
-	"blue",
-	"cyan",
-	"green",
-	"lime",
-	"magenta",
-	"orange",
-	"red",
-	"redviolet",
-	"skyblue",
-	"violet",
-	"yellow"
+	'aqua',
+	'blue',
+	'cyan',
+	'green',
+	'lime',
+	'magenta',
+	'orange',
+	'red',
+	'redviolet',
+	'skyblue',
+	'violet',
+	'yellow'
 }
 
 for I in pairs(base_colors) do
-	local prefix = "coloredwood:wood_"
-	local suffix = "_s50"
+	local prefix = 'coloredwood:wood_'
+	local suffix = '_s50'
 	local color = base_colors[I]
-	local s_dark = "dark_"
-	local s_med = "medium_"
-	local s_light = "light_"
+	local s_dark = 'dark_'
+	local s_med = 'medium_'
+	local s_light = 'light_'
 	
-	local basecolor = prefix .. color
+	local basecolor = color
 	local basecolor_s50 = basecolor .. suffix
-	local darkcolor = prefix .. s_dark .. color
+	local darkcolor = s_dark .. color
 	local darkcolor_s50 = darkcolor .. suffix
-	local medcolor = prefix .. s_med .. color
+	local medcolor = s_med .. color
 	local medcolor_s50 = medcolor .. suffix
-	local lightcolor = prefix .. s_light .. color
+	local lightcolor = s_light .. color
 	
 	local combos = {
 		basecolor, basecolor_s50,
@@ -89,8 +96,9 @@ for I in pairs(base_colors) do
 		lightcolor,
 	}
 	
-	for C in pairs(combos) do
-		antum.clearCraftOutput(combos[C])
+	for I in pairs(combos) do
+		local output = prefix .. combos[I]
+		antum.clearCraftOutput(output)
 	end
 	
 	registerCWoodCraft(basecolor)
