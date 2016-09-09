@@ -13,6 +13,7 @@ homedecor?
 kpgmobs?
 moreblocks?
 simple_protection?
+stairsplus?
 unifieddyes?
 walking_light?
 wool?

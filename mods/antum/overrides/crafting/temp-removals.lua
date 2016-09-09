@@ -25,51 +25,57 @@
 --]]
 
 
-antum.clearCraftOutput = function(o)
-	antum.log_action(antum.overrides.modname, 'Clearing craft by output: ' .. o)
-	minetest.clear_craft({
-		output = o
-	})
+-- Temporarily remove erroneous craft recipes until fixed
+
+if minetest.get_modpath('homedecor') then
+	local outputs = {
+		'homedecor:standing_lamp_blue_off',
+		'homedecor:standing_lamp_green_off',
+		'homedecor:standing_lamp_pink_off',
+		'homedecor:standing_lamp_red_off',
+		'homedecor:standing_lamp_violet_off',
+		'homedecor:standing_lamp_off',
+		'homedecor:table_lamp_blue_off',
+		'homedecor:table_lamp_green_off',
+		'homedecor:table_lamp_pink_off',
+		'homedecor:table_lamp_red_off',
+		'homedecor:table_lamp_violet_off',
+		'homedecor:table_lamp_off',
+	}
+	
+	for I in pairs(outputs) do
+		antum.clearCraftOutput(outputs[I])
+	end
 end
 
-antum.clearCraftRecipe = function(r)
-	local recipe_string = ''
-	local icount = 0
-	for I in pairs(r) do
-		icount = icount + 1
+if minetest.get_modpath('stairsplus') then
+	local outputs = {
+		'brick',
+		'cobble',
+		'copperblock',
+		'desert_stone',
+		'sandstone',
+		'desert_stone',
+		'glass',
+		'mossycobble',
+		'sandstone',
+		'steelblock',
+		'stone',
+		'wood',
+	}
+	
+	for I in pairs(outputs) do
+		antum.clearCraftOutput('stairsplus:corner_' .. outputs[I])
+		antum.clearCraftOutput('stairsplus:stair_' .. outputs[I])
 	end
-	
-	for I in pairs(r) do
-		if I == icount then
-			recipe_string = recipe_string .. ' ' .. r[I]
-		elseif I > 1 then
-			recipe_string = recipe_string .. ' + ' .. r[I]
-		else
-			recipe_string = r[I]
-		end
-	end
-	
-	
-	antum.log_action(antum.overrides.modname, ' Clearing craft by recipe: ' .. recipe_string)
-	minetest.clear_craft({
-		recipe = {r}
-	})
 end
 
-local craftdir = antum.overrides.modpath .. '/crafting'
-
-local modoverrides = {
-	'coloredwood',
-	'craftguide',
-	'dye',
-	'farming',
-	'helicopter',
-	'temp-removals',
-}
-
-for I in pairs(modoverrides) do
-	local modname = modoverrides[I]
-	if minetest.get_modpath(modname) then
-		dofile(craftdir .. '/' .. modname .. '.lua')
+if minetest.get_modpath('quartz') then
+	local outputs = {
+		'quartz:chiseled',
+	}
+	
+	for I in pairs(outputs) do
+		antum.clearCraftOutput(outputs[I])
 	end
 end
