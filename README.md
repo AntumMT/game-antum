@@ -106,7 +106,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [home_gui][] ([BSD 3-Clause](mods/ui/home_gui/LICENSE)) Installed version: [f6b5001][home_gui version] (Git)
     * [hud][] ([LGPL / CC BY-SA / WTFPL](mods/ui/hud/README.txt))
     * [hudmap][] ([LGPL / WTFPL](mods/ui/hudmap/README.txt))
-    * [markers][] (GPL / WTFPL) -- version [52d1b90][markers version]
 * [vector_extras][] ([WTFPL](mods/vector_extras/LICENSE.txt))
 * weather/
     * [lightning][] ([LGPL/CC-BY-SA](mods/weather/lightning/README.md))
@@ -231,8 +230,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [jumping]: https://forum.minetest.net/viewtopic.php?t=2957
 [kpgmobs]: https://forum.minetest.net/viewtopic.php?t=8798
 [lightning]: https://forum.minetest.net/viewtopic.php?t=13886
-[markers]: https://forum.minetest.net/viewtopic.php?id=8175
-[markers version]: https://github.com/Sokomine/markers/tree/52d1b90b8906b28d4b5ba93cd271b3865b316d00
 [mesecons]: https://forum.minetest.net/viewtopic.php?t=628
 [mobs_goblins]: https://forum.minetest.net/viewtopic.php?t=13004
 [mobs_monster]: https://github.com/tenplus1/mobs_monster
