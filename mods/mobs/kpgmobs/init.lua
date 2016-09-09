@@ -1,5 +1,7 @@
 dofile(minetest.get_modpath("kpgmobs").."/api.lua")
 
+local v = 0
+
 minetest.register_node("kpgmobs:uley", {
 	description = "Uley",
 	drawtype = "plantlike",
