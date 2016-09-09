@@ -27,7 +27,7 @@
 
 
 antum.spawneggs.addEggRecipe = function(name, spawn, ingredients)
-	table.insert(ingredients, 0, 'spawneggs:egg')
+	table.insert(ingredients, 1, 'spawneggs:egg')
 	minetest.register_craft({
 		output = 'spawneggs:' .. name,
 		type = 'shapeless',
@@ -55,6 +55,9 @@ antum.spawneggs.addEgg = function(name, spawn, ingredients)
 	})
 	
 	antum.spawneggs.addEggRecipe(name, spawn, ingredients)
+	
+	-- DEBUG
+	antum.log_action(antum.spawneggs.modname, 'Registered spawnegg for ' .. spawn)
 end
 
 
