@@ -200,6 +200,24 @@ end
 
 -- extra recipes for default dye colors.
 
+-- FIXME:
+minetest.register_node('coloredwood:fence_dark_grey', {
+	drawtype = 'fencelike',
+	description = 'Dark Grey Fence',
+	tiles = { 'coloredwood_wood_darkgrey.png' },
+	inventory_image = 'coloredwood_fence_darkgrey.png', 
+	wield_image = 'coloredwood_fence_darkgrey.png',
+	sunlight_propagates = colored_block_sunlight,
+	paramtype = "light",
+	walkable = colored_block_walkable,
+	groups = colored_block_groups,
+	sounds = colored_block_sound,
+	selection_box = {
+		type = "fixed",
+		fixed = {-1/7, -1/2, -1/7, 1/7, 1/2, 1/7},
+	},
+})
+
 for _, color in ipairs(coloredwood.default_hues) do
 	minetest.register_craft({
 		output = "coloredwood:fence_"..color.." 2",
