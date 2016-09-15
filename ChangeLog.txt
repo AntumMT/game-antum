@@ -1,8 +1,88 @@
 0.1.0:
+- Mods added:
+  - all mods from minetest_game
+  - 3d_armor modpack
+  - adv_spawning (Advanced Spawning)
+  - ambience (Immersive Sounds Ultrafast)
+  - animalmaterials modpack
+  - animals_modpack
+  - areas
+  - awards
+  - bags
+  - bedrock2
+  - biome_lib
+  - bookmarks_gui
+  - campfire
+  - character_creator
+  - chat
+  - christmas
+  - clean
+  - coloredwood
+  - compassgps
+  - craft_guide
+  - craftguide
+  - cme (Creatures MOB-Engine) modpack
+  - creeper
+  - currency
+  - elevator
+  - ethereal
+  - farming_plus
+  - fort_spikes
+  - glow
+  - helicopter
+  - home_gui
+  - homedecor_modpack
+  - hovercraft
+  - hud
+  - hudmap
+  - ilights (Industrial Lights)
+  - intllib
+  - inventory_plus
+  - invisibility
+  - invisible
+  - jukebox
+  - kpgmobs
+  - lightning
+  - mesecons modpack
+  - mobf_core modpack
+  - mobs_goblins
+  - mobs_monster (mobs_redo???)
+  - mobs_redo
+  - moreblocks
+  - moremesecons modpack
+  - moreores
+  - mydoors modpack
+  - mywoodslopes
+  - nether
+  - painting
+  - peaceful_npc
+  - pipeworks
+  - playeranim
+  - priviligeareas
+  - quartz
+  - sethome
+  - spawneggs
+  - signs_lib
+  - simple_protection
+  - spectator_mode
+  - spidermob
+  - stairsplus
+  - technic modpack
+  - throwing
+  - tnt
+  - tools_obsidian
+  - torches (minetest_game???)
+  - trampoline
+  - trash_can
+  - unifieddyes
+  - vector_extras
+  - walking_light
+  - wardrobe
+  - windmill
+  - workbench
+  - worldedge
 - Created 'antum' mod
 - Created 'antum_overrides' mod
 - Created 'antum_spawneggs' mod
 - Disabled shearing of sheep when punched (player must use shears to get wool)
 - Disabled kpgmobs:sheep (use only sheep from creatures_mob_engine)
-- Added 'mywoodslopes' mod
-- Added 'bedrock2' mod
