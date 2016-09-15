@@ -30,7 +30,6 @@ end
 -- register entities
 dofile(minetest.get_modpath("craft_guide").."/register_node.lua")
 dofile(minetest.get_modpath("craft_guide").."/register_craft.lua")
-dofile(minetest.get_modpath("craft_guide").."/register_alias.lua")
 
 -- log that we started
 minetest.log("action", "[MOD]"..minetest.get_current_modname().." -- loaded from "..minetest.get_modpath(minetest.get_current_modname()))
