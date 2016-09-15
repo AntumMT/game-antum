@@ -4,3 +4,5 @@
 - Created 'antum_spawneggs' mod
 - Disabled shearing of sheep when punched (player must use shears to get wool)
 - Disabled kpgmobs:sheep (use only sheep from creatures_mob_engine)
+- Added 'mywoodslopes' mod
+- Added 'bedrock2' mod
