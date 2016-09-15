@@ -90,25 +90,26 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * spawning/
 	* [adv_spawning][[animals_modpack] (part of animals_modpack) ([???][lic.amp_adv_spawning]) -- version: 0.0.13
 	* [spawneggs][] ([WTFPL][lic.spawneggs]) -- version [4650370 Git][ver.spawneggs]
-* [tnt][] ([WTFPL](mods/tnt/README.txt)) (Git [d6a0b7d][tnt version])
+* [tnt][] ([WTFPL](mods/tnt/README.txt)) -- version: [d6a0b7d Git][ver.tnt]
 * tools/
 	* [compassgps][] ([WTFPL / CC0 / CC BY-SA](mods/tools/compassgps/README.md))
     * [torches][] ([LGPL / CC-BY-SA](mods/tools/torches/README.txt))
     * [workbench][] ([GPL / WTFPL](mods/tools/workbench/LICENSE))
-    * [tools_obsidian][] ([LGPL / CC BY-SA](mods/tools/tools_obsidian/README.md)) -- version: [f77fd79][tools_obsidian version]
+    * [tools_obsidian][] ([LGPL / CC BY-SA](mods/tools/tools_obsidian/README.md)) -- version: [f77fd79][ver.tools_obsidian]
 * transport/
     * [carts][] ([WTFPL/CC0](mods/transport/carts/README.txt))
     * [hovercraft][] ([LGPL / CC BY-SA / CC0](mods/transport/hovercraft/LICENSE.txt))
 * ui/
     * [bookmarks_gui][] ([BSD 3-Clause](mods/ui/bookmarks_gui/LICENSE))
-    * [home_gui][] ([BSD 3-Clause](mods/ui/home_gui/LICENSE)) Installed version: [f6b5001][home_gui version] (Git)
+    * [home_gui][] ([BSD 3-Clause](mods/ui/home_gui/LICENSE)) -- version: [f6b5001 Git][ver.home_gui]
     * [hud][] ([LGPL / CC BY-SA / WTFPL](mods/ui/hud/README.txt))
     * [hudmap][] ([LGPL / WTFPL](mods/ui/hudmap/README.txt))
 * [vector_extras][] ([WTFPL](mods/vector_extras/LICENSE.txt))
 * weather/
     * [lightning][] ([LGPL/CC-BY-SA](mods/weather/lightning/README.md))
 * wood/
-	* [coloredwood][] ([LGPL][lic.coloredwood]) Version: Git [7b177f3][ver.coloredwood]
+	* [coloredwood][] ([LGPL][lic.coloredwood]) -- version: [7b177f3 Git][ver.coloredwood]
+	* [mywoodslopes][] ([DWYWPL][lic.mywoodslopes]) -- version: [3a1b531 Git][ver.mywoodslopes]
 * world/
     * [ethereal][] ([WTFPL](mods/world/ethereal/license.txt))
     * [glow][] (GPL)
@@ -215,7 +216,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [glow]: https://forum.minetest.net/viewtopic.php?t=6300
 [helicopter]: https://forum.minetest.net/viewtopic.php?t=6183
 [home_gui]: http://cornernote.github.io/minetest-home_gui/
-[home_gui version]: https://github.com/cornernote/minetest-home_gui/tree/f6b500164f95a85c4f2fab9a150983887bad143f
 [homedecor]: https://forum.minetest.net/viewtopic.php?t=2041
 [hovercraft]: https://forum.minetest.net/viewtopic.php?t=6722
 [hud]: https://github.com/BlockMen/hud
@@ -238,6 +238,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [moreores]: https://forum.minetest.net/viewtopic.php?t=549
 [moretrees]: https://forum.minetest.net/viewtopic.php?t=4394
 [mydoors]: https://forum.minetest.net/viewtopic.php?t=10626
+[mywoodslopes]: https://forum.minetest.net/viewtopic.php?t=11433
 [nether]: https://forum.minetest.net/viewtopic.php?t=5790
 [painting]: https://github.com/minetest-mods/painting
 [peaceful_npc]: https://forum.minetest.net/viewtopic.php?t=4167
@@ -256,10 +257,8 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [technic]: https://forum.minetest.net/viewtopic.php?t=2538
 [throwing]: https://forum.minetest.net/viewtopic.php?t=687
 [tnt]: https://forum.minetest.net/viewtopic.php?id=2902
-[tnt version]: https://github.com/PilzAdam/TNT/tree/d6a0b7dfec33c647414ed4c2dadf32b9347b7508
 [torches]: https://forum.minetest.net/viewtopic.php?t=6099
 [tools_obsidian]: https://forum.minetest.net/viewtopic.php?t=14236
-[tools_obsidian version]: https://github.com/Dragonop/tools_obsidian/tree/f77fd79d76a85c07e08ca965708a75f500be32d6
 [trampoline]: mods/furniture/trampoline
 [trash_can]: https://forum.minetest.net/viewtopic.php?t=6315
 [trees]: https://forum.minetest.net/viewtopic.php?f=11&t=5713
@@ -313,6 +312,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.mdoors.2]: doc/modpacks/mydoors/licence.txt
 [lic.mobf]: mods/mobf_core/License.txt
 [lic.mobs_monster]: mods/mobs_aggressive/mobs_monster/license.txt
+[lic.mywoodslopes]: mods/wood/mywoodslopes/licence.txt
 [lic.playeranim.1]: mods/player_visuals/playeranim/LICENSE.txt
 [lic.playeranim.2]: mods/player_visuals/playeranim/LICENSE-original.txt
 [lic.privilegeareas]: mods/engine/privilegeareas/README.md
@@ -330,16 +330,20 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.cme]: https://github.com/BlockMen/cme/tree/e3502a1
 [ver.coloredwood]: https://github.com/minetest-mods/coloredwood/tree/7b177f3
 [ver.creeper]: https://github.com/Rui-Minetest/creeper/tree/036666e
+[ver.home_gui]: https://github.com/cornernote/minetest-home_gui/tree/f6b5001
 [ver.homedecor]: https://github.com/minetest-mods/homedecor_modpack/tree/02a4d14
 [ver.ilights]: https://github.com/minetest-mods/ilights/tree/d5f6900
 [ver.invisibility]: https://github.com/tenplus1/invisibility/tree/bf4156b
 [ver.jukebox]: https://github.com/minetest-mods/jukebox/tree/e6a507f
 [ver.mobs_monster]: https://github.com/tenplus1/mobs_monster/tree/91cbcf7
+[ver.mywoodslopes]: https://github.com/minetest-mods/mywoodslopes/tree/3a1b531
 [ver.playeranim]: https://github.com/minetest-mods/playeranim/tree/f1c542e
 [ver.privilegeareas]: https://github.com/minetest-mods/privilegeareas/tree/aebaa00
 [ver.simple_protection]: https://github.com/SmallJoker/simple_protection/tree/c822e56
 [ver.spawneggs]: https://github.com/thefamilygrog66/spawneggs/tree/4650370
 [ver.spectator_mode]: https://github.com/minetest-mods/spectator_mode/tree/3459db4
 [ver.throwing]: https://github.com/Jeija/minetest-mod-throwing/tree/79ad788
+[ver.tnt]: https://github.com/PilzAdam/TNT/tree/d6a0b7d
+[ver.tools_obsidian]: https://github.com/Dragonop/tools_obsidian/tree/f77fd79
 [ver.walking_light]: https://github.com/petermaloney/walking_light/tree/93de9b7
 [ver.wardrobe]: https://github.com/prestidigitator/minetest-mod-wardrobe/tree/c48b011
