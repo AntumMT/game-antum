@@ -27,7 +27,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * chat/
     * [away][] ([GPL](mods/chat/away/COPYING))
     * [chatlog][] ([CC0](mods/chat/chatlog/Readme.txt))
-* [coloredwood][] ([LGPL](mods/coloredwood/LICENSE)) Version: Git [7b177f3][coloredwood version]
 * crafting/
     * [craft_guide][] ([BSD 3-Clause](mods/crafting/craft_guide/LICENSE))
     * [craftguide][] ([GPL / WTFPL](mods/crafting/craftguide/LICENSE)) Installed version: [51a00b9][craftguide version] (Git)
@@ -108,6 +107,8 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [vector_extras][] ([WTFPL](mods/vector_extras/LICENSE.txt))
 * weather/
     * [lightning][] ([LGPL/CC-BY-SA](mods/weather/lightning/README.md))
+* wood/
+	* [coloredwood][] ([LGPL][lic.coloredwood]) Version: Git [7b177f3][ver.coloredwood]
 * world/
     * [ethereal][] ([WTFPL](mods/world/ethereal/license.txt))
     * [glow][] (GPL)
@@ -200,7 +201,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [clean]: https://forum.minetest.net/viewtopic.php?t=2777
 [cme]: https://forum.minetest.net/viewtopic.php?t=8638
 [coloredwood]: https://forum.minetest.net/viewtopic.php?t=2411
-[coloredwood version]: https://github.com/minetest-mods/coloredwood/tree/7b177f3082da84faf14fef38274358e3768a99b1
 [compass]: https://forum.minetest.net/viewtopic.php?t=3785
 [compassgps]: https://forum.minetest.net/viewtopic.php?t=9373
 [craft_guide]: https://cornernote.github.io/minetest-craft_guide/
@@ -303,6 +303,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.awards]: mods/awards/LICENSE.txt
 [lic.character_creator]: mods/player_visuals/character_creator/LICENSE.md
 [lic.cme]: mods/mp_cme/LICENSE.txt
+[lic.coloredwood]: mods/wood/coloredwood/LICENSE
 [lic.creeper]: mods/mobs_aggressive/creeper/LICENSE.md
 [lic.homedecor]: mods/homedecor_modpack/LICENSE
 [lic.ilights]: mods/lighting/ilights/init.lua
@@ -327,6 +328,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.awards]: https://github.com/minetest-mods/awards/tree/92c43d1
 [ver.character_creator]: https://github.com/Rui-Minetest/character_creator/tree/5e8fec2
 [ver.cme]: https://github.com/BlockMen/cme/tree/e3502a1
+[ver.coloredwood]: https://github.com/minetest-mods/coloredwood/tree/7b177f3
 [ver.creeper]: https://github.com/Rui-Minetest/creeper/tree/036666e
 [ver.homedecor]: https://github.com/minetest-mods/homedecor_modpack/tree/02a4d14
 [ver.ilights]: https://github.com/minetest-mods/ilights/tree/d5f6900
@@ -337,7 +339,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.privilegeareas]: https://github.com/minetest-mods/privilegeareas/tree/aebaa00
 [ver.simple_protection]: https://github.com/SmallJoker/simple_protection/tree/c822e56
 [ver.spawneggs]: https://github.com/thefamilygrog66/spawneggs/tree/4650370
-[ver.spectator_mode]: https://github.com/minetest-mods/spectator_mode/tree/3459db48e1b507388ee5d24ba1531ea494e64dea
+[ver.spectator_mode]: https://github.com/minetest-mods/spectator_mode/tree/3459db4
 [ver.throwing]: https://github.com/Jeija/minetest-mod-throwing/tree/79ad788
 [ver.walking_light]: https://github.com/petermaloney/walking_light/tree/93de9b7
 [ver.wardrobe]: https://github.com/prestidigitator/minetest-mod-wardrobe/tree/c48b011
