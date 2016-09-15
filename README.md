@@ -8,6 +8,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * admin/
     * [clean][] (WTFPL)
     * [invisible][] ([LGPL / CC BY-SA](mods/admin/invisible/readme.txt))
+    * [privilegeareas][] ([WTFPL / CC0][lic.privilegeareas]) -- version: [aebaa00 Git][ver.privilegeareas]
     * [privs][] ([CC0](mods/admin/privs/init.lua))
     * [spectator_mode][] ([WTFPL][lic.spectator_mode]) -- version: [3459db4 Git][ver.spectator_mode]
 * antum/
@@ -31,8 +32,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [craft_guide][] ([BSD 3-Clause](mods/crafting/craft_guide/LICENSE))
     * [craftguide][] ([GPL / WTFPL](mods/crafting/craftguide/LICENSE)) Installed version: [51a00b9][craftguide version] (Git)
 * [currency][] ([WTFPL](https://forum.minetest.net/viewtopic.php?t=7002)) [Git d2ea7c3](https://github.com/minetest-mods/currency/tree/d2ea7c352ada7646e019f55a365a506d132f301a)
-* engine/
-    * [privilegeareas][] ([WTFPL / CC0][lic.privilegeareas]) -- version: [aebaa00 Git][ver.privilegeareas]
 * farming/
 	* [farming_plus][] ([WTFPL](mods/farming/farming_plus/README.txt))
 * furniture/
@@ -315,7 +314,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.mywoodslopes]: mods/wood/mywoodslopes/licence.txt
 [lic.playeranim.1]: mods/player_visuals/playeranim/LICENSE.txt
 [lic.playeranim.2]: mods/player_visuals/playeranim/LICENSE-original.txt
-[lic.privilegeareas]: mods/engine/privilegeareas/README.md
+[lic.privilegeareas]: mods/admin/privilegeareas/README.md
 [lic.simple_protection]: mods/protection/simple_protection/README.md
 [lic.spawneggs]: mods/spawning/spawneggs/README.txt
 [lic.spectator_mode]: mods/admin/spectator_mode/LICENSE
