@@ -1,8 +1,12 @@
 ## A list of changes to make for Antum game
 
 
+#### Bugs to fix
+* ethereal
+    * setting bonemeal causes server to crash
+
 #### Recipes with undefined ingredients:
-# dye
+* dye
 	* dye:black
 	* dye:cyan
 	* dye:dark_green
