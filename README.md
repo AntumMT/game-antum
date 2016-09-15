@@ -32,10 +32,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [craft_guide][] ([BSD 3-Clause](mods/crafting/craft_guide/LICENSE))
     * [craftguide][] ([GPL / WTFPL](mods/crafting/craftguide/LICENSE)) Installed version: [51a00b9][craftguide version] (Git)
 * [currency][] ([WTFPL](https://forum.minetest.net/viewtopic.php?t=7002)) [Git d2ea7c3](https://github.com/minetest-mods/currency/tree/d2ea7c352ada7646e019f55a365a506d132f301a)
-* display/
-    * [bags][] ([BSD 3-Clause](mods/display/bags/LICENSE))
-    * [home_gui][] ([BSD 3-Clause](mods/display/home_gui/README.md))
-    * [inventory_plus][] ([BSD 3-Clause](mods/display/inventory_plus/LICENSE))
 * engine/
     * [privilegeareas][] ([WTFPL / CC0][lic.privilegeareas]) -- version: [aebaa00 Git][ver.privilegeareas]
 * farming/
@@ -45,6 +41,9 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [trampoline][] ([GPL](mods/furniture/trampoline/LICENSE.txt))
     * [trash_can][] ([MIT](mods/furniture/trash_can/LICENSE.txt))
 * [intllib][] (WTFPL)
+* inventory/
+    * [bags][] ([BSD 3-Clause](mods/inventory/bags/LICENSE))
+    * [inventory_plus][] ([BSD 3-Clause](mods/inventory/inventory_plus/LICENSE))
 * lib/
     * [biome_lib][] ([WTFPL](mods/lib/biome_lib/README.md))
 	* [signs_lib][] ([BSD/WTFPL](mods/lib/signs_lib/copyright.txt))
