@@ -1,83 +1,6 @@
 
 local S = ethereal.intllib
 
--- bone item (use "animalmaterials:bone" if available)
-local ethereal_bone = 'ethereal:bone'
-if minetest.get_modpath('animalmaterials') then
-	ethereal_bone = 'animalmaterials:bone'
-else
-	minetest.register_craftitem('ethereal:bone', {
-		description = S('Bone'),
-		inventory_image = 'bone.png',
-	})
-end
-
--- bonemeal item
-minetest.register_craftitem("ethereal:bonemeal", {
-	description = S("Bone Meal"),
-	inventory_image = "bonemeal.png",
-	
-	on_use = function(itemstack, user, pointed_thing)
-		
-		if pointed_thing.type == "node" then
-			
-		    -- Check if node protected
-		    if minetest.is_protected(pointed_thing.under, user:get_player_name()) then
-		    	return
-			end
-			
-			if not minetest.setting_getbool("creative_mode") then
-			
-				local item = user:get_wielded_item()
-				
-				item:take_item()
-				user:set_wielded_item(item)
-			end
-			
-			growth(pointed_thing)
-			
-			itemstack:take_item()
-			
-			return itemstack
-		end
-	end,
-})
-
--- bonemeal recipes
-minetest.register_craft({
-	type = "shapeless",
-	output = 'ethereal:bonemeal 2',
-	recipe = {ethereal_bone},
-})
-
-minetest.register_craft({
-	type = "shapeless",
-	output = 'ethereal:bonemeal 4',
-	recipe = {'bones:bones'},
-})
-
-minetest.register_craft( {
-	type = "shapeless",
-	output = "dye:white 2",
-	recipe = {"ethereal:bonemeal"},
-})
-
--- add bones to dirt
-minetest.override_item("default:dirt", {
-	drop = {
-		max_items = 1,
-		items = {
-			{
-				items = {ethereal_bone, 'default:dirt'},
-				rarity = 30,
-			},
-			{
-				items = {'default:dirt'},
-			}
-		}
-	},
-})
-
 local plants = {
 	"flowers:dandelion_white",
 	"flowers:dandelion_yellow",
@@ -298,3 +221,80 @@ local function growth(pointed_thing)
 		end
 	end
 end
+
+-- bone item (use "animalmaterials:bone" if available)
+local ethereal_bone = 'ethereal:bone'
+if minetest.get_modpath('animalmaterials') then
+	ethereal_bone = 'animalmaterials:bone'
+else
+	minetest.register_craftitem('ethereal:bone', {
+		description = S('Bone'),
+		inventory_image = 'bone.png',
+	})
+end
+
+-- bonemeal item
+minetest.register_craftitem("ethereal:bonemeal", {
+	description = S("Bone Meal"),
+	inventory_image = "bonemeal.png",
+	
+	on_use = function(itemstack, user, pointed_thing)
+		
+		if pointed_thing.type == "node" then
+			
+		    -- Check if node protected
+		    if minetest.is_protected(pointed_thing.under, user:get_player_name()) then
+		    	return
+			end
+			
+			if not minetest.setting_getbool("creative_mode") then
+			
+				local item = user:get_wielded_item()
+				
+				item:take_item()
+				user:set_wielded_item(item)
+			end
+			
+			growth(pointed_thing)
+			
+			itemstack:take_item()
+			
+			return itemstack
+		end
+	end,
+})
+
+-- bonemeal recipes
+minetest.register_craft({
+	type = "shapeless",
+	output = 'ethereal:bonemeal 2',
+	recipe = {ethereal_bone},
+})
+
+minetest.register_craft({
+	type = "shapeless",
+	output = 'ethereal:bonemeal 4',
+	recipe = {'bones:bones'},
+})
+
+minetest.register_craft( {
+	type = "shapeless",
+	output = "dye:white 2",
+	recipe = {"ethereal:bonemeal"},
+})
+
+-- add bones to dirt
+minetest.override_item("default:dirt", {
+	drop = {
+		max_items = 1,
+		items = {
+			{
+				items = {ethereal_bone, 'default:dirt'},
+				rarity = 30,
+			},
+			{
+				items = {'default:dirt'},
+			}
+		}
+	},
+})
