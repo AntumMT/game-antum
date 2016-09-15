@@ -108,7 +108,7 @@ minetest.register_craftitem("ethereal:fishing_rod_baited", {
 
 				inv:add_item("main", {name = type})
 
-				return {name = "ethereal:fishing_rod"}
+				return ItemStack("ethereal:fishing_rod")
 			else
 				minetest.chat_send_player(user:get_player_name(),
 					S("Inventory full, Fish Got Away!"))

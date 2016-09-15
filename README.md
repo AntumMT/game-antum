@@ -111,7 +111,9 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [mywoodslopes][] ([DWYWPL][lic.mywoodslopes]) -- version: [3a1b531 Git][ver.mywoodslopes]
 * world/
     * [bedrock2][] ([WTFPL][lic.bedrock2]) -- version [1.2.0-0378b61 Git][ver.bedrock2]
-    * [ethereal][] ([WTFPL](mods/world/ethereal/license.txt))
+    * [ethereal][] ([WTFPL][lic.ethereal])
+        * base version: [d0b896e Git][ver.ethereal]
+        * patched version: [2714ad4 Git][ver.ethereal.patched]
     * [glow][] (GPL)
     * [nether][] ([WTFPL / CC BY-SA](mods/world/nether/README.md))
     * [worldedge][] ([DWYWPL](mods/world/worldedge/licence.txt))
@@ -306,6 +308,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.cme]: mods/mp_cme/LICENSE.txt
 [lic.coloredwood]: mods/wood/coloredwood/LICENSE
 [lic.creeper]: mods/mobs_aggressive/creeper/LICENSE.md
+[lic.ethereal]: mods/world/ethereal/license.txt
 [lic.homedecor]: mods/homedecor_modpack/LICENSE
 [lic.ilights]: mods/lighting/ilights/init.lua
 [lic.invisibility]: mods/player_visuals/invisibility/license.txt
@@ -333,6 +336,8 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.cme]: https://github.com/BlockMen/cme/tree/e3502a1
 [ver.coloredwood]: https://github.com/minetest-mods/coloredwood/tree/7b177f3
 [ver.creeper]: https://github.com/Rui-Minetest/creeper/tree/036666e
+[ver.ethereal]: https://github.com/tenplus1/ethereal/tree/d0b896e
+[ver.ethereal.patched]: https://github.com/AntumDeluge/minetest-mod-ethereal/commit/2714ad4
 [ver.home_gui]: https://github.com/cornernote/minetest-home_gui/tree/f6b5001
 [ver.homedecor]: https://github.com/minetest-mods/homedecor_modpack/tree/02a4d14
 [ver.ilights]: https://github.com/minetest-mods/ilights/tree/d5f6900
