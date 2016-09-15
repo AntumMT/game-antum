@@ -110,7 +110,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [coloredwood][] ([LGPL][lic.coloredwood]) -- version: [7b177f3 Git][ver.coloredwood]
 	* [mywoodslopes][] ([DWYWPL][lic.mywoodslopes]) -- version: [3a1b531 Git][ver.mywoodslopes]
 * world/
-    * [bedrock2][] ([WTFPL][lic.bedrock2] -- version [1.2.0-0378b61 Git][ver.bedrock2]
+    * [bedrock2][] ([WTFPL][lic.bedrock2]) -- version [1.2.0-0378b61 Git][ver.bedrock2]
     * [ethereal][] ([WTFPL](mods/world/ethereal/license.txt))
     * [glow][] (GPL)
     * [nether][] ([WTFPL / CC BY-SA](mods/world/nether/README.md))
