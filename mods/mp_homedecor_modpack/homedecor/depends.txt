@@ -10,4 +10,3 @@ bucket?
 beds?
 flowers?
 3d_armor?
-craft_guide?

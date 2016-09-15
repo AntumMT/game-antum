@@ -1,4 +1,2 @@
 default
-farming
 moreblocks?
-craft_guide?
