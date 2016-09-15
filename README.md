@@ -16,7 +16,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [glass][antum_glass] ([MIT][lic.antum])
 	* [overrides][antum_overrides] ([MIT][lic.antum])
 * [awards][] ([LGPL][lic.awards]) -- version: [2.3.0-14-92c43d1 Git][ver.awards]
-* [bedrock2][] ([WTFPL][lic.bedrock2] -- version [1.2.0-0378b61 Git][ver.bedrock2]
 * buildings/
     * [christmas][] ([MIT](mods/buildings/christmas/LICENSE.txt))
     * [elevator][] ([WTFPL](mods/buildings/elevator/readme.txt))
@@ -111,6 +110,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [coloredwood][] ([LGPL][lic.coloredwood]) -- version: [7b177f3 Git][ver.coloredwood]
 	* [mywoodslopes][] ([DWYWPL][lic.mywoodslopes]) -- version: [3a1b531 Git][ver.mywoodslopes]
 * world/
+    * [bedrock2][] ([WTFPL][lic.bedrock2] -- version [1.2.0-0378b61 Git][ver.bedrock2]
     * [ethereal][] ([WTFPL](mods/world/ethereal/license.txt))
     * [glow][] (GPL)
     * [nether][] ([WTFPL / CC BY-SA](mods/world/nether/README.md))
@@ -301,7 +301,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.antum]: mods/antum/LICENSE.txt
 [lic.areas]: mods/protection/areas/LICENSE.txt
 [lic.awards]: mods/awards/LICENSE.txt
-[lic.bedrock2]: mods/bedrock2/COPYING
+[lic.bedrock2]: mods/world/bedrock2/COPYING
 [lic.character_creator]: mods/player_visuals/character_creator/LICENSE.md
 [lic.cme]: mods/mp_cme/LICENSE.txt
 [lic.coloredwood]: mods/wood/coloredwood/LICENSE
