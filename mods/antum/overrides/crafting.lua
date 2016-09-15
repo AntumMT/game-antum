@@ -59,17 +59,21 @@ end
 local craftdir = antum.overrides.modpath .. '/crafting'
 
 local modoverrides = {
+	'bags',
+	'carts',
 	'coloredwood',
 	'craftguide',
 	'dye',
 	'farming',
 	'helicopter',
-	'temp-removals',
+	'invisibility',
+--	'temp-removals',
 }
 
 for I in pairs(modoverrides) do
 	local modname = modoverrides[I]
 	if minetest.get_modpath(modname) then
+		antum.log_action(antum.overrides.modname, 'DEBUG: found mod \"' .. modname .. '\"')
 		dofile(craftdir .. '/' .. modname .. '.lua')
 	end
 end
