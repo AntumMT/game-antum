@@ -25,6 +25,16 @@
 --]]
 
 
+-- Boilerplate to support localized strings if intllib mod is installed.
+local S
+if (minetest.get_modpath("intllib")) then
+  dofile(minetest.get_modpath("intllib").."/intllib.lua")
+  S = intllib.Getter(minetest.get_current_modname())
+else
+  S = function ( s ) return s end
+end
+
+
 -- ITEMS THAT SHOULD NOT BE AVAILABLE IN ANTUM GAME
 
 local delete_items = {
@@ -37,6 +47,9 @@ end
 
 
 -- OVERRIDING CRAFT ITEMS
+
+
+-- Fish
 
 minetest.register_craftitem(':animalmaterials:fish_bluewhite', {
 	description = 'Raw Bluewhite Fish',
@@ -55,3 +68,27 @@ minetest.register_craftitem(':animalmaterials:fish_clownfish', {
 	stack_max = 25
 })
 minetest.register_alias('clownfish_raw', 'animalmaterials:fish_clownfish')
+
+
+-- Fur group
+
+minetest.register_craftitem(":animalmaterials:fur", {
+	description = S("Fur"),
+	image = "animalmaterials_fur.png",
+	stack_max=25,
+	groups = {fur = 1},
+})
+
+minetest.register_craftitem(":animalmaterials:fur_deer", {
+	description = S("Deer fur"),
+	image = "animalmaterials_deer_fur.png",
+	stack_max=10,
+	groups = {fur = 1},
+})
+
+minetest.register_craftitem(":animalmaterials:coat_cattle", {
+	description = S("Cattle coat"),
+	image = "animalmaterials_cattle_coat.png",
+	stack_max=10,
+	groups = {fur = 1},
+})
