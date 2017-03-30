@@ -65,9 +65,14 @@ function cattle_drop()
 		table.insert(result,"animalmaterials:meat_beef 5")
 	end
 
+	--[[
 	if math.random() < 0.25 then
 		table.insert(result,"animalmaterials:coat_cattle 1")
 	end
+	]]--
+	
+	-- 100% cow hide drop
+	table.insert(result,"animalmaterials:coat_cattle 1")
 
 	if math.random() < 0.1 then
 		table.insert(result,"animalmaterials:bone 1")
