@@ -25,19 +25,23 @@
 --]]
 
 
-local itemsdir = antum.overrides.modpath .. '/items'
-
-local modoverrides = {
-	'animalmaterials',
-	'cooking',
-	'kpgmobs',
-	'mobs',
-	'simple_protection',
-}
-
-for I in pairs(modoverrides) do
-	local modname = modoverrides[I]
-	if minetest.get_modpath(modname) then
-		dofile(itemsdir .. '/' .. modname .. '.lua')
-	end
+-- Boilerplate to support localized strings if intllib mod is installed.
+local S
+if (minetest.get_modpath("intllib")) then
+  dofile(minetest.get_modpath("intllib").."/intllib.lua")
+  S = intllib.Getter(minetest.get_current_modname())
+else
+  S = function ( s ) return s end
 end
+
+
+-- OVERRIDING CRAFT ITEMS
+
+
+-- Fur group
+
+minetest.register_craftitem(":mobs:leather", {
+	description = S("Leather"),
+	inventory_image = "mobs_leather.png",
+	groups = {fur = 1},
+})
