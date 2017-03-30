@@ -63,8 +63,8 @@ if bags.satisfied then
 		output = 'bags:small',
 		recipe = {
 			{'', 'group:stick', '',},
-			{'animalmaterials:coat_cattle', 'animalmaterials:coat_cattle', 'animalmaterials:coat_cattle',},
-			{'animalmaterials:coat_cattle', 'animalmaterials:coat_cattle', 'animalmaterials:coat_cattle',},
+			{'group:fur', 'group:fur', 'group:fur',},
+			{'group:fur', 'group:fur', 'group:fur',},
 		}
 	})
 	minetest.register_craft({
