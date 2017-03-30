@@ -29,6 +29,7 @@ local function is_night_skip_enabled()
 	return enable_night_skip
 end
 
+--[[
 local function check_in_beds(players)
 	local in_bed = beds.player
 	if not players then
@@ -43,6 +44,12 @@ local function check_in_beds(players)
 	end
 
 	return #players > 0
+end
+]]--
+
+-- Allow night skip if any player is in bed
+local function check_in_beds(players)
+	return true
 end
 
 local function lay_down(player, pos, bed_pos, state, skip)
