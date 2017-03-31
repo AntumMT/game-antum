@@ -29,3 +29,12 @@ antum.craft = {}
 
 antum.craft.modname = minetest.get_current_modname()
 antum.craft.modpath = minetest.get_modpath(antum.craft.modname)
+
+minetest.register_craft({
+	output = "default:nyancat_rainbow",
+	recipe = {
+		{'', 'dye:red', '',},
+		{'dye:violet', 'group:wood', 'dye:yellow',},
+		{'', 'dye:blue', '',},
+	}
+})
