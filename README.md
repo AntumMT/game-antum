@@ -17,6 +17,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [overrides][antum_overrides] ([MIT][lic.antum])
 * [awards][] ([LGPL][lic.awards]) -- version: [2.3.0-14-92c43d1 Git][ver.awards]
 * buildings/
+    * [bridges][] ([BPL](mods/buildings/bridges/README.md))
     * [christmas][] ([MIT](mods/buildings/christmas/LICENSE.txt))
     * [elevator][] ([WTFPL](mods/buildings/elevator/readme.txt))
     * [fort_spikes][] ([MIT/CC0](mods/buildings/fort_spikes/LICENSE))
@@ -197,6 +198,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [bedrock2]: https://forum.minetest.net/viewtopic.php?t=11271
 [biome_lib]: https://forum.minetest.net/viewtopic.php?f=11&t=12999
 [bookmarks_gui]: http://cornernote.github.io/minetest-bookmarks_gui/
+[bridges]: https://forum.minetest.net/viewtopic.php?t=3488
 [campfire]: https://forum.minetest.net/viewtopic.php?t=10569
 [carts]: https://forum.minetest.net/viewtopic.php?t=2451
 [character_creator]: https://forum.minetest.net/viewtopic.php?t=13138
