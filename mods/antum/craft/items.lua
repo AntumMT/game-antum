@@ -25,18 +25,17 @@
 --]]
 
 
-antum.craft = {}
+minetest.register_tool(':walking_light:helmet_gold', {
+	description = 'Gold Helmet with light',
+	inventory_image = 'walking_light_inv_helmet_gold.png',
+	wield_image = "3d_armor_inv_helmet_gold.png",
+	groups = {armor_head=10, armor_heal=6, armor_use=250},
+	wear = 0,
+})
 
-antum.craft.modname = minetest.get_current_modname()
-antum.craft.modpath = minetest.get_modpath(antum.craft.modname)
-
-
--- Load sub-scripts
-local scripts = {
-	'items',
-	'crafting',
-}
-
-for I in pairs(scripts) do
-	antum.load_script(antum.craft.modpath, scripts[I])
-end
+--[[
+walking_light.addLightItem('walking_light', {
+	'helmet_gold',
+	}
+)
+--]]
