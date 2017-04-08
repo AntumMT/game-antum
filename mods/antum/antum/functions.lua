@@ -25,9 +25,7 @@
 --]]
 
 
-antum = {}
-antum.modname = minetest.get_current_modname()
-antum.modpath = minetest.get_modpath(antum.modname)
-
-
-dofile(antum.modpath .. '/' .. 'functions.lua')
+-- Displays a message in the log
+function antum.log_action(mod, message)
+	minetest.log('action', '[' .. mod .. '] ' .. message)
+end
