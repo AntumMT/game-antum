@@ -29,3 +29,13 @@
 function antum.log_action(mod, message)
 	minetest.log('action', '[' .. mod .. '] ' .. message)
 end
+
+
+-- Loads a mod sub-script
+function antum.load_script(mod_path, script_name)
+	local script = mod_path .. '/' .. script_name .. '.lua'
+	
+	if antum.file_exists(script) then
+		dofile(script)
+	end
+end
