@@ -34,3 +34,13 @@ minetest.register_craft({
 		{'', 'dye:blue', '',},
 	}
 })
+
+
+-- Walking light items
+minetest.register_craft({
+	output = 'walking_light:helmet_gold',
+	recipe = {
+		{'default:torch'},
+		{'3d_armor:helmet_gold'},
+	}
+})
