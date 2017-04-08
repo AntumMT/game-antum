@@ -14,7 +14,8 @@ walking_light = {}
 -- list of items that use walking light
 local light_items = {
 	"default:torch", "walking_light:pick_mese",
-	"walking_light:helmet_diamond", "walking_light:megatorch"
+	"walking_light:helmet_diamond", "walking_light:megatorch",
+	"walking_light:helmet_gold",
 }
 
 function walking_light.addLightItem(item)
@@ -426,6 +427,13 @@ function get_wielded_light_item(player)
 		if armor_inv then
 --            print( dump(armor_inv:get_lists()) )
 			local item_name = "walking_light:helmet_diamond"
+			local stack = ItemStack(item_name)
+			if armor_inv:contains_item("armor", stack) then
+				return item_name
+			end
+			
+			-- Gold helmet
+			local item_name = "walking_light:helmet_gold"
 			local stack = ItemStack(item_name)
 			if armor_inv:contains_item("armor", stack) then
 				return item_name
