@@ -31,6 +31,19 @@ function antum.log_action(mod, message)
 end
 
 
+-- Checks if a file exists
+function antum.file_exists(file_path)
+	local fexists = io.open(file_path, 'r')
+	
+	if fexists == nil then
+		minetest.log('error', '[' .. antum.modname .. '] Could not load script: ' .. file_path)
+		return false
+	end
+	
+	return true
+end
+
+
 -- Loads a mod sub-script
 function antum.load_script(mod_path, script_name)
 	local script = mod_path .. '/' .. script_name .. '.lua'
