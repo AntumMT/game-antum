@@ -87,3 +87,13 @@
 
 #### Remove old mods replaced by 'minetest' game modpack
 * dye
+* give_initial_stuff
+* killme
+* screwdriver
+* sethome
+* stairs
+* tnt
+* vessels
+* walls
+* wool
+* xpanes
