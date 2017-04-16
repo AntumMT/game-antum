@@ -84,6 +84,3 @@
 #### Mods to create/look for
 * adamantine:
 	* ore & tools
-
-#### Remove old mods replaced by 'minetest' game modpack
-* dye
