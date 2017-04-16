@@ -87,7 +87,6 @@
 
 #### Remove old mods replaced by 'minetest' game modpack
 * dye
-* vessels
 * walls
 * wool
 * xpanes
