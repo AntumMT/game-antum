@@ -78,6 +78,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * player_visuals/
     * 3d_armor ([3d_armor modpack][3d_armor]) ([LGPL / WTFPL / CC-BY-SA][lic.3d_armor]) -- version: [0.4.4-41-456c84e Git][ver.3d_armor]
     * [character_creator][] ([WTFPL / CC-BY-SA][lic.character_creator]) -- version: [5e8fec2 Git][ver.character_creator]
+    * [hidename][] (MIT) -- version [bb52dbc Git][ver.hidename]
     * [invisibility][] ([MIT][lic.invisibility]) -- version: [bf4156b Git][ver.invisibility]
     * [playeranim][] ([WFTLPL][lic.playeranim.1]) / [BSD][lic.playeranim.2]) - version [f1c542e Git][ver.playeranim]
     * [wardrobe][] ([WTFPL][lic.wardrobe]) -- version: [1.1-2-c48b011 Git][ver.wardrobe]
@@ -220,6 +221,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [fort_spikes]: https://forum.minetest.net/viewtopic.php?t=14574
 [glow]: https://forum.minetest.net/viewtopic.php?t=6300
 [helicopter]: https://forum.minetest.net/viewtopic.php?t=6183
+[hidename]: https://github.com/AntumDeluge/mtmod-hidename
 [home_gui]: http://cornernote.github.io/minetest-home_gui/
 [homedecor]: https://forum.minetest.net/viewtopic.php?t=2041
 [hovercraft]: https://forum.minetest.net/viewtopic.php?t=6722
@@ -340,6 +342,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.creeper]: https://github.com/Rui-Minetest/creeper/tree/036666e
 [ver.ethereal]: https://github.com/tenplus1/ethereal/tree/d0b896e
 [ver.ethereal.patched]: https://github.com/AntumDeluge/minetest-mod-ethereal/commit/2714ad4
+[ver.hidename]: https://github.com/AntumDeluge/mtmod-hidename/tree/bb52dbc
 [ver.home_gui]: https://github.com/cornernote/minetest-home_gui/tree/f6b5001
 [ver.homedecor]: https://github.com/minetest-mods/homedecor_modpack/tree/02a4d14
 [ver.ilights]: https://github.com/minetest-mods/ilights/tree/d5f6900
