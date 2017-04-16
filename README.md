@@ -52,6 +52,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * materials/
 	* [moreores][] ([zlib/CC-BY-SA](mods/materials/moreores/README.md))
 	* [quartz][] ([MIT](mods/materials/quartz/LICENSE.txt))
+	* [rainbow_ore][] ([LGPL][lic.rainbow_ore]) -- version: [6e77693 Git][ver.rainbow_ore]
 	* [unifieddyes][] ([GPL](mods/materials/unifieddyes/LICENSE))
 * mobs/
     * [kpgmobs][] ([MIT](mods/mobs/kpgmobs/README.txt))
@@ -255,6 +256,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [privilegeareas]: https://forum.minetest.net/viewtopic.php?t=5545
 [privs]: mods/admin/privs
 [quartz]: https://forum.minetest.net/viewtopic.php?t=5682
+[rainbow_ore]: https://forum.minetest.net/viewtopic.php?id=13519
 [signs_lib]: https://forum.minetest.net/viewtopic.php?f=11&t=13762
 [simple_protection]: https://forum.minetest.net/viewtopic.php?t=9035
 [spawneggs]: https://forum.minetest.net/viewtopic.php?t=6214
@@ -325,6 +327,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.playeranim.1]: mods/player_visuals/playeranim/LICENSE.txt
 [lic.playeranim.2]: mods/player_visuals/playeranim/LICENSE-original.txt
 [lic.privilegeareas]: mods/admin/privilegeareas/README.md
+[lic.rainbow_ore]: mods/materials/rainbow_ore/README.md
 [lic.simple_protection]: mods/protection/simple_protection/README.md
 [lic.spawneggs]: mods/spawning/spawneggs/README.txt
 [lic.spectator_mode]: mods/admin/spectator_mode/LICENSE
@@ -353,6 +356,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.mywoodslopes]: https://github.com/minetest-mods/mywoodslopes/tree/3a1b531
 [ver.playeranim]: https://github.com/minetest-mods/playeranim/tree/f1c542e
 [ver.privilegeareas]: https://github.com/minetest-mods/privilegeareas/tree/aebaa00
+[ver.rainbow_ore]: https://github.com/FsxShader2012/rainbow_ore/tree/6e77693
 [ver.simple_protection]: https://github.com/SmallJoker/simple_protection/tree/c822e56
 [ver.spawneggs]: https://github.com/thefamilygrog66/spawneggs/tree/4650370
 [ver.spectator_mode]: https://github.com/minetest-mods/spectator_mode/tree/3459db4
