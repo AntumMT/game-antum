@@ -55,7 +55,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [unifieddyes][] ([GPL](mods/materials/unifieddyes/LICENSE))
 * mobs/
     * [kpgmobs][] ([MIT](mods/mobs/kpgmobs/README.txt))
-    * [mobs_redo][] ([MIT](mods/mobs/mobs_redo/license.txt))
+    * [mobs_redo][] ([MIT](mods/mobs/mobs_redo/license.txt)) -- version: [e64530a Git][ver.mobs_redo]
 * mobs_aggressive/
     * [creeper][] ([WTFPL][lic.creeper]) -- version [036666e Git][ver.creeper]
     * [mobs_goblins][] ([CC-BY-SA / CC-BY / CC0](mods/mobs_aggressive/mobs_goblins/README.md))
@@ -346,6 +346,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.invisibility]: https://github.com/tenplus1/invisibility/tree/bf4156b
 [ver.jukebox]: https://github.com/minetest-mods/jukebox/tree/e6a507f
 [ver.mobs_monster]: https://github.com/tenplus1/mobs_monster/tree/91cbcf7
+[ver.mobs_redo]: https://github.com/tenplus1/mobs_redo/tree/e64530a
 [ver.mywoodslopes]: https://github.com/minetest-mods/mywoodslopes/tree/3a1b531
 [ver.playeranim]: https://github.com/minetest-mods/playeranim/tree/f1c542e
 [ver.privilegeareas]: https://github.com/minetest-mods/privilegeareas/tree/aebaa00

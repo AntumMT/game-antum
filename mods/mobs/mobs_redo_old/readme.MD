@@ -16,17 +16,10 @@ Crafts:
  - Nets can be used to right-click tamed mobs to pick them up and place inside inventory as a spawn egg.
  - Magic Lasso is similar to nets but with a better chance of picking up larger mobs.
  - Shears are used to right-click sheep and return 1-3 wool.
- - Protection Rune lets you protect tamed mobs from harm by other players
-
-Lucky Blocks: 9
 
 
 Changelog:
 
-- 1.34- Added function to fly mob using directional movement (thanks D00Med for flying code)
-- 1.33- Added functions to mount ride mobs (mobs.attach, mobs.detach, mobs.drive) many thanks to Blert2112
-- 1.32- Added new spawn check to count specific mobs AND new minetest.conf setting to chance spawn chance and numbers, added ability to protect tamed mobs
-- 1.31- Added 'attack_animals' and 'specific_attack' flags for custom monster attacks, also 'mob_difficulty' .conf setting to make mobs harder.
 - 1.30- Added support for invisibility mod (mobs cant attack what they cant see), tweaked and tidied code
 - 1.29- Split original Mobs Redo into a modpack to make it easier to disable mob sets (animal, monster, npc) or simply use the Api itself for your own mod
 - 1.28- New damage system added with ability for mob to be immune to weapons or healed by them :)
