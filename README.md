@@ -156,7 +156,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* oerrki
 		* sheep
 		* zombie
-* [homedecor_modpack][homedecor] ([LGPL / WTFPL / CC BY-SA / CC0][lic.homedecor]) -- version: [02a4d14 Git][ver.homedecor]
+* [homedecor_modpack][homedecor] ([LGPL / WTFPL / CC BY-SA / CC0][lic.homedecor]) -- version: [5fb16c4 Git][ver.homedecor]
 	* mp_homedecor_modpack/
 		* building_blocks
 		* chains
@@ -347,7 +347,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.ethereal.patched]: https://github.com/AntumDeluge/minetest-mod-ethereal/commit/2714ad4
 [ver.hidename]: https://github.com/AntumDeluge/mtmod-hidename/tree/bb52dbc
 [ver.home_gui]: https://github.com/cornernote/minetest-home_gui/tree/f6b5001
-[ver.homedecor]: https://github.com/minetest-mods/homedecor_modpack/tree/02a4d14
+[ver.homedecor]: https://github.com/minetest-mods/homedecor_modpack/tree/5fb16c4
 [ver.ilights]: https://github.com/minetest-mods/ilights/tree/d5f6900
 [ver.invisibility]: https://github.com/tenplus1/invisibility/tree/bf4156b
 [ver.jukebox]: https://github.com/minetest-mods/jukebox/tree/e6a507f
