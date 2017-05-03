@@ -23,7 +23,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [fort_spikes][] ([MIT/CC0](mods/buildings/fort_spikes/LICENSE))
     * [moreblocks][] ([zlib](mods/buildings/moreblocks/LICENSE.md))
     * my_garage_door ([mydoors modpack][mydoors])
-    * [stairsplus][] ([zlib](mods/buildings/stairsplus/LICENSE.txt))
+    * [stairsplus][] ([zlib][lic.stairsplus]) -- version: [311e1f0 Git][ver.stairsplus]
     * [windmill][] ([WTFPL](mods/buildings/windmill/README.md))
 * [campfire][] ([GPL / CC BY-SA / WTFPL](mods/campfire/README.md))
 * chat/
@@ -262,7 +262,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [spawneggs]: https://forum.minetest.net/viewtopic.php?t=6214
 [spectator_mode]: https://forum.minetest.net/viewtopic.php?t=13718
 [spidermob]: https://forum.minetest.net/viewtopic.php?t=10045
-[stairsplus]: https://forum.minetest.net/viewtopic.php?id=6140
+[stairsplus]: https://forum.minetest.net/viewtopic.php?t=6140
 [technic]: https://forum.minetest.net/viewtopic.php?t=2538
 [throwing]: https://forum.minetest.net/viewtopic.php?t=687
 [tnt]: https://forum.minetest.net/viewtopic.php?id=2902
@@ -331,6 +331,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.simple_protection]: mods/protection/simple_protection/README.md
 [lic.spawneggs]: mods/spawning/spawneggs/README.txt
 [lic.spectator_mode]: mods/admin/spectator_mode/LICENSE
+[lic.stairsplus]: mods/buildings/stairsplus/LICENSE.txt
 [lic.throwing]: https://forum.minetest.net/viewtopic.php?t=687#p5739
 [lic.walking_light]: mods/lighting/walking_light/README.md
 [lic.wardrobe]: mods/player_visuals/wardrobe/README.txt
@@ -360,6 +361,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.simple_protection]: https://github.com/SmallJoker/simple_protection/tree/c822e56
 [ver.spawneggs]: https://github.com/thefamilygrog66/spawneggs/tree/4650370
 [ver.spectator_mode]: https://github.com/minetest-mods/spectator_mode/tree/3459db4
+[ver.stairsplus]: https://github.com/CasimirKaPazi/stairsplus/tree/311e1f0
 [ver.throwing]: https://github.com/Jeija/minetest-mod-throwing/tree/79ad788
 [ver.tnt]: https://github.com/PilzAdam/TNT/tree/d6a0b7d
 [ver.tools_obsidian]: https://github.com/Dragonop/tools_obsidian/tree/f77fd79
