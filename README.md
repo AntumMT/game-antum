@@ -21,7 +21,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [christmas][] ([MIT](mods/buildings/christmas/LICENSE.txt))
     * [elevator][] ([WTFPL](mods/buildings/elevator/readme.txt))
     * [fort_spikes][] ([MIT/CC0](mods/buildings/fort_spikes/LICENSE))
-    * [moreblocks][] ([zlib](mods/buildings/moreblocks/LICENSE.md))
+    * [moreblocks][] ([zlib][lic.moreblocks]) -- version: [fbfb079 Git][ver.moreblocks]
     * my_garage_door ([mydoors modpack][mydoors])
     * [stairsplus][] ([zlib][lic.stairsplus]) -- version: [311e1f0 Git][ver.stairsplus]
     * [windmill][] ([WTFPL](mods/buildings/windmill/README.md))
@@ -323,6 +323,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.mdoors.2]: doc/modpacks/mydoors/licence.txt
 [lic.mobf]: mods/mobf_core/License.txt
 [lic.mobs_monster]: mods/mobs_aggressive/mobs_monster/license.txt
+[lic.moreblocks]: mods/buildings/moreblocks/LICENSE.md
 [lic.mywoodslopes]: mods/wood/mywoodslopes/licence.txt
 [lic.playeranim.1]: mods/player_visuals/playeranim/LICENSE.txt
 [lic.playeranim.2]: mods/player_visuals/playeranim/LICENSE-original.txt
@@ -354,6 +355,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.jukebox]: https://github.com/minetest-mods/jukebox/tree/e6a507f
 [ver.mobs_monster]: https://github.com/tenplus1/mobs_monster/tree/91cbcf7
 [ver.mobs_redo]: https://github.com/tenplus1/mobs_redo/tree/e64530a
+[ver.moreblocks]: https://github.com/minetest-mods/moreblocks/tree/fbfb079
 [ver.mywoodslopes]: https://github.com/minetest-mods/mywoodslopes/tree/3a1b531
 [ver.playeranim]: https://github.com/minetest-mods/playeranim/tree/f1c542e
 [ver.privilegeareas]: https://github.com/minetest-mods/privilegeareas/tree/aebaa00
