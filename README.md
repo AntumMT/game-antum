@@ -11,10 +11,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [privilegeareas][] ([WTFPL / CC0][lic.privilegeareas]) -- version: [aebaa00 Git][ver.privilegeareas]
     * [privs][] ([CC0](mods/admin/privs/init.lua))
     * [spectator_mode][] ([WTFPL][lic.spectator_mode]) -- version: [3459db4 Git][ver.spectator_mode]
-* antum/
-    * [antum][] ([MIT][lic.antum])
-    * [glass][antum_glass] ([MIT][lic.antum])
-	* [overrides][antum_overrides] ([MIT][lic.antum])
 * [awards][] ([LGPL][lic.awards]) -- version: [2.3.0-14-92c43d1 Git][ver.awards]
 * buildings/
     * [bridges][] ([BPL](mods/buildings/bridges/README.md))
@@ -148,6 +144,14 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* mob_shark ([CC BY-SA][lic.amp_shark])
 		* mob_slime ([CC0 / CC BY / CC BY-SA / CC0][lic.amp_slime])
 		* mob_warthog ([CC BY / CC BY-SA][lic.amp_warthog])
+* [antum][] ([MIT][lic.antum]) -- version: [ceb8f47 Git][ver.antum]
+	* mp_antum/
+		* antum
+		* craft
+		* entities
+		* glass
+		* overrides
+		* spawneggs
 * [Creatures MOB-Engine][cme] ([zlib/CC-BY-SA][lic.cme]) -- version: [2.3.1-0-e3502a1 Git][ver.cme]
 	* mp_cme/
 		* chicken
@@ -190,7 +194,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [3d_armor]: https://forum.minetest.net/viewtopic.php?t=4654
 [ambience_ultralite]: https://forum.minetest.net/viewtopic.php?p=151166#p151166
 [animals_modpack]: https://forum.minetest.net/viewtopic.php?t=629
-[antum]: mods/antum/antum
+[antum]: https://github.com/AntumDeluge/mtmp-antum
 [antum_glass]: mods/antum/glass
 [antum_overrides]: mods/antum/overrides
 [areas]: https://forum.minetest.net/viewtopic.php?t=7239
@@ -306,7 +310,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.amp_sheep]: mods/animals_modpack/License.txt
 [lic.amp_slime]: mods/animals_modpack/mob_slime/License.txt
 [lic.amp_warthog]: mods/animals_modpack/mob_warthog/License.txt
-[lic.antum]: mods/antum/LICENSE.txt
+[lic.antum]: mods/mp_antum/LICENSE.txt
 [lic.areas]: mods/protection/areas/LICENSE.txt
 [lic.awards]: mods/awards/LICENSE.txt
 [lic.bedrock2]: mods/world/bedrock2/COPYING
@@ -339,6 +343,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 [ver.3d_armor]: https://github.com/stujones11/minetest-3d_armor/tree/456c84e
 [ver.adv_spawning]: https://github.com/sapier/adv_spawning/tree/ec41aa9
+[ver.antum]: https://github.com/AntumDeluge/mtmp-antum/tree/ceb8f47
 [ver.areas]: https://github.com/ShadowNinja/areas/tree/67507c7
 [ver.awards]: https://github.com/minetest-mods/awards/tree/92c43d1
 [ver.bedrock2]: http://repo.or.cz/minetest_bedrock2.git/tree/0378b61
