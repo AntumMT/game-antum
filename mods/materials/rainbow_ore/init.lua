@@ -12,7 +12,7 @@ end
 -- Define Rainbow_Ore_Block node
 minetest.register_node("rainbow_ore:rainbow_ore_block", {
 	description = "Rainbow Ore",
-	tile_images = {"rainbow_ore_block.png"},
+	tiles = {"rainbow_ore_block.png"},
 	groups = {stone=2, cracky=3},
 	drop = "rainbow_ore:rainbow_ore_block",
 	is_ground_content = true,
@@ -167,6 +167,6 @@ minetest.register_ore({
 	clust_scarcity = 17*17*17,
 	clust_num_ores = 3,
 	clust_size = 3,
-	height_min = -31000,
-	height_max = -200,
+	y_min = -31000,
+	y_max = -200,
 })
