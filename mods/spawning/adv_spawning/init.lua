@@ -10,10 +10,6 @@
 
 local version = "0.0.13"
 
-if adv_spawning ~= nil then
-	core.log("error", "MOD: adv_spawning requires adv_spawning variable to be available")
-end
-
 --------------------------------------------------------------------------------
 -- @type adv_spawning base element for usage of adv_spawning
 -- -----------------------------------------------------------------------------
