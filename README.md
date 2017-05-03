@@ -37,7 +37,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [farming_plus][] ([WTFPL](mods/farming/farming_plus/README.txt))
 * furniture/
 	* [jukebox][] ([WTFPL / CC0][lic.jukebox]) -- version: [e6a507f Git][ver.jukebox]
-    * [trampoline][] ([GPL](mods/furniture/trampoline/LICENSE.txt))
+    * [trampoline][] ([GPL](mods/furniture/trampoline/LICENSE.txt)) -- version: [0c9c9c8 Git][ver.trampoline]
     * [trash_can][] ([MIT](mods/furniture/trash_can/LICENSE.txt))
 * [intllib][] (WTFPL)
 * inventory/
@@ -268,7 +268,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [tnt]: https://forum.minetest.net/viewtopic.php?id=2902
 [torches]: https://forum.minetest.net/viewtopic.php?t=6099
 [tools_obsidian]: https://forum.minetest.net/viewtopic.php?t=14236
-[trampoline]: mods/furniture/trampoline
+[trampoline]: https://github.com/AntumDeluge/mtmod-trampoline
 [trash_can]: https://forum.minetest.net/viewtopic.php?t=6315
 [trees]: https://forum.minetest.net/viewtopic.php?f=11&t=5713
 [unified_inventory]: https://forum.minetest.net/viewtopic.php?id=3933
@@ -363,6 +363,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.throwing]: https://github.com/Jeija/minetest-mod-throwing/tree/79ad788
 [ver.tnt]: https://github.com/PilzAdam/TNT/tree/d6a0b7d
 [ver.tools_obsidian]: https://github.com/Dragonop/tools_obsidian/tree/f77fd79
+[ver.trampoline]: https://github.com/AntumDeluge/mtmod-trampoline/tree/0c9c9c8
 [ver.unifieddyes]: https://github.com/minetest-mods/unifieddyes/tree/df177c2
 [ver.walking_light]: https://github.com/petermaloney/walking_light/tree/93de9b7
 [ver.wardrobe]: https://github.com/prestidigitator/minetest-mod-wardrobe/tree/c48b011

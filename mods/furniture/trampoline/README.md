@@ -19,39 +19,26 @@ License: [GPLv3](LICENSE.txt)
 * DS = default:stick
 
 
-<pre>
- -----------------------
-|		|		|		|
-|  DL	|  DL	|  DL	|
-|		|		|		|
-|-----------------------|
-|		|		|		|
-|  DW	|  DW	|  DW	|
-|		|		|		|
-|-----------------------|
-|		|		|		|
-|  DS	|  DS	|  DS	|
-|		|		|		|
- -----------------------
-</pre>
+Craft recipe:
+
+    ╔════╦════╦════╗
+    ║ DL ║ DL ║ DL ║
+    ╠════╬════╬════╣
+    ║ DW ║ DW ║ DW ║
+    ╠════╬════╬════╣
+    ║ DS ║ DS ║ DS ║
+    ╚════╩════╩════╝
 
 
-Crafting a brown trampoline:
-<pre>
- -----------------------
-|		|		|		|
-|  DL	|  DL	|  DL	|
-|		|		|		|
-|-----------------------|
-|		|		|		|
-|  JW	|  JW	|  JW	|
-|		|		|		|
-|-----------------------|
-|		|		|		|
-|  DS	|  DS	|  DS	|
-|		|		|		|
- -----------------------
-</pre>
+Craft recipe brown trampoline:
+
+    ╔════╦════╦════╗
+    ║ DL ║ DL ║ DL ║
+    ╠════╬════╬════╣
+    ║ JW ║ JW ║ JW ║
+    ╠════╬════╬════╣
+    ║ DS ║ DS ║ DS ║
+    ╚════╩════╩════╝
 
 
 To craft colored trampolines, replace "default:wood" with "colored_wood:wood_[color]".
