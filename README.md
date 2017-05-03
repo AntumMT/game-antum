@@ -90,7 +90,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * sound/
     * [ambience][ambience_ultralite] ([WTFPL][lic.ambience_ultralite.1] / [CC-BY / CC-BY-SA / CC-BY-NC-SA / CC0][lic.ambience_ultralite.2]) -- version: 0.36
 * spawning/
-	* [adv_spawning][[animals_modpack] (part of animals_modpack) ([???][lic.amp_adv_spawning]) -- version: [0.0.13 ec41aa9 Git][ver.adv_spawning]
+	* [adv_spawning][[animals_modpack] (part of animals_modpack) ([???][lic.amp_adv_spawning]) -- version: [0.0.13 ec41aa9 Git][ver.adv_spawning] ([patched][patch.adv_spawning])
 	* [spawneggs][] ([WTFPL][lic.spawneggs]) -- version [4650370 Git][ver.spawneggs]
 * [tnt][] ([WTFPL](mods/tnt/README.txt)) -- version: [d6a0b7d Git][ver.tnt]
 * tools/
@@ -373,4 +373,5 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.walking_light]: https://github.com/petermaloney/walking_light/tree/93de9b7
 [ver.wardrobe]: https://github.com/prestidigitator/minetest-mod-wardrobe/tree/c48b011
 
+[patch.adv_spawning]: https://github.com/AntumDeluge/mtmod-adv_spawning/commit/572688b
 [patch.rainbow_ore]: https://github.com/AntumDeluge/mtmod-rainbow_ore/commit/60dc35e
