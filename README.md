@@ -90,7 +90,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * sound/
     * [ambience][ambience_ultralite] ([WTFPL][lic.ambience_ultralite.1] / [CC-BY / CC-BY-SA / CC-BY-NC-SA / CC0][lic.ambience_ultralite.2]) -- version: 0.36
 * spawning/
-	* [adv_spawning][[animals_modpack] (part of animals_modpack) ([???][lic.amp_adv_spawning]) -- version: [0.0.13 ec41aa9 Git][ver.adv_spawning] ([patched][patch.adv_spawning])
+	* [adv_spawning][animals_modpack] (part of animals_modpack) ([???][lic.amp_adv_spawning]) -- version: [0.0.13 ec41aa9 Git][ver.adv_spawning] ([patched][patch.adv_spawning])
 	* [spawneggs][] ([WTFPL][lic.spawneggs]) -- version [4650370 Git][ver.spawneggs]
 * [tnt][] ([WTFPL](mods/tnt/README.txt)) -- version: [d6a0b7d Git][ver.tnt]
 * tools/
