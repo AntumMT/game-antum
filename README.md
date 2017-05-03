@@ -52,7 +52,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * materials/
 	* [moreores][] ([zlib/CC-BY-SA](mods/materials/moreores/README.md))
 	* [quartz][] ([MIT](mods/materials/quartz/LICENSE.txt))
-	* [rainbow_ore][] ([LGPL][lic.rainbow_ore]) -- version: [6e77693 Git][ver.rainbow_ore]
+	* [rainbow_ore][] ([LGPL][lic.rainbow_ore]) -- version: [6e77693 Git][ver.rainbow_ore] ([patched][patch.rainbow_ore])
 	* [unifieddyes][] ([GPL](mods/materials/unifieddyes/LICENSE)) -- version: [df177c2 Git][ver.unifieddyes]
 * mobs/
     * [kpgmobs][] ([MIT](mods/mobs/kpgmobs/README.txt))
@@ -371,3 +371,5 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.unifieddyes]: https://github.com/minetest-mods/unifieddyes/tree/df177c2
 [ver.walking_light]: https://github.com/petermaloney/walking_light/tree/93de9b7
 [ver.wardrobe]: https://github.com/prestidigitator/minetest-mod-wardrobe/tree/c48b011
+
+[patch.rainbow_ore]: https://github.com/AntumDeluge/mtmod-rainbow_ore/commit/60dc35e
