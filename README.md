@@ -95,6 +95,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [workbench][] ([GPL / WTFPL](mods/tools/workbench/LICENSE))
     * [tools_obsidian][] ([LGPL / CC BY-SA](mods/tools/tools_obsidian/README.md)) -- version: [f77fd79][ver.tools_obsidian]
 * transport/
+	* [helicopter][] ([GPL][lic.helicopter]) -- version: [10f1433 Git][ver.helicopter] ([patched][patch.helicopter])
     * [hovercraft][] ([LGPL / CC BY-SA / CC0](mods/transport/hovercraft/LICENSE.txt))
 * ui/
     * [bookmarks_gui][] ([BSD 3-Clause](mods/ui/bookmarks_gui/LICENSE))
@@ -317,6 +318,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.coloredwood]: mods/wood/coloredwood/LICENSE
 [lic.creeper]: mods/mobs_aggressive/creeper/LICENSE.md
 [lic.ethereal]: mods/world/ethereal/license.txt
+[lic.helicopter]: mods/transport/helicopter/LICENSE
 [lic.homedecor]: mods/homedecor_modpack/LICENSE
 [lic.ilights]: mods/lighting/ilights/init.lua
 [lic.invisibility]: mods/player_visuals/invisibility/license.txt
@@ -351,6 +353,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.creeper]: https://github.com/Rui-Minetest/creeper/tree/036666e
 [ver.ethereal]: https://github.com/tenplus1/ethereal/tree/d0b896e
 [ver.ethereal.patched]: https://github.com/AntumDeluge/minetest-mod-ethereal/commit/2714ad4
+[ver.helicopter]: https://github.com/SokolovPavel/helicopter/tree/10f1433
 [ver.hidename]: https://github.com/AntumDeluge/mtmod-hidename/tree/bb52dbc
 [ver.home_gui]: https://github.com/cornernote/minetest-home_gui/tree/f6b5001
 [ver.homedecor]: https://github.com/minetest-mods/homedecor_modpack/tree/5fb16c4
@@ -377,4 +380,5 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.wardrobe]: https://github.com/prestidigitator/minetest-mod-wardrobe/tree/c48b011
 
 [patch.adv_spawning]: https://github.com/AntumDeluge/mtmod-adv_spawning/commit/572688b
+[patch.helicopter]: https://github.com/AntumDeluge/mtmod-helicopter/commit/d7f2548
 [patch.rainbow_ore]: https://github.com/AntumDeluge/mtmod-rainbow_ore/commit/60dc35e
