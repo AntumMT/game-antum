@@ -207,7 +207,7 @@ end)
 
 function unifieddyes.fix_rotation(pos, placer, itemstack, pointed_thing)
 	local node = minetest.get_node(pos)
-	local yaw = placer:get_look_yaw()
+	local yaw = placer:get_look_horizontal()
 	local dir = minetest.yaw_to_dir(yaw-1.5)
 	local pitch = placer:get_look_vertical()
 
@@ -226,7 +226,7 @@ end
 
 function unifieddyes.fix_rotation_nsew(pos, placer, itemstack, pointed_thing)
 	local node = minetest.get_node(pos)
-	local yaw = placer:get_look_yaw()
+	local yaw = placer:get_look_horizontal()
 	local dir = minetest.yaw_to_dir(yaw)
 	local fdir = minetest.dir_to_wallmounted(dir)
 	minetest.swap_node(pos, { name = node.name, param2 = fdir })
