@@ -25,8 +25,6 @@
 --]]
 
 
-local nodedir = antum.overrides.modpath .. '/nodes'
-
 local modoverrides = {
 	'ethereal',
 }
@@ -34,6 +32,6 @@ local modoverrides = {
 for I in pairs(modoverrides) do
 	local modname = modoverrides[I]
 	if minetest.get_modpath(modname) then
-		dofile(nodedir .. '/' .. modname .. '.lua')
+		antum.loadScript('nodes/' .. modname)
 	end
 end

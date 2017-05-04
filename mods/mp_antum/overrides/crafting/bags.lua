@@ -59,7 +59,7 @@ if bags.satisfied then
 		},
 	})
 	
-	antum.register_craft({
+	antum.registerCraft({
 		output = 'bags:small',
 		recipe = {
 			{'', 'group:stick', '',},
@@ -67,7 +67,7 @@ if bags.satisfied then
 			{'group:fur', 'group:fur', 'group:fur',},
 		}
 	})
-	antum.register_craft({
+	antum.registerCraft({
 		output = 'bags:medium',
 		recipe = {
 			{'bags:small', 'bags:small',},
@@ -75,7 +75,7 @@ if bags.satisfied then
 			{'bags:small', 'bags:small',},
 		}
 	})
-	antum.register_craft({
+	antum.registerCraft({
 		output = 'bags:large',
 		recipe = {
 			{'bags:medium', 'bags:medium',},

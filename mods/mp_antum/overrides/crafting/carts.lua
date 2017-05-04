@@ -37,7 +37,7 @@ for I in pairs(depends) do
 end
 
 if depends_satisfied then
-	antum.register_craft({
+	antum.registerCraft({
 		output = 'carts:powerrail',
 		type = 'shapeless',
 		recipe = {

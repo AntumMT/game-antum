@@ -32,10 +32,11 @@ antum.overrides = {}
 antum.overrides.modname = minetest.get_current_modname()
 antum.overrides.modpath = minetest.get_modpath(antum.overrides.modname)
 
-local scripts = {
-	'items', 'entities', 'misc', 'nodes', 'crafting',
-}
-
-for I in pairs(scripts) do
-	dofile(antum.overrides.modpath .. '/' .. scripts[I] .. '.lua')
-end
+--local scripts = {
+antum.loadScripts({
+	'items',
+	'entities',
+	'misc',
+	'nodes',
+	'crafting',
+})

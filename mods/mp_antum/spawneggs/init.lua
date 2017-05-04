@@ -30,4 +30,4 @@ antum.spawneggs = {}
 antum.spawneggs.modname = minetest.get_current_modname()
 antum.spawneggs.modpath = minetest.get_modpath(antum.spawneggs.modname)
 
-dofile(antum.spawneggs.modpath .. '/eggs.lua')
+antum.loadScript('eggs')

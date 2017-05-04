@@ -25,8 +25,6 @@
 --]]
 
 
-local miscdir = antum.overrides.modpath .. "/misc"
-
 local modoverrides = {
 	"walking_light",
 }
@@ -34,6 +32,6 @@ local modoverrides = {
 for I in pairs(modoverrides) do
 	local modname = modoverrides[I]
 	if minetest.get_modpath(modname) then
-		dofile(miscdir .. "/" .. modname .. ".lua")
+		antum.loadScript('misc/' .. modname)
 	end
 end

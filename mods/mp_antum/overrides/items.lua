@@ -25,8 +25,6 @@
 --]]
 
 
-local itemsdir = antum.overrides.modpath .. '/items'
-
 local modoverrides = {
 	'animalmaterials',
 	'cooking',
@@ -38,6 +36,6 @@ local modoverrides = {
 for I in pairs(modoverrides) do
 	local modname = modoverrides[I]
 	if minetest.get_modpath(modname) then
-		dofile(itemsdir .. '/' .. modname .. '.lua')
+		antum.loadScript('items/' .. modname)
 	end
 end

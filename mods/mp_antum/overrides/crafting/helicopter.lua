@@ -27,7 +27,7 @@
 
 antum.clearCraftOutput("helicopter:cabin")
 
-antum.register_craft({
+antum.registerCraft({
 	output = 'helicopter:cabin',
 	recipe = {
 		{'', 'group:wood', ''},

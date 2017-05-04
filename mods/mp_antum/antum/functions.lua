@@ -26,25 +26,28 @@
 
 
 -- Displays a message in the log
-function antum.log(level, mod, message)
-	minetest.log(level, '[' .. mod .. '] ' .. message)
+function antum.log(level, message)
+	minetest.log(level, '[' .. minetest.get_current_modname() .. '] ' .. message)
 end
 
-function antum.log_action(mod, message)
-	antum.log('action', mod, message)
+function antum.logAction(message)
+	antum.log('action', message)
 end
 
-function antum.log_warn(mod, message)
-	antum.log('warning', mod, message)
+function antum.logWarn(message)
+	antum.log('warning', message)
+end
+
+function antum.logError(message)
+	antum.log('error', message)
 end
 
 
 -- Checks if a file exists
-function antum.file_exists(file_path)
+function antum.fileExists(file_path)
 	local fexists = io.open(file_path, 'r')
 	
 	if fexists == nil then
-		minetest.log('error', '[' .. antum.modname .. '] Could not load script: ' .. file_path)
 		return false
 	end
 	
@@ -52,18 +55,34 @@ function antum.file_exists(file_path)
 end
 
 
+-- Retrieves path for currently loaded mod
+function antum.getCurrentModPath()
+	return minetest.get_modpath(minetest.get_current_modname())
+end
+
+
 -- Loads a mod sub-script
-function antum.load_script(mod_path, script_name)
-	local script = mod_path .. '/' .. script_name .. '.lua'
+function antum.loadScript(script_name)
+	local script = antum.getCurrentModPath() .. '/' .. script_name .. '.lua'
 	
-	if antum.file_exists(script) then
+	if antum.fileExists(script) then
 		dofile(script)
+	else
+		antum.logError('Could not load, script does not exists: ' .. script)
+	end
+end
+
+
+-- Loads multiple mod sub-scripts
+function antum.loadScripts(script_list)
+	for I in pairs(script_list) do
+		antum.loadScript(script_list[I])
 	end
 end
 
 
 -- Registers a craft & displays a log message
-function antum.register_craft(craft)
-	antum.log_action(minetest.get_current_modname(), 'Registering craft recipe for "' .. craft.output .. '"')
+function antum.registerCraft(craft)
+	antum.logAction('Registering craft recipe for "' .. craft.output .. '"')
 	minetest.register_craft(craft)
 end

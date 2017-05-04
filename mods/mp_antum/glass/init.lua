@@ -32,5 +32,7 @@ antum.glass.modpath = minetest.get_modpath(antum.glass.modname)
 
 antum.glass.colors = {'blue', 'green', 'red', 'violet'}
 
-dofile(antum.glass.modpath .. '/nodes.lua')
-dofile(antum.glass.modpath .. '/crafting.lua')
+antum.loadScripts({
+	'nodes',
+	'crafting',
+})

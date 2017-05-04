@@ -106,7 +106,7 @@ if depends_satisfied then
 	})--]]
 	
 	
-	antum.register_craft({
+	antum.registerCraft({
 		output = 'invisibility:potion',
 		type = 'shapeless',
 		recipe = {

@@ -38,7 +38,7 @@ end
 
 if cotton.dependencies.satisfied then
 	-- Craft cotton from white wool
-	antum.register_craft({
+	antum.registerCraft({
 		output = "farming:cotton 4",
 		type = "shapeless",
 		recipe = {"wool:white"},

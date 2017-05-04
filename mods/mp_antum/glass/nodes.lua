@@ -30,9 +30,7 @@ local function registerGroupAliases(group)
 		local source = group[I][1]
 		local alias = group[I][2]
 		-- DEBUG
-		antum.log_action(antum.glass.modname,
-			'Registering alias: ' .. alias .. ' -> ' .. source
-		)
+		antum.logAction('Registering alias: ' .. alias .. ' -> ' .. source)
 		minetest.register_alias(alias, source)
 	end
 end

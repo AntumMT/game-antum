@@ -32,7 +32,7 @@ local registerCWoodCraft = function(color)
 		return
 	end
 	
-	antum.register_craft({
+	antum.registerCraft({
 		type = 'shapeless',
 		output = 'coloredwood:wood_' .. color,
 		recipe = {

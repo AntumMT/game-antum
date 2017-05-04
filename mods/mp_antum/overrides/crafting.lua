@@ -26,7 +26,7 @@
 
 
 antum.clearCraftOutput = function(o)
-	antum.log_action(antum.overrides.modname, 'Clearing craft by output: ' .. o)
+	antum.logAction('Clearing craft by output: ' .. o)
 	minetest.clear_craft({
 		output = o
 	})
@@ -50,13 +50,11 @@ antum.clearCraftRecipe = function(r)
 	end
 	
 	
-	antum.log_action(antum.overrides.modname, ' Clearing craft by recipe: ' .. recipe_string)
+	antum.logAction(' Clearing craft by recipe: ' .. recipe_string)
 	minetest.clear_craft({
 		recipe = {r}
 	})
 end
-
-local craftdir = antum.overrides.modpath .. '/crafting'
 
 local modoverrides = {
 	'bags',
@@ -73,7 +71,7 @@ local modoverrides = {
 for I in pairs(modoverrides) do
 	local modname = modoverrides[I]
 	if minetest.get_modpath(modname) then
-		antum.log_action(antum.overrides.modname, 'DEBUG: found mod \"' .. modname .. '\"')
-		dofile(craftdir .. '/' .. modname .. '.lua')
+		antum.logAction('DEBUG: found mod \"' .. modname .. '\"')
+		antum.loadScript('crafting/' .. modname)
 	end
 end

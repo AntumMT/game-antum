@@ -44,7 +44,7 @@ if depends.satisfied then
 	--minetest.register_alias("craftguide", "xdecor:crafting_guide") -- Alias already taken by "craft_guide:sign_wall"
 	
 	if minetest.get_modpath(depends.craft_guide) then
-		antum.register_craft({
+		antum.registerCraft({
 			type = "shapeless",
 			output = "craftguide:craftguide",
 			recipe = {
