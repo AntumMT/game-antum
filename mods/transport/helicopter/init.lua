@@ -315,11 +315,15 @@ end
 
 
 function heli:on_rightclick(clicker)
+	local ctrl = clicker:get_player_control()
+	
 	if not clicker or not clicker:is_player() then
 		return
 	end
 	
-	if self.driver and clicker == self.driver then
+	-- Hold "e" and right-click to dismount
+	if self.driver and clicker == self.driver and ctrl.aux1 then
+		self:removedriver()
 		return
 	elseif self.pas1 and clicker == self.pas1 then
 		return

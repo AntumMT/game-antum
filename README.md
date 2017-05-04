@@ -378,5 +378,5 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 [patch.adv_spawning]: https://github.com/AntumDeluge/mtmod-adv_spawning/commit/572688b
 [patch.ethereal]: https://github.com/AntumDeluge/minetest-mod-ethereal/commit/2714ad4
-[patch.helicopter]: https://github.com/petermaloney/helicopter/commit/3e22922
+[patch.helicopter]: https://github.com/AntumDeluge/mtmod-helicopter/commit/bcb6fbf
 [patch.rainbow_ore]: https://github.com/AntumDeluge/mtmod-rainbow_ore/commit/60dc35e
