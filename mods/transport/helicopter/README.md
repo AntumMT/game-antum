@@ -11,3 +11,14 @@ License of media (textures and sounds):
 
 helicopter_motor.ogg by  Robinhood76 | License: Attribution Noncommercial
 
+Controls:
+---------
+    Mount:         right-click
+    Dismount:      "E" + right-click or "E" + "S"
+    Forward:       "W"
+    Reverse:       "S"
+    Left:          "A"
+    Right:         "D"
+    Up:            "Space"
+    Down:          "Shift"
+    Switch driver: "E" + "A"
