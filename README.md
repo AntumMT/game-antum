@@ -171,7 +171,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* lavalamp
 		* lrfurn
 		* plasmascreen
-* [mesecons)][] ([LGPL/CC-BY-SA](mods/mesecons/COPYING.txt))
+* [mesecons][] ([LGPL/CC-BY-SA](mods/mesecons/COPYING.txt))
 	* mp_mesecons/
 * [mobf_core][animals_modpack] (part of animals_modpack) ([CC-BY-SA][lic.mobf]) -- version: 2.5.1
 	* mp_mobf_core/
