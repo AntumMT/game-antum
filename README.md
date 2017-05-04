@@ -64,22 +64,14 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [painting][] (???)
 * [pipeworks][] ([WTFPL](mods/pipeworks/LICENSE))
 * plantlife/
-* player/
-    * 3d_armor_stand ([3d_armor modpack][3d_armor])
-    * hazmat_suit ([3d_armor modpack][3d_armor])
-    * shields ([3d_armor modpack][3d_armor])
-    * technic_armor ([3d_armor modpack][3d_armor])
-    * [unified_inventory][] ([LGPL/WTFPL](mods/player/unified_inventory/README.md))
 * player_action/
     * [throwing][] ([WTFPL][lic.throwing]) -- version: [0.14-79ad788 Git][ver.throwing]
 * player_visuals/
-    * 3d_armor ([3d_armor modpack][3d_armor]) ([LGPL / WTFPL / CC-BY-SA][lic.3d_armor]) -- version: [0.4.4-41-456c84e Git][ver.3d_armor]
     * [character_creator][] ([WTFPL / CC-BY-SA][lic.character_creator]) -- version: [5e8fec2 Git][ver.character_creator]
     * [hidename][] (MIT) -- version [bb52dbc Git][ver.hidename]
     * [invisibility][] ([MIT][lic.invisibility]) -- version: [bf4156b Git][ver.invisibility]
     * [playeranim][] ([WFTLPL][lic.playeranim.1]) / [BSD][lic.playeranim.2]) - version [f1c542e Git][ver.playeranim]
     * [wardrobe][] ([WTFPL][lic.wardrobe]) -- version: [1.1-2-c48b011 Git][ver.wardrobe]
-    * wieldview ([3d_armor modpack][3d_armor])  ([LGPL / WTFPL / CC-BY-SA][lic.3d_armor]) -- version: [0.4.4-41-456c84e Git][ver.3d_armor]
 * protection/
     * [areas][] ([LGPL][lic.areas]) -- version [67507c7 Git][ver.areas]
     * [simple_protection][] ([WTFPL][lic.simple_protection]) -- version [c822e56 Git][ver.simple_protection]
@@ -118,6 +110,17 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 
 ### This is a list of installed modpacks & their components (trying to keep them listed separate for sake of organization):
+* [3d_armor][] ([LGPL / CC-BY-SA][lic.3d_armor]) - version: [0.4.9 (793c748 Git)][ver.3d_armor]
+	* mp_3d_armor/
+		* 3d_armor
+		* 3d_armor_ip
+		* 3d_armor_sfinv
+		* 3d_armor_stand
+		* 3d_armor_ui
+		* hazmat_suit
+		* shields
+		* technic_armor
+		* wieldview
 * [animalmaterials][animals_modpack] (part of animals_modpack) -- version: 0.1.3
 	* mp_animalmaterials/
 		* animal_resources ([CC0][lic.amp_animal_resources])
@@ -283,7 +286,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [workbench]: https://forum.minetest.net/viewtopic.php?t=14085
 [worldedge]: https://forum.minetest.net/viewtopic.php?t=10753
 
-[lic.3d_armor]: doc/modpacks/3d_armor/LICENSE.md
+[lic.3d_armor]: mods/mp_3d_armor/LICENSE.md
 [lic.ambience_ultralite.1]: https://forum.minetest.net/viewtopic.php?t=2807
 [lic.ambience_ultralite.2]: mods/sound/ambience/sounds/SoundLicenses.txt
 [lic.amp_adv_spawning]: mods/spawning/adv_spawning/README.txt
@@ -339,7 +342,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.walking_light]: mods/lighting/walking_light/README.md
 [lic.wardrobe]: mods/player_visuals/wardrobe/README.txt
 
-[ver.3d_armor]: https://github.com/stujones11/minetest-3d_armor/tree/456c84e
+[ver.3d_armor]: https://github.com/stujones11/minetest-3d_armor/tree/793c748
 [ver.adv_spawning]: https://github.com/sapier/adv_spawning/tree/ec41aa9
 [ver.antum]: https://github.com/AntumDeluge/mtmp-antum/tree/4477d40
 [ver.areas]: https://github.com/ShadowNinja/areas/tree/67507c7
