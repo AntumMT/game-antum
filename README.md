@@ -171,20 +171,20 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* lavalamp
 		* lrfurn
 		* plasmascreen
-* [mesecons][] ([LGPL/CC-BY-SA](mods/mesecons/COPYING.txt))
+* [mesecons][] ([LGPL/CC-BY-SA](mods/mp_mesecons/COPYING.txt))
 	* mp_mesecons/
 * [mobf_core][animals_modpack] (part of animals_modpack) ([CC-BY-SA][lic.mobf]) -- version: 2.5.1
 	* mp_mobf_core/
 		* barn
 		* mobf
 		* mobf_settings
-* [moremesecons][] ([GPL](mods/moremesecons/LICENSE.txt))
+* [moremesecons][] ([GPL](mods/mp_moremesecons/LICENSE.txt))
 	* mp_moremesecons/
 * [mydoors][] -- version: 1.0
 	* mp_mydoors/
 		* mdoors ([CC-BY / CC-BY-SA / WTFPL][lic.mdoors.1] / [DWYWFPL][lic.mdoors.2])
 		* my_*_doors
-* [technic)][] ([LGPL](mods/technic/README.md))
+* [technic)][] ([LGPL](mods/mp_technic/README.md))
 	* mp_technic/
 
 
@@ -287,26 +287,26 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.ambience_ultralite.1]: https://forum.minetest.net/viewtopic.php?t=2807
 [lic.ambience_ultralite.2]: mods/sound/ambience/sounds/SoundLicenses.txt
 [lic.amp_adv_spawning]: mods/spawning/adv_spawning/README.txt
-[lic.amp_animal_resources]: mods/animalmaterials/animal_resources/License.txt
-[lic.amp_animalmaterials]: mods/animalmaterials/animalmaterisl/License.txt
-[lic.amp_bear]: mods/animals_modpack/mob_bear/License.txt
-[lic.amp_chicken]: mods/animals_modpack/animal_chicken/License.txt
-[lic.amp_clownfish]: mods/animals_modpack/animal_clownfish/License.txt
-[lic.amp_cooking]: mods/animalmaterials/cooking/License.txt
-[lic.amp_cow]: mods/animals_modpack/animal_cow/License.txt
-[lic.amp_deer]: mods/animals_modpack/animal_deer/License.txt
-[lic.amp_dm]: mods/animals_modpack/animal_dm/License.txt
-[lic.amp_fish_blue_white]: mods/animals_modpack/animal_fish_blue_white/License.txt
-[lic.amp_ghost]: mods/animals_modpack/mob_ghost/License.txt
-[lic.amp_gull]: mods/animals_modpack/animal_gull/License.txt
-[lic.amp_mob_environments]: mods/animalmaterials/mob_environments/README
-[lic.amp_oerkki]: mods/animals_modpack/mob_oerkki/License.txt
-[lic.amp_ostrich]: mods/animals_modpack/mob_ostrich/License.txt
-[lic.amp_rat]: mods/animals_modpack/animal_rat/License.txt
-[lic.amp_shark]: mods/animals_modpack/mob_shark/License.txt
-[lic.amp_sheep]: mods/animals_modpack/License.txt
-[lic.amp_slime]: mods/animals_modpack/mob_slime/License.txt
-[lic.amp_warthog]: mods/animals_modpack/mob_warthog/License.txt
+[lic.amp_animal_resources]: mods/mp_animalmaterials/animal_resources/License.txt
+[lic.amp_animalmaterials]: mods/mp_animalmaterials/animalmaterisl/License.txt
+[lic.amp_bear]: mods/mp_animals_modpack/mob_bear/License.txt
+[lic.amp_chicken]: mods/mp_animals_modpack/animal_chicken/License.txt
+[lic.amp_clownfish]: mods/mp_animals_modpack/animal_clownfish/License.txt
+[lic.amp_cooking]: mods/mp_animalmaterials/cooking/License.txt
+[lic.amp_cow]: mods/mp_animals_modpack/animal_cow/License.txt
+[lic.amp_deer]: mods/mp_animals_modpack/animal_deer/License.txt
+[lic.amp_dm]: mods/mp_animals_modpack/animal_dm/License.txt
+[lic.amp_fish_blue_white]: mods/mp_animals_modpack/animal_fish_blue_white/License.txt
+[lic.amp_ghost]: mods/mp_animals_modpack/mob_ghost/License.txt
+[lic.amp_gull]: mods/mp_animals_modpack/animal_gull/License.txt
+[lic.amp_mob_environments]: mods/mp_animalmaterials/mob_environments/README
+[lic.amp_oerkki]: mods/mp_animals_modpack/mob_oerkki/License.txt
+[lic.amp_ostrich]: mods/mp_animals_modpack/mob_ostrich/License.txt
+[lic.amp_rat]: mods/mp_animals_modpack/animal_rat/License.txt
+[lic.amp_shark]: mods/mp_animals_modpack/mob_shark/License.txt
+[lic.amp_sheep]: mods/mp_animals_modpack/License.txt
+[lic.amp_slime]: mods/mp_animals_modpack/mob_slime/License.txt
+[lic.amp_warthog]: mods/mp_animals_modpack/mob_warthog/License.txt
 [lic.antum]: mods/mp_antum/LICENSE.txt
 [lic.areas]: mods/protection/areas/LICENSE.txt
 [lic.awards]: mods/awards/LICENSE.txt
@@ -317,13 +317,13 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.creeper]: mods/mobs_aggressive/creeper/LICENSE.md
 [lic.ethereal]: mods/world/ethereal/license.txt
 [lic.helicopter]: mods/transport/helicopter/LICENSE
-[lic.homedecor]: mods/homedecor_modpack/LICENSE
+[lic.homedecor]: mods/mp_homedecor_modpack/LICENSE
 [lic.ilights]: mods/lighting/ilights/init.lua
 [lic.invisibility]: mods/player_visuals/invisibility/license.txt
 [lic.jukebox]: mods/furniture/jukebox/README.txt
-[lic.mdoors.1]: mods/mydoors/mdoors/README.txt
+[lic.mdoors.1]: mods/mp_mydoors/mdoors/README.txt
 [lic.mdoors.2]: doc/modpacks/mydoors/licence.txt
-[lic.mobf]: mods/mobf_core/License.txt
+[lic.mobf]: mods/mp_mobf_core/License.txt
 [lic.mobs_monster]: mods/mobs_aggressive/mobs_monster/license.txt
 [lic.moreblocks]: mods/buildings/moreblocks/LICENSE.md
 [lic.mywoodslopes]: mods/wood/mywoodslopes/licence.txt
