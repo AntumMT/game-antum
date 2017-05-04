@@ -1,8 +1,8 @@
 --[[ LICENSE HEADER
   
-  The MIT License (MIT)
+  MIT License
   
-  Copyright © 2016 Jordan Irwin
+  Copyright © 2017 Jordan Irwin
   
   Permission is hereby granted, free of charge, to any person obtaining a copy of
   this software and associated documentation files (the "Software"), to deal in
@@ -27,7 +27,7 @@
 
 antum.clearCraftOutput("helicopter:cabin")
 
-minetest.register_craft({
+antum.register_craft({
 	output = 'helicopter:cabin',
 	recipe = {
 		{'', 'group:wood', ''},

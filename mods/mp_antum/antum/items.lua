@@ -46,9 +46,7 @@ minetest.register_craftitem('antum:bottled_water', {
 
 
 if depends_satisfied then
-	antum.log_action(antum.modname, 'Registering craft "' .. antum.modname .. ':bottled_water"')
-	
-	minetest.register_craft({
+	antum.register_craft({
 		output = 'antum:bottled_water',
 		type = 'shapeless',
 		recipe = {
