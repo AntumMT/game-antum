@@ -28,7 +28,9 @@
 local depends_satisfied = true
 
 local depends = {
+	'antum',
 	'bucket',
+	'default',
 	'vessels',
 }
 
@@ -41,7 +43,7 @@ end
 if depends_satisfied then
 	-- Override vessels:glass_bottle
 	--[[
-	minetest.override_item('vessesl:glass_bottle', {
+	minetest.override_item('vessels:glass_bottle', {
 		description = 'Glass Bottle (empty)',
 		drawtype = 'plantlike',
 		tiles = {'vessels_glass_bottle.png'},
@@ -102,23 +104,7 @@ if depends_satisfied then
 			end
 		end,
 	})--]]
-		
 	
-	minetest.register_craftitem(':antum:bottled_water', {
-		description = 'A bottle of water',
-		inventory_image = 'bottled_water.png',
-	})
-	
-	minetest.register_craft({
-		output = 'antum:bottled_water',
-		type = 'shapeless',
-		recipe = {
-			'bucket:bucket_water', 'vessels:glass_bottle',
-		},
-		replacements = {
-			{"bucket:bucket_water", "bucket:bucket_empty"},
-		},
-	})
 	
 	minetest.register_craft({
 		output = 'invisibility:potion',

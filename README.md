@@ -144,7 +144,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* mob_shark ([CC BY-SA][lic.amp_shark])
 		* mob_slime ([CC0 / CC BY / CC BY-SA / CC0][lic.amp_slime])
 		* mob_warthog ([CC BY / CC BY-SA][lic.amp_warthog])
-* [antum][] ([MIT][lic.antum]) -- version: [ceb8f47 Git][ver.antum]
+* [antum][] ([MIT][lic.antum]) -- version: [0374670 Git][ver.antum]
 	* mp_antum/
 		* antum
 		* craft
@@ -343,7 +343,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 [ver.3d_armor]: https://github.com/stujones11/minetest-3d_armor/tree/456c84e
 [ver.adv_spawning]: https://github.com/sapier/adv_spawning/tree/ec41aa9
-[ver.antum]: https://github.com/AntumDeluge/mtmp-antum/tree/ceb8f47
+[ver.antum]: https://github.com/AntumDeluge/mtmp-antum/tree/0374670
 [ver.areas]: https://github.com/ShadowNinja/areas/tree/67507c7
 [ver.awards]: https://github.com/minetest-mods/awards/tree/92c43d1
 [ver.bedrock2]: http://repo.or.cz/minetest_bedrock2.git/tree/0378b61

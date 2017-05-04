@@ -1,8 +1,8 @@
 --[[ LICENSE HEADER
   
-  The MIT License (MIT)
+  MIT License
   
-  Copyright © 2016 Jordan Irwin
+  Copyright © 2017 Jordan Irwin
   
   Permission is hereby granted, free of charge, to any person obtaining a copy of
   this software and associated documentation files (the "Software"), to deal in
@@ -25,16 +25,39 @@
 --]]
 
 
-antum = {}
-antum.modname = minetest.get_current_modname()
-antum.modpath = minetest.get_modpath(antum.modname)
+local depends_satisfied = true
 
-
-local scripts = {
-	'functions',
-	'items',
+local depends = {
+	'bucket',
+	'vessels',
 }
 
-for I in pairs(scripts) do
-	dofile(antum.modpath .. '/' .. scripts[I] .. '.lua')
+for I in pairs(depends) do
+	if not minetest.get_modpath(depends[I]) then
+		depends_satisfied = false
+	end
+end
+
+
+minetest.register_craftitem('antum:bottled_water', {
+	description = 'A bottle of water',
+	inventory_image = 'bottled_water.png',
+})
+
+
+if depends_satisfied then
+	antum.log_action(antum.modname, 'Registering craft "' .. antum.modname .. ':bottled_water"')
+	
+	minetest.register_craft({
+		output = 'antum:bottled_water',
+		type = 'shapeless',
+		recipe = {
+			'bucket:bucket_water', 'vessels:glass_bottle',
+		},
+		replacements = {
+			{'bucket:bucket_water', 'bucket:bucket_empty'},
+		},
+	})
+else
+	antum.log_warn(antum.modname, 'Not registering craft for "' .. antum.modname .. ':bottled_water", dependency not satisfied')
 end

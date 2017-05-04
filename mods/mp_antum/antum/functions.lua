@@ -26,8 +26,16 @@
 
 
 -- Displays a message in the log
+function antum.log(level, mod, message)
+	minetest.log(level, '[' .. mod .. '] ' .. message)
+end
+
 function antum.log_action(mod, message)
-	minetest.log('action', '[' .. mod .. '] ' .. message)
+	antum.log('action', mod, message)
+end
+
+function antum.log_warn(mod, message)
+	antum.log('warning', mod, message)
 end
 
 
