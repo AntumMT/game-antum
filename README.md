@@ -95,7 +95,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [workbench][] ([GPL / WTFPL](mods/tools/workbench/LICENSE))
     * [tools_obsidian][] ([LGPL / CC BY-SA](mods/tools/tools_obsidian/README.md)) -- version: [f77fd79][ver.tools_obsidian]
 * transport/
-    * [carts][] ([WTFPL/CC0](mods/transport/carts/README.txt))
     * [hovercraft][] ([LGPL / CC BY-SA / CC0](mods/transport/hovercraft/LICENSE.txt))
 * ui/
     * [bookmarks_gui][] ([BSD 3-Clause](mods/ui/bookmarks_gui/LICENSE))
@@ -206,7 +205,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [bookmarks_gui]: http://cornernote.github.io/minetest-bookmarks_gui/
 [bridges]: https://forum.minetest.net/viewtopic.php?t=3488
 [campfire]: https://forum.minetest.net/viewtopic.php?t=10569
-[carts]: https://forum.minetest.net/viewtopic.php?t=2451
 [character_creator]: https://forum.minetest.net/viewtopic.php?t=13138
 [chatlog]: https://forum.minetest.net/viewtopic.php?id=6220
 [christmas]: https://forum.minetest.net/viewtopic.php?t=3950
