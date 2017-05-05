@@ -26,7 +26,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [away][] ([GPL](mods/chat/away/COPYING))
     * [chatlog][] ([CC0](mods/chat/chatlog/Readme.txt))
 * crafting/
-    * [craft_guide][] ([BSD 3-Clause](mods/crafting/craft_guide/LICENSE))
+    * [craft_guide][] ([BSD 3-Clause][lic.craft_guide]) -- version: [20520b5 git][ver.craft_guide] 2017-01-30
     * [craftguide][] ([GPL / WTFPL](mods/crafting/craftguide/LICENSE)) Installed version: [51a00b9][craftguide version] (Git)
 * [currency][] ([WTFPL](https://forum.minetest.net/viewtopic.php?t=7002)) [Git d2ea7c3](https://github.com/minetest-mods/currency/tree/d2ea7c352ada7646e019f55a365a506d132f301a)
 * farming/
@@ -317,6 +317,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.character_creator]: mods/player_visuals/character_creator/license.txt
 [lic.cme]: mods/mp_cme/LICENSE.txt
 [lic.coloredwood]: mods/wood/coloredwood/LICENSE
+[lic.craft_guide]: mods/crafting/craft_guide/LICENSE
 [lic.creeper]: mods/mobs_aggressive/creeper/LICENSE.md
 [lic.ethereal]: mods/world/ethereal/license.txt
 [lic.helicopter]: mods/transport/helicopter/LICENSE
@@ -351,6 +352,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.character_creator]: https://github.com/Rui-Minetest/character_creator/tree/6a0e6aa
 [ver.cme]: https://github.com/BlockMen/cme/tree/e3502a1
 [ver.coloredwood]: https://github.com/minetest-mods/coloredwood/tree/fc4ab15
+[ver.craft_guide]: https://github.com/cornernote/minetest-craft_guide/tree/20520b5
 [ver.creeper]: https://github.com/Rui-Minetest/creeper/tree/036666e
 [ver.ethereal]: https://github.com/tenplus1/ethereal/tree/d0b896e
 [ver.helicopter]: https://github.com/SokolovPavel/helicopter/tree/10f1433
