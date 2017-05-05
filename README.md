@@ -101,7 +101,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * weather/
     * [lightning][] ([LGPL / CC-BY-SA][lic.lightning]) -- version: [39bd36c Git][ver.lightning] *2017-02-20*
 * wood/
-	* [coloredwood][] ([LGPL][lic.coloredwood]) -- version: [7b177f3 Git][ver.coloredwood] *2016-03-27* ***UPDT***
+	* [coloredwood][] ([LGPL][lic.coloredwood]) -- version: [fc4ab15 Git][ver.coloredwood] *2017-03-18* ([patched][patch.coloredwood])
 	* [mywoodslopes][] ([DWYWPL][lic.mywoodslopes]) -- version: [3a1b531 Git][ver.mywoodslopes] *2016-03-23*
 * world/
     * [bedrock2][] ([WTFPL][lic.bedrock2]) -- version [1.2.0-0378b61 Git][ver.bedrock2]
@@ -355,7 +355,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.bedrock2]: http://repo.or.cz/minetest_bedrock2.git/tree/0378b61
 [ver.character_creator]: https://github.com/Rui-Minetest/character_creator/tree/6a0e6aa
 [ver.cme]: https://github.com/BlockMen/cme/tree/e3502a1
-[ver.coloredwood]: https://github.com/minetest-mods/coloredwood/tree/7b177f3
+[ver.coloredwood]: https://github.com/minetest-mods/coloredwood/tree/fc4ab15
 [ver.craft_guide]: https://github.com/cornernote/minetest-craft_guide/tree/20520b5
 [ver.craftguide]: https://github.com/minetest-mods/craftguide/tree/86a96c3
 [ver.creeper]: https://github.com/Rui-Minetest/creeper/tree/036666e
@@ -390,6 +390,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.wardrobe]: https://github.com/prestidigitator/minetest-mod-wardrobe/tree/c48b011
 
 [patch.adv_spawning]: https://github.com/AntumDeluge/mtmod-adv_spawning/commit/572688b
+[patch.coloredwood]: https://github.com/AntumDeluge/mtmod-coloredwood/commit/ed6c46f
 [patch.craftguide]: https://github.com/AntumDeluge/mtmod-craftguide/commit/89db504
 [patch.currency]: https://github.com/AntumDeluge/mtmod-currency/commit/7b0e29f
 [patch.ethereal]: https://github.com/AntumDeluge/mtmod-ethereal/commit/ba81be1
