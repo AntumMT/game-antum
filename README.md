@@ -67,7 +67,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * player_action/
     * [throwing][] ([WTFPL][lic.throwing]) -- version: [0.14-79ad788 Git][ver.throwing]
 * player_visuals/
-    * [character_creator][] ([WTFPL / CC-BY-SA][lic.character_creator]) -- version: [5e8fec2 Git][ver.character_creator]
+    * [character_creator][] ([MIT / CC-BY-SA][lic.character_creator]) -- version: [6a0e6aa Git][ver.character_creator]
     * [hidename][] (MIT) -- version [bb52dbc Git][ver.hidename]
     * [invisibility][] ([MIT][lic.invisibility]) -- version: [bf4156b Git][ver.invisibility]
     * [playeranim][] ([WFTLPL][lic.playeranim.1]) / [BSD][lic.playeranim.2]) - version [f1c542e Git][ver.playeranim]
@@ -314,7 +314,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.areas]: mods/protection/areas/LICENSE.txt
 [lic.awards]: mods/awards/LICENSE.txt
 [lic.bedrock2]: mods/world/bedrock2/COPYING
-[lic.character_creator]: mods/player_visuals/character_creator/LICENSE.md
+[lic.character_creator]: mods/player_visuals/character_creator/license.txt
 [lic.cme]: mods/mp_cme/LICENSE.txt
 [lic.coloredwood]: mods/wood/coloredwood/LICENSE
 [lic.creeper]: mods/mobs_aggressive/creeper/LICENSE.md
@@ -348,7 +348,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.areas]: https://github.com/ShadowNinja/areas/tree/67507c7
 [ver.awards]: https://github.com/minetest-mods/awards/tree/92c43d1
 [ver.bedrock2]: http://repo.or.cz/minetest_bedrock2.git/tree/0378b61
-[ver.character_creator]: https://github.com/Rui-Minetest/character_creator/tree/5e8fec2
+[ver.character_creator]: https://github.com/Rui-Minetest/character_creator/tree/6a0e6aa
 [ver.cme]: https://github.com/BlockMen/cme/tree/e3502a1
 [ver.coloredwood]: https://github.com/minetest-mods/coloredwood/tree/7b177f3
 [ver.creeper]: https://github.com/Rui-Minetest/creeper/tree/036666e
