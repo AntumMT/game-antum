@@ -31,7 +31,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * crafting/
     * [craft_guide][] ([BSD 3-Clause][lic.craft_guide]) -- version: [20520b5 Git][ver.craft_guide] *2017-01-30*
     * [craftguide][] ([GPL / WTFPL](mods/crafting/craftguide/LICENSE)) Installed version: [86a96c3 Git][ver.craftguide] *2017-03-21* ([patched][patch.craftguide])
-* [currency][] ([WTFPL][lic.currency]) [21f9811 Git][ver.currency] *2017-03-22*
+* [currency][] ([WTFPL][lic.currency]) [21f9811 Git][ver.currency] *2017-03-22* ([patched][patch.currency])
 * farming/
 	* [farming_plus][] ([WTFPL](mods/farming/farming_plus/README.txt))
 * furniture/
@@ -391,6 +391,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 [patch.adv_spawning]: https://github.com/AntumDeluge/mtmod-adv_spawning/commit/572688b
 [patch.craftguide]: https://github.com/AntumDeluge/mtmod-craftguide/commit/89db504
+[patch.currency]: https://github.com/AntumDeluge/mtmod-currency/commit/7b0e29f
 [patch.ethereal]: https://github.com/AntumDeluge/mtmod-ethereal/commit/ba81be1
 [patch.helicopter]: https://github.com/AntumDeluge/mtmod-helicopter/commit/66a6523
 [patch.rainbow_ore]: https://github.com/AntumDeluge/mtmod-rainbow_ore/commit/60dc35e
