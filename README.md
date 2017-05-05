@@ -17,7 +17,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [awards][] ([LGPL][lic.awards]) -- version: [096fe16 Git][ver.awards] *2017-02-25*
 * buildings/
     * [bridges][] ([GPL][lic.bridges]) -- version: [5b5f475 Git][ver.bridges] *2015-08-23*
-    * [christmas][] ([MIT](mods/buildings/christmas/LICENSE.txt))
+    * [christmas][] ([MIT][lic.christmas]) -- version [d3bd872 Git][ver.christmas] *2013-01-11* ([patched][patch.christmas])
     * [elevator][] ([WTFPL](mods/buildings/elevator/readme.txt))
     * [fort_spikes][] ([MIT/CC0](mods/buildings/fort_spikes/LICENSE))
     * [moreblocks][] ([zlib][lic.moreblocks]) -- version: [fbfb079 Git][ver.moreblocks] *2017-03-14*
@@ -318,6 +318,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.bedrock2]: mods/world/bedrock2/COPYING
 [lic.bridges]: mods/buildings/bridges/README.md
 [lic.character_creator]: mods/player_visuals/character_creator/license.txt
+[lic.christmas]: mods/buildings/christmas/LICENSE.txt
 [lic.cme]: mods/mp_cme/LICENSE.txt
 [lic.coloredwood]: mods/wood/coloredwood/LICENSE
 [lic.craft_guide]: mods/crafting/craft_guide/LICENSE
@@ -356,6 +357,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.bedrock2]: http://repo.or.cz/minetest_bedrock2.git/tree/0378b61
 [ver.bridges]: https://github.com/Sokomine/bridges/tree/5b5f475
 [ver.character_creator]: https://github.com/Rui-Minetest/character_creator/tree/6a0e6aa
+[ver.christmas]: https://github.com/TheZenKitteh/minetest-christmas/tree/d3bd872
 [ver.cme]: https://github.com/BlockMen/cme/tree/e3502a1
 [ver.coloredwood]: https://github.com/minetest-mods/coloredwood/tree/fc4ab15
 [ver.craft_guide]: https://github.com/cornernote/minetest-craft_guide/tree/20520b5
@@ -392,6 +394,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.wardrobe]: https://github.com/prestidigitator/minetest-mod-wardrobe/tree/c48b011
 
 [patch.adv_spawning]: https://github.com/AntumDeluge/mtmod-adv_spawning/commit/572688b
+[patch.christmas]: https://github.com/AntumDeluge/mtmod-christmas/commit/f6c8dc2
 [patch.coloredwood]: https://github.com/AntumDeluge/mtmod-coloredwood/commit/ed6c46f
 [patch.craftguide]: https://github.com/AntumDeluge/mtmod-craftguide/commit/89db504
 [patch.currency]: https://github.com/AntumDeluge/mtmod-currency/commit/7b0e29f

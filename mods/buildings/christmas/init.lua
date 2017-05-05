@@ -1,3 +1,86 @@
+-- Crafting
+minetest.register_craft({
+	output = '"christmas:ligs" 5',
+	recipe = {
+		{"christmas:slig"},
+		{"christmas:slig"},
+		{"christmas:slig"},
+	}
+})
+minetest.register_craft({
+	output = '"christmas:stoc" 5',
+	recipe = {
+		{"christmas:orn"},
+		{"christmas:slig"},
+		{"christmas:slig"},
+	}
+})
+minetest.register_craft({
+	output = '"christmas:gar" 5',
+	recipe = {
+		{"default:leaves"},
+		{"default:leaves"},
+		}
+})
+minetest.register_craft({
+	output = '"christmas:slig" 4',
+	recipe = {
+		{"default:coal_lump"},
+		{"default:leaves"},
+	}
+})
+minetest.register_craft({
+	output = '"christmas:orn" 10',
+	recipe = {
+		{"default:glass", "default:steel_ingot", "default:glass"},
+		{"default:glass", "default:cactus", "default:glass"},
+	        {"default:glass", "default:glass", "default:glass"},
+        }
+
+})
+minetest.register_craft({
+	output = '"christmas:tee" 4',
+	recipe = {
+		{"default:mese"},
+		{"wool:white"},
+	}
+})
+minetest.register_craft({
+	output = '"christmas:rwool" 4',
+	recipe = {
+		{"default:leaves"},
+		{"wool:white"},
+	}
+})
+
+minetest.register_craft({
+	output = '"christmas:bwool" 4',
+	recipe = {
+		{"default:cactus"},
+		{"wool:white"},
+	}
+})
+minetest.register_craft({
+	output = '"christmas:t" 4',
+	recipe = {
+		{"christmas:orn"},
+		{"default:leaves"},
+	}
+})
+minetest.register_craft({
+	output = '"christmas:star" 1',
+	recipe = {
+		{"default:mese", "default:mese", "default:mese"},
+		{"default:mese", "default:mese", "default:mese"},
+		{"default:mese", "default:mese", "default:mese"},
+	}
+})
+minetest.register_craft({
+	output = '"christmas:fire" 1',
+	recipe = {
+		{"default:gravel", "default:leaves", "default:gravel"},
+		}
+})
 -- Blocks
 
 minetest.register_node("christmas:wool", {
@@ -196,91 +279,6 @@ minetest.register_node("christmas:orn", {
 	end,
 	groups = {choppy=2,dig_immediate=2},
 	furnace_burntime = 4,
-})
-
-
--- Crafting
-minetest.register_craft({
-	output = '"christmas:ligs" 5',
-	recipe = {
-		{"christmas:slig"},
-		{"christmas:slig"},
-		{"christmas:slig"},
-	}
-})
-minetest.register_craft({
-	output = '"christmas:stoc" 5',
-	recipe = {
-		{"christmas:orn"},
-		{"christmas:slig"},
-		{"christmas:slig"},
-	}
-})
-minetest.register_craft({
-	output = '"christmas:gar" 5',
-	recipe = {
-		{"default:leaves"},
-		{"default:leaves"},
-		}
-})
-minetest.register_craft({
-	output = '"christmas:slig" 4',
-	recipe = {
-		{"default:coal_lump"},
-		{"default:leaves"},
-	}
-})
-minetest.register_craft({
-	output = '"christmas:orn" 10',
-	recipe = {
-		{"default:glass", "default:steel_ingot", "default:glass"},
-		{"default:glass", "default:cactus", "default:glass"},
-	        {"default:glass", "default:glass", "default:glass"},
-        }
-
-})
-minetest.register_craft({
-	output = '"christmas:tee" 4',
-	recipe = {
-		{"default:mese"},
-		{"wool:white"},
-	}
-})
-minetest.register_craft({
-	output = '"christmas:rwool" 4',
-	recipe = {
-		{"default:leaves"},
-		{"wool:white"},
-	}
-})
-
-minetest.register_craft({
-	output = '"christmas:bwool" 4',
-	recipe = {
-		{"default:cactus"},
-		{"wool:white"},
-	}
-})
-minetest.register_craft({
-	output = '"christmas:t" 4',
-	recipe = {
-		{"christmas:orn"},
-		{"default:leaves"},
-	}
-})
-minetest.register_craft({
-	output = '"christmas:star" 1',
-	recipe = {
-		{"default:mese", "default:mese", "default:mese"},
-		{"default:mese", "default:mese", "default:mese"},
-		{"default:mese", "default:mese", "default:mese"},
-	}
-})
-minetest.register_craft({
-	output = '"christmas:fire" 1',
-	recipe = {
-		{"default:gravel", "default:leaves", "default:gravel"},
-		}
 })
 --		end
 --		return false
