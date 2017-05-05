@@ -150,7 +150,7 @@ function _doors.door_toggle(pos, node, clicker)
 
 	replace_old_owner_information(pos)
 
-	if not default.can_interact_with_node(clicker, pos) then
+	if clicker and not default.can_interact_with_node(clicker, pos) then
 		return false
 	end
 
@@ -331,6 +331,8 @@ function doors.register(name, def)
 			if not (creative and creative.is_enabled_for and creative.is_enabled_for(pn)) then
 				itemstack:take_item()
 			end
+
+			minetest.sound_play(def.sounds.place, {pos = pos})
 
 			on_place_node(pos, minetest.get_node(pos),
 				placer, node, itemstack, pointed_thing)
@@ -530,7 +532,7 @@ function _doors.trapdoor_toggle(pos, node, clicker)
 
 	replace_old_owner_information(pos)
 
-	if not default.can_interact_with_node(clicker, pos) then
+	if clicker and not default.can_interact_with_node(clicker, pos) then
 		return false
 	end
 
