@@ -1,5 +1,5 @@
 
-MOB API (10th March 2017)
+MOB API (27th April 2017)
 
 The mob api is a function that can be called on by other mods to add new animals or monsters into minetest.
 
@@ -237,7 +237,7 @@ This function is generally called inside the on_rightclick section of the mob ap
 
 mobs:feed_tame(self, clicker, feed_count, breed)
 
-This function allows the mob to be fed the item inside self.follow be it apple, wheat or whatever a set number of times and be tamed or bred as a result.
+This function allows the mob to be fed the item inside self.follow be it apple, wheat or whatever a set number of times and be tamed or bred as a result.  Will return true when mob is fed with item it likes.
 
     'self' mob information
     'clicker' player information
@@ -248,7 +248,7 @@ This function allows the mob to be fed the item inside self.follow be it apple, 
 
 mobs:protect(self, clicker)
 
-This function can be used to right-click any tamed mob with mobs:protector item, this will protect the mob from harm inside of a protected area from other players.
+This function can be used to right-click any tamed mob with mobs:protector item, this will protect the mob from harm inside of a protected area from other players.  Will return true when mob right-clicked with mobs:protector item.
 
     'self' mob information
     'clicker' player information

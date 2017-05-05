@@ -1,5 +1,5 @@
 
--- Mobs Api (13th March 2017)
+-- Mobs Api (27th April 2017)
 
 mobs = {}
 mobs.mod = "redo"
@@ -197,9 +197,11 @@ function line_of_sight(self, pos1, pos2, stepsize)
 	-- Actual Distance (ad) traveled
 	local ad = 0
 
-	-- It continues to advance in the line of sight in search of a real obstruction.
+	-- It continues to advance in the line of sight in search of a real
+	-- obstruction which counts as 'normal' nodebox.
 	while minetest.registered_nodes[nn]
-	and minetest.registered_nodes[nn].walkable == false do
+	and (minetest.registered_nodes[nn].walkable == false
+	or minetest.registered_nodes[nn].drawtype == "nodebox") do
 
 		-- Check if you can still move forward
 		if td < ad + stepsize then
@@ -257,6 +259,8 @@ local function flight_check(self, pos_w)
 			end
 		end
 	end
+
+	return false
 end
 
 
@@ -3056,6 +3060,14 @@ function mobs:capture_mob(self, clicker, chance_hand, chance_net, chance_lasso, 
 	end
 
 	local name = clicker:get_player_name()
+	local tool = clicker:get_wielded_item()
+
+	-- are we using hand, net or lasso to pick up mob?
+	if tool:get_name() ~= ""
+	and tool:get_name() ~= "mobs:net"
+	and tool:get_name() ~= "mobs:magic_lasso" then
+		return false
+	end
 
 	-- is mob tamed?
 	if self.tamed == false
@@ -3063,7 +3075,7 @@ function mobs:capture_mob(self, clicker, chance_hand, chance_net, chance_lasso, 
 
 		minetest.chat_send_player(name, S("Not tamed!"))
 
-		return false
+		return true -- false
 	end
 
 	-- cannot pick up if not owner
@@ -3072,16 +3084,15 @@ function mobs:capture_mob(self, clicker, chance_hand, chance_net, chance_lasso, 
 
 		minetest.chat_send_player(name, S("@1 is owner!", self.owner))
 
-		return false
+		return true -- false
 	end
 
 	if clicker:get_inventory():room_for_item("main", mobname) then
 
 		-- was mob clicked with hand, net, or lasso?
-		local tool = clicker:get_wielded_item()
 		local chance = 0
 
-		if tool:is_empty() then
+		if tool:get_name() == "" then
 			chance = chance_hand
 
 		elseif tool:get_name() == "mobs:net" then
@@ -3099,6 +3110,7 @@ function mobs:capture_mob(self, clicker, chance_hand, chance_net, chance_lasso, 
 			tool:add_wear(650) -- 100 uses
 
 			clicker:set_wielded_item(tool)
+
 		end
 
 		-- calculate chance.. add to inventory if successful?
@@ -3139,13 +3151,12 @@ function mobs:capture_mob(self, clicker, chance_hand, chance_net, chance_lasso, 
 
 			self.object:remove()
 
-			return true
 		else
 			minetest.chat_send_player(name, S("Missed!"))
 		end
 	end
 
-	return false
+	return true
 end
 
 
@@ -3153,31 +3164,29 @@ end
 function mobs:protect(self, clicker)
 
 	local name = clicker:get_player_name()
+	local tool = clicker:get_wielded_item()
+
+	if tool:get_name() ~= "mobs:protector" then
+		return false
+	end
 
 	if self.tamed == false then
 		minetest.chat_send_player(name, S("Not tamed!"))
-		return false
+		return true -- false
 	end
 
 	if self.protected == true then
 		minetest.chat_send_player(name, S("Already protected!"))
-		return false
+		return true -- false
 	end
 
-	local tool = clicker:get_wielded_item()
+	tool:take_item() -- take 1 protection rune
+	clicker:set_wielded_item(tool)
 
-	if tool:get_name() == "mobs:protector" then
+	self.protected = true
+	minetest.chat_send_player(name, S("Protected!"))
 
-		tool:take_item() -- take 1 protection rune
-		clicker:set_wielded_item(tool)
-
-		self.protected = true
-		minetest.chat_send_player(name, S("Protected!"))
-
-		return true
-	end
-
-	return false
+	return true
 end
 
 
