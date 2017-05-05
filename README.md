@@ -14,7 +14,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [privilegeareas][] ([WTFPL / CC0][lic.privilegeareas]) -- version: [aebaa00 Git][ver.privilegeareas] *2016-05-18*
     * [privs][] ([CC0](mods/admin/privs/init.lua))
     * [spectator_mode][] ([WTFPL][lic.spectator_mode]) -- version: [3459db4 Git][ver.spectator_mode] *2016-08-05* ***UPDT***
-* [awards][] ([LGPL][lic.awards]) -- version: [2.3.0-14-92c43d1 Git][ver.awards] *2016-08-29* ***UPDT***
+* [awards][] ([LGPL][lic.awards]) -- version: [096fe16 Git][ver.awards] *2017-02-25*
 * buildings/
     * [bridges][] ([BPL](mods/buildings/bridges/README.md))
     * [christmas][] ([MIT](mods/buildings/christmas/LICENSE.txt))
@@ -349,7 +349,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.adv_spawning]: https://github.com/sapier/adv_spawning/tree/ec41aa9
 [ver.antum]: https://github.com/AntumDeluge/mtmp-antum/tree/4477d40
 [ver.areas]: https://github.com/ShadowNinja/areas/tree/67507c7
-[ver.awards]: https://github.com/minetest-mods/awards/tree/92c43d1
+[ver.awards]: https://github.com/minetest-mods/awards/tree/096fe16
 [ver.bedrock2]: http://repo.or.cz/minetest_bedrock2.git/tree/0378b61
 [ver.character_creator]: https://github.com/Rui-Minetest/character_creator/tree/6a0e6aa
 [ver.cme]: https://github.com/BlockMen/cme/tree/e3502a1

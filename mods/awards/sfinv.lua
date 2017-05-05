@@ -1,6 +1,8 @@
 if minetest.get_modpath("sfinv") then
+	local S = awards.gettext
+
 	sfinv.register_page("awards:awards", {
-		title = "Awards",
+		title = S("Awards"),
 		on_enter = function(self, player, context)
 			context.awards_idx = 1
 		end,
@@ -15,7 +17,7 @@ if minetest.get_modpath("sfinv") then
 				local event = minetest.explode_textlist_event(fields.awards)
 				if event.type == "CHG" then
 					context.awards_idx = event.index
-					sfinv.set(player, context)
+					sfinv.set_player_inventory_formspec(player, context)
 				end
 			end
 		end

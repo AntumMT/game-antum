@@ -14,10 +14,8 @@
 -- 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 --
 
--- The global award namespace
-awards = {
-	show_mode = "hud"
-}
+local S = awards.gettext
+
 dofile(minetest.get_modpath("awards").."/api_helpers.lua")
 
 -- Table Save Load Functions
@@ -27,11 +25,6 @@ function awards.save()
 		file:write(minetest.serialize(awards.players))
 		file:close()
 	end
-end
-
-local S = function(s) return s end
-function awards.set_intllib(locale)
-	S = locale
 end
 
 function awards.init()
@@ -115,6 +108,22 @@ function awards.get_item_count(data, field, itemname)
 	end
 end
 
+function awards.get_total_item_count(data, field)
+	local i = 0
+	if data and field then
+		awards.assertPlayer(data)
+		awards.tbv(data, field)
+		for mod,_ in pairs(data[field]) do
+			awards.tbv(data[field], mod)
+			for item,_ in pairs(data[field][mod]) do
+				awards.tbv(data[field][mod], item, 0)
+				i = i + data[field][mod][item]
+			end
+		end
+	end
+	return i
+end
+
 function awards.register_on_unlock(func)
 	table.insert(awards.on_unlock, func)
 end
@@ -140,6 +149,11 @@ function awards.register_achievement(name, def)
 
 	-- Add Award
 	awards.def[name] = def
+
+	local tdef = awards.def[name]
+	if def.description == nil and tdef.getDefaultDescription then
+		def.description = tdef:getDefaultDescription()
+	end
 end
 
 function awards.enable(name)
@@ -157,7 +171,7 @@ function awards.disable(name)
 end
 
 function awards.clear_player(name)
-	awards.players[name] = nil
+	awards.players[name] = {}
 end
 
 -- This function is called whenever a target condition is met.
@@ -222,6 +236,11 @@ function awards.unlock(name, award)
 	local desc = awdef.description or ""
 	local background = awdef.background or "awards_bg_default.png"
 	local icon = awdef.icon or "awards_unknown.png"
+	local sound = awdef.sound
+	if sound == nil then
+		-- Explicit check for nil because sound could be `false` to disable it
+		sound = {name="awards_got_generic", gain=0.25}
+	end
 	local custom_announce = awdef.custom_announce
 	if not custom_announce then
 		if awdef.secret then
@@ -232,10 +251,19 @@ function awards.unlock(name, award)
 	end
 
 	-- Do Notification
+	if sound then
+		-- Enforce sound delay to prevent sound spamming
+		local lastsound = awards.players[name].lastsound
+		if lastsound == nil or os.difftime(os.time(), lastsound) >= 1 then
+			minetest.sound_play(sound, {to_player=name})
+			awards.players[name].lastsound = os.time()
+		end
+	end
+
 	if awards.show_mode == "formspec" then
 		-- use a formspec to send it
-		minetest.show_formspec(name, "achievements:unlocked", "size[4,2]"..
-				"image_button_exit[0,0;4,2;"..background..";close1; ]"..
+		minetest.show_formspec(name, "achievements:unlocked", "size[6,2]"..
+				"image_button_exit[0,0;6,2;"..background..";close1; ]"..
 				"image_button_exit[0.2,0.8;1,1;"..icon..";close2; ]"..
 				"label[1.1,1;"..title.."]"..
 				"label[0.3,0.1;"..custom_announce.."]")
@@ -256,7 +284,7 @@ function awards.unlock(name, award)
 		local one = player:hud_add({
 			hud_elem_type = "image",
 			name = "award_bg",
-			scale = {x = 1, y = 1},
+			scale = {x = 2, y = 1},
 			text = background,
 			position = {x = 0.5, y = 0},
 			offset = {x = 0, y = 138},
@@ -293,11 +321,11 @@ function awards.unlock(name, award)
 			name = "award_icon",
 			scale = {x = 4, y = 4},
 			text = icon,
-			position = {x = 0.5, y = 0},
+			position = {x = 0.4, y = 0},
 			offset = {x = -81.5, y = 126},
 			alignment = {x = 0, y = -1}
 		})
-		minetest.after(3, function()
+		minetest.after(4, function()
 			player:hud_remove(one)
 			player:hud_remove(two)
 			player:hud_remove(three)
@@ -322,26 +350,37 @@ function awards.getFormspec(name, to, sid)
 	local listofawards = awards._order_awards(name)
 	local playerdata = awards.players[name]
 
+	if #listofawards == 0 then
+		formspec = formspec .. "label[3.9,1.5;"..minetest.formspec_escape(S("Error: No awards available.")).."]"
+		formspec = formspec .. "button_exit[4.2,2.3;3,1;close;"..minetest.formspec_escape(S("OK")).."]"
+		return formspec
+	end
+
 	-- Sidebar
 	if sid then
 		local item = listofawards[sid+0]
 		local def = awards.def[item.name]
+
 		if def and def.secret and not item.got then
-			formspec = formspec .. "label[1,2.75;(Secret Award)]"..
+			formspec = formspec .. "label[1,2.75;"..minetest.formspec_escape(S("(Secret Award)")).."]"..
 								"image[1,0;3,3;awards_unknown.png]"
 			if def and def.description then
-				formspec = formspec	.. "label[0,3.25;Unlock this award to find out what it is.]"
+				formspec = formspec	.. "textarea[0.25,3.25;4.8,1.7;;"..minetest.formspec_escape(S("Unlock this award to find out what it is."))..";]"
 			end
 		else
 			local title = item.name
 			if def and def.title then
 				title = def.title
 			end
-			local status = ""
+			local status = "%s"
 			if item.got then
-				status = " (got)"
+				status = S("%s (got)")
 			end
-			formspec = formspec .. "label[1,2.75;" .. title .. status .. "]"
+
+      formspec = formspec .. "textarea[0.5,2.7;4.8,1.45;;" ..
+				string.format(status, minetest.formspec_escape(title)) ..
+				";]"
+			
 			if def and def.icon then
 				formspec = formspec .. "image[1,0;3,3;" .. def.icon .. "]"
 			end
@@ -360,11 +399,11 @@ function awards.getFormspec(name, to, sid)
 				formspec = formspec .. "background[0,4.80;" .. barwidth ..",0.25;awards_progress_gray.png;false]"
 				formspec = formspec .. "background[0,4.80;" .. (barwidth * perc) ..",0.25;awards_progress_green.png;false]"
 				if label then
-					formspec = formspec .. "label[1.75,4.63;" .. label .. "]"
+					formspec = formspec .. "label[1.75,4.63;" .. minetest.formspec_escape(label) .. "]"
 				end
 			end
 			if def and def.description then
-				formspec = formspec	.. "label[0,3.25;"..def.description.."]"
+				formspec = formspec	.. "textarea[0.25,3.75;4.8,1.7;;"..minetest.formspec_escape(def.description)..";]"
 			end
 		end
 	end
@@ -381,7 +420,7 @@ function awards.getFormspec(name, to, sid)
 			first = false
 
 			if def.secret and not award.got then
-				formspec = formspec .. "#707070(Secret Award)"
+				formspec = formspec .. "#707070"..minetest.formspec_escape(S("(Secret Award)"))
 			else
 				local title = award.name
 				if def and def.title then
@@ -403,23 +442,26 @@ function awards.show_to(name, to, sid, text)
 		name = to
 	end
 	if name == to and awards.player(to).disabled then
-		minetest.chat_send_player("You've disabled awards. Type /awards" ..
-				" enable to reenable")
+		minetest.chat_send_player(S("You've disabled awards. Type /awards enable to reenable."))
 		return
 	end
 	if text then
-		if not awards.players[name] or not awards.players[name].unlocked  then
-			minetest.chat_send_player(to, "You have not unlocked any awards")
+		local listofawards = awards._order_awards(name)
+		if #listofawards == 0 then
+			minetest.chat_send_player(to, S("Error: No awards available."))
+			return
+		elseif not awards.players[name] or not awards.players[name].unlocked  then
+			minetest.chat_send_player(to, S("You have not unlocked any awards."))
 			return
 		end
-		minetest.chat_send_player(to, name.."'s awards:")
+		minetest.chat_send_player(to, string.format(S("%s’s awards:"), name))
 
 		for _, str in pairs(awards.players[name].unlocked) do
 			local def = awards.def[str]
 			if def then
 				if def.title then
 					if def.description then
-						minetest.chat_send_player(to, def.title..": "..def.description)
+						minetest.chat_send_player(to, string.format(S("%s: %s"), def.title, def.description))
 					else
 						minetest.chat_send_player(to, def.title)
 					end
@@ -432,9 +474,14 @@ function awards.show_to(name, to, sid, text)
 		if sid == nil or sid < 1 then
 			sid = 1
 		end
+		local deco = ""
+		if minetest.global_exists("default") then
+			deco = default.gui_bg .. default.gui_bg_img
+		end
 		-- Show formspec to user
 		minetest.show_formspec(to,"awards:awards",
-			"size[11,5]" .. awards.getFormspec(name, to, sid))
+			"size[11,5]" .. deco ..
+			awards.getFormspec(name, to, sid))
 	end
 end
 awards.showto = awards.show_to
