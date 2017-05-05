@@ -59,7 +59,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * mobs_aggressive/
     * [creeper][] ([WTFPL][lic.creeper]) -- version [036666e Git][ver.creeper]
     * [mobs_goblins][] ([CC-BY-SA / CC-BY / CC0](mods/mobs_aggressive/mobs_goblins/README.md))
-    * [mobs_monster][] ([MIT][lic.mobs_monster]) -- version: [91cbcf7 Git][ver.mobs_monster] *2016-08-19* ***UPDT***
+    * [mobs_monster][] ([MIT][lic.mobs_monster]) -- version: [f6d0e01 Git][ver.mobs_monster] *2017-04-27*
     * [spidermob][] ([CC-BY-SA / WTFPL / CC0](mods/mobs_aggressive/spidermob/LICENSE))
 * mobs_passive/
 * npc/
@@ -369,7 +369,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.invisibility]: https://github.com/tenplus1/invisibility/tree/bf4156b
 [ver.jukebox]: https://github.com/minetest-mods/jukebox/tree/e6a507f
 [ver.lightning]: https://github.com/minetest-mods/lightning/tree/39bd36c
-[ver.mobs_monster]: https://github.com/tenplus1/mobs_monster/tree/91cbcf7
+[ver.mobs_monster]: https://github.com/tenplus1/mobs_monster/tree/f6d0e01
 [ver.mobs_redo]: https://github.com/tenplus1/mobs_redo/tree/feb26ed
 [ver.moreblocks]: https://github.com/minetest-mods/moreblocks/tree/fbfb079
 [ver.mywoodslopes]: https://github.com/minetest-mods/mywoodslopes/tree/3a1b531

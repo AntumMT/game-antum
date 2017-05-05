@@ -1,6 +1,7 @@
 
 local S = mobs.intllib
 
+
 -- Dungeon Master by PilzAdam
 
 mobs:register_mob("mobs_monster:dungeon_master", {
@@ -9,7 +10,8 @@ mobs:register_mob("mobs_monster:dungeon_master", {
 	damage = 4,
 	attack_type = "dogshoot",
 	dogshoot_switch = 1,
-	dogshoot_count_max = 10,
+	dogshoot_count_max = 12, -- shoot for 10 seconds
+	dogshoot_count2_max = 3, -- dogfight for 3 seconds
 	reach = 3,
 	shoot_interval = 2.5,
 	arrow = "mobs_monster:fireball",
@@ -58,12 +60,22 @@ mobs:register_mob("mobs_monster:dungeon_master", {
 	},
 })
 
-mobs:register_spawn("mobs_monster:dungeon_master", {"default:stone"}, 7, 0, 7000, 1, -70)
+
+mobs:spawn({
+	name = "mobs_monster:dungeon_master",
+	nodes = {"default:stone"},
+	max_light = 7,
+	chance = 7000,
+	active_object_count = 1,
+	max_height = -70,
+})
+
 
 mobs:register_egg("mobs_monster:dungeon_master", S("Dungeon Master"), "fire_basic_flame.png", 1, true)
 
--- compatibility
-mobs:alias_mob("mobs:dungeon_master", "mobs_monster:dungeon_master")
+
+mobs:alias_mob("mobs:dungeon_master", "mobs_monster:dungeon_master") -- compatibility
+
 
 -- fireball (weapon)
 mobs:register_arrow("mobs_monster:fireball", {
@@ -71,6 +83,11 @@ mobs:register_arrow("mobs_monster:fireball", {
 	visual_size = {x = 1, y = 1},
 	textures = {"mobs_fireball.png"},
 	velocity = 6,
+	tail = 1,
+	tail_texture = "mobs_fireball.png",
+	tail_size = 10,
+	glow = 5,
+	expire = 0.1,
 
 	-- direct hit, no fire... just plenty of pain
 	hit_player = function(self, player)

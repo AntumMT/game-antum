@@ -1,6 +1,7 @@
 
 local S = mobs.intllib
 
+
 -- Oerkki by PilzAdam
 
 mobs:register_mob("mobs_monster:oerkki", {
@@ -57,9 +58,17 @@ mobs:register_mob("mobs_monster:oerkki", {
 	},
 })
 
-mobs:register_spawn("mobs_monster:oerkki", {"default:stone"}, 7, 0, 7000, 1, -10)
+
+mobs:spawn({
+	name = "mobs_monster:oerkki",
+	nodes = {"default:stone"},
+	max_light = 7,
+	chance = 7000,
+	max_height = -10,
+})
+
 
 mobs:register_egg("mobs_monster:oerkki", S("Oerkki"), "default_obsidian.png", 1)
 
--- compatibility
-mobs:alias_mob("mobs:oerkki", "mobs_monster:oerkki")
+
+mobs:alias_mob("mobs:oerkki", "mobs_monster:oerkki") -- compatiblity

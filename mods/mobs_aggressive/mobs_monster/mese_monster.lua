@@ -1,6 +1,7 @@
 
 local S = mobs.intllib
 
+
 -- Mese Monster by Zeg9
 
 mobs:register_mob("mobs_monster:mese_monster", {
@@ -54,19 +55,32 @@ mobs:register_mob("mobs_monster:mese_monster", {
 	},
 })
 
-mobs:register_spawn("mobs_monster:mese_monster", {"default:stone"}, 7, 0, 5000, 1, -20)
+
+mobs:spawn({
+	name = "mobs_monster:mese_monster",
+	nodes = {"default:stone"},
+	max_light = 7,
+	chance = 5000,
+	active_object_count = 1,
+	max_height = -20,
+})
+
 
 mobs:register_egg("mobs_monster:mese_monster", S("Mese Monster"), "default_mese_block.png", 1)
 
--- compatibility
-mobs:alias_mob("mobs:mese_monster", "mobs_monster:mese_monster")
+
+mobs:alias_mob("mobs:mese_monster", "mobs_monster:mese_monster") -- compatiblity
+
 
 -- mese arrow (weapon)
 mobs:register_arrow("mobs_monster:mese_arrow", {
 	visual = "sprite",
+--	visual = "wielditem",
 	visual_size = {x = 0.5, y = 0.5},
 	textures = {"default_mese_crystal_fragment.png"},
+	--textures = {"default:mese_crystal_fragment"},
 	velocity = 6,
+--	rotate = 180,
 
 	hit_player = function(self, player)
 		player:punch(self.object, 1.0, {

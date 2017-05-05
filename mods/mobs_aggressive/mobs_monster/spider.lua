@@ -1,6 +1,7 @@
 
 local S = mobs.intllib
 
+
 -- Spider by AspireMint (fishyWET (CC-BY-SA 3.0 license for texture)
 
 mobs:register_mob("mobs_monster:spider", {
@@ -52,24 +53,38 @@ mobs:register_mob("mobs_monster:spider", {
 	},
 })
 
-mobs:register_spawn("mobs_monster:spider",
-	{"default:desert_stone", "ethereal:crystal_dirt"}, 13, 0, 7000, 1, 71)
+
+local spawn_on = "default:desert_stone"
+
+if minetest.get_modpath("ethereal") then
+	spawn_on = "ethereal:crystal_dirt"
+else
+	minetest.register_alias("ethereal:crystal_spike", "default:sandstone")
+end
+
+mobs:spawn({
+	name = "mobs_monster:spider",
+	nodes = {spawn_on},
+	min_light = 0,
+	max_light = 12,
+	chance = 7000,
+	active_object_count = 1,
+	min_height = -50,
+	max_height = 31000,
+})
+
 
 mobs:register_egg("mobs_monster:spider", S("Spider"), "mobs_cobweb.png", 1)
 
--- compatibility
-mobs:alias_mob("mobs:spider", "mobs_monster:spider")
 
--- ethereal crystal spike compatibility
-if not minetest.get_modpath("ethereal") then
-	minetest.register_alias("ethereal:crystal_spike", "default:sandstone")
-end
+mobs:alias_mob("mobs:spider", "mobs_monster:spider") -- compatibility
+
 
 -- cobweb
 minetest.register_node(":mobs:cobweb", {
 	description = S("Cobweb"),
 	drawtype = "plantlike",
-	visual_scale = 1.1,
+	visual_scale = 1.2,
 	tiles = {"mobs_cobweb.png"},
 	inventory_image = "mobs_cobweb.png",
 	paramtype = "light",
@@ -81,7 +96,7 @@ minetest.register_node(":mobs:cobweb", {
 	liquid_renewable = false,
 	liquid_range = 0,
 	walkable = false,
-	groups = {snappy = 1},
+	groups = {snappy = 1, disable_jump = 1},
 	drop = "farming:cotton",
 	sounds = default.node_sound_leaves_defaults(),
 })

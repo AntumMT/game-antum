@@ -1,6 +1,7 @@
 
 local S = mobs.intllib
 
+
 -- Sand Monster by PilzAdam
 
 mobs:register_mob("mobs_monster:sand_monster", {
@@ -8,6 +9,7 @@ mobs:register_mob("mobs_monster:sand_monster", {
 	passive = false,
 	attack_type = "dogfight",
 	pathfinding = true,
+	--specific_attack = {"player", "mobs_npc:npc"},
 	reach = 2,
 	damage = 1,
 	hp_min = 4,
@@ -55,9 +57,17 @@ mobs:register_mob("mobs_monster:sand_monster", {
 ]]
 })
 
-mobs:register_spawn("mobs_monster:sand_monster", {"default:desert_sand"}, 20, 0, 7000, 1, 31000)
+
+mobs:spawn({
+	name = "mobs_monster:sand_monster",
+	nodes = {"default:desert_sand"},
+	chance = 7000,
+	active_object_count = 2,
+	min_height = 0,
+})
+
 
 mobs:register_egg("mobs_monster:sand_monster", S("Sand Monster"), "default_desert_sand.png", 1)
 
--- compatibility
-mobs:alias_mob("mobs:sand_monster", "mobs_monster:sand_monster")
+
+mobs:alias_mob("mobs:sand_monster", "mobs_monster:sand_monster") -- compatibility
