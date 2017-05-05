@@ -101,7 +101,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * weather/
     * [lightning][] ([LGPL/CC-BY-SA](mods/weather/lightning/README.md))
 * wood/
-	* [coloredwood][] ([LGPL][lic.coloredwood]) -- version: [fc4ab15 Git][ver.coloredwood] *2017-03-18*
+	* [coloredwood][] ([LGPL][lic.coloredwood]) -- version: [7b177f3 Git][ver.coloredwood] *2016-03-27* ***UPDT***
 	* [mywoodslopes][] ([DWYWPL][lic.mywoodslopes]) -- version: [3a1b531 Git][ver.mywoodslopes] *2016-03-23*
 * world/
     * [bedrock2][] ([WTFPL][lic.bedrock2]) -- version [1.2.0-0378b61 Git][ver.bedrock2]
@@ -353,7 +353,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.bedrock2]: http://repo.or.cz/minetest_bedrock2.git/tree/0378b61
 [ver.character_creator]: https://github.com/Rui-Minetest/character_creator/tree/6a0e6aa
 [ver.cme]: https://github.com/BlockMen/cme/tree/e3502a1
-[ver.coloredwood]: https://github.com/minetest-mods/coloredwood/tree/fc4ab15
+[ver.coloredwood]: https://github.com/minetest-mods/coloredwood/tree/7b177f3
 [ver.craft_guide]: https://github.com/cornernote/minetest-craft_guide/tree/20520b5
 [ver.craftguide]: https://github.com/minetest-mods/craftguide/tree/51a00b9
 [ver.creeper]: https://github.com/Rui-Minetest/creeper/tree/036666e
