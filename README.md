@@ -68,6 +68,8 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [painting][] (???)
 * [pipeworks][] ([WTFPL](mods/pipeworks/LICENSE))
 * plantlife/
+* player/
+	* [airtanks][] ([MIT][lic.airtanks]) -- version: [fc01ffb Git][ver.airtanks] *2017-04-01*
 * player_action/
     * [throwing][] ([WTFPL][lic.throwing]) -- version: [0.14-79ad788 Git][ver.throwing] *2012-02-10*
 * player_visuals/
@@ -197,6 +199,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 
 [3d_armor]: https://forum.minetest.net/viewtopic.php?t=4654
+[airtanks]: https://forum.minetest.net/viewtopic.php?t=17102
 [ambience_ultralite]: https://forum.minetest.net/viewtopic.php?p=151166#p151166
 [animals_modpack]: https://forum.minetest.net/viewtopic.php?t=629
 [antum]: https://github.com/AntumDeluge/mtmp-antum
@@ -291,6 +294,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [worldedge]: https://forum.minetest.net/viewtopic.php?t=10753
 
 [lic.3d_armor]: mods/mp_3d_armor/LICENSE.md
+[lic.airtanks]: mods/player/airtanks/LICENSE.txt
 [lic.ambience_ultralite.1]: https://forum.minetest.net/viewtopic.php?t=2807
 [lic.ambience_ultralite.2]: mods/sound/ambience/sounds/SoundLicenses.txt
 [lic.amp_adv_spawning]: mods/spawning/adv_spawning/README.txt
@@ -358,6 +362,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 [ver.3d_armor]: https://github.com/stujones11/minetest-3d_armor/tree/793c748
 [ver.adv_spawning]: https://github.com/sapier/adv_spawning/tree/ec41aa9
+[ver.airtanks]: https://github.com/minetest-mods/airtanks/tree/fc01ffb
 [ver.antum]: https://github.com/AntumDeluge/mtmp-antum/tree/4477d40
 [ver.areas]: https://github.com/ShadowNinja/areas/tree/6080ff0
 [ver.awards]: https://github.com/minetest-mods/awards/tree/096fe16
