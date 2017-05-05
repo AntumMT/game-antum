@@ -47,7 +47,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [signs_lib][] ([BSD/WTFPL](mods/lib/signs_lib/copyright.txt))
 * lighting/
 	* [ilights][] ([CC BY-SA][lic.ilights]) -- version [d5f6900 Git][ver.ilights] *2016-03-27* ***UPDT***
-    * walking_light ([petermalone fork][walking_light]) ([WTFPL / CC-BY-SA][lic.walking_light]) -- version: [93de9b7 Git][ver.walking_light] *2015-09-14* ***UPDT***
+    * walking_light ([petermalone fork][walking_light]) ([WTFPL / CC-BY-SA][lic.walking_light]) -- version: [b9de302 Git][ver.walking_light] *2016-09-09* ([patched][patch.walking_light])
 * materials/
 	* [moreores][] ([zlib/CC-BY-SA](mods/materials/moreores/README.md))
 	* [quartz][] ([MIT](mods/materials/quartz/LICENSE.txt))
@@ -385,7 +385,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.trampoline]: https://github.com/AntumDeluge/mtmod-trampoline/tree/0c9c9c8
 [ver.unifieddyes]: https://github.com/minetest-mods/unifieddyes/tree/df177c2
 [ver.vector_extras]: https://github.com/HybridDog/vector_extras/tree/472deb6
-[ver.walking_light]: https://github.com/petermaloney/walking_light/tree/93de9b7
+[ver.walking_light]: https://github.com/petermaloney/walking_light/tree/b9de302
 [ver.wardrobe]: https://github.com/prestidigitator/minetest-mod-wardrobe/tree/c48b011
 
 [patch.adv_spawning]: https://github.com/AntumDeluge/mtmod-adv_spawning/commit/572688b
@@ -393,3 +393,4 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.helicopter]: https://github.com/AntumDeluge/mtmod-helicopter/commit/66a6523
 [patch.rainbow_ore]: https://github.com/AntumDeluge/mtmod-rainbow_ore/commit/60dc35e
 [patch.unifieddyes]: https://github.com/AntumDeluge/mtmod-unifieddyes/commit/df3f1b1
+[patch.walking_light]: https://github.com/AntumDeluge/mtmod-walking_light/commit/00ebab8
