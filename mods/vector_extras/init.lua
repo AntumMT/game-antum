@@ -235,7 +235,7 @@ function funcs.threeline(x, y, z)
 	return line
 end
 
-function funcs.sort(ps, preferred_coords)
+function funcs.sort_positions(ps, preferred_coords)
 	preferred_coords = preferred_coords or {"z", "y", "x"}
 	local a,b,c = unpack(preferred_coords)
 	local function ps_sorting(p1, p2)
@@ -270,7 +270,7 @@ end
 --local areas = {}
 function funcs.plane(ps)
 	-- sort positions and imagine the first one (A) as vector.zero
-	ps = vector.sort(ps)
+	ps = vector.sort_positions(ps)
 	local pos = ps[1]
 	local B = vector.subtract(ps[2], pos)
 	local C = vector.subtract(ps[3], pos)

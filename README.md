@@ -97,7 +97,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [home_gui][] ([BSD 3-Clause](mods/ui/home_gui/LICENSE)) -- version: [f6b5001 Git][ver.home_gui] *2015-08-14*
     * [hud][] ([LGPL / CC BY-SA / WTFPL](mods/ui/hud/README.txt))
     * [hudmap][] ([LGPL / WTFPL](mods/ui/hudmap/README.txt))
-* [vector_extras][] ([WTFPL](mods/vector_extras/LICENSE.txt))
+* [vector_extras][] ([WTFPL][lic.vector_extras]) -- version: [472deb6 Git][ver.vector_extras] *2017-01-25*
 * weather/
     * [lightning][] ([LGPL/CC-BY-SA](mods/weather/lightning/README.md))
 * wood/
@@ -341,6 +341,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.spectator_mode]: mods/admin/spectator_mode/LICENSE
 [lic.stairsplus]: mods/buildings/stairsplus/LICENSE.txt
 [lic.throwing]: https://forum.minetest.net/viewtopic.php?t=687#p5739
+[lic.vector_extras]: mods/vector_extras/LICENSE.txt
 [lic.walking_light]: mods/lighting/walking_light/README.md
 [lic.wardrobe]: mods/player_visuals/wardrobe/README.txt
 
@@ -381,6 +382,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.tools_obsidian]: https://github.com/Dragonop/tools_obsidian/tree/f77fd79
 [ver.trampoline]: https://github.com/AntumDeluge/mtmod-trampoline/tree/0c9c9c8
 [ver.unifieddyes]: https://github.com/minetest-mods/unifieddyes/tree/df177c2
+[ver.vector_extras]: https://github.com/HybridDog/vector_extras/tree/472deb6
 [ver.walking_light]: https://github.com/petermaloney/walking_light/tree/93de9b7
 [ver.wardrobe]: https://github.com/prestidigitator/minetest-mod-wardrobe/tree/c48b011
 
