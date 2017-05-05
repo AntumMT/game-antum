@@ -23,7 +23,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [moreblocks][] ([zlib][lic.moreblocks]) -- version: [fbfb079 Git][ver.moreblocks] *2017-03-14*
     * my_garage_door ([mydoors modpack][mydoors])
     * [stairsplus][] ([zlib][lic.stairsplus]) -- version: [311e1f0 Git][ver.stairsplus] *2013-05-30*
-    * [windmill][] ([WTFPL](mods/buildings/windmill/README.md))
+    * [windmill][] ([WTFPL][lic.windmill]) -- version: [47b029d Git][ver.windmill] *2014-08-21* ([patched][patch.windmill])
 * [campfire][] ([GPL / CC BY-SA / WTFPL](mods/campfire/README.md))
 * chat/
     * [away][] ([GPL](mods/chat/away/COPYING))
@@ -352,6 +352,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.vector_extras]: mods/vector_extras/LICENSE.txt
 [lic.walking_light]: mods/lighting/walking_light/README.md
 [lic.wardrobe]: mods/player_visuals/wardrobe/README.txt
+[lic.windmill]: mods/buildings/windmill/README.md
 
 [ver.3d_armor]: https://github.com/stujones11/minetest-3d_armor/tree/793c748
 [ver.adv_spawning]: https://github.com/sapier/adv_spawning/tree/ec41aa9
@@ -398,6 +399,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.vector_extras]: https://github.com/HybridDog/vector_extras/tree/472deb6
 [ver.walking_light]: https://github.com/petermaloney/walking_light/tree/b9de302
 [ver.wardrobe]: https://github.com/prestidigitator/minetest-mod-wardrobe/tree/c48b011
+[ver.windmill]: https://github.com/Sokomine/windmill/tree/47b029d
 
 [patch.adv_spawning]: https://github.com/AntumDeluge/mtmod-adv_spawning/commit/572688b
 [patch.christmas]: https://github.com/AntumDeluge/mtmod-christmas/commit/f6c8dc2
@@ -410,3 +412,4 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.rainbow_ore]: https://github.com/AntumDeluge/mtmod-rainbow_ore/commit/60dc35e
 [patch.unifieddyes]: https://github.com/AntumDeluge/mtmod-unifieddyes/commit/df3f1b1
 [patch.walking_light]: https://github.com/AntumDeluge/mtmod-walking_light/commit/00ebab8
+[patch.windmill]: https://github.com/AntumDeluge/mtmod-windmill/commit/7756ab4
