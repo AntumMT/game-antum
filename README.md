@@ -30,7 +30,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [chatlog][] ([CC0](mods/chat/chatlog/Readme.txt))
 * crafting/
     * [craft_guide][] ([BSD 3-Clause][lic.craft_guide]) -- version: [20520b5 Git][ver.craft_guide] *2017-01-30*
-    * [craftguide][] ([GPL / WTFPL](mods/crafting/craftguide/LICENSE)) Installed version: [51a00b9 Git][ver.craftguide] *2016-08-05* ***UPDT***
+    * [craftguide][] ([GPL / WTFPL](mods/crafting/craftguide/LICENSE)) Installed version: [86a96c3 Git][ver.craftguide] *2017-03-21* ([patched][patch.craftguide])
 * [currency][] ([WTFPL](https://forum.minetest.net/viewtopic.php?t=7002)) [Git d2ea7c3][ver.currency] *2016-03-27* ***UPDT***
 * farming/
 	* [farming_plus][] ([WTFPL](mods/farming/farming_plus/README.txt))
@@ -356,7 +356,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.cme]: https://github.com/BlockMen/cme/tree/e3502a1
 [ver.coloredwood]: https://github.com/minetest-mods/coloredwood/tree/7b177f3
 [ver.craft_guide]: https://github.com/cornernote/minetest-craft_guide/tree/20520b5
-[ver.craftguide]: https://github.com/minetest-mods/craftguide/tree/51a00b9
+[ver.craftguide]: https://github.com/minetest-mods/craftguide/tree/86a96c3
 [ver.creeper]: https://github.com/Rui-Minetest/creeper/tree/036666e
 [ver.currency]: https://github.com/minetest-mods/currency/tree/d2ea7c3
 [ver.ethereal]: https://github.com/tenplus1/ethereal/tree/2c24961
@@ -389,6 +389,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.wardrobe]: https://github.com/prestidigitator/minetest-mod-wardrobe/tree/c48b011
 
 [patch.adv_spawning]: https://github.com/AntumDeluge/mtmod-adv_spawning/commit/572688b
+[patch.craftguide]: https://github.com/AntumDeluge/mtmod-craftguide/commit/89db504
 [patch.ethereal]: https://github.com/AntumDeluge/mtmod-ethereal/commit/ba81be1
 [patch.helicopter]: https://github.com/AntumDeluge/mtmod-helicopter/commit/66a6523
 [patch.rainbow_ore]: https://github.com/AntumDeluge/mtmod-rainbow_ore/commit/60dc35e
