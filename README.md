@@ -16,7 +16,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [spectator_mode][] ([WTFPL][lic.spectator_mode]) -- version: [7d68bec Git][ver.spectator_mode] *2017-03-30*
 * [awards][] ([LGPL][lic.awards]) -- version: [096fe16 Git][ver.awards] *2017-02-25*
 * buildings/
-    * [bridges][] ([BPL](mods/buildings/bridges/README.md))
+    * [bridges][] ([GPL][lic.bridges]) -- version: [5b5f475 Git][ver.bridges] *2015-08-23*
     * [christmas][] ([MIT](mods/buildings/christmas/LICENSE.txt))
     * [elevator][] ([WTFPL](mods/buildings/elevator/readme.txt))
     * [fort_spikes][] ([MIT/CC0](mods/buildings/fort_spikes/LICENSE))
@@ -316,6 +316,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.areas]: mods/protection/areas/LICENSE.txt
 [lic.awards]: mods/awards/LICENSE.txt
 [lic.bedrock2]: mods/world/bedrock2/COPYING
+[lic.bridges]: mods/buildings/bridges/README.md
 [lic.character_creator]: mods/player_visuals/character_creator/license.txt
 [lic.cme]: mods/mp_cme/LICENSE.txt
 [lic.coloredwood]: mods/wood/coloredwood/LICENSE
@@ -353,6 +354,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.areas]: https://github.com/ShadowNinja/areas/tree/6080ff0
 [ver.awards]: https://github.com/minetest-mods/awards/tree/096fe16
 [ver.bedrock2]: http://repo.or.cz/minetest_bedrock2.git/tree/0378b61
+[ver.bridges]: https://github.com/Sokomine/bridges/tree/5b5f475
 [ver.character_creator]: https://github.com/Rui-Minetest/character_creator/tree/6a0e6aa
 [ver.cme]: https://github.com/BlockMen/cme/tree/e3502a1
 [ver.coloredwood]: https://github.com/minetest-mods/coloredwood/tree/fc4ab15
