@@ -19,7 +19,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [bridges][] ([GPL][lic.bridges]) -- version: [5b5f475 Git][ver.bridges] *2015-08-23*
     * [christmas][] ([MIT][lic.christmas]) -- version [d3bd872 Git][ver.christmas] *2013-01-11* ([patched][patch.christmas])
     * [elevator][] ([WTFPL](mods/buildings/elevator/readme.txt))
-    * [fort_spikes][] ([MIT/CC0](mods/buildings/fort_spikes/LICENSE))
+    * [fort_spikes][] ([MIT / CC0][lic.fort_spikes]) -- version: [2765b56 Git][ver.fort_spikes] *2017-04-07* ([patched][patch.fort_spikes])
     * [moreblocks][] ([zlib][lic.moreblocks]) -- version: [fbfb079 Git][ver.moreblocks] *2017-03-14*
     * my_garage_door ([mydoors modpack][mydoors])
     * [stairsplus][] ([zlib][lic.stairsplus]) -- version: [311e1f0 Git][ver.stairsplus] *2013-05-30*
@@ -328,6 +328,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.currency]: https://forum.minetest.net/viewtopic.php?t=7002
 [lic.enchanting]: mods/enchanting/LICENSE
 [lic.ethereal]: mods/world/ethereal/license.txt
+[lic.fort_spikes]: mods/buildings/fort_spikes/README.md
 [lic.helicopter]: mods/transport/helicopter/LICENSE
 [lic.homedecor]: mods/mp_homedecor_modpack/LICENSE
 [lic.ilights]: mods/lighting/ilights/init.lua
@@ -369,6 +370,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.currency]: https://github.com/minetest-mods/currency/tree/21f9811
 [ver.enchanting]: https://github.com/minetest-mods/enchanting/tree/13ea31c
 [ver.ethereal]: https://github.com/tenplus1/ethereal/tree/2c24961
+[ver.fort_spikes]: https://github.com/xeranas/fort_spikes/tree/2765b56
 [ver.helicopter]: https://github.com/SokolovPavel/helicopter/tree/10f1433
 [ver.hidename]: https://github.com/AntumDeluge/mtmod-hidename/tree/bb52dbc
 [ver.home_gui]: https://github.com/cornernote/minetest-home_gui/tree/f6b5001
@@ -403,6 +405,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.craftguide]: https://github.com/AntumDeluge/mtmod-craftguide/commit/89db504
 [patch.currency]: https://github.com/AntumDeluge/mtmod-currency/commit/7b0e29f
 [patch.ethereal]: https://github.com/AntumDeluge/mtmod-ethereal/commit/ba81be1
+[patch.fort_spikes]: https://github.com/AntumDeluge/mtmod-fort_spikes/commit/74dca42
 [patch.helicopter]: https://github.com/AntumDeluge/mtmod-helicopter/commit/66a6523
 [patch.rainbow_ore]: https://github.com/AntumDeluge/mtmod-rainbow_ore/commit/60dc35e
 [patch.unifieddyes]: https://github.com/AntumDeluge/mtmod-unifieddyes/commit/df3f1b1
