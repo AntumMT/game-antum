@@ -31,7 +31,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * crafting/
     * [craft_guide][] ([BSD 3-Clause][lic.craft_guide]) -- version: [20520b5 Git][ver.craft_guide] *2017-01-30*
     * [craftguide][] ([GPL / WTFPL](mods/crafting/craftguide/LICENSE)) Installed version: [86a96c3 Git][ver.craftguide] *2017-03-21* ([patched][patch.craftguide])
-* [currency][] ([WTFPL](https://forum.minetest.net/viewtopic.php?t=7002)) [Git d2ea7c3][ver.currency] *2016-03-27* ***UPDT***
+* [currency][] ([WTFPL][lic.currency]) [21f9811 Git][ver.currency] *2017-03-22*
 * farming/
 	* [farming_plus][] ([WTFPL](mods/farming/farming_plus/README.txt))
 * furniture/
@@ -321,6 +321,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.coloredwood]: mods/wood/coloredwood/LICENSE
 [lic.craft_guide]: mods/crafting/craft_guide/LICENSE
 [lic.creeper]: mods/mobs_aggressive/creeper/LICENSE.md
+[lic.currency]: https://forum.minetest.net/viewtopic.php?t=7002
 [lic.ethereal]: mods/world/ethereal/license.txt
 [lic.helicopter]: mods/transport/helicopter/LICENSE
 [lic.homedecor]: mods/mp_homedecor_modpack/LICENSE
@@ -358,7 +359,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.craft_guide]: https://github.com/cornernote/minetest-craft_guide/tree/20520b5
 [ver.craftguide]: https://github.com/minetest-mods/craftguide/tree/86a96c3
 [ver.creeper]: https://github.com/Rui-Minetest/creeper/tree/036666e
-[ver.currency]: https://github.com/minetest-mods/currency/tree/d2ea7c3
+[ver.currency]: https://github.com/minetest-mods/currency/tree/21f9811
 [ver.ethereal]: https://github.com/tenplus1/ethereal/tree/2c24961
 [ver.helicopter]: https://github.com/SokolovPavel/helicopter/tree/10f1433
 [ver.hidename]: https://github.com/AntumDeluge/mtmod-hidename/tree/bb52dbc
