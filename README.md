@@ -105,7 +105,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [mywoodslopes][] ([DWYWPL][lic.mywoodslopes]) -- version: [3a1b531 Git][ver.mywoodslopes] *2016-03-23*
 * world/
     * [bedrock2][] ([WTFPL][lic.bedrock2]) -- version [1.2.0-0378b61 Git][ver.bedrock2]
-    * [ethereal][] ([WTFPL][lic.ethereal]) -- version [2c24961 Git][ver.ethereal] *2017-04-23*
+    * [ethereal][] ([WTFPL][lic.ethereal]) -- version [2c24961 Git][ver.ethereal] *2017-04-23* ([patched][patch.ethereal])
     * [glow][] (GPL)
     * [nether][] ([WTFPL / CC BY-SA](mods/world/nether/README.md))
     * [worldedge][] ([DWYWPL](mods/world/worldedge/licence.txt))
@@ -389,7 +389,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.wardrobe]: https://github.com/prestidigitator/minetest-mod-wardrobe/tree/c48b011
 
 [patch.adv_spawning]: https://github.com/AntumDeluge/mtmod-adv_spawning/commit/572688b
-[patch.ethereal]: https://github.com/AntumDeluge/minetest-mod-ethereal/commit/2714ad4
+[patch.ethereal]: https://github.com/AntumDeluge/mtmod-ethereal/commit/ba81be1
 [patch.helicopter]: https://github.com/AntumDeluge/mtmod-helicopter/commit/66a6523
 [patch.rainbow_ore]: https://github.com/AntumDeluge/mtmod-rainbow_ore/commit/60dc35e
 [patch.unifieddyes]: https://github.com/AntumDeluge/mtmod-unifieddyes/commit/df3f1b1
