@@ -5,13 +5,16 @@ Requires Minetest server 0.4.15 or above
 The game includes the mods from the default [minetest_game](https://github.com/minetest/minetest_game/tree/master/mods)
 
 ### The following mods are also included:
+
+***"UPDT" Denotes update available***
+
 * admin/
     * [clean][] (WTFPL)
     * [invisible][] ([LGPL / CC BY-SA](mods/admin/invisible/readme.txt))
     * [privilegeareas][] ([WTFPL / CC0][lic.privilegeareas]) -- version: [aebaa00 Git][ver.privilegeareas] *2016-05-18*
     * [privs][] ([CC0](mods/admin/privs/init.lua))
-    * [spectator_mode][] ([WTFPL][lic.spectator_mode]) -- version: [3459db4 Git][ver.spectator_mode] *2016-08-05*
-* [awards][] ([LGPL][lic.awards]) -- version: [2.3.0-14-92c43d1 Git][ver.awards] *2016-08-29*
+    * [spectator_mode][] ([WTFPL][lic.spectator_mode]) -- version: [3459db4 Git][ver.spectator_mode] *2016-08-05* ***UPDT***
+* [awards][] ([LGPL][lic.awards]) -- version: [2.3.0-14-92c43d1 Git][ver.awards] *2016-08-29* ***UPDT***
 * buildings/
     * [bridges][] ([BPL](mods/buildings/bridges/README.md))
     * [christmas][] ([MIT](mods/buildings/christmas/LICENSE.txt))
@@ -27,8 +30,8 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [chatlog][] ([CC0](mods/chat/chatlog/Readme.txt))
 * crafting/
     * [craft_guide][] ([BSD 3-Clause][lic.craft_guide]) -- version: [20520b5 Git][ver.craft_guide] *2017-01-30*
-    * [craftguide][] ([GPL / WTFPL](mods/crafting/craftguide/LICENSE)) Installed version: [51a00b9 Git][ver.craftguide] *2016-08-05*
-* [currency][] ([WTFPL](https://forum.minetest.net/viewtopic.php?t=7002)) [Git d2ea7c3][ver.currency] *2016-03-27*
+    * [craftguide][] ([GPL / WTFPL](mods/crafting/craftguide/LICENSE)) Installed version: [51a00b9 Git][ver.craftguide] *2016-08-05* ***UPDT***
+* [currency][] ([WTFPL](https://forum.minetest.net/viewtopic.php?t=7002)) [Git d2ea7c3][ver.currency] *2016-03-27* ***UPDT***
 * farming/
 	* [farming_plus][] ([WTFPL](mods/farming/farming_plus/README.txt))
 * furniture/
@@ -43,8 +46,8 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [biome_lib][] ([WTFPL](mods/lib/biome_lib/README.md))
 	* [signs_lib][] ([BSD/WTFPL](mods/lib/signs_lib/copyright.txt))
 * lighting/
-	* [ilights][] ([CC BY-SA][lic.ilights]) -- version [d5f6900 Git][ver.ilights] *2016-03-27*
-    * walking_light ([petermalone fork][walking_light]) ([WTFPL / CC-BY-SA][lic.walking_light]) -- version: [93de9b7 Git][ver.walking_light] *2015-09-14*
+	* [ilights][] ([CC BY-SA][lic.ilights]) -- version [d5f6900 Git][ver.ilights] *2016-03-27* ***UPDT***
+    * walking_light ([petermalone fork][walking_light]) ([WTFPL / CC-BY-SA][lic.walking_light]) -- version: [93de9b7 Git][ver.walking_light] *2015-09-14* ***UPDT***
 * materials/
 	* [moreores][] ([zlib/CC-BY-SA](mods/materials/moreores/README.md))
 	* [quartz][] ([MIT](mods/materials/quartz/LICENSE.txt))
@@ -52,11 +55,11 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [unifieddyes][] ([GPL](mods/materials/unifieddyes/LICENSE)) -- version: [df177c2 Git][ver.unifieddyes] *2017-03-18* ([patched][patch.unifieddyes])
 * mobs/
     * [kpgmobs][] ([MIT](mods/mobs/kpgmobs/README.txt))
-    * [mobs_redo][] ([MIT](mods/mobs/mobs_redo/license.txt)) -- version: [e64530a Git][ver.mobs_redo] *2017-04-13*
+    * [mobs_redo][] ([MIT](mods/mobs/mobs_redo/license.txt)) -- version: [e64530a Git][ver.mobs_redo] *2017-04-13* ***UPDT***
 * mobs_aggressive/
     * [creeper][] ([WTFPL][lic.creeper]) -- version [036666e Git][ver.creeper]
     * [mobs_goblins][] ([CC-BY-SA / CC-BY / CC0](mods/mobs_aggressive/mobs_goblins/README.md))
-    * [mobs_monster][] ([MIT][lic.mobs_monster]) -- version: [91cbcf7 Git][ver.mobs_monster] *2016-08-19*
+    * [mobs_monster][] ([MIT][lic.mobs_monster]) -- version: [91cbcf7 Git][ver.mobs_monster] *2016-08-19* ***UPDT***
     * [spidermob][] ([CC-BY-SA / WTFPL / CC0](mods/mobs_aggressive/spidermob/LICENSE))
 * mobs_passive/
 * npc/
@@ -70,11 +73,11 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [character_creator][] ([MIT / CC-BY-SA][lic.character_creator]) -- version: [6a0e6aa Git][ver.character_creator]
     * [hidename][] (MIT) -- version [bb52dbc Git][ver.hidename]
     * [invisibility][] ([MIT][lic.invisibility]) -- version: [bf4156b Git][ver.invisibility] *2016-08-19*
-    * [playeranim][] ([WFTLPL][lic.playeranim.1]) / [BSD][lic.playeranim.2]) - version [f1c542e Git][ver.playeranim] *2016-07-25*
+    * [playeranim][] ([WFTLPL][lic.playeranim.1]) / [BSD][lic.playeranim.2]) - version [f1c542e Git][ver.playeranim] *2016-07-25* ***UPDT***
     * [wardrobe][] ([WTFPL][lic.wardrobe]) -- version: [1.1-2-c48b011 Git][ver.wardrobe] *2015-05-21*
 * protection/
-    * [areas][] ([LGPL][lic.areas]) -- version [67507c7 Git][ver.areas] *2016-06-19*
-    * [simple_protection][] ([WTFPL][lic.simple_protection]) -- version [c822e56 Git][ver.simple_protection] *2016-08-21*
+    * [areas][] ([LGPL][lic.areas]) -- version [67507c7 Git][ver.areas] *2016-06-19* ***UPDT***
+    * [simple_protection][] ([WTFPL][lic.simple_protection]) -- version [c822e56 Git][ver.simple_protection] *2016-08-21* ***UPDT***
 * sound/
     * [ambience][ambience_ultralite] ([WTFPL][lic.ambience_ultralite.1] / [CC-BY / CC-BY-SA / CC-BY-NC-SA / CC0][lic.ambience_ultralite.2]) -- version: 0.36
 * spawning/
@@ -102,7 +105,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [mywoodslopes][] ([DWYWPL][lic.mywoodslopes]) -- version: [3a1b531 Git][ver.mywoodslopes] *2016-03-23*
 * world/
     * [bedrock2][] ([WTFPL][lic.bedrock2]) -- version [1.2.0-0378b61 Git][ver.bedrock2]
-    * [ethereal][] ([WTFPL][lic.ethereal]) -- version [d0b896e Git][ver.ethereal] ([patched][patch.ethereal]) *2016-09-05*
+    * [ethereal][] ([WTFPL][lic.ethereal]) -- version [d0b896e Git][ver.ethereal] ([patched][patch.ethereal]) *2016-09-05* ***UPDT***
     * [glow][] (GPL)
     * [nether][] ([WTFPL / CC BY-SA](mods/world/nether/README.md))
     * [worldedge][] ([DWYWPL](mods/world/worldedge/licence.txt))
