@@ -24,7 +24,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * my_garage_door ([mydoors modpack][mydoors])
     * [stairsplus][] ([zlib][lic.stairsplus]) -- version: [311e1f0 Git][ver.stairsplus] *2013-05-30*
     * [windmill][] ([WTFPL][lic.windmill]) -- version: [47b029d Git][ver.windmill] *2014-08-21* ([patched][patch.windmill])
-* [campfire][] ([GPL / CC BY-SA / WTFPL](mods/campfire/README.md))
+* [campfire][] ([GPL / CC-BY-SA / WTFPL][lic.campfire]) -- version: [b45acd2 Git][ver.campfire] *2016-02-18* ([patched][patch.campfire])
 * chat/
     * [away][] ([GPL](mods/chat/away/COPYING))
     * [chatlog][] ([CC0](mods/chat/chatlog/Readme.txt))
@@ -319,6 +319,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.awards]: mods/awards/LICENSE.txt
 [lic.bedrock2]: mods/world/bedrock2/COPYING
 [lic.bridges]: mods/buildings/bridges/README.md
+[lic.campfire]: mods/campfire/README.md
 [lic.character_creator]: mods/player_visuals/character_creator/license.txt
 [lic.christmas]: mods/buildings/christmas/LICENSE.txt
 [lic.cme]: mods/mp_cme/LICENSE.txt
@@ -361,6 +362,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.awards]: https://github.com/minetest-mods/awards/tree/096fe16
 [ver.bedrock2]: http://repo.or.cz/minetest_bedrock2.git/tree/0378b61
 [ver.bridges]: https://github.com/Sokomine/bridges/tree/5b5f475
+[ver.campfire]: https://github.com/Napiophelios/campfire/tree/b45acd2
 [ver.character_creator]: https://github.com/Rui-Minetest/character_creator/tree/6a0e6aa
 [ver.christmas]: https://github.com/TheZenKitteh/minetest-christmas/tree/d3bd872
 [ver.cme]: https://github.com/BlockMen/cme/tree/e3502a1
@@ -402,6 +404,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.windmill]: https://github.com/Sokomine/windmill/tree/47b029d
 
 [patch.adv_spawning]: https://github.com/AntumDeluge/mtmod-adv_spawning/commit/572688b
+[patch.campfire]: https://github.com/AntumDeluge/mtmod-campfire/commit/67b9dd7
 [patch.christmas]: https://github.com/AntumDeluge/mtmod-christmas/commit/f6c8dc2
 [patch.coloredwood]: https://github.com/AntumDeluge/mtmod-coloredwood/commit/ed6c46f
 [patch.craftguide]: https://github.com/AntumDeluge/mtmod-craftguide/commit/89db504
