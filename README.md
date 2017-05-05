@@ -8,10 +8,10 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * admin/
     * [clean][] (WTFPL)
     * [invisible][] ([LGPL / CC BY-SA](mods/admin/invisible/readme.txt))
-    * [privilegeareas][] ([WTFPL / CC0][lic.privilegeareas]) -- version: [aebaa00 Git][ver.privilegeareas]
+    * [privilegeareas][] ([WTFPL / CC0][lic.privilegeareas]) -- version: [aebaa00 Git][ver.privilegeareas] *2016-05-18*
     * [privs][] ([CC0](mods/admin/privs/init.lua))
-    * [spectator_mode][] ([WTFPL][lic.spectator_mode]) -- version: [3459db4 Git][ver.spectator_mode]
-* [awards][] ([LGPL][lic.awards]) -- version: [2.3.0-14-92c43d1 Git][ver.awards]
+    * [spectator_mode][] ([WTFPL][lic.spectator_mode]) -- version: [3459db4 Git][ver.spectator_mode] *2016-08-05*
+* [awards][] ([LGPL][lic.awards]) -- version: [2.3.0-14-92c43d1 Git][ver.awards] *2016-08-29*
 * buildings/
     * [bridges][] ([BPL](mods/buildings/bridges/README.md))
     * [christmas][] ([MIT](mods/buildings/christmas/LICENSE.txt))
