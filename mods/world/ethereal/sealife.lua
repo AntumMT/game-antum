@@ -41,7 +41,7 @@ minetest.register_node("ethereal:coral2", {
 	paramtype = "light",
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.5, -0.5, -0.5, 0.5, -5/16, 0.5}
+		fixed = {-6 / 16, -0.5, -6 / 16, 6 / 16, 1 / 4, 6 / 16},
 	},
 	light_source = 3,
 	groups = {snappy = 3},
@@ -64,7 +64,7 @@ minetest.register_node("ethereal:coral3", {
 	paramtype = "light",
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.5, -0.5, -0.5, 0.5, -5/16, 0.5}
+		fixed = {-6 / 16, -0.5, -6 / 16, 6 / 16, 1 / 4, 6 / 16},
 	},
 	light_source = 3,
 	groups = {snappy = 3},
@@ -87,7 +87,7 @@ minetest.register_node("ethereal:coral4", {
 	paramtype = "light",
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.5, -0.5, -0.5, 0.5, -5/16, 0.5}
+		fixed = {-6 / 16, -0.5, -6 / 16, 6 / 16, 8 / 16, 6 / 16},
 	},
 	light_source = 3,
 	groups = {snappy = 3},
@@ -110,7 +110,7 @@ minetest.register_node("ethereal:coral5", {
 	paramtype = "light",
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.5, -0.5, -0.5, 0.5, -5/16, 0.5}
+		fixed = {-6 / 16, -0.5, -6 / 16, 6 / 16, 3 / 16, 6 / 16},
 	},
 	light_source = 3,
 	groups = {snappy = 3},
@@ -136,6 +136,7 @@ minetest.register_node("ethereal:sandy", {
 })
 
 -- randomly generate coral or seaweed and have seaweed grow up to 14 high
+if ethereal.sealife == 1 then
 minetest.register_abm({
 	label = "Grow coral/seaweed",
 	nodenames = {"ethereal:sandy"},
@@ -185,3 +186,4 @@ minetest.register_abm({
 
 	end,
 })
+end

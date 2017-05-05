@@ -1,6 +1,6 @@
 --[[
 
-	Minetest Ethereal Mod (9th August 2016)
+	Minetest Ethereal Mod (1st March 2017)
 
 	Created by ChinChow
 
@@ -8,12 +8,15 @@
 
 ]]
 
-ethereal = {}
+ethereal = {} -- DO NOT change settings below, use the settings.conf file
+ethereal.version = "1.22"
 ethereal.leaftype = 0 -- 0 for 2D plantlike, 1 for 3D allfaces
 ethereal.leafwalk = false -- true for walkable leaves, false to fall through
 ethereal.cavedirt = true -- caves chop through dirt when true
-
--- Set following to 1 to enable biome or 0 to disable
+ethereal.torchdrop = true -- torches drop when touching water
+ethereal.papyruswalk = true -- papyrus can be walked on
+ethereal.lilywalk = true -- waterlilies can be walked on
+ethereal.xcraft = true -- allow cheat crafts for cobble->gravel->dirt->sand, ice->snow, dry dirt->desert sand
 ethereal.glacier   = 1 -- Ice glaciers with snow
 ethereal.bamboo    = 1 -- Bamboo with sprouts
 ethereal.mesa      = 1 -- Mesa red and orange clay with giant redwood
@@ -37,6 +40,19 @@ ethereal.plains    = 1 -- Dry dirt with scorched trees
 ethereal.savannah  = 1 -- Dry yellow grass with acacia tree's
 ethereal.fiery     = 1 -- Red grass with lava craters
 ethereal.sandclay  = 1 -- Sand areas with clay underneath
+ethereal.swamp     = 1 -- Swamp areas with vines on tree's, mushrooms, lilly's and clay sand
+ethereal.sealife   = 1 -- Enable coral and seaweed
+ethereal.reefs     = 1 -- Enable new 0.4.15 coral reefs in default
+
+local path = minetest.get_modpath("ethereal")
+
+-- Load new settings if found
+local input = io.open(path.."/settings.conf", "r")
+if input then
+	dofile(path .. "/settings.conf")
+	input:close()
+	input = nil
+end
 
 -- Intllib
 local S
@@ -47,7 +63,8 @@ else
 end
 ethereal.intllib = S
 
-local path = minetest.get_modpath("ethereal")
+-- Falling node function
+ethereal.check_falling = minetest.check_for_falling or nodeupdate
 
 dofile(path .. "/plantlife.lua")
 dofile(path .. "/mushroom.lua")
@@ -55,8 +72,9 @@ dofile(path .. "/onion.lua")
 dofile(path .. "/crystal.lua")
 dofile(path .. "/water.lua")
 dofile(path .. "/dirt.lua")
-dofile(path .. "/leaves.lua")
+dofile(path .. "/food.lua")
 dofile(path .. "/wood.lua")
+dofile(path .. "/leaves.lua")
 dofile(path .. "/sapling.lua")
 dofile(path .. "/strawberry.lua")
 dofile(path .. "/fishing.lua")
@@ -65,10 +83,17 @@ dofile(path .. "/sealife.lua")
 dofile(path .. "/fences.lua")
 dofile(path .. "/gates.lua")
 dofile(path .. "/mapgen.lua")
-dofile(path .. "/food.lua")
-dofile(path .. "/bonemeal.lua")
 dofile(path .. "/compatibility.lua")
 dofile(path .. "/stairs.lua")
+dofile(path .. "/lucky_block.lua")
+
+-- Use bonemeal mod instead of ethereal's own if found
+if minetest.get_modpath("bonemeal") then
+	minetest.register_alias("ethereal:bone", "bonemeal:bone")
+	minetest.register_alias("ethereal:bonemeal", "bonemeal:bonemeal")
+else
+	dofile(path .. "/bonemeal.lua")
+end
 
 if minetest.get_modpath("xanadu") then
 	dofile(path .. "/plantpack.lua")

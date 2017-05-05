@@ -13,11 +13,11 @@ minetest.register_node("ethereal:crystal_spike", {
 	sunlight_propagates = true,
 	walkable = false,
 	damage_per_second = 1,
-	groups = {cracky = 1, falling_node = 1, puts_out_fire = 1},
+	groups = {cracky = 1, falling_node = 1, puts_out_fire = 1, cools_lava = 1},
 	sounds = default.node_sound_glass_defaults(),
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.5, -0.5, -0.5, 0.5, -5/16, 0.5},
+		fixed = {-5 / 16, -0.5, -5 / 16, 5 / 16, 0.41, 5 / 16},
 	},
 })
 
@@ -36,13 +36,21 @@ minetest.register_craft({
 	}
 })
 
+minetest.register_craft({
+	output = "ethereal:crystal_ingot",
+	recipe = {
+		{"ethereal:crystal_spike", "default:mese_crystal"},
+		{"default:mese_crystal", "ethereal:crystal_spike"},
+	}
+})
+
 -- Crystal Block
 minetest.register_node("ethereal:crystal_block", {
 	description = S("Crystal Block"),
 	tiles = {"crystal_block.png"},
 	light_source = 9,
 	is_ground_content = false,
-	groups = {cracky = 1, level = 2, puts_out_fire = 1},
+	groups = {cracky = 1, level = 2, puts_out_fire = 1, cools_lava = 1},
 	sounds = default.node_sound_glass_defaults(),
 })
 
@@ -78,7 +86,8 @@ minetest.register_tool("ethereal:sword_crystal", {
 			},
 		},
 		damage_groups = {fleshy = 10},
-	}
+	},
+	sound = {breaks = "default_tool_breaks"},
 })
 
 minetest.register_craft({
@@ -101,12 +110,13 @@ minetest.register_tool("ethereal:axe_crystal", {
 		groupcaps = {
 			choppy = {
 				times = {[1] = 2.00, [2] = 0.80, [3] = 0.40},
-				uses = 30,
-				maxlevel = 2
+				uses = 40,
+				maxlevel = 3
 			},
 		},
 		damage_groups = {fleshy = 7},
 	},
+	sound = {breaks = "default_tool_breaks"},
 })
 
 minetest.register_craft({
@@ -115,6 +125,15 @@ minetest.register_craft({
 		{'ethereal:crystal_ingot', 'ethereal:crystal_ingot'},
 		{'ethereal:crystal_ingot', 'default:steel_ingot'},
 		{'', 'default:steel_ingot'},
+	}
+})
+
+minetest.register_craft({
+	output = 'ethereal:axe_crystal',
+	recipe = {
+		{'ethereal:crystal_ingot', 'ethereal:crystal_ingot'},
+		{'default:steel_ingot', 'ethereal:crystal_ingot'},
+		{'default:steel_ingot', ''},
 	}
 })
 
@@ -133,8 +152,9 @@ minetest.register_tool("ethereal:pick_crystal", {
 				maxlevel = 3
 			},
 		},
-		damage_groups = {fleshy = 7},
+		damage_groups = {fleshy = 6},
 	},
+	sound = {breaks = "default_tool_breaks"},
 })
 
 minetest.register_craft({
@@ -151,7 +171,7 @@ minetest.register_tool("ethereal:shovel_crystal", {
 	description = S("Crystal (soft touch) Shovel"),
 	inventory_image = "crystal_shovel.png",
 	wield_image = "crystal_shovel.png^[transformR90",
-
+	sound = {breaks = "default_tool_breaks"},
 	on_use = function(itemstack, user, pointed_thing)
 
 		if pointed_thing.type ~= "node" then
@@ -173,12 +193,20 @@ minetest.register_tool("ethereal:shovel_crystal", {
 
 			minetest.remove_node(pointed_thing.under)
 
-			nodeupdate(pos)
+			ethereal.check_falling(pos)
 
-			inv:add_item("main", {name = nn})
-			itemstack:add_wear(65535 / 100) -- 111 uses
+			if minetest.setting_getbool("creative_mode") then
 
-			minetest.sound_play("default_dirt_footstep", {pos = pos, gain = 0.35})
+				if not inv:contains_item("main", {name = nn}) then
+					inv:add_item("main", {name = nn})
+				end
+			else
+
+				inv:add_item("main", {name = nn})
+				itemstack:add_wear(65535 / 100) -- 111 uses
+			end
+
+			minetest.sound_play("default_dig_crumbly", {pos = pos, gain = 0.4})
 
 			return itemstack
 		end
@@ -208,10 +236,11 @@ minetest.register_tool("ethereal:crystal_gilly_staff", {
 })
 
 minetest.register_craft({
+	type = "shapeless",
 	output = "ethereal:crystal_gilly_staff",
 	recipe = {
-		{"ethereal:green_moss", "ethereal:gray_moss", "ethereal:fiery_moss"},
-		{"ethereal:crystal_moss", "ethereal:crystal_ingot", "ethereal:mushroom_moss"},
-		{"", "ethereal:crystal_ingot", ""},
-	}
+		"ethereal:green_moss", "ethereal:gray_moss", "ethereal:fiery_moss",
+		"ethereal:crystal_moss", "ethereal:crystal_ingot", "ethereal:mushroom_moss",
+		"ethereal:crystal_ingot"
+	},
 })

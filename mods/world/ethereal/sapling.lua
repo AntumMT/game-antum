@@ -13,14 +13,14 @@ minetest.register_node("ethereal:bamboo_sprout", {
 	walkable = false,
 	groups = {
 		snappy = 3, attached_node = 1, flammable = 2,
-		dig_immediate = 3, sapling = 1
+		dig_immediate = 3, ethereal_sapling = 1
 	},
 	sounds = default.node_sound_defaults(),
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.5, -0.5, -0.5, 0.5, -5/16, 0.5},
+		fixed = {-4 / 16, -0.5, -4 / 16, 4 / 16, 0, 4 / 16}
 	},
-	on_use = minetest.item_eat(-2),
+	on_use = minetest.item_eat(2),
 	grown_height = 11,
 })
 
@@ -30,7 +30,6 @@ ethereal.register_sapling = function(name, desc, texture, height)
 	minetest.register_node(name .. "_sapling", {
 		description = S(desc .. " Tree Sapling"),
 		drawtype = "plantlike",
-		visual_scale = 1.0,
 		tiles = {texture .. ".png"},
 		inventory_image = texture .. ".png",
 		wield_image = texture .. ".png",
@@ -40,13 +39,13 @@ ethereal.register_sapling = function(name, desc, texture, height)
 		walkable = false,
 		selection_box = {
 			type = "fixed",
-			fixed = {-0.5, -0.5, -0.5, 0.5, -5/16, 0.5}
+			fixed = {-4 / 16, -0.5, -4 / 16, 4 / 16, 7 / 16, 4 / 16}
 		},
 		groups = {
 			snappy = 2, dig_immediate = 3, flammable = 2,
-			ethereal_sapling = 1, sapling = 1, attached_node = 1
+			ethereal_sapling = 1, attached_node = 1, sapling = 1
 		},
-		sounds = default.node_sound_defaults(),
+		sounds = default.node_sound_leaves_defaults(),
 		grown_height = height,
 	})
 end
@@ -165,7 +164,8 @@ ethereal.grow_sapling = function (pos, node)
 		ethereal.grow_yellow_tree(pos)
 
 	elseif node.name == "ethereal:big_tree_sapling"
-	and under == "ethereal:green_dirt" then
+	--and under == "ethereal:green_dirt" then
+	and under == "default:dirt_with_grass" then
 		ethereal.grow_big_tree(pos)
 
 	elseif node.name == "ethereal:banana_tree_sapling"
@@ -189,7 +189,8 @@ ethereal.grow_sapling = function (pos, node)
 		ethereal.grow_willow_tree(pos)
 
 	elseif node.name == "ethereal:redwood_sapling"
-	and under == "bakedclay:red" then
+	--and under == "bakedclay:red" then
+	and under == "default:dirt_with_dry_grass" then
 		ethereal.grow_redwood_tree(pos)
 
 	elseif node.name == "ethereal:orange_tree_sapling"
@@ -201,7 +202,8 @@ ethereal.grow_sapling = function (pos, node)
 		ethereal.grow_bamboo_tree(pos)
 
 	elseif node.name == "ethereal:birch_sapling"
-	and under == "ethereal:green_dirt" then
+	--and under == "ethereal:green_dirt" then
+	and under == "default:dirt_with_grass" then
 		ethereal.grow_birch_tree(pos)
 	end
 
@@ -225,3 +227,11 @@ minetest.register_abm({
 		ethereal.grow_sapling(pos, node)
 	end,
 })
+
+--[[ burn saplings
+minetest.register_craft({
+	type = "fuel",
+	recipe = "group:ethereal_sapling",
+	burntime = 10,
+})
+]]

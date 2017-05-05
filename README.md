@@ -105,7 +105,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [mywoodslopes][] ([DWYWPL][lic.mywoodslopes]) -- version: [3a1b531 Git][ver.mywoodslopes] *2016-03-23*
 * world/
     * [bedrock2][] ([WTFPL][lic.bedrock2]) -- version [1.2.0-0378b61 Git][ver.bedrock2]
-    * [ethereal][] ([WTFPL][lic.ethereal]) -- version [d0b896e Git][ver.ethereal] ([patched][patch.ethereal]) *2016-09-05* ***UPDT***
+    * [ethereal][] ([WTFPL][lic.ethereal]) -- version [2c24961 Git][ver.ethereal] *2017-04-23*
     * [glow][] (GPL)
     * [nether][] ([WTFPL / CC BY-SA](mods/world/nether/README.md))
     * [worldedge][] ([DWYWPL](mods/world/worldedge/licence.txt))
@@ -359,7 +359,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.craftguide]: https://github.com/minetest-mods/craftguide/tree/51a00b9
 [ver.creeper]: https://github.com/Rui-Minetest/creeper/tree/036666e
 [ver.currency]: https://github.com/minetest-mods/currency/tree/d2ea7c3
-[ver.ethereal]: https://github.com/tenplus1/ethereal/tree/d0b896e
+[ver.ethereal]: https://github.com/tenplus1/ethereal/tree/2c24961
 [ver.helicopter]: https://github.com/SokolovPavel/helicopter/tree/10f1433
 [ver.hidename]: https://github.com/AntumDeluge/mtmod-hidename/tree/bb52dbc
 [ver.home_gui]: https://github.com/cornernote/minetest-home_gui/tree/f6b5001

@@ -1,6 +1,57 @@
 
 local S = ethereal.intllib
 
+-- bone item
+minetest.register_craftitem("ethereal:bone", {
+	description = S("Bone"),
+	inventory_image = "bone.png",
+})
+
+-- bonemeal recipes
+minetest.register_craft({
+	type = "shapeless",
+	output = 'ethereal:bonemeal 2',
+	recipe = {'ethereal:bone'},
+})
+
+minetest.register_craft({
+	type = "shapeless",
+	output = 'ethereal:bonemeal 4',
+	recipe = {'bones:bones'},
+})
+
+minetest.register_craft( {
+	type = "shapeless",
+	output = "dye:white 2",
+	recipe = {"ethereal:bonemeal"},
+})
+
+-- have animalmaterials bone craft into bonemeal if found
+if minetest.get_modpath('animalmaterials') then
+
+	minetest.register_craft({
+		type = "shapeless",
+		output = 'ethereal:bonemeal 2',
+		recipe = {'animalmaterials:bone'},
+	})
+end
+
+-- add bones to dirt
+minetest.override_item("default:dirt", {
+	drop = {
+		max_items = 1,
+		items = {
+			{
+				items = {'ethereal:bone', 'default:dirt'},
+				rarity = 30,
+			},
+			{
+				items = {'default:dirt'},
+			}
+		}
+	},
+})
+
 local plants = {
 	"flowers:dandelion_white",
 	"flowers:dandelion_yellow",
@@ -31,6 +82,7 @@ local crops = {
 	{"ethereal:strawberry_", 8},
 	{"ethereal:onion_", 5},
 	{"farming:barley_", 7},
+	{"farming:hemp_", 8},
 }
 
 -- check if sapling has enough height room to grow
@@ -44,6 +96,25 @@ local function enough_height(pos, height)
 		return false -- obstructed
 	else
 		return true -- can grow
+	end
+end
+
+-- moretrees specific function
+local function more_tree(pos, object)
+
+	if type(object) == "table" and object.axiom then
+		-- grow L-system tree
+		minetest.remove_node(pos)
+		minetest.spawn_tree(pos, object)
+
+	elseif type(object) == "string" and minetest.registered_nodes[object] then
+		-- place node
+		minetest.set_node(pos, {name = object})
+
+	elseif type(object) == "function" then
+		-- function
+		object(pos)
+
 	end
 end
 
@@ -74,7 +145,8 @@ local function growth(pointed_thing)
 	})
 
 	-- 50/50 chance of growing a sapling
-	if minetest.get_item_group(node.name, "sapling") > 0 then
+	if minetest.get_item_group(node.name, "sapling") > 0
+	or minetest.get_item_group(node.name, "ethereal_sapling") > 0 then
 
 		if math.random(1, 2) == 1 then
 			return
@@ -138,6 +210,41 @@ local function growth(pointed_thing)
 
 		elseif node.name == "ethereal:birch_sapling" then
 			ethereal.grow_birch_tree(pos)
+
+-- grow moretree's sapling
+elseif node.name == "moretrees:beech_sapling" then
+	more_tree(pos, moretrees.spawn_beech_object)
+elseif node.name == "moretrees:apple_tree_sapling" then
+	more_tree(pos, moretrees.spawn_apple_tree_object)
+elseif node.name == "moretrees:oak_sapling" then
+	more_tree(pos, moretrees.spawn_oak_object)
+elseif node.name == "moretrees:sequoia_sapling" then
+	more_tree(pos, moretrees.spawn_sequoia_object)
+elseif node.name == "moretrees:birch_sapling" then
+	--more_tree(pos, moretrees.spawn_birch_object)
+	moretrees.grow_birch(pos)
+elseif node.name == "moretrees:palm_sapling" then
+	more_tree(pos, moretrees.spawn_palm_object)
+elseif node.name == "moretrees:date_palm_sapling" then
+	more_tree(pos, moretrees.spawn_date_palm_object)
+elseif node.name == "moretrees:spruce_sapling" then
+	--more_tree(pos, moretrees.spawn_spruce_object)
+	moretrees.grow_spruce(pos)
+elseif node.name == "moretrees:cedar_sapling" then
+	more_tree(pos, moretrees.spawn_cedar_object)
+elseif node.name == "moretrees:poplar_sapling" then
+	more_tree(pos, moretrees.spawn_poplar_object)
+elseif node.name == "moretrees:willow_sapling" then
+	more_tree(pos, moretrees.spawn_willow_object)
+elseif node.name == "moretrees:rubber_tree_sapling" then
+	more_tree(pos, moretrees.spawn_rubber_tree_object)
+elseif node.name == "moretrees:fir_sapling" then
+	--more_tree(pos, moretrees.spawn_fir_object)
+	if minetest.find_node_near(pos, 1, {"default:snow"}) then
+		moretrees.grow_fir_snow(pos)
+	else
+		moretrees.grow_fir(pos)
+	end
 
 		-- grow default tree
 		elseif node.name == "default:sapling"
@@ -222,79 +329,33 @@ local function growth(pointed_thing)
 	end
 end
 
--- bone item (use "animalmaterials:bone" if available)
-local ethereal_bone = 'ethereal:bone'
-if minetest.get_modpath('animalmaterials') then
-	ethereal_bone = 'animalmaterials:bone'
-else
-	minetest.register_craftitem('ethereal:bone', {
-		description = S('Bone'),
-		inventory_image = 'bone.png',
-	})
-end
-
 -- bonemeal item
 minetest.register_craftitem("ethereal:bonemeal", {
 	description = S("Bone Meal"),
 	inventory_image = "bonemeal.png",
-	
+
 	on_use = function(itemstack, user, pointed_thing)
-		
+
 		if pointed_thing.type == "node" then
-			
-		    -- Check if node protected
-		    if minetest.is_protected(pointed_thing.under, user:get_player_name()) then
-		    	return
+
+			-- Check if node protected
+			if minetest.is_protected(pointed_thing.under, user:get_player_name()) then
+				return
 			end
-			
+
 			if not minetest.setting_getbool("creative_mode") then
-			
+
 				local item = user:get_wielded_item()
-				
+
 				item:take_item()
 				user:set_wielded_item(item)
 			end
-			
+
 			growth(pointed_thing)
-			
+
 			itemstack:take_item()
-			
+
 			return itemstack
 		end
 	end,
-})
-
--- bonemeal recipes
-minetest.register_craft({
-	type = "shapeless",
-	output = 'ethereal:bonemeal 2',
-	recipe = {ethereal_bone},
-})
-
-minetest.register_craft({
-	type = "shapeless",
-	output = 'ethereal:bonemeal 4',
-	recipe = {'bones:bones'},
-})
-
-minetest.register_craft( {
-	type = "shapeless",
-	output = "dye:white 2",
-	recipe = {"ethereal:bonemeal"},
-})
-
--- add bones to dirt
-minetest.override_item("default:dirt", {
-	drop = {
-		max_items = 1,
-		items = {
-			{
-				items = {ethereal_bone, 'default:dirt'},
-				rarity = 30,
-			},
-			{
-				items = {'default:dirt'},
-			}
-		}
-	},
 })
