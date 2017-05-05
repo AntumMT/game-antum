@@ -34,8 +34,9 @@ local revertsky = function()
 		return
 	end
 
-	for i = 1, table.getn(ps) do
-		ps[i].p:set_sky(ps[i].sky.bgcolor, ps[i].sky.type, ps[i].sky.textures)
+	for key, entry in pairs(ps) do
+		local sky = entry.sky
+		entry.p:set_sky(sky.bgcolor, sky.type, sky.textures)
 	end
 
 	ps = {}
@@ -118,6 +119,8 @@ lightning.strike = function(pos)
 		-- to make the texture lightning bolt hit exactly in the middle of the
 		-- texture (e.g. 127/128 on a 256x wide texture)
 		texture = "lightning_lightning_" .. rng:next(1,3) .. ".png",
+		-- 0.4.15+
+		glow = 14,
 	})
 
 	minetest.sound_play({ pos = pos, name = "lightning_thunder", gain = 10, max_hear_distance = 500 })
@@ -130,11 +133,18 @@ lightning.strike = function(pos)
 
 	local playerlist = minetest.get_connected_players()
 	for i = 1, #playerlist do
+		local player = playerlist[i]
 		local sky = {}
-		sky.bgcolor, sky.type, sky.textures = playerlist[i]:get_sky()
-		table.insert(ps, { p = playerlist[i], sky = sky})
-		playerlist[i]:set_sky(0xffffff, "plain", {})
+
+		sky.bgcolor, sky.type, sky.textures = player:get_sky()
+
+		local name = player:get_player_name()
+		if ps[name] == nil then
+			ps[name] = {p = player, sky = sky}
+			player:set_sky(0xffffff, "plain", {})
+		end
 	end
+
 	-- trigger revert of skybox
 	ttl = 5
 
@@ -147,7 +157,7 @@ lightning.strike = function(pos)
 				return
 			end
 			-- very rarely, potentially cause a fire
-			if rng:next(1,1000) == 1 then
+			if fire and rng:next(1,1000) == 1 then
 				minetest.set_node(pos2, {name = "fire:basic_flame"})
 			else
 				minetest.set_node(pos2, {name = "lightning:dying_flame"})
@@ -156,7 +166,7 @@ lightning.strike = function(pos)
 	end
 
 	-- perform block modifications
-	if rng:next(1,10) > 1 then
+	if not default or rng:next(1,10) > 1 then
 		return
 	end
 	pos2.y = pos2.y - 1
@@ -192,7 +202,7 @@ minetest.register_node("lightning:dying_flame", {
 	buildable_to = true,
 	sunlight_propagates = true,
 	damage_per_second = 4,
-	groups = {dig_immediate = 3},
+	groups = {dig_immediate = 3, not_in_creative_inventory=1},
 	on_timer = function(pos)
 		minetest.remove_node(pos)
 	end,

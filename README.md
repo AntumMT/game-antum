@@ -99,7 +99,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [hudmap][] ([LGPL / WTFPL](mods/ui/hudmap/README.txt))
 * [vector_extras][] ([WTFPL][lic.vector_extras]) -- version: [472deb6 Git][ver.vector_extras] *2017-01-25*
 * weather/
-    * [lightning][] ([LGPL/CC-BY-SA](mods/weather/lightning/README.md))
+    * [lightning][] ([LGPL / CC-BY-SA][lic.lightning]) -- version: [39bd36c Git][ver.lightning] *2017-02-20*
 * wood/
 	* [coloredwood][] ([LGPL][lic.coloredwood]) -- version: [7b177f3 Git][ver.coloredwood] *2016-03-27* ***UPDT***
 	* [mywoodslopes][] ([DWYWPL][lic.mywoodslopes]) -- version: [3a1b531 Git][ver.mywoodslopes] *2016-03-23*
@@ -327,6 +327,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.ilights]: mods/lighting/ilights/init.lua
 [lic.invisibility]: mods/player_visuals/invisibility/license.txt
 [lic.jukebox]: mods/furniture/jukebox/README.txt
+[lic.lightning]: mods/weather/lightning/README.md
 [lic.mdoors.1]: mods/mp_mydoors/mdoors/README.txt
 [lic.mdoors.2]: doc/modpacks/mydoors/licence.txt
 [lic.mobf]: mods/mp_mobf_core/License.txt
@@ -366,6 +367,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.ilights]: https://github.com/minetest-mods/ilights/tree/d5f6900
 [ver.invisibility]: https://github.com/tenplus1/invisibility/tree/bf4156b
 [ver.jukebox]: https://github.com/minetest-mods/jukebox/tree/e6a507f
+[ver.lightning]: https://github.com/minetest-mods/lightning/tree/39bd36c
 [ver.mobs_monster]: https://github.com/tenplus1/mobs_monster/tree/91cbcf7
 [ver.mobs_redo]: https://github.com/tenplus1/mobs_redo/tree/feb26ed
 [ver.moreblocks]: https://github.com/minetest-mods/moreblocks/tree/fbfb079
