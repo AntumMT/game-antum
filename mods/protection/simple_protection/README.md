@@ -11,7 +11,7 @@ License: WTFPL
 
 Chat commands:
 --------------
-/area &lt;args&gt;
+/area &lt;args ..&gt;
 
 	show				-> Shows up the information about the current area
 	share <name>		-> Shares the current area with <name>
@@ -19,7 +19,9 @@ Chat commands:
 	shareall <name>		-> Shares all your areas with <name>
 	unshareall <name>	-> Unshares all your areas with <name>
 	unclaim				-> Unclaims the current area
-	
+	delete <name>		-> Removes all areas of <name> (requires "server" privilege)
+	list [<name>]		-> Lists all areas (<name> is optional)
+
 About /area show:
 -----------------
 

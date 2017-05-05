@@ -33,7 +33,7 @@ function table_delete(t, e)
 end
 
 s_protect.can_access = function(pos, player_name)
-	if not player_name or player_name == "" then
+	if not player_name then
 		return false
 	end
 	-- Allow pipeworks access
@@ -190,6 +190,7 @@ s_protect.save = function()
 	io.close(file)
 end
 
+simple_protection = false
 s_protect.load_config = function()
 	-- Load defaults
 	dofile(s_protect.mod_path.."/settings.conf")
@@ -197,7 +198,7 @@ s_protect.load_config = function()
 	if file then
 		io.close(file)
 		-- Load existing config
-		local simple_protection = {}
+		simple_protection = {}
 		dofile(s_protect.conf)
 
 		-- Backwards compatibility

@@ -77,7 +77,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [wardrobe][] ([WTFPL][lic.wardrobe]) -- version: [1.1-2-c48b011 Git][ver.wardrobe] *2015-05-21*
 * protection/
     * [areas][] ([LGPL][lic.areas]) -- version [6080ff0 Git][ver.areas] *2016-11-25*
-    * [simple_protection][] ([WTFPL][lic.simple_protection]) -- version [c822e56 Git][ver.simple_protection] *2016-08-21* ***UPDT***
+    * [simple_protection][] ([WTFPL][lic.simple_protection]) -- version [23c024f Git][ver.simple_protection] *2017-01-07*
 * sound/
     * [ambience][ambience_ultralite] ([WTFPL][lic.ambience_ultralite.1] / [CC-BY / CC-BY-SA / CC-BY-NC-SA / CC0][lic.ambience_ultralite.2]) -- version: 0.36
 * spawning/
@@ -376,7 +376,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.playeranim]: https://github.com/minetest-mods/playeranim/tree/0ca8e5a
 [ver.privilegeareas]: https://github.com/minetest-mods/privilegeareas/tree/aebaa00
 [ver.rainbow_ore]: https://github.com/FsxShader2012/rainbow_ore/tree/6e77693
-[ver.simple_protection]: https://github.com/SmallJoker/simple_protection/tree/c822e56
+[ver.simple_protection]: https://github.com/SmallJoker/simple_protection/tree/23c024f
 [ver.spawneggs]: https://github.com/thefamilygrog66/spawneggs/tree/4650370
 [ver.spectator_mode]: https://github.com/minetest-mods/spectator_mode/tree/7d68bec
 [ver.stairsplus]: https://github.com/CasimirKaPazi/stairsplus/tree/311e1f0

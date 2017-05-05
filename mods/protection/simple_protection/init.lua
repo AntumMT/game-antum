@@ -14,21 +14,16 @@ s_protect.sharefile = world_path.."/s_protect_share.data"
 -- INTTLIB SUPPORT START
 s_protect.gettext = function(rawtext, replacements, ...)
 	replacements = {replacements, ...}
-	return rawtext:gsub("@(%d+)", function(n)
+	local text = rawtext:gsub("@(%d+)", function(n)
 		return replacements[tonumber(n)]
 	end)
+	return text
 end
 
 if minetest.get_modpath("intllib") then
     s_protect.gettext = intllib.Getter()
 end
-
--- Function to insert words without translating
-s_protect.gettext_replace = function(rawtext, replacement, ...)
-	return s_protect.gettext(rawtext, ...):gsub("[$]", replacement)
-end
 local S = s_protect.gettext
-local SR = s_protect.gettext_replace
 -- INTTLIB SUPPORT END
 
 
@@ -50,34 +45,35 @@ minetest.register_chatcommand("area", {
 	description = S("Manages all of your areas."),
 	privs = {interact = true},
 	func = function(name, param)
-		if param == "" then
+		if param == "" or param == "help" then
 			local function chat_send(text, raw_text)
 				if raw_text then
 					raw_text = ": "..raw_text
 				end
-				minetest.chat_send_player(name, S(text).." "..(raw_text or ""))
+				minetest.chat_send_player(name, S(text)..(raw_text or ""))
 			end
+			local privs = minetest.get_player_privs(name)
 			chat_send("Available area commands:")
 			chat_send("Information about this area", "/area show")
 			chat_send("(Un)share one area",  "/area (un)share <name>")
 			chat_send("(Un)share all areas", "/area (un)shareall <name>")
+			if s_protect.area_list or privs.simple_protection then
+				chat_send("List claimed areas", "/area list [<name>]")
+			end
 			chat_send("Unclaim this area",   "/area unclaim")
+			if privs.server then
+				chat_send("Delete all areas of a player", "/area delete <name>")
+			end
 			return
 		end
-		if param == "show" or param == "unclaim" then
-			return s_protect["command_"..param](name)
-		end
-		-- all other commands
+
 		local args = param:split(" ")
-		if #args ~= 2 then
-			return false, S("Invalid number of arguments. Check '/area' for correct usage.")
-		end
-		if args[1] == "share" or args[1] == "unshare" or
-			args[1] == "shareall" or args[1] == "unshareall" then
-			return s_protect["command_"..args[1]](name, args[2])
+		local func = s_protect["command_"..args[1]]
+		if not func then
+			return false, S("Unknown command parameter: @1. Check '/area' for correct usage.", args[1])
 		end
 
-		return false, SR("Unknown command parameter: $", args[1])
+		return func(name, args[2])
 	end,
 })
 
@@ -94,12 +90,12 @@ s_protect.command_show = function(name)
 
 	if not data then
 		if axis < s_protect.underground_limit then
-			return true, S("Area status: @1", "Not claimable")
+			return true, S("Area status: @1", S("Not claimable"))
 		end
-		return true, S("Area status: @1", "Unowned (!)")
+		return true, S("Area status: @1", S("Unowned (!)"))
 	end
 
-	minetest.chat_send_player(name, SR("Area status: @1", data.owner, "Owned by $"))
+	minetest.chat_send_player(name, S("Area status: @1", S("Owned by @1", data.owner)))
 	local text = ""
 	for i, player in ipairs(data.shared) do
 		text = text..player..", "
@@ -112,12 +108,12 @@ s_protect.command_show = function(name)
 	end
 
 	if text ~= "" then
-		return true, SR("Players with access: $", text)
+		return true, S("Players with access: @1", text)
 	end
 end
 
 s_protect.command_share = function(name, param)
-	if name == param or param == "" then
+	if not param or name == param then
 		return false, S("No player name given.")
 	end
 	if not minetest.auth_table[param] and param ~= "*all" then
@@ -134,23 +130,23 @@ s_protect.command_share = function(name, param)
 	end
 	local shared = s_protect.share[name]
 	if shared and shared[param] then
-		return true, SR("$ already has access to all your areas.", param)
+		return true, S("@1 already has access to all your areas.", param)
 	end
 
 	if table_contains(data.shared, param) then
-		return true, SR("$ already has access to this area.", param)
+		return true, S("@1 already has access to this area.", param)
 	end
 	table.insert(data.shared, param)
 	s_protect.save()
 
 	if minetest.get_player_by_name(param) then
-		minetest.chat_send_player(param, SR("$ shared an area with you.", name))
+		minetest.chat_send_player(param, S("@1 shared an area with you.", name))
 	end
-	return true, SR("$ has now access to this area.", param)
+	return true, S("@1 has now access to this area.", param)
 end
 
 s_protect.command_unshare = function(name, param)
-	if name == param or param == "" then
+	if not param or name == param or param == "" then
 		return false, S("No player name given.")
 	end
 	local player = minetest.get_player_by_name(name)
@@ -168,13 +164,13 @@ s_protect.command_unshare = function(name, param)
 	s_protect.save()
 
 	if minetest.get_player_by_name(param) then
-		minetest.chat_send_player(param, SR("$ unshared an area with you.", name))
+		minetest.chat_send_player(param, S("@1 unshared an area with you.", name))
 	end
-	return true, SR("$ has no longer access to this area.", param)
+	return true, S("@1 has no longer access to this area.", param)
 end
 
 s_protect.command_shareall = function(name, param)
-	if name == param or param == "" then
+	if not param or name == param or param == "" then
 		return false, S("No player name given.")
 	end
 	if not minetest.auth_table[param] then
@@ -186,7 +182,7 @@ s_protect.command_shareall = function(name, param)
 
 	local shared = s_protect.share[name]
 	if table_contains(shared, param) then
-		return true, SR("$ already has now access to all your areas.", param)
+		return true, S("@1 already has now access to all your areas.", param)
 	end
 	if not shared then
 		s_protect.share[name] = {}
@@ -195,13 +191,15 @@ s_protect.command_shareall = function(name, param)
 	s_protect.save()
 
 	if minetest.get_player_by_name(param) then
-		minetest.chat_send_player(param, SR("$ shared all areas with you.", name))
+		minetest.chat_send_player(param, S("@1 shared all areas with you.", name))
 	end
-	return true, SR("$ has now access to all your areas.", param)
+	return true, S("@1 has now access to all your areas.", param)
 end
 
 s_protect.command_unshareall = function(name, param)
-	if name == param then return end
+	if not param or name == param or param == "" then
+		return false, S("No player name given.")
+	end
 	local removed = false
 	local shared = s_protect.share[name]
 	if table_delete(shared, param) then
@@ -217,13 +215,13 @@ s_protect.command_unshareall = function(name, param)
 		end
 	end
 	if not removed then
-		return false, SR("$ does not have access to any of your areas.", param)
+		return false, S("@1 does not have access to any of your areas.", param)
 	end
 	s_protect.save()
 	if minetest.get_player_by_name(param) then
-		minetest.chat_send_player(param, SR("$ unshared all areas with you.", name))
+		minetest.chat_send_player(param, S("@1 unshared all areas with you.", name))
 	end
-	return true, SR("$ has no longer access to your areas.", param)
+	return true, S("@1 has no longer access to your areas.", param)
 end
 
 s_protect.command_unclaim = function(name)
@@ -234,7 +232,7 @@ s_protect.command_unclaim = function(name)
 	if not data then
 		return false, S("You do not own this area.")
 	end
-	local privs = minetest.check_player_privs(name, {simple_protection=true})
+	local priv = minetest.check_player_privs(name, {simple_protection=true})
 	if name ~= data.owner and not priv then
 		return false, S("You do not own this area.")
 	end
@@ -247,4 +245,69 @@ s_protect.command_unclaim = function(name)
 	s_protect.claims[pos] = nil
 	s_protect.save()
 	return true, S("This area is unowned now.")
+end
+
+s_protect.command_delete = function(name, param)
+	if not param or name == param or param == "" then
+		return false, S("No player name given.")
+	end
+	if not minetest.check_player_privs(name, {server=true}) then
+		return false, S("Missing privilege: @1", "server")
+	end
+
+	local removed = {}
+	if s_protect.share[param] then
+		s_protect.share[param] = nil
+		table.insert(removed, S("Globally shared areas"))
+	end
+
+	-- Delete all claims
+	local counter = 0
+	local claims = s_protect.claims
+	for pos, data in pairs(claims) do
+		if data.owner == param then
+			claims[pos] = nil
+			counter = counter + 1
+		end
+	end
+
+	if counter > 0 then
+		table.insert(removed, S("@1 claimed area(s)", tostring(counter)))
+	end
+
+	if #removed == 0 then
+		return false, S("@1 does not own any claimed areas.", param)
+	end
+	s_protect.save()
+	return true, S("Removed")..": "..table.concat(removed, ", ")
+end
+
+s_protect.command_list = function(name, param)
+	local has_sp_priv = minetest.check_player_privs(name, {simple_protection=true})
+	if not s_protect.area_list and not has_sp_priv then
+		return false, S("This command is not available.")
+	end
+	if not param or param == "" then
+		param = name
+	end
+	if not has_sp_priv and param ~= name then
+		return false, S("Missing privilege: @1", "simple_protection")
+	end
+
+	local list = {}
+	local width = s_protect.claim_size
+	local height = s_protect.claim_height
+	for pos, data in pairs(s_protect.claims) do
+		if data.owner == param then
+			local abs_pos = minetest.string_to_pos(pos)
+			table.insert(list, string.format("%5i,%5i,%5i",
+				abs_pos.x * width + (width / 2),
+				abs_pos.y * height - s_protect.start_underground + (height / 2),
+				abs_pos.z * width + (width / 2)
+			))
+		end
+	end
+
+	local text = S("Listing all areas of @1. Amount: @2", param, tostring(#list))
+	return true, text.."\n"..table.concat(list, "\n")
 end
