@@ -73,7 +73,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [character_creator][] ([MIT / CC-BY-SA][lic.character_creator]) -- version: [6a0e6aa Git][ver.character_creator]
     * [hidename][] (MIT) -- version [bb52dbc Git][ver.hidename]
     * [invisibility][] ([MIT][lic.invisibility]) -- version: [bf4156b Git][ver.invisibility] *2016-08-19*
-    * [playeranim][] ([WFTLPL][lic.playeranim.1]) / [BSD][lic.playeranim.2]) - version [f1c542e Git][ver.playeranim] *2016-07-25* ***UPDT***
+    * [playeranim][] ([BSD 2-Clause][lic.playeranim]) - version [0ca8e5a Git][ver.playeranim] *2016-12-07*
     * [wardrobe][] ([WTFPL][lic.wardrobe]) -- version: [1.1-2-c48b011 Git][ver.wardrobe] *2015-05-21*
 * protection/
     * [areas][] ([LGPL][lic.areas]) -- version [67507c7 Git][ver.areas] *2016-06-19* ***UPDT***
@@ -333,8 +333,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.mobs_monster]: mods/mobs_aggressive/mobs_monster/license.txt
 [lic.moreblocks]: mods/buildings/moreblocks/LICENSE.md
 [lic.mywoodslopes]: mods/wood/mywoodslopes/licence.txt
-[lic.playeranim.1]: mods/player_visuals/playeranim/LICENSE.txt
-[lic.playeranim.2]: mods/player_visuals/playeranim/LICENSE-original.txt
+[lic.playeranim]: mods/player_visuals/playeranim/license.md
 [lic.privilegeareas]: mods/admin/privilegeareas/README.md
 [lic.rainbow_ore]: mods/materials/rainbow_ore/README.md
 [lic.simple_protection]: mods/protection/simple_protection/README.md
@@ -370,7 +369,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.mobs_redo]: https://github.com/tenplus1/mobs_redo/tree/feb26ed
 [ver.moreblocks]: https://github.com/minetest-mods/moreblocks/tree/fbfb079
 [ver.mywoodslopes]: https://github.com/minetest-mods/mywoodslopes/tree/3a1b531
-[ver.playeranim]: https://github.com/minetest-mods/playeranim/tree/f1c542e
+[ver.playeranim]: https://github.com/minetest-mods/playeranim/tree/0ca8e5a
 [ver.privilegeareas]: https://github.com/minetest-mods/privilegeareas/tree/aebaa00
 [ver.rainbow_ore]: https://github.com/FsxShader2012/rainbow_ore/tree/6e77693
 [ver.simple_protection]: https://github.com/SmallJoker/simple_protection/tree/c822e56
