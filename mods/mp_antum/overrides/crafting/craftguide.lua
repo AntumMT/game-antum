@@ -37,6 +37,8 @@ for D in pairs(dependencies) do
 	end
 end
 
+-- Incompatible with current craft_guide mod
+--[[
 if depends.satisfied then
 	antum.clearCraftOutput("xdecor:crafting_guide")
 	
@@ -53,3 +55,4 @@ if depends.satisfied then
 		})
 	end
 end
+--]]
