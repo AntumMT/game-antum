@@ -76,7 +76,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [playeranim][] ([BSD 2-Clause][lic.playeranim]) - version [0ca8e5a Git][ver.playeranim] *2016-12-07*
     * [wardrobe][] ([WTFPL][lic.wardrobe]) -- version: [1.1-2-c48b011 Git][ver.wardrobe] *2015-05-21*
 * protection/
-    * [areas][] ([LGPL][lic.areas]) -- version [67507c7 Git][ver.areas] *2016-06-19* ***UPDT***
+    * [areas][] ([LGPL][lic.areas]) -- version [6080ff0 Git][ver.areas] *2016-11-25*
     * [simple_protection][] ([WTFPL][lic.simple_protection]) -- version [c822e56 Git][ver.simple_protection] *2016-08-21* ***UPDT***
 * sound/
     * [ambience][ambience_ultralite] ([WTFPL][lic.ambience_ultralite.1] / [CC-BY / CC-BY-SA / CC-BY-NC-SA / CC0][lic.ambience_ultralite.2]) -- version: 0.36
@@ -350,7 +350,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.3d_armor]: https://github.com/stujones11/minetest-3d_armor/tree/793c748
 [ver.adv_spawning]: https://github.com/sapier/adv_spawning/tree/ec41aa9
 [ver.antum]: https://github.com/AntumDeluge/mtmp-antum/tree/4477d40
-[ver.areas]: https://github.com/ShadowNinja/areas/tree/67507c7
+[ver.areas]: https://github.com/ShadowNinja/areas/tree/6080ff0
 [ver.awards]: https://github.com/minetest-mods/awards/tree/096fe16
 [ver.bedrock2]: http://repo.or.cz/minetest_bedrock2.git/tree/0378b61
 [ver.character_creator]: https://github.com/Rui-Minetest/character_creator/tree/6a0e6aa
