@@ -47,8 +47,13 @@ minetest.register_alias('dye:lightgrey', 'dye:light_grey')
 
 
 local shadeless_colors = {
+    -- Incompatible with current coloredwood mod version
+    --[[
 	'black',
-	'grey', 'darkgrey', 'lightgrey'
+	'grey',
+	'darkgrey',
+	'lightgrey',
+	--]]
 }
 
 for I in pairs(shadeless_colors) do
@@ -59,6 +64,8 @@ end
 
 
 local base_colors = {
+    -- Incompatible with current coloredwood mod version
+    --[[
 	'aqua',
 	'blue',
 	'cyan',
@@ -71,6 +78,7 @@ local base_colors = {
 	'skyblue',
 	'violet',
 	'yellow'
+	--]]
 }
 
 for I in pairs(base_colors) do
