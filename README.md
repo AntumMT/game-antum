@@ -13,7 +13,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [invisible][] ([LGPL / CC BY-SA](mods/admin/invisible/readme.txt))
     * [privilegeareas][] ([WTFPL / CC0][lic.privilegeareas]) -- version: [aebaa00 Git][ver.privilegeareas] *2016-05-18*
     * [privs][] ([CC0](mods/admin/privs/init.lua))
-    * [spectator_mode][] ([WTFPL][lic.spectator_mode]) -- version: [3459db4 Git][ver.spectator_mode] *2016-08-05* ***UPDT***
+    * [spectator_mode][] ([WTFPL][lic.spectator_mode]) -- version: [7d68bec Git][ver.spectator_mode] *2017-03-30*
 * [awards][] ([LGPL][lic.awards]) -- version: [096fe16 Git][ver.awards] *2017-02-25*
 * buildings/
     * [bridges][] ([BPL](mods/buildings/bridges/README.md))
@@ -377,7 +377,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.rainbow_ore]: https://github.com/FsxShader2012/rainbow_ore/tree/6e77693
 [ver.simple_protection]: https://github.com/SmallJoker/simple_protection/tree/c822e56
 [ver.spawneggs]: https://github.com/thefamilygrog66/spawneggs/tree/4650370
-[ver.spectator_mode]: https://github.com/minetest-mods/spectator_mode/tree/3459db4
+[ver.spectator_mode]: https://github.com/minetest-mods/spectator_mode/tree/7d68bec
 [ver.stairsplus]: https://github.com/CasimirKaPazi/stairsplus/tree/311e1f0
 [ver.throwing]: https://github.com/Jeija/minetest-mod-throwing/tree/79ad788
 [ver.tnt]: https://github.com/PilzAdam/TNT/tree/d6a0b7d
