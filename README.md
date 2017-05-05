@@ -34,7 +34,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [currency][] ([WTFPL][lic.currency]) -- version: [21f9811 Git][ver.currency] *2017-03-22* ([patched][patch.currency])
 * [enchanting][] ([GPL][lic.enchanting]) -- version: [13ea31c Git][ver.enchanting] *2016-12-16*
 * farming/
-	* [farming_plus][] ([WTFPL](mods/farming/farming_plus/README.txt))
+	* [farming_plus][] ([WTFPL][lic.farming_plus]) -- version: [7e0d976 Git][ver.farming_plus] *2014-07-31*
 * furniture/
 	* [jukebox][] ([WTFPL / CC0][lic.jukebox]) -- version: [e6a507f Git][ver.jukebox] *2016-05-23*
     * [trampoline][] ([GPL](mods/furniture/trampoline/LICENSE.txt)) -- version: [0c9c9c8 Git][ver.trampoline]
@@ -329,6 +329,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.currency]: https://forum.minetest.net/viewtopic.php?t=7002
 [lic.enchanting]: mods/enchanting/LICENSE
 [lic.ethereal]: mods/world/ethereal/license.txt
+[lic.farming_plus]: mods/farming/farming_plus/README.txt
 [lic.fort_spikes]: mods/buildings/fort_spikes/README.md
 [lic.helicopter]: mods/transport/helicopter/LICENSE
 [lic.homedecor]: mods/mp_homedecor_modpack/LICENSE
@@ -373,6 +374,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.currency]: https://github.com/minetest-mods/currency/tree/21f9811
 [ver.enchanting]: https://github.com/minetest-mods/enchanting/tree/13ea31c
 [ver.ethereal]: https://github.com/tenplus1/ethereal/tree/2c24961
+[ver.farming_plus]: https://github.com/PilzAdam/farming_plus/tree/7e0d976
 [ver.fort_spikes]: https://github.com/xeranas/fort_spikes/tree/2765b56
 [ver.helicopter]: https://github.com/SokolovPavel/helicopter/tree/10f1433
 [ver.hidename]: https://github.com/AntumDeluge/mtmod-hidename/tree/bb52dbc
