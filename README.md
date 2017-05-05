@@ -46,7 +46,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [biome_lib][] ([WTFPL](mods/lib/biome_lib/README.md))
 	* [signs_lib][] ([BSD/WTFPL](mods/lib/signs_lib/copyright.txt))
 * lighting/
-	* [ilights][] ([CC BY-SA][lic.ilights]) -- version [d5f6900 Git][ver.ilights] *2016-03-27* ***UPDT***
+	* [ilights][] ([CC BY-SA][lic.ilights]) -- version [b1f7ccf Git][ver.ilights] *2017-03-18*
     * walking_light ([petermalone fork][walking_light]) ([WTFPL / CC-BY-SA][lic.walking_light]) -- version: [b9de302 Git][ver.walking_light] *2016-09-09* ([patched][patch.walking_light])
 * materials/
 	* [moreores][] ([zlib/CC-BY-SA](mods/materials/moreores/README.md))
@@ -364,7 +364,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.hidename]: https://github.com/AntumDeluge/mtmod-hidename/tree/bb52dbc
 [ver.home_gui]: https://github.com/cornernote/minetest-home_gui/tree/f6b5001
 [ver.homedecor]: https://github.com/minetest-mods/homedecor_modpack/tree/5fb16c4
-[ver.ilights]: https://github.com/minetest-mods/ilights/tree/d5f6900
+[ver.ilights]: https://github.com/minetest-mods/ilights/tree/b1f7ccf
 [ver.invisibility]: https://github.com/tenplus1/invisibility/tree/bf4156b
 [ver.jukebox]: https://github.com/minetest-mods/jukebox/tree/e6a507f
 [ver.lightning]: https://github.com/minetest-mods/lightning/tree/39bd36c
