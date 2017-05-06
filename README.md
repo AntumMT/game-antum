@@ -130,6 +130,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* shields
 		* technic_armor
 		* wieldview
+* [advtrains][] ([LGPL][lic.advtrains] / [CC-BY-NC-SA][lic.advtrains.2] -- version: [28717b4 Git][ver.advtrains] *2017-05-03*
 * [animalmaterials][animals_modpack] (part of animals_modpack) -- version: 0.1.3
 	* mp_animalmaterials/
 		* animal_resources ([CC0][lic.amp_animal_resources])
@@ -202,6 +203,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 
 [3d_armor]: https://forum.minetest.net/viewtopic.php?t=4654
+[advtrains]: https://forum.minetest.net/viewtopic.php?t=14726
 [airtanks]: https://forum.minetest.net/viewtopic.php?t=17102
 [ambience_ultralite]: https://forum.minetest.net/viewtopic.php?p=151166#p151166
 [animals_modpack]: https://forum.minetest.net/viewtopic.php?t=629
@@ -299,6 +301,8 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [worldedge]: https://forum.minetest.net/viewtopic.php?t=10753
 
 [lic.3d_armor]: mods/mp_3d_armor/LICENSE.md
+[lic.advtrains]: mods/mp_advtrains/license.txt
+[lic.advtrains.2]: mods/mp_advtrains/license_media.txt
 [lic.airtanks]: mods/player/airtanks/LICENSE.txt
 [lic.ambience_ultralite.1]: https://forum.minetest.net/viewtopic.php?t=2807
 [lic.ambience_ultralite.2]: mods/sound/ambience/sounds/SoundLicenses.txt
@@ -369,6 +373,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 [ver.3d_armor]: https://github.com/stujones11/minetest-3d_armor/tree/793c748
 [ver.adv_spawning]: https://github.com/sapier/adv_spawning/tree/ec41aa9
+[ver.advtrains]: https://github.com/orwell96/advtrains/tree/28717b4
 [ver.airtanks]: https://github.com/minetest-mods/airtanks/tree/fc01ffb
 [ver.antum]: https://github.com/AntumDeluge/mtmp-antum/tree/4477d40
 [ver.areas]: https://github.com/ShadowNinja/areas/tree/6080ff0
