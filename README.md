@@ -87,6 +87,8 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * spawning/
 	* [adv_spawning][animals_modpack] (part of animals_modpack) (CC-BY-SA) -- version: [0.0.13 ec41aa9 Git][ver.adv_spawning] *2015-12-28* ([patched][patch.adv_spawning])
 	* [spawneggs][] ([WTFPL][lic.spawneggs]) -- version [4650370 Git][ver.spawneggs] *2013-09-09*
+* storage/
+	* [more_chests][] ([GPL][lic.more_chests]) -- version [c597779 Git][ver.more_chests] *2017-02-27*
 * [tnt][] ([WTFPL](mods/tnt/README.txt)) -- version: [d6a0b7d Git][ver.tnt]
 * tools/
 	* [compassgps][] ([WTFPL / CC0 / CC BY-SA](mods/tools/compassgps/README.md))
@@ -254,6 +256,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [mobs_goblins]: https://forum.minetest.net/viewtopic.php?t=13004
 [mobs_monster]: https://github.com/tenplus1/mobs_monster
 [mobs_redo]: https://forum.minetest.net/viewtopic.php?t=9917
+[more_chests]: https://github.com/minetest-mods/more_chests
 [moreblocks]: https://forum.minetest.net/viewtopic.php?t=509
 [moremesecons]: https://forum.minetest.net/viewtopic.php?t=13150
 [moreores]: https://forum.minetest.net/viewtopic.php?t=549
@@ -348,6 +351,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.mdoors.2]: doc/modpacks/mydoors/licence.txt
 [lic.mobf]: mods/mp_mobf_core/License.txt
 [lic.mobs_monster]: mods/mobs_aggressive/mobs_monster/license.txt
+[lic.more_chests]: mods/storage/more_chests/LICENSE
 [lic.moreblocks]: mods/buildings/moreblocks/LICENSE.md
 [lic.mywoodslopes]: mods/wood/mywoodslopes/licence.txt
 [lic.playeranim]: mods/player_visuals/playeranim/license.md
@@ -395,6 +399,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.lightning]: https://github.com/minetest-mods/lightning/tree/39bd36c
 [ver.mobs_monster]: https://github.com/tenplus1/mobs_monster/tree/f6d0e01
 [ver.mobs_redo]: https://github.com/tenplus1/mobs_redo/tree/feb26ed
+[ver.more_chests]: https://github.com/minetest-mods/more_chests/tree/c597779
 [ver.moreblocks]: https://github.com/minetest-mods/moreblocks/tree/fbfb079
 [ver.mywoodslopes]: https://github.com/minetest-mods/mywoodslopes/tree/3a1b531
 [ver.playeranim]: https://github.com/minetest-mods/playeranim/tree/0ca8e5a
