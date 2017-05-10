@@ -197,7 +197,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* mp_mydoors/
 		* my_*_doors
 		* my_garage_door
-* [technic][] ([LGPL](mods/mp_technic/README.md))
+* [technic][] ([LGPL][lic.technic]) -- version: [42efc7e Git][ver.technic] *2017-04-17*
 	* mp_technic/
 
 
@@ -365,6 +365,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.spawneggs]: mods/spawning/spawneggs/README.txt
 [lic.spectator_mode]: mods/admin/spectator_mode/LICENSE
 [lic.stairsplus]: mods/buildings/stairsplus/LICENSE.txt
+[lic.technic]: mods/mp_technic/README.md
 [lic.throwing]: https://forum.minetest.net/viewtopic.php?t=687#p5739
 [lic.vector_extras]: mods/vector_extras/LICENSE.txt
 [lic.walking_light]: mods/lighting/walking_light/README.md
@@ -415,6 +416,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.spawneggs]: https://github.com/thefamilygrog66/spawneggs/tree/4650370
 [ver.spectator_mode]: https://github.com/minetest-mods/spectator_mode/tree/7d68bec
 [ver.stairsplus]: https://github.com/CasimirKaPazi/stairsplus/tree/311e1f0
+[ver.technic]: https://github.com/minetest-mods/technic/tree/42efc7e
 [ver.throwing]: https://github.com/Jeija/minetest-mod-throwing/tree/79ad788
 [ver.tnt]: https://github.com/PilzAdam/TNT/tree/d6a0b7d
 [ver.tools_obsidian]: https://github.com/Dragonop/tools_obsidian/tree/f77fd79

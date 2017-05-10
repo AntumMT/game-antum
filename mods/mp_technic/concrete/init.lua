@@ -84,9 +84,9 @@ minetest.register_node(":technic:blast_resistant_concrete", {
 	groups = {cracky=1, level=3, concrete=1},
 	sounds = default.node_sound_stone_defaults(),
 	on_blast = function(pos, intensity)
-		if intensity > 1 then
+		if intensity > 9 then
 			minetest.remove_node(pos)
-			minetest.add_item(pos, "technic:blast_resistant_concrete")
+			return {"technic:blast_resistant_concrete"}
 		end
 	end,
 })
@@ -94,9 +94,9 @@ minetest.register_node(":technic:blast_resistant_concrete", {
 
 local box_platform = {-0.5,  0.3,  -0.5,  0.5,  0.5, 0.5}
 local box_post     = {-0.15, -0.5, -0.15, 0.15, 0.5, 0.15}
-local box_front    = {-0.1,  -0.3, 0,     0.1,  0.3, -0.5}
+local box_front    = {-0.1,  -0.3, -0.5,  0.1,  0.3, 0}
 local box_back     = {-0.1,  -0.3, 0,     0.1,  0.3, 0.5}
-local box_left     = {0,     -0.3, -0.1,  -0.5, 0.3, 0.1}
+local box_left     = {-0.5,  -0.3, -0.1,  0,    0.3, 0.1}
 local box_right    = {0,     -0.3, -0.1,  0.5,  0.3, 0.1}
 
 minetest.register_node(":technic:concrete_post_platform", {
