@@ -21,7 +21,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [elevator][] ([WTFPL](mods/buildings/elevator/readme.txt))
     * [fort_spikes][] ([MIT / CC0][lic.fort_spikes]) -- version: [2765b56 Git][ver.fort_spikes] *2017-04-07* ([patched][patch.fort_spikes])
     * [moreblocks][] ([zlib][lic.moreblocks]) -- version: [fbfb079 Git][ver.moreblocks] *2017-03-14*
-    * my_garage_door ([mydoors modpack][mydoors])
     * [stairsplus][] ([zlib][lic.stairsplus]) -- version: [311e1f0 Git][ver.stairsplus] *2013-05-30*
     * [windmill][] ([WTFPL][lic.windmill]) -- version: [47b029d Git][ver.windmill] *2014-08-21* ([patched][patch.windmill])
 * [campfire][] ([GPL / CC-BY-SA / WTFPL][lic.campfire]) -- version: [b45acd2 Git][ver.campfire] *2016-02-18* ([patched][patch.campfire])
@@ -194,10 +193,11 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* mobf_settings
 * [moremesecons][] ([GPL](mods/mp_moremesecons/LICENSE.txt))
 	* mp_moremesecons/
-* [mydoors][] -- version: 1.0
+* [mydoors][] ([CC-BY / CC-BY-SA / WTFPL][lic.mdoors.1] / [DWYWFPL][lic.mdoors.2]) -- version: [1.0][ver.mydoors] *2016-02-18*
 	* mp_mydoors/
-		* mdoors ([CC-BY / CC-BY-SA / WTFPL][lic.mdoors.1] / [DWYWFPL][lic.mdoors.2])
+		* mdoors
 		* my_*_doors
+		* my_garage_door
 * [technic][] ([LGPL](mods/mp_technic/README.md))
 	* mp_technic/
 
@@ -407,6 +407,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.mobs_redo]: https://github.com/tenplus1/mobs_redo/tree/feb26ed
 [ver.more_chests]: https://github.com/minetest-mods/more_chests/tree/c597779
 [ver.moreblocks]: https://github.com/minetest-mods/moreblocks/tree/fbfb079
+[ver.mydoors]: https://github.com/minetest-mods/mydoors/tree/c3f8a87
 [ver.mywoodslopes]: https://github.com/minetest-mods/mywoodslopes/tree/3a1b531
 [ver.playeranim]: https://github.com/minetest-mods/playeranim/tree/0ca8e5a
 [ver.privilegeareas]: https://github.com/minetest-mods/privilegeareas/tree/aebaa00
