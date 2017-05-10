@@ -59,7 +59,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [mobs_redo][] ([MIT](mods/mobs/mobs_redo/license.txt)) -- version: [feb26ed Git][ver.mobs_redo] *2017-04-27*
 * mobs_aggressive/
     * [creeper][] ([WTFPL][lic.creeper]) -- version [036666e Git][ver.creeper]
-    * [mobs_goblins][] ([CC-BY-SA / CC-BY / CC0](mods/mobs_aggressive/mobs_goblins/README.md))
+    * [mobs_goblins][] ([CC-BY-SA / CC-BY / CC0][lic.mobs_goblins]) -- version: [a346f85 Git][ver.mobs_goblins] *2015-09-12* ([patched][patch.mobs_goblins])
     * [mobs_monster][] ([MIT][lic.mobs_monster]) -- version: [f6d0e01 Git][ver.mobs_monster] *2017-04-27*
     * [spidermob][] ([CC-BY-SA / WTFPL / CC0](mods/mobs_aggressive/spidermob/LICENSE))
 * mobs_passive/
@@ -354,6 +354,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.kpgmobs]: mods/mobs/kpgmobs/README.txt
 [lic.lightning]: mods/weather/lightning/README.md
 [lic.mobf]: mods/mp_mobf_core/License.txt
+[lic.mobs_goblins]: mods/mobs_aggressive/mobs_goblins/README.md
 [lic.mobs_monster]: mods/mobs_aggressive/mobs_monster/license.txt
 [lic.more_chests]: mods/storage/more_chests/LICENSE
 [lic.moreblocks]: mods/buildings/moreblocks/LICENSE.md
@@ -406,6 +407,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.invisibility]: https://github.com/tenplus1/invisibility/tree/bf4156b
 [ver.jukebox]: https://github.com/minetest-mods/jukebox/tree/e6a507f
 [ver.lightning]: https://github.com/minetest-mods/lightning/tree/39bd36c
+[ver.mobs_goblins]: https://github.com/FreeLikeGNU/mobs_goblins/tree/a346f85
 [ver.mobs_monster]: https://github.com/tenplus1/mobs_monster/tree/f6d0e01
 [ver.mobs_redo]: https://github.com/tenplus1/mobs_redo/tree/feb26ed
 [ver.more_chests]: https://github.com/minetest-mods/more_chests/tree/c597779
@@ -441,6 +443,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.fort_spikes]: https://github.com/AntumDeluge/mtmod-fort_spikes/commit/74dca42
 [patch.helicopter]: https://github.com/AntumDeluge/mtmod-helicopter/commit/66a6523
 [patch.kpgmobs]: https://github.com/AntumDeluge/mtmod-kpgmobs/tree/7da994c
+[patch.mobs_goblins]: https://github.com/AntumDeluge/mtmod-mobs_goblins/tree/c7fc71b
 [patch.mydoors]: https://github.com/AntumDeluge/mtmp-mydoors/tree/e36c9d1
 [patch.rainbow_ore]: https://github.com/AntumDeluge/mtmod-rainbow_ore/commit/60dc35e
 [patch.technic]: https://github.com/AntumDeluge/mtmod-technic/tree/9649cee
