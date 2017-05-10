@@ -33,7 +33,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [currency][] ([WTFPL][lic.currency]) -- version: [21f9811 Git][ver.currency] *2017-03-22* ([patched][patch.currency])
 * [enchanting][] ([GPL][lic.enchanting]) -- version: [13ea31c Git][ver.enchanting] *2016-12-16*
 * farming/
-	* [crops][] ([LGPL / CC-BY-SA / CC-BY / CC0][lic.crops]) -- version: [2b1bb37 Git][ver.crops] *2017-03-31*
+	* [crops][] ([LGPL / CC-BY-SA / CC-BY / CC0][lic.crops]) -- version: [2b1bb37 Git][ver.crops] *2017-03-31* ([patched][patch.crops])
 	* [farming_plus][] ([WTFPL][lic.farming_plus]) -- version: [7e0d976 Git][ver.farming_plus] *2014-07-31*
 * furniture/
 	* [jukebox][] ([WTFPL / CC0][lic.jukebox]) -- version: [e6a507f Git][ver.jukebox] *2016-05-23*
@@ -432,6 +432,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.christmas]: https://github.com/AntumDeluge/mtmod-christmas/commit/f6c8dc2
 [patch.coloredwood]: https://github.com/AntumDeluge/mtmod-coloredwood/commit/ed6c46f
 [patch.craftguide]: https://github.com/AntumDeluge/mtmod-craftguide/commit/89db504
+[patch.crops]: https://github.com/AntumDeluge/mtmod-crops/tree/b79cf07
 [patch.currency]: https://github.com/AntumDeluge/mtmod-currency/commit/7b0e29f
 [patch.ethereal]: https://github.com/AntumDeluge/mtmod-ethereal/commit/ba81be1
 [patch.fort_spikes]: https://github.com/AntumDeluge/mtmod-fort_spikes/commit/74dca42
