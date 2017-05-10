@@ -34,7 +34,7 @@ print(p2)
 	after_destruct = function(pos, oldnode)
 		minetest.set_node({x=pos.x,y=pos.y+1,z=pos.z},{name = "air"})
 	end,
-	
+
 	on_rightclick = function(pos, node, player, itemstack, pointed_thing)
 	local p2 = node.param2 --minetest.dir_to_facedir(player:get_look_dir())
 	local t1 = {x=pos.x,y=pos.y+1,z=pos.z}
@@ -103,11 +103,12 @@ minetest.register_node("my_garage_door:garage_door_open", {
 		}
 	},
 	selection_box = {type = "fixed",fixed = {{-1.5, 0.375, -0.5, 1.5, 0.5, 1.5},}},
-	
+
 	on_rightclick = function(pos, node, player, itemstack, pointed_thing)
 	local p2 = node.param2 --minetest.dir_to_facedir(player:get_look_dir())
 	local t1 = {x=pos.x,y=pos.y+1,z=pos.z}
 	local t2 = {x=pos.x,y=pos.y+1,z=pos.z}
+	local t3
 		if p2 == 0 then
 		t1 = {x=pos.x,y=pos.y,z=pos.z-1}
 		t2 = {x=pos.x,y=pos.y-1,z=pos.z-1}

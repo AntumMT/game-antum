@@ -193,9 +193,8 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* mobf_settings
 * [moremesecons][] ([GPL](mods/mp_moremesecons/LICENSE.txt))
 	* mp_moremesecons/
-* [mydoors][] ([CC-BY / CC-BY-SA / WTFPL][lic.mdoors.1] / [DWYWFPL][lic.mdoors.2]) -- version: [1.0][ver.mydoors] *2016-02-18*
+* [mydoors][] ([CC-BY / CC-BY-SA / WTFPL][lic.mydoors.1] / [DWYWFPL][lic.mydoors.2]) -- version: [63aef13 Git][ver.mydoors] *2017-03-31* ([patched][patch.mydoors])
 	* mp_mydoors/
-		* mdoors
 		* my_*_doors
 		* my_garage_door
 * [technic][] ([LGPL](mods/mp_technic/README.md))
@@ -352,12 +351,12 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.invisibility]: mods/player_visuals/invisibility/license.txt
 [lic.jukebox]: mods/furniture/jukebox/README.txt
 [lic.lightning]: mods/weather/lightning/README.md
-[lic.mdoors.1]: mods/mp_mydoors/mdoors/README.txt
-[lic.mdoors.2]: doc/modpacks/mydoors/licence.txt
 [lic.mobf]: mods/mp_mobf_core/License.txt
 [lic.mobs_monster]: mods/mobs_aggressive/mobs_monster/license.txt
 [lic.more_chests]: mods/storage/more_chests/LICENSE
 [lic.moreblocks]: mods/buildings/moreblocks/LICENSE.md
+[lic.mydoors.1]: mods/mp_mydoors/README.md
+[lic.mydoors.2]: mods/mp_mydoors/licence.txt
 [lic.mywoodslopes]: mods/wood/mywoodslopes/licence.txt
 [lic.playeranim]: mods/player_visuals/playeranim/license.md
 [lic.privilegeareas]: mods/admin/privilegeareas/README.md
@@ -407,7 +406,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.mobs_redo]: https://github.com/tenplus1/mobs_redo/tree/feb26ed
 [ver.more_chests]: https://github.com/minetest-mods/more_chests/tree/c597779
 [ver.moreblocks]: https://github.com/minetest-mods/moreblocks/tree/fbfb079
-[ver.mydoors]: https://github.com/minetest-mods/mydoors/tree/c3f8a87
+[ver.mydoors]: https://github.com/minetest-mods/mydoors/tree/63aef13
 [ver.mywoodslopes]: https://github.com/minetest-mods/mywoodslopes/tree/3a1b531
 [ver.playeranim]: https://github.com/minetest-mods/playeranim/tree/0ca8e5a
 [ver.privilegeareas]: https://github.com/minetest-mods/privilegeareas/tree/aebaa00
@@ -435,6 +434,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.ethereal]: https://github.com/AntumDeluge/mtmod-ethereal/commit/ba81be1
 [patch.fort_spikes]: https://github.com/AntumDeluge/mtmod-fort_spikes/commit/74dca42
 [patch.helicopter]: https://github.com/AntumDeluge/mtmod-helicopter/commit/66a6523
+[patch.mydoors]: https://github.com/AntumDeluge/mtmp-mydoors/tree/e36c9d1
 [patch.rainbow_ore]: https://github.com/AntumDeluge/mtmod-rainbow_ore/commit/60dc35e
 [patch.unifieddyes]: https://github.com/AntumDeluge/mtmod-unifieddyes/commit/df3f1b1
 [patch.walking_light]: https://github.com/AntumDeluge/mtmod-walking_light/commit/00ebab8

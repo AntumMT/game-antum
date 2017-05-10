@@ -4,7 +4,33 @@ local doors = {
 	{"my_future_doors:door4a","my_future_doors:door4b","my_future_doors:door4c","my_future_doors:door4d","4","Dark"},
 	{"my_future_doors:door6a","my_future_doors:door6b","my_future_doors:door6c","my_future_doors:door6d","6","Points"},
 	{"my_future_doors:door7a","my_future_doors:door7b","my_future_doors:door7c","my_future_doors:door7d","7","Snow Flake"},
+	{"my_future_doors:door8a","my_future_doors:door8b","my_future_doors:door8c","my_future_doors:door8d","8","Blue Steel"},
+	{"my_future_doors:door9a","my_future_doors:door9b","my_future_doors:door9c","my_future_doors:door9d","9","Tan Steel"},
 	}
+
+local recipes = {
+	{{"default:steel_ingot", "default:steelblock", ""},
+		{"default:steel_ingot", "default:steel_ingot", ""},
+		{"default:steelblock", "default:steel_ingot", ""}},
+	{{"default:steel_ingot","default:steel_ingot", ""},
+		{"default:steel_ingot", "default:steel_ingot", ""},
+		{"default:steelblock", "default:steelblock", ""}},
+	{{"default:steel_ingot","default:steel_ingot", ""},
+		{"default:steel_ingot", "default:steel_ingot", "dye:black"},
+		{"default:steelblock", "default:steelblock", ""}},
+	{{"default:steel_ingot","default:steel_ingot", ""},
+		{"default:steelblock", "default:steelblock", ""},
+		{"default:steel_ingot", "default:steel_ingot", ""}},
+	{{"default:steel_ingot", "default:steelblock", ""},
+		{"default:steel_ingot", "default:steel_ingot", ""},
+		{ "default:steel_ingot", "default:steelblock",""}},
+	{{"default:steel_ingot", "default:steelblock", ""},
+		{"default:steel_ingot", "default:steel_ingot", "dye:blue"},
+		{ "default:steel_ingot", "default:steelblock",""}},
+	{{"default:steel_ingot", "default:steelblock", ""},
+		{"default:steel_ingot", "default:steel_ingot", "dye:brown"},
+		{ "default:steel_ingot", "default:steelblock",""}},
+}
 for i in ipairs (doors) do
 local doora = doors[i][1]
 local doorb = doors[i][2]
@@ -12,6 +38,7 @@ local doorc = doors[i][3]
 local doord = doors[i][4]
 local num = doors[i][5]
 local des = doors[i][6]
+local recipe = recipes[i]
 
 function onplace(itemstack, placer, pointed_thing)
 	local pos1 = pointed_thing.above
@@ -22,7 +49,7 @@ function onplace(itemstack, placer, pointed_thing)
 	not minetest.registered_nodes[minetest.get_node(pos2).name].buildable_to or
 	not placer or
 	not placer:is_player() then
-	return 
+	return
 	end
 			local pt = pointed_thing.above
 			local pt2 = {x=pt.x, y=pt.y, z=pt.z}
@@ -50,6 +77,8 @@ function onplace(itemstack, placer, pointed_thing)
 				minetest.set_node(pt, {name=doora, param2=p2})
 				minetest.set_node(pt2, {name=doorb, param2=p2})
 			end
+		itemstack: take_item()
+		return itemstack
 end
 
 function afterdestruct(pos, oldnode)
@@ -230,16 +259,12 @@ minetest.register_node(doord, {
 	selection_box = {
 		type = "fixed",
 		fixed = {
-			{0, 0, 0, 0, 0, 0}, 
+			{0, 0, 0, 0, 0, 0},
 		}
 	},
 })
 minetest.register_craft({
-	output = "my_future_doors:door"..num.."a 1",
-	recipe = {
-		{"default:steel_ingot", "default:steelblock", ""},
-		{"default:steel_ingot", "default:steel_ingot", ""},
-		{"default:steelblock", "default:steel_ingot", ""}
-	}
+	output = "my_future_doors:door"..num.."a 2",
+	recipe = recipe
 })
 end

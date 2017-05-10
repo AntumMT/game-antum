@@ -1,5 +1,5 @@
 default
-mdoors
+doors
 coloredwood
 wool
 craft_guide?

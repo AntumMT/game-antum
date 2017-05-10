@@ -1,4 +1,4 @@
 default
-mdoors
 coloredwood
+doors
 craft_guide?
