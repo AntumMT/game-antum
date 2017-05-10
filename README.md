@@ -55,7 +55,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [rainbow_ore][] ([LGPL][lic.rainbow_ore]) -- version: [6e77693 Git][ver.rainbow_ore] *2015-11-02* ([patched][patch.rainbow_ore])
 	* [unifieddyes][] ([GPL](mods/materials/unifieddyes/LICENSE)) -- version: [df177c2 Git][ver.unifieddyes] *2017-03-18* ([patched][patch.unifieddyes])
 * mobs/
-    * [kpgmobs][] ([MIT](mods/mobs/kpgmobs/README.txt))
+    * [kpgmobs][] ([MIT][lic.kpgmobs]) -- version: v6 *2015-01-31* ([patched][patch.kpgmobs])
     * [mobs_redo][] ([MIT](mods/mobs/mobs_redo/license.txt)) -- version: [feb26ed Git][ver.mobs_redo] *2017-04-27*
 * mobs_aggressive/
     * [creeper][] ([WTFPL][lic.creeper]) -- version [036666e Git][ver.creeper]
@@ -351,6 +351,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.ilights]: mods/lighting/ilights/init.lua
 [lic.invisibility]: mods/player_visuals/invisibility/license.txt
 [lic.jukebox]: mods/furniture/jukebox/README.txt
+[lic.kpgmobs]: mods/mobs/kpgmobs/README.txt
 [lic.lightning]: mods/weather/lightning/README.md
 [lic.mobf]: mods/mp_mobf_core/License.txt
 [lic.mobs_monster]: mods/mobs_aggressive/mobs_monster/license.txt
@@ -439,6 +440,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.ethereal]: https://github.com/AntumDeluge/mtmod-ethereal/commit/ba81be1
 [patch.fort_spikes]: https://github.com/AntumDeluge/mtmod-fort_spikes/commit/74dca42
 [patch.helicopter]: https://github.com/AntumDeluge/mtmod-helicopter/commit/66a6523
+[patch.kpgmobs]: https://github.com/AntumDeluge/mtmod-kpgmobs/tree/7da994c
 [patch.mydoors]: https://github.com/AntumDeluge/mtmp-mydoors/tree/e36c9d1
 [patch.rainbow_ore]: https://github.com/AntumDeluge/mtmod-rainbow_ore/commit/60dc35e
 [patch.technic]: https://github.com/AntumDeluge/mtmod-technic/tree/9649cee

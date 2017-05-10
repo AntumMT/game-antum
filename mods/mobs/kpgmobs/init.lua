@@ -697,7 +697,7 @@ kpgmobs:register_mob("kpgmobs:deer", {
 		chance = 1,
 		min = 2,
 		max = 3,},
-		{name = "animalmaterials:bone", -- Added temporarily by AntumDeluge
+		{name = "animalmaterials:bone",
 		chance = 0.5,
 		min = 1,
 		max = 1,},
@@ -821,7 +821,7 @@ kpgmobs:register_mob("kpgmobs:wolf", {
 		chance = 1,
 		min = 2,
 		max = 3,},
-		{name = "animalmaterials:bone", -- Added temporarily by AntumDeluge
+		{name = "animalmaterials:bone",
 		chance = 0.75,
 		min = 1,
 		max = 1,},
