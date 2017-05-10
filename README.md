@@ -197,7 +197,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* mp_mydoors/
 		* my_*_doors
 		* my_garage_door
-* [technic][] ([LGPL][lic.technic]) -- version: [42efc7e Git][ver.technic] *2017-04-17*
+* [technic][] ([LGPL][lic.technic]) -- version: [42efc7e Git][ver.technic] *2017-04-17* ([patched][patch.technic])
 	* mp_technic/
 
 
@@ -438,6 +438,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.helicopter]: https://github.com/AntumDeluge/mtmod-helicopter/commit/66a6523
 [patch.mydoors]: https://github.com/AntumDeluge/mtmp-mydoors/tree/e36c9d1
 [patch.rainbow_ore]: https://github.com/AntumDeluge/mtmod-rainbow_ore/commit/60dc35e
+[patch.technic]: https://github.com/AntumDeluge/mtmod-technic/tree/9649cee
 [patch.unifieddyes]: https://github.com/AntumDeluge/mtmod-unifieddyes/commit/df3f1b1
 [patch.walking_light]: https://github.com/AntumDeluge/mtmod-walking_light/commit/00ebab8
 [patch.windmill]: https://github.com/AntumDeluge/mtmod-windmill/commit/7756ab4

@@ -8,3 +8,4 @@ digilines?
 intllib?
 unified_inventory?
 vector_extras?
+craft_guide?
