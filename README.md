@@ -44,7 +44,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [bags][] ([BSD 3-Clause](mods/inventory/bags/LICENSE))
     * [inventory_plus][] ([BSD 3-Clause](mods/inventory/inventory_plus/LICENSE))
 * lib/
-    * [biome_lib][] ([WTFPL](mods/lib/biome_lib/README.md))
+    * [biome_lib][] ([WTFPL][lic.biome_lib]) -- version: [9cdcdcf Git][ver.biome_lib] *2017-01-26*
 	* [signs_lib][] ([BSD/WTFPL](mods/lib/signs_lib/copyright.txt))
 * lighting/
 	* [ilights][] ([CC BY-SA][lic.ilights]) -- version [b1f7ccf Git][ver.ilights] *2017-03-18*
@@ -331,6 +331,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.areas]: mods/protection/areas/LICENSE.txt
 [lic.awards]: mods/awards/LICENSE.txt
 [lic.bedrock2]: mods/world/bedrock2/COPYING
+[lic.biome_lib]: mods/lib/biome_lib/README.md
 [lic.bridges]: mods/buildings/bridges/README.md
 [lic.campfire]: mods/campfire/README.md
 [lic.character_creator]: mods/player_visuals/character_creator/license.txt
@@ -380,6 +381,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.areas]: https://github.com/ShadowNinja/areas/tree/6080ff0
 [ver.awards]: https://github.com/minetest-mods/awards/tree/096fe16
 [ver.bedrock2]: http://repo.or.cz/minetest_bedrock2.git/tree/0378b61
+[ver.biome_lib]: https://github.com/minetest-mods/biome_lib/tree/9cdcdcf
 [ver.bridges]: https://github.com/Sokomine/bridges/tree/5b5f475
 [ver.campfire]: https://github.com/Napiophelios/campfire/tree/b45acd2
 [ver.character_creator]: https://github.com/Rui-Minetest/character_creator/tree/6a0e6aa
