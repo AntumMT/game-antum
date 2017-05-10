@@ -158,6 +158,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [antum][] ([MIT][lic.antum]) -- version: [4477d40 Git][ver.antum] *2017-05-03*
 	* mp_antum/
 		* antum
+		* commands
 		* craft
 		* entities
 		* glass
