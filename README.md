@@ -81,7 +81,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [areas][] ([LGPL][lic.areas]) -- version [6080ff0 Git][ver.areas] *2016-11-25*
     * [simple_protection][] ([WTFPL][lic.simple_protection]) -- version [23c024f Git][ver.simple_protection] *2017-01-07*
 * signs/
-	* [signs_lib][] ([BSD / WTFPL][lic.signs_lib])
+	* [signs_lib][] ([BSD / WTFPL][lic.signs_lib]) -- version: [2c36937 Git][ver.signs_lib] *2017-03-05* ([patched][patch.signs_lib])
 * sound/
     * [ambience][ambience_ultralite] ([WTFPL][lic.ambience_ultralite.1] / [CC-BY / CC-BY-SA / CC-BY-NC-SA / CC0][lic.ambience_ultralite.2]) -- version: 0.36
 * spawning/
@@ -424,6 +424,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.privilegeareas]: https://github.com/minetest-mods/privilegeareas/tree/aebaa00
 [ver.quartz]: https://github.com/minetest-mods/quartz/tree/00ca4eb
 [ver.rainbow_ore]: https://github.com/FsxShader2012/rainbow_ore/tree/6e77693
+[ver.signs_lib]: https://github.com/minetest-mods/signs_lib/tree/2c36937
 [ver.simple_protection]: https://github.com/SmallJoker/simple_protection/tree/23c024f
 [ver.spawneggs]: https://github.com/thefamilygrog66/spawneggs/tree/4650370
 [ver.spectator_mode]: https://github.com/minetest-mods/spectator_mode/tree/7d68bec
@@ -456,6 +457,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.mydoors]: https://github.com/AntumDeluge/mtmp-mydoors/tree/e36c9d1
 [patch.quartz]: https://github.com/AntumDeluge/mtmod-quartz/tree/d23dabd
 [patch.rainbow_ore]: https://github.com/AntumDeluge/mtmod-rainbow_ore/commit/60dc35e
+[patch.signs_lib]: https://github.com/AntumDeluge/mtmod-signs_lib/tree/770978c
 [patch.spidermob]: https://github.com/AntumDeluge/mtmod-spidermob/tree/16350f0
 [patch.technic]: https://github.com/AntumDeluge/mtmod-technic/tree/9649cee
 [patch.unifieddyes]: https://github.com/AntumDeluge/mtmod-unifieddyes/commit/df3f1b1
