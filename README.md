@@ -25,7 +25,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [windmill][] ([WTFPL][lic.windmill]) -- version: [47b029d Git][ver.windmill] *2014-08-21* ([patched][patch.windmill])
 * [campfire][] ([GPL / CC-BY-SA / WTFPL][lic.campfire]) -- version: [b45acd2 Git][ver.campfire] *2016-02-18* ([patched][patch.campfire])
 * chat/
-    * [away][] ([GPL](mods/chat/away/COPYING))
+    * [away][] ([GPL][lic.away]) -- version: [4c1e5a9 Git][ver.away] *2012-03-09*
     * [chatlog][] ([CC0](mods/chat/chatlog/Readme.txt))
 * crafting/
     * [craft_guide][] ([BSD 3-Clause][lic.craft_guide]) -- version: [20520b5 Git][ver.craft_guide] *2017-01-30*
@@ -330,6 +330,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.antum]: mods/mp_antum/LICENSE.txt
 [lic.areas]: mods/protection/areas/LICENSE.txt
 [lic.awards]: mods/awards/LICENSE.txt
+[lic.away]: mods/chat/away/COPYING
 [lic.bedrock2]: mods/world/bedrock2/COPYING
 [lic.biome_lib]: mods/lib/biome_lib/README.md
 [lic.bridges]: mods/buildings/bridges/README.md
@@ -386,6 +387,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.antum]: https://github.com/AntumDeluge/mtmp-antum/tree/4477d40
 [ver.areas]: https://github.com/ShadowNinja/areas/tree/6080ff0
 [ver.awards]: https://github.com/minetest-mods/awards/tree/096fe16
+[ver.away]: https://github.com/kahrl/minetest-mod-away/tree/4c1e5a9
 [ver.bedrock2]: http://repo.or.cz/minetest_bedrock2.git/tree/0378b61
 [ver.biome_lib]: https://github.com/minetest-mods/biome_lib/tree/9cdcdcf
 [ver.bridges]: https://github.com/Sokomine/bridges/tree/5b5f475
