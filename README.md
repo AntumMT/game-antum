@@ -43,8 +43,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * inventory/
     * [bags][] ([BSD 3-Clause](mods/inventory/bags/LICENSE))
     * [inventory_plus][] ([BSD 3-Clause](mods/inventory/inventory_plus/LICENSE))
-* lib/
-    * [biome_lib][] ([WTFPL][lic.biome_lib]) -- version: [9cdcdcf Git][ver.biome_lib] *2017-01-26*
 * lighting/
 	* [ilights][] ([CC BY-SA][lic.ilights]) -- version [b1f7ccf Git][ver.ilights] *2017-03-18*
     * walking_light ([petermalone fork][walking_light]) ([WTFPL / CC-BY-SA][lic.walking_light]) -- version: [b9de302 Git][ver.walking_light] *2016-09-09* ([patched][patch.walking_light])
@@ -111,6 +109,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [mywoodslopes][] ([DWYWPL][lic.mywoodslopes]) -- version: [3a1b531 Git][ver.mywoodslopes] *2016-03-23*
 * world/
     * [bedrock2][] ([WTFPL][lic.bedrock2]) -- version [1.2.0-0378b61 Git][ver.bedrock2]
+    * [biome_lib][] ([WTFPL][lic.biome_lib]) -- version: [9cdcdcf Git][ver.biome_lib] *2017-01-26*
     * [ethereal][] ([WTFPL][lic.ethereal]) -- version [2c24961 Git][ver.ethereal] *2017-04-23* ([patched][patch.ethereal])
     * [glow][] (GPL)
     * [nether][] ([WTFPL / CC BY-SA](mods/world/nether/README.md))
