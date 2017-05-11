@@ -50,7 +50,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [ilights][] ([CC BY-SA][lic.ilights]) -- version [b1f7ccf Git][ver.ilights] *2017-03-18*
     * walking_light ([petermalone fork][walking_light]) ([WTFPL / CC-BY-SA][lic.walking_light]) -- version: [b9de302 Git][ver.walking_light] *2016-09-09* ([patched][patch.walking_light])
 * materials/
-	* [moreores][] ([zlib/CC-BY-SA](mods/materials/moreores/README.md))
+	* [moreores][] ([zlib / CC-BY-SA][lic.moreores]) -- version: [0842b4f Git][ver.moreores] *2017-03-21* ([patched][patch.moreores])
 	* [quartz][] ([MIT](mods/materials/quartz/LICENSE.txt))
 	* [rainbow_ore][] ([LGPL][lic.rainbow_ore]) -- version: [6e77693 Git][ver.rainbow_ore] *2015-11-02* ([patched][patch.rainbow_ore])
 	* [unifieddyes][] ([GPL](mods/materials/unifieddyes/LICENSE)) -- version: [df177c2 Git][ver.unifieddyes] *2017-03-18* ([patched][patch.unifieddyes])
@@ -358,6 +358,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.mobs_monster]: mods/mobs_aggressive/mobs_monster/license.txt
 [lic.more_chests]: mods/storage/more_chests/LICENSE
 [lic.moreblocks]: mods/buildings/moreblocks/LICENSE.md
+[lic.moreores]: mods/materials/moreores/README.md
 [lic.mydoors.1]: mods/mp_mydoors/README.md
 [lic.mydoors.2]: mods/mp_mydoors/licence.txt
 [lic.mywoodslopes]: mods/wood/mywoodslopes/licence.txt
@@ -413,6 +414,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.mobs_redo]: https://github.com/tenplus1/mobs_redo/tree/feb26ed
 [ver.more_chests]: https://github.com/minetest-mods/more_chests/tree/c597779
 [ver.moreblocks]: https://github.com/minetest-mods/moreblocks/tree/fbfb079
+[ver.moreores]: https://github.com/minetest-mods/moreores/tree/0842b4f
 [ver.mydoors]: https://github.com/minetest-mods/mydoors/tree/63aef13
 [ver.mywoodslopes]: https://github.com/minetest-mods/mywoodslopes/tree/3a1b531
 [ver.playeranim]: https://github.com/minetest-mods/playeranim/tree/0ca8e5a
@@ -446,6 +448,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.helicopter]: https://github.com/AntumDeluge/mtmod-helicopter/commit/66a6523
 [patch.kpgmobs]: https://github.com/AntumDeluge/mtmod-kpgmobs/tree/7da994c
 [patch.mobs_goblins]: https://github.com/AntumDeluge/mtmod-mobs_goblins/tree/c7fc71b
+[patch.moreores]: https://github.com/AntumDeluge/mtmod-moreores/tree/2172c49
 [patch.mydoors]: https://github.com/AntumDeluge/mtmp-mydoors/tree/e36c9d1
 [patch.rainbow_ore]: https://github.com/AntumDeluge/mtmod-rainbow_ore/commit/60dc35e
 [patch.spidermob]: https://github.com/AntumDeluge/mtmod-spidermob/tree/16350f0
