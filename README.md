@@ -51,7 +51,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * walking_light ([petermalone fork][walking_light]) ([WTFPL / CC-BY-SA][lic.walking_light]) -- version: [b9de302 Git][ver.walking_light] *2016-09-09* ([patched][patch.walking_light])
 * materials/
 	* [moreores][] ([zlib / CC-BY-SA][lic.moreores]) -- version: [0842b4f Git][ver.moreores] *2017-03-21* ([patched][patch.moreores])
-	* [quartz][] ([MIT](mods/materials/quartz/LICENSE.txt))
+	* [quartz][] ([MIT][lic.quartz]) -- version: [00ca4eb Git][ver.quartz] *2017-02-28*
 	* [rainbow_ore][] ([LGPL][lic.rainbow_ore]) -- version: [6e77693 Git][ver.rainbow_ore] *2015-11-02* ([patched][patch.rainbow_ore])
 	* [unifieddyes][] ([GPL](mods/materials/unifieddyes/LICENSE)) -- version: [df177c2 Git][ver.unifieddyes] *2017-03-18* ([patched][patch.unifieddyes])
 * mobs/
@@ -364,6 +364,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.mywoodslopes]: mods/wood/mywoodslopes/licence.txt
 [lic.playeranim]: mods/player_visuals/playeranim/license.md
 [lic.privilegeareas]: mods/admin/privilegeareas/README.md
+[lic.quartz]: mods/materials/quartz/LICENSE.txt
 [lic.rainbow_ore]: mods/materials/rainbow_ore/README.md
 [lic.simple_protection]: mods/protection/simple_protection/README.md
 [lic.spawneggs]: mods/spawning/spawneggs/README.txt
@@ -419,6 +420,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.mywoodslopes]: https://github.com/minetest-mods/mywoodslopes/tree/3a1b531
 [ver.playeranim]: https://github.com/minetest-mods/playeranim/tree/0ca8e5a
 [ver.privilegeareas]: https://github.com/minetest-mods/privilegeareas/tree/aebaa00
+[ver.quartz]: https://github.com/minetest-mods/quartz/tree/00ca4eb
 [ver.rainbow_ore]: https://github.com/FsxShader2012/rainbow_ore/tree/6e77693
 [ver.simple_protection]: https://github.com/SmallJoker/simple_protection/tree/23c024f
 [ver.spawneggs]: https://github.com/thefamilygrog66/spawneggs/tree/4650370
