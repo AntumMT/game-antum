@@ -61,7 +61,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [creeper][] ([WTFPL][lic.creeper]) -- version [036666e Git][ver.creeper]
     * [mobs_goblins][] ([CC-BY-SA / CC-BY / CC0][lic.mobs_goblins]) -- version: [a346f85 Git][ver.mobs_goblins] *2015-09-12* ([patched][patch.mobs_goblins])
     * [mobs_monster][] ([MIT][lic.mobs_monster]) -- version: [f6d0e01 Git][ver.mobs_monster] *2017-04-27*
-    * [spidermob][] ([CC-BY-SA / WTFPL / CC0](mods/mobs_aggressive/spidermob/LICENSE))
+    * [spidermob][] ([CC-BY-SA / WTFPL / CC0][lic.spidermob]) -- version [c72d2ff Git][ver.spidermob] *2016-08-14* ([patched][patch.spidermob])
 * mobs_passive/
 * npc/
     * [peaceful_npc][] (WTFPL)
@@ -367,6 +367,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.simple_protection]: mods/protection/simple_protection/README.md
 [lic.spawneggs]: mods/spawning/spawneggs/README.txt
 [lic.spectator_mode]: mods/admin/spectator_mode/LICENSE
+[lic.spidermob]: mods/mobs_aggressive/spidermob/LICENSE
 [lic.stairsplus]: mods/buildings/stairsplus/LICENSE.txt
 [lic.technic]: mods/mp_technic/README.md
 [lic.throwing]: https://forum.minetest.net/viewtopic.php?t=687#p5739
@@ -420,6 +421,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.simple_protection]: https://github.com/SmallJoker/simple_protection/tree/23c024f
 [ver.spawneggs]: https://github.com/thefamilygrog66/spawneggs/tree/4650370
 [ver.spectator_mode]: https://github.com/minetest-mods/spectator_mode/tree/7d68bec
+[ver.spidermob]: https://github.com/Darcidride/minetest-spidermob-v1/tree/c72d2ff
 [ver.stairsplus]: https://github.com/CasimirKaPazi/stairsplus/tree/311e1f0
 [ver.technic]: https://github.com/minetest-mods/technic/tree/42efc7e
 [ver.throwing]: https://github.com/Jeija/minetest-mod-throwing/tree/79ad788
@@ -446,6 +448,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.mobs_goblins]: https://github.com/AntumDeluge/mtmod-mobs_goblins/tree/c7fc71b
 [patch.mydoors]: https://github.com/AntumDeluge/mtmp-mydoors/tree/e36c9d1
 [patch.rainbow_ore]: https://github.com/AntumDeluge/mtmod-rainbow_ore/commit/60dc35e
+[patch.spidermob]: https://github.com/AntumDeluge/mtmod-spidermob/tree/16350f0
 [patch.technic]: https://github.com/AntumDeluge/mtmod-technic/tree/9649cee
 [patch.unifieddyes]: https://github.com/AntumDeluge/mtmod-unifieddyes/commit/df3f1b1
 [patch.walking_light]: https://github.com/AntumDeluge/mtmod-walking_light/commit/00ebab8
