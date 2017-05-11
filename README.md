@@ -45,7 +45,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [inventory_plus][] ([BSD 3-Clause](mods/inventory/inventory_plus/LICENSE))
 * lib/
     * [biome_lib][] ([WTFPL][lic.biome_lib]) -- version: [9cdcdcf Git][ver.biome_lib] *2017-01-26*
-	* [signs_lib][] ([BSD/WTFPL](mods/lib/signs_lib/copyright.txt))
 * lighting/
 	* [ilights][] ([CC BY-SA][lic.ilights]) -- version [b1f7ccf Git][ver.ilights] *2017-03-18*
     * walking_light ([petermalone fork][walking_light]) ([WTFPL / CC-BY-SA][lic.walking_light]) -- version: [b9de302 Git][ver.walking_light] *2016-09-09* ([patched][patch.walking_light])
@@ -81,6 +80,8 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * protection/
     * [areas][] ([LGPL][lic.areas]) -- version [6080ff0 Git][ver.areas] *2016-11-25*
     * [simple_protection][] ([WTFPL][lic.simple_protection]) -- version [23c024f Git][ver.simple_protection] *2017-01-07*
+* signs/
+	* [signs_lib][] ([BSD / WTFPL][lic.signs_lib])
 * sound/
     * [ambience][ambience_ultralite] ([WTFPL][lic.ambience_ultralite.1] / [CC-BY / CC-BY-SA / CC-BY-NC-SA / CC0][lic.ambience_ultralite.2]) -- version: 0.36
 * spawning/
@@ -366,6 +367,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.privilegeareas]: mods/admin/privilegeareas/README.md
 [lic.quartz]: mods/materials/quartz/LICENSE.txt
 [lic.rainbow_ore]: mods/materials/rainbow_ore/README.md
+[lic.signs_lib]: mods/signs/signs_lib/copyright.txt
 [lic.simple_protection]: mods/protection/simple_protection/README.md
 [lic.spawneggs]: mods/spawning/spawneggs/README.txt
 [lic.spectator_mode]: mods/admin/spectator_mode/LICENSE
