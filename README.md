@@ -60,7 +60,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [spidermob][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0] / [MIT][lic.mit] / [WTFPL][lic.spidermob] / [Unlicense][lic.unlicense]) -- version [c72d2ff Git][ver.spidermob] *2016-08-14* ([patched][patch.spidermob])
 * mobs_passive/
 * npc/
-    * [peaceful_npc][] ([WTFPL][lic.wtfpl])
+    * [peaceful_npc][] ([WTFPL][lic.wtfpl]) -- version: [2b3a7a5 Git][ver.peaceful_npc] *2015-08-09*
 * [painting][] (???)
 * [pipeworks][] ([WTFPL][lic.wtfpl])
 * plantlife/
@@ -429,6 +429,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.moreores]: https://github.com/minetest-mods/moreores/tree/0842b4f
 [ver.mydoors]: https://github.com/minetest-mods/mydoors/tree/63aef13
 [ver.mywoodslopes]: https://github.com/minetest-mods/mywoodslopes/tree/3a1b531
+[ver.peaceful_npc]: https://github.com/jojoa1997/peaceful_npc/tree/2b3a7a5
 [ver.playeranim]: https://github.com/minetest-mods/playeranim/tree/0ca8e5a
 [ver.privilegeareas]: https://github.com/minetest-mods/privilegeareas/tree/aebaa00
 [ver.quartz]: https://github.com/minetest-mods/quartz/tree/00ca4eb
