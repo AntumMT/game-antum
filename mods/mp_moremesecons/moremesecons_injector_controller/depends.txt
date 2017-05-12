@@ -1,3 +1,2 @@
 mesecons
-mesecons_blinkyplant
-mesecons_gates
+craft_guide?

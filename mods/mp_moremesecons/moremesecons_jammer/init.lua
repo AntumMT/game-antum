@@ -1,23 +1,42 @@
-local JAMMER_MAX_DISTANCE = 10
-
 -- see wireless jammer
 local get = vector.get_data_from_pos
 local set = vector.set_data_to_pos
 local remove = vector.remove_data_from_pos
 
-local jammers = {}
+local jammers
+local enable_lbm = moremesecons.setting("jammer", "enable_lbm", false)
+local storage
+if not minetest.get_mod_storage then
+	enable_lbm = true -- No mod storage (<= 0.4.15-stable): force registration of LBM
+	jammers = {}
+else
+	storage = minetest.get_mod_storage()
+	jammers = minetest.deserialize(storage:get_string("jammers")) or {}
+end
+
+local function update_mod_storage()
+	if not storage then
+		return
+	end
+	storage:set_string("jammers", minetest.serialize(jammers))
+end
+
 local function add_jammer(pos)
 	if get(jammers, pos.z,pos.y,pos.x) then
 		return
 	end
 	set(jammers, pos.z,pos.y,pos.x, true)
+	update_mod_storage()
 end
 
 local function remove_jammer(pos)
 	remove(jammers, pos.z,pos.y,pos.x)
+	update_mod_storage()
 end
 
 local function is_jammed(pos)
+	local JAMMER_MAX_DISTANCE = moremesecons.setting("jammer", "max_distance", 10, 1)
+
 	local pz,py,px = vector.unpack(pos)
 	for z,yxs in pairs(jammers) do
 		if math.abs(pz-z) <= JAMMER_MAX_DISTANCE then
@@ -39,7 +58,7 @@ end
 minetest.after(0, function() -- After loading all mods, override some functions
 	local jammed
 
-	local actual_node_get = minetest.get_node_or_nil
+	local actual_node_get = mesecon.get_node_force
 	local function temp_node_get(pos, ...)
 		local node = actual_node_get(pos, ...)
 		if jammed == nil
@@ -77,13 +96,13 @@ minetest.after(0, function() -- After loading all mods, override some functions
 	local actual_turnon = mesecon.turnon
 	function mesecon.turnon(...)
 		--set those to the temporary functions
-		minetest.get_node_or_nil = temp_node_get
+		mesecon.get_node_force = temp_node_get
 		mesecon.is_conductor_off = temp_is_conductor_off
 		mesecon.is_effector = temp_is_effector
 
 		actual_turnon(...)
 
-		minetest.get_node_or_nil = actual_node_get
+		mesecon.get_node_force = actual_node_get
 		mesecon.is_conductor_off = actual_is_conductor_off
 		mesecon.is_effector = actual_is_effector
 
@@ -101,6 +120,7 @@ mesecon.register_node("moremesecons_jammer:jammer", {
 	mesecons = {effector = {
 		action_on = function(pos)
 			add_jammer(pos)
+			minetest.sound_play("moremesecons_jammer", {pos = pos})
 			minetest.swap_node(pos, {name="moremesecons_jammer:jammer_on"})
 		end
 	}},
@@ -123,9 +143,11 @@ minetest.register_craft({
 		{"", "moremesecons_wireless:jammer_off", ""}}
 })
 
-minetest.register_lbm({
-	name = "moremesecons_jammer:add_jammer",
-	nodenames = {"moremesecons_jammer:jammer_on"},
-	run_at_every_load = true,
-	action = add_jammer
-})
+if enable_lbm then
+	minetest.register_lbm({
+		name = "moremesecons_jammer:add_jammer",
+		nodenames = {"moremesecons_jammer:jammer_on"},
+		run_at_every_load = true,
+		action = add_jammer
+	})
+end

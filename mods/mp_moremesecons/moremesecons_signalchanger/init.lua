@@ -4,8 +4,8 @@ local nodebox = {
 }
 
 local function signalchanger_get_output_rules(node)
-	local rules = {{x=1, y=0, z=0},
-			{x=-1, y=0, z=0}}
+	local rules = {{x=-1, y=0, z=0},
+			{x=1, y=0, z=0}}
 	for i = 0, node.param2 do
 		rules = mesecon.rotate_rules_left(rules)
 	end
@@ -13,7 +13,7 @@ local function signalchanger_get_output_rules(node)
 end
 
 local function signalchanger_get_input_rules(node)
-	local rules = {{x=0, y=0, z=1, name="input_on"}, {x=0, y=0, z=-1, name="input_off"}}
+	local rules = {{x=0, y=0, z=-1, name="input_on"}, {x=0, y=0, z=1, name="input_off"}}
 	for i = 0, node.param2 do
 		rules = mesecon.rotate_rules_left(rules)
 	end
@@ -77,5 +77,5 @@ mesecon.register_node("moremesecons_signalchanger:signalchanger", {
 
 minetest.register_craft({
 	output = "moremesecons_signalchanger:signalchanger_off",
-	recipe = {{"group:mesecon_conductor_craftable","moremesecons_switchtorch:switchtorch_on","group:mesecon_conductor_craftable"}}
+	recipe = {{"group:mesecon_conductor_craftable","moremesecons_switchtorch:switchtorch_off","group:mesecon_conductor_craftable"}}
 })

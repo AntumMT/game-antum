@@ -142,6 +142,9 @@ end
 
 -- tests if the node is a luacontroller
 local function is_luacontroller(pos)
+	if not pos then
+		return false
+	end
 	return string.match(minetest.get_node(pos).name, "mesecons_luacontroller:luacontroller%d%d%d%d")
 end
 
@@ -252,7 +255,7 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
 		local code = get_code_or_nil(pname, fields.player_name, fields.template_name)
 		if code then
 			set_luacontroller_code(pos, code)
-			minetest.chat_send_player(pname, "code set to template at "..vector.pos_to_string(pos))
+			minetest.chat_send_player(pname, "code set to template at "..minetest.pos_to_string(pos))
 		end
 		return
 	end
@@ -262,7 +265,7 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
 		local code = get_code_or_nil(pname, fields.player_name, fields.template_name)
 		if code then
 			set_luacontroller_code(pos, meta:get_string("code").."\r"..code)
-			minetest.chat_send_player(pname, "code added to luacontroller at "..vector.pos_to_string(pos))
+			minetest.chat_send_player(pname, "code added to luacontroller at "..minetest.pos_to_string(pos))
 		end
 		return
 	end

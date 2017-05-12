@@ -1,61 +1,90 @@
-local teleporters = {}
-local teleporters_rids = {}
+local teleporters
+local teleporters_rids
+
+local enable_lbm = moremesecons.setting("teleporter", "enable_lbm", false)
+local storage
+if not minetest.get_mod_storage then
+	enable_lbm = true -- No mod storage (<= 0.4.15-stable): force registration of LBM
+	teleporters = {}
+	teleporters_rids = {}
+	jammers = {}
+else
+	storage = minetest.get_mod_storage()
+
+	teleporters = minetest.deserialize(storage:get_string("teleporters")) or {}
+	teleporters_rids = minetest.deserialize(storage:get_string("teleporters_rids")) or {}
+	jammers = minetest.deserialize(storage:get_string("jammers")) or {}
+end
+
+local function update_mod_storage()
+	if not storage then
+		return
+	end
+	storage:set_string("teleporters", minetest.serialize(teleporters))
+	storage:set_string("teleporters_rids", minetest.serialize(teleporters_rids))
+end
 
 
-local register = function(pos)
+local function register(pos)
 	if not vector.get_data_from_pos(teleporters_rids, pos.z,pos.y,pos.x) then
 		table.insert(teleporters, pos)
 		vector.set_data_to_pos(teleporters_rids, pos.z,pos.y,pos.x, #teleporters)
+		update_mod_storage()
 	end
 end
 
-local teleport_nearest = function(pos)
-	local MAX_TELEPORTATION_DISTANCE = 50
-	local MAX_PLAYER_DISTANCE = 25
+local function teleport_nearest(pos)
+	local MAX_TELEPORTATION_DISTANCE = moremesecons.setting("teleporter", "max_t2t_distance", 50, 1)
+	local MAX_PLAYER_DISTANCE = moremesecons.setting("teleporter", "max_p2t_distance", 25, 1)
 
-	-- Search the nearest player
+	-- Search for the nearest player
 	local nearest = nil
 	local min_distance = MAX_PLAYER_DISTANCE
 	local players = minetest.get_connected_players()
 	for index, player in pairs(players) do
 		local distance = vector.distance(pos, player:getpos())
-		if distance < min_distance then
+		if distance <= min_distance then
 			min_distance = distance
 			nearest = player
 		end
 	end
 
 	if not nearest then
-		-- If there is no nearest player (maybe too far...)
+		-- If there is no nearest player (maybe too far away...)
 		return
 	end
 
-	-- Search other teleporter and teleport
+	-- Search for the corresponding teleporter and teleport
 	if not minetest.registered_nodes["moremesecons_teleporter:teleporter"] then return end
 
 	local newpos = {}
+	local min_distance = MAX_TELEPORTATION_DISTANCE
 	for i = 1, #teleporters do
 		if minetest.get_node(teleporters[i]).name == "moremesecons_teleporter:teleporter" then
+			local tel_pos
 			if teleporters[i].y == pos.y and teleporters[i].x == pos.x and teleporters[i].z ~= pos.z then
-				newpos = {x=teleporters[i].x, y=teleporters[i].y+1, z=teleporters[i].z}
+				tel_pos = {x=teleporters[i].x, y=teleporters[i].y+1, z=teleporters[i].z}
 			elseif teleporters[i].z == pos.z and teleporters[i].x == pos.x and teleporters[i].y ~= pos.y then
-				newpos = {x=teleporters[i].x, y=teleporters[i].y+1, z=teleporters[i].z}
+				tel_pos = {x=teleporters[i].x, y=teleporters[i].y+1, z=teleporters[i].z}
 			elseif teleporters[i].z == pos.z and teleporters[i].y == pos.y and teleporters[i].x ~= pos.x then
-				newpos = {x=teleporters[i].x, y=teleporters[i].y+1, z=teleporters[i].z}
+				tel_pos = {x=teleporters[i].x, y=teleporters[i].y+1, z=teleporters[i].z}
+			end
+
+			if tel_pos then
+				local distance = vector.distance(tel_pos, pos)
+				if distance <= min_distance then
+					min_distance = distance
+					newpos = tel_pos
+				end
 			end
 		end
 	end
-	if newpos.x then
-		-- If there is another teleporter BUT too far, delete newpos.
-		if vector.distance(newpos, pos) > MAX_TELEPORTATION_DISTANCE then
-			newpos = {}
-		end
-	end
 	if not newpos.x then
-		newpos = {x=pos.x, y=pos.y+1, z=pos.z} -- If newpos doesn't exist, teleport on the actual teleporter.
+		newpos = {x=pos.x, y=pos.y+1, z=pos.z} -- If newpos doesn't exist, teleport on the current teleporter
 	end
+
 	nearest:moveto(newpos)
-	minetest.log("action", "Player "..nearest:get_player_name().." was teleport with a MoreMesecons Teleporter.")
+	minetest.log("action", "Player "..nearest:get_player_name().." was teleported using a MoreMesecons Teleporter.")
 end
 
 minetest.register_craft({
@@ -79,14 +108,16 @@ minetest.register_node("moremesecons_teleporter:teleporter", {
 		if RID then
 			table.remove(teleporters, RID)
 			vector.remove_data_from_pos(teleporters_rids, pos.z,pos.y,pos.x)
+			update_mod_storage()
 		end
 	end,
 })
 
-
-minetest.register_lbm({
-	name = "moremesecons_teleporter:add_teleporter",
-	nodenames = {"moremesecons_teleporter:teleporter"},
-	run_at_every_load = true,
-	action = register
-})
+if enable_lbm then
+	minetest.register_lbm({
+		name = "moremesecons_teleporter:add_teleporter",
+		nodenames = {"moremesecons_teleporter:teleporter"},
+		run_at_every_load = true,
+		action = register
+	})
+end

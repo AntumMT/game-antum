@@ -189,7 +189,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* barn
 		* mobf
 		* mobf_settings
-* [moremesecons][] ([GPL][lic.gpl3.0])
+* [moremesecons][] ([MPL][lic.mpl2.0]) -- version: [e1d2e84 Git][ver.moremesecons] *2017-05-02* ([patched][patch.moremesecons])
 	* mp_moremesecons/
 * [mydoors][] ([CC-BY / CC-BY-SA][lic.mydoors] / [WTFPL][lic.wtfpl] / [DWYWFPL][lic.dwywpl]) -- version: [63aef13 Git][ver.mydoors] *2017-03-31* ([patched][patch.mydoors])
 	* mp_mydoors/
@@ -385,6 +385,8 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.lgpl2.1]: doc/licenses/LGPL-2.1.txt
 [lic.lgpl3.0]: doc/licenses/LGPL-3.0.txt
 [lic.mit]: doc/licenses/MIT.txt
+[lic.mpl]: doc/licenses/MPL-2.0.txt
+[lic.mpl2.0]: doc/licenses/MPL-2.0.txt
 [lic.unlicense]: doc/licenses/Unlicense.txt
 [lic.wtfpl]: doc/licenses/WTFPL.txt
 [lic.zlib]: doc/licenses/zlib.txt
@@ -439,6 +441,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.mobs_redo]: https://github.com/tenplus1/mobs_redo/tree/feb26ed
 [ver.more_chests]: https://github.com/minetest-mods/more_chests/tree/c597779
 [ver.moreblocks]: https://github.com/minetest-mods/moreblocks/tree/fbfb079
+[ver.moremesecons]: https://github.com/minetest-mods/MoreMesecons/tree/e1d2e84
 [ver.moreores]: https://github.com/minetest-mods/moreores/tree/0842b4f
 [ver.mydoors]: https://github.com/minetest-mods/mydoors/tree/63aef13
 [ver.mywoodslopes]: https://github.com/minetest-mods/mywoodslopes/tree/3a1b531
@@ -487,6 +490,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.kpgmobs]: https://github.com/AntumDeluge/mtmod-kpgmobs/tree/7da994c
 [patch.mesecons]: https://github.com/AntumDeluge/mtmp-mesecons/tree/2c5beee
 [patch.mobs_goblins]: https://github.com/AntumDeluge/mtmod-mobs_goblins/tree/c7fc71b
+[patch.moremesecons]: https://github.com/AntumDeluge/mtmp-moremesecons/tree/caa71bc
 [patch.moreores]: https://github.com/AntumDeluge/mtmod-moreores/tree/2172c49
 [patch.mydoors]: https://github.com/AntumDeluge/mtmp-mydoors/tree/e36c9d1
 [patch.nether]: https://github.com/AntumDeluge/mtmod-nether/tree/f634851
