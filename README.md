@@ -110,7 +110,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [biome_lib][] ([WTFPL][lic.wtfpl]) -- version: [9cdcdcf Git][ver.biome_lib] *2017-01-26*
     * [ethereal][] ([MIT][lic.ethereal]) -- version [2c24961 Git][ver.ethereal] *2017-04-23* ([patched][patch.ethereal])
     * [glow][] ([GPL][lic.gpl2.0]) -- version: [30f9cf3 Git][ver.glow] *2015-09-25*
-    * [nether][] ([WTFPL / CC BY-SA](mods/world/nether/README.md))
+    * [nether][] ([WTFPL / CC BY-SA][lic.nether]) -- version: [bc2ccfb Git][ver.nether] *2017-01-04* ([patched][patch.nether])
     * [worldedge][] ([DWYWPL][lic.dwywpl])
 
 
@@ -354,6 +354,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.moreblocks]: mods/buildings/moreblocks/LICENSE.md
 [lic.moreores]: mods/materials/moreores/LICENSE.md
 [lic.mydoors]: mods/mp_mydoors/README.md
+[lic.nether]: mods/world/nether/README.md
 [lic.playeranim]: mods/player_visuals/playeranim/license.md
 [lic.privilegeareas]: mods/admin/privilegeareas/README.md
 [lic.quartz]: mods/materials/quartz/LICENSE.txt
@@ -437,6 +438,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.moreores]: https://github.com/minetest-mods/moreores/tree/0842b4f
 [ver.mydoors]: https://github.com/minetest-mods/mydoors/tree/63aef13
 [ver.mywoodslopes]: https://github.com/minetest-mods/mywoodslopes/tree/3a1b531
+[ver.nether]: https://github.com/PilzAdam/nether/tree/bc2ccfb
 [ver.peaceful_npc]: https://github.com/jojoa1997/peaceful_npc/tree/2b3a7a5
 [ver.pipeworks]: https://github.com/minetest-mods/pipeworks/tree/d822279
 [ver.playeranim]: https://github.com/minetest-mods/playeranim/tree/0ca8e5a
@@ -481,6 +483,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.mobs_goblins]: https://github.com/AntumDeluge/mtmod-mobs_goblins/tree/c7fc71b
 [patch.moreores]: https://github.com/AntumDeluge/mtmod-moreores/tree/2172c49
 [patch.mydoors]: https://github.com/AntumDeluge/mtmp-mydoors/tree/e36c9d1
+[patch.nether]: https://github.com/AntumDeluge/mtmod-nether/tree/f634851
 [patch.quartz]: https://github.com/AntumDeluge/mtmod-quartz/tree/d23dabd
 [patch.rainbow_ore]: https://github.com/AntumDeluge/mtmod-rainbow_ore/tree/60dc35e
 [patch.signs_lib]: https://github.com/AntumDeluge/mtmod-signs_lib/tree/770978c
