@@ -184,7 +184,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* plasmascreen
 * [mesecons][] ([LGPL / CC BY-SA][lic.mesecons]) -- version: [564bdc2 Git][ver.mesecons] *2017-05-08* ([patched][patch.mesecons])
 	* mp_mesecons/
-* [mobf_core][animals_modpack] (part of animals_modpack) ([CC BY-SA][lic.mobf]) -- version: 2.5.1
+* [mobf_core][animals_modpack] (part of animals_modpack) ([CC BY-SA][lic.mobf]) -- version: [2.5.1 (fcc2553 Git)][ver.mobf_core] *2015-12-30* ***UPDATE***
 	* mp_mobf_core/
 		* barn
 		* mobf
@@ -433,6 +433,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.jukebox]: https://github.com/minetest-mods/jukebox/tree/e6a507f
 [ver.lightning]: https://github.com/minetest-mods/lightning/tree/39bd36c
 [ver.mesecons]: https://github.com/minetest-mods/mesecons/tree/564bdc2
+[ver.mobf_core]: https://github.com/sapier/mobf_core/tree/fcc2553
 [ver.mobs_goblins]: https://github.com/FreeLikeGNU/mobs_goblins/tree/a346f85
 [ver.mobs_monster]: https://github.com/tenplus1/mobs_monster/tree/f6d0e01
 [ver.mobs_redo]: https://github.com/tenplus1/mobs_redo/tree/feb26ed
