@@ -109,7 +109,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [bedrock2][] ([WTFPL][lic.wtfpl]) -- version [1.2.0-0378b61 Git][ver.bedrock2]
     * [biome_lib][] ([WTFPL][lic.wtfpl]) -- version: [9cdcdcf Git][ver.biome_lib] *2017-01-26*
     * [ethereal][] ([MIT][lic.ethereal]) -- version [2c24961 Git][ver.ethereal] *2017-04-23* ([patched][patch.ethereal])
-    * [glow][] ([GPL][lic.gpl2.0])
+    * [glow][] ([GPL][lic.gpl2.0]) -- version: [30f9cf3 Git][ver.glow] *2015-09-25*
     * [nether][] ([WTFPL / CC BY-SA](mods/world/nether/README.md))
     * [worldedge][] ([DWYWPL][lic.dwywpl])
 
@@ -416,6 +416,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.ethereal]: https://github.com/tenplus1/ethereal/tree/2c24961
 [ver.farming_plus]: https://github.com/PilzAdam/farming_plus/tree/7e0d976
 [ver.fort_spikes]: https://github.com/xeranas/fort_spikes/tree/2765b56
+[ver.glow]: https://github.com/bdjnk/glow/tree/30f9cf3
 [ver.helicopter]: https://github.com/SokolovPavel/helicopter/tree/10f1433
 [ver.hidename]: https://github.com/AntumDeluge/mtmod-hidename/tree/bb52dbc
 [ver.home_gui]: https://github.com/cornernote/minetest-home_gui/tree/f6b5001
