@@ -6,7 +6,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 ### The following mods are also included:
 
-***"UPDT" Denotes update available***
+***"UPDATE" Denotes update available***
 
 * admin/
     * [clean][] ([WTFPL][lic.wtfpl])
@@ -134,7 +134,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* animalmaterials
 		* cooking
 		* mob_environments
-* [animals_modpack][] -- version: 2.5.0
+* [animals_modpack][] -- version: [2.5.0 (963cef1 Git)][ver.animals_modpack] *2015-12-28* ***UPDATE***
 	* mp_animals_modpack/
 		* animal_chicken ([CC BY-SA / CC0][lic.amp_chicken])
 		* animal_clownfish ([CC BY-SA][lic.amp_clownfish])
@@ -394,6 +394,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.advtrains]: https://github.com/orwell96/advtrains/tree/28717b4
 [ver.airtanks]: https://github.com/minetest-mods/airtanks/tree/fc01ffb
 [ver.animalmaterials]: https://github.com/sapier/animalmaterials/tree/d952d27
+[ver.animals_modpack]: https://github.com/sapier/animals_modpack/tree/963cef1
 [ver.antum]: https://github.com/AntumDeluge/mtmp-antum/tree/4477d40
 [ver.areas]: https://github.com/ShadowNinja/areas/tree/6080ff0
 [ver.awards]: https://github.com/minetest-mods/awards/tree/096fe16
