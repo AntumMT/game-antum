@@ -87,7 +87,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * storage/
 	* [more_chests][] ([GPL][lic.gpl2.0]) -- version [c597779 Git][ver.more_chests] *2017-02-27*
 * tools/
-	* [compassgps][] ([WTFPL][lic.wtfpl] / [CC0][lic.cc0] / [CC BY-SA][lic.ccbysa])
+	* [compassgps][] ([WTFPL][lic.wtfpl] / [CC0][lic.cc0] / [CC BY-SA][lic.ccbysa]) -- version: [96892a0 Git][ver.compassgps] *2015-07-31* ([patched][patch.compassgps])
     * [tools_obsidian][] ([LGPL / CC BY-SA][lic.tools_obsidian]) -- version: [f77fd79][ver.tools_obsidian] *2016-03-19*
     * [torches][] ([LGPL / CC-BY-SA](mods/tools/torches/README.txt))
     * [workbench][] ([GPL / WTFPL](mods/tools/workbench/LICENSE))
@@ -403,6 +403,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.christmas]: https://github.com/TheZenKitteh/minetest-christmas/tree/d3bd872
 [ver.cme]: https://github.com/BlockMen/cme/tree/e3502a1
 [ver.coloredwood]: https://github.com/minetest-mods/coloredwood/tree/fc4ab15
+[ver.compassgps]: https://github.com/Kilarin/compassgps/tree/96892a0
 [ver.craft_guide]: https://github.com/cornernote/minetest-craft_guide/tree/20520b5
 [ver.craftguide]: https://github.com/minetest-mods/craftguide/tree/86a96c3
 [ver.creeper]: https://github.com/Rui-Minetest/creeper/tree/036666e
@@ -458,6 +459,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.campfire]: https://github.com/AntumDeluge/mtmod-campfire/tree/67b9dd7
 [patch.christmas]: https://github.com/AntumDeluge/mtmod-christmas/tree/f6c8dc2
 [patch.coloredwood]: https://github.com/AntumDeluge/mtmod-coloredwood/tree/ed6c46f
+[patch.compassgps]: https://github.com/AntumDeluge/mtmod-compassgps/tree/888ec15
 [patch.craftguide]: https://github.com/AntumDeluge/mtmod-craftguide/tree/89db504
 [patch.crops]: https://github.com/AntumDeluge/mtmod-crops/tree/b79cf07
 [patch.currency]: https://github.com/AntumDeluge/mtmod-currency/tree/7b0e29f
