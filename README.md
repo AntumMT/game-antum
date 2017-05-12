@@ -40,7 +40,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [trampoline][] ([GPL][lic.gpl3.0]) -- version: [0c9c9c8 Git][ver.trampoline]
     * [trash_can][] ([MIT][lic.trash_can]) -- version: [5fd3df7 Git][ver.trash_can] *2016-01-14* ([patched][patch.trash_can])
 * inventory/
-    * [bags][] ([BSD 3-Clause][lic.bags])
+    * [bags][] ([BSD 3-Clause][lic.bags]) -- version: [f17d829 Git][ver.bags] *2015-10-11* ([patched][patch.bags])
     * [inventory_plus][] ([BSD 3-Clause][lic.inventory_plus])
 * lighting/
 	* [ilights][] ([CC BY-SA][lic.ccbysa]) -- version [b1f7ccf Git][ver.ilights] *2017-03-18*
@@ -394,6 +394,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.areas]: https://github.com/ShadowNinja/areas/tree/6080ff0
 [ver.awards]: https://github.com/minetest-mods/awards/tree/096fe16
 [ver.away]: https://github.com/kahrl/minetest-mod-away/tree/4c1e5a9
+[ver.bags]: https://github.com/cornernote/minetest-bags/tree/f17d829
 [ver.bedrock2]: http://repo.or.cz/minetest_bedrock2.git/tree/0378b61
 [ver.biome_lib]: https://github.com/minetest-mods/biome_lib/tree/9cdcdcf
 [ver.bridges]: https://github.com/Sokomine/bridges/tree/5b5f475
@@ -450,6 +451,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.windmill]: https://github.com/Sokomine/windmill/tree/47b029d
 
 [patch.adv_spawning]: https://github.com/AntumDeluge/mtmod-adv_spawning/tree/572688b
+[patch.bags]: https://github.com/AntumDeluge/mtmod-bags/tree/4363284
 [patch.campfire]: https://github.com/AntumDeluge/mtmod-campfire/tree/67b9dd7
 [patch.christmas]: https://github.com/AntumDeluge/mtmod-christmas/tree/f6c8dc2
 [patch.coloredwood]: https://github.com/AntumDeluge/mtmod-coloredwood/tree/ed6c46f
