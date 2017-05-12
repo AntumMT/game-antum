@@ -41,7 +41,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [trash_can][] ([MIT][lic.trash_can]) -- version: [5fd3df7 Git][ver.trash_can] *2016-01-14* ([patched][patch.trash_can])
 * inventory/
     * [bags][] ([BSD 3-Clause][lic.bags]) -- version: [f17d829 Git][ver.bags] *2015-10-11* ([patched][patch.bags])
-    * [inventory_plus][] ([BSD 3-Clause][lic.inventory_plus])
+    * [inventory_plus][] ([BSD 3-Clause][lic.inventory_plus]) -- version: [a978b47 Git][ver.inventory_plus] *2016-03-31*
 * lighting/
 	* [ilights][] ([CC BY-SA][lic.ccbysa]) -- version [b1f7ccf Git][ver.ilights] *2017-03-18*
     * walking_light ([petermalone fork][walking_light]) ([WTFPL / CC BY-SA][lic.walking_light]) -- version: [b9de302 Git][ver.walking_light] *2016-09-09* ([patched][patch.walking_light])
@@ -417,6 +417,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.home_gui]: https://github.com/cornernote/minetest-home_gui/tree/f6b5001
 [ver.homedecor]: https://github.com/minetest-mods/homedecor_modpack/tree/5fb16c4
 [ver.ilights]: https://github.com/minetest-mods/ilights/tree/b1f7ccf
+[ver.inventory_plus]: https://github.com/cornernote/minetest-inventory_plus/tree/a978b47
 [ver.invisibility]: https://github.com/tenplus1/invisibility/tree/bf4156b
 [ver.jukebox]: https://github.com/minetest-mods/jukebox/tree/e6a507f
 [ver.lightning]: https://github.com/minetest-mods/lightning/tree/39bd36c
