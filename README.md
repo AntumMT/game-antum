@@ -90,7 +90,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [compassgps][] ([WTFPL][lic.wtfpl] / [CC0][lic.cc0] / [CC BY-SA][lic.ccbysa]) -- version: [96892a0 Git][ver.compassgps] *2015-07-31* ([patched][patch.compassgps])
     * [tools_obsidian][] ([LGPL / CC BY-SA][lic.tools_obsidian]) -- version: [f77fd79][ver.tools_obsidian] *2016-03-19*
     * [torches][] ([LGPL / CC-BY-SA](mods/tools/torches/README.txt)) -- version: [e19c772 Git][ver.torches] *2015-11-12*
-    * [workbench][] ([GPL / WTFPL](mods/tools/workbench/LICENSE))
+    * [workbench][] ([GPL / WTFPL](mods/tools/workbench/LICENSE)) -- version: [74dd1af Git][ver.workbench] *2017-02-07* ([patched][patch.workbench])
 * transport/
 	* [helicopter][] ([GPL][lic.gpl2.0]) -- version: [10f1433 Git][ver.helicopter] ([patched][patch.helicopter]) *2015-07-15*
     * [hovercraft][] ([LGPL / CC BY-SA / CC0][lic.hovercraft])
@@ -454,6 +454,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.walking_light]: https://github.com/petermaloney/walking_light/tree/b9de302
 [ver.wardrobe]: https://github.com/prestidigitator/minetest-mod-wardrobe/tree/c48b011
 [ver.windmill]: https://github.com/Sokomine/windmill/tree/47b029d
+[ver.workbench]: https://github.com/minetest-mods/workbench/tree/74dd1af
 
 [patch.adv_spawning]: https://github.com/AntumDeluge/mtmod-adv_spawning/tree/572688b
 [patch.bags]: https://github.com/AntumDeluge/mtmod-bags/tree/4363284
@@ -480,3 +481,4 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.unifieddyes]: https://github.com/AntumDeluge/mtmod-unifieddyes/tree/df3f1b1
 [patch.walking_light]: https://github.com/AntumDeluge/mtmod-walking_light/tree/00ebab8
 [patch.windmill]: https://github.com/AntumDeluge/mtmod-windmill/tree/7756ab4
+[patch.workbench]: https://github.com/AntumDeluge/mtmod-workbench/tree/b964323
