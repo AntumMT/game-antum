@@ -38,7 +38,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * furniture/
 	* [jukebox][] ([WTFPL / CC0][lic.jukebox]) -- version: [e6a507f Git][ver.jukebox] *2016-05-23*
     * [trampoline][] ([GPL][lic.gpl3.0]) -- version: [0c9c9c8 Git][ver.trampoline]
-    * [trash_can][] ([MIT][lic.trash_can])
+    * [trash_can][] ([MIT][lic.trash_can]) -- version: [5fd3df7 Git][ver.trash_can] *2016-01-14* ([patched][patch.trash_can])
 * [intllib][] ([WTFPL][lic.intllib])
 * inventory/
     * [bags][] ([BSD 3-Clause][lic.bags])
@@ -445,6 +445,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.tnt]: https://github.com/PilzAdam/TNT/tree/d6a0b7d
 [ver.tools_obsidian]: https://github.com/Dragonop/tools_obsidian/tree/f77fd79
 [ver.trampoline]: https://github.com/AntumDeluge/mtmod-trampoline/tree/0c9c9c8
+[ver.trash_can]: https://github.com/minetest-mods/trash_can/tree/5fd3df7
 [ver.unifieddyes]: https://github.com/minetest-mods/unifieddyes/tree/df177c2
 [ver.vector_extras]: https://github.com/HybridDog/vector_extras/tree/472deb6
 [ver.walking_light]: https://github.com/petermaloney/walking_light/tree/b9de302
@@ -470,6 +471,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.signs_lib]: https://github.com/AntumDeluge/mtmod-signs_lib/tree/770978c
 [patch.spidermob]: https://github.com/AntumDeluge/mtmod-spidermob/tree/16350f0
 [patch.technic]: https://github.com/AntumDeluge/mtmod-technic/tree/9649cee
+[patch.trash_can]: https://github.com/AntumDeluge/mtmod-trash_can/tree/5a92bf4
 [patch.unifieddyes]: https://github.com/AntumDeluge/mtmod-unifieddyes/tree/df3f1b1
 [patch.walking_light]: https://github.com/AntumDeluge/mtmod-walking_light/tree/00ebab8
 [patch.windmill]: https://github.com/AntumDeluge/mtmod-windmill/tree/7756ab4
