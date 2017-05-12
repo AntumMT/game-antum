@@ -97,7 +97,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * ui/
     * [bookmarks_gui][] ([BSD 3-Clause][lic.bookmarks_gui]) -- version: [d369dba Git][ver.bookmarks_gui] *2015-08-14*
     * [home_gui][] ([BSD 3-Clause](mods/ui/home_gui/LICENSE)) -- version: [f6b5001 Git][ver.home_gui] *2015-08-14*
-    * [hud][] ([LGPL / CC BY-SA / WTFPL][lic.hud]) -- version: [c58f703 Git][ver.hud] *2016-02-15*
+    * [hud][] ([LGPL / CC BY-SA / WTFPL][lic.hud]) -- version: [c58f703 Git][ver.hud] *2016-02-15* ([patched][patch.hud])
     * [hudmap][] ([LGPL][lic.lgpl2.1] / WTFPL][lic.wtfpl])
 * [vector_extras][] ([WTFPL][lic.vector_extras]) -- version: [472deb6 Git][ver.vector_extras] *2017-01-25*
 * weather/
@@ -474,6 +474,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.fort_spikes]: https://github.com/AntumDeluge/mtmod-fort_spikes/tree/74dca42
 [patch.helicopter]: https://github.com/AntumDeluge/mtmod-helicopter/tree/66a6523
 [patch.hovercraft]: https://github.com/AntumDeluge/mtmod-hovercraft/tree/96ad3b4
+[patch.hud]: https://github.com/AntumDeluge/mtmod-hud/tree/3473476
 [patch.kpgmobs]: https://github.com/AntumDeluge/mtmod-kpgmobs/tree/7da994c
 [patch.mobs_goblins]: https://github.com/AntumDeluge/mtmod-mobs_goblins/tree/c7fc71b
 [patch.moreores]: https://github.com/AntumDeluge/mtmod-moreores/tree/2172c49
