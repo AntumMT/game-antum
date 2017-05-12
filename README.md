@@ -39,7 +39,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [jukebox][] ([WTFPL / CC0][lic.jukebox]) -- version: [e6a507f Git][ver.jukebox] *2016-05-23*
     * [trampoline][] ([GPL][lic.gpl3.0]) -- version: [0c9c9c8 Git][ver.trampoline]
     * [trash_can][] ([MIT][lic.trash_can]) -- version: [5fd3df7 Git][ver.trash_can] *2016-01-14* ([patched][patch.trash_can])
-* [intllib][] ([WTFPL][lic.intllib])
 * inventory/
     * [bags][] ([BSD 3-Clause][lic.bags])
     * [inventory_plus][] ([BSD 3-Clause][lic.inventory_plus])
@@ -245,7 +244,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [hud]: https://github.com/BlockMen/hud
 [hudmap]: https://github.com/stujones11/hudmap
 [ilights]: https://forum.minetest.net/viewtopic.php?t=12200
-[intllib]: https://forum.minetest.net/viewtopic.php?t=4929
 [invisibility]: https://forum.minetest.net/viewtopic.php?t=14846
 [invisible]: https://forum.minetest.net/viewtopic.php?t=14399
 [inventory_plus]: https://forum.minetest.net/viewtopic.php?t=3100
@@ -340,7 +338,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.hidename]: mods/player_visuals/hidename/LICENSE.txt
 [lic.homedecor]: mods/mp_homedecor_modpack/LICENSE
 [lic.hovercraft]: mods/transport/hovercraft/LICENSE.txt
-[lic.intllib]: mods/intllib/README.md
 [lic.inventory_plus]: mods/inventory/inventory_plus/LICENSE
 [lic.invisibility]: mods/player_visuals/invisibility/license.txt
 [lic.invisible]: mods/admin/invisible/readme.txt
