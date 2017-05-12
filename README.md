@@ -97,7 +97,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * ui/
     * [bookmarks_gui][] ([BSD 3-Clause][lic.bookmarks_gui]) -- version: [d369dba Git][ver.bookmarks_gui] *2015-08-14*
     * [home_gui][] ([BSD 3-Clause](mods/ui/home_gui/LICENSE)) -- version: [f6b5001 Git][ver.home_gui] *2015-08-14*
-    * [hud][] ([LGPL / CC BY-SA / WTFPL](mods/ui/hud/README.txt))
+    * [hud][] ([LGPL / CC BY-SA / WTFPL][lic.hud]) -- version: [c58f703 Git][ver.hud] *2016-02-15*
     * [hudmap][] ([LGPL][lic.lgpl2.1] / WTFPL][lic.wtfpl])
 * [vector_extras][] ([WTFPL][lic.vector_extras]) -- version: [472deb6 Git][ver.vector_extras] *2017-01-25*
 * weather/
@@ -339,6 +339,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.hidename]: mods/player_visuals/hidename/LICENSE.txt
 [lic.homedecor]: mods/mp_homedecor_modpack/LICENSE
 [lic.hovercraft]: mods/transport/hovercraft/LICENSE.txt
+[lic.hud]: mods/ui/hud/README.txt
 [lic.inventory_plus]: mods/inventory/inventory_plus/LICENSE
 [lic.invisibility]: mods/player_visuals/invisibility/license.txt
 [lic.invisible]: mods/admin/invisible/readme.txt
@@ -420,6 +421,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.home_gui]: https://github.com/cornernote/minetest-home_gui/tree/f6b5001
 [ver.homedecor]: https://github.com/minetest-mods/homedecor_modpack/tree/5fb16c4
 [ver.hovercraft]: https://github.com/stujones11/hovercraft/tree/7b0df6f
+[ver.hud]: https://github.com/BlockMen/hud/tree/c58f703
 [ver.ilights]: https://github.com/minetest-mods/ilights/tree/b1f7ccf
 [ver.inventory_plus]: https://github.com/cornernote/minetest-inventory_plus/tree/a978b47
 [ver.invisibility]: https://github.com/tenplus1/invisibility/tree/bf4156b
