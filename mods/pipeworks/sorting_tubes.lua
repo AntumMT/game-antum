@@ -1,3 +1,5 @@
+local fs_helpers = pipeworks.fs_helpers
+
 if pipeworks.enable_mese_tube then
 	local function update_formspec(pos)
 		local meta = minetest.get_meta(pos)
@@ -13,8 +15,12 @@ if pipeworks.enable_mese_tube then
 		local buttons_formspec = ""
 		for i = 0, 5 do
 			buttons_formspec = buttons_formspec .. fs_helpers.cycling_button(meta,
-				"image_button[7,"..(i)..";1,1", "l"..(i+1).."s",
-				{{text="",texture="pipeworks_button_off.png", addopts="false;false;pipeworks_button_interm.png"}, {text="",texture="pipeworks_button_on.png", addopts="false;false;pipeworks_button_interm.png"}})
+				"image_button[7,"..(i+0.2)..";1,0.6", "l"..(i+1).."s",
+				{
+					pipeworks.button_off,
+					pipeworks.button_on
+				}
+			)
 		end
 		meta:set_string("formspec",
 			"size[8,11]"..
@@ -31,7 +37,21 @@ if pipeworks.enable_mese_tube then
 			"image[0,4;1,1;pipeworks_blue.png]"..
 			"image[0,5;1,1;pipeworks_red.png]"..
 			buttons_formspec..
-			"list[current_player;main;0,7;8,4;]")
+			"list[current_player;main;0,7;8,4;]" ..
+			"listring[current_player;main]" ..
+			"listring[current_player;main]" ..
+			"listring[context;line1]" ..
+			"listring[current_player;main]" ..
+			"listring[context;line2]" ..
+			"listring[current_player;main]" ..
+			"listring[context;line3]" ..
+			"listring[current_player;main]" ..
+			"listring[context;line4]" ..
+			"listring[current_player;main]" ..
+			"listring[context;line5]" ..
+			"listring[current_player;main]" ..
+			"listring[context;line6]"
+			)
 	end
 
 	pipeworks.register_tube("pipeworks:mese_tube", {
@@ -119,8 +139,13 @@ if pipeworks.enable_mese_tube then
 					if not pipeworks.may_configure(pos, player) then return 0 end
 					update_formspec(pos) -- For old tubes
 					local inv = minetest.get_meta(pos):get_inventory()
-					inv:set_stack(from_list, from_index, ItemStack(""))
-					return 0
+
+					if from_list:match("line%d") and to_list:match("line%d") then
+						return count
+					else
+						inv:set_stack(from_list, from_index, ItemStack(""))
+						return 0
+					end
 				end,
 			},
 	})

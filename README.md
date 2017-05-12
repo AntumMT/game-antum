@@ -62,7 +62,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * npc/
     * [peaceful_npc][] ([WTFPL][lic.wtfpl]) -- version: [2b3a7a5 Git][ver.peaceful_npc] *2015-08-09*
 * [painting][] (???)
-* [pipeworks][] ([WTFPL][lic.wtfpl])
+* [pipeworks][] ([WTFPL][lic.wtfpl]) -- version: [d822279 Git][ver.pipeworks] *2017-04-13*
 * plantlife/
 * player/
 	* [airtanks][] ([MIT][lic.airtanks]) -- version: [fc01ffb Git][ver.airtanks] *2017-04-01*
@@ -430,6 +430,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.mydoors]: https://github.com/minetest-mods/mydoors/tree/63aef13
 [ver.mywoodslopes]: https://github.com/minetest-mods/mywoodslopes/tree/3a1b531
 [ver.peaceful_npc]: https://github.com/jojoa1997/peaceful_npc/tree/2b3a7a5
+[ver.pipeworks]: https://github.com/minetest-mods/pipeworks/tree/d822279
 [ver.playeranim]: https://github.com/minetest-mods/playeranim/tree/0ca8e5a
 [ver.privilegeareas]: https://github.com/minetest-mods/privilegeareas/tree/aebaa00
 [ver.quartz]: https://github.com/minetest-mods/quartz/tree/00ca4eb
