@@ -7,7 +7,7 @@ local edge = tonumber(minetest.setting_get("world_edge")) or 30000
 local radius = 2
 --------------
 
-core.log("action", "World edge: " .. edge)
+minetest.log("action", "World edge: " .. edge)
 
 local count = 0
 local waiting_list = {}

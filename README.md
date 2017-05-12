@@ -111,7 +111,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [ethereal][] ([MIT][lic.ethereal]) -- version [2c24961 Git][ver.ethereal] *2017-04-23* ([patched][patch.ethereal])
     * [glow][] ([GPL][lic.gpl2.0]) -- version: [30f9cf3 Git][ver.glow] *2015-09-25*
     * [nether][] ([WTFPL / CC BY-SA][lic.nether]) -- version: [bc2ccfb Git][ver.nether] *2017-01-04* ([patched][patch.nether])
-    * [worldedge][] ([DWYWPL][lic.dwywpl])
+    * [worldedge][] ([DWYWPL][lic.dwywpl]) -- version: [e15fa99 Git][ver.worldedge] *2016-03-23* ([patched][patch.worldedge])
 
 
 
@@ -464,6 +464,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.wardrobe]: https://github.com/prestidigitator/minetest-mod-wardrobe/tree/c48b011
 [ver.windmill]: https://github.com/Sokomine/windmill/tree/47b029d
 [ver.workbench]: https://github.com/minetest-mods/workbench/tree/74dd1af
+[ver.worldedge]: https://github.com/minetest-mods/worldedge/tree/e15fa99
 
 [patch.adv_spawning]: https://github.com/AntumDeluge/mtmod-adv_spawning/tree/572688b
 [patch.bags]: https://github.com/AntumDeluge/mtmod-bags/tree/4363284
@@ -494,3 +495,4 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.walking_light]: https://github.com/AntumDeluge/mtmod-walking_light/tree/00ebab8
 [patch.windmill]: https://github.com/AntumDeluge/mtmod-windmill/tree/7756ab4
 [patch.workbench]: https://github.com/AntumDeluge/mtmod-workbench/tree/b964323
+[patch.worldedge]: https://github.com/AntumDeluge/mtmod-worldedge/tree/c9b6dd3
