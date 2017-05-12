@@ -26,7 +26,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [campfire][] ([GPL][lic.gpl2.0] / [CC BY-SA][lic.ccbysa] / [WTFPL][lic.campfire]) -- version: [b45acd2 Git][ver.campfire] *2016-02-18* ([patched][patch.campfire])
 * chat/
     * [away][] ([GPL][lic.gpl2.0]) -- version: [4c1e5a9 Git][ver.away] *2012-03-09*
-    * [chatlog][] ([CC0][lic.cc0])
+    * [chatlog][] ([CC0][lic.cc0]) -- version: (no version info)
 * crafting/
     * [craft_guide][] ([BSD 3-Clause][lic.craft_guide]) -- version: [20520b5 Git][ver.craft_guide] *2017-01-30*
     * [craftguide][] ([GPL / WTFPL](mods/crafting/craftguide/LICENSE)) -- version: [86a96c3 Git][ver.craftguide] *2017-03-21* ([patched][patch.craftguide])
@@ -219,7 +219,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [bridges]: https://forum.minetest.net/viewtopic.php?t=3488
 [campfire]: https://forum.minetest.net/viewtopic.php?t=10569
 [character_creator]: https://forum.minetest.net/viewtopic.php?t=13138
-[chatlog]: https://forum.minetest.net/viewtopic.php?id=6220
+[chatlog]: https://forum.minetest.net/viewtopic.php?t=6220
 [christmas]: https://forum.minetest.net/viewtopic.php?t=3950
 [clean]: https://forum.minetest.net/viewtopic.php?t=2777
 [cme]: https://forum.minetest.net/viewtopic.php?t=8638
