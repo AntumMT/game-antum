@@ -95,7 +95,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [helicopter][] ([GPL][lic.gpl2.0]) -- version: [10f1433 Git][ver.helicopter] ([patched][patch.helicopter]) *2015-07-15*
     * [hovercraft][] ([LGPL / CC BY-SA / CC0][lic.hovercraft]) -- version: [7b0df6f Git][ver.hovercraft] *2016-04-10* ([patched][patch.hovercraft])
 * ui/
-    * [bookmarks_gui][] ([BSD 3-Clause](mods/ui/bookmarks_gui/LICENSE))
+    * [bookmarks_gui][] ([BSD 3-Clause][lic.bookmarks_gui]) -- version: [d369dba Git][ver.bookmarks_gui] *2015-08-14*
     * [home_gui][] ([BSD 3-Clause](mods/ui/home_gui/LICENSE)) -- version: [f6b5001 Git][ver.home_gui] *2015-08-14*
     * [hud][] ([LGPL / CC BY-SA / WTFPL](mods/ui/hud/README.txt))
     * [hudmap][] ([LGPL][lic.lgpl2.1] / WTFPL][lic.wtfpl])
@@ -321,6 +321,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.antum]: mods/mp_antum/LICENSE.txt
 [lic.awards]: mods/awards/LICENSE.txt
 [lic.bags]: mods/inventory/bags/LICENSE
+[lic.bookmarks_gui]: mods/ui/bookmarks_gui/LICENSE
 [lic.bridges]: mods/buildings/bridges/README.md
 [lic.campfire]: mods/campfire/README.md
 [lic.character_creator]: mods/player_visuals/character_creator/license.txt
@@ -397,6 +398,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.bags]: https://github.com/cornernote/minetest-bags/tree/f17d829
 [ver.bedrock2]: http://repo.or.cz/minetest_bedrock2.git/tree/0378b61
 [ver.biome_lib]: https://github.com/minetest-mods/biome_lib/tree/9cdcdcf
+[ver.bookmarks_gui]: https://github.com/cornernote/minetest-bookmarks_gui/tree/d369dba
 [ver.bridges]: https://github.com/Sokomine/bridges/tree/5b5f475
 [ver.campfire]: https://github.com/Napiophelios/campfire/tree/b45acd2
 [ver.character_creator]: https://github.com/Rui-Minetest/character_creator/tree/6a0e6aa

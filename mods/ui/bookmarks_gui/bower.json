@@ -1,0 +1,18 @@
+{
+    "name": "bookmarks_gui",
+    "description": "Allows players to set bookmark positions and then go to them using the inventory screen.",
+    "keywords": [
+        "bookmarks_gui"
+    ],
+    "homepage": "http://cornernote.github.io/minetest-bookmarks_gui/",
+    "forum": "http://forum.minetest.net/viewtopic.php?f=11&t=3219",
+    "screenshots": [
+        "https://cornernote.github.io/minetest-bookmarks_gui/img/screenshot.png"
+    ],
+    "dependencies": {
+        "inventory_plus": "~1.0.0"
+    },
+    "authors": [
+        "cornernote"
+    ]
+}
