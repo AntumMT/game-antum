@@ -200,7 +200,6 @@ end
 mesecon.register_on_mvps_move(function(moved_nodes)
 	for _, n in ipairs(moved_nodes) do
 		mesecon.on_placenode(n.pos, n.node)
-		mesecon.update_autoconnect(n.pos)
 	end
 end)
 
@@ -247,3 +246,4 @@ mesecon.register_mvps_stopper("doors:door_steel_t_1")
 mesecon.register_mvps_stopper("doors:door_steel_b_2")
 mesecon.register_mvps_stopper("doors:door_steel_t_2")
 mesecon.register_mvps_stopper("default:chest_locked")
+mesecon.register_on_mvps_move(mesecon.move_hot_nodes)

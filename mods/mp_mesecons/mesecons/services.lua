@@ -1,7 +1,7 @@
 -- Dig and place services
 
-mesecon.on_placenode = function (pos, node)
-	mesecon.update_autoconnect(pos, node)
+mesecon.on_placenode = function(pos, node)
+	mesecon.execute_autoconnect_hooks_now(pos, node)
 
 	-- Receptors: Send on signal when active
 	if mesecon.is_receptor_on(node.name) then
@@ -52,45 +52,77 @@ mesecon.on_placenode = function (pos, node)
 	end
 end
 
-mesecon.on_dignode = function (pos, node)
+mesecon.on_dignode = function(pos, node)
 	if mesecon.is_conductor_on(node) then
 		mesecon.receptor_off(pos, mesecon.conductor_get_rules(node))
 	elseif mesecon.is_receptor_on(node.name) then
 		mesecon.receptor_off(pos, mesecon.receptor_get_rules(node))
 	end
-	mesecon.queue:add_action(pos, "update_autoconnect", {node})
-end
 
-mesecon.queue:add_function("update_autoconnect", mesecon.update_autoconnect)
+	mesecon.execute_autoconnect_hooks_queue(pos, node)
+end
 
 minetest.register_on_placenode(mesecon.on_placenode)
 minetest.register_on_dignode(mesecon.on_dignode)
 
 -- Overheating service for fast circuits
+local OVERHEAT_MAX = mesecon.setting("overheat_max", 20)
+local COOLDOWN_TIME = mesecon.setting("cooldown_time", 2.0)
+local COOLDOWN_STEP = mesecon.setting("cooldown_granularity", 0.5)
+local COOLDOWN_MULTIPLIER = OVERHEAT_MAX / COOLDOWN_TIME
+local cooldown_timer = 0.0
+local object_heat = {}
 
 -- returns true if heat is too high
-mesecon.do_overheat = function(pos)
-	local meta = minetest.get_meta(pos)
-	local heat = meta:get_int("heat") or 0
-
-	heat = heat + 1
-	meta:set_int("heat", heat)
-
-	if heat < mesecon.setting("overheat_max", 20) then
-		mesecon.queue:add_action(pos, "cooldown", {}, 1, nil, 0)
-	else
+function mesecon.do_overheat(pos)
+	local id = minetest.hash_node_position(pos)
+	local heat = (object_heat[id] or 0) + 1
+	object_heat[id] = heat
+	if heat >= OVERHEAT_MAX then
+		minetest.log("action", "Node overheats at " .. minetest.pos_to_string(pos))
+		object_heat[id] = nil
 		return true
 	end
-
 	return false
 end
 
+function mesecon.do_cooldown(pos)
+	local id = minetest.hash_node_position(pos)
+	object_heat[id] = nil
+end
 
-mesecon.queue:add_function("cooldown", function (pos)
-	local meta = minetest.get_meta(pos)
-	local heat = meta:get_int("heat")
+function mesecon.get_heat(pos)
+	local id = minetest.hash_node_position(pos)
+	return object_heat[id] or 0
+end
 
-	if (heat > 0) then
-		meta:set_int("heat", heat - 1)
+function mesecon.move_hot_nodes(moved_nodes)
+	local new_heat = {}
+	for _, n in ipairs(moved_nodes) do
+		local old_id = minetest.hash_node_position(n.oldpos)
+		local new_id = minetest.hash_node_position(n.pos)
+		new_heat[new_id] = object_heat[old_id]
+		object_heat[old_id] = nil
 	end
-end)
+	for id, heat in pairs(new_heat) do
+		object_heat[id] = heat
+	end
+end
+
+local function global_cooldown(dtime)
+	cooldown_timer = cooldown_timer + dtime
+	if cooldown_timer < COOLDOWN_STEP then
+		return -- don't overload the CPU
+	end
+	local cooldown = COOLDOWN_MULTIPLIER * cooldown_timer
+	cooldown_timer = 0
+	for id, heat in pairs(object_heat) do
+		heat = heat - cooldown
+		if heat <= 0 then
+			object_heat[id] = nil -- free some RAM
+		else
+			object_heat[id] = heat
+		end
+	end
+end
+minetest.register_globalstep(global_cooldown)

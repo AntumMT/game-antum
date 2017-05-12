@@ -2,7 +2,7 @@
 -- A lamp is "is an electrical device used to create artificial light" (wikipedia)
 -- guess what?
 
-mesecon_lamp_box = {
+local mesecon_lamp_box = {
 	type = "wallmounted",
 	wall_top = {-0.3125,0.375,-0.3125,0.3125,0.5,0.3125},
 	wall_bottom = {-0.3125,-0.5,-0.3125,0.3125,-0.375,0.3125},
@@ -42,7 +42,7 @@ minetest.register_node("mesecons_lamp:lamp_off", {
 	node_box = mesecon_lamp_box,
 	selection_box = mesecon_lamp_box,
 	groups = {dig_immediate=3, mesecon_receptor_off = 1, mesecon_effector_off = 1},
-    	description="Meselamp",
+	description="Mesecon Lamp",
 	sounds = default.node_sound_glass_defaults(),
 	mesecons = {effector = {
 		action_on = function (pos, node)

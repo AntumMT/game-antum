@@ -1,4 +1,4 @@
-function insulated_wire_get_rules(node)
+local function insulated_wire_get_rules(node)
 	local rules = 	{{x = 1,  y = 0,  z = 0},
 			 {x =-1,  y = 0,  z = 0}}
 	if node.param2 == 1 or node.param2 == 3 then
@@ -9,7 +9,7 @@ end
 
 minetest.register_node("mesecons_insulated:insulated_on", {
 	drawtype = "nodebox",
-	description = "Insulated Mesecon",
+	description = "Straight Insulated Mesecon",
 	tiles = {
 		"jeija_insulated_wire_sides_on.png",
 		"jeija_insulated_wire_sides_on.png",
@@ -41,7 +41,7 @@ minetest.register_node("mesecons_insulated:insulated_on", {
 
 minetest.register_node("mesecons_insulated:insulated_off", {
 	drawtype = "nodebox",
-	description = "Insulated Mesecon",
+	description = "Straight Insulated Mesecon",
 	tiles = {
 		"jeija_insulated_wire_sides_off.png",
 		"jeija_insulated_wire_sides_off.png",

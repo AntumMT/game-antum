@@ -12,7 +12,7 @@
 -- ports = get_real_port_states(pos): gets if inputs are powered from outside
 -- newport = merge_port_states(state1, state2): just does result = state1 or state2 for every port
 -- set_port(pos, rule, state): activates/deactivates the mesecons according to the port states
--- set_port_states(pos, ports): Applies new port states to a LuaController at pos
+-- set_port_states(pos, ports): Applies new port states to a Luacontroller at pos
 -- run(pos): runs the code in the controller at pos
 -- reset_meta(pos, code, errmsg): performs a software-reset, installs new code and prints error messages
 -- resetn(pos): performs a hardware reset, turns off all ports
@@ -20,8 +20,6 @@
 -- The Sandbox
 -- The whole code of the controller runs in a sandbox,
 -- a very restricted environment.
--- However, as this does not prevent you from using e.g. loops,
--- we need to check for these prohibited commands first.
 -- Actually the only way to damage the server is to
 -- use too much memory from the sandbox.
 -- You can add more functions to the environment
@@ -221,7 +219,7 @@ end
 local function safe_string_find(...)
 	if (select(4, ...)) ~= true then
 		debug.sethook() -- Clear hook
-		error("string.find: 'plain' (fourth parameter) must always be true in a LuaController")
+		error("string.find: 'plain' (fourth parameter) must always be true in a Luacontroller")
 	end
 
 	return string.find(...)
@@ -234,7 +232,7 @@ local function remove_functions(x)
 	end
 
 	-- Make sure to not serialize the same table multiple times, otherwise
-	-- writing mem.test = mem in the LuaController will lead to infinite recursion
+	-- writing mem.test = mem in the Luacontroller will lead to infinite recursion
 	local seen = {}
 
 	local function rfuncs(x)
@@ -275,9 +273,25 @@ end
 local function get_digiline_send(pos)
 	if not digiline then return end
 	return function(channel, msg)
+		-- Make sure channel is string, number or boolean
+		if (type(channel) ~= "string" and type(channel) ~= "number" and type(channel) ~= "boolean") then
+			return false
+		end
+
+		-- It is technically possible to send functions over the wire since
+		-- the high performance impact of stripping those from the data has
+		-- been decided to not be worth the added realism.
+		-- Make sure serialized version of the data is not insanely long to
+		-- prevent DoS-like attacks
+		local msg_ser = minetest.serialize(msg)
+		if #msg_ser > mesecon.setting("luacontroller_digiline_maxlen", 50000) then
+			return false
+		end
+
 		minetest.after(0, function()
 			digiline:receptor_send(pos, digiline.rules.default, channel, msg)
 		end)
+		return true
 	end
 end
 
@@ -286,6 +300,7 @@ local safe_globals = {
 	"assert", "error", "ipairs", "next", "pairs", "select",
 	"tonumber", "tostring", "type", "unpack", "_VERSION"
 }
+
 local function create_environment(pos, mem, event)
 	-- Gather variables for the environment
 	local vports = minetest.registered_nodes[minetest.get_node(pos).name].virtual_portstates
@@ -293,14 +308,14 @@ local function create_environment(pos, mem, event)
 	for k, v in pairs(vports) do vports_copy[k] = v end
 	local rports = get_real_port_states(pos)
 
-	-- Create new library tables on each call to prevent one LuaController
-	-- from breaking a library and messing up other LuaControllers.
+	-- Create new library tables on each call to prevent one Luacontroller
+	-- from breaking a library and messing up other Luacontrollers.
 	local env = {
 		pin = merge_port_states(vports, rports),
 		port = vports_copy,
 		event = event,
 		mem = mem,
-		heat = minetest.get_meta(pos):get_int("heat"),
+		heat = mesecon.get_heat(pos),
 		heat_max = mesecon.setting("overheat_max", 20),
 		print = safe_print,
 		interrupt = get_interrupt(pos),
@@ -463,14 +478,13 @@ local function reset_meta(pos, code, errmsg)
 	local meta = minetest.get_meta(pos)
 	meta:set_string("code", code)
 	code = minetest.formspec_escape(code or "")
-	errmsg = minetest.formspec_escape(errmsg or "")
-	meta:set_string("formspec", "size[10,8]"..
-		"background[-0.2,-0.25;10.4,8.75;jeija_luac_background.png]"..
-		"textarea[0.2,0.6;10.2,5;code;;"..code.."]"..
-		"image_button[3.75,6;2.5,1;jeija_luac_runbutton.png;program;]"..
-		"image_button_exit[9.72,-0.25;0.425,0.4;jeija_close_window.png;exit;]"..
-		"label[0.1,5;"..errmsg.."]")
-	meta:set_int("heat", 0)
+	errmsg = minetest.formspec_escape(tostring(errmsg or ""))
+	meta:set_string("formspec", "size[12,10]"..
+		"background[-0.2,-0.25;12.4,10.75;jeija_luac_background.png]"..
+		"textarea[0.2,0.2;12.2,9.5;code;;"..code.."]"..
+		"image_button[4.75,8.75;2.5,1;jeija_luac_runbutton.png;program;]"..
+		"image_button_exit[11.72,-0.25;0.425,0.4;jeija_close_window.png;exit;]"..
+		"label[0.1,9;"..errmsg.."]")
 	meta:set_int("luac_id", math.random(1, 65535))
 end
 
@@ -580,7 +594,7 @@ for d = 0, 1 do
 	}
 
 	minetest.register_node(node_name, {
-		description = "LuaController",
+		description = "Luacontroller",
 		drawtype = "nodebox",
 		tiles = {
 			top,
@@ -611,6 +625,7 @@ for d = 0, 1 do
 			d = d == 1,
 		},
 		after_dig_node = function (pos, node)
+			mesecon.do_cooldown(pos)
 			mesecon.receptor_off(pos, output_rules)
 		end,
 		is_luacontroller = true,
@@ -621,7 +636,7 @@ end
 end
 
 ------------------------------
--- Overheated LuaController --
+-- Overheated Luacontroller --
 ------------------------------
 
 minetest.register_node(BASENAME .. "_burnt", {

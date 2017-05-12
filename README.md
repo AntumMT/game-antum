@@ -182,7 +182,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* lavalamp
 		* lrfurn
 		* plasmascreen
-* [mesecons][] ([LGPL / CC BY-SA][lic.mesecons])
+* [mesecons][] ([LGPL / CC BY-SA][lic.mesecons]) -- version: [564bdc2 Git][ver.mesecons] *2017-05-08* ([patched][patch.mesecons])
 	* mp_mesecons/
 * [mobf_core][animals_modpack] (part of animals_modpack) ([CC BY-SA][lic.mobf]) -- version: 2.5.1
 	* mp_mobf_core/
@@ -432,6 +432,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.invisibility]: https://github.com/tenplus1/invisibility/tree/bf4156b
 [ver.jukebox]: https://github.com/minetest-mods/jukebox/tree/e6a507f
 [ver.lightning]: https://github.com/minetest-mods/lightning/tree/39bd36c
+[ver.mesecons]: https://github.com/minetest-mods/mesecons/tree/564bdc2
 [ver.mobs_goblins]: https://github.com/FreeLikeGNU/mobs_goblins/tree/a346f85
 [ver.mobs_monster]: https://github.com/tenplus1/mobs_monster/tree/f6d0e01
 [ver.mobs_redo]: https://github.com/tenplus1/mobs_redo/tree/feb26ed
@@ -483,6 +484,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.hovercraft]: https://github.com/AntumDeluge/mtmod-hovercraft/tree/96ad3b4
 [patch.hud]: https://github.com/AntumDeluge/mtmod-hud/tree/3473476
 [patch.kpgmobs]: https://github.com/AntumDeluge/mtmod-kpgmobs/tree/7da994c
+[patch.mesecons]: https://github.com/AntumDeluge/mtmp-mesecons/tree/2c5beee
 [patch.mobs_goblins]: https://github.com/AntumDeluge/mtmod-mobs_goblins/tree/c7fc71b
 [patch.moreores]: https://github.com/AntumDeluge/mtmod-moreores/tree/2172c49
 [patch.mydoors]: https://github.com/AntumDeluge/mtmp-mydoors/tree/e36c9d1

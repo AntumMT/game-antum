@@ -9,7 +9,7 @@ minetest.register_node("mesecons_random:removestone", {
 	mesecons = {effector = {
 		action_on = function (pos, node)
 			minetest.remove_node(pos)
-			mesecon.update_autoconnect(pos)
+			mesecon.on_dignode(pos, node)
 		end
 	}}
 })
@@ -53,6 +53,7 @@ minetest.register_node("mesecons_random:ghoststone_active", {
 	diggable = false,
 	sunlight_propagates = true,
 	paramtype = "light",
+	drop = "mesecons_random:ghoststone",
 	mesecons = {conductor = {
 		state = mesecon.state.on,
 		rules = {
