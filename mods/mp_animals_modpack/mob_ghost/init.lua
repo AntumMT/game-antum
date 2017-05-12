@@ -212,7 +212,7 @@ mobf_spawner_register("ghost_spawner_1",ghost_name,
 	collisionbox = selectionbox_ghost
 	})
 
-if minetest.get_modpath('factions') and
+if factions~= nil and
 	type(factions.set_base_reputation) == "function" then
 	factions.set_base_reputation("ghosts","players",-25)
 end

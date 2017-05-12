@@ -39,7 +39,7 @@ local oerkki_prototype = {
 					kill_result="animalmaterials:meat_toxic 1",
 					armor_groups= {
 						fleshy=30,
-						deamon=30,
+						demon=30,
 					},
 					groups = oerkki_groups,
 					envid="simple_air",

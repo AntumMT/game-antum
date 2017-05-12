@@ -127,7 +127,7 @@ local prototype_mob_slime_L = {
 		--! @brief [OPTIONAL] armor groups of mob
 		armor_groups = {
 						fleshy=40,
-						deamon=30,
+						demon=30,
 					},
 
 		groups = slime_groups,
@@ -257,7 +257,7 @@ local prototype_mob_slime_S = {
 		--! @brief [OPTIONAL] armor groups of mob
 		armor_groups = {
 						fleshy=40,
-						deamon=30,
+						demon=30,
 					},
 
 		groups = slime_groups,
@@ -370,7 +370,7 @@ local prototype_mob_slime_M = {
 		--! @brief [OPTIONAL] armor groups of mob
 		armor_groups = {
 						fleshy=40,
-						deamon=30,
+						demon=30,
 					},
 
 		groups = slime_groups,

@@ -25,7 +25,7 @@ end
 
 minetest.log("action","MOD: animal_sheep mod loading ...")
 
-local version = "0.3.2"
+local version = "0.4.0"
 
 local sheep_groups = {
 						sheerable=1,
@@ -33,9 +33,9 @@ local sheep_groups = {
 						not_in_creative_inventory=1
 					}
 
-local selectionbox_sheep = {-0.65, -0.75, -0.65, 0.65, 0.45, 0.65}
-local selectionbox_lamb = {-0.65*0.6, -0.8*0.6, -0.65*0.6,
-                           0.65*0.6, 0.45*0.6, 0.65*0.65 }
+local selectionbox_sheep = {-0.49, -0.75, -0.49, 0.49, 0.3, 0.49}
+local selectionbox_lamb = {-0.49*0.6, -0.49*0.6, -0.49*0.6,
+                           0.49*0.6, 0.49*0.6, 0.49*0.6 }
 
 local feeding_nodes = {
     "default:junglegrass",
@@ -53,11 +53,11 @@ local feeding_nodes = {
 }
 
 local hunger_config =  {
-      target_nodes = feeding_nodes,
-      range = 10,
-      chance = 0.3,
-      typical_walk_time = 30,
-      }
+	target_nodes = feeding_nodes,
+	range = 10,
+	chance = 0.3,
+	typical_walk_time = 30,
+	}
 
 local sheep_prototype = {
 		name="sheep",
@@ -79,14 +79,14 @@ local sheep_prototype = {
 					},
 					groups = sheep_groups,
 					envid="meadow",
-					population_density = 50
+					population_density = 50,
 				},
 		movement =  {
 					min_accel=0.05,
 					max_accel=0.1,
 					max_speed=0.5,
 					min_speed=0.1,
-					pattern="stop_and_go",
+					pattern="stop_and_go_v2",
 					canfly=false,
 --					max_distance = 0.1
 					},
@@ -97,6 +97,9 @@ local sheep_prototype = {
 					result="wool:white 1",
 					transforms_to="animal_sheep:sheep_naked",
 					min_delay=-1,
+					dyeable=true,
+					dye_removed=true,
+					dye_result_base="wool:"
 					},
 		catching = {
 					tool="animalmaterials:lasso",
@@ -144,7 +147,7 @@ local sheep_prototype = {
 				walk = {
 					start_frame = 0,
 					end_frame   = 60,
-					basevelocity = 3,
+					basevelocity = 0.25,
 					},
 				stand = {
 					start_frame = 61,
@@ -199,7 +202,7 @@ local sheep_prototype = {
 				{
 					name = "walking",
 					custom_preconhandler = nil,
-					movgen = "probab_mov_gen",
+					movgen = "probab_v2_mov_gen",
 					typical_state_time = 180,
 					chance = 0.50,
 					animation = "walk"
@@ -221,6 +224,7 @@ local sheep_prototype = {
 --				},
 			},
 		hunger = hunger_config,
+		
 		}
 
 local lamb_prototype = {
@@ -250,7 +254,7 @@ local lamb_prototype = {
 					max_accel=0.05,
 					max_speed=0.3,
 					min_speed=0.05,
-					pattern="stop_and_go"
+					pattern="stop_and_go_v2"
 					},
 		harvest     = nil,
 		catching = {
@@ -288,7 +292,7 @@ local lamb_prototype = {
 				walk = {
 					start_frame = 0,
 					end_frame   = 60,
-					basevelocity = 3,
+					basevelocity = 0.25,
 					},
 				stand = {
 					start_frame = 61,
@@ -343,7 +347,7 @@ local lamb_prototype = {
 				{
 					name = "walking",
 					custom_preconhandler = nil,
-					movgen = "probab_mov_gen",
+					movgen = "probab_v2_mov_gen",
 					typical_state_time = 180,
 					chance = 0.50,
 					animation = "walk"
@@ -386,7 +390,7 @@ local sheep_naked_prototype = {
 					max_accel=0.1,
 					max_speed=0.5,
 					min_speed=0.1,
-					pattern="stop_and_go"
+					pattern="stop_and_go_v2"
 					},
 		catching = {
 					tool="animalmaterials:lasso",
@@ -428,7 +432,7 @@ local sheep_naked_prototype = {
 				walk = {
 					start_frame = 0,
 					end_frame   = 60,
-					basevelocity = 0.3,
+					basevelocity = 0.25,
 					},
 				stand = {
 					start_frame = 61,
@@ -483,7 +487,7 @@ local sheep_naked_prototype = {
 				{
 					name = "walking",
 					custom_preconhandler = nil,
-					movgen = "probab_mov_gen",
+					movgen = "probab_v2_mov_gen",
 					typical_state_time = 180,
 					chance = 0.50,
 					animation = "walk"

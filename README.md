@@ -134,7 +134,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* animalmaterials
 		* cooking
 		* mob_environments
-* [animals_modpack][] -- version: [2.5.0 (963cef1 Git)][ver.animals_modpack] *2015-12-28* ***UPDATE***
+* [animals_modpack][] -- version: [b9d0172 Git][ver.animals_modpack] *2017-03-22* ([patched][patch.animals_modpack])
 	* mp_animals_modpack/
 		* animal_chicken ([CC BY-SA / CC0][lic.amp_chicken])
 		* animal_clownfish ([CC BY-SA][lic.amp_clownfish])
@@ -315,7 +315,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.amp_ostrich]: mods/mp_animals_modpack/mob_ostrich/License.txt
 [lic.amp_rat]: mods/mp_animals_modpack/animal_rat/License.txt
 [lic.amp_shark]: mods/mp_animals_modpack/mob_shark/License.txt
-[lic.amp_sheep]: mods/mp_animals_modpack/License.txt
+[lic.amp_sheep]: mods/mp_animals_modpack/animal_sheep/License%20information.txt
 [lic.amp_slime]: mods/mp_animals_modpack/mob_slime/License.txt
 [lic.amp_warthog]: mods/mp_animals_modpack/mob_warthog/License.txt
 [lic.antum]: mods/mp_antum/LICENSE.txt
@@ -396,7 +396,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.advtrains]: https://github.com/orwell96/advtrains/tree/28717b4
 [ver.airtanks]: https://github.com/minetest-mods/airtanks/tree/fc01ffb
 [ver.animalmaterials]: https://github.com/sapier/animalmaterials/tree/d952d27
-[ver.animals_modpack]: https://github.com/sapier/animals_modpack/tree/963cef1
+[ver.animals_modpack]: https://github.com/sapier/animals_modpack/tree/b9d0172
 [ver.antum]: https://github.com/AntumDeluge/mtmp-antum/tree/4477d40
 [ver.areas]: https://github.com/ShadowNinja/areas/tree/6080ff0
 [ver.awards]: https://github.com/minetest-mods/awards/tree/096fe16
@@ -474,6 +474,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.worldedge]: https://github.com/minetest-mods/worldedge/tree/e15fa99
 
 [patch.adv_spawning]: https://github.com/AntumDeluge/mtmod-adv_spawning/tree/572688b
+[patch.animals_modpack]: https://github.com/AntumDeluge/mtmp-animals_modpack/tree/e84e1e6
 [patch.bags]: https://github.com/AntumDeluge/mtmod-bags/tree/4363284
 [patch.campfire]: https://github.com/AntumDeluge/mtmod-campfire/tree/67b9dd7
 [patch.christmas]: https://github.com/AntumDeluge/mtmod-christmas/tree/f6c8dc2

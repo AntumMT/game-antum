@@ -49,7 +49,7 @@ local dm_prototype = {
 					kill_result="",
 					armor_groups= {
 						fleshy=30,
-						deamon=40,
+						demon=40,
 					},
 					groups = dm_groups,
 					envid="simple_air",

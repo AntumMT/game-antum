@@ -247,15 +247,15 @@ end
 
 vault.checkdistance = function(pos,mindistance)
 
-	for i=1,#vault.spawnpositions,1 do
-		local distance = mobf_calc_distance(pos,vault.spawnpositions[i])
-		dm_debug("Distance to vault: " .. i .. " at " ..minetest.pos_to_string(vault.spawnpositions[i]) .. " is : " .. distance)
-		if distance < mindistance then
-			return false
-		end
-	end
+    for i=1,#vault.spawnpositions,1 do
+        local distance = vector.distance(pos,vault.spawnpositions[i])
+        dm_debug("Distance to vault: " .. i .. " at " ..minetest.pos_to_string(vault.spawnpositions[i]) .. " is : " .. distance)
+        if distance < mindistance then
+            return false
+        end
+    end
 
-	return true
+    return true
 end
 
 vault.addvaultpos = function(pos)

@@ -24,7 +24,7 @@ else
 end
 
 minetest.log("action","MOD: animal_chicken mod loading ...")
-local version = "0.2.2"
+local version = "0.3.0"
 
 local chicken_groups = {
 						not_in_creative_inventory=1
@@ -96,7 +96,7 @@ local chicken_prototype = {
 					max_accel=0.1,
 					max_speed=0.3,
 					min_speed=0.1,
-					pattern="stop_and_go",
+					pattern="stop_and_go_v2",
 					canfly = false,
 					},
 		catching = {
@@ -180,7 +180,7 @@ local chicken_prototype = {
 				},
 				{
 				name = "walking",
-				movgen = "probab_mov_gen",
+				movgen = "probab_v2_mov_gen",
 				chance = 0.50,
 				animation = "walk",
 				typical_state_time = 180,
@@ -222,7 +222,7 @@ local rooster_prototype = {
 					max_accel=0.1,
 					max_speed=0.3,
 					min_speed=0.1,
-					pattern="stop_and_go",
+					pattern="stop_and_go_v2",
 					canfly = false,
 					},
 		catching = {
@@ -295,7 +295,7 @@ local rooster_prototype = {
 				},
 				{
 				name = "walking",
-				movgen = "probab_mov_gen",
+				movgen = "probab_v2_mov_gen",
 				chance = 0.25,
 				animation = "walk",
 				typical_state_time = 180,
@@ -336,7 +336,7 @@ local chick_m_prototype = {
 				max_accel=0.05,
 				max_speed=0.2,
 				min_speed=0.05,
-				pattern="stop_and_go",
+				pattern="stop_and_go_v2",
 				canfly = false,
 				},
 		catching = {
@@ -380,7 +380,7 @@ local chick_m_prototype = {
 				},
 				{
 				name = "walking",
-				movgen = "probab_mov_gen",
+				movgen = "probab_v2_mov_gen",
 				chance = 0.50,
 				animation = "walk",
 				typical_state_time = 180,
@@ -421,7 +421,7 @@ local chick_f_prototype = {
 				max_accel=0.05,
 				max_speed=0.2,
 				min_speed=0.05,
-				pattern="stop_and_go",
+				pattern="stop_and_go_v2",
 				canfly = false,
 				},
 		catching = {
@@ -465,7 +465,7 @@ local chick_f_prototype = {
 				},
 				{
 				name = "walking",
-				movgen = "probab_mov_gen",
+				movgen = "probab_v2_mov_gen",
 				chance = 0.50,
 				animation = "walk",
 				typical_state_time = 180,
