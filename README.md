@@ -89,7 +89,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * tools/
 	* [compassgps][] ([WTFPL][lic.wtfpl] / [CC0][lic.cc0] / [CC BY-SA][lic.ccbysa]) -- version: [96892a0 Git][ver.compassgps] *2015-07-31* ([patched][patch.compassgps])
     * [tools_obsidian][] ([LGPL / CC BY-SA][lic.tools_obsidian]) -- version: [f77fd79][ver.tools_obsidian] *2016-03-19*
-    * [torches][] ([LGPL / CC-BY-SA](mods/tools/torches/README.txt))
+    * [torches][] ([LGPL / CC-BY-SA](mods/tools/torches/README.txt)) -- version: [e19c772 Git][ver.torches] *2015-11-12*
     * [workbench][] ([GPL / WTFPL](mods/tools/workbench/LICENSE))
 * transport/
 	* [helicopter][] ([GPL][lic.gpl2.0]) -- version: [10f1433 Git][ver.helicopter] ([patched][patch.helicopter]) *2015-07-15*
@@ -446,6 +446,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.throwing]: https://github.com/Jeija/minetest-mod-throwing/tree/79ad788
 [ver.tnt]: https://github.com/PilzAdam/TNT/tree/d6a0b7d
 [ver.tools_obsidian]: https://github.com/Dragonop/tools_obsidian/tree/f77fd79
+[ver.torches]: https://github.com/BlockMen/torches/tree/e19c772
 [ver.trampoline]: https://github.com/AntumDeluge/mtmod-trampoline/tree/0c9c9c8
 [ver.trash_can]: https://github.com/minetest-mods/trash_can/tree/5fd3df7
 [ver.unifieddyes]: https://github.com/minetest-mods/unifieddyes/tree/df177c2
