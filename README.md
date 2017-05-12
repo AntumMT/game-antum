@@ -93,7 +93,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [workbench][] ([GPL / WTFPL](mods/tools/workbench/LICENSE)) -- version: [74dd1af Git][ver.workbench] *2017-02-07* ([patched][patch.workbench])
 * transport/
 	* [helicopter][] ([GPL][lic.gpl2.0]) -- version: [10f1433 Git][ver.helicopter] ([patched][patch.helicopter]) *2015-07-15*
-    * [hovercraft][] ([LGPL / CC BY-SA / CC0][lic.hovercraft])
+    * [hovercraft][] ([LGPL / CC BY-SA / CC0][lic.hovercraft]) -- version: [7b0df6f Git][ver.hovercraft] *2016-04-10* ([patched][patch.hovercraft])
 * ui/
     * [bookmarks_gui][] ([BSD 3-Clause](mods/ui/bookmarks_gui/LICENSE))
     * [home_gui][] ([BSD 3-Clause](mods/ui/home_gui/LICENSE)) -- version: [f6b5001 Git][ver.home_gui] *2015-08-14*
@@ -417,6 +417,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.hidename]: https://github.com/AntumDeluge/mtmod-hidename/tree/bb52dbc
 [ver.home_gui]: https://github.com/cornernote/minetest-home_gui/tree/f6b5001
 [ver.homedecor]: https://github.com/minetest-mods/homedecor_modpack/tree/5fb16c4
+[ver.hovercraft]: https://github.com/stujones11/hovercraft/tree/7b0df6f
 [ver.ilights]: https://github.com/minetest-mods/ilights/tree/b1f7ccf
 [ver.inventory_plus]: https://github.com/cornernote/minetest-inventory_plus/tree/a978b47
 [ver.invisibility]: https://github.com/tenplus1/invisibility/tree/bf4156b
@@ -468,6 +469,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.ethereal]: https://github.com/AntumDeluge/mtmod-ethereal/tree/ba81be1
 [patch.fort_spikes]: https://github.com/AntumDeluge/mtmod-fort_spikes/tree/74dca42
 [patch.helicopter]: https://github.com/AntumDeluge/mtmod-helicopter/tree/66a6523
+[patch.hovercraft]: https://github.com/AntumDeluge/mtmod-hovercraft/tree/96ad3b4
 [patch.kpgmobs]: https://github.com/AntumDeluge/mtmod-kpgmobs/tree/7da994c
 [patch.mobs_goblins]: https://github.com/AntumDeluge/mtmod-mobs_goblins/tree/c7fc71b
 [patch.moreores]: https://github.com/AntumDeluge/mtmod-moreores/tree/2172c49
