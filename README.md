@@ -128,7 +128,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* technic_armor
 		* wieldview
 * [advtrains][] ([LGPL][lic.lgpl2.1] / [CC BY-NC-SA][lic.ccbyncsa3.0]) -- version: [28717b4 Git][ver.advtrains] *2017-05-03*
-* [animalmaterials][animals_modpack] (part of animals_modpack) ([CC0][lic.cc0] / [CC BY-SA][lic.ccbysa3.0]) -- version: 0.1.3
+* [animalmaterials][animals_modpack] (part of animals_modpack) ([CC0][lic.cc0] / [CC BY-SA][lic.ccbysa3.0]) -- version: [0.1.3 (d952d27 Git)][ver.animalmaterials] *2014-09-10*
 	* mp_animalmaterials/
 		* animal_resources
 		* animalmaterials
@@ -393,6 +393,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.adv_spawning]: https://github.com/sapier/adv_spawning/tree/ec41aa9
 [ver.advtrains]: https://github.com/orwell96/advtrains/tree/28717b4
 [ver.airtanks]: https://github.com/minetest-mods/airtanks/tree/fc01ffb
+[ver.animalmaterials]: https://github.com/sapier/animalmaterials/tree/d952d27
 [ver.antum]: https://github.com/AntumDeluge/mtmp-antum/tree/4477d40
 [ver.areas]: https://github.com/ShadowNinja/areas/tree/6080ff0
 [ver.awards]: https://github.com/minetest-mods/awards/tree/096fe16
