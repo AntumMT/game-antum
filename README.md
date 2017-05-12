@@ -9,116 +9,115 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 ***"UPDT" Denotes update available***
 
 * admin/
-    * [clean][] (WTFPL)
-    * [invisible][] ([LGPL / CC BY-SA](mods/admin/invisible/readme.txt))
-    * [privilegeareas][] ([WTFPL / CC0][lic.privilegeareas]) -- version: [aebaa00 Git][ver.privilegeareas] *2016-05-18*
-    * [privs][] ([CC0](mods/admin/privs/init.lua))
+    * [clean][] ([WTFPL][lic.wtfpl])
+    * [invisible][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0])
+    * [privilegeareas][] ([WTFPL][lic.privilegeareas] / [CC0][lic.cc0]) -- version: [aebaa00 Git][ver.privilegeareas] *2016-05-18*
+    * [privs][] ([CC0][lic.cc0])
     * [spectator_mode][] ([WTFPL][lic.spectator_mode]) -- version: [7d68bec Git][ver.spectator_mode] *2017-03-30*
-* [awards][] ([LGPL][lic.awards]) -- version: [096fe16 Git][ver.awards] *2017-02-25*
+* [awards][] ([LGPL][lic.lgpl2.1]) -- version: [096fe16 Git][ver.awards] *2017-02-25*
 * buildings/
-    * [bridges][] ([GPL][lic.bridges]) -- version: [5b5f475 Git][ver.bridges] *2015-08-23*
+    * [bridges][] ([GPL][lic.gpl3.0]) -- version: [5b5f475 Git][ver.bridges] *2015-08-23*
     * [christmas][] ([MIT][lic.christmas]) -- version [d3bd872 Git][ver.christmas] *2013-01-11* ([patched][patch.christmas])
-    * [elevator][] ([WTFPL](mods/buildings/elevator/readme.txt))
-    * [fort_spikes][] ([MIT / CC0][lic.fort_spikes]) -- version: [2765b56 Git][ver.fort_spikes] *2017-04-07* ([patched][patch.fort_spikes])
+    * [elevator][] ([WTFPL][lic.elevator])
+    * [fort_spikes][] ([MIT][lic.fort_spikes] / [CC0][lic.cc0]) -- version: [2765b56 Git][ver.fort_spikes] *2017-04-07* ([patched][patch.fort_spikes])
     * [moreblocks][] ([zlib][lic.moreblocks]) -- version: [fbfb079 Git][ver.moreblocks] *2017-03-14*
     * [stairsplus][] ([zlib][lic.stairsplus]) -- version: [311e1f0 Git][ver.stairsplus] *2013-05-30*
     * [windmill][] ([WTFPL][lic.windmill]) -- version: [47b029d Git][ver.windmill] *2014-08-21* ([patched][patch.windmill])
-* [campfire][] ([GPL / CC-BY-SA / WTFPL][lic.campfire]) -- version: [b45acd2 Git][ver.campfire] *2016-02-18* ([patched][patch.campfire])
+* [campfire][] ([GPL][lic.gpl2.0] / [CC BY-SA][lic.ccbysa] / [WTFPL][lic.campfire]) -- version: [b45acd2 Git][ver.campfire] *2016-02-18* ([patched][patch.campfire])
 * chat/
-    * [away][] ([GPL][lic.away]) -- version: [4c1e5a9 Git][ver.away] *2012-03-09*
-    * [chatlog][] ([CC0](mods/chat/chatlog/Readme.txt))
+    * [away][] ([GPL][lic.gpl2.0]) -- version: [4c1e5a9 Git][ver.away] *2012-03-09*
+    * [chatlog][] ([CC0][lic.cc0])
 * crafting/
     * [craft_guide][] ([BSD 3-Clause][lic.craft_guide]) -- version: [20520b5 Git][ver.craft_guide] *2017-01-30*
-    * [craftguide][] ([GPL / WTFPL](mods/crafting/craftguide/LICENSE)) Installed version: [86a96c3 Git][ver.craftguide] *2017-03-21* ([patched][patch.craftguide])
+    * [craftguide][] ([GPL / WTFPL](mods/crafting/craftguide/LICENSE)) -- version: [86a96c3 Git][ver.craftguide] *2017-03-21* ([patched][patch.craftguide])
 * [currency][] ([WTFPL][lic.currency]) -- version: [21f9811 Git][ver.currency] *2017-03-22* ([patched][patch.currency])
-* [enchanting][] ([GPL][lic.enchanting]) -- version: [13ea31c Git][ver.enchanting] *2016-12-16*
+* [enchanting][] ([GPL / WTFPL / CC BY-SA-NA][lic.enchanting]) -- version: [13ea31c Git][ver.enchanting] *2016-12-16*
 * farming/
-	* [crops][] ([LGPL / CC-BY-SA / CC-BY / CC0][lic.crops]) -- version: [2b1bb37 Git][ver.crops] *2017-03-31* ([patched][patch.crops])
+	* [crops][] ([LGPL / CC BY-SA / CC BY / CC0][lic.crops]) -- version: [2b1bb37 Git][ver.crops] *2017-03-31* ([patched][patch.crops])
 	* [farming_plus][] ([WTFPL][lic.farming_plus]) -- version: [7e0d976 Git][ver.farming_plus] *2014-07-31*
 * furniture/
 	* [jukebox][] ([WTFPL / CC0][lic.jukebox]) -- version: [e6a507f Git][ver.jukebox] *2016-05-23*
-    * [trampoline][] ([GPL](mods/furniture/trampoline/LICENSE.txt)) -- version: [0c9c9c8 Git][ver.trampoline]
-    * [trash_can][] ([MIT](mods/furniture/trash_can/LICENSE.txt))
-* [intllib][] (WTFPL)
+    * [trampoline][] ([GPL][lic.gpl3.0]) -- version: [0c9c9c8 Git][ver.trampoline]
+    * [trash_can][] ([MIT][lic.trash_can])
+* [intllib][] ([WTFPL][lic.intllib])
 * inventory/
-    * [bags][] ([BSD 3-Clause](mods/inventory/bags/LICENSE))
-    * [inventory_plus][] ([BSD 3-Clause](mods/inventory/inventory_plus/LICENSE))
+    * [bags][] ([BSD 3-Clause][lic.bags])
+    * [inventory_plus][] ([BSD 3-Clause][lic.inventory_plus])
 * lighting/
-	* [ilights][] ([CC BY-SA][lic.ilights]) -- version [b1f7ccf Git][ver.ilights] *2017-03-18*
-    * walking_light ([petermalone fork][walking_light]) ([WTFPL / CC-BY-SA][lic.walking_light]) -- version: [b9de302 Git][ver.walking_light] *2016-09-09* ([patched][patch.walking_light])
+	* [ilights][] ([CC BY-SA][lic.ccbysa]) -- version [b1f7ccf Git][ver.ilights] *2017-03-18*
+    * walking_light ([petermalone fork][walking_light]) ([WTFPL / CC BY-SA][lic.walking_light]) -- version: [b9de302 Git][ver.walking_light] *2016-09-09* ([patched][patch.walking_light])
 * materials/
-	* [moreores][] ([zlib / CC-BY-SA][lic.moreores]) -- version: [0842b4f Git][ver.moreores] *2017-03-21* ([patched][patch.moreores])
+	* [moreores][] ([zlib][lic.moreores] / [CC BY-SA][lic.ccbysa3.0]) -- version: [0842b4f Git][ver.moreores] *2017-03-21* ([patched][patch.moreores])
 	* [quartz][] ([MIT][lic.quartz]) -- version: [00ca4eb Git][ver.quartz] *2017-02-28* ([patched][patch.quartz])
 	* [rainbow_ore][] ([LGPL][lic.rainbow_ore]) -- version: [6e77693 Git][ver.rainbow_ore] *2015-11-02* ([patched][patch.rainbow_ore])
-	* [unifieddyes][] ([GPL](mods/materials/unifieddyes/LICENSE)) -- version: [df177c2 Git][ver.unifieddyes] *2017-03-18* ([patched][patch.unifieddyes])
+	* [unifieddyes][] ([GPL][lic.gpl2.0]) -- version: [df177c2 Git][ver.unifieddyes] *2017-03-18* ([patched][patch.unifieddyes])
 * mobs/
     * [kpgmobs][] ([MIT][lic.kpgmobs]) -- version: v6 *2015-01-31* ([patched][patch.kpgmobs])
-    * [mobs_redo][] ([MIT](mods/mobs/mobs_redo/license.txt)) -- version: [feb26ed Git][ver.mobs_redo] *2017-04-27*
+    * [mobs_redo][] ([MIT][lic.mobs_redo]) -- version: [feb26ed Git][ver.mobs_redo] *2017-04-27*
 * mobs_aggressive/
     * [creeper][] ([WTFPL][lic.creeper]) -- version [036666e Git][ver.creeper]
     * [mobs_goblins][] ([CC-BY-SA / CC-BY / CC0][lic.mobs_goblins]) -- version: [a346f85 Git][ver.mobs_goblins] *2015-09-12* ([patched][patch.mobs_goblins])
     * [mobs_monster][] ([MIT][lic.mobs_monster]) -- version: [f6d0e01 Git][ver.mobs_monster] *2017-04-27*
-    * [spidermob][] ([CC-BY-SA / WTFPL / CC0][lic.spidermob]) -- version [c72d2ff Git][ver.spidermob] *2016-08-14* ([patched][patch.spidermob])
+    * [spidermob][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0] / [MIT][lic.mit] / [WTFPL][lic.spidermob] / [Unlicense][lic.unlicense]) -- version [c72d2ff Git][ver.spidermob] *2016-08-14* ([patched][patch.spidermob])
 * mobs_passive/
 * npc/
-    * [peaceful_npc][] (WTFPL)
+    * [peaceful_npc][] ([WTFPL][lic.wtfpl])
 * [painting][] (???)
-* [pipeworks][] ([WTFPL](mods/pipeworks/LICENSE))
+* [pipeworks][] ([WTFPL][lic.wtfpl])
 * plantlife/
 * player/
 	* [airtanks][] ([MIT][lic.airtanks]) -- version: [fc01ffb Git][ver.airtanks] *2017-04-01*
 * player_action/
-    * [throwing][] ([WTFPL][lic.throwing]) -- version: [0.14-79ad788 Git][ver.throwing] *2012-02-10*
+    * [throwing][] ([WTFPL][lic.wtfpl]) -- version: [0.14-79ad788 Git][ver.throwing] *2012-02-10*
 * player_visuals/
     * [character_creator][] ([MIT / CC-BY-SA][lic.character_creator]) -- version: [6a0e6aa Git][ver.character_creator]
-    * [hidename][] (MIT) -- version [bb52dbc Git][ver.hidename]
+    * [hidename][] ([MIT][lic.hidename]) -- version [bb52dbc Git][ver.hidename]
     * [invisibility][] ([MIT][lic.invisibility]) -- version: [bf4156b Git][ver.invisibility] *2016-08-19*
     * [playeranim][] ([BSD 2-Clause][lic.playeranim]) - version [0ca8e5a Git][ver.playeranim] *2016-12-07*
-    * [wardrobe][] ([WTFPL][lic.wardrobe]) -- version: [1.1-2-c48b011 Git][ver.wardrobe] *2015-05-21*
+    * [wardrobe][] ([WTFPL][lic.wtfpl]) -- version: [1.1-2-c48b011 Git][ver.wardrobe] *2015-05-21*
 * protection/
-    * [areas][] ([LGPL][lic.areas]) -- version [6080ff0 Git][ver.areas] *2016-11-25*
-    * [simple_protection][] ([WTFPL][lic.simple_protection]) -- version [23c024f Git][ver.simple_protection] *2017-01-07*
+    * [areas][] ([LGPL][lic.lgpl2.1]) -- version [6080ff0 Git][ver.areas] *2016-11-25*
+    * [simple_protection][] ([WTFPL][lic.wtfpl]) -- version [23c024f Git][ver.simple_protection] *2017-01-07*
 * signs/
-	* [signs_lib][] ([BSD / WTFPL][lic.signs_lib]) -- version: [2c36937 Git][ver.signs_lib] *2017-03-05* ([patched][patch.signs_lib])
+	* [signs_lib][] ([BSD][lic.signs_lib] / [WTFPL][lic.wtfpl]) -- version: [2c36937 Git][ver.signs_lib] *2017-03-05* ([patched][patch.signs_lib])
 * sound/
-    * [ambience][ambience_ultralite] ([WTFPL][lic.ambience_ultralite.1] / [CC-BY / CC-BY-SA / CC-BY-NC-SA / CC0][lic.ambience_ultralite.2]) -- version: 0.36
+    * [ambience][ambience_ultralite] ([WTFPL][lic.wtfpl] / [CC BY / CC BY-SA / CC BY-NC-SA / CC0][lic.ambience_ultralite]) -- version: 0.36
 * spawning/
-	* [adv_spawning][animals_modpack] (part of animals_modpack) (CC-BY-SA) -- version: [0.0.13 ec41aa9 Git][ver.adv_spawning] *2015-12-28* ([patched][patch.adv_spawning])
+	* [adv_spawning][animals_modpack] (part of animals_modpack) ([WTFPL][lic.wtfpl]) -- version: [0.0.13 ec41aa9 Git][ver.adv_spawning] *2015-12-28* ([patched][patch.adv_spawning])
 	* [spawneggs][] ([WTFPL][lic.spawneggs]) -- version [4650370 Git][ver.spawneggs] *2013-09-09*
 * storage/
-	* [more_chests][] ([GPL][lic.more_chests]) -- version [c597779 Git][ver.more_chests] *2017-02-27*
-* [tnt][] ([WTFPL](mods/tnt/README.txt)) -- version: [d6a0b7d Git][ver.tnt]
+	* [more_chests][] ([GPL][lic.gpl2.0]) -- version [c597779 Git][ver.more_chests] *2017-02-27*
 * tools/
-	* [compassgps][] ([WTFPL / CC0 / CC BY-SA](mods/tools/compassgps/README.md))
+	* [compassgps][] ([WTFPL][lic.wtfpl] / [CC0][lic.cc0] / [CC BY-SA][lic.ccbysa])
+    * [tools_obsidian][] ([LGPL / CC BY-SA][lic.tools_obsidian]) -- version: [f77fd79][ver.tools_obsidian] *2016-03-19*
     * [torches][] ([LGPL / CC-BY-SA](mods/tools/torches/README.txt))
     * [workbench][] ([GPL / WTFPL](mods/tools/workbench/LICENSE))
-    * [tools_obsidian][] ([LGPL / CC BY-SA](mods/tools/tools_obsidian/README.md)) -- version: [f77fd79][ver.tools_obsidian] *2016-03-19*
 * transport/
-	* [helicopter][] ([GPL][lic.helicopter]) -- version: [10f1433 Git][ver.helicopter] ([patched][patch.helicopter]) *2015-07-15*
-    * [hovercraft][] ([LGPL / CC BY-SA / CC0](mods/transport/hovercraft/LICENSE.txt))
+	* [helicopter][] ([GPL][lic.gpl2.0]) -- version: [10f1433 Git][ver.helicopter] ([patched][patch.helicopter]) *2015-07-15*
+    * [hovercraft][] ([LGPL / CC BY-SA / CC0][lic.hovercraft])
 * ui/
     * [bookmarks_gui][] ([BSD 3-Clause](mods/ui/bookmarks_gui/LICENSE))
     * [home_gui][] ([BSD 3-Clause](mods/ui/home_gui/LICENSE)) -- version: [f6b5001 Git][ver.home_gui] *2015-08-14*
     * [hud][] ([LGPL / CC BY-SA / WTFPL](mods/ui/hud/README.txt))
-    * [hudmap][] ([LGPL / WTFPL](mods/ui/hudmap/README.txt))
+    * [hudmap][] ([LGPL][lic.lgpl2.1] / WTFPL][lic.wtfpl])
 * [vector_extras][] ([WTFPL][lic.vector_extras]) -- version: [472deb6 Git][ver.vector_extras] *2017-01-25*
 * weather/
-    * [lightning][] ([LGPL / CC-BY-SA][lic.lightning]) -- version: [39bd36c Git][ver.lightning] *2017-02-20*
+    * [lightning][] ([LGPL / CC BY-SA][lic.lightning]) -- version: [39bd36c Git][ver.lightning] *2017-02-20*
 * wood/
-	* [coloredwood][] ([LGPL][lic.coloredwood]) -- version: [fc4ab15 Git][ver.coloredwood] *2017-03-18* ([patched][patch.coloredwood])
-	* [mywoodslopes][] ([DWYWPL][lic.mywoodslopes]) -- version: [3a1b531 Git][ver.mywoodslopes] *2016-03-23*
+	* [coloredwood][] ([LGPL][lic.lgpl3.0]) -- version: [fc4ab15 Git][ver.coloredwood] *2017-03-18* ([patched][patch.coloredwood])
+	* [mywoodslopes][] ([DWYWPL][lic.dwywpl]) -- version: [3a1b531 Git][ver.mywoodslopes] *2016-03-23*
 * world/
-    * [bedrock2][] ([WTFPL][lic.bedrock2]) -- version [1.2.0-0378b61 Git][ver.bedrock2]
-    * [biome_lib][] ([WTFPL][lic.biome_lib]) -- version: [9cdcdcf Git][ver.biome_lib] *2017-01-26*
-    * [ethereal][] ([WTFPL][lic.ethereal]) -- version [2c24961 Git][ver.ethereal] *2017-04-23* ([patched][patch.ethereal])
-    * [glow][] (GPL)
+    * [bedrock2][] ([WTFPL][lic.wtfpl]) -- version [1.2.0-0378b61 Git][ver.bedrock2]
+    * [biome_lib][] ([WTFPL][lic.wtfpl]) -- version: [9cdcdcf Git][ver.biome_lib] *2017-01-26*
+    * [ethereal][] ([MIT][lic.ethereal]) -- version [2c24961 Git][ver.ethereal] *2017-04-23* ([patched][patch.ethereal])
+    * [glow][] ([GPL][lic.gpl2.0])
     * [nether][] ([WTFPL / CC BY-SA](mods/world/nether/README.md))
-    * [worldedge][] ([DWYWPL](mods/world/worldedge/licence.txt))
+    * [worldedge][] ([DWYWPL][lic.dwywpl])
 
 
 
 ### This is a list of installed modpacks & their components (trying to keep them listed separate for sake of organization):
-* [3d_armor][] ([LGPL / CC-BY-SA][lic.3d_armor]) - version: [0.4.9 (793c748 Git)][ver.3d_armor] *2017-05-03*
+* [3d_armor][] ([LGPL / CC BY-SA][lic.3d_armor]) - version: [0.4.9 (793c748 Git)][ver.3d_armor] *2017-05-03*
 	* mp_3d_armor/
 		* 3d_armor
 		* 3d_armor_ip
@@ -129,25 +128,25 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* shields
 		* technic_armor
 		* wieldview
-* [advtrains][] ([LGPL][lic.advtrains] / [CC-BY-NC-SA][lic.advtrains.2] -- version: [28717b4 Git][ver.advtrains] *2017-05-03*
-* [animalmaterials][animals_modpack] (part of animals_modpack) -- version: 0.1.3
+* [advtrains][] ([LGPL][lic.lgpl2.1] / [CC BY-NC-SA][lic.ccbyncsa3.0]) -- version: [28717b4 Git][ver.advtrains] *2017-05-03*
+* [animalmaterials][animals_modpack] (part of animals_modpack) ([CC0][lic.cc0] / [CC BY-SA][lic.ccbysa3.0]) -- version: 0.1.3
 	* mp_animalmaterials/
-		* animal_resources ([CC0][lic.amp_animal_resources])
-		* animalmaterials ([CC BY-SA][lic.amp_animalmaterials])
-		* cooking ([CC BY-SA][lic.amp_cooking]
-		* mob_environments ([???][lic.amp_mob_environments)
+		* animal_resources
+		* animalmaterials
+		* cooking
+		* mob_environments
 * [animals_modpack][] -- version: 2.5.0
 	* mp_animals_modpack/
-		* animal_chicken [CC BY-SA / CC0][lic.amp_chicken]
+		* animal_chicken ([CC BY-SA / CC0][lic.amp_chicken])
 		* animal_clownfish ([CC BY-SA][lic.amp_clownfish])
 		* animal_cow ([CC BY-SA / GFDL / WTFPL][lic.amp_cow])
 		* animal_deer ([CC BY-SA][lic.amp_deer])
 		* animal_dm ([CC0 / CC BY-SA][lic.amp_dm])
-		* animal_fish_blue_white ([CC-BY-SA][lic.amp_fish_blue_white])
+		* animal_fish_blue_white ([CC BY-SA][lic.amp_fish_blue_white])
 		* animal_gull ([CC BY-SA][lic.amp_gull])
-		* animal_rat ([CC0 / CC-BY-SA][lic.amp_rat])
+		* animal_rat ([CC0 / CC BY-SA][lic.amp_rat])
 		* animal_sheep ([CC BY-SA / GFDL][lic.amp_sheep])
-		* mob_bear ([CC0 / CC-BY-SA][lic.amp_bear])
+		* mob_bear ([CC0 / CC BY-SA][lic.amp_bear])
 		* mob_ghost ([CC BY-SA][lic.amp_ghost])
 		* mob_oerkki ([CC0 / CC BY-SA][lic.amp_oerkki])
 		* mob_ostrich ([CC BY-SA][lic.amp_ostrich])
@@ -163,7 +162,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* glass
 		* overrides
 		* spawneggs
-* [Creatures MOB-Engine][cme] ([zlib/CC-BY-SA][lic.cme]) -- version: [2.3.1-0-e3502a1 Git][ver.cme] *2016-02-16*
+* [Creatures MOB-Engine][cme] ([zlib / CC-BY-SA][lic.cme]) -- version: [2.3.1-0-e3502a1 Git][ver.cme] *2016-02-16*
 	* mp_cme/
 		* chicken
 		* creatures
@@ -184,20 +183,20 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* lavalamp
 		* lrfurn
 		* plasmascreen
-* [mesecons][] ([LGPL/CC-BY-SA](mods/mp_mesecons/COPYING.txt))
+* [mesecons][] ([LGPL / CC BY-SA][lic.mesecons])
 	* mp_mesecons/
-* [mobf_core][animals_modpack] (part of animals_modpack) ([CC-BY-SA][lic.mobf]) -- version: 2.5.1
+* [mobf_core][animals_modpack] (part of animals_modpack) ([CC BY-SA][lic.mobf]) -- version: 2.5.1
 	* mp_mobf_core/
 		* barn
 		* mobf
 		* mobf_settings
-* [moremesecons][] ([GPL](mods/mp_moremesecons/LICENSE.txt))
+* [moremesecons][] ([GPL][lic.gpl3.0])
 	* mp_moremesecons/
-* [mydoors][] ([CC-BY / CC-BY-SA / WTFPL][lic.mydoors.1] / [DWYWFPL][lic.mydoors.2]) -- version: [63aef13 Git][ver.mydoors] *2017-03-31* ([patched][patch.mydoors])
+* [mydoors][] ([CC-BY / CC-BY-SA][lic.mydoors] / [WTFPL][lic.wtfpl] / [DWYWFPL][lic.dwywpl]) -- version: [63aef13 Git][ver.mydoors] *2017-03-31* ([patched][patch.mydoors])
 	* mp_mydoors/
 		* my_*_doors
 		* my_garage_door
-* [technic][] ([LGPL][lic.technic]) -- version: [42efc7e Git][ver.technic] *2017-04-17* ([patched][patch.technic])
+* [technic][] ([LGPL][lic.lgpl2.0]) -- version: [42efc7e Git][ver.technic] *2017-04-17* ([patched][patch.technic])
 	* mp_technic/
 
 
@@ -301,18 +300,12 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [worldedge]: https://forum.minetest.net/viewtopic.php?t=10753
 
 [lic.3d_armor]: mods/mp_3d_armor/LICENSE.md
-[lic.advtrains]: mods/mp_advtrains/license.txt
-[lic.advtrains.2]: mods/mp_advtrains/license_media.txt
 [lic.airtanks]: mods/player/airtanks/LICENSE.txt
-[lic.ambience_ultralite.1]: https://forum.minetest.net/viewtopic.php?t=2807
-[lic.ambience_ultralite.2]: mods/sound/ambience/sounds/SoundLicenses.txt
+[lic.ambience_ultralite]: mods/sound/ambience/sounds/SoundLicenses.txt
 [lic.amp_adv_spawning]: mods/spawning/adv_spawning/README.txt
-[lic.amp_animal_resources]: mods/mp_animalmaterials/animal_resources/License.txt
-[lic.amp_animalmaterials]: mods/mp_animalmaterials/animalmaterisl/License.txt
 [lic.amp_bear]: mods/mp_animals_modpack/mob_bear/License.txt
 [lic.amp_chicken]: mods/mp_animals_modpack/animal_chicken/License.txt
 [lic.amp_clownfish]: mods/mp_animals_modpack/animal_clownfish/License.txt
-[lic.amp_cooking]: mods/mp_animalmaterials/cooking/License.txt
 [lic.amp_cow]: mods/mp_animals_modpack/animal_cow/License.txt
 [lic.amp_deer]: mods/mp_animals_modpack/animal_deer/License.txt
 [lic.amp_dm]: mods/mp_animals_modpack/animal_dm/License.txt
@@ -328,57 +321,73 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.amp_slime]: mods/mp_animals_modpack/mob_slime/License.txt
 [lic.amp_warthog]: mods/mp_animals_modpack/mob_warthog/License.txt
 [lic.antum]: mods/mp_antum/LICENSE.txt
-[lic.areas]: mods/protection/areas/LICENSE.txt
 [lic.awards]: mods/awards/LICENSE.txt
-[lic.away]: mods/chat/away/COPYING
-[lic.bedrock2]: mods/world/bedrock2/COPYING
-[lic.biome_lib]: mods/lib/biome_lib/README.md
+[lic.bags]: mods/inventory/bags/LICENSE
 [lic.bridges]: mods/buildings/bridges/README.md
 [lic.campfire]: mods/campfire/README.md
 [lic.character_creator]: mods/player_visuals/character_creator/license.txt
 [lic.christmas]: mods/buildings/christmas/LICENSE.txt
 [lic.cme]: mods/mp_cme/LICENSE.txt
-[lic.coloredwood]: mods/wood/coloredwood/LICENSE
 [lic.craft_guide]: mods/crafting/craft_guide/LICENSE
 [lic.creeper]: mods/mobs_aggressive/creeper/LICENSE.md
 [lic.crops]: mods/farming/crops/LICENSE
 [lic.currency]: https://forum.minetest.net/viewtopic.php?t=7002
+[lic.elevator]: mods/buildings/elevator/readme.txt
 [lic.enchanting]: mods/enchanting/LICENSE
 [lic.ethereal]: mods/world/ethereal/license.txt
 [lic.farming_plus]: mods/farming/farming_plus/README.txt
 [lic.fort_spikes]: mods/buildings/fort_spikes/README.md
-[lic.helicopter]: mods/transport/helicopter/LICENSE
+[lic.hidename]: mods/player_visuals/hidename/LICENSE.txt
 [lic.homedecor]: mods/mp_homedecor_modpack/LICENSE
-[lic.ilights]: mods/lighting/ilights/init.lua
+[lic.hovercraft]: mods/transport/hovercraft/LICENSE.txt
+[lic.intllib]: mods/intllib/README.md
+[lic.inventory_plus]: mods/inventory/inventory_plus/LICENSE
 [lic.invisibility]: mods/player_visuals/invisibility/license.txt
+[lic.invisible]: mods/admin/invisible/readme.txt
 [lic.jukebox]: mods/furniture/jukebox/README.txt
 [lic.kpgmobs]: mods/mobs/kpgmobs/README.txt
 [lic.lightning]: mods/weather/lightning/README.md
+[lic.mesecons]: mods/mp_mesecons/COPYING.txt
 [lic.mobf]: mods/mp_mobf_core/License.txt
 [lic.mobs_goblins]: mods/mobs_aggressive/mobs_goblins/README.md
 [lic.mobs_monster]: mods/mobs_aggressive/mobs_monster/license.txt
-[lic.more_chests]: mods/storage/more_chests/LICENSE
+[lic.mobs_redo]: mods/mobs/mobs_redo/license.txt
 [lic.moreblocks]: mods/buildings/moreblocks/LICENSE.md
-[lic.moreores]: mods/materials/moreores/README.md
-[lic.mydoors.1]: mods/mp_mydoors/README.md
-[lic.mydoors.2]: mods/mp_mydoors/licence.txt
-[lic.mywoodslopes]: mods/wood/mywoodslopes/licence.txt
+[lic.moreores]: mods/materials/moreores/LICENSE.md
+[lic.mydoors]: mods/mp_mydoors/README.md
 [lic.playeranim]: mods/player_visuals/playeranim/license.md
 [lic.privilegeareas]: mods/admin/privilegeareas/README.md
 [lic.quartz]: mods/materials/quartz/LICENSE.txt
 [lic.rainbow_ore]: mods/materials/rainbow_ore/README.md
 [lic.signs_lib]: mods/signs/signs_lib/copyright.txt
-[lic.simple_protection]: mods/protection/simple_protection/README.md
 [lic.spawneggs]: mods/spawning/spawneggs/README.txt
 [lic.spectator_mode]: mods/admin/spectator_mode/LICENSE
-[lic.spidermob]: mods/mobs_aggressive/spidermob/LICENSE
+[lic.spidermob]: https://github.com/minetest-LOTR/Lord-of-the-Test/blob/master/mods/lottmobs/license.txt
 [lic.stairsplus]: mods/buildings/stairsplus/LICENSE.txt
-[lic.technic]: mods/mp_technic/README.md
-[lic.throwing]: https://forum.minetest.net/viewtopic.php?t=687#p5739
+[lic.tools_obsidian]: mods/tools/tools_obsidian/README.md
+[lic.trash_can]: mods/furniture/trash_can/LICENSE.txt
 [lic.vector_extras]: mods/vector_extras/LICENSE.txt
 [lic.walking_light]: mods/lighting/walking_light/README.md
-[lic.wardrobe]: mods/player_visuals/wardrobe/README.txt
 [lic.windmill]: mods/buildings/windmill/README.md
+
+[lic.cc0]: doc/licenses/CC0.txt
+[lic.ccbyncsa]: doc/licenses/CC_BY-NC-SA-4.0.txt
+[lic.ccbyncsa3.0]: doc/licenses/CC_BY-NC-SA-3.0.txt
+[lic.ccbyncsa4.0]: doc/licenses/CC_BY-NC-SA-4.0.txt
+[lic.ccbysa]: doc/licenses/CC_BY-SA-4.0.txt
+[lic.ccbysa3.0]: doc/licenses/CC_BY-SA-3.0.txt
+[lic.ccbysa4.0]: doc/licenses/CC_BY-SA-4.0.txt
+[lic.dwywpl]: doc/licenses/DWYWPL.txt
+[lic.gpl1.0]: doc/licenses/GPL-1.0.txt
+[lic.gpl2.0]: doc/licenses/GPL-2.0.txt
+[lic.gpl3.0]: doc/licenses/GPL-3.0.txt
+[lic.lgpl2.0]: doc/licenses/LGPL-2.0.txt
+[lic.lgpl2.1]: doc/licenses/LGPL-2.1.txt
+[lic.lgpl3.0]: doc/licenses/LGPL-3.0.txt
+[lic.mit]: doc/licenses/MIT.txt
+[lic.unlicense]: doc/licenses/Unlicense.txt
+[lic.wtfpl]: doc/licenses/WTFPL.txt
+[lic.zlib]: doc/licenses/zlib.txt
 
 [ver.3d_armor]: https://github.com/stujones11/minetest-3d_armor/tree/793c748
 [ver.adv_spawning]: https://github.com/sapier/adv_spawning/tree/ec41aa9
