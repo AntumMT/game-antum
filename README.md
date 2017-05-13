@@ -65,7 +65,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [pipeworks][] ([WTFPL][lic.wtfpl]) -- version: [d822279 Git][ver.pipeworks] *2017-04-13* ([patched][patch.pipeworks])
 * plantlife/
 * player/
-	* [airtanks][] ([MIT][lic.airtanks]) -- version: [fc01ffb Git][ver.airtanks] *2017-04-01*
+	* [airtanks][] ([MIT][lic.airtanks]) -- version: [fc01ffb Git][ver.airtanks] *2017-04-01* ([patched][patch.airtanks])
 * player_action/
     * [throwing][] ([WTFPL][lic.wtfpl]) -- version: [0.14-79ad788 Git][ver.throwing] *2012-02-10*
 * player_visuals/
@@ -476,6 +476,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.3d_armor]: https://github.com/AntumDeluge/mtmp-3d_armor/tree/3f3df7b
 [patch.adv_spawning]: https://github.com/AntumDeluge/mtmod-adv_spawning/tree/e73c0aa
 [patch.advtrains]: https://github.com/AntumDeluge/mtmp-advtrains/tree/26f8bf4
+[patch.airtanks]: https://github.com/AntumDeluge/mtmod-airtanks/tree/4667c26
 [patch.animals_modpack]: https://github.com/AntumDeluge/mtmp-animals_modpack/tree/e84e1e6
 [patch.awards]: https://github.com/AntumDeluge/mtmod-awards/tree/638c137
 [patch.bags]: https://github.com/AntumDeluge/mtmod-bags/tree/4363284
