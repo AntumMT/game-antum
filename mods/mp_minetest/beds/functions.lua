@@ -1,7 +1,7 @@
 local pi = math.pi
 local player_in_bed = 0
 local is_sp = minetest.is_singleplayer()
-local enable_respawn = minetest.setting_getbool("enable_bed_respawn")
+local enable_respawn = minetest.settings:get_bool("enable_bed_respawn")
 if enable_respawn == nil then
 	enable_respawn = true
 end
@@ -22,13 +22,14 @@ local function get_look_yaw(pos)
 end
 
 local function is_night_skip_enabled()
-	local enable_night_skip = minetest.setting_getbool("enable_bed_night_skip")
+	local enable_night_skip = minetest.settings:get_bool("enable_bed_night_skip")
 	if enable_night_skip == nil then
 		enable_night_skip = true
 	end
 	return enable_night_skip
 end
 
+--[[
 local function check_in_beds(players)
 	local in_bed = beds.player
 	if not players then
@@ -43,6 +44,12 @@ local function check_in_beds(players)
 	end
 
 	return #players > 0
+end
+]]--
+
+-- Allow night skip if any player is in bed
+local function check_in_beds(players)
+	return true
 end
 
 local function lay_down(player, pos, bed_pos, state, skip)
