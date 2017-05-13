@@ -20,7 +20,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [christmas][] ([MIT][lic.christmas]) -- version [d3bd872 Git][ver.christmas] *2013-01-11* ([patched][patch.christmas])
     * [elevator][] ([WTFPL][lic.elevator])
     * [fort_spikes][] ([MIT][lic.fort_spikes] / [CC0][lic.cc0]) -- version: [2765b56 Git][ver.fort_spikes] *2017-04-07* ([patched][patch.fort_spikes])
-    * [moreblocks][] ([zlib][lic.moreblocks]) -- version: [fbfb079 Git][ver.moreblocks] *2017-03-14*
+    * [moreblocks][] ([zlib][lic.moreblocks]) -- version: [fbfb079 Git][ver.moreblocks] *2017-03-14* ([patched][patch.moreblocks])
     * [stairsplus][] ([zlib][lic.stairsplus]) -- version: [311e1f0 Git][ver.stairsplus] *2013-05-30*
     * [windmill][] ([WTFPL][lic.windmill]) -- version: [47b029d Git][ver.windmill] *2014-08-21* ([patched][patch.windmill])
 * [campfire][] ([GPL][lic.gpl2.0] / [CC BY-SA][lic.ccbysa] / [WTFPL][lic.campfire]) -- version: [b45acd2 Git][ver.campfire] *2016-02-18* ([patched][patch.campfire])
@@ -496,6 +496,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.mobf_core]: https://github.com/AntumDeluge/mtmp-mobf_core/tree/e6fa3b7
 [patch.mobs_goblins]: https://github.com/AntumDeluge/mtmod-mobs_goblins/tree/8813304
 [patch.mobs_redo]: https://github.com/AntumDeluge/mtmod-mobs_redo/tree/58e123a
+[patch.moreblocks]: https://github.com/AntumDeluge/mtmod-moreblocks/tree/786f9e4
 [patch.moremesecons]: https://github.com/AntumDeluge/mtmp-moremesecons/tree/caa71bc
 [patch.moreores]: https://github.com/AntumDeluge/mtmod-moreores/tree/2172c49
 [patch.mydoors]: https://github.com/AntumDeluge/mtmp-mydoors/tree/e36c9d1
