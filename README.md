@@ -106,7 +106,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [coloredwood][] ([LGPL][lic.lgpl3.0]) -- version: [fc4ab15 Git][ver.coloredwood] *2017-03-18* ([patched][patch.coloredwood])
 	* [mywoodslopes][] ([DWYWPL][lic.dwywpl]) -- version: [3a1b531 Git][ver.mywoodslopes] *2016-03-23*
 * world/
-    * [bedrock2][] ([WTFPL][lic.wtfpl]) -- version [1.2.0-0378b61 Git][ver.bedrock2]
+    * [bedrock2][] ([WTFPL][lic.wtfpl]) -- version [1.2.2 (5fe9e87 Git)][ver.bedrock2] *2016-11-21* ([patched][patch.bedrock2])
     * [biome_lib][] ([WTFPL][lic.wtfpl]) -- version: [9cdcdcf Git][ver.biome_lib] *2017-01-26*
     * [ethereal][] ([MIT][lic.ethereal]) -- version [2c24961 Git][ver.ethereal] *2017-04-23* ([patched][patch.ethereal])
     * [glow][] ([GPL][lic.gpl2.0]) -- version: [30f9cf3 Git][ver.glow] *2015-09-25*
@@ -402,7 +402,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.awards]: https://github.com/minetest-mods/awards/tree/096fe16
 [ver.away]: https://github.com/kahrl/minetest-mod-away/tree/4c1e5a9
 [ver.bags]: https://github.com/cornernote/minetest-bags/tree/f17d829
-[ver.bedrock2]: http://repo.or.cz/minetest_bedrock2.git/tree/0378b61
+[ver.bedrock2]: http://repo.or.cz/minetest_bedrock2.git/tree/5fe9e87
 [ver.biome_lib]: https://github.com/minetest-mods/biome_lib/tree/9cdcdcf
 [ver.bookmarks_gui]: https://github.com/cornernote/minetest-bookmarks_gui/tree/d369dba
 [ver.bridges]: https://github.com/Sokomine/bridges/tree/5b5f475
@@ -476,6 +476,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.adv_spawning]: https://github.com/AntumDeluge/mtmod-adv_spawning/tree/572688b
 [patch.animals_modpack]: https://github.com/AntumDeluge/mtmp-animals_modpack/tree/e84e1e6
 [patch.bags]: https://github.com/AntumDeluge/mtmod-bags/tree/4363284
+[patch.bedrock2]: https://github.com/AntumDeluge/mtmod-bedrock2/tree/0375ac1
 [patch.campfire]: https://github.com/AntumDeluge/mtmod-campfire/tree/67b9dd7
 [patch.christmas]: https://github.com/AntumDeluge/mtmod-christmas/tree/f6c8dc2
 [patch.coloredwood]: https://github.com/AntumDeluge/mtmod-coloredwood/tree/ed6c46f

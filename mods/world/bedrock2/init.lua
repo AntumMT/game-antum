@@ -1,9 +1,9 @@
+-- Boilerplate to support localized strings if intllib mod is installed.
 local S
-if (minetest.get_modpath("intllib")) then
-	dofile(minetest.get_modpath("intllib").."/intllib.lua")
-	S = intllib.Getter(minetest.get_current_modname())
+if minetest.get_modpath("intllib") then
+	S = intllib.Getter()
 else
-	S = function ( s ) return s end
+	S = function(s) return s end
 end
 
 local bedrock = {}
@@ -11,10 +11,13 @@ local bedrock = {}
 bedrock.layer = -30912 -- determined as appropriate by experiment
 bedrock.node = {name = "bedrock2:bedrock"}
 
-local depth = tonumber(minetest.setting_get("bedrock2_y"))
+local depth = tonumber(minetest.settings:get("bedrock2_y"))
 if depth ~= nil then
 	bedrock.layer = depth
 end
+
+-- DEBUG:
+minetest.log("action", "[" .. minetest.get_current_modname() .. "] Bedrock depth: " .. tostring(depth))
 
 minetest.register_on_generated(function(minp, maxp)
 	if maxp.y >= bedrock.layer and minp.y <= bedrock.layer then
@@ -39,8 +42,9 @@ end)
 
 minetest.register_node("bedrock2:bedrock", {
 	description = S("Bedrock"),
+	_doc_items_longdesc = S("Bedrock is a very hard block. It cannot be mined, altered, destroyed or moved by any means. It appears at the bottom of the world in a flat layer."),
 	tiles = {"bedrock2_bedrock.png"},
-	groups = {immortal=1, not_in_creative_inventory=1, in_doc = 1 },
+	groups = {immortal=1, not_in_creative_inventory=1, },
 	sounds = { footstep = { name = "bedrock2_step", gain = 1 } },
 	is_ground_content = false,
 	on_blast = function() end,
@@ -51,9 +55,5 @@ minetest.register_node("bedrock2:bedrock", {
 })
 
 if minetest.get_modpath("mesecons_mvps") ~= nil then
-	mesecon:register_mvps_stopper("bedrock2:bedrock")
-end
-
-if minetest.get_modpath("doc_items") ~= nil then
-	doc.sub.items.set_items_longdesc({["bedrock2:bedrock"] = S("Bedrock is a very hard block. It cannot be mined, altered, destroyed or moved by any means. It appears at the bottom of the world in a flat layer.")})
+	mesecon.register_mvps_stopper("bedrock2:bedrock")
 end
