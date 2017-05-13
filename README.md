@@ -4,6 +4,10 @@ Requires Minetest server 0.4.15 or above
 
 The game includes the mods from the default [minetest_game](https://github.com/minetest/minetest_game/tree/master/mods)
 
+***Currently, a development version of the Minetest server is required. It has been tested with [build 0d4d35a](https://github.com/minetest/minetest/tree/0d4d35a).***
+
+---
+
 ### The following mods are also included:
 
 ***"UPDATE" Denotes update available***
@@ -114,8 +118,10 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [worldedge][] ([DWYWPL][lic.dwywpl]) -- version: [e15fa99 Git][ver.worldedge] *2016-03-23* ([patched][patch.worldedge])
 
 
+---
 
 ### This is a list of installed modpacks & their components (trying to keep them listed separate for sake of organization):
+
 * [3d_armor][] ([LGPL / CC BY-SA][lic.3d_armor]) - version: [0.4.9 (793c748 Git)][ver.3d_armor] *2017-05-03* ([patched][patch.3d_armor]) ***UPDATE***
 	* mp_3d_armor/
 		* 3d_armor
