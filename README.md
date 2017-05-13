@@ -107,7 +107,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [mywoodslopes][] ([DWYWPL][lic.dwywpl]) -- version: [3a1b531 Git][ver.mywoodslopes] *2016-03-23*
 * world/
     * [bedrock2][] ([WTFPL][lic.wtfpl]) -- version [1.2.2 (5fe9e87 Git)][ver.bedrock2] *2016-11-21* ([patched][patch.bedrock2])
-    * [biome_lib][] ([WTFPL][lic.wtfpl]) -- version: [9cdcdcf Git][ver.biome_lib] *2017-01-26*
+    * [biome_lib][] ([WTFPL][lic.wtfpl]) -- version: [9cdcdcf Git][ver.biome_lib] *2017-01-26* ([patched][patch.biome_lib])
     * [ethereal][] ([MIT][lic.ethereal]) -- version [2c24961 Git][ver.ethereal] *2017-04-23* ([patched][patch.ethereal])
     * [glow][] ([GPL][lic.gpl2.0]) -- version: [30f9cf3 Git][ver.glow] *2015-09-25*
     * [nether][] ([WTFPL / CC BY-SA][lic.nether]) -- version: [bc2ccfb Git][ver.nether] *2017-01-04* ([patched][patch.nether])
@@ -482,6 +482,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.awards]: https://github.com/AntumDeluge/mtmod-awards/tree/638c137
 [patch.bags]: https://github.com/AntumDeluge/mtmod-bags/tree/4363284
 [patch.bedrock2]: https://github.com/AntumDeluge/mtmod-bedrock2/tree/0375ac1
+[patch.biome_lib]: https://github.com/AntumDeluge/mtmod-biome_lib/tree/4821839
 [patch.campfire]: https://github.com/AntumDeluge/mtmod-campfire/tree/67b9dd7
 [patch.christmas]: https://github.com/AntumDeluge/mtmod-christmas/tree/f6c8dc2
 [patch.cme]: https://github.com/AntumDeluge/mtmp-cme/tree/7a6e106
