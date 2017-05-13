@@ -1,7 +1,7 @@
-local egg_interval = tonumber(minetest.setting_get('spawneggs_egg_interval')) or 600
-local egg_chance = tonumber(minetest.setting_get('spawneggs_egg_chance')) or 3000
-local grass_interval = tonumber(minetest.setting_get('spawneggs_grass_interval')) or 600
-local grass_chance = tonumber(minetest.setting_get('spawneggs_grass_chance')) or 3000
+local egg_interval = tonumber(minetest.settings:get('spawneggs_egg_interval')) or 600
+local egg_chance = tonumber(minetest.settings:get('spawneggs_egg_chance')) or 3000
+local grass_interval = tonumber(minetest.settings:get('spawneggs_grass_interval')) or 600
+local grass_chance = tonumber(minetest.settings:get('spawneggs_grass_chance')) or 3000
 
 local spawneggs_list = {
 	{ "Spawn Dirt Monster", "dirt_monster", "default:dirt"},
