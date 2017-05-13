@@ -72,7 +72,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [character_creator][] ([MIT / CC-BY-SA][lic.character_creator]) -- version: [6a0e6aa Git][ver.character_creator]
     * [hidename][] ([MIT][lic.hidename]) -- version [bb52dbc Git][ver.hidename]
     * [invisibility][] ([MIT][lic.invisibility]) -- version: [bf4156b Git][ver.invisibility] *2016-08-19* ([patched][patch.invisibility])
-    * [playeranim][] ([BSD 2-Clause][lic.playeranim]) - version [0ca8e5a Git][ver.playeranim] *2016-12-07*
+    * [playeranim][] ([BSD 2-Clause][lic.playeranim]) - version [0ca8e5a Git][ver.playeranim] *2016-12-07* ([patched][patch.playeranim])
     * [wardrobe][] ([WTFPL][lic.wtfpl]) -- version: [1.1-2-c48b011 Git][ver.wardrobe] *2015-05-21*
 * protection/
     * [areas][] ([LGPL][lic.lgpl2.1]) -- version [6080ff0 Git][ver.areas] *2016-11-25*
@@ -512,6 +512,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.mydoors]: https://github.com/AntumDeluge/mtmp-mydoors/tree/e36c9d1
 [patch.nether]: https://github.com/AntumDeluge/mtmod-nether/tree/f634851
 [patch.pipeworks]: https://github.com/AntumDeluge/mtmod-pipeworks/tree/32b6613
+[patch.playeranim]: https://github.com/AntumDeluge/mtmod-playeranim/tree/54a4cb6
 [patch.quartz]: https://github.com/AntumDeluge/mtmod-quartz/tree/d23dabd
 [patch.rainbow_ore]: https://github.com/AntumDeluge/mtmod-rainbow_ore/tree/60dc35e
 [patch.signs_lib]: https://github.com/AntumDeluge/mtmod-signs_lib/tree/fe46611
