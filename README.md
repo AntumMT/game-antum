@@ -152,7 +152,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* mob_shark ([CC BY-SA][lic.amp_shark])
 		* mob_slime ([CC0 / CC BY / CC BY-SA / CC0][lic.amp_slime])
 		* mob_warthog ([CC BY / CC BY-SA][lic.amp_warthog])
-* [antum][] ([MIT][lic.antum]) -- version: [4477d40 Git][ver.antum] *2017-05-03*
+* [antum][] ([MIT][lic.antum]) -- version: [e539f08 Git][ver.antum] *2017-05-03*
 	* mp_antum/
 		* antum
 		* commands
@@ -397,7 +397,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.airtanks]: https://github.com/minetest-mods/airtanks/tree/fc01ffb
 [ver.animalmaterials]: https://github.com/sapier/animalmaterials/tree/d952d27
 [ver.animals_modpack]: https://github.com/sapier/animals_modpack/tree/b9d0172
-[ver.antum]: https://github.com/AntumDeluge/mtmp-antum/tree/4477d40
+[ver.antum]: https://github.com/AntumDeluge/mtmp-antum/tree/e539f08
 [ver.areas]: https://github.com/ShadowNinja/areas/tree/6080ff0
 [ver.awards]: https://github.com/minetest-mods/awards/tree/096fe16
 [ver.away]: https://github.com/kahrl/minetest-mod-away/tree/4c1e5a9
