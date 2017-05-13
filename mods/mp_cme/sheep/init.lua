@@ -115,7 +115,7 @@ local def = {
 	},
 
 	drops = function(self)
-		local items = {{"animalmaterials:meat_raw"}}
+		local items = {{"creatures:flesh"}}
 		if self.has_wool then
 			table.insert(items, {"wool:" .. self.wool_color, {min = 1, max = 2}})
 		end
@@ -148,8 +148,7 @@ local def = {
 	},
 
 	on_punch = function(self, puncher)
-		-- DISABLE shearing sheep when punched
-		--shear(self)
+		shear(self)
 	end,
 
 	get_staticdata = function(self)
@@ -190,7 +189,7 @@ local def = {
 					shear(self, math.random(2, 3), true)
 					item:add_wear(65535/100)
 				end
-				if not core.setting_getbool("creative_mode") then
+				if not minetest.settings:get_bool("creative_mode") then
 					clicker:set_wielded_item(item)
 				end
 			end
