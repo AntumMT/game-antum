@@ -1,5 +1,5 @@
 
-MOB API (27th April 2017)
+MOB API (12th May 2017)
 
 The mob api is a function that can be called on by other mods to add new animals or monsters into minetest.
 
@@ -25,6 +25,7 @@ This functions registers a new mob as a Minetest entity.
         'docile_by_day' when true, mob will not attack during daylight hours unless provoked
         'attacks_monsters' usually for npc's to attack monsters in area
         'group_attack' true to defend same kind of mobs from attack in area
+        'owner_loyal' when true owned mobs will attack any monsters you punch
         'attack_animals' true for monster to attack animals as well as player and npc's
         'specific_attack' has a table of entity names that monsters can attack {"player", "mobs_animal:chicken"}
         'hp_min' minimum health

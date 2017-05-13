@@ -1,5 +1,5 @@
 
--- Mobs Api (27th April 2017)
+-- Mobs Api (12th May 2017)
 
 mobs = {}
 mobs.mod = "redo"
@@ -51,19 +51,19 @@ end
 
 
 -- Load settings
-local damage_enabled = minetest.setting_getbool("enable_damage")
-local peaceful_only = minetest.setting_getbool("only_peaceful_mobs")
-local disable_blood = minetest.setting_getbool("mobs_disable_blood")
-local creative = minetest.setting_getbool("creative_mode")
-local spawn_protected = tonumber(minetest.setting_get("mobs_spawn_protected")) or 1
-local remove_far = minetest.setting_getbool("remove_far_mobs")
-local difficulty = tonumber(minetest.setting_get("mob_difficulty")) or 1.0
-local show_health = minetest.setting_getbool("mob_show_health") ~= false
-local max_per_block = tonumber(minetest.setting_get("max_objects_per_block") or 99)
+local damage_enabled = minetest.settings:get_bool("enable_damage")
+local peaceful_only = minetest.settings:get_bool("only_peaceful_mobs")
+local disable_blood = minetest.settings:get_bool("mobs_disable_blood")
+local creative = minetest.settings:get_bool("creative_mode")
+local spawn_protected = tonumber(minetest.settings:get("mobs_spawn_protected")) or 1
+local remove_far = minetest.settings:get_bool("remove_far_mobs")
+local difficulty = tonumber(minetest.settings:get("mob_difficulty")) or 1.0
+local show_health = minetest.settings:get_bool("mob_show_health") ~= false
+local max_per_block = tonumber(minetest.settings:get("max_objects_per_block") or 99)
 
 -- calculate aoc range for mob count
-local aosrb = tonumber(minetest.setting_get("active_object_send_range_blocks"))
-local abr = tonumber(minetest.setting_get("active_block_range"))
+local aosrb = tonumber(minetest.settings:get("active_object_send_range_blocks"))
+local abr = tonumber(minetest.settings:get("active_block_range"))
 local aoc_range = max(aosrb, abr) * 16
 
 -- pathfinding settings
@@ -1259,7 +1259,6 @@ local follow_flop = function(self)
 
 				if p.x > s.x then yaw = yaw + pi end
 
---				self.object:setyaw(yaw)
 				yaw = set_yaw(self.object, yaw)
 
 				-- anyone but standing npc's can move along
@@ -1364,7 +1363,6 @@ local do_states = function(self, dtime)
 				yaw = (random(0, 360) - 180) / 180 * pi
 			end
 
---			self.object:setyaw(yaw)
 			yaw = set_yaw(self.object, yaw)
 		end
 
@@ -1438,7 +1436,6 @@ local do_states = function(self, dtime)
 					if lp.x > s.x then yaw = yaw + pi end
 
 						-- look towards land and jump/move in that direction
---						self.object:setyaw(yaw)
 						yaw = set_yaw(self.object, yaw)
 						do_jump(self)
 						set_velocity(self, self.walk_velocity)
@@ -1458,7 +1455,6 @@ local do_states = function(self, dtime)
 				if lp.x > s.x then yaw = yaw + pi end
 			end
 
---			self.object:setyaw(yaw)
 			yaw = set_yaw(self.object, yaw)
 
 		-- otherwise randomly turn
@@ -1466,7 +1462,6 @@ local do_states = function(self, dtime)
 
 			yaw = random() * 2 * pi
 
---			self.object:setyaw(yaw)
 			yaw = set_yaw(self.object, yaw)
 		end
 
@@ -1547,7 +1542,6 @@ local do_states = function(self, dtime)
 
 			if p.x > s.x then yaw = yaw + pi end
 
---			self.object:setyaw(yaw)
 			yaw = set_yaw(self.object, yaw)
 
 			if dist > self.reach then
@@ -1708,7 +1702,6 @@ local do_states = function(self, dtime)
 
 			if p.x > s.x then yaw = yaw + pi end
 
---			self.object:setyaw(yaw)
 			yaw = set_yaw(self.object, yaw)
 
 			-- move towards enemy if beyond mob reach
@@ -1808,7 +1801,6 @@ local do_states = function(self, dtime)
 
 			if p.x > s.x then yaw = yaw + pi end
 
---			self.object:setyaw(yaw)
 			yaw = set_yaw(self.object, yaw)
 
 			set_velocity(self, 0)
@@ -2085,19 +2077,20 @@ local mob_punch = function(self, hitter, tflp, tool_capabilities, dir)
 			yaw = yaw + pi
 		end
 
---		self.object:setyaw(yaw)
 		yaw = set_yaw(self.object, yaw)
 		self.state = "runaway"
 		self.runaway_timer = 0
 		self.following = nil
 	end
 
+	local name = hitter:get_player_name() or ""
+
 	-- attack puncher and call other mobs for help
 	if self.passive == false
 	and self.state ~= "flop"
 	and self.child == false
 	and hitter:get_player_name() ~= self.owner
-	and not mobs.invis[ hitter:get_player_name() ] then
+	and not mobs.invis[ name ] then
 
 		-- attack whoever punched mob
 		self.state = ""
@@ -2113,9 +2106,17 @@ local mob_punch = function(self, hitter, tflp, tool_capabilities, dir)
 
 			if obj then
 
+				-- only alert members of same mob
 				if obj.group_attack == true
-				and obj.state ~= "attack" then
+				and obj.state ~= "attack"
+				and obj.owner ~= name
+				and obj.name == self.name then
 					do_attack(obj, hitter)
+				end
+
+				-- have owned mobs attack player threat
+				if obj.owner == name and obj.owner_loyal then
+					do_attack(obj, self.object)
 				end
 			end
 		end
@@ -2267,7 +2268,6 @@ local mob_activate = function(self, staticdata, def)
 
 	-- set anything changed above
 	self.object:set_properties(self)
---	self.object:setyaw((random(0, 360) - 180) / 180 * pi)
 	set_yaw(self.object, (random(0, 360) - 180) / 180 * pi)
 	update_tag(self)
 end
@@ -2494,6 +2494,7 @@ minetest.register_entity(name, {
 	dogshoot_count2_max = def.dogshoot_count2_max or (def.dogshoot_count_max or 5),
 	attack_animals = def.attack_animals or false,
 	specific_attack = def.specific_attack,
+	owner_loyal = def.owner_loyal,
 
 	on_blast = def.on_blast or do_tnt,
 
@@ -2551,7 +2552,7 @@ function mobs:spawn_specific(name, nodes, neighbors, min_light, max_light,
 	interval, chance, aoc, min_height, max_height, day_toggle, on_spawn)
 
 	-- chance/spawn number override in minetest.conf for registered mob
-	local numbers = minetest.setting_get(name)
+	local numbers = minetest.settings:get(name)
 
 	if numbers then
 		numbers = numbers:split(",")
