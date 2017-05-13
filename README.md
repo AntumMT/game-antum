@@ -62,7 +62,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * npc/
     * [peaceful_npc][] ([WTFPL][lic.wtfpl]) -- version: [2b3a7a5 Git][ver.peaceful_npc] *2015-08-09*
 * [painting][] (???)
-* [pipeworks][] ([WTFPL][lic.wtfpl]) -- version: [d822279 Git][ver.pipeworks] *2017-04-13*
+* [pipeworks][] ([WTFPL][lic.wtfpl]) -- version: [d822279 Git][ver.pipeworks] *2017-04-13* ([patched][patch.pipeworks])
 * plantlife/
 * player/
 	* [airtanks][] ([MIT][lic.airtanks]) -- version: [fc01ffb Git][ver.airtanks] *2017-04-01*
@@ -501,6 +501,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.moreores]: https://github.com/AntumDeluge/mtmod-moreores/tree/2172c49
 [patch.mydoors]: https://github.com/AntumDeluge/mtmp-mydoors/tree/e36c9d1
 [patch.nether]: https://github.com/AntumDeluge/mtmod-nether/tree/f634851
+[patch.pipeworks]: https://github.com/AntumDeluge/mtmod-pipeworks/tree/32b6613
 [patch.quartz]: https://github.com/AntumDeluge/mtmod-quartz/tree/d23dabd
 [patch.rainbow_ore]: https://github.com/AntumDeluge/mtmod-rainbow_ore/tree/60dc35e
 [patch.signs_lib]: https://github.com/AntumDeluge/mtmod-signs_lib/tree/770978c
