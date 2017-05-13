@@ -75,7 +75,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [playeranim][] ([BSD 2-Clause][lic.playeranim]) - version [0ca8e5a Git][ver.playeranim] *2016-12-07* ([patched][patch.playeranim])
     * [wardrobe][] ([WTFPL][lic.wtfpl]) -- version: [1.1-2-c48b011 Git][ver.wardrobe] *2015-05-21*
 * protection/
-    * [areas][] ([LGPL][lic.lgpl2.1]) -- version [6080ff0 Git][ver.areas] *2016-11-25*
+    * [areas][] ([LGPL][lic.lgpl2.1]) -- version [6080ff0 Git][ver.areas] *2016-11-25* ([patched][patch.areas])
     * [simple_protection][] ([WTFPL][lic.wtfpl]) -- version [23c024f Git][ver.simple_protection] *2017-01-07*
 * signs/
 	* [signs_lib][] ([BSD][lic.signs_lib] / [WTFPL][lic.wtfpl]) -- version: [2c36937 Git][ver.signs_lib] *2017-03-05* ([patched][patch.signs_lib])
@@ -478,6 +478,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.advtrains]: https://github.com/AntumDeluge/mtmp-advtrains/tree/26f8bf4
 [patch.airtanks]: https://github.com/AntumDeluge/mtmod-airtanks/tree/4667c26
 [patch.animals_modpack]: https://github.com/AntumDeluge/mtmp-animals_modpack/tree/e84e1e6
+[patch.areas]: https://github.com/AntumDeluge/mtmod-areas/tree/db074be
 [patch.awards]: https://github.com/AntumDeluge/mtmod-awards/tree/638c137
 [patch.bags]: https://github.com/AntumDeluge/mtmod-bags/tree/4363284
 [patch.bedrock2]: https://github.com/AntumDeluge/mtmod-bedrock2/tree/0375ac1
