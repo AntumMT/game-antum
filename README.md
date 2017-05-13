@@ -169,7 +169,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* oerrki
 		* sheep
 		* zombie
-* [homedecor_modpack][homedecor] ([LGPL / WTFPL / CC BY-SA / CC0][lic.homedecor]) -- version: [5fb16c4 Git][ver.homedecor] *2017-03-31*
+* [homedecor_modpack][homedecor] ([LGPL / WTFPL / CC BY-SA / CC0][lic.homedecor]) -- version: [5fb16c4 Git][ver.homedecor] *2017-03-31* ([patched][patch.homedecor])
 	* mp_homedecor_modpack/
 		* building_blocks
 		* chains
@@ -488,6 +488,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.ethereal]: https://github.com/AntumDeluge/mtmod-ethereal/tree/ba81be1
 [patch.fort_spikes]: https://github.com/AntumDeluge/mtmod-fort_spikes/tree/74dca42
 [patch.helicopter]: https://github.com/AntumDeluge/mtmod-helicopter/tree/66a6523
+[patch.homedecor]: https://github.com/AntumDeluge/mtmp-homedecor/tree/4d6f0c0
 [patch.hovercraft]: https://github.com/AntumDeluge/mtmod-hovercraft/tree/96ad3b4
 [patch.hud]: https://github.com/AntumDeluge/mtmod-hud/tree/3473476
 [patch.kpgmobs]: https://github.com/AntumDeluge/mtmod-kpgmobs/tree/0773e37
