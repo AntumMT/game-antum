@@ -485,7 +485,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.craftguide]: https://github.com/AntumDeluge/mtmod-craftguide/tree/89db504
 [patch.crops]: https://github.com/AntumDeluge/mtmod-crops/tree/b79cf07
 [patch.currency]: https://github.com/AntumDeluge/mtmod-currency/tree/7b0e29f
-[patch.ethereal]: https://github.com/AntumDeluge/mtmod-ethereal/tree/ba81be1
+[patch.ethereal]: https://github.com/AntumDeluge/mtmod-ethereal/tree/4be06f0
 [patch.fort_spikes]: https://github.com/AntumDeluge/mtmod-fort_spikes/tree/74dca42
 [patch.helicopter]: https://github.com/AntumDeluge/mtmod-helicopter/tree/66a6523
 [patch.homedecor]: https://github.com/AntumDeluge/mtmp-homedecor/tree/4d6f0c0
