@@ -490,7 +490,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.helicopter]: https://github.com/AntumDeluge/mtmod-helicopter/tree/66a6523
 [patch.homedecor]: https://github.com/AntumDeluge/mtmp-homedecor/tree/4d6f0c0
 [patch.hovercraft]: https://github.com/AntumDeluge/mtmod-hovercraft/tree/96ad3b4
-[patch.hud]: https://github.com/AntumDeluge/mtmod-hud/tree/3473476
+[patch.hud]: https://github.com/AntumDeluge/mtmod-hud/tree/6846e20
 [patch.kpgmobs]: https://github.com/AntumDeluge/mtmod-kpgmobs/tree/0773e37
 [patch.mesecons]: https://github.com/AntumDeluge/mtmp-mesecons/tree/2c5beee
 [patch.mobf_core]: https://github.com/AntumDeluge/mtmp-mobf_core/tree/e6fa3b7
