@@ -29,7 +29,7 @@ local function get_formspec(tabview, name, tabdata)
 		"label[2.75,1.25;" .. mobf_fixed_size_string(mobf_rtd.timesource,30) .. "]"
 		
 		
-	if mobf_rtd.have_adv_spawning then
+	if mobf_rtd.have_adv_spawning and adv_stats then
 		retval = retval ..
 			"label[0.75,2.25;Mobs spawned by adv_spawning this session:]" ..
 			"label[6,2.25;" .. string.format("%10d",adv_stats.session.entities_created) .. "]"
@@ -81,7 +81,7 @@ local function get_formspec(tabview, name, tabdata)
 		mobf_settings.printfac("User 2",         statistics.data.user_2,      "7.5",   "%2.2f%%") ..
 		mobf_settings.printfac("User 3",         statistics.data.user_3,      "8", "%2.2f%%")
 		
-	if mobf_rtd.have_adv_spawning then
+	if mobf_rtd.have_adv_spawning and adv_stats then
 		retval = retval ..
 			mobf_settings.printfac("Adv.Spawning",
 				{

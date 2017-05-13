@@ -64,7 +64,7 @@ end
 
 -- minetest workarounds
 
-if not type(core.global_exists) ~= "function" then
+if not type(core.global_exists) == "function" then
 	core.global_exists = function(name)
 		return core[name] ~= nil
 	end
