@@ -517,7 +517,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.spidermob]: https://github.com/AntumDeluge/mtmod-spidermob/tree/00b6107
 [patch.technic]: https://github.com/AntumDeluge/mtmod-technic/tree/66876a1
 [patch.trash_can]: https://github.com/AntumDeluge/mtmod-trash_can/tree/5a92bf4
-[patch.unifieddyes]: https://github.com/AntumDeluge/mtmod-unifieddyes/tree/df3f1b1
+[patch.unifieddyes]: https://github.com/AntumDeluge/mtmod-unifieddyes/tree/20947c3
 [patch.walking_light]: https://github.com/AntumDeluge/mtmod-walking_light/tree/00ebab8
 [patch.windmill]: https://github.com/AntumDeluge/mtmod-windmill/tree/7756ab4
 [patch.workbench]: https://github.com/AntumDeluge/mtmod-workbench/tree/b964323
