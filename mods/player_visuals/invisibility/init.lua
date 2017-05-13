@@ -3,79 +3,6 @@ invisibility = {}
 
 local effect_time = 300 -- 5 minutes
 
--- invisibility function
-
-local toggle_invisible = function(player, toggle)
-
-	if not player then return false end
-
-	local name = player:get_player_name()
-
-	invisibility[name] = toggle
-
-	local prop
-
-	if toggle == true then
-
-		-- hide player and name tag
-		prop = {
-			visual_size = {x = 0, y = 0},
-			collisionbox = {0, 0, 0, 0, 0, 0}
-		}
-
-		player:set_nametag_attributes({
-			color = {a = 0, r = 255, g = 255, b = 255}
-		})
-	else
-		-- show player and tag
-		prop = {
-			visual_size = {x = 1, y = 1},
-			collisionbox = {-0.35, -1, -0.35, 0.35, 1, 0.35}
-		}
-
-		player:set_nametag_attributes({
-			color = {a = 255, r = 255, g = 255, b = 255}
-		})
-	end
-
-	player:set_properties(prop)
-
-end
-
--- vanish command (admin only)
-
-minetest.register_chatcommand("vanish", {
-	params = "<name>",
-	description = "Make player invisible",
-	privs = {server = true},
-
-	func = function(name, param)
-
-		-- player online
-		if param ~= ""
-		and minetest.get_player_by_name(param) then
-
-			name = param
-
-		-- player not online
-		elseif param ~= "" then
-
-			return false, "Player " .. param .. " is not online!"
-		end
-
-		local player = minetest.get_player_by_name(name)
-
-		-- hide / show player
-		if invisibility[name] then
-
-			toggle_invisible(player, nil)
-		else
-			toggle_invisible(player, true)
-		end
-
-	end
-})
-
 -- reset player invisibility if they go offline
 
 minetest.register_on_leaveplayer(function(player)
@@ -160,7 +87,7 @@ minetest.register_node("invisibility:potion", {
 		end)
 
 		-- take potion, return empty bottle (and rest of potion stack)
-		if not minetest.setting_getbool("creative_mode") then
+		if not minetest.settings:get_bool("creative_mode") then
 
 			local item_count = user:get_wielded_item():get_count()
 			local inv = user:get_inventory()
@@ -193,4 +120,77 @@ minetest.register_craft( {
 	output = "invisibility:potion",
 	type = "shapeless",
 	recipe = {"default:nyancat_rainbow", "vessels:glass_bottle"},
+})
+
+-- invisibility function
+
+local toggle_invisible = function(player, toggle)
+
+	if not player then return false end
+
+	local name = player:get_player_name()
+
+	invisibility[name] = toggle
+
+	local prop
+
+	if toggle == true then
+
+		-- hide player and name tag
+		prop = {
+			visual_size = {x = 0, y = 0},
+			collisionbox = {0, 0, 0, 0, 0, 0}
+		}
+
+		player:set_nametag_attributes({
+			color = {a = 0, r = 255, g = 255, b = 255}
+		})
+	else
+		-- show player and tag
+		prop = {
+			visual_size = {x = 1, y = 1},
+			collisionbox = {-0.35, -1, -0.35, 0.35, 1, 0.35}
+		}
+
+		player:set_nametag_attributes({
+			color = {a = 255, r = 255, g = 255, b = 255}
+		})
+	end
+
+	player:set_properties(prop)
+
+end
+
+-- vanish command (admin only)
+
+minetest.register_chatcommand("vanish", {
+	params = "<name>",
+	description = "Make player invisible",
+	privs = {server = true},
+
+	func = function(name, param)
+
+		-- player online
+		if param ~= ""
+		and minetest.get_player_by_name(param) then
+
+			name = param
+
+		-- player not online
+		elseif param ~= "" then
+
+			return false, "Player " .. param .. " is not online!"
+		end
+
+		local player = minetest.get_player_by_name(name)
+
+		-- hide / show player
+		if invisibility[name] then
+
+			toggle_invisible(player, nil)
+		else
+			toggle_invisible(player, true)
+		end
+
+	end
 })
