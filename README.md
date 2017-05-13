@@ -473,7 +473,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.workbench]: https://github.com/minetest-mods/workbench/tree/74dd1af
 [ver.worldedge]: https://github.com/minetest-mods/worldedge/tree/e15fa99
 
-[patch.adv_spawning]: https://github.com/AntumDeluge/mtmod-adv_spawning/tree/572688b
+[patch.adv_spawning]: https://github.com/AntumDeluge/mtmod-adv_spawning/tree/e73c0aa
 [patch.advtrains]: https://github.com/AntumDeluge/mtmp-advtrains/tree/26f8bf4
 [patch.animals_modpack]: https://github.com/AntumDeluge/mtmp-animals_modpack/tree/e84e1e6
 [patch.bags]: https://github.com/AntumDeluge/mtmod-bags/tree/4363284

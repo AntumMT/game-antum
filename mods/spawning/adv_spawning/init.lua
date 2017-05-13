@@ -15,7 +15,7 @@ local version = "0.0.13"
 -- -----------------------------------------------------------------------------
 adv_spawning = {}
 
-adv_spawning.debug = core.setting_get("adv_spawning.debug")
+adv_spawning.debug = minetest.settings:get("adv_spawning.debug")
 
 local adv_modpath = core.get_modpath("adv_spawning")
 
