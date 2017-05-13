@@ -127,7 +127,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* shields
 		* technic_armor
 		* wieldview
-* [advtrains][] ([LGPL][lic.lgpl2.1] / [CC BY-NC-SA][lic.ccbyncsa3.0]) -- version: [28717b4 Git][ver.advtrains] *2017-05-03*
+* [advtrains][] ([LGPL][lic.lgpl2.1] / [CC BY-NC-SA][lic.ccbyncsa3.0]) -- version: [da884af Git][ver.advtrains] *2017-05-12* ([patched][patch.advtrains])
 * [animalmaterials][animals_modpack] (part of animals_modpack) ([CC0][lic.cc0] / [CC BY-SA][lic.ccbysa3.0]) -- version: [0.1.3 (d952d27 Git)][ver.animalmaterials] *2014-09-10*
 	* mp_animalmaterials/
 		* animal_resources
@@ -393,7 +393,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 [ver.3d_armor]: https://github.com/stujones11/minetest-3d_armor/tree/793c748
 [ver.adv_spawning]: https://github.com/sapier/adv_spawning/tree/ec41aa9
-[ver.advtrains]: https://github.com/orwell96/advtrains/tree/28717b4
+[ver.advtrains]: https://github.com/orwell96/advtrains/tree/da884af
 [ver.airtanks]: https://github.com/minetest-mods/airtanks/tree/fc01ffb
 [ver.animalmaterials]: https://github.com/sapier/animalmaterials/tree/d952d27
 [ver.animals_modpack]: https://github.com/sapier/animals_modpack/tree/b9d0172
@@ -474,6 +474,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.worldedge]: https://github.com/minetest-mods/worldedge/tree/e15fa99
 
 [patch.adv_spawning]: https://github.com/AntumDeluge/mtmod-adv_spawning/tree/572688b
+[patch.advtrains]: https://github.com/AntumDeluge/mtmp-advtrains/tree/26f8bf4
 [patch.animals_modpack]: https://github.com/AntumDeluge/mtmp-animals_modpack/tree/e84e1e6
 [patch.bags]: https://github.com/AntumDeluge/mtmod-bags/tree/4363284
 [patch.bedrock2]: https://github.com/AntumDeluge/mtmod-bedrock2/tree/0375ac1
