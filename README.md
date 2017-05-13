@@ -493,7 +493,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.kpgmobs]: https://github.com/AntumDeluge/mtmod-kpgmobs/tree/0773e37
 [patch.mesecons]: https://github.com/AntumDeluge/mtmp-mesecons/tree/2c5beee
 [patch.mobf_core]: https://github.com/AntumDeluge/mtmp-mobf_core/tree/e6fa3b7
-[patch.mobs_goblins]: https://github.com/AntumDeluge/mtmod-mobs_goblins/tree/c7fc71b
+[patch.mobs_goblins]: https://github.com/AntumDeluge/mtmod-mobs_goblins/tree/8813304
 [patch.mobs_redo]: https://github.com/AntumDeluge/mtmod-mobs_redo/tree/58e123a
 [patch.moremesecons]: https://github.com/AntumDeluge/mtmp-moremesecons/tree/caa71bc
 [patch.moreores]: https://github.com/AntumDeluge/mtmod-moreores/tree/2172c49
