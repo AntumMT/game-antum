@@ -502,7 +502,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.quartz]: https://github.com/AntumDeluge/mtmod-quartz/tree/d23dabd
 [patch.rainbow_ore]: https://github.com/AntumDeluge/mtmod-rainbow_ore/tree/60dc35e
 [patch.signs_lib]: https://github.com/AntumDeluge/mtmod-signs_lib/tree/770978c
-[patch.spidermob]: https://github.com/AntumDeluge/mtmod-spidermob/tree/16350f0
+[patch.spidermob]: https://github.com/AntumDeluge/mtmod-spidermob/tree/00b6107
 [patch.technic]: https://github.com/AntumDeluge/mtmod-technic/tree/9649cee
 [patch.trash_can]: https://github.com/AntumDeluge/mtmod-trash_can/tree/5a92bf4
 [patch.unifieddyes]: https://github.com/AntumDeluge/mtmod-unifieddyes/tree/df3f1b1
