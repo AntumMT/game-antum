@@ -520,7 +520,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.signs_lib]: https://github.com/AntumDeluge/mtmod-signs_lib/tree/fe46611
 [patch.spawneggs]: https://github.com/AntumDeluge/mtmod-spawneggs/tree/b47f49f
 [patch.spidermob]: https://github.com/AntumDeluge/mtmod-spidermob/tree/00b6107
-[patch.technic]: https://github.com/AntumDeluge/mtmod-technic/tree/66876a1
+[patch.technic]: https://github.com/AntumDeluge/mtmod-technic/tree/0ddc6e6
 [patch.torches] https://github.com/AntumDeluge/mtmod-torches/tree/fb2b692
 [patch.trash_can]: https://github.com/AntumDeluge/mtmod-trash_can/tree/5a92bf4
 [patch.unifieddyes]: https://github.com/AntumDeluge/mtmod-unifieddyes/tree/20947c3
