@@ -116,7 +116,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 
 ### This is a list of installed modpacks & their components (trying to keep them listed separate for sake of organization):
-* [3d_armor][] ([LGPL / CC BY-SA][lic.3d_armor]) - version: [0.4.9 (793c748 Git)][ver.3d_armor] *2017-05-03*
+* [3d_armor][] ([LGPL / CC BY-SA][lic.3d_armor]) - version: [0.4.9 (793c748 Git)][ver.3d_armor] *2017-05-03* ***UPDATE***
 	* mp_3d_armor/
 		* 3d_armor
 		* 3d_armor_ip
