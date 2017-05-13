@@ -116,7 +116,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 
 ### This is a list of installed modpacks & their components (trying to keep them listed separate for sake of organization):
-* [3d_armor][] ([LGPL / CC BY-SA][lic.3d_armor]) - version: [0.4.9 (793c748 Git)][ver.3d_armor] *2017-05-03* ***UPDATE***
+* [3d_armor][] ([LGPL / CC BY-SA][lic.3d_armor]) - version: [0.4.9 (793c748 Git)][ver.3d_armor] *2017-05-03* ([patched][patch.3d_armor]) ***UPDATE***
 	* mp_3d_armor/
 		* 3d_armor
 		* 3d_armor_ip
@@ -473,6 +473,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.workbench]: https://github.com/minetest-mods/workbench/tree/74dd1af
 [ver.worldedge]: https://github.com/minetest-mods/worldedge/tree/e15fa99
 
+[patch.3d_armor]: https://github.com/AntumDeluge/mtmp-3d_armor/tree/3f3df7b
 [patch.adv_spawning]: https://github.com/AntumDeluge/mtmod-adv_spawning/tree/e73c0aa
 [patch.advtrains]: https://github.com/AntumDeluge/mtmp-advtrains/tree/26f8bf4
 [patch.animals_modpack]: https://github.com/AntumDeluge/mtmp-animals_modpack/tree/e84e1e6
