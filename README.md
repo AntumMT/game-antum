@@ -41,7 +41,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [trash_can][] ([MIT][lic.trash_can]) -- version: [5fd3df7 Git][ver.trash_can] *2016-01-14* ([patched][patch.trash_can])
 * inventory/
     * [bags][] ([BSD 3-Clause][lic.bags]) -- version: [f17d829 Git][ver.bags] *2015-10-11* ([patched][patch.bags])
-    * [inventory_plus][] ([BSD 3-Clause][lic.inventory_plus]) -- version: [a978b47 Git][ver.inventory_plus] *2016-03-31*
+    * [inventory_plus][] ([BSD 3-Clause][lic.inventory_plus]) -- version: [a978b47 Git][ver.inventory_plus] *2016-03-31* ([patched][patch.inventory_plus])
 * lighting/
 	* [ilights][] ([CC BY-SA][lic.ccbysa]) -- version [b1f7ccf Git][ver.ilights] *2017-03-18*
     * walking_light ([petermalone fork][walking_light]) ([WTFPL / CC BY-SA][lic.walking_light]) -- version: [b9de302 Git][ver.walking_light] *2016-09-09* ([patched][patch.walking_light])
@@ -496,6 +496,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.homedecor]: https://github.com/AntumDeluge/mtmp-homedecor/tree/4d6f0c0
 [patch.hovercraft]: https://github.com/AntumDeluge/mtmod-hovercraft/tree/96ad3b4
 [patch.hud]: https://github.com/AntumDeluge/mtmod-hud/tree/6846e20
+[patch.inventory_plus]: https://github.com/AntumDeluge/mtmp-inventory_plus/tree/3c81158
 [patch.kpgmobs]: https://github.com/AntumDeluge/mtmod-kpgmobs/tree/0773e37
 [patch.mesecons]: https://github.com/AntumDeluge/mtmp-mesecons/tree/32a4823
 [patch.minetest]: https://github.com/AntumDeluge/mtgame-minetest/tree/914595e
