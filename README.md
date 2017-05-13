@@ -109,7 +109,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [bedrock2][] ([WTFPL][lic.wtfpl]) -- version [1.2.2 (5fe9e87 Git)][ver.bedrock2] *2016-11-21* ([patched][patch.bedrock2])
     * [biome_lib][] ([WTFPL][lic.wtfpl]) -- version: [9cdcdcf Git][ver.biome_lib] *2017-01-26* ([patched][patch.biome_lib])
     * [ethereal][] ([MIT][lic.ethereal]) -- version [2c24961 Git][ver.ethereal] *2017-04-23* ([patched][patch.ethereal])
-    * [glow][] ([GPL][lic.gpl2.0]) -- version: [30f9cf3 Git][ver.glow] *2015-09-25*
+    * [glow][] ([GPL][lic.gpl2.0]) -- version: [30f9cf3 Git][ver.glow] *2015-09-25* ([patched][patch.glow])
     * [nether][] ([WTFPL / CC BY-SA][lic.nether]) -- version: [bc2ccfb Git][ver.nether] *2017-01-04* ([patched][patch.nether])
     * [worldedge][] ([DWYWPL][lic.dwywpl]) -- version: [e15fa99 Git][ver.worldedge] *2016-03-23* ([patched][patch.worldedge])
 
@@ -495,6 +495,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.ethereal]: https://github.com/AntumDeluge/mtmod-ethereal/tree/4be06f0
 [patch.farming_plus]: https://github.com/AntumDeluge/mtmod-farming_plus/tree/c9c3a3a
 [patch.fort_spikes]: https://github.com/AntumDeluge/mtmod-fort_spikes/tree/74dca42
+[patch.glow]: https://github.com/AntumDeluge/mtmod-glow/tree/12266d3
 [patch.helicopter]: https://github.com/AntumDeluge/mtmod-helicopter/tree/66a6523
 [patch.homedecor]: https://github.com/AntumDeluge/mtmp-homedecor/tree/4d6f0c0
 [patch.hovercraft]: https://github.com/AntumDeluge/mtmod-hovercraft/tree/96ad3b4
