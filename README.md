@@ -477,7 +477,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.adv_spawning]: https://github.com/AntumDeluge/mtmod-adv_spawning/tree/e73c0aa
 [patch.advtrains]: https://github.com/AntumDeluge/mtmp-advtrains/tree/26f8bf4
 [patch.airtanks]: https://github.com/AntumDeluge/mtmod-airtanks/tree/4667c26
-[patch.animals_modpack]: https://github.com/AntumDeluge/mtmp-animals_modpack/tree/e84e1e6
+[patch.animals_modpack]: https://github.com/AntumDeluge/mtmp-animals_modpack/tree/ad4c5da
 [patch.areas]: https://github.com/AntumDeluge/mtmod-areas/tree/db074be
 [patch.awards]: https://github.com/AntumDeluge/mtmod-awards/tree/638c137
 [patch.bags]: https://github.com/AntumDeluge/mtmod-bags/tree/4363284
