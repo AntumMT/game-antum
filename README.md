@@ -89,6 +89,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [adv_spawning][animals_modpack] (part of animals_modpack) ([WTFPL][lic.wtfpl]) -- version: [0.0.13 ec41aa9 Git][ver.adv_spawning] *2015-12-28* ([patched][patch.adv_spawning])
 	* [spawneggs][] ([WTFPL][lic.spawneggs]) -- version [4650370 Git][ver.spawneggs] *2013-09-09* ([patched][patch.spawneggs])
 * storage/
+	* [drawers][] () -- version: [7b9a384 Git][ver.drawers] *2017-04-23* ([patched][patch.drawers])
 	* [more_chests][] ([GPL][lic.gpl2.0]) -- version [c597779 Git][ver.more_chests] *2017-02-27*
 * tools/
 	* [compassgps][] ([WTFPL][lic.wtfpl] / [CC0][lic.cc0] / [CC BY-SA][lic.ccbysa]) -- version: [96892a0 Git][ver.compassgps] *2015-07-31* ([patched][patch.compassgps])
@@ -236,6 +237,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [creeper]: https://forum.minetest.net/viewtopic.php?t=11891
 [crops]: https://forum.minetest.net/viewtopic.php?t=11795
 [currency]: https://github.com/minetest-mods/currency
+[drawers]: https://forum.minetest.net/viewtopic.php?t=17134
 [elevator]: https://forum.minetest.net/viewtopic.php?t=12944
 [enchanting]: https://forum.minetest.net/viewtopic.php?t=7354
 [ethereal]: https://forum.minetest.net/viewtopic.php?t=14638
@@ -423,6 +425,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.creeper]: https://github.com/Rui-Minetest/creeper/tree/036666e
 [ver.crops]: https://github.com/minetest-mods/crops/tree/2b1bb37
 [ver.currency]: https://github.com/minetest-mods/currency/tree/21f9811
+[ver.drawers]: https://github.com/minetest-mods/drawers/tree/7b9a384
 [ver.enchanting]: https://github.com/minetest-mods/enchanting/tree/13ea31c
 [ver.ethereal]: https://github.com/tenplus1/ethereal/tree/2c24961
 [ver.farming_plus]: https://github.com/PilzAdam/farming_plus/tree/7e0d976
@@ -498,6 +501,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.creeper]: https://github.com/AntumDeluge/mtmod-creeper/tree/dc9ffbe
 [patch.crops]: https://github.com/AntumDeluge/mtmod-crops/tree/f8b33ae
 [patch.currency]: https://github.com/AntumDeluge/mtmod-currency/tree/29f4eda
+[patch.drawers]: https://github.com/AntumDeluge/mtmod-drawers/tree/3887c5b
 [patch.ethereal]: https://github.com/AntumDeluge/mtmod-ethereal/tree/4be06f0
 [patch.farming_plus]: https://github.com/AntumDeluge/mtmod-farming_plus/tree/c9c3a3a
 [patch.fort_spikes]: https://github.com/AntumDeluge/mtmod-fort_spikes/tree/74dca42
