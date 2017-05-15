@@ -500,7 +500,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.craftguide]: https://github.com/AntumDeluge/mtmod-craftguide/tree/44c2e03
 [patch.creeper]: https://github.com/AntumDeluge/mtmod-creeper/tree/dc9ffbe
 [patch.crops]: https://github.com/AntumDeluge/mtmod-crops/tree/f8b33ae
-[patch.currency]: https://github.com/AntumDeluge/mtmod-currency/tree/29f4eda
+[patch.currency]: https://github.com/AntumDeluge/mtmod-currency/tree/d88f59a
 [patch.drawers]: https://github.com/AntumDeluge/mtmod-drawers/tree/3887c5b
 [patch.ethereal]: https://github.com/AntumDeluge/mtmod-ethereal/tree/4be06f0
 [patch.farming_plus]: https://github.com/AntumDeluge/mtmod-farming_plus/tree/c9c3a3a

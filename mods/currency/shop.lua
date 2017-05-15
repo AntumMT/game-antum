@@ -33,6 +33,8 @@ default.shop.formspec = {
 	end,
 }
 
+local have_pipeworks = minetest.global_exists("pipeworks")
+
 default.shop.check_privilege = function(listname,playername,meta)
 	--[[if listname == "pl1" then
 		if playername ~= meta:get_string("pl1") then
@@ -104,9 +106,9 @@ minetest.register_node("currency:shop", {
 		inv:set_size("stock", 3*2)
 		inv:set_size("owner_wants", 3*2)
 		inv:set_size("owner_gives", 3*2)
-		if minetest.get_modpath("pipeworks") then pipeworks.after_place(pos) end
+		if have_pipeworks then pipeworks.after_place(pos) end
 	end,
-	after_dig_node = (pipeworks and pipeworks.after_dig),
+	after_dig_node = (have_pipeworks and pipeworks and pipeworks.after_dig),
 	tube = {
 		insert_object = function(pos, node, stack, direction)
 			local meta = minetest.get_meta(pos)
