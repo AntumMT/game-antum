@@ -202,7 +202,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* mp_mydoors/
 		* my_*_doors
 		* my_garage_door
-* [technic][] ([LGPL][lic.lgpl2.0]) -- version: [42efc7e Git][ver.technic] *2017-04-17* ([patched][patch.technic])
+* [technic][] ([LGPL][lic.lgpl2.0]) -- version: [cbe9743 Git][ver.technic] *2017-02-25* ([patched][patch.technic])
 	* mp_technic/
 
 
@@ -467,7 +467,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.spectator_mode]: https://github.com/minetest-mods/spectator_mode/tree/7d68bec
 [ver.spidermob]: https://github.com/Darcidride/minetest-spidermob-v1/tree/c72d2ff
 [ver.stairsplus]: https://github.com/CasimirKaPazi/stairsplus/tree/311e1f0
-[ver.technic]: https://github.com/minetest-mods/technic/tree/42efc7e
+[ver.technic]: https://github.com/minetest-mods/technic/tree/cbe9743
 [ver.throwing]: https://github.com/Jeija/minetest-mod-throwing/tree/79ad788
 [ver.tnt]: https://github.com/PilzAdam/TNT/tree/d6a0b7d
 [ver.tools_obsidian]: https://github.com/Dragonop/tools_obsidian/tree/f77fd79
@@ -531,7 +531,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.signs_lib]: https://github.com/AntumDeluge/mtmod-signs_lib/tree/fe46611
 [patch.spawneggs]: https://github.com/AntumDeluge/mtmod-spawneggs/tree/b47f49f
 [patch.spidermob]: https://github.com/AntumDeluge/mtmod-spidermob/tree/00b6107
-[patch.technic]: https://github.com/AntumDeluge/mtmod-technic/tree/0ddc6e6
+[patch.technic]: https://github.com/AntumDeluge/mtmod-technic/tree/d3a58d8
 [patch.torches]: https://github.com/AntumDeluge/mtmod-torches/tree/fb2b692
 [patch.trash_can]: https://github.com/AntumDeluge/mtmod-trash_can/tree/5a92bf4
 [patch.unifieddyes]: https://github.com/AntumDeluge/mtmod-unifieddyes/tree/20947c3

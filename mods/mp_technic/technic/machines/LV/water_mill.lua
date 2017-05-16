@@ -4,8 +4,6 @@
 
 local S = technic.getter
 
-local cable_entry = "^technic_cable_connection_overlay.png"
-
 minetest.register_alias("water_mill", "technic:water_mill")
 
 minetest.register_craft({
@@ -32,7 +30,7 @@ local run = function(pos, node)
 	local lava_nodes       = 0
 	local production_level = 0
 	local eu_supply        = 0
-	local max_output       = 35 * 45 -- four param2's at 15 makes 60, cap it lower for "overload protection"
+	local max_output       = 50 * 45 -- four param2's at 15 makes 60, cap it lower for "overload protection"
 									 -- (plus we want the gen to report 100% if three sides have full flow)
 
 	local positions = {
@@ -49,10 +47,12 @@ local run = function(pos, node)
 		end
 	end
 
-	eu_supply = math.min(35 * water_flow, max_output)
+	eu_supply = 50 * water_flow
 	production_level = math.floor(100 * eu_supply / max_output)
 
-	meta:set_int("LV_EU_supply", eu_supply)
+	if production_level > 0 then
+		meta:set_int("LV_EU_supply", eu_supply)
+	end
 
 	meta:set_string("infotext",
 		S("Hydro %s Generator"):format("LV").." ("..production_level.."%)")
@@ -70,14 +70,9 @@ end
 
 minetest.register_node("technic:water_mill", {
 	description = S("Hydro %s Generator"):format("LV"),
-	tiles = {
-		"technic_water_mill_top.png",
-		"technic_machine_bottom.png"..cable_entry,
-		"technic_water_mill_side.png",
-		"technic_water_mill_side.png",
-		"technic_water_mill_side.png",
-		"technic_water_mill_side.png"
-	},
+	tiles = {"technic_water_mill_top.png",  "technic_machine_bottom.png",
+	         "technic_water_mill_side.png", "technic_water_mill_side.png",
+	         "technic_water_mill_side.png", "technic_water_mill_side.png"},
 	paramtype2 = "facedir",
 	groups = {snappy=2, choppy=2, oddly_breakable_by_hand=2,
 		technic_machine=1, technic_lv=1},

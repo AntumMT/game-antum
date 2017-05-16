@@ -54,14 +54,8 @@ local rad_resistance_node = {
 	["default:lava_source"] = 17,
 	["default:mese"] = 21,
 	["default:mossycobble"] = 15,
-	["pbj_pup:pbj_pup"] = 10000,
-	["pbj_pup:pbj_pup_candies"] = 10000,
-	["gloopblocks:rainbow_block_diagonal"] = 5000,
-	["gloopblocks:rainbow_block_horizontal"] = 10000,
-	["default:nyancat"] = 10000,
-	["default:nyancat_rainbow"] = 10000,
-	["nyancat:nyancat"] = 10000,
-	["nyancat:nyancat_rainbow"] = 10000,
+	["default:nyancat"] = 1000,
+	["default:nyancat_rainbow"] = 1000,
 	["default:obsidian"] = 18,
 	["default:obsidian_glass"] = 18,
 	["default:sand"] = 10,
@@ -344,9 +338,8 @@ local function dmg_abm(pos, node)
 	end
 end
 
-if minetest.settings:get_bool("enable_damage") then
+if minetest.setting_getbool("enable_damage") then
 	minetest.register_abm({
-		label = "Radiation damage",
 		nodenames = {"group:radioactive"},
 		interval = 1,
 		chance = 1,
@@ -439,7 +432,6 @@ minetest.register_node("technic:chernobylite_block", {
 })
 
 minetest.register_abm({
-	label = "Corium: boil-off water (sources)",
 	nodenames = {"group:water"},
 	neighbors = {"technic:corium_source"},
 	interval = 1,
@@ -450,7 +442,6 @@ minetest.register_abm({
 })
 
 minetest.register_abm({
-	label = "Corium: boil-off water (flowing)",
 	nodenames = {"technic:corium_flowing"},
 	neighbors = {"group:water"},
 	interval = 1,
@@ -461,7 +452,6 @@ minetest.register_abm({
 })
 
 minetest.register_abm({
-	label = "Corium: become chernobylite",
 	nodenames = {"technic:corium_flowing"},
 	interval = 5,
 	chance = (griefing and 10 or 1),
@@ -472,7 +462,6 @@ minetest.register_abm({
 
 if griefing then
 	minetest.register_abm({
-		label = "Corium: griefing",
 		nodenames = {"technic:corium_source", "technic:corium_flowing"},
 		interval = 4,
 		chance = 4,
