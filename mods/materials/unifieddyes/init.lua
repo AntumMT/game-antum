@@ -30,8 +30,6 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 --=====================================================================
 
 unifieddyes = {}
-unifieddyes.last_used_dye = {}
-unifieddyes.last_dyed_node = {}
 
 local creative_mode = minetest.setting_getbool("creative_mode")
 
@@ -136,78 +134,21 @@ local default_dyes = {
 	"yellow"
 }
 
--- automatically recolor a placed node to match the last-used dye
--- should be called in the node's `after_place_node` callback.
-
-function unifieddyes.recolor_on_place(pos, placer, itemstack, pointed_thing)
-
-	local playername = placer:get_player_name()
-	local stackname = itemstack:get_name()
-
-	if unifieddyes.last_dyed_node[playername] ~= stackname then
-		if unifieddyes.last_used_dye[playername] then
-			minetest.chat_send_player(playername, "Switched to \""..stackname.."\" while auto-coloring, color reset to neutral.")
-		end
-		unifieddyes.last_used_dye[playername] = nil
-		unifieddyes.last_dyed_node[playername] = nil
-	end
-
-	unifieddyes.last_dyed_node[playername] = stackname
-
-	if unifieddyes.last_used_dye[playername] then
-		local lastdye = unifieddyes.last_used_dye[playername]
-
-		local inv = placer:get_inventory()
-		if (lastdye and lastdye ~= "" and inv:contains_item("main", lastdye.." 1")) or creative_mode then
-
-			local nodedef = minetest.registered_nodes[stackname]
-			local newname = nodedef.ud_replacement_node or stackname
-			local node = minetest.get_node(pos)
-
-			local palette_type = true -- default to 89-color split, because the others are easier to check for.
-			local oldfdir = node.param2 % 32
-
-			if nodedef.palette == "unifieddyes_palette.png" then
-				palette_type = false
-				oldfdir = 0
-			elseif nodedef.palette == "unifieddyes_palette_colorwallmounted.png" then
-				palette_type = "wallmounted"
-				oldfdir = node.param2 % 8
-			elseif nodedef.palette == "unifieddyes_palette_extended.png" then
-				palette_type = "extended"
-				oldfdir = 0
-			end
-
-			local paletteidx, hue = unifieddyes.getpaletteidx(lastdye, palette_type)
-			if palette_type == true then newname = string.gsub(newname, "_grey", "_"..unifieddyes.HUES[hue]) end
-
-			minetest.set_node(pos, { name = newname, param2 = oldfdir + paletteidx })
-
-			local meta = minetest.get_meta(pos)
-			meta:set_string("dye", lastdye)
-
-			if not creative_mode then
-				inv:remove_item("main", lastdye.." 1")
-			end
-		else
-			minetest.chat_send_player(playername, "Ran out of "..unifieddyes.last_used_dye[playername]..", resetting to neutral.")
-			unifieddyes.last_used_dye[playername] = nil
-		end
-	end
-end
-
-minetest.register_on_leaveplayer(function(player)
-	local playername = player:get_player_name()
-	unifieddyes.last_used_dye[playername] = nil
-	unifieddyes.last_dyed_node[playername] = nil
-end)
+-- this tiles the "extended" palette sideways and then crops it to 256x1
+-- to convert it from human readable to something the engine can use as a palette.
+--
+-- in machine-readable form, the selected color is:
+-- [hue] - [shade]*24 for the light colors, or
+-- [hue] + [saturation]*24 + [shade]*48 for the dark colors, or
+-- 240 + [shade] for the greys, 0 = white.
 
 -- code borrowed from homedecor
+
 -- call this function to reset the rotation of a "wallmounted" object on place
 
 function unifieddyes.fix_rotation(pos, placer, itemstack, pointed_thing)
 	local node = minetest.get_node(pos)
-	local yaw = placer:get_look_horizontal()
+	local yaw = placer:get_look_yaw()
 	local dir = minetest.yaw_to_dir(yaw-1.5)
 	local pitch = placer:get_look_vertical()
 
@@ -226,7 +167,7 @@ end
 
 function unifieddyes.fix_rotation_nsew(pos, placer, itemstack, pointed_thing)
 	local node = minetest.get_node(pos)
-	local yaw = placer:get_look_horizontal()
+	local yaw = placer:get_look_yaw()
 	local dir = minetest.yaw_to_dir(yaw)
 	local fdir = minetest.dir_to_wallmounted(dir)
 	minetest.swap_node(pos, { name = node.name, param2 = fdir })
@@ -532,16 +473,6 @@ function unifieddyes.getpaletteidx(color, palette_type)
 	end
 end
 
--- if your node was once 89-color and uses an LBM to convert to the 256-color palette,
--- call this in that node def's on_construct:
-
-function unifieddyes.on_construct(pos)
-	local meta = minetest.get_meta(pos)
-	meta:set_string("palette", "ext")
-end
-
--- call this in your node's after_dig_node to get the last-used dye back.
-
 function unifieddyes.after_dig_node(pos, oldnode, oldmetadata, digger)
 	local prevdye
 
@@ -561,30 +492,18 @@ function unifieddyes.after_dig_node(pos, oldnode, oldmetadata, digger)
 end
 
 function unifieddyes.on_use(itemstack, player, pointed_thing)
-	local stackname = itemstack:get_name()
-	local playername = player:get_player_name()
-
-	if pointed_thing and pointed_thing.type == "node" then
-		if minetest.is_protected(unifieddyes.select_node(pointed_thing), playername)
-		  and not minetest.check_player_privs(playername, "protection_bypass") then
-			minetest.chat_send_player(playername, "Sorry, someone else owns that spot.")
-			return
-		end
-	end
 
 	if pointed_thing and pointed_thing.type == "object" then
 		pointed_thing.ref:punch(player, 0, itemstack:get_tool_capabilities())
 		return player:get_wielded_item() -- punch may modified the wielded item, load the new and return it
 	end
 
-	if not (pointed_thing and pointed_thing.type == "node") then return end  -- if "using" the dye on nothing at all (e.g. air)
+	if not (pointed_thing and pointed_thing.type == "node") then return end  -- if "using" the dye not on a node
 
 	local pos = minetest.get_pointed_thing_position(pointed_thing)
 	local node = minetest.get_node(pos)
-
 	local nodedef = minetest.registered_nodes[node.name]
-
-	if not nodedef then return end -- target was an unknown node, just bail out
+	local playername = player:get_player_name()
 
 	-- if the node has an on_punch defined, bail out and call that instead, unless "sneak" is pressed.
 	if not player:get_player_control().sneak then
@@ -592,14 +511,6 @@ function unifieddyes.on_use(itemstack, player, pointed_thing)
 		if onpunch then
 			return onpunch
 		end
-	end
-
-	if player:get_player_control().sneak then
-		if unifieddyes.last_used_dye[playername] then
-			minetest.chat_send_player(playername, "Shift-punched a node, switching back to neutral color." )
-		end
-		unifieddyes.last_used_dye[playername] = nil
-		return
 	end
 
 	-- if the target is unknown, has no groups defined, or isn't UD-colorable, just bail out
@@ -621,20 +532,18 @@ function unifieddyes.on_use(itemstack, player, pointed_thing)
 		palette_type = "wallmounted"
 	end
 
+	print(palette_type)
+
 	if minetest.is_protected(pos, playername) and not minetest.check_player_privs(playername, {protection_bypass=true}) then
 		minetest.record_protection_violation(pos, playername)
 		return
 	end
 
+	local stackname = itemstack:get_name()
 	local pos2 = unifieddyes.select_node(pointed_thing)
 	local paletteidx, hue = unifieddyes.getpaletteidx(stackname, palette_type)
 
 	if paletteidx then
-
-		if unifieddyes.last_used_dye[playername] ~= stackname then
-			minetest.chat_send_player(playername, "Color "..stackname.." selected, auto-coloring activated." )
-			unifieddyes.last_used_dye[playername] = stackname
-		end
 
 		local meta = minetest.get_meta(pos)
 		local prevdye = meta:get_string("dye")

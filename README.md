@@ -53,7 +53,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [moreores][] ([zlib][lic.moreores] / [CC BY-SA][lic.ccbysa3.0]) -- version: [0842b4f Git][ver.moreores] *2017-03-21* ([patched][patch.moreores])
 	* [quartz][] ([MIT][lic.quartz]) -- version: [00ca4eb Git][ver.quartz] *2017-02-28* ([patched][patch.quartz])
 	* [rainbow_ore][] ([LGPL][lic.rainbow_ore]) -- version: [6e77693 Git][ver.rainbow_ore] *2015-11-02* ([patched][patch.rainbow_ore])
-	* [unifieddyes][] ([GPL][lic.gpl2.0]) -- version: [df177c2 Git][ver.unifieddyes] *2017-03-18* ([patched][patch.unifieddyes])
+	* [unifieddyes][] ([GPL][lic.gpl2.0]) -- version: [70b1f9f Git][ver.unifieddyes] *2017-02-26* ([patched][patch.unifieddyes])
 * mobs/
     * [kpgmobs][] ([MIT][lic.kpgmobs]) -- version: v6 *2015-01-31* ([patched][patch.kpgmobs])
     * [mobs_redo][] ([MIT][lic.mobs_redo]) -- version: [7de8bc4 Git][ver.mobs_redo] *2017-05-12* ([patched][patch.mobs_redo])
@@ -474,7 +474,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.torches]: https://github.com/BlockMen/torches/tree/e19c772
 [ver.trampoline]: https://github.com/AntumDeluge/mtmod-trampoline/tree/0c9c9c8
 [ver.trash_can]: https://github.com/minetest-mods/trash_can/tree/5fd3df7
-[ver.unifieddyes]: https://github.com/minetest-mods/unifieddyes/tree/df177c2
+[ver.unifieddyes]: https://github.com/minetest-mods/unifieddyes/tree/70b1f9f
 [ver.vector_extras]: https://github.com/HybridDog/vector_extras/tree/472deb6
 [ver.walking_light]: https://github.com/petermaloney/walking_light/tree/b9de302
 [ver.wardrobe]: https://github.com/prestidigitator/minetest-mod-wardrobe/tree/c48b011
