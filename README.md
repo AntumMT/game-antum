@@ -73,7 +73,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * player_action/
     * [throwing][] ([WTFPL][lic.wtfpl]) -- version: [0.14-79ad788 Git][ver.throwing] *2012-02-10*
 * player_visuals/
-    * [character_creator][] ([MIT / CC-BY-SA][lic.character_creator]) -- version: [6a0e6aa Git][ver.character_creator]
+    * [character_creator][] ([MIT / CC-BY-SA][lic.character_creator]) -- version: [0c0e187 Git][ver.character_creator] *2015-08-28*
     * [hidename][] ([MIT][lic.hidename]) -- version [bb52dbc Git][ver.hidename]
     * [invisibility][] ([MIT][lic.invisibility]) -- version: [bf4156b Git][ver.invisibility] *2016-08-19* ([patched][patch.invisibility])
     * [playeranim][] ([BSD 2-Clause][lic.playeranim]) - version [0ca8e5a Git][ver.playeranim] *2016-12-07* ([patched][patch.playeranim])
@@ -415,7 +415,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.bookmarks_gui]: https://github.com/cornernote/minetest-bookmarks_gui/tree/d369dba
 [ver.bridges]: https://github.com/Sokomine/bridges/tree/5b5f475
 [ver.campfire]: https://github.com/Napiophelios/campfire/tree/b45acd2
-[ver.character_creator]: https://github.com/Rui-Minetest/character_creator/tree/6a0e6aa
+[ver.character_creator]: https://github.com/Rui-Minetest/character_creator/tree/0c0e187
 [ver.christmas]: https://github.com/TheZenKitteh/minetest-christmas/tree/d3bd872
 [ver.cme]: https://github.com/BlockMen/cme/tree/e3502a1
 [ver.coloredwood]: https://github.com/minetest-mods/coloredwood/tree/fc4ab15

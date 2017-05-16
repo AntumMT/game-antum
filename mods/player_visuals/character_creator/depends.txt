@@ -1,4 +1,3 @@
 3d_armor?
-multiskin?
 inventory_plus?
 unified_inventory?
