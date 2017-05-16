@@ -1,5 +1,5 @@
 local craftguide, datas, mt = {}, {}, minetest
-local progressive_mode = mt.settings:get_bool("craftguide_progressive_mode")
+local progressive_mode = mt.setting_getbool("craftguide_progressive_mode")
 local get_recipe, get_recipes = mt.get_craft_recipe, mt.get_all_craft_recipes
 local get_result, show_formspec = mt.get_craft_result, mt.show_formspec
 local reg_items = mt.registered_items

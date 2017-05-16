@@ -496,7 +496,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.cme]: https://github.com/AntumDeluge/mtmp-cme/tree/7a6e106
 [patch.coloredwood]: https://github.com/AntumDeluge/mtmod-coloredwood/tree/e1e02b3
 [patch.compassgps]: https://github.com/AntumDeluge/mtmod-compassgps/tree/888ec15
-[patch.craftguide]: https://github.com/AntumDeluge/mtmod-craftguide/tree/44c2e03
+[patch.craftguide]: https://github.com/AntumDeluge/mtmod-craftguide/tree/89db504
 [patch.creeper]: https://github.com/AntumDeluge/mtmod-creeper/tree/dc9ffbe
 [patch.crops]: https://github.com/AntumDeluge/mtmod-crops/tree/f8b33ae
 [patch.currency]: https://github.com/AntumDeluge/mtmod-currency/tree/d88f59a
