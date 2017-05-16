@@ -12,7 +12,7 @@ minetest.log("info", "[Currency] Safe Loaded!")
 dofile(modpath.."/crafting.lua")
 minetest.log("info", "[Currency] Crafting Loaded!")
 
-if minetest.settings:get_bool("creative_mode") then
+if minetest.setting_getbool("creative_mode") then
 	minetest.log("info", "[Currency] Creative mode in use, skipping basic income.")
 else
 	dofile(modpath.."/income.lua")
