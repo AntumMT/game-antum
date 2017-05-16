@@ -2,7 +2,7 @@
 -- Vector functions --
 ----------------------
 
-function pipeworks.vector_cross(a, b)
+function vector.cross(a, b)
 	return {
 		x = a.y * b.z - a.z * b.y,
 		y = a.z * b.x - a.x * b.z,
@@ -10,7 +10,7 @@ function pipeworks.vector_cross(a, b)
 	}
 end
 
-function pipeworks.vector_dot(a, b)
+function vector.dot(a, b)
 	return a.x * b.x + a.y * b.y + a.z * b.z
 end
 
@@ -18,7 +18,7 @@ end
 -- Facedir functions --
 -----------------------
 
-function pipeworks.facedir_to_top_dir(facedir)
+function minetest.facedir_to_top_dir(facedir)
 	return 	({[0] = {x =  0, y =  1, z =  0},
 	                {x =  0, y =  0, z =  1},
 	                {x =  0, y =  0, z = -1},
@@ -28,15 +28,14 @@ function pipeworks.facedir_to_top_dir(facedir)
 		[math.floor(facedir / 4)]
 end
 
-function pipeworks.facedir_to_right_dir(facedir)
-	return pipeworks.vector_cross(
-		pipeworks.facedir_to_top_dir(facedir),
+function minetest.facedir_to_right_dir(facedir)
+	return vector.cross(
+		minetest.facedir_to_top_dir(facedir),
 		minetest.facedir_to_dir(facedir)
 	)
 end
 
-local directions = {}
-pipeworks.directions = directions
+directions = {}
 function directions.side_to_dir(side)
 	return ({[0] = vector.new(),
 		vector.new( 0,  1,  0),
@@ -49,7 +48,7 @@ function directions.side_to_dir(side)
 end
 
 function directions.dir_to_side(dir)
-	local c = pipeworks.vector_dot(dir, vector.new(1, 2, 3)) + 4
+	local c = vector.dot(dir, vector.new(1, 2, 3)) + 4
 	return ({6, 2, 4, 0, 3, 1, 5})[c]
 end
 
@@ -57,7 +56,7 @@ end
 -- String functions --
 ----------------------
 
---[[function pipeworks.string_split(str, sep)
+--[[function string.split(str, sep)
 	local fields = {}
 	local index = 1
 	local expr = "([^"..sep.."])+"
@@ -68,7 +67,7 @@ end
 	return fields
 end]]
 
-function pipeworks.string_startswith(str, substr)
+function string.startswith(str, substr)
 	return str:sub(1, substr:len()) == substr
 end
 
@@ -76,7 +75,7 @@ end
 -- Table functions --
 ---------------------
 
-function pipeworks.table_contains(tbl, element)
+function table.contains(tbl, element)
 	for _, elt in pairs(tbl) do
 		if elt == element then
 			return true
@@ -85,7 +84,7 @@ function pipeworks.table_contains(tbl, element)
 	return false
 end
 
-function pipeworks.table_extend(tbl, tbl2)
+function table.extend(tbl, tbl2)
 	local index = #tbl + 1
 	for _, elt in ipairs(tbl2) do
 		tbl[index] = elt
@@ -93,11 +92,11 @@ function pipeworks.table_extend(tbl, tbl2)
 	end
 end
 
-function pipeworks.table_recursive_replace(tbl, pattern, replace_with)
+function table.recursive_replace(tbl, pattern, replace_with)
 	if type(tbl) == "table" then
 		local tbl2 = {}
 		for key, value in pairs(tbl) do
-			tbl2[key] = pipeworks.table_recursive_replace(value, pattern, replace_with)
+			tbl2[key] = table.recursive_replace(value, pattern, replace_with)
 		end
 		return tbl2
 	elseif type(tbl) == "string" then
@@ -111,12 +110,11 @@ end
 -- Formspec functions --
 ------------------------
 
-local fs_helpers = {}
-pipeworks.fs_helpers = fs_helpers
+fs_helpers = {}
 function fs_helpers.on_receive_fields(pos, fields)
 	local meta = minetest.get_meta(pos)
 	for field, value in pairs(fields) do
-		if pipeworks.string_startswith(field, "fs_helpers_cycling:") then
+		if field:startswith("fs_helpers_cycling:") then
 			local l = field:split(":")
 			local new_value = tonumber(l[2])
 			local meta_name = l[3]
@@ -148,7 +146,7 @@ end
 -- Env --
 ---------
 
-function pipeworks.load_position(pos)
+function minetest.load_position(pos)
 	if pos.x < -30912 or pos.y < -30912 or pos.z < -30912 or
 	   pos.x >  30927 or pos.y >  30927 or pos.z >  30927 then return end
 	if minetest.get_node_or_nil(pos) then

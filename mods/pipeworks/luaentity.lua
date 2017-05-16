@@ -1,7 +1,6 @@
 local max_entity_id = 1000000000000 -- If you need more, there's a problem with your code
 
-local luaentity = {}
-pipeworks.luaentity = luaentity
+luaentity = {}
 
 luaentity.registered_entities = {}
 
@@ -24,22 +23,6 @@ end
 local function read_entities()
 	local t = read_file()
 	for _, entity in pairs(t) do
-
-		local x=entity.start_pos.x
-		local y=entity.start_pos.y
-		local z=entity.start_pos.z
-
-		x=math.max(-30912,x)
-		y=math.max(-30912,y)
-		z=math.max(-30912,z)
-		x=math.min(30927,x)
-		y=math.min(30927,y)
-		z=math.min(30927,z)
-
-		entity.start_pos.x = x                 
-		entity.start_pos.y = y
-		entity.start_pos.z = z
-
 		setmetatable(entity, luaentity.registered_entities[entity.name])
 	end
 	return t
@@ -69,27 +52,32 @@ local function get_blockpos(pos)
 end
 
 local active_blocks = {} -- These only contain active blocks near players (i.e., not forceloaded ones)
+local handle_active_blocks_step = 2
+local handle_active_blocks_timer = 0
+minetest.register_globalstep(function(dtime)
+	handle_active_blocks_timer = handle_active_blocks_timer + dtime
+	if handle_active_blocks_timer >= handle_active_blocks_step then
+		handle_active_blocks_timer = handle_active_blocks_timer - handle_active_blocks_step
+		local active_block_range = tonumber(minetest.setting_get("active_block_range")) or 2
+		local new_active_blocks = {}
+		for _, player in ipairs(minetest.get_connected_players()) do
+			local blockpos = get_blockpos(player:getpos())
+			local minp = vector.subtract(blockpos, active_block_range)
+			local maxp = vector.add(blockpos, active_block_range)
 
-local move_entities_globalstep_part1 = function(dtime)
-	local active_block_range = tonumber(minetest.settings:get("active_block_range")) or 2
-	local new_active_blocks = {}
-	for _, player in ipairs(minetest.get_connected_players()) do
-		local blockpos = get_blockpos(player:getpos())
-		local minp = vector.subtract(blockpos, active_block_range)
-		local maxp = vector.add(blockpos, active_block_range)
-
-		for x = minp.x, maxp.x do
-		for y = minp.y, maxp.y do
-		for z = minp.z, maxp.z do
-			local pos = {x = x, y = y, z = z}
-			new_active_blocks[minetest.hash_node_position(pos)] = pos
+			for x = minp.x, maxp.x do
+			for y = minp.y, maxp.y do
+			for z = minp.z, maxp.z do
+				local pos = {x = x, y = y, z = z}
+				new_active_blocks[minetest.hash_node_position(pos)] = pos
+			end
+			end
+			end
 		end
-		end
-		end
+		active_blocks = new_active_blocks
+		-- todo: callbacks on block load/unload
 	end
-	active_blocks = new_active_blocks
-	-- todo: callbacks on block load/unload
-end
+end)
 
 local function is_active(pos)
 	return active_blocks[minetest.hash_node_position(get_blockpos(pos))] ~= nil
@@ -321,7 +309,7 @@ function luaentity.get_objects_inside_radius(pos, radius)
 	end
 end
 
-local move_entities_globalstep_part2 = function(dtime)
+minetest.register_globalstep(function(dtime)
 	if not luaentity.entities then
 		luaentity.entities = read_entities()
 	end
@@ -359,17 +347,5 @@ local move_entities_globalstep_part2 = function(dtime)
 				entity:on_step(dtime)
 			end
 		end
-	end
-end
-
-local handle_active_blocks_step = 0.2
-local handle_active_blocks_timer = 0.1
-
-minetest.register_globalstep(function(dtime)
-	handle_active_blocks_timer = handle_active_blocks_timer + dtime
-	if handle_active_blocks_timer >= handle_active_blocks_step then
-		handle_active_blocks_timer = handle_active_blocks_timer - handle_active_blocks_step
-		move_entities_globalstep_part1(dtime)
-		move_entities_globalstep_part2(dtime)
 	end
 end)
