@@ -4,3 +4,4 @@ unified_inventory?
 fire?
 ethereal?
 bakedclay?
+craft_guide?
