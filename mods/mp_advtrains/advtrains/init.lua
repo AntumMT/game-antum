@@ -71,7 +71,7 @@ function advtrains.print_concat_table(a)
 	return str
 end
 atprint=function() end
-if minetest.settings:get_bool("advtrains_debug") then
+if minetest.setting_getbool("advtrains_debug") then
 	atprint=function(t, ...)
 		local context=advtrains.atprint_context_tid
 		if not context then context="" end

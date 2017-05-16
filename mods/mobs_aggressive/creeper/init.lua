@@ -335,7 +335,7 @@ if minetest.get_modpath('spawneggs') and minetest.get_modpath('tnt') then
 				local pos = pointed_thing.above
 				pos.y = pos.y+1
 				minetest.add_entity(pos,"creeper:creeper")
-				if not minetest.settings:get_bool("creative_mode") then
+				if not minetest.setting_getbool("creative_mode") then
 					itemstack:take_item()
 				end
 				return itemstack

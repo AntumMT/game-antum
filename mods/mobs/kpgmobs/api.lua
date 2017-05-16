@@ -130,7 +130,7 @@ function kpgmobs:register_mob(name, def)
 		    
 			end
 		
-			if self.type == "monster" and minetest.settings:get_bool("only_peaceful_mobs") then
+			if self.type == "monster" and minetest.setting_getbool("only_peaceful_mobs") then
 				self.object:remove()
 			end
 			
@@ -232,7 +232,7 @@ function kpgmobs:register_mob(name, def)
 				do_env_damage(self)
 			end
 			
-			if self.type == "monster" and minetest.settings:get_bool("enable_damage") then
+			if self.type == "monster" and minetest.setting_getbool("enable_damage") then
 				for _,player in pairs(minetest.get_connected_players()) do
 					local s = self.object:getpos()
 					local p = player:getpos()
@@ -459,7 +459,7 @@ function kpgmobs:register_mob(name, def)
 			self.state = "stand"
 			self.object:setvelocity({x=0, y=self.object:getvelocity().y, z=0})
 			self.object:setyaw(math.random(1, 360)/180*math.pi)
-			if self.type == "monster" and minetest.settings:get_bool("only_peaceful_mobs") then
+			if self.type == "monster" and minetest.setting_getbool("only_peaceful_mobs") then
 				self.object:remove()
 			end
 			self.lifetimer = 600 - dtime_s
@@ -539,7 +539,7 @@ function kpgmobs:register_spawn(name, nodes, max_light, min_light, chance, activ
 				return
 			end
 			
-			if minetest.settings:get_bool("display_mob_spawn") then
+			if minetest.setting_getbool("display_mob_spawn") then
 				minetest.chat_send_all("[kpgmobs] Add "..name.." at "..minetest.pos_to_string(pos))
 			end
 			minetest.env:add_entity(pos, name)

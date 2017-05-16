@@ -33,7 +33,7 @@ unifieddyes = {}
 unifieddyes.last_used_dye = {}
 unifieddyes.last_dyed_node = {}
 
-local creative_mode = minetest.settings:get_bool("creative_mode")
+local creative_mode = minetest.setting_getbool("creative_mode")
 
 -- Boilerplate to support localized strings if intllib mod is installed.
 local S

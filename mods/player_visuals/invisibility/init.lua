@@ -87,7 +87,7 @@ minetest.register_node("invisibility:potion", {
 		end)
 
 		-- take potion, return empty bottle (and rest of potion stack)
-		if not minetest.settings:get_bool("creative_mode") then
+		if not minetest.setting_getbool("creative_mode") then
 
 			local item_count = user:get_wielded_item():get_count()
 			local inv = user:get_inventory()

@@ -195,7 +195,7 @@ minetest.register_tool("ethereal:shovel_crystal", {
 
 			ethereal.check_falling(pos)
 
-			if minetest.settings:get_bool("creative_mode") then
+			if minetest.setting_getbool("creative_mode") then
 
 				if not inv:contains_item("main", {name = nn}) then
 					inv:add_item("main", {name = nn})
