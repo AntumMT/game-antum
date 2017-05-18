@@ -13,7 +13,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 ***"UPDATE" Denotes update available***
 
 * admin/
-    * [clean][] ([WTFPL][lic.wtfpl])
+    * [clean][] ([WTFPL][lic.wtfpl]) -- version: Unknown *2013-06-08* ([patched][patch.clean])
     * [invisible][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0])
     * [privilegeareas][] ([WTFPL][lic.privilegeareas] / [CC0][lic.cc0]) -- version: [aebaa00 Git][ver.privilegeareas] *2016-05-18*
     * [privs][] ([CC0][lic.cc0])
@@ -493,6 +493,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.biome_lib]: https://github.com/AntumDeluge/mtmod-biome_lib/tree/4821839
 [patch.campfire]: https://github.com/AntumDeluge/mtmod-campfire/tree/67b9dd7
 [patch.christmas]: https://github.com/AntumDeluge/mtmod-christmas/tree/f6c8dc2
+[patch.clean]: https://github.com/AntumDeluge/mtmod-clean/tree/c4b2b99
 [patch.cme]: https://github.com/AntumDeluge/mtmp-cme/tree/7a6e106
 [patch.coloredwood]: https://github.com/AntumDeluge/mtmod-coloredwood/tree/e1e02b3
 [patch.compassgps]: https://github.com/AntumDeluge/mtmod-compassgps/tree/888ec15
