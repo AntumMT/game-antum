@@ -168,6 +168,9 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* glass
 		* overrides
 		* spawneggs
+* castle
+	* mp_castle/
+		* [crafting_bench][] ([MIT][lic.crafting_bench]) -- version [3aa4cfb Git][ver.crafting_bench] *2017-02-28*
 * [Creatures MOB-Engine][cme] ([zlib / CC-BY-SA][lic.cme]) -- version: [2.3.1-0-e3502a1 Git][ver.cme] *2016-02-16* ([patched][patch.cme])
 	* mp_cme/
 		* chicken
@@ -234,6 +237,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [compassgps]: https://forum.minetest.net/viewtopic.php?t=9373
 [craft_guide]: https://cornernote.github.io/minetest-craft_guide/
 [craftguide]: https://forum.minetest.net/viewtopic.php?t=14088
+[crafting_bench]: https://github.com/minetest-mods/crafting_bench
 [creeper]: https://forum.minetest.net/viewtopic.php?t=11891
 [crops]: https://forum.minetest.net/viewtopic.php?t=11795
 [currency]: https://github.com/minetest-mods/currency
@@ -336,6 +340,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.christmas]: mods/buildings/christmas/LICENSE.txt
 [lic.cme]: mods/mp_cme/LICENSE.txt
 [lic.craft_guide]: mods/crafting/craft_guide/LICENSE
+[lic.crafting_bench]: mods/mp_castle/crafting_bench/LICENSE
 [lic.creeper]: mods/mobs_aggressive/creeper/LICENSE.md
 [lic.crops]: mods/farming/crops/LICENSE
 [lic.currency]: https://forum.minetest.net/viewtopic.php?t=7002
@@ -421,6 +426,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.coloredwood]: https://github.com/minetest-mods/coloredwood/tree/fc4ab15
 [ver.compassgps]: https://github.com/Kilarin/compassgps/tree/96892a0
 [ver.craft_guide]: https://github.com/cornernote/minetest-craft_guide/tree/20520b5
+[ver.crafting_bench]: https://github.com/minetest-mods/crafting_bench/tree/3aa4cfb
 [ver.craftguide]: https://github.com/minetest-mods/craftguide/tree/86a96c3
 [ver.creeper]: https://github.com/Rui-Minetest/creeper/tree/036666e
 [ver.crops]: https://github.com/minetest-mods/crops/tree/2b1bb37
