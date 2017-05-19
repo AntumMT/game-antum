@@ -170,6 +170,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* spawneggs
 * castle
 	* mp_castle/
+		* [castle_farming][] ([MIT][lic.castle_farming]) -- version [a190dcf Git][ver.castle_farming] *2017-04-21*
 		* [crafting_bench][] ([MIT][lic.crafting_bench]) -- version [3aa4cfb Git][ver.crafting_bench] *2017-02-28* ([patched][patch.crafting_bench])
 * [Creatures MOB-Engine][cme] ([zlib / CC-BY-SA][lic.cme]) -- version: [2.3.1-0-e3502a1 Git][ver.cme] *2016-02-16* ([patched][patch.cme])
 	* mp_cme/
@@ -227,6 +228,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [bookmarks_gui]: http://cornernote.github.io/minetest-bookmarks_gui/
 [bridges]: https://forum.minetest.net/viewtopic.php?t=3488
 [campfire]: https://forum.minetest.net/viewtopic.php?t=10569
+[castle_farming]: https://github.com/minetest-mods/castle_farming
 [character_creator]: https://forum.minetest.net/viewtopic.php?t=13138
 [chatlog]: https://forum.minetest.net/viewtopic.php?t=6220
 [christmas]: https://forum.minetest.net/viewtopic.php?t=3950
@@ -336,6 +338,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.bookmarks_gui]: mods/ui/bookmarks_gui/LICENSE
 [lic.bridges]: mods/buildings/bridges/README.md
 [lic.campfire]: mods/campfire/README.md
+[lic.castle_farming]: mods/mp_castle/castle_farming/LICENSE
 [lic.character_creator]: mods/player_visuals/character_creator/license.txt
 [lic.christmas]: mods/buildings/christmas/LICENSE.txt
 [lic.cme]: mods/mp_cme/LICENSE.txt
@@ -420,6 +423,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.bookmarks_gui]: https://github.com/cornernote/minetest-bookmarks_gui/tree/d369dba
 [ver.bridges]: https://github.com/Sokomine/bridges/tree/5b5f475
 [ver.campfire]: https://github.com/Napiophelios/campfire/tree/b45acd2
+[ver.castle_farming]: https://github.com/minetest-mods/castle_farming/tree/a190dcf
 [ver.character_creator]: https://github.com/Rui-Minetest/character_creator/tree/0c0e187
 [ver.christmas]: https://github.com/TheZenKitteh/minetest-christmas/tree/d3bd872
 [ver.cme]: https://github.com/BlockMen/cme/tree/e3502a1
