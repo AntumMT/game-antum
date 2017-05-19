@@ -1,6 +1,6 @@
 -- Various home electronics
 
-local S = homedecor_i18n.gettext
+local S = homedecor.gettext
 
 homedecor.register("speaker", {
 	description = S("Large Stereo Speaker"),
@@ -11,7 +11,7 @@ homedecor.register("speaker", {
 	},
 	groups = { snappy = 3 },
 	sounds = default.node_sound_wood_defaults(),
-	on_rightclick = function(pos, node, clicker, itemstack, pointed_thing)
+	on_punch = function(pos, node, puncher, pointed_thing)
 		minetest.set_node(pos, {name = "homedecor:speaker_open", param2 = node.param2})
 	end
 })
@@ -23,11 +23,11 @@ homedecor.register("speaker_open", {
 		"homedecor_speaker_sides.png",
 		"homedecor_speaker_driver.png",
 		"homedecor_speaker_open_front.png",
-		{ name = "homedecor_generic_metal.png", color = homedecor.color_black }
+		"homedecor_generic_metal_black.png"
 	},
 	groups = { snappy = 3, not_in_creative_inventory=1 },
 	sounds = default.node_sound_wood_defaults(),
-	on_rightclick = function(pos, node, clicker, itemstack, pointed_thing)
+	on_punch = function(pos, node, puncher, pointed_thing)
 		minetest.set_node(pos, {name = "homedecor:speaker", param2 = node.param2})
 	end
 })

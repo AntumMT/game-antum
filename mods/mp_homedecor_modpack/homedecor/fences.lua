@@ -14,7 +14,9 @@ if signs_modpath then
 	sign_post_model = signs_lib.sign_post_model.nodebox
 end
 
-local S = homedecor_i18n.gettext
+local S = homedecor.gettext
+
+local function N_(x) return x end
 
 local materials = {
 	{ S("brass"), "brass" },

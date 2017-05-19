@@ -1,5 +1,4 @@
-
-local S = homedecor_i18n.gettext
+local S = homedecor.gettext
 
 local default_can_dig = function(pos,player)
 	local meta = minetest.get_meta(pos)
@@ -119,7 +118,7 @@ function homedecor.handle_inventory(name, def, original_def)
 			local playername = player:get_player_name()
 
 			if playername == owner or
-					minetest.check_player_privs(playername, "protection_bypass") then
+					minetest.check_player_privs(player, "protection_bypass") then
 				return allow_move and
 						allow_move(pos, from_list, from_index, to_list, to_index, count, player) or
 						count
@@ -138,7 +137,7 @@ function homedecor.handle_inventory(name, def, original_def)
 			local playername = player:get_player_name()
 
 			if playername == owner or
-					minetest.check_player_privs(playername, "protection_bypass") then
+					minetest.check_player_privs(player, "protection_bypass") then
 				return allow_put and allow_put(pos, listname, index, stack, player) or
 						stack:get_count()
 			end
@@ -156,7 +155,7 @@ function homedecor.handle_inventory(name, def, original_def)
 			local playername = player:get_player_name()
 
 			if playername == owner or
-					minetest.check_player_privs(playername, "protection_bypass") then
+					minetest.check_player_privs(player, "protection_bypass") then
 				return allow_take and allow_take(pos, listname, index, stack, player) or
 						stack:get_count()
 			end

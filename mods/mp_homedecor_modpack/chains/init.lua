@@ -1,6 +1,3 @@
-
-local S = homedecor_i18n.gettext
-
 local chains_sbox = {
 	type = "fixed",
 	fixed = { -0.1, -0.625, -0.1, 0.1, 0.5, 0.1 }
@@ -15,7 +12,7 @@ local topchains_sbox = {
 }
 
 minetest.register_node("chains:chain", {
-	description = S("Hanging chain (wrought iron)"),
+	description = "Hanging chain (wrought iron)",
 	drawtype = "mesh",
 	mesh = "chains.obj",
 	tiles = {"chains_wrought_iron.png"},
@@ -29,7 +26,7 @@ minetest.register_node("chains:chain", {
 })
 
 minetest.register_node("chains:chain_brass", {
-	description = S("Hanging chain (brass)"),
+	description = "Hanging chain (brass)",
 	drawtype = "mesh",
 	mesh = "chains.obj",
 	tiles = {"chains_brass.png"},
@@ -43,7 +40,7 @@ minetest.register_node("chains:chain_brass", {
 })
 
 minetest.register_node("chains:chain_top", {
-	description = S("Hanging chain (ceiling mount, wrought iron)"),
+	description = "Hanging chain (ceiling mount, wrought iron)",
 	drawtype = "mesh",
 	mesh = "top_chains.obj",
 	tiles = {"chains_wrought_iron.png"},
@@ -57,7 +54,7 @@ minetest.register_node("chains:chain_top", {
 })
 
 minetest.register_node("chains:chain_top_brass", {
-	description = S("Hanging chain (ceiling mount, brass)"),
+	description = "Hanging chain (ceiling mount, brass)",
 	drawtype = "mesh",
 	mesh = "top_chains.obj",
 	tiles = {"chains_brass.png"},
@@ -71,12 +68,13 @@ minetest.register_node("chains:chain_top_brass", {
 })
 
 minetest.register_node("chains:chandelier", {
-	description = S("Chandelier (wrought iron)"),
+	description = "Chandelier (wrought iron)",
 	paramtype = "light",
 	light_source = default.LIGHT_MAX-2,
 	walkable = false,
 	climbable = true,
 	sunlight_propagates = true,
+	paramtype = "light",
 	tiles = {
 		"chains_wrought_iron.png",
 		"chains_candle.png",
@@ -97,12 +95,13 @@ minetest.register_node("chains:chandelier", {
 })
 
 minetest.register_node("chains:chandelier_brass", {
-	description = S("Chandelier (brass)"),
+	description = "Chandelier (brass)",
 	paramtype = "light",
 	light_source = default.LIGHT_MAX-2,
 	walkable = false,
 	climbable = true,
 	sunlight_propagates = true,
+	paramtype = "light",
 	tiles = {
 		"chains_brass.png",
 		"chains_candle.png",

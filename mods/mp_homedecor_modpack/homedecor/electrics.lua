@@ -1,8 +1,5 @@
-
-local S = homedecor_i18n.gettext
-
 homedecor.register("power_outlet", {
-	description = S("Power Outlet"),
+	description = "Power Outlet",
 	tiles = {
 		"homedecor_outlet_edges.png",
 		"homedecor_outlet_edges.png",
@@ -29,7 +26,7 @@ homedecor.register("power_outlet", {
 })
 
 homedecor.register("light_switch", {
-	description = S("Light switch"),
+	description = "Light switch",
 	tiles = {
 		"homedecor_light_switch_edges.png",
 		"homedecor_light_switch_edges.png",
@@ -61,7 +58,7 @@ homedecor.register("light_switch", {
 homedecor.register("doorbell", {
 	tiles = { "homedecor_doorbell.png" },
 	inventory_image = "homedecor_doorbell_inv.png",
-	description = S("Doorbell"),
+	description = "Doorbell",
     groups = {snappy=3},
     walkable = false,
 	node_box = {
@@ -71,7 +68,7 @@ homedecor.register("doorbell", {
 			{-0.03125, 0.0625, 0.45, 0.03125, 0.125, 0.4675}, -- NodeBox2
 		}
 	},
-	on_rightclick = function(pos, node, clicker, itemstack, pointed_thing)
+	on_punch = function(pos, node, puncher, pointed_thing)
 		minetest.sound_play("homedecor_doorbell", {
 			pos = pos,
 			gain = 1.0,

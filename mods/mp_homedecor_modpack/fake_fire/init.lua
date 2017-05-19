@@ -1,6 +1,3 @@
-
-local S = homedecor_i18n.gettext
-
 screwdriver = screwdriver or {}
 
 local function start_smoke(pos, node, clicker, chimney)
@@ -67,16 +64,12 @@ local function stop_smoke(pos)
 end
 
 -- FLAME TYPES
-local flame_types = {
-	{ "fake",  S("Fake fire") },
-	{ "ice",   S("Ice fire")  },
-}
+local flame_types = {"fake", "ice"}
 
 for _, f in ipairs(flame_types) do
-	local name, desc = unpack(f)
-	minetest.register_node("fake_fire:"..name.."_fire", {
-		inventory_image = name.."_fire_inv.png",
-		description = desc,
+	minetest.register_node("fake_fire:"..f.."_fire", {
+		inventory_image = f.."_fire_inv.png",
+		description = f.." fire",
 		drawtype = "plantlike",
 		paramtype = "light",
 		paramtype2 = "facedir",
@@ -87,7 +80,7 @@ for _, f in ipairs(flame_types) do
 		light_source = 14,
 		waving = 1,
 		tiles = {
-			{name=name.."_fire_animated.png", animation={type="vertical_frames",
+			{name=f.."_fire_animated.png", animation={type="vertical_frames",
 			aspect_w=16, aspect_h=16, length=1.5}},
 		},
 		on_rightclick = function(pos, node, clicker, itemstack, pointed_thing)
@@ -106,7 +99,7 @@ end
 
 minetest.register_node("fake_fire:fancy_fire", {
 		inventory_image = "fancy_fire_inv.png",
-		description = S("Fancy Fire"),
+		description = "Fancy Fire",
 		drawtype = "mesh",
 		mesh = "fancy_fire.obj",
 		paramtype = "light",
@@ -143,7 +136,7 @@ minetest.register_node("fake_fire:fancy_fire", {
 
 -- EMBERS
 minetest.register_node("fake_fire:embers", {
-    description = S("Glowing Embers"),
+    description = "Glowing Embers",
 	tiles = {
 		{name="embers_animated.png", animation={type="vertical_frames",
 		aspect_w=16, aspect_h=16, length=2}},
@@ -155,16 +148,12 @@ minetest.register_node("fake_fire:embers", {
 })
 
 -- CHIMNEYS
-local materials = {
-	{ "stone",     S("Stone chimney top") },
-	{ "sandstone", S("Sandstone chimney top") },
-}
+local materials = {"stone", "sandstone"}
 
-for _, mat in ipairs(materials) do
-	local name, desc = unpack(mat)
-	minetest.register_node("fake_fire:chimney_top_"..name, {
-		description = desc,
-		tiles = {"default_"..name..".png^chimney_top.png", "default_"..name..".png"},
+for _, m in ipairs(materials) do
+	minetest.register_node("fake_fire:chimney_top_"..m, {
+		description = "Chimney Top - "..m,
+		tiles = {"default_"..m..".png^chimney_top.png", "default_"..m..".png"},
 		groups = {snappy=3},
 		paramtype = "light",
 		sounds = default.node_sound_stone_defaults(),
@@ -185,14 +174,14 @@ for _, mat in ipairs(materials) do
 
 	minetest.register_craft({
 		type = "shapeless",
-		output = 'fake_fire:chimney_top_'..name,
-		recipe = {"default:torch", "stairs:slab_"..name}
+		output = 'fake_fire:chimney_top_'..m,
+		recipe = {"default:torch", "stairs:slab_"..m}
 	})
 end
 
 -- FLINT and STEEL
 minetest.register_tool("fake_fire:flint_and_steel", {
-	description = S("Flint and steel"),
+	description = "Flint and steel",
 	inventory_image = "flint_and_steel.png",
 	liquids_pointable = false,
 	stack_max = 1,
@@ -210,7 +199,7 @@ minetest.register_tool("fake_fire:flint_and_steel", {
 					minetest.set_node(pointed_thing.above, {name="fake_fire:fake_fire"})
 				end
 			else
-				minetest.chat_send_player(user:get_player_name(), S("This area is protected!"))
+				minetest.chat_send_player(user:get_player_name(), "This area is protected!")
 			end
 		else
 			return

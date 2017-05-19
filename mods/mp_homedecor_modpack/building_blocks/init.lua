@@ -1,9 +1,6 @@
-
-local S = homedecor_i18n.gettext
-
 minetest.register_node("building_blocks:Adobe", {
 	tiles = {"building_blocks_Adobe.png"},
-	description = S("Adobe"),
+	description = "Adobe",
 	is_ground_content = true,
 	groups = {crumbly=3},
 	sounds = default.node_sound_stone_defaults(),
@@ -11,7 +8,7 @@ minetest.register_node("building_blocks:Adobe", {
 minetest.register_node("building_blocks:Roofing", {
 	tiles = {"building_blocks_Roofing.png"},
 	is_ground_content = true,
-	description = S("Roof block"),
+	description = "Roof block",
 	groups = {snappy=3},
 })
 minetest.register_craft({
@@ -131,7 +128,7 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = 'building_blocks:tar_base 4',
+	output = 'building_blocks:tar_base 2',
 	recipe = {
 		{"default:coal_lump", "default:gravel"},
 		{"default:gravel", "default:coal_lump"}
@@ -139,7 +136,7 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = 'building_blocks:tar_base 4',
+	output = 'building_blocks:tar_base 2',
 	recipe = {
 		{"default:gravel", "default:coal_lump"},
 		{"default:coal_lump", "default:gravel"}
@@ -153,7 +150,7 @@ minetest.register_craft({
 })
 minetest.register_node("building_blocks:smoothglass", {
 	drawtype = "glasslike",
-	description = S("Streak Free Glass"),
+	description = "Streak Free Glass",
 	tiles = {"building_blocks_sglass.png"},
 	inventory_image = minetest.inventorycube("building_blocks_sglass.png"),
 	paramtype = "light",
@@ -164,7 +161,7 @@ minetest.register_node("building_blocks:smoothglass", {
 })
 minetest.register_node("building_blocks:grate", {
 	drawtype = "glasslike",
-	description = S("Grate"),
+	description = "Grate",
 	tiles = {"building_blocks_grate.png"},
 	inventory_image = minetest.inventorycube("building_blocks_grate.png"),
 	paramtype = "light",
@@ -174,7 +171,7 @@ minetest.register_node("building_blocks:grate", {
 })
 
 minetest.register_node("building_blocks:Fireplace", {
-	description = S("Fireplace"),
+	description = "Fireplace",
 	tiles = {
 		"building_blocks_cast_iron.png",
 		"building_blocks_cast_iron.png",
@@ -191,7 +188,7 @@ minetest.register_node("building_blocks:Fireplace", {
 
 minetest.register_node("building_blocks:woodglass", {
 	drawtype = "glasslike",
-	description = S("Wood Framed Glass"),
+	description = "Wood Framed Glass",
 	tiles = {"building_blocks_wglass.png"},
 	inventory_image = minetest.inventorycube("building_blocks_wglass.png"),
 	paramtype = "light",
@@ -202,7 +199,7 @@ minetest.register_node("building_blocks:woodglass", {
 })
 minetest.register_node("building_blocks:terrycloth_towel", {
 	drawtype = "raillike",
-	description = S("Terrycloth towel"),
+	description = "Terrycloth towel",
 	tiles = {"building_blocks_towel.png"},
 	inventory_image = "building_blocks_towel_inv.png",
 	paramtype = "light",
@@ -218,7 +215,7 @@ minetest.register_node("building_blocks:terrycloth_towel", {
 })
 minetest.register_node("building_blocks:Tarmac_spread", {
 	drawtype = "raillike",
-	description = S("Tarmac Spread"),
+	description = "Tarmac Spread",
 	tiles = {"building_blocks_tar.png"},
 	inventory_image = "building_blocks_tar_spread_inv.png",
 	paramtype = "light",
@@ -235,7 +232,7 @@ minetest.register_node("building_blocks:Tarmac_spread", {
 })
 minetest.register_node("building_blocks:BWtile", {
 	drawtype = "raillike",
-	description = S("Chess board tiling"),
+	description = "Chess board tiling",
 	tiles = {"building_blocks_BWtile.png"},
 	inventory_image = "building_blocks_bwtile_inv.png",
 	paramtype = "light",
@@ -251,9 +248,7 @@ minetest.register_node("building_blocks:BWtile", {
 })
 minetest.register_node("building_blocks:brobble_spread", {
 	drawtype = "raillike",
-	-- Translators: "Brobble" is a portmanteau of "Brick" and "Cobble".
-	-- Translate however you see fit.
-	description = S("Brobble Spread"),
+	description = "Brobble Spread",
 	tiles = {"building_blocks_brobble.png"},
 	inventory_image = "building_blocks_brobble_spread_inv.png",
 	paramtype = "light",
@@ -269,7 +264,7 @@ minetest.register_node("building_blocks:brobble_spread", {
 })
 minetest.register_node("building_blocks:gravel_spread", {
 	drawtype = "raillike",
-	description = S("Gravel Spread"),
+	description = "Gravel Spread",
 	tiles = {"default_gravel.png"},
 	inventory_image = "building_blocks_gravel_spread_inv.png",
 	paramtype = "light",
@@ -290,7 +285,7 @@ minetest.register_node("building_blocks:gravel_spread", {
 minetest.register_node("building_blocks:hardwood", {
 	tiles = {"building_blocks_hardwood.png"},
 	is_ground_content = true,
-	description = S("Hardwood"),
+	description = "Hardwood",
 	groups = {choppy=1,flammable=1},
 	sounds = default.node_sound_wood_defaults(),
 })
@@ -332,17 +327,6 @@ if minetest.get_modpath("moreblocks") then
 			}),
 		}
 	)
-
-	for _, i in ipairs(stairsplus.shapes_list) do
-		local class = i[1]
-		local cut = i[2]
-		minetest.unregister_item("moreblocks:"..class.."tar"..cut)
-		minetest.register_alias("moreblocks:"..class.."tar"..cut, "building_blocks:"..class.."tar"..cut)
-
-	end
-	minetest.unregister_item("moreblocks:tar")
-	minetest.register_alias("moreblocks:tar", "building_blocks:Tar")
-
 	stairsplus:register_all(
 		"building_blocks",
 		"tar",
@@ -354,7 +338,6 @@ if minetest.get_modpath("moreblocks") then
 			sounds = default.node_sound_stone_defaults(),
 		}
 	)
-
 	stairsplus:register_all(
 		"building_blocks",
 		"grate",
@@ -465,44 +448,44 @@ else
 	bb_stairs.register_stair_and_slab("marble","building_blocks:Marble",
 		{cracky=3},
 		{"building_blocks_marble.png"},
-		S("Marble stair"),
-		S("Marble slab")
+		"Marble stair",
+		"Marble slab"
 	)
 	bb_stairs.register_stair_and_slab("hardwood","building_blocks:hardwood",
 		{choppy=1,flammable=1},
 		{"building_blocks_hardwood.png"},
-		S("Hardwood stair"),
-		S("Hardwood slab")
+		"Hardwood stair",
+		"Hardwood slab"
 	)
 	bb_stairs.register_stair_and_slab("fakegrass","building_blocks:fakegrass",
 		{crumbly=3},
 		{"default_grass.png"},
-		S("Grass stair"),
-		S("Grass slab")
+		"Grass stair",
+		"Grass slab"
 	)
 	bb_stairs.register_stair_and_slab("tar","building_blocks:Tar",
 		{crumbly=1},
 		{"building_blocks_tar.png"},
-		S("Tar stair"),
-		S("Tar slab")
+		"Tar stair",
+		"Tar slab"
 	)
 	bb_stairs.register_stair_and_slab("grate","building_blocks:grate",
 		{cracky=1},
 		{"building_blocks_grate.png"},
-		S("Grate Stair"),
-		S("Grate Slab")
+		"Grate Stair",
+		"Grate Slab"
 	)
 	bb_stairs.register_stair_and_slab("Adobe", "building_blocks:Adobe",
 		{crumbly=3},
 		{"building_blocks_Adobe.png"},
-		S("Adobe stair"),
-		S("Adobe slab")
+		"Adobe stair",
+		"Adobe slab"
 	)
 	bb_stairs.register_stair_and_slab("Roofing", "building_blocks:Roofing",
 		{snappy=3},
 		{"building_blocks_Roofing.png"},
-		S("Roofing stair"),
-		S("Roofing slab")
+		"Roofing stair",
+		"Roofing slab"
 	)
 end
 
@@ -515,7 +498,7 @@ minetest.register_craft({
 
 minetest.register_node("building_blocks:fakegrass", {
 	tiles = {"default_grass.png", "default_dirt.png", "default_dirt.png^default_grass_side.png"},
-	description = S("Fake Grass"),
+	description = "Fake Grass",
 	is_ground_content = true,
 	groups = {crumbly=3},
 		sounds = default.node_sound_dirt_defaults({
@@ -524,13 +507,13 @@ minetest.register_node("building_blocks:fakegrass", {
 })
 
 minetest.register_craftitem("building_blocks:sticks", {
-	description = S("Small bundle of sticks"),
+	description = "Small bundle of sticks",
 	image = "building_blocks_sticks.png",
 	on_place_on_ground = minetest.craftitem_place_item,
 })
 
 minetest.register_craftitem("building_blocks:tar_base", {
-	description = S("Tar base"),
+	description = "Tar base",
 	image = "building_blocks_tar_base.png",
 })
 
@@ -554,14 +537,14 @@ minetest.register_alias("building_blocks:faggot", "building_blocks:sticks")
 minetest.register_alias("marble", "building_blocks:Marble")
 
 minetest.register_node("building_blocks:Tar", {
-	description = S("Tar"),
+	description = "Tar",
 	tiles = {"building_blocks_tar.png"},
 	is_ground_content = true,
 	groups = {crumbly=1, tar_block = 1},
 	sounds = default.node_sound_stone_defaults(),
 })
 minetest.register_node("building_blocks:Marble", {
-	description = S("Marble"),
+	description = "Marble",
 	tiles = {"building_blocks_marble.png"},
 	is_ground_content = true,
 	groups = {cracky=3, marble = 1},
@@ -585,7 +568,7 @@ minetest.register_craft({
 })
 
 minetest.register_tool("building_blocks:knife", {
-	description = S("Tar Knife"),
+	description = "Tar Knife",
 	inventory_image = "building_blocks_knife.png",
 	tool_capabilities = {
 		max_drop_level=0,
@@ -607,7 +590,7 @@ minetest.register_craft({
 
 if not minetest.get_modpath("technic") then
 	minetest.register_node( ":technic:granite", {
-		    description = S("Granite"),
+		    description = "Granite",
 		    tiles = { "technic_granite.png" },
 		    is_ground_content = true,
 		    groups = {cracky=1},
@@ -625,7 +608,7 @@ if not minetest.get_modpath("technic") then
 
 	if minetest.get_modpath("moreblocks") then
 		stairsplus:register_all("technic", "granite", "technic:granite", {
-				description=S("Granite"),
+				description="Granite",
 				groups={cracky=1, not_in_creative_inventory=1},
 				tiles={"technic_granite.png"},
 		})

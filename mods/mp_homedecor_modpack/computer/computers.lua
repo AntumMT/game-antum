@@ -1,6 +1,3 @@
-
-local S = homedecor_i18n.gettext
-
 -- Amiga 500 lookalike
 computer.register("computer:shefriendSOO", {
 	description = "SheFriendSOO",
@@ -153,19 +150,6 @@ computer.register("computer:admiral128", {
 	})
 })
 
--- XBox lookalike
-computer.register("computer:hueg_box", {
-	description = "HUEG Box",
-	tiles_off = { },
-	node_box = computer.pixelnodebox(16, {
-		-- X   Y   Z   W   H   L
-		{  0,  0,  7, 16,  6, 9 },   -- Console
-		{  2,  0,  1, 11,  3, 6 },   -- Controller
-		{  2,  0,  0,  2,  3, 1 },
-		{ 11,  0,  0,  2,  3, 1 },
-	})
-})
-
 -- Generic Flat Screen LCD (16x9) with keyboard
 local mo_sbox = {
 	type = "fixed",
@@ -173,7 +157,7 @@ local mo_sbox = {
 }
 
 minetest.register_node("computer:monitor", {
-	description = S("Monitor and keyboard"),
+	description = "Monitor and keyboard",
 	inventory_image = "computer_monitor_inv.png",
 	drawtype = "mesh",
 	mesh = "computer_monitor.obj",
@@ -191,6 +175,7 @@ minetest.register_node("computer:monitor", {
 })
 
 minetest.register_node("computer:monitor_on", {
+	description = "Monitor and keyboard",
 	drawtype = "mesh",
 	mesh = "computer_monitor.obj",
 	tiles = {"monitor_display.png^[transformFX", "monitor_plastic.png", "computer_black.png", "monitor_plastic.png"},
@@ -215,7 +200,7 @@ minetest.register_alias("computer:monitor_desktop", "computer:monitor")
 
 --WIFI Router (linksys look-a-like)
 minetest.register_node("computer:router", {
-	description = S("WIFI Router"),
+	description = "WIFI Router",
 	inventory_image = "computer_router_inv.png",
 	tiles = {"computer_router_t.png","computer_router_bt.png","computer_router_l.png","computer_router_r.png","computer_router_b.png",
 			{name="computer_router_f_animated.png", animation={type="vertical_frames", aspect_w=32, aspect_h=32, length=1.0}},}, --"computer_router_f.png"},
@@ -243,7 +228,7 @@ local pct_cbox = {
 
 --Modern PC Tower
 minetest.register_node("computer:tower", {
-	description = S("Computer Tower"),
+	description = "Computer Tower",
 	inventory_image = "computer_tower_inv.png",
 	drawtype = "mesh",
 	mesh = "computer_tower.obj",
@@ -260,7 +245,7 @@ minetest.register_alias("computer:tower_on", "computer:tower")
 
 -- Printer/scaner combo
 minetest.register_node("computer:printer", {
-	description = S("Printer-Scanner Combo"),
+	description = "Printer Scaner Combo",
 	inventory_image = "computer_printer_inv.png",
 	tiles = {"computer_printer_t.png","computer_printer_bt.png","computer_printer_l.png",
 			"computer_printer_r.png","computer_printer_b.png","computer_printer_f.png"},
@@ -288,7 +273,7 @@ minetest.register_node("computer:printer", {
 --Rack Server
 minetest.register_node("computer:server", {
 	drawtype = "nodebox",
-	description = S("Rack Server"),
+	description = "Rack Server",
 	tiles = {
 		'computer_server_t.png',
 		'computer_server_bt.png',
@@ -318,8 +303,7 @@ minetest.register_node("computer:server", {
 	on_place = function(itemstack, placer, pointed_thing)
 		local pos = pointed_thing.above
 		if minetest.get_node({x=pos.x, y=pos.y+1, z=pos.z}).name ~= "air" then
-			minetest.chat_send_player( placer:get_player_name(),
-					S("Not enough vertical space to place a server!" ))
+			minetest.chat_send_player( placer:get_player_name(), "Not enough vertical space to place a server!" )
 			return itemstack
 		end
 		return minetest.item_place(itemstack, placer, pointed_thing)
@@ -328,6 +312,7 @@ minetest.register_node("computer:server", {
 
 minetest.register_node("computer:server_on", {
 	drawtype = "nodebox",
+	description = "Rack Server",
 	tiles = {
 		'computer_server_t.png',
 		'computer_server_bt.png',

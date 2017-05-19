@@ -1,4 +1,3 @@
 wool
 bucket
-homedecor_i18n
-unifieddyes
+craft_guide?

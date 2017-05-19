@@ -1,4 +1,3 @@
 default
 wool
-homedecor_i18n
-unifieddyes
+craft_guide?

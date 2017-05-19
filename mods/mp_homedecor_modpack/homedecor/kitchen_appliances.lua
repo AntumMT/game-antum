@@ -1,6 +1,6 @@
 -- This file supplies refrigerators
 
-local S = homedecor_i18n.gettext
+local S = homedecor.gettext
 
 local function N_(x) return x end
 
