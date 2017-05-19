@@ -170,9 +170,14 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* spawneggs
 * castle ([MIT][lic.castle])
 	* mp_castle/
-		* [castle_farming][] -- version [a190dcf Git][ver.castle_farming] *2017-04-21*
+		* [castle_farming][] -- version: [a190dcf Git][ver.castle_farming] *2017-04-21*
+		* [castle_gates][] -- version: [dc53584 Git][ver.castle_gates] *dc53584* ([patched][patch.castle_gates])
+		* [castle_lighting][] -- version: [a7110c6 Git][ver.castle_lighting] *2017-04-28* *[patched][patch.castle_lighting])
 		* [castle_masonry][] -- version [94b25b5 Git][ver.castle_masonry] *2017-02-28* ([patched][patch.castle_masonry])
+		* [castle_shields][] -- version [a7110c6 Git][ver.castle_shields] *2017-02-28* ([patched][patch.castle_shields])
+		* [castle_storage][] -- version [2b9e5f6 Git][ver.castle_storage] *2017-02-28* ([patched.castle_storage])
 		* [castle_tapestries][] -- version [78b6e36 Git][ver.castle_tapestries] *2017-03-19* ([patched][patch.castle_tapestries])
+		* [castle_weapons][] -- version [5f5232a Git][ver.castle_weapons] *2017-02-28* ([patched][patch.castle_weapons])
 		* [crafting_bench][] -- version [3aa4cfb Git][ver.crafting_bench] *2017-02-28* ([patched][patch.crafting_bench])
 * [Creatures MOB-Engine][cme] ([zlib / CC-BY-SA][lic.cme]) -- version: [2.3.1-0-e3502a1 Git][ver.cme] *2016-02-16* ([patched][patch.cme])
 	* mp_cme/
@@ -231,8 +236,13 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [bridges]: https://forum.minetest.net/viewtopic.php?t=3488
 [campfire]: https://forum.minetest.net/viewtopic.php?t=10569
 [castle_farming]: https://github.com/minetest-mods/castle_farming
+[castle_gates]: https://github.com/minetest-mods/castle_gates
+[castle_lighting]: https://github.com/minetest-mods/castle_lighting
 [castle_masonry]: https://github.com/minetest-mods/castle_masonry
+[castle_shields]: https://github.com/minetest-mods/castle_shields
+[castle_storage]: https://github.com/minetest-mods/castle_storage
 [castle_tapestries]: https://github.com/minetest-mods/castle_tapestries
+[castle_weapons]: https://github.com/minetest-mods/castle_weapons
 [character_creator]: https://forum.minetest.net/viewtopic.php?t=13138
 [chatlog]: https://forum.minetest.net/viewtopic.php?t=6220
 [christmas]: https://forum.minetest.net/viewtopic.php?t=3950
@@ -427,8 +437,13 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.bridges]: https://github.com/Sokomine/bridges/tree/5b5f475
 [ver.campfire]: https://github.com/Napiophelios/campfire/tree/b45acd2
 [ver.castle_farming]: https://github.com/minetest-mods/castle_farming/tree/a190dcf
+[ver.castle_gates]: https://github.com/minetest-mods/castle_gates/tree/dc53584
+[ver.castle_lighting]: https://github.com/minetest-mods/castle_lighting/tree/a7110c6
 [ver.castle_masonry]: https://github.com/minetest-mods/castle_masonry/tree/94b25b5
+[ver.castle_shields]: https://github.com/minetest-mods/castle_shields/tree/ce853d7
+[ver.castle_storage]: https://github.com/minetest-mods/castle_storage/tree/2b9e5f6
 [ver.castle_tapestries]: https://github.com/minetest-mods/castle_tapestries/tree/78b6e36
+[ver.castle_weapons]: https://github.com/minetest-mods/castle_weapons/tree/5f5232a
 [ver.character_creator]: https://github.com/Rui-Minetest/character_creator/tree/0c0e187
 [ver.christmas]: https://github.com/TheZenKitteh/minetest-christmas/tree/d3bd872
 [ver.cme]: https://github.com/BlockMen/cme/tree/e3502a1
@@ -507,8 +522,13 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.bedrock2]: https://github.com/AntumDeluge/mtmod-bedrock2/tree/0375ac1
 [patch.biome_lib]: https://github.com/AntumDeluge/mtmod-biome_lib/tree/4821839
 [patch.campfire]: https://github.com/AntumDeluge/mtmod-campfire/tree/67b9dd7
+[patch.castle_gates]: https://github.com/AntumDeluge/mtmod-castle_gates/tree/465ad4f
+[patch.castle_lighting]: https://github.com/AntumDeluge/mtmod-castle_lighting/tree/b360c54
 [patch.castle_masonry]: https://github.com/AntumDeluge/mtmod-castle_masonry/tree/88c2f89
+[patch.castle_shields]: https://github.com/AntumDeluge/mtmod-castle_shields/tree/47ffc27
+[patch.castle_storage]: https://github.com/AntumDeluge/mtmod-castle_storage/tree/b80b72f
 [patch.castle_tapestries]: https://github.com/AntumDeluge/mtmod-castle_tapestries/tree/4e70f1b
+[patch.castle_weapons]: https://github.com/AntumDeluge/mtmod-castle_weapons/tree/577464d
 [patch.christmas]: https://github.com/AntumDeluge/mtmod-christmas/tree/f6c8dc2
 [patch.clean]: https://github.com/AntumDeluge/mtmod-clean/tree/de460c5
 [patch.cme]: https://github.com/AntumDeluge/mtmp-cme/tree/7a6e106
