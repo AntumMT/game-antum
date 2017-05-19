@@ -7,6 +7,7 @@ local old_entities = {'mobs_mc:skeleton', 'mobs_mc:creeper', 'kpgmobs:sheep'}
 -- Old/Missing nodes that should be replaced with something currently in game
 local replace_nodes = {
     {'homedecor:bed_regular', 'homedecor:bed_white_regular'},
+    {'lrfurn:armchair', 'lrfurn:armchair_white'},
 }
 
 
