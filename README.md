@@ -493,7 +493,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.biome_lib]: https://github.com/AntumDeluge/mtmod-biome_lib/tree/4821839
 [patch.campfire]: https://github.com/AntumDeluge/mtmod-campfire/tree/67b9dd7
 [patch.christmas]: https://github.com/AntumDeluge/mtmod-christmas/tree/f6c8dc2
-[patch.clean]: https://github.com/AntumDeluge/mtmod-clean/tree/26e4b42
+[patch.clean]: https://github.com/AntumDeluge/mtmod-clean/tree/de460c5
 [patch.cme]: https://github.com/AntumDeluge/mtmp-cme/tree/7a6e106
 [patch.coloredwood]: https://github.com/AntumDeluge/mtmod-coloredwood/tree/e1e02b3
 [patch.compassgps]: https://github.com/AntumDeluge/mtmod-compassgps/tree/888ec15
