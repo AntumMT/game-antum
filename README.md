@@ -170,7 +170,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* spawneggs
 * castle
 	* mp_castle/
-		* [crafting_bench][] ([MIT][lic.crafting_bench]) -- version [3aa4cfb Git][ver.crafting_bench] *2017-02-28*
+		* [crafting_bench][] ([MIT][lic.crafting_bench]) -- version [3aa4cfb Git][ver.crafting_bench] *2017-02-28* ([patched][patch.crafting_bench])
 * [Creatures MOB-Engine][cme] ([zlib / CC-BY-SA][lic.cme]) -- version: [2.3.1-0-e3502a1 Git][ver.cme] *2016-02-16* ([patched][patch.cme])
 	* mp_cme/
 		* chicken
@@ -504,6 +504,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.coloredwood]: https://github.com/AntumDeluge/mtmod-coloredwood/tree/e1e02b3
 [patch.compassgps]: https://github.com/AntumDeluge/mtmod-compassgps/tree/888ec15
 [patch.craftguide]: https://github.com/AntumDeluge/mtmod-craftguide/tree/89db504
+[patch.crafting_bench]: https://github.com/AntumDeluge/mtmod-crafting_bench/tree/c5ff4e5
 [patch.creeper]: https://github.com/AntumDeluge/mtmod-creeper/tree/dc9ffbe
 [patch.crops]: https://github.com/AntumDeluge/mtmod-crops/tree/f8b33ae
 [patch.currency]: https://github.com/AntumDeluge/mtmod-currency/tree/6275e9b
