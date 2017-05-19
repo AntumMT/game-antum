@@ -32,7 +32,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [away][] ([GPL][lic.gpl2.0]) -- version: [4c1e5a9 Git][ver.away] *2012-03-09*
     * [chatlog][] ([CC0][lic.cc0]) -- version: (no version info)
 * crafting/
-    * [craft_guide][] ([BSD 3-Clause][lic.craft_guide]) -- version: [20520b5 Git][ver.craft_guide] *2017-01-30*
     * [craftguide][] ([GPL / WTFPL](mods/crafting/craftguide/LICENSE)) -- version: [86a96c3 Git][ver.craftguide] *2017-03-21* ([patched][patch.craftguide])
 * [currency][] ([WTFPL][lic.currency]) -- version: [21f9811 Git][ver.currency] *2017-03-22* ([patched][patch.currency])
 * [enchanting][] ([GPL / WTFPL / CC BY-SA-NA][lic.enchanting]) -- version: [13ea31c Git][ver.enchanting] *2016-12-16*
@@ -251,7 +250,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [coloredwood]: https://forum.minetest.net/viewtopic.php?t=2411
 [compass]: https://forum.minetest.net/viewtopic.php?t=3785
 [compassgps]: https://forum.minetest.net/viewtopic.php?t=9373
-[craft_guide]: https://cornernote.github.io/minetest-craft_guide/
 [craftguide]: https://forum.minetest.net/viewtopic.php?t=14088
 [crafting_bench]: https://github.com/minetest-mods/crafting_bench
 [creeper]: https://forum.minetest.net/viewtopic.php?t=11891
@@ -356,7 +354,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.character_creator]: mods/player_visuals/character_creator/license.txt
 [lic.christmas]: mods/buildings/christmas/LICENSE.txt
 [lic.cme]: mods/mp_cme/LICENSE.txt
-[lic.craft_guide]: mods/crafting/craft_guide/LICENSE
 [lic.creeper]: mods/mobs_aggressive/creeper/LICENSE.md
 [lic.crops]: mods/farming/crops/LICENSE
 [lic.currency]: https://forum.minetest.net/viewtopic.php?t=7002
@@ -449,7 +446,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.cme]: https://github.com/BlockMen/cme/tree/e3502a1
 [ver.coloredwood]: https://github.com/minetest-mods/coloredwood/tree/fc4ab15
 [ver.compassgps]: https://github.com/Kilarin/compassgps/tree/96892a0
-[ver.craft_guide]: https://github.com/cornernote/minetest-craft_guide/tree/20520b5
 [ver.crafting_bench]: https://github.com/minetest-mods/crafting_bench/tree/3aa4cfb
 [ver.craftguide]: https://github.com/minetest-mods/craftguide/tree/86a96c3
 [ver.creeper]: https://github.com/Rui-Minetest/creeper/tree/036666e
