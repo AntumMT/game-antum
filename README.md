@@ -171,6 +171,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * castle
 	* mp_castle/
 		* [castle_farming][] ([MIT][lic.castle_farming]) -- version [a190dcf Git][ver.castle_farming] *2017-04-21*
+		* [castle_masonry][] ([MIT][lic.castle_masonry]) -- version [94b25b5 Git][ver.castle_masonry] *2017-02-28* ([patched][patch.castle_masonry])
 		* [crafting_bench][] ([MIT][lic.crafting_bench]) -- version [3aa4cfb Git][ver.crafting_bench] *2017-02-28* ([patched][patch.crafting_bench])
 * [Creatures MOB-Engine][cme] ([zlib / CC-BY-SA][lic.cme]) -- version: [2.3.1-0-e3502a1 Git][ver.cme] *2016-02-16* ([patched][patch.cme])
 	* mp_cme/
@@ -229,6 +230,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [bridges]: https://forum.minetest.net/viewtopic.php?t=3488
 [campfire]: https://forum.minetest.net/viewtopic.php?t=10569
 [castle_farming]: https://github.com/minetest-mods/castle_farming
+[castle_masonry]: https://github.com/minetest-mods/castle_masonry
 [character_creator]: https://forum.minetest.net/viewtopic.php?t=13138
 [chatlog]: https://forum.minetest.net/viewtopic.php?t=6220
 [christmas]: https://forum.minetest.net/viewtopic.php?t=3950
@@ -339,6 +341,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.bridges]: mods/buildings/bridges/README.md
 [lic.campfire]: mods/campfire/README.md
 [lic.castle_farming]: mods/mp_castle/castle_farming/LICENSE
+[lic.castle_masonry]: mods/mp_castle/castle_masonry/LICENSE
 [lic.character_creator]: mods/player_visuals/character_creator/license.txt
 [lic.christmas]: mods/buildings/christmas/LICENSE.txt
 [lic.cme]: mods/mp_cme/LICENSE.txt
@@ -424,6 +427,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.bridges]: https://github.com/Sokomine/bridges/tree/5b5f475
 [ver.campfire]: https://github.com/Napiophelios/campfire/tree/b45acd2
 [ver.castle_farming]: https://github.com/minetest-mods/castle_farming/tree/a190dcf
+[ver.castle_masonry]: https://github.com/minetest-mods/castle_masonry/tree/94b25b5
 [ver.character_creator]: https://github.com/Rui-Minetest/character_creator/tree/0c0e187
 [ver.christmas]: https://github.com/TheZenKitteh/minetest-christmas/tree/d3bd872
 [ver.cme]: https://github.com/BlockMen/cme/tree/e3502a1
@@ -502,6 +506,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.bedrock2]: https://github.com/AntumDeluge/mtmod-bedrock2/tree/0375ac1
 [patch.biome_lib]: https://github.com/AntumDeluge/mtmod-biome_lib/tree/4821839
 [patch.campfire]: https://github.com/AntumDeluge/mtmod-campfire/tree/67b9dd7
+[patch.castle_masonry]: https://github.com/AntumDeluge/mtmod-castle_masonry/tree/88c2f89
 [patch.christmas]: https://github.com/AntumDeluge/mtmod-christmas/tree/f6c8dc2
 [patch.clean]: https://github.com/AntumDeluge/mtmod-clean/tree/de460c5
 [patch.cme]: https://github.com/AntumDeluge/mtmp-cme/tree/7a6e106

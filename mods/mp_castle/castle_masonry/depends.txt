@@ -1,0 +1,7 @@
+default
+moreblocks?
+stairs?
+building_blocks?
+asphalt?
+streets?
+craft_guide?
