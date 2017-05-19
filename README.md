@@ -168,12 +168,12 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* glass
 		* overrides
 		* spawneggs
-* castle
+* castle ([MIT][lic.castle])
 	* mp_castle/
-		* [castle_farming][] ([MIT][lic.castle_farming]) -- version [a190dcf Git][ver.castle_farming] *2017-04-21*
-		* [castle_masonry][] ([MIT][lic.castle_masonry]) -- version [94b25b5 Git][ver.castle_masonry] *2017-02-28* ([patched][patch.castle_masonry])
-		* [castle_tapestries][] ([MIT][lic.castle_tapestries]) -- version [78b6e36 Git][ver.castle_tapestries] *2017-03-19* ([patched][patch.castle_tapestries])
-		* [crafting_bench][] ([MIT][lic.crafting_bench]) -- version [3aa4cfb Git][ver.crafting_bench] *2017-02-28* ([patched][patch.crafting_bench])
+		* [castle_farming][] -- version [a190dcf Git][ver.castle_farming] *2017-04-21*
+		* [castle_masonry][] -- version [94b25b5 Git][ver.castle_masonry] *2017-02-28* ([patched][patch.castle_masonry])
+		* [castle_tapestries][] -- version [78b6e36 Git][ver.castle_tapestries] *2017-03-19* ([patched][patch.castle_tapestries])
+		* [crafting_bench][] -- version [3aa4cfb Git][ver.crafting_bench] *2017-02-28* ([patched][patch.crafting_bench])
 * [Creatures MOB-Engine][cme] ([zlib / CC-BY-SA][lic.cme]) -- version: [2.3.1-0-e3502a1 Git][ver.cme] *2016-02-16* ([patched][patch.cme])
 	* mp_cme/
 		* chicken
@@ -342,14 +342,11 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.bookmarks_gui]: mods/ui/bookmarks_gui/LICENSE
 [lic.bridges]: mods/buildings/bridges/README.md
 [lic.campfire]: mods/campfire/README.md
-[lic.castle_farming]: mods/mp_castle/castle_farming/LICENSE
-[lic.castle_masonry]: mods/mp_castle/castle_masonry/LICENSE
-[lic.castle_tapestries]: mods/mp_castle/castle_tapestries/LICENSE
+[lic.castle]: mods/mp_castle/LICENSE
 [lic.character_creator]: mods/player_visuals/character_creator/license.txt
 [lic.christmas]: mods/buildings/christmas/LICENSE.txt
 [lic.cme]: mods/mp_cme/LICENSE.txt
 [lic.craft_guide]: mods/crafting/craft_guide/LICENSE
-[lic.crafting_bench]: mods/mp_castle/crafting_bench/LICENSE
 [lic.creeper]: mods/mobs_aggressive/creeper/LICENSE.md
 [lic.crops]: mods/farming/crops/LICENSE
 [lic.currency]: https://forum.minetest.net/viewtopic.php?t=7002
