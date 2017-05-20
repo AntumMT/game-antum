@@ -108,6 +108,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [vector_extras][] ([WTFPL][lic.vector_extras]) -- version: [472deb6 Git][ver.vector_extras] *2017-01-25*
 * weather/
     * [lightning][] ([LGPL / CC BY-SA][lic.lightning]) -- version: [39bd36c Git][ver.lightning] *2017-02-20*
+    * [snowdrift][] ([MIT][lic.snowdrift]) -- version: [fcb0537 Git][ver.snowdrift] *2017-04-15*
 * wood/
 	* [coloredwood][] ([LGPL][lic.lgpl3.0]) -- version: [fc4ab15 Git][ver.coloredwood] *2017-03-18* ([patched][patch.coloredwood])
 	* [mywoodslopes][] ([DWYWPL][lic.dwywpl]) -- version: [3a1b531 Git][ver.mywoodslopes] *2016-03-23*
@@ -302,6 +303,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [rainbow_ore]: https://forum.minetest.net/viewtopic.php?id=13519
 [signs_lib]: https://forum.minetest.net/viewtopic.php?f=11&t=13762
 [simple_protection]: https://forum.minetest.net/viewtopic.php?t=9035
+[snowdrift]: https://forum.minetest.net/viewtopic.php?t=6854
 [spawneggs]: https://forum.minetest.net/viewtopic.php?t=6214
 [spectator_mode]: https://forum.minetest.net/viewtopic.php?t=13718
 [spidermob]: https://forum.minetest.net/viewtopic.php?t=10045
@@ -389,6 +391,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.quartz]: mods/materials/quartz/LICENSE.txt
 [lic.rainbow_ore]: mods/materials/rainbow_ore/README.md
 [lic.signs_lib]: mods/signs/signs_lib/copyright.txt
+[lic.snowdrift]: mods/weather/snowdrift/license.txt
 [lic.spawneggs]: mods/spawning/spawneggs/README.txt
 [lic.spectator_mode]: mods/admin/spectator_mode/LICENSE
 [lic.spidermob]: https://github.com/minetest-LOTR/Lord-of-the-Test/blob/master/mods/lottmobs/license.txt
@@ -492,6 +495,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.rainbow_ore]: https://github.com/FsxShader2012/rainbow_ore/tree/6e77693
 [ver.signs_lib]: https://github.com/minetest-mods/signs_lib/tree/2c36937
 [ver.simple_protection]: https://github.com/SmallJoker/simple_protection/tree/23c024f
+[ver.snowdrift]: https://github.com/paramat/snowdrift/tree/fcb0537
 [ver.spawneggs]: https://github.com/thefamilygrog66/spawneggs/tree/4650370
 [ver.spectator_mode]: https://github.com/minetest-mods/spectator_mode/tree/7d68bec
 [ver.spidermob]: https://github.com/Darcidride/minetest-spidermob-v1/tree/c72d2ff
