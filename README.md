@@ -35,6 +35,8 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [craftguide][] ([GPL / WTFPL](mods/crafting/craftguide/LICENSE)) -- version: [86a96c3 Git][ver.craftguide] *2017-03-21* ([patched][patch.craftguide])
 * [currency][] ([WTFPL][lic.currency]) -- version: [21f9811 Git][ver.currency] *2017-03-22* ([patched][patch.currency])
 * [enchanting][] ([GPL / WTFPL / CC BY-SA-NA][lic.enchanting]) -- version: [13ea31c Git][ver.enchanting] *2016-12-16*
+* equipment/
+	* [xtraarmor][] ([CC BY-SA][lic.ccbysa3.0]) -- version: 0.3
 * farming/
 	* [crops][] ([LGPL / CC BY-SA / CC BY / CC0][lic.crops]) -- version: [2b1bb37 Git][ver.crops] *2017-03-31* ([patched][patch.crops])
 	* [farming_plus][] ([WTFPL][lic.farming_plus]) -- version: [7e0d976 Git][ver.farming_plus] *2014-07-31* ([patched][patch.farming_plus])
@@ -322,6 +324,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [windmill]: https://forum.minetest.net/viewtopic.php?id=7440
 [workbench]: https://forum.minetest.net/viewtopic.php?t=14085
 [worldedge]: https://forum.minetest.net/viewtopic.php?t=10753
+[xtraarmor]: https://forum.minetest.net/viewtopic.php?t=16645
 
 [lic.3d_armor]: mods/mp_3d_armor/LICENSE.md
 [lic.airtanks]: mods/player/airtanks/LICENSE.txt
