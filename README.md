@@ -108,7 +108,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [vector_extras][] ([WTFPL][lic.vector_extras]) -- version: [472deb6 Git][ver.vector_extras] *2017-01-25*
 * weather/
     * [lightning][] ([LGPL / CC BY-SA][lic.lightning]) -- version: [39bd36c Git][ver.lightning] *2017-02-20*
-    * [snowdrift][] ([MIT][lic.snowdrift]) -- version: [fcb0537 Git][ver.snowdrift] *2017-04-15*
+    * [snowdrift][] ([MIT][lic.snowdrift]) -- version: [fcb0537 Git][ver.snowdrift] *2017-04-15* ([patched][patch.snowdrift])
 * wood/
 	* [coloredwood][] ([LGPL][lic.lgpl3.0]) -- version: [fc4ab15 Git][ver.coloredwood] *2017-03-18* ([patched][patch.coloredwood])
 	* [mywoodslopes][] ([DWYWPL][lic.dwywpl]) -- version: [3a1b531 Git][ver.mywoodslopes] *2016-03-23*
@@ -570,6 +570,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.quartz]: https://github.com/AntumDeluge/mtmod-quartz/tree/d23dabd
 [patch.rainbow_ore]: https://github.com/AntumDeluge/mtmod-rainbow_ore/tree/60dc35e
 [patch.signs_lib]: https://github.com/AntumDeluge/mtmod-signs_lib/tree/fe46611
+[patch.snowdrift]: https://github.com/AntumDeluge/mtmod-snowdrift/tree/1b9da4f
 [patch.spawneggs]: https://github.com/AntumDeluge/mtmod-spawneggs/tree/b47f49f
 [patch.spidermob]: https://github.com/AntumDeluge/mtmod-spidermob/tree/00b6107
 [patch.technic]: https://github.com/AntumDeluge/mtmod-technic/tree/d3a58d8
