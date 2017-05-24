@@ -102,6 +102,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [hovercraft][] ([LGPL / CC BY-SA / CC0][lic.hovercraft]) -- version: [7b0df6f Git][ver.hovercraft] *2016-04-10* ([patched][patch.hovercraft])
 * ui/
     * [bookmarks_gui][] ([BSD 3-Clause][lic.bookmarks_gui]) -- version: [d369dba Git][ver.bookmarks_gui] *2015-08-14*
+    * [hbarmor][] ([WTFPL][lic.wtfpl] / [CC BY-SA][lic.ccbysa3.0]) -- version: [0.3.0 (bfc5f8c Git)][ver.hbarmor] *2017-03-07*
     * [home_gui][] ([BSD 3-Clause](mods/ui/home_gui/LICENSE)) -- version: [f6b5001 Git][ver.home_gui] *2015-08-14*
     * [hudbars][] ([WTFPL][lic.wtfpl] / [CC BY-SA][lic.ccbysa3.0]) -- version [1.7.1 (fa82d2d Git)][ver.hudbars] *2017-02-24*
     * [hudmap][] ([LGPL][lic.lgpl2.1] / [WTFPL][lic.wtfpl]) -- version: [09d40f3 Git][ver.hudmap] *2014-08-15*
@@ -268,6 +269,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [farming_plus]: https://forum.minetest.net/viewtopic.php?t=2787
 [fort_spikes]: https://forum.minetest.net/viewtopic.php?t=14574
 [glow]: https://forum.minetest.net/viewtopic.php?t=6300
+[hbarmor]: https://forum.minetest.net/viewtopic.php?t=11337
 [helicopter]: https://forum.minetest.net/viewtopic.php?t=6183
 [hidename]: https://github.com/AntumDeluge/mtmod-hidename
 [home_gui]: http://cornernote.github.io/minetest-home_gui/
@@ -467,6 +469,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.farming_plus]: https://github.com/PilzAdam/farming_plus/tree/7e0d976
 [ver.fort_spikes]: https://github.com/xeranas/fort_spikes/tree/2765b56
 [ver.glow]: https://github.com/bdjnk/glow/tree/30f9cf3
+[ver.hbarmor]: repo.or.cz/minetest_hbarmor.git/tree/bfc5f8c
 [ver.helicopter]: https://github.com/SokolovPavel/helicopter/tree/10f1433
 [ver.hidename]: https://github.com/AntumDeluge/mtmod-hidename/tree/bb52dbc
 [ver.home_gui]: https://github.com/cornernote/minetest-home_gui/tree/f6b5001
