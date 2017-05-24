@@ -209,6 +209,8 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* barn
 		* mobf
 		* mobf_settings
+* [minetest][minetest_game] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- version: [0.4.15 (3c9d089 Git)][ver.minetest_game] *2016-12-21*
+	* mp_minetest/
 * [moremesecons][] ([MPL][lic.mpl2.0]) -- version: [e1d2e84 Git][ver.moremesecons] *2017-05-02* ([patched][patch.moremesecons])
 	* mp_moremesecons/
 * [mydoors][] ([CC-BY / CC-BY-SA][lic.mydoors] / [WTFPL][lic.wtfpl] / [DWYWFPL][lic.dwywpl]) -- version: [63aef13 Git][ver.mydoors] *2017-03-31* ([patched][patch.mydoors])
@@ -281,6 +283,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [kpgmobs]: https://forum.minetest.net/viewtopic.php?t=8798
 [lightning]: https://forum.minetest.net/viewtopic.php?t=13886
 [mesecons]: https://forum.minetest.net/viewtopic.php?t=628
+[minetest_game]: https://github.com/minetest/minetest_game
 [mobs_goblins]: https://forum.minetest.net/viewtopic.php?t=13004
 [mobs_monster]: https://github.com/tenplus1/mobs_monster
 [mobs_redo]: https://forum.minetest.net/viewtopic.php?t=9917
@@ -289,6 +292,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [moremesecons]: https://forum.minetest.net/viewtopic.php?t=13150
 [moreores]: https://forum.minetest.net/viewtopic.php?t=549
 [moretrees]: https://forum.minetest.net/viewtopic.php?t=4394
+[mthudclock]: https://forum.minetest.net/viewtopic.php?t=11879
 [mydoors]: https://forum.minetest.net/viewtopic.php?t=10626
 [mywoodslopes]: https://forum.minetest.net/viewtopic.php?t=11433
 [nether]: https://forum.minetest.net/viewtopic.php?t=5790
@@ -476,6 +480,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.jukebox]: https://github.com/minetest-mods/jukebox/tree/e6a507f
 [ver.lightning]: https://github.com/minetest-mods/lightning/tree/39bd36c
 [ver.mesecons]: https://github.com/minetest-mods/mesecons/tree/564bdc2
+[ver.minetest_game]: https://github.com/minetest/minetest_game/tree/3c9d089
 [ver.mobf_core]: https://github.com/sapier/mobf_core/tree/1199ca9
 [ver.mobs_goblins]: https://github.com/FreeLikeGNU/mobs_goblins/tree/a346f85
 [ver.mobs_monster]: https://github.com/tenplus1/mobs_monster/tree/f6d0e01
@@ -484,6 +489,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.moreblocks]: https://github.com/minetest-mods/moreblocks/tree/fbfb079
 [ver.moremesecons]: https://github.com/minetest-mods/MoreMesecons/tree/e1d2e84
 [ver.moreores]: https://github.com/minetest-mods/moreores/tree/0842b4f
+[ver.mthudclock]: https://github.com/Rochambeau/mthudclock/tree/b3e2142
 [ver.mydoors]: https://github.com/minetest-mods/mydoors/tree/63aef13
 [ver.mywoodslopes]: https://github.com/minetest-mods/mywoodslopes/tree/3a1b531
 [ver.nether]: https://github.com/PilzAdam/nether/tree/bc2ccfb

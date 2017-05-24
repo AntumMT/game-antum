@@ -70,7 +70,7 @@ function sfinv.get_formspec(player, context)
 			nav[#nav + 1] = pdef.title
 			nav_ids[#nav_ids + 1] = pdef.name
 			if pdef.name == context.page then
-				current_idx = #nav_ids
+				current_idx = i
 			end
 		end
 	end
@@ -91,40 +91,20 @@ function sfinv.get_formspec(player, context)
 	end
 end
 
-function sfinv.get_or_create_context(player)
-	local name = player:get_player_name()
-	local context = sfinv.contexts[name]
-	if not context then
-		context = {
-			page = sfinv.get_homepage_name(player)
-		}
-		sfinv.contexts[name] = context
-	end
-	return context
-end
-
-function sfinv.set_context(player, context)
-	sfinv.contexts[player:get_player_name()] = context
-end
-
 function sfinv.set_player_inventory_formspec(player, context)
-	local fs = sfinv.get_formspec(player,
-			context or sfinv.get_or_create_context(player))
-	player:set_inventory_formspec(fs)
-end
+	if not context then
+		local name = player:get_player_name()
+		context = sfinv.contexts[name]
+		if not context then
+			context = {
+				page = sfinv.get_homepage_name(player)
+			}
+			sfinv.contexts[name] = context
+		end
+	end
 
-function sfinv.set_page(player, pagename)
-	local context = sfinv.get_or_create_context(player)
-	local oldpage = sfinv.pages[context.page]
-	if oldpage and oldpage.on_leave then
-		oldpage:on_leave(player, context)
-	end
-	context.page = pagename
-	local page = sfinv.pages[pagename]
-	if page.on_enter then
-		page:on_enter(player, context)
-	end
-	sfinv.set_player_inventory_formspec(player, context)
+	local fs = sfinv.get_formspec(player, context)
+	player:set_inventory_formspec(fs)
 end
 
 minetest.register_on_joinplayer(function(player)
@@ -152,21 +132,30 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
 		return false
 	end
 
-	-- Was a tab selected?
+	-- Handle Events
 	if fields.tabs and context.nav then
 		local tid = tonumber(fields.tabs)
 		if tid and tid > 0 then
 			local id = context.nav[tid]
 			local page = sfinv.pages[id]
 			if id and page then
-				sfinv.set_page(player, id)
+				local oldpage = sfinv.pages[context.page]
+				if oldpage and oldpage.on_leave then
+					oldpage:on_leave(player, context)
+				end
+				context.page = id
+				if page.on_enter then
+					page:on_enter(player, context)
+				end
+				sfinv.set_player_inventory_formspec(player, context)
 			end
 		end
-	else
-		-- Pass event to page
-		local page = sfinv.pages[context.page]
-		if page and page.on_player_receive_fields then
-			return page:on_player_receive_fields(player, context, fields)
-		end
+		return
+	end
+
+	-- Pass to page
+	local page = sfinv.pages[context.page]
+	if page and page.on_player_receive_fields then
+		return page:on_player_receive_fields(player, context, fields)
 	end
 end)

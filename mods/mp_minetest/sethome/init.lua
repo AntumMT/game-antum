@@ -5,9 +5,9 @@ local homes_file = minetest.get_worldpath() .. "/homes"
 local homepos = {}
 
 local function loadhomes()
-	local input = io.open(homes_file, "r")
+	local input, err = io.open(homes_file, "r")
 	if not input then
-		return -- no longer an error
+		return minetest.log("info", "Could not load player homes file: " .. err)
 	end
 
 	-- Iterate over all stored positions in the format "x y z player" for each line
@@ -24,13 +24,11 @@ sethome.set = function(name, pos)
 	if not player or not pos then
 		return false
 	end
-	player:set_attribute("sethome:home", minetest.pos_to_string(pos))
 
-	-- remove `name` from the old storage file
 	local data = {}
-	local output = io.open(homes_file, "w")
+	local output, err = io.open(homes_file, "w")
 	if output then
-		homepos[name] = nil
+		homepos[name] = pos
 		for i, v in pairs(homepos) do
 			table.insert(data, string.format("%.1f %.1f %.1f %s\n", v.x, v.y, v.z, i))
 		end
@@ -38,18 +36,12 @@ sethome.set = function(name, pos)
 		io.close(output)
 		return true
 	end
-	return true -- if the file doesn't exist - don't return an error.
+	minetest.log("action", "Unable to write to player homes file: " .. err)
+	return false
 end
 
 sethome.get = function(name)
-	local player = minetest.get_player_by_name(name)
-	local pos = minetest.string_to_pos(player:get_attribute("sethome:home"))
-	if pos then
-		return pos
-	end
-
-	-- fetch old entry from storage table
-	pos = homepos[name]
+	local pos = homepos[name]
 	if pos then
 		return vector.new(pos)
 	else
@@ -58,10 +50,9 @@ sethome.get = function(name)
 end
 
 sethome.go = function(name)
-	local pos = sethome.get(name)
 	local player = minetest.get_player_by_name(name)
-	if player and pos then
-		player:setpos(pos)
+	if player and homepos[name] then
+		player:setpos(homepos[name])
 		return true
 	end
 	return false
