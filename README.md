@@ -103,7 +103,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * ui/
     * [bookmarks_gui][] ([BSD 3-Clause][lic.bookmarks_gui]) -- version: [d369dba Git][ver.bookmarks_gui] *2015-08-14*
     * [home_gui][] ([BSD 3-Clause](mods/ui/home_gui/LICENSE)) -- version: [f6b5001 Git][ver.home_gui] *2015-08-14*
-    * [hud][] ([LGPL / CC BY-SA / WTFPL][lic.hud]) -- version: [c58f703 Git][ver.hud] *2016-02-15* ([patched][patch.hud])
+    * [hudbars][] ([WTFPL][lic.wtfpl] / [CC BY-SA][lic.ccbysa3.0]) -- version [1.7.1 (fa82d2d Git)][ver.hudbars] *2017-02-24*
     * [hudmap][] ([LGPL][lic.lgpl2.1] / [WTFPL][lic.wtfpl]) -- version: [09d40f3 Git][ver.hudmap] *2014-08-15*
     * [mthudclock][] ([WTFPL][lic.wtfpl]) -- version [b3e2142 Git][ver.mthudclock] *2015-04-17*
 * [vector_extras][] ([WTFPL][lic.vector_extras]) -- version: [472deb6 Git][ver.vector_extras] *2017-01-25*
@@ -273,7 +273,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [home_gui]: http://cornernote.github.io/minetest-home_gui/
 [homedecor]: https://forum.minetest.net/viewtopic.php?t=2041
 [hovercraft]: https://forum.minetest.net/viewtopic.php?t=6722
-[hud]: https://github.com/BlockMen/hud
+[hudbars]: https://forum.minetest.net/viewtopic.php?t=11153
 [hudmap]: https://github.com/stujones11/hudmap
 [ilights]: https://forum.minetest.net/viewtopic.php?t=12200
 [invisibility]: https://forum.minetest.net/viewtopic.php?t=14846
@@ -375,7 +375,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.hidename]: mods/player_visuals/hidename/LICENSE.txt
 [lic.homedecor]: mods/mp_homedecor_modpack/LICENSE
 [lic.hovercraft]: mods/transport/hovercraft/LICENSE.txt
-[lic.hud]: mods/ui/hud/README.txt
 [lic.inventory_plus]: mods/inventory/inventory_plus/LICENSE
 [lic.invisibility]: mods/player_visuals/invisibility/license.txt
 [lic.invisible]: mods/admin/invisible/readme.txt
@@ -473,7 +472,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.home_gui]: https://github.com/cornernote/minetest-home_gui/tree/f6b5001
 [ver.homedecor]: https://github.com/minetest-mods/homedecor_modpack/tree/8e467ef
 [ver.hovercraft]: https://github.com/stujones11/hovercraft/tree/7b0df6f
-[ver.hud]: https://github.com/BlockMen/hud/tree/c58f703
+[ver.hudbars]: repo.or.cz/minetest_hudbars.git/tree/fa82d2d
 [ver.hudmap]: https://github.com/stujones11/hudmap/tree/09d40f3
 [ver.ilights]: https://github.com/minetest-mods/ilights/tree/b1f7ccf
 [ver.inventory_plus]: https://github.com/cornernote/minetest-inventory_plus/tree/a978b47
