@@ -1,6 +1,6 @@
 # Trampoline
 
-Forked from [Jeija's jumping mod](https://forum.minetest.net/viewtopic.php?t=2957).
+Forked from [Jeija's jumping mod](https://forum.minetest.net/viewtopic.php?t=2957) @ [Git commit 47df671](https://github.com/Jeija/minetest-mod-jumping/tree/47df671545c55f446d1b2cd08d39a8ded40475d5).
 
 License: [GPLv3](LICENSE.txt)
 
@@ -22,7 +22,7 @@ License: [GPLv3](LICENSE.txt)
 Craft recipe:
 
     ╔════╦════╦════╗
-    ║ DL ║ DL ║ DL ║
+    ║ TR ║ TR ║ TR ║
     ╠════╬════╬════╣
     ║ DW ║ DW ║ DW ║
     ╠════╬════╬════╣
@@ -33,7 +33,7 @@ Craft recipe:
 Craft recipe brown trampoline:
 
     ╔════╦════╦════╗
-    ║ DL ║ DL ║ DL ║
+    ║ TR ║ TR ║ TR ║
     ╠════╬════╬════╣
     ║ JW ║ JW ║ JW ║
     ╠════╬════╬════╣
@@ -41,4 +41,4 @@ Craft recipe brown trampoline:
     ╚════╩════╩════╝
 
 
-To craft colored trampolines, replace "default:wood" with "colored_wood:wood_[color]".
+To craft colored trampolines, replace "default:wood" with "coloredwood:wood_[color]".
