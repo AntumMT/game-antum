@@ -211,7 +211,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* barn
 		* mobf
 		* mobf_settings
-* [minetest][minetest_game] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- version: [0.4.15 (3c9d089 Git)][ver.minetest_game] *2016-12-21*
+* [minetest][minetest_game] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- version: [e523c3a Git][ver.minetest_game] *2017-05-20*
 	* mp_minetest/
 * [moremesecons][] ([MPL][lic.mpl2.0]) -- version: [e1d2e84 Git][ver.moremesecons] *2017-05-02* ([patched][patch.moremesecons])
 	* mp_moremesecons/
@@ -483,7 +483,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.jukebox]: https://github.com/minetest-mods/jukebox/tree/e6a507f
 [ver.lightning]: https://github.com/minetest-mods/lightning/tree/39bd36c
 [ver.mesecons]: https://github.com/minetest-mods/mesecons/tree/564bdc2
-[ver.minetest_game]: https://github.com/minetest/minetest_game/tree/3c9d089
+[ver.minetest_game]: https://github.com/minetest/minetest_game/tree/e523c3a
 [ver.mobf_core]: https://github.com/sapier/mobf_core/tree/1199ca9
 [ver.mobs_goblins]: https://github.com/FreeLikeGNU/mobs_goblins/tree/a346f85
 [ver.mobs_monster]: https://github.com/tenplus1/mobs_monster/tree/f6d0e01
