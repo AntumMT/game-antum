@@ -74,7 +74,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * player_action/
     * [throwing][] ([WTFPL][lic.wtfpl]) -- version: [0.14-79ad788 Git][ver.throwing] *2012-02-10*
 * player_visuals/
-    * [character_creator][] ([MIT / CC-BY-SA][lic.character_creator]) -- version: [0c0e187 Git][ver.character_creator] *2015-08-28*
     * [hidename][] ([MIT][lic.hidename]) -- version [bb52dbc Git][ver.hidename]
     * [invisibility][] ([MIT][lic.invisibility]) -- version: [bf4156b Git][ver.invisibility] *2016-08-19* ([patched][patch.invisibility])
     * [playeranim][] ([BSD 2-Clause][lic.playeranim]) - version [0ca8e5a Git][ver.playeranim] *2016-12-07* ([patched][patch.playeranim])
@@ -363,7 +362,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.bridges]: mods/buildings/bridges/README.md
 [lic.campfire]: mods/campfire/README.md
 [lic.castle]: mods/mp_castle/LICENSE
-[lic.character_creator]: mods/player_visuals/character_creator/license.txt
 [lic.christmas]: mods/buildings/christmas/LICENSE.txt
 [lic.cme]: mods/mp_cme/LICENSE.txt
 [lic.creeper]: mods/mobs_aggressive/creeper/LICENSE.md
@@ -453,7 +451,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.castle_storage]: https://github.com/minetest-mods/castle_storage/tree/2b9e5f6
 [ver.castle_tapestries]: https://github.com/minetest-mods/castle_tapestries/tree/78b6e36
 [ver.castle_weapons]: https://github.com/minetest-mods/castle_weapons/tree/5f5232a
-[ver.character_creator]: https://github.com/Rui-Minetest/character_creator/tree/0c0e187
 [ver.christmas]: https://github.com/TheZenKitteh/minetest-christmas/tree/d3bd872
 [ver.cme]: https://github.com/BlockMen/cme/tree/e3502a1
 [ver.coloredwood]: https://github.com/minetest-mods/coloredwood/tree/7b177f3
