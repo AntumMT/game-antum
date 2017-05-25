@@ -112,7 +112,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [lightning][] ([LGPL / CC BY-SA][lic.lightning]) -- version: [39bd36c Git][ver.lightning] *2017-02-20*
     * [snowdrift][] ([MIT][lic.snowdrift]) -- version: [fcb0537 Git][ver.snowdrift] *2017-04-15* ([patched][patch.snowdrift])
 * wood/
-	* [coloredwood][] ([LGPL][lic.lgpl3.0]) -- version: [fc4ab15 Git][ver.coloredwood] *2017-03-18* ([patched][patch.coloredwood])
+	* [coloredwood][] ([LGPL][lic.lgpl3.0]) -- version: [7b177f3 Git][ver.coloredwood] *2016-03-27*
 	* [mywoodslopes][] ([DWYWPL][lic.dwywpl]) -- version: [3a1b531 Git][ver.mywoodslopes] *2016-03-23*
 * world/
     * [bedrock2][] ([WTFPL][lic.wtfpl]) -- version [1.2.2 (5fe9e87 Git)][ver.bedrock2] *2016-11-21* ([patched][patch.bedrock2])
@@ -456,7 +456,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.character_creator]: https://github.com/Rui-Minetest/character_creator/tree/0c0e187
 [ver.christmas]: https://github.com/TheZenKitteh/minetest-christmas/tree/d3bd872
 [ver.cme]: https://github.com/BlockMen/cme/tree/e3502a1
-[ver.coloredwood]: https://github.com/minetest-mods/coloredwood/tree/fc4ab15
+[ver.coloredwood]: https://github.com/minetest-mods/coloredwood/tree/7b177f3
 [ver.compassgps]: https://github.com/Kilarin/compassgps/tree/96892a0
 [ver.crafting_bench]: https://github.com/minetest-mods/crafting_bench/tree/3aa4cfb
 [ver.craftguide]: https://github.com/minetest-mods/craftguide/tree/86a96c3
@@ -544,7 +544,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.christmas]: https://github.com/AntumDeluge/mtmod-christmas/tree/f6c8dc2
 [patch.clean]: https://github.com/AntumDeluge/mtmod-clean/tree/6ec29e9
 [patch.cme]: https://github.com/AntumDeluge/mtmp-cme/tree/7a6e106
-[patch.coloredwood]: https://github.com/AntumDeluge/mtmod-coloredwood/tree/e1e02b3
 [patch.compassgps]: https://github.com/AntumDeluge/mtmod-compassgps/tree/888ec15
 [patch.craftguide]: https://github.com/AntumDeluge/mtmod-craftguide/tree/1197b13
 [patch.crafting_bench]: https://github.com/AntumDeluge/mtmod-crafting_bench/tree/c5ff4e5
