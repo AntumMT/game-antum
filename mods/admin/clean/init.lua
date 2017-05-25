@@ -9,6 +9,8 @@ local replace_nodes = {
     {'homedecor:bed_regular', 'homedecor:bed_white_regular'},
     {'homedecor:bed_extended', 'homedecor:bed_white_extended'},
     {'homedecor:bed_kingsize', 'homedecor:bed_white_kingsize'},
+    {'homedecor:glowlight_quarter', 'homedecor:glowlight_quarter_white'},
+    {'homedecor:shutter', 'homedecor:shutter_oak'},
     {'lrfurn:armchair', 'lrfurn:armchair_white'},
     {'craft_guide:sign_wall', 'craftguide:sign'},
 }
