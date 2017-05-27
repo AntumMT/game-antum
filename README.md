@@ -190,6 +190,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* oerrki
 		* sheep
 		* zombie
+* [deploy_nodes][] ([BSD 3-Clause][lic.deploy_nodes]) -- version [1.0.0 (d8790ef Git)][ver.deploy_nodes] *2014-01-16*
 * [homedecor_modpack][homedecor] ([LGPL / WTFPL / CC BY-SA / CC0][lic.homedecor]) -- version: [8e467ef Git][ver.homedecor] *2017-01-24* ([patched][patch.homedecor])
 	* mp_homedecor_modpack/
 		* building_blocks
@@ -261,6 +262,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [creeper]: https://forum.minetest.net/viewtopic.php?t=11891
 [crops]: https://forum.minetest.net/viewtopic.php?t=11795
 [currency]: https://github.com/minetest-mods/currency
+[deploy_nodes]: https://cornernote.github.io/minetest-deploy_nodes/
 [drawers]: https://forum.minetest.net/viewtopic.php?t=17134
 [elevator]: https://forum.minetest.net/viewtopic.php?t=12944
 [enchanting]: https://forum.minetest.net/viewtopic.php?t=7354
@@ -367,6 +369,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.creeper]: mods/mobs_aggressive/creeper/LICENSE.md
 [lic.crops]: mods/farming/crops/LICENSE
 [lic.currency]: https://forum.minetest.net/viewtopic.php?t=7002
+[lic.deploy_nodes]: mods/mp_deploy_nodes/LICENSE
 [lic.elevator]: mods/buildings/elevator/readme.txt
 [lic.enchanting]: mods/enchanting/LICENSE
 [lic.ethereal]: mods/world/ethereal/license.txt
@@ -460,6 +463,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.creeper]: https://github.com/Rui-Minetest/creeper/tree/036666e
 [ver.crops]: https://github.com/minetest-mods/crops/tree/2b1bb37
 [ver.currency]: https://github.com/minetest-mods/currency/tree/21f9811
+[ver.deploy_nodes]: https://github.com/cornernote/minetest-deploy_nodes/tree/d8790ef
 [ver.drawers]: https://github.com/minetest-mods/drawers/tree/7b9a384
 [ver.enchanting]: https://github.com/minetest-mods/enchanting/tree/13ea31c
 [ver.ethereal]: https://github.com/tenplus1/ethereal/tree/2c24961
