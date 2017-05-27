@@ -19,6 +19,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [privs][] ([CC0][lic.cc0])
     * [spectator_mode][] ([WTFPL][lic.spectator_mode]) -- version: [7d68bec Git][ver.spectator_mode] *2017-03-30*
 * [awards][] ([LGPL][lic.lgpl2.1]) -- version: [096fe16 Git][ver.awards] *2017-02-25*
+* [antum][] ([MIT][lic.antum]) -- version: [e539f08 Git][ver.antum] *2017-05-03*
 * buildings/
     * [bridges][] ([GPL][lic.gpl3.0]) -- version: [5b5f475 Git][ver.bridges] *2015-08-23*
     * [christmas][] ([MIT][lic.christmas]) -- version [d3bd872 Git][ver.christmas] *2013-01-11* ([patched][patch.christmas])
@@ -162,15 +163,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* mob_shark ([CC BY-SA][lic.amp_shark])
 		* mob_slime ([CC0 / CC BY / CC BY-SA / CC0][lic.amp_slime])
 		* mob_warthog ([CC BY / CC BY-SA][lic.amp_warthog])
-* [antum][] ([MIT][lic.antum]) -- version: [e539f08 Git][ver.antum] *2017-05-03*
-	* mp-antum/
-		* antum
-		* commands
-		* craft
-		* entities
-		* glass
-		* overrides
-		* spawneggs
 * castle ([MIT][lic.castle])
 	* mp-castle/
 		* [castle_farming][] -- version: [a190dcf Git][ver.castle_farming] *2017-04-21*
@@ -365,7 +357,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.amp_sheep]: mods/mp-animals_modpack/animal_sheep/License%20information.txt
 [lic.amp_slime]: mods/mp-animals_modpack/mob_slime/License.txt
 [lic.amp_warthog]: mods/mp-animals_modpack/mob_warthog/License.txt
-[lic.antum]: mods/mp-antum/LICENSE.txt
+[lic.antum]: mods/antum/LICENSE.txt
 [lic.awards]: mods/awards/LICENSE.txt
 [lic.bags]: mods/inventory/bags/LICENSE
 [lic.bookmarks_gui]: mods/ui/bookmarks_gui/LICENSE
