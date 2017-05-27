@@ -118,6 +118,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [biome_lib][] ([WTFPL][lic.wtfpl]) -- version: [9cdcdcf Git][ver.biome_lib] *2017-01-26* ([patched][patch.biome_lib])
     * [ethereal][] ([MIT][lic.ethereal]) -- version [2c24961 Git][ver.ethereal] *2017-04-23* ([patched][patch.ethereal])
     * [glow][] ([GPL][lic.gpl2.0]) -- version: [30f9cf3 Git][ver.glow] *2015-09-25* ([patched][patch.glow])
+    * [hill_nodebox][] ([BSD 3-Clause][lic.hill_nodebox]) -- version [1.0.0 (6d9acf7 Git)][ver.hill_nodebox] *2014-01-16*
     * [nether][] ([WTFPL / CC BY-SA][lic.nether]) -- version: [bc2ccfb Git][ver.nether] *2017-01-04* ([patched][patch.nether])
     * [worldedge][] ([DWYWPL][lic.dwywpl]) -- version: [e15fa99 Git][ver.worldedge] *2016-03-23* ([patched][patch.worldedge])
 
@@ -273,6 +274,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [hbarmor]: https://forum.minetest.net/viewtopic.php?t=11337
 [helicopter]: https://forum.minetest.net/viewtopic.php?t=6183
 [hidename]: https://github.com/AntumDeluge/mtmod-hidename
+[hill_nodebox]: https://cornernote.github.io/minetest-hill_nodebox/
 [home_gui]: http://cornernote.github.io/minetest-home_gui/
 [homedecor]: https://forum.minetest.net/viewtopic.php?t=2041
 [hovercraft]: https://forum.minetest.net/viewtopic.php?t=6722
@@ -376,6 +378,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.farming_plus]: mods/farming/farming_plus/README.txt
 [lic.fort_spikes]: mods/buildings/fort_spikes/README.md
 [lic.hidename]: mods/player_visuals/hidename/LICENSE.txt
+[lic.hill_nodebox]: mods/world/hill_nodebox/LICENSE
 [lic.homedecor]: mods/mp_homedecor_modpack/LICENSE
 [lic.hovercraft]: mods/transport/hovercraft/LICENSE.txt
 [lic.inventory_plus]: mods/inventory/inventory_plus/LICENSE
@@ -473,6 +476,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.hbarmor]: repo.or.cz/minetest_hbarmor.git/tree/bfc5f8c
 [ver.helicopter]: https://github.com/SokolovPavel/helicopter/tree/10f1433
 [ver.hidename]: https://github.com/AntumDeluge/mtmod-hidename/tree/bb52dbc
+[ver.hill_nodebox]: https://github.com/cornernote/minetest-hill_nodebox/tree/6d9acf7
 [ver.home_gui]: https://github.com/cornernote/minetest-home_gui/tree/f6b5001
 [ver.homedecor]: https://github.com/minetest-mods/homedecor_modpack/tree/8e467ef
 [ver.hovercraft]: https://github.com/stujones11/hovercraft/tree/7b0df6f
