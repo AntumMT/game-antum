@@ -72,7 +72,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * player/
 	* [airtanks][] ([MIT][lic.airtanks]) -- version: [fc01ffb Git][ver.airtanks] *2017-04-01* ([patched][patch.airtanks])
 * player_action/
-    * [throwing][] ([WTFPL][lic.wtfpl]) -- version: [0.14-79ad788 Git][ver.throwing] *2012-02-10*
+    * [throwing][] ([WTFPL][lic.wtfpl]) -- version: [90bcf43 Git][ver.throwing] *2013-09-27*
 * player_visuals/
     * [hidename][] ([MIT][lic.hidename]) -- version [bb52dbc Git][ver.hidename]
     * [invisibility][] ([MIT][lic.invisibility]) -- version: [bf4156b Git][ver.invisibility] *2016-08-19* ([patched][patch.invisibility])
@@ -515,7 +515,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.spidermob]: https://github.com/Darcidride/minetest-spidermob-v1/tree/c72d2ff
 [ver.stairsplus]: https://github.com/CasimirKaPazi/stairsplus/tree/311e1f0
 [ver.technic]: https://github.com/minetest-mods/technic/tree/cbe9743
-[ver.throwing]: https://github.com/Jeija/minetest-mod-throwing/tree/79ad788
+[ver.throwing]: https://github.com/PilzAdam/throwing/tree/90bcf43
 [ver.tnt]: https://github.com/PilzAdam/TNT/tree/d6a0b7d
 [ver.tools_obsidian]: https://github.com/Dragonop/tools_obsidian/tree/f77fd79
 [ver.torches]: https://github.com/BlockMen/torches/tree/e19c772

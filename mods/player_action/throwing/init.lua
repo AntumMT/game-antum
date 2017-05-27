@@ -1,107 +1,109 @@
--- Bow and arrow mod
--- Topic on the forum: http://c55.me/minetest/forum/viewtopic.php?id=687
-
-ARROW_DAMAGE=1
-ARROW_GRAVITY=9
-ARROW_VELOCITY=19
-
-throwing_shoot_arrow=function (item, player, pointed_thing)
-	-- Check if arrows in Inventory and remove one of them
-	local i=1
-	if player:get_inventory():contains_item("main", "throwing:arrow") then
-		player:get_inventory():remove_item("main", "throwing:arrow")
-		-- Shoot Arrow
-		local playerpos=player:getpos()
-		local obj=minetest.env:add_entity({x=playerpos.x,y=playerpos.y+1.5,z=playerpos.z}, "throwing:arrow_entity")
-		local dir=player:get_look_dir()
-		obj:setvelocity({x=dir.x*ARROW_VELOCITY, y=dir.y*ARROW_VELOCITY, z=dir.z*ARROW_VELOCITY})
-		obj:setacceleration({x=dir.x*-3, y=-ARROW_GRAVITY, z=dir.z*-3})
-	end
-	return
-end
-
-minetest.register_craftitem("throwing:string", {
-	inventory_image = "throwing_string.png",
-})
-
-minetest.register_craftitem("throwing:bow", {
-	inventory_image = "throwing_bow.png",
-    stack_max = 1,
-	on_use = throwing_shoot_arrow,
-})
-
-minetest.register_craftitem("throwing:arrow", {
-	inventory_image = "throwing_arrow.png",
-})
-
--- The Arrow Entity
-
-THROWING_ARROW_ENTITY={
-	physical = false,
-	timer=0,
-	textures = {"throwing_arrow_back.png"},
-	lastpos={},
-	collisionbox = {0,0,0,0,0,0},
+arrows = {
+	{"throwing:arrow", "throwing:arrow_entity"},
+	{"throwing:arrow_fire", "throwing:arrow_fire_entity"},
+	{"throwing:arrow_teleport", "throwing:arrow_teleport_entity"},
+	{"throwing:arrow_dig", "throwing:arrow_dig_entity"},
+	{"throwing:arrow_build", "throwing:arrow_build_entity"}
 }
 
-
--- Arrow_entity.on_step()--> called when arrow is moving
-THROWING_ARROW_ENTITY.on_step = function(self, dtime)
-	self.timer=self.timer+dtime
-	local pos = self.object:getpos()
-	local node = minetest.env:get_node(pos)
-
-	-- When arrow is away from player (after 0.2 seconds): Cause damage to mobs and players
-	if self.timer>0.2 then
-		local objs = minetest.env:get_objects_inside_radius({x=pos.x,y=pos.y,z=pos.z}, 2)
-		for k, obj in pairs(objs) do
-			obj:set_hp(obj:get_hp()-ARROW_DAMAGE)
-			if obj:get_entity_name() ~= "throwing:arrow_entity" then
-				if obj:get_hp()<=0 then 
-					obj:remove()
-				end
-				self.object:remove() 
+local throwing_shoot_arrow = function(itemstack, player)
+	for _,arrow in ipairs(arrows) do
+		if player:get_inventory():get_stack("main", player:get_wield_index()+1):get_name() == arrow[1] then
+			if not minetest.setting_getbool("creative_mode") then
+				player:get_inventory():remove_item("main", arrow[1])
 			end
+			local playerpos = player:getpos()
+			local obj = minetest.env:add_entity({x=playerpos.x,y=playerpos.y+1.5,z=playerpos.z}, arrow[2])
+			local dir = player:get_look_dir()
+			obj:setvelocity({x=dir.x*19, y=dir.y*19, z=dir.z*19})
+			obj:setacceleration({x=dir.x*-3, y=-10, z=dir.z*-3})
+			obj:setyaw(player:get_look_yaw()+math.pi)
+			minetest.sound_play("throwing_sound", {pos=playerpos})
+			if obj:get_luaentity().player == "" then
+				obj:get_luaentity().player = player
+			end
+			obj:get_luaentity().node = player:get_inventory():get_stack("main", 1):get_name()
+			return true
 		end
 	end
-
-	-- Become item when hitting a node
-	if self.lastpos.x~=nil then --If there is no lastpos for some reason
-		if node.name ~= "air" then
-			minetest.env:add_item(self.lastpos, 'throwing:arrow')
-			self.object:remove()
-		end
-	end
-	self.lastpos={x=pos.x, y=pos.y, z=pos.z} -- Set lastpos-->Item will be added at last pos outside the node
+	return false
 end
 
-minetest.register_entity("throwing:arrow_entity", THROWING_ARROW_ENTITY)
-
-
-
---CRAFTS
-minetest.register_craft({
-	output = 'throwing:string',
-	recipe = {
-		{'default:junglegrass'},
-		{'default:junglegrass'},
-	}
+minetest.register_tool("throwing:bow_wood", {
+	description = "Wood Bow",
+	inventory_image = "throwing_bow_wood.png",
+    stack_max = 1,
+	on_use = function(itemstack, user, pointed_thing)
+		if throwing_shoot_arrow(itemstack, user, pointed_thing) then
+			if not minetest.setting_getbool("creative_mode") then
+				itemstack:add_wear(65535/50)
+			end
+		end
+		return itemstack
+	end,
 })
 
 minetest.register_craft({
-	output = 'throwing:bow',
+	output = 'throwing:bow_wood',
 	recipe = {
-		{'throwing:string', 'default:wood', ''},
-		{'throwing:string', '', 'default:wood'},
-		{'throwing:string', 'default:wood', ''},
+		{'farming:string', 'default:wood', ''},
+		{'farming:string', '', 'default:wood'},
+		{'farming:string', 'default:wood', ''},
 	}
+})
+
+minetest.register_tool("throwing:bow_stone", {
+	description = "Stone Bow",
+	inventory_image = "throwing_bow_stone.png",
+    stack_max = 1,
+	on_use = function(itemstack, user, pointed_thing)
+		if throwing_shoot_arrow(item, user, pointed_thing) then
+			if not minetest.setting_getbool("creative_mode") then
+				itemstack:add_wear(65535/100)
+			end
+		end
+		return itemstack
+	end,
 })
 
 minetest.register_craft({
-	output = 'throwing:arrow 16',
+	output = 'throwing:bow_stone',
 	recipe = {
-		{'default:stick', 'default:stick', 'default:steel_ingot'},
+		{'farming:string', 'default:cobble', ''},
+		{'farming:string', '', 'default:cobble'},
+		{'farming:string', 'default:cobble', ''},
 	}
 })
 
-print ("[Throwing_mod] Loaded!")
+minetest.register_tool("throwing:bow_steel", {
+	description = "Steel Bow",
+	inventory_image = "throwing_bow_steel.png",
+    stack_max = 1,
+	on_use = function(itemstack, user, pointed_thing)
+		if throwing_shoot_arrow(item, user, pointed_thing) then
+			if not minetest.setting_getbool("creative_mode") then
+				itemstack:add_wear(65535/200)
+			end
+		end
+		return itemstack
+	end,
+})
+
+minetest.register_craft({
+	output = 'throwing:bow_steel',
+	recipe = {
+		{'farming:string', 'default:steel_ingot', ''},
+		{'farming:string', '', 'default:steel_ingot'},
+		{'farming:string', 'default:steel_ingot', ''},
+	}
+})
+
+dofile(minetest.get_modpath("throwing").."/arrow.lua")
+dofile(minetest.get_modpath("throwing").."/fire_arrow.lua")
+dofile(minetest.get_modpath("throwing").."/teleport_arrow.lua")
+dofile(minetest.get_modpath("throwing").."/dig_arrow.lua")
+dofile(minetest.get_modpath("throwing").."/build_arrow.lua")
+
+if minetest.setting_get("log_mods") then
+	minetest.log("action", "throwing loaded")
+end

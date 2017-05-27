@@ -1,1 +1,4 @@
-craft_guide?
+default
+bucket
+fire
+farming
