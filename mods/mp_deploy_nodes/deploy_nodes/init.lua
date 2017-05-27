@@ -4,7 +4,7 @@ Deploy Nodes for Minetest
 
 Copyright (c) 2012 cornernote, Brett O'Donnell <cornernote@gmail.com>
 Source Code: https://github.com/cornernote/minetest-deploy_nodes
-License: GPLv3
+License: BSD-3-Clause https://raw.github.com/cornernote/minetest-deploy_nodes/master/LICENSE
 
 MAIN LOADER
 

@@ -191,7 +191,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* oerrki
 		* sheep
 		* zombie
-* [deploy_nodes][] ([BSD 3-Clause][lic.deploy_nodes]) -- version [1.0.0 (d8790ef Git)][ver.deploy_nodes] *2014-01-16*
+* [deploy_nodes][] ([BSD 3-Clause][lic.deploy_nodes]) -- version [eb3d68c Git][ver.deploy_nodes] *2015-05-19*
 * [homedecor_modpack][homedecor] ([LGPL / WTFPL / CC BY-SA / CC0][lic.homedecor]) -- version: [8e467ef Git][ver.homedecor] *2017-01-24* ([patched][patch.homedecor])
 	* mp_homedecor_modpack/
 		* building_blocks
@@ -466,7 +466,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.creeper]: https://github.com/Rui-Minetest/creeper/tree/036666e
 [ver.crops]: https://github.com/minetest-mods/crops/tree/2b1bb37
 [ver.currency]: https://github.com/minetest-mods/currency/tree/21f9811
-[ver.deploy_nodes]: https://github.com/cornernote/minetest-deploy_nodes/tree/d8790ef
+[ver.deploy_nodes]: https://github.com/cornernote/minetest-deploy_nodes/tree/eb3d68c
 [ver.drawers]: https://github.com/minetest-mods/drawers/tree/7b9a384
 [ver.enchanting]: https://github.com/minetest-mods/enchanting/tree/13ea31c
 [ver.ethereal]: https://github.com/tenplus1/ethereal/tree/2c24961

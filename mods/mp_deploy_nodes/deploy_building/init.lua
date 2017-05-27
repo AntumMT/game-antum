@@ -4,7 +4,7 @@ Deploy Nodes for Minetest
 
 Copyright (c) 2012 cornernote, Brett O'Donnell <cornernote@gmail.com>
 Source Code: https://github.com/cornernote/minetest-deploy_nodes
-License: GPLv3
+License: BSD-3-Clause https://raw.github.com/cornernote/minetest-deploy_nodes/master/LICENSE
 
 Shape based on livehouse mod by neko259: http://minetest.net/forum/viewtopic.php?id=1675
 
@@ -22,7 +22,7 @@ deploy_building.get_files = function(size)
 	local modpath = minetest.get_modpath("deploy_building")
 	local output
 	if os.getenv('HOME')~=nil then 
-		os.execute('\ls -a "'..modpath..'/buildings/'..size..'/" | grep .we > "'..modpath..'/buildings/'..size..'/_buildings"') -- linux/mac
+		os.execute('\\ls -a "'..modpath..'/buildings/'..size..'/" | grep .we > "'..modpath..'/buildings/'..size..'/_buildings"') -- linux/mac
 		local file, err = io.open(modpath..'/buildings/'..size..'/_buildings', "rb")
 		if err ~= nil then
 			return

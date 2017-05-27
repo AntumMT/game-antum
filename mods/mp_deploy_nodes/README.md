@@ -15,7 +15,7 @@ Craftable nodes that when placed turn into shapes or structures.
 
 - **[Documentation](http://cornernote.github.io/minetest-deploy_nodes)**
 - **[GitHub Project](https://github.com/cornernote/minetest-deploy_nodes)**
-- **[Minetest Forum](http://minetest.net/forum/viewtopic.php?id=3192)**
+- **[Minetest Forum](https://forum.minetest.net/viewtopic.php?id=3192)**
 
 
 ## Support
