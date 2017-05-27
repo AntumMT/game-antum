@@ -13,7 +13,7 @@ Allows players to craft and place hill-like nodes that are comprised of 16 level
 
 - **[Documentation](http://cornernote.github.io/minetest-hill_nodebox)**
 - **[GitHub Project](https://github.com/cornernote/minetest-hill_nodebox)**
-- **[Minetest Forum](http://minetest.net/forum/viewtopic.php?id=3555)**
+- **[Minetest Forum](https://forum.minetest.net/viewtopic.php?id=3555)**
 
 
 ## Support
