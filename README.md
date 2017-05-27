@@ -128,7 +128,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 ### This is a list of installed modpacks & their components (trying to keep them listed separate for sake of organization):
 
 * [3d_armor][] ([LGPL / CC BY-SA][lic.3d_armor]) - version: [0.4.9 (793c748 Git)][ver.3d_armor] *2017-05-03* ([patched][patch.3d_armor]) ***UPDATE***
-	* mp_3d_armor/
+	* mp-3d_armor/
 		* 3d_armor
 		* 3d_armor_ip
 		* 3d_armor_sfinv
@@ -140,13 +140,13 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* wieldview
 * [advtrains][] ([LGPL][lic.lgpl2.1] / [CC BY-NC-SA][lic.ccbyncsa3.0]) -- version: [da884af Git][ver.advtrains] *2017-05-12* ([patched][patch.advtrains])
 * [animalmaterials][animals_modpack] (part of animals_modpack) ([CC0][lic.cc0] / [CC BY-SA][lic.ccbysa3.0]) -- version: [0.1.3 (d952d27 Git)][ver.animalmaterials] *2014-09-10*
-	* mp_animalmaterials/
+	* mp-animalmaterials/
 		* animal_resources
 		* animalmaterials
 		* cooking
 		* mob_environments
 * [animals_modpack][] -- version: [b9d0172 Git][ver.animals_modpack] *2017-03-22* ([patched][patch.animals_modpack])
-	* mp_animals_modpack/
+	* mp-animals_modpack/
 		* animal_chicken ([CC BY-SA / CC0][lic.amp_chicken])
 		* animal_clownfish ([CC BY-SA][lic.amp_clownfish])
 		* animal_cow ([CC BY-SA / GFDL / WTFPL][lic.amp_cow])
@@ -164,7 +164,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* mob_slime ([CC0 / CC BY / CC BY-SA / CC0][lic.amp_slime])
 		* mob_warthog ([CC BY / CC BY-SA][lic.amp_warthog])
 * [antum][] ([MIT][lic.antum]) -- version: [e539f08 Git][ver.antum] *2017-05-03*
-	* mp_antum/
+	* mp-antum/
 		* antum
 		* commands
 		* craft
@@ -173,7 +173,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* overrides
 		* spawneggs
 * castle ([MIT][lic.castle])
-	* mp_castle/
+	* mp-castle/
 		* [castle_farming][] -- version: [a190dcf Git][ver.castle_farming] *2017-04-21*
 		* [castle_gates][] -- version: [dc53584 Git][ver.castle_gates] *dc53584* ([patched][patch.castle_gates])
 		* [castle_lighting][] -- version: [a7110c6 Git][ver.castle_lighting] *2017-04-28* *[patched][patch.castle_lighting])
@@ -184,7 +184,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* [castle_weapons][] -- version [5f5232a Git][ver.castle_weapons] *2017-02-28* ([patched][patch.castle_weapons])
 		* [crafting_bench][] -- version [3aa4cfb Git][ver.crafting_bench] *2017-02-28* ([patched][patch.crafting_bench])
 * [Creatures MOB-Engine][cme] ([zlib / CC-BY-SA][lic.cme]) -- version: [2.3.1-0-e3502a1 Git][ver.cme] *2016-02-16* ([patched][patch.cme])
-	* mp_cme/
+	* mp-cme/
 		* chicken
 		* creatures
 		* ghost
@@ -193,7 +193,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* zombie
 * [deploy_nodes][] ([BSD 3-Clause][lic.deploy_nodes]) -- version [eb3d68c Git][ver.deploy_nodes] *2015-05-19*
 * [homedecor_modpack][homedecor] ([LGPL / WTFPL / CC BY-SA / CC0][lic.homedecor]) -- version: [8e467ef Git][ver.homedecor] *2017-01-24* ([patched][patch.homedecor])
-	* mp_homedecor_modpack/
+	* mp-homedecor_modpack/
 		* building_blocks
 		* chains
 		* computer
@@ -206,22 +206,22 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* lrfurn
 		* plasmascreen
 * [mesecons][] ([LGPL / CC BY-SA][lic.mesecons]) -- version: [564bdc2 Git][ver.mesecons] *2017-05-08* ([patched][patch.mesecons])
-	* mp_mesecons/
+	* mp-mesecons/
 * [mobf_core][animals_modpack] (part of animals_modpack) ([CC BY-SA][lic.ccbysa3.0]) -- version: [1199ca9 Git][ver.mobf_core] *2017-01-14* ([patched][patch.mobf_core])
-	* mp_mobf_core/
+	* mp-mobf_core/
 		* barn
 		* mobf
 		* mobf_settings
 * [minetest][minetest_game] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- version: [e523c3a Git][ver.minetest_game] *2017-05-20*
-	* mp_minetest/
+	* mp-minetest/
 * [moremesecons][] ([MPL][lic.mpl2.0]) -- version: [e1d2e84 Git][ver.moremesecons] *2017-05-02* ([patched][patch.moremesecons])
-	* mp_moremesecons/
+	* mp-moremesecons/
 * [mydoors][] ([CC-BY / CC-BY-SA][lic.mydoors] / [WTFPL][lic.wtfpl] / [DWYWFPL][lic.dwywpl]) -- version: [63aef13 Git][ver.mydoors] *2017-03-31* ([patched][patch.mydoors])
-	* mp_mydoors/
+	* mp-mydoors/
 		* my_*_doors
 		* my_garage_door
 * [technic][] ([LGPL][lic.lgpl2.0]) -- version: [cbe9743 Git][ver.technic] *2017-02-25* ([patched][patch.technic])
-	* mp_technic/
+	* mp-technic/
 
 
 
@@ -338,40 +338,40 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [worldedge]: https://forum.minetest.net/viewtopic.php?t=10753
 [xtraarmor]: https://forum.minetest.net/viewtopic.php?t=16645
 
-[lic.3d_armor]: mods/mp_3d_armor/LICENSE.md
+[lic.3d_armor]: mods/mp-3d_armor/LICENSE.md
 [lic.airtanks]: mods/player/airtanks/LICENSE.txt
 [lic.ambience_ultralite]: mods/sound/ambience/sounds/SoundLicenses.txt
 [lic.amp_adv_spawning]: mods/spawning/adv_spawning/README.txt
-[lic.amp_bear]: mods/mp_animals_modpack/mob_bear/License.txt
-[lic.amp_chicken]: mods/mp_animals_modpack/animal_chicken/License.txt
-[lic.amp_clownfish]: mods/mp_animals_modpack/animal_clownfish/License.txt
-[lic.amp_cow]: mods/mp_animals_modpack/animal_cow/License.txt
-[lic.amp_deer]: mods/mp_animals_modpack/animal_deer/License.txt
-[lic.amp_dm]: mods/mp_animals_modpack/animal_dm/License.txt
-[lic.amp_fish_blue_white]: mods/mp_animals_modpack/animal_fish_blue_white/License.txt
-[lic.amp_ghost]: mods/mp_animals_modpack/mob_ghost/License.txt
-[lic.amp_gull]: mods/mp_animals_modpack/animal_gull/License.txt
-[lic.amp_mob_environments]: mods/mp_animalmaterials/mob_environments/README
-[lic.amp_oerkki]: mods/mp_animals_modpack/mob_oerkki/License.txt
-[lic.amp_ostrich]: mods/mp_animals_modpack/mob_ostrich/License.txt
-[lic.amp_rat]: mods/mp_animals_modpack/animal_rat/License.txt
-[lic.amp_shark]: mods/mp_animals_modpack/mob_shark/License.txt
-[lic.amp_sheep]: mods/mp_animals_modpack/animal_sheep/License%20information.txt
-[lic.amp_slime]: mods/mp_animals_modpack/mob_slime/License.txt
-[lic.amp_warthog]: mods/mp_animals_modpack/mob_warthog/License.txt
-[lic.antum]: mods/mp_antum/LICENSE.txt
+[lic.amp_bear]: mods/mp-animals_modpack/mob_bear/License.txt
+[lic.amp_chicken]: mods/mp-animals_modpack/animal_chicken/License.txt
+[lic.amp_clownfish]: mods/mp-animals_modpack/animal_clownfish/License.txt
+[lic.amp_cow]: mods/mp-animals_modpack/animal_cow/License.txt
+[lic.amp_deer]: mods/mp-animals_modpack/animal_deer/License.txt
+[lic.amp_dm]: mods/mp-animals_modpack/animal_dm/License.txt
+[lic.amp_fish_blue_white]: mods/mp-animals_modpack/animal_fish_blue_white/License.txt
+[lic.amp_ghost]: mods/mp-animals_modpack/mob_ghost/License.txt
+[lic.amp_gull]: mods/mp-animals_modpack/animal_gull/License.txt
+[lic.amp_mob_environments]: mods/mp-animalmaterials/mob_environments/README
+[lic.amp_oerkki]: mods/mp-animals_modpack/mob_oerkki/License.txt
+[lic.amp_ostrich]: mods/mp-animals_modpack/mob_ostrich/License.txt
+[lic.amp_rat]: mods/mp-animals_modpack/animal_rat/License.txt
+[lic.amp_shark]: mods/mp-animals_modpack/mob_shark/License.txt
+[lic.amp_sheep]: mods/mp-animals_modpack/animal_sheep/License%20information.txt
+[lic.amp_slime]: mods/mp-animals_modpack/mob_slime/License.txt
+[lic.amp_warthog]: mods/mp-animals_modpack/mob_warthog/License.txt
+[lic.antum]: mods/mp-antum/LICENSE.txt
 [lic.awards]: mods/awards/LICENSE.txt
 [lic.bags]: mods/inventory/bags/LICENSE
 [lic.bookmarks_gui]: mods/ui/bookmarks_gui/LICENSE
 [lic.bridges]: mods/buildings/bridges/README.md
 [lic.campfire]: mods/campfire/README.md
-[lic.castle]: mods/mp_castle/LICENSE
+[lic.castle]: mods/mp-castle/LICENSE
 [lic.christmas]: mods/buildings/christmas/LICENSE.txt
-[lic.cme]: mods/mp_cme/LICENSE.txt
+[lic.cme]: mods/mp-cme/LICENSE.txt
 [lic.creeper]: mods/mobs_aggressive/creeper/LICENSE.md
 [lic.crops]: mods/farming/crops/LICENSE
 [lic.currency]: https://forum.minetest.net/viewtopic.php?t=7002
-[lic.deploy_nodes]: mods/mp_deploy_nodes/LICENSE
+[lic.deploy_nodes]: mods/mp-deploy_nodes/LICENSE
 [lic.elevator]: mods/buildings/elevator/readme.txt
 [lic.enchanting]: mods/enchanting/LICENSE
 [lic.ethereal]: mods/world/ethereal/license.txt
@@ -379,7 +379,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.fort_spikes]: mods/buildings/fort_spikes/README.md
 [lic.hidename]: mods/player_visuals/hidename/LICENSE.txt
 [lic.hill_nodebox]: mods/world/hill_nodebox/LICENSE
-[lic.homedecor]: mods/mp_homedecor_modpack/LICENSE
+[lic.homedecor]: mods/mp-homedecor_modpack/LICENSE
 [lic.hovercraft]: mods/transport/hovercraft/LICENSE.txt
 [lic.inventory_plus]: mods/inventory/inventory_plus/LICENSE
 [lic.invisibility]: mods/player_visuals/invisibility/license.txt
@@ -387,14 +387,14 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.jukebox]: mods/furniture/jukebox/README.txt
 [lic.kpgmobs]: mods/mobs/kpgmobs/README.txt
 [lic.lightning]: mods/weather/lightning/README.md
-[lic.mesecons]: mods/mp_mesecons/COPYING.txt
-[lic.mobf]: mods/mp_mobf_core/License.txt
+[lic.mesecons]: mods/mp-mesecons/COPYING.txt
+[lic.mobf]: mods/mp-mobf_core/License.txt
 [lic.mobs_goblins]: mods/mobs_aggressive/mobs_goblins/README.md
 [lic.mobs_monster]: mods/mobs_aggressive/mobs_monster/license.txt
 [lic.mobs_redo]: mods/mobs/mobs_redo/license.txt
 [lic.moreblocks]: mods/buildings/moreblocks/LICENSE.md
 [lic.moreores]: mods/materials/moreores/LICENSE.md
-[lic.mydoors]: mods/mp_mydoors/README.md
+[lic.mydoors]: mods/mp-mydoors/README.md
 [lic.nether]: mods/world/nether/README.md
 [lic.playeranim]: mods/player_visuals/playeranim/license.md
 [lic.privilegeareas]: mods/admin/privilegeareas/README.md
