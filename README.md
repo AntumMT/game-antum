@@ -138,7 +138,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* shields
 		* technic_armor
 		* wieldview
-* [advtrains][] ([LGPL][lic.lgpl2.1] / [CC BY-NC-SA][lic.ccbyncsa3.0]) -- version: [74c8784 Git][ver.advtrains] *2017-05-22*
 * [animalmaterials][animals_modpack] (part of animals_modpack) ([CC0][lic.cc0] / [CC BY-SA][lic.ccbysa3.0]) -- version: [0.1.3 (d952d27 Git)][ver.animalmaterials] *2014-09-10*
 	* mp-animalmaterials/
 		* animal_resources
@@ -222,6 +221,13 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* my_garage_door
 * [technic][] ([LGPL][lic.lgpl2.0]) -- version: [cbe9743 Git][ver.technic] *2017-02-25* ([patched][patch.technic])
 	* mp-technic/
+
+
+---
+
+### Stored in 'modpacks' directory
+
+* [advtrains][] ([LGPL][lic.lgpl2.1] / [CC BY-NC-SA][lic.ccbyncsa3.0]) -- version: [74c8784 Git][ver.advtrains] *2017-05-22*
 
 
 
