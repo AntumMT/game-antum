@@ -13,7 +13,7 @@ minetest.register_node("trampoline:regular", {
 		"bottom.png",
 		"sides.png^sides_overlay.png"
 	},
-	groups = {dig_immediate=2, bouncy=20+20, fall_damage_add_percent=-70},
+	groups = {dig_immediate=2, bouncy=trampoline.bounce*2, fall_damage_add_percent=-70},
 })
 
 
@@ -29,5 +29,5 @@ minetest.register_node("trampoline:brown", {
 		"bottom.png",
 		"sides.png^sides_overlay_brown.png"
 	},
-	groups = {dig_immediate=2, bouncy=20+20, fall_damage_add_percent=-70},
+	groups = {dig_immediate=2, bouncy=trampoline.bounce*2, fall_damage_add_percent=-70},
 })

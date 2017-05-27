@@ -2,6 +2,7 @@
 trampoline = {}
 trampoline.modname = minetest.get_current_modname()
 trampoline.modpath = minetest.get_modpath(trampoline.modname)
+trampoline.bounce = 20
 
 
 minetest.log("action", "[MOD] Loading '" .. trampoline.modname .. "' ...")

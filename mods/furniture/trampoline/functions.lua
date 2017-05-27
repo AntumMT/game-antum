@@ -1,9 +1,6 @@
 -- Functions for trampoline mod
 
 
-local default_bounce = 20
-
-
 -- Log messages specific to trampoline mod
 trampoline.log = function(message)
 	minetest.log('action', '[' .. trampoline.modname .. '] ' .. message)
@@ -12,7 +9,7 @@ end
 
 -- Define function to add a colored trampoline
 trampoline.addColoredTrampNode = function(color, bounce)
-	local bounce = default_bounce * bounce
+	local bounce = trampoline.bounce * bounce
 	
 	minetest.register_node('trampoline:' .. color, {
 		description = color:gsub('^%l', string.upper) .. ' Trampoline',

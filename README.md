@@ -42,7 +42,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [farming_plus][] ([WTFPL][lic.farming_plus]) -- version: [7e0d976 Git][ver.farming_plus] *2014-07-31* ([patched][patch.farming_plus])
 * furniture/
 	* [jukebox][] ([WTFPL / CC0][lic.jukebox]) -- version: [e6a507f Git][ver.jukebox] *2016-05-23*
-    * [trampoline][] ([GPL][lic.gpl3.0]) -- version: [ab3b2ce Git][ver.trampoline] *2017-05-24*
+    * [trampoline][] ([GPL][lic.gpl3.0]) -- version: [5e15530 Git][ver.trampoline] *2017-05-26*
     * [trash_can][] ([MIT][lic.trash_can]) -- version: [5fd3df7 Git][ver.trash_can] *2016-01-14* ([patched][patch.trash_can])
 * inventory/
     * [bags][] ([BSD 3-Clause][lic.bags]) -- version: [f17d829 Git][ver.bags] *2015-10-11* ([patched][patch.bags])
@@ -519,7 +519,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.tnt]: https://github.com/PilzAdam/TNT/tree/d6a0b7d
 [ver.tools_obsidian]: https://github.com/Dragonop/tools_obsidian/tree/f77fd79
 [ver.torches]: https://github.com/BlockMen/torches/tree/e19c772
-[ver.trampoline]: https://github.com/AntumDeluge/mtmod-trampoline/tree/ab3b2ce
+[ver.trampoline]: https://github.com/AntumDeluge/mtmod-trampoline/tree/5e15530
 [ver.trash_can]: https://github.com/minetest-mods/trash_can/tree/5fd3df7
 [ver.unifieddyes]: https://github.com/minetest-mods/unifieddyes/tree/70b1f9f
 [ver.vector_extras]: https://github.com/HybridDog/vector_extras/tree/472deb6
