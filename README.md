@@ -138,7 +138,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* shields
 		* technic_armor
 		* wieldview
-* [advtrains][] ([LGPL][lic.lgpl2.1] / [CC BY-NC-SA][lic.ccbyncsa3.0]) -- version: [da884af Git][ver.advtrains] *2017-05-12* ([patched][patch.advtrains]) **UPDATE**
+* [advtrains][] ([LGPL][lic.lgpl2.1] / [CC BY-NC-SA][lic.ccbyncsa3.0]) -- version: [74c8784 Git][ver.advtrains] *2017-05-22*
 * [animalmaterials][animals_modpack] (part of animals_modpack) ([CC0][lic.cc0] / [CC BY-SA][lic.ccbysa3.0]) -- version: [0.1.3 (d952d27 Git)][ver.animalmaterials] *2014-09-10*
 	* mp-animalmaterials/
 		* animal_resources
@@ -435,7 +435,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 [ver.3d_armor]: https://github.com/stujones11/minetest-3d_armor/tree/793c748
 [ver.adv_spawning]: https://github.com/sapier/adv_spawning/tree/ec41aa9
-[ver.advtrains]: https://github.com/orwell96/advtrains/tree/da884af
+[ver.advtrains]: https://github.com/orwell96/advtrains/tree/74c8784
 [ver.airtanks]: https://github.com/minetest-mods/airtanks/tree/fc01ffb
 [ver.animalmaterials]: https://github.com/sapier/animalmaterials/tree/d952d27
 [ver.animals_modpack]: https://github.com/sapier/animals_modpack/tree/b9d0172
