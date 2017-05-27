@@ -9,8 +9,6 @@ end
 
 -- Define function to add a colored trampoline
 trampoline.addColoredTrampNode = function(color, bounce)
-	local bounce = trampoline.bounce * bounce
-	
 	minetest.register_node('trampoline:' .. color, {
 		description = color:gsub('^%l', string.upper) .. ' Trampoline',
 		drawtype = 'nodebox',

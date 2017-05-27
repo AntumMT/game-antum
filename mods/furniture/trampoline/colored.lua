@@ -1,19 +1,12 @@
 -- Colored trampolines (requires 'coloredwood' mod)
 
 
-local color_count = 0
-local tramp_colors = {"blue", "green", "red", "violet", "yellow"}
-
--- Get the number of tramp colors available
-for _ in pairs(tramp_colors) do
-	color_count = color_count + 1
-end
+local tramp_colors = {'blue', 'green', 'red', 'violet', 'yellow'}
 
 -- Add all available trampoline colors
-for i = 1, color_count do
-	trampoline.addColoredTrampNode(tramp_colors[i], i+1)
-	
-	trampoline.addColoredTrampCraft(tramp_colors[i])
-	
-	trampoline.log("Registered '" .. tramp_colors[i]:gsub("^%l", string.upper) .. " trampoline'")
+for I in pairs(tramp_colors) do
+	-- These colored tramps bounce higher than brown tramp
+	trampoline.addColoredTrampNode(tramp_colors[I], trampoline.bounce * trampoline.multi_colors)
+	trampoline.addColoredTrampCraft(tramp_colors[I])
+	trampoline.log('Registered \'' .. tramp_colors[I]:gsub('^%l', string.upper) .. ' trampoline\'')
 end
