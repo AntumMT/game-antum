@@ -11,6 +11,7 @@ local old_entities = {
 
 -- Old/Missing nodes that should be replaced with something currently in game
 local replace_nodes = {
+	{'creeper:spawnegg', 'sneeker:spawnegg'},
     {'homedecor:bed_regular', 'homedecor:bed_white_regular'},
     {'homedecor:bed_extended', 'homedecor:bed_white_extended'},
     {'homedecor:bed_kingsize', 'homedecor:bed_white_kingsize'},
