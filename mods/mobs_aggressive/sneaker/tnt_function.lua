@@ -1,10 +1,13 @@
+-- Original code by Rui: WTFPL
+
+
 -- From TNT
 local cid_data = {}
-local radius = tonumber(minetest.setting_get("tnt_radius") or 3)
+local radius = tonumber(minetest.settings:get('tnt_radius') or 3)
 local large_radius = 5
 local loss_prob = {
-	["default:cobble"] = 3,
-	["default:dirt"] = 4,
+	['default:cobble'] = 3,
+	['default:dirt'] = 4,
 }
 minetest.after(0, function()
 	for name, def in pairs(minetest.registered_nodes) do
@@ -62,7 +65,7 @@ local function add_drop(drops, item)
 end
 
 local function destroy(drops, pos, cid)
-	if minetest.is_protected(pos, "") then
+	if minetest.is_protected(pos, '') then
 		return
 	end
 	local def = cid_data[cid]
@@ -72,7 +75,7 @@ local function destroy(drops, pos, cid)
 	end
 	minetest.remove_node(pos)
 	if def then
-		local node_drops = minetest.get_node_drops(def.name, "")
+		local node_drops = minetest.get_node_drops(def.name, '')
 		for _, item in ipairs(node_drops) do
 			add_drop(drops, item)
 		end
@@ -128,7 +131,7 @@ local function add_effects(pos, radius)
 		maxexptime = 3,
 		minsize = 8,
 		maxsize = 16,
-		texture = "creeper_smoke.png",
+		texture = 'sneaker_smoke.png',
 	})
 end
 
@@ -146,12 +149,12 @@ local function explode(pos, radius)
 	local drops = {}
 	local p = {}
 
-	local c_air = minetest.get_content_id("air")
-	local c_tnt = minetest.get_content_id("tnt:tnt")
-	local c_tnt_burning = minetest.get_content_id("tnt:tnt_burning")
-	local c_gunpowder = minetest.get_content_id("tnt:gunpowder")
-	local c_gunpowder_burning = minetest.get_content_id("tnt:gunpowder_burning")
-	local c_boom = minetest.get_content_id("tnt:boom")
+	local c_air = minetest.get_content_id('air')
+	local c_tnt = minetest.get_content_id('tnt:tnt')
+	local c_tnt_burning = minetest.get_content_id('tnt:tnt_burning')
+	local c_gunpowder = minetest.get_content_id('tnt:gunpowder')
+	local c_gunpowder_burning = minetest.get_content_id('tnt:gunpowder_burning')
+	local c_boom = minetest.get_content_id('tnt:boom')
 
 	for z = -radius, radius do
 	for y = -radius, radius do
@@ -180,13 +183,13 @@ local function explode(pos, radius)
 	return drops
 end
 
-function creeper.boom(pos,large)
+function sneaker.boom(pos,large)
 	local radius = radius
 	if large then
 		radius = large_radius
 	end
-	minetest.sound_play("creeper_explode", {pos=pos, gain=1.5, max_hear_distance=2*64})
-	minetest.set_node(pos, {name="tnt:boom"})
+	minetest.sound_play('sneaker_explode', {pos=pos, gain=1.5, max_hear_distance=2*64})
+	minetest.set_node(pos, {name='tnt:boom'})
 	minetest.get_node_timer(pos):start(0.5)
 	local drops = explode(pos, radius)
 	entity_physics(pos, radius)

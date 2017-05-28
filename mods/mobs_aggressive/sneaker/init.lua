@@ -1,12 +1,18 @@
-creeper = {}
+-- Original code by Rui: WTFPL
 
---[[
--- DISABLED!!!
-do return end
---]]
 
-dofile(minetest.get_modpath("creeper").."/tnt_function.lua")
-dofile(minetest.get_modpath("creeper").."/spawn.lua")
+sneaker = {}
+sneaker.modname = minetest.get_current_modname()
+sneaker.modpath = minetest.get_modpath(sneaker.modname)
+
+local scripts = {
+	'tnt_function',
+	'spawn',
+	}
+
+for I in pairs(scripts) do
+	dofile(sneaker.modpath .. '/' .. scripts[I] .. '.lua')
+end
 
 local function jump(self,pos,direction)
 	local velocity = self.object:getvelocity()
@@ -28,7 +34,7 @@ local function jump(self,pos,direction)
 	end
 	if def and def.walkable
 	and def2 and not def2.walkable
-	and def.drawtype ~= "fencelike" then
+	and def.drawtype ~= 'fencelike' then
 		self.object:setvelocity({
 			x=velocity.x*2.2,
 			y=self.jump_height,
@@ -41,11 +47,11 @@ local function random_turn(self)
 	if self.turn_timer > math.random(2,5) then
 		local select_turn = math.random(1,3)
 		if select_turn == 1 then
-			self.turn = "left"
+			self.turn = 'left'
 		elseif select_turn == 2 then
-			self.turn = "right"
+			self.turn = 'right'
 		elseif select_turn == 3 then
-			self.turn = "straight"
+			self.turn = 'straight'
 		end
 		self.turn_timer = 0
 		self.turn_speed = 0.05*math.random()
@@ -56,9 +62,9 @@ local def = {
 	hp_max = 20,
 	physical = true,
 	collisionbox = {-0.25,-0.7,-0.25, 0.25,0.8,0.25},
-	visual = "mesh",
-	mesh = "character.b3d",
-	textures = {"creeper.png"},
+	visual = 'mesh',
+	mesh = 'character.b3d',
+	textures = {'sneaker.png'},
 	makes_footstep_sound = false,
 
 	-- Original
@@ -88,15 +94,15 @@ def.on_activate = function(self,staticdata)
 	self.old_y = self.object:getpos().y
 	
 	local data = minetest.deserialize(staticdata)
-	if data and type(data) == "table" then
+	if data and type(data) == 'table' then
 		if data.powered == true then
 			self.powered = true
-			self.object:set_properties({textures = {"creeper_powered.png"}})
+			self.object:set_properties({textures = {'sneaker_powered.png'}})
 		end
 	else
 		if math.random(0,20) == 20 then
 			self.powered = true
-			self.object:set_properties({textures = {"creeper_powered.png"}})
+			self.object:set_properties({textures = {'sneaker_powered.png'}})
 		end
 	end
 end
@@ -124,24 +130,24 @@ def.on_step = function(self, dtime)
 	if not self.chase
 	and self.timer > math.random(2,5) then
 		if math.random() > 0.8 then
-			self.state = "stand"
+			self.state = 'stand'
 		else
-			self.state = "walk"
+			self.state = 'walk'
 		end
 		self.timer = 0
 	end
 
-	if self.turn == "right" then
+	if self.turn == 'right' then
 		self.yaw = self.yaw+self.turn_speed
 		self.object:setyaw(self.yaw)
-	elseif self.turn == "left" then
+	elseif self.turn == 'left' then
 		self.yaw = self.yaw-self.turn_speed
 		self.object:setyaw(self.yaw)
 	end
 	
 	if self.chase and self.visualx < 2 then
 		if self.hiss == false then
-			minetest.sound_play("creeper_hiss",{pos=pos,gain=1.5,max_hear_distance=2*64})
+			minetest.sound_play('sneaker_hiss',{pos=pos,gain=1.5,max_hear_distance=2*64})
 		end
 		self.visualx = self.visualx+0.05
 		self.object:set_properties({
@@ -160,11 +166,11 @@ def.on_step = function(self, dtime)
 	
 	for  _,object in ipairs(inside) do
 		if object:is_player() then
-			self.state = "chase"
+			self.state = 'chase'
 		end
 	end
 
-	if self.state == "stand" then
+	if self.state == 'stand' then
 		if self.anim ~= ANIM_STAND then
 			self.object:set_animation({x=animation.stand_START,y=animation.stand_END},anim_speed,0)
 			self.anim = ANIM_STAND
@@ -178,7 +184,7 @@ def.on_step = function(self, dtime)
 		end
 	end
 
-	if self.state == "walk" then
+	if self.state == 'walk' then
 		if self.anim ~= ANIM_WALK then
 			self.object:set_animation({x=animation.walk_START,y=animation.walk_END},anim_speed,0)
 			self.anim = ANIM_WALK
@@ -200,9 +206,9 @@ def.on_step = function(self, dtime)
 			or minetest.registered_nodes[minetest.get_node(npos).name].walkable then
 				local select_turn = math.random(1,2)
 				if select_turn == 1 then
-					self.turn = "left"
+					self.turn = 'left'
 				elseif select_turn == 2 then
-					self.turn = "right"
+					self.turn = 'right'
 				end
 				self.turn_timer = 0
 				self.turn_speed = 0.05*math.random()
@@ -215,13 +221,13 @@ def.on_step = function(self, dtime)
 		end
 	end
 	
-	if self.state == "chase" then
+	if self.state == 'chase' then
 		if self.anim ~= ANIM_WALK then
 			self.object:set_animation({x=animation.walk_START,y=animation.walk_END},anim_speed,0)
 			self.anim = ANIM_WALK
 		end
 		
-		self.turn = "straight"
+		self.turn = 'straight'
 		
 		local inside_2 = minetest.get_objects_inside_radius(pos,2)
 		
@@ -232,8 +238,8 @@ def.on_step = function(self, dtime)
 					self.chase = true
 					if self.visualx >= 2 then
 						self.object:remove()
-						creeper.boom(pos,self.powered)
-						minetest.sound_play("creeper_explode",{pos=pos,gain=1.5,max_hear_distance=2*64})
+						sneaker.boom(pos,self.powered)
+						minetest.sound_play('sneaker_explode',{pos=pos,gain=1.5,max_hear_distance=2*64})
 					end
 				end
 			end
@@ -276,13 +282,13 @@ def.on_step = function(self, dtime)
 				end
 			end
 		else
-			self.state = "stand"
+			self.state = 'stand'
 		end
 	end
 	
 	-- Swim
 	local node = minetest.get_node(pos)
-	if minetest.get_item_group(node.name,"water") ~= 0 then
+	if minetest.get_item_group(node.name,'water') ~= 0 then
 		self.object:setacceleration({x=0,y=1,z=0})
 		local velocity = self.object:getvelocity()
 		if self.object:getvelocity().y > 5 then
@@ -310,10 +316,10 @@ def.on_punch = function(self,puncher,time_from_last_punch,tool_capabilities,dir)
 		local z = 1/math.random(1,5)*dir.z
 		local p = {x=pos.x+x,y=pos.y,z=pos.z+z}
 		local node = minetest.get_node_or_nil(p)
-		if node == nil or not node.name or node.name ~= "air" then
+		if node == nil or not node.name or node.name ~= 'air' then
 			p = pos
 		end
-		local obj = minetest.add_item(p, {name="tnt:gunpowder",count=math.random(0,2)})
+		local obj = minetest.add_item(p, {name='tnt:gunpowder',count=math.random(0,2)})
 	end
 end
 
@@ -323,19 +329,19 @@ def.get_staticdata = function(self)
 	})
 end
 
-minetest.register_entity("creeper:creeper",def)
+minetest.register_entity('sneaker:sneaker',def)
 
 if minetest.get_modpath('spawneggs') and minetest.get_modpath('tnt') then
-	minetest.register_craftitem("creeper:spawnegg",{
-		description = "Creeper Spawn Egg",
-		inventory_image = "creeper_spawnegg.png",
+	minetest.register_craftitem('sneaker:spawnegg',{
+		description = 'Sneaker Spawn Egg',
+		inventory_image = 'sneaker_spawnegg.png',
 		stack_max = 64,
 		on_place = function(itemstack,placer,pointed_thing)
-			if pointed_thing.type == "node" then
+			if pointed_thing.type == 'node' then
 				local pos = pointed_thing.above
 				pos.y = pos.y+1
-				minetest.add_entity(pos,"creeper:creeper")
-				if not minetest.setting_getbool("creative_mode") then
+				minetest.add_entity(pos,'sneaker:sneaker')
+				if not minetest.settings:get_bool('creative_mode') then
 					itemstack:take_item()
 				end
 				return itemstack
@@ -344,12 +350,12 @@ if minetest.get_modpath('spawneggs') and minetest.get_modpath('tnt') then
 	})
 	
 	minetest.register_craft({
-		output = 'creeper:spawnegg',
+		output = 'sneaker:spawnegg',
 		type = 'shapeless',
 		recipe = {
 			'spawneggs:egg', 'tnt:tnt',
 		},
 	})
 	
-	minetest.register_alias('spawneggs:creeper', 'creeper:spawnegg')
+	minetest.register_alias('spawneggs:sneaker', 'sneaker:spawnegg')
 end
