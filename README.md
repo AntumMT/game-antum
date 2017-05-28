@@ -59,6 +59,8 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * mobs/
     * [kpgmobs][] ([MIT][lic.kpgmobs]) -- version: v6 *2015-01-31* ([patched][patch.kpgmobs])
     * [mobs_redo][] ([MIT][lic.mobs_redo]) -- version: [7de8bc4 Git][ver.mobs_redo] *2017-05-12* ([patched][patch.mobs_redo])
+* mobs/general/
+	* [dmobs][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0] / [WTFPL][lic.wtfpl]) -- version: [8955af2 Git][ver.dbmobs] *2017-01-16*
 * mobs_aggressive/
     * [mobs_goblins][] ([CC-BY-SA / CC-BY / CC0][lic.mobs_goblins]) -- version: [a346f85 Git][ver.mobs_goblins] *2015-09-12* ([patched][patch.mobs_goblins])
     * [mobs_monster][] ([MIT][lic.mobs_monster]) -- version: [f6d0e01 Git][ver.mobs_monster] *2017-04-27*
@@ -261,6 +263,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [crops]: https://forum.minetest.net/viewtopic.php?t=11795
 [currency]: https://github.com/minetest-mods/currency
 [deploy_nodes]: https://cornernote.github.io/minetest-deploy_nodes/
+[dmobs]: https://forum.minetest.net/viewtopic.php?t=14382
 [drawers]: https://forum.minetest.net/viewtopic.php?t=17134
 [elevator]: https://forum.minetest.net/viewtopic.php?t=12944
 [enchanting]: https://forum.minetest.net/viewtopic.php?t=7354
@@ -463,6 +466,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.crops]: https://github.com/minetest-mods/crops/tree/2b1bb37
 [ver.currency]: https://github.com/minetest-mods/currency/tree/21f9811
 [ver.deploy_nodes]: https://github.com/cornernote/minetest-deploy_nodes/tree/eb3d68c
+[ver.dmobs]: https://github.com/D00Med/dmobs/tree/8955af2
 [ver.drawers]: https://github.com/minetest-mods/drawers/tree/7b9a384
 [ver.enchanting]: https://github.com/minetest-mods/enchanting/tree/13ea31c
 [ver.ethereal]: https://github.com/tenplus1/ethereal/tree/2c24961
