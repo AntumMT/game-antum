@@ -5,6 +5,19 @@ sneaker = {}
 sneaker.modname = minetest.get_current_modname()
 sneaker.modpath = minetest.get_modpath(sneaker.modname)
 
+local log_mods = minetest.setting_getbool('log_mods')
+
+if log_mods then
+	minetest.log('action', 'Loading mod "' .. sneaker.modname .. '" ...')
+end
+
+dofile(sneaker.modpath .. '/settings.lua')
+dofile(sneaker.modpath .. '/functions.lua')
+
+if log_mods then
+	sneaker.log('Spawn cap: ' .. tostring(sneaker.spawn_cap))
+end
+
 local scripts = {
 	'tnt_function',
 	'spawn',
@@ -341,7 +354,7 @@ if minetest.get_modpath('spawneggs') and minetest.get_modpath('tnt') then
 				local pos = pointed_thing.above
 				pos.y = pos.y+1
 				minetest.add_entity(pos,'sneaker:sneaker')
-				if not minetest.settings:get_bool('creative_mode') then
+				if not minetest.setting_getbool('creative_mode') then
 					itemstack:take_item()
 				end
 				return itemstack

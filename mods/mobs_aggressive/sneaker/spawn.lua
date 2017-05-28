@@ -1,16 +1,23 @@
 -- Original code by Rui: WTFPL
 
 
-local time_sec = 1
-local time_min = time_sec * 60
+local time_min = 60
 local time_hr = time_min * 60
 local time_day = time_hr * 24
+
+local spawn_chance = minetest.setting_get('sneaker_spawn_chance') or 18000
+local spawn_interval = minetest.setting_get('sneaker_spawn_interval') or time_min * 40 -- Default interval is 40 minutes
+
+if minetest.setting_getbool('log_mods') then
+	sneaker.log('Spawn chance: ' .. tostring(spawn_chance) .. ' (1/' .. tostring(spawn_chance) .. ')')
+	sneaker.log('Spawn interval: ' .. tostring(spawn_interval) .. ' (' .. tostring(spawn_interval/60) .. ' minutes)')
+end
 
 minetest.register_abm({
 	nodenames = {'default:dirt_with_grass','default:stone'},
 	neighbors = {'air'},
-	interval = time_min * 20, -- Run spawn function every 20 minutes
-	chance = 9000,
+	interval = spawn_interval,
+	chance = spawn_chance,
 	action = function(pos, node, _, active_object_count_wider)
 		if active_object_count_wider > 5 then
 			return

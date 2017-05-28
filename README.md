@@ -60,9 +60,9 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [kpgmobs][] ([MIT][lic.kpgmobs]) -- version: v6 *2015-01-31* ([patched][patch.kpgmobs])
     * [mobs_redo][] ([MIT][lic.mobs_redo]) -- version: [7de8bc4 Git][ver.mobs_redo] *2017-05-12* ([patched][patch.mobs_redo])
 * mobs_aggressive/
-    * [creeper][] ([WTFPL][lic.creeper]) -- version [036666e Git][ver.creeper] ([patched][patch.creeper])
     * [mobs_goblins][] ([CC-BY-SA / CC-BY / CC0][lic.mobs_goblins]) -- version: [a346f85 Git][ver.mobs_goblins] *2015-09-12* ([patched][patch.mobs_goblins])
     * [mobs_monster][] ([MIT][lic.mobs_monster]) -- version: [f6d0e01 Git][ver.mobs_monster] *2017-04-27*
+    * [sneaker][] ([WTFPL][lic.wtfpl] / [CC0][lic.cc0]) -- version: [f50c7f3 Git][ver.sneaker] *2017-05-27*
     * [spidermob][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0] / [MIT][lic.mit] / [WTFPL][lic.spidermob] / [Unlicense][lic.unlicense]) -- version [c72d2ff Git][ver.spidermob] *2016-08-14* ([patched][patch.spidermob])
 * mobs_passive/
 * npc/
@@ -258,7 +258,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [compassgps]: https://forum.minetest.net/viewtopic.php?t=9373
 [craftguide]: https://forum.minetest.net/viewtopic.php?t=14088
 [crafting_bench]: https://github.com/minetest-mods/crafting_bench
-[creeper]: https://forum.minetest.net/viewtopic.php?t=11891
 [crops]: https://forum.minetest.net/viewtopic.php?t=11795
 [currency]: https://github.com/minetest-mods/currency
 [deploy_nodes]: https://cornernote.github.io/minetest-deploy_nodes/
@@ -311,6 +310,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [rainbow_ore]: https://forum.minetest.net/viewtopic.php?id=13519
 [signs_lib]: https://forum.minetest.net/viewtopic.php?f=11&t=13762
 [simple_protection]: https://forum.minetest.net/viewtopic.php?t=9035
+[sneaker]: https://github.com/AntumDeluge/mtmod-sneaker
 [snowdrift]: https://forum.minetest.net/viewtopic.php?t=6854
 [spawneggs]: https://forum.minetest.net/viewtopic.php?t=6214
 [spectator_mode]: https://forum.minetest.net/viewtopic.php?t=13718
@@ -366,7 +366,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.castle]: mods/mp-castle/LICENSE
 [lic.christmas]: mods/buildings/christmas/LICENSE.txt
 [lic.cme]: mods/mp-cme/LICENSE.txt
-[lic.creeper]: mods/mobs_aggressive/creeper/LICENSE.md
 [lic.crops]: mods/farming/crops/LICENSE
 [lic.currency]: https://forum.minetest.net/viewtopic.php?t=7002
 [lic.deploy_nodes]: mods/mp-deploy_nodes/LICENSE
@@ -461,7 +460,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.compassgps]: https://github.com/Kilarin/compassgps/tree/96892a0
 [ver.crafting_bench]: https://github.com/minetest-mods/crafting_bench/tree/3aa4cfb
 [ver.craftguide]: https://github.com/minetest-mods/craftguide/tree/86a96c3
-[ver.creeper]: https://github.com/Rui-Minetest/creeper/tree/036666e
 [ver.crops]: https://github.com/minetest-mods/crops/tree/2b1bb37
 [ver.currency]: https://github.com/minetest-mods/currency/tree/21f9811
 [ver.deploy_nodes]: https://github.com/cornernote/minetest-deploy_nodes/tree/eb3d68c
@@ -507,6 +505,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.rainbow_ore]: https://github.com/FsxShader2012/rainbow_ore/tree/6e77693
 [ver.signs_lib]: https://github.com/minetest-mods/signs_lib/tree/2c36937
 [ver.simple_protection]: https://github.com/SmallJoker/simple_protection/tree/23c024f
+[ver.sneaker]: https://github.com/AntumDeluge/mtmod-sneaker/tree/f50c7f3
 [ver.snowdrift]: https://github.com/paramat/snowdrift/tree/fcb0537
 [ver.spawneggs]: https://github.com/thefamilygrog66/spawneggs/tree/4650370
 [ver.spectator_mode]: https://github.com/minetest-mods/spectator_mode/tree/7d68bec
@@ -550,7 +549,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.compassgps]: https://github.com/AntumDeluge/mtmod-compassgps/tree/888ec15
 [patch.craftguide]: https://github.com/AntumDeluge/mtmod-craftguide/tree/1197b13
 [patch.crafting_bench]: https://github.com/AntumDeluge/mtmod-crafting_bench/tree/c5ff4e5
-[patch.creeper]: https://github.com/AntumDeluge/mtmod-creeper/tree/dc9ffbe
 [patch.crops]: https://github.com/AntumDeluge/mtmod-crops/tree/f8b33ae
 [patch.currency]: https://github.com/AntumDeluge/mtmod-currency/tree/6275e9b
 [patch.drawers]: https://github.com/AntumDeluge/mtmod-drawers/tree/3887c5b
