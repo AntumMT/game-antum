@@ -2,7 +2,12 @@
 -- Copyright: PilzAdam
 
 local old_nodes = {'mod:a', 'mod:b'}
-local old_entities = {'mobs_mc:skeleton', 'mobs_mc:creeper', 'kpgmobs:sheep'}
+local old_entities = {
+	'creeper:creeper',
+	'kpgmobs:sheep',
+	'mobs_mc:skeleton',
+	'mobs_mc:creeper',
+	}
 
 -- Old/Missing nodes that should be replaced with something currently in game
 local replace_nodes = {
