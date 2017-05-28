@@ -131,7 +131,7 @@ local function add_effects(pos, radius)
 		maxexptime = 3,
 		minsize = 8,
 		maxsize = 16,
-		texture = 'sneaker_smoke.png',
+		texture = 'sneeker_smoke.png',
 	})
 end
 
@@ -183,12 +183,12 @@ local function explode(pos, radius)
 	return drops
 end
 
-function sneaker.boom(pos,large)
+function sneeker.boom(pos,large)
 	local radius = radius
 	if large then
 		radius = large_radius
 	end
-	minetest.sound_play('sneaker_explode', {pos=pos, gain=1.5, max_hear_distance=2*64})
+	minetest.sound_play('sneeker_explode', {pos=pos, gain=1.5, max_hear_distance=2*64})
 	minetest.set_node(pos, {name='tnt:boom'})
 	minetest.get_node_timer(pos):start(0.5)
 	local drops = explode(pos, radius)

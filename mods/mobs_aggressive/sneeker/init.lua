@@ -1,21 +1,21 @@
 -- Original code by Rui: WTFPL
 
 
-sneaker = {}
-sneaker.modname = minetest.get_current_modname()
-sneaker.modpath = minetest.get_modpath(sneaker.modname)
+sneeker = {}
+sneeker.modname = minetest.get_current_modname()
+sneeker.modpath = minetest.get_modpath(sneeker.modname)
 
 local log_mods = minetest.setting_getbool('log_mods')
 
 if log_mods then
-	minetest.log('action', 'Loading mod "' .. sneaker.modname .. '" ...')
+	minetest.log('action', 'Loading mod "' .. sneeker.modname .. '" ...')
 end
 
-dofile(sneaker.modpath .. '/settings.lua')
-dofile(sneaker.modpath .. '/functions.lua')
+dofile(sneeker.modpath .. '/settings.lua')
+dofile(sneeker.modpath .. '/functions.lua')
 
 if log_mods then
-	sneaker.log('Spawn cap: ' .. tostring(sneaker.spawn_cap))
+	sneeker.log('Spawn cap: ' .. tostring(sneeker.spawn_cap))
 end
 
 local scripts = {
@@ -24,7 +24,7 @@ local scripts = {
 	}
 
 for I in pairs(scripts) do
-	dofile(sneaker.modpath .. '/' .. scripts[I] .. '.lua')
+	dofile(sneeker.modpath .. '/' .. scripts[I] .. '.lua')
 end
 
 local function jump(self,pos,direction)
@@ -77,7 +77,7 @@ local def = {
 	collisionbox = {-0.25,-0.7,-0.25, 0.25,0.8,0.25},
 	visual = 'mesh',
 	mesh = 'character.b3d',
-	textures = {'sneaker.png'},
+	textures = {'sneeker.png'},
 	makes_footstep_sound = false,
 
 	-- Original
@@ -110,12 +110,12 @@ def.on_activate = function(self,staticdata)
 	if data and type(data) == 'table' then
 		if data.powered == true then
 			self.powered = true
-			self.object:set_properties({textures = {'sneaker_powered.png'}})
+			self.object:set_properties({textures = {'sneeker_powered.png'}})
 		end
 	else
 		if math.random(0,20) == 20 then
 			self.powered = true
-			self.object:set_properties({textures = {'sneaker_powered.png'}})
+			self.object:set_properties({textures = {'sneeker_powered.png'}})
 		end
 	end
 end
@@ -160,7 +160,7 @@ def.on_step = function(self, dtime)
 	
 	if self.chase and self.visualx < 2 then
 		if self.hiss == false then
-			minetest.sound_play('sneaker_hiss',{pos=pos,gain=1.5,max_hear_distance=2*64})
+			minetest.sound_play('sneeker_hiss',{pos=pos,gain=1.5,max_hear_distance=2*64})
 		end
 		self.visualx = self.visualx+0.05
 		self.object:set_properties({
@@ -251,8 +251,8 @@ def.on_step = function(self, dtime)
 					self.chase = true
 					if self.visualx >= 2 then
 						self.object:remove()
-						sneaker.boom(pos,self.powered)
-						minetest.sound_play('sneaker_explode',{pos=pos,gain=1.5,max_hear_distance=2*64})
+						sneeker.boom(pos,self.powered)
+						minetest.sound_play('sneeker_explode',{pos=pos,gain=1.5,max_hear_distance=2*64})
 					end
 				end
 			end
@@ -342,18 +342,18 @@ def.get_staticdata = function(self)
 	})
 end
 
-minetest.register_entity('sneaker:sneaker',def)
+minetest.register_entity('sneeker:sneeker',def)
 
 if minetest.get_modpath('spawneggs') and minetest.get_modpath('tnt') then
-	minetest.register_craftitem('sneaker:spawnegg',{
-		description = 'Sneaker Spawn Egg',
-		inventory_image = 'sneaker_spawnegg.png',
+	minetest.register_craftitem('sneeker:spawnegg',{
+		description = 'Sneeker Spawn Egg',
+		inventory_image = 'sneeker_spawnegg.png',
 		stack_max = 64,
 		on_place = function(itemstack,placer,pointed_thing)
 			if pointed_thing.type == 'node' then
 				local pos = pointed_thing.above
 				pos.y = pos.y+1
-				minetest.add_entity(pos,'sneaker:sneaker')
+				minetest.add_entity(pos,'sneeker:sneeker')
 				if not minetest.setting_getbool('creative_mode') then
 					itemstack:take_item()
 				end
@@ -363,12 +363,12 @@ if minetest.get_modpath('spawneggs') and minetest.get_modpath('tnt') then
 	})
 	
 	minetest.register_craft({
-		output = 'sneaker:spawnegg',
+		output = 'sneeker:spawnegg',
 		type = 'shapeless',
 		recipe = {
 			'spawneggs:egg', 'tnt:tnt',
 		},
 	})
 	
-	minetest.register_alias('spawneggs:sneaker', 'sneaker:spawnegg')
+	minetest.register_alias('spawneggs:sneeker', 'sneeker:spawnegg')
 end
