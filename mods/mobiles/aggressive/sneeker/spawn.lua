@@ -14,7 +14,7 @@ if minetest.setting_getbool('log_mods') then
 end
 
 minetest.register_abm({
-	nodenames = {'default:dirt_with_grass','default:stone'},
+	nodenames = {'default:dirt_with_grass', 'default:stone'},
 	neighbors = {'air'},
 	interval = spawn_interval,
 	chance = spawn_chance,
@@ -42,6 +42,16 @@ minetest.register_abm({
 		if minetest.get_node(pos).name ~= 'air' then
 			return
 		end
-		minetest.add_entity(pos,'sneeker:sneeker')
+		
+		-- Get total count of sneekers in world
+		local name, count
+		for name in pairs(minetest.luaentities) do
+		    if name == sneeker.mob_name then
+		        count = count + 1
+		    end
+		end
+		if count >= sneeker.spawn_cap then return end -- Max sneekers already exist
+		
+		minetest.add_entity(pos, sneeker.mob_name)
 	end
 })

@@ -104,7 +104,7 @@ airtanks_wear_in_creative (Air tanks wear out in creative mode) bool true
 sneeker.debug (Log debug output) bool false
 
 # Sets maximum number of spawns that can exist in world.
-sneeker.spawn_cap (Maximum spawns) int 50
+sneeker.spawn_cap (Maximum spawns) int 25
 
 # Sets possibility for spawn.
 sneeker.spawn_chance (Spawn chance) int 18000
