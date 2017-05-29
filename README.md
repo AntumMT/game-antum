@@ -66,7 +66,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [dmobs][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0] / [WTFPL][lic.wtfpl]) -- version: [8955af2 Git][ver.dbmobs] *2017-01-16*
     * [kpgmobs][] ([MIT][lic.kpgmobs]) -- version: v6 *2015-01-31* ([patched][patch.kpgmobs])
     * [mobs_redo][] ([MIT][lic.mobs_redo]) -- version: [7de8bc4 Git][ver.mobs_redo] *2017-05-12* ([patched][patch.mobs_redo])
-* mobs_passive/
+* mobs/passive/
 * npc/
     * [peaceful_npc][] ([WTFPL][lic.wtfpl]) -- version: [2b3a7a5 Git][ver.peaceful_npc] *2015-08-09*
 * [painting][] (???)
