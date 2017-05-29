@@ -151,7 +151,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* mob_slime ([CC0 / CC BY / CC BY-SA / CC0][lic.amp_slime])
 		* mob_warthog ([CC BY / CC BY-SA][lic.amp_warthog])
 * castle ([MIT][lic.castle])
-	* mp-castle/
+	* modpacks/castle/
 		* [castle_farming][] -- version: [a190dcf Git][ver.castle_farming] *2017-04-21*
 		* [castle_gates][] -- version: [dc53584 Git][ver.castle_gates] *dc53584* ([patched][patch.castle_gates])
 		* [castle_lighting][] -- version: [a7110c6 Git][ver.castle_lighting] *2017-04-28* *[patched][patch.castle_lighting])
@@ -351,7 +351,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.bookmarks_gui]: mods/ui/bookmarks_gui/LICENSE
 [lic.bridges]: mods/buildings/bridges/README.md
 [lic.campfire]: mods/campfire/README.md
-[lic.castle]: mods/mp-castle/LICENSE
+[lic.castle]: mods/modpacks/castle/LICENSE
 [lic.christmas]: mods/buildings/christmas/LICENSE.txt
 [lic.cme]: mods/mp-cme/LICENSE.txt
 [lic.crops]: mods/farming/crops/LICENSE
