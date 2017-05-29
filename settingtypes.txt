@@ -2,7 +2,11 @@
 # minetest.conf
 
 
-## MINETEST_GAME
+---------------------------------------------------------------------------------
+
+### MINETEST_GAME
+
+[Minetest Game]
 
 #    In creative mode players are able to dig all kind of blocks nearly
 #    instantly, and have access to unlimited resources.
@@ -51,4 +55,23 @@ share_bones_time (Bone share time) int 1200 0
 enable_stairs_replace_abm (Replace old stairs) bool false
 
 
-## ANTUM
+---------------------------------------------------------------------------------
+
+### ANTUM
+
+[Mods]
+
+[*sneeker]
+
+# Logs debug output.
+sneeker.debug (Log debug output) bool false
+
+# Sets maximum number of spawns that can exist in world.
+sneeker.spawn_cap (Maximum spawns) int 50
+
+# Sets possibility for spawn.
+sneeker.spawn_chance (Spawn chance) int 18000
+
+# Sets frequency of spawn chance.
+#    Default 1200 is equivalent to 20 minutes (60 * 40).
+sneeker.spawn_interval (Spawn interval) int 2400
