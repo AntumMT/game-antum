@@ -535,7 +535,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.signs_lib]: https://github.com/AntumDeluge/mtmod-signs_lib/tree/fe46611
 [patch.snowdrift]: https://github.com/AntumDeluge/mtmod-snowdrift/tree/1b9da4f
 [patch.spawneggs]: https://github.com/AntumDeluge/mtmod-spawneggs/tree/b47f49f
-[patch.spidermob]: https://github.com/AntumDeluge/mtmod-spidermob/tree/00b6107
+[patch.spidermob]: https://github.com/AntumDeluge/mtmod-spidermob/tree/7f2e77d
 [patch.technic]: https://github.com/AntumDeluge/mtmod-technic/tree/661c23d
 [patch.torches]: https://github.com/AntumDeluge/mtmod-torches/tree/fb2b692
 [patch.trash_can]: https://github.com/AntumDeluge/mtmod-trash_can/tree/5a92bf4
