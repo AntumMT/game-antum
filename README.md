@@ -165,7 +165,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [deploy_nodes][] ([BSD 3-Clause][lic.deploy_nodes]) -- version [eb3d68c Git][ver.deploy_nodes] *2015-05-19*
 * [homedecor][] ([LGPL / WTFPL / CC BY-SA / CC0][lic.homedecor]) -- version: [8e467ef Git][ver.homedecor] *2017-01-24* ([patched][patch.homedecor])
 * [mesecons][] ([LGPL / CC BY-SA][lic.mesecons]) -- version: [564bdc2 Git][ver.mesecons] *2017-05-08* ([patched][patch.mesecons])
-	* mp-mesecons/
 * [mobf_core][animals] (part of "animals" modpack) ([CC BY-SA][lic.ccbysa3.0]) -- version: [1199ca9 Git][ver.mobf_core] *2017-01-14* ([patched][patch.mobf_core])
 	* mp-mobf_core/
 		* barn
@@ -353,7 +352,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.jukebox]: mods/furniture/jukebox/README.txt
 [lic.kpgmobs]: mods/mobs/general/kpgmobs/README.txt
 [lic.lightning]: mods/weather/lightning/README.md
-[lic.mesecons]: mods/mp-mesecons/COPYING.txt
+[lic.mesecons]: mods/modpacks/mesecons/COPYING.txt
 [lic.mobf]: mods/mp-mobf_core/License.txt
 [lic.mobs_goblins]: mods/mobs/aggressive/mobs_goblins/README.md
 [lic.mobs_monster]: mods/mobs/aggressive/mobs_monster/license.txt
