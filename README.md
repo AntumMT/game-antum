@@ -56,11 +56,10 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [quartz][] ([MIT][lic.quartz]) -- version: [00ca4eb Git][ver.quartz] *2017-02-28* ([patched][patch.quartz])
 	* [rainbow_ore][] ([LGPL][lic.rainbow_ore]) -- version: [6e77693 Git][ver.rainbow_ore] *2015-11-02* ([patched][patch.rainbow_ore])
 	* [unifieddyes][] ([GPL][lic.gpl2.0]) -- version: [70b1f9f Git][ver.unifieddyes] *2017-02-26* ([patched][patch.unifieddyes])
-* mobs/
-    * [mobs_redo][] ([MIT][lic.mobs_redo]) -- version: [7de8bc4 Git][ver.mobs_redo] *2017-05-12* ([patched][patch.mobs_redo])
 * mobs/general/
 	* [dmobs][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0] / [WTFPL][lic.wtfpl]) -- version: [8955af2 Git][ver.dbmobs] *2017-01-16*
     * [kpgmobs][] ([MIT][lic.kpgmobs]) -- version: v6 *2015-01-31* ([patched][patch.kpgmobs])
+    * [mobs_redo][] ([MIT][lic.mobs_redo]) -- version: [7de8bc4 Git][ver.mobs_redo] *2017-05-12* ([patched][patch.mobs_redo])
 * mobs_aggressive/
     * [mobs_goblins][] ([CC-BY-SA / CC-BY / CC0][lic.mobs_goblins]) -- version: [a346f85 Git][ver.mobs_goblins] *2015-09-12* ([patched][patch.mobs_goblins])
     * [mobs_monster][] ([MIT][lic.mobs_monster]) -- version: [f6d0e01 Git][ver.mobs_monster] *2017-04-27*
@@ -391,7 +390,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.mobf]: mods/mp-mobf_core/License.txt
 [lic.mobs_goblins]: mods/mobs_aggressive/mobs_goblins/README.md
 [lic.mobs_monster]: mods/mobs_aggressive/mobs_monster/license.txt
-[lic.mobs_redo]: mods/mobs/mobs_redo/license.txt
+[lic.mobs_redo]: mods/mobs/general/mobs_redo/license.txt
 [lic.moreblocks]: mods/buildings/moreblocks/LICENSE.md
 [lic.moreores]: mods/materials/moreores/LICENSE.md
 [lic.mydoors]: mods/mp-mydoors/README.md
