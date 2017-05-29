@@ -344,7 +344,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.mobf]: mods/modpacks/mobf_core/License.txt
 [lic.mobs_goblins]: mods/mobiles/aggressive/mobs_goblins/README.md
 [lic.mobs_monster]: mods/mobiles/aggressive/mobs_monster/license.txt
-[lic.mobs_redo]: mods/mobiles/general/mobs_redo/license.txt
+[lic.mobs_redo]: mods/mobiles/engine/mobs_redo/license.txt
 [lic.moreblocks]: mods/buildings/moreblocks/LICENSE.md
 [lic.moreores]: mods/materials/moreores/LICENSE.md
 [lic.mydoors]: mods/modpacks/mydoors/README.md
