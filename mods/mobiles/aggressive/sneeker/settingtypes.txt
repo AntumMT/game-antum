@@ -2,11 +2,14 @@
 sneeker.debug (Log debug output) bool false
 
 # Sets maximum number of spawns that can exist in world.
-sneeker.spawn_cap (Maximum spawns) int 50
+sneeker.spawn_cap (Maximum spawns) int 25
 
 # Sets possibility for spawn.
-sneeker.spawn_chance (Spawn chance) int 18000
+sneeker.spawn_chance (Spawn chance) int 2
 
 # Sets frequency of spawn chance.
-#    Default 1200 is equivalent to 20 minutes (60 * 40).
-sneeker.spawn_interval (Spawn interval) int 2400
+#    Default 120 is equivalent to 2 minutes (60 * 2).
+sneeker.spawn_interval (Spawn interval) int 120
+
+# Sets the maximum light that a node can have for spawn to occur.
+sneeker.spawn_maxlight (Max light for spawn) int 7

@@ -5,18 +5,19 @@ sneeker = {}
 sneeker.modname = minetest.get_current_modname()
 sneeker.modpath = minetest.get_modpath(sneeker.modname)
 
-local log_mods = minetest.setting_getbool('log_mods')
-
-if log_mods then
+if minetest.setting_getbool('log_mods') then
 	minetest.log('action', 'Loading mod "' .. sneeker.modname .. '" ...')
 end
 
 dofile(sneeker.modpath .. '/settings.lua')
 dofile(sneeker.modpath .. '/functions.lua')
 
-if log_mods then
-	sneeker.log('Spawn cap: ' .. tostring(sneeker.spawn_cap))
-end
+sneeker.log_debug('Debugging is on')
+
+sneeker.mob_name = sneeker.modname .. ':' .. sneeker.modname
+sneeker.spawnegg_name = sneeker.modname .. ':spawnegg'
+
+sneeker.log('Spawn cap: ' .. tostring(sneeker.spawn_cap))
 
 local scripts = {
 	'tnt_function',
@@ -342,18 +343,18 @@ def.get_staticdata = function(self)
 	})
 end
 
-minetest.register_entity('sneeker:sneeker',def)
+minetest.register_entity(sneeker.mob_name, def)
 
 if minetest.get_modpath('spawneggs') and minetest.get_modpath('tnt') then
-	minetest.register_craftitem('sneeker:spawnegg',{
+	minetest.register_craftitem(sneeker.spawnegg_name, {
 		description = 'Sneeker Spawn Egg',
 		inventory_image = 'sneeker_spawnegg.png',
 		stack_max = 64,
-		on_place = function(itemstack,placer,pointed_thing)
+		on_place = function(itemstack, placer, pointed_thing)
 			if pointed_thing.type == 'node' then
 				local pos = pointed_thing.above
 				pos.y = pos.y+1
-				minetest.add_entity(pos,'sneeker:sneeker')
+				minetest.add_entity(pos, sneeker.mob_name)
 				if not minetest.setting_getbool('creative_mode') then
 					itemstack:take_item()
 				end
@@ -363,12 +364,12 @@ if minetest.get_modpath('spawneggs') and minetest.get_modpath('tnt') then
 	})
 	
 	minetest.register_craft({
-		output = 'sneeker:spawnegg',
+		output = sneeker.spawnegg_name,
 		type = 'shapeless',
 		recipe = {
 			'spawneggs:egg', 'tnt:tnt',
 		},
 	})
 	
-	minetest.register_alias('spawneggs:sneeker', 'sneeker:spawnegg')
+	minetest.register_alias('spawneggs:sneeker', sneeker.spawnegg_name)
 end
