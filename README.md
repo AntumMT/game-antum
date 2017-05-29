@@ -131,22 +131,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 ### This is a list of installed modpacks & their components (trying to keep them listed separate for sake of organization):
 
 * [3d_armor][] ([LGPL / CC BY-SA][lic.3d_armor]) - version: [0.4.9 (793c748 Git)][ver.3d_armor] *2017-05-03* ([patched][patch.3d_armor]) ***UPDATE***
-	* mp-3d_armor/
-		* 3d_armor
-		* 3d_armor_ip
-		* 3d_armor_sfinv
-		* 3d_armor_stand
-		* 3d_armor_ui
-		* hazmat_suit
-		* shields
-		* technic_armor
-		* wieldview
 * [animalmaterials][animals_modpack] (part of animals_modpack) ([CC0][lic.cc0] / [CC BY-SA][lic.ccbysa3.0]) -- version: [0.1.3 (d952d27 Git)][ver.animalmaterials] *2014-09-10*
-	* mp-animalmaterials/
-		* animal_resources
-		* animalmaterials
-		* cooking
-		* mob_environments
 * [animals_modpack][] -- version: [b9d0172 Git][ver.animals_modpack] *2017-03-22* ([patched][patch.animals_modpack])
 	* mp-animals_modpack/
 		* animal_chicken ([CC BY-SA / CC0][lic.amp_chicken])
