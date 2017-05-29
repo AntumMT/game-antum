@@ -72,8 +72,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [painting][] (???)
 * [pipeworks][] ([WTFPL][lic.wtfpl]) -- version: [a3d2e69 Git][ver.pipeworks] *2016-10-10* ([patched][patch.pipeworks])
 * plantlife/
-* player/
-* player_action/
+* player/action/
     * [throwing][] ([WTFPL][lic.wtfpl]) -- version: [90bcf43 Git][ver.throwing] *2013-09-27*
 * player_visuals/
     * [hidename][] ([MIT][lic.hidename]) -- version [bb52dbc Git][ver.hidename]
