@@ -423,14 +423,14 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.farming_plus]: https://github.com/PilzAdam/farming_plus/tree/7e0d976
 [ver.fort_spikes]: https://github.com/xeranas/fort_spikes/tree/2765b56
 [ver.glow]: https://github.com/bdjnk/glow/tree/30f9cf3
-[ver.hbarmor]: repo.or.cz/minetest_hbarmor.git/tree/bfc5f8c
+[ver.hbarmor]: http://repo.or.cz/minetest_hbarmor.git/tree/bfc5f8c
 [ver.helicopter]: https://github.com/SokolovPavel/helicopter/tree/10f1433
 [ver.hidename]: https://github.com/AntumDeluge/mtmod-hidename/tree/bb52dbc
 [ver.hill_nodebox]: https://github.com/cornernote/minetest-hill_nodebox/tree/41bbfa2
 [ver.home_gui]: https://github.com/cornernote/minetest-home_gui/tree/f6b5001
 [ver.homedecor]: https://github.com/minetest-mods/homedecor_modpack/tree/8e467ef
 [ver.hovercraft]: https://github.com/stujones11/hovercraft/tree/7b0df6f
-[ver.hudbars]: repo.or.cz/minetest_hudbars.git/tree/fa82d2d
+[ver.hudbars]: http://repo.or.cz/minetest_hudbars.git/tree/fa82d2d
 [ver.hudmap]: https://github.com/stujones11/hudmap/tree/09d40f3
 [ver.ilights]: https://github.com/minetest-mods/ilights/tree/b1f7ccf
 [ver.inventory_plus]: https://github.com/cornernote/minetest-inventory_plus/tree/a978b47
