@@ -339,7 +339,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [worldedge]: https://forum.minetest.net/viewtopic.php?t=10753
 [xtraarmor]: https://forum.minetest.net/viewtopic.php?t=16645
 
-[lic.3d_armor]: mods/mp-3d_armor/LICENSE.md
+[lic.3d_armor]: mods/modpacks/3d_armor/LICENSE.md
 [lic.airtanks]: mods/player/airtanks/LICENSE.txt
 [lic.ambience_ultralite]: mods/sound/ambience/sounds/SoundLicenses.txt
 [lic.amp_adv_spawning]: mods/spawning/adv_spawning/README.txt
