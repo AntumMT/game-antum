@@ -2404,6 +2404,11 @@ end
 
 mobs.spawning_mobs = {}
 
+local mobs_blood = "mobs_blood"
+if not minetest.setting_getbool("mobs_enable_blood") then
+	mobs_blood = mobs_blood .. "_transparent"
+end
+
 -- register mob entity
 function mobs:register_mob(name, def)
 
@@ -2458,7 +2463,7 @@ minetest.register_entity(name, {
 	recovery_time = def.recovery_time or 0.5,
 	knock_back = def.knock_back or 3,
 	blood_amount = def.blood_amount or 5,
-	blood_texture = def.blood_texture or "mobs_blood.png",
+	blood_texture = def.blood_texture or mobs_blood .. ".png",
 	shoot_offset = def.shoot_offset or 0,
 	floats = def.floats or 1, -- floats in water by default
 	replace_rate = def.replace_rate,

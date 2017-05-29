@@ -525,7 +525,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.minetest]: https://github.com/AntumDeluge/mtgame-minetest/tree/914595e
 [patch.mobf_core]: https://github.com/AntumDeluge/mtmp-mobf_core/tree/e6fa3b7
 [patch.mobs_goblins]: https://github.com/AntumDeluge/mtmod-mobs_goblins/tree/2b40fab
-[patch.mobs_redo]: https://github.com/AntumDeluge/mtmod-mobs_redo/tree/58e123a
+[patch.mobs_redo]: https://github.com/AntumDeluge/mtmod-mobs_redo/tree/a6613ec
 [patch.moreblocks]: https://github.com/AntumDeluge/mtmod-moreblocks/tree/b52a403
 [patch.moremesecons]: https://github.com/AntumDeluge/mtmp-moremesecons/tree/cae948e
 [patch.moreores]: https://github.com/AntumDeluge/mtmod-moreores/tree/8b874f6
