@@ -61,6 +61,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [mobs_monster][] ([MIT][lic.mobs_monster]) -- version: [f6d0e01 Git][ver.mobs_monster] *2017-04-27*
     * [sneeker][] ([WTFPL][lic.wtfpl] / [CC0][lic.cc0]) -- version: [b5c7aeb Git][ver.sneeker] *2017-05-27*
     * [spidermob][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0] / [MIT][lic.mit] / [WTFPL][lic.spidermob] / [Unlicense][lic.unlicense]) -- version [c72d2ff Git][ver.spidermob] *2016-08-14* ([patched][patch.spidermob])
+* mobs/engine/
 * mobs/general/
 	* [dmobs][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0] / [WTFPL][lic.wtfpl]) -- version: [8955af2 Git][ver.dbmobs] *2017-01-16*
     * [kpgmobs][] ([MIT][lic.kpgmobs]) -- version: v6 *2015-01-31* ([patched][patch.kpgmobs])
