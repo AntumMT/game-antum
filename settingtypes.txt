@@ -1,5 +1,8 @@
-# This file contains settings of minetest_game that can be changed in
+# This file contains settings of Antum game that can be changed in
 # minetest.conf
+
+
+## MINETEST_GAME
 
 #    In creative mode players are able to dig all kind of blocks nearly
 #    instantly, and have access to unlimited resources.
@@ -46,3 +49,6 @@ share_bones_time (Bone share time) int 1200 0
 
 #    Replaces old stairs with new ones. Only required for older worlds.
 enable_stairs_replace_abm (Replace old stairs) bool false
+
+
+## ANTUM
