@@ -168,7 +168,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [mobf_core][animals] (part of "animals" modpack) ([CC BY-SA][lic.ccbysa3.0]) -- version: [1199ca9 Git][ver.mobf_core] *2017-01-14* ([patched][patch.mobf_core])
 * [minetest_game][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- version: [e523c3a Git][ver.minetest_game] *2017-05-20*
 * [moremesecons][] ([MPL][lic.mpl2.0]) -- version: [e1d2e84 Git][ver.moremesecons] *2017-05-02* ([patched][patch.moremesecons])
-	* mp-moremesecons/
 * [mydoors][] ([CC-BY / CC-BY-SA][lic.mydoors] / [WTFPL][lic.wtfpl] / [DWYWFPL][lic.dwywpl]) -- version: [63aef13 Git][ver.mydoors] *2017-03-31* ([patched][patch.mydoors])
 	* mp-mydoors/
 		* my_*_doors
