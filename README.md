@@ -57,10 +57,10 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [rainbow_ore][] ([LGPL][lic.rainbow_ore]) -- version: [6e77693 Git][ver.rainbow_ore] *2015-11-02* ([patched][patch.rainbow_ore])
 	* [unifieddyes][] ([GPL][lic.gpl2.0]) -- version: [70b1f9f Git][ver.unifieddyes] *2017-02-26* ([patched][patch.unifieddyes])
 * mobs/
-    * [kpgmobs][] ([MIT][lic.kpgmobs]) -- version: v6 *2015-01-31* ([patched][patch.kpgmobs])
     * [mobs_redo][] ([MIT][lic.mobs_redo]) -- version: [7de8bc4 Git][ver.mobs_redo] *2017-05-12* ([patched][patch.mobs_redo])
 * mobs/general/
 	* [dmobs][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0] / [WTFPL][lic.wtfpl]) -- version: [8955af2 Git][ver.dbmobs] *2017-01-16*
+    * [kpgmobs][] ([MIT][lic.kpgmobs]) -- version: v6 *2015-01-31* ([patched][patch.kpgmobs])
 * mobs_aggressive/
     * [mobs_goblins][] ([CC-BY-SA / CC-BY / CC0][lic.mobs_goblins]) -- version: [a346f85 Git][ver.mobs_goblins] *2015-09-12* ([patched][patch.mobs_goblins])
     * [mobs_monster][] ([MIT][lic.mobs_monster]) -- version: [f6d0e01 Git][ver.mobs_monster] *2017-04-27*
@@ -385,7 +385,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.invisibility]: mods/player_visuals/invisibility/license.txt
 [lic.invisible]: mods/admin/invisible/readme.txt
 [lic.jukebox]: mods/furniture/jukebox/README.txt
-[lic.kpgmobs]: mods/mobs/kpgmobs/README.txt
+[lic.kpgmobs]: mods/mobs/general/kpgmobs/README.txt
 [lic.lightning]: mods/weather/lightning/README.md
 [lic.mesecons]: mods/mp-mesecons/COPYING.txt
 [lic.mobf]: mods/mp-mobf_core/License.txt
