@@ -280,6 +280,34 @@ hudbars_tick (Default HUD bars update interval) float 0.1 0.0 4.0
 bedrock2_y (Bedrock height) int -30912
 
 
+[*Misc.]
+
+
+[**pipeworks]
+
+pipeworks.enable_pipes (Enable pipes) bool true
+pipeworks.enable_autocrafter (Enable autocrafter) bool true
+pipeworks.enable_deployer (Enable deployer) bool true
+pipeworks.enable_dispenser (Enable dispenser) bool true
+pipeworks.enable_node_breaker (Enable node breaker) bool true
+pipeworks.enable_teleport_tube (Enable teleport tube) bool true
+pipeworks.enable_pipe_devices (Enable pipe devices) bool true
+pipeworks.enable_redefines (Enable redefines) bool true
+pipeworks.enable_mese_tube (Enable mese tube) bool true
+pipeworks.enable_detector_tube (Enable detector tube) bool true
+pipeworks.enable_digiline_detector_tube (Enable digiline detector tube) bool true
+pipeworks.enable_conductor_tube (Enable conductor tube) bool true
+pipeworks.enable_accelerator_tube (Enable accelerator tube) bool true
+pipeworks.enable_crossing_tube (Enable crossing tube) bool true
+pipeworks.enable_sand_tube (Enable sand tube) bool true
+pipeworks.enable_mese_sand_tube (Enable mese sand tube) bool true
+pipeworks.enable_one_way_tube (Enable one way tube) bool true
+pipeworks.enable_priority_tube (Enable priority tube) bool true
+pipeworks.enable_cyclic_mode (Enable cyclic mode) bool true
+
+pipeworks.delete_item_on_clearobject (Delete item on clearobject) bool true
+
+
 [Modpacks]
 
 
