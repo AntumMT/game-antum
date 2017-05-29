@@ -116,6 +116,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * world/
     * [bedrock2][] ([WTFPL][lic.wtfpl]) -- version [1.2.2 (5fe9e87 Git)][ver.bedrock2] *2016-11-21* ([patched][patch.bedrock2])
     * [biome_lib][] ([WTFPL][lic.wtfpl]) -- version: [9cdcdcf Git][ver.biome_lib] *2017-01-26* ([patched][patch.biome_lib])
+    * [desert_life][] ([CC BY-SA][lic.ccbysa4.0]) -- version: [d448fa3 Git][ver.desert_life] *2017-01-01*
     * [ethereal][] ([MIT][lic.ethereal]) -- version [2c24961 Git][ver.ethereal] *2017-04-23* ([patched][patch.ethereal])
     * [glow][] ([GPL][lic.gpl2.0]) -- version: [30f9cf3 Git][ver.glow] *2015-09-25* ([patched][patch.glow])
     * [hill_nodebox][] ([BSD 3-Clause][lic.hill_nodebox]) -- version [41bbfa2 Git][ver.hill_nodebox] *2014-12-13*
@@ -215,6 +216,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [crops]: https://forum.minetest.net/viewtopic.php?t=11795
 [currency]: https://github.com/minetest-mods/currency
 [deploy_nodes]: https://cornernote.github.io/minetest-deploy_nodes/
+[desert_life]: https://forum.minetest.net/viewtopic.php?t=16054
 [drawers]: https://forum.minetest.net/viewtopic.php?t=17134
 [elevator]: https://forum.minetest.net/viewtopic.php?t=12944
 [enchanting]: https://forum.minetest.net/viewtopic.php?t=7354
@@ -417,6 +419,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.crops]: https://github.com/minetest-mods/crops/tree/2b1bb37
 [ver.currency]: https://github.com/minetest-mods/currency/tree/21f9811
 [ver.deploy_nodes]: https://github.com/cornernote/minetest-deploy_nodes/tree/eb3d68c
+[ver.desert_life]: https://github.com/NathanSalapat/desert_life/tree/d448fa3
 [ver.drawers]: https://github.com/minetest-mods/drawers/tree/7b9a384
 [ver.enchanting]: https://github.com/minetest-mods/enchanting/tree/13ea31c
 [ver.ethereal]: https://github.com/tenplus1/ethereal/tree/2c24961
