@@ -349,7 +349,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.cme]: mods/modpacks/cme/LICENSE.txt
 [lic.crops]: mods/farming/crops/LICENSE
 [lic.currency]: https://forum.minetest.net/viewtopic.php?t=7002
-[lic.deploy_nodes]: mods/mp-deploy_nodes/LICENSE
+[lic.deploy_nodes]: mods/modpacks/deploy_nodes/LICENSE
 [lic.elevator]: mods/buildings/elevator/readme.txt
 [lic.enchanting]: mods/enchanting/LICENSE
 [lic.ethereal]: mods/world/ethereal/license.txt
