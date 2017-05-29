@@ -37,6 +37,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [currency][] ([WTFPL][lic.currency]) -- version: [21f9811 Git][ver.currency] *2017-03-22* ([patched][patch.currency])
 * [enchanting][] ([GPL / WTFPL / CC BY-SA-NA][lic.enchanting]) -- version: [13ea31c Git][ver.enchanting] *2016-12-16*
 * equipment/
+	* [airtanks][] ([MIT][lic.airtanks]) -- version: [fc01ffb Git][ver.airtanks] *2017-04-01* ([patched][patch.airtanks])
 	* [xtraarmor][] ([CC BY-SA][lic.ccbysa3.0]) -- version: 0.3
 * farming/
 	* [crops][] ([LGPL / CC BY-SA / CC BY / CC0][lic.crops]) -- version: [2b1bb37 Git][ver.crops] *2017-03-31* ([patched][patch.crops])
@@ -72,7 +73,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [pipeworks][] ([WTFPL][lic.wtfpl]) -- version: [a3d2e69 Git][ver.pipeworks] *2016-10-10* ([patched][patch.pipeworks])
 * plantlife/
 * player/
-	* [airtanks][] ([MIT][lic.airtanks]) -- version: [fc01ffb Git][ver.airtanks] *2017-04-01* ([patched][patch.airtanks])
 * player_action/
     * [throwing][] ([WTFPL][lic.wtfpl]) -- version: [90bcf43 Git][ver.throwing] *2013-09-27*
 * player_visuals/
@@ -294,7 +294,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [xtraarmor]: https://forum.minetest.net/viewtopic.php?t=16645
 
 [lic.3d_armor]: mods/modpacks/3d_armor/LICENSE.md
-[lic.airtanks]: mods/player/airtanks/LICENSE.txt
+[lic.airtanks]: mods/equipment/airtanks/LICENSE.txt
 [lic.ambience_ultralite]: mods/sound/ambience/sounds/SoundLicenses.txt
 [lic.amp_adv_spawning]: mods/spawning/adv_spawning/README.txt
 [lic.amp_bear]: mods/modpacks/animals/mob_bear/License.txt
