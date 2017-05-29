@@ -62,6 +62,55 @@ enable_stairs_replace_abm (Replace old stairs) bool false
 [Mods]
 
 
+[*Equipment]
+
+
+[**airtanks]
+
+airtanks_steel_uses (Number of uses for a steel air tank) int 30 2 1000
+airtanks_copper_uses (Number of uses for a copper air tank) int 10 2 1000
+airtanks_bronze_uses (Number of uses for a bronze air tank) int 20 2 1000
+airtanks_wear_in_creative (Air tanks wear out in creative mode) bool true
+
+
+[*Mobiles]
+
+[**sneeker]
+
+# Logs debug output.
+sneeker.debug (Log debug output) bool false
+
+# Sets maximum number of spawns that can exist in world.
+sneeker.spawn_cap (Maximum spawns) int 50
+
+# Sets possibility for spawn.
+sneeker.spawn_chance (Spawn chance) int 18000
+
+# Sets frequency of spawn chance.
+#    Default 1200 is equivalent to 20 minutes (60 * 40).
+sneeker.spawn_interval (Spawn interval) int 2400
+
+
+[*Player Visuals]
+
+
+[**playeranim]
+
+#    Version of player model.
+#    Some fixes and improvements were made to the default player model (character.b3d)
+#    end of november 2016. These changes affect the way body parts are attached and
+#    positioned. For correct results, the version of the player model must be known.
+#
+#    Player models known / supported by this mod:
+#    . -- default_character_v1; used in:
+#    .      -- minetest_game before 25 nov 2016
+#    .      -- 3d_armor before 27 nov 2016	(overrides model from minetest_game)
+#    . -- default_character_v2; used in:
+#    .      -- minetest_game after 25 nov 2016
+#    .      -- 3d_armor after 27 nov 2016	(overrides model from minetest_game)
+player_model_version (Version of player model) enum default_character_v2 default_character_v1,default_character_v2
+
+
 [*UI]
 
 
@@ -197,44 +246,6 @@ hudbars_vmargin (Vertical distance between HUD bars) int 24 0
 # (health and breath). Increase this number if you have a slow server or a slow network
 # connection and experience performance problems.
 hudbars_tick (Default HUD bars update interval) float 0.1 0.0 4.0
-
-
-[*Mobiles]
-
-[**sneeker]
-
-# Logs debug output.
-sneeker.debug (Log debug output) bool false
-
-# Sets maximum number of spawns that can exist in world.
-sneeker.spawn_cap (Maximum spawns) int 50
-
-# Sets possibility for spawn.
-sneeker.spawn_chance (Spawn chance) int 18000
-
-# Sets frequency of spawn chance.
-#    Default 1200 is equivalent to 20 minutes (60 * 40).
-sneeker.spawn_interval (Spawn interval) int 2400
-
-
-[*Player Visuals]
-
-
-[**playeranim]
-
-#    Version of player model.
-#    Some fixes and improvements were made to the default player model (character.b3d)
-#    end of november 2016. These changes affect the way body parts are attached and
-#    positioned. For correct results, the version of the player model must be known.
-#
-#    Player models known / supported by this mod:
-#    . -- default_character_v1; used in:
-#    .      -- minetest_game before 25 nov 2016
-#    .      -- 3d_armor before 27 nov 2016	(overrides model from minetest_game)
-#    . -- default_character_v2; used in:
-#    .      -- minetest_game after 25 nov 2016
-#    .      -- 3d_armor after 27 nov 2016	(overrides model from minetest_game)
-player_model_version (Version of player model) enum default_character_v2 default_character_v1,default_character_v2
 
 
 [Modpacks]
