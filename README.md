@@ -74,7 +74,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * plantlife/
 * player/action/
     * [throwing][] ([WTFPL][lic.wtfpl]) -- version: [90bcf43 Git][ver.throwing] *2013-09-27*
-* player_visuals/
+* player/visuals/
     * [hidename][] ([MIT][lic.hidename]) -- version [bb52dbc Git][ver.hidename]
     * [invisibility][] ([MIT][lic.invisibility]) -- version: [bf4156b Git][ver.invisibility] *2016-08-19* ([patched][patch.invisibility])
     * [playeranim][] ([BSD 2-Clause][lic.playeranim]) - version [0ca8e5a Git][ver.playeranim] *2016-12-07* ([patched][patch.playeranim])
@@ -330,12 +330,12 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.ethereal]: mods/world/ethereal/license.txt
 [lic.farming_plus]: mods/farming/farming_plus/README.txt
 [lic.fort_spikes]: mods/buildings/fort_spikes/README.md
-[lic.hidename]: mods/player_visuals/hidename/LICENSE.txt
+[lic.hidename]: mods/player/visuals/hidename/LICENSE.txt
 [lic.hill_nodebox]: mods/world/hill_nodebox/LICENSE
 [lic.homedecor]: mods/modpacks/homedecor/LICENSE
 [lic.hovercraft]: mods/transport/hovercraft/LICENSE.txt
 [lic.inventory_plus]: mods/inventory/inventory_plus/LICENSE
-[lic.invisibility]: mods/player_visuals/invisibility/license.txt
+[lic.invisibility]: mods/player/visuals/invisibility/license.txt
 [lic.invisible]: mods/admin/invisible/readme.txt
 [lic.jukebox]: mods/furniture/jukebox/README.txt
 [lic.kpgmobs]: mods/mobiles/general/kpgmobs/README.txt
@@ -349,7 +349,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.moreores]: mods/materials/moreores/LICENSE.md
 [lic.mydoors]: mods/modpacks/mydoors/README.md
 [lic.nether]: mods/world/nether/README.md
-[lic.playeranim]: mods/player_visuals/playeranim/license.md
+[lic.playeranim]: mods/player/visuals/playeranim/license.md
 [lic.privilegeareas]: mods/admin/privilegeareas/README.md
 [lic.quartz]: mods/materials/quartz/LICENSE.txt
 [lic.rainbow_ore]: mods/materials/rainbow_ore/README.md
