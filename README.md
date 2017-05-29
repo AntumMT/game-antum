@@ -567,7 +567,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.ilights]: https://github.com/AntumDeluge/mtmod-ilights/tree/f610d75
 [patch.inventory_plus]: https://github.com/AntumDeluge/mtmp-inventory_plus/tree/3c81158
 [patch.invisibility]: https://github.com/AntumDeluge/mtmod-invisibility/tree/f045c7c
-[patch.kpgmobs]: https://github.com/AntumDeluge/mtmod-kpgmobs/tree/0773e37
+[patch.kpgmobs]: https://github.com/AntumDeluge/mtmod-kpgmobs/tree/b7c2574
 [patch.mesecons]: https://github.com/AntumDeluge/mtmp-mesecons/tree/32a4823
 [patch.minetest]: https://github.com/AntumDeluge/mtgame-minetest/tree/914595e
 [patch.mobf_core]: https://github.com/AntumDeluge/mtmp-mobf_core/tree/e6fa3b7
