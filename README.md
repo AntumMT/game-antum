@@ -60,7 +60,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * mobiles/aggressive/
     * [mobs_goblins][] ([CC-BY-SA / CC-BY / CC0][lic.mobs_goblins]) -- version: [a346f85 Git][ver.mobs_goblins] *2015-09-12* ([patched][patch.mobs_goblins])
     * [mobs_monster][] ([MIT][lic.mobs_monster]) -- version: [f6d0e01 Git][ver.mobs_monster] *2017-04-27*
-    * [sneeker][] ([WTFPL][lic.wtfpl] / [CC0][lic.cc0]) -- version: [d336800 Git][ver.sneeker] *2017-05-29*
+    * [sneeker][] ([WTFPL][lic.wtfpl] / [CC0][lic.cc0]) -- version: [b69cc98 Git][ver.sneeker] *2017-05-29*
     * [spidermob][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0] / [MIT][lic.mit] / [WTFPL][lic.spidermob] / [Unlicense][lic.unlicense]) -- version [c72d2ff Git][ver.spidermob] *2016-08-14* ([patched][patch.spidermob])
 * mobiles/engine/
 * mobiles/general/
@@ -462,7 +462,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.rainbow_ore]: https://github.com/FsxShader2012/rainbow_ore/tree/6e77693
 [ver.signs_lib]: https://github.com/minetest-mods/signs_lib/tree/2c36937
 [ver.simple_protection]: https://github.com/SmallJoker/simple_protection/tree/23c024f
-[ver.sneeker]: https://github.com/AntumDeluge/mtmod-sneeker/tree/d336800
+[ver.sneeker]: https://github.com/AntumDeluge/mtmod-sneeker/tree/b69cc98
 [ver.snowdrift]: https://github.com/paramat/snowdrift/tree/fcb0537
 [ver.spawneggs]: https://github.com/thefamilygrog66/spawneggs/tree/4650370
 [ver.spectator_mode]: https://github.com/minetest-mods/spectator_mode/tree/7d68bec
