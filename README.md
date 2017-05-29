@@ -162,13 +162,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* [castle_weapons][] -- version [5f5232a Git][ver.castle_weapons] *2017-02-28* ([patched][patch.castle_weapons])
 		* [crafting_bench][] -- version [3aa4cfb Git][ver.crafting_bench] *2017-02-28* ([patched][patch.crafting_bench])
 * [Creatures MOB-Engine][cme] ([zlib / CC-BY-SA][lic.cme]) -- version: [2.3.1-0-e3502a1 Git][ver.cme] *2016-02-16* ([patched][patch.cme])
-	* mp-cme/
-		* chicken
-		* creatures
-		* ghost
-		* oerrki
-		* sheep
-		* zombie
 * [deploy_nodes][] ([BSD 3-Clause][lic.deploy_nodes]) -- version [eb3d68c Git][ver.deploy_nodes] *2015-05-19*
 * [homedecor_modpack][homedecor] ([LGPL / WTFPL / CC BY-SA / CC0][lic.homedecor]) -- version: [8e467ef Git][ver.homedecor] *2017-01-24* ([patched][patch.homedecor])
 	* mp-homedecor_modpack/
@@ -353,7 +346,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.campfire]: mods/campfire/README.md
 [lic.castle]: mods/modpacks/castle/LICENSE
 [lic.christmas]: mods/buildings/christmas/LICENSE.txt
-[lic.cme]: mods/mp-cme/LICENSE.txt
+[lic.cme]: mods/modpacks/cme/LICENSE.txt
 [lic.crops]: mods/farming/crops/LICENSE
 [lic.currency]: https://forum.minetest.net/viewtopic.php?t=7002
 [lic.deploy_nodes]: mods/mp-deploy_nodes/LICENSE
