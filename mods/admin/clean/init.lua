@@ -19,6 +19,7 @@ local replace_nodes = {
     {'homedecor:shutter', 'homedecor:shutter_oak'},
     {'lrfurn:armchair', 'lrfurn:armchair_white'},
     {'craft_guide:sign_wall', 'craftguide:sign'},
+    {'stairsplus:panel_cobble_vertical', 'moreblocks:panel_cobble'},
 }
 
 
