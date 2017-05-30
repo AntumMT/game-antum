@@ -94,7 +94,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * tools/
 	* [compassgps][] ([WTFPL][lic.wtfpl] / [CC0][lic.cc0] / [CC BY-SA][lic.ccbysa]) -- version: [96892a0 Git][ver.compassgps] *2015-07-31* ([patched][patch.compassgps])
     * [tools_obsidian][] ([LGPL / CC BY-SA][lic.tools_obsidian]) -- version: [f77fd79][ver.tools_obsidian] *2016-03-19*
-    * [torches][] ([LGPL / CC-BY-SA](mods/tools/torches/README.txt)) -- version: [e19c772 Git][ver.torches] *2015-11-12* ([patched][patch.torches])
     * [workbench][] ([GPL / WTFPL](mods/tools/workbench/LICENSE)) -- version: [74dd1af Git][ver.workbench] *2017-02-07* ([patched][patch.workbench])
 * transport/
 	* [helicopter][] ([GPL][lic.gpl2.0]) -- version: [10f1433 Git][ver.helicopter] ([patched][patch.helicopter]) *2015-07-15*
@@ -275,7 +274,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [technic]: https://forum.minetest.net/viewtopic.php?t=2538
 [throwing]: https://forum.minetest.net/viewtopic.php?t=687
 [tnt]: https://forum.minetest.net/viewtopic.php?id=2902
-[torches]: https://forum.minetest.net/viewtopic.php?t=6099
 [tools_obsidian]: https://forum.minetest.net/viewtopic.php?t=14236
 [trampoline]: https://github.com/AntumDeluge/mtmod-trampoline
 [trash_can]: https://forum.minetest.net/viewtopic.php?t=6315
@@ -472,7 +470,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.throwing]: https://github.com/PilzAdam/throwing/tree/90bcf43
 [ver.tnt]: https://github.com/PilzAdam/TNT/tree/d6a0b7d
 [ver.tools_obsidian]: https://github.com/Dragonop/tools_obsidian/tree/f77fd79
-[ver.torches]: https://github.com/BlockMen/torches/tree/e19c772
 [ver.trampoline]: https://github.com/AntumDeluge/mtmod-trampoline/tree/ab1c289
 [ver.trash_can]: https://github.com/minetest-mods/trash_can/tree/5fd3df7
 [ver.unifieddyes]: https://github.com/minetest-mods/unifieddyes/tree/70b1f9f
@@ -540,7 +537,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.spawneggs]: https://github.com/AntumDeluge/mtmod-spawneggs/tree/b47f49f
 [patch.spidermob]: https://github.com/AntumDeluge/mtmod-spidermob/tree/7f2e77d
 [patch.technic]: https://github.com/AntumDeluge/mtmod-technic/tree/661c23d
-[patch.torches]: https://github.com/AntumDeluge/mtmod-torches/tree/fb2b692
 [patch.trash_can]: https://github.com/AntumDeluge/mtmod-trash_can/tree/5a92bf4
 [patch.unifieddyes]: https://github.com/AntumDeluge/mtmod-unifieddyes/tree/0e575d9
 [patch.walking_light]: https://github.com/AntumDeluge/mtmod-walking_light/tree/57d2550
