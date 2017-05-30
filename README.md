@@ -19,7 +19,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [privs][] ([CC0][lic.cc0])
     * [spectator_mode][] ([WTFPL][lic.spectator_mode]) -- version: [7d68bec Git][ver.spectator_mode] *2017-03-30*
 * [awards][] ([LGPL][lic.lgpl2.1]) -- version: [096fe16 Git][ver.awards] *2017-02-25*
-* [antum][] ([MIT][lic.antum]) -- version: [e539f08 Git][ver.antum] *2017-05-03*
+* [antum][] ([MIT][lic.antum]) -- version: [2a0e695 Git][ver.antum] *2017-05-29*
 * buildings/
     * [bridges][] ([GPL][lic.gpl3.0]) -- version: [5b5f475 Git][ver.bridges] *2015-08-23*
     * [christmas][] ([MIT][lic.christmas]) -- version [d3bd872 Git][ver.christmas] *2013-01-11* ([patched][patch.christmas])
@@ -94,7 +94,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * tools/
 	* [compassgps][] ([WTFPL][lic.wtfpl] / [CC0][lic.cc0] / [CC BY-SA][lic.ccbysa]) -- version: [96892a0 Git][ver.compassgps] *2015-07-31* ([patched][patch.compassgps])
     * [tools_obsidian][] ([LGPL / CC BY-SA][lic.tools_obsidian]) -- version: [f77fd79][ver.tools_obsidian] *2016-03-19*
-    * [torches][] ([LGPL / CC-BY-SA](mods/tools/torches/README.txt)) -- version: [e19c772 Git][ver.torches] *2015-11-12* ([patched][patch.torches])
     * [workbench][] ([GPL / WTFPL](mods/tools/workbench/LICENSE)) -- version: [74dd1af Git][ver.workbench] *2017-02-07* ([patched][patch.workbench])
 * transport/
 	* [helicopter][] ([GPL][lic.gpl2.0]) -- version: [10f1433 Git][ver.helicopter] ([patched][patch.helicopter]) *2015-07-15*
@@ -116,6 +115,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * world/
     * [bedrock2][] ([WTFPL][lic.wtfpl]) -- version [1.2.2 (5fe9e87 Git)][ver.bedrock2] *2016-11-21* ([patched][patch.bedrock2])
     * [biome_lib][] ([WTFPL][lic.wtfpl]) -- version: [9cdcdcf Git][ver.biome_lib] *2017-01-26* ([patched][patch.biome_lib])
+    * [desert_life][] ([CC BY-SA][lic.ccbysa4.0]) -- version: [d448fa3 Git][ver.desert_life] *2017-01-01*
     * [ethereal][] ([MIT][lic.ethereal]) -- version [2c24961 Git][ver.ethereal] *2017-04-23* ([patched][patch.ethereal])
     * [glow][] ([GPL][lic.gpl2.0]) -- version: [30f9cf3 Git][ver.glow] *2015-09-25* ([patched][patch.glow])
     * [hill_nodebox][] ([BSD 3-Clause][lic.hill_nodebox]) -- version [41bbfa2 Git][ver.hill_nodebox] *2014-12-13*
@@ -215,6 +215,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [crops]: https://forum.minetest.net/viewtopic.php?t=11795
 [currency]: https://github.com/minetest-mods/currency
 [deploy_nodes]: https://cornernote.github.io/minetest-deploy_nodes/
+[desert_life]: https://forum.minetest.net/viewtopic.php?t=16054
 [drawers]: https://forum.minetest.net/viewtopic.php?t=17134
 [elevator]: https://forum.minetest.net/viewtopic.php?t=12944
 [enchanting]: https://forum.minetest.net/viewtopic.php?t=7354
@@ -273,7 +274,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [technic]: https://forum.minetest.net/viewtopic.php?t=2538
 [throwing]: https://forum.minetest.net/viewtopic.php?t=687
 [tnt]: https://forum.minetest.net/viewtopic.php?id=2902
-[torches]: https://forum.minetest.net/viewtopic.php?t=6099
 [tools_obsidian]: https://forum.minetest.net/viewtopic.php?t=14236
 [trampoline]: https://github.com/AntumDeluge/mtmod-trampoline
 [trash_can]: https://forum.minetest.net/viewtopic.php?t=6315
@@ -390,7 +390,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.airtanks]: https://github.com/minetest-mods/airtanks/tree/fc01ffb
 [ver.animalmaterials]: https://github.com/sapier/animalmaterials/tree/d952d27
 [ver.animals]: https://github.com/sapier/animals_modpack/tree/b9d0172
-[ver.antum]: https://github.com/AntumDeluge/mtmp-antum/tree/e539f08
+[ver.antum]: https://github.com/AntumDeluge/mtmp-antum/tree/2a0e695
 [ver.areas]: https://github.com/ShadowNinja/areas/tree/6080ff0
 [ver.awards]: https://github.com/minetest-mods/awards/tree/096fe16
 [ver.away]: https://github.com/kahrl/minetest-mod-away/tree/4c1e5a9
@@ -417,6 +417,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.crops]: https://github.com/minetest-mods/crops/tree/2b1bb37
 [ver.currency]: https://github.com/minetest-mods/currency/tree/21f9811
 [ver.deploy_nodes]: https://github.com/cornernote/minetest-deploy_nodes/tree/eb3d68c
+[ver.desert_life]: https://github.com/NathanSalapat/desert_life/tree/d448fa3
 [ver.drawers]: https://github.com/minetest-mods/drawers/tree/7b9a384
 [ver.enchanting]: https://github.com/minetest-mods/enchanting/tree/13ea31c
 [ver.ethereal]: https://github.com/tenplus1/ethereal/tree/2c24961
@@ -469,7 +470,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.throwing]: https://github.com/PilzAdam/throwing/tree/90bcf43
 [ver.tnt]: https://github.com/PilzAdam/TNT/tree/d6a0b7d
 [ver.tools_obsidian]: https://github.com/Dragonop/tools_obsidian/tree/f77fd79
-[ver.torches]: https://github.com/BlockMen/torches/tree/e19c772
 [ver.trampoline]: https://github.com/AntumDeluge/mtmod-trampoline/tree/ab1c289
 [ver.trash_can]: https://github.com/minetest-mods/trash_can/tree/5fd3df7
 [ver.unifieddyes]: https://github.com/minetest-mods/unifieddyes/tree/70b1f9f
@@ -498,7 +498,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.castle_tapestries]: https://github.com/AntumDeluge/mtmod-castle_tapestries/tree/4e70f1b
 [patch.castle_weapons]: https://github.com/AntumDeluge/mtmod-castle_weapons/tree/577464d
 [patch.christmas]: https://github.com/AntumDeluge/mtmod-christmas/tree/f6c8dc2
-[patch.clean]: https://github.com/AntumDeluge/mtmod-clean/tree/8279699
+[patch.clean]: https://github.com/AntumDeluge/mtmod-clean/tree/ec7cfff
 [patch.cme]: https://github.com/AntumDeluge/mtmp-cme/tree/7a6e106
 [patch.compassgps]: https://github.com/AntumDeluge/mtmod-compassgps/tree/888ec15
 [patch.craftguide]: https://github.com/AntumDeluge/mtmod-craftguide/tree/1197b13
@@ -537,7 +537,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.spawneggs]: https://github.com/AntumDeluge/mtmod-spawneggs/tree/b47f49f
 [patch.spidermob]: https://github.com/AntumDeluge/mtmod-spidermob/tree/7f2e77d
 [patch.technic]: https://github.com/AntumDeluge/mtmod-technic/tree/661c23d
-[patch.torches]: https://github.com/AntumDeluge/mtmod-torches/tree/fb2b692
 [patch.trash_can]: https://github.com/AntumDeluge/mtmod-trash_can/tree/5a92bf4
 [patch.unifieddyes]: https://github.com/AntumDeluge/mtmod-unifieddyes/tree/0e575d9
 [patch.walking_light]: https://github.com/AntumDeluge/mtmod-walking_light/tree/57d2550
