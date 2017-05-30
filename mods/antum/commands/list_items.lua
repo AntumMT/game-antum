@@ -88,12 +88,6 @@ minetest.register_chatcommand('listitems', {
 		-- Make all parameters lowercase for case-insensitive matching
 		param = antum.removeListDuplicates(string.split(string.lower(param), ' '))
 		
-		-- Debug
-		minetest.log('action', '[list_items] Parameters:')
-		for I in pairs(param) do
-			minetest.log('action', '  ' .. param[I])
-		end
-		
 		local all_item_names = antum.getRegisteredItemNames()
 		local found_names = {}
 		
