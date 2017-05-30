@@ -20,6 +20,7 @@ local replace_nodes = {
     {'lrfurn:armchair', 'lrfurn:armchair_white'},
     {'craft_guide:sign_wall', 'craftguide:sign'},
     {'stairsplus:panel_cobble_vertical', 'moreblocks:panel_cobble'},
+    {'torches:floor', 'default:torch'},
 }
 
 
