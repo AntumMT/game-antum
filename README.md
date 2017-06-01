@@ -65,6 +65,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * mobiles/engine/
     * [mobs_redo][] ([MIT][lic.mobs_redo]) -- version: [7de8bc4 Git][ver.mobs_redo] *2017-05-12* ([patched][patch.mobs_redo])
 * mobiles/general/
+	* [mobs_animal][] ([MIT][lic.mobs_animal]) -- version: [ebc2e3a Git][ver.mobs_animal] *2017-05-27*
 * mobiles/passive/
 	* [mob_horse][] -- version: [39b6986 Git][ver.mob_horse] *2017-05-29* ([patched][patch.mob_horse])
     * [peaceful_npc][] ([WTFPL][lic.wtfpl]) -- version: [2b3a7a5 Git][ver.peaceful_npc] *2015-08-09*
@@ -242,6 +243,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [mesecons]: https://forum.minetest.net/viewtopic.php?t=628
 [minetest_game]: https://github.com/minetest/minetest_game
 [mob_horse]: https://github.com/tenplus1/mob_horse
+[mobs_animal]: https://github.com/tenplus1/mobs_animal
 [mobs_goblins]: https://forum.minetest.net/viewtopic.php?t=13004
 [mobs_monster]: https://github.com/tenplus1/mobs_monster
 [mobs_redo]: https://forum.minetest.net/viewtopic.php?t=9917
@@ -339,6 +341,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.lightning]: mods/weather/lightning/README.md
 [lic.mesecons]: mods/modpacks/mesecons/COPYING.txt
 [lic.mobf]: mods/modpacks/mobf_core/License.txt
+[lic.mobs_animal]: mods/mobiles/general/mobs_animal/license.txt
 [lic.mobs_goblins]: mods/mobiles/aggressive/mobs_goblins/README.md
 [lic.mobs_monster]: mods/mobiles/aggressive/mobs_monster/license.txt
 [lic.mobs_redo]: mods/mobiles/engine/mobs_redo/license.txt
@@ -441,6 +444,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.minetest_game]: https://github.com/minetest/minetest_game/tree/e523c3a
 [ver.mob_horse]: https://github.com/tenplus1/mob_horse/tree/39b6986
 [ver.mobf_core]: https://github.com/sapier/mobf_core/tree/1199ca9
+[ver.mobs_animal]: https://github.com/tenplus1/mobs_animal/tree/ebc2e3a
 [ver.mobs_goblins]: https://github.com/FreeLikeGNU/mobs_goblins/tree/a346f85
 [ver.mobs_monster]: https://github.com/tenplus1/mobs_monster/tree/f6d0e01
 [ver.mobs_redo]: https://github.com/tenplus1/mobs_redo/tree/7de8bc4
