@@ -509,7 +509,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.christmas]: https://github.com/AntumDeluge/mtmod-christmas/tree/f6c8dc2
 [patch.clean]: https://github.com/AntumDeluge/mtmod-clean/tree/ec7cfff
 [patch.cme]: https://github.com/AntumDeluge/mtmp-cme/tree/27234af
-[patch.compassgps]: https://github.com/AntumDeluge/mtmod-compassgps/tree/888ec15
+[patch.compassgps]: https://github.com/AntumDeluge/mtmod-compassgps/tree/14179c2
 [patch.craftguide]: https://github.com/AntumDeluge/mtmod-craftguide/tree/1197b13
 [patch.crafting_bench]: https://github.com/AntumDeluge/mtmod-crafting_bench/tree/c5ff4e5
 [patch.crops]: https://github.com/AntumDeluge/mtmod-crops/tree/f8b33ae
