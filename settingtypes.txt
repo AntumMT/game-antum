@@ -96,6 +96,13 @@ airtanks_bronze_uses (Number of uses for a bronze air tank) int 20 2 1000
 airtanks_wear_in_creative (Air tanks wear out in creative mode) bool true
 
 
+[**slingshot]
+
+# Require rubber band as additional ingredient in slingshot craft recipes.
+slingshot.require_rubber_band (Require rubber band in craft recipe) bool true
+
+
+
 [*Mobiles]
 
 [**sneeker]

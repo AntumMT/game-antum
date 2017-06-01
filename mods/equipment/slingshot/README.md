@@ -12,8 +12,13 @@ Depends:
 
 ### Licensing:
 
-- Original code by [AiTechEye][]: [CC0][lic.cc0]
-- Code by Jordan Irwin: [MIT][lic.mit]
+- Code
+  - Original code by [AiTechEye][]: [CC0][lic.cc0]
+  - Code by Jordan Irwin: [MIT][lic.mit]
+
+- Textures:
+  - slingshots: [CC0][lic.cc0]
+  - rubber band: [CC0][lic.cc0]
 
 
 ### Functions:

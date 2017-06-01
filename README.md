@@ -38,7 +38,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [enchanting][] ([GPL / WTFPL / CC BY-SA-NA][lic.enchanting]) -- version: [13ea31c Git][ver.enchanting] *2016-12-16*
 * equipment/
 	* [airtanks][] ([MIT][lic.airtanks]) -- version: [fc01ffb Git][ver.airtanks] *2017-04-01* ([patched][patch.airtanks])
-	* [slingshot][] ([MIT][lic.slingshot] / [CC0][lic.cc0]) -- version: [903fc8d Git][ver.slingshot] *2017-06-01*
+	* [slingshot][] ([MIT][lic.slingshot] / [CC0][lic.cc0]) -- version: [1c40c25 Git][ver.slingshot] *2017-06-01*
 	* [xtraarmor][] ([CC BY-SA][lic.ccbysa3.0]) -- version: 0.3
 * farming/
 	* [crops][] ([LGPL / CC BY-SA / CC BY / CC0][lic.crops]) -- version: [2b1bb37 Git][ver.crops] *2017-03-31* ([patched][patch.crops])
@@ -467,7 +467,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.rainbow_ore]: https://github.com/FsxShader2012/rainbow_ore/tree/6e77693
 [ver.signs_lib]: https://github.com/minetest-mods/signs_lib/tree/2c36937
 [ver.simple_protection]: https://github.com/SmallJoker/simple_protection/tree/23c024f
-[ver.slingshot]: https://github.com/AntumDeluge/mtmod-slingshot/tree/903fc8d
+[ver.slingshot]: https://github.com/AntumDeluge/mtmod-slingshot/tree/1c40c25
 [ver.sneeker]: https://github.com/AntumDeluge/mtmod-sneeker/tree/258d366
 [ver.snowdrift]: https://github.com/paramat/snowdrift/tree/fcb0537
 [ver.spawneggs]: https://github.com/thefamilygrog66/spawneggs/tree/4650370

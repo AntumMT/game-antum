@@ -69,11 +69,12 @@ function slingshot.register(name, def)
 	else
 		image = 'slingshot_' .. name .. '.png'
 	end
-		
+	
 	minetest.register_tool('slingshot:' .. name, {
 		description = def.description,
 		range = 4,
 		inventory_image = image,
+		wield_image = image,
 		
 		on_use = function(itemstack, user, pointed_thing)
 			if pointed_thing.ref and pointed_thing.ref:is_player() == false and pointed_thing.ref:get_luaentity().name == '__builtin:item' then
@@ -106,6 +107,25 @@ function slingshot.register(name, def)
 		end
 	})
 	
+	-- def.ingredient overrides def.recipe
+	if def.ingredient ~= nil then
+		if slingshot.require_rubber_band and minetest.global_exists('technic') then
+			-- More complicated recipe for technic
+			def.recipe = {
+				{def.ingredient, 'slingshot:rubber_band', def.ingredient},
+				{'', def.ingredient, ''},
+				{'', def.ingredient, ''},
+			}
+		else
+			def.recipe = {
+				{def.ingredient, '', def.ingredient},
+				{'', def.ingredient, ''},
+				{'', def.ingredient, ''},
+			}
+		end
+	end
+	
+	-- Optional register a craft recipe
 	if def.recipe ~= nil then
 		minetest.register_craft({
 			output = 'slingshot:' .. name,
