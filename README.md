@@ -31,7 +31,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [campfire][] ([GPL][lic.gpl2.0] / [CC BY-SA][lic.ccbysa] / [WTFPL][lic.campfire]) -- version: [b45acd2 Git][ver.campfire] *2016-02-18* ([patched][patch.campfire])
 * chat/
     * [away][] ([GPL][lic.gpl2.0]) -- version: [4c1e5a9 Git][ver.away] *2012-03-09*
-    * [chatlog][] ([CC0][lic.cc0]) -- version: (no version info)
+    * [chatlog][] ([CC0][lic.cc0]) -- version: (no version info) *2013-06-09* ([patched][patch.chatlog])
 * crafting/
     * [craftguide][] ([GPL / WTFPL](mods/crafting/craftguide/LICENSE)) -- version: [86a96c3 Git][ver.craftguide] *2017-03-21* ([patched][patch.craftguide])
 * [currency][] ([WTFPL][lic.currency]) -- version: [21f9811 Git][ver.currency] *2017-03-22* ([patched][patch.currency])
@@ -505,6 +505,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.castle_storage]: https://github.com/AntumDeluge/mtmod-castle_storage/tree/b80b72f
 [patch.castle_tapestries]: https://github.com/AntumDeluge/mtmod-castle_tapestries/tree/4e70f1b
 [patch.castle_weapons]: https://github.com/AntumDeluge/mtmod-castle_weapons/tree/577464d
+[patch.chatlog]: https://github.com/AntumDeluge/mtmod-chatlog/tree/074c8ee
 [patch.christmas]: https://github.com/AntumDeluge/mtmod-christmas/tree/f6c8dc2
 [patch.clean]: https://github.com/AntumDeluge/mtmod-clean/tree/ec7cfff
 [patch.cme]: https://github.com/AntumDeluge/mtmp-cme/tree/7a6e106

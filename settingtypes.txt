@@ -85,6 +85,16 @@ remove_far_mobs (Remove far mobs) bool false
 [Mods]
 
 
+[*Chat]
+
+
+[**chatlog]
+
+# Whether month is displayed before day in timestamp (E.g. 'dd/mm/yyyy' vs. 'mm/dd/yy').
+chatlog.monthfirst (Timestamp shows month before day) bool true
+
+
+
 [*Equipment]
 
 
