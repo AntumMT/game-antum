@@ -4,6 +4,11 @@
 local old_nodes = {'mod:a', 'mod:b'}
 local old_entities = {
 	'creeper:creeper',
+	'kpgmobs:bee',
+	'kpgmobs:cow',
+	'kpgmobs:horse',
+	'kpgmobs:horse2',
+	'kpgmobs:medved',
 	'kpgmobs:sheep',
 	'mobs_mc:skeleton',
 	'mobs_mc:creeper',
@@ -17,6 +22,8 @@ local replace_nodes = {
     {'homedecor:bed_kingsize', 'homedecor:bed_white_kingsize'},
     {'homedecor:glowlight_quarter', 'homedecor:glowlight_quarter_white'},
     {'homedecor:shutter', 'homedecor:shutter_oak'},
+    {'kpgmobs:meat', 'mobs:meat'},
+    {'kpgmobs:meat_raw', 'mobs:meat_raw'},
     {'lrfurn:armchair', 'lrfurn:armchair_white'},
     {'craft_guide:sign_wall', 'craftguide:sign'},
     {'stairsplus:panel_cobble_vertical', 'moreblocks:panel_cobble'},
