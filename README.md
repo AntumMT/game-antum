@@ -64,7 +64,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [spidermob][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0] / [MIT][lic.mit] / [WTFPL][lic.spidermob] / [Unlicense][lic.unlicense]) -- version [c72d2ff Git][ver.spidermob] *2016-08-14* ([patched][patch.spidermob])
 * mobiles/engine/
 * mobiles/general/
-    * [kpgmobs][] ([MIT][lic.kpgmobs]) -- version: v6 *2015-01-31* ([patched][patch.kpgmobs])
     * [mobs_redo][] ([MIT][lic.mobs_redo]) -- version: [7de8bc4 Git][ver.mobs_redo] *2017-05-12* ([patched][patch.mobs_redo])
 * mobiles/passive/
 	* [mob_horse][] -- version: [39b6986 Git][ver.mob_horse] *2017-05-29* ([patched][patch.mob_horse])
@@ -239,7 +238,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [inventory_plus]: https://forum.minetest.net/viewtopic.php?t=3100
 [jukebox]: https://forum.minetest.net/viewtopic.php?t=13505
 [jumping]: https://forum.minetest.net/viewtopic.php?t=2957
-[kpgmobs]: https://forum.minetest.net/viewtopic.php?t=8798
 [lightning]: https://forum.minetest.net/viewtopic.php?t=13886
 [mesecons]: https://forum.minetest.net/viewtopic.php?t=628
 [minetest_game]: https://github.com/minetest/minetest_game
@@ -338,7 +336,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.invisibility]: mods/player/visuals/invisibility/license.txt
 [lic.invisible]: mods/admin/invisible/readme.txt
 [lic.jukebox]: mods/furniture/jukebox/README.txt
-[lic.kpgmobs]: mods/mobiles/general/kpgmobs/README.txt
 [lic.lightning]: mods/weather/lightning/README.md
 [lic.mesecons]: mods/modpacks/mesecons/COPYING.txt
 [lic.mobf]: mods/modpacks/mobf_core/License.txt
@@ -520,7 +517,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.ilights]: https://github.com/AntumDeluge/mtmod-ilights/tree/f610d75
 [patch.inventory_plus]: https://github.com/AntumDeluge/mtmp-inventory_plus/tree/3c81158
 [patch.invisibility]: https://github.com/AntumDeluge/mtmod-invisibility/tree/f045c7c
-[patch.kpgmobs]: https://github.com/AntumDeluge/mtmod-kpgmobs/tree/b7c2574
 [patch.mesecons]: https://github.com/AntumDeluge/mtmp-mesecons/tree/32a4823
 [patch.minetest]: https://github.com/AntumDeluge/mtgame-minetest/tree/914595e
 [patch.mob_horse]: https://github.com/AntumDeluge/mtmod-mob_horse/tree/4ce38fa
