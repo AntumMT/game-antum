@@ -1,4 +1,3 @@
 stairs
 default
 moreblocks?
-craft_guide?

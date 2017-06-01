@@ -536,7 +536,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.moremesecons]: https://github.com/AntumDeluge/mtmp-moremesecons/tree/cae948e
 [patch.moreores]: https://github.com/AntumDeluge/mtmod-moreores/tree/8b874f6
 [patch.mydoors]: https://github.com/AntumDeluge/mtmp-mydoors/tree/e36c9d1
-[patch.nether]: https://github.com/AntumDeluge/mtmod-nether/tree/ec3e2af
+[patch.nether]: https://github.com/AntumDeluge/mtmod-nether/tree/1903dfc
 [patch.pipeworks]: https://github.com/AntumDeluge/mtmod-pipeworks/tree/81480a5
 [patch.playeranim]: https://github.com/AntumDeluge/mtmod-playeranim/tree/54a4cb6
 [patch.quartz]: https://github.com/AntumDeluge/mtmod-quartz/tree/d23dabd
