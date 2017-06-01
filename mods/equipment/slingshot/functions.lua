@@ -32,8 +32,7 @@ minetest.register_globalstep(function(dtime)
 end)
 
 
-function slingshot.on_use(itemstack, user)
-	local veloc = 15
+function slingshot.on_use(itemstack, user, veloc)
 	local pos = user:getpos()
 	local upos = {x=pos.x, y=pos.y+2, z=pos.z}
 	local dir = user:get_look_dir()
@@ -56,4 +55,68 @@ function slingshot.on_use(itemstack, user)
 	user:get_inventory():remove_item('main', item)
 	minetest.sound_play('slingshot_throw', {pos=pos, gain = 1.0, max_hear_distance = 5,})
 	return itemstack
+end
+
+
+-- Registers a new slingshot
+-- 'def' should include 'description', 'damage_groups', & 'velocity'
+function slingshot.register(name, def)
+	local image = {}
+	
+	-- The default slingshot
+	if name == 'slingshot' then
+		image = 'slingshot.png'
+	else
+		image = 'slingshot_' .. name .. '.png'
+	end
+		
+	minetest.register_tool('slingshot:' .. name, {
+		description = def.description,
+		range = 4,
+		inventory_image = image,
+		
+		on_use = function(itemstack, user, pointed_thing)
+			if pointed_thing.ref and pointed_thing.ref:is_player() == false and pointed_thing.ref:get_luaentity().name == '__builtin:item' then
+				pointed_thing.ref:punch(user, {full_punch_interval=1.0, damage_groups=def.damage_groups}, 'default:bronze_pick', nil)
+				return itemstack
+			end
+			slingshot.on_use(itemstack, user, def.velocity)
+			return itemstack
+		end,
+		
+		on_place = function(itemstack, user, pointed_thing)
+			local item = itemstack:to_table()
+			local meta = minetest.deserialize(item['metadata'])
+			local mode = 0
+			if meta == nil then meta = {} mode = 1 end
+			if meta.mode == nil then meta.mode = 1 end
+			mode = (meta.mode)
+			if mode == 1 then
+				mode = -1
+				minetest.chat_send_player(user:get_player_name(), 'Use stack to left')
+			else
+				mode = 1
+				minetest.chat_send_player(user:get_player_name(), 'Use stack to right')
+			end
+			meta.mode = mode
+			item.metadata = minetest.serialize(meta)
+			item.meta = minetest.serialize(meta)
+			itemstack:replace(item)
+			return itemstack
+		end
+	})
+	
+	if def.recipe ~= nil then
+		minetest.register_craft({
+			output = 'slingshot:' .. name,
+			recipe = def.recipe,
+		})
+	end
+	
+	-- Optionally register aliases
+	if def.aliases ~= nil then
+		for index, alias in ipairs(def.aliases) do
+			minetest.register_alias(alias, 'slingshot:' .. name)
+		end
+	end
 end

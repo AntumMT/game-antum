@@ -7,7 +7,6 @@ slingshot.modpath = minetest.get_modpath(slingshot.modname)
 local scripts = {
 	'functions',
 	'register',
-	'crafting',
 }
 
 for index, script in ipairs(scripts) do

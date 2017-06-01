@@ -25,16 +25,29 @@ Depends:
 ### Crafting:
 
 * `SI` = default:steel_ingot
-* `SB` = default:steelblock
+* `ST` = default:stick
 
-Craft recipe:
+##### Craft recipes:
+
+slingshot:
 
     ╔════╦════╦════╗
     ║ SI ║    ║ SI ║
     ╠════╬════╬════╣
-    ║    ║ SB ║    ║
+    ║    ║ SI ║    ║
     ╠════╬════╬════╣
     ║    ║ SI ║    ║
+    ╚════╩════╩════╝
+
+
+wood slingshot:
+
+    ╔════╦════╦════╗
+    ║ ST ║    ║ ST ║
+    ╠════╬════╬════╣
+    ║    ║ ST ║    ║
+    ╠════╬════╬════╣
+    ║    ║ ST ║    ║
     ╚════╩════╩════╝
 
 
