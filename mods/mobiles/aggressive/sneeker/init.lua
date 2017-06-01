@@ -17,8 +17,6 @@ sneeker.log_debug('Debugging is on')
 sneeker.mob_name = sneeker.modname .. ':' .. sneeker.modname
 sneeker.spawnegg_name = sneeker.modname .. ':spawnegg'
 
-sneeker.log('Spawn cap: ' .. tostring(sneeker.spawn_cap))
-
 local scripts = {
 	'tnt_function',
 	'spawn',
