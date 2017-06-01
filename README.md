@@ -67,6 +67,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [kpgmobs][] ([MIT][lic.kpgmobs]) -- version: v6 *2015-01-31* ([patched][patch.kpgmobs])
     * [mobs_redo][] ([MIT][lic.mobs_redo]) -- version: [7de8bc4 Git][ver.mobs_redo] *2017-05-12* ([patched][patch.mobs_redo])
 * mobiles/passive/
+	* [mob_horse][] -- version: [39b6986 Git][ver.mob_horse] *2017-05-29*
     * [peaceful_npc][] ([WTFPL][lic.wtfpl]) -- version: [2b3a7a5 Git][ver.peaceful_npc] *2015-08-09*
 * [painting][] (???)
 * [pipeworks][] ([WTFPL][lic.wtfpl]) -- version: [a3d2e69 Git][ver.pipeworks] *2016-10-10* ([patched][patch.pipeworks])
@@ -242,6 +243,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lightning]: https://forum.minetest.net/viewtopic.php?t=13886
 [mesecons]: https://forum.minetest.net/viewtopic.php?t=628
 [minetest_game]: https://github.com/minetest/minetest_game
+[mob_horse]: https://github.com/tenplus1/mob_horse
 [mobs_goblins]: https://forum.minetest.net/viewtopic.php?t=13004
 [mobs_monster]: https://github.com/tenplus1/mobs_monster
 [mobs_redo]: https://forum.minetest.net/viewtopic.php?t=9917
@@ -440,6 +442,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.lightning]: https://github.com/minetest-mods/lightning/tree/39bd36c
 [ver.mesecons]: https://github.com/minetest-mods/mesecons/tree/564bdc2
 [ver.minetest_game]: https://github.com/minetest/minetest_game/tree/e523c3a
+[ver.mob_horse]: https://github.com/tenplus1/mob_horse/tree/39b6986
 [ver.mobf_core]: https://github.com/sapier/mobf_core/tree/1199ca9
 [ver.mobs_goblins]: https://github.com/FreeLikeGNU/mobs_goblins/tree/a346f85
 [ver.mobs_monster]: https://github.com/tenplus1/mobs_monster/tree/f6d0e01
