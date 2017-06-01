@@ -38,6 +38,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [enchanting][] ([GPL / WTFPL / CC BY-SA-NA][lic.enchanting]) -- version: [13ea31c Git][ver.enchanting] *2016-12-16*
 * equipment/
 	* [airtanks][] ([MIT][lic.airtanks]) -- version: [fc01ffb Git][ver.airtanks] *2017-04-01* ([patched][patch.airtanks])
+	* [slingshot][] ([MIT][lic.slingshot] / [CC0][lic.cc0]) -- version: [f30e13d Git][ver.slingshot] *2017-06-01*
 	* [xtraarmor][] ([CC BY-SA][lic.ccbysa3.0]) -- version: 0.3
 * farming/
 	* [crops][] ([LGPL / CC BY-SA / CC BY / CC0][lic.crops]) -- version: [2b1bb37 Git][ver.crops] *2017-03-31* ([patched][patch.crops])
@@ -267,6 +268,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [rainbow_ore]: https://forum.minetest.net/viewtopic.php?id=13519
 [signs_lib]: https://forum.minetest.net/viewtopic.php?f=11&t=13762
 [simple_protection]: https://forum.minetest.net/viewtopic.php?t=9035
+[slingshot]: https://github.com/AntumDeluge/mtmod-slingshot
 [sneeker]: https://github.com/AntumDeluge/mtmod-sneeker
 [snowdrift]: https://forum.minetest.net/viewtopic.php?t=6854
 [spawneggs]: https://forum.minetest.net/viewtopic.php?t=6214
@@ -354,6 +356,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.quartz]: mods/materials/quartz/LICENSE.txt
 [lic.rainbow_ore]: mods/materials/rainbow_ore/README.md
 [lic.signs_lib]: mods/signs/signs_lib/copyright.txt
+[lic.slingshot]: mods/equipment/slingshot/LICENSE.txt
 [lic.snowdrift]: mods/weather/snowdrift/license.txt
 [lic.spawneggs]: mods/spawning/spawneggs/README.txt
 [lic.spectator_mode]: mods/admin/spectator_mode/LICENSE
@@ -464,6 +467,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.rainbow_ore]: https://github.com/FsxShader2012/rainbow_ore/tree/6e77693
 [ver.signs_lib]: https://github.com/minetest-mods/signs_lib/tree/2c36937
 [ver.simple_protection]: https://github.com/SmallJoker/simple_protection/tree/23c024f
+[ver.slingshot]: https://github.com/AntumDeluge/mtmod-slingshot/tree/f30e13d
 [ver.sneeker]: https://github.com/AntumDeluge/mtmod-sneeker/tree/258d366
 [ver.snowdrift]: https://github.com/paramat/snowdrift/tree/fcb0537
 [ver.spawneggs]: https://github.com/thefamilygrog66/spawneggs/tree/4650370
