@@ -27,7 +27,10 @@ mobs:register_mob("mob_horse:horse", {
 	fly = false,
 	walk_chance = 60,
 	view_range = 5,
-	follow = {"farming:wheat"},
+	follow = {
+		"farming:wheat",
+		"default:apple",
+	},
 	passive = true,
 	hp_min = 12,
 	hp_max = 16,
