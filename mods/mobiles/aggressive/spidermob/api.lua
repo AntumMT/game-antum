@@ -701,7 +701,7 @@ function spidermob:register_mob(name, def)
 				local p = pos
 				p.y = p.y + self.blood_offset
 
-				minetest.add_particlespawner(
+				minetest.add_particlespawner({
 					5, --blood_amount, --amount
 					0.25, --time
 					{x=p.x-0.2, y=p.y-0.2, z=p.z-0.2}, --minpos
@@ -716,7 +716,7 @@ function spidermob:register_mob(name, def)
 					1, --maxsize
 					false, --collisiondetection
 					self.blood_texture --texture
-				)
+				})
 			end
 
 			-- knock back effect, adapted from blockmen's pyramids mod
