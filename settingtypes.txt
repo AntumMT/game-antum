@@ -115,6 +115,37 @@ slingshot.require_rubber_band (Require rubber band in craft recipe) bool true
 
 [*Mobiles]
 
+
+[**mobs_animal]
+
+# Enables chicken.
+mobs.enable_chicken (Enable chicken) bool true
+
+# Enables cow.
+mobs.enable_cow (Enable cow) bool true
+
+# Enables rat.
+mobs.enable_rat (Enable rat) bool true
+
+# Enables sheep.
+mobs.enable_sheep (Enable sheep) bool true
+
+# Enables warthog.
+mobs.enable_warthog (Enable warthog) bool true
+
+# Enables bee.
+mobs.enable_bee (Enable bee) bool true
+
+# Enables bunny.
+mobs.enable_bunny (Enable bunny) bool true
+
+# Enables kitten.
+mobs.enable_kitten (Enable kitten) bool true
+
+# Enables penguin.
+mobs.enable_penguin (Enable penguin) bool true
+
+
 [**sneeker]
 
 # Logs debug output.

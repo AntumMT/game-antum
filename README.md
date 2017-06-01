@@ -66,7 +66,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * mobiles/engine/
     * [mobs_redo][] ([MIT][lic.mobs_redo]) -- version: [7de8bc4 Git][ver.mobs_redo] *2017-05-12* ([patched][patch.mobs_redo])
 * mobiles/general/
-	* [mobs_animal][] ([MIT][lic.mobs_animal]) -- version: [ebc2e3a Git][ver.mobs_animal] *2017-05-27*
+	* [mobs_animal][] ([MIT][lic.mobs_animal]) -- version: [ebc2e3a Git][ver.mobs_animal] *2017-05-27* ([patched][patch.mobs_animal])
 * mobiles/passive/
 	* [mob_horse][] -- version: [39b6986 Git][ver.mob_horse] *2017-05-29* ([patched][patch.mob_horse])
     * [peaceful_npc][] ([WTFPL][lic.wtfpl]) -- version: [2b3a7a5 Git][ver.peaceful_npc] *2015-08-09*
@@ -530,6 +530,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.minetest]: https://github.com/AntumDeluge/mtgame-minetest/tree/914595e
 [patch.mob_horse]: https://github.com/AntumDeluge/mtmod-mob_horse/tree/4ce38fa
 [patch.mobf_core]: https://github.com/AntumDeluge/mtmp-mobf_core/tree/e6fa3b7
+[patch.mobs_animal]: https://github.com/AntumDeluge/mtmod-mobs_animal/tree/8b18341
 [patch.mobs_goblins]: https://github.com/AntumDeluge/mtmod-mobs_goblins/tree/2b40fab
 [patch.mobs_redo]: https://github.com/AntumDeluge/mtmod-mobs_redo/tree/a6613ec
 [patch.moreblocks]: https://github.com/AntumDeluge/mtmod-moreblocks/tree/b52a403
