@@ -152,7 +152,7 @@ mobs.enable_penguin (Enable penguin) bool true
 sneeker.debug (Log debug output) bool false
 
 # Sets maximum number of spawns that can exist in world.
-sneeker.spawn_cap (Maximum spawns) int 25
+sneeker.spawn_cap (Maximum spawns) int 10
 
 # Sets possibility for spawn.
 sneeker.spawn_chance (Spawn chance) int 2

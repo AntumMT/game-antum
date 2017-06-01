@@ -5,7 +5,7 @@ local time_min = 60
 local time_hr = time_min * 60
 local time_day = time_hr * 24
 
-local spawn_cap = minetest.setting_get('sneeker.spawn_cap') or 25 -- Maximum number of spawns active at one time
+local spawn_cap = minetest.setting_get('sneeker.spawn_cap') or 10 -- Maximum number of spawns active at one time
 local spawn_chance = minetest.setting_get('sneeker.spawn_chance') or 1000 -- 1/1000 chance of spawn
 local spawn_interval = minetest.setting_get('sneeker.spawn_interval') or time_min * 4 -- Default interval is 4 minutes
 local spawn_maxlight = minetest.setting_get('sneeker.spawn_maxlight') or 5 -- Maximum light of node for spawn
