@@ -2,7 +2,12 @@
 slingshot = {}
 slingshot.modname = minetest.get_current_modname()
 slingshot.modpath = minetest.get_modpath(slingshot.modname)
-slingshot.require_rubber_band = minetest.setting_getbool('slingshot.require_rubber_band') or true
+
+-- Requires rubber band for slingshot craft recipe
+slingshot.require_rubber_band = minetest.setting_getbool('slingshot.require_rubber_band')
+if slingshot.require_rubber_band == nil then
+	slingshot.require_rubber_band = true
+end
 
 
 local scripts = {
