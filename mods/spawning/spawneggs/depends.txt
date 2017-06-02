@@ -1,4 +1,3 @@
 default
 mobs
 wool
-craft_guide?

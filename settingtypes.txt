@@ -185,6 +185,20 @@ sneeker.spawn_maxlight (Max node light for spawn) int 7
 player_model_version (Version of player model) enum default_character_v2 default_character_v1,default_character_v2
 
 
+[*Spawning]
+
+
+[**spawneggs]
+
+spawneggs.egg_interval (Spawn interval) int 600
+spawneggs.egg_chance (Spawn chance) int 3000
+spawneggs.grass_interval (Grass interval) int 600
+spawneggs.grass_chance (Grass chance) int 3000
+
+# Allow eggs to spawn randomly in the world.
+spawneggs.enable_node_spawn (Enable node spawn) bool true
+
+
 [*UI]
 
 
