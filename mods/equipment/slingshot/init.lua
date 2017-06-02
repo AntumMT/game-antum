@@ -9,6 +9,10 @@ if slingshot.require_rubber_band == nil then
 	slingshot.require_rubber_band = true
 end
 
+if minetest.setting_getbool('log_mods') then
+	minetest.log('action', '[slingshot] Require rubber band: ' .. tostring(slingshot.require_rubber_band))
+end
+
 
 local scripts = {
 	'functions',

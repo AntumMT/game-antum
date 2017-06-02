@@ -31,6 +31,9 @@ Depends:
 
 * `SI` = default:steel_ingot
 * `ST` = default:stick
+* `RB` = slingshot:rubber_band
+* `TR` = technic:rubber
+* `TL` = technic:raw_latex
 
 ##### Craft recipes:
 
@@ -44,16 +47,51 @@ slingshot:
     ║    ║ SI ║    ║
     ╚════╩════╩════╝
 
+slingshot (with technic):
+
+    ╔════╦════╦════╗
+    ║ SI ║    ║ SI ║
+    ╠════╬════╬════╣
+    ║    ║ SI ║    ║
+    ╠════╬════╬════╣
+    ║    ║ SI ║    ║
+    ╚════╩════╩════╝
 
 wood slingshot:
 
     ╔════╦════╦════╗
-    ║ ST ║    ║ ST ║
+    ║ ST ║ RB ║ ST ║
     ╠════╬════╬════╣
     ║    ║ ST ║    ║
     ╠════╬════╬════╣
     ║    ║ ST ║    ║
     ╚════╩════╩════╝
+
+wood slingshot (with technic):
+
+    ╔════╦════╦════╗
+    ║ ST ║ RB ║ ST ║
+    ╠════╬════╬════╣
+    ║    ║ ST ║    ║
+    ╠════╬════╬════╣
+    ║    ║ ST ║    ║
+    ╚════╩════╩════╝
+
+rubber band:
+
+    ╔════╦════╦════╗
+    ║ TL ║ TL ║    ║
+    ╠════╬════╬════╣
+    ║ TL ║    ║ TL ║
+    ╠════╬════╬════╣
+    ║    ║ TL ║ TL ║
+    ╚════╩════╩════╝
+
+rubber band (shapeless):
+
+    ╔════╗
+    ║ TR ║
+    ╚════╝
 
 
 

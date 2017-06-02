@@ -12,6 +12,15 @@ if minetest.global_exists('technic') then
 		type = 'shapeless',
 		recipe = {'technic:rubber'},
 	})
+	
+	minetest.register_craft({
+		output = 'slingshot:rubber_band 2',
+		recipe = {
+			{'technic:raw_latex', 'technic:raw_latex', ''},
+			{'technic:raw_latex', '', 'technic:raw_latex'},
+			{'', 'technic:raw_latex', 'technic:raw_latex'},
+		}
+	})
 end
 
 
