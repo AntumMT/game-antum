@@ -165,7 +165,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [homedecor][] ([LGPL / WTFPL / CC BY-SA / CC0][lic.homedecor]) -- version: [8e467ef Git][ver.homedecor] *2017-01-24* ([patched][patch.homedecor])
 * [mesecons][] ([LGPL / CC BY-SA][lic.mesecons]) -- version: [564bdc2 Git][ver.mesecons] *2017-05-08* ([patched][patch.mesecons])
 * [mobf_core][animals] (part of "animals" modpack) ([CC BY-SA][lic.ccbysa3.0]) -- version: [1199ca9 Git][ver.mobf_core] *2017-01-14* ([patched][patch.mobf_core])
-* [minetest_game][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- version: [e523c3a Git][ver.minetest_game] *2017-05-20*
+* [minetest_game][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- version: [e523c3a Git][ver.minetest_game] *2017-05-20* ([patched][patch.minetest_game])
 * [moremesecons][] ([MPL][lic.mpl2.0]) -- version: [e1d2e84 Git][ver.moremesecons] *2017-05-02* ([patched][patch.moremesecons])
 * [mydoors][] ([CC-BY / CC-BY-SA][lic.mydoors] / [WTFPL][lic.wtfpl] / [DWYWFPL][lic.dwywpl]) -- version: [63aef13 Git][ver.mydoors] *2017-03-31* ([patched][patch.mydoors])
 * [technic][] ([LGPL][lic.lgpl2.0]) -- version: [cbe9743 Git][ver.technic] *2017-02-25* ([patched][patch.technic])
@@ -527,7 +527,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.inventory_plus]: https://github.com/AntumDeluge/mtmp-inventory_plus/tree/3c81158
 [patch.invisibility]: https://github.com/AntumDeluge/mtmod-invisibility/tree/f045c7c
 [patch.mesecons]: https://github.com/AntumDeluge/mtmp-mesecons/tree/32a4823
-[patch.minetest]: https://github.com/AntumDeluge/mtgame-minetest/tree/914595e
+[patch.minetest_game]: https://github.com/AntumDeluge/mtgame-minetest/tree/30549f9
 [patch.mob_horse]: https://github.com/AntumDeluge/mtmod-mob_horse/tree/4ce38fa
 [patch.mobf_core]: https://github.com/AntumDeluge/mtmp-mobf_core/tree/e6fa3b7
 [patch.mobs_animal]: https://github.com/AntumDeluge/mtmod-mobs_animal/tree/8b18341
