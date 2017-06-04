@@ -52,7 +52,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [inventory_plus][] ([BSD 3-Clause][lic.inventory_plus]) -- version: [a978b47 Git][ver.inventory_plus] *2016-03-31* ([patched][patch.inventory_plus])
 * lighting/
 	* [ilights][] ([CC BY-SA][lic.ccbysa]) -- version [b1f7ccf Git][ver.ilights] *2017-03-18* ([patched][patch.ilights])
-    * walking_light ([petermalone fork][walking_light]) ([WTFPL / CC BY-SA][lic.walking_light]) -- version: [b9de302 Git][ver.walking_light] *2016-09-09* ([patched][patch.walking_light])
+    * walking_light ([petermalone fork][walking_light]) ([WTFPL / CC BY-SA][lic.walking_light]) -- version: [594bc62 Git][ver.walking_light] *2017-05-21* ([patched][patch.walking_light])
 * materials/
 	* [moreores][] ([zlib][lic.moreores] / [CC BY-SA][lic.ccbysa3.0]) -- version: [0842b4f Git][ver.moreores] *2017-03-21* ([patched][patch.moreores])
 	* [quartz][] ([MIT][lic.quartz]) -- version: [00ca4eb Git][ver.quartz] *2017-02-28* ([patched][patch.quartz])
@@ -482,7 +482,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.trash_can]: https://github.com/minetest-mods/trash_can/tree/5fd3df7
 [ver.unifieddyes]: https://github.com/minetest-mods/unifieddyes/tree/70b1f9f
 [ver.vector_extras]: https://github.com/HybridDog/vector_extras/tree/472deb6
-[ver.walking_light]: https://github.com/petermaloney/walking_light/tree/b9de302
+[ver.walking_light]: https://github.com/petermaloney/walking_light/tree/594bc62
 [ver.wardrobe]: https://github.com/prestidigitator/minetest-mod-wardrobe/tree/c48b011
 [ver.windmill]: https://github.com/Sokomine/windmill/tree/47b029d
 [ver.workbench]: https://github.com/minetest-mods/workbench/tree/74dd1af
@@ -548,7 +548,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.technic]: https://github.com/AntumDeluge/mtmod-technic/tree/661c23d
 [patch.trash_can]: https://github.com/AntumDeluge/mtmod-trash_can/tree/5a92bf4
 [patch.unifieddyes]: https://github.com/AntumDeluge/mtmod-unifieddyes/tree/0e575d9
-[patch.walking_light]: https://github.com/AntumDeluge/mtmod-walking_light/tree/57d2550
+[patch.walking_light]: https://github.com/AntumDeluge/mtmod-walking_light/tree/8084572
 [patch.windmill]: https://github.com/AntumDeluge/mtmod-windmill/tree/7756ab4
 [patch.workbench]: https://github.com/AntumDeluge/mtmod-workbench/tree/b964323
 [patch.worldedge]: https://github.com/AntumDeluge/mtmod-worldedge/tree/4f14aab

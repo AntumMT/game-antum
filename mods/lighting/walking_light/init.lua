@@ -7,6 +7,10 @@ local light_positions = {}
 -- last item seen wielded by players
 local last_wielded = {}
 
+-- toggles debug mode
+local walking_light_debug = false
+-- name of light node, changed by toggling debug mode
+local walking_light_node = nil
 
 -- initialize walking light
 walking_light = {}
@@ -168,6 +172,13 @@ local function table_insert_pos(t, pos)
 	end
 end
 
+local function is_light(node)
+	if node ~= nil and ( node.name == "walking_light:light" or node.name == "walking_light:light_debug" ) then
+		return true
+	end
+	return false
+end
+    
 -- removes light at the given position
 -- player is optional
 local function remove_light(player, pos)
@@ -176,8 +187,7 @@ local function remove_light(player, pos)
 		player_name = player:get_player_name()
 	end
 	local node = mt_get_node_or_nil(pos)
-	if node ~= nil and node.name == "walking_light:light" then
-		mt_add_node(pos,{type="node",name="walking_light:clear"})
+	if is_light(node) then
 		mt_add_node(pos,{type="node",name="air"})
 		if player_name then
 			table_remove_pos(light_positions[player_name], pos)
@@ -210,7 +220,7 @@ local function can_add_light(pos)
 	if node == nil or node.name == "air" then
 --		print("walking_light can_add_light(), pos = " .. dumppos(pos) .. ", true")
 		return true
-	elseif node.name == "walking_light:light" then
+	elseif is_light(node) then
 --		print("walking_light can_add_light(), pos = " .. dumppos(pos) .. ", true")
 		return true
 	end
@@ -316,7 +326,7 @@ local function add_light(player, pos)
 		return false
 	elseif node.name == "air" then
 		-- when the node that is already there is air, add light
-		mt_add_node(pos,{type="node",name="walking_light:light"})
+		mt_add_node(pos,{type="node",name=walking_light_node})
 		if not table_contains_pos(light_positions[player_name], pos) then
 			table_insert_pos(light_positions[player_name], pos)
 		end
@@ -327,7 +337,7 @@ local function add_light(player, pos)
 --			print("DEBUG: add_light(), node.name = nil, pos = " .. dumppos(pos))
 --		end
 		return true
-	elseif node.name == "walking_light:light" then
+	elseif is_light(node) then
 		-- no point in adding light where it is already, but we should assign it to the player so it gets removed (in case it has no player)
 --		print("DEBUG: add_light(), not adding; node.name = " .. node.name .. ", pos = " .. dumppos(pos))
 
@@ -482,17 +492,15 @@ minetest.register_globalstep(function(dtime)
 	end
 end)
 
-minetest.register_node("walking_light:clear", {
+minetest.register_node("walking_light:light_debug", {
 	drawtype = "glasslike",
-	tiles = {"walking_light.png"},
-	-- tiles = {"walking_light_debug.png"},
-	--inventory_image = minetest.inventorycube("walking_light.png"),
+	tiles = {"walking_light_debug.png"},
+	inventory_image = minetest.inventorycube("walking_light.png"),
 	paramtype = "light",
 	walkable = false,
-	--is_ground_content = true,
-	--light_propagates = true,
+	is_ground_content = true,
 	sunlight_propagates = true,
-	--light_source = 13,
+	light_source = 13,
 	selection_box = {
 		type = "fixed",
 		fixed = {0, 0, 0, 0, 0, 0},
@@ -502,12 +510,10 @@ minetest.register_node("walking_light:clear", {
 minetest.register_node("walking_light:light", {
 	drawtype = "glasslike",
 	tiles = {"walking_light.png"},
-	-- tiles = {"walking_light_debug.png"},
 	inventory_image = minetest.inventorycube("walking_light.png"),
 	paramtype = "light",
 	walkable = false,
 	is_ground_content = true,
-	--light_propagates = true,
 	sunlight_propagates = true,
 	light_source = 13,
 	selection_box = {
@@ -515,6 +521,15 @@ minetest.register_node("walking_light:light", {
 		fixed = {0, 0, 0, 0, 0, 0},
 	},
 })
+
+function update_walking_light_node()
+	if walking_light_debug then
+		walking_light_node = "walking_light:light_debug"
+	else
+		walking_light_node = "walking_light:light"
+	end
+end
+update_walking_light_node()
 
 minetest.register_tool("walking_light:pick_mese", {
 	description = "Mese Pickaxe with light",
@@ -615,9 +630,9 @@ minetest.register_craft({
 	}
 })
 
-minetest.register_chatcommand("mapclearlight", {
+minetest.register_chatcommand("walking_light_clear_light", {
 	params = "<size>",
-	description = "Remove walking_light:light from the area",
+	description = "Remove light nodes from the area",
 	func = function(name, param)
 		if not minetest.check_player_privs(name, {server=true}) then
 			return false, "You need the server privilege to use mapclearlight"
@@ -626,20 +641,22 @@ minetest.register_chatcommand("mapclearlight", {
 		local pos = vector.round(minetest.get_player_by_name(name):getpos())
 		local size = tonumber(param) or 40
 
-		point = minetest.find_node_near(pos, size/2, "walking_light:light")
-		while point do
-			remove_light(nil, point)
-			oldpoint = point
-			point = minetest.find_node_near(pos, size/2, "walking_light:light")
-			if poseq(oldpoint, point) then
-				return false, "Failed... infinite loop detected"
+		for i,v in ipairs({"walking_light:light", "walking_light:light_debug"}) do
+			point = minetest.find_node_near(pos, size/2, v)
+			while point do
+				remove_light(nil, point)
+				oldpoint = point
+				point = minetest.find_node_near(pos, size/2, v)
+				if poseq(oldpoint, point) then
+					return false, "Failed... infinite loop detected"
+				end
 			end
 		end
 		return true, "Done."
 	end,
 })
 
-minetest.register_chatcommand("mapaddlight", {
+minetest.register_chatcommand("walking_light_add_light", {
 	params = "<size>",
 	description = "Add walking_light:light to a position, without a player owning it",
 	func = function(name, param)
@@ -651,10 +668,25 @@ minetest.register_chatcommand("mapaddlight", {
 		pos = vector.new(pos.x, pos.y + 1, pos.z)
 
 		if pos then
-			mt_add_node(pos,{type="node",name="walking_light:light"})
+			mt_add_node(pos,{type="node",name=walking_light_node})
 		end
 
 		return true, "Done."
 	end,
 })
 
+minetest.register_chatcommand("walking_light_debug", {
+	description = "Change to debug mode, so light blocks are visible.",
+	func = function(name, param)
+		if not minetest.check_player_privs(name, {server=true}) then
+			return false, "You need the server privilege to use walking_light_debug"
+		end
+
+		walking_light_debug = not walking_light_debug
+        update_walking_light_node()
+ 
+		return true, "Done."
+	end,
+})
+
+-- vim: ts=4 sw=4 softtabstop=4 smarttab noexpandtab
