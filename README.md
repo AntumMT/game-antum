@@ -84,7 +84,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [areas][] ([LGPL][lic.lgpl2.1]) -- version [6080ff0 Git][ver.areas] *2016-11-25* ([patched][patch.areas])
     * [simple_protection][] ([WTFPL][lic.wtfpl]) -- version [23c024f Git][ver.simple_protection] *2017-01-07*
 * signs/
-	* [signs_lib][] ([BSD][lic.signs_lib] / [WTFPL][lic.wtfpl]) -- version: [2c36937 Git][ver.signs_lib] *2017-03-05* ([patched][patch.signs_lib])
+	* [signs_lib][] ([BSD][lic.signs_lib] / [WTFPL][lic.wtfpl]) -- version: [3e00159 Git][ver.signs_lib] *2017-05-20*
 * sound/
     * [ambience][ambience_ultralite] ([WTFPL][lic.wtfpl] / [CC BY / CC BY-SA / CC BY-NC-SA / CC0][lic.ambience_ultralite]) -- version: 0.36
 * spawning/
@@ -465,7 +465,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.privilegeareas]: https://github.com/minetest-mods/privilegeareas/tree/aebaa00
 [ver.quartz]: https://github.com/minetest-mods/quartz/tree/00ca4eb
 [ver.rainbow_ore]: https://github.com/FsxShader2012/rainbow_ore/tree/6e77693
-[ver.signs_lib]: https://github.com/minetest-mods/signs_lib/tree/2c36937
+[ver.signs_lib]: https://github.com/minetest-mods/signs_lib/tree/3e00159
 [ver.simple_protection]: https://github.com/SmallJoker/simple_protection/tree/23c024f
 [ver.slingshot]: https://github.com/AntumDeluge/mtmod-slingshot/tree/dffa38f
 [ver.sneeker]: https://github.com/AntumDeluge/mtmod-sneeker/tree/9e1b11a
@@ -541,7 +541,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.playeranim]: https://github.com/AntumDeluge/mtmod-playeranim/tree/54a4cb6
 [patch.quartz]: https://github.com/AntumDeluge/mtmod-quartz/tree/d23dabd
 [patch.rainbow_ore]: https://github.com/AntumDeluge/mtmod-rainbow_ore/tree/60dc35e
-[patch.signs_lib]: https://github.com/AntumDeluge/mtmod-signs_lib/tree/fe46611
 [patch.snowdrift]: https://github.com/AntumDeluge/mtmod-snowdrift/tree/1b9da4f
 [patch.spawneggs]: https://github.com/AntumDeluge/mtmod-spawneggs/tree/03edd95
 [patch.spidermob]: https://github.com/AntumDeluge/mtmod-spidermob/tree/89b9bc4
