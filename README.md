@@ -57,7 +57,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [moreores][] ([zlib][lic.moreores] / [CC BY-SA][lic.ccbysa3.0]) -- version: [0842b4f Git][ver.moreores] *2017-03-21* ([patched][patch.moreores])
 	* [quartz][] ([MIT][lic.quartz]) -- version: [00ca4eb Git][ver.quartz] *2017-02-28* ([patched][patch.quartz])
 	* [rainbow_ore][] ([LGPL][lic.rainbow_ore]) -- version: [6e77693 Git][ver.rainbow_ore] *2015-11-02* ([patched][patch.rainbow_ore])
-	* [unifieddyes][] ([GPL][lic.gpl2.0]) -- version: [70b1f9f Git][ver.unifieddyes] *2017-02-26* ([patched][patch.unifieddyes])
+	* [unifieddyes][] ([GPL][lic.gpl2.0]) -- version: [8b20a06 Git][ver.unifieddyes] *2017-06-04*
 * mobiles/aggressive/
     * [mobs_goblins][] ([CC-BY-SA / CC-BY / CC0][lic.mobs_goblins]) -- version: [a346f85 Git][ver.mobs_goblins] *2015-09-12* ([patched][patch.mobs_goblins])
     * [mobs_monster][] ([MIT][lic.mobs_monster]) -- version: [f6d0e01 Git][ver.mobs_monster] *2017-04-27*
@@ -480,7 +480,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.tools_obsidian]: https://github.com/Dragonop/tools_obsidian/tree/f77fd79
 [ver.trampoline]: https://github.com/AntumDeluge/mtmod-trampoline/tree/ab1c289
 [ver.trash_can]: https://github.com/minetest-mods/trash_can/tree/5fd3df7
-[ver.unifieddyes]: https://github.com/minetest-mods/unifieddyes/tree/70b1f9f
+[ver.unifieddyes]: https://github.com/minetest-mods/unifieddyes/tree/8b20a06
 [ver.vector_extras]: https://github.com/HybridDog/vector_extras/tree/472deb6
 [ver.walking_light]: https://github.com/petermaloney/walking_light/tree/594bc62
 [ver.wardrobe]: https://github.com/prestidigitator/minetest-mod-wardrobe/tree/c48b011
@@ -547,7 +547,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.spidermob]: https://github.com/AntumDeluge/mtmod-spidermob/tree/89b9bc4
 [patch.technic]: https://github.com/AntumDeluge/mtmod-technic/tree/661c23d
 [patch.trash_can]: https://github.com/AntumDeluge/mtmod-trash_can/tree/5a92bf4
-[patch.unifieddyes]: https://github.com/AntumDeluge/mtmod-unifieddyes/tree/0e575d9
 [patch.walking_light]: https://github.com/AntumDeluge/mtmod-walking_light/tree/8084572
 [patch.windmill]: https://github.com/AntumDeluge/mtmod-windmill/tree/7756ab4
 [patch.workbench]: https://github.com/AntumDeluge/mtmod-workbench/tree/b964323
