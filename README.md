@@ -68,7 +68,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * mobiles/general/
 	* [mobs_animal][] ([MIT][lic.mobs_animal]) -- version: [ebc2e3a Git][ver.mobs_animal] *2017-05-27* ([patched][patch.mobs_animal])
 * mobiles/passive/
-	* [mob_horse][] -- version: [39b6986 Git][ver.mob_horse] *2017-05-29* ([patched][patch.mob_horse])
+	* [mob_horse][] -- version: [dee3883 Git][ver.mob_horse] *2017-06-01*
     * [peaceful_npc][] ([WTFPL][lic.wtfpl]) -- version: [2b3a7a5 Git][ver.peaceful_npc] *2015-08-09*
 * [painting][] (???)
 * [pipeworks][] ([WTFPL][lic.wtfpl]) -- version: [a3d2e69 Git][ver.pipeworks] *2016-10-10* ([patched][patch.pipeworks])
@@ -445,7 +445,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.lightning]: https://github.com/minetest-mods/lightning/tree/39bd36c
 [ver.mesecons]: https://github.com/minetest-mods/mesecons/tree/564bdc2
 [ver.minetest_game]: https://github.com/minetest/minetest_game/tree/e523c3a
-[ver.mob_horse]: https://github.com/tenplus1/mob_horse/tree/39b6986
+[ver.mob_horse]: https://github.com/tenplus1/mob_horse/tree/dee3883
 [ver.mobf_core]: https://github.com/sapier/mobf_core/tree/1199ca9
 [ver.mobs_animal]: https://github.com/tenplus1/mobs_animal/tree/ebc2e3a
 [ver.mobs_goblins]: https://github.com/FreeLikeGNU/mobs_goblins/tree/a346f85
@@ -528,7 +528,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.invisibility]: https://github.com/AntumDeluge/mtmod-invisibility/tree/f045c7c
 [patch.mesecons]: https://github.com/AntumDeluge/mtmp-mesecons/tree/32a4823
 [patch.minetest_game]: https://github.com/AntumDeluge/mtgame-minetest/tree/30549f9
-[patch.mob_horse]: https://github.com/AntumDeluge/mtmod-mob_horse/tree/4ce38fa
 [patch.mobf_core]: https://github.com/AntumDeluge/mtmp-mobf_core/tree/e6fa3b7
 [patch.mobs_animal]: https://github.com/AntumDeluge/mtmod-mobs_animal/tree/8b18341
 [patch.mobs_goblins]: https://github.com/AntumDeluge/mtmod-mobs_goblins/tree/2b40fab
