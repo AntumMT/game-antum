@@ -1,20 +1,24 @@
-minetest.log("info", " Currency mod loading... ")
 local modpath = minetest.get_modpath("currency")
 
-dofile(modpath.."/craftitems.lua")
-minetest.log("info", "[Currency] Craft_items Loaded!")
-dofile(modpath.."/shop.lua")
-minetest.log("info", "[Currency] Shop Loaded!")
-dofile(modpath.."/barter.lua")
-minetest.log("info", "[Currency]  Barter Loaded!")
-dofile(modpath.."/safe.lua")
-minetest.log("info", "[Currency] Safe Loaded!")
-dofile(modpath.."/crafting.lua")
-minetest.log("info", "[Currency] Crafting Loaded!")
+-- internationalization boilerplate
+local S, NS = dofile(modpath.."/intllib.lua")
 
-if minetest.setting_getbool("creative_mode") then
-	minetest.log("info", "[Currency] Creative mode in use, skipping basic income.")
+minetest.log("info", S("Currency mod loading..."))
+
+dofile(modpath.."/craftitems.lua")
+minetest.log("info", "[Currency] "..S("Craft_items Loaded!"))
+dofile(modpath.."/shop.lua")
+minetest.log("info", "[Currency] "..S("Shop Loaded!"))
+dofile(modpath.."/barter.lua")
+minetest.log("info", "[Currency] "..S("Barter Loaded!"))
+dofile(modpath.."/safe.lua")
+minetest.log("info", "[Currency] "..S("Safe Loaded!"))
+dofile(modpath.."/crafting.lua")
+minetest.log("info", "[Currency] "..S("Crafting Loaded!"))
+
+if minetest.settings:get_bool("creative_mode") then
+	minetest.log("info", "[Currency] "..S("Creative mode in use, skipping basic income."))
 else
 	dofile(modpath.."/income.lua")
-	minetest.log("info", "[Currency] Income Loaded!")
+	minetest.log("info", "[Currency] "..S("Income Loaded!"))
 end

@@ -34,7 +34,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [chatlog][] ([CC0][lic.cc0]) -- version: (no version info) *2013-06-09* ([patched][patch.chatlog])
 * crafting/
     * [craftguide][] ([GPL / WTFPL](mods/crafting/craftguide/LICENSE)) -- version: [86a96c3 Git][ver.craftguide] *2017-03-21* ([patched][patch.craftguide])
-* [currency][] ([WTFPL][lic.currency]) -- version: [21f9811 Git][ver.currency] *2017-03-22* ([patched][patch.currency])
+* [currency][] ([WTFPL][lic.currency]) -- version: [3ee673d Git][ver.currency] *2017-05-18* ([patched][patch.currency])
 * [enchanting][] ([GPL / WTFPL / CC BY-SA-NA][lic.enchanting]) -- version: [13ea31c Git][ver.enchanting] *2016-12-16*
 * equipment/
 	* [airtanks][] ([MIT][lic.airtanks]) -- version: [fc01ffb Git][ver.airtanks] *2017-04-01* ([patched][patch.airtanks])
@@ -420,7 +420,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.crafting_bench]: https://github.com/minetest-mods/crafting_bench/tree/3aa4cfb
 [ver.craftguide]: https://github.com/minetest-mods/craftguide/tree/86a96c3
 [ver.crops]: https://github.com/minetest-mods/crops/tree/2b1bb37
-[ver.currency]: https://github.com/minetest-mods/currency/tree/21f9811
+[ver.currency]: https://github.com/minetest-mods/currency/tree/3ee673d
 [ver.deploy_nodes]: https://github.com/cornernote/minetest-deploy_nodes/tree/eb3d68c
 [ver.desert_life]: https://github.com/NathanSalapat/desert_life/tree/d448fa3
 [ver.drawers]: https://github.com/minetest-mods/drawers/tree/7b9a384
@@ -513,7 +513,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.craftguide]: https://github.com/AntumDeluge/mtmod-craftguide/tree/1197b13
 [patch.crafting_bench]: https://github.com/AntumDeluge/mtmod-crafting_bench/tree/c5ff4e5
 [patch.crops]: https://github.com/AntumDeluge/mtmod-crops/tree/f8b33ae
-[patch.currency]: https://github.com/AntumDeluge/mtmod-currency/tree/6275e9b
+[patch.currency]: https://github.com/AntumDeluge/mtmod-currency/tree/9e9b1be
 [patch.drawers]: https://github.com/AntumDeluge/mtmod-drawers/tree/3887c5b
 [patch.ethereal]: https://github.com/AntumDeluge/mtmod-ethereal/tree/4be06f0
 [patch.farming_plus]: https://github.com/AntumDeluge/mtmod-farming_plus/tree/c9c3a3a
