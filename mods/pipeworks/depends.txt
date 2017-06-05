@@ -2,4 +2,3 @@ default
 mesecons?
 mesecons_mvps?
 digilines?
-craft_guide?
