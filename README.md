@@ -158,7 +158,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* [castle_shields][] -- version [a7110c6 Git][ver.castle_shields] *2017-02-28* ([patched][patch.castle_shields])
 		* [castle_storage][] -- version [2b9e5f6 Git][ver.castle_storage] *2017-02-28* ([patched.castle_storage])
 		* [castle_tapestries][] -- version [78b6e36 Git][ver.castle_tapestries] *2017-03-19* ([patched][patch.castle_tapestries])
-		* [castle_weapons][] -- version [5f5232a Git][ver.castle_weapons] *2017-02-28* ([patched][patch.castle_weapons])
+		* [castle_weapons][] -- version [fcfa716 Git][ver.castle_weapons] *2017-06-04* ([patched][patch.castle_weapons])
 		* [crafting_bench][] -- version [3aa4cfb Git][ver.crafting_bench] *2017-02-28* ([patched][patch.crafting_bench])
 * [Creatures MOB-Engine][cme] ([zlib / CC-BY-SA][lic.cme]) -- version: [2.3.1-0-e3502a1 Git][ver.cme] *2016-02-16* ([patched][patch.cme])
 * [deploy_nodes][] ([BSD 3-Clause][lic.deploy_nodes]) -- version [eb3d68c Git][ver.deploy_nodes] *2015-05-19*
@@ -412,7 +412,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.castle_shields]: https://github.com/minetest-mods/castle_shields/tree/ce853d7
 [ver.castle_storage]: https://github.com/minetest-mods/castle_storage/tree/2b9e5f6
 [ver.castle_tapestries]: https://github.com/minetest-mods/castle_tapestries/tree/78b6e36
-[ver.castle_weapons]: https://github.com/minetest-mods/castle_weapons/tree/5f5232a
+[ver.castle_weapons]: https://github.com/minetest-mods/castle_weapons/tree/fcfa716
 [ver.christmas]: https://github.com/TheZenKitteh/minetest-christmas/tree/d3bd872
 [ver.cme]: https://github.com/BlockMen/cme/tree/e3502a1
 [ver.coloredwood]: https://github.com/minetest-mods/coloredwood/tree/7b177f3
@@ -503,7 +503,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.castle_shields]: https://github.com/AntumDeluge/mtmod-castle_shields/tree/47ffc27
 [patch.castle_storage]: https://github.com/AntumDeluge/mtmod-castle_storage/tree/b80b72f
 [patch.castle_tapestries]: https://github.com/AntumDeluge/mtmod-castle_tapestries/tree/4e70f1b
-[patch.castle_weapons]: https://github.com/AntumDeluge/mtmod-castle_weapons/tree/e668934
+[patch.castle_weapons]: https://github.com/AntumDeluge/mtmod-castle_weapons/tree/3e4ec4d
 [patch.chatlog]: https://github.com/AntumDeluge/mtmod-chatlog/tree/074c8ee
 [patch.christmas]: https://github.com/AntumDeluge/mtmod-christmas/tree/f6c8dc2
 [patch.clean]: https://github.com/AntumDeluge/mtmod-clean/tree/ec7cfff

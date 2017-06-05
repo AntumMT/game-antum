@@ -371,7 +371,7 @@ minetest.register_entity("castle_weapons:crossbow_bolt_entity", {
 		groups = {not_in_creative_inventory=1},
 		on_use = function(itemstack, user, pointed_thing)
 			minetest.sound_play("castle_crossbow_click", {object=user})
-			if not minetest.setting_getbool("creative_mode") then
+			if not minetest.settings:get_bool("creative_mode") then
 				itemstack:add_wear(65535/CROSSBOW_USES)
 			end
 			itemstack = "castle_weapons:crossbow 1 "..itemstack:get_wear()
@@ -431,7 +431,7 @@ minetest.register_tool("castle_weapons:crossbow", {
 		local inv = user:get_inventory()
 if inv:contains_item("main", "castle_weapons:crossbow_bolt") then
 				minetest.sound_play("castle_crossbow_reload", {object=user})
-				if not minetest.setting_getbool("creative_mode") then
+				if not minetest.settings:get_bool("creative_mode") then
 					inv:remove_item("main", "castle_weapons:crossbow_bolt 1")
 				end
 				return "castle_weapons:crossbow_loaded 1 "..itemstack:get_wear()
