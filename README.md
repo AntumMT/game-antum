@@ -37,7 +37,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [currency][] ([WTFPL][lic.currency]) -- version: [3ee673d Git][ver.currency] *2017-05-18* ([patched][patch.currency])
 * [enchanting][] ([GPL / WTFPL / CC BY-SA-NA][lic.enchanting]) -- version: [13ea31c Git][ver.enchanting] *2016-12-16*
 * equipment/
-	* [airtanks][] ([MIT][lic.airtanks]) -- version: [fc01ffb Git][ver.airtanks] *2017-04-01* ([patched][patch.airtanks])
+	* [airtanks][] ([MIT][lic.airtanks]) -- version: [5787956 Git][ver.airtanks] *2017-05-13*
 	* [slingshot][] ([MIT][lic.slingshot] / [CC0][lic.cc0]) -- version: [dffa38f Git][ver.slingshot] *2017-06-01*
 	* [xtraarmor][] ([CC BY-SA][lic.ccbysa3.0]) -- version: 0.3
 * farming/
@@ -392,7 +392,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.3d_armor]: https://github.com/stujones11/minetest-3d_armor/tree/9577fb7
 [ver.adv_spawning]: https://github.com/sapier/adv_spawning/tree/ec41aa9
 [ver.advtrains]: https://github.com/orwell96/advtrains/tree/74c8784
-[ver.airtanks]: https://github.com/minetest-mods/airtanks/tree/fc01ffb
+[ver.airtanks]: https://github.com/minetest-mods/airtanks/tree/5787956
 [ver.animalmaterials]: https://github.com/sapier/animalmaterials/tree/d952d27
 [ver.animals]: https://github.com/sapier/animals_modpack/tree/b9d0172
 [ver.antum]: https://github.com/AntumDeluge/mtmp-antum/tree/2a0e695
@@ -491,7 +491,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.3d_armor]: https://github.com/AntumDeluge/mtmp-3d_armor/tree/07c7b9c
 [patch.adv_spawning]: https://github.com/AntumDeluge/mtmod-adv_spawning/tree/e73c0aa
 [patch.advtrains]: https://github.com/AntumDeluge/mtmp-advtrains/tree/26f8bf4
-[patch.airtanks]: https://github.com/AntumDeluge/mtmod-airtanks/tree/4667c26
 [patch.animals]: https://github.com/AntumDeluge/mtmp-animals_modpack/tree/ad4c5da
 [patch.areas]: https://github.com/AntumDeluge/mtmod-areas/tree/db074be
 [patch.bags]: https://github.com/AntumDeluge/mtmod-bags/tree/4363284
