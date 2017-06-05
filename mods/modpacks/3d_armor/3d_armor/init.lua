@@ -41,11 +41,11 @@ end
 -- Load Configuration
 
 for name, config in pairs(armor.config) do
-	local setting = minetest.setting_get("armor_"..name)
+	local setting = minetest.settings:get("armor_"..name)
 	if type(config) == "number" then
 		setting = tonumber(setting)
 	elseif type(config) == "boolean" then
-		setting = minetest.setting_getbool("armor_"..name)
+		setting = minetest.settings:get_bool("armor_"..name)
 	end
 	if setting ~= nil then
 		armor.config[name] = setting
@@ -57,8 +57,6 @@ for material, _ in pairs(armor.materials) do
 		armor.materials[material] = nil
 	end
 end
-
-dofile(modpath.."/armor.lua")
 
 -- Mod Compatibility
 
@@ -86,6 +84,8 @@ end
 if not minetest.get_modpath("ethereal") then
 	armor.materials.crystal = nil
 end
+
+dofile(modpath.."/armor.lua")
 
 -- Armor Initialization
 
