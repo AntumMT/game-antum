@@ -166,7 +166,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [mesecons][] ([LGPL / CC BY-SA][lic.mesecons]) -- version: [564bdc2 Git][ver.mesecons] *2017-05-08* ([patched][patch.mesecons])
 * [mobf_core][animals] (part of "animals" modpack) ([CC BY-SA][lic.ccbysa3.0]) -- version: [1199ca9 Git][ver.mobf_core] *2017-01-14* ([patched][patch.mobf_core])
 * [minetest_game][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- version: [e523c3a Git][ver.minetest_game] *2017-05-20* ([patched][patch.minetest_game])
-* [moremesecons][] ([MPL][lic.mpl2.0]) -- version: [e1d2e84 Git][ver.moremesecons] *2017-05-02* ([patched][patch.moremesecons])
+* [moremesecons][] ([MPL][lic.mpl2.0]) -- version: [aa2ae82 Git][ver.moremesecons] *2017-06-04*
 * [mydoors][] ([CC-BY / CC-BY-SA][lic.mydoors] / [WTFPL][lic.wtfpl] / [DWYWFPL][lic.dwywpl]) -- version: [63aef13 Git][ver.mydoors] *2017-03-31* ([patched][patch.mydoors])
 * [technic][] ([LGPL][lic.lgpl2.0]) -- version: [cbe9743 Git][ver.technic] *2017-02-25* ([patched][patch.technic])
 
@@ -453,7 +453,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.mobs_redo]: https://github.com/tenplus1/mobs_redo/tree/7de8bc4
 [ver.more_chests]: https://github.com/minetest-mods/more_chests/tree/c597779
 [ver.moreblocks]: https://github.com/minetest-mods/moreblocks/tree/fbfb079
-[ver.moremesecons]: https://github.com/minetest-mods/MoreMesecons/tree/e1d2e84
+[ver.moremesecons]: https://github.com/minetest-mods/MoreMesecons/tree/aa2ae82
 [ver.moreores]: https://github.com/minetest-mods/moreores/tree/0842b4f
 [ver.mthudclock]: https://github.com/Rochambeau/mthudclock/tree/b3e2142
 [ver.mydoors]: https://github.com/minetest-mods/mydoors/tree/63aef13
@@ -529,7 +529,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.mobs_goblins]: https://github.com/AntumDeluge/mtmod-mobs_goblins/tree/2b40fab
 [patch.mobs_redo]: https://github.com/AntumDeluge/mtmod-mobs_redo/tree/a6613ec
 [patch.moreblocks]: https://github.com/AntumDeluge/mtmod-moreblocks/tree/b52a403
-[patch.moremesecons]: https://github.com/AntumDeluge/mtmp-moremesecons/tree/cae948e
 [patch.moreores]: https://github.com/AntumDeluge/mtmod-moreores/tree/8b874f6
 [patch.mydoors]: https://github.com/AntumDeluge/mtmp-mydoors/tree/e36c9d1
 [patch.nether]: https://github.com/AntumDeluge/mtmod-nether/tree/1903dfc
