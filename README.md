@@ -51,7 +51,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [bags][] ([BSD 3-Clause][lic.bags]) -- version: [f17d829 Git][ver.bags] *2015-10-11* ([patched][patch.bags])
     * [inventory_plus][] ([BSD 3-Clause][lic.inventory_plus]) -- version: [fd71e3d Git][ver.inventory_plus] *2016-05-13*
 * lighting/
-	* [ilights][] ([CC BY-SA][lic.ccbysa]) -- version [b1f7ccf Git][ver.ilights] *2017-03-18* ([patched][patch.ilights])
+	* [ilights][] ([CC BY-SA][lic.ccbysa]) -- version [7060243 Git][ver.ilights] *2017-05-18*
     * walking_light ([petermalone fork][walking_light]) ([WTFPL / CC BY-SA][lic.walking_light]) -- version: [594bc62 Git][ver.walking_light] *2017-05-21* ([patched][patch.walking_light])
 * materials/
 	* [moreores][] ([zlib][lic.moreores] / [CC BY-SA][lic.ccbysa3.0]) -- version: [0842b4f Git][ver.moreores] *2017-03-21* ([patched][patch.moreores])
@@ -438,7 +438,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.hovercraft]: https://github.com/stujones11/hovercraft/tree/7b0df6f
 [ver.hudbars]: http://repo.or.cz/minetest_hudbars.git/tree/fa82d2d
 [ver.hudmap]: https://github.com/stujones11/hudmap/tree/09d40f3
-[ver.ilights]: https://github.com/minetest-mods/ilights/tree/b1f7ccf
+[ver.ilights]: https://github.com/minetest-mods/ilights/tree/7060243
 [ver.inventory_plus]: https://github.com/cornernote/minetest-inventory_plus/tree/fd71e3d
 [ver.invisibility]: https://github.com/tenplus1/invisibility/tree/bf4156b
 [ver.jukebox]: https://github.com/minetest-mods/jukebox/tree/e6a507f
@@ -523,7 +523,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.homedecor]: https://github.com/AntumDeluge/mtmp-homedecor/tree/68585f6
 [patch.hovercraft]: https://github.com/AntumDeluge/mtmod-hovercraft/tree/96ad3b4
 [patch.hud]: https://github.com/AntumDeluge/mtmod-hud/tree/6846e20
-[patch.ilights]: https://github.com/AntumDeluge/mtmod-ilights/tree/f610d75
 [patch.invisibility]: https://github.com/AntumDeluge/mtmod-invisibility/tree/f045c7c
 [patch.mesecons]: https://github.com/AntumDeluge/mtmp-mesecons/tree/32a4823
 [patch.minetest_game]: https://github.com/AntumDeluge/mtgame-minetest/tree/30549f9
