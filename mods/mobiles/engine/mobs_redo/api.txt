@@ -309,6 +309,14 @@ This function allows an attached player to fly the mob around using directional 
     'stand_animation' string containing movement animation e.g. "stand"
 
 
+mobs:set_animation(self, name)
+
+This function sets the current animation for mob, defaulting to "stand" if not found.
+
+    'self' mob information
+    'name' name of animation
+
+
 Certain variables need to be set before using the above functions:
 
     'self.v2' toggle switch

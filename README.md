@@ -65,7 +65,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [sneeker][] ([WTFPL][lic.wtfpl] / [CC0][lic.cc0]) -- version: [9e1b11a Git][ver.sneeker] *2017-06-04*
     * [spidermob][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0] / [MIT][lic.mit] / [WTFPL][lic.spidermob] / [Unlicense][lic.unlicense]) -- version [8f9080a Git][ver.spidermob] *2016-08-14* ([patched][patch.spidermob])
 * mobiles/engine/
-    * [mobs_redo][] ([MIT][lic.mobs_redo]) -- version: [7de8bc4 Git][ver.mobs_redo] *2017-05-12* ([patched][patch.mobs_redo])
+    * [mobs_redo][] ([MIT][lic.mobs_redo]) -- version: [4eb1c93 Git][ver.mobs_redo] *2017-06-04* ([patched][patch.mobs_redo])
 * mobiles/general/
 	* [mobs_animal][] ([MIT][lic.mobs_animal]) -- version: [ebc2e3a Git][ver.mobs_animal] *2017-05-27* ([patched][patch.mobs_animal])
 * mobiles/passive/
@@ -450,7 +450,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.mobs_animal]: https://github.com/tenplus1/mobs_animal/tree/ebc2e3a
 [ver.mobs_goblins]: https://github.com/FreeLikeGNU/mobs_goblins/tree/a346f85
 [ver.mobs_monster]: https://github.com/tenplus1/mobs_monster/tree/f6d0e01
-[ver.mobs_redo]: https://github.com/tenplus1/mobs_redo/tree/7de8bc4
+[ver.mobs_redo]: https://github.com/tenplus1/mobs_redo/tree/4eb1c93
 [ver.more_chests]: https://github.com/minetest-mods/more_chests/tree/c597779
 [ver.moreblocks]: https://github.com/minetest-mods/moreblocks/tree/fbfb079
 [ver.moremesecons]: https://github.com/minetest-mods/MoreMesecons/tree/aa2ae82
@@ -525,7 +525,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.mobf_core]: https://github.com/AntumDeluge/mtmp-mobf_core/tree/e6fa3b7
 [patch.mobs_animal]: https://github.com/AntumDeluge/mtmod-mobs_animal/tree/8b18341
 [patch.mobs_goblins]: https://github.com/AntumDeluge/mtmod-mobs_goblins/tree/2b40fab
-[patch.mobs_redo]: https://github.com/AntumDeluge/mtmod-mobs_redo/tree/a6613ec
+[patch.mobs_redo]: https://github.com/AntumDeluge/mtmod-mobs_redo/tree/d8edf22
 [patch.moreblocks]: https://github.com/AntumDeluge/mtmod-moreblocks/tree/b52a403
 [patch.moreores]: https://github.com/AntumDeluge/mtmod-moreores/tree/8b874f6
 [patch.mydoors]: https://github.com/AntumDeluge/mtmp-mydoors/tree/e36c9d1

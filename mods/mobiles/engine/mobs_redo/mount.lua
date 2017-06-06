@@ -241,7 +241,7 @@ function mobs.drive(entity, moving_anim, stand_anim, can_fly, dtime)
 	if entity.v == 0 and velo.x == 0 and velo.y == 0 and velo.z == 0 then
 
 		if stand_anim then
-			set_animation(entity, stand_anim)
+			mobs:set_animation(entity, stand_anim)
 		end
 
 		return
@@ -249,7 +249,7 @@ function mobs.drive(entity, moving_anim, stand_anim, can_fly, dtime)
 	
 	-- set moving animation
 	if moving_anim then
-		set_animation(entity, moving_anim)
+		mobs:set_animation(entity, moving_anim)
 	end
 
 	-- Stop!
@@ -429,9 +429,9 @@ function mobs.fly(entity, dtime, speed, shoots, arrow, moving_anim, stand_anim)
 	-- change animation if stopped
 	if velo.x == 0 and velo.y == 0 and velo.z == 0 then
 
-		set_animation(entity, stand_anim)
+		mobs:set_animation(entity, stand_anim)
 	else
 		-- moving animation
-		set_animation(entity, moving_anim)
+		mobs:set_animation(entity, moving_anim)
 	end
 end
