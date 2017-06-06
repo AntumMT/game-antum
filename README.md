@@ -60,7 +60,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [rainbow_ore][] ([LGPL][lic.rainbow_ore]) -- version: [6e77693 Git][ver.rainbow_ore] *2015-11-02* ([patched][patch.rainbow_ore])
 	* [unifieddyes][] ([GPL][lic.gpl2.0]) -- version: [8b20a06 Git][ver.unifieddyes] *2017-06-04*
 * mobiles/aggressive/
-    * [mobs_goblins][] ([CC-BY-SA / CC-BY / CC0][lic.mobs_goblins]) -- version: [a346f85 Git][ver.mobs_goblins] *2015-09-12* ([patched][patch.mobs_goblins])
+    * [mobs_goblins][] ([CC-BY-SA / CC-BY / CC0][lic.mobs_goblins]) -- version: [6c7fdf9 Git][ver.mobs_goblins] *2017-05-23* ([patched][patch.mobs_goblins])
     * [mobs_monster][] ([MIT][lic.mobs_monster]) -- version: [f6d0e01 Git][ver.mobs_monster] *2017-04-27*
     * [sneeker][] ([WTFPL][lic.wtfpl] / [CC0][lic.cc0]) -- version: [9e1b11a Git][ver.sneeker] *2017-06-04*
     * [spidermob][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0] / [MIT][lic.mit] / [WTFPL][lic.spidermob] / [Unlicense][lic.unlicense]) -- version [8f9080a Git][ver.spidermob] *2016-08-14* ([patched][patch.spidermob])
@@ -448,7 +448,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.mob_horse]: https://github.com/tenplus1/mob_horse/tree/dee3883
 [ver.mobf_core]: https://github.com/sapier/mobf_core/tree/1199ca9
 [ver.mobs_animal]: https://github.com/tenplus1/mobs_animal/tree/ebc2e3a
-[ver.mobs_goblins]: https://github.com/FreeLikeGNU/mobs_goblins/tree/a346f85
+[ver.mobs_goblins]: https://github.com/FreeLikeGNU/mobs_goblins/tree/6c7fdf9
 [ver.mobs_monster]: https://github.com/tenplus1/mobs_monster/tree/f6d0e01
 [ver.mobs_redo]: https://github.com/tenplus1/mobs_redo/tree/4eb1c93
 [ver.more_chests]: https://github.com/minetest-mods/more_chests/tree/c597779
@@ -524,7 +524,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.minetest_game]: https://github.com/AntumDeluge/mtgame-minetest/tree/30549f9
 [patch.mobf_core]: https://github.com/AntumDeluge/mtmp-mobf_core/tree/e6fa3b7
 [patch.mobs_animal]: https://github.com/AntumDeluge/mtmod-mobs_animal/tree/8b18341
-[patch.mobs_goblins]: https://github.com/AntumDeluge/mtmod-mobs_goblins/tree/2b40fab
+[patch.mobs_goblins]: https://github.com/AntumDeluge/mtmod-mobs_goblins/tree/fefd6bf
 [patch.mobs_redo]: https://github.com/AntumDeluge/mtmod-mobs_redo/tree/d8edf22
 [patch.moreblocks]: https://github.com/AntumDeluge/mtmod-moreblocks/tree/b52a403
 [patch.moreores]: https://github.com/AntumDeluge/mtmod-moreores/tree/8b874f6
