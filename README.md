@@ -119,7 +119,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [biome_lib][] ([WTFPL][lic.wtfpl]) -- version: [7f54d95 Git][ver.biome_lib] *2017-05-18*
     * [desert_life][] ([CC BY-SA][lic.ccbysa4.0]) -- version: [d448fa3 Git][ver.desert_life] *2017-01-01*
     * [ethereal][] ([MIT][lic.ethereal]) -- version [2c24961 Git][ver.ethereal] *2017-04-23* ([patched][patch.ethereal])
-    * [glow][] ([GPL][lic.gpl2.0]) -- version: [30f9cf3 Git][ver.glow] *2015-09-25* ([patched][patch.glow])
+    * [glow][] ([GPL][lic.gpl2.0]) -- version: [78d0166 Git][ver.glow] *2017-05-16*
     * [hill_nodebox][] ([BSD 3-Clause][lic.hill_nodebox]) -- version [41bbfa2 Git][ver.hill_nodebox] *2014-12-13*
     * [nether][] ([WTFPL / CC BY-SA][lic.nether]) -- version: [bc2ccfb Git][ver.nether] *2017-01-04* ([patched][patch.nether])
     * [worldedge][] ([DWYWPL][lic.dwywpl]) -- version: [e15fa99 Git][ver.worldedge] *2016-03-23* ([patched][patch.worldedge])
@@ -428,7 +428,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.ethereal]: https://github.com/tenplus1/ethereal/tree/2c24961
 [ver.farming_plus]: https://github.com/PilzAdam/farming_plus/tree/7e0d976
 [ver.fort_spikes]: https://github.com/xeranas/fort_spikes/tree/2765b56
-[ver.glow]: https://github.com/bdjnk/glow/tree/30f9cf3
+[ver.glow]: https://github.com/bdjnk/glow/tree/78d0166
 [ver.hbarmor]: http://repo.or.cz/minetest_hbarmor.git/tree/bfc5f8c
 [ver.helicopter]: https://github.com/SokolovPavel/helicopter/tree/10f1433
 [ver.hidename]: https://github.com/AntumDeluge/mtmod-hidename/tree/bb52dbc
@@ -516,7 +516,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.ethereal]: https://github.com/AntumDeluge/mtmod-ethereal/tree/4be06f0
 [patch.farming_plus]: https://github.com/AntumDeluge/mtmod-farming_plus/tree/c9c3a3a
 [patch.fort_spikes]: https://github.com/AntumDeluge/mtmod-fort_spikes/tree/74dca42
-[patch.glow]: https://github.com/AntumDeluge/mtmod-glow/tree/12266d3
 [patch.helicopter]: https://github.com/AntumDeluge/mtmod-helicopter/tree/66a6523
 [patch.hovercraft]: https://github.com/AntumDeluge/mtmod-hovercraft/tree/96ad3b4
 [patch.hud]: https://github.com/AntumDeluge/mtmod-hud/tree/6846e20

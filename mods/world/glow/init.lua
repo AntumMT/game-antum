@@ -1,9 +1,7 @@
 -- boilerplate to support localized strings if intllib mod is installed
 
-local have_intl = minetest.global_exists("intllib")
-
 local S
-if have_intl then
+if minetest.global_exists("intllib") then
 	S = intllib.Getter()
 else
 	S = function(s) return s end
