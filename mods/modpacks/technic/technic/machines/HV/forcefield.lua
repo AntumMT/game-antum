@@ -6,16 +6,20 @@
 
 -- How expensive is the generator?
 -- Leaves room for upgrades lowering the power drain?
+local digilines_path = minetest.get_modpath("digilines")
+
 local forcefield_power_drain   = 10
 
 local S = technic.getter
 
+local cable_entry = "^technic_cable_connection_overlay.png"
+
 minetest.register_craft({
 	output = "technic:forcefield_emitter_off",
 	recipe = {
-			{"default:mese",         "technic:motor",          "default:mese"        },
-			{"technic:deployer_off", "technic:machine_casing", "technic:deployer_off"},
-			{"default:mese",         "technic:hv_cable",       "default:mese"        },
+		{"default:mese",         "technic:motor",          "default:mese"        },
+		{"technic:deployer_off", "technic:machine_casing", "technic:deployer_off"},
+		{"default:mese",         "technic:hv_cable",       "default:mese"        },
 	}
 })
 
@@ -90,7 +94,14 @@ local function update_forcefield(pos, meta, active, first)
 end
 
 local function set_forcefield_formspec(meta)
-	local formspec = "size[5,2.25]"..
+	local formspec
+	if digilines_path then
+		formspec = "size[5,3.25]"..
+			"field[0.3,3;5,1;channel;Digiline Channel;"..meta:get_string("channel").."]"
+	else
+		formspec = "size[5,2.25]"
+	end
+	formspec = formspec..
 		"field[0.3,0.5;2,1;range;"..S("Range")..";"..meta:get_int("range").."]"
 	-- The names for these toggle buttons are explicit about which
 	-- state they'll switch to, so that multiple presses (arising
@@ -130,9 +141,10 @@ local forcefield_receive_fields = function(pos, formname, fields, sender)
 		update_forcefield(pos, meta, false)
 	end
 	if range then meta:set_int("range", range) end
-	if fields.shape0 then meta:set_int("shape", 0) end
-	if fields.shape1 then meta:set_int("shape", 1) end
-	if fields.enable then meta:set_int("enabled", 1) end
+	if fields.channel then meta:set_string("channel", fields.channel) end
+	if fields.shape0  then meta:set_int("shape", 0) end
+	if fields.shape1  then meta:set_int("shape", 1) end
+	if fields.enable  then meta:set_int("enabled", 1) end
 	if fields.disable then meta:set_int("enabled", 0) end
 	if fields.mesecon_mode_0 then meta:set_int("mesecon_mode", 0) end
 	if fields.mesecon_mode_1 then meta:set_int("mesecon_mode", 1) end
@@ -150,10 +162,89 @@ local mesecons = {
 	}
 }
 
+local digiline_def = {
+	receptor = {action = function() end},
+	effector = {
+		action = function(pos, node, channel, msg)
+			local meta = minetest.get_meta(pos)
+			if channel ~= meta:get_string("channel") then
+				return
+			end
+			local msgt = type(msg)
+			if msgt == "string" then
+				local smsg = msg:lower()
+				msg = {}
+				if smsg == "get" then
+					msg.command = "get"
+				elseif smsg == "off" then
+					msg.command = "off"
+				elseif smsg == "on" then
+					msg.command = "on"
+				elseif smsg == "toggle" then
+					msg.command = "toggle"
+				elseif smsg:sub(1, 5) == "range" then
+					msg.command = "range"
+					msg.value = tonumber(smsg:sub(7))
+				elseif smsg:sub(1, 5) == "shape" then
+					msg.command = "shape"
+					msg.value = smsg:sub(7):lower()
+					msg.value = tonumber(msg.value) or msg.value
+				end
+			elseif msgt ~= "table" then
+				return
+			end
+			if msg.command == "get" then
+				digilines.receptor_send(pos, digilines.rules.default, channel, {
+					enabled = meta:get_int("enabled"),
+					range   = meta:get_int("range"),
+					shape   = meta:get_int("shape")
+				})
+				return
+			elseif msg.command == "off" then
+				meta:set_int("enabled", 0)
+			elseif msg.command == "on" then
+				meta:set_int("enabled", 1)
+			elseif msg.command == "toggle" then
+				local onn = meta:get_int("enabled")
+				onn = 1-onn -- Mirror onn with pivot 0.5, so switch between 1 and 0.
+				meta:set_int("enabled", onn)
+			elseif msg.command == "range" then
+				if type(msg.value) ~= "number" then
+					return
+				end
+				msg.value = math.max(msg.value, 5)
+				msg.value = math.min(msg.value, 20)
+				update_forcefield(pos, meta, false)
+				meta:set_int("range", msg.value)
+			elseif msg.command == "shape" then
+				local valuet = type(msg.value)
+				if valuet == "string" then
+					if msg.value == "sphere" then
+						msg.value = 0
+					elseif msg.value == "cube" then
+						msg.value = 1
+					end
+				elseif valuet ~= "number" then
+					return
+				end
+				if not msg.value then
+					return
+				end
+				update_forcefield(pos, meta, false)
+				meta:set_int("shape", msg.value)
+			else
+				return
+			end
+			set_forcefield_formspec(meta)
+		end
+	},
+}
+
 local function run(pos, node)
 	local meta = minetest.get_meta(pos)
 	local eu_input   = meta:get_int("HV_EU_input")
-	local enabled = meta:get_int("enabled") ~= 0 and (meta:get_int("mesecon_mode") == 0 or meta:get_int("mesecon_effect") ~= 0)
+	local enabled = meta:get_int("enabled") ~= 0 and
+		(meta:get_int("mesecon_mode") == 0 or meta:get_int("mesecon_effect") ~= 0)
 	local machine_name = S("%s Forcefield Emitter"):format("HV")
 
 	local range = meta:get_int("range")
@@ -194,7 +285,14 @@ end
 
 minetest.register_node("technic:forcefield_emitter_off", {
 	description = S("%s Forcefield Emitter"):format("HV"),
-	tiles = {"technic_forcefield_emitter_off.png"},
+	tiles = {
+		"technic_forcefield_emitter_off.png",
+		"technic_machine_bottom.png"..cable_entry,
+		"technic_forcefield_emitter_off.png",
+		"technic_forcefield_emitter_off.png",
+		"technic_forcefield_emitter_off.png",
+		"technic_forcefield_emitter_off.png"
+	},
 	groups = {cracky = 1, technic_machine = 1, technic_hv = 1},
 	on_receive_fields = forcefield_receive_fields,
 	on_construct = function(pos)
@@ -205,16 +303,27 @@ minetest.register_node("technic:forcefield_emitter_off", {
 		meta:set_int("enabled", 0)
 		meta:set_int("mesecon_mode", 0)
 		meta:set_int("mesecon_effect", 0)
+		if digilines_path then
+			meta:set_string("channel", "forcefield"..minetest.pos_to_string(pos))
+		end
 		meta:set_string("infotext", S("%s Forcefield Emitter"):format("HV"))
 		set_forcefield_formspec(meta)
 	end,
 	mesecons = mesecons,
+	digiline = digiline_def,
 	technic_run = run,
 })
 
 minetest.register_node("technic:forcefield_emitter_on", {
 	description = S("%s Forcefield Emitter"):format("HV"),
-	tiles = {"technic_forcefield_emitter_on.png"},
+	tiles = {
+		"technic_forcefield_emitter_on.png",
+		"technic_machine_bottom.png"..cable_entry,
+		"technic_forcefield_emitter_on.png",
+		"technic_forcefield_emitter_on.png",
+		"technic_forcefield_emitter_on.png",
+		"technic_forcefield_emitter_on.png"
+	},
 	groups = {cracky = 1, technic_machine = 1, technic_hv = 1,
 			not_in_creative_inventory=1},
 	drop = "technic:forcefield_emitter_off",
@@ -224,11 +333,16 @@ minetest.register_node("technic:forcefield_emitter_on", {
 		update_forcefield(pos, meta, false)
 	end,
 	mesecons = mesecons,
+	digiline = digiline_def,
 	technic_run = run,
 	technic_on_disable = function (pos, node)
 		local meta = minetest.get_meta(pos)
 		update_forcefield(pos, meta, false)
 		technic.swap_node(pos, "technic:forcefield_emitter_off")
+	end,
+	on_blast = function(pos, intensity)
+		minetest.dig_node(pos)
+		return {"technic:forcefield_emitter_off"}
 	end,
 })
 
@@ -238,7 +352,7 @@ minetest.register_node("technic:forcefield", {
 	drawtype = "glasslike",
 	groups = {not_in_creative_inventory=1},
 	paramtype = "light",
-        light_source = 15,
+	light_source = default.LIGHT_MAX,
 	diggable = false,
 	drop = '',
 	tiles = {{
@@ -250,6 +364,8 @@ minetest.register_node("technic:forcefield", {
 			length = 1.0,
 		},
 	}},
+	on_blast = function(pos, intensity)
+	end,
 })
 
 

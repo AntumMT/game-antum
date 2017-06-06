@@ -168,7 +168,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [minetest_game][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- version: [e523c3a Git][ver.minetest_game] *2017-05-20* ([patched][patch.minetest_game])
 * [moremesecons][] ([MPL][lic.mpl2.0]) -- version: [aa2ae82 Git][ver.moremesecons] *2017-06-04*
 * [mydoors][] ([CC-BY / CC-BY-SA][lic.mydoors] / [WTFPL][lic.wtfpl] / [DWYWFPL][lic.dwywpl]) -- version: [63aef13 Git][ver.mydoors] *2017-03-31* ([patched][patch.mydoors])
-* [technic][] ([LGPL][lic.lgpl2.0]) -- version: [cbe9743 Git][ver.technic] *2017-02-25* ([patched][patch.technic])
+* [technic][] ([LGPL][lic.lgpl2.0]) -- version: [bf58c77 Git][ver.technic] *2017-06-05* ([patched][patch.technic])
 
 
 ---
@@ -474,7 +474,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.spectator_mode]: https://github.com/minetest-mods/spectator_mode/tree/7d68bec
 [ver.spidermob]: https://github.com/Darcidride/minetest-spidermob-v1/tree/8f9080a
 [ver.stairsplus]: https://github.com/CasimirKaPazi/stairsplus/tree/311e1f0
-[ver.technic]: https://github.com/minetest-mods/technic/tree/cbe9743
+[ver.technic]: https://github.com/minetest-mods/technic/tree/bf58c77
 [ver.throwing]: https://github.com/PilzAdam/throwing/tree/90bcf43
 [ver.tnt]: https://github.com/PilzAdam/TNT/tree/d6a0b7d
 [ver.tools_obsidian]: https://github.com/Dragonop/tools_obsidian/tree/f77fd79
@@ -538,7 +538,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.snowdrift]: https://github.com/AntumDeluge/mtmod-snowdrift/tree/1b9da4f
 [patch.spawneggs]: https://github.com/AntumDeluge/mtmod-spawneggs/tree/03edd95
 [patch.spidermob]: https://github.com/AntumDeluge/mtmod-spidermob/tree/89b9bc4
-[patch.technic]: https://github.com/AntumDeluge/mtmod-technic/tree/661c23d
+[patch.technic]: https://github.com/AntumDeluge/mtmod-technic/tree/3577609
 [patch.trash_can]: https://github.com/AntumDeluge/mtmod-trash_can/tree/5a92bf4
 [patch.walking_light]: https://github.com/AntumDeluge/mtmod-walking_light/tree/8084572
 [patch.windmill]: https://github.com/AntumDeluge/mtmod-windmill/tree/7756ab4

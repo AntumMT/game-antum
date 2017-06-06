@@ -2,4 +2,3 @@ default
 moreores?
 pipeworks?
 intllib?
-craft_guide?
