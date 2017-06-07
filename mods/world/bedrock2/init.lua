@@ -11,13 +11,14 @@ local bedrock = {}
 bedrock.layer = -30912 -- determined as appropriate by experiment
 bedrock.node = {name = "bedrock2:bedrock"}
 
-local depth = tonumber(minetest.setting_get("bedrock2_y"))
+local depth = tonumber(minetest.settings:get("bedrock2_y"))
 if depth ~= nil then
 	bedrock.layer = depth
 end
 
--- DEBUG:
-minetest.log("action", "[" .. minetest.get_current_modname() .. "] Bedrock depth: " .. tostring(depth))
+if minetest.settings:get_bool("log_mods") then
+	minetest.log("action", "[" .. minetest.get_current_modname() .. "] Bedrock depth: " .. tostring(depth))
+end
 
 minetest.register_on_generated(function(minp, maxp)
 	if maxp.y >= bedrock.layer and minp.y <= bedrock.layer then
