@@ -530,7 +530,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.mydoors]: https://github.com/AntumDeluge/mtmp-mydoors/tree/e36c9d1
 [patch.nether]: https://github.com/AntumDeluge/mtmod-nether/tree/d4e5a2a
 [patch.pipeworks]: https://github.com/AntumDeluge/mtmod-pipeworks/tree/981f3b1
-[patch.playeranim]: https://github.com/AntumDeluge/mtmod-playeranim/tree/54a4cb6
+[patch.playeranim]: https://github.com/AntumDeluge/mtmod-playeranim/tree/a64d144
 [patch.quartz]: https://github.com/AntumDeluge/mtmod-quartz/tree/d23dabd
 [patch.rainbow_ore]: https://github.com/AntumDeluge/mtmod-rainbow_ore/tree/60dc35e
 [patch.snowdrift]: https://github.com/AntumDeluge/mtmod-snowdrift/tree/1b9da4f
