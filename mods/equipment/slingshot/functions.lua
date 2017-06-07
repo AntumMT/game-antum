@@ -3,7 +3,7 @@
 
 slingshot.tmp_throw = {}
 slingshot.tmp_throw_timer = 0
-slingshot.tmp_time = tonumber(minetest.setting_get('item_entity_ttl')) or 890
+slingshot.tmp_time = tonumber(minetest.settings:get('item_entity_ttl')) or 890
 
 
 minetest.register_globalstep(function(dtime)
@@ -15,7 +15,7 @@ minetest.register_globalstep(function(dtime)
 		if t.timer <= 0 or t.ob == nil or t.ob:getpos() == nil then table.remove(slingshot.tmp_throw, i) return end
 		for ii, ob in pairs(minetest.get_objects_inside_radius(t.ob:getpos(), 1.5)) do
 			if (not ob:get_luaentity()) or (ob:get_luaentity() and (ob:get_luaentity().name ~= '__builtin:item')) then
-				if (not ob:is_player()) or (ob:is_player() and ob:get_player_name(ob) ~= t.user and minetest.setting_getbool('enable_pvp') == true) then
+				if (not ob:is_player()) or (ob:is_player() and ob:get_player_name(ob) ~= t.user and minetest.settings:get_bool('enable_pvp') == true) then
 					ob:set_hp(ob:get_hp()-5)
 					ob:punch(ob, {full_punch_interval=1.0, damage_groups={fleshy=4}}, 'default:bronze_pick', nil)
 					t.ob:setvelocity({x=0, y=0, z=0})
