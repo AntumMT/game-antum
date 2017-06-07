@@ -534,12 +534,12 @@ function sl.create_slopeplacer_on_place(def, preset)
 			if not minetest.registered_nodes[node.name] or not minetest.registered_nodes[node.name].buildable_to or advtrains.is_protected(pos, player:get_player_name()) then 
 				--do slopes of this distance exist?
 				if lookup[step] then
-					if minetest.setting_getbool("creative_mode") or istack:get_count()>=step then
+					if minetest.settings:get_bool("creative_mode") or istack:get_count()>=step then
 						--start placing
 						local placenodes=lookup[step]
 						while step>0 do
 							minetest.set_node(pos, {name=def.nodename_prefix.."_"..placenodes[step], param2=param2})
-							if not minetest.setting_getbool("creative_mode") then
+							if not minetest.settings:get_bool("creative_mode") then
 								istack:take_item()
 							end
 							step=step-1
@@ -644,7 +644,7 @@ if mesecon then
 				},
 				advtrains = {
 					on_train_enter=function(pos, train_id)
-						advtrains.ndb.swap_node(pos, {name="advtrains:dtrack_detector_on".."_"..suffix..rotation, param2=minetest.get_node(pos).param2})
+						advtrains.ndb.swap_node(pos, {name="advtrains:dtrack_detector_on".."_"..suffix..rotation, param2=advtrains.ndb.get_node(pos).param2})
 						mesecon.receptor_on(pos, advtrains.meseconrules)
 					end
 				}
@@ -669,7 +669,7 @@ if mesecon then
 				},
 				advtrains = {
 					on_train_leave=function(pos, train_id)
-						advtrains.ndb.swap_node(pos, {name="advtrains:dtrack_detector_off".."_"..suffix..rotation, param2=minetest.get_node(pos).param2})
+						advtrains.ndb.swap_node(pos, {name="advtrains:dtrack_detector_off".."_"..suffix..rotation, param2=advtrains.ndb.get_node(pos).param2})
 						mesecon.receptor_off(pos, advtrains.meseconrules)
 					end
 				}

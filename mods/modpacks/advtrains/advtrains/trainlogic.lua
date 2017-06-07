@@ -56,14 +56,17 @@ advtrains.mainloop_trainlogic=function(dtime)
 	advtrains.detector.on_node={}
 	for k,v in pairs(advtrains.trains) do
 		advtrains.atprint_context_tid=sid(k)
+		advtrains.atprint_context_tid_full=k
 		advtrains.train_step_a(k, v, dtime)
 	end
 	for k,v in pairs(advtrains.trains) do
 		advtrains.atprint_context_tid=sid(k)
+		advtrains.atprint_context_tid_full=k
 		advtrains.train_step_b(k, v, dtime)
 	end
 	
 	advtrains.atprint_context_tid=nil
+	advtrains.atprint_context_tid_full=nil
 	
 	atprintbm("trainsteps", t)
 	endstep()
@@ -131,6 +134,10 @@ train step structure:
 ]]
 
 function advtrains.train_step_a(id, train, dtime)
+	--atprint("--- runcnt ",advtrains.mainloop_runcnt,": index",train.index,"end_index", train.end_index,"| max_iot", train.max_index_on_track, "min_iot", train.min_index_on_track, "<> pe_min", train.path_extent_min,"pe_max", train.path_extent_max)
+	if train.min_index_on_track then
+		assert(math.floor(train.min_index_on_track)==train.min_index_on_track)
+	end
 	--- 1. LEGACY STUFF ---
 	if not train.drives_on or not train.max_speed then
 		advtrains.update_trainpart_properties(id)
@@ -235,6 +242,7 @@ function advtrains.train_step_a(id, train, dtime)
 	local t_info, train_pos=sid(id), train.path[math.floor(train.index)]
 	if train_pos then
 		t_info=t_info.." @"..minetest.pos_to_string(train_pos)
+		--atprint("train_pos:",train_pos)
 	end
 	
 	--apply off-track handling:
@@ -402,7 +410,10 @@ function advtrains.train_step_a(id, train, dtime)
 	else
 		for i=ibn, ifn do
 			if path[i] then
-				advtrains.detector.stay_node(path[i], id)
+				local pts=minetest.pos_to_string(path[i])
+				if not (advtrains.detector.on_node[pts] and advtrains.detector.on_node[pts]~=id) then
+					advtrains.detector.stay_node(path[i], id)
+				end
 			end
 		end
 		
@@ -412,8 +423,10 @@ function advtrains.train_step_a(id, train, dtime)
 					local pts=minetest.pos_to_string(path[i])
 					if advtrains.detector.on_node[pts] and advtrains.detector.on_node[pts]~=id then
 						--if another train has signed up for this position first, it won't be recognized in train_step_b. So do collision here.
+						atprint("Collision detected in enter_node callbacks (front) @",pts,"with",sid(advtrains.detector.on_node[pts]))
 						advtrains.collide_and_spawn_couple(id, path[i], advtrains.detector.on_node[pts], false)
 					end
+					atprint("enter_node (front) @index",i,"@",pts,"on_node",sid(advtrains.detector.on_node[pts]))
 					advtrains.detector.enter_node(path[i], id)
 				end
 			end
@@ -430,8 +443,10 @@ function advtrains.train_step_a(id, train, dtime)
 					local pts=minetest.pos_to_string(path[i])
 					if advtrains.detector.on_node[pts] and advtrains.detector.on_node[pts]~=id then
 						--if another train has signed up for this position first, it won't be recognized in train_step_b. So do collision here.
-						advtrains.collide_and_spawn_couple(id, path[i], advtrains.detector.on_node[pts], false)
+						atprint("Collision detected in enter_node callbacks (back) @",pts,"on_node",sid(advtrains.detector.on_node[pts]))
+						advtrains.collide_and_spawn_couple(id, path[i], advtrains.detector.on_node[pts], true)
 					end
+					atprint("enter_node (back) @index",i,"@",pts,"with",sid(advtrains.detector.on_node[pts]))
 					advtrains.detector.enter_node(path[i], id)
 				end
 			end
@@ -448,7 +463,7 @@ function advtrains.train_step_a(id, train, dtime)
 	--check for any trainpart entities if they have been unloaded. do this only if train is near a player, to not spawn entities into unloaded areas
 	
 	train.check_trainpartload=(train.check_trainpartload or 0)-dtime
-	local node_range=(math.max((minetest.setting_get("active_block_range") or 0),1)*16)
+	local node_range=(math.max((minetest.settings:get("active_block_range") or 0),1)*16)
 	if train.check_trainpartload<=0 then
 		local ori_pos=train_pos --see 3a.
 		--atprint("[train "..id.."] at "..minetest.pos_to_string(vector.round(ori_pos)))
@@ -561,7 +576,7 @@ function advtrains.train_step_b(id, train, dtime)
 						advtrains.collide_and_spawn_couple(id, testpos, advtrains.detector.on_node[testpts], train.movedir==-1)
 					end
 					--- 8b damage players ---
-					if not minetest.setting_getbool("creative_mode") then
+					if not minetest.settings:get_bool("creative_mode") then
 						local player=advtrains.playersbypts[testpts]
 						if player and train.velocity>3 then
 							--instantly kill player
@@ -765,6 +780,10 @@ function advtrains.trains_facing(train1, train2)
 end
 
 function advtrains.collide_and_spawn_couple(id1, pos, id2, t1_is_backpos)
+	if minetest.settings:get_bool("advtrains_disable_collisions") then
+		return
+	end
+	
 	atprint("COLLISION: "..sid(id1).." and "..sid(id2).." at ",pos,", t1_is_backpos="..(t1_is_backpos and "true" or "false"))
 	--TODO:
 	local train1=advtrains.trains[id1]

@@ -175,7 +175,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 ### Stored in 'modpacks' directory
 
-* [advtrains][] ([LGPL][lic.lgpl2.1] / [CC BY-NC-SA][lic.ccbyncsa3.0]) -- version: [74c8784 Git][ver.advtrains] *2017-05-22*
+* [advtrains][] ([LGPL][lic.lgpl2.1] / [CC BY-NC-SA][lic.ccbyncsa3.0]) -- version: [92af0b5 Git][ver.advtrains] *2017-05-31* ([patched][patch.advtrains])
 
 
 
@@ -391,7 +391,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 [ver.3d_armor]: https://github.com/stujones11/minetest-3d_armor/tree/9577fb7
 [ver.adv_spawning]: https://github.com/sapier/adv_spawning/tree/ec41aa9
-[ver.advtrains]: https://github.com/orwell96/advtrains/tree/74c8784
+[ver.advtrains]: https://github.com/orwell96/advtrains/tree/92af0b5
 [ver.airtanks]: https://github.com/minetest-mods/airtanks/tree/5787956
 [ver.animalmaterials]: https://github.com/sapier/animalmaterials/tree/d952d27
 [ver.animals]: https://github.com/sapier/animals_modpack/tree/b9d0172
@@ -491,7 +491,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 [patch.3d_armor]: https://github.com/AntumDeluge/mtmp-3d_armor/tree/07c7b9c
 [patch.adv_spawning]: https://github.com/AntumDeluge/mtmod-adv_spawning/tree/757197a
-[patch.advtrains]: https://github.com/AntumDeluge/mtmp-advtrains/tree/26f8bf4
+[patch.advtrains]: https://github.com/AntumDeluge/mtmp-advtrains/tree/b907561
 [patch.animals]: https://github.com/AntumDeluge/mtmp-animals_modpack/tree/ad4c5da
 [patch.areas]: https://github.com/AntumDeluge/mtmod-areas/tree/eef1203
 [patch.awards]: https://github.com/AntumDeluge/mtmod-awards/tree/638c137
