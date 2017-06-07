@@ -413,7 +413,7 @@ function mobf_line_of_sight(pos1,pos2)
 					y=pos1.y + (normalized_vector.y *i),
 					z=pos1.z + (normalized_vector.z *i)}
 
-		local node = minetest.env:get_node(tocheck)
+		local node = minetest.get_node(tocheck)
 
 
 		if minetest.registered_nodes[node.name] == nil or
