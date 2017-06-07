@@ -10,39 +10,17 @@ else
 end
 mobs.intllib = S
 
-local function log(message)
-	if minetest.setting_getbool("log_mods") then
-		minetest.log("action", "[mobs_animal] " .. message)
-	end
-end
-
 -- Animals
 
-local animals = {
-	"chicken", -- JKmurray
-	"cow", -- KrupnoPavel
-	"rat", -- PilzAdam
-	"sheep", -- PilzAdam
-	"warthog", -- KrupnoPavel
-	"bee", -- KrupnoPavel
-	"bunny", -- ExeterDad
-	"kitten", -- Jordach/BFD
-	"penguin", -- D00Med
-}
-
-for index, animal in ipairs(animals) do
-	local enable_animal = minetest.setting_getbool("mobs.enable_" .. animal)
-	-- Default enabled
-	if enable_animal == nil then
-		enable_animal = true
-	end
-	if enable_animal then
-		log(animal .. " enabled")
-		dofile(path .. "/" .. animal .. ".lua")
-	else
-		log(animal .. " disabled")
-	end
-end
+dofile(path .. "/chicken.lua") -- JKmurray
+dofile(path .. "/cow.lua") -- KrupnoPavel
+dofile(path .. "/rat.lua") -- PilzAdam
+dofile(path .. "/sheep.lua") -- PilzAdam
+dofile(path .. "/warthog.lua") -- KrupnoPavel
+dofile(path .. "/bee.lua") -- KrupnoPavel
+dofile(path .. "/bunny.lua") -- ExeterDad
+dofile(path .. "/kitten.lua") -- Jordach/BFD
+dofile(path .. "/penguin.lua") -- D00Med
 
 dofile(path .. "/lucky_block.lua")
 
