@@ -1,10 +1,10 @@
-local egg_interval = tonumber(minetest.setting_get('spawneggs.egg_interval')) or 600
-local egg_chance = tonumber(minetest.setting_get('spawneggs.egg_chance')) or 3000
-local grass_interval = tonumber(minetest.setting_get('spawneggs.grass_interval')) or 600
-local grass_chance = tonumber(minetest.setting_get('spawneggs.grass_chance')) or 3000
+local egg_interval = tonumber(minetest.settings:get('spawneggs.egg_interval')) or 600
+local egg_chance = tonumber(minetest.settings:get('spawneggs.egg_chance')) or 3000
+local grass_interval = tonumber(minetest.settings:get('spawneggs.grass_interval')) or 600
+local grass_chance = tonumber(minetest.settings:get('spawneggs.grass_chance')) or 3000
 
 -- Allow spawnegg nodes to spawn in world
-local enable_node_spawn = minetest.setting_getbool('spawneggs.enable_node_spawn')
+local enable_node_spawn = minetest.settings:get_bool('spawneggs.enable_node_spawn')
 if enable_node_spawn == nil then
 	enable_node_spawn = true
 end
@@ -30,7 +30,7 @@ for i in ipairs(spawneggs_list) do
 		inventory_image = "spawneggs_"..eggtype..".png",
 		on_place = function(itemstack, placer, pointed_thing)
 			if pointed_thing.above then
-				minetest.env:add_entity(pointed_thing.above, "mobs:"..eggtype)
+				minetest.add_entity(pointed_thing.above, "mobs:"..eggtype)
 				itemstack:take_item()
 			end
 			return itemstack
@@ -86,7 +86,7 @@ if enable_node_spawn then
 		interval = grass_interval,
 		chance = grass_chance,
 		action = function(pos)
-		minetest.env:add_node(pos, {name="spawneggs:egg"})
+		minetest.add_node(pos, {name="spawneggs:egg"})
 		end,
 	})
 end
@@ -96,6 +96,6 @@ minetest.register_abm(
 	interval = egg_interval,
 	chance = egg_chance,
 	action = function(pos)
-	minetest.env:add_node(pos, {name="air"})
+	minetest.add_node(pos, {name="air"})
 	end,
 })
