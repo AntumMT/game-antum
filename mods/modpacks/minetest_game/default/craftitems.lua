@@ -16,12 +16,6 @@ minetest.register_craftitem("default:paper", {
 local lpp = 14 -- Lines per book's page
 local function book_on_use(itemstack, user)
 	local player_name = user:get_player_name()
-	
-	-- FIXME: Using a dev build of 'minetest_game' with server 0.4.15 & can't downgrade.
-	--        Will probably have to wait until 0.4.16 is released.
-	minetest.chat_send_player(player_name, "Using books on this server is currently broken. Hopefully it will be fixed with next Minetest release.")
-	
-	--[[
 	local meta = itemstack:get_meta()
 	local title, text, owner = "", "", player_name
 	local page, page_max, lines, string = 1, 1, {}, ""
@@ -79,8 +73,6 @@ local function book_on_use(itemstack, user)
 
 	minetest.show_formspec(player_name, "default:book", formspec)
 	return itemstack
-	
-	]]--
 end
 
 minetest.register_on_player_receive_fields(function(player, formname, fields)
@@ -148,13 +140,11 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
 		end
 
 		stack:get_meta():from_table({fields = data})
-		--stack = book_on_use(stack, player)
-		-- FIXME:
-		book_on_use(stack, player)
+		stack = book_on_use(stack, player)
 	end
 
 	-- Update stack
-	--player:set_wielded_item(stack)
+	player:set_wielded_item(stack)
 end)
 
 minetest.register_craftitem("default:book", {

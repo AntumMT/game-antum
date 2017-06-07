@@ -58,11 +58,19 @@ for _, row in ipairs(dyes) do
 		description = description,
 		groups = groups
 	})
-	minetest.register_craft({
-		type = "shapeless",
-		output = item_name .. " 4",
-		recipe = {"group:flower,color_" .. name},
-	})
+	
+	-- Compare color against flowers
+	if minetest.get_modpath('flowers') then
+		for I in pairs(flowers.colors) do
+			if name == flowers.colors[I] then
+				minetest.register_craft({
+					type = "shapeless",
+					output = item_name .. " 4",
+					recipe = {"group:flower,color_" .. name},
+				})
+			end
+		end
+	end
 end
 
 -- Manually add coal->black dye
