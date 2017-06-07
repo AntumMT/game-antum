@@ -2,12 +2,14 @@
 -- TODO: Check for terrain height
 
 -- Defines the edge of a world
-local edge = tonumber(minetest.setting_get("world_edge")) or 30000
+local edge = tonumber(minetest.settings:get("world_edge")) or 30000
 -- Radius which should be checked for a good teleportation place
 local radius = 2
 --------------
 
-minetest.log("action", "World edge: " .. edge)
+if minetest.settings:get_bool("log_mods") then
+	minetest.log("action", "World edge: " .. edge)
+end
 
 local count = 0
 local waiting_list = {}
