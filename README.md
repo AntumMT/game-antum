@@ -514,7 +514,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.currency]: https://github.com/AntumDeluge/mtmod-currency/tree/9e9b1be
 [patch.drawers]: https://github.com/AntumDeluge/mtmod-drawers/tree/3887c5b
 [patch.ethereal]: https://github.com/AntumDeluge/mtmod-ethereal/tree/4be06f0
-[patch.farming_plus]: https://github.com/AntumDeluge/mtmod-farming_plus/tree/c9c3a3a
+[patch.farming_plus]: https://github.com/AntumDeluge/mtmod-farming_plus/tree/454a443
 [patch.helicopter]: https://github.com/AntumDeluge/mtmod-helicopter/tree/66a6523
 [patch.hovercraft]: https://github.com/AntumDeluge/mtmod-hovercraft/tree/96ad3b4
 [patch.hud]: https://github.com/AntumDeluge/mtmod-hud/tree/6846e20
