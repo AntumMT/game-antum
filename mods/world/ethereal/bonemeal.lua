@@ -348,7 +348,7 @@ minetest.register_craftitem("ethereal:bonemeal", {
 				return
 			end
 
-			if not minetest.setting_getbool("creative_mode") then
+			if not minetest.settings:get_bool("creative_mode") then
 
 				local item = user:get_wielded_item()
 
