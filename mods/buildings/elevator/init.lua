@@ -611,7 +611,7 @@ elevator_on_entry_rightclick=function(pos, node, clicker)
 		for obj_id, ent in pairs(minetest.luaentities) do
 			if ent.is_elevator and ent.id==id then
 				if not ent.driver then
-					if math.abs(ent.currdeep-deep)<(math.max((minetest.setting_get("active_block_range") or 0)-1,1)*16) then
+					if math.abs(ent.currdeep-deep)<(math.max((minetest.settings:get("active_block_range") or 0)-1,1)*16) then
 						ent.tardeep=deep
 						ent.getoffto=nil
 						ent.tardeep_set=true
@@ -783,7 +783,7 @@ minetest.register_entity("elevator:elevator", {
 		self.object:remove()
 		
 		--local inv = puncher:get_inventory()
-		--if minetest.setting_getbool("creative_mode") then
+		--if minetest.settings:get_bool("creative_mode") then
 		--	if not inv:contains_item("main", "elevator:elev_motor") then
 		--		inv:add_item("main", "elevator:elev_motor")
 		--	end
