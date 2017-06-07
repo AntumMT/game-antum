@@ -55,7 +55,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [ilights][] ([CC BY-SA][lic.ccbysa]) -- version [7060243 Git][ver.ilights] *2017-05-18*
     * walking_light ([petermalone fork][walking_light]) ([WTFPL / CC BY-SA][lic.walking_light]) -- version: [594bc62 Git][ver.walking_light] *2017-05-21* ([patched][patch.walking_light])
 * materials/
-	* [moreores][] ([zlib][lic.moreores] / [CC BY-SA][lic.ccbysa3.0]) -- version: [0842b4f Git][ver.moreores] *2017-03-21* ([patched][patch.moreores])
+	* [moreores][] ([zlib][lic.moreores] / [CC BY-SA][lic.ccbysa3.0]) -- version: [73e99e7 Git][ver.moreores] *2017-05-20* ([patched][patch.moreores])
 	* [quartz][] ([MIT][lic.quartz]) -- version: [00ca4eb Git][ver.quartz] *2017-02-28* ([patched][patch.quartz])
 	* [rainbow_ore][] ([LGPL][lic.rainbow_ore]) -- version: [6e77693 Git][ver.rainbow_ore] *2015-11-02* ([patched][patch.rainbow_ore])
 	* [unifieddyes][] ([GPL][lic.gpl2.0]) -- version: [8b20a06 Git][ver.unifieddyes] *2017-06-04*
@@ -455,7 +455,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.more_chests]: https://github.com/minetest-mods/more_chests/tree/c597779
 [ver.moreblocks]: https://github.com/minetest-mods/moreblocks/tree/fbfb079
 [ver.moremesecons]: https://github.com/minetest-mods/MoreMesecons/tree/aa2ae82
-[ver.moreores]: https://github.com/minetest-mods/moreores/tree/0842b4f
+[ver.moreores]: https://github.com/minetest-mods/moreores/tree/73e99e7
 [ver.mthudclock]: https://github.com/Rochambeau/mthudclock/tree/b3e2142
 [ver.mydoors]: https://github.com/minetest-mods/mydoors/tree/63aef13
 [ver.mywoodslopes]: https://github.com/minetest-mods/mywoodslopes/tree/3a1b531
@@ -531,7 +531,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.mobs_goblins]: https://github.com/AntumDeluge/mtmod-mobs_goblins/tree/fefd6bf
 [patch.mobs_redo]: https://github.com/AntumDeluge/mtmod-mobs_redo/tree/d8edf22
 [patch.moreblocks]: https://github.com/AntumDeluge/mtmod-moreblocks/tree/abb2e49
-[patch.moreores]: https://github.com/AntumDeluge/mtmod-moreores/tree/8b874f6
+[patch.moreores]: https://github.com/AntumDeluge/mtmod-moreores/tree/51fbd4f
 [patch.mydoors]: https://github.com/AntumDeluge/mtmp-mydoors/tree/e36c9d1
 [patch.nether]: https://github.com/AntumDeluge/mtmod-nether/tree/d4e5a2a
 [patch.peaceful_npc]: https://github.com/AntumDeluge/mtmod-peaceful_npc/tree/cbae09e
