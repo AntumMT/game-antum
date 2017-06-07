@@ -510,7 +510,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.compassgps]: https://github.com/AntumDeluge/mtmod-compassgps/tree/14179c2
 [patch.craftguide]: https://github.com/AntumDeluge/mtmod-craftguide/tree/1197b13
 [patch.crafting_bench]: https://github.com/AntumDeluge/mtmod-crafting_bench/tree/c5ff4e5
-[patch.crops]: https://github.com/AntumDeluge/mtmod-crops/tree/f8b33ae
+[patch.crops]: https://github.com/AntumDeluge/mtmod-crops/tree/0c5c649
 [patch.currency]: https://github.com/AntumDeluge/mtmod-currency/tree/9e9b1be
 [patch.drawers]: https://github.com/AntumDeluge/mtmod-drawers/tree/3887c5b
 [patch.ethereal]: https://github.com/AntumDeluge/mtmod-ethereal/tree/4be06f0
