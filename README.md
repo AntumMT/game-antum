@@ -75,7 +75,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [pipeworks][] ([WTFPL][lic.wtfpl]) -- version: [69d994a Git][ver.pipeworks] *2016-05-18*  ([patched][patch.pipeworks])
 * plantlife/
 * player/action/
-    * [throwing][] ([WTFPL][lic.wtfpl]) -- version: [90bcf43 Git][ver.throwing] *2013-09-27*
+    * [throwing][] ([WTFPL][lic.wtfpl]) -- version: [90bcf43 Git][ver.throwing] *2013-09-27* ([patched][patch.throwing])
 * player/visuals/
     * [hidename][] ([MIT][lic.hidename]) -- version [bb52dbc Git][ver.hidename]
     * [invisibility][] ([MIT][lic.invisibility]) -- version: [bf4156b Git][ver.invisibility] *2016-08-19* ([patched][patch.invisibility])
@@ -537,6 +537,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.spawneggs]: https://github.com/AntumDeluge/mtmod-spawneggs/tree/03edd95
 [patch.spidermob]: https://github.com/AntumDeluge/mtmod-spidermob/tree/89b9bc4
 [patch.technic]: https://github.com/AntumDeluge/mtmod-technic/tree/3577609
+[patch.throwing]: https://github.com/AntumDeluge/mtmod-throwing/tree/7b48d90
 [patch.trash_can]: https://github.com/AntumDeluge/mtmod-trash_can/tree/5a92bf4
 [patch.walking_light]: https://github.com/AntumDeluge/mtmod-walking_light/tree/8084572
 [patch.windmill]: https://github.com/AntumDeluge/mtmod-windmill/tree/7756ab4
