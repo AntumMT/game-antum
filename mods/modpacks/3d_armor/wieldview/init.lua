@@ -2,12 +2,12 @@ local time = 0
 local update_time = tonumber(minetest.settings:get("wieldview_update_time"))
 if not update_time then
 	update_time = 2
-	minetest.setting_set("wieldview_update_time", tostring(update_time))
+	minetest.settings:set("wieldview_update_time", tostring(update_time))
 end
 local node_tiles = minetest.settings:get_bool("wieldview_node_tiles")
 if not node_tiles then
 	node_tiles = false
-	minetest.setting_set("wieldview_node_tiles", "false")
+	minetest.settings:set("wieldview_node_tiles", "false")
 end
 
 wieldview = {
