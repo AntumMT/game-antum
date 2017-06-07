@@ -1,7 +1,7 @@
 -- License: CC0
 
 local chatlog = minetest.get_worldpath().."/chatlog.txt"
-monthfirst = minetest.setting_getbool('chatlog.monthfirst') or true -- Whether month is displayed before day in timestamp
+monthfirst = minetest.settings:get_bool('chatlog.monthfirst') or true -- Whether month is displayed before day in timestamp
 
 
 function playerspeak(name,msg)
