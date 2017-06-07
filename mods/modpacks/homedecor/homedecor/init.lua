@@ -9,17 +9,13 @@
 
 local modpath = minetest.get_modpath("homedecor")
 
--- Load support for intllib.
-local S, NS = dofile(modpath.."/intllib.lua")
+local S = homedecor_i18n.gettext
 
 homedecor = {
 	modpath = modpath,
 
-	gettext = S,
-	ngettext = NS,
-
 	-- infinite stacks
-	expect_infinite_stacks = minetest.setting_getbool("creative_mode") and not minetest.get_modpath("unified_inventory")
+	expect_infinite_stacks = minetest.settings:get_bool("creative_mode") and not minetest.get_modpath("unified_inventory")
 }
 
 -- Determine if the item being pointed at is the underside of a node (e.g a ceiling)
@@ -67,18 +63,15 @@ end
 
 screwdriver = screwdriver or {}
 
-homedecor.plain_wood = "homedecor_generic_wood_plain.png^"..
-					   "(homedecor_generic_wood_boards_overlay.png^[colorize:#a7682020:100)"
+homedecor.plain_wood    = { name = "homedecor_generic_wood_plain.png",  color = 0xffa76820 }
+homedecor.mahogany_wood = { name = "homedecor_generic_wood_plain.png",  color = 0xff7d2506 }
+homedecor.white_wood    = "homedecor_generic_wood_plain.png"
+homedecor.dark_wood     = { name = "homedecor_generic_wood_plain.png",  color = 0xff39240f }
+homedecor.lux_wood      = { name = "homedecor_generic_wood_luxury.png", color = 0xff643f23 }
 
-homedecor.mahogany_wood = "(homedecor_generic_wood_plain.png^[colorize:#401010:125)^"..
-					      "(homedecor_generic_wood_boards_overlay.png^[colorize:#66493880:200)"
-
-homedecor.white_wood = "(homedecor_generic_wood_plain.png^[colorize:#e0f0ff:200)^"..
-					   "(homedecor_generic_wood_boards_overlay.png^[colorize:#ffffff:200)"
-
-homedecor.dark_wood = "(homedecor_generic_wood_plain.png^[colorize:#140900:200)^"..
-					  "(homedecor_generic_wood_boards_overlay.png^[colorize:#21110180:180)"
-
+homedecor.color_black     = 0xff303030
+homedecor.color_dark_grey = 0xff606060
+homedecor.color_med_grey  = 0xffa0a0a0
 
 -- load different handler subsystems
 dofile(modpath.."/handlers/init.lua")

@@ -1,5 +1,5 @@
 
-local S = homedecor.gettext
+local S = homedecor_i18n.gettext
 
 local function N_(x) return x end
 
@@ -12,8 +12,8 @@ homedecor.register("barbecue", {
 	description = S("Barbecue"),
 	mesh = "homedecor_barbecue.obj",
 	tiles = {
-		"homedecor_generic_metal_black.png",
-		{	name="homedecor_embers.png",
+		{ name = "homedecor_generic_metal.png" , color = homedecor.color_black },
+		{ name = "homedecor_embers.png",
 			animation={
 				type="vertical_frames",
 				aspect_w=16,
@@ -319,7 +319,7 @@ homedecor.register("well", {
 	mesh = "homedecor_well.obj",
 	tiles = {
 		"homedecor_rope_texture.png",
-		"homedecor_generic_metal_black.png^[brighten",
+		{ name = "homedecor_generic_metal.png", color = homedecor.color_med_grey },
 		"default_water.png",
 		"default_cobble.png",
 		"default_wood.png",

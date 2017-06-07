@@ -1,9 +1,10 @@
-local S = homedecor.gettext
+
+local S = homedecor_i18n.gettext
 
 -- Various kinds of tables
 
 local materials = {
-	{ "glass", 
+	{ "glass",
 		S("Small square glass table"),
 		S("Small round glass table"),
 		S("Large glass table piece"),

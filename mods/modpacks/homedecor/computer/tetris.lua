@@ -1,3 +1,6 @@
+
+local S = homedecor_i18n.gettext
+
 local shapes = {
    {  { x = {0, 1, 0, 1}, y = {0, 0, 1, 1} } },
 
@@ -35,7 +38,7 @@ local buttons = "button[3,4.5;0.6,0.6;left;<]"
 	.."button[4.2,5.3;0.6,0.6;drop;V]"
 	.."button[4.8,4.5;0.6,0.6;rotateright;R]"
 	.."button[5.4,4.5;0.6,0.6;right;>]"
-	.."button[3.5,3;2,2;new;New Game]"
+	.."button[3.5,3;2,2;new;"..minetest.formspec_escape(S("New Game")).."]"
 
 local formsize = "size[5.9,5.7]"
 local boardx, boardy = 0, 0
@@ -241,7 +244,7 @@ local function step(pos, fields)
 end
 
 minetest.register_node("computer:tetris_arcade", {
-	description="Tetris Arcade",
+	description=S("Tetris Arcade"),
 	drawtype = "mesh",
 	mesh = "tetris_arcade.obj",
 	tiles = {"tetris_arcade.png"},
@@ -259,7 +262,8 @@ minetest.register_node("computer:tetris_arcade", {
 	},
 	on_construct = function(pos)
 		local meta = minetest.get_meta(pos)
-		meta:set_string("formspec", formsize.."button[2,2.5;2,2;new;New Game]"
+		meta:set_string("formspec", formsize
+			.."button[2,2.5;2,2;new;"..minetest.formspec_escape(S("New Game")).."]"
 			..default.gui_bg..default.gui_bg_img..default.gui_slots)
 	end,
 	on_timer = function(pos)
@@ -275,7 +279,7 @@ minetest.register_node("computer:tetris_arcade", {
 			return itemstack
 		end
 		if minetest.get_node({x=pos.x, y=pos.y+1, z=pos.z}).name ~= "air" then
-			minetest.chat_send_player(placer:get_player_name(), "No room for place the Arcade!")
+			minetest.chat_send_player(placer:get_player_name(), S("No room for place the Arcade!"))
 			return itemstack
 		end
 		local dir = placer:get_look_dir()

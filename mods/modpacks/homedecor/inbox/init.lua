@@ -1,5 +1,8 @@
+
+local S = homedecor_i18n.gettext
+
 local inbox = {}
-screwdriver = screwdriver or {}
+local screwdriver = rawget(_G, "screwdriver") or {}
 
 minetest.register_craft({
 	output ="inbox:empty",
@@ -19,7 +22,7 @@ minetest.register_node("inbox:empty", {
 	paramtype = "light",
 	drawtype = "mesh",
 	mesh = "inbox_mailbox.obj",
-	description = "Mailbox",
+	description = S("Mailbox"),
 	tiles = {
 		"inbox_red_metal.png",
 		"inbox_white_metal.png",
@@ -36,7 +39,7 @@ minetest.register_node("inbox:empty", {
 		local meta = minetest.get_meta(pos)
 		local owner = placer:get_player_name()
 		meta:set_string("owner", owner)
-		meta:set_string("infotext", owner.."'s Mailbox")
+		meta:set_string("infotext", S("@1's Mailbox", owner))
 		local inv = meta:get_inventory()
 		inv:set_size("main", 8*4)
 		inv:set_size("drop", 1)
@@ -49,13 +52,13 @@ minetest.register_node("inbox:empty", {
 				minetest.check_player_privs(player, "protection_bypass") and
 				clicker:get_player_control().aux1 then
 			minetest.show_formspec(
-				clicker:get_player_name(),
-				"default:chest_locked",
+				player,
+				"inbox:mailbox",
 				inbox.get_inbox_formspec(pos))
 		else
 			minetest.show_formspec(
-				clicker:get_player_name(),
-				"default:chest_locked",
+				player,
+				"inbox:mailbox",
 				inbox.get_inbox_insert_formspec(pos))
 		end
 		return itemstack
@@ -88,6 +91,19 @@ minetest.register_node("inbox:empty", {
 				return 0
 			end
 		end
+	end,
+	allow_metadata_inventory_take = function(pos, listname, index, stack, player)
+		local meta = minetest.get_meta(pos)
+		local owner = meta:get_string("owner")
+		if player:get_player_name() == owner or
+				minetest.check_player_privs(player, "protection_bypass") and
+				clicker:get_player_control().aux1 then
+			return stack:get_count()
+		end
+		return 0
+	end,
+	allow_metadata_inventory_move = function(pos)
+		return 0
 	end,
 })
 

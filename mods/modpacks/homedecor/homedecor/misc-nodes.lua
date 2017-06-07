@@ -1,5 +1,5 @@
 
-local S = homedecor.gettext
+local S = homedecor_i18n.gettext
 
 local function N_(x) return x end
 
@@ -74,7 +74,7 @@ homedecor.register("flower_pot_"..p, {
 	mesh = "homedecor_flowerpot.obj",
 	tiles = {
 		"homedecor_flower_pot_"..p..".png",
-		"default_dirt.png^[colorize:#000000:175"
+		{ name = "default_dirt.png", color = 0xff505050 },
 	},
 	groups = { snappy = 3, potting_soil=1 },
 	sounds = default.node_sound_stone_defaults(),
@@ -100,7 +100,7 @@ for _, f in ipairs(flowers_list) do
 		mesh = "homedecor_potted_plant.obj",
 		tiles = {
 			"homedecor_flower_pot_terracotta.png",
-			"default_dirt.png^[colorize:#000000:175",
+			{ name = "default_dirt.png", color = 0xff303030 },
 			"flowers_"..flower..".png"
 		},
 		walkable = false,
@@ -167,7 +167,7 @@ homedecor.register("fishtank", {
 	description = S("Fishtank"),
 	mesh = "homedecor_fishtank.obj",
 	tiles = {
-		"homedecor_generic_plastic_black.png",
+		{ name = "homedecor_generic_plastic.png", color = homedecor.color_black },
 		"homedecor_fishtank_filter.png",
 		"homedecor_fishtank_fishes.png",
 		"homedecor_fishtank_gravel.png",
@@ -189,7 +189,7 @@ homedecor.register("fishtank_lighted", {
 	description = S("Fishtank (lighted)"),
 	mesh = "homedecor_fishtank.obj",
 	tiles = {
-		"homedecor_generic_plastic_black.png",
+		{ name = "homedecor_generic_plastic.png", color = homedecor.color_black },
 		"homedecor_fishtank_filter.png",
 		"homedecor_fishtank_fishes_lighted.png",
 		"homedecor_fishtank_gravel_lighted.png",
@@ -268,7 +268,7 @@ homedecor.register("pool_table", {
 		"homedecor_pool_table_baize.png",
 		"homedecor_pool_table_pockets.png",
 		"homedecor_pool_table_balls.png",
-		"homedecor_generic_wood_luxury.png^[colorize:#000000:90"
+		homedecor.lux_wood,
 	},
 	description = S("Pool Table"),
 	inventory_image = "homedecor_pool_table_inv.png",
@@ -290,7 +290,7 @@ local piano_cbox = {
 homedecor.register("piano", {
 	mesh = "homedecor_piano.obj",
 	tiles = {
-		"homedecor_generic_wood_luxury.png^[colorize:#000000:175",
+		{ name = "homedecor_generic_wood_luxury.png", color = homedecor.color_black },
 		"homedecor_piano_keys.png",
 		"homedecor_generic_metal_brass.png",
 	},
@@ -336,7 +336,7 @@ homedecor.register("sportbench", {
 	tiles = {
 		"homedecor_generic_metal_wrought_iron.png",
 		"homedecor_generic_metal_bright.png",
-		"homedecor_generic_metal_black.png",
+		{ name = "homedecor_generic_metal.png", color = homedecor.color_black },
 		"wool_black.png"
 	},
 	inventory_image = "homedecor_sport_bench_inv.png",
@@ -368,10 +368,10 @@ homedecor.register("tool_cabinet", {
 	description = S("Metal tool cabinet and work table"),
 	mesh = "homedecor_tool_cabinet.obj",
 	tiles = {
-		"homedecor_generic_metal_black.png^[colorize:#ff0000:150",
+		{ name = "homedecor_generic_metal.png", color = 0xffd00000 },
 		"homedecor_tool_cabinet_drawers.png",
-		"homedecor_generic_metal_black.png^[colorize:#006000:150",
-		"homedecor_generic_metal_black.png^[brighten",
+		{ name = "homedecor_generic_metal.png", color = 0xff006000 },
+		{ name = "homedecor_generic_metal.png", color = homedecor.color_med_grey },
 		"homedecor_generic_metal_bright.png",
 		"homedecor_tool_cabinet_misc.png",
 	},
@@ -400,7 +400,7 @@ for _, i in ipairs(n) do
 		mesh = "homedecor_picture_frame.obj",
 		tiles = {
 			"homedecor_picture_frame_image"..i..".png",
-			"homedecor_generic_wood_luxury.png^[colorize:#000000:50",
+			homedecor.lux_wood,
 			"homedecor_picture_frame_back.png",
 		},
 		inventory_image = "homedecor_picture_frame"..i.."_inv.png",

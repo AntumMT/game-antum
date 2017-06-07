@@ -1,6 +1,6 @@
 -- Nodes that would affect the local temperature e.g. fans, heater, A/C
 
-local S = homedecor.gettext
+local S = homedecor_i18n.gettext
 
 homedecor.register("air_conditioner", {
 	description = S("Air Conditioner"),
@@ -59,7 +59,7 @@ homedecor.register("desk_fan", {
 		meta:set_string("active", "no")
 		add_mesh_desk_fan_entity(pos)
 	end,
-	on_punch = function(pos)
+	on_rightclick = function(pos, node, clicker, itemstack, pointed_thing)
 		local meta = minetest.get_meta(pos)
 		local entities = minetest.get_objects_inside_radius(pos, 0.1)
 		local entity = entities[1] or add_mesh_desk_fan_entity(pos)
@@ -132,7 +132,7 @@ local r_cbox = homedecor.nodebox.slab_z(-0.25)
 homedecor.register("radiator", {
 	mesh = "homedecor_radiator.obj",
 	tiles = {
-		"homedecor_generic_metal_black.png^[colorize:#ffffff:200",
+		"homedecor_generic_metal.png",
 		"homedecor_radiator_controls.png"
 	},
 	inventory_image = "homedecor_radiator_inv.png",

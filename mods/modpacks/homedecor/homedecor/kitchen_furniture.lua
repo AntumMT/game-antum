@@ -1,6 +1,6 @@
 -- This file supplies Kitchen cabinets and kitchen sink
 
-local S = homedecor.gettext
+local S = homedecor_i18n.gettext
 
 local cabinet_sides = "(default_wood.png^[transformR90)^homedecor_kitchen_cabinet_bevel.png"
 local cabinet_bottom = "(default_wood.png^[colorize:#000000:100)^(homedecor_kitchen_cabinet_bevel.png^[colorize:#46321580)"
@@ -96,7 +96,7 @@ local cp_cbox = {
 }
 
 homedecor.register("copper_pans", {
-	description = "Copper pans",
+	description = S("Copper pans"),
 	mesh = "homedecor_copper_pans.obj",
 	tiles = { "homedecor_polished_copper.png" },
 	inventory_image = "homedecor_copper_pans_inv.png",
@@ -115,7 +115,7 @@ homedecor.register("kitchen_faucet", {
 	mesh = "homedecor_kitchen_faucet.obj",
 	tiles = { "homedecor_generic_metal_bright.png" },
 	inventory_image = "homedecor_kitchen_faucet_inv.png",
-	description = "Kitchen Faucet",
+	description = S("Kitchen Faucet"),
 	groups = {snappy=3},
 	selection_box = kf_cbox,
 	walkable = false,
