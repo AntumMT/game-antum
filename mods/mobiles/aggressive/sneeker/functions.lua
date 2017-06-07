@@ -1,7 +1,7 @@
 -- Functions for sneeker mod
 
 
-local log_mods = minetest.setting_getbool('log_mods')
+local log_mods = minetest.settings:get_bool('log_mods')
 
 
 -- Displays a message in log output

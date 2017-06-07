@@ -5,7 +5,7 @@ sneeker = {}
 sneeker.modname = minetest.get_current_modname()
 sneeker.modpath = minetest.get_modpath(sneeker.modname)
 
-if minetest.setting_getbool('log_mods') then
+if minetest.settings:get_bool('log_mods') then
 	minetest.log('action', 'Loading mod "' .. sneeker.modname .. '" ...')
 end
 
@@ -353,7 +353,7 @@ if minetest.get_modpath('spawneggs') and minetest.get_modpath('tnt') then
 				local pos = pointed_thing.above
 				pos.y = pos.y+1
 				minetest.add_entity(pos, sneeker.mob_name)
-				if not minetest.setting_getbool('creative_mode') then
+				if not minetest.settings:get_bool('creative_mode') then
 					itemstack:take_item()
 				end
 				return itemstack
