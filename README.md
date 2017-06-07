@@ -92,7 +92,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [adv_spawning][animals] (part of "animals" modpack) ([WTFPL][lic.wtfpl]) -- version: [0.0.13 ec41aa9 Git][ver.adv_spawning] *2015-12-28* ([patched][patch.adv_spawning])
 	* [spawneggs][] ([WTFPL][lic.spawneggs]) -- version [4650370 Git][ver.spawneggs] *2013-09-09* ([patched][patch.spawneggs])
 * storage/
-	* [drawers][] () -- version: [7b9a384 Git][ver.drawers] *2017-04-23* ([patched][patch.drawers])
+	* [drawers][] () -- version: [0.4.3 (7063e2b Git)][ver.drawers] *2017-06-04* ([patched][patch.drawers])
 	* [more_chests][] ([GPL][lic.gpl2.0]) -- version [c597779 Git][ver.more_chests] *2017-02-27*
 * tools/
 	* [compassgps][] ([WTFPL][lic.wtfpl] / [CC0][lic.cc0] / [CC BY-SA][lic.ccbysa]) -- version: [96892a0 Git][ver.compassgps] *2015-07-31* ([patched][patch.compassgps])
@@ -423,7 +423,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.currency]: https://github.com/minetest-mods/currency/tree/3ee673d
 [ver.deploy_nodes]: https://github.com/cornernote/minetest-deploy_nodes/tree/eb3d68c
 [ver.desert_life]: https://github.com/NathanSalapat/desert_life/tree/d448fa3
-[ver.drawers]: https://github.com/minetest-mods/drawers/tree/7b9a384
+[ver.drawers]: https://github.com/minetest-mods/drawers/tree/7063e2b
 [ver.enchanting]: https://github.com/minetest-mods/enchanting/tree/13ea31c
 [ver.ethereal]: https://github.com/tenplus1/ethereal/tree/2c24961
 [ver.farming_plus]: https://github.com/PilzAdam/farming_plus/tree/7e0d976
@@ -515,7 +515,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.crops]: https://github.com/AntumDeluge/mtmod-crops/tree/0c5c649
 [patch.currency]: https://github.com/AntumDeluge/mtmod-currency/tree/9e9b1be
 [patch.deploy_nodes]: https://github.com/AntumDeluge/mtmp-deploy_nodes/tree/3ea67b7
-[patch.drawers]: https://github.com/AntumDeluge/mtmod-drawers/tree/3887c5b
+[patch.drawers]: https://github.com/AntumDeluge/mtmod-drawers/tree/a77f809
 [patch.ethereal]: https://github.com/AntumDeluge/mtmod-ethereal/tree/9f50d6e
 [patch.farming_plus]: https://github.com/AntumDeluge/mtmod-farming_plus/tree/454a443
 [patch.hbarmor]: https://github.com/AntumDeluge/mtmod-hbarmor/tree/d1168bb

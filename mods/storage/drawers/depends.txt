@@ -3,4 +3,3 @@ mcl_core?
 screwdriver?
 pipeworks?
 intllib?
-craft_guide?

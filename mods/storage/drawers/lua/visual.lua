@@ -90,10 +90,11 @@ core.register_entity("drawers:visual", {
 			drawers.drawer_visuals[posstr][vId] = self
 		end
 
-
-		local node = core.get_node(self.drawer_pos)
+		-- get meta
+		self.meta = core.get_meta(self.drawer_pos)
 
 		-- collisionbox
+		local node = core.get_node(self.drawer_pos)
 		local colbox
 		if self.drawerType ~= 2 then
 			if node.param2 == 1 or node.param2 == 3 then
@@ -123,17 +124,16 @@ core.register_entity("drawers:visual", {
 
 
 		-- drawer values
-		local meta = core.get_meta(self.drawer_pos)
 		local vid = self.visualId
-		self.count = meta:get_int("count"..vid)
-		self.itemName = meta:get_string("name"..vid)
-		self.maxCount = meta:get_int("max_count"..vid)
-		self.itemStackMax = meta:get_int("base_stack_max"..vid)
-		self.stackMaxFactor = meta:get_int("stack_max_factor"..vid)
+		self.count = self.meta:get_int("count"..vid)
+		self.itemName = self.meta:get_string("name"..vid)
+		self.maxCount = self.meta:get_int("max_count"..vid)
+		self.itemStackMax = self.meta:get_int("base_stack_max"..vid)
+		self.stackMaxFactor = self.meta:get_int("stack_max_factor"..vid)
 
 
 		-- infotext
-		local infotext = meta:get_string("entity_infotext"..vid) .. "\n\n\n\n\n"
+		local infotext = self.meta:get_string("entity_infotext"..vid) .. "\n\n\n\n\n"
 
 		self.object:set_properties({
 			collisionbox = colbox,
@@ -150,10 +150,37 @@ core.register_entity("drawers:visual", {
 		local leftover = self.try_insert_stack(self, clicker:get_wielded_item(),
 			not clicker:get_player_control().sneak)
 
+		-- if smth. was added play the interact sound
+		if clicker:get_wielded_item():get_count() > leftover:get_count() then
+			self:play_interact_sound()
+		end
+		-- set the leftover as new wielded item for the player
 		clicker:set_wielded_item(leftover)
 	end,
 
 	on_punch = function(self, puncher, time_from_last_punch, tool_capabilities, dir)
+		local add_stack = not puncher:get_player_control().sneak
+
+		local inv = puncher:get_inventory()
+		local spaceChecker = ItemStack(self.itemName)
+		if add_stack then
+			spaceChecker:set_count(spaceChecker:get_stack_max())
+		end
+		if not inv:room_for_item("main", spaceChecker) then
+			return
+		end
+
+		stack = self:take_items(add_stack)
+		if stack ~= nil then
+			-- add removed stack to player's inventory
+			inv:add_item("main", stack)
+
+			-- play the interact sound
+			self:play_interact_sound()
+		end
+	end,
+
+	take_items = function(self, take_stack)
 		local meta = core.get_meta(self.drawer_pos)
 
 		if self.count <= 0 then
@@ -161,44 +188,25 @@ core.register_entity("drawers:visual", {
 		end
 
 		local removeCount = 1
-		if not puncher:get_player_control().sneak then
+		if take_stack then
 			removeCount = ItemStack(self.itemName):get_stack_max()
 		end
-		if removeCount > self.count then removeCount = self.count end
+		if removeCount > self.count then
+			removeCount = self.count
+		end
 
 		local stack = ItemStack(self.itemName)
 		stack:set_count(removeCount)
 
-		local inv = puncher:get_inventory()
-		if not inv:room_for_item("main", stack) then
-			return
-		end
-
-		inv:add_item("main", stack)
+		-- update the drawer count
 		self.count = self.count - removeCount
-		meta:set_int("count"..self.visualId, self.count)
 
-		-- update infotext
-		local itemDescription = ""
-		if core.registered_items[self.itemName] then
-			itemDescription = core.registered_items[self.itemName].description
-		end
+		self:updateInfotext()
+		self:updateTexture()
+		self:saveMetaData()
 
-		if self.count <= 0 then
-			self.itemName = ""
-			meta:set_string("name"..self.visualId, self.itemName)
-			self.texture = "blank.png"
-			itemDescription = S("Empty")
-		end
-
-		local infotext = drawers.gen_info_text(itemDescription,
-			self.count, self.stackMaxFactor, self.itemStackMax)
-		meta:set_string("entity_infotext"..self.visualId, infotext)
-
-		self.object:set_properties({
-			infotext = infotext .. "\n\n\n\n\n",
-			textures = {self.texture}
-		})
+		-- return the stack that was removed from the drawer
+		return stack
 	end,
 
 	try_insert_stack = function(self, itemstack, insert_stack)
@@ -244,40 +252,109 @@ core.register_entity("drawers:visual", {
 			itemstack:set_count(itemstack:get_count() - stackCount)
 		end
 
-		-- get meta
-		local meta = core.get_meta(self.drawer_pos)
+		-- update infotext, texture
+		self:updateInfotext()
+		self:updateTexture()
 
-		-- update infotext
-		local itemDescription
-		if core.registered_items[self.itemName] then
-			itemDescription = core.registered_items[self.itemName].description
-		else
-			itemDescription = S("Empty")
-		end
-		local infotext = drawers.gen_info_text(itemDescription,
-			self.count, self.stackMaxFactor, self.itemStackMax)
-		meta:set_string("entity_infotext"..self.visualId, infotext)
-
-		-- texture
-		self.texture = drawers.get_inv_image(self.itemName)
-
-		self.object:set_properties({
-			infotext = infotext .. "\n\n\n\n\n",
-			textures = {self.texture}
-		})
-
-		self.saveMetaData(self, meta)
+		self:saveMetaData()
 
 		if itemstack:get_count() == 0 then itemstack = ItemStack("") end
 		return itemstack
 	end,
 
+	updateInfotext = function(self)
+		local itemDescription = ""
+		if core.registered_items[self.itemName] then
+			itemDescription = core.registered_items[self.itemName].description
+		end
+
+		if self.count <= 0 then
+			self.itemName = ""
+			self.meta:set_string("name"..self.visualId, self.itemName)
+			self.texture = "blank.png"
+			itemDescription = S("Empty")
+		end
+
+		local infotext = drawers.gen_info_text(itemDescription,
+			self.count, self.stackMaxFactor, self.itemStackMax)
+		self.meta:set_string("entity_infotext"..self.visualId, infotext)
+
+		self.object:set_properties({
+			infotext = infotext .. "\n\n\n\n\n"
+		})
+	end,
+
+	updateTexture = function(self)
+		-- texture
+		self.texture = drawers.get_inv_image(self.itemName)
+
+		self.object:set_properties({
+			textures = {self.texture}
+		})
+	end,
+
+	dropStack = function(self, itemStack)
+		-- print warning if dropping higher stack counts than allowed
+		if itemStack:get_count() > itemStack:get_stack_max() then
+			core.log("warning", "[drawers] Dropping item stack with higher count than allowed")
+		end
+		-- find a position containing air
+		local dropPos = core.find_node_near(self.drawer_pos, 1, {"air"}, false)
+		-- if no pos found then drop on the top of the drawer
+		if not dropPos then
+			dropPos = self.pos
+			dropPos.y = dropPos.y + 1
+		end
+		-- drop the item stack
+		core.item_drop(itemStack, nil, dropPos)
+	end,
+
+	dropItemOverload = function(self)
+		-- drop stacks until there are no more items than allowed
+		while self.count > self.maxCount do
+			-- remove the overflow
+			local removeCount = self.count - self.maxCount
+			-- if this is too much for a single stack, only take the
+			-- stack limit
+			if removeCount > self.itemStackMax then
+				removeCount = self.itemStackMax
+			end
+			-- remove this count from the drawer
+			self.count = self.count - removeCount
+			-- create a new item stack having the size of the remove
+			-- count
+			local stack = ItemStack(self.itemName)
+			stack:set_count(removeCount)
+			print(stack:to_string())
+			-- drop the stack
+			self:dropStack(stack)
+		end
+	end,
+
+	setStackMaxFactor = function(self, stackMaxFactor)
+		self.stackMaxFactor = stackMaxFactor
+		self.maxCount = self.stackMaxFactor * self.itemStackMax
+
+		-- will drop possible overflowing items
+		self:dropItemOverload()
+		self:updateInfotext()
+		self:saveMetaData()
+	end,
+
+	play_interact_sound = function(self)
+		core.sound_play("drawers_interact", {
+			pos = self.pos,
+			max_hear_distance = 6,
+			gain = 2.0
+		})
+	end,
+
 	saveMetaData = function(self, meta)
-		meta:set_int("count"..self.visualId, self.count)
-		meta:set_string("name"..self.visualId, self.itemName)
-		meta:set_int("max_count"..self.visualId, self.maxCount)
-		meta:set_int("base_stack_max"..self.visualId, self.itemStackMax)
-		meta:set_int("stack_max_factor"..self.visualId, self.stackMaxFactor)
+		self.meta:set_int("count"..self.visualId, self.count)
+		self.meta:set_string("name"..self.visualId, self.itemName)
+		self.meta:set_int("max_count"..self.visualId, self.maxCount)
+		self.meta:set_int("base_stack_max"..self.visualId, self.itemStackMax)
+		self.meta:set_int("stack_max_factor"..self.visualId, self.stackMaxFactor)
 	end
 })
 
@@ -286,6 +363,13 @@ core.register_lbm({
 	nodenames = {"group:drawer"},
 	run_at_every_load = true,
 	action  = function(pos, node)
+		local meta = core.get_meta(pos)
+		-- create drawer upgrade inventory
+		meta:get_inventory():set_size("upgrades", 5)
+		-- set the formspec
+		meta:set_string("formspec", drawers.drawer_formspec)
+
+		-- count the drawer visuals
 		local drawerType = core.registered_nodes[node.name].groups.drawer
 		local foundVisuals = 0
 		local objs = core.get_objects_inside_radius(pos, 0.537)

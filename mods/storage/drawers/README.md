@@ -1,5 +1,5 @@
 # Minetest Mod Storage Drawers
-Version 0.4.2, Status: alpha, License: MIT
+Version 0.4.3, Status: alpha, License: MIT
 
 ## Description
 This mod adds simple item storages showing the item's inventory image in the
@@ -38,4 +38,6 @@ alternatively you can also [email](mailto:git@lnj.li) me.
 
 ## Links
 * [Minetest Forums](https://forum.minetest.net/viewtopic.php?f=9&t=17134)
+* [Weblate](https://hosted.weblate.org/projects/minetest/mod-storage-drawers/)
 * [GitHub](http://github.com/lnj2/drawers/)
+
