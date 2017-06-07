@@ -2,4 +2,3 @@ default
 intllib?
 hopper?
 doc?
-craft_guide?
