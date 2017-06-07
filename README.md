@@ -500,7 +500,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.campfire]: https://github.com/AntumDeluge/mtmod-campfire/tree/7b2394a
 [patch.castle_gates]: https://github.com/AntumDeluge/mtmod-castle_gates/tree/465ad4f
 [patch.castle_lighting]: https://github.com/AntumDeluge/mtmod-castle_lighting/tree/b360c54
-[patch.castle_masonry]: https://github.com/AntumDeluge/mtmod-castle_masonry/tree/88c2f89
+[patch.castle_masonry]: https://github.com/AntumDeluge/mtmod-castle_masonry/tree/0aae8d9
 [patch.castle_shields]: https://github.com/AntumDeluge/mtmod-castle_shields/tree/47ffc27
 [patch.castle_storage]: https://github.com/AntumDeluge/mtmod-castle_storage/tree/b80b72f
 [patch.castle_tapestries]: https://github.com/AntumDeluge/mtmod-castle_tapestries/tree/4e70f1b
