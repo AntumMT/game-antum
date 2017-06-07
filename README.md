@@ -63,7 +63,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [mobs_goblins][] ([CC-BY-SA / CC-BY / CC0][lic.mobs_goblins]) -- version: [6c7fdf9 Git][ver.mobs_goblins] *2017-05-23* ([patched][patch.mobs_goblins])
     * [mobs_monster][] ([MIT][lic.mobs_monster]) -- version: [f6d0e01 Git][ver.mobs_monster] *2017-04-27*
     * [sneeker][] ([WTFPL][lic.wtfpl] / [CC0][lic.cc0]) -- version: [9e1b11a Git][ver.sneeker] *2017-06-04*
-    * [spidermob][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0] / [MIT][lic.mit] / [WTFPL][lic.spidermob] / [Unlicense][lic.unlicense]) -- version [8f9080a Git][ver.spidermob] *2016-08-14* ([patched][patch.spidermob])
+    * [spidermob][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0] / [MIT][lic.mit] / [WTFPL][lic.spidermob] / [Unlicense][lic.unlicense]) -- version [8f9080a Git][ver.spidermob] *2017-06-02* ([patched][patch.spidermob])
 * mobiles/engine/
     * [mobs_redo][] ([MIT][lic.mobs_redo]) -- version: [4eb1c93 Git][ver.mobs_redo] *2017-06-04* ([patched][patch.mobs_redo])
 * mobiles/general/
@@ -535,7 +535,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.rainbow_ore]: https://github.com/AntumDeluge/mtmod-rainbow_ore/tree/60dc35e
 [patch.snowdrift]: https://github.com/AntumDeluge/mtmod-snowdrift/tree/1b9da4f
 [patch.spawneggs]: https://github.com/AntumDeluge/mtmod-spawneggs/tree/03edd95
-[patch.spidermob]: https://github.com/AntumDeluge/mtmod-spidermob/tree/89b9bc4
+[patch.spidermob]: https://github.com/AntumDeluge/mtmod-spidermob/tree/25a88ff
 [patch.technic]: https://github.com/AntumDeluge/mtmod-technic/tree/3577609
 [patch.throwing]: https://github.com/AntumDeluge/mtmod-throwing/tree/7b48d90
 [patch.trash_can]: https://github.com/AntumDeluge/mtmod-trash_can/tree/5a92bf4
