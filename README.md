@@ -89,7 +89,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * sound/
     * [ambience][ambience_ultralite] ([WTFPL][lic.wtfpl] / [CC BY / CC BY-SA / CC BY-NC-SA / CC0][lic.ambience_ultralite]) -- version: 0.36
 * spawning/
-	* [adv_spawning][animals] (part of "animals" modpack) ([WTFPL][lic.wtfpl]) -- version: [0.0.13 ec41aa9 Git][ver.adv_spawning] *2015-12-28* ([patched][patch.adv_spawning])
+	* [adv_spawning][animals] (part of "animals" modpack) ([WTFPL][lic.wtfpl]) -- version: [0.0.13 (ec41aa9 Git)][ver.adv_spawning] *2015-12-28* ([patched][patch.adv_spawning])
 	* [spawneggs][] ([WTFPL][lic.spawneggs]) -- version [4650370 Git][ver.spawneggs] *2013-09-09* ([patched][patch.spawneggs])
 * storage/
 	* [drawers][] () -- version: [0.4.3 (7063e2b Git)][ver.drawers] *2017-06-04* ([patched][patch.drawers])
@@ -490,7 +490,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.worldedge]: https://github.com/minetest-mods/worldedge/tree/e15fa99
 
 [patch.3d_armor]: https://github.com/AntumDeluge/mtmp-3d_armor/tree/07c7b9c
-[patch.adv_spawning]: https://github.com/AntumDeluge/mtmod-adv_spawning/tree/e73c0aa
+[patch.adv_spawning]: https://github.com/AntumDeluge/mtmod-adv_spawning/tree/757197a
 [patch.advtrains]: https://github.com/AntumDeluge/mtmp-advtrains/tree/26f8bf4
 [patch.animals]: https://github.com/AntumDeluge/mtmp-animals_modpack/tree/ad4c5da
 [patch.areas]: https://github.com/AntumDeluge/mtmod-areas/tree/eef1203
