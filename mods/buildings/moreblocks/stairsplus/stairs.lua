@@ -141,7 +141,27 @@ function stairsplus:register_stair(modname, subname, recipeitem, fields)
 		end
 		minetest.register_node(":" .. modname .. ":stair_" .. subname .. alternate, def)
 	end
-	minetest.register_alias("stairs:stair_" .. subname, modname .. ":stair_" .. subname)
+	
+	local alias = "stairs:stair_" .. subname
+	local registered = false
+	
+	for index in pairs(minetest.registered_items) do
+		if minetest.registered_items[index].name == alias then
+			registered = true
+		end
+	end
+	
+	if not registered then
+		for index in pairs(minetest.registered_aliases) do
+			if minetest.registered_aliases[index].name == alias then
+				registered = true
+			end
+		end
+	end
+	
+	if not registered then
+		minetest.register_alias(alias, modname .. ":stair_" .. subname)
+	end
 
 	circular_saw.known_nodes[recipeitem] = {modname, subname}
 
