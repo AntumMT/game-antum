@@ -18,7 +18,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [privilegeareas][] ([WTFPL][lic.privilegeareas] / [CC0][lic.cc0]) -- version: [aebaa00 Git][ver.privilegeareas] *2016-05-18*
     * [privs][] ([CC0][lic.cc0])
     * [spectator_mode][] ([WTFPL][lic.spectator_mode]) -- version: [7d68bec Git][ver.spectator_mode] *2017-03-30*
-* [awards][] ([LGPL][lic.lgpl2.1]) -- version: [096fe16 Git][ver.awards] *2017-02-25*
+* [awards][] ([LGPL][lic.lgpl2.1]) -- version: [096fe16 Git][ver.awards] *2017-02-25* ([patched][patch.awards])
 * [antum][] ([MIT][lic.antum]) -- version: [2a0e695 Git][ver.antum] *2017-05-29*
 * buildings/
     * [bridges][] ([GPL][lic.gpl3.0]) -- version: [5b5f475 Git][ver.bridges] *2015-08-23*
@@ -494,6 +494,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.advtrains]: https://github.com/AntumDeluge/mtmp-advtrains/tree/26f8bf4
 [patch.animals]: https://github.com/AntumDeluge/mtmp-animals_modpack/tree/ad4c5da
 [patch.areas]: https://github.com/AntumDeluge/mtmod-areas/tree/eef1203
+[patch.awards]: https://github.com/AntumDeluge/mtmod-awards/tree/638c137
 [patch.bags]: https://github.com/AntumDeluge/mtmod-bags/tree/4363284
 [patch.bedrock2]: https://github.com/AntumDeluge/mtmod-bedrock2/tree/51b25b6
 [patch.campfire]: https://github.com/AntumDeluge/mtmod-campfire/tree/7b2394a
