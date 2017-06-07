@@ -10,7 +10,6 @@ farming?
 flowers?
 helicopter?
 invisibility?
-kpgmobs?
 mobs?
 moreblocks?
 simple_protection?

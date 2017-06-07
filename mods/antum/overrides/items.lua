@@ -28,7 +28,6 @@
 local modoverrides = {
 	'animalmaterials',
 	'cooking',
-	'kpgmobs',
 	'mobs',
 	'simple_protection',
 }

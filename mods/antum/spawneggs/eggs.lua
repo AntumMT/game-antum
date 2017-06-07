@@ -45,7 +45,7 @@ antum.spawneggs.addEgg = function(name, spawn, ingredients)
 				local pos = target.above
 				pos.y = pos.y + 1
 				minetest.add_entity(pos, spawn)
-				if not minetest.setting_getbool('creative_mode') then
+				if not minetest.settings:get_bool('creative_mode') then
 					itemstack:take_item()
 				end
 				
@@ -90,11 +90,6 @@ end
 -- Chicken spawnegg
 if minetest.get_modpath('chicken') then
 	antum.spawneggs.addEgg('chicken', 'creatures:chicken', {'creatures:feather'})
-end
-
--- Cow spawnegg
-if minetest.get_modpath('kpgmobs') and minetest.get_modpath('mobs') then
-	antum.spawneggs.addEgg('cow', 'kpgmobs:cow', {'mobs:leather'})
 end
 
 -- mobs_redo monsters

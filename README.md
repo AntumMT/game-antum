@@ -19,7 +19,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [privs][] ([CC0][lic.cc0])
     * [spectator_mode][] ([WTFPL][lic.spectator_mode]) -- version: [7d68bec Git][ver.spectator_mode] *2017-03-30*
 * [awards][] ([LGPL][lic.lgpl2.1]) -- version: [096fe16 Git][ver.awards] *2017-02-25* ([patched][patch.awards])
-* [antum][] ([MIT][lic.antum]) -- version: [2a0e695 Git][ver.antum] *2017-05-29*
+* [antum][] ([MIT][lic.antum]) -- version: [3af5496 Git][ver.antum] *2017-06-08*
 * buildings/
     * [bridges][] ([GPL][lic.gpl3.0]) -- version: [5b5f475 Git][ver.bridges] *2015-08-23*
     * [christmas][] ([MIT][lic.christmas]) -- version [d3bd872 Git][ver.christmas] *2013-01-11* ([patched][patch.christmas])
@@ -395,7 +395,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.airtanks]: https://github.com/minetest-mods/airtanks/tree/5787956
 [ver.animalmaterials]: https://github.com/sapier/animalmaterials/tree/d952d27
 [ver.animals]: https://github.com/sapier/animals_modpack/tree/b9d0172
-[ver.antum]: https://github.com/AntumDeluge/mtmp-antum/tree/2a0e695
+[ver.antum]: https://github.com/AntumDeluge/mtmp-antum/tree/3af5496
 [ver.areas]: https://github.com/ShadowNinja/areas/tree/d3d43d9
 [ver.awards]: https://github.com/minetest-mods/awards/tree/096fe16
 [ver.away]: https://github.com/kahrl/minetest-mod-away/tree/4c1e5a9
