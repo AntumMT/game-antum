@@ -115,7 +115,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [snowdrift][] ([MIT][lic.snowdrift]) -- version: [fcb0537 Git][ver.snowdrift] *2017-04-15* ([patched][patch.snowdrift])
 * wood/
 	* [coloredwood][] ([LGPL][lic.lgpl3.0]) -- version: [bd490be Git][ver.coloredwood] *2017-05-18*
-	* [mywoodslopes][] ([DWYWPL][lic.dwywpl]) -- version: [3a1b531 Git][ver.mywoodslopes] *2016-03-23*
 * world/
     * [bedrock2][] ([WTFPL][lic.wtfpl]) -- version [1.2.2 (5fe9e87 Git)][ver.bedrock2] *2016-11-21* ([patched][patch.bedrock2])
     * [biome_lib][] ([WTFPL][lic.wtfpl]) -- version: [7f54d95 Git][ver.biome_lib] *2017-05-18*
@@ -178,6 +177,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [advtrains][] ([LGPL][lic.lgpl2.1] / [CC BY-NC-SA][lic.ccbyncsa3.0]) -- version: [92af0b5 Git][ver.advtrains] *2017-05-31* ([patched][patch.advtrains])
 * [mymods]
 	* [myroofs][] ([DWYWPL][lic.dwywpl]) -- version: [6da6148 Git][ver.myroofs] *2016-03-23*
+	* [mywoodslopes][] ([DWYWPL][lic.dwywpl]) -- version: [3a1b531 Git][ver.mywoodslopes] *2016-03-23*
 	* [worldedge][] ([DWYWPL][lic.dwywpl]) -- version: [e15fa99 Git][ver.worldedge] *2016-03-23* ([patched][patch.worldedge])
 
 
