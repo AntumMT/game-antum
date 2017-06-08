@@ -179,6 +179,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [myfences][] ([DWYWPL][lic.dwywpl]) -- version: [c6e529a Git][ver.myfences] *2016-04-04*
 	* [mylights][] ([DWYWPL][lic.dwywpl]) -- version: [437fc0c Git][ver.mylights] *2016-03-23*
 	* [mypaint][] ([DWYWPL][lic.dwywpl]) -- version: [c1d4dd5 Git][ver.mypaint] *2016-03-25*
+	* [mypaths][] ([DWYWPL][lic.dwywpl]) -- version: [4de5e84 Git][ver.mypaths] *2016-03-23*
 	* [myroofs][] ([DWYWPL][lic.dwywpl]) -- version: [6da6148 Git][ver.myroofs] *2016-03-23*
 	* [mysheetmetal][] ([DWYWPL][lic.dwywpl]) -- version: [7c5ab71 Git][ver.mysheetmetal] *2016-04-12* ([patched][patch.mysheetmetal])
 	* [mywoodslopes][] ([DWYWPL][lic.dwywpl]) -- version: [3a1b531 Git][ver.mywoodslopes] *2016-03-23*
@@ -265,6 +266,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [myfences]: https://forum.minetest.net/viewtopic.php?t=14275
 [mylights]: https://forum.minetest.net/viewtopic.php?t=13154
 [mypaint]: https://forum.minetest.net/viewtopic.php?t=14274
+[mypaths]: https://forum.minetest.net/viewtopic.php?t=11388
 [myroofs]: https://forum.minetest.net/viewtopic.php?t=11416
 [mysheetmetal]: https://forum.minetest.net/viewtopic.php?t=11702
 [mywoodslopes]: https://forum.minetest.net/viewtopic.php?t=11433
@@ -475,6 +477,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.myfences]: https://github.com/DonBatman/myfences/tree/c6e529a
 [ver.mylights]: https://github.com/minetest-mods/mylights/tree/437fc0c
 [ver.mypaint]: https://github.com/DonBatman/mypaint/tree/c1d4dd5
+[ver.mypaths]: https://github.com/minetest-mods/mypaths/tree/4de5e84
 [ver.myroofs]: https://github.com/minetest-mods/myroofs/tree/6da6148
 [ver.mysheetmetal]: https://github.com/minetest-mods/mysheetmetal/tree/7c5ab71
 [ver.mywoodslopes]: https://github.com/minetest-mods/mywoodslopes/tree/3a1b531
