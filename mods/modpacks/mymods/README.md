@@ -9,6 +9,7 @@
 - [mydoors][] (DWYWPL)
 - [myfences][] (DWYWPL)
 - [mylights][] (DWYWPL)
+- [mypaint][] (DWYWPL)
 - [myroofs][] (DWYWPL)
 - [mysheetmetal][] (DWYWPL)
 - [mywoodslopes][] (DWYWPL)
@@ -22,6 +23,7 @@
 [mydoors]: https://forum.minetest.net/viewtopic.php?t=10626
 [myfences]: https://forum.minetest.net/viewtopic.php?t=14275
 [mylights]: https://forum.minetest.net/viewtopic.php?t=13154
+[mypaint]: https://forum.minetest.net/viewtopic.php?t=14274
 [myroofs]: https://forum.minetest.net/viewtopic.php?t=11416
 [mysheetmetal]: https://forum.minetest.net/viewtopic.php?t=11702
 [mywoodslopes]: https://forum.minetest.net/viewtopic.php?t=11433

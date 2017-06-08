@@ -1,0 +1,1 @@
+Provides paint brushes and buckets for other mods to use to paint their items.
