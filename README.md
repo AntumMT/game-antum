@@ -505,7 +505,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.castle_weapons]: https://github.com/AntumDeluge/mtmod-castle_weapons/tree/3e4ec4d
 [patch.chatlog]: https://github.com/AntumDeluge/mtmod-chatlog/tree/074c8ee
 [patch.christmas]: https://github.com/AntumDeluge/mtmod-christmas/tree/f6c8dc2
-[patch.clean]: https://github.com/AntumDeluge/mtmod-clean/tree/ec7cfff
+[patch.clean]: https://github.com/AntumDeluge/mtmod-clean/tree/6ba5bad
 [patch.cme]: https://github.com/AntumDeluge/mtmp-cme/tree/27234af
 [patch.compassgps]: https://github.com/AntumDeluge/mtmod-compassgps/tree/14179c2
 [patch.craftguide]: https://github.com/AntumDeluge/mtmod-craftguide/tree/1197b13
