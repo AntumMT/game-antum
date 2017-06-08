@@ -136,8 +136,8 @@ minetest.register_node("christmas:ligs", {
 	},
 	legacy_wallmounted = true,
 	on_construct = function(pos)
-		--local n = minetest.env:get_node(pos)
-		local meta = minetest.env:get_meta(pos)
+		--local n = minetest.get_node(pos)
+		local meta = minetest.get_meta(pos)
 	end,
 	groups = {choppy=2,dig_immediate=2},
 })
@@ -160,8 +160,8 @@ minetest.register_node("christmas:stoc", {
 	},
 	legacy_wallmounted = true,
 	on_construct = function(pos)
-		--local n = minetest.env:get_node(pos)
-		local meta = minetest.env:get_meta(pos)
+		--local n = minetest.get_node(pos)
+		local meta = minetest.get_meta(pos)
 	end,
 	groups = {choppy=2,dig_immediate=2},
 })
@@ -184,8 +184,8 @@ minetest.register_node("christmas:gar", {
 	},
 	legacy_wallmounted = true,
 	on_construct = function(pos)
-		--local n = minetest.env:get_node(pos)
-		local meta = minetest.env:get_meta(pos)
+		--local n = minetest.get_node(pos)
+		local meta = minetest.get_meta(pos)
 	end,
 	groups = {choppy=2,dig_immediate=2},
 })
@@ -207,8 +207,8 @@ minetest.register_node("christmas:slig", {
 	},
 	legacy_wallmounted = true,
 	on_construct = function(pos)
-		--local n = minetest.env:get_node(pos)
-		local meta = minetest.env:get_meta(pos)
+		--local n = minetest.get_node(pos)
+		local meta = minetest.get_meta(pos)
 	end,
 	groups = {choppy=2,dig_immediate=2},
 	furnace_burntime = 4,
@@ -231,8 +231,8 @@ minetest.register_node("christmas:star", {
 	},
 	legacy_wallmounted = true,
 	on_construct = function(pos)
-		--local n = minetest.env:get_node(pos)
-		local meta = minetest.env:get_meta(pos)
+		--local n = minetest.get_node(pos)
+		local meta = minetest.get_meta(pos)
 	end,
 	groups = {choppy=2,dig_immediate=2},
 	furnace_burntime = 4,
@@ -274,8 +274,8 @@ minetest.register_node("christmas:orn", {
 	},
 	legacy_wallmounted = true,
 	on_construct = function(pos)
-		--local n = minetest.env:get_node(pos)
-		local meta = minetest.env:get_meta(pos)
+		--local n = minetest.get_node(pos)
+		local meta = minetest.get_meta(pos)
 	end,
 	groups = {choppy=2,dig_immediate=2},
 	furnace_burntime = 4,
