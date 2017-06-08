@@ -26,6 +26,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [elevator][] ([WTFPL][lic.elevator])
     * [fort_spikes][] ([MIT][lic.fort_spikes] / [CC0][lic.cc0]) -- version: [3c7d7c6 Git][ver.fort_spikes] *2017-05-06*
     * [moreblocks][] ([zlib][lic.moreblocks]) -- version: [fbfb079 Git][ver.moreblocks] *2017-03-14* ([patched][patch.moreblocks])
+    * [myroofs][] ([DWYWPL][lic.dwywpl]) -- version: [6da6148 Git][ver.myroofs] *2016-03-23*
     * [stairsplus][] ([zlib][lic.stairsplus]) -- version: [311e1f0 Git][ver.stairsplus] *2013-05-30*
     * [windmill][] ([WTFPL][lic.windmill]) -- version: [47b029d Git][ver.windmill] *2014-08-21* ([patched][patch.windmill])
 * [campfire][] ([GPL][lic.gpl2.0] / [CC BY-SA][lic.ccbysa] / [WTFPL][lic.campfire]) -- version: [b45acd2 Git][ver.campfire] *2016-02-18* ([patched][patch.campfire])
@@ -256,6 +257,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [moretrees]: https://forum.minetest.net/viewtopic.php?t=4394
 [mthudclock]: https://forum.minetest.net/viewtopic.php?t=11879
 [mydoors]: https://forum.minetest.net/viewtopic.php?t=10626
+[myroofs]: https://forum.minetest.net/viewtopic.php?t=11416
 [mywoodslopes]: https://forum.minetest.net/viewtopic.php?t=11433
 [nether]: https://forum.minetest.net/viewtopic.php?t=5790
 [painting]: https://github.com/minetest-mods/painting
@@ -461,6 +463,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.moreores]: https://github.com/minetest-mods/moreores/tree/73e99e7
 [ver.mthudclock]: https://github.com/Rochambeau/mthudclock/tree/b3e2142
 [ver.mydoors]: https://github.com/minetest-mods/mydoors/tree/63aef13
+[ver.myroofs]: https://github.com/minetest-mods/myroofs/tree/6da6148
 [ver.mywoodslopes]: https://github.com/minetest-mods/mywoodslopes/tree/3a1b531
 [ver.nether]: https://github.com/PilzAdam/nether/tree/bc2ccfb
 [ver.peaceful_npc]: https://github.com/jojoa1997/peaceful_npc/tree/2b3a7a5
