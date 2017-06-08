@@ -6,6 +6,7 @@
 
 ### Included Mods:
 
+- [mydoors][] (DWYWPL)
 - [myfences][] (DWYWPL)
 - [mylights][] (DWYWPL)
 - [myroofs][] (DWYWPL)
@@ -18,6 +19,7 @@
 [Minetest]: http://www.minetest.net/
 [MyMods]: http://donbatman.github.io/mymods.html
 
+[mydoors]: https://forum.minetest.net/viewtopic.php?t=10626
 [myfences]: https://forum.minetest.net/viewtopic.php?t=14275
 [mylights]: https://forum.minetest.net/viewtopic.php?t=13154
 [myroofs]: https://forum.minetest.net/viewtopic.php?t=11416
