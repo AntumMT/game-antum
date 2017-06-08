@@ -35,7 +35,7 @@ deploy_spiral.deploy =  function(pos,placer,nodename,width,height,spacer)
 		for z=width*spacer*-0.5,width*spacer*0.5 do
 			if x~=0 or y~=0 or z~=0 then
 				local checkpos = {x=pos.x+x,y=pos.y+y,z=pos.z+z}
-				local checknode = minetest.env:get_node(checkpos).name
+				local checknode = minetest.get_node(checkpos).name
 				if checknode~="air" then
 					minetest.chat_send_player(placer:get_player_name(), "[deploy_spiral] no room to build because "..checknode.." is in the way at "..dump(checkpos).."")
 					return
@@ -47,7 +47,7 @@ deploy_spiral.deploy =  function(pos,placer,nodename,width,height,spacer)
 	end
 
 	-- remove spiral node
-	minetest.env:remove_node(pos)
+	minetest.remove_node(pos)
 
 	-- build the spiral
 	-- spiral matrix - http://rosettacode.org/wiki/Spiral_matrix#Lua
@@ -83,22 +83,22 @@ deploy_spiral.deploy =  function(pos,placer,nodename,width,height,spacer)
 				if lp.x~=np.x then 
 					if lp.x<np.x then 
 						for i=lp.x+1,np.x do
-							minetest.env:add_node({x=i, y=np.y, z=np.z}, node)
+							minetest.add_node({x=i, y=np.y, z=np.z}, node)
 						end
 					else
 						for i=np.x,lp.x-1 do
-							minetest.env:add_node({x=i, y=np.y, z=np.z}, node)
+							minetest.add_node({x=i, y=np.y, z=np.z}, node)
 						end
 					end
 				end
 				if lp.z~=np.z then 
 					if lp.z<np.z then 
 						for i=lp.z+1,np.z do
-							minetest.env:add_node({x=np.x, y=np.y, z=i}, node)
+							minetest.add_node({x=np.x, y=np.y, z=i}, node)
 						end
 					else
 						for i=np.z,lp.z-1 do
-							minetest.env:add_node({x=np.x, y=np.y, z=i}, node)
+							minetest.add_node({x=np.x, y=np.y, z=i}, node)
 						end
 					end
 				end
@@ -202,9 +202,9 @@ deploy_spiral.register = function(label,name,material,texture)
 		on_step = function(self, dtime)
 			self.timer=self.timer+dtime
 			local pos = self.object:getpos()
-			local node = minetest.env:get_node(pos)
+			local node = minetest.get_node(pos)
 			if self.timer>0.2 then
-				local objs = minetest.env:get_objects_inside_radius({x=pos.x,y=pos.y,z=pos.z}, 2)
+				local objs = minetest.get_objects_inside_radius({x=pos.x,y=pos.y,z=pos.z}, 2)
 				for k, obj in pairs(objs) do
 					if obj:get_luaentity() ~= nil then
 						if obj:get_luaentity().name ~= "deploy_spiral:"..name.."_arrow_entity" and obj:get_luaentity().name ~= "__builtin:item" then

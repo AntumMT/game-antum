@@ -27,7 +27,7 @@ deploy_pyramid.deploy =  function(pos,placer,nodename,height)
 		for z=-height*0.5,height*0.5 do
 			if x~=0 or y~=0 or z~=0 then
 				local checkpos = {x=pos.x+x,y=pos.y+y,z=pos.z+z}
-				local checknode = minetest.env:get_node(checkpos).name
+				local checknode = minetest.get_node(checkpos).name
 				if checknode~="air" then
 					minetest.chat_send_player(placer:get_player_name(), "[deploy_pyramid] no room to build because "..checknode.." is in the way at "..dump(checkpos).."")
 					return
@@ -39,7 +39,7 @@ deploy_pyramid.deploy =  function(pos,placer,nodename,height)
 	end
 
 	-- remove pyramid node
-	minetest.env:remove_node(pos)
+	minetest.remove_node(pos)
 
 	-- build the pyramid
 	local pos1 = {x=pos.x-height, y=pos.y, z=pos.z-height}
@@ -51,7 +51,7 @@ deploy_pyramid.deploy =  function(pos,placer,nodename,height)
 		while np.x <= pos2.x do
 			np.z = pos1.z
 			while np.z <= pos2.z do
-				minetest.env:add_node({x=np.x-height*0.5,y=np.y,z=np.z-height*0.5}, node)
+				minetest.add_node({x=np.x-height*0.5,y=np.y,z=np.z-height*0.5}, node)
 				np.z = np.z + 1
 			end
 			np.x = np.x + 1
@@ -156,9 +156,9 @@ deploy_pyramid.register = function(label,name,material,texture)
 		on_step = function(self, dtime)
 			self.timer=self.timer+dtime
 			local pos = self.object:getpos()
-			local node = minetest.env:get_node(pos)
+			local node = minetest.get_node(pos)
 			if self.timer>0.2 then
-				local objs = minetest.env:get_objects_inside_radius({x=pos.x,y=pos.y,z=pos.z}, 2)
+				local objs = minetest.get_objects_inside_radius({x=pos.x,y=pos.y,z=pos.z}, 2)
 				for k, obj in pairs(objs) do
 					if obj:get_luaentity() ~= nil then
 						if obj:get_luaentity().name ~= "deploy_pyramid:"..name.."_arrow_entity" and obj:get_luaentity().name ~= "__builtin:item" then

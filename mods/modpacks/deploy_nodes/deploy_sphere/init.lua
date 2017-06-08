@@ -33,7 +33,7 @@ deploy_sphere.deploy =  function(pos,placer,nodename,radius)
 			if x*x+y*y+z*z <= radius * radius + radius then
 				if x~=0 or y~=radius*-1 or z~=0 then
 					local checkpos = {x=pos.x+x,y=pos.y+y+radius,z=pos.z+z}
-					local checknode = minetest.env:get_node(checkpos).name
+					local checknode = minetest.get_node(checkpos).name
 					if checknode~="air" then
 						minetest.chat_send_player(placer:get_player_name(), "[deploy_sphere] no room to build because "..checknode.." is in the way at "..dump(checkpos).."")
 						return
@@ -46,7 +46,7 @@ deploy_sphere.deploy =  function(pos,placer,nodename,radius)
 	end
 
 	-- remove sphere node
-	minetest.env:remove_node(pos)
+	minetest.remove_node(pos)
 
 	-- build the sphere
 	local hollow = 1
@@ -54,7 +54,7 @@ deploy_sphere.deploy =  function(pos,placer,nodename,radius)
 	for y=-radius,radius do
 	for z=-radius,radius do
 		if x*x+y*y+z*z >= (radius-hollow) * (radius-hollow) + (radius-hollow) and x*x+y*y+z*z <= radius * radius + radius then
-			minetest.env:add_node({x=pos.x+x,y=pos.y+y+radius,z=pos.z+z},{name=nodename})
+			minetest.add_node({x=pos.x+x,y=pos.y+y+radius,z=pos.z+z},{name=nodename})
 		end
 	end
 	end
@@ -155,9 +155,9 @@ deploy_sphere.register = function(label,name,material,texture)
 		on_step = function(self, dtime)
 			self.timer=self.timer+dtime
 			local pos = self.object:getpos()
-			local node = minetest.env:get_node(pos)
+			local node = minetest.get_node(pos)
 			if self.timer>0.2 then
-				local objs = minetest.env:get_objects_inside_radius({x=pos.x,y=pos.y,z=pos.z}, 2)
+				local objs = minetest.get_objects_inside_radius({x=pos.x,y=pos.y,z=pos.z}, 2)
 				for k, obj in pairs(objs) do
 					if obj:get_luaentity() ~= nil then
 						if obj:get_luaentity().name ~= "deploy_sphere:"..name.."_arrow_entity" and obj:get_luaentity().name ~= "__builtin:item" then

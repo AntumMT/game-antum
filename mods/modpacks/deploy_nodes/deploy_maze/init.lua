@@ -70,7 +70,7 @@ deploy_maze.deploy = function(originpos, placer, material, size, floors)
 				checkpos.x = cosine * x - sine * (y - math.floor(maze_size_z / 2)) + originpos.x
 				checkpos.z = sine * x + cosine * (y - math.floor(maze_size_z / 2)) + originpos.z
 				checkpos.y = originpos.y + y
-				local checknode = minetest.env:get_node(checkpos).name
+				local checknode = minetest.get_node(checkpos).name
 				if checknode~="air" then
 					minetest.chat_send_player(placer:get_player_name(), "[deploy_cylinder_y] no room to build because "..checknode.." is in the way at "..dump(checkpos).."")
 					return
@@ -82,7 +82,7 @@ deploy_maze.deploy = function(originpos, placer, material, size, floors)
 	end
 
 	-- remove maze node
-	minetest.env:remove_node(originpos)
+	minetest.remove_node(originpos)
 
 	-- tweak the pos
 	originpos.y = originpos.y+1
@@ -330,29 +330,29 @@ deploy_maze.deploy = function(originpos, placer, material, size, floors)
 					elseif ladder_direction == 5 then ladder_direction = 2 end
 				end
 				if not change_level_down then 
-					minetest.env:add_node(pos, {type = "node", name = material})
+					minetest.add_node(pos, {type = "node", name = material})
 				end
 				if maze[l][x][y] then 
 					line = "X" .. line
 					pos.y = pos.y + 1
-					minetest.env:add_node(pos, {type = "node", name = material})
+					minetest.add_node(pos, {type = "node", name = material})
 					pos.y = pos.y + 1
-					minetest.env:add_node(pos, {type = "node", name = material})
+					minetest.add_node(pos, {type = "node", name = material})
 				else
 					line = " " .. line
 					pos.y = pos.y + 1
-					minetest.env:add_node(pos, {type = "node", name = "air"})
-					if change_level_up then minetest.env:add_node(pos, {type = "node", name = "default:ladder", param2 = ladder_direction}) end
+					minetest.add_node(pos, {type = "node", name = "air"})
+					if change_level_up then minetest.add_node(pos, {type = "node", name = "default:ladder", param2 = ladder_direction}) end
 					pos.y = pos.y + 1
-					minetest.env:add_node(pos, {type = "node", name = "air"})
-					if change_level_up then minetest.env:add_node(pos, {type = "node", name = "default:ladder", param2 = ladder_direction}) end
+					minetest.add_node(pos, {type = "node", name = "air"})
+					if change_level_up then minetest.add_node(pos, {type = "node", name = "default:ladder", param2 = ladder_direction}) end
 				end
 				pos.y = pos.y + 1
 				if change_level_up then 
-					minetest.env:add_node(pos, {type = "node", name = "air"})
-					minetest.env:add_node(pos, {type = "node", name = "default:ladder", param2 = ladder_direction})
+					minetest.add_node(pos, {type = "node", name = "air"})
+					minetest.add_node(pos, {type = "node", name = "default:ladder", param2 = ladder_direction})
 				else
-					minetest.env:add_node(pos, {type = "node", name = material})
+					minetest.add_node(pos, {type = "node", name = material})
 				end
 			end
 			if l==exit_l and y==exit_y then line = "<-" .. line else line = "  " .. line end
@@ -453,9 +453,9 @@ deploy_maze.register = function(label,name,material,texture)
 		on_step = function(self, dtime)
 			self.timer=self.timer+dtime
 			local pos = self.object:getpos()
-			local node = minetest.env:get_node(pos)
+			local node = minetest.get_node(pos)
 			if self.timer>0.2 then
-				local objs = minetest.env:get_objects_inside_radius({x=pos.x,y=pos.y,z=pos.z}, 2)
+				local objs = minetest.get_objects_inside_radius({x=pos.x,y=pos.y,z=pos.z}, 2)
 				for k, obj in pairs(objs) do
 					if obj:get_luaentity() ~= nil then
 						if obj:get_luaentity().name ~= "deploy_maze:"..name.."_arrow_entity" and obj:get_luaentity().name ~= "__builtin:item" then

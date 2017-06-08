@@ -161,7 +161,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* [castle_weapons][] -- version [fcfa716 Git][ver.castle_weapons] *2017-06-04* ([patched][patch.castle_weapons])
 		* [crafting_bench][] -- version [3aa4cfb Git][ver.crafting_bench] *2017-02-28* ([patched][patch.crafting_bench])
 * [Creatures MOB-Engine][cme] ([zlib / CC-BY-SA][lic.cme]) -- version: [2.3.1-0-e3502a1 Git][ver.cme] *2016-02-16* ([patched][patch.cme])
-* [deploy_nodes][] ([BSD 3-Clause][lic.deploy_nodes]) -- version [eb3d68c Git][ver.deploy_nodes] *2015-05-19*
+* [deploy_nodes][] ([BSD 3-Clause][lic.deploy_nodes]) -- version [eb3d68c Git][ver.deploy_nodes] *2015-05-19* ([patched][patch.deploy_nodes])
 * [homedecor][] ([LGPL / WTFPL / CC BY-SA / CC0][lic.homedecor]) -- version: [8e467ef Git][ver.homedecor] *2017-01-24* ***UPDATE***
 * [mesecons][] ([LGPL / CC BY-SA][lic.mesecons]) -- version: [564bdc2 Git][ver.mesecons] *2017-05-08* ([patched][patch.mesecons])
 * [mobf_core][animals] (part of "animals" modpack) ([CC BY-SA][lic.ccbysa3.0]) -- version: [1199ca9 Git][ver.mobf_core] *2017-01-14* ([patched][patch.mobf_core])
@@ -513,6 +513,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.crafting_bench]: https://github.com/AntumDeluge/mtmod-crafting_bench/tree/c5ff4e5
 [patch.crops]: https://github.com/AntumDeluge/mtmod-crops/tree/0c5c649
 [patch.currency]: https://github.com/AntumDeluge/mtmod-currency/tree/9e9b1be
+[patch.deploy_nodes]: https://github.com/AntumDeluge/mtmp-deploy_nodes/tree/3ea67b7
 [patch.drawers]: https://github.com/AntumDeluge/mtmod-drawers/tree/3887c5b
 [patch.ethereal]: https://github.com/AntumDeluge/mtmod-ethereal/tree/9f50d6e
 [patch.farming_plus]: https://github.com/AntumDeluge/mtmod-farming_plus/tree/454a443

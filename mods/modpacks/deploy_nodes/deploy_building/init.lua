@@ -74,7 +74,7 @@ deploy_building.deploy = function(originpos, placer, size)
 		for z=minpos.z,maxpos.z do
 			if x~=0 or y~=0 or z~=0 then
 			local checkpos = {x=originpos.x+x,y=originpos.y+y,z=originpos.z+z}
-			local checknode = minetest.env:get_node(checkpos).name
+			local checknode = minetest.get_node(checkpos).name
 				if checknode~="air" then
 					minetest.chat_send_player(placer:get_player_name(), "[deploy_building] no room to build because "..checknode.." is in the way at "..dump(checkpos).."")
 					return
@@ -86,7 +86,7 @@ deploy_building.deploy = function(originpos, placer, size)
 	end
 	
 	-- remove building node
-	minetest.env:remove_node(originpos)
+	minetest.remove_node(originpos)
 	
 	-- create building
 	local pos = {x=0, y=0, z=0}
@@ -98,7 +98,7 @@ deploy_building.deploy = function(originpos, placer, size)
 		node.name = name
 		node.param1 = param1
 		node.param2 = param2
-		minetest.env:add_node(pos, node)
+		minetest.add_node(pos, node)
 	end
 	
 end
@@ -193,9 +193,9 @@ minetest.register_entity("deploy_building:arrow_entity", {
 	on_step = function(self, dtime)
 		self.timer=self.timer+dtime
 		local pos = self.object:getpos()
-		local node = minetest.env:get_node(pos)
+		local node = minetest.get_node(pos)
 		if self.timer>0.2 then
-			local objs = minetest.env:get_objects_inside_radius({x=pos.x,y=pos.y,z=pos.z}, 2)
+			local objs = minetest.get_objects_inside_radius({x=pos.x,y=pos.y,z=pos.z}, 2)
 			for k, obj in pairs(objs) do
 				if obj:get_luaentity() ~= nil then
 					if obj:get_luaentity().name ~= "deploy_building:arrow_entity" and obj:get_luaentity().name ~= "__builtin:item" then
