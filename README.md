@@ -176,6 +176,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [advtrains][] ([LGPL][lic.lgpl2.1] / [CC BY-NC-SA][lic.ccbyncsa3.0]) -- version: [92af0b5 Git][ver.advtrains] *2017-05-31* ([patched][patch.advtrains])
 * [mymods]
 	* [mydoors][] ([CC-BY / CC-BY-SA][lic.mydoors] / [WTFPL][lic.wtfpl] / [DWYWFPL][lic.dwywpl]) -- version: [63aef13 Git][ver.mydoors] *2017-03-31* ([patched][patch.mydoors])
+	* [mylights][] ([DWYWPL][lic.dwywpl]) -- version: [437fc0c Git][ver.mylights] *2016-03-23*
 	* [myroofs][] ([DWYWPL][lic.dwywpl]) -- version: [6da6148 Git][ver.myroofs] *2016-03-23*
 	* [mywoodslopes][] ([DWYWPL][lic.dwywpl]) -- version: [3a1b531 Git][ver.mywoodslopes] *2016-03-23*
 	* [worldedge][] ([DWYWPL][lic.dwywpl]) -- version: [e15fa99 Git][ver.worldedge] *2016-03-23* ([patched][patch.worldedge])
@@ -258,6 +259,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [moretrees]: https://forum.minetest.net/viewtopic.php?t=4394
 [mthudclock]: https://forum.minetest.net/viewtopic.php?t=11879
 [mydoors]: https://forum.minetest.net/viewtopic.php?t=10626
+[mylights]: https://forum.minetest.net/viewtopic.php?t=13154
 [myroofs]: https://forum.minetest.net/viewtopic.php?t=11416
 [mywoodslopes]: https://forum.minetest.net/viewtopic.php?t=11433
 [nether]: https://forum.minetest.net/viewtopic.php?t=5790
@@ -464,6 +466,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.moreores]: https://github.com/minetest-mods/moreores/tree/73e99e7
 [ver.mthudclock]: https://github.com/Rochambeau/mthudclock/tree/b3e2142
 [ver.mydoors]: https://github.com/minetest-mods/mydoors/tree/63aef13
+[ver.mylights]: https://github.com/minetest-mods/mylights/tree/437fc0c
 [ver.myroofs]: https://github.com/minetest-mods/myroofs/tree/6da6148
 [ver.mywoodslopes]: https://github.com/minetest-mods/mywoodslopes/tree/3a1b531
 [ver.nether]: https://github.com/PilzAdam/nether/tree/bc2ccfb

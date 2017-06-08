@@ -6,6 +6,7 @@
 
 ### Included Mods:
 
+- [mylights][] (DWYWPL)
 - [myroofs][] (DWYWPL)
 - [mywoodslopes][] (DWYWPL)
 - [worldedge][] (DWYWPL)
@@ -15,6 +16,7 @@
 [Minetest]: http://www.minetest.net/
 [MyMods]: http://donbatman.github.io/mymods.html
 
+[mylights]: https://forum.minetest.net/viewtopic.php?t=13154
 [myroofs]: https://forum.minetest.net/viewtopic.php?t=11416
 [mywoodslopes]: https://forum.minetest.net/viewtopic.php?t=11433
 [worldedge]: https://forum.minetest.net/viewtopic.php?t=10753
