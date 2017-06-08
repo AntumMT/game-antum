@@ -2,11 +2,11 @@
 function npc_command( command_name, npc_command_type, command_desc)
 	local function spawn_for_command(name, param)
 		local npcs_to_spawn = tonumber(param) or 1
-		local player = minetest.env:get_player_by_name(name)
+		local player = minetest.get_player_by_name(name)
 		local pos = player:getpos()
 		local max_spawn = 20
 		local max_surround_npc = 30
-		local active_npc_count = table.getn(minetest.env:get_objects_inside_radius(pos, 50))
+		local active_npc_count = table.getn(minetest.get_objects_inside_radius(pos, 50))
 		if active_npc_count == nil then
 			active_npc_count = 0
 		end
@@ -19,7 +19,7 @@ function npc_command( command_name, npc_command_type, command_desc)
 			offsetx = math.random(-5,5)
 			offsety = math.random(2,4)
 			offsetz = math.random(-5,5)
-				minetest.env:add_entity({ x=pos.x+offsetx, y=pos.y+offsety, z=pos.z+offsetz }, ("peaceful_npc:npc_"..npc_command_type))
+				minetest.add_entity({ x=pos.x+offsetx, y=pos.y+offsety, z=pos.z+offsetz }, ("peaceful_npc:npc_"..npc_command_type))
 			end
 		end
 	end

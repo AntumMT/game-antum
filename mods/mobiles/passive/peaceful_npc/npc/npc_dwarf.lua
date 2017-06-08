@@ -93,7 +93,7 @@ NPC_ENTITY_DWARF.on_activate = function(self)
 end
 
 NPC_ENTITY_DWARF.on_punch = function(self, puncher)
-	for  _,object in ipairs(minetest.env:get_objects_inside_radius(self.object:getpos(), 5)) do
+	for  _,object in ipairs(minetest.get_objects_inside_radius(self.object:getpos(), 5)) do
 		if not object:is_player() then
 			if object:get_luaentity().name == "peaceful_npc:npc_dwarf" then
 				object:get_luaentity().state = 3
@@ -108,7 +108,7 @@ NPC_ENTITY_DWARF.on_punch = function(self, puncher)
 	end
 
 	if self.object:get_hp() == 0 then
-	    local obj = minetest.env:add_item(self.object:getpos(), "default:stone_with_mese 12")
+	    local obj = minetest.add_item(self.object:getpos(), "default:stone_with_mese 12")
 	end
 end
 
@@ -120,7 +120,7 @@ NPC_ENTITY_DWARF.on_step = function(self, dtime)
 	self.attacking_timer = self.attacking_timer + 0.01
 
 	local current_pos = self.object:getpos()
-	local current_node = minetest.env:get_node(current_pos)
+	local current_node = minetest.get_node(current_pos)
 	if self.time_passed == nil then
 		self.time_passed = 0
 	end
@@ -143,7 +143,7 @@ end
 
 	--collision detection prealpha
 	--[[
-	for  _,object in ipairs(minetest.env:get_objects_inside_radius(self.object:getpos(), 2)) do
+	for  _,object in ipairs(minetest.get_objects_inside_radius(self.object:getpos(), 2)) do
 		if object:is_player() then
 			compare1 = object:getpos()
 			compare2 = self.object:getpos()
@@ -161,9 +161,9 @@ end
 	]]--
 
 	--set npc to hostile in night, and revert npc back to peaceful in daylight
-	if minetest.env:get_timeofday() >= 0 and minetest.env:get_timeofday() < 0.25 and self.state ~= 4 then
+	if minetest.get_timeofday() >= 0 and minetest.get_timeofday() < 0.25 and self.state ~= 4 then
 		self.state = 4
-	elseif minetest.env:get_timeofday() > 0.25 and self.state == 4 then
+	elseif minetest.get_timeofday() > 0.25 and self.state == 4 then
 		self.state = 1
 	end
 	--if mob is not in attack or hostile mode, set mob to walking or standing
@@ -176,7 +176,7 @@ end
 	--STANDING
 	if self.state == 1 then
 		self.yawwer = true
-		for  _,object in ipairs(minetest.env:get_objects_inside_radius(self.object:getpos(), 3)) do
+		for  _,object in ipairs(minetest.get_objects_inside_radius(self.object:getpos(), 3)) do
 			if object:is_player() then
 				self.yawwer = false
 				NPC = self.object:getpos()
@@ -206,7 +206,7 @@ end
 	--WALKING
 	if self.state == 2 then
 		if self.present_timer == 1 then
-			minetest.env:add_item(self.object:getpos(),"default:coal_lump")
+			minetest.add_item(self.object:getpos(),"default:coal_lump")
 			self.present_timer = 0
 		end
 		if self.direction ~= nil then
@@ -228,21 +228,21 @@ end
 		--open a door [alpha]
 		if self.direction ~= nil then
 			if self.door_timer > 2 then
-				local is_a_door = minetest.env:get_node({x=self.object:getpos().x + self.direction.x,y=self.object:getpos().y,z=self.object:getpos().z + self.direction.z}).name
+				local is_a_door = minetest.get_node({x=self.object:getpos().x + self.direction.x,y=self.object:getpos().y,z=self.object:getpos().z + self.direction.z}).name
 				if is_a_door == "doors:door_wood_t_1" then
-					minetest.env:punch_node({x=self.object:getpos().x + self.direction.x,y=self.object:getpos().y-1,z=self.object:getpos().z + self.direction.z})
+					minetest.punch_node({x=self.object:getpos().x + self.direction.x,y=self.object:getpos().y-1,z=self.object:getpos().z + self.direction.z})
 					self.door_timer = 0
 				end
-				local is_in_door = minetest.env:get_node(self.object:getpos()).name
+				local is_in_door = minetest.get_node(self.object:getpos()).name
 				if is_in_door == "doors:door_wood_t_1" then
-					minetest.env:punch_node(self.object:getpos())
+					minetest.punch_node(self.object:getpos())
 				end
 			end
 		end
 		--jump
 		if self.direction ~= nil then
 			if self.jump_timer > 0.3 then
-				if minetest.env:get_node({x=self.object:getpos().x + self.direction.x,y=self.object:getpos().y-1,z=self.object:getpos().z + self.direction.z}).name ~= "air" then
+				if minetest.get_node({x=self.object:getpos().x + self.direction.x,y=self.object:getpos().y-1,z=self.object:getpos().z + self.direction.z}).name ~= "air" then
 					self.object:setvelocity({x=self.object:getvelocity().x,y=2.5,z=self.object:getvelocity().z})
 					self.jump_timer = 0
 				end
@@ -256,7 +256,7 @@ end
 			self.object:set_animation({x=self.anim.walk_START,y=self.anim.walk_END}, animation_speed_mod, animation_blend)
 			self.npc_anim = ANIM_WALK
 		end
-		for  _,object in ipairs(minetest.env:get_objects_inside_radius(self.object:getpos(), 12)) do
+		for  _,object in ipairs(minetest.get_objects_inside_radius(self.object:getpos(), 12)) do
 			if object:is_player() then
 				if object:get_hp() > 0 then
 					NPC = self.object:getpos()
@@ -274,21 +274,21 @@ end
 					end
 					--jump over obstacles
 					if self.jump_timer > 0.3 then
-						if minetest.env:get_node({x=self.object:getpos().x + self.direction.x,y=self.object:getpos().y-1,z=self.object:getpos().z + self.direction.z}).name ~= "air" then
+						if minetest.get_node({x=self.object:getpos().x + self.direction.x,y=self.object:getpos().y-1,z=self.object:getpos().z + self.direction.z}).name ~= "air" then
 							self.object:setvelocity({x=self.object:getvelocity().x,y=5,z=self.object:getvelocity().z})
 							self.jump_timer = 0
 						end
 					end
 					if self.direction ~= nil then
 						if self.door_timer > 2 then
-							local is_a_door = minetest.env:get_node({x=self.object:getpos().x + self.direction.x,y=self.object:getpos().y,z=self.object:getpos().z + self.direction.z}).name
+							local is_a_door = minetest.get_node({x=self.object:getpos().x + self.direction.x,y=self.object:getpos().y,z=self.object:getpos().z + self.direction.z}).name
 							if is_a_door == "doors:door_wood_t_1" then
-								minetest.env:punch_node({x=self.object:getpos().x + self.direction.x,y=self.object:getpos().y-1,z=self.object:getpos().z + self.direction.z})
+								minetest.punch_node({x=self.object:getpos().x + self.direction.x,y=self.object:getpos().y-1,z=self.object:getpos().z + self.direction.z})
 								self.door_timer = 0
 							end
-							local is_in_door = minetest.env:get_node(self.object:getpos()).name
+							local is_in_door = minetest.get_node(self.object:getpos()).name
 							if is_in_door == "doors:door_wood_t_1" then
-								minetest.env:punch_node(self.object:getpos())
+								minetest.punch_node(self.object:getpos())
 							end
 						end
 					end
@@ -316,24 +316,24 @@ end
 		--open a door [alpha]
 		if self.direction ~= nil then
 			if self.door_timer > 2 then
-				local is_a_door = minetest.env:get_node({x=self.object:getpos().x + self.direction.x,y=self.object:getpos().y,z=self.object:getpos().z + self.direction.z}).name
+				local is_a_door = minetest.get_node({x=self.object:getpos().x + self.direction.x,y=self.object:getpos().y,z=self.object:getpos().z + self.direction.z}).name
 				if is_a_door == "doors:door_wood_t_1" then
 					--print("door")
-					minetest.env:punch_node({x=self.object:getpos().x + self.direction.x,y=self.object:getpos().y-1,z=self.object:getpos().z + self.direction.z})
+					minetest.punch_node({x=self.object:getpos().x + self.direction.x,y=self.object:getpos().y-1,z=self.object:getpos().z + self.direction.z})
 					self.door_timer = 0
 				end
-				local is_in_door = minetest.env:get_node(self.object:getpos()).name
+				local is_in_door = minetest.get_node(self.object:getpos()).name
 				--print(dump(is_in_door))
 				if is_in_door == "doors:door_wood_t_1" then
-					minetest.env:punch_node(self.object:getpos())
+					minetest.punch_node(self.object:getpos())
 				end
 			end
 		end
 		--jump
 		if self.direction ~= nil then
 			if self.jump_timer > 0.3 then
-				--print(dump(minetest.env:get_node({x=self.object:getpos().x + self.direction.x,y=self.object:getpos().y-1,z=self.object:getpos().z + self.direction.z})))
-				if minetest.env:get_node({x=self.object:getpos().x + self.direction.x,y=self.object:getpos().y-1,z=self.object:getpos().z + self.direction.z}).name ~= "air" then
+				--print(dump(minetest.get_node({x=self.object:getpos().x + self.direction.x,y=self.object:getpos().y-1,z=self.object:getpos().z + self.direction.z})))
+				if minetest.get_node({x=self.object:getpos().x + self.direction.x,y=self.object:getpos().y-1,z=self.object:getpos().z + self.direction.z}).name ~= "air" then
 					self.object:setvelocity({x=self.object:getvelocity().x,y=5,z=self.object:getvelocity().z})
 					self.jump_timer = 0
 				end

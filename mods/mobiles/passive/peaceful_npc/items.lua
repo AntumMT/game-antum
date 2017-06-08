@@ -1,13 +1,13 @@
 --Spawn code
 function npc_spawner(pos, SPAWN_TYPE)
 	local MAX_NPC = 5
-	local count = table.getn(minetest.env:get_objects_inside_radius(pos, 50))
+	local count = table.getn(minetest.get_objects_inside_radius(pos, 50))
 	if count == nil then
 		count = 0
 	end
 	
 	if count <= MAX_NPC then
-		minetest.env:add_entity({x=pos.x+math.random(-1,1),y=pos.y+math.random(2,3),z=pos.z+math.random(-1,1)}, SPAWN_TYPE)
+		minetest.add_entity({x=pos.x+math.random(-1,1),y=pos.y+math.random(2,3),z=pos.z+math.random(-1,1)}, SPAWN_TYPE)
 	end
 end
 
@@ -32,7 +32,7 @@ minetest.register_node("peaceful_npc:summoner_npc_def", {
 		if (minetest.check_player_privs(name, {peacefulnpc=true})) then
             pos = pointed.above
             pos.y = pos.y + 1
-        minetest.env:add_entity(pointed.above,"peaceful_npc:npc_def")
+        minetest.add_entity(pointed.above,"peaceful_npc:npc_def")
         itemstack:take_item(1)
 	else
 		minetest.chat_send_player(name, "Nope! You need to have the peacefulnpc priv!")
@@ -83,7 +83,7 @@ minetest.register_node("peaceful_npc:summoner_npc_fast", {
 		if (minetest.check_player_privs(name, {peacefulnpc=true})) then
             pos = pointed.above
             pos.y = pos.y + 1
-        minetest.env:add_entity(pointed.above,"peaceful_npc:npc_fast")
+        minetest.add_entity(pointed.above,"peaceful_npc:npc_fast")
         itemstack:take_item(1)
 	else
 		minetest.chat_send_player(name, "Nope! You need to have the peacefulnpc priv!")
@@ -134,7 +134,7 @@ minetest.register_node("peaceful_npc:summoner_npc_dwarf", {
 		if (minetest.check_player_privs(name, {peacefulnpc=true})) then
             pos = pointed.above
             pos.y = pos.y + 1
-        minetest.env:add_entity(pointed.above,"peaceful_npc:npc_dwarf")
+        minetest.add_entity(pointed.above,"peaceful_npc:npc_dwarf")
         itemstack:take_item(1)
 	else
 		minetest.chat_send_player(name, "Nope! You need to have the peacefulnpc priv!")

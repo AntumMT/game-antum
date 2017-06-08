@@ -1,6 +1,6 @@
 --Spawn function
 function def_spawn(pos)
-	minetest.env:add_entity(pos, "peaceful_npc:npc_def")
+	minetest.add_entity(pos, "peaceful_npc:npc_def")
 	print("want to spawn npc_def at "..dump(pos))
 	if mode_debug == true then
 		minetest.chat_send_all("want to spawn npc_def at "..dump(pos))
@@ -8,7 +8,7 @@ function def_spawn(pos)
 end
 
 function fast_spawn(pos)
-	minetest.env:add_entity(pos, "peaceful_npc:npc_fast")
+	minetest.add_entity(pos, "peaceful_npc:npc_fast")
 	print("want to spawn npc_fast at "..dump(pos))
 	if mode_debug == true then
 		minetest.chat_send_all("want to spawn npc_fast at "..dump(pos))
@@ -16,7 +16,7 @@ function fast_spawn(pos)
 end
 
 function dwarf_spawn(pos)
-	minetest.env:add_entity(pos, "peaceful_npc:npc_dwarf")
+	minetest.add_entity(pos, "peaceful_npc:npc_dwarf")
 	print("want to spawn npc_dwarf at "..dump(pos))
 	if mode_debug == true then
 		minetest.chat_send_all("want to spawn npc_dwarf at "..dump(pos))

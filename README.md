@@ -70,7 +70,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [mobs_animal][] ([MIT][lic.mobs_animal]) -- version: [ebc2e3a Git][ver.mobs_animal] *2017-05-27* ([patched][patch.mobs_animal])
 * mobiles/passive/
 	* [mob_horse][] -- version: [dee3883 Git][ver.mob_horse] *2017-06-01*
-    * [peaceful_npc][] ([WTFPL][lic.wtfpl]) -- version: [2b3a7a5 Git][ver.peaceful_npc] *2015-08-09*
+    * [peaceful_npc][] ([WTFPL][lic.wtfpl]) -- version: [2b3a7a5 Git][ver.peaceful_npc] *2015-08-09* ([patched][patch.peaceful_npc])
 * [painting][] (???)
 * [pipeworks][] ([WTFPL][lic.wtfpl]) -- version: [69d994a Git][ver.pipeworks] *2016-05-18*  ([patched][patch.pipeworks])
 * plantlife/
@@ -529,6 +529,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.moreores]: https://github.com/AntumDeluge/mtmod-moreores/tree/8b874f6
 [patch.mydoors]: https://github.com/AntumDeluge/mtmp-mydoors/tree/e36c9d1
 [patch.nether]: https://github.com/AntumDeluge/mtmod-nether/tree/d4e5a2a
+[patch.peaceful_npc]: https://github.com/AntumDeluge/mtmod-peaceful_npc/tree/cbae09e
 [patch.pipeworks]: https://github.com/AntumDeluge/mtmod-pipeworks/tree/981f3b1
 [patch.playeranim]: https://github.com/AntumDeluge/mtmod-playeranim/tree/a64d144
 [patch.quartz]: https://github.com/AntumDeluge/mtmod-quartz/tree/d23dabd
