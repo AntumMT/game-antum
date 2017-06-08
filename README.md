@@ -179,6 +179,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [myfences][] ([DWYWPL][lic.dwywpl]) -- version: [c6e529a Git][ver.myfences] *2016-04-04*
 	* [mylights][] ([DWYWPL][lic.dwywpl]) -- version: [437fc0c Git][ver.mylights] *2016-03-23*
 	* [myroofs][] ([DWYWPL][lic.dwywpl]) -- version: [6da6148 Git][ver.myroofs] *2016-03-23*
+	* [mysheetmetal][] ([DWYWPL][lic.dwywpl]) -- version: [7c5ab71 Git][ver.mysheetmetal] *2016-04-12* ([patched][patch.mysheetmetal])
 	* [mywoodslopes][] ([DWYWPL][lic.dwywpl]) -- version: [3a1b531 Git][ver.mywoodslopes] *2016-03-23*
 	* [worldedge][] ([DWYWPL][lic.dwywpl]) -- version: [e15fa99 Git][ver.worldedge] *2016-03-23* ([patched][patch.worldedge])
 
@@ -263,6 +264,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [myfences]: https://forum.minetest.net/viewtopic.php?t=14275
 [mylights]: https://forum.minetest.net/viewtopic.php?t=13154
 [myroofs]: https://forum.minetest.net/viewtopic.php?t=11416
+[mysheetmetal]: https://forum.minetest.net/viewtopic.php?t=11702
 [mywoodslopes]: https://forum.minetest.net/viewtopic.php?t=11433
 [nether]: https://forum.minetest.net/viewtopic.php?t=5790
 [painting]: https://github.com/minetest-mods/painting
@@ -471,6 +473,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.myfences]: https://github.com/DonBatman/myfences/tree/c6e529a
 [ver.mylights]: https://github.com/minetest-mods/mylights/tree/437fc0c
 [ver.myroofs]: https://github.com/minetest-mods/myroofs/tree/6da6148
+[ver.mysheetmetal]: https://github.com/minetest-mods/mysheetmetal/tree/7c5ab71
 [ver.mywoodslopes]: https://github.com/minetest-mods/mywoodslopes/tree/3a1b531
 [ver.nether]: https://github.com/PilzAdam/nether/tree/bc2ccfb
 [ver.peaceful_npc]: https://github.com/jojoa1997/peaceful_npc/tree/2b3a7a5
@@ -548,6 +551,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.moreblocks]: https://github.com/AntumDeluge/mtmod-moreblocks/tree/abb2e49
 [patch.moreores]: https://github.com/AntumDeluge/mtmod-moreores/tree/51fbd4f
 [patch.mydoors]: https://github.com/AntumDeluge/mtmp-mydoors/tree/e36c9d1
+[patch.mysheetmetal]: https://github.com/AntumDeluge/mtmod-mysheetmetal/tree/b7d644b
 [patch.nether]: https://github.com/AntumDeluge/mtmod-nether/tree/d4e5a2a
 [patch.peaceful_npc]: https://github.com/AntumDeluge/mtmod-peaceful_npc/tree/cbae09e
 [patch.pipeworks]: https://github.com/AntumDeluge/mtmod-pipeworks/tree/981f3b1

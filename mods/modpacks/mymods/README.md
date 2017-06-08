@@ -9,6 +9,7 @@
 - [myfences][] (DWYWPL)
 - [mylights][] (DWYWPL)
 - [myroofs][] (DWYWPL)
+- [mysheetmetal][] (DWYWPL)
 - [mywoodslopes][] (DWYWPL)
 - [worldedge][] (DWYWPL)
 
@@ -20,5 +21,6 @@
 [myfences]: https://forum.minetest.net/viewtopic.php?t=14275
 [mylights]: https://forum.minetest.net/viewtopic.php?t=13154
 [myroofs]: https://forum.minetest.net/viewtopic.php?t=11416
+[mysheetmetal]: https://forum.minetest.net/viewtopic.php?t=11702
 [mywoodslopes]: https://forum.minetest.net/viewtopic.php?t=11433
 [worldedge]: https://forum.minetest.net/viewtopic.php?t=10753
