@@ -26,7 +26,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [elevator][] ([WTFPL][lic.elevator])
     * [fort_spikes][] ([MIT][lic.fort_spikes] / [CC0][lic.cc0]) -- version: [3c7d7c6 Git][ver.fort_spikes] *2017-05-06*
     * [moreblocks][] ([zlib][lic.moreblocks]) -- version: [fbfb079 Git][ver.moreblocks] *2017-03-14* ([patched][patch.moreblocks])
-    * [myroofs][] ([DWYWPL][lic.dwywpl]) -- version: [6da6148 Git][ver.myroofs] *2016-03-23*
     * [stairsplus][] ([zlib][lic.stairsplus]) -- version: [311e1f0 Git][ver.stairsplus] *2013-05-30*
     * [windmill][] ([WTFPL][lic.windmill]) -- version: [47b029d Git][ver.windmill] *2014-08-21* ([patched][patch.windmill])
 * [campfire][] ([GPL][lic.gpl2.0] / [CC BY-SA][lic.ccbysa] / [WTFPL][lic.campfire]) -- version: [b45acd2 Git][ver.campfire] *2016-02-18* ([patched][patch.campfire])
@@ -178,6 +177,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 * [advtrains][] ([LGPL][lic.lgpl2.1] / [CC BY-NC-SA][lic.ccbyncsa3.0]) -- version: [92af0b5 Git][ver.advtrains] *2017-05-31* ([patched][patch.advtrains])
 * [mymods]
+	* [myroofs][] ([DWYWPL][lic.dwywpl]) -- version: [6da6148 Git][ver.myroofs] *2016-03-23*
 	* [worldedge][] ([DWYWPL][lic.dwywpl]) -- version: [e15fa99 Git][ver.worldedge] *2016-03-23* ([patched][patch.worldedge])
 
 
