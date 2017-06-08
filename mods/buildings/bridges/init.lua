@@ -289,7 +289,7 @@ minetest.register_node("bridges:bridge_auto", {
        drop = "", -- all leftover parts are in the "chest"
 
        on_construct = function(pos)
-          local meta = minetest.env:get_meta(pos);
+          local meta = minetest.get_meta(pos);
           meta:set_string("formspec",
                           "invsize[8,9;]"..
                           "list[current_name;main;0,0;8,4;]"..
@@ -300,7 +300,7 @@ minetest.register_node("bridges:bridge_auto", {
        end,
 
        can_dig = function(pos,player)
-          local meta = minetest.env:get_meta(pos);
+          local meta = minetest.get_meta(pos);
           local inv = meta:get_inventory();
           return inv:is_empty("main");
        end,
@@ -347,18 +347,18 @@ minetest.register_node("bridges:bridge_auto", {
 
              -- is there space for a bridge?
              p = {x=pos.x+(x_dir*i), y=pos.y, z=pos.z+(z_dir*i)};
-             n = minetest.env:get_node(p);
+             n = minetest.get_node(p);
              if( n == nil or (n.name ~= "air" and n.name ~= 'moonrealm:vacuum' and n.name ~= 'moonrealm:air' and n.name ~= 'moontest:vacuum' and n.name ~= 'moontest:air')) then
                 i = MAX_BRIDGE_LENGTH+1; -- end
 --                print("At length "..tostring(i)..": node at target position not air; no place for bridge: "..tostring(n.name));
              else
                 -- one small bridge is followed by two middle parts
                 if( i%3 == 1 ) then
-                    minetest.env:add_node(p, {name="bridges:bridge_small", param1=0, param2=fdir});
+                    minetest.add_node(p, {name="bridges:bridge_small", param1=0, param2=fdir});
                     rem_small  = rem_small - 1; -- one small bridge used
 --                    print("Placing small bridge at dist "..tostring(i));
                 else
-                    minetest.env:add_node(p, {name="bridges:bridge_middle", param1=0, param2=fdir});
+                    minetest.add_node(p, {name="bridges:bridge_middle", param1=0, param2=fdir});
                     rem_middle = rem_middle -1; -- one middle part used
 --                    print("Placing middle bridge at dist "..tostring(i));
                 end
@@ -369,7 +369,7 @@ minetest.register_node("bridges:bridge_auto", {
  
 
           -- do we have to give any leftover parts back?
-          local meta = minetest.env:get_meta(pos);
+          local meta = minetest.get_meta(pos);
           local inv = meta:get_inventory();
 
           if( rem_small > 0 ) then

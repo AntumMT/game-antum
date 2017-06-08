@@ -21,7 +21,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [awards][] ([LGPL][lic.lgpl2.1]) -- version: [096fe16 Git][ver.awards] *2017-02-25* ([patched][patch.awards])
 * [antum][] ([MIT][lic.antum]) -- version: [3af5496 Git][ver.antum] *2017-06-08*
 * buildings/
-    * [bridges][] ([GPL][lic.gpl3.0]) -- version: [5b5f475 Git][ver.bridges] *2015-08-23*
+    * [bridges][] ([GPL][lic.gpl3.0]) -- version: [5b5f475 Git][ver.bridges] *2015-08-23* ([patched][patch.bridges])
     * [christmas][] ([MIT][lic.christmas]) -- version [d3bd872 Git][ver.christmas] *2013-01-11* ([patched][patch.christmas])
     * [elevator][] ([WTFPL][lic.elevator])
     * [fort_spikes][] ([MIT][lic.fort_spikes] / [CC0][lic.cc0]) -- version: [3c7d7c6 Git][ver.fort_spikes] *2017-05-06*
@@ -497,6 +497,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.awards]: https://github.com/AntumDeluge/mtmod-awards/tree/638c137
 [patch.bags]: https://github.com/AntumDeluge/mtmod-bags/tree/4363284
 [patch.bedrock2]: https://github.com/AntumDeluge/mtmod-bedrock2/tree/51b25b6
+[patch.bridges]: https://github.com/AntumDeluge/mtmod-bridges/tree/ba8f71a
 [patch.campfire]: https://github.com/AntumDeluge/mtmod-campfire/tree/7b2394a
 [patch.castle_gates]: https://github.com/AntumDeluge/mtmod-castle_gates/tree/465ad4f
 [patch.castle_lighting]: https://github.com/AntumDeluge/mtmod-castle_lighting/tree/b360c54
