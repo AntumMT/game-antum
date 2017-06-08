@@ -431,6 +431,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.glow]: https://github.com/bdjnk/glow/tree/78d0166
 [ver.hbarmor]: http://repo.or.cz/minetest_hbarmor.git/tree/bfc5f8c
 [ver.helicopter]: https://github.com/SokolovPavel/helicopter/tree/10f1433
+[ver.helicopter_pm]: https://github.com/petermaloney/helicopter/tree/abdf5fa
 [ver.hidename]: https://github.com/AntumDeluge/mtmod-hidename/tree/bb52dbc
 [ver.hill_nodebox]: https://github.com/cornernote/minetest-hill_nodebox/tree/41bbfa2
 [ver.home_gui]: https://github.com/cornernote/minetest-home_gui/tree/f6b5001
@@ -515,7 +516,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.drawers]: https://github.com/AntumDeluge/mtmod-drawers/tree/3887c5b
 [patch.ethereal]: https://github.com/AntumDeluge/mtmod-ethereal/tree/9f50d6e
 [patch.farming_plus]: https://github.com/AntumDeluge/mtmod-farming_plus/tree/454a443
-[patch.helicopter]: https://github.com/AntumDeluge/mtmod-helicopter/tree/66a6523
+[patch.helicopter]: https://github.com/AntumDeluge/mtmod-helicopter/tree/dd53fdd
 [patch.hovercraft]: https://github.com/AntumDeluge/mtmod-hovercraft/tree/96ad3b4
 [patch.hud]: https://github.com/AntumDeluge/mtmod-hud/tree/6846e20
 [patch.invisibility]: https://github.com/AntumDeluge/mtmod-invisibility/tree/f045c7c

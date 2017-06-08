@@ -9,7 +9,11 @@ GPL_v2
 License of media (textures and sounds):
 ---------------------------------------
 
-helicopter_motor.ogg by  Robinhood76 | License: Attribution Noncommercial
+helicopter_motor.ogg by  Robinhood76 | License: Attribution Noncommercial  
+
+Forum:  
+------  
+https://forum.minetest.net/viewtopic.php?id=6183
 
 Controls:
 ---------
