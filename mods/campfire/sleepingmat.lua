@@ -46,7 +46,7 @@ minetest.register_node("campfire:sleeping_mat_bottom", {
         },
 
 		after_place_node = function(pos, placer, itemstack)
-			local node = minetest.env:get_node(pos)
+			local node = minetest.get_node(pos)
 			local p = {x = pos.x, y = pos.y, z = pos.z}
 			local param2 = node.param2
 			node.name = "campfire:sleeping_mat_top"
@@ -59,16 +59,16 @@ minetest.register_node("campfire:sleeping_mat_bottom", {
 			elseif param2 == 3 then
 				pos.x = pos.x - 1
 			end
-			if minetest.registered_nodes[minetest.env:get_node(pos).name].buildable_to then
-				minetest.env:set_node(pos, node)
+			if minetest.registered_nodes[minetest.get_node(pos).name].buildable_to then
+				minetest.set_node(pos, node)
 			else
-				minetest.env:remove_node(p)
+				minetest.remove_node(p)
 				return true
 			end
 		end,
 
 		on_destruct = function(pos)
-			local node = minetest.env:get_node(pos)
+			local node = minetest.get_node(pos)
 			local param2 = node.param2
 			if param2 == 0 then
 				pos.z = pos.z+1
@@ -79,9 +79,9 @@ minetest.register_node("campfire:sleeping_mat_bottom", {
 			elseif param2 == 3 then
 				pos.x = pos.x-1
 			end
-			if (minetest.env:get_node({x = pos.x, y = pos.y, z = pos.z}).name == "campfire:sleeping_mat_top") then
-				if (minetest.env:get_node({x = pos.x, y = pos.y, z = pos.z}).param2 == param2) then
-					minetest.env:remove_node(pos)
+			if (minetest.get_node({x = pos.x, y = pos.y, z = pos.z}).name == "campfire:sleeping_mat_top") then
+				if (minetest.get_node({x = pos.x, y = pos.y, z = pos.z}).param2 == param2) then
+					minetest.remove_node(pos)
 				end
 			end
 		end,
@@ -89,7 +89,7 @@ minetest.register_node("campfire:sleeping_mat_bottom", {
 		on_rightclick = function(pos, node, clicker)
 			if not clicker or not clicker:is_player() then return end
 	  local name = clicker:get_player_name()
-			local meta = minetest.env:get_meta(pos)
+			local meta = minetest.get_meta(pos)
 			local param2 = node.param2
 
 			if param2 == 0 then
@@ -222,11 +222,11 @@ minetest.register_globalstep(function(dtime)
 
 	local players = #minetest.get_connected_players()
 	if players ~= 0 and players * 0.5 < players_in_bed then
-		if minetest.env:get_timeofday() < 0.2 or minetest.env:get_timeofday() > 0.8 then
+		if minetest.get_timeofday() < 0.2 or minetest.get_timeofday() > 0.8 then
 			if not wait then
 				minetest.chat_send_all("[zzz] " .. players_in_bed .. " of " .. players .. " players slept, skipping to day.")
 				minetest.after(2, function()
-					minetest.env:set_timeofday(0.23)
+					minetest.set_timeofday(0.23)
 					wait = false
 				end)
 				wait = true

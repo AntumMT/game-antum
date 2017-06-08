@@ -1,4 +1,3 @@
 default
 fire
 wool
-craft_guide?

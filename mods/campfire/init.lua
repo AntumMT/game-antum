@@ -99,7 +99,7 @@ groups = {oddly_breakable_by_hand=2, dig_immediate=3, attached_node=1},
 	legacy_facedir_simple = true,
 	sounds = default.node_sound_stone_defaults(),
 	on_construct = function(pos)
-			local meta = minetest.env:get_meta(pos)
+			local meta = minetest.get_meta(pos)
 			meta:set_string('formspec', campfire.campfire_formspec)
 			meta:set_string('infotext', 'Campfire');
 			local inv = meta:get_inventory()
@@ -108,7 +108,7 @@ groups = {oddly_breakable_by_hand=2, dig_immediate=3, attached_node=1},
 			inv:set_size("dst", 2)
 		end,
 	can_dig = function(pos,player)
-		local meta = minetest.env:get_meta(pos);
+		local meta = minetest.get_meta(pos);
 		local inv = meta:get_inventory()
 		if not inv:is_empty("fuel") then
 			return false
@@ -142,7 +142,7 @@ fixed = { -0.48, -0.5, -0.48, 0.48, -0.5, 0.48 }
 groups = {oddly_breakable_by_hand=1, dig_immediate=2, hot=2, attached_node=1,not_in_creative_inventory =1},
 sounds = default.node_sound_stone_defaults(),
 	can_dig = function(pos,player)
-		local meta = minetest.env:get_meta(pos);
+		local meta = minetest.get_meta(pos);
 		local inv = meta:get_inventory()
 		if not inv:is_empty("fuel") then
 			return false

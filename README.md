@@ -495,7 +495,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.areas]: https://github.com/AntumDeluge/mtmod-areas/tree/eef1203
 [patch.bags]: https://github.com/AntumDeluge/mtmod-bags/tree/4363284
 [patch.bedrock2]: https://github.com/AntumDeluge/mtmod-bedrock2/tree/51b25b6
-[patch.campfire]: https://github.com/AntumDeluge/mtmod-campfire/tree/67b9dd7
+[patch.campfire]: https://github.com/AntumDeluge/mtmod-campfire/tree/7b2394a
 [patch.castle_gates]: https://github.com/AntumDeluge/mtmod-castle_gates/tree/465ad4f
 [patch.castle_lighting]: https://github.com/AntumDeluge/mtmod-castle_lighting/tree/b360c54
 [patch.castle_masonry]: https://github.com/AntumDeluge/mtmod-castle_masonry/tree/88c2f89
