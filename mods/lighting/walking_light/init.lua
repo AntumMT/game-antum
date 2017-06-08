@@ -94,7 +94,7 @@ function mt_get_node_or_nil(pos)
 		print(debug.traceback("Current Callstack:\n"))
 		return nil
 	end
-	return minetest.env:get_node_or_nil(pos)
+	return minetest.get_node_or_nil(pos)
 end
 
 function mt_add_node(pos, sometable)
@@ -108,7 +108,7 @@ function mt_add_node(pos, sometable)
 		print(debug.traceback("Current Callstack:\n"))
 		return nil
 	end
-	minetest.env:add_node(pos,sometable)
+	minetest.add_node(pos,sometable)
 end
 
 function round(num) 
@@ -408,7 +408,7 @@ end
 local function update_light_all()
 	-- go through all players to check
 	for i,player_name in ipairs(players) do
-		local player = minetest.env:get_player_by_name(player_name)
+		local player = minetest.get_player_by_name(player_name)
 		update_light_player(player)
 	end
 end
@@ -483,7 +483,7 @@ end)
 
 minetest.register_globalstep(function(dtime)
 	for i,player_name in ipairs(players) do
-		local player = minetest.env:get_player_by_name(player_name)
+		local player = minetest.get_player_by_name(player_name)
 		if player ~= nil then
 			update_light_player(player)
 		else

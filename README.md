@@ -547,7 +547,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.technic]: https://github.com/AntumDeluge/mtmod-technic/tree/3577609
 [patch.throwing]: https://github.com/AntumDeluge/mtmod-throwing/tree/7b48d90
 [patch.trash_can]: https://github.com/AntumDeluge/mtmod-trash_can/tree/5a92bf4
-[patch.walking_light]: https://github.com/AntumDeluge/mtmod-walking_light/tree/8084572
+[patch.walking_light]: https://github.com/AntumDeluge/mtmod-walking_light/tree/e70ac7e
 [patch.windmill]: https://github.com/AntumDeluge/mtmod-windmill/tree/7756ab4
 [patch.workbench]: https://github.com/AntumDeluge/mtmod-workbench/tree/b964323
 [patch.worldedge]: https://github.com/AntumDeluge/mtmod-worldedge/tree/3ff6429
