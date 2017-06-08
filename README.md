@@ -166,7 +166,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [mobf_core][animals] (part of "animals" modpack) ([CC BY-SA][lic.ccbysa3.0]) -- version: [1199ca9 Git][ver.mobf_core] *2017-01-14* ([patched][patch.mobf_core])
 * [minetest_game][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- version: [f855bee Git][ver.minetest_game] *2017-06-06* ([patched][patch.minetest_game])
 * [moremesecons][] ([MPL][lic.mpl2.0]) -- version: [aa2ae82 Git][ver.moremesecons] *2017-06-04*
-* [mydoors][] ([CC-BY / CC-BY-SA][lic.mydoors] / [WTFPL][lic.wtfpl] / [DWYWFPL][lic.dwywpl]) -- version: [63aef13 Git][ver.mydoors] *2017-03-31* ([patched][patch.mydoors])
 * [technic][] ([LGPL][lic.lgpl2.0]) -- version: [bf58c77 Git][ver.technic] *2017-06-05* ([patched][patch.technic])
 
 
@@ -176,6 +175,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 * [advtrains][] ([LGPL][lic.lgpl2.1] / [CC BY-NC-SA][lic.ccbyncsa3.0]) -- version: [92af0b5 Git][ver.advtrains] *2017-05-31* ([patched][patch.advtrains])
 * [mymods]
+	* [mydoors][] ([CC-BY / CC-BY-SA][lic.mydoors] / [WTFPL][lic.wtfpl] / [DWYWFPL][lic.dwywpl]) -- version: [63aef13 Git][ver.mydoors] *2017-03-31* ([patched][patch.mydoors])
 	* [myroofs][] ([DWYWPL][lic.dwywpl]) -- version: [6da6148 Git][ver.myroofs] *2016-03-23*
 	* [mywoodslopes][] ([DWYWPL][lic.dwywpl]) -- version: [3a1b531 Git][ver.mywoodslopes] *2016-03-23*
 	* [worldedge][] ([DWYWPL][lic.dwywpl]) -- version: [e15fa99 Git][ver.worldedge] *2016-03-23* ([patched][patch.worldedge])
