@@ -30,7 +30,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [windmill][] ([WTFPL][lic.windmill]) -- version: [47b029d Git][ver.windmill] *2014-08-21* ([patched][patch.windmill])
 * [campfire][] ([GPL][lic.gpl2.0] / [CC BY-SA][lic.ccbysa] / [WTFPL][lic.campfire]) -- version: [b45acd2 Git][ver.campfire] *2016-02-18* ([patched][patch.campfire])
 * chat/
-    * [away][] ([GPL][lic.gpl2.0]) -- version: [4c1e5a9 Git][ver.away] *2012-03-09*
+    * [away][] ([GPL][lic.gpl2.0]) -- version: [4c1e5a9 Git][ver.away] *2012-03-09* ([patched][patch.away])
     * [chatlog][] ([CC0][lic.cc0]) -- version: (no version info) *2013-06-09* ([patched][patch.chatlog])
 * crafting/
     * [craftguide][] ([GPL / WTFPL](mods/crafting/craftguide/LICENSE)) -- version: [86a96c3 Git][ver.craftguide] *2017-03-21* ([patched][patch.craftguide])
@@ -495,6 +495,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.animals]: https://github.com/AntumDeluge/mtmp-animals_modpack/tree/ad4c5da
 [patch.areas]: https://github.com/AntumDeluge/mtmod-areas/tree/eef1203
 [patch.awards]: https://github.com/AntumDeluge/mtmod-awards/tree/638c137
+[patch.away]: https://github.com/AntumDeluge/mtmod-away/tree/3b0bf9e
 [patch.bags]: https://github.com/AntumDeluge/mtmod-bags/tree/4363284
 [patch.bedrock2]: https://github.com/AntumDeluge/mtmod-bedrock2/tree/51b25b6
 [patch.bridges]: https://github.com/AntumDeluge/mtmod-bridges/tree/ba8f71a

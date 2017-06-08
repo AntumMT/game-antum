@@ -113,7 +113,7 @@ end
 
 -- Returns 'present' or 'away' or 'away (<reason>)' or 'disconnected'
 function get_away_status(name)
-	if minetest.env:get_player_by_name(name) == nil then
+	if minetest.get_player_by_name(name) == nil then
 		return 'disconnected'
 	elseif is_away(name) then
 		reason = get_away_reason(name)
@@ -198,7 +198,7 @@ minetest.register_globalstep(function(dtime)
 		away_check_disconnect_timer = 0
 		local disconnected = {}
 		for name, _ in pairs(away_players) do
-			if minetest.env:get_player_by_name(name) == nil then
+			if minetest.get_player_by_name(name) == nil then
 				table.insert(disconnected, name)
 			end
 		end
