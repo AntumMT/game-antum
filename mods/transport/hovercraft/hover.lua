@@ -118,7 +118,7 @@ function hover:register_hovercraft(name, def)
 			end
 			local pos = self.object:getpos()
 			if self.timer > 0.5 then
-				local node = minetest.env:get_node({x=pos.x, y=pos.y-0.5, z=pos.z})
+				local node = minetest.get_node({x=pos.x, y=pos.y-0.5, z=pos.z})
 				if node.name == "air" or node.name == "ignore" then
 					self.velocity.y = 0 - self.fall_velocity
 				else
@@ -167,7 +167,7 @@ function hover:register_hovercraft(name, def)
 				return
 			end
 			pointed_thing.under.y = pointed_thing.under.y + 0.5
-			minetest.env:add_entity(pointed_thing.under, name)
+			minetest.add_entity(pointed_thing.under, name)
 			itemstack:take_item()
 			return itemstack
 		end,

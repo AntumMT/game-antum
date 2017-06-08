@@ -100,7 +100,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [workbench][] ([GPL / WTFPL](mods/tools/workbench/LICENSE)) -- version: [74dd1af Git][ver.workbench] *2017-02-07* ([patched][patch.workbench])
 * transport/
 	* [helicopter][] ([GPL][lic.gpl2.0]) -- version: [10f1433 Git][ver.helicopter] ([patched][patch.helicopter]) *2015-07-15*
-    * [hovercraft][] ([LGPL / CC BY-SA / CC0][lic.hovercraft]) -- version: [7b0df6f Git][ver.hovercraft] *2016-04-10* ([patched][patch.hovercraft])
+    * [hovercraft][] ([LGPL / CC BY-SA / CC0][lic.hovercraft]) -- version: [4d50e68 Git][ver.hovercraft] *2017-05-14* ([patched][patch.hovercraft])
 * ui/
     * [bookmarks_gui][] ([BSD 3-Clause][lic.bookmarks_gui]) -- version: [d369dba Git][ver.bookmarks_gui] *2015-08-14*
     * [hbarmor][] ([WTFPL][lic.wtfpl] / [CC BY-SA][lic.ccbysa3.0]) -- version: [0.3.0 (bfc5f8c Git)][ver.hbarmor] *2017-03-07*
@@ -436,7 +436,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.hill_nodebox]: https://github.com/cornernote/minetest-hill_nodebox/tree/41bbfa2
 [ver.home_gui]: https://github.com/cornernote/minetest-home_gui/tree/f6b5001
 [ver.homedecor]: https://github.com/minetest-mods/homedecor_modpack/tree/8e467ef
-[ver.hovercraft]: https://github.com/stujones11/hovercraft/tree/7b0df6f
+[ver.hovercraft]: https://github.com/stujones11/hovercraft/tree/4d50e68
 [ver.hudbars]: http://repo.or.cz/minetest_hudbars.git/tree/fa82d2d
 [ver.hudmap]: https://github.com/stujones11/hudmap/tree/09d40f3
 [ver.ilights]: https://github.com/minetest-mods/ilights/tree/7060243
@@ -517,7 +517,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.ethereal]: https://github.com/AntumDeluge/mtmod-ethereal/tree/9f50d6e
 [patch.farming_plus]: https://github.com/AntumDeluge/mtmod-farming_plus/tree/454a443
 [patch.helicopter]: https://github.com/AntumDeluge/mtmod-helicopter/tree/dd53fdd
-[patch.hovercraft]: https://github.com/AntumDeluge/mtmod-hovercraft/tree/96ad3b4
+[patch.hovercraft]: https://github.com/AntumDeluge/mtmod-hovercraft/tree/73a6223
 [patch.hud]: https://github.com/AntumDeluge/mtmod-hud/tree/6846e20
 [patch.invisibility]: https://github.com/AntumDeluge/mtmod-invisibility/tree/f045c7c
 [patch.mesecons]: https://github.com/AntumDeluge/mtmp-mesecons/tree/32a4823

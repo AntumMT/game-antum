@@ -2,4 +2,3 @@ default
 wool
 dye
 mesecons_pistons
-craft_guide?
