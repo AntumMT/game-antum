@@ -11,9 +11,3 @@ dofile(minetest.get_modpath("mylights").."/machine_bulbs.lua")
 dofile(minetest.get_modpath("mylights").."/machine_cubes.lua")
 dofile(minetest.get_modpath("mylights").."/aliases.lua")
 print ("mylights loaded")
-
-if minetest.get_modpath("ilights") then
-	dofile(minetest.get_modpath("mylights").."/ilights.lua")
-		return
-	end
-
