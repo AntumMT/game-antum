@@ -180,7 +180,7 @@ local chicken_prototype = {
 				},
 				{
 				name = "walking",
-				movgen = "probab_v2_mov_gen",
+				movgen = "probab_mov_gen",
 				chance = 0.50,
 				animation = "walk",
 				typical_state_time = 180,
@@ -295,7 +295,7 @@ local rooster_prototype = {
 				},
 				{
 				name = "walking",
-				movgen = "probab_v2_mov_gen",
+				movgen = "probab_mov_gen",
 				chance = 0.25,
 				animation = "walk",
 				typical_state_time = 180,
@@ -380,7 +380,7 @@ local chick_m_prototype = {
 				},
 				{
 				name = "walking",
-				movgen = "probab_v2_mov_gen",
+				movgen = "probab_mov_gen",
 				chance = 0.50,
 				animation = "walk",
 				typical_state_time = 180,
@@ -465,7 +465,7 @@ local chick_f_prototype = {
 				},
 				{
 				name = "walking",
-				movgen = "probab_v2_mov_gen",
+				movgen = "probab_mov_gen",
 				chance = 0.50,
 				animation = "walk",
 				typical_state_time = 180,

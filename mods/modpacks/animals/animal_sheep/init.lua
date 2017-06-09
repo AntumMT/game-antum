@@ -202,7 +202,7 @@ local sheep_prototype = {
 				{
 					name = "walking",
 					custom_preconhandler = nil,
-					movgen = "probab_v2_mov_gen",
+					movgen = "probab_mov_gen",
 					typical_state_time = 180,
 					chance = 0.50,
 					animation = "walk"
@@ -347,7 +347,7 @@ local lamb_prototype = {
 				{
 					name = "walking",
 					custom_preconhandler = nil,
-					movgen = "probab_v2_mov_gen",
+					movgen = "probab_mov_gen",
 					typical_state_time = 180,
 					chance = 0.50,
 					animation = "walk"
@@ -487,7 +487,7 @@ local sheep_naked_prototype = {
 				{
 					name = "walking",
 					custom_preconhandler = nil,
-					movgen = "probab_v2_mov_gen",
+					movgen = "probab_mov_gen",
 					typical_state_time = 180,
 					chance = 0.50,
 					animation = "walk"

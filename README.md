@@ -510,7 +510,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 [patch.3d_armor]: https://github.com/AntumDeluge/mtmp-3d_armor/tree/128a97a
 [patch.adv_spawning]: https://github.com/AntumDeluge/mtmod-adv_spawning/tree/757197a
-[patch.animals]: https://github.com/AntumDeluge/mtmp-animals_modpack/tree/ad4c5da
+[patch.animals]: https://github.com/AntumDeluge/mtmp-animals_modpack/tree/3e25eb0
 [patch.areas]: https://github.com/AntumDeluge/mtmod-areas/tree/eef1203
 [patch.awards]: https://github.com/AntumDeluge/mtmod-awards/tree/638c137
 [patch.away]: https://github.com/AntumDeluge/mtmod-away/tree/3b0bf9e
