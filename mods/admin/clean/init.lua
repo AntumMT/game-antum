@@ -10,7 +10,15 @@ local old_entities = {
 }
 
 -- Old/Missing nodes that should be replaced with something currently in game
-local replace_nodes = {}
+local replace_nodes = {
+	-- Discontinued
+	{'kpgmobs:horse', 'mob_horse:horse'},
+	{'kpgmobs:horse2', 'mob_horse:horse'},
+	{'kpgmobs:horse3', 'mob_horse:horse'},
+	{'kpgmobs:horsearah1', 'mob_horse:horse'},
+	{'kpgmobs:horseh1', 'mob_horse:horse'},
+	{'kpgmobs:horsepegh1', 'mob_horse:horse'},
+}
 
 
 -- "Replaces" an old/non-existent node
