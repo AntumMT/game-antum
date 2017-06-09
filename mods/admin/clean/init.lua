@@ -2,7 +2,12 @@
 -- Copyright: PilzAdam
 
 local old_nodes = {}
-local old_entities = {}
+local old_entities = {
+	-- Broken
+	'animal_chicken:chicken',
+	'animal_dm:dm',
+	'sneeker:sneeker',
+}
 
 -- Old/Missing nodes that should be replaced with something currently in game
 local replace_nodes = {}
