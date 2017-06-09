@@ -53,10 +53,10 @@ minetest.register_tool("animalmaterials:sword_deamondeath", {
 		full_punch_interval = 0.50,
 		max_drop_level=1,
 		groupcaps={
-			fleshy={times={[1]=2.00, [2]=0.80, [3]=0.40}, uses=10, maxlevel=1},
-			snappy={times={[2]=0.70, [3]=0.30}, uses=40, maxlevel=1},
-			choppy={times={[3]=0.70}, uses=40, maxlevel=0},
-			deamon={times={[1]=0.25, [2]=0.10, [3]=0.05}, uses=20, maxlevel=3},
+			fleshy={times={[1]=2.00, [2]=0.80, [3]=0.40}, uses=0, maxlevel=1},
+			snappy={times={[2]=0.70, [3]=0.30}, uses=0, maxlevel=1},
+			choppy={times={[3]=0.70}, uses=0, maxlevel=0},
+			deamon={times={[1]=0.25, [2]=0.10, [3]=0.05}, uses=0, maxlevel=3},
 		}
 	}
 	})
@@ -72,7 +72,7 @@ minetest.register_tool("animalmaterials:scissors", {
 	tool_capabilities = {
 		max_drop_level=0,
 		groupcaps={
-			wool  = {uses=40,maxlevel=1}
+			wool  = {uses=0,maxlevel=1}
 		}
 	},
 })

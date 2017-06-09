@@ -32,7 +32,7 @@ minetest.register_tool("technic:blue_energy_crystal", {
 	tool_capabilities = {
 		max_drop_level = 0,
 		groupcaps = {
-			fleshy = {times={}, uses=10000, maxlevel=0}
+			fleshy = {times={}, uses=0000, maxlevel=0}
 		}
 	}
 }) 
@@ -48,7 +48,7 @@ minetest.register_tool("technic:green_energy_crystal", {
 	tool_capabilities = {
 		max_drop_level = 0,
 		groupcaps = {
-			fleshy = {times={}, uses=10000, maxlevel=0}
+			fleshy = {times={}, uses=0000, maxlevel=0}
 		}
 	}
 }) 
@@ -64,7 +64,7 @@ minetest.register_tool("technic:red_energy_crystal", {
 	tool_capabilities = {
 		max_drop_level = 0,
 		groupcaps = {
-			fleshy = {times={}, uses=10000, maxlevel=0}
+			fleshy = {times={}, uses=0000, maxlevel=0}
 		}
 	}
 }) 

@@ -539,9 +539,9 @@ minetest.register_tool("walking_light:pick_mese", {
 		full_punch_interval = 1.0,
 		max_drop_level=3,
 		groupcaps={
-			cracky={times={[1]=2.0, [2]=1.0, [3]=0.5}, uses=20, maxlevel=3},
-			crumbly={times={[1]=2.0, [2]=1.0, [3]=0.5}, uses=20, maxlevel=3},
-			snappy={times={[1]=2.0, [2]=1.0, [3]=0.5}, uses=20, maxlevel=3}
+			cracky={times={[1]=2.0, [2]=1.0, [3]=0.5}, uses=0, maxlevel=3},
+			crumbly={times={[1]=2.0, [2]=1.0, [3]=0.5}, uses=0, maxlevel=3},
+			snappy={times={[1]=2.0, [2]=1.0, [3]=0.5}, uses=0, maxlevel=3}
 		}
 	},
 })

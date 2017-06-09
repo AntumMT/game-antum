@@ -42,7 +42,7 @@ minetest.register_tool("rainbow_ore:rainbow_ore_pickaxe", {
 		full_punch_interval = 0.9,
 		max_drop_level=3,
 		groupcaps={
-			cracky = {times={[1]=1.0, [2]=0.5, [3]=0.25}, uses=15, maxlevel=3},
+			cracky = {times={[1]=1.0, [2]=0.5, [3]=0.25}, uses=0, maxlevel=3},
 		},
 		damage_groups = {fleshy=5},
 	},
@@ -68,7 +68,7 @@ minetest.register_tool("rainbow_ore:rainbow_ore_axe", {
 		full_punch_interval = 0.9,
 		max_drop_level=3,
 		groupcaps={
-			choppy={times={[1]=1.05, [2]=0.45, [3]=0.25}, uses=15, maxlevel=3},
+			choppy={times={[1]=1.05, [2]=0.45, [3]=0.25}, uses=0, maxlevel=3},
 		},
 		damage_groups = {fleshy=7},
 	}
@@ -104,7 +104,7 @@ minetest.register_tool("rainbow_ore:rainbow_ore_shovel", {
 		full_punch_interval = 1.0,
 		max_drop_level=3,
 		groupcaps={
-			crumbly = {times={[1]=0.55, [2]=0.25, [3]=0.15}, uses=15, maxlevel=3},
+			crumbly = {times={[1]=0.55, [2]=0.25, [3]=0.15}, uses=0, maxlevel=3},
 		},
 		damage_groups = {fleshy=4},
 	},
@@ -130,7 +130,7 @@ minetest.register_tool("rainbow_ore:rainbow_ore_sword", {
 		full_punch_interval = 0.7,
 		max_drop_level=3,
 		groupcaps={
-			snappy={times={[1]=0.95, [2]=0.45, [3]=0.15}, uses=20, maxlevel=3},
+			snappy={times={[1]=0.95, [2]=0.45, [3]=0.15}, uses=0, maxlevel=3},
 		},
 		damage_groups = {fleshy=8},
 	}
