@@ -83,7 +83,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [playeranim][] ([BSD 2-Clause][lic.playeranim]) - version [0ca8e5a Git][ver.playeranim] *2016-12-07* ([patched][patch.playeranim])
     * [wardrobe][] ([WTFPL][lic.wtfpl]) -- version: [1.1-2-c48b011 Git][ver.wardrobe] *2015-05-21*
 * protection/
-    * [areas][] ([LGPL][lic.lgpl2.1]) -- version [d3d43d9 Git][ver.areas] *2017-05-06* ([patched][patch.areas])
+    * [areas][] ([LGPL][lic.lgpl2.1]) -- version [289d0e6 Git][ver.areas] *2017-06-09*
     * [simple_protection][] ([WTFPL][lic.wtfpl]) -- version [23c024f Git][ver.simple_protection] *2017-01-07*
 * signs/
 	* [signs_lib][] ([BSD][lic.signs_lib] / [WTFPL][lic.wtfpl]) -- version: [3e00159 Git][ver.signs_lib] *2017-05-20*
@@ -407,7 +407,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.animalmaterials]: https://github.com/sapier/animalmaterials/tree/d952d27
 [ver.animals]: https://github.com/sapier/animals_modpack/tree/b9d0172
 [ver.antum]: https://github.com/AntumDeluge/mtmp-antum/tree/3187ddd
-[ver.areas]: https://github.com/ShadowNinja/areas/tree/d3d43d9
+[ver.areas]: https://github.com/ShadowNinja/areas/tree/289d0e6
 [ver.awards]: https://github.com/minetest-mods/awards/tree/096fe16
 [ver.away]: https://github.com/kahrl/minetest-mod-away/tree/4c1e5a9
 [ver.bags]: https://github.com/cornernote/minetest-bags/tree/f17d829
@@ -510,7 +510,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.3d_armor]: https://github.com/AntumDeluge/mtmp-3d_armor/tree/128a97a
 [patch.adv_spawning]: https://github.com/AntumDeluge/mtmod-adv_spawning/tree/757197a
 [patch.animals]: https://github.com/AntumDeluge/mtmp-animals_modpack/tree/3e25eb0
-[patch.areas]: https://github.com/AntumDeluge/mtmod-areas/tree/eef1203
 [patch.awards]: https://github.com/AntumDeluge/mtmod-awards/tree/638c137
 [patch.away]: https://github.com/AntumDeluge/mtmod-away/tree/3b0bf9e
 [patch.bags]: https://github.com/AntumDeluge/mtmod-bags/tree/4363284
