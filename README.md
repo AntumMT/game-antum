@@ -152,8 +152,8 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* modpacks/castle/
 		* [castle_farming][] -- version: [a190dcf Git][ver.castle_farming] *2017-04-21*
 		* [castle_gates][] -- version: [dc53584 Git][ver.castle_gates] *dc53584* ([patched][patch.castle_gates])
-		* [castle_lighting][] -- version: [a7110c6 Git][ver.castle_lighting] *2017-04-28* *[patched][patch.castle_lighting])
-		* [castle_masonry][] -- version [94b25b5 Git][ver.castle_masonry] *2017-02-28* ([patched][patch.castle_masonry])
+		* [castle_lighting][] -- version: [a7110c6 Git][ver.castle_lighting] *2017-06-07* *[patched][patch.castle_lighting])
+		* [castle_masonry][] -- version [2ed4f19 Git][ver.castle_masonry] *2017-02-28*
 		* [castle_shields][] -- version [a7110c6 Git][ver.castle_shields] *2017-02-28* ([patched][patch.castle_shields])
 		* [castle_storage][] -- version [2b9e5f6 Git][ver.castle_storage] *2017-02-28* ([patched.castle_storage])
 		* [castle_tapestries][] -- version [78b6e36 Git][ver.castle_tapestries] *2017-03-19* ([patched][patch.castle_tapestries])
@@ -420,7 +420,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.castle_farming]: https://github.com/minetest-mods/castle_farming/tree/a190dcf
 [ver.castle_gates]: https://github.com/minetest-mods/castle_gates/tree/dc53584
 [ver.castle_lighting]: https://github.com/minetest-mods/castle_lighting/tree/a7110c6
-[ver.castle_masonry]: https://github.com/minetest-mods/castle_masonry/tree/94b25b5
+[ver.castle_masonry]: https://github.com/minetest-mods/castle_masonry/tree/2ed4f19
 [ver.castle_shields]: https://github.com/minetest-mods/castle_shields/tree/ce853d7
 [ver.castle_storage]: https://github.com/minetest-mods/castle_storage/tree/2b9e5f6
 [ver.castle_tapestries]: https://github.com/minetest-mods/castle_tapestries/tree/78b6e36
@@ -519,7 +519,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.bridges]: https://github.com/AntumDeluge/mtmod-bridges/tree/ba8f71a
 [patch.castle_gates]: https://github.com/AntumDeluge/mtmod-castle_gates/tree/465ad4f
 [patch.castle_lighting]: https://github.com/AntumDeluge/mtmod-castle_lighting/tree/b360c54
-[patch.castle_masonry]: https://github.com/AntumDeluge/mtmod-castle_masonry/tree/0aae8d9
 [patch.castle_shields]: https://github.com/AntumDeluge/mtmod-castle_shields/tree/47ffc27
 [patch.castle_storage]: https://github.com/AntumDeluge/mtmod-castle_storage/tree/b80b72f
 [patch.castle_tapestries]: https://github.com/AntumDeluge/mtmod-castle_tapestries/tree/4e70f1b
