@@ -72,7 +72,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [mob_horse][] -- version: [dee3883 Git][ver.mob_horse] *2017-06-01*
     * [peaceful_npc][] ([WTFPL][lic.wtfpl]) -- version: [2b3a7a5 Git][ver.peaceful_npc] *2015-08-09* ([patched][patch.peaceful_npc])
 * [painting][] (???)
-* [pipeworks][] ([WTFPL][lic.wtfpl]) -- version: [69d994a Git][ver.pipeworks] *2016-05-18*  ([patched][patch.pipeworks])
+* [pipeworks][] ([WTFPL][lic.wtfpl]) -- version: [2eff6e3 Git][ver.pipeworks] *2017-06-07*
 * plantlife/
 * player/action/
     * [throwing][] ([WTFPL][lic.wtfpl]) -- version: [90bcf43 Git][ver.throwing] *2013-09-27* ([patched][patch.throwing])
@@ -479,7 +479,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.mywoodslopes]: https://github.com/minetest-mods/mywoodslopes/tree/3a1b531
 [ver.nether]: https://github.com/PilzAdam/nether/tree/bc2ccfb
 [ver.peaceful_npc]: https://github.com/jojoa1997/peaceful_npc/tree/2b3a7a5
-[ver.pipeworks]: https://github.com/minetest-mods/pipeworks/tree/69d994a
+[ver.pipeworks]: https://github.com/minetest-mods/pipeworks/tree/2eff6e3
 [ver.playeranim]: https://github.com/minetest-mods/playeranim/tree/0ca8e5a
 [ver.privilegeareas]: https://github.com/minetest-mods/privilegeareas/tree/aebaa00
 [ver.quartz]: https://github.com/minetest-mods/quartz/tree/00ca4eb
@@ -551,7 +551,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.mysheetmetal]: https://github.com/AntumDeluge/mtmod-mysheetmetal/tree/b7d644b
 [patch.nether]: https://github.com/AntumDeluge/mtmod-nether/tree/d4e5a2a
 [patch.peaceful_npc]: https://github.com/AntumDeluge/mtmod-peaceful_npc/tree/cbae09e
-[patch.pipeworks]: https://github.com/AntumDeluge/mtmod-pipeworks/tree/981f3b1
 [patch.playeranim]: https://github.com/AntumDeluge/mtmod-playeranim/tree/a64d144
 [patch.quartz]: https://github.com/AntumDeluge/mtmod-quartz/tree/d23dabd
 [patch.rainbow_ore]: https://github.com/AntumDeluge/mtmod-rainbow_ore/tree/60dc35e
