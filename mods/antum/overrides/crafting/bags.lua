@@ -28,6 +28,7 @@
 local bags = {}
 bags.depends = {
 	'animalmaterials',
+	'farming',
 }
 bags.satisfied = true
 
@@ -59,28 +60,57 @@ if bags.satisfied then
 		},
 	})
 	
+	-- Small bag
 	antum.registerCraft({
 		output = 'bags:small',
 		recipe = {
-			{'', 'group:stick', '',},
-			{'group:fur', 'group:fur', 'group:fur',},
-			{'group:fur', 'group:fur', 'group:fur',},
+			{'farming:cotton', '', '',},
+			{'group:fur', 'group:fur', '',},
+			{'group:fur', 'group:fur', '',},
+		}
+	})
+	antum.registerCraft({
+		output = 'bags:small',
+		recipe = {
+			{'', 'farming:cotton', '',},
+			{'group:fur', 'group:fur', '',},
+			{'group:fur', 'group:fur', '',},
+		}
+	})
+	
+	-- Medium bag
+	antum.registerCraft({
+		output = 'bags:medium',
+		recipe = {
+			{'farming:cotton', '', '',},
+			{'bags:small', 'bags:small', '',},
+			{'bags:small', 'bags:small', '',},
 		}
 	})
 	antum.registerCraft({
 		output = 'bags:medium',
 		recipe = {
-			{'bags:small', 'bags:small',},
-			{'bags:small', 'bags:small',},
-			{'bags:small', 'bags:small',},
+			{'', 'farming:cotton', '',},
+			{'bags:small', 'bags:small', '',},
+			{'bags:small', 'bags:small', '',},
+		}
+	})
+	
+	-- Large bag
+	antum.registerCraft({
+		output = 'bags:large',
+		recipe = {
+			{'farming:cotton', '', '',},
+			{'bags:medium', 'bags:medium', '',},
+			{'bags:medium', 'bags:medium', '',},
 		}
 	})
 	antum.registerCraft({
 		output = 'bags:large',
 		recipe = {
-			{'bags:medium', 'bags:medium',},
-			{'bags:medium', 'bags:medium',},
-			{'bags:medium', 'bags:medium',},
+			{'', 'farming:cotton', '',},
+			{'bags:medium', 'bags:medium', '',},
+			{'bags:medium', 'bags:medium', '',},
 		}
 	})
 end
