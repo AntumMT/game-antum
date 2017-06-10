@@ -148,17 +148,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* mob_shark ([CC BY-SA][lic.amp_shark])
 		* mob_slime ([CC0 / CC BY / CC BY-SA / CC0][lic.amp_slime])
 		* mob_warthog ([CC BY / CC BY-SA][lic.amp_warthog])
-* castle ([MIT][lic.castle])
-	* modpacks/castle/
-		* [castle_farming][] -- version: [a190dcf Git][ver.castle_farming] *2017-04-21*
-		* [castle_gates][] -- version: [dc53584 Git][ver.castle_gates] *dc53584* ([patched][patch.castle_gates])
-		* [castle_lighting][] -- version: [a7110c6 Git][ver.castle_lighting] *2017-06-07* *[patched][patch.castle_lighting])
-		* [castle_masonry][] -- version [2ed4f19 Git][ver.castle_masonry] *2017-02-28*
-		* [castle_shields][] -- version [a7110c6 Git][ver.castle_shields] *2017-02-28* ([patched][patch.castle_shields])
-		* [castle_storage][] -- version [2b9e5f6 Git][ver.castle_storage] *2017-02-28* ([patched.castle_storage])
-		* [castle_tapestries][] -- version [78b6e36 Git][ver.castle_tapestries] *2017-03-19* ([patched][patch.castle_tapestries])
-		* [castle_weapons][] -- version [5f5ebcc Git][ver.castle_weapons] *2017-06-07*
-		* [crafting_bench][] -- version [3aa4cfb Git][ver.crafting_bench] *2017-02-28* ([patched][patch.crafting_bench])
 * [Creatures MOB-Engine][cme] ([zlib / CC-BY-SA][lic.cme]) -- version: [2.3.1-0-e3502a1 Git][ver.cme] *2016-02-16* ([patched][patch.cme])
 * [deploy_nodes][] ([BSD 3-Clause][lic.deploy_nodes]) -- version [eb3d68c Git][ver.deploy_nodes] *2015-05-19* ([patched][patch.deploy_nodes])
 * [homedecor][] ([LGPL / WTFPL / CC BY-SA / CC0][lic.homedecor]) -- version: [5c52111 Git][ver.homedecor] *2017-05-25* ([patched][patch.homedecor])
@@ -173,6 +162,16 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 ### Stored in 'modpacks' directory
 
+* castle ([MIT][lic.castle])
+	* [castle_farming][] -- version: [a190dcf Git][ver.castle_farming] *2017-04-21*
+	* [castle_gates][] -- version: [dc53584 Git][ver.castle_gates] *dc53584* ([patched][patch.castle_gates])
+	* [castle_lighting][] -- version: [a7110c6 Git][ver.castle_lighting] *2017-06-07* *[patched][patch.castle_lighting])
+	* [castle_masonry][] -- version [2ed4f19 Git][ver.castle_masonry] *2017-02-28*
+	* [castle_shields][] -- version [a7110c6 Git][ver.castle_shields] *2017-02-28* ([patched][patch.castle_shields])
+	* [castle_storage][] -- version [2b9e5f6 Git][ver.castle_storage] *2017-02-28* ([patched.castle_storage])
+	* [castle_tapestries][] -- version [78b6e36 Git][ver.castle_tapestries] *2017-03-19* ([patched][patch.castle_tapestries])
+	* [castle_weapons][] -- version [5f5ebcc Git][ver.castle_weapons] *2017-06-07*
+	* [crafting_bench][] -- version [ca21489 Git][ver.crafting_bench] *2017-06-07*
 * [mymods]
 	* [mydoors][] ([CC-BY / CC-BY-SA][lic.mydoors] / [WTFPL][lic.wtfpl] / [DWYWFPL][lic.dwywpl]) -- version: [63aef13 Git][ver.mydoors] *2017-03-31* ([patched][patch.mydoors])
 	* [myfences][] ([DWYWPL][lic.dwywpl]) -- version: [c6e529a Git][ver.myfences] *2016-04-04*
@@ -430,7 +429,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.cme]: https://github.com/BlockMen/cme/tree/e3502a1
 [ver.coloredwood]: https://github.com/minetest-mods/coloredwood/tree/bd490be
 [ver.compassgps]: https://github.com/Kilarin/compassgps/tree/96892a0
-[ver.crafting_bench]: https://github.com/minetest-mods/crafting_bench/tree/3aa4cfb
+[ver.crafting_bench]: https://github.com/minetest-mods/crafting_bench/tree/ca21489
 [ver.craftguide]: https://github.com/minetest-mods/craftguide/tree/86a96c3
 [ver.crops]: https://github.com/minetest-mods/crops/tree/2b1bb37
 [ver.currency]: https://github.com/minetest-mods/currency/tree/3ee673d
@@ -528,7 +527,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.cme]: https://github.com/AntumDeluge/mtmp-cme/tree/f6d1538
 [patch.compassgps]: https://github.com/AntumDeluge/mtmod-compassgps/tree/1d7e6a7
 [patch.craftguide]: https://github.com/AntumDeluge/mtmod-craftguide/tree/39b7ddf
-[patch.crafting_bench]: https://github.com/AntumDeluge/mtmod-crafting_bench/tree/81e56c6
 [patch.crops]: https://github.com/AntumDeluge/mtmod-crops/tree/0c5c649
 [patch.currency]: https://github.com/AntumDeluge/mtmod-currency/tree/9e9b1be
 [patch.deploy_nodes]: https://github.com/AntumDeluge/mtmp-deploy_nodes/tree/3ea67b7
