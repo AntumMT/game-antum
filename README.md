@@ -155,7 +155,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [mobf_core][animals] (part of "animals" modpack) ([CC BY-SA][lic.ccbysa3.0]) -- version: [1199ca9 Git][ver.mobf_core] *2017-01-14* ([patched][patch.mobf_core])
 * [minetest_game][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- version: [f855bee Git][ver.minetest_game] *2017-06-06* ([patched][patch.minetest_game])
 * [moremesecons][] ([MPL][lic.mpl2.0]) -- version: [aa2ae82 Git][ver.moremesecons] *2017-06-04*
-* [technic][] ([LGPL][lic.lgpl2.0]) -- version: [bf58c77 Git][ver.technic] *2017-06-05* ([patched][patch.technic])
+* [technic][] ([LGPL][lic.lgpl2.0]) -- version: [4cc124f Git][ver.technic] *2017-06-08* ([patched][patch.technic])
 
 
 ---
@@ -493,7 +493,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.spectator_mode]: https://github.com/minetest-mods/spectator_mode/tree/7d68bec
 [ver.spidermob]: https://github.com/Darcidride/minetest-spidermob-v1/tree/8f9080a
 [ver.stairsplus]: https://github.com/CasimirKaPazi/stairsplus/tree/311e1f0
-[ver.technic]: https://github.com/minetest-mods/technic/tree/bf58c77
+[ver.technic]: https://github.com/minetest-mods/technic/tree/4cc124f
 [ver.throwing]: https://github.com/PilzAdam/throwing/tree/90bcf43
 [ver.tnt]: https://github.com/PilzAdam/TNT/tree/d6a0b7d
 [ver.tools_obsidian]: https://github.com/Dragonop/tools_obsidian/tree/f77fd79
@@ -559,7 +559,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.snowdrift]: https://github.com/AntumDeluge/mtmod-snowdrift/tree/1b9da4f
 [patch.spawneggs]: https://github.com/AntumDeluge/mtmod-spawneggs/tree/f2cc4cc
 [patch.spidermob]: https://github.com/AntumDeluge/mtmod-spidermob/tree/25a88ff
-[patch.technic]: https://github.com/AntumDeluge/mtmod-technic/tree/3577609
+[patch.technic]: https://github.com/AntumDeluge/mtmod-technic/tree/b608509
 [patch.throwing]: https://github.com/AntumDeluge/mtmod-throwing/tree/7b48d90
 [patch.trash_can]: https://github.com/AntumDeluge/mtmod-trash_can/tree/5a92bf4
 [patch.walking_light]: https://github.com/AntumDeluge/mtmod-walking_light/tree/e70ac7e
