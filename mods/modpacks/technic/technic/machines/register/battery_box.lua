@@ -77,7 +77,7 @@ minetest.register_tool("technic:battery", {
 		charge = 0,
 		max_drop_level = 0,
 		groupcaps = {
-			fleshy = {times={}, uses=0000, maxlevel=0}
+			fleshy = {times={}, uses=10000, maxlevel=0}
 		}
 	}
 })
