@@ -80,7 +80,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [character_creator][] ([MIT][lic.character_creator]) -- version [1.0 (6a0e6aa Git)][ver.character_creator] *2017-04-01*
     * [hidename][] ([MIT][lic.hidename]) -- version [bb52dbc Git][ver.hidename]
     * [invisibility][] ([MIT][lic.invisibility]) -- version: [bf4156b Git][ver.invisibility] *2016-08-19* ([patched][patch.invisibility])
-    * [playeranim][] ([BSD 2-Clause][lic.playeranim]) - version [0ca8e5a Git][ver.playeranim] *2016-12-07* ([patched][patch.playeranim])
+    * [playeranim][] ([BSD 2-Clause][lic.playeranim]) - version [59bcd38 Git][ver.playeranim] *2017-06-07* ([patched][patch.playeranim])
     * [wardrobe][] ([WTFPL][lic.wtfpl]) -- version: [1.1-2-c48b011 Git][ver.wardrobe] *2015-05-21*
 * protection/
     * [areas][] ([LGPL][lic.lgpl2.1]) -- version [289d0e6 Git][ver.areas] *2017-06-09*
@@ -480,7 +480,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.nether]: https://github.com/PilzAdam/nether/tree/bc2ccfb
 [ver.peaceful_npc]: https://github.com/jojoa1997/peaceful_npc/tree/2b3a7a5
 [ver.pipeworks]: https://github.com/minetest-mods/pipeworks/tree/2eff6e3
-[ver.playeranim]: https://github.com/minetest-mods/playeranim/tree/0ca8e5a
+[ver.playeranim]: https://github.com/minetest-mods/playeranim/tree/59bcd38
 [ver.privilegeareas]: https://github.com/minetest-mods/privilegeareas/tree/aebaa00
 [ver.quartz]: https://github.com/minetest-mods/quartz/tree/00ca4eb
 [ver.rainbow_ore]: https://github.com/FsxShader2012/rainbow_ore/tree/6e77693
@@ -551,7 +551,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.mysheetmetal]: https://github.com/AntumDeluge/mtmod-mysheetmetal/tree/b7d644b
 [patch.nether]: https://github.com/AntumDeluge/mtmod-nether/tree/d4e5a2a
 [patch.peaceful_npc]: https://github.com/AntumDeluge/mtmod-peaceful_npc/tree/cbae09e
-[patch.playeranim]: https://github.com/AntumDeluge/mtmod-playeranim/tree/a64d144
+[patch.playeranim]: https://github.com/AntumDeluge/mtmod-playeranim/tree/8a289b9
 [patch.quartz]: https://github.com/AntumDeluge/mtmod-quartz/tree/d23dabd
 [patch.rainbow_ore]: https://github.com/AntumDeluge/mtmod-rainbow_ore/tree/60dc35e
 [patch.snowdrift]: https://github.com/AntumDeluge/mtmod-snowdrift/tree/1b9da4f
