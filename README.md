@@ -28,7 +28,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [moreblocks][] ([zlib][lic.moreblocks]) -- version: [fbfb079 Git][ver.moreblocks] *2017-03-14* ([patched][patch.moreblocks])
     * [stairsplus][] ([zlib][lic.stairsplus]) -- version: [311e1f0 Git][ver.stairsplus] *2013-05-30*
     * [windmill][] ([WTFPL][lic.windmill]) -- version: [47b029d Git][ver.windmill] *2014-08-21* ([patched][patch.windmill])
-* [campfire][] ([GPL][lic.gpl2.0] / [CC BY-SA][lic.ccbysa] / [WTFPL][lic.campfire]) -- version: [b45acd2 Git][ver.campfire] *2016-02-18* ([patched][patch.campfire])
+* [campfire][] ([GPL][lic.gpl2.0] / [CC BY-SA][lic.ccbysa] / [WTFPL][lic.campfire]) -- version: [04b4ea5 Git][ver.campfire] *2017-06-08*
 * chat/
     * [away][] ([GPL][lic.gpl2.0]) -- version: [4c1e5a9 Git][ver.away] *2012-03-09* ([patched][patch.away])
     * [chatlog][] ([CC0][lic.cc0]) -- version: (no version info) *2013-06-09* ([patched][patch.chatlog])
@@ -416,7 +416,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.biome_lib]: https://github.com/minetest-mods/biome_lib/tree/7f54d95
 [ver.bookmarks_gui]: https://github.com/cornernote/minetest-bookmarks_gui/tree/d369dba
 [ver.bridges]: https://github.com/Sokomine/bridges/tree/5b5f475
-[ver.campfire]: https://github.com/Napiophelios/campfire/tree/b45acd2
+[ver.campfire]: https://github.com/Napiophelios/campfire/tree/04b4ea5
 [ver.castle_farming]: https://github.com/minetest-mods/castle_farming/tree/a190dcf
 [ver.castle_gates]: https://github.com/minetest-mods/castle_gates/tree/dc53584
 [ver.castle_lighting]: https://github.com/minetest-mods/castle_lighting/tree/a7110c6
@@ -517,7 +517,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.bags]: https://github.com/AntumDeluge/mtmod-bags/tree/4363284
 [patch.bedrock2]: https://github.com/AntumDeluge/mtmod-bedrock2/tree/51b25b6
 [patch.bridges]: https://github.com/AntumDeluge/mtmod-bridges/tree/ba8f71a
-[patch.campfire]: https://github.com/AntumDeluge/mtmod-campfire/tree/7b2394a
 [patch.castle_gates]: https://github.com/AntumDeluge/mtmod-castle_gates/tree/465ad4f
 [patch.castle_lighting]: https://github.com/AntumDeluge/mtmod-castle_lighting/tree/b360c54
 [patch.castle_masonry]: https://github.com/AntumDeluge/mtmod-castle_masonry/tree/0aae8d9
