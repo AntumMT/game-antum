@@ -63,15 +63,10 @@ homedecor.register("bed_regular", {
 	end,
 	on_rightclick = function(pos, node, clicker, itemstack, pointed_thing)
 		local itemname = itemstack:get_name()
-		if itemname == "homedecor:bed_regular" then
-			homedecor.bed_expansion(pos, clicker, itemstack, pointed_thing, true)
-			return itemstack
-		else
---			if minetest.get_modpath("beds") then
---				beds.on_rightclick(pos, clicker)
---			end
-			return itemstack
+		if minetest.get_modpath("beds") then
+			beds.on_rightclick(pos, clicker)
 		end
+		return itemstack
 	end
 })
 
@@ -98,13 +93,13 @@ homedecor.register("bed_extended", {
 		unifieddyes.after_dig_node(pos, oldnode, oldmetadata, digger)
 		homedecor.unextend_bed(pos)
 	end,
---	on_rightclick = function(pos, node, clicker, itemstack, pointed_thing)
---		local itemname = itemstack:get_name()
---		if minetest.get_modpath("beds") then
---			beds.on_rightclick(pos, clicker)
---		end
---		return itemstack
---	end,
+	on_rightclick = function(pos, node, clicker, itemstack, pointed_thing)
+		local itemname = itemstack:get_name()
+		if minetest.get_modpath("beds") then
+			beds.on_rightclick(pos, clicker)
+		end
+		return itemstack
+	end,
 	drop = "homedecor:bed_regular"
 })
 
@@ -139,13 +134,13 @@ homedecor.register("bed_kingsize", {
 			inv:add_item("main", "homedecor:bed_regular 2")
 		end
 	end,
---	on_rightclick = function(pos, node, clicker, itemstack, pointed_thing)
---		local itemname = itemstack:get_name()
---		if minetest.get_modpath("beds") then
---			beds.on_rightclick(pos, clicker)
---		end
---		return itemstack
---	end
+	on_rightclick = function(pos, node, clicker, itemstack, pointed_thing)
+		local itemname = itemstack:get_name()
+		if minetest.get_modpath("beds") then
+			beds.on_rightclick(pos, clicker)
+		end
+		return itemstack
+	end
 })
 
 for _, w in pairs({ N_("mahogany"), N_("oak") }) do

@@ -161,7 +161,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* [crafting_bench][] -- version [3aa4cfb Git][ver.crafting_bench] *2017-02-28* ([patched][patch.crafting_bench])
 * [Creatures MOB-Engine][cme] ([zlib / CC-BY-SA][lic.cme]) -- version: [2.3.1-0-e3502a1 Git][ver.cme] *2016-02-16* ([patched][patch.cme])
 * [deploy_nodes][] ([BSD 3-Clause][lic.deploy_nodes]) -- version [eb3d68c Git][ver.deploy_nodes] *2015-05-19* ([patched][patch.deploy_nodes])
-* [homedecor][] ([LGPL / WTFPL / CC BY-SA / CC0][lic.homedecor]) -- version: [5c52111 Git][ver.homedecor] *2017-05-25*
+* [homedecor][] ([LGPL / WTFPL / CC BY-SA / CC0][lic.homedecor]) -- version: [5c52111 Git][ver.homedecor] *2017-05-25* ([patched][patch.homedecor])
 * [mesecons][] ([LGPL / CC BY-SA][lic.mesecons]) -- version: [564bdc2 Git][ver.mesecons] *2017-05-08* ([patched][patch.mesecons])
 * [mobf_core][animals] (part of "animals" modpack) ([CC BY-SA][lic.ccbysa3.0]) -- version: [1199ca9 Git][ver.mobf_core] *2017-01-14* ([patched][patch.mobf_core])
 * [minetest_game][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- version: [f855bee Git][ver.minetest_game] *2017-06-06* ([patched][patch.minetest_game])
@@ -540,6 +540,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.farming_plus]: https://github.com/AntumDeluge/mtmod-farming_plus/tree/454a443
 [patch.hbarmor]: https://github.com/AntumDeluge/mtmod-hbarmor/tree/d1168bb
 [patch.helicopter]: https://github.com/AntumDeluge/mtmod-helicopter/tree/dd53fdd
+[patch.homedecor]: https://github.com/AntumDeluge/mtmp-homedecor/tree/52dc75a
 [patch.hovercraft]: https://github.com/AntumDeluge/mtmod-hovercraft/tree/73a6223
 [patch.hud]: https://github.com/AntumDeluge/mtmod-hud/tree/6846e20
 [patch.hudbars]: https://github.com/AntumDeluge/mtmod-hudbars/tree/31926a0
