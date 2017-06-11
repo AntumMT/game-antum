@@ -539,7 +539,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.hudbars]: https://github.com/AntumDeluge/mtmod-hudbars/tree/31926a0
 [patch.invisibility]: https://github.com/AntumDeluge/mtmod-invisibility/tree/f045c7c
 [patch.mesecons]: https://github.com/AntumDeluge/mtmp-mesecons/tree/830823a
-[patch.minetest_game]: https://github.com/AntumDeluge/mtgame-minetest/tree/796035a
+[patch.minetest_game]: https://github.com/AntumDeluge/mtgame-minetest/tree/470c2b1
 [patch.mobf_core]: https://github.com/AntumDeluge/mtmp-mobf_core/tree/c0f3639
 [patch.mobs_animal]: https://github.com/AntumDeluge/mtmod-mobs_animal/tree/3f3249e
 [patch.mobs_goblins]: https://github.com/AntumDeluge/mtmod-mobs_goblins/tree/c34401a
