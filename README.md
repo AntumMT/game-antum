@@ -170,7 +170,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [castle_shields][] -- version [a7110c6 Git][ver.castle_shields] *2017-02-28* ([patched][patch.castle_shields])
 	* [castle_storage][] -- version [2b9e5f6 Git][ver.castle_storage] *2017-02-28* ([patched.castle_storage])
 	* [castle_tapestries][] -- version [78b6e36 Git][ver.castle_tapestries] *2017-03-19* ([patched][patch.castle_tapestries])
-	* [castle_weapons][] -- version [5f5ebcc Git][ver.castle_weapons] *2017-06-07*
+	* [castle_weapons][] -- version [5f5ebcc Git][ver.castle_weapons] *2017-06-07* ([patched][patch.castle_weapons])
 	* [crafting_bench][] -- version [ca21489 Git][ver.crafting_bench] *2017-06-07*
 * [mymods]
 	* [mydoors][] ([CC-BY / CC-BY-SA][lic.mydoors] / [WTFPL][lic.wtfpl] / [DWYWFPL][lic.dwywpl]) -- version: [63aef13 Git][ver.mydoors] *2017-03-31* ([patched][patch.mydoors])
@@ -520,6 +520,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.castle_shields]: https://github.com/AntumDeluge/mtmod-castle_shields/tree/47ffc27
 [patch.castle_storage]: https://github.com/AntumDeluge/mtmod-castle_storage/tree/b80b72f
 [patch.castle_tapestries]: https://github.com/AntumDeluge/mtmod-castle_tapestries/tree/4e70f1b
+[patch.castle_weapons]: https://github.com/AntumDeluge/mtmod-castle_weapons/tree/669db13
 [patch.chatlog]: https://github.com/AntumDeluge/mtmod-chatlog/tree/ba6dabf
 [patch.christmas]: https://github.com/AntumDeluge/mtmod-christmas/tree/7ffdc67
 [patch.clean]: https://github.com/AntumDeluge/mtmod-clean/tree/6ba5bad
