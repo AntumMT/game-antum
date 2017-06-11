@@ -553,7 +553,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.peaceful_npc]: https://github.com/AntumDeluge/mtmod-peaceful_npc/tree/cbae09e
 [patch.playeranim]: https://github.com/AntumDeluge/mtmod-playeranim/tree/8a289b9
 [patch.quartz]: https://github.com/AntumDeluge/mtmod-quartz/tree/d23dabd
-[patch.rainbow_ore]: https://github.com/AntumDeluge/mtmod-rainbow_ore/tree/60dc35e
+[patch.rainbow_ore]: https://github.com/AntumDeluge/mtmod-rainbow_ore/tree/0f2a9e8
 [patch.snowdrift]: https://github.com/AntumDeluge/mtmod-snowdrift/tree/1b9da4f
 [patch.spawneggs]: https://github.com/AntumDeluge/mtmod-spawneggs/tree/f2cc4cc
 [patch.spidermob]: https://github.com/AntumDeluge/mtmod-spidermob/tree/25a88ff
