@@ -5,6 +5,8 @@ local old_nodes = {}
 local old_entities = {
 	-- Broken
 	'animal_chicken:chicken',
+	'animal_sheep:sheep',
+	'animal_sheep:sheep_naked',
 	'animal_dm:dm',
 	'sneeker:sneeker',
 }
