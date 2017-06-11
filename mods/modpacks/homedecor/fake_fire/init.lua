@@ -199,7 +199,7 @@ minetest.register_tool("fake_fire:flint_and_steel", {
 	tool_capabilities = {
 		full_punch_interval = 1.0,
 		max_drop_level=0,
-		groupcaps={flamable = {uses=65, maxlevel=1}}
+		groupcaps={flamable = {uses=0, maxlevel=1}}
 	},
 	on_use = function(itemstack, user, pointed_thing)
 		if pointed_thing.type == "node" and minetest.get_node(pointed_thing.above).name == "air" then
