@@ -97,7 +97,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [more_chests][] ([GPL][lic.gpl2.0]) -- version [c597779 Git][ver.more_chests] *2017-02-27*
 * tools/
 	* [compassgps][] ([WTFPL][lic.wtfpl] / [CC0][lic.cc0] / [CC BY-SA][lic.ccbysa]) -- version: [96892a0 Git][ver.compassgps] *2015-07-31* ([patched][patch.compassgps])
-    * [tools_obsidian][] ([LGPL / CC BY-SA][lic.tools_obsidian]) -- version: [f77fd79][ver.tools_obsidian] *2016-03-19*
+    * [tools_obsidian][] ([LGPL / CC BY-SA][lic.tools_obsidian]) -- version: [f77fd79][ver.tools_obsidian] *2016-03-19* ([patched][patch.tools_obsidian])
     * [workbench][] ([GPL / WTFPL](mods/tools/workbench/LICENSE)) -- version: [74dd1af Git][ver.workbench] *2017-02-07* ([patched][patch.workbench])
 * transport/
 	* [helicopter][] ([GPL][lic.gpl2.0]) -- version: [10f1433 Git][ver.helicopter] ([patched][patch.helicopter]) *2015-07-15*
@@ -561,6 +561,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.spidermob]: https://github.com/AntumDeluge/mtmod-spidermob/tree/25a88ff
 [patch.technic]: https://github.com/AntumDeluge/mtmod-technic/tree/b608509
 [patch.throwing]: https://github.com/AntumDeluge/mtmod-throwing/tree/7b48d90
+[patch.tools_obsidian]: https://github.com/AntumDeluge/mtmod-tools_obsidian/tree/2d19297
 [patch.trash_can]: https://github.com/AntumDeluge/mtmod-trash_can/tree/5a92bf4
 [patch.walking_light]: https://github.com/AntumDeluge/mtmod-walking_light/tree/67211ea
 [patch.windmill]: https://github.com/AntumDeluge/mtmod-windmill/tree/7756ab4

@@ -1,3 +1,18 @@
+
+local t_uses = {}
+local tool_wear_enabled = minetest.settings:get_bool("enable_tool_wear")
+if tool_wear_enabled == nil then
+	-- Default is enabled
+	tool_wear_enabled = true
+end
+
+if tool_wear_enabled then
+	t_uses.forty = 40
+else
+	t_uses.forty = 0
+end
+
+
 minetest.register_tool("tools_obsidian:sword_obsidian", {
 	description = "Obsidian Sword",
 	inventory_image = "tools_obsidian_sword.png",
@@ -9,7 +24,7 @@ minetest.register_tool("tools_obsidian:sword_obsidian", {
         range = 4.0,
 		max_drop_level=1,
 		groupcaps={
-			snappy={times={[1]=1.90, [2]=0.90, [3]=0.30}, uses=0, maxlevel=3},
+			snappy={times={[1]=1.90, [2]=0.90, [3]=0.30}, uses=t_uses.forty, maxlevel=3},
 		},
 		damage_groups = {fleshy=14},
 	}
@@ -41,7 +56,7 @@ minetest.register_tool("tools_obsidian:longsword_obsidian", {
         range = 4.0,
 		max_drop_level=2,
 		groupcaps={
-			snappy={times={[1]=1.90, [2]=0.90, [3]=0.30}, uses=0, maxlevel=3},
+			snappy={times={[1]=1.90, [2]=0.90, [3]=0.30}, uses=t_uses.forty, maxlevel=3},
 		},
 		damage_groups = {fleshy=26},
 	}
@@ -73,7 +88,7 @@ minetest.register_tool("tools_obsidian:dagger_obsidian", {
         range = 3.0,
 		max_drop_level=2,
 		groupcaps={
-			snappy={times={[1]=1.90, [2]=0.90, [3]=0.30}, uses=0, maxlevel=3},
+			snappy={times={[1]=1.90, [2]=0.90, [3]=0.30}, uses=t_uses.forty, maxlevel=3},
 		},
 		damage_groups = {fleshy=2},
 	}
