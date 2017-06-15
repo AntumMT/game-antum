@@ -1771,10 +1771,10 @@ only_peaceful_mobs = false
 
 # *** mobs_animal ***
 
-# Sets spawn rate of mobs_animal:sheep (0 = disabled).
+# Sets spawn rate of sheep (0 = disabled).
 #    type: int
 #    default: ???
-mobs_animal:sheep = 0
+mobs_animal:sheep_white = 0
 
 
 # *** sneeker ***
