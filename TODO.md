@@ -1,11 +1,68 @@
 ## A list of changes to make for Antum game
 
 
-#### Bugs to fix
-* ethereal
-    * setting bonemeal causes server to crash
+---
 
-#### Recipes with undefined ingredients:
+### Bugs
+
+---
+
+### Nodes
+
+#### Nodes that are too common in game
+
+#### Sleeping
+* beds
+    * add option to allow night skip for single player in bed
+
+#### Nodes that should emit light, but don't
+* homedecor:candle???
+
+#### Damage
+* trampoline
+    * player should not receive damage from falling on tramp
+
+#### Glass nodes to make connected
+
+---
+
+### Broken nodes
+
+#### Doors
+* my_future_doors:door\*a
+
+#### Misc
+* jukebox:box
+
+---
+
+### Entities
+
+#### Duplicate mobiles types
+* mobs:sheep
+
+#### Overspawning
+* sneeker:sneeker
+
+#### Convert to 'mobs_redo' engine
+* sneeker:sneeker
+* spidermob
+* cme:sheep
+
+#### Misc
+* cme:sheep
+    * make only drop wool when shorn (or killed)
+
+---
+
+### Crafting
+
+#### Recipes to override / change
+* craftguide:sign
+* default:book
+    * 3 paper, 3 ???
+
+#### Undefined ingredients:
 * dye
 	* dye:black
 	* dye:cyan
@@ -16,7 +73,7 @@
 	* dye:magenta
 	* dye:pink
 
-#### Recipes that are unusable due to redefinition or override:
+#### Unusable due to redefinition or override:
 * my_future_doors (sliding doors all use same recipe)
 	* my_future_doors:door2a (Steel Sliding Door)
 	* my_future_doors:door3a (Squared Sliding Door)
@@ -28,29 +85,18 @@
 
 #### Duplicate recipes:
 
-#### Craft recipes to override:
-* bags:
-	* small
-		* Use leather & thread
-	* medium
-		* Use 9 small bags
-	* large
-		* Use 9 mediaum bags
-* default:
-	* book
-		* 3 paper, 3 ???
-	* furnace
-		* Add coal or something similar to recipe
-
 #### Aliases that do not register:
-* farming_plus:
-	* farming:cotton -> farming:cotton_3
-* moreblocks:
-	* stairs:stair_stone -> moreblocks:stair_stone
-	* stairs:slab_stone -> moreblocks:slab_stone
-	* stairs:stair_cobble -> moreblocks:stair_cobble
 
-#### Craft items that need new aliases
+---
+
+### Items
+
+#### Items to make work with 'walking_light'
+* ethereal:candle
+* moreblocks:glow_glass
+* moreblocks:super_glow_glass
+
+#### Items that need new aliases
 * my_future_doors
 	* my_future_doors:door2a
 	* my_future_doors:door3a
@@ -60,27 +106,32 @@
 * my_misc_doors
 	* my_misc_doors:door2a
 
-#### Craft items that need new descriptions
+#### Items that need new descriptions
 
-#### Craft items that need new inventory textures
+#### Items that need new inventory textures
 
-#### Items that do not function correctly
-* moreblocks:glow_glass & moreblocks:super_glow_glass
-	* Make work with connected glass setting
+#### Duplicates or items with similar function
+* mobs:magic_lasso
+    * lasso???
 
-#### Items to make work with walking_light
-* ethereal:candle
+---
 
-#### Nodes that are too common in game
+### Broken items
 
-#### Nodes that do not work right
-* my_future_doors:
-	* door*a
-* jukebox:
-	* box
+---
 
-#### Glass nodes to make connected
+### Tools / Weapons / Equipment
+
+#### Add optional setting to disable wear/break
+* all weapons
+* all armor
+
+---
+
+### Alternate / Additional mods
 
 #### Mods to create/look for
-* adamantine:
+* adamantine
 	* ore & tools
+* colored_glass
+    * use node coloring
