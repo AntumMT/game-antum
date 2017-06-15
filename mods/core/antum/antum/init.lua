@@ -7,7 +7,7 @@
 	See: LICENSE.txt
 --]]
 
-local testing = false
+local testing = true
 if testing then
 	core.settings:set_bool("creative_mode", true)
 	core.settings:set_bool("server_announce", false)

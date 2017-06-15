@@ -412,7 +412,7 @@ disallow_empty_password = true
 
 ## Dump the mapgen debug infos.
 #    type: bool
-#enable_mapgen_debug_info = false
+enable_mapgen_debug_info = true
 
 ## Maximum number of blocks that can be queued for loading.
 #    type: int
@@ -846,7 +846,7 @@ disallow_empty_password = true
 #  -    info
 #  -    verbose
 #    type: enum values: , warning, action, info, verbose
-#debug_log_level = action
+debug_log_level = verbose
 
 ## IPv6 support.
 #    type: bool
@@ -905,7 +905,7 @@ default_game = antum
 ## Message of the day displayed to players connecting.
 #    type: string
 #    default:
-motd = Antum Server
+motd = Antum Testing Server
 
 ## Verbose logging of mods
 #    type: bool
@@ -920,7 +920,7 @@ log_mods = true
 ## Logs extra debug messages.
 #    type: bool
 #    default: false
-#enable_debug_mods = false
+enable_debug_mods = true
 
 ## Inventory interface to use.
 #    type:    enum
