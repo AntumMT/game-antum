@@ -504,6 +504,13 @@ mesecon.piston_max_pull (Max pull) int 15
 mesecon.pplate_interval (Interval) float 0.1
 
 
+[*mob-engine]
+
+## Replace certain items with ones from "mobs" (mobs_redo) engine if available.
+#  E.g., 'mobs:meat_raw' will be used instead of 'creatures:flesh'.
+creatures.mobs_replace_items (Use items from 'mobs' engine) bool false
+
+
 [*moremesecons]
 
 [**Adjustable Blinky Plant]

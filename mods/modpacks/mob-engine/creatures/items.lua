@@ -20,20 +20,25 @@
 --
 
 
-core.register_craftitem("creatures:flesh", {
-	description = "Flesh",
-	inventory_image = "creatures_flesh.png",
-	on_use = core.item_eat(2),
-})
-
-core.register_craftitem("creatures:meat", {
-	description = "Cooked Meat",
-	inventory_image = "creatures_meat.png",
-	on_use = core.item_eat(4),
-})
-
-core.register_craft({
-	type = "cooking",
-	output = "creatures:meat",
-	recipe = "creatures:flesh",
-})
+if creatures.mobs_replace_items then
+	minetest.register_alias("creatures:flesh", "mobs:meat_raw")
+	minetest.register_alias("creatures:meat", "mobs:meat")
+else
+	core.register_craftitem("creatures:flesh", {
+		description = "Flesh",
+		inventory_image = "creatures_flesh.png",
+		on_use = core.item_eat(2),
+	})
+	
+	core.register_craftitem("creatures:meat", {
+		description = "Cooked Meat",
+		inventory_image = "creatures_meat.png",
+		on_use = core.item_eat(4),
+	})
+	
+	core.register_craft({
+		type = "cooking",
+		output = "creatures:meat",
+		recipe = "creatures:flesh",
+	})
+end

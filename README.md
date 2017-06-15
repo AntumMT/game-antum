@@ -172,7 +172,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [castle_tapestries][] -- version [78b6e36 Git][ver.castle_tapestries] *2017-03-19* ([patched][patch.castle_tapestries])
 	* [castle_weapons][] -- version [5f5ebcc Git][ver.castle_weapons] *2017-06-07* ([patched][patch.castle_weapons])
 	* [crafting_bench][] -- version [ca21489 Git][ver.crafting_bench] *2017-06-07*
-* [mob-engine][] ([zlib][lic.mob-engine] / [CC BY-SA][lic.ccbysa3.0]) -- version: [138f655 Git][ver.mob-engine] *2017-06-04*
+* [mob-engine][] ([zlib][lic.mob-engine] / [CC BY-SA][lic.ccbysa3.0]) -- version: [138f655 Git][ver.mob-engine] *2017-06-04* ([patched][patch.mob-engine])
 * [mymods][]
 	* [mydoors][] ([CC-BY / CC-BY-SA][lic.mydoors] / [WTFPL][lic.wtfpl] / [DWYWFPL][lic.dwywpl]) -- version: [63aef13 Git][ver.mydoors] *2017-03-31* ([patched][patch.mydoors])
 	* [myfences][] ([DWYWPL][lic.dwywpl]) -- version: [c6e529a Git][ver.myfences] *2016-04-04*
@@ -544,6 +544,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.invisibility]: https://github.com/AntumDeluge/mtmod-invisibility/tree/f045c7c
 [patch.mesecons]: https://github.com/AntumDeluge/mtmp-mesecons/tree/830823a
 [patch.minetest_game]: https://github.com/AntumDeluge/mtgame-minetest/tree/339c7e1
+[patch.mob-engine]: https://github.com/AntumDeluge/mtmp-mob-engine/tree/0215ca5
 [patch.mobf_core]: https://github.com/AntumDeluge/mtmp-mobf_core/tree/c0f3639
 [patch.mobs_animal]: https://github.com/AntumDeluge/mtmod-mobs_animal/tree/3f3249e
 [patch.mobs_goblins]: https://github.com/AntumDeluge/mtmod-mobs_goblins/tree/c34401a

@@ -2075,3 +2075,17 @@ bedrock2_y = -28000
 #    type: bool
 #    default: true
 moremesecons_sayer.use_speech_dispatcher = false
+
+
+
+# **************
+# ** MODPACKS **
+# **************
+
+# ** mob-engine **
+
+## Replace certain items with ones from "mobs" (mobs_redo) engine if available.
+#  E.g., 'mobs:meat_raw' will be used instead of 'creatures:flesh'.
+#    type: bool
+#    default: false
+creatures.mobs_replace_items = true

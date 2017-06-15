@@ -21,8 +21,15 @@
 
 
 
--- Egg
-dofile(core.get_modpath("chicken") .. "/egg.lua")
+if creatures.mobs_replace_items then
+	-- Use egg & fried egg from 'mobs' engine
+	minetest.register_alias("creatures:egg", "mobs:egg")
+	minetest.register_alias("creatures:fried_egg", "mobs:chicken_egg_fried")
+else
+	-- Egg
+	dofile(core.get_modpath("chicken") .. "/egg.lua")
+end
+
 local function dropEgg(obj)
   local pos = obj:getpos()
   if pos then
@@ -30,30 +37,37 @@ local function dropEgg(obj)
   end
 end
 
--- Flesh
-core.register_craftitem(":creatures:chicken_flesh", {
-	description = "Raw Chicken Flesh",
-	inventory_image = "creatures_chicken_flesh.png",
-	on_use = core.item_eat(1)
-})
-
-core.register_craftitem(":creatures:chicken_meat", {
-	description = "Chicken Meat",
-	inventory_image = "creatures_chicken_meat.png",
-	on_use = core.item_eat(3)
-})
-
-core.register_craft({
-	type = "cooking",
-	output = "creatures:chicken_meat",
-	recipe = "creatures:chicken_flesh",
-})
-
--- Feather
-core.register_craftitem(":creatures:feather", {
-	description = "Feather",
-	inventory_image = "creatures_feather.png",
-})
+if creatures.mobs_replace_items then
+	-- Use meat & feather from 'mobs' engine
+	minetest.register_alias("creatures:chicken_flesh", "mobs:chicken_raw")
+	minetest.register_alias("creatures:chicken_meat", "mobs:chicken_cooked")
+	minetest.register_alias("creatures:feather", "mobs:chicken_feather")
+else
+	-- Flesh
+	core.register_craftitem(":creatures:chicken_flesh", {
+		description = "Raw Chicken Flesh",
+		inventory_image = "creatures_chicken_flesh.png",
+		on_use = core.item_eat(1)
+	})
+	
+	core.register_craftitem(":creatures:chicken_meat", {
+		description = "Chicken Meat",
+		inventory_image = "creatures_chicken_meat.png",
+		on_use = core.item_eat(3)
+	})
+	
+	core.register_craft({
+		type = "cooking",
+		output = "creatures:chicken_meat",
+		recipe = "creatures:chicken_flesh",
+	})
+	
+	-- Feather
+	core.register_craftitem(":creatures:feather", {
+		description = "Feather",
+		inventory_image = "creatures_feather.png",
+	})
+end
 
 local def = {
   -- general

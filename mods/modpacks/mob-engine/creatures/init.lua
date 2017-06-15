@@ -24,6 +24,15 @@ creatures = {}
 
 local modpath = core.get_modpath("creatures")
 
+creatures.mobs_replace_items = false
+
+if minetest.global_exists("mobs") then
+	-- Use items from 'mobs' engine
+	if minetest.settings:get_bool("creatures.mobs_replace_items") == true then
+		creatures.mobs_replace_items = true
+	end
+end
+
 -- API and common functions
 dofile(modpath .."/common.lua")
 dofile(modpath .."/functions.lua")

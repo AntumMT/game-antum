@@ -1,0 +1,3 @@
+## Replace certain items with ones from "mobs" (mobs_redo) engine if available.
+#  E.g., 'mobs:meat_raw' will be used instead of 'creatures:flesh'.
+creatures.mobs_replace_items (Use items from 'mobs' engine) bool false
