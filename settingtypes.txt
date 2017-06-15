@@ -88,6 +88,19 @@ remove_far_mobs (Remove far mobs) bool false
 [Mods]
 
 
+[*Admin]
+
+[**give_initial_stuff]
+
+#    Whether players will get initial itmes.
+give_initial_stuff (Give initial items) bool true
+
+# Defines what items new players will start with.
+# Comma-separated list: item1,item2 10,item3
+initial_stuff (Initial items) string default:sword_stone,default:pick_steel,default:apple 10
+
+
+
 [*Chat]
 
 
