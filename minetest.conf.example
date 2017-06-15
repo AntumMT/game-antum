@@ -1663,7 +1663,7 @@ share_bones_time_early = share_bones_time / 4
 # Enables/Disables stairsplus for coloredwood mod
 #    type: bool
 #    default: true
-coloredwood_enable_stairsplus = false
+coloredwood_enable_stairsplus = true
 
 
 
