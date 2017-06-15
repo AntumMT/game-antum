@@ -112,7 +112,9 @@
 
 #### Duplicates or items with similar function
 * mobs:magic_lasso
-    * lasso???
+    * animalmaterials:lasso
+* mobs:shears
+    * creatures:shears
 
 ---
 
@@ -125,6 +127,8 @@
 #### Add optional setting to disable wear/break
 * all weapons
 * all armor
+* creatures:shears
+* mobs:shears
 
 ---
 
