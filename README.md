@@ -32,6 +32,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * chat/
     * [away][] ([GPL][lic.gpl2.0]) -- version: [4c1e5a9 Git][ver.away] *2012-03-09* ([patched][patch.away])
     * [chatlog][] ([CC0][lic.cc0]) -- version: (no version info) *2013-06-09* ([patched][patch.chatlog])
+    * [listitems][] ([MIT][lic.listitems]) -- version: [6aec9d7 Git][ver.listitems] *2017-06-15*
 * crafting/
     * [craftguide][] ([GPL / WTFPL](mods/crafting/craftguide/LICENSE)) -- version: [86a96c3 Git][ver.craftguide] *2017-03-21* ([patched][patch.craftguide])
 * [currency][] ([WTFPL][lic.currency]) -- version: [3ee673d Git][ver.currency] *2017-05-18* ([patched][patch.currency])
@@ -246,6 +247,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [jukebox]: https://forum.minetest.net/viewtopic.php?t=13505
 [jumping]: https://forum.minetest.net/viewtopic.php?t=2957
 [lightning]: https://forum.minetest.net/viewtopic.php?t=13886
+[listitems]: https://github.com/AntumDeluge/mtmod-listitems
 [mesecons]: https://forum.minetest.net/viewtopic.php?t=628
 [minetest_game]: https://github.com/minetest/minetest_game
 [mob_horse]: https://github.com/tenplus1/mob_horse
@@ -353,6 +355,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.invisible]: mods/admin/invisible/readme.txt
 [lic.jukebox]: mods/furniture/jukebox/README.txt
 [lic.lightning]: mods/weather/lightning/README.md
+[lic.listitems]: mods/chat/listitems/LICENSE.txt
 [lic.mesecons]: mods/modpacks/mesecons/COPYING.txt
 [lic.mobf]: mods/modpacks/mobf_core/License.txt
 [lic.mobs_animal]: mods/mobiles/general/mobs_animal/license.txt
@@ -456,6 +459,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.invisibility]: https://github.com/tenplus1/invisibility/tree/bf4156b
 [ver.jukebox]: https://github.com/minetest-mods/jukebox/tree/e6a507f
 [ver.lightning]: https://github.com/minetest-mods/lightning/tree/39bd36c
+[ver.listitems]: https://github.com/AntumDeluge/mtmod-listitems/tree/6aec9d7
 [ver.mesecons]: https://github.com/minetest-mods/mesecons/tree/564bdc2
 [ver.minetest_game]: https://github.com/minetest/minetest_game/tree/f855bee
 [ver.mob_horse]: https://github.com/tenplus1/mob_horse/tree/dee3883

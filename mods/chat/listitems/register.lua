@@ -50,7 +50,7 @@ end
 local function removeListDuplicates(tlist)
 	local cleaned = {}
 	for index, value in ipairs(tlist) do
-		if not antum.listContains(cleaned, value) then
+		if not listContains(cleaned, value) then
 			table.insert(cleaned, value)
 		end
 	end
