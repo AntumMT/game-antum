@@ -115,7 +115,7 @@ local def = {
 	},
 
 	drops = function(self)
-		local items = {{"mobs:meat_raw"}}
+		local items = {{"creatures:flesh"}}
 		if self.has_wool then
 			table.insert(items, {"wool:" .. self.wool_color, {min = 1, max = 2}})
 		end

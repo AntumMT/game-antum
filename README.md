@@ -149,7 +149,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* mob_shark ([CC BY-SA][lic.amp_shark])
 		* mob_slime ([CC0 / CC BY / CC BY-SA / CC0][lic.amp_slime])
 		* mob_warthog ([CC BY / CC BY-SA][lic.amp_warthog])
-* [Creatures MOB-Engine][cme] ([zlib / CC-BY-SA][lic.cme]) -- version: [2.3.1-0-e3502a1 Git][ver.cme] *2016-02-16* ([patched][patch.cme])
 * [deploy_nodes][] ([BSD 3-Clause][lic.deploy_nodes]) -- version [b67e162 Git][ver.deploy_nodes] *2017-06-08*
 * [homedecor][] ([LGPL / WTFPL / CC BY-SA / CC0][lic.homedecor]) -- version: [5c52111 Git][ver.homedecor] *2017-05-25* ([patched][patch.homedecor])
 * [mesecons][] ([LGPL / CC BY-SA][lic.mesecons]) -- version: [564bdc2 Git][ver.mesecons] *2017-05-08* ([patched][patch.mesecons])
@@ -173,7 +172,8 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [castle_tapestries][] -- version [78b6e36 Git][ver.castle_tapestries] *2017-03-19* ([patched][patch.castle_tapestries])
 	* [castle_weapons][] -- version [5f5ebcc Git][ver.castle_weapons] *2017-06-07* ([patched][patch.castle_weapons])
 	* [crafting_bench][] -- version [ca21489 Git][ver.crafting_bench] *2017-06-07*
-* [mymods]
+* [mob-engine][] ([zlib][lic.mob-engine] / [CC BY-SA][lic.ccbysa3.0]) -- version: [138f655 Git][ver.mob-engine] *2017-06-04*
+* [mymods][]
 	* [mydoors][] ([CC-BY / CC-BY-SA][lic.mydoors] / [WTFPL][lic.wtfpl] / [DWYWFPL][lic.dwywpl]) -- version: [63aef13 Git][ver.mydoors] *2017-03-31* ([patched][patch.mydoors])
 	* [myfences][] ([DWYWPL][lic.dwywpl]) -- version: [c6e529a Git][ver.myfences] *2016-04-04*
 	* [mylights][] ([DWYWPL][lic.dwywpl]) -- version: [437fc0c Git][ver.mylights] *2016-03-23* ([patched][patch.mylights])
@@ -214,7 +214,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [chatlog]: https://forum.minetest.net/viewtopic.php?t=6220
 [christmas]: https://forum.minetest.net/viewtopic.php?t=3950
 [clean]: https://forum.minetest.net/viewtopic.php?t=2777
-[cme]: https://forum.minetest.net/viewtopic.php?t=8638
 [coloredwood]: https://forum.minetest.net/viewtopic.php?t=2411
 [compass]: https://forum.minetest.net/viewtopic.php?t=3785
 [compassgps]: https://forum.minetest.net/viewtopic.php?t=9373
@@ -250,6 +249,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [listitems]: https://github.com/AntumDeluge/mtmod-listitems
 [mesecons]: https://forum.minetest.net/viewtopic.php?t=628
 [minetest_game]: https://github.com/minetest/minetest_game
+[mob-engine]: https://github.com/minetest-mods/mob-engine
 [mob_horse]: https://github.com/tenplus1/mob_horse
 [mobs_animal]: https://github.com/tenplus1/mobs_animal
 [mobs_goblins]: https://forum.minetest.net/viewtopic.php?t=13004
@@ -337,7 +337,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.castle]: mods/modpacks/castle/LICENSE
 [lic.character_creator]: mods/player/visuals/character_creator/license.txt
 [lic.christmas]: mods/buildings/christmas/LICENSE.txt
-[lic.cme]: mods/modpacks/cme/LICENSE.txt
 [lic.crops]: mods/farming/crops/LICENSE
 [lic.currency]: https://forum.minetest.net/viewtopic.php?t=7002
 [lic.deploy_nodes]: mods/modpacks/deploy_nodes/LICENSE
@@ -357,6 +356,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.lightning]: mods/weather/lightning/README.md
 [lic.listitems]: mods/chat/listitems/LICENSE.txt
 [lic.mesecons]: mods/modpacks/mesecons/COPYING.txt
+[lic.mob-engine]: mods/modpacks/mob-engine/LICENSE
 [lic.mobf]: mods/modpacks/mobf_core/License.txt
 [lic.mobs_animal]: mods/mobiles/general/mobs_animal/license.txt
 [lic.mobs_goblins]: mods/mobiles/aggressive/mobs_goblins/README.md
@@ -429,7 +429,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.castle_weapons]: https://github.com/minetest-mods/castle_weapons/tree/5f5ebcc
 [ver.character_creator]: https://github.com/minetest-mods/character_creator/tree/6a0e6aa
 [ver.christmas]: https://github.com/TheZenKitteh/minetest-christmas/tree/d3bd872
-[ver.cme]: https://github.com/BlockMen/cme/tree/e3502a1
 [ver.coloredwood]: https://github.com/minetest-mods/coloredwood/tree/bd490be
 [ver.compassgps]: https://github.com/Kilarin/compassgps/tree/96892a0
 [ver.crafting_bench]: https://github.com/minetest-mods/crafting_bench/tree/ca21489
@@ -462,6 +461,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.listitems]: https://github.com/AntumDeluge/mtmod-listitems/tree/6aec9d7
 [ver.mesecons]: https://github.com/minetest-mods/mesecons/tree/564bdc2
 [ver.minetest_game]: https://github.com/minetest/minetest_game/tree/f855bee
+[ver.mob-engine]: https://github.com/minetest-mods/mob-engine/tree/138f655
 [ver.mob_horse]: https://github.com/tenplus1/mob_horse/tree/dee3883
 [ver.mobf_core]: https://github.com/sapier/mobf_core/tree/1199ca9
 [ver.mobs_animal]: https://github.com/tenplus1/mobs_animal/tree/ebc2e3a
@@ -528,7 +528,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.chatlog]: https://github.com/AntumDeluge/mtmod-chatlog/tree/ba6dabf
 [patch.christmas]: https://github.com/AntumDeluge/mtmod-christmas/tree/7ffdc67
 [patch.clean]: https://github.com/AntumDeluge/mtmod-clean/tree/6ba5bad
-[patch.cme]: https://github.com/AntumDeluge/mtmp-cme/tree/f6d1538
 [patch.compassgps]: https://github.com/AntumDeluge/mtmod-compassgps/tree/1d7e6a7
 [patch.craftguide]: https://github.com/AntumDeluge/mtmod-craftguide/tree/39b7ddf
 [patch.crops]: https://github.com/AntumDeluge/mtmod-crops/tree/0c5c649

@@ -20,7 +20,6 @@
 --
 
 
---[[
 core.register_craftitem("creatures:flesh", {
 	description = "Flesh",
 	inventory_image = "creatures_flesh.png",
@@ -38,4 +37,3 @@ core.register_craft({
 	output = "creatures:meat",
 	recipe = "creatures:flesh",
 })
-]]--
