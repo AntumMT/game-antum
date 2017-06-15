@@ -1,32 +1,15 @@
 --[[ LICENSE HEADER
   
-  MIT License
+  MIT Licensing
   
   Copyright © 2017 Jordan Irwin
   
-  Permission is hereby granted, free of charge, to any person obtaining a copy of
-  this software and associated documentation files (the "Software"), to deal in
-  the Software without restriction, including without limitation the rights to
-  use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
-  of the Software, and to permit persons to whom the Software is furnished to do
-  so, subject to the following conditions:
-  
-    The above copyright notice and this permission notice shall be included in
-    all copies or substantial portions of the Software.
-  
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-  SOFTWARE.
-  
+  See: LICENSE.txt
 --]]
 
 
 -- Retrieves a simplified table containing string names of registered items
-function antum.getRegisteredItemNames()
+local function getRegisteredItemNames()
 	local item_names = {}
 	for item, def in pairs(minetest.registered_items) do
 		table.insert(item_names, item)
@@ -39,8 +22,7 @@ end
 
 
 -- Compares a string from a list of substrings
--- FIXME: Move to Antum functions
-function antum.compareSubstringList(ss_list, s_value)
+local function compareSubstringList(ss_list, s_value)
 	for index, substring in ipairs(ss_list) do
 		-- Tests for substring (does not need to match full string)
 		if string.find(s_value, substring) then
@@ -53,8 +35,7 @@ end
 
 
 -- Checks if value is contained in list
--- FIXME: Move to Antum functions
-function antum.listContains(tlist, v)
+local function listContains(tlist, v)
 	for index, value in ipairs(tlist) do
 		if v == value then
 			return true
@@ -66,8 +47,7 @@ end
 
 
 -- Replaces duplicates found in a list
--- FIXME: Move to Antum functions
-function antum.removeListDuplicates(tlist)
+local function removeListDuplicates(tlist)
 	local cleaned = {}
 	for index, value in ipairs(tlist) do
 		if not antum.listContains(cleaned, value) then
@@ -79,16 +59,16 @@ function antum.removeListDuplicates(tlist)
 end
 
 
-antum.logAction('Registering chat command "listitems"')
+minetest.log('action', '[listitems] Registering chat command "listitems"')
 
 minetest.register_chatcommand('listitems', {
 	params = '[string1] [string2] ...',
 	description = 'List registered items',
 	func = function(player, param)
 		-- Make all parameters lowercase for case-insensitive matching
-		param = antum.removeListDuplicates(string.split(string.lower(param), ' '))
+		param = removeListDuplicates(string.split(string.lower(param), ' '))
 		
-		local all_item_names = antum.getRegisteredItemNames()
+		local all_item_names = getRegisteredItemNames()
 		local found_names = {}
 		
 		-- Check if table is empty
@@ -97,7 +77,7 @@ minetest.register_chatcommand('listitems', {
 		else
 			-- Need to fill item list
 			for I in pairs(all_item_names) do
-				if antum.compareSubstringList(param, string.lower(all_item_names[I])) then
+				if compareSubstringList(param, string.lower(all_item_names[I])) then
 					table.insert(found_names, all_item_names[I])
 				end
 			end
