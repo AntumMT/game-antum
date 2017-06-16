@@ -3,10 +3,6 @@
 
 ---
 
-### Bugs
-
----
-
 ### Nodes
 
 #### Nodes that are too common in game
@@ -49,8 +45,8 @@
 * spidermob
 * cme:sheep
 
-#### Misc
-* cme:sheep
+#### Mobiles drops
+* creatures:sheep
     * make only drop wool when shorn (or killed)
 
 ---
