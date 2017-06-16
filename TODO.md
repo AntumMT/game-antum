@@ -5,58 +5,78 @@
 
 ### Nodes
 
-#### Nodes that are too common in game
+#### Duplicates or similar function
+* homedecor:bed_*
+	* beds:bed_*
 
-#### Sleeping
+#### Too common in game
+
+#### Function changes
 * beds
-    * add option to allow night skip for single player in bed
-
-#### Nodes that should emit light, but don't
-* homedecor:candle???
-
-#### Damage
+   	* add option to allow night skip for single player in bed
 * trampoline
     * player should not receive damage from falling on tramp
 
+#### Should emit light, but don't
+* homedecor:candle???
+
 #### Glass nodes to make connected
 
----
+#### Broken
+* Doors
+	* my_future_doors:door\*a
+* Misc
+	* jukebox:box
 
-### Broken nodes
+#### Fix unknown
 
-#### Doors
-* my_future_doors:door\*a
-
-#### Misc
-* jukebox:box
 
 ---
 
 ### Entities
 
-#### Duplicate mobiles types
+#### Spawn/Death
+* Use max spawn instead of timeout
+* Reduce spawn rate
+	* creatures:sheep
+	* sneeker:sneeker
+
+#### Duplicates
 * mobs:sheep
 
-#### Overspawning
-* sneeker:sneeker
-
-#### Convert to 'mobs_redo' engine
-* sneeker:sneeker
-* spidermob
-* cme:sheep
-
-#### Mobiles drops
+#### Drops
 * creatures:sheep
     * make only drop wool when shorn (or killed)
+* mob_horse:horse
+	* drop 'mobs:leather'
+* spidermob:spider
+	* fix 'farming:cotton' drop
+	* drop 'mobs:meat_raw' instead of 'spidermob:meat_raw'
+
+#### Graphics
+* spidermob:spider
+	* Use 'enable_blood' setting
+
+#### Engine changes
+* Convert to 'mobs' (mobs_redo)
+	* creature:sheep???
+	* sneeker:sneeker
+	* spidermob:spider
+* Unify mobiles/engines
+
 
 ---
 
 ### Crafting
 
 #### Recipes to override / change
+* craftguide:book
 * craftguide:sign
+	* use recipe from 'craft_guide' mod
 * default:book
     * 3 paper, 3 ???
+* farming:cotton
+	* use wool
 
 #### Undefined ingredients:
 * dye
@@ -83,16 +103,17 @@
 
 #### Aliases that do not register:
 
+
 ---
 
 ### Items
 
-#### Items to make work with 'walking_light'
+#### To make work with 'walking_light'
 * ethereal:candle
 * moreblocks:glow_glass
 * moreblocks:super_glow_glass
 
-#### Items that need new aliases
+#### Need new/more aliases
 * my_future_doors
 	* my_future_doors:door2a
 	* my_future_doors:door3a
@@ -102,9 +123,9 @@
 * my_misc_doors
 	* my_misc_doors:door2a
 
-#### Items that need new descriptions
+#### Need new descriptions
 
-#### Items that need new inventory textures
+#### Need new inventory textures
 
 #### Duplicates or items with similar function
 * mobs:magic_lasso
@@ -112,9 +133,13 @@
 * mobs:shears
     * creatures:shears
 
----
+#### Fix unknown
+* ethereal:bone
+* homedecor:glowlight_small_cube_white
 
-### Broken items
+
+#### Broken
+
 
 ---
 
@@ -125,6 +150,12 @@
 * all armor
 * creatures:shears
 * mobs:shears
+* technic:treetap
+
+#### Change/Add/Understand function
+* compassgps
+	* How to reset
+
 
 ---
 
@@ -135,3 +166,24 @@
 	* ore & tools
 * colored_glass
     * use node coloring
+
+
+---
+
+### World
+
+#### Weather
+* Make snow only in cold biomes
+
+#### Misc
+* Look at 'remove far entities' option
+
+
+---
+
+### UI
+
+#### Inventory
+* Switch to 'sfinv'
+* Convert to use 'sfinv'
+	* bags
