@@ -5,7 +5,6 @@ flowers
 doors
 bakedclay?
 moreblocks?
-moretrees?
 intllib?
 lucky_block?
 animalmaterials?

@@ -44,6 +44,11 @@ ethereal.swamp     = 1 -- Swamp areas with vines on tree's, mushrooms, lilly's a
 ethereal.sealife   = 1 -- Enable coral and seaweed
 ethereal.reefs     = 1 -- Enable new 0.4.15 coral reefs in default
 
+ethereal.use_animalmaterials = false
+if minetest.get_modpath("animalmaterials") and minetest.settings:get_bool("ethereal.use_animalmaterials") then
+	ethereal.use_animalmaterials = true
+end
+
 local path = minetest.get_modpath("ethereal")
 
 -- Load new settings if found

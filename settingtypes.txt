@@ -346,6 +346,12 @@ advtrains_enable_debugging (Enable debugging) bool false
 bedrock2_y (Bedrock height) int -30912
 
 
+[**ethereal]
+
+# Instead of registering new item 'ethereal:bone', registers alias of 'animalmaterials.bone'.
+ethereal.use_animalmaterials (Use bone from animalmaterials) bool false
+
+
 [*Misc.]
 
 

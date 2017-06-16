@@ -120,7 +120,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [bedrock2][] ([WTFPL][lic.wtfpl]) -- version [1.2.2 (5fe9e87 Git)][ver.bedrock2] *2016-11-21* ([patched][patch.bedrock2])
     * [biome_lib][] ([WTFPL][lic.wtfpl]) -- version: [7f54d95 Git][ver.biome_lib] *2017-05-18*
     * [desert_life][] ([CC BY-SA][lic.ccbysa4.0]) -- version: [d448fa3 Git][ver.desert_life] *2017-01-01*
-    * [ethereal][] ([MIT][lic.ethereal]) -- version [2c24961 Git][ver.ethereal] *2017-04-23* ([patched][patch.ethereal])
+    * [ethereal][] ([MIT][lic.ethereal]) -- version [8917c9d Git][ver.ethereal] *2017-06-12* ([patched][patch.ethereal])
     * [hill_nodebox][] ([BSD 3-Clause][lic.hill_nodebox]) -- version [41bbfa2 Git][ver.hill_nodebox] *2014-12-13*
     * [nether][] ([WTFPL / CC BY-SA][lic.nether]) -- version: [bc2ccfb Git][ver.nether] *2017-01-04* ([patched][patch.nether])
 
@@ -439,7 +439,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.desert_life]: https://github.com/NathanSalapat/desert_life/tree/d448fa3
 [ver.drawers]: https://github.com/minetest-mods/drawers/tree/7063e2b
 [ver.enchanting]: https://github.com/minetest-mods/enchanting/tree/13ea31c
-[ver.ethereal]: https://github.com/tenplus1/ethereal/tree/2c24961
+[ver.ethereal]: https://github.com/tenplus1/ethereal/tree/8917c9d
 [ver.farming_plus]: https://github.com/PilzAdam/farming_plus/tree/7e0d976
 [ver.fort_spikes]: https://github.com/xeranas/fort_spikes/tree/3c7d7c6
 [ver.glow]: https://github.com/bdjnk/glow/tree/78d0166
@@ -533,7 +533,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.crops]: https://github.com/AntumDeluge/mtmod-crops/tree/0c5c649
 [patch.currency]: https://github.com/AntumDeluge/mtmod-currency/tree/9e9b1be
 [patch.drawers]: https://github.com/AntumDeluge/mtmod-drawers/tree/a77f809
-[patch.ethereal]: https://github.com/AntumDeluge/mtmod-ethereal/tree/9f50d6e
+[patch.ethereal]: https://github.com/AntumDeluge/mtmod-ethereal/tree/4dd599e
 [patch.farming_plus]: https://github.com/AntumDeluge/mtmod-farming_plus/tree/454a443
 [patch.hbarmor]: https://github.com/AntumDeluge/mtmod-hbarmor/tree/d1168bb
 [patch.helicopter]: https://github.com/AntumDeluge/mtmod-helicopter/tree/dd53fdd
