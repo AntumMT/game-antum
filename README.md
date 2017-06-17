@@ -66,7 +66,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [sneeker][] ([WTFPL][lic.wtfpl] / [CC0][lic.cc0]) -- version: [a56b9c2 Git][ver.sneeker] *2017-06-07*
     * [spidermob][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0] / [MIT][lic.mit] / [WTFPL][lic.spidermob] / [Unlicense][lic.unlicense]) -- version [8f9080a Git][ver.spidermob] *2017-06-02* ([patched][patch.spidermob])
 * mobiles/engine/
-    * [mobs_redo][] ([MIT][lic.mobs_redo]) -- version: [4eb1c93 Git][ver.mobs_redo] *2017-06-04* ([patched][patch.mobs_redo])
+    * [mobs_redo][] ([MIT][lic.mobs_redo]) -- version: [4eb1c93 Git][ver.mobs_redo] *2017-06-04* ([patched][patch.mobs_redo]) ***UPDATE***
 * mobiles/general/
 	* [mobs_animal][] ([MIT][lic.mobs_animal]) -- version: [ebc2e3a Git][ver.mobs_animal] *2017-05-27* ([patched][patch.mobs_animal])
 * mobiles/passive/
@@ -551,7 +551,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.mobs_animal]: https://github.com/AntumDeluge/mtmod-mobs_animal/tree/3f3249e
 [patch.mobs_goblins]: https://github.com/AntumDeluge/mtmod-mobs_goblins/tree/68f9235
 [patch.mobs_monster]: https://github.com/AntumDeluge/mtmod-mobs_monster/tree/71d3e0c
-[patch.mobs_redo]: https://github.com/AntumDeluge/mtmod-mobs_redo/tree/d8edf22
+[patch.mobs_redo]: https://github.com/AntumDeluge/mtmod-mobs_redo/tree/3a82320
 [patch.moreblocks]: https://github.com/AntumDeluge/mtmod-moreblocks/tree/abb2e49
 [patch.moreores]: https://github.com/AntumDeluge/mtmod-moreores/tree/51fbd4f
 [patch.mydoors]: https://github.com/AntumDeluge/mtmp-mydoors/tree/e36c9d1
