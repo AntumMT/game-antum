@@ -3,7 +3,6 @@ default
 animalmaterials?
 bags?
 carts?
-coloredwood?
 dye?
 ethereal?
 farming?

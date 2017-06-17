@@ -82,9 +82,66 @@ end
 
 
 -- Registers a craft & displays a log message
-function antum.registerCraft(craft)
-	antum.logAction('Registering craft recipe for "' .. craft.output .. '"')
-	minetest.register_craft(craft)
+function antum.registerCraft(def)
+	if antum.verbose then
+		antum.logAction('Registering craft recipe for "' .. def.output .. '"')
+	end
+	
+	minetest.register_craft(def)
+end
+
+
+-- De-registers a craft by output
+function antum.clearCraftOutput(output)
+	if antum.verbose then
+		antum.logAction('Clearing craft by output: ' .. output)
+	end
+	
+	minetest.clear_craft({
+		output = output
+	})
+end
+
+
+-- De-registers craft by recipe
+function antum.clearCraftRecipe(recipe)
+	if antum.verbose then
+		local recipe_string = ''
+		local icount = 0
+		for I in pairs(recipe) do
+			icount = icount + 1
+		end
+		
+		for I in pairs(recipe) do
+			if I == icount then
+				recipe_string = recipe_string .. ' ' .. recipe[I]
+			elseif I > 1 then
+				recipe_string = recipe_string .. ' + ' .. recipe[I]
+			else
+				recipe_string = recipe[I]
+			end
+		end
+		
+		antum.logAction(' Clearing craft by recipe: ' .. recipe_string)
+	end
+	
+	minetest.clear_craft({
+		recipe = {recipe}
+	})
+end
+
+
+-- Overrides a previously registered craft using output
+function antum.overrideCraftOutput(def)
+	antum.clearCraftOutput(def.output)
+	antum.registerCraft(def)
+end
+
+
+-- Overrides a previously registered craft using recipe
+function antum.overrideCraftRecipe(def)
+	antum.clearCraftRecipe(def.replace)
+	antum.registerCraft(def)
 end
 
 

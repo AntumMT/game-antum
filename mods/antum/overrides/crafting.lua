@@ -25,41 +25,9 @@
 --]]
 
 
-antum.clearCraftOutput = function(o)
-	antum.logAction('Clearing craft by output: ' .. o)
-	minetest.clear_craft({
-		output = o
-	})
-end
-
-antum.clearCraftRecipe = function(r)
-	local recipe_string = ''
-	local icount = 0
-	for I in pairs(r) do
-		icount = icount + 1
-	end
-	
-	for I in pairs(r) do
-		if I == icount then
-			recipe_string = recipe_string .. ' ' .. r[I]
-		elseif I > 1 then
-			recipe_string = recipe_string .. ' + ' .. r[I]
-		else
-			recipe_string = r[I]
-		end
-	end
-	
-	
-	antum.logAction(' Clearing craft by recipe: ' .. recipe_string)
-	minetest.clear_craft({
-		recipe = {r}
-	})
-end
-
 local modoverrides = {
 	'bags',
 	'carts',
-	'coloredwood',
 	'craftguide',
 	'dye',
 	'farming',
@@ -68,10 +36,12 @@ local modoverrides = {
 --	'temp-removals',
 }
 
-for I in pairs(modoverrides) do
-	local modname = modoverrides[I]
+for index, modname in ipairs(modoverrides) do
 	if minetest.get_modpath(modname) then
-		antum.logAction('DEBUG: found mod \"' .. modname .. '\"')
+		if antum.verbose then
+			antum.logAction('DEBUG: found mod \"' .. modname .. '\"')
+		end
+		
 		antum.loadScript('crafting/' .. modname)
 	end
 end

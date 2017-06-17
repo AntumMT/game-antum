@@ -25,34 +25,42 @@
 --]]
 
 
-local depends = {}
-depends.craft_guide = "craft_guide"
+-- Override craftguide:sign
+antum.overrideCraftOutput({
+	type = 'shapeless',
+	output = 'craftguide:sign',
+	recipe = {'default:sign_wall_wood', 'default:paper'},
+})
 
-local dependencies = {depends.craft_guide}
+-- Alternate recipes for craftguide:sign
+antum.registerCraft({
+	type = 'shapeless',
+	output = 'craftguide:sign',
+	recipe = {'default:sign_wall_wood', 'craftguide:book'},
+})
 
-depends.satisfied = false
-for D in pairs(dependencies) do
-	if minetest.get_modpath(dependencies[D]) then
-		depends.satisfied = true
-	end
-end
+-- Override craftguide:book
+antum.overrideCraftOutput({
+	type = 'shapeless',
+	output = 'craftguide:book',
+	recipe = {'default:book', 'default:paper'},
+})
 
--- Incompatible with current craft_guide mod
---[[
-if depends.satisfied then
-	antum.clearCraftOutput("xdecor:crafting_guide")
-	
-	minetest.register_alias("craftguide:craftguide", "xdecor:crafting_guide")
-	--minetest.register_alias("craftguide", "xdecor:crafting_guide") -- Alias already taken by "craft_guide:sign_wall"
-	
-	if minetest.get_modpath(depends.craft_guide) then
-		antum.registerCraft({
-			type = "shapeless",
-			output = "craftguide:craftguide",
-			recipe = {
-				"default:book", "craft_guide:sign_wall",
-			}
-		})
-	end
-end
---]]
+-- Alternate recipes for craftguide:book
+antum.registerCraft({
+	type = 'shapeless',
+	output = 'craftguide:book',
+	recipe = {'default:book', 'craftguide:sign'},
+})
+
+antum.registerCraft({
+	type = 'shapeless',
+	output = 'craftguide:book',
+	recipe = {'default:book_written', 'default:paper'},
+})
+
+antum.registerCraft({
+	type = 'shapeless',
+	output = 'craftguide:book',
+	recipe = {'default:book_written', 'craftguide:sign'},
+})
