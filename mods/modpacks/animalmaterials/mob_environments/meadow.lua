@@ -1,7 +1,7 @@
 -------------------------------------------------------------------------------
 -- Mob Framework Mod by Sapier
 -- 
--- You may copy, use, modify or do nearly anything except removing this
+-- You may copy, use, modify or do anything except removing this
 -- copyright notice. 
 -- And of course you are NOT allow to pretend you have written it.
 --

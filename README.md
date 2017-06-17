@@ -130,7 +130,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 ### This is a list of installed modpacks & their components (trying to keep them listed separate for sake of organization):
 
 * [3d_armor][] ([LGPL / CC BY-SA][lic.3d_armor]) - version: [0.4.9 (9577fb7 Git)][ver.3d_armor] *2017-05-14* ([patched][patch.3d_armor])
-* [animalmaterials][animals] (part of "animals" modpack) ([CC0][lic.cc0] / [CC BY-SA][lic.ccbysa3.0]) -- version: [0.1.3 (d952d27 Git)][ver.animalmaterials] *2014-09-10*
+* [animalmaterials][animals] (part of "animals" modpack) ([CC0][lic.cc0] / [CC BY-SA][lic.ccbysa3.0]) -- version: [0.1.3 (aa4697c Git)][ver.animalmaterials] *2016-09-20* ([patched][patch.animalmaterials])
 * [animals][] -- version: [b9d0172 Git][ver.animals] *2017-03-22* ([patched][patch.animals])
 	* modpacks/animals/
 		* animal_chicken ([CC BY-SA / CC0][lic.amp_chicken])
@@ -407,7 +407,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.3d_armor]: https://github.com/stujones11/minetest-3d_armor/tree/9577fb7
 [ver.adv_spawning]: https://github.com/sapier/adv_spawning/tree/ec41aa9
 [ver.airtanks]: https://github.com/minetest-mods/airtanks/tree/5787956
-[ver.animalmaterials]: https://github.com/sapier/animalmaterials/tree/d952d27
+[ver.animalmaterials]: https://github.com/sapier/animalmaterials/tree/aa4697c
 [ver.animals]: https://github.com/sapier/animals_modpack/tree/b9d0172
 [ver.antum]: https://github.com/AntumDeluge/mtmp-antum/tree/703f700
 [ver.areas]: https://github.com/ShadowNinja/areas/tree/289d0e6
@@ -513,6 +513,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 [patch.3d_armor]: https://github.com/AntumDeluge/mtmp-3d_armor/tree/128a97a
 [patch.adv_spawning]: https://github.com/AntumDeluge/mtmod-adv_spawning/tree/757197a
+[patch.animalmaterials]: https://github.com/AntumDeluge/mtmp-animalmaterials/tree/c97f681
 [patch.animals]: https://github.com/AntumDeluge/mtmp-animals_modpack/tree/3e25eb0
 [patch.awards]: https://github.com/AntumDeluge/mtmod-awards/tree/638c137
 [patch.away]: https://github.com/AntumDeluge/mtmod-away/tree/3b0bf9e

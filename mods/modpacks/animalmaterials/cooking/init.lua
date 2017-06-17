@@ -1,6 +1,6 @@
 ---------------------------------------------------------
 --Cooking Support, added by Mr Elmux
--- You may use modify or do nearly anything except removing this Copyright hint
+-- You may use modify or do anything except removing this copyright hint
 -----------------------------------------------------------
 local version = "0.1.1"
 core.log("action","MOD: Loading cooking (by Mr Elmux) ...")

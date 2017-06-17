@@ -436,6 +436,16 @@ pipeworks_delete_item_on_clearobject (Delete Item On Clearobject) bool true
 [Modpacks]
 
 
+[*animalmaterials]
+
+
+[**animalmaterials]
+
+# Registers 'animalmaterials:lass' as alias of 'mobs:magic_lasso' if 'mobs' mod
+# is available.
+animalmaterials.override_lasso (Use 'magic_lasso' from 'mobs' mod) bool false
+
+
 [*castle]
 
 

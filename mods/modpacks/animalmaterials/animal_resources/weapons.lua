@@ -12,7 +12,7 @@
 --
 -- Contact sapier a t gmx net
 -------------------------------------------------------------------------------
---assert(weapons_spacer == nil)
+assert(weapons_spacer == nil)
 local weapons_spacer = {} --unused to fix lua doxygen bug only
 
 -------------------------------------------------------------------------------
@@ -460,8 +460,11 @@ core.register_node("animal_resources:arrow_box", {
 	groups = {not_in_creative_inventory=1},
 })
 
-local THROWINGDIR = minetest.get_modpath("throwing")
-if THROWINGDIR then
-	print("AR: throwing mod found!")
-	core.register_alias("animal_resources:arrow", "throwing:arrow")
+local mods = core.get_modnames()
+
+for i,v in ipairs(mods) do
+	if v == element then
+		print("AR: throwing mod found!")
+		core.register_alias("animal_resources:arrow", "throwing:arrow")
+	end
 end

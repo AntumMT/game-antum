@@ -2092,6 +2092,15 @@ moremesecons_sayer.use_speech_dispatcher = false
 # ** MODPACKS **
 # **************
 
+# ** animalmaterials
+
+## Registers 'animalmaterials:lass' as alias of 'mobs:magic_lasso' if 'mobs' mod
+#  is available.
+#    type: bool
+#    default: false
+#animalmaterials.override_lasso = false
+
+
 # ** mob-engine **
 
 ## Replace certain items with ones from "mobs" (mobs_redo) engine if available.
