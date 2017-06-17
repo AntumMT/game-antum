@@ -86,3 +86,15 @@ function antum.registerCraft(craft)
 	antum.logAction('Registering craft recipe for "' .. craft.output .. '"')
 	minetest.register_craft(craft)
 end
+
+
+-- Checks if dependencies are satisfied
+function antum.dependsSatisfied(depends)
+	for index, dep in ipairs(depends) do
+		if not minetest.get_modpath(dep) then
+			return false
+		end
+	end
+	
+	return true
+end

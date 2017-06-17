@@ -1,3 +1,5 @@
 bucket?
 craft_guide?
+farming?
 vessels?
+wool?

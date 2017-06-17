@@ -25,17 +25,15 @@
 --]]
 
 
-antum = {}
-antum.modname = minetest.get_current_modname()
-antum.modpath = minetest.get_modpath(antum.modname)
-
-
-local scripts = {
-	'functions',
-	'items',
-	'crafting',
+local thread_depends = {
+	'farming',
+	'wool',
 }
 
-for I in pairs(scripts) do
-	dofile(antum.modpath .. '/' .. scripts[I] .. '.lua')
+if antum.dependsSatisfied(thread_depends) then
+	antum.registerCraft({
+		type = 'shapeless',
+		output = 'farming:cotton 4',
+		recipe = {'group:wool'},
+	})
 end
