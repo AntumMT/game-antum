@@ -2098,7 +2098,7 @@ moremesecons_sayer.use_speech_dispatcher = false
 #  is available.
 #    type: bool
 #    default: false
-#animalmaterials.override_lasso = false
+animalmaterials.override_lasso = true
 
 
 # ** mob-engine **
