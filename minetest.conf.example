@@ -2015,6 +2015,10 @@ inventory_default = craft
 ## WORLD ##
 ###########
 
+# *** ethereal ***
+
+ethereal.use_animalmaterials = true
+
 # *** worldedge ***
 
 # Limit the size of the world causing players to "circle around" (teleport)
