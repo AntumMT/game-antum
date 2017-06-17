@@ -111,6 +111,9 @@
 	* my_future_doors:door7a
 * my_misc_doors
 	* my_misc_doors:door2a
+* mobs:magic_lasso
+	* mobs:lasso
+	* lasso
 
 #### Need new descriptions
 
