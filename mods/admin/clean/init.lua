@@ -13,6 +13,10 @@ local old_entities = {
 
 -- Old/Missing nodes that should be replaced with something currently in game
 local replace_nodes = {
+	-- Craft guides
+	{'craft_guide:sign_wall', 'craftguide:sign'},
+	-- Old homedecor nodes
+	{'homedecor:glowlight_small_cube_white', 'homedecor:glowlight_small_cube'},
 	-- Discontinued
 	{'kpgmobs:horse', 'mob_horse:horse'},
 	{'kpgmobs:horse2', 'mob_horse:horse'},

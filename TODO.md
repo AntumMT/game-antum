@@ -119,8 +119,6 @@
 #### Duplicates or items with similar function
 
 #### Fix unknown
-* homedecor:glowlight_small_cube_white
-
 
 #### Broken
 
