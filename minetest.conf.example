@@ -1591,7 +1591,7 @@ creative_mode = false
 # Tools & weapons will wear down & break when used for digging, chopping, etc.
 #    type: bool
 #    default: true
-#enable_tool_wear = true
+enable_tool_wear = false
 
 
 ### MOD CONFIGURATIONS ###
