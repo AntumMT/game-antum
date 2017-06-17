@@ -39,6 +39,14 @@ antum.registerCraft({
 	recipe = {'default:sign_wall_wood', 'craftguide:book'},
 })
 
+antum.registerCraft({
+	output = 'craftguide:sign',
+	recipe = {
+		{'default:sign_wall_wood', 'default:sign_wall_wood', ''},
+		{'default:sign_wall_wood', 'default:sign_wall_wood', ''},
+	},
+})
+
 -- Override craftguide:book
 antum.overrideCraftOutput({
 	type = 'shapeless',
