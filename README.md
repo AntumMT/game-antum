@@ -70,7 +70,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * mobiles/general/
 	* [mobs_animal][] ([MIT][lic.mobs_animal]) -- version: [ebc2e3a Git][ver.mobs_animal] *2017-05-27* ([patched][patch.mobs_animal])
 * mobiles/passive/
-	* [mob_horse][] -- version: [dee3883 Git][ver.mob_horse] *2017-06-01*
+	* [mob_horse][] -- version: [dee3883 Git][ver.mob_horse] *2017-06-01* ([patched][patch.mob_horse])
     * [peaceful_npc][] ([WTFPL][lic.wtfpl]) -- version: [2b3a7a5 Git][ver.peaceful_npc] *2015-08-09* ([patched][patch.peaceful_npc])
 * [painting][] (???)
 * [pipeworks][] ([WTFPL][lic.wtfpl]) -- version: [2eff6e3 Git][ver.pipeworks] *2017-06-07*
@@ -545,6 +545,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.mesecons]: https://github.com/AntumDeluge/mtmp-mesecons/tree/830823a
 [patch.minetest_game]: https://github.com/AntumDeluge/mtgame-minetest/tree/2e390d0
 [patch.mob-engine]: https://github.com/AntumDeluge/mtmp-mob-engine/tree/0215ca5
+[patch.mob_horse]: https://github.com/AntumDeluge/mtmod-mob_horse/tree/4fb526b
 [patch.mobf_core]: https://github.com/AntumDeluge/mtmp-mobf_core/tree/c0f3639
 [patch.mobs_animal]: https://github.com/AntumDeluge/mtmod-mobs_animal/tree/3f3249e
 [patch.mobs_goblins]: https://github.com/AntumDeluge/mtmod-mobs_goblins/tree/68f9235
