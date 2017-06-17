@@ -111,19 +111,12 @@
 	* my_future_doors:door7a
 * my_misc_doors
 	* my_misc_doors:door2a
-* mobs:magic_lasso
-	* mobs:lasso
-	* lasso
 
 #### Need new descriptions
 
 #### Need new inventory textures
 
 #### Duplicates or items with similar function
-* mobs:magic_lasso
-    * animalmaterials:lasso
-* mobs:shears
-    * creatures:shears
 
 #### Fix unknown
 * homedecor:glowlight_small_cube_white
