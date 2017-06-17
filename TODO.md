@@ -134,7 +134,6 @@
     * creatures:shears
 
 #### Fix unknown
-* ethereal:bone
 * homedecor:glowlight_small_cube_white
 
 
