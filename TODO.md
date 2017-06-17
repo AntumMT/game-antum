@@ -12,8 +12,6 @@
 #### Too common in game
 
 #### Function changes
-* beds
-   	* add option to allow night skip for single player in bed
 * trampoline
     * player should not receive damage from falling on tramp
 
@@ -45,10 +43,6 @@
 * mobs:sheep
 
 #### Drops
-* creatures:sheep
-    * make only drop wool when shorn (or killed)
-* mob_horse:horse
-	* drop 'mobs:leather'
 * spidermob:spider
 	* fix 'farming:cotton' drop
 	* drop 'mobs:meat_raw' instead of 'spidermob:meat_raw'
@@ -70,13 +64,8 @@
 ### Crafting
 
 #### Recipes to override / change
-* craftguide:book
-* craftguide:sign
-	* use recipe from 'craft_guide' mod
 * default:book
     * 3 paper, 3 ???
-* farming:cotton
-	* use wool
 
 #### Undefined ingredients:
 * dye
