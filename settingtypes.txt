@@ -39,6 +39,10 @@ enable_bed_respawn (Respawn at bed) bool true
 #    in beds.
 enable_bed_night_skip (Skip night when sleeping) bool true
 
+#    If enabled with 'enable_bed_night_skip', allows any single player in bed
+#    to skip night.
+enable_single_night_skip (Skip night if any player in bed) bool false
+
 #    When TNT explodes, it destroys nearby nodes and damages nearby players.
 #    This setting is disabled by default on servers.
 enable_tnt (TNT) bool true

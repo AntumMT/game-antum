@@ -1691,6 +1691,12 @@ disable_fire = false
 #    default: true
 enable_bed_night_skip = true
 
+# If enabled with 'enable_bed_night_skip', allows any single player in bed
+# to skip night.
+#    type: bool
+#    default: false
+enable_single_night_skip = true
+
 # Allow players to respawn on death at last bed slept in.
 #    type: bool
 #    default: true
