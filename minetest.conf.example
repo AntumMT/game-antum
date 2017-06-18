@@ -1766,11 +1766,6 @@ only_peaceful_mobs = false
 
 # ???
 #    type: bool
-#    default: ???
-#only_peaceful_spidermob = ???
-
-# ???
-#    type: bool
 #    default: false
 #remove_far_mobs = false
 
@@ -1810,14 +1805,6 @@ mobs_animal:sheep_white = 0
 #    type: int
 #    default: 5
 #sneeker.spawn_maxlight = 5
-
-
-# *** spidermob ***
-
-## If enabled, uses 'mobs' (mobs_redo) mod api if available.
-#    type: bool
-#    default: false
-spidermob.use_mobs_api = true
 
 
 

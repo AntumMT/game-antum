@@ -64,7 +64,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [mobs_goblins][] ([CC-BY-SA / CC-BY / CC0][lic.mobs_goblins]) -- version: [832cac6 Git][ver.mobs_goblins] *2017-06-14* ([patched][patch.mobs_goblins])
     * [mobs_monster][] ([MIT][lic.mobs_monster]) -- version: [e6f77e1 Git][ver.mobs_monster] *2017-05-28* ([patched][patch.mobs_monster])
     * [sneeker][] ([WTFPL][lic.wtfpl] / [CC0][lic.cc0]) -- version: [a56b9c2 Git][ver.sneeker] *2017-06-07*
-    * [spidermob][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0] / [MIT][lic.mit] / [WTFPL][lic.spidermob] / [Unlicense][lic.unlicense]) -- version [8f9080a Git][ver.spidermob] *2017-06-02* ([patched][patch.spidermob])
 * mobiles/engine/
     * [mobs_redo][] ([MIT][lic.mobs_redo]) -- version: [4eb1c93 Git][ver.mobs_redo] *2017-06-04* ([patched][patch.mobs_redo]) ***UPDATE***
 * mobiles/general/
@@ -286,7 +285,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [snowdrift]: https://forum.minetest.net/viewtopic.php?t=6854
 [spawneggs]: https://forum.minetest.net/viewtopic.php?t=6214
 [spectator_mode]: https://forum.minetest.net/viewtopic.php?t=13718
-[spidermob]: https://forum.minetest.net/viewtopic.php?t=10045
 [stairsplus]: https://forum.minetest.net/viewtopic.php?t=6140
 [technic]: https://forum.minetest.net/viewtopic.php?t=2538
 [throwing]: https://forum.minetest.net/viewtopic.php?t=687
@@ -375,7 +373,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.snowdrift]: mods/weather/snowdrift/license.txt
 [lic.spawneggs]: mods/spawning/spawneggs/README.txt
 [lic.spectator_mode]: mods/admin/spectator_mode/LICENSE
-[lic.spidermob]: https://github.com/minetest-LOTR/Lord-of-the-Test/blob/master/mods/lottmobs/license.txt
 [lic.stairsplus]: mods/buildings/stairsplus/LICENSE.txt
 [lic.tools_obsidian]: mods/tools/tools_obsidian/README.md
 [lic.trash_can]: mods/furniture/trash_can/LICENSE.txt
@@ -495,7 +492,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.snowdrift]: https://github.com/paramat/snowdrift/tree/fcb0537
 [ver.spawneggs]: https://github.com/thefamilygrog66/spawneggs/tree/4650370
 [ver.spectator_mode]: https://github.com/minetest-mods/spectator_mode/tree/7d68bec
-[ver.spidermob]: https://github.com/Darcidride/minetest-spidermob-v1/tree/8f9080a
 [ver.stairsplus]: https://github.com/CasimirKaPazi/stairsplus/tree/311e1f0
 [ver.technic]: https://github.com/minetest-mods/technic/tree/4cc124f
 [ver.throwing]: https://github.com/PilzAdam/throwing/tree/90bcf43
@@ -564,7 +560,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.rainbow_ore]: https://github.com/AntumDeluge/mtmod-rainbow_ore/tree/0227a86
 [patch.snowdrift]: https://github.com/AntumDeluge/mtmod-snowdrift/tree/1b9da4f
 [patch.spawneggs]: https://github.com/AntumDeluge/mtmod-spawneggs/tree/f2cc4cc
-[patch.spidermob]: https://github.com/AntumDeluge/mtmod-spidermob/tree/3fe51ae
 [patch.technic]: https://github.com/AntumDeluge/mtmod-technic/tree/b608509
 [patch.throwing]: https://github.com/AntumDeluge/mtmod-throwing/tree/7b48d90
 [patch.tools_obsidian]: https://github.com/AntumDeluge/mtmod-tools_obsidian/tree/2d19297

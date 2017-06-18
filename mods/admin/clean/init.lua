@@ -9,6 +9,8 @@ local old_entities = {
 	'animal_sheep:sheep_naked',
 	'animal_dm:dm',
 	'sneeker:sneeker',
+	-- Replaced
+	'spidermob:spider',
 }
 
 -- Old/Missing nodes that should be replaced with something currently in game

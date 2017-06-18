@@ -1,2 +1,0 @@
-# If enabled, uses 'mobs' (mobs_redo) mod api if available.
-spidermob.use_mobs_api (Use 'mobs' api) bool false
