@@ -14,10 +14,19 @@ if spidermob.use_mobs_api then
 		minetest.log("action", "[spidermob] Using \"mobs\" api")
 	end
 	
-	spidermob.register_mob = mobs.register_mob
+	function spidermob:register_mob(name, def)
+		mobs:register_mob(name, def)
+	end
+	
 	spidermob.spawning_spidermob = mobs.spawning_mobs
-	spidermob.register_spawn = mobs.register_spawn
-	spidermob.register_arrow = mobs.register_arrow
+	
+	function spidermob:register_spawn(name, nodes, max_light, min_light, chance, active_object_count, max_height, spawn_func)
+		mobs:register_spawn(name, nodes, max_light, min_light, chance, active_object_count, max_height, spawn_func)
+	end
+	
+	function spidermob:register_arrow(name, def)
+		mobs:register_arrow(name, def)
+	end
 else
 	if log_mods then
 		minetest.log("action", "[spidermob] Using local api")

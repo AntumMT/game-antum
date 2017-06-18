@@ -564,7 +564,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.rainbow_ore]: https://github.com/AntumDeluge/mtmod-rainbow_ore/tree/0227a86
 [patch.snowdrift]: https://github.com/AntumDeluge/mtmod-snowdrift/tree/1b9da4f
 [patch.spawneggs]: https://github.com/AntumDeluge/mtmod-spawneggs/tree/f2cc4cc
-[patch.spidermob]: https://github.com/AntumDeluge/mtmod-spidermob/tree/f6d27bb
+[patch.spidermob]: https://github.com/AntumDeluge/mtmod-spidermob/tree/3fe51ae
 [patch.technic]: https://github.com/AntumDeluge/mtmod-technic/tree/b608509
 [patch.throwing]: https://github.com/AntumDeluge/mtmod-throwing/tree/7b48d90
 [patch.tools_obsidian]: https://github.com/AntumDeluge/mtmod-tools_obsidian/tree/2d19297
