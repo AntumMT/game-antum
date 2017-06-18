@@ -1817,7 +1817,7 @@ mobs_animal:sheep_white = 0
 ## If enabled, uses 'mobs' (mobs_redo) mod api if available.
 #    type: bool
 #    default: false
-#spidermob.use_mobs_api = false
+spidermob.use_mobs_api = true
 
 
 
