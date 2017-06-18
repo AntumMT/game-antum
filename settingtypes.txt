@@ -155,6 +155,12 @@ sneeker.spawn_interval (Spawn interval) int 2400
 sneeker.spawn_maxlight (Max node light for spawn) int 5
 
 
+[**spidermob]
+
+# If enabled, uses 'mobs' (mobs_redo) mod api if available.
+spidermob.use_mobs_api (Use 'mobs' api) bool false
+
+
 [*Player Visuals]
 
 

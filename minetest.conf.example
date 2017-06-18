@@ -1812,6 +1812,14 @@ mobs_animal:sheep_white = 0
 #sneeker.spawn_maxlight = 5
 
 
+# *** spidermob ***
+
+## If enabled, uses 'mobs' (mobs_redo) mod api if available.
+#    type: bool
+#    default: false
+#spidermob.use_mobs_api = false
+
+
 
 ###############
 ## PIPEWORKS ##

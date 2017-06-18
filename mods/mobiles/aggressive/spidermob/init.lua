@@ -1,21 +1,26 @@
 dofile(minetest.get_modpath("spidermob").."/api.lua")
 
-minetest.register_craftitem("spidermob:meat", {
-	description = "Cooked Meat",
-	inventory_image = "spidermob_meat.png",
-	on_use = minetest.item_eat(4),
-})
-
-minetest.register_craftitem("spidermob:meat_raw", {
-	description = "Raw Meat",
-	inventory_image = "spidermob_meat_raw.png",
-})
-
-minetest.register_craft({
-	type = "cooking",
-	output = "spidermob:meat",
-	recipe = "spidermob:meat_raw",
-})
+if spidermob.use_mobs_api then
+	minetest.register_alias("spidermob:meat", "mobs:meat")
+	minetest.register_alias("spidermob:meat_raw", "mobs:meat_raw")
+else
+	minetest.register_craftitem("spidermob:meat", {
+		description = "Cooked Meat",
+		inventory_image = "spidermob_meat.png",
+		on_use = minetest.item_eat(4),
+	})
+	
+	minetest.register_craftitem("spidermob:meat_raw", {
+		description = "Raw Meat",
+		inventory_image = "spidermob_meat_raw.png",
+	})
+	
+	minetest.register_craft({
+		type = "cooking",
+		output = "spidermob:meat",
+		recipe = "spidermob:meat_raw",
+	})
+end
 
 spidermob:register_mob("spidermob:spider", {
 	type = "monster",
@@ -71,5 +76,9 @@ spidermob:register_mob("spidermob:spider", {
 		attack = "mobs_oerkki_attack",
 	},
 })
+minetest.register_alias("spider", "spidermob:spider")
+if spidermob.use_mobs_api then
+	minetest.register_alias("mobs:spider", "spidermob:spider")
+end
 
 spidermob:register_spawn("spidermob:spider", {"default:junglegrass", "default:jungleleaves", "default:jungletree"}, 20, -10, 7500, 3, 31000)
