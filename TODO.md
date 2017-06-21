@@ -3,6 +3,11 @@
 
 ---
 
+### Game data
+* Add custom game header image
+
+---
+
 ### Nodes
 
 #### Duplicates or similar function
