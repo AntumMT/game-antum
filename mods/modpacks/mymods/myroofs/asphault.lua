@@ -235,9 +235,9 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "myroofs:asphalt_shingle_"..color.."_ocorner 3",
 	recipe = {
-		{"", "",""},
-		{"", "myroofs:asphalt_shingle_"..color.."_bundle",""},
-		{"", "myroofs:asphalt_shingle_"..color.."_bundle","myroofs:asphalt_shingle_"..color.."_bundle"},
+		{"", "", ""},
+		{"", "myroofs:asphalt_shingle_"..color.."_bundle", ""},
+		{"myroofs:asphalt_shingle_"..color.."_bundle", "", "myroofs:asphalt_shingle_"..color.."_bundle"},
 	}
 })
 end

@@ -179,7 +179,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [mylights][] ([DWYWPL][lic.dwywpl]) -- version: [437fc0c Git][ver.mylights] *2016-03-23* ([patched][patch.mylights])
 	* [mypaint][] ([DWYWPL][lic.dwywpl]) -- version: [c1d4dd5 Git][ver.mypaint] *2016-03-25*
 	* [mypaths][] ([DWYWPL][lic.dwywpl]) -- version: [4de5e84 Git][ver.mypaths] *2016-03-23*
-	* [myroofs][] ([DWYWPL][lic.dwywpl]) -- version: [6da6148 Git][ver.myroofs] *2016-03-23*
+	* [myroofs][] ([DWYWPL][lic.dwywpl]) -- version: [6da6148 Git][ver.myroofs] *2016-03-23* ([patched][patch.myroofs])
 	* [mysheetmetal][] ([DWYWPL][lic.dwywpl]) -- version: [7c5ab71 Git][ver.mysheetmetal] *2016-04-12* ([patched][patch.mysheetmetal])
 	* [mywoodslopes][] ([DWYWPL][lic.dwywpl]) -- version: [3a1b531 Git][ver.mywoodslopes] *2016-03-23*
 	* [worldedge][] ([DWYWPL][lic.dwywpl]) -- version: [e15fa99 Git][ver.worldedge] *2016-03-23* ([patched][patch.worldedge])
@@ -556,6 +556,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.moreores]: https://github.com/AntumMT/mtmod-moreores/tree/51fbd4f
 [patch.mydoors]: https://github.com/AntumMT/mtmp-mydoors/tree/e36c9d1
 [patch.mylights]: https://github.com/AntumMT/mtmod-mylights/tree/fef9fec
+[patch.myroofs]: https://github.com/AntumMT/mtmod-myroofs/tree/e6b23fd
 [patch.mysheetmetal]: https://github.com/AntumMT/mtmod-mysheetmetal/tree/b7d644b
 [patch.nether]: https://github.com/AntumMT/mtmod-nether/tree/d4e5a2a
 [patch.peaceful_npc]: https://github.com/AntumMT/mtmod-peaceful_npc/tree/cbae09e

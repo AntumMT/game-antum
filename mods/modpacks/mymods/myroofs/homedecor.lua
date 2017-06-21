@@ -237,9 +237,9 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "myroofs:asphalt_shingle_"..color.."_ocorner 3",
 	recipe = {
-		{"", "",""},
-		{"", item,""},
-		{"", item,item},
+		{"", "", ""},
+		{"", item, ""},
+		{item, "", item},
 	}
 })
 end
