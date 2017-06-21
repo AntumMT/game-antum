@@ -1,4 +1,4 @@
-# Antum
+# Antum ![icon](menu/icon.png)
 A custom game for [Minetest](http://www.minetest.net/) / [Freeminer](http://freeminer.org/)
 Requires Minetest server 0.4.15 or above
 
