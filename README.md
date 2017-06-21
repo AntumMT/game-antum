@@ -100,7 +100,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [tools_obsidian][] ([LGPL / CC BY-SA][lic.tools_obsidian]) -- version: [f77fd79][ver.tools_obsidian] *2016-03-19* ([patched][patch.tools_obsidian])
     * [workbench][] ([GPL / WTFPL](mods/tools/workbench/LICENSE)) -- version: [74dd1af Git][ver.workbench] *2017-02-07* ([patched][patch.workbench])
 * transport/
-	* [helicopter][] ([GPL][lic.gpl2.0]) -- version: [10f1433 Git][ver.helicopter] ([patched][patch.helicopter]) *2015-07-15*
+	* [helicopter][] ([GPL][lic.gpl2.0]) -- version: [10f1433 Git][ver.helicopter] *2015-07-15* ([patched][patch.helicopter])
     * [hovercraft][] ([LGPL / CC BY-SA / CC0][lic.hovercraft]) -- version: [4d50e68 Git][ver.hovercraft] *2017-05-14* ([patched][patch.hovercraft])
 * ui/
     * [bookmarks_gui][] ([BSD 3-Clause][lic.bookmarks_gui]) -- version: [d369dba Git][ver.bookmarks_gui] *2015-08-14*
@@ -533,7 +533,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.ethereal]: https://github.com/AntumDeluge/mtmod-ethereal/tree/4dd599e
 [patch.farming_plus]: https://github.com/AntumDeluge/mtmod-farming_plus/tree/454a443
 [patch.hbarmor]: https://github.com/AntumDeluge/mtmod-hbarmor/tree/d1168bb
-[patch.helicopter]: https://github.com/AntumDeluge/mtmod-helicopter/tree/dd53fdd
+[patch.helicopter]: https://github.com/AntumDeluge/mtmod-helicopter/tree/46a25d7
 [patch.homedecor]: https://github.com/AntumDeluge/mtmp-homedecor/tree/d0d79dc
 [patch.hovercraft]: https://github.com/AntumDeluge/mtmod-hovercraft/tree/73a6223
 [patch.hud]: https://github.com/AntumDeluge/mtmod-hud/tree/6846e20
