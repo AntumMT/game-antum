@@ -61,9 +61,26 @@ function antum.getCurrentModPath()
 end
 
 
--- Loads a mod sub-script
-function antum.loadScript(script_name)
-	local script = antum.getCurrentModPath() .. '/' .. script_name .. '.lua'
+--[[
+  Loads a mod sub-script.
+  
+  @param script_name
+    Name or base name of the script file
+  @param lua_ext
+    type: bool
+    default: true
+    description: If 'true', appends '.lua' extension to script filename
+]]--
+function antum.loadScript(script_name, lua_ext)
+	-- Default 'true'
+	if lua_ext == nil then
+		lua_ext = true
+	end
+	
+	local script = antum.getCurrentModPath() .. '/' .. script_name
+	if lua_ext then
+		script = script .. '.lua'
+	end
 	
 	if antum.fileExists(script) then
 		dofile(script)
@@ -154,4 +171,93 @@ function antum.dependsSatisfied(depends)
 	end
 	
 	return true
+end
+
+
+--[[
+  Retrieves an item from registered items using name string.
+  
+  @param item_name
+    Item name string to search for
+  @return
+    Item object with name matching 'item_name' parameter
+]]
+function antum.getItem(item_name)
+	for index in pairs(minetest.registered_items) do
+		if minetest.registered_items[index].name == item_name then
+			return minetest.registered_items[index]
+		end
+	end
+end
+
+
+--[[
+  Retrieves a list of items containing a string.
+  
+  @param substring
+    String to match within item names
+  @param case_sensitive
+    If 'true', 'substring' case must match that of item name
+  @return
+    List of item names matching 'substring'
+]]--
+function antum.getItemNames(substring, case_sensitive)
+	antum.logAction('Checking registered items for "' .. substring .. '" in item name ...')
+	
+	-- Convert to lowercase
+	if not case_sensitive then
+		substring = string.lower(substring)
+	end
+	
+	local item_names = {}
+	
+	for index in pairs(minetest.registered_items) do
+		local item_name = minetest.registered_items[index].name
+		if not case_sensitive then
+			item_name = string.lower(item_name)
+		end
+		
+		-- Check item name for substring
+		if string.find(item_name, substring) then
+			table.insert(item_names, item_name)
+		end
+	end
+	
+	return item_names
+end
+
+
+--[[
+  Un-registers an item & converts its name to an alias.
+  
+  @param item_name
+    Name of the item to override
+  @param alias_of
+    Name of the item to be aliased
+]]
+function antum.convertItemToAlias(item_name, alias_of)
+	antum.logAction('Overridding "' .. item_name .. '" with "' .. alias_of .. '"')
+	minetest.unregister_item(item_name)
+	minetest.register_alias(item_name, alias_of)
+end
+
+
+--[[
+  Changes object description.
+  
+  @param item_name
+    Name of item to be altered
+  @param description
+    New string description value
+]]
+function antum.overrideItemDescription(item_name, description)
+	-- Original item definition
+	local item = antum.getItem(item_name)
+	-- Change description
+	item.description = description
+	
+	-- Unregister original item
+	minetest.unregister_item(item.name)
+	
+	minetest.register_craftitem(':' .. item.name, item)
 end

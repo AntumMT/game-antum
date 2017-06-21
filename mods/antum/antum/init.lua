@@ -35,12 +35,16 @@ if minetest.settings:get_bool('log_mods') then
 end
 
 
+-- Load API functions first
+dofile(antum.modpath .. '/api.lua')
+
+
+-- Other scripts to load
 local scripts = {
-	'functions',
 	'items',
 	'crafting',
 }
 
-for I in pairs(scripts) do
-	dofile(antum.modpath .. '/' .. scripts[I] .. '.lua')
+for index, script_name in pairs(scripts) do
+	antum.loadScript(script_name)
 end
