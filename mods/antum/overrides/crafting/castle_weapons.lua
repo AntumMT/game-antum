@@ -27,11 +27,11 @@
 
 -- ** castle_weapons **
 
--- Recipe for 'deploy_building:arrow' conflicts with 'castle_weapons:crossbow_bolt'
+-- Recipe for 'throwing:arrow' conflicts with 'castle_weapons:crossbow_bolt'
 -- TODO: 'antum:feather' item should be moved to 'antum_items' mod
-if antum.dependsSatisfied({'deploy_building', 'antum_core'}) then
+if antum.dependsSatisfied({'throwing', 'antum_core'}) then
 	-- TODO: Possible alternate solutions:
-	--   * Allow 'deploy_building:arrow' to be used as ammo for 'castle_weapons:crossbow'
+	--   * Allow 'throwing:arrow' to be used as ammo for 'castle_weapons:crossbow'
 	
 	-- FIXME: Cannot use 'antum.overrideCraftOutput' because 'minetest.clear_craft' does not allow
 	--        clearing craft by output with quantity. E.g., 'castle_weapons:crossbow_bolt 6'.

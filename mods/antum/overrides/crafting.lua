@@ -34,7 +34,6 @@ local modoverrides = {
 	'farming',
 	'helicopter',
 	'invisibility',
---	'temp-removals',
 }
 
 for index, modname in ipairs(modoverrides) do

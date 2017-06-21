@@ -39,4 +39,5 @@ antum.loadScripts({
 	'misc',
 	'nodes',
 	'crafting',
+	'temp_fixes',
 })

@@ -4,7 +4,6 @@ animalmaterials?
 bags?
 carts?
 castle_weapons?
-deploy_building?
 dye?
 ethereal?
 farming?
@@ -15,6 +14,7 @@ mobs?
 moreblocks?
 simple_protection?
 stairsplus?
+throwing?
 unifieddyes?
 vessels?
 walking_light?
