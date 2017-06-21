@@ -25,24 +25,32 @@
 --]]
 
 
-local modoverrides = {
-	'bags',
-	'carts',
-	'castle_weapons',
-	'craftguide',
-	'dye',
-	'farming',
-	'helicopter',
-	'invisibility',
---	'temp-removals',
-}
+-- ** castle_weapons **
 
-for index, modname in ipairs(modoverrides) do
-	if minetest.get_modpath(modname) then
-		if antum.verbose then
-			antum.logAction('DEBUG: found mod \"' .. modname .. '\"')
-		end
-		
-		antum.loadScript('crafting/' .. modname)
-	end
+-- Recipe for 'deploy_building:arrow' conflicts with 'castle_weapons:crossbow_bolt'
+-- TODO: 'antum:feather' item should be moved to 'antum_items' mod
+if antum.dependsSatisfied({'deploy_building', 'antum_core'}) then
+	-- TODO: Possible alternate solutions:
+	--   * Allow 'deploy_building:arrow' to be used as ammo for 'castle_weapons:crossbow'
+	
+	-- FIXME: Cannot use 'antum.overrideCraftOutput' because 'minetest.clear_craft' does not allow
+	--        clearing craft by output with quantity. E.g., 'castle_weapons:crossbow_bolt 6'.
+	--  - Solution 1: Parse whitespace in 'output'
+	antum.clearCraftOutput('castle_weapons:crossbow_bolt')
+	
+	-- New recipe
+	antum.registerCraft({
+		output = 'castle_weapons:crossbow_bolt 6',
+		recipe = {
+			{'antum:feather', 'default:stick', 'default:steel_ingot'},
+		},
+	})
+	
+	-- Same recipe but reversed
+	antum.registerCraft({
+		output = 'castle_weapons:crossbow_bolt 6',
+		recipe = {
+			{'default:steel_ingot', 'default:stick', 'antum:feather'},
+		},
+	})
 end

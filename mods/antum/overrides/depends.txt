@@ -3,6 +3,8 @@ default
 animalmaterials?
 bags?
 carts?
+castle_weapons?
+deploy_building?
 dye?
 ethereal?
 farming?
