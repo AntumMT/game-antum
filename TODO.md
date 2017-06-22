@@ -47,20 +47,10 @@
 #### Duplicates
 * mobs:sheep
 
-#### Drops
-* spidermob:spider
-	* fix 'farming:cotton' drop
-	* drop 'mobs:meat_raw' instead of 'spidermob:meat_raw'
-
-#### Graphics
-* spidermob:spider
-	* Use 'enable_blood' setting
-
 #### Engine changes
 * Convert to 'mobs' (mobs_redo)
 	* creature:sheep???
 	* sneeker:sneeker
-	* spidermob:spider
 * Unify mobiles/engines
 
 
