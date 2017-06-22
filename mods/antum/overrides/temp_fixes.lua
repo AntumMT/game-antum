@@ -15,9 +15,7 @@
 -- WARNING: 'old' item will be un-registered from game & all instances converted to 'new' item.
 --          Clearing this list will re-register 'old' item on following run, but will not convert
 --          instances back.
-local replace_items = {
-	{'throwing:arrow', 'castle_weapons:crossbow_bolt'},
-}
+local replace_items = {}
 
 for index, item_group in ipairs(replace_items) do
 	antum.convertItemToAlias(item_group[1], item_group[2])
