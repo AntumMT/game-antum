@@ -129,7 +129,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 ### This is a list of installed modpacks & their components (trying to keep them listed separate for sake of organization):
 
-* [3d_armor][] ([LGPL / CC BY-SA][lic.3d_armor]) - version: [0.4.9 (9577fb7 Git)][ver.3d_armor] *2017-05-14* ([patched][patch.3d_armor])
+* [3d_armor][] ([LGPL / CC BY-SA][lic.3d_armor]) - version: [0.4.9 (38d79b9 Git)][ver.3d_armor] *2017-06-21* ([patched][patch.3d_armor])
 * [animalmaterials][animals] (part of "animals" modpack) ([CC0][lic.cc0] / [CC BY-SA][lic.ccbysa3.0]) -- version: [0.1.3 (aa4697c Git)][ver.animalmaterials] *2016-09-20* ([patched][patch.animalmaterials])
 * [animals][] -- version: [b9d0172 Git][ver.animals] *2017-03-22* ([patched][patch.animals])
 	* modpacks/animals/
@@ -403,7 +403,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.wtfpl]: doc/licenses/WTFPL.txt
 [lic.zlib]: doc/licenses/zlib.txt
 
-[ver.3d_armor]: https://github.com/stujones11/minetest-3d_armor/tree/9577fb7
+[ver.3d_armor]: https://github.com/stujones11/minetest-3d_armor/tree/38d79b9
 [ver.adv_spawning]: https://github.com/sapier/adv_spawning/tree/ec41aa9
 [ver.airtanks]: https://github.com/minetest-mods/airtanks/tree/5787956
 [ver.animalmaterials]: https://github.com/sapier/animalmaterials/tree/aa4697c
@@ -510,7 +510,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.workbench]: https://github.com/minetest-mods/workbench/tree/74dd1af
 [ver.worldedge]: https://github.com/minetest-mods/worldedge/tree/e15fa99
 
-[patch.3d_armor]: https://github.com/AntumMT/mtmp-3d_armor/tree/128a97a
+[patch.3d_armor]: https://github.com/AntumMT/mtmp-3d_armor/tree/09fa26f
 [patch.adv_spawning]: https://github.com/AntumMT/mtmod-adv_spawning/tree/757197a
 [patch.animalmaterials]: https://github.com/AntumMT/mtmp-animalmaterials/tree/c97f681
 [patch.animals]: https://github.com/AntumMT/mtmp-animals_modpack/tree/3e25eb0
