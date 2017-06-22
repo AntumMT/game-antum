@@ -421,21 +421,52 @@ function heli:on_step(dtime)
 		end
 	end
 
-	-- if object is stopped it hit something, bounce unless landing	
-	local vel = self.object:getvelocity()
-	if vel.x == 0 then
-		self.vx = -0.3 * self.vx
-	end
-	if vel.y == 0 then
-		if self.vy <0 then
-			-- stop when trying to land
-			self.vy = 0 
-		else
-			self.vy = -0.3 * self.vy	
+	-- workaround for bouncing off of air... make sure the block we hit is not air
+	-- for now we just count the air... but it should probably only check the colliding side of the heli
+	local air_count = 0
+    local driver_pos = self.object:getpos()
+
+	local pos_tbl = {
+		vector.new(driver_pos.x - 1, driver_pos.y, driver_pos.z),
+		vector.new(driver_pos.x + 1, driver_pos.y, driver_pos.z),
+		vector.new(driver_pos.x, driver_pos.y - 1, driver_pos.z),
+		vector.new(driver_pos.x, driver_pos.y + 1, driver_pos.z),
+		vector.new(driver_pos.x, driver_pos.y, driver_pos.z - 1),
+		vector.new(driver_pos.x, driver_pos.y, driver_pos.z + 1),
+	}
+	for i, pos in pairs(pos_tbl) do
+		local object = mt_get_node_or_nil(pos)
+		-- TODO: instead of looking for air, look at the collides property
+		if object then
+			--if self.driver then
+			--	minetest.chat_send_player(self.driver:get_player_name(), "pos = (" .. pos.x .. "," .. pos.y .. "," .. pos.z .. "), name = " .. object.name)
+			--end
+			if object.name == "air" or object.name == "walking_light:light" then
+				air_count = air_count + 1
+			end
 		end
 	end
-	if vel.z == 0 then
-		self.vz = -0.3 * self.vz
+    --if self.driver then
+	--	minetest.chat_send_player(self.driver:get_player_name(), "air_count = " .. air_count)
+	--end
+
+	if air_count ~= 6 then
+		-- if object is stopped it hit something, bounce unless landing	
+		local vel = self.object:getvelocity()
+		if vel.x == 0 then
+			self.vx = -0.3 * self.vx
+		end
+		if vel.y == 0 then
+			if self.vy <0 then
+				-- stop when trying to land
+				self.vy = 0 
+			else
+				self.vy = -0.3 * self.vy	
+			end
+		end
+		if vel.z == 0 then
+			self.vz = -0.3 * self.vz
+		end
 	end
 	
 	if self.driver then
