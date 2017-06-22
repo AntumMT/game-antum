@@ -55,7 +55,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * lighting/
     * [glow][] ([GPL][lic.gpl2.0]) -- version: [78d0166 Git][ver.glow] *2017-05-16*
 	* [ilights][] ([CC BY-SA][lic.ccbysa]) -- version [7060243 Git][ver.ilights] *2017-05-18*
-    * walking_light ([petermalone fork][walking_light]) ([WTFPL / CC BY-SA][lic.walking_light]) -- version: [594bc62 Git][ver.walking_light] *2017-05-21* ([patched][patch.walking_light])
+    * walking_light ([petermalone fork][walking_light]) ([WTFPL / CC BY-SA][lic.walking_light]) -- version: [b23d836 Git][ver.walking_light] *2017-06-21* ([patched][patch.walking_light])
 * materials/
 	* [moreores][] ([zlib][lic.moreores] / [CC BY-SA][lic.ccbysa3.0]) -- version: [73e99e7 Git][ver.moreores] *2017-05-20* ([patched][patch.moreores])
 	* [quartz][] ([MIT][lic.quartz]) -- version: [00ca4eb Git][ver.quartz] *2017-02-28* ([patched][patch.quartz])
@@ -504,7 +504,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.trash_can]: https://github.com/minetest-mods/trash_can/tree/5fd3df7
 [ver.unifieddyes]: https://github.com/minetest-mods/unifieddyes/tree/8b20a06
 [ver.vector_extras]: https://github.com/HybridDog/vector_extras/tree/472deb6
-[ver.walking_light]: https://github.com/petermaloney/walking_light/tree/594bc62
+[ver.walking_light]: https://github.com/petermaloney/walking_light/tree/b23d836
 [ver.wardrobe]: https://github.com/prestidigitator/minetest-mod-wardrobe/tree/c48b011
 [ver.windmill]: https://github.com/Sokomine/windmill/tree/47b029d
 [ver.workbench]: https://github.com/minetest-mods/workbench/tree/74dd1af
@@ -569,7 +569,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.throwing]: https://github.com/AntumMT/mtmod-throwing/tree/7b48d90
 [patch.tools_obsidian]: https://github.com/AntumMT/mtmod-tools_obsidian/tree/2d19297
 [patch.trash_can]: https://github.com/AntumMT/mtmod-trash_can/tree/5a92bf4
-[patch.walking_light]: https://github.com/AntumMT/mtmod-walking_light/tree/67211ea
+[patch.walking_light]: https://github.com/AntumMT/mtmod-walking_light/tree/e602515
 [patch.windmill]: https://github.com/AntumMT/mtmod-windmill/tree/7756ab4
 [patch.workbench]: https://github.com/AntumMT/mtmod-workbench/tree/b964323
 [patch.worldedge]: https://github.com/AntumMT/mtmod-worldedge/tree/3ff6429

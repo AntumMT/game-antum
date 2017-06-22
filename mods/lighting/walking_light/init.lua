@@ -212,7 +212,7 @@ local function remove_light_player(player)
 			remove_light(player, old_pos)
 		end
 	end
-	print("DEBUG: walking_light.remove_light_player(), done; light_positions = " .. dumppostable(light_positions[player_name]))
+--	print("DEBUG: walking_light.remove_light_player(), done; light_positions = " .. dumppostable(light_positions[player_name]))
 end
 
 local function can_add_light(pos)
