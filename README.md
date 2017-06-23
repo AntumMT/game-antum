@@ -58,7 +58,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * walking_light ([petermalone fork][walking_light]) ([WTFPL / CC BY-SA][lic.walking_light]) -- version: [b23d836 Git][ver.walking_light] *2017-06-21* ([patched][patch.walking_light])
 * materials/
 	* [gems_encrustable][] ([WTFPL][lic.wtfpl]) -- version: [81d513d Git][ver.gems_encrustable] *2012-07-31* ([patched][patch.gems_encrustable])
-	* [gems_tools][] () -- version: [b375432 Git][ver.gems_tools] *2016-09-03*
+	* [gems_tools][] () -- version: [b375432 Git][ver.gems_tools] *2016-09-03* ([patched][patch.gems_tools])
 	* [moreores][] ([zlib][lic.moreores] / [CC BY-SA][lic.ccbysa3.0]) -- version: [73e99e7 Git][ver.moreores] *2017-05-20* ([patched][patch.moreores])
 	* [quartz][] ([MIT][lic.quartz]) -- version: [00ca4eb Git][ver.quartz] *2017-02-28* ([patched][patch.quartz])
 	* [rainbow_ore][] ([LGPL][lic.rainbow_ore]) -- version: [6e77693 Git][ver.rainbow_ore] *2015-11-02* ([patched][patch.rainbow_ore])
@@ -542,6 +542,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.ethereal]: https://github.com/AntumMT/mtmod-ethereal/tree/4dd599e
 [patch.farming_plus]: https://github.com/AntumMT/mtmod-farming_plus/tree/454a443
 [patch.gems_encrustable]: https://github.com/AntumMT/mtmod-gems_encrustable/tree/791bff5
+[patch.gems_tools]: https://github.com/AntumMT/mtmod-gems_tools
 [patch.hbarmor]: https://github.com/AntumMT/mtmod-hbarmor/tree/d1168bb
 [patch.helicopter]: https://github.com/AntumMT/mtmod-helicopter/tree/4402412
 [patch.homedecor]: https://github.com/AntumMT/mtmp-homedecor/tree/d0d79dc
