@@ -1404,12 +1404,12 @@ local mg_params = minetest.get_mapgen_params()
 if mg_params.mgname == "v6" then
 	default.register_ores()
 	default.register_mgv6_decorations()
-	minetest.register_on_generated(default.generate_nyancats)
+	--minetest.register_on_generated(default.generate_nyancats)
 elseif mg_params.mgname ~= "singlenode" then
 	default.register_biomes()
 	default.register_ores()
 	default.register_decorations()
-	minetest.register_on_generated(default.generate_nyancats)
+	--minetest.register_on_generated(default.generate_nyancats)
 end
 
 --ruby

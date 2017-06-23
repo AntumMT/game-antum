@@ -542,7 +542,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.ethereal]: https://github.com/AntumMT/mtmod-ethereal/tree/4dd599e
 [patch.farming_plus]: https://github.com/AntumMT/mtmod-farming_plus/tree/454a443
 [patch.gems_encrustable]: https://github.com/AntumMT/mtmod-gems_encrustable/tree/791bff5
-[patch.gems_tools]: https://github.com/AntumMT/mtmod-gems_tools
+[patch.gems_tools]: https://github.com/AntumMT/mtmod-gems_tools/tree/abe21e3
 [patch.hbarmor]: https://github.com/AntumMT/mtmod-hbarmor/tree/d1168bb
 [patch.helicopter]: https://github.com/AntumMT/mtmod-helicopter/tree/4402412
 [patch.homedecor]: https://github.com/AntumMT/mtmp-homedecor/tree/d0d79dc
