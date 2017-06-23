@@ -58,6 +58,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * walking_light ([petermalone fork][walking_light]) ([WTFPL / CC BY-SA][lic.walking_light]) -- version: [b23d836 Git][ver.walking_light] *2017-06-21* ([patched][patch.walking_light])
 * materials/
 	* [gems_encrustable][] ([WTFPL][lic.wtfpl]) -- version: [81d513d Git][ver.gems_encrustable] *2012-07-31* ([patched][patch.gems_encrustable])
+	* [gems_tools][] () -- version: [b375432 Git][ver.gems_tools] *2016-09-03*
 	* [moreores][] ([zlib][lic.moreores] / [CC BY-SA][lic.ccbysa3.0]) -- version: [73e99e7 Git][ver.moreores] *2017-05-20* ([patched][patch.moreores])
 	* [quartz][] ([MIT][lic.quartz]) -- version: [00ca4eb Git][ver.quartz] *2017-02-28* ([patched][patch.quartz])
 	* [rainbow_ore][] ([LGPL][lic.rainbow_ore]) -- version: [6e77693 Git][ver.rainbow_ore] *2015-11-02* ([patched][patch.rainbow_ore])
@@ -231,6 +232,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [farming_plus]: https://forum.minetest.net/viewtopic.php?t=2787
 [fort_spikes]: https://forum.minetest.net/viewtopic.php?t=14574
 [gems_encrustable]: https://forum.minetest.net/viewtopic.php?t=2596
+[gems_tools]: https://forum.minetest.net/viewtopic.php?t=4294
 [glow]: https://forum.minetest.net/viewtopic.php?t=6300
 [hbarmor]: https://forum.minetest.net/viewtopic.php?t=11337
 [helicopter]: https://forum.minetest.net/viewtopic.php?t=6183
@@ -444,6 +446,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.farming_plus]: https://github.com/PilzAdam/farming_plus/tree/7e0d976
 [ver.fort_spikes]: https://github.com/xeranas/fort_spikes/tree/3c7d7c6
 [ver.gems_encrustable]: https://github.com/wowiamdiamonds/gems/tree/81d513d
+[ver.gems_tools]: https://github.com/captainLAD/gems/tree/b375432
 [ver.glow]: https://github.com/bdjnk/glow/tree/78d0166
 [ver.hbarmor]: http://repo.or.cz/minetest_hbarmor.git/tree/bfc5f8c
 [ver.helicopter]: https://github.com/SokolovPavel/helicopter/tree/10f1433
