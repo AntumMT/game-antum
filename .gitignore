@@ -6,3 +6,6 @@
 debug.txt
 server.log
 /ignore/
+
+## Mods for testing that should not be added to Git
+mods/development_mods
