@@ -37,24 +37,26 @@ function slingshot.on_use(itemstack, user, veloc)
 	local upos = {x=pos.x, y=pos.y+2, z=pos.z}
 	local dir = user:get_look_dir()
 	local item = itemstack:to_table()
-	local mode = minetest.deserialize(item['metadata'])
-	if mode == nil then mode = 1 else mode = mode.mode end
+	-- Throw items in slot to right
+	local mode = 1
 
 	local item = user:get_inventory():get_stack('main', user:get_wield_index()+mode):get_name()
 	if item == '' then return itemstack end
 	local e = minetest.add_item({x=pos.x, y=pos.y+2, z=pos.z}, item)
-	e:setvelocity({x=dir.x*veloc, y=dir.y*veloc, z=dir.z*veloc})
-	e:setacceleration({x=dir.x*-3, y=-5, z=dir.z*-3})
-	e:get_luaentity().age = slingshot.tmp_time
-	table.insert(slingshot.tmp_throw, {ob=e, timer=2, user=user:get_player_name()})
-
-	if item == 'slingshot:slingshot' then
-	itemstack:set_wear(9999999)
+	if e then
+		e:setvelocity({x=dir.x*veloc, y=dir.y*veloc, z=dir.z*veloc})
+		e:setacceleration({x=dir.x*-3, y=-5, z=dir.z*-3})
+		e:get_luaentity().age = slingshot.tmp_time
+		table.insert(slingshot.tmp_throw, {ob=e, timer=2, user=user:get_player_name()})
+	
+		if item == 'slingshot:slingshot' then
+			itemstack:set_wear(9999999)
+		end
+		
+		user:get_inventory():remove_item('main', item)
+		minetest.sound_play('slingshot_throw', {pos=pos, gain = 1.0, max_hear_distance = 5,})
+		return itemstack
 	end
-
-	user:get_inventory():remove_item('main', item)
-	minetest.sound_play('slingshot_throw', {pos=pos, gain = 1.0, max_hear_distance = 5,})
-	return itemstack
 end
 
 
@@ -84,27 +86,6 @@ function slingshot.register(name, def)
 			slingshot.on_use(itemstack, user, def.velocity)
 			return itemstack
 		end,
-		
-		on_place = function(itemstack, user, pointed_thing)
-			local item = itemstack:to_table()
-			local meta = minetest.deserialize(item['metadata'])
-			local mode = 0
-			if meta == nil then meta = {} mode = 1 end
-			if meta.mode == nil then meta.mode = 1 end
-			mode = (meta.mode)
-			if mode == 1 then
-				mode = -1
-				minetest.chat_send_player(user:get_player_name(), 'Use stack to left')
-			else
-				mode = 1
-				minetest.chat_send_player(user:get_player_name(), 'Use stack to right')
-			end
-			meta.mode = mode
-			item.metadata = minetest.serialize(meta)
-			item.meta = minetest.serialize(meta)
-			itemstack:replace(item)
-			return itemstack
-		end
 	})
 	
 	-- def.ingredient overrides def.recipe
