@@ -13,6 +13,9 @@ enable_tool_wear (Tools wear & break on use) bool true
 # Logs extra debug messages.
 enable_debug (Enable debugging messages) bool false
 
+# Limits flowing liquids.
+liquid_finite (Finite liquid) bool false
+
 
 [*Mobiles (Mobs)]
 
