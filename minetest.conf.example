@@ -2461,6 +2461,12 @@ enable_single_night_skip = true
 
 # **** bones
 
+## Manages how item loss is handled when a player dies.
+#    type:    enum
+#    values:  bones, drop, keep
+#    default: bones
+bones_mode = bones
+
 ## The time in seconds after which the bones of a dead player can be looted by
 #  anyone. Set to 0 to disable
 #    type: string
