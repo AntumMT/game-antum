@@ -2485,11 +2485,24 @@ creative_mode = false
 
 # **** fire
 
+## Flammable nodes will be ignited by nearby igniters. Spreading fire may
+#  cause severe destruction.
+#  Spreading fire nodes will disappear when fire is disabled, but
+#  'permanent_flame' nodes are unaffected.
+#    type:    bool
+#    default: true
+#enable_fire = true
+
 ## Disable random fire spurts. Opposite of (& overridden by)
 #  'enable_fire'.
 #    type:    bool
 #    default: false
 #disable_fire = false
+
+# Enable flame sound.
+#    type:    bool
+#    default: true
+#flame_sound = true
 
 
 # **** give_initial_stuff
