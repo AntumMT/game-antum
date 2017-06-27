@@ -1818,20 +1818,116 @@ enable_bed_respawn = true
 
 # *** mesecons ***
 
+
+# ## mesecons
+
 # ???
-#    type: int
+#    type:    int
 #    default: 600
 #mesecon.foreceload_timeout = 600
 
 # The value at which circuits will overheat.
-#    type: int
+#    type:    int
 #    default: 20
 #mesecon.overheat_max = 20
 
-# ???
-#    type: int
+# Resume time.
+#    type:    int
 #    default: 4
 #mesecon.resumetime = 4
+
+## Cooldown time.
+#    type:    float
+#    default: 2.0
+#mesecon.cooldown_time = 2.0
+
+## Cooldown granularity.
+#    type:    float
+#    default: 0.5
+#mesecon.cooldown_granularity = 0.5
+
+
+# ## mesecons_blinkyplant
+
+## Plant interval.
+#    type:    int
+#    default: 3
+#mesecon.blinky_plant_interval = 3
+
+
+# ## mesecons_detector
+
+## Detector radius.
+#    type:    int
+#    default: 6
+#mesecon.detector_radius = 6
+
+## Detector max distance.
+#    type:    int
+#    default: 10
+#mesecon.node_detector_distance_max = 10
+
+
+# ## mesecons_luacontroller
+
+## Max.
+#    type:    int
+#    default: 64000
+#mesecon.luacontroller_string_rep_max = 64000
+
+## Digiline max length.
+#    type:    int
+#    default: 50000
+#mesecon.luacontroller_digiline_maxlen = 50000
+
+## Max events.
+#    type:    int
+#    default: 10000
+#mesecon.luacontroller_maxevents = 10000
+
+## Memory size.
+#    type:    int
+#    default: 100000
+#mesecon.luacontroller_memsize = 100000
+
+
+# ## mesecons_movestones
+
+## Speed.
+#    type:    int
+#    default: 3
+#mesecon.movestone_speed = 3
+
+## Max push
+#    type:    int
+#    default: 50
+#mesecon.movestone_max_push = 50
+
+## Max pull
+#    type:    int
+#    default: 50
+#mesecon.movestone_max_pull = 50
+
+
+# ## mesecons_pistons
+
+## Max push.
+#    type:    int
+#    default: 15
+#mesecon.piston_max_push = 15
+
+## Max pull.
+#    type:    int
+#    default: 15
+#mesecon.piston_max_pull = 15
+
+
+# ## mesecons_pressureplates
+
+## Interval.
+#    type:    float
+#    default: 0.1
+#mesecon.pplate_interval = 0.1
 
 
 
