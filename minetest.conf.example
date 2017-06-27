@@ -2210,11 +2210,6 @@ spawneggs.enable_node_spawn = false
 #    default: true
 #slingshot.require_rubber_band = true
 
-## Logs additional debugging messages.
-#    type: bool
-#    default: false
-#slingshot.enable_debug = false
-
 
 # *** torches ***
 
