@@ -1938,12 +1938,12 @@ enable_bed_respawn = true
 # Announce to all players when & where a mob is spawned.
 #    type: bool
 #    default: false
-display_mob_spawn = false
+#display_mob_spawn = false
 
 # Show blood
 #    type: bool
 #    default: false
-mobs_enable_blood = false
+#mobs_enable_blood = false
 
 # ???
 #    type: int
