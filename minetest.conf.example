@@ -1728,6 +1728,40 @@ coloredwood_enable_stairsplus = true
 
 
 
+###############
+## EQUIPMENT ##
+###############
+
+# *** airtanks ***
+
+## Number of uses for a steel air tank.
+#    type: int
+#    min: 2
+#    max: 1000
+#    default: 30
+#airtanks_steel_uses = 30
+
+## Number of uses for a copper air tank.
+#    type: int
+#    min: 2
+#    max: 1000
+#    default: 10
+#airtanks_copper_uses = 10
+
+## Number of uses for a bronze air tank.
+#    type: int
+#    min: 2
+#    max: 1000
+#    default: 20
+#airtanks_bronze_uses = 20
+
+## Air tanks wear out in creative mode.
+#    type: bool
+#    default: true
+#airtanks_wear_in_creative = true
+
+
+
 ##########
 ## FIRE ##
 ##########
