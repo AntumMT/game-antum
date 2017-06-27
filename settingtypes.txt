@@ -6,57 +6,8 @@
 
 [General]
 
-#    In creative mode players are able to dig all kind of blocks nearly
-#    instantly, and have access to unlimited resources.
-#    Some of the functionality is only available if this setting is present
-#    at startup.
-creative_mode (Creative mode) bool false
 
-#    Flammable nodes will be ignited by nearby igniters. Spreading fire may
-#    cause severe destruction.
-#    Spreading fire nodes will disappear when fire is disabled, but
-#    'permanent_flame' nodes are unaffected.
-enable_fire (Fire) bool true
-
-#    Enable flame sound.
-flame_sound (Flame sound) bool true
-
-#    Enable lavacooling.
-enable_lavacooling (Lavacooling) bool true
-
-#    If enabled, steel tools, torches and cobblestone will be given to new
-#    players.
-give_initial_stuff (Give initial items) bool false
-
-#    If enabled, players respawn at the bed they last lay on instead of normal
-#    spawn.
-#    This setting is only read at startup.
-enable_bed_respawn (Respawn at bed) bool true
-
-#    If enabled, the night can be skipped if more than half of the players are
-#    in beds.
-enable_bed_night_skip (Skip night when sleeping) bool true
-
-#    If enabled with 'enable_bed_night_skip', allows any single player in bed
-#    to skip night.
-enable_single_night_skip (Skip night if any player in bed) bool false
-
-#    When TNT explodes, it destroys nearby nodes and damages nearby players.
-#    This setting is disabled by default on servers.
-enable_tnt (TNT) bool true
-
-#    The radius in which nodes will be destroyed by a TNT explosion.
-tnt_radius (TNT radius) int 3 0
-
-#    The time in seconds after which the bones of a dead player can be looted
-#    by everyone.
-#    Setting this to 0 will disable sharing of bones completely.
-share_bones_time (Bone share time) int 1200 0
-
-#    Replaces old stairs with new ones. Only required for older worlds.
-enable_stairs_replace_abm (Replace old stairs) bool false
-
-#    Tools & weapons will wear down & break when used for digging, chopping, etc.
+# Tools & weapons will wear down & break when used for digging, chopping, etc.
 enable_tool_wear (Tools wear & break on use) bool true
 
 
@@ -78,22 +29,10 @@ remove_far_mobs (Remove far mobs) bool false
 
 # ---------------------------------------------------------------------------------
 
-### ANTUM
-
 [Mods]
 
 
 [*Admin]
-
-[**give_initial_stuff]
-
-#    Whether players will get initial itmes.
-give_initial_stuff (Give initial items) bool true
-
-# Defines what items new players will start with.
-# Comma-separated list: item1,item2 10,item3
-initial_stuff (Initial items) string default:sword_stone,default:pick_steel,default:apple 10
-
 
 
 [*Chat]
@@ -424,6 +363,8 @@ pipeworks_drop_on_routing_fail (Drop On Routing Fail) bool false
 pipeworks_delete_item_on_clearobject (Delete Item On Clearobject) bool true
 
 
+# ---------------------------------------------------------------------------------
+
 [Modpacks]
 
 
@@ -520,6 +461,78 @@ mesecon.pplate_interval (Interval) float 0.1
 ## Replace certain items with ones from "mobs" (mobs_redo) engine if available.
 #  E.g., 'mobs:meat_raw' will be used instead of 'creatures:flesh'.
 creatures.mobs_replace_items (Use items from 'mobs' engine) bool false
+
+
+[*minetest_game]
+
+[**beds]
+
+# If enabled, players respawn at the bed they last lay on instead of normal
+# spawn.
+# This setting is only read at startup.
+enable_bed_respawn (Respawn at bed) bool true
+
+# If enabled, the night can be skipped if more than half of the players are
+# in beds.
+enable_bed_night_skip (Skip night when sleeping) bool true
+
+# If enabled with 'enable_bed_night_skip', allows any single player in bed
+# to skip night.
+enable_single_night_skip (Skip night if any player in bed) bool false
+
+[**bones]
+
+# The time in seconds after which the bones of a dead player can be looted
+# by everyone.
+#
+# Setting this to 0 will disable sharing of bones completely.
+share_bones_time (Bones share time) int 1200 0
+
+[**creative]
+
+# In creative mode players are able to dig all kind of blocks nearly
+# instantly, and have access to unlimited resources.
+#
+# Some of the functionality is only available if this setting is present
+# at startup.
+creative_mode (Creative mode) bool false
+
+[**default]
+
+# If enabled, lava will "cool" & turn into stone & obsidian when touching
+# water.
+enable_lavacooling (Lavacooling) bool true
+
+[**fire]
+
+# Flammable nodes will be ignited by nearby igniters. Spreading fire may
+# cause severe destruction.
+# Spreading fire nodes will disappear when fire is disabled, but
+# 'permanent_flame' nodes are unaffected.
+enable_fire (Fire) bool true
+
+# Enable flame sound.
+flame_sound (Flame sound) bool true
+
+[**give_initial_stuff]
+
+# If enabled, items defined in 'initial_stuff' setting will be given
+# to players.
+give_initial_stuff (Give initial items) bool false
+
+[**stairs]
+
+# Replaces old stairs with new ones (Only required for older worlds).
+enable_stairs_replace_abm (Replace old stairs) bool false
+
+[**tnt]
+
+# When TNT explodes, it destroys nearby nodes and damages nearby players.
+# This setting is disabled by default on servers.
+enable_tnt (TNT) bool true
+
+# The radius in which nodes will be destroyed by a TNT explosion.
+tnt_radius (TNT radius) int 3 0
 
 
 [*moremesecons]
