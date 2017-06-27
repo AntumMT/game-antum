@@ -486,11 +486,29 @@ enable_single_night_skip (Skip night if any player in bed) bool false
 
 [**bones]
 
+# Manages how item loss is handled when a player dies.
+#
+# Modes supported:
+# | ■ bones:
+# |     ● Bones containing player's inventory contents are
+# |       placed where/near player died.
+# | ■ drop:
+# |     ● Inventory contents are dropped on the ground.
+# | ■ keep:
+# |     ● Player does not lose items at death.
+bones_mode (Bones mode) enum bones bones,drop,keep
+
 # The time in seconds after which the bones of a dead player can be looted
 # by everyone.
 #
 # Setting this to 0 will disable sharing of bones completely.
 share_bones_time (Bones share time) int 1200 0
+
+# How much earlier the bones of a dead player can be looted by everyone if
+# the player dies in a protected area they don't own.
+#
+# 0 to disable. Default is "share_bones_time" divide by four (300).
+share_bones_time_early (Bones early share time) int 300 0
 
 [**creative]
 
