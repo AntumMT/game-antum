@@ -2229,6 +2229,22 @@ torches_enable_ceiling = false
 ## UI ##
 ########
 
+# *** hbarmor ***
+
+## If true, automatically hides the armor HUD bar when the player wears no
+#  armor. Otherwise, the armor bar shows “0%”.
+#    type:    bool
+#    default: true
+#hbarmor_autohide = true
+
+## Time difference in seconds between updates to the armor HUD bar.
+#  Increase this number for slow servers.
+#    type:    float
+#    min:     0.0
+#    max:     4.0
+#    default: 0.1
+hbarmor_tick (Armor HUD bar update frequency) float 0.1 0.0 4.0
+
 # *** hudbars *** #
 
 # Specifies how the value indicators (i.e. health, breath, etc.) look.
