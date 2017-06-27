@@ -1598,33 +1598,11 @@ motd = Antum Server
 #    default: false
 log_mods = true
 
-# *** tnt ***
-
-## ???
-#    type: bool
-#    default: ???
-enable_tnt = true
-
-## ???
-#    type: int
-#    default: 3
-#tnt_radius = 3
-
 ## Logs extra debug messages.
 #    type: bool
 #    default: false
 #enable_debug = false
 
-
-
-##############
-## CREATIVE ##
-##############
-
-# Whether server will be initiated in creative mode
-#    type: bool
-#    default: false
-creative_mode = false
 
 
 #####################
@@ -1645,45 +1623,6 @@ enable_weapon_wear = false
 ### MOD CONFIGURATIONS ###
 
 
-###########
-## ADMIN ##
-###########
-
-# *** give_initial_stuff ***
-
-# Whether players will get initial itmes.
-#    type: bool
-#    default: false
-give_initial_stuff = true
-
-# Defines what items new players will start with.
-#    type: string
-#    default: default:pick_steel,default:axe_steel,default:shovel_steel,default:torch 99,default:cobble 99
-initial_stuff = default:sword_stone,default:pick_steel,default:apple 10
-
-
-
-###########
-## BONES ##
-###########
-
-# *** bones ***
-
-## The time in seconds after which the bones of a dead player can be looted by
-#  anyone. Set to 0 to disable
-#    type: string
-#    default: 1200
-share_bones_time = 1200
-
-## How much earlier the bones of a dead player can be looted by anyone if the
-#  player dies in a protected area they don't own.
-#  Set to 0 to disable.
-#    type: string
-#    default: share_bones_time / 4
-share_bones_time_early = share_bones_time / 4
-
-
-
 ###############
 ## BUILDINGS ##
 ###############
@@ -1700,12 +1639,8 @@ share_bones_time_early = share_bones_time / 4
 #    default: ???
 #moreblocks.circular_saw_crafting = ???
 
-# *** stairs ***
 
-# ???
-#    type: bool
-#    default: ???
-#enable_stairs_replace_abm = ???
+# *** coloredwood ***
 
 # Enables/Disables stairsplus for coloredwood mod
 #    type: bool
@@ -1759,43 +1694,6 @@ coloredwood_enable_stairsplus = true
 #    type: bool
 #    default: true
 #airtanks_wear_in_creative = true
-
-
-
-##########
-## FIRE ##
-##########
-
-# *** fire ***
-
-# Disable random fire spurts
-#    type: bool
-#    default: false
-disable_fire = false
-
-
-
-###############
-## FURNITURE ##
-###############
-
-# *** beds ***
-
-## Allow players to skip to morning when more than half online are in bed.
-#    type: bool
-#    default: true
-enable_bed_night_skip = true
-
-## If enabled with 'enable_bed_night_skip', allows any single player in bed
-#  to skip night.
-#    type: bool
-#    default: false
-enable_single_night_skip = true
-
-## Allow players to respawn on death at last bed slept in.
-#    type: bool
-#    default: true
-enable_bed_respawn = true
 
 
 
@@ -2537,3 +2435,95 @@ animalmaterials.override_lasso = true
 #    type:    float
 #    default: 0.1
 #mesecon.pplate_interval = 0.1
+
+
+
+# *** minetest_game ***
+
+# **** beds
+
+## Allow players to respawn on death at last bed slept in.
+#    type: bool
+#    default: true
+enable_bed_respawn = true
+
+## Allow players to skip to morning when more than half online are in bed.
+#    type: bool
+#    default: true
+enable_bed_night_skip = true
+
+## If enabled with 'enable_bed_night_skip', allows any single player in bed
+#  to skip night.
+#    type: bool
+#    default: false
+enable_single_night_skip = true
+
+
+# **** bones
+
+## The time in seconds after which the bones of a dead player can be looted by
+#  anyone. Set to 0 to disable
+#    type: string
+#    default: 1200
+share_bones_time = 1200
+
+## How much earlier the bones of a dead player can be looted by anyone if the
+#  player dies in a protected area they don't own.
+#  Set to 0 to disable.
+#    type: string
+#    default: share_bones_time / 4
+share_bones_time_early = share_bones_time / 4
+
+
+# **** creative
+
+# Whether server will be initiated in creative mode
+#    type:    bool
+#    default: false
+creative_mode = false
+
+
+# **** fire
+
+## Disable random fire spurts. Opposite of (& overridden by)
+#  'enable_fire'.
+#    type:    bool
+#    default: false
+#disable_fire = false
+
+
+# **** give_initial_stuff
+
+## If enabled, items defined in 'initial_stuff' setting will be given
+#  to players.
+#    type:    bool
+#    default: false
+give_initial_stuff = true
+
+## Defines what items new players will start with if 'give_initial_stuff'
+#  setting is enabled.
+#    type:    string (list)
+initial_stuff = default:sword_stone,default:pick_steel,default:apple 10
+
+
+# **** stairs
+
+# Replaces old stairs with new ones (Only required for older worlds).
+#    type:    bool
+#    default: false
+#enable_stairs_replace_abm = false
+
+
+# **** tnt
+
+## When TNT explodes, it destroys nearby nodes and damages nearby players.
+#  NOTE: This setting is disabled by default on servers.
+#    type:    bool
+#    default: true
+enable_tnt = true
+
+## The radius in which nodes will be destroyed by a TNT explosion.
+#    type:    int
+#    min:     0
+#    default: 3
+#tnt_radius = 3
