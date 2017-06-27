@@ -533,6 +533,9 @@ enable_lavacooling (Lavacooling) bool true
 # 'permanent_flame' nodes are unaffected.
 enable_fire (Fire) bool true
 
+# Opposite of (& overridden by) 'enable_fire'.
+disable_fire (Disable fire) bool false
+
 # Enable flame sound.
 flame_sound (Flame sound) bool true
 
