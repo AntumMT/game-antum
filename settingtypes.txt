@@ -4,9 +4,7 @@
 
 # ---------------------------------------------------------------------------------
 
-### MINETEST_GAME
-
-[Minetest Game]
+[General]
 
 #    In creative mode players are able to dig all kind of blocks nearly
 #    instantly, and have access to unlimited resources.
@@ -60,13 +58,6 @@ enable_stairs_replace_abm (Replace old stairs) bool false
 
 #    Tools & weapons will wear down & break when used for digging, chopping, etc.
 enable_tool_wear (Tools wear & break on use) bool true
-
-
-# ---------------------------------------------------------------------------------
-
-### GENERAL
-
-[General]
 
 
 [*Mobiles (Mobs)]
