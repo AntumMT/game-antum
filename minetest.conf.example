@@ -2031,7 +2031,7 @@ torches_enable_ceiling = false
 #    min:     0.0
 #    max:     4.0
 #    default: 0.1
-hbarmor_tick (Armor HUD bar update frequency) float 0.1 0.0 4.0
+#hbarmor_tick = 0.1
 
 # *** hudbars *** #
 
