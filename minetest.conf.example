@@ -1715,6 +1715,20 @@ coloredwood_enable_stairsplus = true
 
 
 ##########
+## CHAT ##
+##########
+
+# *** chatlog ***
+
+## Whether month is displayed before day in timestamp
+#  (E.g. 'dd/mm/yyyy' vs. 'mm/dd/yy').
+#    type: bool
+#    default: true
+#chatlog.monthfirst = true
+
+
+
+##########
 ## FIRE ##
 ##########
 
