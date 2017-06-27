@@ -545,6 +545,12 @@ flame_sound (Flame sound) bool true
 # to players.
 give_initial_stuff (Give initial items) bool false
 
+# Defines what items new players will start with if 'give_initial_stuff' setting
+# is enabled.
+#
+# Comma-separated list: item1,item2 10,item3
+initial_stuff (Initial items) string default:sword_stone,default:pick_steel,default:apple 10
+
 [**stairs]
 
 # Replaces old stairs with new ones (Only required for older worlds).
