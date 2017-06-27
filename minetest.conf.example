@@ -2552,7 +2552,7 @@ enable_tnt = true
 
 # *** moremesecons ***
 
-[**Sayer]
+# **** moremesecons_sayer
 
 ## Whether to use the Speech Dispatcher
 #
@@ -2563,4 +2563,4 @@ enable_tnt = true
 #  * you are using a POSIX-compliant system and a sh-compatible shell (such as bash, dash, zsh...)
 #    type:    bool
 #    default: true
-moremesecons_sayer.use_speech_dispatcher = false
+#moremesecons_sayer.use_speech_dispatcher = true
