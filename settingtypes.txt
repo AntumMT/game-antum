@@ -10,6 +10,9 @@
 # Tools & weapons will wear down & break when used for digging, chopping, etc.
 enable_tool_wear (Tools wear & break on use) bool true
 
+# Logs extra debug messages.
+enable_debug (Enable debugging messages) bool false
+
 
 [*Mobiles (Mobs)]
 
