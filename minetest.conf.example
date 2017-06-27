@@ -2426,11 +2426,13 @@ moremesecons_sayer.use_speech_dispatcher = false
 
 
 
-# **************
-# ** MODPACKS **
-# **************
+##############
+## MODPACKS ##
+##############
 
-# ** animalmaterials
+# *** animalmaterials ***
+
+# ## animalmaterials
 
 ## Registers 'animalmaterials:lass' as alias of 'mobs:magic_lasso' if 'mobs' mod
 #  is available.
@@ -2439,7 +2441,96 @@ moremesecons_sayer.use_speech_dispatcher = false
 animalmaterials.override_lasso = true
 
 
-# ** mob-engine **
+# *** castle ***
+
+# ## castle_masonry
+
+## Stonewall.
+#    type:    bool
+#    default: true
+#castle_masonry_stonewall = true
+
+## Cobble.
+#    type:    bool
+#    default: true
+#castle_masonry_cobble = true
+
+## Stone Brick.
+#    type:    bool
+#    default: true
+#castle_masonry_stonebrick = true
+
+## Sandstone Brick
+#    type:    bool
+#    default: true
+#castle_masonry_sandstonebrick = true
+
+## Desert Stone Brick.
+#    type:    bool
+#    default: true
+#castle_masonry_desertstonebrick = true
+
+## Stone.
+#    type:    bool
+#    default: true
+#castle_masonry_stone = true
+
+## Sandstone.
+#    type:    bool
+#    default: true
+#castle_masonry_sandstone = true
+
+## Desert Stone.
+#    type:    bool
+#    default: true
+#castle_masonry_desertstone = true
+
+## Wood.
+#    type:    bool
+#    default: false
+#castle_masonry_wood = false
+
+## Ice.
+#    type:    bool
+#    default: false
+#castle_masonry_ice = false
+
+## Snow.
+#    type:    bool
+#    default: false
+#castle_masonry_snow = false
+
+## Obsidian Brick.
+#    type:    bool
+#    default: false
+#castle_masonry_obsidianbrick = false
+
+## Pillars.
+#    type:    bool
+#    default: true
+#castle_masonry_pillar = true
+
+## Arrow slits.
+#    type:    bool
+#    default: true
+#castle_masonry_arrowslit = true
+
+## Murder holes and machicolations.
+#    type:    bool
+#    default: true
+#castle_masonry_murderhole = true
+
+# ## crafting_bench
+
+## The number of seconds between each operation of the crafting bench.
+#    type:    int
+#    min:     1
+#    max:     60
+#    default: 5
+#crafting_bench_crafting_rate = 5
+
+
+# *** mob-engine ***
 
 ## Replace certain items with ones from "mobs" (mobs_redo) engine if available.
 #  E.g., 'mobs:meat_raw' will be used instead of 'creatures:flesh'.
