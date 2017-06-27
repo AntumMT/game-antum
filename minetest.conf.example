@@ -2483,6 +2483,15 @@ share_bones_time_early = share_bones_time / 4
 creative_mode = false
 
 
+# **** default
+
+## If enabled, lava will "cool" & turn into stone & obsidian when touching
+#  water.
+#    type:    bool
+#    default: true
+#enable_lavacooling = true
+
+
 # **** fire
 
 ## Flammable nodes will be ignited by nearby igniters. Spreading fire may
