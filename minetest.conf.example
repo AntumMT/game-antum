@@ -2206,13 +2206,6 @@ areas.self_protection_max_areas = 10
 bedrock2_y = -28000
 
 
-# *** moremesecons ***
-# ???
-#    type: bool
-#    default: true
-moremesecons_sayer.use_speech_dispatcher = false
-
-
 
 ##############
 ## MODPACKS ##
@@ -2555,3 +2548,19 @@ enable_tnt = true
 #    min:     0
 #    default: 3
 #tnt_radius = 3
+
+
+# *** moremesecons ***
+
+[**Sayer]
+
+## Whether to use the Speech Dispatcher
+#
+#  It will work only if:
+#  * moremesecons_sayer is present in your trusted_mods setting
+#  * you are playing in singleplayer
+#  * the speech-dispatcher is installed on your system
+#  * you are using a POSIX-compliant system and a sh-compatible shell (such as bash, dash, zsh...)
+#    type:    bool
+#    default: true
+moremesecons_sayer.use_speech_dispatcher = false
