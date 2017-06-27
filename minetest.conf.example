@@ -758,6 +758,12 @@ name = AntumDeluge
 #    type: string
 #serverlist_url = servers.minetest.net
 
+# Limits flowing liquids.
+#    type: bool
+#    default: false
+#liquid_finite = false
+
+
 
 #############
 ## Network ##
@@ -1906,13 +1912,6 @@ mobs_animal:sheep_white = 0
 #    type:    bool
 #    default: true
 #pipeworks_delete_item_on_clearobject = true
-
-# *** ??? ***
-
-# FIXME (where does this belong???)
-#    type: bool
-#    default: ???
-#liquid_finite = ???
 
 
 
