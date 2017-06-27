@@ -2128,9 +2128,21 @@ mobs_animal:sheep_white = 0
 
 
 
-############
-## PLAYER ##
-############
+####################
+## PLAYER VISUALS ##
+####################
+
+# *** playeranim ***
+
+## Version of player model used by the engine.
+#
+#  Some fixes and improvements were made to the default player model (character.b3d)
+#  end of november 2016. These changes affect the way body parts are attached and
+#  positioned. For correct results, the version of the player model must be known.
+#    type:    enum
+#    values:  default_character_v1, default_character_v2
+#    default: default_character_v2
+#player_model_version = default_character_v2
 
 # *** wieldview ***
 
