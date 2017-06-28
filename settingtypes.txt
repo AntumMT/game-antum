@@ -41,23 +41,7 @@ remove_far_mobs (Remove far mobs) bool false
 [Mods]
 
 
-[*Admin]
-
-
-[*Chat]
-
-
-[**chatlog]
-
-# Whether month is displayed before day in timestamp (E.g. 'dd/mm/yyyy' vs. 'mm/dd/yy').
-chatlog.monthfirst (Timestamp shows month before day) bool true
-
-
-
-[*Equipment]
-
-
-[**airtanks]
+[*airtanks]
 
 # If 'enable_tool_wear' is enabled, air tanks will begin to wear out when used.
 airtanks_enable_wear (Wear out when used) bool true
@@ -75,71 +59,25 @@ airtanks_copper_uses (Copper air tank uses) int 10 2 1000
 airtanks_bronze_uses (Bronze air tank uses) int 20 2 1000
 
 
-[**slingshot]
+[*bedrock2]
 
-# Require rubber band as additional ingredient in slingshot craft recipes.
-slingshot.require_rubber_band (Require rubber band in craft recipe) bool true
-
-
-
-[*Mobiles]
+# Sets the height (Y) at which the bedrock layer will be created.
+bedrock2_y (Bedrock height) int -30912
 
 
-[**sneeker]
+[*chatlog]
 
-# Sets maximum number of spawns that can exist in world.
-sneeker.spawn_cap (Maximum spawns) int 10
-
-# Sets possibility for spawn.
-sneeker.spawn_chance (Spawn chance) int 1000
-
-# Sets frequency of spawn chance.
-#    Default 2400 is equivalent to 2 minutes (60 * 4).
-sneeker.spawn_interval (Spawn interval) int 2400
-
-# Sets the maximum light that a node can have for spawn to occur.
-sneeker.spawn_maxlight (Max node light for spawn) int 5
+# Whether month is displayed before day in timestamp (E.g. 'dd/mm/yyyy' vs. 'mm/dd/yy').
+chatlog.monthfirst (Timestamp shows month before day) bool true
 
 
-[*Player Visuals]
+[*ethereal]
+
+# Instead of registering new item 'ethereal:bone', registers alias of 'animalmaterials.bone'.
+ethereal.use_animalmaterials (Use bone from animalmaterials) bool false
 
 
-[**playeranim]
-
-# Version of player model used by the engine.
-#
-# Some fixes and improvements were made to the default player model (character.b3d)
-# end of november 2016. These changes affect the way body parts are attached and
-# positioned. For correct results, the version of the player model must be known.
-#
-# Player models known / supported:
-# | ■ default_character_v1; used in:
-# |     ● minetest_game before 25 nov 2016
-# |     ● 3d_armor before 27 nov 2016 (overrides model from minetest_game)
-# | ■ default_character_v2; used in:
-# |     ● minetest_game after 25 nov 2016
-# |     ● 3d_armor after 27 nov 2016 (overrides model from minetest_game)
-player_model_version (Version of player model) enum default_character_v2 default_character_v1,default_character_v2
-
-
-[*Spawning]
-
-
-[**spawneggs]
-
-spawneggs.egg_interval (Spawn interval) int 600
-spawneggs.egg_chance (Spawn chance) int 3000
-spawneggs.grass_interval (Grass interval) int 600
-spawneggs.grass_chance (Grass chance) int 3000
-
-# Allow eggs to spawn randomly in the world.
-spawneggs.enable_node_spawn (Enable node spawn) bool true
-
-
-[*UI]
-
-
-[**hbarmor]
+[*hbarmor]
 
 #If true, automatically hides the armor HUD bar when the player wears no
 #armor. Otherwise, the armor bar shows “0%”.
@@ -150,9 +88,9 @@ hbarmor_autohide (Automatically hide armor HUD bar) bool true
 hbarmor_tick (Armor HUD bar update frequency) float 0.1 0.0 4.0
 
 
-[**hudbars]
+[*hudbars]
 
-[***Appearance]
+[**Appearance]
 
 # Specifies how the value indicators (i.e. health, breah, etc.) look.
 #
@@ -226,7 +164,7 @@ hudbars_alignment_pattern (HUD bars alignment pattern) enum zigzag zigzag,stack_
 # of the default one.
 hudbars_sorting (HUD bars order) string
 
-[***Positions and offsets]
+[**Positions and offsets]
 
 # Horizontal (x) main position of the HUD bars over the entire screen.
 # 0.0 is left-most, 1.0 is right-most.
@@ -291,7 +229,7 @@ hudbars_start_statbar_offset_right_y (Right HUD statbar y offset) int -90
 # The vertical distance between two HUD bars, in pixels.
 hudbars_vmargin (Vertical distance between HUD bars) int 24 0
 
-[***Performance]
+[**Performance]
 
 # The of seconds which need to pass before the server updates the default HUD bars
 # (health and breath). Increase this number if you have a slow server or a slow network
@@ -299,28 +237,7 @@ hudbars_vmargin (Vertical distance between HUD bars) int 24 0
 hudbars_tick (Default HUD bars update interval) float 0.1 0.0 4.0
 
 
-[*Vehicles]
-
-
-[*World]
-
-
-[**bedrock2]
-
-# Sets the height (Y) at which the bedrock layer will be created.
-bedrock2_y (Bedrock height) int -30912
-
-
-[**ethereal]
-
-# Instead of registering new item 'ethereal:bone', registers alias of 'animalmaterials.bone'.
-ethereal.use_animalmaterials (Use bone from animalmaterials) bool false
-
-
-[*Misc.]
-
-
-[**pipeworks]
+[*pipeworks]
 
 #Enable pipes.
 pipeworks_enable_pipes (Enable Pipes) bool true
@@ -394,12 +311,63 @@ pipeworks_drop_on_routing_fail (Drop On Routing Fail) bool false
 pipeworks_delete_item_on_clearobject (Delete Item On Clearobject) bool true
 
 
+[*playeranim]
+
+# Version of player model used by the engine.
+#
+# Some fixes and improvements were made to the default player model (character.b3d)
+# end of november 2016. These changes affect the way body parts are attached and
+# positioned. For correct results, the version of the player model must be known.
+#
+# Player models known / supported:
+# | ■ default_character_v1; used in:
+# |     ● minetest_game before 25 nov 2016
+# |     ● 3d_armor before 27 nov 2016 (overrides model from minetest_game)
+# | ■ default_character_v2; used in:
+# |     ● minetest_game after 25 nov 2016
+# |     ● 3d_armor after 27 nov 2016 (overrides model from minetest_game)
+player_model_version (Version of player model) enum default_character_v2 default_character_v1,default_character_v2
+
+
+[*slingshot]
+
+# Require rubber band as additional ingredient in slingshot craft recipes.
+slingshot.require_rubber_band (Require rubber band in craft recipe) bool true
+
+
+[*sneeker]
+
+# Sets maximum number of spawns that can exist in world.
+sneeker.spawn_cap (Maximum spawns) int 10
+
+# Sets possibility for spawn.
+sneeker.spawn_chance (Spawn chance) int 1000
+
+# Sets frequency of spawn chance.
+#    Default 2400 is equivalent to 2 minutes (60 * 4).
+sneeker.spawn_interval (Spawn interval) int 2400
+
+# Sets the maximum light that a node can have for spawn to occur.
+sneeker.spawn_maxlight (Max node light for spawn) int 5
+
+
+[*spawneggs]
+
+spawneggs.egg_interval (Spawn interval) int 600
+spawneggs.egg_chance (Spawn chance) int 3000
+spawneggs.grass_interval (Grass interval) int 600
+spawneggs.grass_chance (Grass chance) int 3000
+
+# Allow eggs to spawn randomly in the world.
+spawneggs.enable_node_spawn (Enable node spawn) bool true
+
+
 # ---------------------------------------------------------------------------------
 
 [Modpacks]
 
 
-[*animalmaterials]
+[*Animal Materials]
 
 
 [**animalmaterials]
@@ -409,7 +377,7 @@ pipeworks_delete_item_on_clearobject (Delete Item On Clearobject) bool true
 animalmaterials.override_lasso (Use 'magic_lasso' from 'mobs' mod) bool false
 
 
-[*castle]
+[*Castle]
 
 
 [**castle_masonry]
@@ -440,7 +408,7 @@ castle_masonry_murderhole (Murder holes and machicolations) bool true
 crafting_bench_crafting_rate (Crafting rate) int 5 1 60
 
 
-[*mesecons]
+[*Mesecons]
 
 [**mesecons]
 
@@ -487,14 +455,7 @@ mesecon.piston_max_pull (Max pull) int 15
 mesecon.pplate_interval (Interval) float 0.1
 
 
-[*mob-engine]
-
-## Replace certain items with ones from "mobs" (mobs_redo) engine if available.
-#  E.g., 'mobs:meat_raw' will be used instead of 'creatures:flesh'.
-creatures.mobs_replace_items (Use items from 'mobs' engine) bool false
-
-
-[*minetest_game]
+[*Minetest Game]
 
 [**beds]
 
@@ -580,6 +541,8 @@ initial_stuff (Initial items) string default:sword_stone,default:pick_steel,defa
 
 [**stairs]
 
+[***Advanced]
+
 # Replaces old stairs with new ones (Only required for older worlds).
 enable_stairs_replace_abm (Replace old stairs) bool false
 
@@ -594,14 +557,23 @@ enable_tnt (TNT) bool true
 tnt_radius (TNT radius) int 3 0
 
 
-[*moremesecons]
+[*Mob Engine]
 
-[**Adjustable Blinky Plant]
+[**creatures]
+
+# Replace certain items with ones from "mobs" (mobs_redo) engine if available.
+# E.g., 'mobs:meat_raw' will be used instead of 'creatures:flesh'.
+creatures.mobs_replace_items (Use items from 'mobs' engine) bool false
+
+
+[*More Mesecons]
+
+[**moremesecons_adjustable_blinkyplant]
 
 # Minimal interval authorized. Any lower will be set to it.
 moremesecons_adjustable_blinky_plant.min_interval (Minimum interval) float 0.5
 
-[**Craftable Commandblock]
+[**moremesecons_commandblock]
 
 # Space-separated list of authorized commands (empty to authorize all).
 moremesecons_commandblock.authorized_commands (Authorized commands) string tell
@@ -609,7 +581,7 @@ moremesecons_commandblock.authorized_commands (Authorized commands) string tell
 # Any value less than or equal to 0 will be changed to 1 and a NaN value will be changed to the default value.
 moremesecons_commandblock.nearest_max_distance (Nearest player maximum distance) float 8
 
-[**Signal Jammer]
+[**moremesecons_jammer]
 
 # Any value less than or equal to 0 will be changed to 1 and a NaN value will be changed to the default value.
 moremesecons_jammer.max_distance (Jammer action range) float 10
@@ -619,12 +591,12 @@ moremesecons_jammer.max_distance (Jammer action range) float 10
 # from an older version which did not use it.
 moremesecons_jammer.enable_lbm (Enable Jammer registration LBM) bool false
 
-[**Player Killer]
+[**moremesecons_playerkiller]
 
 # Any value less than or equal to 0 will be changed to 1 and a NaN value will be changed to the default value.
 moremesecons_playerkiller.max_distance (Player Killer action range) float 8
 
-[**Sayer]
+[**moremesecons_sayer]
 
 # It will work only if:
 # * moremesecons_sayer is present in your trusted_mods setting
@@ -636,7 +608,7 @@ moremesecons_sayer.use_speech_dispatcher (Use Speech Dispatcher) bool true
 # Any value less than or equal to 0 will be changed to 1 and a NaN value will be changed to the default value.
 moremesecons_sayer.max_distance (Sayer range) float 8
 
-[**Teleporter]
+[**moremesecons_teleporter]
 
 # Any value less than or equal to 0 will be changed to 1 and a NaN value will be changed to the default value.
 moremesecons_teleporter.max_t2t_distance (Maximum teleporter-to-teleporter distance) float 50
@@ -649,7 +621,7 @@ moremesecons_teleporter.max_p2t_distance (Maximum player-to-teleporter distance)
 # from an older version which did not use it.
 moremesecons_teleporter.enable_lbm (Enable Teleporter registration LBM) bool false
 
-[**Wireless]
+[**moremesecons_wireless]
 
 # Any value less than or equal to 0 will be changed to 1 and a NaN value will be changed to the default value.
 moremesecons_wireless.jammer_max_distance (Wireless Jammer action range) float 15
