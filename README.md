@@ -562,7 +562,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.mobs_monster]: https://github.com/AntumMT/mtmod-mobs_monster/tree/71d3e0c
 [patch.mobs_redo]: https://github.com/AntumMT/mtmod-mobs_redo/tree/3a82320
 [patch.moreblocks]: https://github.com/AntumMT/mtmod-moreblocks/tree/abb2e49
-[patch.moreores]: https://github.com/AntumMT/mtmod-moreores/tree/51fbd4f
+[patch.moreores]: https://github.com/AntumMT/mtmod-moreores/tree/e5abf12
 [patch.mydoors]: https://github.com/AntumMT/mtmp-mydoors/tree/e36c9d1
 [patch.mylights]: https://github.com/AntumMT/mtmod-mylights/tree/fef9fec
 [patch.myroofs]: https://github.com/AntumMT/mtmod-myroofs/tree/e6b23fd
