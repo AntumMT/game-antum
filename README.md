@@ -38,7 +38,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [currency][] ([WTFPL][lic.currency]) -- version: [3ee673d Git][ver.currency] *2017-05-18* ([patched][patch.currency])
 * [enchanting][] ([GPL / WTFPL / CC BY-SA-NA][lic.enchanting]) -- version: [13ea31c Git][ver.enchanting] *2016-12-16* ([patched][patch.enchanting])
 * equipment/
-	* [airtanks][] ([MIT][lic.airtanks]) -- version: [5787956 Git][ver.airtanks] *2017-05-13*
+	* [airtanks][] ([MIT][lic.airtanks]) -- version: [5787956 Git][ver.airtanks] *2017-05-13* ([patche][patch.airtanks])
 	* [slingshot][] ([MIT][lic.slingshot] / [CC0][lic.cc0]) -- version: [ef698e8 Git][ver.slingshot] *2017-06-26*
     * [throwing][] ([WTFPL][lic.wtfpl]) -- version: [90bcf43 Git][ver.throwing] *2013-09-27* ([patched][patch.throwing])
 	* [xtraarmor][] ([CC BY-SA][lic.ccbysa3.0]) -- version: 0.3
@@ -518,6 +518,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 [patch.3d_armor]: https://github.com/AntumMT/mtmp-3d_armor/tree/09fa26f
 [patch.adv_spawning]: https://github.com/AntumMT/mtmod-adv_spawning/tree/757197a
+[patch.airtanks]: https://github.com/AntumMT/mod-airtanks/tree/71ea616
 [patch.animalmaterials]: https://github.com/AntumMT/mtmp-animalmaterials/tree/c97f681
 [patch.animals]: https://github.com/AntumMT/mtmp-animals_modpack/tree/3e25eb0
 [patch.awards]: https://github.com/AntumMT/mtmod-awards/tree/638c137
