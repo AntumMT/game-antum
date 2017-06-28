@@ -1616,12 +1616,12 @@ log_mods = true
 #####################
 
 # Tools & weapons will wear down & break when used for digging, chopping, etc.
-#    type: bool
+#    type:    bool
 #    default: true
 enable_tool_wear = false
 
 # Tools & weapons will wear down & break when used for attacking/fighting.
-#    type: bool
+#    type:    bool
 #    default: true
 enable_weapon_wear = false
 
