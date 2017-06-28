@@ -552,7 +552,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.intllib]: https://github.com/AntumMT/mtmod-intllib/tree/48d1914
 [patch.invisibility]: https://github.com/AntumMT/mtmod-invisibility/tree/f045c7c
 [patch.mesecons]: https://github.com/AntumMT/mtmp-mesecons/tree/830823a
-[patch.minetest_game]: https://github.com/AntumMT/mtgame-minetest/tree/2e390d0
+[patch.minetest_game]: https://github.com/AntumMT/mtgame-minetest/tree/4275126
 [patch.mob-engine]: https://github.com/AntumMT/mtmp-mob-engine/tree/93575e0
 [patch.mob_horse]: https://github.com/AntumMT/mtmod-mob_horse/tree/4fb526b
 [patch.mobf_core]: https://github.com/AntumMT/mtmp-mobf_core/tree/c0f3639

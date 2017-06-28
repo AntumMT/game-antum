@@ -78,6 +78,12 @@ end
 
 screwdriver.rotate.colorwallmounted = screwdriver.rotate.wallmounted
 
+local tool_wear = minetest.settings:get_bool('enable_tool_wear')
+if tool_wear == nil then
+	-- Default is enabled
+	tool_wear = true
+end
+
 -- Handles rotation
 screwdriver.handler = function(itemstack, user, pointed_thing, mode, uses)
 	if pointed_thing.type ~= "node" then
@@ -135,7 +141,9 @@ screwdriver.handler = function(itemstack, user, pointed_thing, mode, uses)
 
 	if not (creative and creative.is_enabled_for
 			and creative.is_enabled_for(user:get_player_name())) then
-		itemstack:add_wear(65535 / ((uses or 200) - 1))
+		if tool_wear then
+			itemstack:add_wear(65535 / ((uses or 200) - 1))
+		end
 	end
 
 	return itemstack

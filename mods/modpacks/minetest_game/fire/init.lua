@@ -74,6 +74,12 @@ minetest.register_node("fire:permanent_flame", {
 
 -- Flint and steel
 
+local tool_wear = minetest.settings:get_bool('enable_tool_wear')
+if tool_wear == nil then
+	-- Default is enabled
+	tool_wear = true
+end
+
 minetest.register_tool("fire:flint_and_steel", {
 	description = "Flint and Steel",
 	inventory_image = "fire_flint_steel.png",
@@ -105,12 +111,14 @@ minetest.register_tool("fire:flint_and_steel", {
 		end
 		if not (creative and creative.is_enabled_for
 				and creative.is_enabled_for(player_name)) then
-			-- Wear tool
-			local wdef = itemstack:get_definition()
-			itemstack:add_wear(1000)
-			-- Tool break sound
-			if itemstack:get_count() == 0 and wdef.sound and wdef.sound.breaks then
-				minetest.sound_play(wdef.sound.breaks, {pos = sound_pos, gain = 0.5})
+			if tool_wear then
+				-- Wear tool
+				local wdef = itemstack:get_definition()
+				itemstack:add_wear(1000)
+				-- Tool break sound
+				if itemstack:get_count() == 0 and wdef.sound and wdef.sound.breaks then
+					minetest.sound_play(wdef.sound.breaks, {pos = sound_pos, gain = 0.5})
+				end
 			end
 			return itemstack
 		end
