@@ -74,9 +74,6 @@ slingshot.require_rubber_band (Require rubber band in craft recipe) bool true
 
 [**sneeker]
 
-# Logs debug output.
-sneeker.debug (Log debug output) bool false
-
 # Sets maximum number of spawns that can exist in world.
 sneeker.spawn_cap (Maximum spawns) int 10
 

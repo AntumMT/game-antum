@@ -1765,11 +1765,6 @@ mobs_animal:sheep_white = 0
 
 # *** sneeker ***
 
-# Logs debug output.
-#    type: bool
-#    default: false
-#sneeker.debug = false
-
 # Sets maximum number of spawns that can exist in world.
 #    type: int
 #    default: 10
