@@ -36,7 +36,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * crafting/
     * [craftguide][] ([GPL / WTFPL](mods/crafting/craftguide/LICENSE)) -- version: [86a96c3 Git][ver.craftguide] *2017-03-21* ([patched][patch.craftguide])
 * [currency][] ([WTFPL][lic.currency]) -- version: [3ee673d Git][ver.currency] *2017-05-18* ([patched][patch.currency])
-* [enchanting][] ([GPL / WTFPL / CC BY-SA-NA][lic.enchanting]) -- version: [13ea31c Git][ver.enchanting] *2016-12-16*
+* [enchanting][] ([GPL / WTFPL / CC BY-SA-NA][lic.enchanting]) -- version: [13ea31c Git][ver.enchanting] *2016-12-16* ([patched][patch.enchanting])
 * equipment/
 	* [airtanks][] ([MIT][lic.airtanks]) -- version: [5787956 Git][ver.airtanks] *2017-05-13*
 	* [slingshot][] ([MIT][lic.slingshot] / [CC0][lic.cc0]) -- version: [ef698e8 Git][ver.slingshot] *2017-06-26*
@@ -539,6 +539,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.crops]: https://github.com/AntumMT/mtmod-crops/tree/0c5c649
 [patch.currency]: https://github.com/AntumMT/mtmod-currency/tree/9e9b1be
 [patch.drawers]: https://github.com/AntumMT/mtmod-drawers/tree/a77f809
+[patch.enchanting]: https://github.com/AntumMT/mtmod-enchanting/tree/7a01f2f
 [patch.ethereal]: https://github.com/AntumMT/mtmod-ethereal/tree/4dd599e
 [patch.farming_plus]: https://github.com/AntumMT/mtmod-farming_plus/tree/454a443
 [patch.gems_encrustable]: https://github.com/AntumMT/mtmod-gems_encrustable/tree/791bff5

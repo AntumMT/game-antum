@@ -94,6 +94,12 @@ function enchanting.on_put(pos, listname, _, stack)
 	end
 end
 
+local tool_wear = minetest.settings:get("enable_tool_wear")
+if tool_wear == nil then
+	-- Default is enabled
+	tool_wear = true
+end
+
 function enchanting.fields(pos, _, fields, sender)
 	if not next(fields) or fields.quit then
 		return
@@ -108,7 +114,9 @@ function enchanting.fields(pos, _, fields, sender)
 	if mese:get_count() >= mese_cost and minetest.registered_tools[enchanted_tool] then
 		minetest.sound_play("xdecor_enchanting", {to_player=sender:get_player_name(), gain=0.8})
 		tool:replace(enchanted_tool)
-		tool:add_wear(orig_wear)
+		if tool_wear then
+			tool:add_wear(orig_wear)
+		end
 		mese:take_item(mese_cost)
 		inv:set_stack("mese", 1, mese)
 		inv:set_stack("tool", 1, tool)
