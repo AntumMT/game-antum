@@ -1607,7 +1607,7 @@ log_mods = true
 ## Logs extra debug messages.
 #    type: bool
 #    default: false
-#enable_debug = false
+#enable_debug_mods = false
 
 
 
