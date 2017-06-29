@@ -4,8 +4,6 @@ Requires Minetest server 0.4.16 or above
 
 The game includes the mods from the default [minetest_game](https://github.com/minetest/minetest_game/tree/master/mods)
 
-***Currently, a development version of the Minetest server is required. It has been tested with [build 0d4d35a](https://github.com/minetest/minetest/tree/0d4d35a).***
-
 ---
 
 ### The following mods are also included:
