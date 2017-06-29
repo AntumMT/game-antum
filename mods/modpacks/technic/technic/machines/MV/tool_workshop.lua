@@ -34,6 +34,13 @@ local workshop_formspec =
 	"listring[current_name;upgrade2]"..
 	"listring[current_player;main]"
 
+-- Setting for enabling/disabling tool wear & break
+local tool_wear = minetest.settings:get_bool("enable_tool_wear")
+if tool_wear == nil then
+	-- Default is enabled
+	tool_wear = true
+end
+
 local run = function(pos, node)
 	local meta         = minetest.get_meta(pos)
 	local inv          = meta:get_inventory()
@@ -76,7 +83,9 @@ local run = function(pos, node)
 		meta:set_string("infotext", S("%s Unpowered"):format(machine_name))
 	elseif eu_input >= workshop_demand[EU_upgrade+1] then
 		meta:set_string("infotext", S("%s Active"):format(machine_name))
-		srcstack:add_wear(-1000)
+		if enable_wear then
+			srcstack:add_wear(-1000)
+		end
 		inv:set_stack("src", 1, srcstack)
 	end
 	meta:set_int("MV_EU_demand", workshop_demand[EU_upgrade+1])
