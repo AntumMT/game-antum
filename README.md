@@ -549,7 +549,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.hovercraft]: https://github.com/AntumMT/mtmod-hovercraft/tree/73a6223
 [patch.hud]: https://github.com/AntumMT/mtmod-hud/tree/6846e20
 [patch.hudbars]: https://github.com/AntumMT/mtmod-hudbars/tree/31926a0
-[patch.intllib]: https://github.com/AntumMT/mtmod-intllib/tree/48d1914
+[patch.intllib]: https://github.com/AntumMT/mod-intllib/tree/816ef06
 [patch.invisibility]: https://github.com/AntumMT/mtmod-invisibility/tree/f045c7c
 [patch.mesecons]: https://github.com/AntumMT/mtmp-mesecons/tree/830823a
 [patch.minetest_game]: https://github.com/AntumMT/mtgame-minetest/tree/4275126
