@@ -118,7 +118,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [coloredwood][] ([LGPL][lic.lgpl3.0]) -- version: [bd490be Git][ver.coloredwood] *2017-05-18*
 * world/
     * [bedrock2][] ([WTFPL][lic.wtfpl]) -- version [1.2.2 (5fe9e87 Git)][ver.bedrock2] *2016-11-21* ([patched][patch.bedrock2])
-    * [biome_lib][] ([WTFPL][lic.wtfpl]) -- version: [7f54d95 Git][ver.biome_lib] *2017-05-18*
+    * [biome_lib][] ([WTFPL][lic.wtfpl]) -- version: [7f54d95 Git][ver.biome_lib] *2017-05-18* ([patched][patch.biome_lib])
     * [desert_life][] ([CC BY-SA][lic.ccbysa4.0]) -- version: [d448fa3 Git][ver.desert_life] *2017-01-01*
     * [ethereal][] ([MIT][lic.ethereal]) -- version [8917c9d Git][ver.ethereal] *2017-06-12* ([patched][patch.ethereal])
     * [hill_nodebox][] ([BSD 3-Clause][lic.hill_nodebox]) -- version [41bbfa2 Git][ver.hill_nodebox] *2014-12-13*
@@ -523,6 +523,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.away]: https://github.com/AntumMT/mtmod-away/tree/3b0bf9e
 [patch.bags]: https://github.com/AntumMT/mtmod-bags/tree/4363284
 [patch.bedrock2]: https://github.com/AntumMT/mtmod-bedrock2/tree/51b25b6
+[patch.biome_lib]: https://github.com/AntumMT/mod-biome_lib/tree/83c9426
 [patch.bridges]: https://github.com/AntumMT/mtmod-bridges/tree/ba8f71a
 [patch.castle_gates]: https://github.com/AntumMT/mtmod-castle_gates/tree/465ad4f
 [patch.castle_lighting]: https://github.com/AntumMT/mtmod-castle_lighting/tree/b360c54
