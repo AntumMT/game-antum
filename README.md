@@ -87,7 +87,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [areas][] ([LGPL][lic.lgpl2.1]) -- version [289d0e6 Git][ver.areas] *2017-06-09*
     * [simple_protection][] ([WTFPL][lic.wtfpl]) -- version [23c024f Git][ver.simple_protection] *2017-01-07*
 * signs/
-	* [signs_lib][] ([BSD][lic.signs_lib] / [WTFPL][lic.wtfpl]) -- version: [3e00159 Git][ver.signs_lib] *2017-05-20*
+	* [signs_lib][] ([BSD][lic.signs_lib] / [WTFPL][lic.wtfpl]) -- version: [3e00159 Git][ver.signs_lib] *2017-05-20* ([patched][patch.signs_lib])
 * sound/
     * [ambience][ambience_ultralite] ([WTFPL][lic.wtfpl] / [CC BY / CC BY-SA / CC BY-NC-SA / CC0][lic.ambience_ultralite]) -- version: 0.36
 * spawning/
@@ -571,6 +571,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.playeranim]: https://github.com/AntumMT/mtmod-playeranim/tree/8a289b9
 [patch.quartz]: https://github.com/AntumMT/mtmod-quartz/tree/d23dabd
 [patch.rainbow_ore]: https://github.com/AntumMT/mtmod-rainbow_ore/tree/0227a86
+[patch.signs_lib]: https://github.com/AntumMT/mod-signs_lib/tree/47d3dd0
 [patch.snowdrift]: https://github.com/AntumMT/mtmod-snowdrift/tree/1b9da4f
 [patch.spawneggs]: https://github.com/AntumMT/mtmod-spawneggs/tree/f2cc4cc
 [patch.technic]: https://github.com/AntumMT/mp-technic/tree/70ebc1e
