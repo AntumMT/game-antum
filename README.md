@@ -47,7 +47,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [jukebox][] ([WTFPL / CC0][lic.jukebox]) -- version: [e6a507f Git][ver.jukebox] *2016-05-23*
     * [trampoline][] ([GPL][lic.gpl3.0]) -- version: [ab1c289 Git][ver.trampoline] *2017-05-26*
     * [trash_can][] ([MIT][lic.trash_can]) -- version: [5fd3df7 Git][ver.trash_can] *2016-01-14* ([patched][patch.trash_can])
-* [intllib][] ([Unilicense][lic.unilicense]) -- version: [49e965d Git][ver.intllib] ** ([patched][patch.intllib])
+* [intllib][] ([Unilicense][lic.unilicense]) -- version: [49e965d Git][ver.intllib] *2017-05-15* ([patched][patch.intllib])
 * inventory/
     * [bags][] ([BSD 3-Clause][lic.bags]) -- version: [f17d829 Git][ver.bags] *2015-10-11* ([patched][patch.bags])
     * [inventory_plus][] ([BSD 3-Clause][lic.inventory_plus]) -- version: [fd71e3d Git][ver.inventory_plus] *2016-05-13*
@@ -550,7 +550,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.hovercraft]: https://github.com/AntumMT/mtmod-hovercraft/tree/73a6223
 [patch.hud]: https://github.com/AntumMT/mtmod-hud/tree/6846e20
 [patch.hudbars]: https://github.com/AntumMT/mtmod-hudbars/tree/9ca4f6b
-[patch.intllib]: https://github.com/AntumMT/mod-intllib/tree/816ef06
+[patch.intllib]: https://github.com/AntumMT/mod-intllib/tree/edea599
 [patch.invisibility]: https://github.com/AntumMT/mtmod-invisibility/tree/f045c7c
 [patch.mesecons]: https://github.com/AntumMT/mtmp-mesecons/tree/830823a
 [patch.minetest_game]: https://github.com/AntumMT/mtgame-minetest/tree/4275126

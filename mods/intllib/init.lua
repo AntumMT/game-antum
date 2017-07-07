@@ -65,11 +65,7 @@ end
 
 
 function intllib.Getter(modname)
-	minetest.log("deprecated", "intllib.Getter (called from \""
-			..minetest.get_current_modname()
-			.. "\") is deprecated."
-			.." Please use intllib.make_gettext_pair instead.")
-	return Getter(modname)
+	return intllib.make_gettext_pair(modname)
 end
 
 
