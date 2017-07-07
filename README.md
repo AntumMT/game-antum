@@ -101,6 +101,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [tools_obsidian][] ([LGPL / CC BY-SA][lic.tools_obsidian]) -- version: [f77fd79][ver.tools_obsidian] *2016-03-19* ([patched][patch.tools_obsidian])
     * [workbench][] ([GPL / WTFPL](mods/tools/workbench/LICENSE)) -- version: [74dd1af Git][ver.workbench] *2017-02-07* ([patched][patch.workbench])
 * transport/
+	* [boats][boats2] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa3.0]) -- version [b83231e Git][ver.boats2] *2016-10-14* ([patched][patch.boats2])
 	* [helicopter][] ([GPL][lic.gpl2.0]) -- version: [10f1433 Git][ver.helicopter] *2015-07-15* ([patched][patch.helicopter])
     * [hovercraft][] ([LGPL / CC BY-SA / CC0][lic.hovercraft]) -- version: [4d50e68 Git][ver.hovercraft] *2017-05-14* ([patched][patch.hovercraft])
 * ui/
@@ -199,6 +200,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [bags]: http://cornernote.github.io/minetest-bags/
 [bedrock2]: https://forum.minetest.net/viewtopic.php?t=11271
 [biome_lib]: https://forum.minetest.net/viewtopic.php?f=11&t=12999
+[boats2]: https://github.com/amadin/boats
 [bookmarks_gui]: http://cornernote.github.io/minetest-bookmarks_gui/
 [bridges]: https://forum.minetest.net/viewtopic.php?t=3488
 [campfire]: https://forum.minetest.net/viewtopic.php?t=10569
@@ -417,6 +419,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.bags]: https://github.com/cornernote/minetest-bags/tree/f17d829
 [ver.bedrock2]: http://repo.or.cz/minetest_bedrock2.git/tree/5fe9e87
 [ver.biome_lib]: https://github.com/minetest-mods/biome_lib/tree/7f54d95
+[ver.boats2]: https://github.com/amadin/boats/tree/b83231e
 [ver.bookmarks_gui]: https://github.com/cornernote/minetest-bookmarks_gui/tree/d369dba
 [ver.bridges]: https://github.com/Sokomine/bridges/tree/5b5f475
 [ver.campfire]: https://github.com/Napiophelios/campfire/tree/04b4ea5
@@ -524,6 +527,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.bags]: https://github.com/AntumMT/mtmod-bags/tree/4363284
 [patch.bedrock2]: https://github.com/AntumMT/mtmod-bedrock2/tree/51b25b6
 [patch.biome_lib]: https://github.com/AntumMT/mod-biome_lib/tree/83c9426
+[patch.boats2]: https://github.com/AntumMT/mod-boats2/tree/ccd7f2d
 [patch.bridges]: https://github.com/AntumMT/mtmod-bridges/tree/ba8f71a
 [patch.castle_gates]: https://github.com/AntumMT/mtmod-castle_gates/tree/465ad4f
 [patch.castle_lighting]: https://github.com/AntumMT/mtmod-castle_lighting/tree/b360c54
