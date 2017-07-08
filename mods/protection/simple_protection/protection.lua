@@ -5,6 +5,18 @@ minetest.after(1, function()
 	s_protect.load_shareall()
 end)
 
+local function notify_player(pos, player_name)
+	local data = s_protect.get_data(pos)
+	if not data and s_protect.claim_to_dig then
+		minetest.chat_send_player(player_name, S("Please claim this area to modify it."))
+	elseif not data then
+		minetest.log("warning", "[simple_protection] Access refused but no area was found "..
+			"near pos=".. minetest.pos_to_string(pos))
+	else
+		minetest.chat_send_player(player_name, S("Area owned by: @1", data.owner))
+	end
+end
+
 s_protect.old_is_protected = minetest.is_protected
 minetest.is_protected = function(pos, player_name)
 	if s_protect.can_access(pos, player_name) then
@@ -26,14 +38,16 @@ minetest.item_place = function(itemstack, placer, pointed_thing)
 		end
 	end]]
 
-	if s_protect.can_access(pointed_thing.above, player_name) or not minetest.registered_nodes[itemstack:get_name()] then
+	if s_protect.can_access(pointed_thing.above, player_name)
+			or not minetest.registered_nodes[itemstack:get_name()] then
 		return old_item_place(itemstack, placer, pointed_thing)
-	else
-		local data = s_protect.get_data(pointed_thing.above)
-		minetest.chat_send_player(player_name, S("Area owned by: @1", data.owner))
-		return itemstack
 	end
+
+	notify_player(pointed_thing.above, player_name)
+	return itemstack
 end
+
+minetest.register_on_protection_violation(notify_player)
 
 local hud_time = 0
 s_protect.player_huds = {}
@@ -133,6 +147,26 @@ minetest.register_craftitem("simple_protection:claim", {
 					S("This area is already owned by: @1", data.owner))
 			return
 		end
+		-- Count number of claims for this user
+		local claims_count = 0
+		local claims_max = s_protect.max_claims
+
+		if minetest.check_player_privs(player_name, {simple_protection=true}) then
+			claims_max = claims_max * 2
+		end
+
+		for k, v in pairs(s_protect.claims) do
+			if v.owner == player_name then
+				claims_count = claims_count + 1
+				if claims_count >= claims_max then
+					minetest.chat_send_player(player_name,
+						S("You can not claim any further areas: Limit (@1) reached.",
+						tostring(claims_max)))
+					return
+				end
+			end
+		end
+
 		itemstack:take_item(1)
 		s_protect.claims[area_pos] = {owner=player_name, shared={}}
 		s_protect.save()

@@ -85,7 +85,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [wardrobe][] ([WTFPL][lic.wtfpl]) -- version: [1.1-2-c48b011 Git][ver.wardrobe] *2015-05-21*
 * protection/
     * [areas][] ([LGPL][lic.lgpl2.1]) -- version [289d0e6 Git][ver.areas] *2017-06-09*
-    * [simple_protection][] ([WTFPL][lic.wtfpl]) -- version [23c024f Git][ver.simple_protection] *2017-01-07*
+    * [simple_protection][] ([WTFPL][lic.wtfpl]) -- version [2cdb431 Git][ver.simple_protection] *2017-07-03* ([patched][patch.simple_protection])
 * signs/
 	* [signs_lib][] ([BSD][lic.signs_lib] / [WTFPL][lic.wtfpl]) -- version: [3e00159 Git][ver.signs_lib] *2017-05-20* ([patched][patch.signs_lib])
 * sound/
@@ -496,7 +496,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.quartz]: https://github.com/minetest-mods/quartz/tree/00ca4eb
 [ver.rainbow_ore]: https://github.com/FsxShader2012/rainbow_ore/tree/6e77693
 [ver.signs_lib]: https://github.com/minetest-mods/signs_lib/tree/3e00159
-[ver.simple_protection]: https://github.com/SmallJoker/simple_protection/tree/23c024f
+[ver.simple_protection]: https://github.com/SmallJoker/simple_protection/tree/2cdb431
 [ver.slingshot]: https://github.com/AntumMT/mtmod-slingshot/tree/ef698e8
 [ver.sneeker]: https://github.com/AntumMT/mtmod-sneeker/tree/a56b9c2
 [ver.snowdrift]: https://github.com/paramat/snowdrift/tree/fcb0537
@@ -577,6 +577,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.quartz]: https://github.com/AntumMT/mtmod-quartz/tree/d23dabd
 [patch.rainbow_ore]: https://github.com/AntumMT/mtmod-rainbow_ore/tree/0227a86
 [patch.signs_lib]: https://github.com/AntumMT/mod-signs_lib/tree/47d3dd0
+[patch.simple_protection]: https://github.com/AntumMT/mod-simple_protection/tree/1b924d0
 [patch.snowdrift]: https://github.com/AntumMT/mtmod-snowdrift/tree/1b9da4f
 [patch.spawneggs]: https://github.com/AntumMT/mtmod-spawneggs/tree/f2cc4cc
 [patch.technic]: https://github.com/AntumMT/mp-technic/tree/70ebc1e

@@ -20,8 +20,12 @@ s_protect.gettext = function(rawtext, replacements, ...)
 	return text
 end
 
-if minetest.get_modpath("intllib") then
-    s_protect.gettext = intllib.Getter()
+if minetest.global_exists("intllib") then
+	if intllib.make_gettext_pair then
+		s_protect.gettext = intllib.make_gettext_pair()
+	else
+		s_protect.gettext = intllib.Getter()
+	end
 end
 local S = s_protect.gettext
 -- INTTLIB SUPPORT END
@@ -30,14 +34,6 @@ local S = s_protect.gettext
 dofile(s_protect.mod_path.."/functions.lua")
 s_protect.load_config()
 dofile(s_protect.mod_path.."/protection.lua")
-
-minetest.register_on_protection_violation(function(pos, player_name)
-	minetest.chat_send_player(player_name, S("Do not try to modify this area!"))
-	--PUNISH HIM!!!!
-
-	--local player = minetest.get_player_by_name(player_name)
-	--player:set_hp(player:get_hp() - 1)
-end)
 
 minetest.register_privilege("simple_protection", S("Allows to modify and delete protected areas"))
 
