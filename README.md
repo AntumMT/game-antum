@@ -156,7 +156,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [mobf_core][animals] (part of "animals" modpack) ([CC BY-SA][lic.ccbysa3.0]) -- version: [1199ca9 Git][ver.mobf_core] *2017-01-14* ([patched][patch.mobf_core])
 * [minetest_game][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- version: [f855bee Git][ver.minetest_game] *2017-06-06* ([patched][patch.minetest_game])
 * [moremesecons][] ([MPL][lic.mpl2.0]) -- version: [aa2ae82 Git][ver.moremesecons] *2017-06-04*
-* [technic][] ([LGPL][lic.lgpl2.0]) -- version: [d4162be9 Git][ver.technic] *2017-06-17* ([patched][patch.technic])
+* [technic][] ([LGPL][lic.lgpl2.0]) -- version: [a84b5f3 Git][ver.technic] *2017-07-03* ([patched][patch.technic])
 
 
 ---
@@ -503,7 +503,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.spawneggs]: https://github.com/thefamilygrog66/spawneggs/tree/4650370
 [ver.spectator_mode]: https://github.com/minetest-mods/spectator_mode/tree/7d68bec
 [ver.stairsplus]: https://github.com/CasimirKaPazi/stairsplus/tree/311e1f0
-[ver.technic]: https://github.com/minetest-mods/technic/tree/d4162be9
+[ver.technic]: https://github.com/minetest-mods/technic/tree/a84b5f3
 [ver.throwing]: https://github.com/PilzAdam/throwing/tree/90bcf43
 [ver.tnt]: https://github.com/PilzAdam/TNT/tree/d6a0b7d
 [ver.tools_obsidian]: https://github.com/Dragonop/tools_obsidian/tree/f77fd79
@@ -580,7 +580,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.simple_protection]: https://github.com/AntumMT/mod-simple_protection/tree/1b924d0
 [patch.snowdrift]: https://github.com/AntumMT/mtmod-snowdrift/tree/1b9da4f
 [patch.spawneggs]: https://github.com/AntumMT/mtmod-spawneggs/tree/f2cc4cc
-[patch.technic]: https://github.com/AntumMT/mp-technic/tree/70ebc1e
+[patch.technic]: https://github.com/AntumMT/mp-technic/tree/28875c7
 [patch.throwing]: https://github.com/AntumMT/mtmod-throwing/tree/b33ffde
 [patch.tools_obsidian]: https://github.com/AntumMT/mtmod-tools_obsidian/tree/2d19297
 [patch.trash_can]: https://github.com/AntumMT/mtmod-trash_can/tree/5a92bf4
