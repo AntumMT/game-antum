@@ -560,7 +560,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.minetest_game]: https://github.com/AntumMT/mtgame-minetest/tree/4275126
 [patch.mob-engine]: https://github.com/AntumMT/mtmp-mob-engine/tree/93575e0
 [patch.mob_horse]: https://github.com/AntumMT/mtmod-mob_horse/tree/4fb526b
-[patch.mobf_core]: https://github.com/AntumMT/mtmp-mobf_core/tree/c0f3639
+[patch.mobf_core]: https://github.com/AntumMT/mp-mobf_core/tree/d532137
 [patch.mobs_animal]: https://github.com/AntumMT/mtmod-mobs_animal/tree/3f3249e
 [patch.mobs_goblins]: https://github.com/AntumMT/mod-mobs_goblins/tree/b5cee44
 [patch.mobs_monster]: https://github.com/AntumMT/mtmod-mobs_monster/tree/71d3e0c
