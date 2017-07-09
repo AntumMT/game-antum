@@ -164,3 +164,4 @@
 * Switch to 'sfinv'
 * Convert to use 'sfinv'
 	* bags
+* Add setting to disable 'trash' in 'inventory_plus'
