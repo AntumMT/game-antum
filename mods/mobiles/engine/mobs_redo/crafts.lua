@@ -3,15 +3,17 @@ local S = mobs.intllib
 
 -- name tag
 minetest.register_craftitem("mobs:nametag", {
-	description = S("Nametag"),
+	description = S("Name Tag"),
 	inventory_image = "mobs_nametag.png",
 })
 
-core.register_craft({
-	type = "shapeless",
-	output = "mobs:nametag",
-	recipe = {"default:paper", "dye:black", "farming:string"},
-})
+if minetest.get_modpath("dye") and minetest.get_modpath("farming") then
+	minetest.register_craft({
+		type = "shapeless",
+		output = "mobs:nametag",
+		recipe = {"default:paper", "dye:black", "farming:string"},
+	})
+end
 
 -- leather
 minetest.register_craftitem("mobs:leather", {
@@ -40,22 +42,26 @@ minetest.register_craft({
 	cooktime = 5,
 })
 
--- magic lasso
-minetest.register_tool("mobs:magic_lasso", {
-	description = S("Magic Lasso (right-click animal to put in inventory)"),
+-- lasso
+minetest.register_tool("mobs:lasso", {
+	description = S("Lasso (right-click animal to put in inventory)"),
 	inventory_image = "mobs_magic_lasso.png",
 })
 minetest.register_alias("mobs:lasso", "mobs:magic_lasso")
 minetest.register_alias("lasso", "mobs:magic_lasso")
 
-minetest.register_craft({
-	output = "mobs:magic_lasso",
-	recipe = {
-		{"farming:string", "default:gold_lump", "farming:string"},
-		{"default:gold_lump", "default:diamondblock", "default:gold_lump"},
-		{"farming:string", "default:gold_lump", "farming:string"},
-	}
-})
+if minetest.get_modpath("farming") then
+	minetest.register_craft({
+		output = "mobs:lasso",
+		recipe = {
+			{"farming:string", "", "farming:string"},
+			{"", "default:diamond", ""},
+			{"farming:string", "", "farming:string"},
+		}
+	})
+end
+
+minetest.register_alias("mobs:magic_lasso", "mobs:lasso")
 
 -- net
 minetest.register_tool("mobs:net", {
@@ -63,14 +69,16 @@ minetest.register_tool("mobs:net", {
 	inventory_image = "mobs_net.png",
 })
 
-minetest.register_craft({
-	output = "mobs:net",
-	recipe = {
-		{"default:stick", "", "default:stick"},
-		{"default:stick", "", "default:stick"},
-		{"farming:string", "default:stick", "farming:string"},
-	}
-})
+if minetest.get_modpath("farming") then
+	minetest.register_craft({
+		output = "mobs:net",
+		recipe = {
+			{"group:stick", "", "group:stick"},
+			{"group:stick", "", "group:stick"},
+			{"farming:string", "group:stick", "farming:string"},
+		}
+	})
+end
 
 -- shears (right click to shear animal)
 minetest.register_tool("mobs:shears", {
@@ -103,7 +111,7 @@ minetest.register_craft({
 
 -- saddle
 minetest.register_craftitem("mobs:saddle", {
-	description = "Saddle",
+	description = S("Saddle"),
 	inventory_image = "mobs_saddle.png"
 })
 

@@ -1,5 +1,7 @@
 
-local S = mobs.intllib
+-- intllib
+local MP = minetest.get_modpath(minetest.get_current_modname())
+local S, NS = dofile(MP .. "/intllib.lua")
 
 -- mob spawner
 
@@ -66,7 +68,7 @@ minetest.register_node("mobs:spawner", {
 		else
 			minetest.chat_send_player(name, S("Mob Spawner settings failed!"))
 			minetest.chat_send_player(name,
-				S("> name min_light[0-14] max_light[0-14] max_mobs_in_area[0 to disable] distance[1-20] y_offset[-10 to 10]"))
+				S("Syntax: “name min_light[0-14] max_light[0-14] max_mobs_in_area[0 to disable] distance[1-20] y_offset[-10 to 10]”"))
 		end
 	end,
 })
