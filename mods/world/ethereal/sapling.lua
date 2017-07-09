@@ -160,7 +160,8 @@ ethereal.grow_sapling = function (pos, node)
 
 	-- Check if Ethereal Sapling is growing on correct substrate
 	if node.name == "ethereal:yellow_tree_sapling"
-	and under == "default:dirt_with_snow" then
+--	and under == "default:dirt_with_snow" then
+	and minetest.get_item_group(under, "soil") > 0 then
 		ethereal.grow_yellow_tree(pos)
 
 	elseif node.name == "ethereal:big_tree_sapling"

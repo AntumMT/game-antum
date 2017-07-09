@@ -121,7 +121,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [bedrock2][] ([WTFPL][lic.wtfpl]) -- version [63dbab8 Git][ver.bedrock2] *2017-06-20* ([patched][patch.bedrock2])
     * [biome_lib][] ([WTFPL][lic.wtfpl]) -- version: [7f54d95 Git][ver.biome_lib] *2017-05-18* ([patched][patch.biome_lib])
     * [desert_life][] ([CC BY-SA][lic.ccbysa4.0]) -- version: [d448fa3 Git][ver.desert_life] *2017-01-01*
-    * [ethereal][] ([MIT][lic.ethereal]) -- version [8917c9d Git][ver.ethereal] *2017-06-12* ([patched][patch.ethereal]) ***UPDATE***
+    * [ethereal][] ([MIT][lic.ethereal]) -- version [6c8ea9e Git][ver.ethereal] *2017-07-09* ([patched][patch.ethereal])
     * [hill_nodebox][] ([BSD 3-Clause][lic.hill_nodebox]) -- version [41bbfa2 Git][ver.hill_nodebox] *2014-12-13*
     * [nether][] ([WTFPL / CC BY-SA][lic.nether]) -- version: [bc2ccfb Git][ver.nether] *2017-01-04* ([patched][patch.nether])
 
@@ -443,7 +443,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.desert_life]: https://github.com/NathanSalapat/desert_life/tree/d448fa3
 [ver.drawers]: https://github.com/minetest-mods/drawers/tree/7063e2b
 [ver.enchanting]: https://github.com/minetest-mods/enchanting/tree/13ea31c
-[ver.ethereal]: https://github.com/tenplus1/ethereal/tree/8917c9d
+[ver.ethereal]: https://github.com/tenplus1/ethereal/tree/6c8ea9e
 [ver.farming_plus]: https://github.com/PilzAdam/farming_plus/tree/7e0d976
 [ver.fort_spikes]: https://github.com/xeranas/fort_spikes/tree/3c7d7c6
 [ver.gems_encrustable]: https://github.com/wowiamdiamonds/gems/tree/81d513d
@@ -544,7 +544,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.currency]: https://github.com/AntumMT/mod-currency/tree/9e9b1be
 [patch.drawers]: https://github.com/AntumMT/mod-drawers/tree/a77f809
 [patch.enchanting]: https://github.com/AntumMT/mod-enchanting/tree/7a01f2f
-[patch.ethereal]: https://github.com/AntumMT/mod-ethereal/tree/4428d76
+[patch.ethereal]: https://github.com/AntumMT/mod-ethereal/tree/893c199
 [patch.farming_plus]: https://github.com/AntumMT/mod-farming_plus/tree/8bee49a
 [patch.gems_encrustable]: https://github.com/AntumMT/mod-gems_encrustable/tree/791bff5
 [patch.gems_tools]: https://github.com/AntumMT/mod-gems_tools/tree/abe21e3
