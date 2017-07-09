@@ -61,7 +61,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [moreores][] ([zlib][lic.moreores] / [CC BY-SA][lic.ccbysa3.0]) -- version: [73e99e7 Git][ver.moreores] *2017-05-20* ([patched][patch.moreores])
 	* [quartz][] ([MIT][lic.quartz]) -- version: [00ca4eb Git][ver.quartz] *2017-02-28* ([patched][patch.quartz])
 	* [rainbow_ore][] ([LGPL][lic.rainbow_ore]) -- version: [6e77693 Git][ver.rainbow_ore] *2015-11-02* ([patched][patch.rainbow_ore])
-	* [unifieddyes][] ([GPL][lic.gpl2.0]) -- version: [8b20a06 Git][ver.unifieddyes] *2017-06-04*
+	* [unifieddyes][] ([GPL][lic.gpl2.0]) -- version: [8b20a06 Git][ver.unifieddyes] *2017-06-04* ([patched][patch.unifieddyes]) ***UPDATE***
 * mobiles/aggressive/
     * [mobs_goblins][] ([CC-BY-SA / CC-BY / CC0][lic.mobs_goblins]) -- version: [acabe4d Git][ver.mobs_goblins] *2017-07-05* ([patched][patch.mobs_goblins])
     * [mobs_monster][] ([MIT][lic.mobs_monster]) -- version: [e6f77e1 Git][ver.mobs_monster] *2017-05-28* ([patched][patch.mobs_monster])
@@ -584,6 +584,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.throwing]: https://github.com/AntumMT/mtmod-throwing/tree/b33ffde
 [patch.tools_obsidian]: https://github.com/AntumMT/mtmod-tools_obsidian/tree/2d19297
 [patch.trash_can]: https://github.com/AntumMT/mtmod-trash_can/tree/5a92bf4
+[patch.unifieddyes]: https://github.com/AntumMT/mod-unifieddyes/tree/9c2f740
 [patch.walking_light]: https://github.com/AntumMT/mtmod-walking_light/tree/e602515
 [patch.windmill]: https://github.com/AntumMT/mtmod-windmill/tree/7756ab4
 [patch.workbench]: https://github.com/AntumMT/mtmod-workbench/tree/b964323
