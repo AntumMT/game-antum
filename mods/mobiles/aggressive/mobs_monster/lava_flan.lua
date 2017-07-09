@@ -154,7 +154,7 @@ minetest.register_tool(":mobs:pick_lava", {
 		full_punch_interval = 0.4,
 		max_drop_level=3,
 		groupcaps={
-			cracky = {times={[1]=1.80, [2]=0.90, [3]=0.45}, uses=0, maxlevel=3},
+			cracky = {times={[1]=1.80, [2]=0.80, [3]=0.40}, uses=0, maxlevel=3},
 		},
 		damage_groups = {fleshy=6},
 	},
