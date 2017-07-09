@@ -517,7 +517,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.workbench]: https://github.com/minetest-mods/workbench/tree/74dd1af
 [ver.worldedge]: https://github.com/minetest-mods/worldedge/tree/e15fa99
 
-[patch.3d_armor]: https://github.com/AntumMT/mp-3d_armor/tree/09fa26f
+[patch.3d_armor]: https://github.com/AntumMT/mp-3d_armor/tree/2a3a0ac
 [patch.adv_spawning]: https://github.com/AntumMT/mod-adv_spawning/tree/757197a
 [patch.airtanks]: https://github.com/AntumMT/mod-airtanks/tree/71ea616
 [patch.animalmaterials]: https://github.com/AntumMT/mp-animalmaterials/tree/b5d8315
