@@ -53,7 +53,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [inventory_plus][] ([BSD 3-Clause][lic.inventory_plus]) -- version: [fd71e3d Git][ver.inventory_plus] *2016-05-13*
 * lighting/
     * [glow][] ([GPL][lic.gpl2.0]) -- version: [78d0166 Git][ver.glow] *2017-05-16*
-	* [ilights][] ([CC BY-SA][lic.ccbysa]) -- version [7060243 Git][ver.ilights] *2017-05-18*
+	* [ilights][] ([CC BY-SA][lic.ccbysa]) -- version [7060243 Git][ver.ilights] *2017-05-18* ([patched][patch.ilights])
     * walking_light ([petermalone fork][walking_light]) ([WTFPL / CC BY-SA][lic.walking_light]) -- version: [b23d836 Git][ver.walking_light] *2017-06-21* ([patched][patch.walking_light])
 * materials/
 	* [gems_encrustable][] ([WTFPL][lic.wtfpl]) -- version: [81d513d Git][ver.gems_encrustable] *2012-07-31* ([patched][patch.gems_encrustable])
@@ -554,6 +554,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.hovercraft]: https://github.com/AntumMT/mtmod-hovercraft/tree/73a6223
 [patch.hud]: https://github.com/AntumMT/mtmod-hud/tree/6846e20
 [patch.hudbars]: https://github.com/AntumMT/mtmod-hudbars/tree/9ca4f6b
+[patch.ilights]: https://github.com/AntumMT/mod-ilights/tree/d7f4f7e
 [patch.intllib]: https://github.com/AntumMT/mod-intllib/tree/edea599
 [patch.invisibility]: https://github.com/AntumMT/mtmod-invisibility/tree/f045c7c
 [patch.mesecons]: https://github.com/AntumMT/mtmp-mesecons/tree/830823a
