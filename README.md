@@ -581,7 +581,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.signs_lib]: https://github.com/AntumMT/mod-signs_lib/tree/47d3dd0
 [patch.snowdrift]: https://github.com/AntumMT/mod-snowdrift/tree/1b9da4f
 [patch.spawneggs]: https://github.com/AntumMT/mod-spawneggs/tree/f2cc4cc
-[patch.technic]: https://github.com/AntumMT/mp-technic/tree/bb388d5
+[patch.technic]: https://github.com/AntumMT/mp-technic/tree/28eaaec
 [patch.throwing]: https://github.com/AntumMT/mod-throwing/tree/b33ffde
 [patch.tools_obsidian]: https://github.com/AntumMT/mod-tools_obsidian/tree/2d19297
 [patch.trash_can]: https://github.com/AntumMT/mod-trash_can/tree/5a92bf4
