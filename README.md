@@ -521,7 +521,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.adv_spawning]: https://github.com/AntumMT/mod-adv_spawning/tree/757197a
 [patch.airtanks]: https://github.com/AntumMT/mod-airtanks/tree/71ea616
 [patch.animalmaterials]: https://github.com/AntumMT/mp-animalmaterials/tree/b5d8315
-[patch.animals]: https://github.com/AntumMT/mp-animals_modpack/tree/3e25eb0
+[patch.animals]: https://github.com/AntumMT/mp-animals_modpack/tree/9d08ca5
 [patch.awards]: https://github.com/AntumMT/mod-awards/tree/638c137
 [patch.away]: https://github.com/AntumMT/mod-away/tree/3b0bf9e
 [patch.bags]: https://github.com/AntumMT/mod-bags/tree/4363284
