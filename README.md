@@ -69,7 +69,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * mobiles/engine/
     * [mobs_redo][] ([MIT][lic.mobs_redo] / Unspecified Creative Commons license) -- version: [7b02fef Git][ver.mobs_redo] *2017-07-08* ([patched][patch.mobs_redo]) ***UPDATE***
 * mobiles/general/
-	* [mobs_animal][] ([MIT][lic.mobs_animal]) -- version: [ebc2e3a Git][ver.mobs_animal] *2017-05-27* ([patched][patch.mobs_animal]) ***UPDATE***
+	* [mobs_animal][] ([MIT][lic.mobs_animal]) -- version: [b40fe3a Git][ver.mobs_animal] *2017-07-03* ([patched][patch.mobs_animal])
 * mobiles/passive/
 	* [mob_horse][] -- version: [dee3883 Git][ver.mob_horse] *2017-06-01* ([patched][patch.mob_horse])
     * [peaceful_npc][] ([WTFPL][lic.wtfpl]) -- version: [2b3a7a5 Git][ver.peaceful_npc] *2015-08-09* ([patched][patch.peaceful_npc])
@@ -471,7 +471,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.mob-engine]: https://github.com/minetest-mods/mob-engine/tree/138f655
 [ver.mob_horse]: https://github.com/tenplus1/mob_horse/tree/dee3883
 [ver.mobf_core]: https://github.com/sapier/mobf_core/tree/1199ca9
-[ver.mobs_animal]: https://github.com/tenplus1/mobs_animal/tree/ebc2e3a
+[ver.mobs_animal]: https://github.com/tenplus1/mobs_animal/tree/b40fe3a
 [ver.mobs_goblins]: https://github.com/FreeLikeGNU/mobs_goblins/tree/acabe4d
 [ver.mobs_monster]: https://github.com/tenplus1/mobs_monster/tree/e6f77e1
 [ver.mobs_redo]: https://github.com/tenplus1/mobs_redo/tree/7b02fef
@@ -562,7 +562,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.mob-engine]: https://github.com/AntumMT/mp-mob-engine/tree/93575e0
 [patch.mob_horse]: https://github.com/AntumMT/mod-mob_horse/tree/4fb526b
 [patch.mobf_core]: https://github.com/AntumMT/mp-mobf_core/tree/d532137
-[patch.mobs_animal]: https://github.com/AntumMT/mod-mobs_animal/tree/3f3249e
+[patch.mobs_animal]: https://github.com/AntumMT/mod-mobs_animal/tree/87c54f5
 [patch.mobs_goblins]: https://github.com/AntumMT/mod-mobs_goblins/tree/b5cee44
 [patch.mobs_monster]: https://github.com/AntumMT/mod-mobs_monster/tree/71d3e0c
 [patch.mobs_redo]: https://github.com/AntumMT/mod-mobs_redo/tree/5f4c18f
