@@ -69,7 +69,11 @@ for _, col in ipairs(all_colours) do
 		replace_with = "air",
 		replace_offset = -1,
 		fear_height = 3,
-
+--[[
+		on_replace = function(self, pos, oldnode, newnode)
+			print ("---- replaced") ; return false -- false to keep node, true to replace
+		end,
+]]
 		on_rightclick = function(self, clicker)
 
 			--are we feeding?
