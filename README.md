@@ -545,7 +545,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.drawers]: https://github.com/AntumMT/mtmod-drawers/tree/a77f809
 [patch.enchanting]: https://github.com/AntumMT/mtmod-enchanting/tree/7a01f2f
 [patch.ethereal]: https://github.com/AntumMT/mtmod-ethereal/tree/4dd599e
-[patch.farming_plus]: https://github.com/AntumMT/mtmod-farming_plus/tree/454a443
+[patch.farming_plus]: https://github.com/AntumMT/mod-farming_plus/tree/8bee49a
 [patch.gems_encrustable]: https://github.com/AntumMT/mtmod-gems_encrustable/tree/791bff5
 [patch.gems_tools]: https://github.com/AntumMT/mtmod-gems_tools/tree/abe21e3
 [patch.hbarmor]: https://github.com/AntumMT/mtmod-hbarmor/tree/d1168bb
