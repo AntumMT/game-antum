@@ -229,7 +229,7 @@ This function registers a spawn egg which can be used by admin to properly spawn
     'no_creative' when set to true this stops spawn egg appearing in creative mode for destructive mobs like Dungeon Masters
 
 
-mobs:explosion(pos, radius, fire, smoke)
+mobs:explosion(pos, radius, fire, smoke) -- DEPRECATED!!!  use tnt mod's tnt.boom function instead
 
 This function generates an explosion which removes nodes in a specific radius and replace them with fire or air. Protection nodes, obsidian and locked chests will not be destroyed although a normal chest will drop it's contents.
 

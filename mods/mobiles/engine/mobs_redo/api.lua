@@ -1,9 +1,9 @@
 
--- Mobs Api (8th July 2017)
+-- Mobs Api (9th July 2017)
 
 mobs = {}
 mobs.mod = "redo"
-mobs.version = "20170708"
+mobs.version = "20170709"
 
 
 -- Intllib
@@ -1694,14 +1694,17 @@ local do_states = function(self, dtime)
 
 					self.object:remove()
 
-					if minetest.get_modpath("tnt") then
+					if minetest.get_modpath("tnt") and tnt and tnt.boom then
 
 						tnt.boom(pos, {
 							radius = radius,
 							damage_radius = damage_radius,
+							sound = self.sounds.explode,
 						})
 					else
+						mob_sound(self, self.sounds.explode)
 						entity_physics(pos, damage_radius)
+						effect(pos, 32, "tnt_smoke.png", radius * 3, radius * 5, radius, 1, 0)
 					end
 
 					return

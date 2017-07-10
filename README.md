@@ -67,7 +67,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [mobs_monster][] ([MIT][lic.mobs_monster]) -- version: [c0aaf9f Git][ver.mobs_monster] *2017-07-09* ([patched][patch.mobs_monster])
     * [sneeker][] ([WTFPL][lic.wtfpl] / [CC0][lic.cc0]) -- version: [a56b9c2 Git][ver.sneeker] *2017-06-07*
 * mobiles/engine/
-    * [mobs_redo][] ([MIT][lic.mobs_redo] / Unspecified Creative Commons license) -- version: [7b02fef Git][ver.mobs_redo] *2017-07-08* ([patched][patch.mobs_redo]) ***UPDATE***
+    * [mobs_redo][] ([MIT][lic.mobs_redo] / [CC BY][lic.ccby3.0] / [CC0][lic.cc0]) -- version: [8dbea86 Git][ver.mobs_redo] *2017-07-09* ([patched][patch.mobs_redo])
 * mobiles/general/
 	* [mobs_animal][] ([MIT][lic.mobs_animal]) -- version: [1c3d11c Git][ver.mobs_animal] *2017-07-09* ([patched][patch.mobs_animal])
 * mobiles/passive/
@@ -474,7 +474,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.mobs_animal]: https://github.com/tenplus1/mobs_animal/tree/1c3d11c
 [ver.mobs_goblins]: https://github.com/FreeLikeGNU/mobs_goblins/tree/acabe4d
 [ver.mobs_monster]: https://github.com/tenplus1/mobs_monster/tree/c0aaf9f
-[ver.mobs_redo]: https://github.com/tenplus1/mobs_redo/tree/7b02fef
+[ver.mobs_redo]: https://github.com/tenplus1/mobs_redo/tree/8dbea86
 [ver.more_chests]: https://github.com/minetest-mods/more_chests/tree/c597779
 [ver.moreblocks]: https://github.com/minetest-mods/moreblocks/tree/fbfb079
 [ver.moremesecons]: https://github.com/minetest-mods/MoreMesecons/tree/aa2ae82
@@ -566,7 +566,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.mobs_animal]: https://github.com/AntumMT/mod-mobs_animal/tree/22b178b
 [patch.mobs_goblins]: https://github.com/AntumMT/mod-mobs_goblins/tree/b5cee44
 [patch.mobs_monster]: https://github.com/AntumMT/mod-mobs_monster/tree/309310b
-[patch.mobs_redo]: https://github.com/AntumMT/mod-mobs_redo/tree/5f4c18f
+[patch.mobs_redo]: https://github.com/AntumMT/mod-mobs_redo/tree/73d3a4a
 [patch.moreblocks]: https://github.com/AntumMT/mod-moreblocks/tree/e5d5449
 [patch.moreores]: https://github.com/AntumMT/mod-moreores/tree/94122a3
 [patch.mydoors]: https://github.com/AntumMT/mp-mydoors/tree/e36c9d1
