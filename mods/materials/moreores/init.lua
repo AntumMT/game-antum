@@ -248,7 +248,7 @@ local function add_ore(modname, description, mineral_name, oredef)
 		local fulltool_name = tool_base .. tool_name .. tool_post
 		minetest.register_tool(fulltool_name, tdef)
 		minetest.register_alias(tool_name .. tool_post, fulltool_name)
-		if oredef.makes.ingot then
+		if oredef.makes.ingot or mineral_name == "gold" then
 			minetest.register_craft({
 				output = fulltool_name,
 				recipe = get_recipe(ingot, tool_name)
