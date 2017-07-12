@@ -2,6 +2,10 @@
 A custom game for [Minetest](http://www.minetest.net/) / [Freeminer](http://freeminer.org/)
 Requires Minetest server 0.4.16 or above
 
+This "safe" version removes any mobiles/monsters from the game that will attack players.
+
+***WARNING:*** *This is the "safe" branch is often rebased on [master](https://github.com/AntumMT/game-antum/tree/master). So, force resetting will likely be required to update from it.*
+
 The game includes the mods from the default [minetest_game](https://github.com/minetest/minetest_game/tree/master/mods)
 
 ---
