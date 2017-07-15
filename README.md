@@ -180,7 +180,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [mylights][] ([DWYWPL][lic.dwywpl]) -- version: [437fc0c Git][ver.mylights] *2016-03-23* ([patched][patch.mylights])
 	* [mypaint][] ([DWYWPL][lic.dwywpl]) -- version: [c1d4dd5 Git][ver.mypaint] *2016-03-25*
 	* [mypaths][] ([DWYWPL][lic.dwywpl]) -- version: [4de5e84 Git][ver.mypaths] *2016-03-23*
-	* [myroofs][] ([DWYWPL][lic.dwywpl]) -- version: [6da6148 Git][ver.myroofs] *2016-03-23* ([patched][patch.myroofs])
+	* [myroofs][] ([DWYWPL][lic.dwywpl]) -- version: [fe98461 Git][ver.myroofs] *2017-07-14*
 	* [mysheetmetal][] ([DWYWPL][lic.dwywpl]) -- version: [7c5ab71 Git][ver.mysheetmetal] *2016-04-12* ([patched][patch.mysheetmetal])
 	* [mywoodslopes][] ([DWYWPL][lic.dwywpl]) -- version: [3a1b531 Git][ver.mywoodslopes] *2016-03-23*
 	* [worldedge][] ([DWYWPL][lic.dwywpl]) -- version: [e15fa99 Git][ver.worldedge] *2016-03-23* ([patched][patch.worldedge])
@@ -485,7 +485,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.mylights]: https://github.com/minetest-mods/mylights/tree/437fc0c
 [ver.mypaint]: https://github.com/DonBatman/mypaint/tree/c1d4dd5
 [ver.mypaths]: https://github.com/minetest-mods/mypaths/tree/4de5e84
-[ver.myroofs]: https://github.com/minetest-mods/myroofs/tree/6da6148
+[ver.myroofs]: https://github.com/minetest-mods/myroofs/tree/fe98461
 [ver.mysheetmetal]: https://github.com/minetest-mods/mysheetmetal/tree/7c5ab71
 [ver.mywoodslopes]: https://github.com/minetest-mods/mywoodslopes/tree/3a1b531
 [ver.nether]: https://github.com/PilzAdam/nether/tree/bc2ccfb
@@ -570,7 +570,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.moreores]: https://github.com/AntumMT/mod-moreores/tree/f574a02
 [patch.mydoors]: https://github.com/AntumMT/mp-mydoors/tree/e36c9d1
 [patch.mylights]: https://github.com/AntumMT/mod-mylights/tree/fef9fec
-[patch.myroofs]: https://github.com/AntumMT/mod-myroofs/tree/e6b23fd
 [patch.mysheetmetal]: https://github.com/AntumMT/mod-mysheetmetal/tree/b7d644b
 [patch.nether]: https://github.com/AntumMT/mod-nether/tree/d4e5a2a
 [patch.peaceful_npc]: https://github.com/AntumMT/mod-peaceful_npc/tree/cbae09e
