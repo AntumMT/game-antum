@@ -177,7 +177,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [mymods][]
 	* [mydoors][] ([CC-BY / CC-BY-SA][lic.mydoors] / [WTFPL][lic.wtfpl] / [DWYWFPL][lic.dwywpl]) -- version: [63aef13 Git][ver.mydoors] *2017-03-31* ([patched][patch.mydoors])
 	* [myfences][] ([DWYWPL][lic.dwywpl]) -- version: [c6e529a Git][ver.myfences] *2016-04-04*
-	* [mylights][] ([DWYWPL][lic.dwywpl]) -- version: [437fc0c Git][ver.mylights] *2016-03-23* ([patched][patch.mylights])
+	* [mylights][] ([DWYWPL][lic.dwywpl]) -- version: [0d734b7 Git][ver.mylights] *2017-07-14*
 	* [mypaint][] ([DWYWPL][lic.dwywpl]) -- version: [c1d4dd5 Git][ver.mypaint] *2016-03-25*
 	* [mypaths][] ([DWYWPL][lic.dwywpl]) -- version: [4de5e84 Git][ver.mypaths] *2016-03-23*
 	* [myroofs][] ([DWYWPL][lic.dwywpl]) -- version: [fe98461 Git][ver.myroofs] *2017-07-14*
@@ -482,7 +482,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.mthudclock]: https://github.com/Rochambeau/mthudclock/tree/b3e2142
 [ver.mydoors]: https://github.com/minetest-mods/mydoors/tree/63aef13
 [ver.myfences]: https://github.com/DonBatman/myfences/tree/c6e529a
-[ver.mylights]: https://github.com/minetest-mods/mylights/tree/437fc0c
+[ver.mylights]: https://github.com/minetest-mods/mylights/tree/0d734b7
 [ver.mypaint]: https://github.com/DonBatman/mypaint/tree/c1d4dd5
 [ver.mypaths]: https://github.com/minetest-mods/mypaths/tree/4de5e84
 [ver.myroofs]: https://github.com/minetest-mods/myroofs/tree/fe98461
@@ -569,7 +569,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.moreblocks]: https://github.com/AntumMT/mod-moreblocks/tree/e5d5449
 [patch.moreores]: https://github.com/AntumMT/mod-moreores/tree/f574a02
 [patch.mydoors]: https://github.com/AntumMT/mp-mydoors/tree/e36c9d1
-[patch.mylights]: https://github.com/AntumMT/mod-mylights/tree/fef9fec
 [patch.mysheetmetal]: https://github.com/AntumMT/mod-mysheetmetal/tree/b7d644b
 [patch.nether]: https://github.com/AntumMT/mod-nether/tree/d4e5a2a
 [patch.peaceful_npc]: https://github.com/AntumMT/mod-peaceful_npc/tree/cbae09e
