@@ -183,7 +183,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [myroofs][] ([DWYWPL][lic.dwywpl]) -- version: [fe98461 Git][ver.myroofs] *2017-07-14*
 	* [mysheetmetal][] ([DWYWPL][lic.dwywpl]) -- version: [7c5ab71 Git][ver.mysheetmetal] *2016-04-12* ([patched][patch.mysheetmetal])
 	* [mywoodslopes][] ([DWYWPL][lic.dwywpl]) -- version: [3a1b531 Git][ver.mywoodslopes] *2016-03-23*
-	* [worldedge][] ([DWYWPL][lic.dwywpl]) -- version: [e15fa99 Git][ver.worldedge] *2016-03-23* ([patched][patch.worldedge])
+	* [worldedge][] ([DWYWPL][lic.dwywpl]) -- version: [608462d Git][ver.worldedge] *2017-07-14*
 
 
 
@@ -515,7 +515,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.wardrobe]: https://github.com/prestidigitator/minetest-mod-wardrobe/tree/c48b011
 [ver.windmill]: https://github.com/Sokomine/windmill/tree/47b029d
 [ver.workbench]: https://github.com/minetest-mods/workbench/tree/74dd1af
-[ver.worldedge]: https://github.com/minetest-mods/worldedge/tree/e15fa99
+[ver.worldedge]: https://github.com/minetest-mods/worldedge/tree/608462d
 
 [patch.3d_armor]: https://github.com/AntumMT/mp-3d_armor/tree/97c13a6
 [patch.adv_spawning]: https://github.com/AntumMT/mod-adv_spawning/tree/757197a
@@ -587,4 +587,3 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.walking_light]: https://github.com/AntumMT/mod-walking_light/tree/e602515
 [patch.windmill]: https://github.com/AntumMT/mod-windmill/tree/7756ab4
 [patch.workbench]: https://github.com/AntumMT/mod-workbench/tree/b964323
-[patch.worldedge]: https://github.com/AntumMT/mod-worldedge/tree/3ff6429
