@@ -52,7 +52,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [bags][] ([BSD 3-Clause][lic.bags]) -- version: [f17d829 Git][ver.bags] *2015-10-11* ([patched][patch.bags])
     * [inventory_plus][] ([BSD 3-Clause][lic.inventory_plus]) -- version: [fd71e3d Git][ver.inventory_plus] *2016-05-13*
 * lighting/
-    * [glow][] ([GPL][lic.gpl2.0]) -- version: [78d0166 Git][ver.glow] *2017-05-16* ([patched][patch.glow])
+    * [glow][] ([GPL][lic.gpl2.0]) -- version: [c611ae0 Git][ver.glow] *2017-07-18*
 	* [ilights][] ([CC BY-SA][lic.ccbysa]) -- version [7060243 Git][ver.ilights] *2017-05-18* ([patched][patch.ilights])
     * walking_light ([petermalone fork][walking_light]) ([WTFPL / CC BY-SA][lic.walking_light]) -- version: [b23d836 Git][ver.walking_light] *2017-06-21* ([patched][patch.walking_light])
 * materials/
@@ -448,7 +448,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.fort_spikes]: https://github.com/xeranas/fort_spikes/tree/3c7d7c6
 [ver.gems_encrustable]: https://github.com/wowiamdiamonds/gems/tree/81d513d
 [ver.gems_tools]: https://github.com/captainLAD/gems/tree/b375432
-[ver.glow]: https://github.com/bdjnk/glow/tree/78d0166
+[ver.glow]: https://github.com/bdjnk/glow/tree/c611ae0
 [ver.hbarmor]: http://repo.or.cz/minetest_hbarmor.git/tree/ceb313e
 [ver.helicopter]: https://github.com/SokolovPavel/helicopter/tree/10f1433
 [ver.helicopter_pm]: https://github.com/petermaloney/helicopter/tree/abdf5fa
@@ -548,7 +548,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.farming_plus]: https://github.com/AntumMT/mod-farming_plus/tree/8bee49a
 [patch.gems_encrustable]: https://github.com/AntumMT/mod-gems_encrustable/tree/791bff5
 [patch.gems_tools]: https://github.com/AntumMT/mod-gems_tools/tree/abe21e3
-[patch.glow]: https://github.com/AntumMT/mod-glow/tree/7becf6d
 [patch.hbarmor]: https://github.com/AntumMT/mod-hbarmor/tree/587dae9
 [patch.helicopter]: https://github.com/AntumMT/mod-helicopter/tree/9ffee1f
 [patch.homedecor]: https://github.com/AntumMT/mp-homedecor/tree/d0d79dc
