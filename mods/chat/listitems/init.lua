@@ -12,4 +12,4 @@ listitems = {}
 listitems.modname = minetest.get_current_modname()
 listitems.modpath = minetest.get_modpath(listitems.modname)
 
-dofile(listitems.modpath .. '/register.lua')
+dofile(listitems.modpath .. '/api.lua')

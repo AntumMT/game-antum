@@ -8,6 +8,23 @@
 --]]
 
 
+-- Boilerplate to support localized strings if intllib mod is installed.
+local S
+if minetest.global_exists('intllib') then
+	if intllib.make_gettext_pair then
+		S = intllib.make_gettext_pair()
+	else
+		S = intllib.Getter()
+	end
+else
+	S = function(s) return s end
+end
+
+
+-- Invoking command string
+local list_command = S('listitems')
+
+
 -- Retrieves a simplified table containing string names of registered items
 local function getRegisteredItemNames()
 	local item_names = {}
@@ -59,11 +76,11 @@ local function removeListDuplicates(tlist)
 end
 
 
-minetest.log('action', '[listitems] Registering chat command "listitems"')
+minetest.log('action', '[listitems] Registering chat command "' .. list_command .. '"')
 
-minetest.register_chatcommand('listitems', {
-	params = '[string1] [string2] ...',
-	description = 'List registered items',
+minetest.register_chatcommand(list_command, {
+	params = '[' .. S('string1') .. '] [' .. S('string2') .. '] ...',
+	description = S('List registered items'),
 	func = function(player, param)
 		-- Make all parameters lowercase for case-insensitive matching
 		param = removeListDuplicates(string.split(string.lower(param), ' '))
@@ -85,11 +102,11 @@ minetest.register_chatcommand('listitems', {
 		
 		if found_names ~= nil then
 			for I in pairs(found_names) do
-				minetest.chat_send_player(player, found_names[I])
+				minetest.chat_send_player(player, S('•') .. ' ' .. found_names[I])
 			end
-		else
-			minetest.chat_send_player(player, 'No registered items found!')
 		end
+		-- Show player number of items listed
+		minetest.chat_send_player(player, S('Items listed:') .. ' ' .. tostring(#found_names))
 		
 		return true
 	end,

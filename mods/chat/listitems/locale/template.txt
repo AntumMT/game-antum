@@ -1,0 +1,18 @@
+# Translation by
+
+
+## Invoking command (remove this line to use default "listitems")
+listitems =
+
+## Help output description
+List registered items =
+
+## Help output parameters
+string1 =
+string2 =
+
+## Number of items listed
+Items listed: =
+
+## Bullet (change this if there are problems displaying the raw character "•")
+• =

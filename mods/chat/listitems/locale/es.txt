@@ -1,0 +1,15 @@
+# Translation by Jordan Irwin (AntumDeluge)
+
+
+## Invoking command (remove this line to use default "listitems")
+listitems = listararticulos
+
+## Help output description
+List registered items = Listar los artículos registrados
+
+## Help output parameters
+string1 = cadena1
+string2 = cadena2
+
+## Number of items listed
+Items listed: = Artículos enumerados:
