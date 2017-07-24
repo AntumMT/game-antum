@@ -2225,6 +2225,50 @@ bedrock2_y = -28000
 animalmaterials.override_lasso = true
 
 
+# *** animals_aggressive ***
+
+# ## mob_shark
+
+## Interval in seconds that specifies how often shark spawns.
+#    type:    int
+#    default: 60
+#mobs.shark_interval = 60
+
+## Chance for each node of spawning shark at each interval. The value
+#  is inverted. So a chance of value of 9000 equals 1/9000.
+#    type:    int
+#    default: 9000
+#mobs.shark_chance = 9000
+
+## Minimum node light required for spawning. "0" is darkest & "14" is
+#  lightest (daylight).
+#    type:    int
+#    default: 4
+#mobs.shark_min_light = 4
+
+## Maximum node light required for spawning. "0" is darkest & "14" is
+#  lightest (daylight).
+#    type:    int
+#    default: 14
+#mobs.shark_max_light = 14
+
+# Minimum height at which shark can spawn.
+#    type:    int
+#    default: -30
+#mobs.shark_min_height = -30
+
+# Maximum height at which shark can spawn.
+#    type:    int
+#    default: -3
+#mobs.shark_max_height = -3
+
+# Times that shark can spawn.
+#    type:    enum
+#    values:  day, night, any
+#    default: any
+#mobs.shark_spawn_time = any
+
+
 # *** castle ***
 
 # ## castle_masonry

@@ -1,0 +1,5 @@
+animalmaterials
+default
+ethereal
+mobs
+intllib?

@@ -163,6 +163,8 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 ### Stored in 'modpacks' directory
 
+* [animals_aggressive][] -- version: [4fc096e Git][ver.animals_aggressive] *2017-07-23*
+	* mob_shark ([CC BY-SA][lic.ccbysa3.0]) -- Forked from [Animals Modpack][animals]
 * castle ([MIT][lic.castle])
 	* [castle_farming][] -- version: [a190dcf Git][ver.castle_farming] *2017-04-21*
 	* [castle_gates][] -- version: [dc53584 Git][ver.castle_gates] *dc53584* ([patched][patch.castle_gates])
@@ -191,6 +193,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [airtanks]: https://forum.minetest.net/viewtopic.php?t=17102
 [ambience_ultralite]: https://forum.minetest.net/viewtopic.php?p=151166#p151166
 [animals]: https://forum.minetest.net/viewtopic.php?t=629
+[animals_aggressive]: https://github.com/AntumMT/mp-animals_aggressive
 [antum]: https://github.com/AntumMT/mp-antum
 [antum_glass]: mods/antum/glass
 [antum_overrides]: mods/antum/overrides
@@ -412,6 +415,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.airtanks]: https://github.com/minetest-mods/airtanks/tree/5787956
 [ver.animalmaterials]: https://github.com/sapier/animalmaterials/tree/aa4697c
 [ver.animals]: https://github.com/sapier/animals_modpack/tree/b9d0172
+[ver.animals_aggressive]: https://github.com/AntumMT/mp-animals_aggressive/tree/4fc096e
 [ver.antum]: https://github.com/AntumMT/mp-antum/tree/f643879
 [ver.areas]: https://github.com/ShadowNinja/areas/tree/289d0e6
 [ver.awards]: https://github.com/minetest-mods/awards/tree/096fe16
