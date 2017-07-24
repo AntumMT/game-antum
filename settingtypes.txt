@@ -237,6 +237,12 @@ hudbars_vmargin (Vertical distance between HUD bars) int 24 0
 hudbars_tick (Default HUD bars update interval) float 0.1 0.0 4.0
 
 
+[*listitems]
+
+# Displays items in a bulleted list.
+listitems.bullet_list (Bulleted list) bool true
+
+
 [*pipeworks]
 
 #Enable pipes.

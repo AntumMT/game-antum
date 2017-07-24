@@ -1,0 +1,3 @@
+
+# Displays items in a bulleted list.
+listitems.bullet_list (Bulleted list) bool true

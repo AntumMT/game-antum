@@ -1670,6 +1670,14 @@ coloredwood_enable_stairsplus = true
 #chatlog.monthfirst = true
 
 
+# *** listitems ***
+
+## Displays items in a bulleted list.
+#    type:    bool
+#    default: true
+#listitems.bullet_list = true
+
+
 
 ###############
 ## EQUIPMENT ##

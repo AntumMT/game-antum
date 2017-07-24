@@ -78,6 +78,17 @@ end
 
 minetest.log('action', '[listitems] Registering chat command "' .. list_command .. '"')
 
+local bullet_list = core.settings:get_bool('listitems.bullet_list')
+if bullet_list == nil then
+	-- Default is true
+	bullet_list = true
+end
+
+local bullet = ''
+if bullet_list then
+	bullet = S('•') .. ' '
+end
+
 minetest.register_chatcommand(list_command, {
 	params = '[' .. S('string1') .. '] [' .. S('string2') .. '] ...',
 	description = S('List registered items'),
@@ -102,7 +113,7 @@ minetest.register_chatcommand(list_command, {
 		
 		if found_names ~= nil then
 			for I in pairs(found_names) do
-				minetest.chat_send_player(player, S('•') .. ' ' .. found_names[I])
+				minetest.chat_send_player(player, bullet .. found_names[I])
 			end
 		end
 		-- Show player number of items listed
