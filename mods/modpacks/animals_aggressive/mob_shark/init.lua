@@ -18,34 +18,47 @@
 
 -- Boilerplate to support localized strings if intllib mod is installed.
 local S
-if minetest.global_exists('intllib') then
-	dofile(minetest.get_modpath('intllib') .. '/intllib.lua')
+if core.global_exists('intllib') then
+	dofile(core.get_modpath('intllib') .. '/intllib.lua')
 	if intllib.make_gettext_pair then
 		-- New method using gettext.
-		S = intllib.make_gettext_pair(minetest.get_current_modname())
+		S = intllib.make_gettext_pair(core.get_current_modname())
 	else
 		-- Old method using text files.
-		S = intllib.Getter(minetest.get_current_modname())
+		S = intllib.Getter(core.get_current_modname())
 	end
 else
 	S = function ( s ) return s end
 end
+
+
+local modname = core.get_current_modname()
+local modpath = core.get_modpath(modname)
 
 local version = '0.2.0'
 local variant = 'mobs_redo'
 local variant_version = '0.1'
 local version_full = version .. '-' .. variant .. '-' .. variant_version
 
-minetest.log('action','MOD: mob_shark loading ...')
+core.log('action','MOD: mob_shark loading ...')
 
 
 local mobname = 'mobs:shark'
+local scripts = {
+	'items',
+}
+
+for index, script in ipairs(scripts) do
+	dofile(modpath .. '/' .. script .. '.lua')
+end
+
+
 --local shark_collisionbox = {-0.75, -0.5, -0.75, 0.75, 0.5, 0.75}
 local shark_collisionbox = {-0.38, -0.25, -0.38, 0.38, 0.25, 0.38}
 local shark_drop = {
-	{name='animalmaterials:fish_shark', chance=1, min=3, max=3},
-	{name='animalmaterials:shark_tooth', chance=4, min=1, max=3},  -- FIXME: Original 'chance' value was 0.01
-	{name='animalmaterials:shark_skin', chance=4, min=1, max=1},  --FIXME: Original 'chance' value was 0.01
+	{name='mobs:shark_meat_raw', chance=1, min=3, max=3},
+	{name='mobs:shark_tooth', chance=4, min=1, max=3},  -- FIXME: Original 'chance' value was 0.01
+	{name='mobs:shark_skin', chance=4, min=1, max=1},  -- FIXME: Original 'chance' value was 0.01
 }
 
 mobs:register_mob(':' .. mobname, {
@@ -65,7 +78,7 @@ mobs:register_mob(':' .. mobname, {
 	visual_size = {x=0.5, y=0.5},  -- CHANGED (ORIGINAL: {x=1, y=1, z=1})
 	mesh = 'mob_shark.b3d',
 	textures = {
-		{'mob_shark_shark_mesh.png'},
+		{'mobs_shark_mesh.png'},
 	},
 	--gotten_texture = nil,
 	--child_texture = nil,
@@ -123,13 +136,13 @@ mobs:register_mob(':' .. mobname, {
 
 
 -- SPAWNING
-local interval = tonumber(minetest.settings:get('mobs.shark_interval'))
-local chance = tonumber(minetest.settings:get('mobs.shark_chance'))
-local min_light = tonumber(minetest.settings:get('mobs.shark_min_light'))
-local max_light = tonumber(minetest.settings:get('mobs.shark_max_light'))
-local min_height = tonumber(minetest.settings:get('mobs.shark_min_height'))
-local max_height = tonumber(minetest.settings:get('mobs.shark_max_height'))
-local day_toggle = minetest.settings:get('mobs.shark_spawn_time')
+local interval = tonumber(core.settings:get('mobs.shark_interval'))
+local chance = tonumber(core.settings:get('mobs.shark_chance'))
+local min_light = tonumber(core.settings:get('mobs.shark_min_light'))
+local max_light = tonumber(core.settings:get('mobs.shark_max_light'))
+local min_height = tonumber(core.settings:get('mobs.shark_min_height'))
+local max_height = tonumber(core.settings:get('mobs.shark_max_height'))
+local day_toggle = core.settings:get('mobs.shark_spawn_time')
 
 if interval == nil then
 	interval = 60
@@ -172,7 +185,7 @@ mobs:spawn({
 	day_toggle = day_toggle,
 })
 
-mobs:register_egg(':' .. mobname, S('Shark'), 'mob_shark_shark_item.png', 0, false)
+mobs:register_egg(':' .. mobname, S('Shark'), 'mobs_shark_inv.png', 0, false)
 
 
-minetest.log('action','MOD: mob_shark mod version ' .. version_full .. ' loaded')
+core.log('action','MOD: mob_shark mod version ' .. version_full .. ' loaded')

@@ -10,17 +10,16 @@ A compilation of aggressive animal mods.
 ---
 ### Mods
 
-* ***mob_shark*** forked from [animals_modpack][] @ Git commit [8455b98][ver.mob_shark] ([CC BY-SA][lic.mob_shark])
+* ***mob_shark*** forked from [animals_modpack][] @ Git commit [8455b98][ver.mob_shark] ([CC BY-SA / CC0][lic.mob_shark])
 
 
 ---
 ### Dependencies
 
 #### Required:
-* ***animalmaterials*** (part of [animalmaterials modpack][animalmaterials])
 * ***default*** (part of [minetest_game])
-* ***mob_environments*** (part of [animalmaterials modpack][animalmaterials])
-* ***mobf*** (part of [mobf_core modpack][mobf_core])
+* ***[ethereal][]***
+* ***mobs*** ([mobs_redo][])
 
 #### Optional:
 * ***[intllib][]***
@@ -28,11 +27,11 @@ A compilation of aggressive animal mods.
 
 [Minetest]: http://www.minetest.net/
 
-[animalmaterials]: https://github.com/sapier/animalmaterials
 [animals_modpack]: https://forum.minetest.net/viewtopic.php?t=629
+[ethereal]: https://forum.minetest.net/viewtopic.php?t=14638
 [intllib]: https://forum.minetest.net/viewtopic.php?t=4929
 [minetest_game]: https://github.com/minetest/minetest_game
-[mobf_core]: https://github.com/sapier/mobf_core
+[mobs_redo]: https://forum.minetest.net/viewtopic.php?t=9917
 
 [lic.mob_shark]: mob_shark/License.txt
 

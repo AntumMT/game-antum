@@ -1,4 +1,3 @@
-animalmaterials
 default
 ethereal
 mobs
