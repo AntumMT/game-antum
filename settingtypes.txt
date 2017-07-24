@@ -14,7 +14,7 @@ enable_tool_wear (Tools wear & break on use) bool true
 enable_weapon_wear (Weapons wear & break when fighting) bool true
 
 # Logs extra debug messages.
-enable_debug (Enable debugging messages) bool false
+enable_debug_mods (Enable debugging messages) bool false
 
 # Limits flowing liquids.
 liquid_finite (Finite liquid) bool false
