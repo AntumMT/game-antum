@@ -2368,6 +2368,61 @@ animalmaterials.override_lasso = true
 #crafting_bench_crafting_rate = 5
 
 
+# *** dinosaurs_aggressive ***
+
+# ## velociraptor
+[*Dinosaurs (Aggressive)]
+
+[**velociraptor]
+
+## Use alternate "feathered" texture.
+#    type:    bool
+#    default: false
+#mobs.velociraptor_feathered = false
+
+## Interval in seconds that specifies how often velociraptor spawns.
+#    type:    int
+#    min:     0
+#    default: 30
+#mobs.velociraptor_interval = 30
+
+## Chance for each node of spawning velociraptor at each interval. The value
+#  is inverted. So a chance of value of 32000 equals 1/32000.
+#    type:    int
+#    min:     0
+#    default: 32000
+#mobs.velociraptor_chance = 32000
+
+## Minimum node light required for spawning. "0" is darkest & "14" is
+#  lightest (daylight).
+#  See: [Node definition] light_source
+#    type:    int
+#    min:     0
+#    max:     14
+#    default: 10
+#mobs.velociraptor_min_light = 10
+
+## Maximum node light required for spawning. "0" is darkest & "14" is
+#  lightest (daylight).
+#  See: [Node definition] light_source
+#    type:    int
+#    min:     0
+#    max:     14
+#    default: 14
+#mobs.velociraptor_max_light = 14
+
+## Maximum height at which velociraptor can spawn.
+#    type:    int
+#    default: 31000
+#mobs.velociraptor_max_height = 31000
+
+## Times that velociraptor can spawn.
+#    type:    enum
+#    values:  day, night, any
+#    default: any
+#mobs.velociraptor_spawn_time = any
+
+
 
 ##############
 ## MESECONS ##

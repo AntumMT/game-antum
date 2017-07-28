@@ -1,0 +1,31 @@
+
+# Used alternate "feathered" texture.
+mobs.velociraptor_feathered (Feathered velociraptor) bool false
+
+# Interval in seconds that specifies how often velociraptor spawns.
+mobs.velociraptor_interval (Velociraptor spawn interval) int 30 0
+
+# Chance for each node of spawning velociraptor at each interval. The value
+# is inverted. So a chance of value of 32000 equals 1/32000.
+mobs.velociraptor_chance (Velociraptor spawn chance) int 32000 0
+
+# Minimum node light required for spawning. "0" is darkest & "14" is
+# lightest (daylight).
+# See: [Node definition] light_source
+mobs.velociraptor_min_light (Velociraptor min spawn light) int 10 0 14
+
+# Maximum node light required for spawning. "0" is darkest & "14" is
+# lightest (daylight).
+# See: [Node definition] light_source
+mobs.velociraptor_max_light (Velociraptor max spawn light) int 14 0 14
+
+# Maximum height at which velociraptor can spawn.
+mobs.velociraptor_max_height (Velociraptor max spawn height) int 31000
+
+# Times that velociraptor can spawn.
+#
+# Modes supported:
+# | ■ day:   spawns during day
+# | ■ night: spawns during night
+# | ■ any:   spawns anytime
+mobs.velociraptor_spawn_time (Velociraptor spawn time) enum any day,night,any
