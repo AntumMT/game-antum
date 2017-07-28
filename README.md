@@ -79,7 +79,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * player/action/
 * player/visuals/
 	* [character_creator][] ([MIT][lic.character_creator]) -- version [1.0 (6a0e6aa Git)][ver.character_creator] *2017-04-01*
-    * [hidename][] ([MIT][lic.hidename]) -- version [bb52dbc Git][ver.hidename]
+    * [hidename][] ([MIT][lic.hidename]) -- version [0.2 (a75de87 Git)][ver.hidename] *2017-07-28*
     * [invisibility][] ([MIT][lic.invisibility]) -- version: [bf4156b Git][ver.invisibility] *2016-08-19* ([patched][patch.invisibility]) ***UPDATE***
     * [playeranim][] ([BSD 2-Clause][lic.playeranim]) - version [59bcd38 Git][ver.playeranim] *2017-06-07* ([patched][patch.playeranim])
     * [wardrobe][] ([WTFPL][lic.wtfpl]) -- version: [1.1-2-c48b011 Git][ver.wardrobe] *2015-05-21*
@@ -461,7 +461,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.hbarmor]: http://repo.or.cz/minetest_hbarmor.git/tree/ceb313e
 [ver.helicopter]: https://github.com/SokolovPavel/helicopter/tree/10f1433
 [ver.helicopter_pm]: https://github.com/petermaloney/helicopter/tree/abdf5fa
-[ver.hidename]: https://github.com/AntumMT/mod-hidename/tree/bb52dbc
+[ver.hidename]: https://github.com/AntumMT/mod-hidename/tree/a75de87
 [ver.hill_nodebox]: https://github.com/cornernote/minetest-hill_nodebox/tree/41bbfa2
 [ver.home_gui]: https://github.com/cornernote/minetest-home_gui/tree/f6b5001
 [ver.homedecor]: https://github.com/minetest-mods/homedecor_modpack/tree/5c52111
