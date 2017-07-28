@@ -1762,7 +1762,7 @@ only_peaceful_mobs = false
 # ???
 #    type: bool
 #    default: false
-#remove_far_mobs = false
+remove_far_mobs = true
 
 
 # *** mob-engine ***
