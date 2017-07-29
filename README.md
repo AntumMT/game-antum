@@ -51,6 +51,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * inventory/
     * [bags][] ([BSD 3-Clause][lic.bags]) -- version: [aa387d9 Git][ver.bags] *2017-05-11* ([patched][patch.bags])
     * [inventory_plus][] ([BSD 3-Clause][lic.inventory_plus]) -- version: [fd71e3d Git][ver.inventory_plus] *2016-05-13*
+    * [sfinv_buttons][] ([MIT][lic.mit]) -- version [1.0.0 (4f3b075 Git)][ver.sfinv_buttons] *2017-03-19*
 * lighting/
     * [glow][] ([GPL][lic.gpl2.0]) -- version: [c611ae0 Git][ver.glow] *2017-07-18*
 	* [ilights][] ([CC BY-SA][lic.ccbysa]) -- version [fa085fd Git][ver.ilights] *2017-07-19*
@@ -291,6 +292,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [privs]: mods/admin/privs
 [quartz]: https://forum.minetest.net/viewtopic.php?t=5682
 [rainbow_ore]: https://forum.minetest.net/viewtopic.php?id=13519
+[sfinv_buttons]: https://forum.minetest.net/viewtopic.php?t=16079
 [signs_lib]: https://forum.minetest.net/viewtopic.php?f=11&t=13762
 [simple_protection]: https://forum.minetest.net/viewtopic.php?t=9035
 [slingshot]: https://github.com/AntumMT/mod-slingshot
@@ -504,6 +506,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.privilegeareas]: https://github.com/minetest-mods/privilegeareas/tree/aebaa00
 [ver.quartz]: https://github.com/minetest-mods/quartz/tree/00ca4eb
 [ver.rainbow_ore]: https://github.com/FsxShader2012/rainbow_ore/tree/6e77693
+[ver.sfinv_buttons]: http://repo.or.cz/minetest_sfinv_buttons.git/tree/4f3b075
 [ver.signs_lib]: https://github.com/minetest-mods/signs_lib/tree/3e00159
 [ver.simple_protection]: https://github.com/SmallJoker/simple_protection/tree/574ecb8
 [ver.slingshot]: https://github.com/AntumMT/mod-slingshot/tree/ef698e8
