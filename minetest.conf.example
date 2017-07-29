@@ -1611,6 +1611,12 @@ log_mods = true
 #    default: false
 #enable_debug_mods = false
 
+## Inventory interface to use.
+#    type:    enum
+#    values:  sfinv, inventory_plus
+#    default: sfinv
+inventory = sfinv
+
 
 
 #####################
