@@ -47,7 +47,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [jukebox][] ([WTFPL / CC0][lic.jukebox]) -- version: [e6a507f Git][ver.jukebox] *2016-05-23* ***UPDATE***
     * [trampoline][] ([GPL][lic.gpl3.0]) -- version: [ab1c289 Git][ver.trampoline] *2017-05-26*
     * [trash_can][] ([MIT][lic.trash_can]) -- version: [5fd3df7 Git][ver.trash_can] *2016-01-14* ([patched][patch.trash_can])
-* [intllib][] ([Unilicense][lic.unilicense]) -- version: [7b818cb Git][ver.intllib] *2017-07-10*
+* [intllib][] ([Unlicense][lic.unlicense]) -- version: [7b818cb Git][ver.intllib] *2017-07-10*
 * inventory/
     * [bags][] ([BSD 3-Clause][lic.bags]) -- version: [aa387d9 Git][ver.bags] *2017-05-11* ([patched][patch.bags])
     * [inventory_plus][] ([BSD 3-Clause][lic.inventory_plus]) -- version: [fd71e3d Git][ver.inventory_plus] *2016-05-13*
