@@ -1060,7 +1060,7 @@ disallow_empty_password = true
 #    type:    enum
 #    values:  v5, v6, v7, flat, valleys, fractal, singlenode
 #    default: v7
-mg_name = v7
+#mg_name = v7
 
 ## Water surface level of the world.
 #    type: int
