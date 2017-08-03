@@ -1,18 +1,24 @@
 # Translation by
 
 
-## Invoking command (remove this line to use default "listitems")
-listitems =
-
 ## Help output description
 List registered items =
+List registered entities =
 
 ## Help output parameters
+options =
 string1 =
 string2 =
 
+## Player used unrecognized switch
+Unknown option: =
+
+## Search description
+Searching in names ... =
+Searching in names and descriptions ... =
+
 ## Number of items listed
-Items listed: =
+Objects listed: =
 
 ## Bullet (change this if there are problems displaying the raw character "•")
 • =

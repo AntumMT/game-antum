@@ -7,9 +7,23 @@
   See: LICENSE.txt
 --]]
 
+--- @script init.lua
+
 
 listitems = {}
-listitems.modname = minetest.get_current_modname()
-listitems.modpath = minetest.get_modpath(listitems.modname)
+listitems.modname = core.get_current_modname()
+listitems.modpath = core.get_modpath(listitems.modname)
 
-dofile(listitems.modpath .. '/api.lua')
+listitems.debug = core.settings:get_bool('enable_debug_mods') or false
+
+local scripts = {
+	'logging',
+	'api',
+}
+
+for index, script in ipairs(scripts) do
+	dofile(listitems.modpath .. '/' .. script .. '.lua')
+end
+
+-- DEBUG:
+listitems.logDebug('Loaded')
