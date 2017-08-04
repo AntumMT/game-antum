@@ -13,7 +13,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * admin/
     * [clean][] ([WTFPL][lic.wtfpl]) -- version: Unknown *2013-06-08* ([patched][patch.clean])
     * [invisible][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0])
-    * [override][] ([MIT][lic.mit]) -- version: [0.1 (35ab53c Git)][ver.override] *2017-08-03*
     * [privilegeareas][] ([WTFPL][lic.privilegeareas] / [CC0][lic.cc0]) -- version: [aebaa00 Git][ver.privilegeareas] *2016-05-18*
     * [privs][] ([CC0][lic.cc0])
     * [spectator_mode][] ([WTFPL][lic.spectator_mode]) -- version: [7d68bec Git][ver.spectator_mode] *2017-03-30*
@@ -31,7 +30,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * chat/
     * [away][] ([GPL][lic.gpl2.0]) -- version: [4c1e5a9 Git][ver.away] *2012-03-09* ([patched][patch.away])
     * [chatlog][] ([CC0][lic.cc0]) -- version: (no version info) *2013-06-09* ([patched][patch.chatlog])
-    * [listitems][] ([MIT][lic.listitems]) -- version: [0.5 (9356503 Git)][ver.listitems] *2017-08-04*
 * crafting/
     * [craftguide][] ([GPL / WTFPL](mods/crafting/craftguide/LICENSE)) -- version: [86a96c3 Git][ver.craftguide] *2017-03-21* ([patched][patch.craftguide])
 * [currency][] ([WTFPL][lic.currency]) -- version: [3ee673d Git][ver.currency] *2017-05-18* ([patched][patch.currency])
@@ -81,7 +79,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * player/action/
 * player/visuals/
 	* [character_creator][] ([MIT][lic.character_creator]) -- version [1.0 (6a0e6aa Git)][ver.character_creator] *2017-04-01*
-    * [hidename][] ([MIT][lic.hidename]) -- version [0.2 (a75de87 Git)][ver.hidename] *2017-07-28*
     * [invisibility][] ([MIT][lic.invisibility]) -- version: [bf4156b Git][ver.invisibility] *2016-08-19* ([patched][patch.invisibility]) ***UPDATE***
     * [playeranim][] ([BSD 2-Clause][lic.playeranim]) - version [59bcd38 Git][ver.playeranim] *2017-06-07* ([patched][patch.playeranim])
     * [wardrobe][] ([WTFPL][lic.wtfpl]) -- version: [1.1-2-c48b011 Git][ver.wardrobe] *2015-05-21*
@@ -245,7 +242,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [glow]: https://forum.minetest.net/viewtopic.php?t=6300
 [hbarmor]: https://forum.minetest.net/viewtopic.php?t=11337
 [helicopter]: https://forum.minetest.net/viewtopic.php?t=6183
-[hidename]: https://github.com/AntumMT/mod-hidename
 [hill_nodebox]: https://cornernote.github.io/minetest-hill_nodebox/
 [home_gui]: http://cornernote.github.io/minetest-home_gui/
 [homedecor]: https://forum.minetest.net/viewtopic.php?t=2041
@@ -260,7 +256,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [jukebox]: https://forum.minetest.net/viewtopic.php?t=13505
 [jumping]: https://forum.minetest.net/viewtopic.php?t=2957
 [lightning]: https://forum.minetest.net/viewtopic.php?t=13886
-[listitems]: https://github.com/AntumMT/mod-listitems
 [mesecons]: https://forum.minetest.net/viewtopic.php?t=628
 [minetest_game]: https://github.com/minetest/minetest_game
 [mob-engine]: https://github.com/minetest-mods/mob-engine
@@ -284,7 +279,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [mysheetmetal]: https://forum.minetest.net/viewtopic.php?t=11702
 [mywoodslopes]: https://forum.minetest.net/viewtopic.php?t=11433
 [nether]: https://forum.minetest.net/viewtopic.php?t=5790
-[override]: https://forum.minetest.net/viewtopic.php?t=18229
 [painting]: https://github.com/minetest-mods/painting
 [peaceful_npc]: https://forum.minetest.net/viewtopic.php?t=4167
 [pipeworks]: https://forum.minetest.net/viewtopic.php?t=2155
@@ -360,7 +354,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.ethereal]: mods/world/ethereal/license.txt
 [lic.farming_plus]: mods/farming/farming_plus/README.txt
 [lic.fort_spikes]: mods/buildings/fort_spikes/README.md
-[lic.hidename]: mods/player/visuals/hidename/LICENSE.txt
 [lic.hill_nodebox]: mods/world/hill_nodebox/LICENSE
 [lic.homedecor]: mods/modpacks/homedecor/LICENSE
 [lic.hovercraft]: mods/transport/hovercraft/LICENSE.txt
@@ -369,7 +362,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.invisible]: mods/admin/invisible/readme.txt
 [lic.jukebox]: mods/furniture/jukebox/README.txt
 [lic.lightning]: mods/weather/lightning/README.md
-[lic.listitems]: mods/chat/listitems/LICENSE.txt
 [lic.mesecons]: mods/modpacks/mesecons/COPYING.txt
 [lic.mob-engine]: mods/modpacks/mob-engine/LICENSE
 [lic.mobf]: mods/modpacks/mobf_core/License.txt
@@ -465,7 +457,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.hbarmor]: http://repo.or.cz/minetest_hbarmor.git/tree/ceb313e
 [ver.helicopter]: https://github.com/SokolovPavel/helicopter/tree/10f1433
 [ver.helicopter_pm]: https://github.com/petermaloney/helicopter/tree/abdf5fa
-[ver.hidename]: https://github.com/AntumMT/mod-hidename/tree/a75de87
 [ver.hill_nodebox]: https://github.com/cornernote/minetest-hill_nodebox/tree/41bbfa2
 [ver.home_gui]: https://github.com/cornernote/minetest-home_gui/tree/f6b5001
 [ver.homedecor]: https://github.com/minetest-mods/homedecor_modpack/tree/5c52111
@@ -478,7 +469,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.invisibility]: https://github.com/tenplus1/invisibility/tree/bf4156b
 [ver.jukebox]: https://github.com/minetest-mods/jukebox/tree/e6a507f
 [ver.lightning]: https://github.com/minetest-mods/lightning/tree/39bd36c
-[ver.listitems]: https://github.com/AntumMT/mod-listitems/tree/9356503
 [ver.mesecons]: https://github.com/minetest-mods/mesecons/tree/564bdc2
 [ver.minetest_game]: https://github.com/minetest/minetest_game/tree/f855bee
 [ver.mob-engine]: https://github.com/minetest-mods/mob-engine/tree/138f655
@@ -502,7 +492,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.mysheetmetal]: https://github.com/minetest-mods/mysheetmetal/tree/7c5ab71
 [ver.mywoodslopes]: https://github.com/minetest-mods/mywoodslopes/tree/3a1b531
 [ver.nether]: https://github.com/PilzAdam/nether/tree/bc2ccfb
-[ver.override]: https://github.com/AntumMT/mod-override/tree/35ab53c
 [ver.peaceful_npc]: https://github.com/jojoa1997/peaceful_npc/tree/2b3a7a5
 [ver.pipeworks]: https://github.com/minetest-mods/pipeworks/tree/2eff6e3
 [ver.playeranim]: https://github.com/minetest-mods/playeranim/tree/59bcd38
