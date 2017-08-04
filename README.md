@@ -196,8 +196,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [animals]: https://forum.minetest.net/viewtopic.php?t=629
 [animals_aggressive]: https://github.com/AntumMT/mp-animals_aggressive
 [antum]: https://github.com/AntumMT/mp-antum
-[antum_glass]: mods/antum/glass
-[antum_overrides]: mods/antum/overrides
 [areas]: https://forum.minetest.net/viewtopic.php?t=7239
 [awards]: https://forum.minetest.net/viewtopic.php?t=4870
 [away]: https://forum.minetest.net/viewtopic.php?t=1211
