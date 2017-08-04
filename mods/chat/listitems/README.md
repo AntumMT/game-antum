@@ -17,6 +17,7 @@
 - ***listentities:*** Alias for */list entities*.
 - ***listnodes:*** Alias for */list nodes*.
 - ***listores:*** Alias for */list ores*.
+- ***listtools:*** Alias for */list tools*.
   - Invocation: ```/<command> [options] [string1] [string2] ...```
     - ***command:*** Name of the command (e.g. *listitems*, *listentities*, etc.)
 

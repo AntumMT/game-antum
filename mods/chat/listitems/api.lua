@@ -41,6 +41,7 @@ local known_lists = {
 	'entities',
 	'nodes',
 	'ores',
+	'tools',
 }
 
 if listitems.enable_mobs then
@@ -102,6 +103,8 @@ local function getRegistered(r_type)
 		o_temp = core.registered_nodes
 	elseif r_type == 'ores' then
 		o_temp = core.registered_ores
+	elseif r_type == 'tools' then
+		o_temp = core.registered_tools
 	elseif r_type == 'mobs' then
 		o_temp = mobs.spawning_mobs
 	else
