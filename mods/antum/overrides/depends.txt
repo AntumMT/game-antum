@@ -1,5 +1,6 @@
 antum_core
 default
+override
 animalmaterials?
 bags?
 carts?
@@ -7,6 +8,7 @@ castle_weapons?
 dye?
 ethereal?
 farming?
+farming_plus?
 flowers?
 helicopter?
 invisibility?
