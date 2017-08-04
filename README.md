@@ -13,6 +13,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * admin/
     * [clean][] ([WTFPL][lic.wtfpl]) -- version: Unknown *2013-06-08* ([patched][patch.clean])
     * [invisible][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0])
+    * [override][] ([MIT][lic.mit]) -- version: [0.1 (cd24d1c Git)][ver.override] *2017-08-02*
     * [privilegeareas][] ([WTFPL][lic.privilegeareas] / [CC0][lic.cc0]) -- version: [aebaa00 Git][ver.privilegeareas] *2016-05-18*
     * [privs][] ([CC0][lic.cc0])
     * [spectator_mode][] ([WTFPL][lic.spectator_mode]) -- version: [7d68bec Git][ver.spectator_mode] *2017-03-30*
@@ -283,6 +284,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [mysheetmetal]: https://forum.minetest.net/viewtopic.php?t=11702
 [mywoodslopes]: https://forum.minetest.net/viewtopic.php?t=11433
 [nether]: https://forum.minetest.net/viewtopic.php?t=5790
+[override]: https://forum.minetest.net/viewtopic.php?t=18229
 [painting]: https://github.com/minetest-mods/painting
 [peaceful_npc]: https://forum.minetest.net/viewtopic.php?t=4167
 [pipeworks]: https://forum.minetest.net/viewtopic.php?t=2155
@@ -500,6 +502,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.mysheetmetal]: https://github.com/minetest-mods/mysheetmetal/tree/7c5ab71
 [ver.mywoodslopes]: https://github.com/minetest-mods/mywoodslopes/tree/3a1b531
 [ver.nether]: https://github.com/PilzAdam/nether/tree/bc2ccfb
+[ver.override]: https://github.com/AntumMT/mod-override/tree/cd24d1c
 [ver.peaceful_npc]: https://github.com/jojoa1997/peaceful_npc/tree/2b3a7a5
 [ver.pipeworks]: https://github.com/minetest-mods/pipeworks/tree/2eff6e3
 [ver.playeranim]: https://github.com/minetest-mods/playeranim/tree/59bcd38
