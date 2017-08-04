@@ -4,14 +4,18 @@
 ## Help output description
 List registered items =
 List registered entities =
+List registered ores =
 
 ## Help output parameters
-options =
+type =
 string1 =
 string2 =
 
-## Player used unrecognized switch
-Unknown option: =
+## Error output
+Error: Unknown option: =
+Error: Must specify list type =
+Error: Unknown list type: =
+Recognized list types: =
 
 ## Search description
 Searching in names ... =

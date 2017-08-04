@@ -30,7 +30,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * chat/
     * [away][] ([GPL][lic.gpl2.0]) -- version: [4c1e5a9 Git][ver.away] *2012-03-09* ([patched][patch.away])
     * [chatlog][] ([CC0][lic.cc0]) -- version: (no version info) *2013-06-09* ([patched][patch.chatlog])
-    * [listitems][] ([MIT][lic.listitems]) -- version: [0.5 (6228eea Git)][ver.listitems] *2017-08-02*
+    * [listitems][] ([MIT][lic.listitems]) -- version: [0.5 (007a57a Git)][ver.listitems] *2017-08-03*
 * crafting/
     * [craftguide][] ([GPL / WTFPL](mods/crafting/craftguide/LICENSE)) -- version: [86a96c3 Git][ver.craftguide] *2017-03-21* ([patched][patch.craftguide])
 * [currency][] ([WTFPL][lic.currency]) -- version: [3ee673d Git][ver.currency] *2017-05-18* ([patched][patch.currency])
@@ -476,7 +476,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.invisibility]: https://github.com/tenplus1/invisibility/tree/bf4156b
 [ver.jukebox]: https://github.com/minetest-mods/jukebox/tree/e6a507f
 [ver.lightning]: https://github.com/minetest-mods/lightning/tree/39bd36c
-[ver.listitems]: https://github.com/AntumMT/mod-listitems/tree/6228eea
+[ver.listitems]: https://github.com/AntumMT/mod-listitems/tree/007a57a
 [ver.mesecons]: https://github.com/minetest-mods/mesecons/tree/564bdc2
 [ver.minetest_game]: https://github.com/minetest/minetest_game/tree/f855bee
 [ver.mob-engine]: https://github.com/minetest-mods/mob-engine/tree/138f655

@@ -1,4 +1,0 @@
-TODO List:
-- Add 'listentities' command
-- Optionally display item descriptions
-- Optionally search in item descriptions

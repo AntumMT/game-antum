@@ -32,6 +32,21 @@ end
 -- @field -v Display descriptions.
 local known_switches = {'-v',}
 
+--- Valid list types.
+--
+-- @table known_lists
+-- @local
+local known_lists = {
+	'items',
+	'entities',
+	'nodes',
+	'ores',
+}
+
+if listitems.enable_mobs then
+	table.insert(known_lists, 'mobs')
+end
+
 
 --- Checks if a parameter is a switch beginning with "-".
 --
@@ -71,23 +86,36 @@ end
 -- @function getRegistered
 -- @local
 -- @tparam string r_type Must be either "items" or "entities".
--- @treturn table Either a list of registered item or entity names & descriptions. 
+-- @treturn table Either a list of registered item or entity names & descriptions.
+-- @note Ore names are located in the "ore" field of the registered tables
 local function getRegistered(r_type)
-	if r_type == nil then
-		r_type = 'items'
-	end
+	-- Default is "items"
+	r_type = r_type or 'items'
 	
 	local o_names = {}
 	local objects = {}
 	local o_temp = {}
 	
-	if r_type == 'items' then
-		o_temp = core.registered_items
-	else
+	if r_type == 'entities' then
 		o_temp = core.registered_entities
+	elseif r_type == 'nodes' then
+		o_temp = core.registered_nodes
+	elseif r_type == 'ores' then
+		o_temp = core.registered_ores
+	elseif r_type == 'mobs' then
+		o_temp = mobs.spawning_mobs
+	else
+		o_temp = core.registered_items
 	end
 	
 	for name, def in pairs(o_temp) do
+		-- Ore names are located in the 'ore' field of the table
+		if r_type == 'ores' then
+			name = def.ore
+		elseif r_type == 'mobs' then
+			def = {}
+		end
+		
 		table.insert(objects, {name=name, descr=def.description,})
 		table.insert(o_names, name)
 	end
@@ -141,19 +169,6 @@ local function extractSwitches(plist)
 				table.insert(switches, p)
 			else
 				table.insert(params, p)
-			end
-		end
-		
-		-- DEBUG:
-		if listitems.debug then
-			listitems.logDebug('Switches:')
-			for i, o in ipairs(switches) do
-				listitems.logDebug('  ' .. o)
-			end
-			
-			listitems.logDebug('Parameters:')
-			for i, p in ipairs(params) do
-				listitems.logDebug('  ' .. p)
 			end
 		end
 	end
@@ -245,6 +260,7 @@ end
 --
 -- @setting listitems.bullet_list
 -- @settype boolean
+-- @default true
 local bullet_list = core.settings:get_bool('listitems.bullet_list')
 if bullet_list == nil then
 	-- Default is true
@@ -292,19 +308,18 @@ end
 --
 -- @function listitems.list
 -- @tparam string player Name of player to receive message output.
--- @tparam string params String list of parameters.
+-- @tparam string l_type Objects to list (either "items", "entities", or "ores").
 -- @tparam string switches String list of switch options for manipulating output.
--- @tparam string l_type Objects to list (either "items" or "entities").
+-- @tparam string params String list of parameters.
 -- @tparam boolean lower Case-insensitive matching if ***true***.
 -- @treturn boolean
-function listitems.list(player, params, switches, l_type, lower)
+function listitems.list(player, l_type, switches, params, lower)
 	-- Default list type is "items"
 	l_type = l_type or 'items'
 	lower = lower == nil or lower == true
 	
-	local types = {'items', 'entities',}
-	if not listContains(types, l_type) then
-		listitems.logWarn('listitems.listitems called with unknown list type: ' .. tostring(l_type))
+	if not listContains(known_lists, l_type) then
+		listitems.logWarn('listitems.list called with unknown list type: ' .. tostring(l_type))
 		return false
 	end
 	
@@ -329,7 +344,7 @@ function listitems.list(player, params, switches, l_type, lower)
 	
 	for i, s in ipairs(switches) do
 		if not listContains(known_switches, s) then
-			core.chat_send_player(player, S('Unknown option:') .. ' ' .. s)
+			core.chat_send_player(player, S('Error: Unknown option:') .. ' ' .. s)
 			return false
 		end
 	end
@@ -343,43 +358,81 @@ function listitems.list(player, params, switches, l_type, lower)
 end
 
 
---- Lists registered items.
+--- Helper function called from within chat commands.
 --
--- @chatcmd listitems
--- @chatparam [-v]
--- @chatparam [string1]
--- @chatparam [string2]
--- @chatparam ...
--- @treturn boolean
-registerChatCommand('listitems', {
-	params = '[-v] [' .. S('string1') .. '] [' .. S('string2') .. '] ...',
-	description = S('List registered items'),
-	func = function(player, params)
-		local switches = extractSwitches(string.split(params, ' '))
+-- @function list
+-- @local
+-- @param player
+-- @param params
+local function list(player, l_type, params)
+		local switches = string.split(params, ' ')
+		
+		local type_ok = true
+		if not l_type then
+			core.chat_send_player(player, S('Error: Must specify list type'))
+			type_ok = false
+		elseif not listContains(known_lists, l_type) then
+			core.chat_send_player(player, S('Error: Unknown list type:') .. ' ' .. l_type)
+			type_ok = false
+		end
+		
+		if not type_ok then
+			core.chat_send_player(player, S('Recognized list types:') .. ' ' .. table.concat(known_lists, ', '))
+			return false
+		end
+		
+		switches = extractSwitches(switches)
 		params = removeListDuplicates(switches[2])
 		switches = switches[1]
 		
-		return listitems.list(player, params, switches, 'items')
-	end,
-})
-
-
---- Lists registered entities.
---
--- @chatcmd listentities
--- @chatparam [-v]
--- @chatparam [string1]
--- @chatparam [string2]
--- @chatparam ...
--- @treturn boolean
-registerChatCommand('listentities', {
-	params = '[' .. S('options') .. '] [' .. S('string1') .. '] [' .. S('string2') .. '] ...',
-	description = S('List registered entities'),
-	func = function(player, params)
-		local switches = extractSwitches(string.split(params, ' '))
-		params = removeListDuplicates(switches[2])
-		switches = switches[1]
+		-- DEBUG:
+		if listitems.debug then
+			listitems.log('action', 'List type: ' .. l_type)
+			listitems.log('action', 'Switches:')
+			for i, s in ipairs(switches) do
+				listitems.log('action', '  ' .. s)
+			end
+			listitems.log('action', 'Parameters:')
+			for i, p in ipairs(params) do
+				listitems.log('action', '  ' .. p)
+			end
+		end
 		
-		return listitems.list(player, params, switches, 'entities')
-	end,
-})
+		return listitems.list(player, l_type, switches, params)
+end
+
+
+if listitems.enable_generic then
+	--- General *list* chat command
+	--
+	-- @chatcmd list
+	-- @chatparam type
+	-- @chatparam [-v]
+	-- @chatparam [string1]
+	-- @chatparam [string2]
+	-- @chatparam ...
+	-- @treturn boolean
+	registerChatCommand('list', {
+		params = S('type') .. ' [-v] [' .. S('string1') .. '] [' .. S('string2') .. '] ...',
+		description = S('List registered items or entities'),
+		func = function(player, params)
+			local params = string.split(params, ' ')
+			local l_type = table.remove(params, 1)
+			params = table.concat(params, ' ')
+			
+			return list(player, l_type, params)
+		end,
+	})
+end
+
+
+-- Chat commands aliases.
+for i, cmd in ipairs(known_lists) do
+	registerChatCommand('list' .. cmd, {
+		params = '[-v] [' .. S('string1') .. '] [' .. S('string2') .. '] ...',
+		description = S('List registered ' .. cmd),
+		func = function(player, params)
+			return list(player, cmd, params)
+		end,
+	})
+end

@@ -4,9 +4,9 @@
 ## Help output description
 List registered items = Listar los artículos registrados
 List registered entities = Listar los entidades registrados
+List registered ores = Listar los minerales registrados
 
 ## Help output parameters
-options = opciones
 string1 = cadena1
 string2 = cadena2
 

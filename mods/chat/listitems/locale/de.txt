@@ -6,7 +6,6 @@ List registered items = Registrierte Gegenstände anzeigen
 List registered entities = Registrierte Entities anzeigen
 
 ## Help output parameters
-options = Optionen
 string1 = Text 1
 string2 = Text 2
 

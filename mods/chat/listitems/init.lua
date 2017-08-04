@@ -14,9 +14,8 @@ listitems = {}
 listitems.modname = core.get_current_modname()
 listitems.modpath = core.get_modpath(listitems.modname)
 
-listitems.debug = core.settings:get_bool('enable_debug_mods') or false
-
 local scripts = {
+	'settings',
 	'logging',
 	'api',
 }
