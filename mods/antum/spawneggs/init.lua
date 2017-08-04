@@ -27,7 +27,7 @@
 
 antum.spawneggs = {}
 
-antum.spawneggs.modname = minetest.get_current_modname()
-antum.spawneggs.modpath = minetest.get_modpath(antum.spawneggs.modname)
+antum.spawneggs.modname = core.get_current_modname()
+antum.spawneggs.modpath = core.get_modpath(antum.spawneggs.modname)
 
 antum.loadScript('eggs')

@@ -27,7 +27,7 @@
 
 -- Return default tree leaves back to original except make walkable (collides)
 
-minetest.override_item('default:leaves', {
+core.override_item('default:leaves', {
 	description = "Leaves",
 	drawtype = 'allfaces_optional',
 	waving = 1,
@@ -58,7 +58,7 @@ minetest.override_item('default:leaves', {
 	walkable = true,
 })
 
-minetest.override_item('default:jungleleaves', {
+core.override_item('default:jungleleaves', {
 	description = "Jungle Leaves",
 	drawtype = 'allfaces_optional',
 	waving = 1,

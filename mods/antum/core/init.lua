@@ -26,11 +26,12 @@
 
 
 antum = {}
-antum.modname = minetest.get_current_modname()
-antum.modpath = minetest.get_modpath(antum.modname)
+antum.modname = core.get_current_modname()
+antum.modpath = core.get_modpath(antum.modname)
+antum.namespace = 'antum'
 
 antum.verbose = false
-if minetest.settings:get_bool('log_mods') then
+if core.settings:get_bool('log_mods') then
 	antum.verbose = true
 end
 

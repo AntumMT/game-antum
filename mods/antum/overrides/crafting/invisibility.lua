@@ -35,7 +35,7 @@ local depends = {
 }
 
 for I in pairs(depends) do
-	if not minetest.get_modpath(depends[I]) then
+	if not core.get_modpath(depends[I]) then
 		depends_satisfied = false
 	end
 end
@@ -43,7 +43,7 @@ end
 if depends_satisfied then
 	-- Override vessels:glass_bottle
 	--[[
-	minetest.override_item('vessels:glass_bottle', {
+	core.override_item('vessels:glass_bottle', {
 		description = 'Glass Bottle (empty)',
 		drawtype = 'plantlike',
 		tiles = {'vessels_glass_bottle.png'},
@@ -64,7 +64,7 @@ if depends_satisfied then
 				return
 			end
 			-- Check if pointing to a liquid source
-			local node = minetest.get_node(pointed_thing.under)
+			local node = core.get_node(pointed_thing.under)
 			local liquiddef = bucket.liquids[node.name]
 			local item_count = user:get_wielded_item():get_count()
 	
@@ -98,7 +98,7 @@ if depends_satisfied then
 	
 				end
 	
-				minetest.add_node(pointed_thing.under, {name='air'})
+				core.add_node(pointed_thing.under, {name='air'})
 	
 				return ItemStack(giving_back)
 			end

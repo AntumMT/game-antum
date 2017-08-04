@@ -26,20 +26,25 @@
 
 
 -- Displays a message in the log
-function antum.log(level, message)
-	minetest.log(level, '[' .. minetest.get_current_modname() .. '] ' .. message)
+function antum.log(level, msg)
+	local prefix = '[' .. core.get_current_modname() .. '] '
+	if msg == nil then
+		core.log(prefix .. level)
+	else
+		core.log(level, prefix .. msg)
+	end
 end
 
-function antum.logAction(message)
-	antum.log('action', message)
+function antum.logAction(msg)
+	antum.log('action', msg)
 end
 
-function antum.logWarn(message)
-	antum.log('warning', message)
+function antum.logWarn(msg)
+	antum.log('warning', msg)
 end
 
-function antum.logError(message)
-	antum.log('error', message)
+function antum.logError(msg)
+	antum.log('error', msg)
 end
 
 
@@ -57,20 +62,19 @@ end
 
 -- Retrieves path for currently loaded mod
 function antum.getCurrentModPath()
-	return minetest.get_modpath(minetest.get_current_modname())
+	return core.get_modpath(core.get_current_modname())
 end
 
 
---[[
-  Loads a mod sub-script.
-  
+--[[ Loads a mod sub-script.
+
   @param script_name
     Name or base name of the script file
   @param lua_ext
     type: bool
     default: true
     description: If 'true', appends '.lua' extension to script filename
-]]--
+]]
 function antum.loadScript(script_name, lua_ext)
 	-- Default 'true'
 	if lua_ext == nil then
@@ -104,7 +108,7 @@ function antum.registerCraft(def)
 		antum.logAction('Registering craft recipe for "' .. def.output .. '"')
 	end
 	
-	minetest.register_craft(def)
+	core.register_craft(def)
 end
 
 
@@ -114,7 +118,7 @@ function antum.clearCraftOutput(output)
 		antum.logAction('Clearing craft by output: ' .. output)
 	end
 	
-	minetest.clear_craft({
+	core.clear_craft({
 		output = output
 	})
 end
@@ -142,7 +146,7 @@ function antum.clearCraftRecipe(recipe)
 		antum.logAction(' Clearing craft by recipe: ' .. recipe_string)
 	end
 	
-	minetest.clear_craft({
+	core.clear_craft({
 		recipe = {recipe}
 	})
 end
@@ -165,7 +169,7 @@ end
 -- Checks if dependencies are satisfied
 function antum.dependsSatisfied(depends)
 	for index, dep in ipairs(depends) do
-		if not minetest.get_modpath(dep) then
+		if not core.get_modpath(dep) then
 			return false
 		end
 	end
@@ -183,24 +187,23 @@ end
     Item object with name matching 'item_name' parameter
 ]]
 function antum.getItem(item_name)
-	for index in pairs(minetest.registered_items) do
-		if minetest.registered_items[index].name == item_name then
-			return minetest.registered_items[index]
+	for index in pairs(core.registered_items) do
+		if core.registered_items[index].name == item_name then
+			return core.registered_items[index]
 		end
 	end
 end
 
 
---[[
-  Retrieves a list of items containing a string.
-  
+--[[ Retrieves a list of items containing a string.
+
   @param substring
     String to match within item names
   @param case_sensitive
     If 'true', 'substring' case must match that of item name
   @return
     List of item names matching 'substring'
-]]--
+]]
 function antum.getItemNames(substring, case_sensitive)
 	antum.logAction('Checking registered items for "' .. substring .. '" in item name ...')
 	
@@ -211,8 +214,8 @@ function antum.getItemNames(substring, case_sensitive)
 	
 	local item_names = {}
 	
-	for index in pairs(minetest.registered_items) do
-		local item_name = minetest.registered_items[index].name
+	for index in pairs(core.registered_items) do
+		local item_name = core.registered_items[index].name
 		if not case_sensitive then
 			item_name = string.lower(item_name)
 		end
@@ -227,9 +230,8 @@ function antum.getItemNames(substring, case_sensitive)
 end
 
 
---[[
-  Un-registers an item & converts its name to an alias.
-  
+--[[ Un-registers an item & converts its name to an alias.
+
   @param item_name
     Name of the item to override
   @param alias_of
@@ -237,14 +239,13 @@ end
 ]]
 function antum.convertItemToAlias(item_name, alias_of)
 	antum.logAction('Overridding "' .. item_name .. '" with "' .. alias_of .. '"')
-	minetest.unregister_item(item_name)
-	minetest.register_alias(item_name, alias_of)
+	core.unregister_item(item_name)
+	core.register_alias(item_name, alias_of)
 end
 
 
---[[
-  Changes object description.
-  
+--[[ Changes object description.
+
   @param item_name
     Name of item to be altered
   @param description
@@ -257,7 +258,20 @@ function antum.overrideItemDescription(item_name, description)
 	item.description = description
 	
 	-- Unregister original item
-	minetest.unregister_item(item.name)
+	core.unregister_item(item.name)
 	
-	minetest.register_craftitem(':' .. item.name, item)
+	core.register_craftitem(':' .. item.name, item)
+end
+
+
+--[[ Registers a new item under "antum" namespace
+
+  @param name
+    Base name of new item
+  @param def
+    Item definition
+]]
+function antum.registerItem(name, def)
+	name = ':' .. antum.namespace .. ':' .. name
+	core.register_craftitem(name, def)
 end

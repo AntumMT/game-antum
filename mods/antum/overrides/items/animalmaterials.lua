@@ -27,8 +27,8 @@
 
 -- Boilerplate to support localized strings if intllib mod is installed.
 local S
-if minetest.global_exists("intllib") then
-	dofile(minetest.get_modpath("intllib").."/intllib.lua")
+if core.global_exists("intllib") then
+	dofile(core.get_modpath("intllib").."/intllib.lua")
 	if intllib.make_gettext_pair then
 		S = intllib.make_gettext_pair("animalmaterials")
 	else
@@ -46,7 +46,7 @@ local delete_items = {
 }
 
 for I in pairs(delete_items) do
-	minetest.unregister_item('animalmaterials:' .. delete_items[I])
+	core.unregister_item('animalmaterials:' .. delete_items[I])
 end
 
 
@@ -55,42 +55,42 @@ end
 
 -- Fish
 
-minetest.register_craftitem(':animalmaterials:fish_bluewhite', {
+core.register_craftitem(':animalmaterials:fish_bluewhite', {
 	description = 'Raw Bluewhite Fish',
 	image = 'fish_raw.png',
-	on_use = minetest.item_eat(1),
+	on_use = core.item_eat(1),
 	groups = { meat=1, eatable=1 },
 	stack_max = 25
 })
-minetest.register_alias('fish_bluewhite_raw', 'animalmaterials:fish_bluewhite')
+core.register_alias('fish_bluewhite_raw', 'animalmaterials:fish_bluewhite')
 
-minetest.register_craftitem(':animalmaterials:fish_clownfish', {
+core.register_craftitem(':animalmaterials:fish_clownfish', {
 	description = 'Raw Clownfish',
 	image = 'fish_raw.png',
-	on_use = minetest.item_eat(1),
+	on_use = core.item_eat(1),
 	groups = { meat=1, eatable=1 },
 	stack_max = 25
 })
-minetest.register_alias('clownfish_raw', 'animalmaterials:fish_clownfish')
+core.register_alias('clownfish_raw', 'animalmaterials:fish_clownfish')
 
 
 -- Fur group
 
-minetest.register_craftitem(":animalmaterials:fur", {
+core.register_craftitem(":animalmaterials:fur", {
 	description = S("Fur"),
 	image = "animalmaterials_fur.png",
 	stack_max=25,
 	groups = {fur = 1},
 })
 
-minetest.register_craftitem(":animalmaterials:fur_deer", {
+core.register_craftitem(":animalmaterials:fur_deer", {
 	description = S("Deer fur"),
 	image = "animalmaterials_deer_fur.png",
 	stack_max=10,
 	groups = {fur = 1},
 })
 
-minetest.register_craftitem(":animalmaterials:coat_cattle", {
+core.register_craftitem(":animalmaterials:coat_cattle", {
 	description = S("Cattle coat"),
 	image = "animalmaterials_cattle_coat.png",
 	stack_max=10,

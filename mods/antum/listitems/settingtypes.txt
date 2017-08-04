@@ -1,0 +1,9 @@
+
+# Displays items in a bulleted list.
+listitems.bullet_list (Bulleted list) bool true
+
+# Enables/Disables generic "list" chat command.
+listitems.enable_generic (Enable generic "list" command) bool false
+
+# Enables/Disables "listmobs" chat command (requires "mobs").
+listitems.enable_mobs (Enable "listmobs" command) bool true

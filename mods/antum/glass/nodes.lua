@@ -31,7 +31,7 @@ local function registerGroupAliases(group)
 		local alias = group[I][2]
 		-- DEBUG
 		antum.logAction('Registering alias: ' .. alias .. ' -> ' .. source)
-		minetest.register_alias(alias, source)
+		core.register_alias(alias, source)
 	end
 end
 
@@ -53,7 +53,7 @@ end
 for I in pairs(antum.glass.colors) do
 	local color = antum.glass.colors[I]
 	
-	minetest.register_node(':glass:' .. color, {
+	core.register_node(':glass:' .. color, {
 		description = color:gsub('^%l', string.upper) .. ' Glass',
 		drawtype = 'glasslike_framed_optional',
 		tiles = {'glass_' .. color .. '.png', 'glass_' .. color .. '_detail.png'},
@@ -73,14 +73,14 @@ for I in pairs(antum.glass.colors) do
 	appendGroupPanes(source, suffix)
 end
 
-if minetest.get_modpath('default') then
+if core.get_modpath('default') then
 	local source = 'default:glass'
 	local suffix = 'glass'
 	appendGroupGlass(source, suffix)
 	appendGroupPanes(source, suffix)
 end
 
-if minetest.get_modpath('moreblocks') then
+if core.get_modpath('moreblocks') then
 	local panes = {
 		'clean', 'coal', 'glow', 'iron', 'super_glow',
 		'trap', 'trap_glow', 'trap_super_glow',

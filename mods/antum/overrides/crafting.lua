@@ -37,7 +37,7 @@ local modoverrides = {
 }
 
 for index, modname in ipairs(modoverrides) do
-	if minetest.get_modpath(modname) then
+	if core.get_modpath(modname) then
 		if antum.verbose then
 			antum.logAction('DEBUG: found mod \"' .. modname .. '\"')
 		end

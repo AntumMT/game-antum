@@ -28,7 +28,7 @@
 
 antum.spawneggs.addEggRecipe = function(name, spawn, ingredients)
 	table.insert(ingredients, 1, 'spawneggs:egg')
-	minetest.register_craft({
+	core.register_craft({
 		output = 'spawneggs:' .. name,
 		type = 'shapeless',
 		recipe = ingredients,
@@ -36,7 +36,7 @@ antum.spawneggs.addEggRecipe = function(name, spawn, ingredients)
 end
 
 antum.spawneggs.addEgg = function(name, spawn, ingredients)
-	minetest.register_craftitem(':spawneggs:' .. name, {
+	core.register_craftitem(':spawneggs:' .. name, {
 		description = name:gsub("^%l", string.upper) .. ' Spawn Egg',
 		inventory_image = 'spawneggs_' .. name ..'.png',
 		
@@ -44,8 +44,8 @@ antum.spawneggs.addEgg = function(name, spawn, ingredients)
 			if target.type == 'node' then
 				local pos = target.above
 				pos.y = pos.y + 1
-				minetest.add_entity(pos, spawn)
-				if not minetest.settings:get_bool('creative_mode') then
+				core.add_entity(pos, spawn)
+				if not core.settings:get_bool('creative_mode') then
 					itemstack:take_item()
 				end
 				
@@ -62,7 +62,7 @@ end
 
 
 
-if minetest.get_modpath('spawneggs') then
+if core.get_modpath('spawneggs') then
 	-- Clear all spawneggs
 	local spawneggs_default = {
 		'dirt_monster', 'dungeon_master', 'oerkki', 'rat',
@@ -70,7 +70,7 @@ if minetest.get_modpath('spawneggs') then
 	}
 	
 	for I in pairs(spawneggs_default) do
-		minetest.clear_craft({
+		core.clear_craft({
 			output = 'spawneggs:' .. spawneggs_default[I],
 		})
 	end
@@ -78,22 +78,22 @@ end
 
 
 -- Sheep spawnegg
-if minetest.get_modpath('sheep') and minetest.get_modpath('wool') then
+if core.get_modpath('sheep') and core.get_modpath('wool') then
 	antum.spawneggs.addEgg('sheep', 'creatures:sheep', {'group:wool'})
 end
 
 -- Oerrki spawnegg
-if minetest.get_modpath('oerrki') and minetest.get_modpath('default') then
+if core.get_modpath('oerrki') and core.get_modpath('default') then
 	antum.spawneggs.addEgg('oerrki', 'creatures:oerrki', {'default:obsidian'})
 end
 
 -- Chicken spawnegg
-if minetest.get_modpath('chicken') then
+if core.get_modpath('chicken') then
 	antum.spawneggs.addEgg('chicken', 'creatures:chicken', {'creatures:feather'})
 end
 
 -- mobs_redo monsters
-if minetest.get_modpath('mobs_monster') and minetest.get_modpath('default') then
+if core.get_modpath('mobs_monster') and core.get_modpath('default') then
 	
 	-- Dirt monster
 	antum.spawneggs.addEgg('dirt_monster', 'mobs_monster:dirt_monster', {'default:dirt'})

@@ -1,0 +1,26 @@
+# Translation by
+
+
+## Invoking commands (remove these lines to use defaults "nametag", "hidename", & "showname")
+nametag =
+hidename =
+showname =
+
+## "nametag" parameters
+hide =
+show =
+status =
+
+Nametag: =
+Status: hidden =
+Status: visible =
+Unknown parameter: =
+
+Make nametag hidden =
+Make nametag visible =
+Nametag is now hidden =
+Nametag is now visible =
+Nametag is already hidden =
+Nametag is already visible =
+ERROR: Could not hide nametag =
+ERROR: Could not show nametag =

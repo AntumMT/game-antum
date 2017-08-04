@@ -31,7 +31,7 @@ local depends = {
 }
 
 for I in pairs(depends) do
-	if not minetest.get_modpath(depends[I]) then
+	if not core.get_modpath(depends[I]) then
 		depends_satisfied = false
 	end
 end

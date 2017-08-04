@@ -27,8 +27,8 @@
 
 antum.craft = {}
 
-antum.craft.modname = minetest.get_current_modname()
-antum.craft.modpath = minetest.get_modpath(antum.craft.modname)
+antum.craft.modname = core.get_current_modname()
+antum.craft.modpath = core.get_modpath(antum.craft.modname)
 
 
 -- Load sub-scripts

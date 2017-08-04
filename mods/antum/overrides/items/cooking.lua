@@ -25,7 +25,7 @@
 --]]
 
 
-minetest.register_craftitem(':cooking:fish_bluewhite_cooked', {
+core.register_craftitem(':cooking:fish_bluewhite_cooked', {
 	description = 'Cooked Bluewhite Fish',
 	image = 'fish_cooked.png',
 	on_use = core.item_eat(6),
@@ -33,9 +33,9 @@ minetest.register_craftitem(':cooking:fish_bluewhite_cooked', {
 	stack_max = 25
 })
 
-minetest.register_alias('fish_bluewhite_cooked', 'cooking:fish_bluewhite_cooked')
+core.register_alias('fish_bluewhite_cooked', 'cooking:fish_bluewhite_cooked')
 
-minetest.register_craftitem(':cooking:fish_clownfish_cooked', {
+core.register_craftitem(':cooking:fish_clownfish_cooked', {
 	description = 'Cooked Clownfish',
 	image = 'fish_cooked.png',
 	on_use = core.item_eat(6),
@@ -43,4 +43,4 @@ minetest.register_craftitem(':cooking:fish_clownfish_cooked', {
 	stack_max = 25
 })
 
-minetest.register_alias('clownfish_cooked', 'cooking:fish_clownfish_cooked')
+core.register_alias('clownfish_cooked', 'cooking:fish_clownfish_cooked')

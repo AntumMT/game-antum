@@ -25,7 +25,7 @@
 --]]
 
 
-minetest.register_tool(':walking_light:helmet_gold', {
+core.register_tool(':walking_light:helmet_gold', {
 	description = 'Gold Helmet with light',
 	inventory_image = 'walking_light_inv_helmet_gold.png',
 	wield_image = "3d_armor_inv_helmet_gold.png",

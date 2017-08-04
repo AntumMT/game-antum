@@ -27,8 +27,8 @@
 
 antum.glass = {}
 
-antum.glass.modname = minetest.get_current_modname()
-antum.glass.modpath = minetest.get_modpath(antum.glass.modname)
+antum.glass.modname = core.get_current_modname()
+antum.glass.modpath = core.get_modpath(antum.glass.modname)
 
 antum.glass.colors = {'blue', 'green', 'red', 'violet'}
 

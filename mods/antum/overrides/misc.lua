@@ -31,7 +31,7 @@ local modoverrides = {
 
 for I in pairs(modoverrides) do
 	local modname = modoverrides[I]
-	if minetest.get_modpath(modname) then
+	if core.get_modpath(modname) then
 		antum.loadScript('misc/' .. modname)
 	end
 end

@@ -1,4 +1,4 @@
-antum_core
+antum
 default
 dye
 craft_guide?

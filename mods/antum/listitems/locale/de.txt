@@ -1,0 +1,20 @@
+# Translation by Wuzzy
+
+
+## Help output description
+List registered items = Registrierte Gegenstände anzeigen
+List registered entities = Registrierte Entities anzeigen
+
+## Help output parameters
+string1 = Text 1
+string2 = Text 2
+
+## Player used unrecognized switch
+Unknown option: = Unbekannte Option:
+
+## Search description
+Searching in names ... = In Namen suchen …
+Searching in names and descriptions ... = In Namen und Beschreibungen suchen …
+
+## Number of items listed
+Objects listed: = Aufgezählte Objekte:

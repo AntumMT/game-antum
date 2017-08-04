@@ -1,4 +1,4 @@
-antum_core
+antum
 default
 override
 animalmaterials?

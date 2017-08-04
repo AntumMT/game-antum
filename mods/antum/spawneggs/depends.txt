@@ -1,4 +1,4 @@
-antum_core
+antum
 spawneggs
 animal_chicken?
 chicken?

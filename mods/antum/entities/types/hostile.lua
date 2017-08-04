@@ -52,7 +52,7 @@ function antum.createHostileEntity(def)
 		knockback_level = ba.knockback,
 	}
 	
-	minetest.register_entity(name, def)
+	core.register_entity(name, def)
 end
 
 -- TESTING

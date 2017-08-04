@@ -26,8 +26,8 @@
 
 
 antum.entities = {}
-antum.entities.modname = minetest.get_current_modname()
-antum.entities.modpath = minetest.get_modpath(antum.entities.modname)
+antum.entities.modname = core.get_current_modname()
+antum.entities.modpath = core.get_modpath(antum.entities.modname)
 
 
 -- Loading entity definitions

@@ -28,5 +28,5 @@
 local sp = 'simple_protection'
 local sp_claim = sp .. ':claim'
 
-minetest.register_alias(sp .. ':claim_stick', sp_claim)
-minetest.register_alias('claim_stick', sp_claim)
+core.register_alias(sp .. ':claim_stick', sp_claim)
+core.register_alias('claim_stick', sp_claim)

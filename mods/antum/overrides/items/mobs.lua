@@ -27,8 +27,8 @@
 
 -- Boilerplate to support localized strings if intllib mod is installed.
 local S
-if minetest.global_exists("intllib") then
-	dofile(minetest.get_modpath("intllib").."/intllib.lua")
+if core.global_exists("intllib") then
+	dofile(core.get_modpath("intllib").."/intllib.lua")
 	if intllib.make_gettext_pair then
 		S = intllib.make_gettext_pair("mobs")
 	else
@@ -44,7 +44,7 @@ end
 
 -- Fur group
 
-minetest.register_craftitem(":mobs:leather", {
+core.register_craftitem(":mobs:leather", {
 	description = S("Leather"),
 	inventory_image = "mobs_leather.png",
 	groups = {fur = 1},

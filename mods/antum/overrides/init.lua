@@ -25,12 +25,12 @@
 --]]
 
 
--- NOTE: This mod depends on the method 'minetest.unregister_item()' by paly2.
+-- NOTE: This mod depends on the method 'core.unregister_item()' by paly2.
 --       As of writing, the Mineteset main branch does not include it.
 
 antum.overrides = {}
-antum.overrides.modname = minetest.get_current_modname()
-antum.overrides.modpath = minetest.get_modpath(antum.overrides.modname)
+antum.overrides.modname = core.get_current_modname()
+antum.overrides.modpath = core.get_modpath(antum.overrides.modname)
 
 --local scripts = {
 antum.loadScripts({

@@ -1,4 +1,4 @@
 3d_armor
-antum_core
+antum
 default
 unifieddyes

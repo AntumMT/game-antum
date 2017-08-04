@@ -31,7 +31,7 @@ cotton.aliases = {"thread", "string"}
 
 cotton.dependencies.satisfied = false
 for dep in pairs(cotton.dependencies) do
-	if minetest.get_modpath(dep) then
+	if core.get_modpath(dep) then
 		cotton.dependencies.satisfied = true
 	end
 end
@@ -46,6 +46,6 @@ if cotton.dependencies.satisfied then
 	
 	-- Add aliases for cotton
 	for alias in pairs(cotton.aliases) do
-		minetest.register_alias("farming:" .. alias, "farming:cotton")
+		core.register_alias("farming:" .. alias, "farming:cotton")
 	end
 end

@@ -33,27 +33,27 @@ bags.depends = {
 bags.satisfied = true
 
 for I in pairs(bags.depends) do
-	if not minetest.get_modpath(bags.depends[I]) then
+	if not core.get_modpath(bags.depends[I]) then
 		bags.satisfied = false
 	end
 end
 
 
 if bags.satisfied then
-	minetest.clear_craft({
+	core.clear_craft({
 		recipe = {
 			{"", "default:stick", ""},
 			{"default:wood", "default:wood", "default:wood"},
 			{"default:wood", "default:wood", "default:wood"},
 		},
 	})
-	minetest.clear_craft({
+	core.clear_craft({
 		recipe = {
 			{"bags:small", "bags:small"},
 			{"bags:small", "bags:small"},
 		},
 	})
-	minetest.clear_craft({
+	core.clear_craft({
 		recipe = {
 			{"bags:medium", "bags:medium"},
 			{"bags:medium", "bags:medium"},

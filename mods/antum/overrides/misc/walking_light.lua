@@ -26,7 +26,7 @@
 
 
 local addLightItems = function(mod, itemlist)
-	if minetest.get_modpath(mod) then
+	if core.get_modpath(mod) then
 		for I in pairs(itemlist) do
 			walking_light.addLightItem(mod .. ':' .. itemlist[I])
 		end
@@ -55,6 +55,6 @@ addLightItems('ethereal', {
 --[[ DEBUG
 local light_items = walking_light.getLightItems()
 for I in pairs(light_items) do
-	minetest.log('action', '[walking_light] Light item: \"' .. light_items[I] .. '\"')
+	core.log('action', '[walking_light] Light item: \"' .. light_items[I] .. '\"')
 end
 --]]

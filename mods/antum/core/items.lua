@@ -38,11 +38,11 @@ for index, feather in ipairs(feathers) do
 	antum.convertItemToAlias(feather, 'antum:feather')
 end
 
-minetest.register_craftitem(':antum:feather', {
+core.register_craftitem(':antum:feather', {
 	description = 'Feather',
 	inventory_image = 'antum_feather_white.png',
 })
-minetest.register_alias('antum:feather_white', 'antum:feather')
+core.register_alias('antum:feather_white', 'antum:feather')
 
 
 local depends_satisfied = true
@@ -53,15 +53,15 @@ local depends = {
 }
 
 for I in pairs(depends) do
-	if not minetest.get_modpath(depends[I]) then
+	if not core.get_modpath(depends[I]) then
 		depends_satisfied = false
 	end
 end
 
 
-minetest.register_craftitem(':antum:bottled_water', {
+core.register_craftitem(':antum:bottled_water', {
 	description = 'A bottle of water',
-	inventory_image = 'bottled_water.png',
+	inventory_image = 'antum_bottled_water.png',
 })
 
 
