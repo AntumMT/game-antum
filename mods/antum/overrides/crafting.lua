@@ -31,6 +31,7 @@ local modoverrides = {
 	'castle_weapons',
 	'craftguide',
 	'dye',
+	'ethereal',
 	'farming',
 	'helicopter',
 	'invisibility',
