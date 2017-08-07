@@ -57,6 +57,17 @@ home_gui.go_home = function(player)
 	end
 end
 
+
+local use_sfinv = false
+if not core.global_exists("inventory_plus") and core.global_exists("sfinv_buttons") then
+	use_sfinv = true
+else
+	local use_sfinv = (core.global_exists("sfinv_buttons") and core.settings:get("inventory") == "sfinv") or false
+end
+
+local ui_icon = nil
+
+
 -- get_formspec
 home_gui.get_formspec = function(player)
 	local formspec = "size[4,1.5]"
@@ -74,8 +85,18 @@ end
 
 -- register_on_joinplayer
 minetest.register_on_joinplayer(function(player)
-	-- add inventory_plus page
-	inventory_plus.register_button(player,"home_gui","Home Pos")
+	if use_sfinv then
+		sfinv_buttons.register_button("home_gui", {
+			title = "Home Pos",
+			action = function(player)
+				player:set_inventory_formspec(home_gui.get_formspec(player, "home_gui"))
+			end,
+			image = ui_icon,
+		})
+	else
+		-- add inventory_plus page
+		inventory_plus.register_button(player,"home_gui","Home Pos")
+	end
 end)
 
 -- register_on_player_receive_fields
@@ -87,7 +108,11 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
 		home_gui.go_home(player)
 	end
 	if fields.home_gui or fields.home_gui_set or fields.home_gui_go then
-		inventory_plus.set_inventory_formspec(player, home_gui.get_formspec(player))
+		if use_sfinv then
+			sfinv.set_page(player, "sfinv_buttons:buttons")
+		else
+			inventory_plus.set_inventory_formspec(player, home_gui.get_formspec(player))
+		end
 	end
 end)
 
