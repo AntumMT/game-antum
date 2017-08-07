@@ -48,7 +48,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [trash_can][] ([MIT][lic.trash_can]) -- version: [5fd3df7 Git][ver.trash_can] *2016-01-14* ([patched][patch.trash_can])
 * [intllib][] ([Unlicense][lic.unlicense]) -- version: [7b818cb Git][ver.intllib] *2017-07-10*
 * inventory/
-    * [bags][] ([BSD 3-Clause][lic.bags]) -- version: [aa387d9 Git][ver.bags] *2017-05-11* ([patched][patch.bags])
+    * [bags][] ([BSD 3-Clause][lic.bags]) -- version: [8a02b4d Git][ver.bags] *2017-08-07*
     * [inventory_plus][] ([BSD 3-Clause][lic.inventory_plus]) -- version: [fd71e3d Git][ver.inventory_plus] *2016-05-13*
     * [sfinv_buttons][] ([MIT][lic.mit]) -- version [1.0.0 (4f3b075 Git)][ver.sfinv_buttons] *2017-03-19*
 * lighting/
@@ -418,7 +418,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.areas]: https://github.com/ShadowNinja/areas/tree/289d0e6
 [ver.awards]: https://github.com/minetest-mods/awards/tree/096fe16
 [ver.away]: https://github.com/kahrl/minetest-mod-away/tree/4c1e5a9
-[ver.bags]: https://github.com/cornernote/minetest-bags/tree/aa387d9
+[ver.bags]: https://github.com/cornernote/minetest-bags/tree/8a02b4d
 [ver.bedrock2]: http://repo.or.cz/minetest_bedrock2.git/tree/63dbab8
 [ver.biome_lib]: https://github.com/minetest-mods/biome_lib/tree/7f54d95
 [ver.boats2]: https://github.com/amadin/boats/tree/b83231e
@@ -526,7 +526,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.animals]: https://github.com/AntumMT/mp-animals_modpack/tree/9d08ca5
 [patch.awards]: https://github.com/AntumMT/mod-awards/tree/638c137
 [patch.away]: https://github.com/AntumMT/mod-away/tree/3b0bf9e
-[patch.bags]: https://github.com/AntumMT/mod-bags/tree/892bf97
 [patch.bedrock2]: https://github.com/AntumMT/mod-bedrock2/tree/344fdae
 [patch.biome_lib]: https://github.com/AntumMT/mod-biome_lib/tree/83c9426
 [patch.boats2]: https://github.com/AntumMT/mod-boats2/tree/ccd7f2d
