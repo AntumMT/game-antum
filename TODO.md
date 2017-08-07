@@ -116,6 +116,8 @@
 #### Fix unknown
 
 #### Broken
+* shears
+  * Don't work with sheep.
 
 
 ---
