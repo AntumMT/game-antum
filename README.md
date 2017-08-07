@@ -49,7 +49,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [intllib][] ([Unlicense][lic.unlicense]) -- version: [7b818cb Git][ver.intllib] *2017-07-10*
 * inventory/
     * [bags][] ([BSD 3-Clause][lic.bags]) -- version: [8a02b4d Git][ver.bags] *2017-08-07*
-    * [inventory_plus][] ([BSD 3-Clause][lic.inventory_plus]) -- version: [fd71e3d Git][ver.inventory_plus] *2016-05-13*
     * [sfinv_buttons][] ([MIT][lic.mit]) -- version [1.0.0 (4f3b075 Git)][ver.sfinv_buttons] *2017-03-19*
 * lighting/
     * [glow][] ([GPL][lic.gpl2.0]) -- version: [c611ae0 Git][ver.glow] *2017-07-18*
@@ -250,7 +249,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [intllib]: https://forum.minetest.net/viewtopic.php?t=4929
 [invisibility]: https://forum.minetest.net/viewtopic.php?t=14846
 [invisible]: https://forum.minetest.net/viewtopic.php?t=14399
-[inventory_plus]: https://forum.minetest.net/viewtopic.php?t=3100
 [jukebox]: https://forum.minetest.net/viewtopic.php?t=13505
 [jumping]: https://forum.minetest.net/viewtopic.php?t=2957
 [lightning]: https://forum.minetest.net/viewtopic.php?t=13886
@@ -355,7 +353,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.hill_nodebox]: mods/world/hill_nodebox/LICENSE
 [lic.homedecor]: mods/modpacks/homedecor/LICENSE
 [lic.hovercraft]: mods/transport/hovercraft/LICENSE.txt
-[lic.inventory_plus]: mods/inventory/inventory_plus/LICENSE
 [lic.invisibility]: mods/player/visuals/invisibility/license.txt
 [lic.invisible]: mods/admin/invisible/readme.txt
 [lic.jukebox]: mods/furniture/jukebox/README.txt
@@ -463,7 +460,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.hudmap]: https://github.com/stujones11/hudmap/tree/09d40f3
 [ver.ilights]: https://github.com/minetest-mods/ilights/tree/fa085fd
 [ver.intllib]: https://github.com/minetest-mods/intllib/tree/7b818cb
-[ver.inventory_plus]: https://github.com/cornernote/minetest-inventory_plus/tree/fd71e3d
 [ver.invisibility]: https://github.com/tenplus1/invisibility/tree/bf4156b
 [ver.jukebox]: https://github.com/minetest-mods/jukebox/tree/e6a507f
 [ver.lightning]: https://github.com/minetest-mods/lightning/tree/39bd36c
