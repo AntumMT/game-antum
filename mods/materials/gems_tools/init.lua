@@ -7,6 +7,31 @@
 --Tools>Picks
 --
 
+t_uses = {}
+if core.settings:get_bool('enable_tool_wear') ~= false then
+	t_uses = {
+		low1 = 15,
+		low2 = 20,
+		low3 = 25,
+		mid1 = 30,
+		mid2 = 35,
+		mid3 = 37,
+		hi1 = 40,
+		hi2 = 45,
+	}
+else
+	t_uses = {
+		low1 = 0,
+		low2 = 0,
+		low3 = 0,
+		mid1 = 0,
+		mid2 = 0,
+		mid3 = 0,
+		hi1 = 0,
+		hi2 = 0,
+	}
+end
+
 minetest.register_tool("gems_tools:pick_ruby", {
 	description = "ruby pickaxe",
 	inventory_image = "ruby_ruby_pick.png",
@@ -14,7 +39,7 @@ minetest.register_tool("gems_tools:pick_ruby", {
 		full_punch_interval = 0.9,
 		max_drop_level=3,
 		groupcaps={
-			cracky = {times={[1]=1.5, [2]=.50, [3]=0.25}, uses=25, maxlevel=3},
+			cracky = {times={[1]=1.5, [2]=.50, [3]=0.25}, uses=t_uses.low3, maxlevel=3},
 		},
 		damage_groups = {fleshy=5},
 	},
@@ -27,7 +52,7 @@ minetest.register_tool("gems_tools:stone_pick_ruby", {
 		full_punch_interval = 0.9,
 		max_drop_level=3,
 		groupcaps={
-			cracky = {times={[1]=2.5, [2]=1.5, [3]=1.0}, uses=35, maxlevel=3},
+			cracky = {times={[1]=2.5, [2]=1.5, [3]=1.0}, uses=t_uses.mid2, maxlevel=3},
 		},
 		damage_groups = {fleshy=5},
 	},
@@ -40,7 +65,7 @@ minetest.register_tool("gems_tools:pick_emerald", {
 		full_punch_interval = 1.0,
 		max_drop_level=1,
 		groupcaps={
-			cracky = {times={[1]=3.50, [2]=1.10, [3]=0.30}, uses=20, maxlevel=2},
+			cracky = {times={[1]=3.50, [2]=1.10, [3]=0.30}, uses=t_uses.low2, maxlevel=2},
 		},
 		damage_groups = {fleshy=3},
 	},
@@ -53,7 +78,7 @@ minetest.register_tool("gems_tools:stone_pick_emerald", {
 		full_punch_interval = 1.0,
 		max_drop_level=1,
 		groupcaps={
-			cracky = {times={[1]=4.25, [2]=1.80, [3]=1.0}, uses=30, maxlevel=2},
+			cracky = {times={[1]=4.25, [2]=1.80, [3]=1.0}, uses=t_uses.mid1, maxlevel=2},
 		},
 		damage_groups = {fleshy=3},
 	},
@@ -66,7 +91,7 @@ minetest.register_tool("gems_tools:pick_sapphire", {
 		full_punch_interval = 0.9,
 		max_drop_level=3,
 		groupcaps={
-			cracky = {times={[1]=2.0, [2]=1.0, [3]=0.30}, uses=15, maxlevel=3},
+			cracky = {times={[1]=2.0, [2]=1.0, [3]=0.30}, uses=t_uses.low1, maxlevel=3},
 		},
 		damage_groups = {fleshy=5},
 	},
@@ -79,7 +104,7 @@ minetest.register_tool("gems_tools:stone_pick_sapphire", {
 		full_punch_interval = 0.9,
 		max_drop_level=3,
 		groupcaps={
-			cracky = {times={[1]=2.8, [2]=1.4, [3]=0.90}, uses=25, maxlevel=3},
+			cracky = {times={[1]=2.8, [2]=1.4, [3]=0.90}, uses=t_uses.low3, maxlevel=3},
 		},
 		damage_groups = {fleshy=5},
 	},
@@ -92,7 +117,7 @@ minetest.register_tool("gems_tools:pick_amethyst", {
 		full_punch_interval = 1.0,
 		max_drop_level=1,
 		groupcaps={
-			cracky = {times={[1]=3.50, [2]=1.10, [3]=0.30}, uses=15, maxlevel=2},
+			cracky = {times={[1]=3.50, [2]=1.10, [3]=0.30}, uses=t_uses.low1, maxlevel=2},
 		},
 		damage_groups = {fleshy=4},
 	},
@@ -105,7 +130,7 @@ minetest.register_tool("gems_tools:stone_pick_amethyst", {
 		full_punch_interval = 1.0,
 		max_drop_level=1,
 		groupcaps={
-			cracky = {times={[1]=4.25, [2]=1.80, [3]=1.0}, uses=25, maxlevel=2},
+			cracky = {times={[1]=4.25, [2]=1.80, [3]=1.0}, uses=t_uses.low3, maxlevel=2},
 		},
 		damage_groups = {fleshy=4},
 	},
@@ -122,7 +147,7 @@ minetest.register_tool("gems_tools:sword_ruby", {
 		full_punch_interval = 0.7,
 		max_drop_level=1,
 		groupcaps={
-			snappy={times={[1]=1.25, [2]=0.40, [3]=0.20}, uses=35, maxlevel=3},
+			snappy={times={[1]=1.25, [2]=0.40, [3]=0.20}, uses=t_uses.mid2, maxlevel=3},
 		},
 		damage_groups = {fleshy=7},
 	},
@@ -135,7 +160,7 @@ minetest.register_tool("gems_tools:stone_sword_ruby", {
 		full_punch_interval = 0.7,
 		max_drop_level=1,
 		groupcaps={
-			snappy={times={[1]=2.0, [2]=1.30, [3]=0.70}, uses=45, maxlevel=3},
+			snappy={times={[1]=2.0, [2]=1.30, [3]=0.70}, uses=t_uses.hi2, maxlevel=3},
 		},
 		damage_groups = {fleshy=9},
 	},
@@ -148,7 +173,7 @@ minetest.register_tool("gems_tools:sword_emerald", {
 		full_punch_interval = 1.0,
 		max_drop_level=1,
 		groupcaps={
-			snappy={times={[1]=2.0, [2]=0.80, [3]=0.20}, uses=25, maxlevel=2},
+			snappy={times={[1]=2.0, [2]=0.80, [3]=0.20}, uses=t_uses.low3, maxlevel=2},
 		},
 		damage_groups = {fleshy=5.5},
 	},
@@ -161,7 +186,7 @@ minetest.register_tool("gems_tools:stone_sword_emerald", {
 		full_punch_interval = 1.0,
 		max_drop_level=1,
 		groupcaps={
-			snappy={times={[1]=3.0, [2]=1.70, [3]=0.85}, uses=37, maxlevel=2},
+			snappy={times={[1]=3.0, [2]=1.70, [3]=0.85}, uses=t_uses.mid3, maxlevel=2},
 		},
 		damage_groups = {fleshy=7.5},
 	},
@@ -174,7 +199,7 @@ minetest.register_tool("gems_tools:sword_sapphire", {
 		full_punch_interval = 0.7,
 		max_drop_level=1,
 		groupcaps={
-			snappy={times={[1]=1.5, [2]=0.60, [3]=0.30}, uses=25, maxlevel=3},
+			snappy={times={[1]=1.5, [2]=0.60, [3]=0.30}, uses=t_uses.low3, maxlevel=3},
 		},
 		damage_groups = {fleshy=6},
 	},
@@ -187,7 +212,7 @@ minetest.register_tool("gems_tools:stone_sword_sapphire", {
 		full_punch_interval = 0.7,
 		max_drop_level=1,
 		groupcaps={
-			snappy={times={[1]=2.5, [2]=1.30, [3]=0.60}, uses=35, maxlevel=3},
+			snappy={times={[1]=2.5, [2]=1.30, [3]=0.60}, uses=t_uses.mid2, maxlevel=3},
 		},
 		damage_groups = {fleshy=8},
 	},
@@ -200,7 +225,7 @@ minetest.register_tool("gems_tools:sword_amethyst", {
 		full_punch_interval = 0.8,
 		max_drop_level=1,
 		groupcaps={
-			snappy={times={[1]=2.0, [2]=0.80, [3]=0.20}, uses=20, maxlevel=2},
+			snappy={times={[1]=2.0, [2]=0.80, [3]=0.20}, uses=t_uses.low2, maxlevel=2},
 		},
 		damage_groups = {fleshy=5},
 	},
@@ -213,7 +238,7 @@ minetest.register_tool("gems_tools:stone_sword_amethyst", {
 		full_punch_interval = 1.0,
 		max_drop_level=1,
 		groupcaps={
-			snappy={times={[1]=3.0, [2]=1.70, [3]=0.85}, uses=35, maxlevel=2},
+			snappy={times={[1]=3.0, [2]=1.70, [3]=0.85}, uses=t_uses.mid2, maxlevel=2},
 		},
 		damage_groups = {fleshy=7},
 	},
@@ -230,7 +255,7 @@ minetest.register_tool("gems_tools:axe_emerald", {
 		full_punch_interval = 1.0,
 		max_drop_level=1,
 		groupcaps={
-			choppy={times={[1]=2.00, [2]=1.20, [3]=0.60}, uses=20, maxlevel=2},
+			choppy={times={[1]=2.00, [2]=1.20, [3]=0.60}, uses=t_uses.low2, maxlevel=2},
 		},
 		damage_groups = {fleshy=4},
 	},
@@ -243,7 +268,7 @@ minetest.register_tool("gems_tools:stone_axe_emerald", {
 		full_punch_interval = 1.0,
 		max_drop_level=1,
 		groupcaps={
-			choppy={times={[1]=3.0, [2]=1.70, [3]=1.30}, uses=30, maxlevel=2},
+			choppy={times={[1]=3.0, [2]=1.70, [3]=1.30}, uses=t_uses.mid1, maxlevel=2},
 		},
 		damage_groups = {fleshy=4},
 	},
@@ -256,7 +281,7 @@ minetest.register_tool("gems_tools:axe_ruby", {
 		full_punch_interval = 0.9,
 		max_drop_level=1,
 		groupcaps={
-			choppy={times={[1]=1.40, [2]=0.30, [3]=0.20}, uses=25, maxlevel=2},
+			choppy={times={[1]=1.40, [2]=0.30, [3]=0.20}, uses=t_uses.low3, maxlevel=2},
 		},
 		damage_groups = {fleshy=2},
 	},
@@ -269,7 +294,7 @@ minetest.register_tool("gems_tools:stone_axe_ruby", {
 		full_punch_interval = 0.9,
 		max_drop_level=1,
 		groupcaps={
-			choppy={times={[1]=2.30, [2]=1.0, [3]=0.60}, uses=35, maxlevel=2},
+			choppy={times={[1]=2.30, [2]=1.0, [3]=0.60}, uses=t_uses.mid2, maxlevel=2},
 		},
 		damage_groups = {fleshy=7},
 	},
@@ -282,7 +307,7 @@ minetest.register_tool("gems_tools:axe_sapphire", {
 		full_punch_interval = 0.9,
 		max_drop_level=1,
 		groupcaps={
-			choppy={times={[1]=1.60, [2]=0.50, [3]=0.30}, uses=15, maxlevel=3},
+			choppy={times={[1]=1.60, [2]=0.50, [3]=0.30}, uses=t_uses.low1, maxlevel=3},
 		},
 		damage_groups = {fleshy=6},
 	},
@@ -295,7 +320,7 @@ minetest.register_tool("gems_tools:stone_axe_sapphire", {
 		full_punch_interval = 0.9,
 		max_drop_level=1,
 		groupcaps={
-			choppy={times={[1]=2.60, [2]=1.40, [3]=1.10}, uses=25, maxlevel=3},
+			choppy={times={[1]=2.60, [2]=1.40, [3]=1.10}, uses=t_uses.low3, maxlevel=3},
 		},
 		damage_groups = {fleshy=6},
 	},
@@ -308,7 +333,7 @@ minetest.register_tool("gems_tools:axe_amethyst", {
 		full_punch_interval = 1.0,
 		max_drop_level=1,
 		groupcaps={
-			choppy={times={[1]=2.00, [2]=1.20, [3]=0.60}, uses=15, maxlevel=2},
+			choppy={times={[1]=2.00, [2]=1.20, [3]=0.60}, uses=t_uses.low1, maxlevel=2},
 		},
 		damage_groups = {fleshy=4},
 	},
@@ -321,7 +346,7 @@ minetest.register_tool("gems_tools:stone_axe_amethyst", {
 		full_punch_interval = 1.0,
 		max_drop_level=1,
 		groupcaps={
-			choppy={times={[1]=3.0, [2]=1.70, [3]=1.30}, uses=25, maxlevel=2},
+			choppy={times={[1]=3.0, [2]=1.70, [3]=1.30}, uses=t_uses.low3, maxlevel=2},
 		},
 		damage_groups = {fleshy=4},
 	},
@@ -339,7 +364,7 @@ minetest.register_tool("gems_tools:shovel_ruby", {
 		full_punch_interval = 1.0,
 		max_drop_level=1,
 		groupcaps={
-			crumbly = {times={[1]=1.30, [2]=0.70, [3]=0.50}, uses=25, maxlevel=3},
+			crumbly = {times={[1]=1.30, [2]=0.70, [3]=0.50}, uses=t_uses.low3, maxlevel=3},
 		},
 		damage_groups = {fleshy=4},
 	},
@@ -353,7 +378,7 @@ minetest.register_tool("gems_tools:stone_shovel_ruby", {
 		full_punch_interval = 1.0,
 		max_drop_level=1,
 		groupcaps={
-			crumbly = {times={[1]=0.90, [2]=0.30, [3]=0.10}, uses=35, maxlevel=3},
+			crumbly = {times={[1]=0.90, [2]=0.30, [3]=0.10}, uses=t_uses.mid2, maxlevel=3},
 		},
 		damage_groups = {fleshy=4},
 	},
@@ -367,7 +392,7 @@ minetest.register_tool("gems_tools:shovel_emerald", {
 		full_punch_interval = 1.1,
 		max_drop_level=1,
 		groupcaps={
-			crumbly = {times={[1]=1.30, [2]=0.70, [3]=0.20}, uses=30, maxlevel=2},
+			crumbly = {times={[1]=1.30, [2]=0.70, [3]=0.20}, uses=t_uses.mid1, maxlevel=2},
 		},
 		damage_groups = {fleshy=3},
 	},
@@ -381,7 +406,7 @@ minetest.register_tool("gems_tools:stone_shovel_emerald", {
 		full_punch_interval = 1.1,
 		max_drop_level=1,
 		groupcaps={
-			crumbly = {times={[1]=1.70, [2]=1.10, [3]=0.60}, uses=40, maxlevel=2},
+			crumbly = {times={[1]=1.70, [2]=1.10, [3]=0.60}, uses=t_uses.hi1, maxlevel=2},
 		},
 		damage_groups = {fleshy=3},
 	},
@@ -396,7 +421,7 @@ minetest.register_tool("gems_tools:shovel_sapphire", {
 		full_punch_interval = 1.0,
 		max_drop_level=3,
 		groupcaps={
-			crumbly = {times={[1]=1.0, [2]=0.40, [3]=0.10}, uses=15, maxlevel=3},
+			crumbly = {times={[1]=1.0, [2]=0.40, [3]=0.10}, uses=t_uses.low1, maxlevel=3},
 		},
 		damage_groups = {fleshy=4},
 	},
@@ -410,7 +435,7 @@ minetest.register_tool("gems_tools:stone_shovel_sapphire", {
 		full_punch_interval = 1.0,
 		max_drop_level=3,
 		groupcaps={
-			crumbly = {times={[1]=1.40, [2]=0.80, [3]=0.50}, uses=25, maxlevel=3},
+			crumbly = {times={[1]=1.40, [2]=0.80, [3]=0.50}, uses=t_uses.low3, maxlevel=3},
 		},
 		damage_groups = {fleshy=4},
 	},
@@ -424,7 +449,7 @@ minetest.register_tool("gems_tools:shovel_amethyst", {
 		full_punch_interval = 1.1,
 		max_drop_level=1,
 		groupcaps={
-			crumbly = {times={[1]=1.30, [2]=0.70, [3]=0.20}, uses=25, maxlevel=2},
+			crumbly = {times={[1]=1.30, [2]=0.70, [3]=0.20}, uses=t_uses.low3, maxlevel=2},
 		},
 		damage_groups = {fleshy=3},
 	},
@@ -438,7 +463,7 @@ minetest.register_tool("gems_tools:stone_shovel_amethyst", {
 		full_punch_interval = 1.1,
 		max_drop_level=1,
 		groupcaps={
-			crumbly = {times={[1]=1.70, [2]=1.10, [3]=0.60}, uses=35, maxlevel=2},
+			crumbly = {times={[1]=1.70, [2]=1.10, [3]=0.60}, uses=t_uses.mid2, maxlevel=2},
 		},
 		damage_groups = {fleshy=3},
 	},
