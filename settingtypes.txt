@@ -91,6 +91,12 @@ hbarmor_autohide (Automatically hide armor HUD bar) bool true
 hbarmor_tick (Armor HUD bar update frequency) float 0.1 0.0 4.0
 
 
+[*hidename]
+
+# Use alpha color level to hide nametag instead of clearing text.
+hidename.use_alpha (Use nametag alpha level) bool true
+
+
 [*hudbars]
 
 [**Appearance]

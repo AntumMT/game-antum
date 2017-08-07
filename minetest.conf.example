@@ -2062,96 +2062,105 @@ torches_enable_ceiling = false
 #    default: 0.1
 #hbarmor_tick = 0.1
 
+
+# *** hidename *** #
+
+## Use alpha color level to hide nametag instead of clearing text.
+#    type:    bool
+#    default: true
+#hidename.use_alpha = true
+
+
 # *** hudbars *** #
 
-# Specifies how the value indicators (i.e. health, breath, etc.) look.
+## Specifies how the value indicators (i.e. health, breath, etc.) look.
 #    type: enum
 #    options: progress_bar, statbar_classic, statbar_modern
 #    default: progress_bar
 #hudbars_bar_type = progress_bar
 
-# Automatically hides breath indicator if enabled.
+## Automatically hides breath indicator if enabled.
 #    type: bool
 #    default: true
 #hudbars_autohide_breath = true
 
-# Changes the way the HUD bars are ordered on the display.
+## Changes the way the HUD bars are ordered on the display.
 #    type: enum
 #    options: zigzag, stack_up, stack_down
 #    default: zigzag
 #hudbars_alignment_pattern = zigzag
 
-# Specifies the order of the HUD bars.
+## Specifies the order of the HUD bars.
 #    type: string (comma-seperated list of key=value pairs)
 #    default: breath=0, health=1
 #hudbars_sorting = breath=0, health=1
 
-# Horizontal (x) main position of the HUD bars over the entire screen.
+## Horizontal (x) main position of the HUD bars over the entire screen.
 #    type: float
 #    default: 0.5 0.0 1.0
 #hudbars_pos_left_x = 0.5 0.0 1.0
 
-# Vertical (y) main position of the HUD bars over the entire screen.
+## Vertical (y) main position of the HUD bars over the entire screen.
 #    type: float
 #    default: 1.0 0.0 1.0
 #hudbars_pos_left_y = 1.0 0.0 1.0
 
-# Horizontal (x) main position of the right HUD bars over the entire screen.
+## Horizontal (x) main position of the right HUD bars over the entire screen.
 #    type: float
 #    default: 0.5 0.0 1.0
 #hudbars_pos_right_x = 0.5 0.0 1.0
 
-# Vertical main position (y) of the right HUD bars over the entire screen.
+## Vertical main position (y) of the right HUD bars over the entire screen.
 #    type: float
 #    default: 1.0 0.0 1.0
 #hudbars_pos_right_y = 1.0 0.0 1.0
 
-# Precise x offset in pixels from the basic screen x position of the HUD bars.
+## Precise x offset in pixels from the basic screen x position of the HUD bars.
 #    type: int
 #    default: -175
 #hudbars_start_offset_left_x = -175
 
-# Precise y offset in pixels from the basic screen y position of the HUD bars.
+## Precise y offset in pixels from the basic screen y position of the HUD bars.
 #    type: int
 #    default: -86
 #hudbars_start_offset_left_y = -86
 
-# Precise x offset in pixels from the basic screen x position of the right HUD bars.
+## Precise x offset in pixels from the basic screen x position of the right HUD bars.
 #    type: int
 #    default: 15
 #hudbars_start_offset_right_x = 15
 
-# Precise y offset in pixels from the basic screen y position of the right HUD bars.
+## Precise y offset in pixels from the basic screen y position of the right HUD bars.
 #    type: int
 #    default: -86
 #hudbars_start_offset_right_y = -86
 
-# Precise x offset in pixels from the basic screen x position of the HUD statbars.
+## Precise x offset in pixels from the basic screen x position of the HUD statbars.
 #    type: int
 #    default: -256
 #hudbars_start_statbar_offset_left_x = -256
 
-# Precise y offset in pixels from the basic screen y position of the HUD statbars.
+## Precise y offset in pixels from the basic screen y position of the HUD statbars.
 #    type: int
 #    default: -90
 #hudbars_start_statbar_offset_left_y = -90
 
-# Precise x offset in pixels from the basic screen x position of the right HUD statbars.
+## Precise x offset in pixels from the basic screen x position of the right HUD statbars.
 #    type: int
 #    default: 25
 #hudbars_start_statbar_offset_right_x = 25
 
-# Precise y offset in pixels from the basic screen y position of the right HUD statbars.
+## Precise y offset in pixels from the basic screen y position of the right HUD statbars.
 #    type: int
 #    default: -90
 #hudbars_start_statbar_offset_right_y = -90
 
-# The vertical distance between two HUD bars, in pixels.
+## The vertical distance between two HUD bars, in pixels.
 #    type: int
 #    default: 24 0
 #hudbars_vmargin = 24 0
 
-# Hud bars display refresh rate (in seconds).
+## Hud bars display refresh rate (in seconds).
 #    type: float
 #    default: 0.1 0.0 4.0
 #hudbars_tick = 0.1 0.0 4.0
@@ -2159,12 +2168,12 @@ torches_enable_ceiling = false
 
 # *** inventory_plus ***
 
-# Use a smaller inventory UI for smaller screens.
+## Use a smaller inventory UI for smaller screens.
 #    type: bool
 #    default: false
 inventory_craft_small = false
 
-# The default page to show when first opening the inventory
+## The default page to show when first opening the inventory
 #    type: string
 #    values: craft, ???
 #    default: craft
