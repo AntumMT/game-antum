@@ -165,4 +165,6 @@
 #### Inventory
 * Switch to 'sfinv'
 * Convert to work with 'sfinv' using 'sfinv_buttons':
+  * bookmarks_gui
+  * home_gui
 * Add setting to disable 'trash' in 'inventory_plus'
