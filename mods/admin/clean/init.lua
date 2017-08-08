@@ -11,6 +11,8 @@ local old_entities = {
 	'sneeker:sneeker',
 	-- Replaced
 	'spidermob:spider',
+	'mob_oerkki:oerkki',  -- animals_modpack
+	'creatures:oerrki',  -- mob-engine
 }
 
 -- Old/Missing nodes that should be replaced with something currently in game
