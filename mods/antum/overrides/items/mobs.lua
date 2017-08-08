@@ -49,3 +49,20 @@ core.register_craftitem(":mobs:leather", {
 	inventory_image = "mobs_leather.png",
 	groups = {fur = 1},
 })
+
+
+-- Shears
+if antum.dependsSatisfied({'mob_sheep', 'mobs',}) or antum.dependsSatisfied({'sheep', 'mobs',}) then
+	override.overrideItems(':creatures:shears', {
+		overrides = {'creatures:shears', 'mobs:shears'},
+		description = 'Shears',
+		inventory_image = 'mobs_shears.png',
+		stack_max = 1,
+	})
+	core.clear_craft({
+		output = 'mobs:shears',
+	})
+	
+	-- FIXME: Not being registered in overrideItems
+	core.register_alias('mobs:shears', 'creatures:shears')
+end

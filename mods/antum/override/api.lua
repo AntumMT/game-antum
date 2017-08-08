@@ -24,12 +24,16 @@ function override.replaceItems(items, target)
 		override.logDebug('Overriding item "' .. items .. '" with "' .. target .. '"')
 		
 		core.unregister_item(items)
-		core.register_alias(items, target)
+		if items ~= target then
+			core.register_alias(items, target)
+		end
 	else
 		for i, it in ipairs(items) do
 			override.logDebug('Overriding item "' .. it .. '" with "' .. target .. '"')
 			core.unregister_item(it)
-			core.register_alias(it, target)
+			if it ~= target then
+				core.register_alias(it, target)
+			end
 		end
 	end
 end
@@ -47,8 +51,8 @@ function override.overrideItems(name, def)
 	local overrides = def.overrides
 	def.overrides = nil
 	
-	core.register_craftitem(name, def)
 	override.replaceItems(overrides, name)
+	core.register_craftitem(name, def)
 end
 
 --- Item definition table for *override.overrideItems*

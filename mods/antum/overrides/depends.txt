@@ -12,6 +12,7 @@ farming_plus?
 flowers?
 helicopter?
 invisibility?
+mob_sheep?
 mobs?
 moreblocks?
 simple_protection?
