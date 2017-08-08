@@ -335,7 +335,7 @@ mobs_goblins:register_mob("mobs_goblins:goblin_digger", {
 
 		mobs_goblins:capture_mob(self, clicker, 0, 5, 80, false, nil)
 	end,
-		
+	--[[
 	do_custom = function(self)
 		mobs_goblins.goblin_tunneling(self, "digger")
 
@@ -343,6 +343,7 @@ mobs_goblins:register_mob("mobs_goblins:goblin_digger", {
 		-- mobs_goblins.search_replace(self.object:getpos(), 10, {"group:stone"}, "default:mossycobble")
 		-- mobs_goblins.search_replace(self.object:getpos(), 50, {"group:stone"}, "mobs_goblins:mossycobble_trap")
 	end,
+	]]
 })
 
 mobs_goblins:register_mob("mobs_goblins:goblin_coal", {
@@ -1090,13 +1091,67 @@ active_object_count,
 min_height, 
 max_height)
 ]]
-mobs_goblins:spawn_specific("mobs_goblins:goblin_cobble", {"group:stone"}, "air", 0, 50, 1, 10, 3, -30000 , 0)
-mobs_goblins:spawn_specific("mobs_goblins:goblin_digger", {"group:stone"},  "air", 0, 50, 1, 10, 3, -30000 , 0)
-mobs_goblins:spawn_specific("mobs_goblins:goblin_coal", {"default:stone_with_coal", "default:mossycobble"}, "air",0, 50, 1, 2, 3, -30000, 0)
-mobs_goblins:spawn_specific("mobs_goblins:goblin_iron", {"default:stone_with_iron", "default:mossycobble"}, "air", 0, 50, 1, 2, 3, -30000, -20)
-mobs_goblins:spawn_specific("mobs_goblins:goblin_copper", {"default:stone_with_copper", "default:mossycobble"}, "air", 0, 50, 1, 2, 3, -30000, -20)
-mobs_goblins:spawn_specific("mobs_goblins:goblin_gold", {"default:stone_with_gold", "default:mossycobble"}, "air",0, 50, 1, 2, 3, -30000, -40)
-mobs_goblins:spawn_specific("mobs_goblins:goblin_diamond", {"default:stone_with_diamond", "default:mossycobble" }, "air", 0, 50, 1,2, 3, -30000, -80)
-mobs_goblins:spawn_specific("mobs_goblins:goblin_king", {"default:mossycobble",},"air", 0, 50, 1, 10, 3, -30000, -100)
+
+local interval = 4
+local chance_low = 20
+local chance_high = 4
+local max_height = -50
+
+mobs_goblins:spawn_specific(
+	"mobs_goblins:goblin_cobble",
+	{"group:stone"},
+	"air",
+	0, 50, interval, chance_low, 3,
+	-30000, max_height
+)
+mobs_goblins:spawn_specific(
+	"mobs_goblins:goblin_digger",
+	{"group:stone"},
+	"air",
+	0, 50, interval, chance_low, 3,
+	-30000, max_height
+)
+mobs_goblins:spawn_specific(
+	"mobs_goblins:goblin_coal",
+	{"default:stone_with_coal", "default:mossycobble"},
+	"air",
+	0, 50, interval, chance_high, 3,
+	-30000, max_height
+)
+mobs_goblins:spawn_specific(
+	"mobs_goblins:goblin_iron",
+	{"default:stone_with_iron", "default:mossycobble"},
+	"air",
+	0, 50, interval, chance_high, 3,
+	-30000, max_height-20
+)
+mobs_goblins:spawn_specific(
+	"mobs_goblins:goblin_copper",
+	{"default:stone_with_copper", "default:mossycobble"},
+	"air",
+	0, 50, interval, chance_high, 3,
+	-30000, max_height-20
+)
+mobs_goblins:spawn_specific(
+	"mobs_goblins:goblin_gold",
+	{"default:stone_with_gold", "default:mossycobble"},
+	"air",
+	0, 50, interval, chance_high, 3,
+	-30000, max_height-40
+)
+mobs_goblins:spawn_specific(
+	"mobs_goblins:goblin_diamond",
+	{"default:stone_with_diamond", "default:mossycobble" },
+	"air",
+	0, 50, interval, chance_high, 3,
+	-30000, max_height-80
+)
+mobs_goblins:spawn_specific(
+	"mobs_goblins:goblin_king",
+	{"default:mossycobble",},
+	"air",
+	0, 50, interval, chance_low, 3,
+	-30000, max_height-100
+)
 mobs_goblins:register_egg("mobs_goblins:goblin_cobble", "goblin egg", "default:mossycobble", 1) 
 
