@@ -21,22 +21,18 @@
 
 
 -- shears
-if creatures.mobs_replace_items then
-	minetest.register_alias("creatures:shears", "mobs:shears")
-else
-	core.register_tool(":creatures:shears", {
-		description = "Shears",
-		inventory_image = "creatures_shears.png",
-	})
-	
-	core.register_craft({
-		output = 'creatures:shears',
-		recipe = {
-			{'', 'default:steel_ingot'},
-			{'default:steel_ingot', 'default:stick'},
-		}
-	})
-end
+core.register_tool(":creatures:shears", {
+	description = "Shears",
+	inventory_image = "creatures_shears.png",
+})
+
+core.register_craft({
+	output = 'creatures:shears',
+	recipe = {
+		{'', 'default:steel_ingot'},
+		{'default:steel_ingot', 'default:stick'},
+	}
+})
 
 
 local function setColor(self)
@@ -151,6 +147,10 @@ local def = {
 		}
 	},
 
+	on_punch = function(self, puncher)
+		shear(self)
+	end,
+
 	get_staticdata = function(self)
 		return {
 			has_wool = self.has_wool,
@@ -189,7 +189,7 @@ local def = {
 					shear(self, math.random(2, 3), true)
 					item:add_wear(65535/100)
 				end
-				if not minetest.settings:get_bool("creative_mode") then
+				if not core.settings:get_bool("creative_mode") then
 					clicker:set_wielded_item(item)
 				end
 			end
