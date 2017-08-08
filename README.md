@@ -163,7 +163,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 * [animals_aggressive][] -- version: [2c913bb Git][ver.animals_aggressive] *2017-07-24*
 	* mob_shark ([CC BY-SA][lic.ccbysa3.0]) -- forked from [Animals Modpack][animals]
-* [animals_passive][] -- version: [4b87615][ver.animals_passive] *2017-08-07*
+* [animals_passive][] -- version: [f979583][ver.animals_passive] *2017-08-07*
 	* mob_sheep ([Zlib][lic.zlib]) -- forked from [mob-engine][]
 * castle ([MIT][lic.castle])
 	* [castle_farming][] -- version: [a190dcf Git][ver.castle_farming] *2017-04-21*
@@ -414,7 +414,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.animalmaterials]: https://github.com/sapier/animalmaterials/tree/aa4697c
 [ver.animals]: https://github.com/sapier/animals_modpack/tree/b9d0172
 [ver.animals_aggressive]: https://github.com/AntumMT/mp-animals_aggressive/tree/2c913bb
-[ver.animals_passive]: https://github.com/AntumMT/mp-animals_passive/tree/4b87615
+[ver.animals_passive]: https://github.com/AntumMT/mp-animals_passive/tree/f979583
 [ver.antum]: https://github.com/AntumMT/mp-antum/tree/2c731af
 [ver.areas]: https://github.com/ShadowNinja/areas/tree/289d0e6
 [ver.awards]: https://github.com/minetest-mods/awards/tree/096fe16

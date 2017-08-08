@@ -147,10 +147,6 @@ local def = {
 		}
 	},
 
-	on_punch = function(self, puncher)
-		shear(self)
-	end,
-
 	get_staticdata = function(self)
 		return {
 			has_wool = self.has_wool,
