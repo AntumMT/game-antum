@@ -55,6 +55,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [ilights][] ([CC BY-SA][lic.ccbysa]) -- version [fa085fd Git][ver.ilights] *2017-07-19*
     * walking_light ([petermalone fork][walking_light]) ([WTFPL / CC BY-SA][lic.walking_light]) -- version: [b23d836 Git][ver.walking_light] *2017-06-21* ([patched][patch.walking_light])
 * materials/
+	* [amber][] ([LGPL][lic.lgpl2.1]) -- version: [21637e8 Git][ver.amber] *2017-08-09*
 	* [gems_encrustable][] ([WTFPL][lic.wtfpl]) -- version: [81d513d Git][ver.gems_encrustable] *2012-07-31* ([patched][patch.gems_encrustable])
 	* [gems_tools][] () -- version: [b375432 Git][ver.gems_tools] *2016-09-03* ([patched][patch.gems_tools])
 	* [moreores][] ([zlib][lic.moreores] / [CC BY-SA][lic.ccbysa3.0]) -- version: [809da6d1 Git][ver.moreores] *2017-07-05* ([patched][patch.moreores])
@@ -193,6 +194,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 [3d_armor]: https://forum.minetest.net/viewtopic.php?t=4654
 [airtanks]: https://forum.minetest.net/viewtopic.php?t=17102
+[amber]: https://forum.minetest.net/viewtopic.php?t=18186
 [ambience_ultralite]: https://forum.minetest.net/viewtopic.php?p=151166#p151166
 [animals]: https://forum.minetest.net/viewtopic.php?t=629
 [animals_aggressive]: https://github.com/AntumMT/mp-animals_aggressive
@@ -411,6 +413,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.3d_armor]: https://github.com/stujones11/minetest-3d_armor/tree/cc26d04
 [ver.adv_spawning]: https://github.com/sapier/adv_spawning/tree/ec41aa9
 [ver.airtanks]: https://github.com/minetest-mods/airtanks/tree/5787956
+[ver.amber]: https://github.com/theraven262/amber/tree/21637e8
 [ver.animalmaterials]: https://github.com/sapier/animalmaterials/tree/aa4697c
 [ver.animals]: https://github.com/sapier/animals_modpack/tree/b9d0172
 [ver.animals_aggressive]: https://github.com/AntumMT/mp-animals_aggressive/tree/2c913bb
