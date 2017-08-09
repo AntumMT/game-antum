@@ -168,3 +168,12 @@ minetest.register_craft({
 		{"", "default:obsidian_shard", ""},
 	}
 })
+
+-- Add [toolranks] mod support if found
+if minetest.get_modpath("toolranks") then
+
+minetest.override_item("mobs:pick_lava", {
+	original_description = "Lava Pickaxe",
+	description = toolranks.create_description("Lava Pickaxe", 0, 1),
+	after_use = toolranks.new_afteruse})
+end
