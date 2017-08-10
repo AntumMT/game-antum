@@ -63,7 +63,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [rainbow_ore][] ([LGPL][lic.rainbow_ore]) -- version: [6e77693 Git][ver.rainbow_ore] *2015-11-02* ([patched][patch.rainbow_ore])
 	* [unifieddyes][] ([GPL][lic.gpl2.0]) -- version: [8b20a06 Git][ver.unifieddyes] *2017-06-04* ([patched][patch.unifieddyes]) ***UPDATE***
 * mobiles/aggressive/
-    * [sneeker][] ([WTFPL][lic.wtfpl] / [CC0][lic.cc0]) -- version: [a56b9c2 Git][ver.sneeker] *2017-06-07*
 * mobiles/engine/
     * [mobs_redo][] ([MIT][lic.mobs_redo] / [CC BY][lic.ccby3.0] / [CC0][lic.cc0]) -- version: [ba167a3 Git][ver.mobs_redo] *2017-08-07* ([patched][patch.mobs_redo])
 * mobiles/general/
@@ -293,7 +292,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [signs_lib]: https://forum.minetest.net/viewtopic.php?f=11&t=13762
 [simple_protection]: https://forum.minetest.net/viewtopic.php?t=9035
 [slingshot]: https://github.com/AntumMT/mod-slingshot
-[sneeker]: https://github.com/AntumMT/mod-sneeker
 [snowdrift]: https://forum.minetest.net/viewtopic.php?t=6854
 [spawneggs]: https://forum.minetest.net/viewtopic.php?t=6214
 [spectator_mode]: https://forum.minetest.net/viewtopic.php?t=13718
@@ -501,7 +499,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.signs_lib]: https://github.com/minetest-mods/signs_lib/tree/3e00159
 [ver.simple_protection]: https://github.com/SmallJoker/simple_protection/tree/574ecb8
 [ver.slingshot]: https://github.com/AntumMT/mod-slingshot/tree/ef698e8
-[ver.sneeker]: https://github.com/AntumMT/mod-sneeker/tree/a56b9c2
 [ver.snowdrift]: https://github.com/paramat/snowdrift/tree/fcb0537
 [ver.spawneggs]: https://github.com/thefamilygrog66/spawneggs/tree/4650370
 [ver.spectator_mode]: https://github.com/minetest-mods/spectator_mode/tree/7d68bec
