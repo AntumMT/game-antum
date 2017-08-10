@@ -177,7 +177,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [dinosaurs_aggressive][] -- version: [874f299 Git][ver.dinosaurs_aggressive] *2017-07-27*
 	* velociraptor ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- forked from *mobs_farlands* (part of [farlands][] sub-game)
 * [mob-engine][] ([zlib][lic.mob-engine] / [CC BY-SA][lic.ccbysa3.0]) -- version: [138f655 Git][ver.mob-engine] *2017-06-04* ([patched][patch.mob-engine])
-* [monsters_aggressive[] (see individual mods for licensing) -- version: [aa0f910 Git][ver.monsters_aggressive] **2017-08-09*
+* [monsters_aggressive[] (see individual mods for licensing) -- version: [2edaa70 Git][ver.monsters_aggressive] **2017-08-09*
 * mymods
 	* [mydoors][] ([CC-BY / CC-BY-SA][lic.mydoors] / [WTFPL][lic.wtfpl] / [DWYWFPL][lic.dwywpl]) -- version: [63aef13 Git][ver.mydoors] *2017-03-31* ([patched][patch.mydoors])
 	* [myfences][] ([DWYWPL][lic.dwywpl]) -- version: [c6e529a Git][ver.myfences] *2016-04-04*
@@ -473,7 +473,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.mobf_core]: https://github.com/sapier/mobf_core/tree/1199ca9
 [ver.mobs_animal]: https://github.com/tenplus1/mobs_animal/tree/cadacac
 [ver.mobs_redo]: https://github.com/tenplus1/mobs_redo/tree/ba167a3
-[ver.monsters_aggressive]: https://github.com/AntumMT/mp-monsters_aggressive/tree/aa0f910
+[ver.monsters_aggressive]: https://github.com/AntumMT/mp-monsters_aggressive/tree/2edaa70
 [ver.more_chests]: https://github.com/minetest-mods/more_chests/tree/c597779
 [ver.moreblocks]: https://github.com/minetest-mods/moreblocks/tree/fbfb079
 [ver.moremesecons]: https://github.com/minetest-mods/MoreMesecons/tree/aa2ae82
