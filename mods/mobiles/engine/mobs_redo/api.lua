@@ -2917,6 +2917,17 @@ function mobs:register_arrow(name, def)
 
 	if not name or not def then return end -- errorcheck
 
+	-- Colon prefix must initially be removed for compatibility
+	if string.find(name, ":") == 1 then
+		name = string.sub(name, 2)
+	end
+
+	-- Allows for registering arrows using mod prefix different than current mod name
+	local mob_prefix = string.split(name, ":")[1]
+	if mob_prefix ~= minetest.get_current_modname() then
+		name = ":" .. name
+	end
+
 	minetest.register_entity(name, {
 
 		physical = false,
