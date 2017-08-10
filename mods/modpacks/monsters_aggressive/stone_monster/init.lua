@@ -4,7 +4,7 @@ local S = mobs.intllib
 
 -- Stone Monster by PilzAdam
 
-mobs:register_mob("mobs_monster:stone_monster", {
+mobs:register_mob("mobs:stone_monster", {
 	type = "monster",
 	passive = false,
 	attack_type = "dogfight",
@@ -55,7 +55,7 @@ mobs:register_mob("mobs_monster:stone_monster", {
 
 
 mobs:spawn({
-	name = "mobs_monster:stone_monster",
+	name = "mobs:stone_monster",
 	nodes = {"default:stone", "default:desert_stone"},
 	max_light = 7,
 	chance = 7000,
@@ -63,7 +63,4 @@ mobs:spawn({
 })
 
 
-mobs:register_egg("mobs_monster:stone_monster", S("Stone Monster"), "default_stone.png", 1)
-
-
-mobs:alias_mob("mobs:stone_monster", "mobs_monster:stone_monster") -- compatibility
+mobs:register_egg("mobs:stone_monster", S("Stone Monster"), "default_stone.png", 1)

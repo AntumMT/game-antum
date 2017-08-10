@@ -1,0 +1,7 @@
+# Template for translations of mob_lava_flan mod
+# last update: 2017-08-09
+
+
+Lava Flan =
+Lava orb =
+Lava Pickaxe =

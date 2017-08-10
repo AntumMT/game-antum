@@ -1,0 +1,6 @@
+# Template for translations of mob_spider mod
+# last update: 2017-08-09
+
+
+Spider =
+Cobweb =

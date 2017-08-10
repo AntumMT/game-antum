@@ -4,7 +4,7 @@ local S = mobs.intllib
 
 -- Tree Monster (or Tree Gollum) by PilzAdam
 
-mobs:register_mob("mobs_monster:tree_monster", {
+mobs:register_mob("mobs:tree_monster", {
 	type = "monster",
 	passive = false,
 	attack_type = "dogfight",
@@ -56,7 +56,7 @@ mobs:register_mob("mobs_monster:tree_monster", {
 
 
 mobs:spawn({
-	name = "mobs_monster:tree_monster",
+	name = "mobs:tree_monster",
 	nodes = {"default:leaves", "default:jungleleaves"},
 	max_light = 7,
 	chance = 7000,
@@ -65,7 +65,4 @@ mobs:spawn({
 })
 
 
-mobs:register_egg("mobs_monster:tree_monster", S("Tree Monster"), "default_tree_top.png", 1)
-
-
-mobs:alias_mob("mobs:tree_monster", "mobs_monster:tree_monster") -- compatibility
+mobs:register_egg("mobs:tree_monster", S("Tree Monster"), "default_tree_top.png", 1)

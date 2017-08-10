@@ -4,7 +4,7 @@ local S = mobs.intllib
 
 -- Spider by AspireMint (fishyWET (CC-BY-SA 3.0 license for texture)
 
-mobs:register_mob("mobs_monster:spider", {
+mobs:register_mob("mobs:spider", {
 	docile_by_day = true,
 	group_attack = true,
 	type = "monster",
@@ -63,7 +63,7 @@ else
 end
 
 mobs:spawn({
-	name = "mobs_monster:spider",
+	name = "mobs:spider",
 	nodes = {spawn_on},
 	min_light = 0,
 	max_light = 12,
@@ -74,10 +74,7 @@ mobs:spawn({
 })
 
 
-mobs:register_egg("mobs_monster:spider", S("Spider"), "mobs_cobweb.png", 1)
-
-
-mobs:alias_mob("mobs:spider", "mobs_monster:spider") -- compatibility
+mobs:register_egg("mobs:spider", S("Spider"), "mobs_cobweb.png", 1)
 
 
 -- cobweb

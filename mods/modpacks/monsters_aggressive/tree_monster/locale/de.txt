@@ -1,0 +1,7 @@
+# German Translation for mobs_monster mod
+# Deutsche Übersetzung der mobs_monster Mod
+# last update: 2016-06-10
+# Author: Xanthin
+
+
+Tree Monster = Baummonster

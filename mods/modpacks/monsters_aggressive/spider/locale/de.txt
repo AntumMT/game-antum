@@ -1,0 +1,8 @@
+# German Translation for mobs_monster mod
+# Deutsche Übersetzung der mobs_monster Mod
+# last update: 2016/June/10
+# Author: Xanthin
+
+
+Spider = Spinne
+Cobweb = Spinnennetz

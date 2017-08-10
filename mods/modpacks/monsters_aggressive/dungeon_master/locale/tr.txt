@@ -1,0 +1,8 @@
+# Türkçe çeviri by Admicos
+# Turkish translation by Admicos
+
+# Son düzenleme: 26 Nisan 2017
+# Last edit: 26 April 2017
+
+
+Dungeon Master = Zindan başı
