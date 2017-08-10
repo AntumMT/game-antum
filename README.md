@@ -67,7 +67,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * mobiles/general/
 	* [mobs_animal][] ([MIT][lic.mobs_animal]) -- version: [cadacac Git][ver.mobs_animal] *2017-08-04* ([patched][patch.mobs_animal])
 * mobiles/passive/
-	* [mob_horse][] -- version: [dee3883 Git][ver.mob_horse] *2017-06-01* ([patched][patch.mob_horse])
     * [peaceful_npc][] ([WTFPL][lic.wtfpl]) -- version: [2b3a7a5 Git][ver.peaceful_npc] *2015-08-09* ([patched][patch.peaceful_npc])
 * [painting][] (???)
 * [pipeworks][] ([WTFPL][lic.wtfpl]) -- version: [2eff6e3 Git][ver.pipeworks] *2017-06-07* ***UPDATE***
@@ -258,7 +257,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [mesecons]: https://forum.minetest.net/viewtopic.php?t=628
 [minetest_game]: https://github.com/minetest/minetest_game
 [mob-engine]: https://github.com/minetest-mods/mob-engine
-[mob_horse]: https://github.com/tenplus1/mob_horse
 [mobs_animal]: https://github.com/tenplus1/mobs_animal
 [mobs_redo]: https://forum.minetest.net/viewtopic.php?t=9917
 [monsters_aggressive]: https://github.com/AntumMT/mp-monsters_aggressive
@@ -468,7 +466,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.mesecons]: https://github.com/minetest-mods/mesecons/tree/564bdc2
 [ver.minetest_game]: https://github.com/minetest/minetest_game/tree/f855bee
 [ver.mob-engine]: https://github.com/minetest-mods/mob-engine/tree/138f655
-[ver.mob_horse]: https://github.com/tenplus1/mob_horse/tree/dee3883
 [ver.mobf_core]: https://github.com/sapier/mobf_core/tree/1199ca9
 [ver.mobs_animal]: https://github.com/tenplus1/mobs_animal/tree/cadacac
 [ver.mobs_redo]: https://github.com/tenplus1/mobs_redo/tree/ba167a3
@@ -558,7 +555,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.mesecons]: https://github.com/AntumMT/mp-mesecons/tree/830823a
 [patch.minetest_game]: https://github.com/AntumMT/mtgame-minetest/tree/4275126
 [patch.mob-engine]: https://github.com/AntumMT/mp-mob-engine/tree/93575e0
-[patch.mob_horse]: https://github.com/AntumMT/mod-mob_horse/tree/4fb526b
 [patch.mobf_core]: https://github.com/AntumMT/mp-mobf_core/tree/d532137
 [patch.mobs_animal]: https://github.com/AntumMT/mod-mobs_animal/tree/1d5f1ca
 [patch.mobs_redo]: https://github.com/AntumMT/mod-mobs_redo/tree/94d14e5
