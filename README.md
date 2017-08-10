@@ -63,8 +63,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [rainbow_ore][] ([LGPL][lic.rainbow_ore]) -- version: [6e77693 Git][ver.rainbow_ore] *2015-11-02* ([patched][patch.rainbow_ore])
 	* [unifieddyes][] ([GPL][lic.gpl2.0]) -- version: [8b20a06 Git][ver.unifieddyes] *2017-06-04* ([patched][patch.unifieddyes]) ***UPDATE***
 * mobiles/aggressive/
-    * [mobs_goblins][] ([CC-BY-SA / CC-BY / CC0][lic.mobs_goblins]) -- version: [acabe4d Git][ver.mobs_goblins] *2017-07-05* ([patched][patch.mobs_goblins])
-    * [mobs_monster][] ([MIT][lic.mobs_monster]) -- version: [1561ec1 Git][ver.mobs_monster] *2017-07-29* ([patched][patch.mobs_monster])
     * [sneeker][] ([WTFPL][lic.wtfpl] / [CC0][lic.cc0]) -- version: [a56b9c2 Git][ver.sneeker] *2017-06-07*
 * mobiles/engine/
     * [mobs_redo][] ([MIT][lic.mobs_redo] / [CC BY][lic.ccby3.0] / [CC0][lic.cc0]) -- version: [ba167a3 Git][ver.mobs_redo] *2017-08-07* ([patched][patch.mobs_redo])
@@ -179,6 +177,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [dinosaurs_aggressive][] -- version: [874f299 Git][ver.dinosaurs_aggressive] *2017-07-27*
 	* velociraptor ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- forked from *mobs_farlands* (part of [farlands][] sub-game)
 * [mob-engine][] ([zlib][lic.mob-engine] / [CC BY-SA][lic.ccbysa3.0]) -- version: [138f655 Git][ver.mob-engine] *2017-06-04* ([patched][patch.mob-engine])
+* [monsters_aggressive[] (see individual mods for licensing) -- version: [2bf9178 Git][ver.monsters_aggressive] **2017-08-09*
 * mymods
 	* [mydoors][] ([CC-BY / CC-BY-SA][lic.mydoors] / [WTFPL][lic.wtfpl] / [DWYWFPL][lic.dwywpl]) -- version: [63aef13 Git][ver.mydoors] *2017-03-31* ([patched][patch.mydoors])
 	* [myfences][] ([DWYWPL][lic.dwywpl]) -- version: [c6e529a Git][ver.myfences] *2016-04-04*
@@ -262,9 +261,8 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [mob-engine]: https://github.com/minetest-mods/mob-engine
 [mob_horse]: https://github.com/tenplus1/mob_horse
 [mobs_animal]: https://github.com/tenplus1/mobs_animal
-[mobs_goblins]: https://forum.minetest.net/viewtopic.php?t=13004
-[mobs_monster]: https://github.com/tenplus1/mobs_monster
 [mobs_redo]: https://forum.minetest.net/viewtopic.php?t=9917
+[monsters_aggressive]: https://github.com/AntumMT/mp-monsters_aggressive
 [more_chests]: https://github.com/minetest-mods/more_chests
 [moreblocks]: https://forum.minetest.net/viewtopic.php?t=509
 [moremesecons]: https://forum.minetest.net/viewtopic.php?t=13150
@@ -366,8 +364,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.mob-engine]: mods/modpacks/mob-engine/LICENSE
 [lic.mobf]: mods/modpacks/mobf_core/License.txt
 [lic.mobs_animal]: mods/mobiles/general/mobs_animal/license.txt
-[lic.mobs_goblins]: mods/mobiles/aggressive/mobs_goblins/README.md
-[lic.mobs_monster]: mods/mobiles/aggressive/mobs_monster/license.txt
 [lic.mobs_redo]: mods/mobiles/engine/mobs_redo/license.txt
 [lic.moreblocks]: mods/buildings/moreblocks/LICENSE.md
 [lic.moreores]: mods/materials/moreores/LICENSE.md
@@ -476,9 +472,8 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.mob_horse]: https://github.com/tenplus1/mob_horse/tree/dee3883
 [ver.mobf_core]: https://github.com/sapier/mobf_core/tree/1199ca9
 [ver.mobs_animal]: https://github.com/tenplus1/mobs_animal/tree/cadacac
-[ver.mobs_goblins]: https://github.com/FreeLikeGNU/mobs_goblins/tree/acabe4d
-[ver.mobs_monster]: https://github.com/tenplus1/mobs_monster/tree/1561ec1
 [ver.mobs_redo]: https://github.com/tenplus1/mobs_redo/tree/ba167a3
+[ver.monsters_aggressive]: https://github.com/AntumMT/mp-monsters_aggressive/tree/2bf9178
 [ver.more_chests]: https://github.com/minetest-mods/more_chests/tree/c597779
 [ver.moreblocks]: https://github.com/minetest-mods/moreblocks/tree/fbfb079
 [ver.moremesecons]: https://github.com/minetest-mods/MoreMesecons/tree/aa2ae82
@@ -567,8 +562,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.mob_horse]: https://github.com/AntumMT/mod-mob_horse/tree/4fb526b
 [patch.mobf_core]: https://github.com/AntumMT/mp-mobf_core/tree/d532137
 [patch.mobs_animal]: https://github.com/AntumMT/mod-mobs_animal/tree/1d5f1ca
-[patch.mobs_goblins]: https://github.com/AntumMT/mod-mobs_goblins/tree/ceb5573
-[patch.mobs_monster]: https://github.com/AntumMT/mod-mobs_monster/tree/309310b
 [patch.mobs_redo]: https://github.com/AntumMT/mod-mobs_redo/tree/d84b196
 [patch.moreblocks]: https://github.com/AntumMT/mod-moreblocks/tree/e5d5449
 [patch.moreores]: https://github.com/AntumMT/mod-moreores/tree/f574a02
