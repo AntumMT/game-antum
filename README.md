@@ -178,6 +178,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* velociraptor ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- forked from *mobs_farlands* (part of [farlands][] sub-game)
 * [mob-engine][] ([zlib][lic.mob-engine] / [CC BY-SA][lic.ccbysa3.0]) -- version: [138f655 Git][ver.mob-engine] *2017-06-04* ([patched][patch.mob-engine])
 * [monsters_aggressive[] (see individual mods for licensing) -- version: [9cc652a Git][ver.monsters_aggressive] **2017-08-09*
+* [monsters_passive[] (see individual mods for licensing) -- version: [b07fe19 Git][ver.monsters_passive] **2017-08-09*
 * mymods
 	* [mydoors][] ([CC-BY / CC-BY-SA][lic.mydoors] / [WTFPL][lic.wtfpl] / [DWYWFPL][lic.dwywpl]) -- version: [63aef13 Git][ver.mydoors] *2017-03-31* ([patched][patch.mydoors])
 	* [myfences][] ([DWYWPL][lic.dwywpl]) -- version: [c6e529a Git][ver.myfences] *2016-04-04*
@@ -263,6 +264,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [mobs_animal]: https://github.com/tenplus1/mobs_animal
 [mobs_redo]: https://forum.minetest.net/viewtopic.php?t=9917
 [monsters_aggressive]: https://github.com/AntumMT/mp-monsters_aggressive
+[monsters_passive]: https://github.com/AntumMT/mp-monsters_passive
 [more_chests]: https://github.com/minetest-mods/more_chests
 [moreblocks]: https://forum.minetest.net/viewtopic.php?t=509
 [moremesecons]: https://forum.minetest.net/viewtopic.php?t=13150
@@ -474,6 +476,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.mobs_animal]: https://github.com/tenplus1/mobs_animal/tree/cadacac
 [ver.mobs_redo]: https://github.com/tenplus1/mobs_redo/tree/ba167a3
 [ver.monsters_aggressive]: https://github.com/AntumMT/mp-monsters_aggressive/tree/9cc652a
+[ver.monsters_passive]: https://github.com/AntumMT/mp-monsters_passive/tree/b07fe19
 [ver.more_chests]: https://github.com/minetest-mods/more_chests/tree/c597779
 [ver.moreblocks]: https://github.com/minetest-mods/moreblocks/tree/fbfb079
 [ver.moremesecons]: https://github.com/minetest-mods/MoreMesecons/tree/aa2ae82
