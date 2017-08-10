@@ -62,7 +62,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [quartz][] ([MIT][lic.quartz]) -- version: [00ca4eb Git][ver.quartz] *2017-02-28* ([patched][patch.quartz])
 	* [rainbow_ore][] ([LGPL][lic.rainbow_ore]) -- version: [6e77693 Git][ver.rainbow_ore] *2015-11-02* ([patched][patch.rainbow_ore])
 	* [unifieddyes][] ([GPL][lic.gpl2.0]) -- version: [8b20a06 Git][ver.unifieddyes] *2017-06-04* ([patched][patch.unifieddyes]) ***UPDATE***
-* mobiles/aggressive/
 * mobiles/engine/
     * [mobs_redo][] ([MIT][lic.mobs_redo] / [CC BY][lic.ccby3.0] / [CC0][lic.cc0]) -- version: [ba167a3 Git][ver.mobs_redo] *2017-08-07* ([patched][patch.mobs_redo])
 * mobiles/general/
