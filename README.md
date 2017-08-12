@@ -382,6 +382,9 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.windmill]: mods/buildings/windmill/README.md
 
 [lic.cc0]: doc/licenses/CC0.txt
+[lic.ccby]: doc/licenses/CC_BY-4.0.txt
+[lic.ccby3.0]: doc/licenses/CC_BY-3.0.txt
+[lic.ccby4.0]: doc/licenses/CC_BY-4.0.txt
 [lic.ccbyncsa]: doc/licenses/CC_BY-NC-SA-4.0.txt
 [lic.ccbyncsa3.0]: doc/licenses/CC_BY-NC-SA-3.0.txt
 [lic.ccbyncsa4.0]: doc/licenses/CC_BY-NC-SA-4.0.txt
