@@ -73,7 +73,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * player/action/
 	* [hbsprint][] ([LGPL][lic.lgpl2.1]) -- version: [c473d57 Git][ver.hbsprint] *2017-08-07* ([patched][patch.hbsprint])
 * player/visuals/
-	* [character_creator][] ([MIT][lic.character_creator]) -- version [1.0 (6a0e6aa Git)][ver.character_creator] *2017-04-01*
     * [invisibility][] ([MIT][lic.invisibility]) -- version: [bf4156b Git][ver.invisibility] *2016-08-19* ([patched][patch.invisibility]) ***UPDATE***
     * [playeranim][] ([BSD 2-Clause][lic.playeranim]) - version [59bcd38 Git][ver.playeranim] *2017-06-07* ([patched][patch.playeranim])
     * [wardrobe][] ([WTFPL][lic.wtfpl]) -- version: [1.1-2-c48b011 Git][ver.wardrobe] *2015-05-21*
@@ -215,7 +214,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [castle_storage]: https://github.com/minetest-mods/castle_storage
 [castle_tapestries]: https://github.com/minetest-mods/castle_tapestries
 [castle_weapons]: https://github.com/minetest-mods/castle_weapons
-[character_creator]: https://forum.minetest.net/viewtopic.php?t=13138
 [chatlog]: https://forum.minetest.net/viewtopic.php?t=6220
 [christmas]: https://forum.minetest.net/viewtopic.php?t=3950
 [clean]: https://forum.minetest.net/viewtopic.php?t=2777
@@ -340,7 +338,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.bridges]: mods/buildings/bridges/README.md
 [lic.campfire]: mods/campfire/README.md
 [lic.castle]: mods/modpacks/castle/LICENSE
-[lic.character_creator]: mods/player/visuals/character_creator/license.txt
 [lic.christmas]: mods/buildings/christmas/LICENSE.txt
 [lic.crops]: mods/farming/crops/LICENSE
 [lic.currency]: https://forum.minetest.net/viewtopic.php?t=7002
@@ -432,7 +429,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.castle_storage]: https://github.com/minetest-mods/castle_storage/tree/2b9e5f6
 [ver.castle_tapestries]: https://github.com/minetest-mods/castle_tapestries/tree/78b6e36
 [ver.castle_weapons]: https://github.com/minetest-mods/castle_weapons/tree/5f5ebcc
-[ver.character_creator]: https://github.com/minetest-mods/character_creator/tree/6a0e6aa
 [ver.christmas]: https://github.com/TheZenKitteh/minetest-christmas/tree/d3bd872
 [ver.coloredwood]: https://github.com/minetest-mods/coloredwood/tree/bd490be
 [ver.compassgps]: https://github.com/Kilarin/compassgps/tree/96892a0
