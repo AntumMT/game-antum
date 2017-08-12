@@ -28,7 +28,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [campfire][] ([GPL][lic.gpl2.0] / [CC BY-SA][lic.ccbysa] / [WTFPL][lic.campfire]) -- version: [04b4ea5 Git][ver.campfire] *2017-06-08*
 * chat/
     * [away][] ([GPL][lic.gpl2.0]) -- version: [4c1e5a9 Git][ver.away] *2012-03-09* ([patched][patch.away])
-    * [chatlog][] ([CC0][lic.cc0]) -- version: (no version info) *2013-06-09* ([patched][patch.chatlog])
+    * [chatlog][] ([CC0][lic.cc0]) -- version [1.0][ver.chatlog] *2017-08-12*
 * crafting/
     * [craftguide][] ([GPL / WTFPL](mods/crafting/craftguide/LICENSE)) -- version: [86a96c3 Git][ver.craftguide] *2017-03-21* ([patched][patch.craftguide])
 * [currency][] ([WTFPL][lic.currency]) -- version: [3ee673d Git][ver.currency] *2017-05-18* ([patched][patch.currency])
@@ -214,7 +214,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [castle_storage]: https://github.com/minetest-mods/castle_storage
 [castle_tapestries]: https://github.com/minetest-mods/castle_tapestries
 [castle_weapons]: https://github.com/minetest-mods/castle_weapons
-[chatlog]: https://forum.minetest.net/viewtopic.php?t=6220
+[chatlog]: https://forum.minetest.net/viewtopic.php?t=18287
 [christmas]: https://forum.minetest.net/viewtopic.php?t=3950
 [clean]: https://forum.minetest.net/viewtopic.php?t=2777
 [coloredwood]: https://forum.minetest.net/viewtopic.php?t=2411
@@ -430,6 +430,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.castle_storage]: https://github.com/minetest-mods/castle_storage/tree/2b9e5f6
 [ver.castle_tapestries]: https://github.com/minetest-mods/castle_tapestries/tree/78b6e36
 [ver.castle_weapons]: https://github.com/minetest-mods/castle_weapons/tree/5f5ebcc
+[ver.chatlog]: https://github.com/AntumMT/mod-chatlog/tree/v1.0
 [ver.christmas]: https://github.com/TheZenKitteh/minetest-christmas/tree/d3bd872
 [ver.coloredwood]: https://github.com/minetest-mods/coloredwood/tree/bd490be
 [ver.compassgps]: https://github.com/Kilarin/compassgps/tree/96892a0
@@ -531,7 +532,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.castle_storage]: https://github.com/AntumMT/mod-castle_storage/tree/b80b72f
 [patch.castle_tapestries]: https://github.com/AntumMT/mod-castle_tapestries/tree/4e70f1b
 [patch.castle_weapons]: https://github.com/AntumMT/mod-castle_weapons/tree/669db13
-[patch.chatlog]: https://github.com/AntumMT/mod-chatlog/tree/ba6dabf
 [patch.christmas]: https://github.com/AntumMT/mod-christmas/tree/7ffdc67
 [patch.clean]: https://github.com/AntumMT/mod-clean/tree/6ba5bad
 [patch.compassgps]: https://github.com/AntumMT/mod-compassgps/tree/b900f30
