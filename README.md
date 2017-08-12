@@ -72,6 +72,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [pipeworks][] ([WTFPL][lic.wtfpl]) -- version: [2eff6e3 Git][ver.pipeworks] *2017-06-07* ***UPDATE***
 * plantlife/
 * player/action/
+	* [hbsprint][] ([LGPL][lic.lgpl2.1]) -- version: [c473d57 Git][ver.hbsprint] *2017-08-07* ([patched][patch.hbsprint])
 * player/visuals/
 	* [character_creator][] ([MIT][lic.character_creator]) -- version [1.0 (6a0e6aa Git)][ver.character_creator] *2017-04-01*
     * [invisibility][] ([MIT][lic.invisibility]) -- version: [bf4156b Git][ver.invisibility] *2016-08-19* ([patched][patch.invisibility]) ***UPDATE***
@@ -240,6 +241,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [gems_tools]: https://forum.minetest.net/viewtopic.php?t=4294
 [glow]: https://forum.minetest.net/viewtopic.php?t=6300
 [hbarmor]: https://forum.minetest.net/viewtopic.php?t=11337
+[hbsprint]: https://forum.minetest.net/viewtopic.php?t=18069
 [helicopter]: https://forum.minetest.net/viewtopic.php?t=6183
 [hill_nodebox]: https://cornernote.github.io/minetest-hill_nodebox/
 [home_gui]: http://cornernote.github.io/minetest-home_gui/
@@ -450,6 +452,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.gems_tools]: https://github.com/captainLAD/gems/tree/b375432
 [ver.glow]: https://github.com/bdjnk/glow/tree/c611ae0
 [ver.hbarmor]: http://repo.or.cz/minetest_hbarmor.git/tree/ceb313e
+[ver.hbsprint]: https://github.com/tacotexmex/hbsprint/tree/c473d57
 [ver.helicopter]: https://github.com/SokolovPavel/helicopter/tree/10f1433
 [ver.helicopter_pm]: https://github.com/petermaloney/helicopter/tree/abdf5fa
 [ver.hill_nodebox]: https://github.com/cornernote/minetest-hill_nodebox/tree/41bbfa2
@@ -545,6 +548,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.gems_encrustable]: https://github.com/AntumMT/mod-gems_encrustable/tree/a043b9c
 [patch.gems_tools]: https://github.com/AntumMT/mod-gems_tools/tree/cc86c61
 [patch.hbarmor]: https://github.com/AntumMT/mod-hbarmor/tree/587dae9
+[patch.hbsprint]: https://github.com/AntumMT/mod-hbsprint/tree/4961941
 [patch.helicopter]: https://github.com/AntumMT/mod-helicopter/tree/9ffee1f
 [patch.home_gui]: https://github.com/AntumMT/mod-home_gui/tree/588e78f
 [patch.homedecor]: https://github.com/AntumMT/mp-homedecor/tree/d0d79dc
