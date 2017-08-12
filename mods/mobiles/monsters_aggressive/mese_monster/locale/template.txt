@@ -1,5 +1,0 @@
-# Template for translations of mob_mese_monster mod
-# last update: 2017-08-09
-
-
-Mese Monster =

@@ -70,19 +70,13 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [rainbow_ore][] ([LGPL][lic.rainbow_ore]) -- version: [6e77693 Git][ver.rainbow_ore] *2015-11-02* ([patched][patch.rainbow_ore])
 	* [unifieddyes][] ([GPL][lic.gpl2.0]) -- version: [stable-20170925][ver.unifieddyes] *2017-08-12* ([patched][patch.unifieddyes])
 * mobiles/
-	* [animals_aggressive][] -- version: [4eede4d Git][ver.animals_aggressive] *2017-08-28*
-		* mob_shark ([CC BY-SA][lic.ccbysa3.0]) -- forked from [Animals Modpack][animals]
 	* [animals_harmless][] -- version: [e9b02a8][ver.animals_harmless] *2017-08-09*
 		* mob_sheep ([Zlib][lic.zlib]) -- forked from [mob-engine][]
-	* [dinosaurs_aggressive][] -- version: [874f299 Git][ver.dinosaurs_aggressive] *2017-07-27*
-		* velociraptor ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- forked from *mobs_farlands* (part of [farlands][] sub-game)
 	* engine/
 		* [creatures][mob-engine] ([zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [c2bedc3 Git][ver.mob-engine] *2018-04-23* ([patched][patch.mob-engine])
 		* [mobs_redo][] ([MIT][lic.mobs_redo] / [CC BY][lic.ccby3.0] / [CC0][lic.cc0]) -- version: [adc4e71 Git][ver.mobs_redo] *2018-07-02* ([patched][patch.mobs_redo])
 	* general/
 		* [mobs_animal][] ([MIT][lic.mobs_animal]) -- version: [52889c7 Git][ver.mobs_animal] *2018-06-27* ([patched][patch.mobs_animal])
-	* [monsters_aggressive][] (see individual mods for licensing) -- version: [89a8187 Git][ver.monsters_aggressive] *2017-08-30*
-	* [monsters_passive][] (see individual mods for licensing) -- version: [b07fe19 Git][ver.monsters_passive] *2017-08-09*
 * [painting][] (???) -- version [8961849 Git][ver.painting] *2016-05-05*
 * [pipeworks][] ([WTFPL][lic.wtfpl]) -- version: [a5e1bfa Git][ver.pipeworks] *2017-08-20* ***UNSTABLE UPDATES***
 * plantlife/
@@ -179,7 +173,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [amber]: https://forum.minetest.net/viewtopic.php?t=18186
 [ambience_ultralite]: https://forum.minetest.net/viewtopic.php?p=151166#p151166
 [animals]: https://forum.minetest.net/viewtopic.php?t=629
-[animals_aggressive]: https://github.com/AntumMT/mp-animals_aggressive
 [animals_harmless]: https://github.com/AntumMT/mp-animals_harmless
 [antum]: https://github.com/AntumMT/mp-antum
 [awards]: https://forum.minetest.net/viewtopic.php?t=4870
@@ -211,12 +204,10 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [currency]: https://github.com/minetest-mods/currency
 [deploy_nodes]: https://cornernote.github.io/minetest-deploy_nodes/
 [desert_life]: https://forum.minetest.net/viewtopic.php?t=16054
-[dinosaurs_aggressive]: https://github.com/AntumMT/mp-dinosaurs_aggressive
 [drawers]: https://forum.minetest.net/viewtopic.php?t=17134
 [elevator]: https://forum.minetest.net/viewtopic.php?t=12944
 [enchanting]: https://forum.minetest.net/viewtopic.php?t=7354
 [ethereal]: https://forum.minetest.net/viewtopic.php?t=14638
-[farlands]: https://forum.minetest.net/viewtopic.php?t=16921
 [farming_plus]: https://forum.minetest.net/viewtopic.php?t=2787
 [fort_spikes]: https://forum.minetest.net/viewtopic.php?t=14574
 [gems_encrustable]: https://forum.minetest.net/viewtopic.php?t=2596
@@ -244,8 +235,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [mob-engine]: https://github.com/minetest-mods/mob-engine
 [mobs_animal]: https://github.com/tenplus1/mobs_animal
 [mobs_redo]: https://forum.minetest.net/viewtopic.php?t=9917
-[monsters_aggressive]: https://github.com/AntumMT/mp-monsters_aggressive
-[monsters_passive]: https://github.com/AntumMT/mp-monsters_passive
 [more_chests]: https://github.com/minetest-mods/more_chests
 [moreblocks]: https://forum.minetest.net/viewtopic.php?t=509
 [moremesecons]: https://forum.minetest.net/viewtopic.php?t=13150
@@ -380,7 +369,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.3d_armor]: https://github.com/stujones11/minetest-3d_armor/tree/656bcf3
 [ver.airtanks]: https://github.com/minetest-mods/airtanks/tree/868c3a7
 [ver.amber]: https://github.com/theraven262/amber/tree/56627fa
-[ver.animals_aggressive]: https://github.com/AntumMT/mp-animals_aggressive/tree/4eede4d
 [ver.animals_harmless]: https://github.com/AntumMT/mp-animals_harmless/tree/e9b02a8
 [ver.antum]: https://github.com/AntumMT/mp-antum/tree/69b39a4
 [ver.awards]: https://github.com/rubenwardy/awards/tree/v3.2.0
@@ -411,7 +399,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.currency]: https://github.com/minetest-mods/currency/tree/bb3fd1a
 [ver.deploy_nodes]: https://github.com/cornernote/minetest-deploy_nodes/tree/b67e162
 [ver.desert_life]: https://github.com/NathanSalapat/desert_life/tree/d448fa3
-[ver.dinosaurs_aggressive]: https://github.com/AntumMT/mp-dinosaurs_aggressive/tree/874f299
 [ver.drawers]: https://github.com/minetest-mods/drawers/tree/7063e2b
 [ver.enchanting]: https://github.com/minetest-mods/enchanting/tree/13ea31c
 [ver.ethereal]: https://notabug.org/TenPlus1/ethereal/src/4641fecbe9415201ee077cf75ee87c886f9a7b55
@@ -441,8 +428,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.mob-engine]: https://github.com/minetest-mods/mob-engine/tree/c2bedc3
 [ver.mobs_animal]: https://github.com/tenplus1/mobs_animal/tree/52889c7
 [ver.mobs_redo]: https://notabug.org/TenPlus1/mobs_redo/src/adc4e71a01728061e47f5af3a9055afb21e53179
-[ver.monsters_aggressive]: https://github.com/AntumMT/mp-monsters_aggressive/tree/89a8187
-[ver.monsters_passive]: https://github.com/AntumMT/mp-monsters_passive/tree/b07fe19
 [ver.more_chests]: https://github.com/minetest-mods/more_chests/tree/c597779
 [ver.moreblocks]: https://github.com/minetest-mods/moreblocks/tree/1.1.0
 [ver.moremesecons]: https://github.com/minetest-mods/MoreMesecons/tree/8a56370
