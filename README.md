@@ -166,7 +166,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [castle_lighting][] -- version: [a7110c6 Git][ver.castle_lighting] *2017-06-07* *[patched][patch.castle_lighting])
 	* [castle_masonry][] -- version [2ed4f19 Git][ver.castle_masonry] *2017-02-28*
 	* [castle_shields][] -- version [a7110c6 Git][ver.castle_shields] *2017-02-28* ([patched][patch.castle_shields])
-	* [castle_storage][] -- version [2b9e5f6 Git][ver.castle_storage] *2017-02-28* ([patched.castle_storage]) ***UPDATE***
+	* [castle_storage][] -- version [2b9e5f6 Git][ver.castle_storage] *2017-02-28* ([patched][patch.castle_storage]) ***UPDATE***
 	* [castle_tapestries][] -- version [78b6e36 Git][ver.castle_tapestries] *2017-03-19* ([patched][patch.castle_tapestries])
 	* [castle_weapons][] -- version [5f5ebcc Git][ver.castle_weapons] *2017-06-07* ([patched][patch.castle_weapons])
 	* [crafting_bench][] -- version [ca21489 Git][ver.crafting_bench] *2017-06-07*
