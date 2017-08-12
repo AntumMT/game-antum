@@ -11,7 +11,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 ***"UPDATE" Denotes update available***
 
 * admin/
-    * [clean][] ([WTFPL][lic.wtfpl]) -- version: Unknown *2013-06-08* ([patched][patch.clean])
+    * [clean][] ([WTFPL][lic.wtfpl]) -- version [2404594 Git][ver.clean] *2017-08-12*
     * [invisible][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0])
     * [privilegeareas][] ([WTFPL][lic.privilegeareas] / [CC0][lic.cc0]) -- version: [aebaa00 Git][ver.privilegeareas] *2016-05-18*
     * [privs][] ([CC0][lic.cc0])
@@ -216,7 +216,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [castle_weapons]: https://github.com/minetest-mods/castle_weapons
 [chatlog]: https://forum.minetest.net/viewtopic.php?t=18287
 [christmas]: https://forum.minetest.net/viewtopic.php?t=3950
-[clean]: https://forum.minetest.net/viewtopic.php?t=2777
+[clean]: https://github.com/AntumMT/mod-clean/tree/2404594
 [coloredwood]: https://forum.minetest.net/viewtopic.php?t=2411
 [compass]: https://forum.minetest.net/viewtopic.php?t=3785
 [compassgps]: https://forum.minetest.net/viewtopic.php?t=9373
@@ -432,6 +432,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.castle_weapons]: https://github.com/minetest-mods/castle_weapons/tree/5f5ebcc
 [ver.chatlog]: https://github.com/AntumMT/mod-chatlog/tree/v1.0
 [ver.christmas]: https://github.com/TheZenKitteh/minetest-christmas/tree/d3bd872
+[ver.clean]: https://github.com/AntumMT/mod-clean/tree/2404594
 [ver.coloredwood]: https://github.com/minetest-mods/coloredwood/tree/bd490be
 [ver.compassgps]: https://github.com/Kilarin/compassgps/tree/96892a0
 [ver.crafting_bench]: https://github.com/minetest-mods/crafting_bench/tree/ca21489
@@ -533,7 +534,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.castle_tapestries]: https://github.com/AntumMT/mod-castle_tapestries/tree/4e70f1b
 [patch.castle_weapons]: https://github.com/AntumMT/mod-castle_weapons/tree/669db13
 [patch.christmas]: https://github.com/AntumMT/mod-christmas/tree/7ffdc67
-[patch.clean]: https://github.com/AntumMT/mod-clean/tree/6ba5bad
 [patch.compassgps]: https://github.com/AntumMT/mod-compassgps/tree/b900f30
 [patch.craftguide]: https://github.com/AntumMT/mod-craftguide/tree/39b7ddf
 [patch.crops]: https://github.com/AntumMT/mod-crops/tree/0c5c649

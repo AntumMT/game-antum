@@ -1,5 +1,5 @@
+-- clean by PilzAdam
 -- LICENSE: WTFPL
--- Copyright: PilzAdam
 
 local old_nodes = {}
 local old_entities = {}
