@@ -2,33 +2,10 @@
 -- Copyright: PilzAdam
 
 local old_nodes = {}
-local old_entities = {
-	-- Broken
-	'animal_chicken:chicken',
-	'animal_sheep:sheep',
-	'animal_sheep:sheep_naked',
-	'animal_dm:dm',
-	'sneeker:sneeker',
-	-- Replaced
-	'spidermob:spider',
-	'mob_oerkki:oerkki',  -- animals_modpack
-	'creatures:oerrki',  -- mob-engine
-}
+local old_entities = {}
 
 -- Old/Missing nodes that should be replaced with something currently in game
-local replace_nodes = {
-	-- Craft guides
-	{'craft_guide:sign_wall', 'craftguide:sign'},
-	-- Old homedecor nodes
-	{'homedecor:glowlight_small_cube_white', 'homedecor:glowlight_small_cube'},
-	-- Discontinued
-	{'kpgmobs:horse', 'mob_horse:horse'},
-	{'kpgmobs:horse2', 'mob_horse:horse'},
-	{'kpgmobs:horse3', 'mob_horse:horse'},
-	{'kpgmobs:horsearah1', 'mob_horse:horse'},
-	{'kpgmobs:horseh1', 'mob_horse:horse'},
-	{'kpgmobs:horsepegh1', 'mob_horse:horse'},
-}
+local replace_nodes = {}
 
 
 -- "Replaces" an old/non-existent node
