@@ -87,7 +87,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [adv_spawning][animals] (part of "animals" modpack) ([WTFPL][lic.wtfpl]) -- version: [0.0.13 (ec41aa9 Git)][ver.adv_spawning] *2015-12-28* ([patched][patch.adv_spawning])
 	* [spawneggs][] ([WTFPL][lic.spawneggs]) -- version [4650370 Git][ver.spawneggs] *2013-09-09* ([patched][patch.spawneggs])
 * storage/
-	* [drawers][] () -- version: [0.4.3 (7063e2b Git)][ver.drawers] *2017-06-04* ([patched][patch.drawers]) ***UPDATE***
+	* [drawers][] ([MIT][lic.drawers]) -- version: [0.4.3 (7063e2b Git)][ver.drawers] *2017-06-04* ([patched][patch.drawers]) ***UPDATE***
 	* [more_chests][] ([GPL][lic.gpl2.0]) -- version [c597779 Git][ver.more_chests] *2017-02-27*
 * tools/
 	* [compassgps][] ([WTFPL][lic.wtfpl] / [CC0][lic.cc0] / [CC BY-SA][lic.ccbysa]) -- version: [96892a0 Git][ver.compassgps] *2015-07-31* ([patched][patch.compassgps]) ***UPDATE***
@@ -342,6 +342,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.crops]: mods/farming/crops/LICENSE
 [lic.currency]: https://forum.minetest.net/viewtopic.php?t=7002
 [lic.deploy_nodes]: mods/modpacks/deploy_nodes/LICENSE
+[lic.drawers]: mods/storage/drawers/LICENSE.txt
 [lic.elevator]: mods/buildings/elevator/readme.txt
 [lic.enchanting]: mods/enchanting/LICENSE
 [lic.ethereal]: mods/world/ethereal/license.txt
