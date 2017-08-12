@@ -24,7 +24,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [elevator][] ([WTFPL][lic.elevator])
     * [fort_spikes][] ([MIT][lic.fort_spikes] / [CC0][lic.cc0]) -- version: [3c7d7c6 Git][ver.fort_spikes] *2017-05-06*
     * [moreblocks][] ([zlib][lic.moreblocks]) -- version: [fbfb079 Git][ver.moreblocks] *2017-03-14* ([patched][patch.moreblocks])
-    * [stairsplus][] ([zlib][lic.stairsplus]) -- version: [311e1f0 Git][ver.stairsplus] *2013-05-30*
     * [windmill][] ([WTFPL][lic.windmill]) -- version: [47b029d Git][ver.windmill] *2014-08-21* ([patched][patch.windmill])
 * [campfire][] ([GPL][lic.gpl2.0] / [CC BY-SA][lic.ccbysa] / [WTFPL][lic.campfire]) -- version: [04b4ea5 Git][ver.campfire] *2017-06-08*
 * chat/
@@ -294,7 +293,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [snowdrift]: https://forum.minetest.net/viewtopic.php?t=6854
 [spawneggs]: https://forum.minetest.net/viewtopic.php?t=6214
 [spectator_mode]: https://forum.minetest.net/viewtopic.php?t=13718
-[stairsplus]: https://forum.minetest.net/viewtopic.php?t=6140
 [technic]: https://forum.minetest.net/viewtopic.php?t=2538
 [throwing]: https://forum.minetest.net/viewtopic.php?t=687
 [tnt]: https://forum.minetest.net/viewtopic.php?id=2902
@@ -377,7 +375,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.snowdrift]: mods/weather/snowdrift/license.txt
 [lic.spawneggs]: mods/spawning/spawneggs/README.txt
 [lic.spectator_mode]: mods/admin/spectator_mode/LICENSE
-[lic.stairsplus]: mods/buildings/stairsplus/LICENSE.txt
 [lic.tools_obsidian]: mods/tools/tools_obsidian/README.md
 [lic.trash_can]: mods/furniture/trash_can/LICENSE.txt
 [lic.vector_extras]: mods/vector_extras/LICENSE.txt
@@ -501,7 +498,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.snowdrift]: https://github.com/paramat/snowdrift/tree/fcb0537
 [ver.spawneggs]: https://github.com/thefamilygrog66/spawneggs/tree/4650370
 [ver.spectator_mode]: https://github.com/minetest-mods/spectator_mode/tree/7d68bec
-[ver.stairsplus]: https://github.com/CasimirKaPazi/stairsplus/tree/311e1f0
 [ver.technic]: https://github.com/minetest-mods/technic/tree/a84b5f3
 [ver.throwing]: https://github.com/PilzAdam/throwing/tree/90bcf43
 [ver.tnt]: https://github.com/PilzAdam/TNT/tree/d6a0b7d
