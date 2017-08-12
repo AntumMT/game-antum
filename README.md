@@ -42,7 +42,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [crops][] ([LGPL / CC BY-SA / CC BY / CC0][lic.crops]) -- version: [2b1bb37 Git][ver.crops] *2017-03-31* ([patched][patch.crops])
 	* [farming_plus][] ([WTFPL][lic.farming_plus]) -- version: [7e0d976 Git][ver.farming_plus] *2014-07-31* ([patched][patch.farming_plus])
 * furniture/
-	* [jukebox][] ([WTFPL / CC0][lic.jukebox]) -- version: [e6a507f Git][ver.jukebox] *2016-05-23* ***UPDATE***
+	* [jukebox][] ([WTFPL / CC0][lic.jukebox]) -- version: [9f31f08 Git][ver.jukebox] *2017-07-12* ([patched][patch.jukebox])
     * [trampoline][] ([GPL][lic.gpl3.0]) -- version: [ab1c289 Git][ver.trampoline] *2017-05-26*
     * [trash_can][] ([MIT][lic.trash_can]) -- version: [5fd3df7 Git][ver.trash_can] *2016-01-14* ([patched][patch.trash_can])
 * [intllib][] ([Unlicense][lic.unlicense]) -- version: [7b818cb Git][ver.intllib] *2017-07-10*
@@ -463,7 +463,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.ilights]: https://github.com/minetest-mods/ilights/tree/fa085fd
 [ver.intllib]: https://github.com/minetest-mods/intllib/tree/7b818cb
 [ver.invisibility]: https://github.com/tenplus1/invisibility/tree/bf4156b
-[ver.jukebox]: https://github.com/minetest-mods/jukebox/tree/e6a507f
+[ver.jukebox]: https://github.com/minetest-mods/jukebox/tree/9f31f08
 [ver.lightning]: https://github.com/minetest-mods/lightning/tree/39bd36c
 [ver.mesecons]: https://github.com/minetest-mods/mesecons/tree/564bdc2
 [ver.minetest_game]: https://github.com/minetest/minetest_game/tree/f855bee
@@ -553,6 +553,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.hud]: https://github.com/AntumMT/mod-hud/tree/6846e20
 [patch.hudbars]: https://github.com/AntumMT/mod-hudbars/tree/9ca4f6b
 [patch.invisibility]: https://github.com/AntumMT/mod-invisibility/tree/f045c7c
+[patch.jukebox]: https://github.com/AntumMT/mod-jukebox/tree/5cbba7f
 [patch.mesecons]: https://github.com/AntumMT/mp-mesecons/tree/830823a
 [patch.minetest_game]: https://github.com/AntumMT/mtgame-minetest/tree/4275126
 [patch.mob-engine]: https://github.com/AntumMT/mp-mob-engine/tree/93575e0
