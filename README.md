@@ -56,7 +56,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * materials/
 	* [amber][] ([LGPL][lic.lgpl2.1]) -- version: [21637e8 Git][ver.amber] *2017-08-09*
 	* [gems_encrustable][] ([WTFPL][lic.wtfpl]) -- version: [81d513d Git][ver.gems_encrustable] *2012-07-31* ([patched][patch.gems_encrustable])
-	* [gems_tools][] () -- version: [b375432 Git][ver.gems_tools] *2016-09-03* ([patched][patch.gems_tools])
+	* [gems_tools][] ([GPL][lic.gpl3.0]) -- version: [b375432 Git][ver.gems_tools] *2016-09-03* ([patched][patch.gems_tools])
 	* [moreores][] ([zlib][lic.moreores] / [CC BY-SA][lic.ccbysa3.0]) -- version: [809da6d1 Git][ver.moreores] *2017-07-05* ([patched][patch.moreores])
 	* [quartz][] ([MIT][lic.quartz]) -- version: [00ca4eb Git][ver.quartz] *2017-02-28* ([patched][patch.quartz])
 	* [rainbow_ore][] ([LGPL][lic.rainbow_ore]) -- version: [6e77693 Git][ver.rainbow_ore] *2015-11-02* ([patched][patch.rainbow_ore])
