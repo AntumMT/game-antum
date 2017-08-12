@@ -67,7 +67,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [mobs_animal][] ([MIT][lic.mobs_animal]) -- version: [cadacac Git][ver.mobs_animal] *2017-08-04* ([patched][patch.mobs_animal])
 * mobiles/passive/
     * [peaceful_npc][] ([WTFPL][lic.wtfpl]) -- version: [2b3a7a5 Git][ver.peaceful_npc] *2015-08-09* ([patched][patch.peaceful_npc])
-* [painting][] (???)
+* [painting][] (???) -- version [8961849 Git][ver.painting] *2016-05-05*
 * [pipeworks][] ([WTFPL][lic.wtfpl]) -- version: [2eff6e3 Git][ver.pipeworks] *2017-06-07* ***UPDATE***
 * plantlife/
 * player/action/
@@ -488,6 +488,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.mysheetmetal]: https://github.com/minetest-mods/mysheetmetal/tree/7c5ab71
 [ver.mywoodslopes]: https://github.com/minetest-mods/mywoodslopes/tree/3a1b531
 [ver.nether]: https://github.com/PilzAdam/nether/tree/bc2ccfb
+[ver.painting]: https://github.com/minetest-mods/painting/tree/8961849
 [ver.peaceful_npc]: https://github.com/jojoa1997/peaceful_npc/tree/2b3a7a5
 [ver.pipeworks]: https://github.com/minetest-mods/pipeworks/tree/2eff6e3
 [ver.playeranim]: https://github.com/minetest-mods/playeranim/tree/59bcd38
