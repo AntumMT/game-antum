@@ -173,8 +173,8 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [dinosaurs_aggressive][] -- version: [874f299 Git][ver.dinosaurs_aggressive] *2017-07-27*
 	* velociraptor ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- forked from *mobs_farlands* (part of [farlands][] sub-game)
 * [mob-engine][] ([zlib][lic.mob-engine] / [CC BY-SA][lic.ccbysa3.0]) -- version: [138f655 Git][ver.mob-engine] *2017-06-04* ([patched][patch.mob-engine]) ***UPDATE***
-* [monsters_aggressive[] (see individual mods for licensing) -- version: [9cc652a Git][ver.monsters_aggressive] **2017-08-09*
-* [monsters_passive[] (see individual mods for licensing) -- version: [b07fe19 Git][ver.monsters_passive] **2017-08-09*
+* [monsters_aggressive][] (see individual mods for licensing) -- version: [9cc652a Git][ver.monsters_aggressive] *2017-08-09*
+* [monsters_passive][] (see individual mods for licensing) -- version: [b07fe19 Git][ver.monsters_passive] *2017-08-09*
 * mymods
 	* [mydoors][] ([CC-BY / CC-BY-SA][lic.mydoors] / [WTFPL][lic.wtfpl] / [DWYWFPL][lic.dwywpl]) -- version: [63aef13 Git][ver.mydoors] *2017-03-31* ([patched][patch.mydoors])
 	* [myfences][] ([DWYWPL][lic.dwywpl]) -- version: [c6e529a Git][ver.myfences] *2016-04-04*
