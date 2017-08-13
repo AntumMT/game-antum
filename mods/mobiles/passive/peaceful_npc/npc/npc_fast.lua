@@ -10,7 +10,7 @@ animation_speed = 40
 animation_blend = 0
 
 -- Default player appearance
-default_model = "character.x"
+default_model = "character.b3d"
 available_npc_textures_fast = {
 	fast_texture_1 = {"diamond_ninja.png"},
 	fast_texture_2 = {"tron.png"},
@@ -21,7 +21,7 @@ available_npc_textures_fast = {
 
 -- Frame ranges for each player model
 function npc_get_animations_fast(model)
-	if model == "character.x" then
+	if model == "character.b3d" then
 		return {
 		stand_START = 0,
 		stand_END = 79,
@@ -67,7 +67,7 @@ NPC_ENTITY_FAST = {
 	physical = true,
 	collisionbox = {-0.3,-0.8,-0.3, 0.3,0.6,0.3},
 	visual = "mesh",
-	mesh = "character.x",
+	mesh = "character.b3d",
 	textures = {"character.png"},
 	npc_anim = 0,
 	timer = 0,

@@ -10,7 +10,7 @@ animation_speed = 15
 animation_blend = 0
 
 -- Default player appearance
-default_model_dwarf = "character.x"
+default_model_dwarf = "character.b3d"
 available_npc_textures_dwarf = {
 	dwarf_texture_1 = {"dwarf_commoner.png"},
 	dwarf_texture_2 = {"dwarf_girl.png"},
@@ -20,7 +20,7 @@ available_npc_textures_dwarf = {
 
 -- Frame ranges for each player model
 function npc_get_animations_dwarf(model)
-	if model == "character.x" then
+	if model == "character.b3d" then
 		return {
 		stand_START = 0,
 		stand_END = 79,
@@ -67,7 +67,7 @@ NPC_ENTITY_DWARF = {
 	lightsource = 5,
 	collisionbox = {-0.15,-0.5,-0.15, 0.15,0.4,0.15},
 	visual = "mesh",
-	mesh = "character.x",
+	mesh = "character.b3d",
 	textures = {"character.png"},
 	npc_anim = 0,
 	timer = 0,

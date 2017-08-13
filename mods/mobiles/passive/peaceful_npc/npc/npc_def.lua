@@ -10,7 +10,7 @@ animation_speed = 30
 animation_blend = 0
 
 -- Default player appearance
-default_model_def = "character.x"
+default_model_def = "character.b3d"
 available_npc_textures_def = {
 	def_texture_1 = {"miner.png"},
 	def_texture_2 = {"archer.png"},
@@ -21,7 +21,7 @@ available_npc_textures_def = {
 
 -- Frame ranges for each player model
 function npc_get_animations_def(model)
-	if model == "character.x" then
+	if model == "character.b3d" then
 		return {
 		stand_START = 0,
 		stand_END = 79,
@@ -67,7 +67,7 @@ NPC_ENTITY_DEF = {
 	physical = true,
 	collisionbox = {-0.3,-1.0,-0.3, 0.3,0.8,0.3},
 	visual = "mesh",
-	mesh = "character.x",
+	mesh = "character.b3d",
 	textures = {"character.png"},
 	npc_anim = 0,
 	timer = 0,

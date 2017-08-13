@@ -66,7 +66,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * mobiles/general/
 	* [mobs_animal][] ([MIT][lic.mobs_animal]) -- version: [cadacac Git][ver.mobs_animal] *2017-08-04* ([patched][patch.mobs_animal])
 * mobiles/passive/
-    * [peaceful_npc][] ([WTFPL][lic.wtfpl]) -- version: [2b3a7a5 Git][ver.peaceful_npc] *2015-08-09* ([patched][patch.peaceful_npc])
+    * [peaceful_npc][] ([WTFPL][lic.wtfpl]) -- version: [4b27991 Git][ver.peaceful_npc] *2017-08-12*
 * [painting][] (???) -- version [8961849 Git][ver.painting] *2016-05-05*
 * [pipeworks][] ([WTFPL][lic.wtfpl]) -- version: [2eff6e3 Git][ver.pipeworks] *2017-06-07* ***UPDATE***
 * plantlife/
@@ -485,7 +485,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.mywoodslopes]: https://github.com/minetest-mods/mywoodslopes/tree/3a1b531
 [ver.nether]: https://github.com/PilzAdam/nether/tree/bc2ccfb
 [ver.painting]: https://github.com/minetest-mods/painting/tree/8961849
-[ver.peaceful_npc]: https://github.com/jojoa1997/peaceful_npc/tree/2b3a7a5
+[ver.peaceful_npc]: https://github.com/jojoa1997/peaceful_npc/tree/4b27991
 [ver.pipeworks]: https://github.com/minetest-mods/pipeworks/tree/2eff6e3
 [ver.playeranim]: https://github.com/minetest-mods/playeranim/tree/59bcd38
 [ver.privilegeareas]: https://github.com/minetest-mods/privilegeareas/tree/aebaa00
@@ -561,7 +561,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.mydoors]: https://github.com/AntumMT/mp-mydoors/tree/e36c9d1
 [patch.mysheetmetal]: https://github.com/AntumMT/mod-mysheetmetal/tree/b7d644b
 [patch.nether]: https://github.com/AntumMT/mod-nether/tree/d4e5a2a
-[patch.peaceful_npc]: https://github.com/AntumMT/mod-peaceful_npc/tree/cbae09e
 [patch.playeranim]: https://github.com/AntumMT/mod-playeranim/tree/8a289b9
 [patch.quartz]: https://github.com/AntumMT/mod-quartz/tree/d23dabd
 [patch.rainbow_ore]: https://github.com/AntumMT/mod-rainbow_ore/tree/0227a86
