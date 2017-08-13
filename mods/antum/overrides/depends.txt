@@ -5,6 +5,7 @@ animalmaterials?
 bags?
 carts?
 castle_weapons?
+currency?
 dye?
 ethereal?
 farming?

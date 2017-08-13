@@ -30,6 +30,7 @@ local modoverrides = {
 	'carts',
 	'castle_weapons',
 	'craftguide',
+	'currency',
 	'dye',
 	'ethereal',
 	'farming',
