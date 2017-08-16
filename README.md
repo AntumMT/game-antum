@@ -33,7 +33,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [chatlog][] ([CC0][lic.cc0]) -- version [1.0][ver.chatlog] *2017-08-12*
 * crafting/
     * [craftguide][] ([GPL / WTFPL](mods/crafting/craftguide/LICENSE)) -- version: [86a96c3 Git][ver.craftguide] *2017-03-21* ([patched][patch.craftguide])
-* [currency][] ([WTFPL][lic.currency]) -- version: [3ee673d Git][ver.currency] *2017-05-18* ([patched][patch.currency])
+* [currency][] ([WTFPL][lic.currency]) -- version: [9feb0c9 Git][ver.currency] *2017-08-14*
 * [enchanting][] ([GPL / WTFPL / CC BY-SA-NA][lic.enchanting]) -- version: [13ea31c Git][ver.enchanting] *2016-12-16* ([patched][patch.enchanting])
 * equipment/
 	* [airtanks][] ([MIT][lic.airtanks]) -- version: [5787956 Git][ver.airtanks] *2017-05-13* ([patche][patch.airtanks])
@@ -439,7 +439,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.crafting_bench]: https://github.com/minetest-mods/crafting_bench/tree/ca21489
 [ver.craftguide]: https://github.com/minetest-mods/craftguide/tree/86a96c3
 [ver.crops]: https://github.com/minetest-mods/crops/tree/2b1bb37
-[ver.currency]: https://github.com/minetest-mods/currency/tree/3ee673d
+[ver.currency]: https://github.com/minetest-mods/currency/tree/9feb0c9
 [ver.deploy_nodes]: https://github.com/cornernote/minetest-deploy_nodes/tree/b67e162
 [ver.desert_life]: https://github.com/NathanSalapat/desert_life/tree/d448fa3
 [ver.dinosaurs_aggressive]: https://github.com/AntumMT/mp-dinosaurs_aggressive/tree/874f299
@@ -539,7 +539,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.compassgps]: https://github.com/AntumMT/mod-compassgps/tree/b900f30
 [patch.craftguide]: https://github.com/AntumMT/mod-craftguide/tree/39b7ddf
 [patch.crops]: https://github.com/AntumMT/mod-crops/tree/0c5c649
-[patch.currency]: https://github.com/AntumMT/mod-currency/tree/9e9b1be
 [patch.drawers]: https://github.com/AntumMT/mod-drawers/tree/a77f809
 [patch.enchanting]: https://github.com/AntumMT/mod-enchanting/tree/7a01f2f
 [patch.ethereal]: https://github.com/AntumMT/mod-ethereal/tree/893c199
