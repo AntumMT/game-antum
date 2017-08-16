@@ -25,7 +25,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [elevator][] ([WTFPL][lic.elevator])
     * [fort_spikes][] ([MIT][lic.fort_spikes] / [CC0][lic.cc0]) -- version: [3c7d7c6 Git][ver.fort_spikes] *2017-05-06*
     * [glass][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- version [d61a6c6 Git][ver.glass] *2017-08-15*
-    * [moreblocks][] ([zlib][lic.moreblocks]) -- version: [fbfb079 Git][ver.moreblocks] *2017-03-14* ([patched][patch.moreblocks])
+    * [moreblocks][] ([zlib][lic.moreblocks]) -- version: [7347b05 Git][ver.moreblocks] *2017-08-12* ([patched][patch.moreblocks])
     * [windmill][] ([WTFPL][lic.windmill]) -- version: [47b029d Git][ver.windmill] *2014-08-21* ([patched][patch.windmill])
 * [campfire][] ([GPL][lic.gpl2.0] / [CC BY-SA][lic.ccbysa] / [WTFPL][lic.campfire]) -- version: [04b4ea5 Git][ver.campfire] *2017-06-08*
 * chat/
@@ -476,7 +476,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.monsters_aggressive]: https://github.com/AntumMT/mp-monsters_aggressive/tree/9cc652a
 [ver.monsters_passive]: https://github.com/AntumMT/mp-monsters_passive/tree/b07fe19
 [ver.more_chests]: https://github.com/minetest-mods/more_chests/tree/c597779
-[ver.moreblocks]: https://github.com/minetest-mods/moreblocks/tree/fbfb079
+[ver.moreblocks]: https://github.com/minetest-mods/moreblocks/tree/7347b05
 [ver.moremesecons]: https://github.com/minetest-mods/MoreMesecons/tree/aa2ae82
 [ver.moreores]: https://github.com/minetest-mods/moreores/tree/809da6d1
 [ver.mthudclock]: https://github.com/Rochambeau/mthudclock/tree/b3e2142
@@ -560,7 +560,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.mobf_core]: https://github.com/AntumMT/mp-mobf_core/tree/d532137
 [patch.mobs_animal]: https://github.com/AntumMT/mod-mobs_animal/tree/1d5f1ca
 [patch.mobs_redo]: https://github.com/AntumMT/mod-mobs_redo/tree/94d14e5
-[patch.moreblocks]: https://github.com/AntumMT/mod-moreblocks/tree/e5d5449
+[patch.moreblocks]: https://github.com/AntumMT/mod-moreblocks/tree/82aa7cd
 [patch.moreores]: https://github.com/AntumMT/mod-moreores/tree/f574a02
 [patch.mydoors]: https://github.com/AntumMT/mp-mydoors/tree/e36c9d1
 [patch.mysheetmetal]: https://github.com/AntumMT/mod-mysheetmetal/tree/b7d644b
