@@ -101,7 +101,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * ui/
     * [bookmarks_gui][] ([BSD 3-Clause][lic.bookmarks_gui]) -- version: [0fd80bc Git][ver.bookmarks_gui] *2017-08-14*
     * [hbarmor][] ([WTFPL][lic.wtfpl] / [CC BY-SA][lic.ccbysa3.0]) -- version: [ceb313e Git][ver.hbarmor] *2017-07-08* ([patched][patch.hbarmor]) ***UPDATE***
-    * [home_gui][] ([BSD 3-Clause](mods/ui/home_gui/LICENSE)) -- version: [f6b5001 Git][ver.home_gui] *2015-08-14* ([patched][patch.home_gui])
+    * [home_gui][] ([BSD 3-Clause](mods/ui/home_gui/LICENSE)) -- version: [15a1cdd Git][ver.home_gui] *2017-08-14*
     * [hudbars][] ([WTFPL][lic.wtfpl] / [CC BY-SA][lic.ccbysa3.0]) -- version [1.8.0 (bd0641a Git)][ver.hudbars] *2017-05-29* ([patched][patch.hudbars]) ***UPDATE***
     * [hudmap][] ([LGPL][lic.lgpl2.1] / [WTFPL][lic.wtfpl]) -- version: [09d40f3 Git][ver.hudmap] *2014-08-15* ***UPDATE***
     * [mthudclock][] ([WTFPL][lic.wtfpl]) -- version [b3e2142 Git][ver.mthudclock] *2015-04-17*
@@ -457,7 +457,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.helicopter]: https://github.com/SokolovPavel/helicopter/tree/10f1433
 [ver.helicopter_pm]: https://github.com/petermaloney/helicopter/tree/abdf5fa
 [ver.hill_nodebox]: https://github.com/cornernote/minetest-hill_nodebox/tree/41bbfa2
-[ver.home_gui]: https://github.com/cornernote/minetest-home_gui/tree/f6b5001
+[ver.home_gui]: https://github.com/cornernote/minetest-home_gui/tree/15a1cdd
 [ver.homedecor]: https://github.com/minetest-mods/homedecor_modpack/tree/5c52111
 [ver.hovercraft]: https://github.com/stujones11/hovercraft/tree/4d50e68
 [ver.hudbars]: http://repo.or.cz/minetest_hudbars.git/tree/bd0641a
@@ -549,7 +549,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.hbarmor]: https://github.com/AntumMT/mod-hbarmor/tree/587dae9
 [patch.hbsprint]: https://github.com/AntumMT/mod-hbsprint/tree/f406038
 [patch.helicopter]: https://github.com/AntumMT/mod-helicopter/tree/9ffee1f
-[patch.home_gui]: https://github.com/AntumMT/mod-home_gui/tree/588e78f
 [patch.homedecor]: https://github.com/AntumMT/mp-homedecor/tree/d0d79dc
 [patch.hovercraft]: https://github.com/AntumMT/mod-hovercraft/tree/73a6223
 [patch.hud]: https://github.com/AntumMT/mod-hud/tree/6846e20
