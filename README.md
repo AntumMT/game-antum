@@ -113,7 +113,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [coloredwood][] ([LGPL][lic.lgpl3.0]) -- version: [bd490be Git][ver.coloredwood] *2017-05-18*
 * world/
     * [bedrock2][] ([WTFPL][lic.wtfpl]) -- version [63dbab8 Git][ver.bedrock2] *2017-06-20* ([patched][patch.bedrock2])
-    * [biome_lib][] ([WTFPL][lic.wtfpl]) -- version: [7f54d95 Git][ver.biome_lib] *2017-05-18* ([patched][patch.biome_lib])
+    * [biome_lib][] ([WTFPL][lic.wtfpl]) -- version: [e6bfd4c Git][ver.biome_lib] *2017-08-12* ([patched][patch.biome_lib])
     * [desert_life][] ([CC BY-SA][lic.ccbysa4.0]) -- version: [d448fa3 Git][ver.desert_life] *2017-01-01*
     * [ethereal][] ([MIT][lic.ethereal]) -- version [6c8ea9e Git][ver.ethereal] *2017-07-09* ([patched][patch.ethereal]) ***UPDATE***
     * [hill_nodebox][] ([BSD 3-Clause][lic.hill_nodebox]) -- version [41bbfa2 Git][ver.hill_nodebox] *2014-12-13*
@@ -418,7 +418,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.away]: https://github.com/kahrl/minetest-mod-away/tree/4c1e5a9
 [ver.bags]: https://github.com/cornernote/minetest-bags/tree/8a02b4d
 [ver.bedrock2]: http://repo.or.cz/minetest_bedrock2.git/tree/63dbab8
-[ver.biome_lib]: https://github.com/minetest-mods/biome_lib/tree/7f54d95
+[ver.biome_lib]: https://github.com/minetest-mods/biome_lib/tree/e6bfd4c
 [ver.boats2]: https://github.com/amadin/boats/tree/b83231e
 [ver.bookmarks_gui]: https://github.com/cornernote/minetest-bookmarks_gui/tree/0fd80bc
 [ver.bridges]: https://github.com/Sokomine/bridges/tree/5b5f475
@@ -526,7 +526,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.awards]: https://github.com/AntumMT/mod-awards/tree/638c137
 [patch.away]: https://github.com/AntumMT/mod-away/tree/3b0bf9e
 [patch.bedrock2]: https://github.com/AntumMT/mod-bedrock2/tree/344fdae
-[patch.biome_lib]: https://github.com/AntumMT/mod-biome_lib/tree/83c9426
+[patch.biome_lib]: https://github.com/AntumMT/mod-biome_lib/tree/4e95b1e
 [patch.boats2]: https://github.com/AntumMT/mod-boats2/tree/ccd7f2d
 [patch.bridges]: https://github.com/AntumMT/mod-bridges/tree/ba8f71a
 [patch.castle_gates]: https://github.com/AntumMT/mod-castle_gates/tree/465ad4f
