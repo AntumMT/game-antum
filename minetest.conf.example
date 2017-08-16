@@ -1619,6 +1619,24 @@ inventory = sfinv
 
 
 
+###########
+## ADMIN ##
+###########
+
+# *** whitelist ***
+
+## Enables/Disables whitelist feature.
+#    type:    bool
+#    default: false
+#whitelist.enable = false
+
+## Sets a custom message to display when access to server is denied.
+#    type:    string
+#    default: This server is whitelisted and you are not on the whitelist.
+#whitelist.message = This server is whitelisted and you are not on the whitelist.
+
+
+
 #####################
 ## TOOLS / WEAPONS ##
 #####################
