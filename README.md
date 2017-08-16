@@ -81,7 +81,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * protection/
     * [simple_protection][] ([WTFPL][lic.wtfpl]) -- version [574ecb8 Git][ver.simple_protection] *2017-07-15*
 * signs/
-	* [signs_lib][] ([BSD][lic.signs_lib] / [WTFPL][lic.wtfpl]) -- version: [3e00159 Git][ver.signs_lib] *2017-05-20* ([patched][patch.signs_lib]) ***UPDATE***
+	* [signs_lib][] ([BSD][lic.signs_lib] / [WTFPL][lic.wtfpl]) -- version: [f6b8c94 Git][ver.signs_lib] *2017-08-12*
 * sound/
     * [ambience][ambience_ultralite] ([WTFPL][lic.wtfpl] / [CC BY / CC BY-SA / CC BY-NC-SA / CC0][lic.ambience_ultralite]) -- version: 0.36
 * spawning/
@@ -497,7 +497,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.quartz]: https://github.com/minetest-mods/quartz/tree/00ca4eb
 [ver.rainbow_ore]: https://github.com/FsxShader2012/rainbow_ore/tree/6e77693
 [ver.sfinv_buttons]: http://repo.or.cz/minetest_sfinv_buttons.git/tree/4f3b075
-[ver.signs_lib]: https://github.com/minetest-mods/signs_lib/tree/3e00159
+[ver.signs_lib]: https://github.com/minetest-mods/signs_lib/tree/f6b8c94
 [ver.simple_protection]: https://github.com/SmallJoker/simple_protection/tree/574ecb8
 [ver.slingshot]: https://github.com/AntumMT/mod-slingshot/tree/ef698e8
 [ver.snowdrift]: https://github.com/paramat/snowdrift/tree/fcb0537
@@ -567,7 +567,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.playeranim]: https://github.com/AntumMT/mod-playeranim/tree/8a289b9
 [patch.quartz]: https://github.com/AntumMT/mod-quartz/tree/d23dabd
 [patch.rainbow_ore]: https://github.com/AntumMT/mod-rainbow_ore/tree/0227a86
-[patch.signs_lib]: https://github.com/AntumMT/mod-signs_lib/tree/47d3dd0
 [patch.snowdrift]: https://github.com/AntumMT/mod-snowdrift/tree/1b9da4f
 [patch.spawneggs]: https://github.com/AntumMT/mod-spawneggs/tree/f2cc4cc
 [patch.technic]: https://github.com/AntumMT/mp-technic/tree/28eaaec
