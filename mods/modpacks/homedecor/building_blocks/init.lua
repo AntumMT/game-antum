@@ -1,6 +1,13 @@
 
 local S = homedecor_i18n.gettext
 
+local tool_wear = minetest.settings:get_bool("enable_tool_wear") ~= false
+
+local knife_uses = 100
+if not tool_wear then
+	knife_uses = 0
+end
+
 minetest.register_node("building_blocks:Adobe", {
 	tiles = {"building_blocks_Adobe.png"},
 	description = S("Adobe"),
@@ -590,8 +597,8 @@ minetest.register_tool("building_blocks:knife", {
 	tool_capabilities = {
 		max_drop_level=0,
 		groupcaps={
-			choppy={times={[2]=7.50, [3]=2.80}, uses=0, maxlevel=1},
-			fleshy={times={[2]=5.50, [3]=2.80}, uses=0, maxlevel=1}
+			choppy={times={[2]=7.50, [3]=2.80}, uses=knife_uses, maxlevel=1},
+			fleshy={times={[2]=5.50, [3]=2.80}, uses=knife_uses, maxlevel=1}
 		}
 	},
 })

@@ -72,9 +72,6 @@ homedecor.register("bed_regular", {
 			end
 			return itemstack
 		end
-		if minetest.get_modpath("beds") then
-			beds.on_rightclick(pos, clicker)
-		end
 		return itemstack
 	end
 })
