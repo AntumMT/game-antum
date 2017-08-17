@@ -47,6 +47,7 @@ core.register_globalstep(function(dtime)
 	-- Reset cooldown
 	tmp_throw_timer = 0
 	for i, t in pairs(tmp_throw) do
+		local puncher = core.get_player_by_name(t.user)
 		t.timer = t.timer-0.25
 		if t.timer <= 0 or t.ob == nil or t.ob:getpos() == nil then table.remove(tmp_throw, i) return end
 		for ii, ob in pairs(core.get_objects_inside_radius(t.ob:getpos(), 1.5)) do
@@ -54,7 +55,7 @@ core.register_globalstep(function(dtime)
 				-- Which entities can be attacked (mobs & other players unless PVP is enabled)
 				if (not ob:is_player()) or (ob:is_player() and ob:get_player_name(ob) ~= t.user and core.settings:get_bool('enable_pvp') == true) then
 					-- FIXME: Don't use 'ob' for puncher
-					ob:punch(ob, 1.0, {damage_groups={fleshy=4}}, nil)
+					ob:punch(puncher, 1.0, {damage_groups={fleshy=4}}, nil)
 					t.ob:setvelocity({x=0, y=0, z=0})
 					t.ob:setacceleration({x=0, y=-10, z=0})
 					t.ob:setvelocity({x=0, y=-10, z=0})
