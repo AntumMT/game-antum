@@ -47,6 +47,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [jukebox][] ([WTFPL / CC0][lic.jukebox]) -- version: [21fdffa Git][ver.jukebox] *2017-08-12*
     * [trampoline][] ([GPL][lic.gpl3.0]) -- version: [ab1c289 Git][ver.trampoline] *2017-05-26*
     * [trash_can][] ([MIT][lic.trash_can]) -- version: [5fd3df7 Git][ver.trash_can] *2016-01-14* ([patched][patch.trash_can])
+    * [waffles][] ([CC0][lic.cc0]) -- version [b02ffbf Git][ver.waffles] *2017-08-04*
 * [intllib][] ([Unlicense][lic.unlicense]) -- version: [7b818cb Git][ver.intllib] *2017-07-10*
 * inventory/
     * [bags][] ([BSD 3-Clause][lic.bags]) -- version: [8a02b4d Git][ver.bags] *2017-08-07*
@@ -303,6 +304,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [unifieddyes]: https://forum.minetest.net/viewtopic.php?t=2178
 [vector_extras]: https://forum.minetest.net/viewtopic.php?t=8533
 [vines]: https://forum.minetest.net/viewtopic.php?f=11&t=2344
+[waffles]: https://forum.minetest.net/viewtopic.php?t=16669
 [walking_light]: https://github.com/petermaloney/walking_light
 [wardrobe]: https://forum.minetest.net/viewtopic.php?t=9680
 [weather]: https://forum.minetest.net/viewtopic.php?t=5245
@@ -511,6 +513,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.trash_can]: https://github.com/minetest-mods/trash_can/tree/5fd3df7
 [ver.unifieddyes]: https://github.com/minetest-mods/unifieddyes/tree/8b20a06
 [ver.vector_extras]: https://github.com/HybridDog/vector_extras/tree/472deb6
+[ver.waffles]: https://github.com/GreenXenith/waffles/tree/b02ffbf
 [ver.walking_light]: https://github.com/petermaloney/walking_light/tree/b23d836
 [ver.wardrobe]: https://github.com/prestidigitator/minetest-mod-wardrobe/tree/c48b011
 [ver.whitelist]: https://github.com/ShadowNinja/whitelist/tree/38e97c9
