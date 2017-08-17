@@ -301,6 +301,17 @@ listitems.enable_generic (Enable generic "list" command) bool false
 listitems.enable_mobs (Enable "listmobs" command) bool true
 
 
+[*mobs_redo]
+
+# Disable blood splatter when attacking mobs.
+mobs_disable_blood (Disable mobs blood) bool false
+
+mob_difficulty (Mob difficulty) float 1.0
+
+# Show mobs' health when attacked.
+mob_show_health (Show mobs health) bool true
+
+
 [*pipeworks]
 
 #Enable pipes.

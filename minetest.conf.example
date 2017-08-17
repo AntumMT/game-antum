@@ -1816,6 +1816,24 @@ creatures.mobs_replace_items = true
 mobs_animal:sheep_white = 0
 
 
+# *** mobs_redo ***
+
+## Disable blood splatter when attacking mobs.
+#    type:    bool
+#    default: false
+#mobs_disable_blood = false
+
+## Mob difficulty.
+#    type:    float
+#    default: 1.0
+#mob_difficulty = 1.0
+
+## Show mobs' health when attacked.
+#    type:    bool
+#    default: true
+#mob_show_health = true
+
+
 # *** sneeker ***
 
 # Sets maximum number of spawns that can exist in world.
