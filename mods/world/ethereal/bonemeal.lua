@@ -226,6 +226,11 @@ local function growth(pointed_thing)
 		elseif node.name == "default:aspen_sapling"
 		and enough_height(pos, 11) then
 			default.grow_new_aspen_tree(pos)
+
+		elseif node.name == "default:bush_sapling" then
+			default.grow_bush(pos)
+		elseif node.name == "default:acacia_bush_sapling" then
+			default.grow_acacia_bush(pos)
 		end
 
 		return

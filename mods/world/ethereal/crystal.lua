@@ -166,51 +166,38 @@ minetest.register_craft({
 	}
 })
 
--- Crystal Shovel (with Soft Touch so player can dig up dirt with grass intact)
+local old_handle_node_drops = minetest.handle_node_drops
+
+function minetest.handle_node_drops(pos, drops, digger)
+
+	-- are we holding Crystal Shovel?
+	if digger:get_wielded_item():get_name() ~= "ethereal:shovel_crystal" then
+		return old_handle_node_drops(pos, drops, digger)
+	end
+
+	local nn = minetest.get_node(pos).name
+
+	if minetest.get_item_group(nn, "crumbly") == 0 then
+		return old_handle_node_drops(pos, drops, digger)
+	end
+
+	return old_handle_node_drops(pos, {ItemStack(nn)}, digger)
+end
+
+
 minetest.register_tool("ethereal:shovel_crystal", {
-	description = S("Crystal (soft touch) Shovel"),
+	description = "Crystal Shovel",
 	inventory_image = "crystal_shovel.png",
 	wield_image = "crystal_shovel.png^[transformR90",
+	tool_capabilities = {
+		full_punch_interval = 1.0,
+		max_drop_level=1,
+		groupcaps={
+			crumbly = {times={[1]=1.10, [2]=0.50, [3]=0.30}, uses=30, maxlevel=3},
+		},
+		damage_groups = {fleshy=4},
+	},
 	sound = {breaks = "default_tool_breaks"},
-	on_use = function(itemstack, user, pointed_thing)
-
-		if pointed_thing.type ~= "node" then
-			return
-		end
-
-		-- Check if node protected
-		if minetest.is_protected(pointed_thing.under, user:get_player_name()) then
-			return
-		end
-
-		local pos = pointed_thing.under
-		local nn = minetest.get_node(pos).name
-
-		-- Is node dirt, sand or gravel
-		if minetest.get_item_group(nn, "crumbly") > 0 then
-
-			local inv = user:get_inventory()
-
-			minetest.remove_node(pointed_thing.under)
-
-			ethereal.check_falling(pos)
-
-			if minetest.settings:get_bool("creative_mode") then
-
-				if not inv:contains_item("main", {name = nn}) then
-					inv:add_item("main", {name = nn})
-				end
-			else
-
-				inv:add_item("main", {name = nn})
-				itemstack:add_wear(65535 / 100) -- 111 uses
-			end
-
-			minetest.sound_play("default_dig_crumbly", {pos = pos, gain = 0.4})
-
-			return itemstack
-		end
-	end,
 })
 
 minetest.register_craft({
@@ -244,3 +231,22 @@ minetest.register_craft({
 		"ethereal:crystal_ingot"
 	},
 })
+
+-- Add [toolranks] mod support if found
+if minetest.get_modpath("toolranks") then
+
+minetest.override_item("ethereal:pick_crystal", {
+	original_description = "Crystal Pickaxe",
+	description = toolranks.create_description("Crystal Pickaxe", 0, 1),
+	after_use = toolranks.new_afteruse})
+
+minetest.override_item("ethereal:axe_crystal", {
+	original_description = "Crystal Axe",
+	description = toolranks.create_description("Crystal Axe", 0, 1),
+	after_use = toolranks.new_afteruse})
+
+minetest.override_item("ethereal:shovel_crystal", {
+	original_description = "Crystal Shovel",
+	description = toolranks.create_description("Crystal Shovel", 0, 1),
+	after_use = toolranks.new_afteruse})
+end

@@ -10,6 +10,12 @@ Ethereal Mapgen mod for Minetest (works on all except v6)
 
 ## Changelog
 
+### 1.23
+
+ - Added bonemeal support for bush sapling and acacia bush sapling
+ - Added support for [toolranks] mod if found
+ - Reworked Crystal Shovel so it acts more like a normal shovel with soft touch
+
 ### 1.22
 
  - Added coral and silver sand to mapgen (0.4.15 only)
