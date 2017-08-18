@@ -1,5 +1,6 @@
 --[[
--- Whitelist mod by ShadowNinja
+-- Whiter List mod by Jordan Irwin (AntumDeluge)
+-- Original Whitelist mod by ShadowNinja
 -- License: CC0
 --]]
 

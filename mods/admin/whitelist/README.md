@@ -1,10 +1,12 @@
-## Whitelist Mod for [Minetest][]
+## Whiter List (*whitelist*) Mod for [Minetest][]
 
 
 ---
 ### **Description:**
 
 This is a simple Minetest mod that adds a player whitelist. Any player names not found in the whitelist are denied access to the server.
+
+Original [White List][] mod by ShadowNinja.
 
 - Commands:
   - ***/whitelist add <name>***
@@ -26,3 +28,4 @@ CC0
 
 
 [Minetest]: http://www.minetest.net/
+[White List]: https://forum.minetest.net/viewtopic.php?t=8434
