@@ -578,6 +578,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.trash_can]: https://github.com/AntumMT/mod-trash_can/tree/5a92bf4
 [patch.unifieddyes]: https://github.com/AntumMT/mod-unifieddyes/tree/9c2f740
 [patch.walking_light]: https://github.com/AntumMT/mod-walking_light/tree/e602515
-[patch.whitelist]: https://github.com/AntumMT/mod-whitelist/tree/13e8686
+[patch.whitelist]: https://github.com/AntumMT/mod-whitelist/tree/9a254b5
 [patch.windmill]: https://github.com/AntumMT/mod-windmill/tree/7756ab4
 [patch.workbench]: https://github.com/AntumMT/mod-workbench/tree/b964323
