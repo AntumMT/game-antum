@@ -74,7 +74,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [pipeworks][] ([WTFPL][lic.wtfpl]) -- version: [2eff6e3 Git][ver.pipeworks] *2017-06-07* ***UPDATE***
 * plantlife/
 * player/action/
-	* [hbsprint][] ([LGPL][lic.lgpl2.1]) -- version: [c473d57 Git][ver.hbsprint] *2017-08-07* ([patched][patch.hbsprint])
+	* [hbsprint][] ([LGPL][lic.lgpl2.1]) -- version: [7fd2beb Git][ver.hbsprint] *2017-08-23* ([patched][patch.hbsprint])
 * player/visuals/
     * [invisibility][] ([MIT][lic.invisibility]) -- version: [bf4156b Git][ver.invisibility] *2016-08-19* ([patched][patch.invisibility]) ***UPDATE***
     * [playeranim][] ([BSD 2-Clause][lic.playeranim]) - version [59bcd38 Git][ver.playeranim] *2017-06-07* ([patched][patch.playeranim]) ***UPDATE***
@@ -455,7 +455,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.glass]: https://github.com/AntumMT/mod-glass/tree/d61a6c6
 [ver.glow]: https://github.com/bdjnk/glow/tree/c611ae0
 [ver.hbarmor]: http://repo.or.cz/minetest_hbarmor.git/tree/ceb313e
-[ver.hbsprint]: https://github.com/tacotexmex/hbsprint/tree/c473d57
+[ver.hbsprint]: https://github.com/tacotexmex/hbsprint/tree/7fd2beb
 [ver.helicopter]: https://github.com/SokolovPavel/helicopter/tree/10f1433
 [ver.helicopter_pm]: https://github.com/petermaloney/helicopter/tree/abdf5fa
 [ver.hill_nodebox]: https://github.com/cornernote/minetest-hill_nodebox/tree/41bbfa2
@@ -549,7 +549,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.gems_encrustable]: https://github.com/AntumMT/mod-gems_encrustable/tree/a043b9c
 [patch.gems_tools]: https://github.com/AntumMT/mod-gems_tools/tree/cc86c61
 [patch.hbarmor]: https://github.com/AntumMT/mod-hbarmor/tree/587dae9
-[patch.hbsprint]: https://github.com/AntumMT/mod-hbsprint/tree/f406038
+[patch.hbsprint]: https://github.com/AntumMT/mod-hbsprint/tree/e2a8d88
 [patch.helicopter]: https://github.com/AntumMT/mod-helicopter/tree/9ffee1f
 [patch.homedecor]: https://github.com/AntumMT/mp-homedecor/tree/8e0e64c
 [patch.hovercraft]: https://github.com/AntumMT/mod-hovercraft/tree/73a6223
