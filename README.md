@@ -71,7 +71,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * mobiles/passive/
     * [peaceful_npc][] ([WTFPL][lic.wtfpl]) -- version: [4b27991 Git][ver.peaceful_npc] *2017-08-12*
 * [painting][] (???) -- version [8961849 Git][ver.painting] *2016-05-05*
-* [pipeworks][] ([WTFPL][lic.wtfpl]) -- version: [2eff6e3 Git][ver.pipeworks] *2017-06-07* ***UPDATE***
+* [pipeworks][] ([WTFPL][lic.wtfpl]) -- version: [a5e1bfa Git][ver.pipeworks] *2017-08-20*
 * plantlife/
 * player/action/
 	* [hbsprint][] ([LGPL][lic.lgpl2.1]) -- version: [7fd2beb Git][ver.hbsprint] *2017-08-23* ([patched][patch.hbsprint])
@@ -493,7 +493,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.nether]: https://github.com/PilzAdam/nether/tree/bc2ccfb
 [ver.painting]: https://github.com/minetest-mods/painting/tree/8961849
 [ver.peaceful_npc]: https://github.com/jojoa1997/peaceful_npc/tree/4b27991
-[ver.pipeworks]: https://github.com/minetest-mods/pipeworks/tree/2eff6e3
+[ver.pipeworks]: https://github.com/minetest-mods/pipeworks/tree/a5e1bfa
 [ver.playeranim]: https://github.com/minetest-mods/playeranim/tree/59bcd38
 [ver.privilegeareas]: https://github.com/minetest-mods/privilegeareas/tree/aebaa00
 [ver.quartz]: https://github.com/minetest-mods/quartz/tree/00ca4eb
