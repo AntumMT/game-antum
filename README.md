@@ -65,9 +65,9 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [rainbow_ore][] ([LGPL][lic.rainbow_ore]) -- version: [6e77693 Git][ver.rainbow_ore] *2015-11-02* ([patched][patch.rainbow_ore])
 	* [unifieddyes][] ([GPL][lic.gpl2.0]) -- version: [8b20a06 Git][ver.unifieddyes] *2017-06-04* ([patched][patch.unifieddyes]) ***UPDATE***
 * mobiles/engine/
-    * [mobs_redo][] ([MIT][lic.mobs_redo] / [CC BY][lic.ccby3.0] / [CC0][lic.cc0]) -- version: [ba167a3 Git][ver.mobs_redo] *2017-08-07* ([patched][patch.mobs_redo])
+    * [mobs_redo][] ([MIT][lic.mobs_redo] / [CC BY][lic.ccby3.0] / [CC0][lic.cc0]) -- version: [ba167a3 Git][ver.mobs_redo] *2017-08-07* ([patched][patch.mobs_redo]) ***UPDATE***
 * mobiles/general/
-	* [mobs_animal][] ([MIT][lic.mobs_animal]) -- version: [cadacac Git][ver.mobs_animal] *2017-08-04* ([patched][patch.mobs_animal])
+	* [mobs_animal][] ([MIT][lic.mobs_animal]) -- version: [cadacac Git][ver.mobs_animal] *2017-08-04* ([patched][patch.mobs_animal]) ***UPDATE***
 * mobiles/passive/
     * [peaceful_npc][] ([WTFPL][lic.wtfpl]) -- version: [4b27991 Git][ver.peaceful_npc] *2017-08-12*
 * [painting][] (???) -- version [8961849 Git][ver.painting] *2016-05-05*
