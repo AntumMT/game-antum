@@ -137,24 +137,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 * [3d_armor][] ([LGPL / CC BY-SA][lic.3d_armor]) - version: [cc26d04 Git][ver.3d_armor] *2017-07-09* ([patched][patch.3d_armor]) ***UPDATE***
 * [animalmaterials][animals] (part of "animals" modpack) ([CC0][lic.cc0] / [CC BY-SA][lic.ccbysa3.0]) -- version: [0.1.3 (aa4697c Git)][ver.animalmaterials] *2016-09-20* ([patched][patch.animalmaterials])
-* [animals][] -- version: [b9d0172 Git][ver.animals] *2017-03-22* ([patched][patch.animals])
-	* modpacks/animals/
-		* animal_chicken ([CC BY-SA / CC0][lic.amp_chicken])
-		* animal_clownfish ([CC BY-SA][lic.amp_clownfish])
-		* animal_cow ([CC BY-SA / GFDL / WTFPL][lic.amp_cow])
-		* animal_deer ([CC BY-SA][lic.amp_deer])
-		* animal_dm ([CC0 / CC BY-SA][lic.amp_dm])
-		* animal_fish_blue_white ([CC BY-SA][lic.amp_fish_blue_white])
-		* animal_gull ([CC BY-SA][lic.amp_gull])
-		* animal_rat ([CC0 / CC BY-SA][lic.amp_rat])
-		* animal_sheep ([CC BY-SA / GFDL][lic.amp_sheep])
-		* mob_bear ([CC0 / CC BY-SA][lic.amp_bear])
-		* mob_ghost ([CC BY-SA][lic.amp_ghost])
-		* mob_oerkki ([CC0 / CC BY-SA][lic.amp_oerkki])
-		* mob_ostrich ([CC BY-SA][lic.amp_ostrich])
-		* mob_shark ([CC BY-SA][lic.amp_shark])
-		* mob_slime ([CC0 / CC BY / CC BY-SA / CC0][lic.amp_slime])
-		* mob_warthog ([CC BY / CC BY-SA][lic.amp_warthog])
 * [deploy_nodes][] ([BSD 3-Clause][lic.deploy_nodes]) -- version [b67e162 Git][ver.deploy_nodes] *2017-06-08*
 * [homedecor][] ([LGPL / WTFPL / CC BY-SA / CC0][lic.homedecor]) -- version: [a6c17d6 Git][ver.homedecor] *2017-06-16* ([patched][patch.homedecor]) ***UPDATE***
 * [mesecons][] ([LGPL / CC BY-SA][lic.mesecons]) -- version: [564bdc2 Git][ver.mesecons] *2017-05-08* ([patched][patch.mesecons])
@@ -415,7 +397,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.airtanks]: https://github.com/minetest-mods/airtanks/tree/5787956
 [ver.amber]: https://github.com/theraven262/amber/tree/21637e8
 [ver.animalmaterials]: https://github.com/sapier/animalmaterials/tree/aa4697c
-[ver.animals]: https://github.com/sapier/animals_modpack/tree/b9d0172
 [ver.animals_aggressive]: https://github.com/AntumMT/mp-animals_aggressive/tree/2c913bb
 [ver.animals_harmless]: https://github.com/AntumMT/mp-animals_harmless/tree/e9b02a8
 [ver.antum]: https://github.com/AntumMT/mp-antum/tree/62c0f6e
@@ -528,7 +509,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.adv_spawning]: https://github.com/AntumMT/mod-adv_spawning/tree/757197a
 [patch.airtanks]: https://github.com/AntumMT/mod-airtanks/tree/71ea616
 [patch.animalmaterials]: https://github.com/AntumMT/mp-animalmaterials/tree/b5d8315
-[patch.animals]: https://github.com/AntumMT/mp-animals_modpack/tree/9d08ca5
 [patch.awards]: https://github.com/AntumMT/mod-awards/tree/638c137
 [patch.away]: https://github.com/AntumMT/mod-away/tree/3b0bf9e
 [patch.bedrock2]: https://github.com/AntumMT/mod-bedrock2/tree/344fdae
