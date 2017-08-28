@@ -96,7 +96,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * sound/
     * [ambience][ambience_ultralite] ([WTFPL][lic.wtfpl] / [CC BY / CC BY-SA / CC BY-NC-SA / CC0][lic.ambience_ultralite]) -- version: 0.36
 * spawning/
-	* [adv_spawning][animals] (part of "animals" modpack) ([WTFPL][lic.wtfpl]) -- version: [0.0.13 (ec41aa9 Git)][ver.adv_spawning] *2015-12-28* ([patched][patch.adv_spawning])
 	* [spawneggs][] ([WTFPL][lic.spawneggs]) -- version [4650370 Git][ver.spawneggs] *2013-09-09* ([patched][patch.spawneggs])
 * storage/
 	* [drawers][] ([MIT][lic.drawers]) -- version: [0.4.3 (7063e2b Git)][ver.drawers] *2017-06-04* ([patched][patch.drawers]) ***UPDATE***
@@ -299,23 +298,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.3d_armor]: mods/modpacks/3d_armor/LICENSE.md
 [lic.airtanks]: mods/equipment/airtanks/LICENSE.txt
 [lic.ambience_ultralite]: mods/sound/ambience/sounds/SoundLicenses.txt
-[lic.amp_adv_spawning]: mods/spawning/adv_spawning/README.txt
-[lic.amp_bear]: mods/modpacks/animals/mob_bear/License.txt
-[lic.amp_chicken]: mods/modpacks/animals/animal_chicken/License.txt
-[lic.amp_clownfish]: mods/modpacks/animals/animal_clownfish/License.txt
-[lic.amp_cow]: mods/modpacks/animals/animal_cow/License.txt
-[lic.amp_deer]: mods/modpacks/animals/animal_deer/License.txt
-[lic.amp_dm]: mods/modpacks/animals/animal_dm/License.txt
-[lic.amp_fish_blue_white]: mods/modpacks/animals/animal_fish_blue_white/License.txt
-[lic.amp_ghost]: mods/modpacks/animals/mob_ghost/License.txt
-[lic.amp_gull]: mods/modpacks/animals/animal_gull/License.txt
-[lic.amp_oerkki]: mods/modpacks/animals/mob_oerkki/License.txt
-[lic.amp_ostrich]: mods/modpacks/animals/mob_ostrich/License.txt
-[lic.amp_rat]: mods/modpacks/animals/animal_rat/License.txt
-[lic.amp_shark]: mods/modpacks/animals/mob_shark/License.txt
-[lic.amp_sheep]: mods/modpacks/animals/animal_sheep/License%20information.txt
-[lic.amp_slime]: mods/modpacks/animals/mob_slime/License.txt
-[lic.amp_warthog]: mods/modpacks/animals/mob_warthog/License.txt
 [lic.antum]: mods/antum/LICENSE.txt
 [lic.awards]: mods/awards/LICENSE.txt
 [lic.bags]: mods/inventory/bags/LICENSE
@@ -389,7 +371,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.zlib]: doc/licenses/zlib.txt
 
 [ver.3d_armor]: https://github.com/stujones11/minetest-3d_armor/tree/cc26d04
-[ver.adv_spawning]: https://github.com/sapier/adv_spawning/tree/ec41aa9
 [ver.airtanks]: https://github.com/minetest-mods/airtanks/tree/5787956
 [ver.amber]: https://github.com/theraven262/amber/tree/21637e8
 [ver.animals_aggressive]: https://github.com/AntumMT/mp-animals_aggressive/tree/2c913bb
@@ -500,7 +481,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.worldedge]: https://github.com/minetest-mods/worldedge/tree/608462d
 
 [patch.3d_armor]: https://github.com/AntumMT/mp-3d_armor/tree/97c13a6
-[patch.adv_spawning]: https://github.com/AntumMT/mod-adv_spawning/tree/757197a
 [patch.airtanks]: https://github.com/AntumMT/mod-airtanks/tree/71ea616
 [patch.awards]: https://github.com/AntumMT/mod-awards/tree/638c137
 [patch.away]: https://github.com/AntumMT/mod-away/tree/3b0bf9e
