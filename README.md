@@ -65,7 +65,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [rainbow_ore][] ([LGPL][lic.rainbow_ore]) -- version: [6e77693 Git][ver.rainbow_ore] *2015-11-02* ([patched][patch.rainbow_ore])
 	* [unifieddyes][] ([GPL][lic.gpl2.0]) -- version: [8b20a06 Git][ver.unifieddyes] *2017-06-04* ([patched][patch.unifieddyes]) ***UPDATE***
 * mobiles/
-	* [animals_aggressive][] -- version: [2c913bb Git][ver.animals_aggressive] *2017-07-24*
+	* [animals_aggressive][] -- version: [4eede4d Git][ver.animals_aggressive] *2017-08-28*
 		* mob_shark ([CC BY-SA][lic.ccbysa3.0]) -- forked from [Animals Modpack][animals]
 	* [animals_harmless][] -- version: [e9b02a8][ver.animals_harmless] *2017-08-09*
 		* mob_sheep ([Zlib][lic.zlib]) -- forked from [mob-engine][]
@@ -373,7 +373,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.3d_armor]: https://github.com/stujones11/minetest-3d_armor/tree/cc26d04
 [ver.airtanks]: https://github.com/minetest-mods/airtanks/tree/5787956
 [ver.amber]: https://github.com/theraven262/amber/tree/21637e8
-[ver.animals_aggressive]: https://github.com/AntumMT/mp-animals_aggressive/tree/2c913bb
+[ver.animals_aggressive]: https://github.com/AntumMT/mp-animals_aggressive/tree/4eede4d
 [ver.animals_harmless]: https://github.com/AntumMT/mp-animals_harmless/tree/e9b02a8
 [ver.antum]: https://github.com/AntumMT/mp-antum/tree/62c0f6e
 [ver.awards]: https://github.com/minetest-mods/awards/tree/096fe16
