@@ -139,7 +139,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [deploy_nodes][] ([BSD 3-Clause][lic.deploy_nodes]) -- version [b67e162 Git][ver.deploy_nodes] *2017-06-08*
 * [homedecor][] ([LGPL / WTFPL / CC BY-SA / CC0][lic.homedecor]) -- version: [a6c17d6 Git][ver.homedecor] *2017-06-16* ([patched][patch.homedecor]) ***UPDATE***
 * [mesecons][] ([LGPL / CC BY-SA][lic.mesecons]) -- version: [564bdc2 Git][ver.mesecons] *2017-05-08* ([patched][patch.mesecons])
-* [mobf_core][animals] (part of "animals" modpack) ([CC BY-SA][lic.ccbysa3.0]) -- version: [1199ca9 Git][ver.mobf_core] *2017-01-14* ([patched][patch.mobf_core])
 * [minetest_game][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- version: [f855bee Git][ver.minetest_game] *2017-06-06* ([patched][patch.minetest_game]) ***UNSTABLE UPDATES***
 * [moremesecons][] ([MPL][lic.mpl2.0]) -- version: [aa2ae82 Git][ver.moremesecons] *2017-06-04* ***UPDATE***
 * [technic][] ([LGPL][lic.lgpl2.0]) -- version: [a84b5f3 Git][ver.technic] *2017-07-03* ([patched][patch.technic])
@@ -344,7 +343,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.lightning]: mods/weather/lightning/README.md
 [lic.mesecons]: mods/modpacks/mesecons/COPYING.txt
 [lic.mob-engine]: mods/modpacks/mob-engine/LICENSE
-[lic.mobf]: mods/modpacks/mobf_core/License.txt
 [lic.mobs_animal]: mods/mobiles/general/mobs_animal/license.txt
 [lic.mobs_redo]: mods/mobiles/engine/mobs_redo/license.txt
 [lic.moreblocks]: mods/buildings/moreblocks/LICENSE.md
@@ -453,7 +451,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.mesecons]: https://github.com/minetest-mods/mesecons/tree/564bdc2
 [ver.minetest_game]: https://github.com/minetest/minetest_game/tree/f855bee
 [ver.mob-engine]: https://github.com/minetest-mods/mob-engine/tree/138f655
-[ver.mobf_core]: https://github.com/sapier/mobf_core/tree/1199ca9
 [ver.mobs_animal]: https://github.com/tenplus1/mobs_animal/tree/cadacac
 [ver.mobs_redo]: https://github.com/tenplus1/mobs_redo/tree/ba167a3
 [ver.monsters_aggressive]: https://github.com/AntumMT/mp-monsters_aggressive/tree/9cc652a
@@ -538,7 +535,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.mesecons]: https://github.com/AntumMT/mp-mesecons/tree/830823a
 [patch.minetest_game]: https://github.com/AntumMT/mtgame-minetest/tree/c2f3b95
 [patch.mob-engine]: https://github.com/AntumMT/mp-mob-engine/tree/0b3706f
-[patch.mobf_core]: https://github.com/AntumMT/mp-mobf_core/tree/d532137
 [patch.mobs_animal]: https://github.com/AntumMT/mod-mobs_animal/tree/1d5f1ca
 [patch.mobs_redo]: https://github.com/AntumMT/mod-mobs_redo/tree/94d14e5
 [patch.moreblocks]: https://github.com/AntumMT/mod-moreblocks/tree/82aa7cd
