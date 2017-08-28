@@ -486,7 +486,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.away]: https://github.com/AntumMT/mod-away/tree/3b0bf9e
 [patch.bedrock2]: https://github.com/AntumMT/mod-bedrock2/tree/344fdae
 [patch.biome_lib]: https://github.com/AntumMT/mod-biome_lib/tree/4e95b1e
-[patch.boats2]: https://github.com/AntumMT/mod-boats2/tree/ccd7f2d
+[patch.boats2]: https://github.com/AntumMT/mod-boats2/tree/9b2bcb7
 [patch.bridges]: https://github.com/AntumMT/mod-bridges/tree/ba8f71a
 [patch.castle_gates]: https://github.com/AntumMT/mod-castle_gates/tree/465ad4f
 [patch.castle_lighting]: https://github.com/AntumMT/mod-castle_lighting/tree/b360c54

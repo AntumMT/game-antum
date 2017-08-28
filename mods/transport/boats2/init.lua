@@ -110,7 +110,7 @@ function row_boat.on_punch(self, puncher, time_from_last_punch, tool_capabilitie
 	minetest.after(0.1, function()
 		self.object:remove()
 	end)
-	if not minetest.setting_getbool("creative_mode") then
+	if not minetest.settings:get_bool("creative_mode") then
 		puncher:get_inventory():add_item("main", "boats:row_boat")
 	end
 end
@@ -217,7 +217,7 @@ minetest.register_craftitem(":boats:row_boat", {
 		end
 		pointed_thing.under.y = pointed_thing.under.y + 0.5
 		minetest.add_entity(pointed_thing.under, "boats:row_boat")
-		if not minetest.setting_getbool("creative_mode") then
+		if not minetest.settings:get_bool("creative_mode") then
 			itemstack:take_item()
 		end
 		return itemstack
@@ -283,7 +283,7 @@ function sail_boat.on_punch(self, puncher, time_from_last_punch, tool_capabiliti
 	minetest.after(0.1, function()
 		self.object:remove()
 	end)
-	if not minetest.setting_getbool("creative_mode") then
+	if not minetest.settings:get_bool("creative_mode") then
 		puncher:get_inventory():add_item("main", "boats:sail_boat")
 	end
 end
@@ -389,7 +389,7 @@ minetest.register_craftitem(":boats:sail_boat", {
 		end
 		pointed_thing.under.y = pointed_thing.under.y+0.5
 		minetest.add_entity(pointed_thing.under, "boats:sail_boat")
-		if not minetest.setting_getbool("creative_mode") then
+		if not minetest.settings:get_bool("creative_mode") then
 			itemstack:take_item()
 		end
 		return itemstack
