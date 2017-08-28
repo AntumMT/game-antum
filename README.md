@@ -67,6 +67,8 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * mobiles/
 	* [animals_aggressive][] -- version: [2c913bb Git][ver.animals_aggressive] *2017-07-24*
 		* mob_shark ([CC BY-SA][lic.ccbysa3.0]) -- forked from [Animals Modpack][animals]
+	* [animals_harmless][] -- version: [e9b02a8][ver.animals_harmless] *2017-08-09*
+		* mob_sheep ([Zlib][lic.zlib]) -- forked from [mob-engine][]
 	* engine/
 		* [creatures][mob-engine] ([zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [138f655 Git][ver.mob-engine] *2017-06-04* ([patched][patch.mob-engine]) ***UPDATE***
 		* [mobs_redo][] ([MIT][lic.mobs_redo] / [CC BY][lic.ccby3.0] / [CC0][lic.cc0]) -- version: [ba167a3 Git][ver.mobs_redo] *2017-08-07* ([patched][patch.mobs_redo]) ***UPDATE***
@@ -162,8 +164,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 ### Stored in 'modpacks' directory
 
-* [animals_harmless][] -- version: [e9b02a8][ver.animals_harmless] *2017-08-09*
-	* mob_sheep ([Zlib][lic.zlib]) -- forked from [mob-engine][]
 * castle ([MIT][lic.castle])
 	* [castle_farming][] -- version: [a190dcf Git][ver.castle_farming] *2017-04-21*
 	* [castle_gates][] -- version: [dc53584 Git][ver.castle_gates] *dc53584* ([patched][patch.castle_gates])
