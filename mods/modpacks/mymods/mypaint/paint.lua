@@ -9,7 +9,7 @@ function check_paintcan(pos, node)
 	local color = string.sub(name, 15)
 	local meta = minetest.get_meta(pos)
 	stack = ItemStack("mypaint:brush_"..color)
-	if minetest.setting_getbool("creative_mode") then
+	if minetest.settings:get_bool("creative_mode") then
 		return stack
 	end
 	local uses = meta:get_int("mypaint:uses") - 1
@@ -51,7 +51,7 @@ function paint_node(pos, node, col, itemstack)
 				return
 			end
 			minetest.set_node(pos, {name = name.."_"..col, param2 = node.param2})
-			if not minetest.setting_getbool("creative_mode") then
+			if not minetest.settings:get_bool("creative_mode") then
 				local wear = itemstack:get_wear() + 65535 / BRUSH_USES
 				if wear < 65535 then
 					itemstack:set_wear(wear)
@@ -162,7 +162,7 @@ for color, entry in pairs(mypaint.colors) do
 			local pname = "mypaint:paint_"..color
 			local paint = ItemStack(pname)
 			paint = minetest.item_place_node(paint, user, pointed_thing)
-			if not minetest.setting_getbool("creative_mode") then
+			if not minetest.settings:get_bool("creative_mode") then
 				if not paint or (paint:get_count() > 0) then
 					return
 				end
