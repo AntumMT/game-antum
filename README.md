@@ -136,7 +136,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 ### This is a list of installed modpacks & their components (trying to keep them listed separate for sake of organization):
 
 * [3d_armor][] ([LGPL / CC BY-SA][lic.3d_armor]) - version: [cc26d04 Git][ver.3d_armor] *2017-07-09* ([patched][patch.3d_armor]) ***UPDATE***
-* [animalmaterials][animals] (part of "animals" modpack) ([CC0][lic.cc0] / [CC BY-SA][lic.ccbysa3.0]) -- version: [0.1.3 (aa4697c Git)][ver.animalmaterials] *2016-09-20* ([patched][patch.animalmaterials])
 * [deploy_nodes][] ([BSD 3-Clause][lic.deploy_nodes]) -- version [b67e162 Git][ver.deploy_nodes] *2017-06-08*
 * [homedecor][] ([LGPL / WTFPL / CC BY-SA / CC0][lic.homedecor]) -- version: [a6c17d6 Git][ver.homedecor] *2017-06-16* ([patched][patch.homedecor]) ***UPDATE***
 * [mesecons][] ([LGPL / CC BY-SA][lic.mesecons]) -- version: [564bdc2 Git][ver.mesecons] *2017-05-08* ([patched][patch.mesecons])
@@ -311,7 +310,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.amp_fish_blue_white]: mods/modpacks/animals/animal_fish_blue_white/License.txt
 [lic.amp_ghost]: mods/modpacks/animals/mob_ghost/License.txt
 [lic.amp_gull]: mods/modpacks/animals/animal_gull/License.txt
-[lic.amp_mob_environments]: mods/mp-animalmaterials/mob_environments/README
 [lic.amp_oerkki]: mods/modpacks/animals/mob_oerkki/License.txt
 [lic.amp_ostrich]: mods/modpacks/animals/mob_ostrich/License.txt
 [lic.amp_rat]: mods/modpacks/animals/animal_rat/License.txt
@@ -396,7 +394,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.adv_spawning]: https://github.com/sapier/adv_spawning/tree/ec41aa9
 [ver.airtanks]: https://github.com/minetest-mods/airtanks/tree/5787956
 [ver.amber]: https://github.com/theraven262/amber/tree/21637e8
-[ver.animalmaterials]: https://github.com/sapier/animalmaterials/tree/aa4697c
 [ver.animals_aggressive]: https://github.com/AntumMT/mp-animals_aggressive/tree/2c913bb
 [ver.animals_harmless]: https://github.com/AntumMT/mp-animals_harmless/tree/e9b02a8
 [ver.antum]: https://github.com/AntumMT/mp-antum/tree/62c0f6e
@@ -508,7 +505,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.3d_armor]: https://github.com/AntumMT/mp-3d_armor/tree/97c13a6
 [patch.adv_spawning]: https://github.com/AntumMT/mod-adv_spawning/tree/757197a
 [patch.airtanks]: https://github.com/AntumMT/mod-airtanks/tree/71ea616
-[patch.animalmaterials]: https://github.com/AntumMT/mp-animalmaterials/tree/b5d8315
 [patch.awards]: https://github.com/AntumMT/mod-awards/tree/638c137
 [patch.away]: https://github.com/AntumMT/mod-away/tree/3b0bf9e
 [patch.bedrock2]: https://github.com/AntumMT/mod-bedrock2/tree/344fdae
