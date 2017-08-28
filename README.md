@@ -76,6 +76,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* [mobs_redo][] ([MIT][lic.mobs_redo] / [CC BY][lic.ccby3.0] / [CC0][lic.cc0]) -- version: [ba167a3 Git][ver.mobs_redo] *2017-08-07* ([patched][patch.mobs_redo]) ***UPDATE***
 	* general/
 		* [mobs_animal][] ([MIT][lic.mobs_animal]) -- version: [cadacac Git][ver.mobs_animal] *2017-08-04* ([patched][patch.mobs_animal]) ***UPDATE***
+	* [monsters_aggressive][] (see individual mods for licensing) -- version: [9cc652a Git][ver.monsters_aggressive] *2017-08-09*
 	* passive/
 		* [peaceful_npc][] ([WTFPL][lic.wtfpl]) -- version: [4b27991 Git][ver.peaceful_npc] *2017-08-12*
 * [painting][] (???) -- version [8961849 Git][ver.painting] *2016-05-05*
@@ -177,7 +178,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [castle_weapons][] -- version [5f5ebcc Git][ver.castle_weapons] *2017-06-07* ([patched][patch.castle_weapons])
 	* [crafting_bench][] -- version [ca21489 Git][ver.crafting_bench] *2017-06-07*
 * [mob-engine][] ([zlib][lic.mob-engine] / [CC BY-SA][lic.ccbysa3.0]) -- version: [138f655 Git][ver.mob-engine] *2017-06-04* ([patched][patch.mob-engine]) ***UPDATE***
-* [monsters_aggressive][] (see individual mods for licensing) -- version: [9cc652a Git][ver.monsters_aggressive] *2017-08-09*
 * [monsters_passive][] (see individual mods for licensing) -- version: [b07fe19 Git][ver.monsters_passive] *2017-08-09*
 * mymods
 	* [mydoors][] ([CC-BY / CC-BY-SA][lic.mydoors] / [WTFPL][lic.wtfpl] / [DWYWFPL][lic.dwywpl]) -- version: [63aef13 Git][ver.mydoors] *2017-03-31* ([patched][patch.mydoors])
