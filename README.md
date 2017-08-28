@@ -69,6 +69,8 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* mob_shark ([CC BY-SA][lic.ccbysa3.0]) -- forked from [Animals Modpack][animals]
 	* [animals_harmless][] -- version: [e9b02a8][ver.animals_harmless] *2017-08-09*
 		* mob_sheep ([Zlib][lic.zlib]) -- forked from [mob-engine][]
+	* [dinosaurs_aggressive][] -- version: [874f299 Git][ver.dinosaurs_aggressive] *2017-07-27*
+		* velociraptor ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- forked from *mobs_farlands* (part of [farlands][] sub-game)
 	* engine/
 		* [creatures][mob-engine] ([zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [138f655 Git][ver.mob-engine] *2017-06-04* ([patched][patch.mob-engine]) ***UPDATE***
 		* [mobs_redo][] ([MIT][lic.mobs_redo] / [CC BY][lic.ccby3.0] / [CC0][lic.cc0]) -- version: [ba167a3 Git][ver.mobs_redo] *2017-08-07* ([patched][patch.mobs_redo]) ***UPDATE***
@@ -174,8 +176,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [castle_tapestries][] -- version [78b6e36 Git][ver.castle_tapestries] *2017-03-19* ([patched][patch.castle_tapestries])
 	* [castle_weapons][] -- version [5f5ebcc Git][ver.castle_weapons] *2017-06-07* ([patched][patch.castle_weapons])
 	* [crafting_bench][] -- version [ca21489 Git][ver.crafting_bench] *2017-06-07*
-* [dinosaurs_aggressive][] -- version: [874f299 Git][ver.dinosaurs_aggressive] *2017-07-27*
-	* velociraptor ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- forked from *mobs_farlands* (part of [farlands][] sub-game)
 * [mob-engine][] ([zlib][lic.mob-engine] / [CC BY-SA][lic.ccbysa3.0]) -- version: [138f655 Git][ver.mob-engine] *2017-06-04* ([patched][patch.mob-engine]) ***UPDATE***
 * [monsters_aggressive][] (see individual mods for licensing) -- version: [9cc652a Git][ver.monsters_aggressive] *2017-08-09*
 * [monsters_passive][] (see individual mods for licensing) -- version: [b07fe19 Git][ver.monsters_passive] *2017-08-09*
