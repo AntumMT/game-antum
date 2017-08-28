@@ -13,5 +13,5 @@ if not minetest.get_modpath("mesecons_materials") then
 	})
 end
 
-if minetest.setting_get("log_mods") then minetest.log("action", "Slimes loaded") end
+if minetest.settings:get("log_mods") then minetest.log("action", "Slimes loaded") end
 

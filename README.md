@@ -76,7 +76,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* [mobs_redo][] ([MIT][lic.mobs_redo] / [CC BY][lic.ccby3.0] / [CC0][lic.cc0]) -- version: [ba167a3 Git][ver.mobs_redo] *2017-08-07* ([patched][patch.mobs_redo]) ***UPDATE***
 	* general/
 		* [mobs_animal][] ([MIT][lic.mobs_animal]) -- version: [cadacac Git][ver.mobs_animal] *2017-08-04* ([patched][patch.mobs_animal]) ***UPDATE***
-	* [monsters_aggressive][] (see individual mods for licensing) -- version: [9cc652a Git][ver.monsters_aggressive] *2017-08-09*
+	* [monsters_aggressive][] (see individual mods for licensing) -- version: [bd4f8fa Git][ver.monsters_aggressive] *2017-08-28*
 	* [monsters_passive][] (see individual mods for licensing) -- version: [b07fe19 Git][ver.monsters_passive] *2017-08-09*
 	* passive/
 		* [peaceful_npc][] ([WTFPL][lic.wtfpl]) -- version: [4b27991 Git][ver.peaceful_npc] *2017-08-12*
@@ -434,7 +434,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.mob-engine]: https://github.com/minetest-mods/mob-engine/tree/138f655
 [ver.mobs_animal]: https://github.com/tenplus1/mobs_animal/tree/cadacac
 [ver.mobs_redo]: https://github.com/tenplus1/mobs_redo/tree/ba167a3
-[ver.monsters_aggressive]: https://github.com/AntumMT/mp-monsters_aggressive/tree/9cc652a
+[ver.monsters_aggressive]: https://github.com/AntumMT/mp-monsters_aggressive/tree/bd4f8fa
 [ver.monsters_passive]: https://github.com/AntumMT/mp-monsters_passive/tree/b07fe19
 [ver.more_chests]: https://github.com/minetest-mods/more_chests/tree/c597779
 [ver.moreblocks]: https://github.com/minetest-mods/moreblocks/tree/7347b05
