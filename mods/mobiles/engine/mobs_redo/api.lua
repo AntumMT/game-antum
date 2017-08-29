@@ -687,7 +687,7 @@ local do_jump = function(self)
 
 --print ("standing on:", nod.name, pos.y)
 
-	if minetest.registered_nodes[nod.name].walkable == false then
+	if nod == nil or minetest.registered_nodes[nod.name].walkable == false then
 		return false
 	end
 
@@ -702,29 +702,31 @@ local do_jump = function(self)
 		z = pos.z + dir_z
 	})
 
-	-- thin blocks that do not need to be jumped
-	if nod.name == node_snow then
-		return false
-	end
-
---print ("in front:", nod.name, pos.y + 0.5)
-
-	if (minetest.registered_items[nod.name].walkable
-	and not nod.name:find("fence")
-	and not nod.name:find("gate"))
-	or self.walk_chance == 0 then
-
-		local v = self.object:getvelocity()
-
-		v.y = self.jump_height
-
-		set_animation(self, "jump") -- only when defined
-
-		self.object:setvelocity(v)
-
-		mob_sound(self, self.sounds.jump)
-
-		return true
+	if nod ~= nil then
+		-- thin blocks that do not need to be jumped
+		if nod.name == node_snow then
+			return false
+		end
+	
+	--print ("in front:", nod.name, pos.y + 0.5)
+	
+		if (minetest.registered_items[nod.name].walkable
+		and not nod.name:find("fence")
+		and not nod.name:find("gate"))
+		or self.walk_chance == 0 then
+	
+			local v = self.object:getvelocity()
+	
+			v.y = self.jump_height
+	
+			set_animation(self, "jump") -- only when defined
+	
+			self.object:setvelocity(v)
+	
+			mob_sound(self, self.sounds.jump)
+	
+			return true
+		end
 	end
 
 	return false
