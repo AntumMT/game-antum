@@ -50,7 +50,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [waffles][] ([CC0][lic.cc0]) -- version [b02ffbf Git][ver.waffles] *2017-08-04*
 * [intllib][] ([Unlicense][lic.unlicense]) -- version: [7b818cb Git][ver.intllib] *2017-07-10*
 * inventory/
-    * [bags][] ([BSD 3-Clause][lic.bags]) -- version: [8a02b4d Git][ver.bags] *2017-08-07*
+    * [bags][] ([BSD 3-Clause][lic.bags]) -- version: [8a02b4d Git][ver.bags] *2017-08-07* ([patched][patch.bags])
     * [sfinv_buttons][] ([MIT][lic.mit]) -- version [1.0.0 (4f3b075 Git)][ver.sfinv_buttons] *2017-03-19*
 * lighting/
     * [glow][] ([GPL][lic.gpl2.0]) -- version: [c611ae0 Git][ver.glow] *2017-07-18*
@@ -484,6 +484,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.airtanks]: https://github.com/AntumMT/mod-airtanks/tree/71ea616
 [patch.awards]: https://github.com/AntumMT/mod-awards/tree/638c137
 [patch.away]: https://github.com/AntumMT/mod-away/tree/3b0bf9e
+[patch.bags]: https://github.com/AntumMT/mod-bags/tree/f275dc0
 [patch.bedrock2]: https://github.com/AntumMT/mod-bedrock2/tree/344fdae
 [patch.biome_lib]: https://github.com/AntumMT/mod-biome_lib/tree/4e95b1e
 [patch.boats2]: https://github.com/AntumMT/mod-boats2/tree/9b2bcb7
