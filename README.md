@@ -78,8 +78,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* [mobs_animal][] ([MIT][lic.mobs_animal]) -- version: [cadacac Git][ver.mobs_animal] *2017-08-04* ([patched][patch.mobs_animal]) ***UPDATE***
 	* [monsters_aggressive][] (see individual mods for licensing) -- version: [bd4f8fa Git][ver.monsters_aggressive] *2017-08-28*
 	* [monsters_passive][] (see individual mods for licensing) -- version: [b07fe19 Git][ver.monsters_passive] *2017-08-09*
-	* passive/
-		* [peaceful_npc][] ([WTFPL][lic.wtfpl]) -- version: [4b27991 Git][ver.peaceful_npc] *2017-08-12*
 * [painting][] (???) -- version [8961849 Git][ver.painting] *2016-05-05*
 * [pipeworks][] ([WTFPL][lic.wtfpl]) -- version: [a5e1bfa Git][ver.pipeworks] *2017-08-20*
 * plantlife/
@@ -259,7 +257,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [mywoodslopes]: https://forum.minetest.net/viewtopic.php?t=11433
 [nether]: https://forum.minetest.net/viewtopic.php?t=5790
 [painting]: https://github.com/minetest-mods/painting
-[peaceful_npc]: https://forum.minetest.net/viewtopic.php?t=4167
 [pipeworks]: https://forum.minetest.net/viewtopic.php?t=2155
 [plantlife_modpack]: https://forum.minetest.net/viewtopic.php?f=11&t=3898
 [playeranim]: https://forum.minetest.net/viewtopic.php?t=12189
@@ -451,7 +448,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.mywoodslopes]: https://github.com/minetest-mods/mywoodslopes/tree/3a1b531
 [ver.nether]: https://github.com/PilzAdam/nether/tree/bc2ccfb
 [ver.painting]: https://github.com/minetest-mods/painting/tree/8961849
-[ver.peaceful_npc]: https://github.com/jojoa1997/peaceful_npc/tree/4b27991
 [ver.pipeworks]: https://github.com/minetest-mods/pipeworks/tree/a5e1bfa
 [ver.playeranim]: https://github.com/minetest-mods/playeranim/tree/59bcd38
 [ver.privilegeareas]: https://github.com/minetest-mods/privilegeareas/tree/aebaa00
