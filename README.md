@@ -109,7 +109,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [helicopter][] ([GPL][lic.gpl2.0]) -- version: [10f1433 Git][ver.helicopter] *2015-07-15* ([patched][patch.helicopter]) ***UPDATE***
     * [hovercraft][] ([LGPL / CC BY-SA / CC0][lic.hovercraft]) -- version: [4d50e68 Git][ver.hovercraft] *2017-05-14* ([patched][patch.hovercraft])
 * ui/
-    * [bookmarks_gui][] ([BSD 3-Clause][lic.bookmarks_gui]) -- version: [0fd80bc Git][ver.bookmarks_gui] *2017-08-14*
+    * [bookmarks_gui][] ([BSD 3-Clause][lic.bookmarks_gui]) -- version: [0fd80bc Git][ver.bookmarks_gui] *2017-08-14* ([patched][patch.bookmarks_gui])
     * [hbarmor][] ([WTFPL][lic.wtfpl] / [CC BY-SA][lic.ccbysa3.0]) -- version: [ceb313e Git][ver.hbarmor] *2017-07-08* ([patched][patch.hbarmor]) ***UPDATE***
     * [home_gui][] ([BSD 3-Clause](mods/ui/home_gui/LICENSE)) -- version: [15a1cdd Git][ver.home_gui] *2017-08-14* ([patched][patch.home_gui])
     * [hudbars][] ([WTFPL][lic.wtfpl] / [CC BY-SA][lic.ccbysa3.0]) -- version [1.8.0 (bd0641a Git)][ver.hudbars] *2017-05-29* ([patched][patch.hudbars]) ***UPDATE***
@@ -487,6 +487,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.bedrock2]: https://github.com/AntumMT/mod-bedrock2/tree/344fdae
 [patch.biome_lib]: https://github.com/AntumMT/mod-biome_lib/tree/4e95b1e
 [patch.boats2]: https://github.com/AntumMT/mod-boats2/tree/9b2bcb7
+[patch.bookmarks_gui]: https://github.com/AntumMT/mod-bookmarks_gui/tree/711c711
 [patch.bridges]: https://github.com/AntumMT/mod-bridges/tree/ba8f71a
 [patch.castle_gates]: https://github.com/AntumMT/mod-castle_gates/tree/465ad4f
 [patch.castle_lighting]: https://github.com/AntumMT/mod-castle_lighting/tree/b360c54

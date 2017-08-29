@@ -157,17 +157,19 @@ bookmarks_gui.get_names = function()
 	return pages
 end
 
+if use_sfinv then
+	sfinv_buttons.register_button("bookmarks_gui", {
+		title = "Bookmarks",
+		action = function(player)
+			player:set_inventory_formspec(bookmarks_gui.formspec(player, "bookmarks_gui"))
+		end,
+		image = ui_icon,
+	})
+end
+
 -- register_on_joinplayer
 minetest.register_on_joinplayer(function(player)
-	if use_sfinv then
-		sfinv_buttons.register_button("bookmarks_gui", {
-			title = "Bookmarks",
-			action = function(player)
-				player:set_inventory_formspec(bookmarks_gui.formspec(player, "bookmarks_gui"))
-			end,
-			image = ui_icon,
-		})
-	else
+	if not use_sfinv then
 		-- add inventory_plus page
 		inventory_plus.register_button(player,"bookmarks_gui","Bookmarks")
 	end
