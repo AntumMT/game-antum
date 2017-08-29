@@ -83,17 +83,19 @@ home_gui.get_formspec = function(player)
 	return formspec
 end
 
+if use_sfinv then
+	sfinv_buttons.register_button("home_gui", {
+		title = "Home Pos",
+		action = function(player)
+			player:set_inventory_formspec(home_gui.get_formspec(player, "home_gui"))
+		end,
+		image = ui_icon,
+	})
+end
+
 -- register_on_joinplayer
 minetest.register_on_joinplayer(function(player)
-	if use_sfinv then
-		sfinv_buttons.register_button("home_gui", {
-			title = "Home Pos",
-			action = function(player)
-				player:set_inventory_formspec(home_gui.get_formspec(player, "home_gui"))
-			end,
-			image = ui_icon,
-		})
-	else
+	if not use_sfinv then
 		-- add inventory_plus page
 		inventory_plus.register_button(player,"home_gui","Home Pos")
 	end
