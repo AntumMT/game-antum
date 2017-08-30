@@ -26,11 +26,8 @@
 
 
 local modoverrides = {
-	'animalmaterials',
 	'cooking',
-	'farming_plus',
 	'mobs',
-	'simple_protection',
 }
 
 for I in pairs(modoverrides) do
