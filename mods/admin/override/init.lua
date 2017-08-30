@@ -32,7 +32,7 @@ local o_list = nil
 local o_path = core.get_worldpath() .. '/overrides.txt'
 local o_file = io.open(o_path, 'r')
 if o_file then
-	o_list = o_file:read()
+	o_list = o_file:read('*a')
 	o_file:close()
 else
 	-- Create empty overrides file
@@ -42,21 +42,26 @@ else
 	end
 end
 
-if o_list then
-	o_list = string.split(o_list, '\n')
-	local overrides = {}
-	
-	for i, o in ipairs(o_list) do
-		local aliases = string.split(o, ';')
-		local target = aliases[2]
-		aliases = string.split(aliases[1], ',')
+-- Read overrides from "overrides.txt" file in world path
+core.after(0, function()
+	if o_list then
+		override.log('action', 'Reading overrides from file:\n' .. o_list)
 		
-		if aliases and target then
-			table.insert(overrides, {aliases, target})
+		o_list = string.split(o_list, '\n')
+		local overrides = {}
+		
+		for i, o in ipairs(o_list) do
+			local aliases = string.split(o, ';')
+			local target = aliases[2]
+			aliases = string.split(aliases[1], ',')
+			
+			if aliases and target then
+				table.insert(overrides, {aliases, target})
+			end
+		end
+		
+		for i, o in ipairs(overrides) do
+			override.replaceItems(o[1], o[2])
 		end
 	end
-	
-	for i, o in ipairs(overrides) do
-		override.replaceItems(o[1], o[2])
-	end
-end
+end)
