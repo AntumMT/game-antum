@@ -11,7 +11,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 ***"UPDATE" Denotes update available***
 
 * admin/
-    * [clean][] ([WTFPL][lic.wtfpl]) -- version [2404594 Git][ver.clean] *2017-08-12*
+    * [cleaner][] ([CC0][lic.cc0]) -- version [0.4 (68222b1 Git)][ver.cleaner] *2017-08-30*
     * [invisible][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0])
     * [override][] ([MIT][lic.override]) -- version [0.2 (e6dda7a Git)][ver.override] *2017-08-30*
     * [privilegeareas][] ([WTFPL][lic.privilegeareas] / [CC0][lic.cc0]) -- version: [aebaa00 Git][ver.privilegeareas] *2016-05-18*
@@ -197,7 +197,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [castle_weapons]: https://github.com/minetest-mods/castle_weapons
 [chatlog]: https://forum.minetest.net/viewtopic.php?t=18287
 [christmas]: https://forum.minetest.net/viewtopic.php?t=3950
-[clean]: https://github.com/AntumMT/mod-clean/tree/2404594
+[cleaner]: https://github.com/AntumMT/mod-cleaner/tree/2404594
 [coloredwood]: https://forum.minetest.net/viewtopic.php?t=2411
 [compass]: https://forum.minetest.net/viewtopic.php?t=3785
 [compassgps]: https://forum.minetest.net/viewtopic.php?t=9373
@@ -395,7 +395,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.castle_weapons]: https://github.com/minetest-mods/castle_weapons/tree/5f5ebcc
 [ver.chatlog]: https://github.com/AntumMT/mod-chatlog/tree/v1.0
 [ver.christmas]: https://github.com/TheZenKitteh/minetest-christmas/tree/d3bd872
-[ver.clean]: https://github.com/AntumMT/mod-clean/tree/2404594
+[ver.cleaner]: https://github.com/AntumMT/mod-cleaner/tree/68222b1
 [ver.coloredwood]: https://github.com/minetest-mods/coloredwood/tree/bd490be
 [ver.compassgps]: https://github.com/Kilarin/compassgps/tree/96892a0
 [ver.crafting_bench]: https://github.com/minetest-mods/crafting_bench/tree/ca21489
