@@ -65,8 +65,6 @@ else
 	local use_sfinv = (core.global_exists("sfinv_buttons") and core.settings:get("inventory") == "sfinv") or false
 end
 
-local ui_icon = nil
-
 
 -- get_formspec
 home_gui.get_formspec = function(player)
@@ -89,7 +87,7 @@ if use_sfinv then
 		action = function(player)
 			player:set_inventory_formspec(home_gui.get_formspec(player, "home_gui"))
 		end,
-		image = ui_icon,
+		image = "home_gui_inv.png",
 	})
 end
 
