@@ -41,3 +41,6 @@ This module is open source, so it's distributed freely. If you find it useful th
 ## License
 
 [BSD-3-Clause](https://raw.github.com/cornernote/minetest-home_gui/master/LICENSE), Copyright © 2013-2014 [Brett O'Donnell](http://cornernote.github.io/)
+
+Textures:
+- home_gui_inv.png: CC0 (based on [House by barretr](https://openclipart.org/detail/3318))
