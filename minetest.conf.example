@@ -1713,6 +1713,19 @@ coloredwood_enable_stairsplus = true
 
 
 
+##############
+## CRAFTING ##
+##############
+
+# *** craftguide ***
+
+## Enables/Disables craftguide button in inventory if sfinv mod present.
+#    type:    bool
+#    default: false
+#craftguide.show_inv_button = false
+
+
+
 ###############
 ## EQUIPMENT ##
 ###############

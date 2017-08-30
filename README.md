@@ -494,7 +494,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.castle_weapons]: https://github.com/AntumMT/mod-castle_weapons/tree/669db13
 [patch.christmas]: https://github.com/AntumMT/mod-christmas/tree/7ffdc67
 [patch.compassgps]: https://github.com/AntumMT/mod-compassgps/tree/b900f30
-[patch.craftguide]: https://github.com/AntumMT/mod-craftguide/tree/39b7ddf
+[patch.craftguide]: https://github.com/AntumMT/mod-craftguide/tree/30eaf59
 [patch.crops]: https://github.com/AntumMT/mod-crops/tree/0c5c649
 [patch.drawers]: https://github.com/AntumMT/mod-drawers/tree/a77f809
 [patch.enchanting]: https://github.com/AntumMT/mod-enchanting/tree/7a01f2f

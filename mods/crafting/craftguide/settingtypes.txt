@@ -1,0 +1,3 @@
+
+# Enables/Disables craftguide button in inventory if sfinv mod present.
+craftguide.show_inv_button (Show craftguide in inventory) bool false

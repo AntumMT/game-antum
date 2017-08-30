@@ -74,6 +74,12 @@ bedrock2_y (Bedrock height) int -30912
 chatlog.monthfirst (Timestamp shows month before day) bool true
 
 
+[*craftguide]
+
+# Enables/Disables craftguide button in inventory if sfinv mod present.
+craftguide.show_inv_button (Show craftguide in inventory) bool false
+
+
 [*ethereal]
 
 # Instead of registering new item 'ethereal:bone', registers alias of 'animalmaterials.bone'.
