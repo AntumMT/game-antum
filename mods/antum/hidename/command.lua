@@ -7,6 +7,8 @@
 
 
 --- *hidename* chat commands
+--
+-- @script command.lua
 
 
 -- Boilerplate to support localized strings if intllib mod is installed.
@@ -23,9 +25,9 @@ end
 
 
 local params = {
-	S('hide'),
-	S('show'),
-	S('status'),
+	'hide',
+	'show',
+	'status',
 }
 
 local params_string = '[' .. table.concat(params, '|') .. ']'
@@ -36,13 +38,13 @@ local params_string = '[' .. table.concat(params, '|') .. ']'
 --
 -- @chatcmd nametag
 -- @chatparam mode
--- @option ***hide*** : Sets player nametag hidden
--- @option ***show*** : Sets player nametag visible
--- @option ***status*** : Displays nametag text & visible state (default)
+-- @option ***hide*** : Sets player nametag hidden.
+-- @option ***show*** : Sets player nametag visible.
+-- @option ***status*** : Displays player nametag text & visible state in chat (default if ***option*** is omitted)
 -- @usage
 -- /nametag [option]
 -- /nametag hide
-core.register_chatcommand(S('nametag'), {
+core.register_chatcommand('nametag', {
 	params = params_string,
 	description = S('Get nametag info or set visibility'),
 	func = function(name, param)
@@ -61,19 +63,17 @@ core.register_chatcommand(S('nametag'), {
 			return hidename.show(name)
 		end
 		
-		core.chat_send_player(name, S('Unknown parameter:') .. ' ' .. mode)
+		core.chat_send_player(name, S('Error: Unknown parameter:') .. ' ' .. mode)
 		return false
 	end
 })
 
 
---- *hidename* chat command.
---
--- Sets player's nametag hidden from others.
+--- Alias for ***/nametag hide***.
 --
 -- @chatcmd hidename
 -- @usage /hidename
-core.register_chatcommand(S('hidename'), {
+core.register_chatcommand('hidename', {
 	description = S('Make nametag hidden'),
 	func = function(name, param)
 		return hidename.hide(name)
@@ -81,12 +81,10 @@ core.register_chatcommand(S('hidename'), {
 })
 
 
---- *showname* chat command.
---
--- Sets player's nametag visible to others.
+--- Alias for ***/nametag show***.
 -- @chatcmd showname
 -- @usage /showname
-core.register_chatcommand(S('showname'), {
+core.register_chatcommand('showname', {
 	description = S('Make nametag visible'),
 	func = function(name, param)
 		return hidename.show(name)

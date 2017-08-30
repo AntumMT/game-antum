@@ -2192,8 +2192,8 @@ torches_enable_ceiling = false
 
 ## Use alpha color level to hide nametag instead of clearing text.
 #    type:    bool
-#    default: true
-#hidename.use_alpha = true
+#    default: false
+#hidename.use_alpha = false
 
 
 # *** hudbars *** #

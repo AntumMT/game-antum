@@ -7,6 +7,8 @@
 
 
 --- *hidename* mod API
+--
+-- @script api.lua
 
 
 -- Boilerplate to support localized strings if intllib mod is installed.
@@ -22,46 +24,39 @@ else
 end
 
 
--- Default alpha level (FIXME: Should be player attribute)
-local stored_alpha = 255
-
-
 --- Checks if player's nametag is hidden.
 --
 -- Compares alpha level of player's nametag against 0 (0 being transparent).
 --
 -- TODO: Check for empty string instead of alpha value
 --
--- @param alpha Can be an integer between 0-255 or player's name string
--- @return ***true*** if player's nametag is hidden
-function hidename.hidden(alpha)
-	if type(alpha) == 'string' then
-	local player = core.get_player_by_name(alpha)
-	alpha = player:get_nametag_attributes().color.a
+-- @tparam table nametag_data Nametag data retrieved by *player:get_nametag_attributes()*.
+-- @treturn bool ***true*** if player's nametag is hidden
+function hidename.hidden(nametag_data)
+	if hidename.use_alpha then
+		return nametag_data.color.a == 0
 	end
 	
-	return alpha == 0
+	return nametag_data.text == '' or nametag_data.text == nil
 end
 
 
 --- Messages info to player about nametag text & visibility.
 --
--- @param name Name of player to check & message
+-- @tparam string name Name of player to check & message
 function hidename.tellStatus(name)
 	local player = core.get_player_by_name(name)
 	local nametag = player:get_nametag_attributes()
 	
 	local status = 'Status: '
-	if hidename.hidden(nametag.color.a) then
+	if hidename.hidden(nametag) then
 		status = status .. 'hidden'
 	else
 		status = status .. 'visible'
 	end
 	
-	-- Use parameter value if nametag.text is empty
-	-- FIXME: This may cause issues if text value is used instead of transparency
-	--        to determine if nametag is hidden
-	if nametag.text == '' then
+	-- Use name parameter value if nametag.text is empty
+	if nametag.text == '' or nametag.text == nil then
 		nametag.text = name
 	end
 	
@@ -72,26 +67,34 @@ end
 
 --- Hides a player's nametag.
 --
--- @param name Name of player whose nametag should be made hidden
--- @return ***true*** if player's nametag is hidden
+-- @tparam string name Name of player whose nametag should be made hidden
+-- @treturn bool ***true*** if player's nametag is hidden
 function hidename.hide(name)
 	local player = core.get_player_by_name(name)
-	local nametag_color = player:get_nametag_attributes().color
+	local nametag = player:get_nametag_attributes()
 	
-	if hidename.hidden(nametag_color.a) then
+	if hidename.hidden(nametag) then
 		core.chat_send_player(name, S('Nametag is already hidden'))
 		return true
 	end
 	
-	-- Set nametag alpha level to 0
-	nametag_color.a = 0
-	player:set_nametag_attributes({
-		color = nametag_color,
-	})
+	if hidename.use_alpha then
+		-- Preserve nametag alpha level
+		player:set_attribute('nametag_stored_alpha', nametag.color.a)
+		nametag.color.a = 0
+		
+		-- Set nametag alpha level to 0
+		player:set_nametag_attributes({
+			color = nametag.color,
+		})
+	else
+		-- Remove text from nametag
+		player:set_nametag_attributes({
+			text = '',
+		})
+	end
 	
-	-- Test new alpha level
-	local hidden = player:get_nametag_attributes().color.a == 0
-	if hidden then
+	if hidename.hidden(player:get_nametag_attributes()) then
 		core.chat_send_player(name, S('Nametag is now hidden'))
 	else
 		core.chat_send_player(name, S('ERROR: Could not hide nametag'))
@@ -105,27 +108,37 @@ end
 
 --- Makes a player's nametag visible.
 --
--- @param name Name of player whose nametag should be made visible
--- @return ***true*** if player's nametag is visible
+-- @tparam string name Name of player whose nametag should be made visible
+-- @treturn bool ***true*** if player's nametag is visible
 function hidename.show(name)
 	local player = core.get_player_by_name(name)
-	local nametag_color = player:get_nametag_attributes().color
-	local alpha = nametag_color.a
+	local nametag = player:get_nametag_attributes()
 	
-	if not hidename.hidden(alpha) then
+	if not hidename.hidden(nametag) then
 		core.chat_send_player(name, S('Nametag is already visible'))
 		return true
 	end
 	
-	-- Restore nametag alpha level (currently static)
-	nametag_color.a = stored_alpha
-	player:set_nametag_attributes({
-		color = nametag_color,
-	})
+	if hidename.use_alpha then
+		-- Restore nametag alpha level
+		local stored_alpha = player:get_attribute('nametag_stored_alpha')
+		if stored_alpha ~= nil then
+			nametag.color.a = stored_alpha
+			-- Reset player attribute
+			player:set_attribute('nametag_stored_alpha', nil)
+		end
+		
+		player:set_nametag_attributes({
+			color = nametag.color,
+		})
+	else
+		-- Restore nametag text
+		player:set_nametag_attributes({
+			text = name,
+		})
+	end
 	
-	-- Test new alpha level
-	local shown = player:get_nametag_attributes().color.a ~= 0
-	if shown then
+	if not hidename.hidden(player:get_nametag_attributes()) then
 		core.chat_send_player(name, S('Nametag is now visible'))
 	else
 		core.chat_send_player(name, S('ERROR: Could not show nametag'))
@@ -134,4 +147,20 @@ function hidename.show(name)
 	end
 	
 	return shown
+end
+
+
+-- Ensure that nametag text attribute is not empty when player logs on
+if not hidename.use_alpha then
+	-- Sets the player's nametag text attribute to player name.
+	local function setNametagText(player)
+		local nametag = player:get_nametag_attributes()
+		if nametag.text == '' or nametag.text == nil then
+			player:set_nametag_attributes({
+				text = player:get_player_name(),
+			})
+		end
+	end
+	
+	core.register_on_joinplayer(setNametagText)
 end

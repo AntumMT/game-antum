@@ -13,7 +13,7 @@ A Minetest mod for hiding player nametags from view.
   - **showname**
     - Invocation: ***/showname***
     - Shows player's nametag
-- [API documentation](http://antummt.github.io/mod-hidename)
+- [API documentation](http://antummt.github.io/mod-hidename/api.html)
 
 
 ---

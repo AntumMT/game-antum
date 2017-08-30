@@ -12,6 +12,7 @@ hidename.modpath = core.get_modpath(hidename.modname)
 
 
 local scripts = {
+	'settings',
 	'api',
 	'command',
 }
