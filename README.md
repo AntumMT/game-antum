@@ -89,7 +89,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [playeranim][] ([BSD 2-Clause][lic.playeranim]) - version [59bcd38 Git][ver.playeranim] *2017-06-07* ([patched][patch.playeranim]) ***UPDATE***
     * [wardrobe][] ([WTFPL][lic.wtfpl]) -- version: [1.1-2-c48b011 Git][ver.wardrobe] *2015-05-21*
 * protection/
-    * [simple_protection][] ([WTFPL][lic.wtfpl]) -- version [574ecb8 Git][ver.simple_protection] *2017-07-15*
+    * [simple_protection][] ([WTFPL][lic.wtfpl]) -- version [91762c7 Git][ver.simple_protection] *2017-08-19* ([patched][patch.simple_protection])
 * signs/
 	* [signs_lib][] ([BSD][lic.signs_lib] / [WTFPL][lic.wtfpl]) -- version: [f6b8c94 Git][ver.signs_lib] *2017-08-12*
 * sound/
@@ -459,7 +459,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.rainbow_ore]: https://github.com/FsxShader2012/rainbow_ore/tree/6e77693
 [ver.sfinv_buttons]: http://repo.or.cz/minetest_sfinv_buttons.git/tree/4f3b075
 [ver.signs_lib]: https://github.com/minetest-mods/signs_lib/tree/f6b8c94
-[ver.simple_protection]: https://github.com/SmallJoker/simple_protection/tree/574ecb8
+[ver.simple_protection]: https://github.com/SmallJoker/simple_protection/tree/91762c7
 [ver.slingshot]: https://github.com/AntumMT/mod-slingshot/tree/bb77525
 [ver.snowdrift]: https://github.com/paramat/snowdrift/tree/fcb0537
 [ver.spawneggs]: https://github.com/thefamilygrog66/spawneggs/tree/4650370
@@ -526,6 +526,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.playeranim]: https://github.com/AntumMT/mod-playeranim/tree/8a289b9
 [patch.quartz]: https://github.com/AntumMT/mod-quartz/tree/d23dabd
 [patch.rainbow_ore]: https://github.com/AntumMT/mod-rainbow_ore/tree/0227a86
+[patch.simple_protection]: https://github.com/AntumMT/mod-simple_protection/tree/2b5bf66
 [patch.snowdrift]: https://github.com/AntumMT/mod-snowdrift/tree/1b9da4f
 [patch.spawneggs]: https://github.com/AntumMT/mod-spawneggs/tree/f2cc4cc
 [patch.technic]: https://github.com/AntumMT/mp-technic/tree/28eaaec
