@@ -20,7 +20,7 @@ trampoline.addColoredTrampNode = function(color, bounce)
 			'bottom.png',
 			'sides.png^sides_overlay_' .. color .. '.png'
 		},
-		groups = {dig_immediate=2, bouncy=bounce, fall_damage_add_percent=-70},
+		groups = {dig_immediate=2, bouncy=bounce, fall_damage_add_percent=-trampoline.damage_absorb},
 	})
 	
 	local aliases = {

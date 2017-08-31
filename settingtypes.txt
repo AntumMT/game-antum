@@ -443,6 +443,12 @@ spawneggs.grass_chance (Grass chance) int 3000
 spawneggs.enable_node_spawn (Enable node spawn) bool true
 
 
+[*trampoline]
+
+# Percent of damage absorbed when falling on a trampoline. Set to 100 to disable damage.
+trampoline.damage_absorb (Trampoline damage absorption) int 100 0 100
+
+
 [*whitelist]
 
 # Enables/Disables whitelist feature.

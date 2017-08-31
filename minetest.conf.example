@@ -1769,6 +1769,22 @@ coloredwood_enable_stairsplus = true
 
 
 
+###############
+## FURNITURE ##
+###############
+
+# *** trampoline ***
+
+## Percent of damage absorbed when falling on a trampoline.
+#  Set to 100 to disable damage.
+#    type:    int
+#    min:     0
+#    max:     100
+#    default: 100
+#trampoline.damage_absorb = 100
+
+
+
 #########
 ## LIB ##
 #########

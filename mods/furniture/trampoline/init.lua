@@ -13,6 +13,19 @@ trampoline.multi_colors = 7
 minetest.log('action', '[MOD] Loading \'' .. trampoline.modname .. '\' ...')
 
 
+--- Percent of damage absorbed when falling on tramp.
+--
+-- min 0 (full damage)
+-- max 100 (no damage)
+trampoline.damage_absorb = core.settings:get('trampoline.damage_absorb')
+if trampoline.damage_absorb == nil then
+	-- Defaults to no damage
+	trampoline.damage_absorb = 100
+else
+	trampoline.damage_absorb = tonumber(trampoline.damage_absorb)
+end
+
+
 trampoline.box = {
 	type = 'fixed',
 	fixed = {

@@ -1,0 +1,3 @@
+
+# Percent of damage absorbed when falling on a trampoline. Set to 100 to disable damage.
+trampoline.damage_absorb (Trampoline damage absorption) int 100 0 100
