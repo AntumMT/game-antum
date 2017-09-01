@@ -1,4 +1,3 @@
 default
 dye
 intllib?
-craft_guide?
