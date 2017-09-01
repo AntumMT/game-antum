@@ -147,7 +147,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 ### Stored in 'modpacks' directory
 
 * castle ([MIT][lic.castle])
-	* [castle_farming][] -- version: [a190dcf Git][ver.castle_farming] *2017-04-21*
+	* [castle_farming][] -- version: [a190dcf Git][ver.castle_farming] *2017-08-30*
 	* [castle_gates][] -- version: [dc53584 Git][ver.castle_gates] *dc53584* ([patched][patch.castle_gates])
 	* [castle_lighting][] -- version: [a7110c6 Git][ver.castle_lighting] *2017-06-07* *[patched][patch.castle_lighting])
 	* [castle_masonry][] -- version [2ed4f19 Git][ver.castle_masonry] *2017-02-28*
@@ -385,7 +385,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.bookmarks_gui]: https://github.com/cornernote/minetest-bookmarks_gui/tree/f7ae10a
 [ver.bridges]: https://github.com/Sokomine/bridges/tree/5b5f475
 [ver.campfire]: https://github.com/Napiophelios/campfire/tree/04b4ea5
-[ver.castle_farming]: https://github.com/minetest-mods/castle_farming/tree/a190dcf
+[ver.castle_farming]: https://github.com/minetest-mods/castle_farming/tree/b6503cf
 [ver.castle_gates]: https://github.com/minetest-mods/castle_gates/tree/dc53584
 [ver.castle_lighting]: https://github.com/minetest-mods/castle_lighting/tree/a7110c6
 [ver.castle_masonry]: https://github.com/minetest-mods/castle_masonry/tree/2ed4f19
