@@ -153,7 +153,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [castle_masonry][] -- version [2ed4f19 Git][ver.castle_masonry] *2017-02-28*
 	* [castle_shields][] -- version [ce853d7 Git][ver.castle_shields] *2017-02-28*
 	* [castle_storage][] -- version [c60b9ec Git][ver.castle_storage] *2017-06-04*
-	* [castle_tapestries][] -- version [78b6e36 Git][ver.castle_tapestries] *2017-03-19* ([patched][patch.castle_tapestries])
+	* [castle_tapestries][] -- version [78b6e36 Git][ver.castle_tapestries] *2017-03-19*
 	* [castle_weapons][] -- version [5f5ebcc Git][ver.castle_weapons] *2017-06-07* ([patched][patch.castle_weapons])
 	* [crafting_bench][] -- version [ca21489 Git][ver.crafting_bench] *2017-06-07*
 * [mob-engine][] ([zlib][lic.mob-engine] / [CC BY-SA][lic.ccbysa3.0]) -- version: [138f655 Git][ver.mob-engine] *2017-06-04* ([patched][patch.mob-engine]) ***UPDATE***
@@ -488,7 +488,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.biome_lib]: https://github.com/AntumMT/mod-biome_lib/tree/4e95b1e
 [patch.boats2]: https://github.com/AntumMT/mod-boats2/tree/9b2bcb7
 [patch.bridges]: https://github.com/AntumMT/mod-bridges/tree/ba8f71a
-[patch.castle_tapestries]: https://github.com/AntumMT/mod-castle_tapestries/tree/4e70f1b
 [patch.castle_weapons]: https://github.com/AntumMT/mod-castle_weapons/tree/669db13
 [patch.christmas]: https://github.com/AntumMT/mod-christmas/tree/7ffdc67
 [patch.compassgps]: https://github.com/AntumMT/mod-compassgps/tree/b900f30
