@@ -439,7 +439,7 @@ function heli:on_step(dtime)
 		vector.new(driver_pos.x, driver_pos.y, driver_pos.z + 1),
 	}
 	for i, pos in pairs(pos_tbl) do
-		local object = mt_get_node_or_nil(pos)
+		local object = minetest.get_node_or_nil(pos)
 		-- TODO: instead of looking for air, look at the collides property
 		if object then
 			--if self.driver then
