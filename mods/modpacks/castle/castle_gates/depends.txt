@@ -4,4 +4,3 @@ doors?
 xpanes?
 intllib?
 doc?
-craft_guide?
