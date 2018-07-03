@@ -42,7 +42,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [throwing][] ([WTFPL][lic.wtfpl]) -- version: [90bcf43 Git][ver.throwing] *2013-09-27* ([patched][patch.throwing])
 	* [xtraarmor][] ([CC BY-SA][lic.ccbysa3.0]) -- version: 0.3
 * farming/
-	* [crops][] ([LGPL / CC BY-SA / CC BY / CC0][lic.crops]) -- version: [2b1bb37 Git][ver.crops] *2017-03-31* ([patched][patch.crops])
+	* [crops][] ([LGPL / CC BY-SA / CC BY / CC0][lic.crops]) -- version: [1][ver.crops] *2017-09-30*
 	* [farming_plus][] ([WTFPL][lic.farming_plus]) -- version: [7e0d976 Git][ver.farming_plus] *2014-07-31* ([patched][patch.farming_plus])
 * furniture/
 	* [jukebox][] ([WTFPL / CC0][lic.jukebox]) -- version: [21fdffa Git][ver.jukebox] *2017-08-12*
@@ -400,7 +400,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.compassgps]: https://github.com/Kilarin/compassgps/tree/96892a0
 [ver.crafting_bench]: https://github.com/minetest-mods/crafting_bench/tree/ca21489
 [ver.craftguide]: https://github.com/minetest-mods/craftguide/tree/86a96c3
-[ver.crops]: https://github.com/minetest-mods/crops/tree/2b1bb37
+[ver.crops]: https://github.com/minetest-mods/crops/tree/v1
 [ver.currency]: https://github.com/minetest-mods/currency/tree/bb3fd1a
 [ver.deploy_nodes]: https://github.com/cornernote/minetest-deploy_nodes/tree/b67e162
 [ver.desert_life]: https://github.com/NathanSalapat/desert_life/tree/d448fa3
@@ -491,7 +491,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.christmas]: https://github.com/AntumMT/mod-christmas/tree/7ffdc67
 [patch.compassgps]: https://github.com/AntumMT/mod-compassgps/tree/b900f30
 [patch.craftguide]: https://github.com/AntumMT/mod-craftguide/tree/30eaf59
-[patch.crops]: https://github.com/AntumMT/mod-crops/tree/0c5c649
 [patch.drawers]: https://github.com/AntumMT/mod-drawers/tree/a77f809
 [patch.enchanting]: https://github.com/AntumMT/mod-enchanting/tree/7a01f2f
 [patch.ethereal]: https://github.com/AntumMT/mod-ethereal/tree/4102703
