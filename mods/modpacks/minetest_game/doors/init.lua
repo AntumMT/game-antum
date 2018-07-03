@@ -203,12 +203,7 @@ end
 
 local function can_dig_door(pos, digger)
 	replace_old_owner_information(pos)
-	if default.can_interact_with_node(digger, pos) then
-		return true
-	else
-		minetest.record_protection_violation(pos, digger:get_player_name())
-		return false
-	end
+	return default.can_interact_with_node(digger, pos)
 end
 
 function doors.register(name, def)
@@ -266,7 +261,8 @@ function doors.register(name, def)
 			local node = minetest.get_node(pointed_thing.under)
 			local pdef = minetest.registered_nodes[node.name]
 			if pdef and pdef.on_rightclick and
-					not placer:get_player_control().sneak then
+					not (placer and placer:is_player() and
+					placer:get_player_control().sneak) then
 				return pdef.on_rightclick(pointed_thing.under,
 						node, placer, itemstack, pointed_thing)
 			end
@@ -290,12 +286,12 @@ function doors.register(name, def)
 				return itemstack
 			end
 
-			local pn = placer:get_player_name()
+			local pn = placer and placer:get_player_name() or ""
 			if minetest.is_protected(pos, pn) or minetest.is_protected(above, pn) then
 				return itemstack
 			end
 
-			local dir = minetest.dir_to_facedir(placer:get_look_dir())
+			local dir = placer and minetest.dir_to_facedir(placer:get_look_dir()) or 0
 
 			local ref = {
 				{x = -1, y = 0, z = 0},
@@ -667,7 +663,7 @@ function doors.register_trapdoor(name, def)
 end
 
 doors.register_trapdoor("doors:trapdoor", {
-	description = "Wooden Trapdoor",
+	description = "Trapdoor",
 	inventory_image = "doors_trapdoor.png",
 	wield_image = "doors_trapdoor.png",
 	tile_front = "doors_trapdoor.png",
@@ -783,14 +779,14 @@ function doors.register_fencegate(name, def)
 end
 
 doors.register_fencegate("doors:gate_wood", {
-	description = "Apple Wood Fence Gate",
+	description = "Wooden Fence Gate",
 	texture = "default_wood.png",
 	material = "default:wood",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2}
 })
 
 doors.register_fencegate("doors:gate_acacia_wood", {
-	description = "Acacia Wood Fence Gate",
+	description = "Acacia Fence Gate",
 	texture = "default_acacia_wood.png",
 	material = "default:acacia_wood",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2}
@@ -804,14 +800,14 @@ doors.register_fencegate("doors:gate_junglewood", {
 })
 
 doors.register_fencegate("doors:gate_pine_wood", {
-	description = "Pine Wood Fence Gate",
+	description = "Pine Fence Gate",
 	texture = "default_pine_wood.png",
 	material = "default:pine_wood",
 	groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3}
 })
 
 doors.register_fencegate("doors:gate_aspen_wood", {
-	description = "Aspen Wood Fence Gate",
+	description = "Aspen Fence Gate",
 	texture = "default_aspen_wood.png",
 	material = "default:aspen_wood",
 	groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3}

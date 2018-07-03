@@ -83,7 +83,8 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
 	local inv = player:get_inventory()
 	local stack = player:get_wielded_item()
 
-	if fields.save and fields.title ~= "" and fields.text ~= "" then
+	if fields.save and fields.title and fields.text
+			and fields.title ~= "" and fields.text ~= "" then
 		local new_stack, data
 		if stack:get_name() ~= "default:book_written" then
 			local count = stack:get_count()
@@ -111,6 +112,7 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
 		end
 		data.description = "\""..short_title.."\" by "..data.owner
 		data.text = fields.text:sub(1, max_text_size)
+		data.text = data.text:gsub("\r\n", "\n"):gsub("\r", "\n")
 		data.page = 1
 		data.page_max = math.ceil((#data.text:gsub("[^\n]", "") + 1) / lpp)
 

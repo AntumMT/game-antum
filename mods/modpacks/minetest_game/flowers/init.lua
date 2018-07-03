@@ -25,10 +25,6 @@ minetest.register_alias("flowers:flower_geranium", "flowers:geranium")
 minetest.register_alias("flowers:flower_viola", "flowers:viola")
 minetest.register_alias("flowers:flower_dandelion_white", "flowers:dandelion_white")
 
--- Available flower colors (used by dye mod)
-flowers.colors = {
-	'blue', 'orange', 'red', 'violet', 'white', 'yellow',
-}
 
 -- Flower registration
 
@@ -63,7 +59,7 @@ end
 flowers.datas = {
 	{
 		"rose",
-		"Red Rose",
+		"Rose",
 		{-2 / 16, -0.5, -2 / 16, 2 / 16, 5 / 16, 2 / 16},
 		{color_red = 1, flammable = 1}
 	},
@@ -76,7 +72,7 @@ flowers.datas = {
 	{
 		"dandelion_yellow",
 		"Yellow Dandelion",
-		{-4 / 16, -0.5, -4 / 16, 4 / 16, -2 / 16, 4 / 16},
+		{-2 / 16, -0.5, -2 / 16, 2 / 16, 4 / 16, 2 / 16},
 		{color_yellow = 1, flammable = 1}
 	},
 	{
@@ -93,7 +89,7 @@ flowers.datas = {
 	},
 	{
 		"dandelion_white",
-		"White Dandelion",
+		"White dandelion",
 		{-5 / 16, -0.5, -5 / 16, 5 / 16, -2 / 16, 5 / 16},
 		{color_white = 1, flammable = 1}
 	},
@@ -131,31 +127,37 @@ function flowers.flower_spread(pos, node)
 
 	local pos0 = vector.subtract(pos, 4)
 	local pos1 = vector.add(pos, 4)
-	if #minetest.find_nodes_in_area(pos0, pos1, "group:flora") > 3 then
+	-- Maximum flower density created by mapgen is 13 per 9x9 area.
+	-- The limit of 7 below was tuned by in-game testing to result in a maximum
+	-- flower density by ABM spread of 13 per 9x9 area.
+	-- Warning: Setting this limit theoretically without in-game testing
+	-- results in a maximum flower density by ABM spread that is far too high.
+	if #minetest.find_nodes_in_area(pos0, pos1, "group:flora") > 7 then
 		return
 	end
 
 	local soils = minetest.find_nodes_in_area_under_air(
 		pos0, pos1, "group:soil")
-	if #soils > 0 then
-		local seedling = soils[math.random(#soils)]
-		local seedling_above =
-			{x = seedling.x, y = seedling.y + 1, z = seedling.z}
-		light = minetest.get_node_light(seedling_above)
-		if not light or light < 13 or
-				-- Desert sand is in the soil group
-				minetest.get_node(seedling).name == "default:desert_sand" then
-			return
+	local num_soils = #soils
+	if num_soils >= 1 then
+		for si = 1, math.min(3, num_soils) do
+			local soil = soils[math.random(num_soils)]
+			local soil_above = {x = soil.x, y = soil.y + 1, z = soil.z}
+			light = minetest.get_node_light(soil_above)
+			if light and light >= 13 and
+					-- Desert sand is in the soil group
+					minetest.get_node(soil).name ~= "default:desert_sand" then
+				minetest.set_node(soil_above, {name = node.name})
+			end
 		end
-
-		minetest.set_node(seedling_above, {name = node.name})
 	end
 end
 
 minetest.register_abm({
+	label = "Flower spread",
 	nodenames = {"group:flora"},
 	interval = 13,
-	chance = 96,
+	chance = 300,
 	action = function(...)
 		flowers.flower_spread(...)
 	end,
@@ -207,37 +209,34 @@ minetest.register_node("flowers:mushroom_brown", {
 
 -- Mushroom spread and death
 
+function flowers.mushroom_spread(pos, node)
+	if minetest.get_node_light(pos, nil) == 15 then
+		minetest.remove_node(pos)
+		return
+	end
+	local positions = minetest.find_nodes_in_area_under_air(
+		{x = pos.x - 1, y = pos.y - 2, z = pos.z - 1},
+		{x = pos.x + 1, y = pos.y + 1, z = pos.z + 1},
+		{"group:soil", "group:tree"})
+	if #positions == 0 then
+		return
+	end
+	local pos2 = positions[math.random(#positions)]
+	pos2.y = pos2.y + 1
+	if minetest.get_node_light(pos, 0.5) <= 3 and
+			minetest.get_node_light(pos2, 0.5) <= 3 then
+		minetest.set_node(pos2, {name = node.name})
+	end
+end
+
 minetest.register_abm({
+	label = "Mushroom spread",
 	nodenames = {"flowers:mushroom_brown", "flowers:mushroom_red"},
 	interval = 11,
-	chance = 50,
-	action = function(pos, node)
-		if minetest.get_node_light(pos, nil) == 15 then
-			minetest.remove_node(pos)
-			return
-		end
-		local random = {
-			x = pos.x + math.random(-2, 2),
-			y = pos.y + math.random(-1, 1),
-			z = pos.z + math.random(-2, 2)
-		}
-		local random_node = minetest.get_node_or_nil(random)
-		if not random_node or random_node.name ~= "air" then
-			return
-		end
-		local node_under = minetest.get_node_or_nil({x = random.x,
-			y = random.y - 1, z = random.z})
-		if not node_under then
-			return
-		end
-
-		if (minetest.get_item_group(node_under.name, "soil") ~= 0 or
-				minetest.get_item_group(node_under.name, "tree") ~= 0) and
-				minetest.get_node_light(pos, 0.5) <= 3 and
-				minetest.get_node_light(random, 0.5) <= 3 then
-			minetest.set_node(random, {name = node.name})
-		end
-	end
+	chance = 150,
+	action = function(...)
+		flowers.mushroom_spread(...)
+	end,
 })
 
 
@@ -247,6 +246,8 @@ minetest.register_alias("flowers:mushroom_spores_brown", "flowers:mushroom_brown
 minetest.register_alias("flowers:mushroom_spores_red", "flowers:mushroom_red")
 minetest.register_alias("flowers:mushroom_fertile_brown", "flowers:mushroom_brown")
 minetest.register_alias("flowers:mushroom_fertile_red", "flowers:mushroom_red")
+minetest.register_alias("mushroom:brown_natural", "flowers:mushroom_brown")
+minetest.register_alias("mushroom:red_natural", "flowers:mushroom_red")
 
 
 --
@@ -258,7 +259,7 @@ minetest.register_node("flowers:waterlily", {
 	drawtype = "nodebox",
 	paramtype = "light",
 	paramtype2 = "facedir",
-	tiles = {"flowers_waterlily.png"},
+	tiles = {"flowers_waterlily.png", "flowers_waterlily_bottom.png"},
 	inventory_image = "flowers_waterlily.png",
 	wield_image = "flowers_waterlily.png",
 	liquids_pointable = true,
@@ -280,12 +281,17 @@ minetest.register_node("flowers:waterlily", {
 
 	on_place = function(itemstack, placer, pointed_thing)
 		local pos = pointed_thing.above
-		local node = minetest.get_node(pointed_thing.under).name
-		local def = minetest.registered_nodes[node]
-		local player_name = placer:get_player_name()
+		local node = minetest.get_node(pointed_thing.under)
+		local def = minetest.registered_nodes[node.name]
+		local player_name = placer and placer:get_player_name() or ""
+
+		if def and def.on_rightclick then
+			return def.on_rightclick(pointed_thing.under, node, placer, itemstack,
+					pointed_thing)
+		end
 
 		if def and def.liquidtype == "source" and
-				minetest.get_item_group(node, "water") > 0 then
+				minetest.get_item_group(node.name, "water") > 0 then
 			if not minetest.is_protected(pos, player_name) then
 				minetest.set_node(pos, {name = "flowers:waterlily",
 					param2 = math.random(0, 3)})
@@ -294,7 +300,8 @@ minetest.register_node("flowers:waterlily", {
 					itemstack:take_item()
 				end
 			else
-				minetest.chat_send_player(player_name, "This area is protected")
+				minetest.chat_send_player(player_name, "Node is protected")
+				minetest.record_protection_violation(pos, player_name)
 			end
 		end
 
