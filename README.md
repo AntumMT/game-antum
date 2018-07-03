@@ -14,7 +14,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [cleaner][] ([CC0][lic.cc0]) -- version [0.4 (68222b1 Git)][ver.cleaner] *2017-08-30*
     * [invisible][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0])
     * [override][] ([MIT][lic.override]) -- version [0.2 (e6dda7a Git)][ver.override] *2017-08-30*
-    * [privilegeareas][] ([WTFPL][lic.privilegeareas] / [CC0][lic.cc0]) -- version: [aebaa00 Git][ver.privilegeareas] *2016-05-18*
+    * [privilegeareas][] ([WTFPL][lic.privilegeareas] / [CC0][lic.cc0]) -- version: [18a803c Git][ver.privilegeareas] *2017-12-04*
     * [privs][] ([CC0][lic.cc0])
     * [spectator_mode][] ([WTFPL][lic.spectator_mode]) -- version: [7d68bec Git][ver.spectator_mode] *2017-03-30*
     * [whitelist][] ([CC0][lic.cc0]) -- version [0.1 (b813b19 Git)][ver.whitelist] *2017-08-18*
@@ -454,7 +454,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.painting]: https://github.com/minetest-mods/painting/tree/8961849
 [ver.pipeworks]: https://github.com/minetest-mods/pipeworks/tree/a5e1bfa
 [ver.playeranim]: https://github.com/minetest-mods/playeranim/tree/59bcd38
-[ver.privilegeareas]: https://github.com/minetest-mods/privilegeareas/tree/aebaa00
+[ver.privilegeareas]: https://github.com/minetest-mods/privilegeareas/tree/18a803c
 [ver.quartz]: https://github.com/minetest-mods/quartz/tree/00ca4eb
 [ver.rainbow_ore]: https://github.com/FsxShader2012/rainbow_ore/tree/6e77693
 [ver.sfinv_buttons]: http://repo.or.cz/minetest_sfinv_buttons.git/tree/4f3b075

@@ -4,6 +4,9 @@ gui = {}
 minetest.register_chatcommand("privareas", {
 	params = "",
 	description = "PrivAreas: access a formspec from the privilegeareas mod",
+	privs = {
+		privs = true,
+	},
 	func = function(name, param)
 		add_gui(name)
 	end,
@@ -31,6 +34,10 @@ end
 minetest.register_on_player_receive_fields(function(player, formname, fields)
 	local name = player:get_player_name()
 	if (formname~="privilegeareas:gui_add") then
+		return false
+	end
+		
+	if not minetest.check_player_privs(player, "privs") then
 		return false
 	end
 
@@ -156,13 +163,19 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
 
 		if (gui[name].id and gui[name].trigger and fields.name) then
 			-- this will doubtlessly be buggy
-			table.insert(privilegeareas.areas[gui[name].id].actions[gui[name].trigger][gui[name].type],fields.name)
+			local id = gui[name].id
+			local trigger = gui[name].trigger
+			local action_type = gui[name].type
+			local trigger_action_types = privilegeareas.areas[id].actions[trigger]
+			if not trigger_action_types[action_type] then
+				trigger_action_types[action_type] = {}
+			end
+			table.insert(trigger_action_types[action_type],fields.name)
 
 			-- Alert user of success
 			minetest.chat_send_player(name, "Added data '"..fields.name.."' to '"..gui[name].type.."' in trigger "..gui[name].trigger.." in area "..gui[name].id)
 			
 			-- Delete field
-			local id = gui[name].id
 			gui[name] = nil
 
 			-- Update
