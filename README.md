@@ -34,7 +34,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [chatlog][] ([CC0][lic.cc0]) -- version [1.0][ver.chatlog] *2017-08-12*
 * crafting/
     * [craftguide][] ([GPL / WTFPL](mods/crafting/craftguide/LICENSE)) -- version: [86a96c3 Git][ver.craftguide] *2017-03-21* ([patched][patch.craftguide])
-* [currency][] ([WTFPL][lic.currency]) -- version: [9feb0c9 Git][ver.currency] *2017-08-14*
+* [currency][] ([WTFPL][lic.currency]) -- version: [bb3fd1a Git][ver.currency] *2018-05-24*
 * [enchanting][] ([GPL / WTFPL / CC BY-SA-NA][lic.enchanting]) -- version: [13ea31c Git][ver.enchanting] *2016-12-16* ([patched][patch.enchanting])
 * equipment/
 	* [airtanks][] ([MIT][lic.airtanks]) -- version: [5787956 Git][ver.airtanks] *2017-05-13* ([patche][patch.airtanks])
@@ -401,7 +401,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.crafting_bench]: https://github.com/minetest-mods/crafting_bench/tree/ca21489
 [ver.craftguide]: https://github.com/minetest-mods/craftguide/tree/86a96c3
 [ver.crops]: https://github.com/minetest-mods/crops/tree/2b1bb37
-[ver.currency]: https://github.com/minetest-mods/currency/tree/9feb0c9
+[ver.currency]: https://github.com/minetest-mods/currency/tree/bb3fd1a
 [ver.deploy_nodes]: https://github.com/cornernote/minetest-deploy_nodes/tree/b67e162
 [ver.desert_life]: https://github.com/NathanSalapat/desert_life/tree/d448fa3
 [ver.dinosaurs_aggressive]: https://github.com/AntumMT/mp-dinosaurs_aggressive/tree/874f299
