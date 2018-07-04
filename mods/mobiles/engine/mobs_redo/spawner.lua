@@ -171,7 +171,8 @@ minetest.register_abm({
 			pos2.y = pos2.y + 0.5
 
 			-- only if light levels are within range
-			if lig >= mlig and lig <= xlig then
+			if lig >= mlig and lig <= xlig
+			and minetest.registered_entities[mob] then
 				minetest.add_entity(pos2, mob)
 			end
 		end
