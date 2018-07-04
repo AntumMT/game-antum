@@ -10,10 +10,10 @@ Allows to modify and delete protected areas = Erlaubt das Abaendern und Entferne
 Manages all of your areas. = Verwaltet alle deine geschuetzten Gebiete
 
 # /area
-Available area commands:
-Information about this area = Informationen ueber dieses Gebiet:
-(Un)share one area = Eine Zugriffs-Berechtigung eines Gebietes hinzufuegen/entfernen
-(Un)share all areas = Eine Zugriffs-Berechtigung fuer alle Gebiete hinzufuegen/entfernen
+Available area commands = Verfuegbare 'area' Befehle
+Information about this area = Informationen ueber dieses Gebiet
+(Un)share one area = Zugriffs-Berechtigung eines Gebietes hinzufuegen/entfernen
+(Un)share all areas = Zugriffs-Berechtigung fuer alle Gebiete hinzufuegen/entfernen
 List claimed areas = Geschuetzte Gebiete auflisten
 Delete all areas of a player = Alle Gebiete eines Spielers loeschen
 Unclaim this area = Den Schutz fuer dieses Gebiet aufheben
@@ -32,6 +32,16 @@ Not claimable = Nicht schuetzbar
 Unowned (!) = Nicht geschuetzt (!)
 Owned by @1 = Von @1 geschuetzt
 Players with access: @1 = Spieler mit Zugriff: @1
+
+# /area radar
+North @1 = Nord @1
+East @1 = Ost @1
+South @1 = Sued @1
+West @1 = West @1
+Your position = Deine Position
+Your area = Dein Gebiet
+Area claimed\nNo access for you = Gebiet geschuetzt\nKeine Berechtigung
+Access for everybody = Zugriff fuer jeden
 
 # /area share <name>
 @1 already has access to all your areas. = @1 hat bereits Zugriff auf alle deine Gebiete.
@@ -78,10 +88,17 @@ Area owned by: @1 = Gebiet geschuetzt durch: @1
 Area owner: @1 = Gebiets-Besitzer: @1
 
 # Item: Claim stick
-Claim stick = Gebiets-Besetzer-Tool
+Claim Stick = Gebietsschutz
+#(click to protect) = (kicken zum schuetzen)
 This area is already protected by an other protection mod. = Dieses Gebiet ist bereits durch eine andere Mod geschuetzt.
 You can not claim areas below @1. = Du kannst keine Gebiete unterhalb von @1 schuetzen.
 This area is already owned by: @1 = @1 besitzt dieses Gebiet bereits.
 Congratulations! You now own this area. = Glueckwunsch! Du besitzt dieses Gebiet jetzt.
 You can not claim any further areas: Limit (@1) reached. = Du kannst keine weiteren Gebiete schuetzen lassen: Limit (@1) erreicht.
 Please claim this area to modify it. = Bitte schuetze das Gebiet um dieses abaendern zu koennen.
+
+
+#### Shared Chest ####
+
+Shared Chest = Geteilte Truhe
+(by protection) = (durch Gebietsschutz)

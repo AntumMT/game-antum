@@ -1,17 +1,20 @@
+--[[
+File: protection.lua
+
+Protection callback handler
+Node placement checks
+Claim Stick item definition
+]]
+
 local S = s_protect.gettext
 
-minetest.after(1, function()
-	s_protect.load_claims()
-	s_protect.load_shareall()
-end)
-
 local function notify_player(pos, player_name)
-	local data = s_protect.get_data(pos)
+	local data = s_protect.get_claim(pos)
 	if not data and s_protect.claim_to_dig then
 		minetest.chat_send_player(player_name, S("Please claim this area to modify it."))
 	elseif not data then
-		minetest.log("warning", "[simple_protection] Access refused but no area was found "..
-			"near pos=".. minetest.pos_to_string(pos))
+		-- Access restricted by another protection mod. Not my job.
+		return
 	else
 		minetest.chat_send_player(player_name, S("Area owned by: @1", data.owner))
 	end
@@ -27,7 +30,7 @@ end
 
 local old_item_place = minetest.item_place
 minetest.item_place = function(itemstack, placer, pointed_thing)
-	local player_name = placer:get_player_name()
+	local player_name = placer and placer:get_player_name() or ""
 
 	if s_protect.can_access(pointed_thing.above, player_name)
 			or not minetest.registered_nodes[itemstack:get_name()] then
@@ -40,76 +43,9 @@ end
 
 minetest.register_on_protection_violation(notify_player)
 
-local hud_time = 0
-s_protect.player_huds = {}
-
-minetest.register_globalstep(function(dtime)
-	hud_time = hud_time + dtime
-	if hud_time < 3 then
-		return
-	end
-	hud_time = 0
-
-
-	local shared = s_protect.share
-	for _, player in ipairs(minetest.get_connected_players()) do
-		local pos = vector.round(player:getpos())
-		local player_name = player:get_player_name()
-
-		local current_owner = ""
-		local data = s_protect.get_data(pos)
-		if data then
-			current_owner = data.owner
-		end
-
-		local has_access = (current_owner == player_name)
-		if not has_access and data then
-			-- Check if this area is shared with this player
-			has_access = table_contains(data.shared, player_name)
-		end
-		if not has_access then
-			-- Check if all areas are shared with this player
-			has_access = table_contains(shared[current_owner], player_name)
-		end
-		local changed = true
-
-		local hud_table = s_protect.player_huds[player_name]
-		if hud_table and hud_table.owner == current_owner
-				and hud_table.had_access == has_access then
-			-- still the same hud
-			changed = false
-		end
-
-		if hud_table and changed then
-			player:hud_remove(hud_table.hudID)
-			s_protect.player_huds[player_name] = nil
-		end
-
-		if current_owner ~= "" and changed then
-			-- green if access
-			local color = 0xFFFFFF
-			if has_access then
-				color = 0x00CC00
-			end
-			s_protect.player_huds[player_name] = {
-				hudID = player:hud_add({
-					hud_elem_type = "text",
-					name          = "area_hud",
-					number        = color,
-					position      = {x=0.15, y=0.97},
-					text          = S("Area owner: @1", current_owner),
-					scale         = {x=100, y=25},
-					alignment     = {x=0, y=0},
-				}),
-				owner = current_owner,
-				had_access = has_access
-			}
-		end
-	end
-end)
 
 minetest.register_craftitem("simple_protection:claim", {
-	description = S("Claim stick"),
+	description = S("Claim Stick") .. " " .. S("(click to protect)"),
 	inventory_image = "simple_protection_claim.png",
 	stack_max = 10,
 	on_use = function(itemstack, user, pointed_thing)
@@ -123,43 +59,40 @@ minetest.register_craftitem("simple_protection:claim", {
 					S("This area is already protected by an other protection mod."))
 			return
 		end
-		if not s_protect.underground_claim then
+		if s_protect.underground_limit then
 			local minp, maxp = s_protect.get_area_bounds(pos)
 			if minp.y < s_protect.underground_limit then
-				minetest.chat_send_player(player_name, S("You can not claim areas below @1.",
-						s_protect.underground_limit.."m"))
+				minetest.chat_send_player(player_name,
+					S("You can not claim areas below @1.",
+					s_protect.underground_limit .. "m"))
 				return
 			end
 		end
-		local data, area_pos = s_protect.get_data(pos)
+		local data, index = s_protect.get_claim(pos)
 		if data then
 			minetest.chat_send_player(player_name,
 					S("This area is already owned by: @1", data.owner))
 			return
 		end
 		-- Count number of claims for this user
-		local claims_count = 0
 		local claims_max = s_protect.max_claims
 
 		if minetest.check_player_privs(player_name, {simple_protection=true}) then
 			claims_max = claims_max * 2
 		end
 
-		for k, v in pairs(s_protect.claims) do
-			if v.owner == player_name then
-				claims_count = claims_count + 1
-				if claims_count >= claims_max then
-					minetest.chat_send_player(player_name,
-						S("You can not claim any further areas: Limit (@1) reached.",
-						tostring(claims_max)))
-					return
-				end
-			end
+		local claims, count = s_protect.get_player_claims(player_name)
+		if count >= claims_max then
+			minetest.chat_send_player(player_name,
+				S("You can not claim any further areas: Limit (@1) reached.",
+				tostring(claims_max)))
+			return
 		end
 
 		itemstack:take_item(1)
-		s_protect.claims[area_pos] = {owner=player_name, shared={}}
-		s_protect.save()
+		s_protect.update_claims({
+			[index] = {owner=player_name, shared={}}
+		})
 
 		minetest.add_entity(s_protect.get_center(pos), "simple_protection:marker")
 		minetest.chat_send_player(player_name, S("Congratulations! You now own this area."))

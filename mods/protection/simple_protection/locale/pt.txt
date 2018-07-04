@@ -10,7 +10,7 @@ Allows to modify and delete protected areas = Permitir modificar e deletar areas
 Manages all of your areas. = Gerencia todas as suas areas.
 
 # /area
-Available area commands: = Comandos disponiveis:
+Available area commands = Comandos disponiveis
 Information about this area = Dados sobre essa area
 (Un)share one area = (Des)compartilha uma area
 (Un)share all areas = (Des)compartilha todas areas
@@ -32,6 +32,16 @@ Not claimable = Nao reivindicada
 Unowned (!) = Sem dono (!)
 Owned by @1 = Reivindicada por @1
 Players with access: @1 = Jogadores com acesso: @1
+
+# /area radar
+#North @1 =
+#East @1 =
+#South @1 =
+#West @1 =
+#Your position =
+#Your area =
+#Area claimed\nNo access for you =
+#Access for everybody =
 
 # /area share <name>
 @1 already has access to all your areas. = @1 ja possui acesso a todas suas areas.
@@ -78,10 +88,17 @@ Area owned by: @1 = Area possuida por: @1
 Area owner: @1 = Area de: @1
 
 # Item: Claim stick
-Claim stick = Graveto Reivindicador
+Claim Stick = Graveto Reivindicador
+#(click to protect) =
 This area is already protected by an other protection mod. = Essa area ja foi protegida por um outro mod protetor.
 You can not claim areas below @1. = Nao podes reivindicar areas abaixo @1.
 This area is already owned by: @1 = Essa area ja foi reivindicada por: @1.
 Congratulations! You now own this area. = Parabens! Agora reivindicaste essa area.
 #You can not claim any further areas: Limit (@1) reached. =
 #Please claim this area to modify it. =
+
+
+#### Shared Chest ####
+
+#Shared Chest =
+#(by protection) =

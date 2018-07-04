@@ -89,7 +89,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [playeranim][] ([BSD 2-Clause][lic.playeranim]) - version [59bcd38 Git][ver.playeranim] *2017-06-07* ([patched][patch.playeranim]) ***UPDATES***
     * [wardrobe][] ([WTFPL][lic.wtfpl]) -- version: [1.1-2-c48b011 Git][ver.wardrobe] *2015-05-21*
 * protection/
-    * [simple_protection][] ([WTFPL][lic.wtfpl]) -- version [2b35fbf Git][ver.simple_protection] *2017-08-31* ***UPDATES***
+    * [simple_protection][] ([CC0][lic.cc0]) -- version [5aa2f24 Git][ver.simple_protection] *2018-04-29*
 * signs/
 	* [signs_lib][] ([BSD][lic.signs_lib] / [WTFPL][lic.wtfpl]) -- version: [f6b8c94 Git][ver.signs_lib] *2017-08-12* ***UPDATES***
 * sound/
@@ -460,7 +460,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.rainbow_ore]: https://github.com/FsxShader2012/rainbow_ore/tree/6e77693
 [ver.sfinv_buttons]: http://repo.or.cz/minetest_sfinv_buttons.git/tree/4f3b075
 [ver.signs_lib]: https://github.com/minetest-mods/signs_lib/tree/f6b8c94
-[ver.simple_protection]: https://github.com/SmallJoker/simple_protection/tree/2b35fbf
+[ver.simple_protection]: https://github.com/SmallJoker/simple_protection/tree/5aa2f24
 [ver.slingshot]: https://github.com/AntumMT/mod-slingshot/tree/bb77525
 [ver.snowdrift]: https://github.com/paramat/snowdrift/tree/fcb0537
 [ver.spawneggs]: https://github.com/thefamilygrog66/spawneggs/tree/4650370

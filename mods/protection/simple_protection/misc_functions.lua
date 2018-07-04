@@ -1,11 +1,12 @@
-function vector.floor(v)
-	return {
-		x = math.floor(v.x),
-		y = math.floor(v.y),
-		z = math.floor(v.z)
-	}
-end
+--[[
+File: functions.lua
 
+Table helper functions
+Protection helper functions
+Configuration loading
+]]
+
+-- Helper functions
 function table_contains(t, e)
 	if not t or not e then
 		return false
@@ -18,7 +19,7 @@ function table_contains(t, e)
 	return false
 end
 
-function table_delete(t, e)
+function table_erase(t, e)
 	if not t or not e then
 		return false
 	end
@@ -36,8 +37,9 @@ s_protect.can_access = function(pos, player_name)
 	if not player_name then
 		return false
 	end
-	-- Allow pipeworks access
-	if player_name == ":pipeworks" then
+	-- Allow access for pipeworks and unidentified mods
+	if player_name == ":pipeworks"
+			or player_name == "" then
 		return true
 	end
 
@@ -48,7 +50,7 @@ s_protect.can_access = function(pos, player_name)
 	end
 
 	-- Data of current area
-	local data = s_protect.get_data(pos)
+	local data = s_protect.get_claim(pos)
 
 	-- Area is not claimed
 	if not data then
@@ -57,8 +59,8 @@ s_protect.can_access = function(pos, player_name)
 			return true
 		end
 
-		-- Claim everywhere? Disallow everywhere.
-		if s_protect.underground_claim then
+		-- Must claim everywhere? Disallow everywhere.
+		if not s_protect.underground_limit then
 			return false
 		end
 		-- Is it in claimable area? Yes? Disallow.
@@ -92,15 +94,8 @@ s_protect.get_location = function(pos_)
 		z =  pos.z                                / s_protect.claim_size
 	})
 end
--- Speed up the function access
+
 local get_location = s_protect.get_location
-
-s_protect.get_data = function(pos)
-	local pos = get_location(pos)
-	local str = pos.x..","..pos.y..","..pos.z
-	return s_protect.claims[str], str
-end
-
 s_protect.get_area_bounds = function(pos_)
 	local cs = s_protect.claim_size
 	local cy = s_protect.claim_height
@@ -135,80 +130,6 @@ s_protect.get_center = function(pos1)
 	return pos
 end
 
-s_protect.load_claims = function()
-	local file = io.open(s_protect.file, "r")
-	if not file then
-		return
-	end
-	for line in file:lines() do
-		if line ~= "" then
-			local data = line:split(" ")
-			-- Line format: pos, owner, shared_player, shared_player2, ..
-			local _shared = {}
-			if #data > 2 then
-				for index = 3, #data do
-					if data[index] ~= "" then
-						table.insert(_shared, data[index])
-					end
-				end
-			end
-			s_protect.claims[data[1]] = {owner=data[2], shared=_shared}
-		end
-	end
-	io.close(file)
-	minetest.log("action", "Loaded claim data")
-end
-
-s_protect.load_shareall = function()
-	local file = io.open(s_protect.sharefile, "r")
-	if not file then
-		return
-	end
-	for line in file:lines() do
-		if line ~= "" then
-			local data = line:split(" ")
-			-- Line format: owner, shared_player, shared_player2, ..
-			local _shared = {}
-			if #data > 1 then
-				for index = 2, #data do
-					if data[index] ~= "" then
-						table.insert(_shared, data[index])
-					end
-				end
-				s_protect.share[data[1]] = _shared
-			end
-		end
-	end
-	io.close(file)
-	minetest.log("action", "Loaded shared claims")
-end
-
-s_protect.save = function()
-	local file = io.open(s_protect.file, "w")
-	for pos, data in pairs(s_protect.claims) do
-		if data.owner and data.owner ~= "" then
-			local shared = ""
-			for i, player in ipairs(data.shared) do
-				shared = shared.." "..player
-			end
-			file:write(pos.." "..data.owner..shared.."\n")
-		end
-	end
-	io.close(file)
-	-- Save globally shared areas
-	file = io.open(s_protect.sharefile, "w")
-	for name, players in pairs(s_protect.share) do
-		if #players > 0 then
-			local shared = ""
-			for i, player in ipairs(players) do
-				shared = shared.." "..player
-			end
-			file:write(name..shared.."\n")
-		end
-	end
-	io.close(file)
-end
-
 simple_protection = false
 s_protect.load_config = function()
 	-- Load defaults
@@ -226,7 +147,14 @@ s_protect.load_config = function()
 		end
 		simple_protection = nil
 		if s_protect.claim_heigh then
+			minetest.log("warning", "[simple_protection] "
+				.. "Loaded deprecated setting: claim_heigh")
 			s_protect.claim_height = s_protect.claim_heigh
+		end
+		if s_protect.underground_claim then
+			minetest.log("warning", "[simple_protection] "
+				.. "Loaded deprecated setting: underground_claim")
+			s_protect.underground_limit = nil
 		end
 		return
 	end

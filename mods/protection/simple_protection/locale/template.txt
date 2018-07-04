@@ -10,7 +10,7 @@ Allows to modify and delete protected areas =
 Manages all of your areas. =
 
 # /area
-Available area commands:
+Available area commands: =
 Information about this area =
 (Un)share one area =
 (Un)share all areas =
@@ -32,6 +32,18 @@ Not claimable =
 Unowned (!) =
 Owned by @1 =
 Players with access: @1 =
+
+# /area radar
+North @1 =
+East @1 =
+South @1 =
+West @1 =
+Your position =
+Your area =
+Area claimed\nNo access for you =
+Access for everybody =
+One area unit (@1m) up/down\n-> no claims on this Y level =
+square \= 1 area \= @1x@2x@3 nodes (X,Y,Z) =
 
 # /area share <name>
 @1 already has access to all your areas. =
@@ -78,10 +90,17 @@ Area owned by: @1 =
 Area owner: @1 =
 
 # Item: Claim stick
-Claim stick =
+Claim Stick =
+(click to protect) =
 This area is already protected by an other protection mod. =
 You can not claim areas below @1. =
 This area is already owned by: @1 =
 Congratulations! You now own this area. =
 You can not claim any further areas: Limit (@1) reached. =
 Please claim this area to modify it. =
+
+
+#### Shared Chest ####
+
+Shared Chest =
+(by protection) =
