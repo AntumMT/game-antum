@@ -17,11 +17,63 @@ port.a = not (pin.b or pin.c)
 port.a = pin.b ~= pin.c
 -- XNOR / NXOR
 port.a = pin.b == pin.c]],
+
 	digilinesth = [[digiline_send(channel, msg)
 if event.type == "digiline" then
 	print(event.channel)
 	print(event.msg)
 end]],
+
+	clock = [[number_of_oscillations = 0 -- 0 for infinity
+interval = 1
+input_port = "A"
+output_port = "C"
+
+if event.type == "on" and event.pin.name == input_port and not mem.running then
+  if not mem.counter then
+    mem.counter = 0
+  end
+  mem.running = true
+  port[string.lower(output_port)] = true
+  interrupt(interval)
+  mem.counter = mem.counter + 1
+elseif event.type == "off" and event.pin.name == input_port and mem.running and number_of_oscillations == 0 then
+  mem.running = false
+  mem.counter = 0
+elseif event.type == "interrupt" then
+  if not port[string.lower(output_port)] and mem.running then
+    port[string.lower(output_port)] = true
+    interrupt(interval)
+    mem.counter = mem.counter + 1
+  else
+    port[string.lower(output_port)] = false
+    if mem.counter < number_of_oscillations or number_of_oscillations == 0 and mem.running then
+      interrupt(interval)
+    else
+      mem.running = false
+      mem.counter = 0
+    end
+  end
+end]],
+
+	counter = [[counter_limit = 5
+output_time = 0.5
+input_port = "A"
+output_port = "C"
+
+if event.type == "on" and event.pin.name == input_port then
+  if not mem.counter then
+    mem.counter = 0
+  end
+  mem.counter = mem.counter + 1
+  if mem.counter >= counter_limit then
+     port[string.lower(output_port)] = true
+     interrupt(output_time)
+     mem.counter = 0
+  end
+elseif event.type == "interrupt" then
+  port[string.lower(output_port)] = false
+end]]
 }}
 
 
@@ -126,7 +178,7 @@ local function get_selection_formspec(pname, selected_template)
 		fill_formspec_dropdown_list(pl_templates, selected_template)..
 
 	-- show selected template
-		"textarea[0,1;10.5,8.5;template_code;template code:;"..template_code.."]"..
+		"textarea[0,1;10.5,8.5;template_code;template code:;"..minetest.formspec_escape(template_code).."]"..
 
 	-- save name
 		"field[5,9.5;5,0;save_name;savename;"..selected_template.."]"..
@@ -150,8 +202,8 @@ end
 
 -- do not localize the function directly here to support possible overwritten luacontrollers
 local luac_def = minetest.registered_nodes["mesecons_luacontroller:luacontroller0000"]
-local function set_luacontroller_code(pos, code)
-	luac_def.on_receive_fields(pos, nil, {code=code, program=""})
+local function set_luacontroller_code(pos, code, sender)
+	luac_def.on_receive_fields(pos, nil, {code=code, program=""}, sender)
 end
 
 minetest.register_tool("moremesecons_luacontroller_tool:lctt", {
@@ -171,10 +223,10 @@ minetest.register_tool("moremesecons_luacontroller_tool:lctt", {
 			return
 		end
 
-		pdata[pname] = pdata[pname] or {
+		pdata[pname] = {
 			pos = pos,
 			player_name = pname,
-			template_name = next(templates[pname] or templates[next(templates)]),
+			template_name = pdata[pname] and pdata[pname].template_name or next(templates[pname] or templates[next(templates)]),
 		}
 		minetest.show_formspec(pname, "moremesecons:luacontroller_tool", get_selection_formspec(pdata[pname].player_name, pdata[pname].template_name))
 	end,
@@ -254,7 +306,7 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
 		-- replace the code of the luacontroller with the template
 		local code = get_code_or_nil(pname, fields.player_name, fields.template_name)
 		if code then
-			set_luacontroller_code(pos, code)
+			set_luacontroller_code(pos, code, player)
 			minetest.chat_send_player(pname, "code set to template at "..minetest.pos_to_string(pos))
 		end
 		return
@@ -264,7 +316,7 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
 		-- add the template to the end of the code of the luacontroller
 		local code = get_code_or_nil(pname, fields.player_name, fields.template_name)
 		if code then
-			set_luacontroller_code(pos, meta:get_string("code").."\r"..code)
+			set_luacontroller_code(pos, meta:get_string("code").."\r"..code, player)
 			minetest.chat_send_player(pname, "code added to luacontroller at "..minetest.pos_to_string(pos))
 		end
 		return
