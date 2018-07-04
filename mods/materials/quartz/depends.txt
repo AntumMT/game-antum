@@ -2,4 +2,3 @@ default
 stairs
 moreblocks?
 intllib?
-craft_guide?

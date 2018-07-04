@@ -62,7 +62,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [gems_encrustable][] ([WTFPL][lic.wtfpl]) -- version: [81d513d Git][ver.gems_encrustable] *2012-07-31* ([patched][patch.gems_encrustable])
 	* [gems_tools][] ([GPL][lic.gpl3.0]) -- version: [b375432 Git][ver.gems_tools] *2016-09-03* ([patched][patch.gems_tools])
 	* [moreores][] ([zlib][lic.moreores] / [CC BY-SA][lic.ccbysa3.0]) -- version: [2316595 Git][ver.moreores] *2018-04-21* ([patched][patch.moreores])
-	* [quartz][] ([MIT][lic.quartz]) -- version: [00ca4eb Git][ver.quartz] *2017-02-28* ([patched][patch.quartz]) ***UPDATES***
+	* [quartz][] ([MIT][lic.quartz]) -- version: [1c5dca2 Git][ver.quartz] *2017-10-03* ([patched][patch.quartz])
 	* [rainbow_ore][] ([LGPL][lic.rainbow_ore]) -- version: [6e77693 Git][ver.rainbow_ore] *2015-11-02* ([patched][patch.rainbow_ore])
 	* [unifieddyes][] ([GPL][lic.gpl2.0]) -- version: [8b20a06 Git][ver.unifieddyes] *2017-06-04* ([patched][patch.unifieddyes]) ***UPDATES***
 * mobiles/
@@ -456,7 +456,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.pipeworks]: https://github.com/minetest-mods/pipeworks/tree/a5e1bfa
 [ver.playeranim]: https://github.com/minetest-mods/playeranim/tree/59bcd38
 [ver.privilegeareas]: https://github.com/minetest-mods/privilegeareas/tree/18a803c
-[ver.quartz]: https://github.com/minetest-mods/quartz/tree/00ca4eb
+[ver.quartz]: https://github.com/minetest-mods/quartz/tree/1c5dca2
 [ver.rainbow_ore]: https://github.com/FsxShader2012/rainbow_ore/tree/6e77693
 [ver.sfinv_buttons]: http://repo.or.cz/minetest_sfinv_buttons.git/tree/4f3b075
 [ver.signs_lib]: https://github.com/minetest-mods/signs_lib/tree/f6b8c94
@@ -517,7 +517,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.mysheetmetal]: https://github.com/AntumMT/mod-mysheetmetal/tree/b7d644b
 [patch.nether]: https://github.com/AntumMT/mod-nether/tree/d4e5a2a
 [patch.playeranim]: https://github.com/AntumMT/mod-playeranim/tree/8a289b9
-[patch.quartz]: https://github.com/AntumMT/mod-quartz/tree/d23dabd
+[patch.quartz]: https://github.com/AntumMT/mod-quartz/tree/c6813dc
 [patch.rainbow_ore]: https://github.com/AntumMT/mod-rainbow_ore/tree/0227a86
 [patch.snowdrift]: https://github.com/AntumMT/mod-snowdrift/tree/1b9da4f
 [patch.spawneggs]: https://github.com/AntumMT/mod-spawneggs/tree/f2cc4cc
