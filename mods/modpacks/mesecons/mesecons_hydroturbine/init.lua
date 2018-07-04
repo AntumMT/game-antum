@@ -13,6 +13,7 @@ minetest.register_node("mesecons_hydroturbine:hydro_turbine_off", {
 		"jeija_hydro_turbine_turbine_misc_off.png"
 	},
 	inventory_image = "jeija_hydro_turbine_inv.png",
+	is_ground_content = false,
 	wield_scale = {x=0.75, y=0.75, z=0.75},
 	groups = {dig_immediate=2},
 	description="Water Turbine",
@@ -24,11 +25,13 @@ minetest.register_node("mesecons_hydroturbine:hydro_turbine_off", {
 	sounds = default.node_sound_stone_defaults(),
 	mesecons = {receptor = {
 		state = mesecon.state.off
-	}}
+	}},
+	on_blast = mesecon.on_blastnode,
 })
 
 minetest.register_node("mesecons_hydroturbine:hydro_turbine_on", {
 	drawtype = "mesh",
+	is_ground_content = false,
 	mesh = "jeija_hydro_turbine_on.obj",
 	wield_scale = {x=0.75, y=0.75, z=0.75},
 	tiles = {
@@ -51,7 +54,8 @@ minetest.register_node("mesecons_hydroturbine:hydro_turbine_on", {
 	sounds = default.node_sound_stone_defaults(),
 	mesecons = {receptor = {
 		state = mesecon.state.on
-	}}
+	}},
+	on_blast = mesecon.on_blastnode,
 })
 
 
@@ -70,7 +74,6 @@ nodenames = {"mesecons_hydroturbine:hydro_turbine_off"},
 		local waterpos={x=pos.x, y=pos.y+1, z=pos.z}
 		if is_flowing_water(waterpos) then
 			minetest.set_node(pos, {name="mesecons_hydroturbine:hydro_turbine_on"})
-			nodeupdate(pos)
 			mesecon.receptor_on(pos)
 		end
 	end,
@@ -84,7 +87,6 @@ nodenames = {"mesecons_hydroturbine:hydro_turbine_on"},
 		local waterpos={x=pos.x, y=pos.y+1, z=pos.z}
 		if not is_flowing_water(waterpos) then
 			minetest.set_node(pos, {name="mesecons_hydroturbine:hydro_turbine_off"})
-			nodeupdate(pos)
 			mesecon.receptor_off(pos)
 		end
 	end,

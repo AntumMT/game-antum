@@ -136,7 +136,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [3d_armor][] ([LGPL / CC BY-SA][lic.3d_armor]) - version: [cc26d04 Git][ver.3d_armor] *2017-07-09* ([patched][patch.3d_armor]) ***UPDATES***
 * [deploy_nodes][] ([BSD 3-Clause][lic.deploy_nodes]) -- version [b67e162 Git][ver.deploy_nodes] *2017-06-08*
 * [homedecor][] ([LGPL / WTFPL / CC BY-SA / CC0][lic.homedecor]) -- version: [a6c17d6 Git][ver.homedecor] *2017-06-16* ([patched][patch.homedecor]) ***UPDATES***
-* [mesecons][] ([LGPL / CC BY-SA][lic.mesecons]) -- version: [564bdc2 Git][ver.mesecons] *2017-05-08* ([patched][patch.mesecons]) ***UPDATES***
+* [mesecons][] ([LGPL / CC BY-SA][lic.mesecons]) -- version [7013f2e Git][ver.mesecons] *2018-05-15* ([patched][patch.mesecons])
 * [minetest_game][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- version: [0.4.17][ver.minetest_game] *2018-05-18* ***UNSTABLE UPDATES***
 * [moremesecons][] ([MPL][lic.mpl2.0]) -- version: [aa2ae82 Git][ver.moremesecons] *2017-06-04* ***UPDATES***
 * [technic][] ([LGPL][lic.lgpl2.0]) -- version: [6664714 Git][ver.technic] *2018-06-28* ([patched][patch.technic])
@@ -431,7 +431,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.invisibility]: https://github.com/tenplus1/invisibility/tree/bf4156b
 [ver.jukebox]: https://github.com/minetest-mods/jukebox/tree/21fdffa
 [ver.lightning]: https://github.com/minetest-mods/lightning/tree/39bd36c
-[ver.mesecons]: https://github.com/minetest-mods/mesecons/tree/564bdc2
+[ver.mesecons]: https://github.com/minetest-mods/mesecons/tree/7013f2e
 [ver.minetest_game]: https://github.com/minetest/minetest_game/tree/f855bee
 [ver.mob-engine]: https://github.com/minetest-mods/mob-engine/tree/138f655
 [ver.mobs_animal]: https://github.com/tenplus1/mobs_animal/tree/52889c7
@@ -505,7 +505,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.hovercraft]: https://github.com/AntumMT/mod-hovercraft/tree/73a6223
 [patch.hud]: https://github.com/AntumMT/mod-hud/tree/6846e20
 [patch.invisibility]: https://github.com/AntumMT/mod-invisibility/tree/f045c7c
-[patch.mesecons]: https://github.com/AntumMT/mp-mesecons/tree/830823a
+[patch.mesecons]: https://github.com/AntumMT/mp-mesecons/tree/96784e2
 [patch.minetest_game]: https://github.com/AntumMT/mtgame-minetest/tree/c2f3b95
 [patch.mob-engine]: https://github.com/AntumMT/mp-mob-engine/tree/0b3706f
 [patch.mobs_animal]: https://github.com/AntumMT/mod-mobs_animal/tree/e275046

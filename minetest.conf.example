@@ -2666,27 +2666,22 @@ animalmaterials.override_lasso = true
 
 # ## mesecons
 
-# ???
-#    type:    int
-#    default: 600
-#mesecon.foreceload_timeout = 600
-
-# The value at which circuits will overheat.
-#    type:    int
-#    default: 20
-#mesecon.overheat_max = 20
-
-# Resume time.
+## Resume time.
 #    type:    int
 #    default: 4
 #mesecon.resumetime = 4
 
-## Cooldown time.
+## The value at which circuits will overheat.
+#    type:    int
+#    default: 20
+#mesecon.overheat_max = 20
+
+## Device cooldown time.
 #    type:    float
 #    default: 2.0
 #mesecon.cooldown_time = 2.0
 
-## Cooldown granularity.
+## Cooldown step length.
 #    type:    float
 #    default: 0.5
 #mesecon.cooldown_granularity = 0.5
@@ -2694,7 +2689,7 @@ animalmaterials.override_lasso = true
 
 # ## mesecons_blinkyplant
 
-## Plant interval.
+## Plant blinking interval.
 #    type:    int
 #    default: 3
 #mesecon.blinky_plant_interval = 3
@@ -2702,12 +2697,12 @@ animalmaterials.override_lasso = true
 
 # ## mesecons_detector
 
-## Detector radius.
+## Player detector radius.
 #    type:    int
 #    default: 6
 #mesecon.detector_radius = 6
 
-## Detector max distance.
+## Node detector radius.
 #    type:    int
 #    default: 10
 #mesecon.node_detector_distance_max = 10
@@ -2715,22 +2710,22 @@ animalmaterials.override_lasso = true
 
 # ## mesecons_luacontroller
 
-## Max.
+## string:rep result length limit.
 #    type:    int
 #    default: 64000
 #mesecon.luacontroller_string_rep_max = 64000
 
-## Digiline max length.
+## Digiline message size limit.
 #    type:    int
 #    default: 50000
 #mesecon.luacontroller_digiline_maxlen = 50000
 
-## Max events.
+## Controller execution time limit.
 #    type:    int
 #    default: 10000
 #mesecon.luacontroller_maxevents = 10000
 
-## Memory size.
+## Controller memory limit.
 #    type:    int
 #    default: 100000
 #mesecon.luacontroller_memsize = 100000
@@ -2743,12 +2738,12 @@ animalmaterials.override_lasso = true
 #    default: 3
 #mesecon.movestone_speed = 3
 
-## Max push
+## Max push.
 #    type:    int
 #    default: 50
 #mesecon.movestone_max_push = 50
 
-## Max pull
+## Max pull.
 #    type:    int
 #    default: 50
 #mesecon.movestone_max_pull = 50
@@ -2769,7 +2764,7 @@ animalmaterials.override_lasso = true
 
 # ## mesecons_pressureplates
 
-## Interval.
+## Check interval.
 #    type:    float
 #    default: 0.1
 #mesecon.pplate_interval = 0.1

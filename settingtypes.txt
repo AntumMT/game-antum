@@ -618,28 +618,31 @@ mobs.velociraptor_spawn_time (Velociraptor spawn time) enum any day,night,any
 [**mesecons]
 
 mesecon.resumetime (Resume time) int 4
-mesecon.overheat_max (Overheat max) int 20
-mesecon.cooldown_time (Cooldown time) float 2.0
-mesecon.cooldown_granularity (Cooldown granularity) float 0.5
+
+# The value at which circuits will overheat.
+mesecon.overheat_max (Device heat limit) int 20
+
+mesecon.cooldown_time (Device cooldown time) float 2.0
+mesecon.cooldown_granularity (Cooldown step length) float 0.5
 
 
 [**mesecons_blinkyplant]
 
-mesecon.blinky_plant_interval (Plant interval) int 3
+mesecon.blinky_plant_interval (Plant blinking interval) int 3
 
 
 [**mesecons_detector]
 
-mesecon.detector_radius (Detector radius) int 6
-mesecon.node_detector_distance_max (Detector max distance) int 10
+mesecon.detector_radius (Player detector radius) int 6
+mesecon.node_detector_distance_max (Node detector radius) int 10
 
 
 [**mesecons_luacontroller]
 
-mesecon.luacontroller_string_rep_max (Max) int 64000
-mesecon.luacontroller_digiline_maxlen (Digiline max length) int 50000
-mesecon.luacontroller_maxevents (Max events) int 10000
-mesecon.luacontroller_memsize (Memory size) int 100000
+mesecon.luacontroller_string_rep_max (string:rep result length limit) int 64000
+mesecon.luacontroller_digiline_maxlen (Digiline message size limit) int 50000
+mesecon.luacontroller_maxevents (Controller execution time limit) int 10000
+mesecon.luacontroller_memsize (Controller memory limit) int 100000
 
 
 [**mesecons_movestones]
@@ -657,7 +660,7 @@ mesecon.piston_max_pull (Max pull) int 15
 
 [**mesecons_pressureplates]
 
-mesecon.pplate_interval (Interval) float 0.1
+mesecon.pplate_interval (Check interval) float 0.1
 
 
 [*Minetest Game]

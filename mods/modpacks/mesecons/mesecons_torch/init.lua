@@ -54,6 +54,7 @@ minetest.register_node("mesecons_torch:mesecon_torch_off", {
 	tiles = {"jeija_torches_off.png", "jeija_torches_off_ceiling.png", "jeija_torches_off_side.png"},
 	inventory_image = "jeija_torches_off.png",
 	paramtype = "light",
+	is_ground_content = false,
 	walkable = false,
 	paramtype2 = "wallmounted",
 	selection_box = torch_selectionbox,
@@ -62,7 +63,8 @@ minetest.register_node("mesecons_torch:mesecon_torch_off", {
 	mesecons = {receptor = {
 		state = mesecon.state.off,
 		rules = torch_get_output_rules
-	}}
+	}},
+	on_blast = mesecon.on_blastnode,
 })
 
 minetest.register_node("mesecons_torch:mesecon_torch_on", {
@@ -71,6 +73,7 @@ minetest.register_node("mesecons_torch:mesecon_torch_on", {
 	inventory_image = "jeija_torches_on.png",
 	wield_image = "jeija_torches_on.png",
 	paramtype = "light",
+	is_ground_content = false,
 	sunlight_propagates = true,
 	walkable = false,
 	paramtype2 = "wallmounted",
@@ -82,6 +85,7 @@ minetest.register_node("mesecons_torch:mesecon_torch_on", {
 		state = mesecon.state.on,
 		rules = torch_get_output_rules
 	}},
+	on_blast = mesecon.on_blastnode,
 })
 
 minetest.register_abm({
