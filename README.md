@@ -105,7 +105,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [workbench][] ([GPL / WTFPL](mods/tools/workbench/LICENSE)) -- version: [74dd1af Git][ver.workbench] *2017-02-07* ([patched][patch.workbench]) ***UPDATES***
 * transport/
 	* [boats][boats2] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa3.0]) -- version [b83231e Git][ver.boats2] *2016-10-14* ([patched][patch.boats2])
-	* [helicopter][] ([GPL][lic.gpl2.0]) -- version: [10f1433 Git][ver.helicopter] *2015-07-15* ([patched][ver.helicopter_pm]) ***UPDATES***
+	* [helicopter][] ([GPL][lic.gpl2.0]) -- version: [10f1433 Git][ver.helicopter] *2014-03-28* ([patched][ver.helicopter_pm]) ***UPSTREAM UPDATES***
     * [hovercraft][] ([LGPL / CC BY-SA / CC0][lic.hovercraft]) -- version: [4d50e68 Git][ver.hovercraft] *2017-05-14* ([patched][patch.hovercraft])
 * ui/
     * [bookmarks_gui][] ([BSD 3-Clause][lic.bookmarks_gui]) -- version: [f7ae10a Git][ver.bookmarks_gui] *2017-08-29*
@@ -419,7 +419,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.hbarmor]: http://repo.or.cz/minetest_hbarmor.git/tree/e513aeb
 [ver.hbsprint]: https://github.com/tacotexmex/hbsprint/tree/de3e77e
 [ver.helicopter]: https://github.com/SokolovPavel/helicopter/tree/10f1433
-[ver.helicopter_pm]: https://github.com/petermaloney/helicopter/tree/c96e9fb
+[ver.helicopter_pm]: https://github.com/petermaloney/helicopter/tree/95c5287
 [ver.hill_nodebox]: https://github.com/cornernote/minetest-hill_nodebox/tree/41bbfa2
 [ver.home_gui]: https://github.com/cornernote/minetest-home_gui/tree/90086d0
 [ver.homedecor]: https://github.com/minetest-mods/homedecor_modpack/tree/a6c17d6
