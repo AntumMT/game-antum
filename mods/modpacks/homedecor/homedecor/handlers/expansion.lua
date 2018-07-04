@@ -104,7 +104,7 @@ local function stack(itemstack, placer, fdir, pos, def, pos2, node1, node2, poin
 			ctrl_node_def.after_place_node(pos, placer, itemstack, pointed_thing)
 		end
 
-		if not homedecor.expect_infinite_stacks then
+		if not creative.is_enabled_for(placer_name) then
 			itemstack:take_item()
 		end
 	end
@@ -368,14 +368,6 @@ function homedecor.place_banister(itemstack, placer, pointed_thing)
 		fdir = right_fwd_node.param2
 		pos = fwd_pos
 		new_place_name = string.gsub(right_fwd_node.name, "_diagonal_.-$", "_horizontal")
-
-	-- try to follow a horizontal with another of the same
-	elseif left_node and string.find(left_node.name, "homedecor:banister_.*_horizontal") then
-		fdir = left_node.param2
-		new_place_name = left_node.name
-	elseif right_node and string.find(right_node.name, "homedecor:banister_.*_horizontal") then
-		fdir = right_node.param2
-		new_place_name = right_node.name
 	end
 
 	-- manually invert left-right orientation
