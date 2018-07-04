@@ -26,7 +26,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [elevator][] ([WTFPL][lic.elevator])
     * [fort_spikes][] ([MIT][lic.fort_spikes] / [CC0][lic.cc0]) -- version: [3c7d7c6 Git][ver.fort_spikes] *2017-05-06* ***UPDATES***
     * [glass][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- version [d61a6c6 Git][ver.glass] *2017-08-15*
-    * [moreblocks][] ([zlib][lic.moreblocks]) -- version: [7347b05 Git][ver.moreblocks] *2017-08-12* ([patched][patch.moreblocks]) ***UPDATES***
+    * [moreblocks][] ([zlib][lic.moreblocks]) -- version: [1.1.0][ver.moreblocks] *2018-04-21* ([patched][patch.moreblocks]) ***UNSTABLE UPDATES***
     * [windmill][] ([WTFPL][lic.windmill]) -- version: [47b029d Git][ver.windmill] *2014-08-21* ([patched][patch.windmill])
 * [campfire][] ([GPL][lic.gpl2.0] / [CC BY-SA][lic.ccbysa] / [WTFPL][lic.campfire]) -- version: [04b4ea5 Git][ver.campfire] *2017-06-08* ***UPDATES***
 * chat/
@@ -61,7 +61,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [amber][] ([LGPL][lic.lgpl2.1]) -- version: [21637e8 Git][ver.amber] *2017-08-09* ***UPDATES***
 	* [gems_encrustable][] ([WTFPL][lic.wtfpl]) -- version: [81d513d Git][ver.gems_encrustable] *2012-07-31* ([patched][patch.gems_encrustable])
 	* [gems_tools][] ([GPL][lic.gpl3.0]) -- version: [b375432 Git][ver.gems_tools] *2016-09-03* ([patched][patch.gems_tools])
-	* [moreores][] ([zlib][lic.moreores] / [CC BY-SA][lic.ccbysa3.0]) -- version: [2316595 Git][ver.moreores] *2018-04-21* ([patched][patch.moreores]) ***UPDATES***
+	* [moreores][] ([zlib][lic.moreores] / [CC BY-SA][lic.ccbysa3.0]) -- version: [2316595 Git][ver.moreores] *2018-04-21* ([patched][patch.moreores])
 	* [quartz][] ([MIT][lic.quartz]) -- version: [00ca4eb Git][ver.quartz] *2017-02-28* ([patched][patch.quartz]) ***UPDATES***
 	* [rainbow_ore][] ([LGPL][lic.rainbow_ore]) -- version: [6e77693 Git][ver.rainbow_ore] *2015-11-02* ([patched][patch.rainbow_ore])
 	* [unifieddyes][] ([GPL][lic.gpl2.0]) -- version: [8b20a06 Git][ver.unifieddyes] *2017-06-04* ([patched][patch.unifieddyes]) ***UPDATES***
@@ -438,7 +438,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.monsters_aggressive]: https://github.com/AntumMT/mp-monsters_aggressive/tree/89a8187
 [ver.monsters_passive]: https://github.com/AntumMT/mp-monsters_passive/tree/b07fe19
 [ver.more_chests]: https://github.com/minetest-mods/more_chests/tree/c597779
-[ver.moreblocks]: https://github.com/minetest-mods/moreblocks/tree/7347b05
+[ver.moreblocks]: https://github.com/minetest-mods/moreblocks/tree/1.1.0
 [ver.moremesecons]: https://github.com/minetest-mods/MoreMesecons/tree/aa2ae82
 [ver.moreores]: https://github.com/minetest-mods/moreores/tree/2316595
 [ver.mthudclock]: https://github.com/Rochambeau/mthudclock/tree/b3e2142
@@ -510,7 +510,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.mob-engine]: https://github.com/AntumMT/mp-mob-engine/tree/0b3706f
 [patch.mobs_animal]: https://github.com/AntumMT/mod-mobs_animal/tree/1d5f1ca
 [patch.mobs_redo]: https://github.com/AntumMT/mod-mobs_redo/tree/8872920
-[patch.moreblocks]: https://github.com/AntumMT/mod-moreblocks/tree/82aa7cd
+[patch.moreblocks]: https://github.com/AntumMT/mod-moreblocks/tree/6dda839
 [patch.moreores]: https://github.com/AntumMT/mod-moreores/tree/1cd9011
 [patch.mydoors]: https://github.com/AntumMT/mp-mydoors/tree/e36c9d1
 [patch.mypaint]: https://github.com/AntumMT/mod-mypaint/tree/10a5359
