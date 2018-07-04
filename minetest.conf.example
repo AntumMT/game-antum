@@ -2326,9 +2326,30 @@ inventory_default = craft
 ## WORLD ##
 ###########
 
+# *** bedrock2 ***
+
+## Sets the Y coordinate on which the bedrock layer will be created
+#    type: int
+#    default: -30912
+bedrock2_y = -28000
+
+
+# *** biome_lib ***
+
+## To slow down the playback of the queue (e.g. for really slow machines where
+#  the 0.2 second max limiter isn't enough). Default is 100 (basically percent
+#  of maximum runtime).
+#    type:    int
+#    min:     1
+#    max:     100
+#    default: 100
+#biome_lib_queue_run_ratio = 100
+
+
 # *** ethereal ***
 
 ethereal.use_animalmaterials = true
+
 
 # *** worldedge ***
 
@@ -2375,14 +2396,6 @@ areas.self_protection_max_areas = 10
 #    type: int
 #    default: 32
 #areas.self_protection_max_areas_high = 32
-
-
-# *** bedrock2 ***
-
-# Sets the Y coordinate on which the bedrock layer will be created
-#    type: int
-#    default: -30912
-bedrock2_y = -28000
 
 
 

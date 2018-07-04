@@ -68,6 +68,14 @@ airtanks_bronze_uses (Bronze air tank uses) int 20 2 1000
 bedrock2_y (Bedrock height) int -30912
 
 
+[*biome_lib]
+
+# To slow down the playback of the queue (e.g. for really slow machines where
+# the 0.2 second max limiter isn't enough). Default is 100 (basically percent
+# of maximum runtime).
+biome_lib_queue_run_ratio (Queue playback speed) int 100 1 100
+
+
 [*chatlog]
 
 # Whether month is displayed before day in timestamp (E.g. 'dd/mm/yyyy' vs. 'mm/dd/yy').
