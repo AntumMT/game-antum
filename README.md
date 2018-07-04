@@ -109,7 +109,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [hovercraft][] ([LGPL / CC BY-SA / CC0][lic.hovercraft]) -- version: [4d50e68 Git][ver.hovercraft] *2017-05-14* ([patched][patch.hovercraft])
 * ui/
     * [bookmarks_gui][] ([BSD 3-Clause][lic.bookmarks_gui]) -- version: [f7ae10a Git][ver.bookmarks_gui] *2017-08-29*
-    * [hbarmor][] ([WTFPL][lic.wtfpl] / [CC BY-SA][lic.ccbysa3.0]) -- version: [ceb313e Git][ver.hbarmor] *2017-07-08* ([patched][patch.hbarmor]) ***UPDATES***
+    * [hbarmor][] ([MIT][lic.mit] / [CC BY-SA][lic.ccbysa3.0]) -- version [0.4.0][ver.hbarmor] *2017-09-18* ([patched][patch.hbarmor])
     * [home_gui][] ([BSD 3-Clause][lic.home_gui]) -- version: [90086d0 Git][ver.home_gui] *2018-03-15*
     * [hudbars][] ([MIT][lic.mit] / [CC BY-SA][lic.ccbysa3.0]) -- version [1.11.0][ver.hudbars] *2018-02-05*
     * [hudmap][] ([LGPL][lic.lgpl2.1] / [WTFPL][lic.wtfpl]) -- version: [09d40f3 Git][ver.hudmap] *2014-08-15* ***UPDATES***
@@ -416,7 +416,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.gems_tools]: https://github.com/captainLAD/gems/tree/b375432
 [ver.glass]: https://github.com/AntumMT/mod-glass/tree/d61a6c6
 [ver.glow]: https://github.com/bdjnk/glow/tree/c611ae0
-[ver.hbarmor]: http://repo.or.cz/minetest_hbarmor.git/tree/ceb313e
+[ver.hbarmor]: http://repo.or.cz/minetest_hbarmor.git/tree/e513aeb
 [ver.hbsprint]: https://github.com/tacotexmex/hbsprint/tree/7fd2beb
 [ver.helicopter]: https://github.com/SokolovPavel/helicopter/tree/10f1433
 [ver.helicopter_pm]: https://github.com/petermaloney/helicopter/tree/c96e9fb
@@ -499,7 +499,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.farming_plus]: https://github.com/AntumMT/mod-farming_plus/tree/8bee49a
 [patch.gems_encrustable]: https://github.com/AntumMT/mod-gems_encrustable/tree/a043b9c
 [patch.gems_tools]: https://github.com/AntumMT/mod-gems_tools/tree/cc86c61
-[patch.hbarmor]: https://github.com/AntumMT/mod-hbarmor/tree/587dae9
+[patch.hbarmor]: https://github.com/AntumMT/mod-hbarmor/tree/12a7dea
 [patch.hbsprint]: https://github.com/AntumMT/mod-hbsprint/tree/e2a8d88
 [patch.homedecor]: https://github.com/AntumMT/mp-homedecor/tree/8e0e64c
 [patch.hovercraft]: https://github.com/AntumMT/mod-hovercraft/tree/73a6223
