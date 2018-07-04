@@ -1,7 +1,7 @@
 # mthudclock
 Adds a clock to the minetest hud
 
-This mod shows ingame time in the upper right corner.
+This mod shows ingame time in the upper center.
 
 Credits:
 

@@ -1,7 +1,7 @@
 local player_hud = { };
 
 local timer = 0;
-local positionx = 0.97;
+local positionx = 0.5;
 local positiony = 0.02;
 local last_time = os.time()
 
@@ -21,7 +21,8 @@ end
 minetest.register_globalstep(function ( dtime )
 	timer = timer + dtime;
 	if os.time() >= last_time then
-		last_time = os.time() + 1
+--		last_time = os.time() + 1
+		last_time = os.time()
 		if (timer >= 1.0) then
 			timer = 0;
 			for _,p in ipairs(minetest.get_connected_players()) do

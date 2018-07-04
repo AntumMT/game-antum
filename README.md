@@ -113,7 +113,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [home_gui][] ([BSD 3-Clause][lic.home_gui]) -- version: [90086d0 Git][ver.home_gui] *2018-03-15*
     * [hudbars][] ([MIT][lic.mit] / [CC BY-SA][lic.ccbysa3.0]) -- version [1.11.0][ver.hudbars] *2018-02-05*
     * [hudmap][] ([LGPL][lic.lgpl2.1] / [WTFPL][lic.wtfpl]) -- version: [09d40f3 Git][ver.hudmap] *2014-08-15* ***UPDATES***
-    * [mthudclock][] ([WTFPL][lic.wtfpl]) -- version [b3e2142 Git][ver.mthudclock] *2015-04-17* ***UPDATES***
+    * [mthudclock][] ([WTFPL][lic.wtfpl]) -- version [d86e745 Git][ver.mthudclock] *2018-01-06*
 * [vector_extras][] ([WTFPL][lic.vector_extras]) -- version: [472deb6 Git][ver.vector_extras] *2017-01-25* ***UPDATES***
 * weather/
     * [lightning][] ([LGPL / CC BY-SA][lic.lightning]) -- version: [39bd36c Git][ver.lightning] *2017-02-20*
@@ -442,7 +442,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.moreblocks]: https://github.com/minetest-mods/moreblocks/tree/1.1.0
 [ver.moremesecons]: https://github.com/minetest-mods/MoreMesecons/tree/aa2ae82
 [ver.moreores]: https://github.com/minetest-mods/moreores/tree/2316595
-[ver.mthudclock]: https://github.com/Rochambeau/mthudclock/tree/b3e2142
+[ver.mthudclock]: https://gitlab.com/Rochambeau/mthudclock/tree/d86e745
 [ver.mydoors]: https://github.com/minetest-mods/mydoors/tree/63aef13
 [ver.myfences]: https://github.com/DonBatman/myfences/tree/c6e529a
 [ver.mylights]: https://github.com/minetest-mods/mylights/tree/0d734b7
