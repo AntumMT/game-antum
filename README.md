@@ -102,7 +102,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * tools/
 	* [compassgps][] ([WTFPL][lic.wtfpl] / [CC0][lic.cc0] / [CC BY-SA][lic.ccbysa]) -- version: [96892a0 Git][ver.compassgps] *2015-07-31* ([patched][patch.compassgps]) ***UPDATES***
     * [tools_obsidian][] ([LGPL / CC BY-SA][lic.tools_obsidian]) -- version: [f77fd79][ver.tools_obsidian] *2016-03-19* ([patched][patch.tools_obsidian])
-    * [workbench][] ([GPL / WTFPL](mods/tools/workbench/LICENSE)) -- version: [74dd1af Git][ver.workbench] *2017-02-07* ([patched][patch.workbench]) ***UPDATES***
+    * [workbench][] ([LGPL / WTFPL](mods/tools/workbench/LICENSE)) -- version: [bd14f59 Git][ver.workbench] *2017-08-08*
 * transport/
 	* [boats][boats2] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa3.0]) -- version [b83231e Git][ver.boats2] *2016-10-14* ([patched][patch.boats2])
 	* [helicopter][] ([GPL][lic.gpl2.0]) -- version: [10f1433 Git][ver.helicopter] *2014-03-28* ([patched][ver.helicopter_pm]) ***UPSTREAM UPDATES***
@@ -479,7 +479,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.wardrobe]: https://github.com/prestidigitator/minetest-mod-wardrobe/tree/c48b011
 [ver.whitelist]: https://github.com/AntumMT/mod-whitelist/tree/b813b19
 [ver.windmill]: https://github.com/Sokomine/windmill/tree/47b029d
-[ver.workbench]: https://github.com/minetest-mods/workbench/tree/74dd1af
+[ver.workbench]: https://github.com/minetest-mods/workbench/tree/bd14f59
 [ver.worldedge]: https://github.com/minetest-mods/worldedge/tree/608462d
 
 [patch.3d_armor]: https://github.com/AntumMT/mp-3d_armor/tree/97c13a6
@@ -528,4 +528,3 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.unifieddyes]: https://github.com/AntumMT/mod-unifieddyes/tree/9e301b9
 [patch.walking_light]: https://github.com/AntumMT/mod-walking_light/tree/e602515
 [patch.windmill]: https://github.com/AntumMT/mod-windmill/tree/7756ab4
-[patch.workbench]: https://github.com/AntumMT/mod-workbench/tree/b964323

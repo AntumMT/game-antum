@@ -1,4 +1,3 @@
 default
 stairs
 xdecor?
-craft_guide?
