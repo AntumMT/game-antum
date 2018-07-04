@@ -54,6 +54,8 @@ home_gui.go_home = function(player)
 	local pos = homepos[player:get_player_name()]
 	if pos~=nil then
 		player:setpos(pos)
+		player:set_eye_offset({x=0,y=0,z=0}, {x=0,y=0,z=0})
+		default.player_set_animation(player, "stand" , 30)
 	end
 end
 
