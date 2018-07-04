@@ -52,53 +52,8 @@ function hb.load_setting(sname, stype, defaultval, valid_values)
 	end
 end
 
--- (hardcoded) default settings
-hb.settings.max_bar_length = 160
-hb.settings.statbar_length = 20
-
--- statbar positions
-hb.settings.pos_left = {}
-hb.settings.pos_right = {}
-hb.settings.start_offset_left = {}
-hb.settings.start_offset_right= {}
-hb.settings.pos_left.x = hb.load_setting("hudbars_pos_left_x", "number", 0.5)
-hb.settings.pos_left.y = hb.load_setting("hudbars_pos_left_y", "number", 1)
-hb.settings.pos_right.x = hb.load_setting("hudbars_pos_right_x", "number", 0.5)
-hb.settings.pos_right.y = hb.load_setting("hudbars_pos_right_y", "number", 1)
-hb.settings.bar_type = hb.load_setting("hudbars_bar_type", "string", "progress_bar", {"progress_bar", "statbar_classic", "statbar_modern"})
-if hb.settings.bar_type == "progress_bar" then
-	hb.settings.start_offset_left.x = hb.load_setting("hudbars_start_offset_left_x", "number", -175)
-	hb.settings.start_offset_left.y = hb.load_setting("hudbars_start_offset_left_y", "number", -86)
-	hb.settings.start_offset_right.x = hb.load_setting("hudbars_start_offset_right_x", "number", 15)
-	hb.settings.start_offset_right.y = hb.load_setting("hudbars_start_offset_right_y", "number", -86)
-else
-	hb.settings.start_offset_left.x = hb.load_setting("hudbars_start_statbar_offset_left_x", "number", -265)
-	hb.settings.start_offset_left.y = hb.load_setting("hudbars_start_statbar_offset_left_y", "number", -90)
-	hb.settings.start_offset_right.x = hb.load_setting("hudbars_start_statbar_offset_right_x", "number", 25)
-	hb.settings.start_offset_right.y = hb.load_setting("hudbars_start_statbar_offset_right_y", "number", -90)
-end
-hb.settings.vmargin  = hb.load_setting("hudbars_vmargin", "number", 24)
-hb.settings.tick = hb.load_setting("hudbars_tick", "number", 0.1)
-
--- experimental setting: Changing this setting is not officially supported, do NOT rely on it!
-hb.settings.forceload_default_hudbars = hb.load_setting("hudbars_forceload_default_hudbars", "bool", true)
-
--- Misc. settings
-hb.settings.alignment_pattern = hb.load_setting("hudbars_alignment_pattern", "string", "zigzag", {"zigzag", "stack_up", "stack_down"})
-hb.settings.autohide_breath = hb.load_setting("hudbars_autohide_breath", "bool", true)
-
-local sorting = minetest.settings:get("hudbars_sorting")
-if sorting ~= nil then
-	hb.settings.sorting = {}
-	hb.settings.sorting_reverse = {}
-	for k,v in string.gmatch(sorting, "(%w+)=(%w+)") do
-		hb.settings.sorting[k] = tonumber(v)
-		hb.settings.sorting_reverse[tonumber(v)] = k
-	end
-else
-	hb.settings.sorting = { ["health"] = 0, ["breath"] = 1 }
-	hb.settings.sorting_reverse = { [0] = "health", [1] = "breath" }
-end
+-- Load default settings
+dofile(minetest.get_modpath("hudbars").."/default_settings.lua")
 
 local function player_exists(player)
 	return player ~= nil and player:is_player()
@@ -240,7 +195,7 @@ function hb.register_hudbar(identifier, text_color, label, textures, default_sta
 		local bar_image, bar_size
 		if hb.settings.bar_type == "progress_bar" then
 			bar_image = textures.bar
-			bar_size = {x=2, y=16}
+			bar_size = nil
 		elseif hb.settings.bar_type == "statbar_classic" or hb.settings.bar_type == "statbar_modern" then
 			bar_image = textures.icon
 			bar_size = {x=24, y=24}
@@ -465,6 +420,14 @@ function hb.get_hudbar_state(player, identifier)
 		barlength = ref.barlength,
 	}
 	return copy
+end
+
+function hb.get_hudbar_identifiers()
+	local ids = {}
+	for id, _ in pairs(hb.hudtables) do
+		table.insert(ids, id)
+	end
+	return ids
 end
 
 --register built-in HUD bars

@@ -111,7 +111,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [bookmarks_gui][] ([BSD 3-Clause][lic.bookmarks_gui]) -- version: [f7ae10a Git][ver.bookmarks_gui] *2017-08-29*
     * [hbarmor][] ([WTFPL][lic.wtfpl] / [CC BY-SA][lic.ccbysa3.0]) -- version: [ceb313e Git][ver.hbarmor] *2017-07-08* ([patched][patch.hbarmor]) ***UPDATES***
     * [home_gui][] ([BSD 3-Clause][lic.home_gui]) -- version: [90086d0 Git][ver.home_gui] *2018-03-15*
-    * [hudbars][] ([WTFPL][lic.wtfpl] / [CC BY-SA][lic.ccbysa3.0]) -- version [1.8.0 (bd0641a Git)][ver.hudbars] *2017-05-29* ([patched][patch.hudbars]) ***UPDATES***
+    * [hudbars][] ([MIT][lic.mit] / [CC BY-SA][lic.ccbysa3.0]) -- version [1.11.0][ver.hudbars] *2018-02-05*
     * [hudmap][] ([LGPL][lic.lgpl2.1] / [WTFPL][lic.wtfpl]) -- version: [09d40f3 Git][ver.hudmap] *2014-08-15* ***UPDATES***
     * [mthudclock][] ([WTFPL][lic.wtfpl]) -- version [b3e2142 Git][ver.mthudclock] *2015-04-17* ***UPDATES***
 * [vector_extras][] ([WTFPL][lic.vector_extras]) -- version: [472deb6 Git][ver.vector_extras] *2017-01-25* ***UPDATES***
@@ -424,7 +424,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.home_gui]: https://github.com/cornernote/minetest-home_gui/tree/90086d0
 [ver.homedecor]: https://github.com/minetest-mods/homedecor_modpack/tree/a6c17d6
 [ver.hovercraft]: https://github.com/stujones11/hovercraft/tree/4d50e68
-[ver.hudbars]: http://repo.or.cz/minetest_hudbars.git/tree/bd0641a
+[ver.hudbars]: http://repo.or.cz/minetest_hudbars.git/tree/ba21f47
 [ver.hudmap]: https://github.com/stujones11/hudmap/tree/09d40f3
 [ver.ilights]: https://github.com/minetest-mods/ilights/tree/fa085fd
 [ver.intllib]: https://github.com/minetest-mods/intllib/tree/9192771
@@ -504,7 +504,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.homedecor]: https://github.com/AntumMT/mp-homedecor/tree/8e0e64c
 [patch.hovercraft]: https://github.com/AntumMT/mod-hovercraft/tree/73a6223
 [patch.hud]: https://github.com/AntumMT/mod-hud/tree/6846e20
-[patch.hudbars]: https://github.com/AntumMT/mod-hudbars/tree/9ca4f6b
 [patch.invisibility]: https://github.com/AntumMT/mod-invisibility/tree/f045c7c
 [patch.mesecons]: https://github.com/AntumMT/mp-mesecons/tree/830823a
 [patch.minetest_game]: https://github.com/AntumMT/mtgame-minetest/tree/c2f3b95
