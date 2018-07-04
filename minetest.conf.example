@@ -2092,15 +2092,34 @@ mobs_animal:sheep_white = 0
 
 # *** playeranim ***
 
-## Version of player model used by the engine.
-#
-#  Some fixes and improvements were made to the default player model (character.b3d)
-#  end of november 2016. These changes affect the way body parts are attached and
-#  positioned. For correct results, the version of the player model must be known.
+## Version of player model.
 #    type:    enum
-#    values:  default_character_v1, default_character_v2
-#    default: default_character_v2
-#player_model_version = default_character_v2
+#    values:  MTG_4_Jun_2017, MTG_4_Nov_2017
+#    default: MTG_4_Jun_2017
+#playeranim.model_version = MTG_4_Jun_2017
+
+## The number of frame delay of sideways body rotation. (between 1 and 20).
+#    type:    int
+#    min:     1
+#    max:     20
+#    default: 7
+#playeranim.body_rotation_delay = 7
+
+## The degrees of the body's X-axis rotation in sneaking.
+#    type:    float
+#    default: 6.0
+#playeranim.body_x_rotation_sneak = 6.0
+
+## The number of stepping per seconds.
+#    type:    float
+#    default: 2.4
+#playeranim.animation_speed = 2.4
+
+## The number of stepping per seconds in sneaking.
+#    type:    float
+#    default: 0.8
+#playeranim.animation_speed_sneak = 0.8
+
 
 # *** wieldview ***
 

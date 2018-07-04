@@ -86,7 +86,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [hbsprint][] ([LGPL][lic.lgpl2.1]) -- version: [7fd2beb Git][ver.hbsprint] *2017-08-23* ([patched][patch.hbsprint]) ***UPDATES***
 * player/visuals/
     * [invisibility][] ([MIT][lic.invisibility]) -- version: [bf4156b Git][ver.invisibility] *2016-08-19* ([patched][patch.invisibility]) ***UPDATES***
-    * [playeranim][] ([BSD 2-Clause][lic.playeranim]) - version [59bcd38 Git][ver.playeranim] *2017-06-07* ([patched][patch.playeranim]) ***UPDATES***
+    * [playeranim][] ([BSD 2-Clause][lic.playeranim]) - version [560af7e Git][ver.playeranim] *2018-06-09* ([patched][patch.playeranim])
     * [wardrobe][] ([WTFPL][lic.wtfpl]) -- version: [1.1-2-c48b011 Git][ver.wardrobe] *2015-05-21*
 * protection/
     * [simple_protection][] ([CC0][lic.cc0]) -- version [5aa2f24 Git][ver.simple_protection] *2018-04-29*
@@ -333,7 +333,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.mydoors]: mods/modpacks/mydoors/README.md
 [lic.nether]: mods/world/nether/README.md
 [lic.override]: mods/admin/override/LICENSE.txt
-[lic.playeranim]: mods/player/visuals/playeranim/license.md
+[lic.playeranim]: mods/player/visuals/playeranim/LICENSE.md
 [lic.privilegeareas]: mods/admin/privilegeareas/README.md
 [lic.quartz]: mods/materials/quartz/LICENSE.txt
 [lic.rainbow_ore]: mods/materials/rainbow_ore/README.md
@@ -455,7 +455,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.override]: https://github.com/AntumMT/mod-override/tree/e6dda7a
 [ver.painting]: https://github.com/minetest-mods/painting/tree/8961849
 [ver.pipeworks]: https://github.com/minetest-mods/pipeworks/tree/a5e1bfa
-[ver.playeranim]: https://github.com/minetest-mods/playeranim/tree/59bcd38
+[ver.playeranim]: https://github.com/minetest-mods/playeranim/tree/560af7e
 [ver.privilegeareas]: https://github.com/minetest-mods/privilegeareas/tree/18a803c
 [ver.quartz]: https://github.com/minetest-mods/quartz/tree/1c5dca2
 [ver.rainbow_ore]: https://github.com/FsxShader2012/rainbow_ore/tree/6e77693
@@ -517,7 +517,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.mypaint]: https://github.com/AntumMT/mod-mypaint/tree/10a5359
 [patch.mysheetmetal]: https://github.com/AntumMT/mod-mysheetmetal/tree/b7d644b
 [patch.nether]: https://github.com/AntumMT/mod-nether/tree/d4e5a2a
-[patch.playeranim]: https://github.com/AntumMT/mod-playeranim/tree/8a289b9
+[patch.playeranim]: https://github.com/AntumMT/mod-playeranim/tree/2540530
 [patch.quartz]: https://github.com/AntumMT/mod-quartz/tree/c6813dc
 [patch.rainbow_ore]: https://github.com/AntumMT/mod-rainbow_ore/tree/0227a86
 [patch.snowdrift]: https://github.com/AntumMT/mod-snowdrift/tree/1b9da4f
