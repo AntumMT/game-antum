@@ -1,97 +1,94 @@
-# German Translation for the signs_lib mod.
+# Russian Translation for the signs_lib mod.
 # Copyright (C) 2018 Vanessa Ezekowitz
 # This file is distributed under the same license as the signs_lib package.
-# Xanthin, 2017.
 # CodeXP <codexp@gmx.net>, 2018.
 #
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: signs_lib\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-31 18:31+0200\n"
-"PO-Revision-Date: 2018-03-24 22:00+0100\n"
+"POT-Creation-Date: 2018-03-24 22:23+0100\n"
+"PO-Revision-Date: \n"
 "Last-Translator: CodeXP <codexp@gmx.net>\n"
 "Language-Team: \n"
-"Language: de\n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.12\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: init.lua
 msgid "Write"
-msgstr "schreiben"
+msgstr "записать"
 
 #: init.lua
 msgid "Locked sign, owned by @1\n"
-msgstr "gesperrter Schild, gehört @1\n"
+msgstr "защищенная табличка, пренадлежит @1\n"
 
 #: init.lua
 msgid "locked "
-msgstr "gesperrt "
+msgstr "защищенный "
 
 #: init.lua
-#, fuzzy
 msgid "@1 wrote \"@2\" to @3sign at @4"
-msgstr "@1 schrieb \"@2\" auf das @3Schild bei @4"
+msgstr "@1 записал \"@2\" в @3sign на @4"
 
 #: init.lua
 msgid "Sign"
-msgstr "Schild"
+msgstr "табличка"
 
 #: init.lua
 msgid "Can edit all locked signs"
-msgstr "Kann alle gesperrte Schilder bearbeiten"
+msgstr "Может редактировать все защищенные таблички"
 
 #: init.lua
 msgid "Locked Sign"
-msgstr "gesperrter Schild"
+msgstr "защищенная табличка"
 
 #: init.lua
 msgid "green"
-msgstr "grün"
+msgstr "зеленая"
 
 #: init.lua
 msgid "yellow"
-msgstr "gelb"
+msgstr "желтая"
 
 #: init.lua
 msgid "red"
-msgstr "rot"
+msgstr "красная"
 
 #: init.lua
 msgid "white_red"
-msgstr "weißrot"
+msgstr "краснобелая"
 
 #: init.lua
 msgid "white_black"
-msgstr "schwarzweiß"
+msgstr "чернобелая"
 
 #: init.lua
 msgid "orange"
-msgstr "orange"
+msgstr "оранжевая"
 
 #: init.lua
 msgid "blue"
-msgstr "blau"
+msgstr "синея"
 
 #: init.lua
 msgid "brown"
-msgstr "braun"
+msgstr "коричневая"
 
 #: init.lua
 msgid "Sign (@1, metal)"
-msgstr "Schild (@1, Metall)"
+msgstr "Табличка (@1, металл)"
 
 #: init.lua
 msgid "Attempt to register unknown node as fence"
-msgstr "Versuch ein unbekanntes Element als Zaun zu registrieren"
+msgstr "Попытка зарегистрировать неизвестный узел как забор"
 
 #: init.lua
 msgid "Registered @1 and @2"
-msgstr "Registrierte @1 und @2"
+msgstr "Зарегистрировано @1 для @2"
 
 #: init.lua
 msgid "[MOD] signs loaded"
-msgstr "[MOD] Schilder-Mod geladen"
+msgstr "[MOD] мод табличек загружен"
