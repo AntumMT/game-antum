@@ -117,7 +117,7 @@ minetest.register_abm({
 		if node == "ethereal:dry_dirt" then
 			minetest.swap_node(pos, {name = "default:dirt"})
 		else
-			minetest.swap_node(pos, {name = "ethereal:green_dirt"})
+			minetest.swap_node(pos, {name = "default:dirt_with_grass"})
 		end
 	end,
 })

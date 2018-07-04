@@ -17,7 +17,7 @@ minetest.register_node("ethereal:seaweed", {
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.5, 0.3}
 	},
 	post_effect_color = {a = 64, r = 100, g = 100, b = 200},
-	groups = {snappy = 3},
+	groups = {food_seaweed = 1, snappy = 3, flammable = 3},
 	on_use = minetest.item_eat(1),
 	sounds = default.node_sound_leaves_defaults(),
 	after_dig_node = function(pos, node, metadata, digger)
@@ -29,6 +29,25 @@ minetest.register_craft( {
 	type = "shapeless",
 	output = "dye:dark_green 3",
 	recipe = {"ethereal:seaweed",},
+})
+
+-- agar powder
+minetest.register_craftitem("ethereal:agar_powder", {
+	description = S("Agar Powder"),
+	inventory_image = "ethereal_agar_powder.png",
+	groups = {food_gelatin = 1, flammable = 2},
+})
+
+minetest.register_craft({
+	output = "ethereal:agar_powder 3",
+	recipe = {
+		{"group:food_seaweed", "group:food_seaweed", "group:food_seaweed"},
+		{"bucket:bucket_water", "bucket:bucket_water", "default:torch"},
+		{"bucket:bucket_water", "bucket:bucket_water", "default:torch"},
+	},
+	replacements = {
+		{"bucket:bucket_water", "bucket:bucket_empty 4"},
+	},
 })
 
 -- Blue Coral

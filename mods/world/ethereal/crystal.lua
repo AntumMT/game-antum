@@ -11,13 +11,17 @@ minetest.register_node("ethereal:crystal_spike", {
 	paramtype = "light",
 	light_source = 7,
 	sunlight_propagates = true,
-	walkable = false,
+	walkable = true,
 	damage_per_second = 1,
 	groups = {cracky = 1, falling_node = 1, puts_out_fire = 1, cools_lava = 1},
 	sounds = default.node_sound_glass_defaults(),
 	selection_box = {
 		type = "fixed",
-		fixed = {-5 / 16, -0.5, -5 / 16, 5 / 16, 0.41, 5 / 16},
+		fixed = {-5 / 16, -0.5, -5 / 16, 5 / 16, 0, 5 / 16},
+	},
+	node_box = {
+		type = "fixed",
+		fixed = {-5 / 16, -0.5, -5 / 16, 5 / 16, 0, 5 / 16},
 	},
 })
 

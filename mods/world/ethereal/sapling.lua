@@ -12,8 +12,8 @@ minetest.register_node("ethereal:bamboo_sprout", {
 	sunlight_propagates = true,
 	walkable = false,
 	groups = {
-		snappy = 3, attached_node = 1, flammable = 2,
-		dig_immediate = 3, ethereal_sapling = 1
+		food_bamboo_sprout = 1, snappy = 3, attached_node = 1, flammable = 2,
+		dig_immediate = 3, ethereal_sapling = 1, sapling = 1,
 	},
 	sounds = default.node_sound_defaults(),
 	selection_box = {
@@ -165,7 +165,6 @@ ethereal.grow_sapling = function (pos, node)
 		ethereal.grow_yellow_tree(pos)
 
 	elseif node.name == "ethereal:big_tree_sapling"
-	--and under == "ethereal:green_dirt" then
 	and under == "default:dirt_with_grass" then
 		ethereal.grow_big_tree(pos)
 
@@ -203,7 +202,6 @@ ethereal.grow_sapling = function (pos, node)
 		ethereal.grow_bamboo_tree(pos)
 
 	elseif node.name == "ethereal:birch_sapling"
-	--and under == "ethereal:green_dirt" then
 	and under == "default:dirt_with_grass" then
 		ethereal.grow_birch_tree(pos)
 	end

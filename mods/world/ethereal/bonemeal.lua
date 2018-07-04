@@ -90,6 +90,7 @@ local crops = {
 	{"ethereal:onion_", 5},
 	{"farming:barley_", 7},
 	{"farming:hemp_", 8},
+	{"farming:chili_", 8},
 }
 
 -- check if sapling has enough height room to grow
@@ -301,17 +302,12 @@ minetest.register_craftitem("ethereal:bonemeal", {
 				return
 			end
 
-			if not minetest.settings:get_bool("creative_mode") then
+			if not ethereal.check_creative(user:get_player_name()) then
 
-				local item = user:get_wielded_item()
-
-				item:take_item()
-				user:set_wielded_item(item)
+				itemstack:take_item()
 			end
 
 			growth(pointed_thing)
-
-			itemstack:take_item()
 
 			return itemstack
 		end
