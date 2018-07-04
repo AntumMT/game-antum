@@ -122,15 +122,6 @@ local function quarry_run(pos, node)
 			vector.new(0, quarry_dig_above_nodes, 0)),
 			pdir),
 			vector.multiply(qdir, -radius))
-		local endpos = vector.add(vector.add(vector.add(startpos,
-			vector.new(0, -quarry_dig_above_nodes-quarry_max_depth, 0)),
-			vector.multiply(pdir, diameter-1)),
-			vector.multiply(qdir, diameter-1))
-		local vm = VoxelManip()
-		local minpos, maxpos = vm:read_from_map(startpos, endpos)
-		local area = VoxelArea:new({MinEdge=minpos, MaxEdge=maxpos})
-		local data = vm:get_data()
-		local c_air = minetest.get_content_id("air")
 		local owner = meta:get_string("owner")
 		local nd = meta:get_int("dug")
 		while nd ~= diameter*diameter * (quarry_dig_above_nodes+1+quarry_max_depth) do
@@ -154,7 +145,17 @@ local function quarry_run(pos, node)
 			if can_dig then
 				dignode = technic.get_or_load_node(digpos) or minetest.get_node(digpos)
 				local dignodedef = minetest.registered_nodes[dignode.name] or {diggable=false}
-				if not dignodedef.diggable or (dignodedef.can_dig and not dignodedef.can_dig(digpos, nil)) then
+				-- doors mod among other thing does NOT like a nil digger...
+				local fakedigger = {
+					get_player_name = function()
+						return "!technic_quarry_fake_digger"
+					end,
+					is_player = function() return false end,
+					get_wielded_item = function()
+						return ItemStack("air")
+					end,
+				}
+				if not dignodedef.diggable or (dignodedef.can_dig and not dignodedef.can_dig(digpos, fakedigger)) then
 					can_dig = false
 				end
 			end

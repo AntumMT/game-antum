@@ -139,7 +139,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [mesecons][] ([LGPL / CC BY-SA][lic.mesecons]) -- version: [564bdc2 Git][ver.mesecons] *2017-05-08* ([patched][patch.mesecons]) ***UPDATES***
 * [minetest_game][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- version: [0.4.17][ver.minetest_game] *2018-05-18* ***UNSTABLE UPDATES***
 * [moremesecons][] ([MPL][lic.mpl2.0]) -- version: [aa2ae82 Git][ver.moremesecons] *2017-06-04* ***UPDATES***
-* [technic][] ([LGPL][lic.lgpl2.0]) -- version: [a84b5f3 Git][ver.technic] *2017-07-03* ([patched][patch.technic]) ***UPDATES***
+* [technic][] ([LGPL][lic.lgpl2.0]) -- version: [6664714 Git][ver.technic] *2018-06-28* ([patched][patch.technic])
 
 
 ---
@@ -466,7 +466,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.snowdrift]: https://github.com/paramat/snowdrift/tree/fcb0537
 [ver.spawneggs]: https://github.com/thefamilygrog66/spawneggs/tree/4650370
 [ver.spectator_mode]: https://github.com/minetest-mods/spectator_mode/tree/7d68bec
-[ver.technic]: https://github.com/minetest-mods/technic/tree/a84b5f3
+[ver.technic]: https://github.com/minetest-mods/technic/tree/6664714
 [ver.throwing]: https://github.com/PilzAdam/throwing/tree/90bcf43
 [ver.tnt]: https://github.com/PilzAdam/TNT/tree/d6a0b7d
 [ver.tools_obsidian]: https://github.com/Dragonop/tools_obsidian/tree/f77fd79
@@ -521,7 +521,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.rainbow_ore]: https://github.com/AntumMT/mod-rainbow_ore/tree/0227a86
 [patch.snowdrift]: https://github.com/AntumMT/mod-snowdrift/tree/1b9da4f
 [patch.spawneggs]: https://github.com/AntumMT/mod-spawneggs/tree/f2cc4cc
-[patch.technic]: https://github.com/AntumMT/mp-technic/tree/28eaaec
+[patch.technic]: https://github.com/AntumMT/mp-technic/tree/cdb31be
 [patch.throwing]: https://github.com/AntumMT/mod-throwing/tree/b33ffde
 [patch.tools_obsidian]: https://github.com/AntumMT/mod-tools_obsidian/tree/2d19297
 [patch.trash_can]: https://github.com/AntumMT/mod-trash_can/tree/5a92bf4
