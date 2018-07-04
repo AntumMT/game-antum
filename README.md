@@ -51,7 +51,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [waffles][] ([CC0][lic.cc0]) -- version [b02ffbf Git][ver.waffles] *2017-08-04* ***UPDATES***
 * [intllib][] ([Unlicense][lic.unlicense]) -- version: [9192771 Git][ver.intllib] *2017-09-10*
 * inventory/
-    * [bags][] ([BSD 3-Clause][lic.bags]) -- version: [1626535 Git][ver.bags] *2017-08-29* ***UPDATES***
+    * [bags][] ([BSD 3-Clause][lic.bags]) -- version: [bc87b45 Git][ver.bags] *2018-04-11*
     * [sfinv_buttons][] ([MIT][lic.mit]) -- version [1.0.0 (4f3b075 Git)][ver.sfinv_buttons] *2017-03-19*
 * lighting/
     * [glow][] ([GPL][lic.gpl2.0]) -- version: [c611ae0 Git][ver.glow] *2017-07-18*
@@ -380,7 +380,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.antum]: https://github.com/AntumMT/mp-antum/tree/69b39a4
 [ver.awards]: https://github.com/rubenwardy/awards/tree/v3.2.0
 [ver.away]: https://github.com/kahrl/minetest-mod-away/tree/4c1e5a9
-[ver.bags]: https://github.com/cornernote/minetest-bags/tree/1626535
+[ver.bags]: https://github.com/cornernote/minetest-bags/tree/bc87b45
 [ver.bedrock2]: http://repo.or.cz/minetest_bedrock2.git/tree/63dbab8
 [ver.biome_lib]: https://github.com/minetest-mods/biome_lib/tree/8fd0789
 [ver.boats2]: https://github.com/amadin/boats/tree/b83231e
