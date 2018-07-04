@@ -133,7 +133,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 ### This is a list of installed modpacks & their components (trying to keep them listed separate for sake of organization):
 
-* [3d_armor][] ([LGPL / CC BY-SA][lic.3d_armor]) - version: [cc26d04 Git][ver.3d_armor] *2017-07-09* ([patched][patch.3d_armor]) ***UPDATES***
+* [3d_armor][] ([LGPL / CC BY-SA][lic.3d_armor]) - version: [0.4.12][ver.3d_armor] *2018-06-10* ([patched][patch.3d_armor]) ***UNSTABLE UPDATES***
 * [deploy_nodes][] ([BSD 3-Clause][lic.deploy_nodes]) -- version [b67e162 Git][ver.deploy_nodes] *2017-06-08*
 * [homedecor][] ([LGPL / WTFPL / CC BY-SA / CC0][lic.homedecor]) -- version [stable-20170925-3 (48be7dd Git)][ver.homedecor] *2017-09-25* ([patched][patch.homedecor]) ***UNSTABLE UPDATES***
 * [mesecons][] ([LGPL / CC BY-SA][lic.mesecons]) -- version [7013f2e Git][ver.mesecons] *2018-05-15* ([patched][patch.mesecons])
@@ -372,7 +372,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.wtfpl]: doc/licenses/WTFPL.txt
 [lic.zlib]: doc/licenses/zlib.txt
 
-[ver.3d_armor]: https://github.com/stujones11/minetest-3d_armor/tree/cc26d04
+[ver.3d_armor]: https://github.com/stujones11/minetest-3d_armor/tree/656bcf3
 [ver.airtanks]: https://github.com/minetest-mods/airtanks/tree/5787956
 [ver.amber]: https://github.com/theraven262/amber/tree/21637e8
 [ver.animals_aggressive]: https://github.com/AntumMT/mp-animals_aggressive/tree/4eede4d
@@ -482,7 +482,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.workbench]: https://github.com/minetest-mods/workbench/tree/bd14f59
 [ver.worldedge]: https://github.com/minetest-mods/worldedge/tree/608462d
 
-[patch.3d_armor]: https://github.com/AntumMT/mp-3d_armor/tree/97c13a6
+[patch.3d_armor]: https://github.com/AntumMT/mp-3d_armor/tree/95b36b7
 [patch.airtanks]: https://github.com/AntumMT/mod-airtanks/tree/71ea616
 [patch.away]: https://github.com/AntumMT/mod-away/tree/3b0bf9e
 [patch.bedrock2]: https://github.com/AntumMT/mod-bedrock2/tree/344fdae
