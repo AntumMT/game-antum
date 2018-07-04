@@ -61,7 +61,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [amber][] ([LGPL][lic.lgpl2.1]) -- version: [21637e8 Git][ver.amber] *2017-08-09* ***UPDATES***
 	* [gems_encrustable][] ([WTFPL][lic.wtfpl]) -- version: [81d513d Git][ver.gems_encrustable] *2012-07-31* ([patched][patch.gems_encrustable])
 	* [gems_tools][] ([GPL][lic.gpl3.0]) -- version: [b375432 Git][ver.gems_tools] *2016-09-03* ([patched][patch.gems_tools])
-	* [moreores][] ([zlib][lic.moreores] / [CC BY-SA][lic.ccbysa3.0]) -- version: [809da6d1 Git][ver.moreores] *2017-07-05* ([patched][patch.moreores]) ***UPDATES***
+	* [moreores][] ([zlib][lic.moreores] / [CC BY-SA][lic.ccbysa3.0]) -- version: [2316595 Git][ver.moreores] *2018-04-21* ([patched][patch.moreores]) ***UPDATES***
 	* [quartz][] ([MIT][lic.quartz]) -- version: [00ca4eb Git][ver.quartz] *2017-02-28* ([patched][patch.quartz]) ***UPDATES***
 	* [rainbow_ore][] ([LGPL][lic.rainbow_ore]) -- version: [6e77693 Git][ver.rainbow_ore] *2015-11-02* ([patched][patch.rainbow_ore])
 	* [unifieddyes][] ([GPL][lic.gpl2.0]) -- version: [8b20a06 Git][ver.unifieddyes] *2017-06-04* ([patched][patch.unifieddyes]) ***UPDATES***
@@ -440,7 +440,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.more_chests]: https://github.com/minetest-mods/more_chests/tree/c597779
 [ver.moreblocks]: https://github.com/minetest-mods/moreblocks/tree/7347b05
 [ver.moremesecons]: https://github.com/minetest-mods/MoreMesecons/tree/aa2ae82
-[ver.moreores]: https://github.com/minetest-mods/moreores/tree/809da6d1
+[ver.moreores]: https://github.com/minetest-mods/moreores/tree/2316595
 [ver.mthudclock]: https://github.com/Rochambeau/mthudclock/tree/b3e2142
 [ver.mydoors]: https://github.com/minetest-mods/mydoors/tree/63aef13
 [ver.myfences]: https://github.com/DonBatman/myfences/tree/c6e529a
@@ -511,7 +511,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.mobs_animal]: https://github.com/AntumMT/mod-mobs_animal/tree/1d5f1ca
 [patch.mobs_redo]: https://github.com/AntumMT/mod-mobs_redo/tree/8872920
 [patch.moreblocks]: https://github.com/AntumMT/mod-moreblocks/tree/82aa7cd
-[patch.moreores]: https://github.com/AntumMT/mod-moreores/tree/f574a02
+[patch.moreores]: https://github.com/AntumMT/mod-moreores/tree/1cd9011
 [patch.mydoors]: https://github.com/AntumMT/mp-mydoors/tree/e36c9d1
 [patch.mypaint]: https://github.com/AntumMT/mod-mypaint/tree/10a5359
 [patch.mysheetmetal]: https://github.com/AntumMT/mod-mysheetmetal/tree/b7d644b
