@@ -1,202 +1,201 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# ITALIAN LOCALE FILE FOR THE MOBS ANMAL MODULE
+# Copyright (c) 2014 Krupnov Pavel and 2016 TenPlus1
+# This file is distributed under the same license as the MOBS ANIMAL package.
+# Hamlet <h4mlet@riseup.net>, 2017.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: Italian localization file for the Mobs Animal mod\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-07-31 11:28+0200\n"
-"PO-Revision-Date: 2017-07-31 09:18+0200\n"
-"Last-Translator: fat115 <fat115@framasoft.org>\n"
+"PO-Revision-Date: 2017-08-18 00:56+0100\n"
+"Last-Translator: H4mlet <h4mlet@riseup.net>\n"
 "Language-Team: \n"
-"Language: fr\n"
+"Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.12\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.6.10\n"
 
 #: bee.lua
 msgid "Bee"
-msgstr "Abeille"
+msgstr "Ape"
 
 #: bee.lua
 msgid "Honey"
-msgstr "Miel"
+msgstr "Miele"
 
 #: bee.lua
 msgid "Beehive"
-msgstr "Ruche"
+msgstr "Favo"
 
 #: bee.lua
 msgid "Honey Block"
-msgstr "Bloc de miel"
+msgstr "Blocco di miele"
 
 #: bunny.lua
 msgid "Bunny"
-msgstr "Lapin"
+msgstr "Coniglietto"
 
 #: bunny.lua
 msgid "Raw Rabbit"
-msgstr "Lapin Cru"
+msgstr "Coniglio Crudo"
 
 #: bunny.lua
 #, fuzzy
 msgid "Cooked Rabbit"
-msgstr "Lapin Cuit"
+msgstr "Coniglio Cotto"
 
 #: bunny.lua
 msgid "Rabbit Hide"
-msgstr "Fourrure de Lapin"
+msgstr "Pelle di Coniglio"
 
 #: chicken.lua
 msgid "Chicken"
-msgstr "Poule"
+msgstr "Gallina"
 
 #: chicken.lua
 msgid "Chicken Egg"
-msgstr "Œuf"
+msgstr "Uovo di gallina"
 
 #: chicken.lua
 msgid "Fried Egg"
-msgstr "Œuf au plat"
+msgstr "Uovo fritto"
 
 #: chicken.lua
 msgid "Raw Chicken"
-msgstr "Poulet cru"
+msgstr "Pollo crudo"
 
 #: chicken.lua
 msgid "Cooked Chicken"
-msgstr "Poulet cuit"
+msgstr "Pollo cotto"
 
 #: chicken.lua
 msgid "Feather"
-msgstr "Plume"
+msgstr "Piuma"
 
 #: cow.lua
 msgid "Cow already milked!"
-msgstr "Vache déjà traite !"
+msgstr "Mucca già munta!"
 
 #: cow.lua
 msgid "Cow"
-msgstr "Vache"
+msgstr "Mucca"
 
 #: cow.lua
 msgid "Bucket of Milk"
-msgstr "Seau de lait"
+msgstr "Secchio di latte"
 
 #: cow.lua
 msgid "Cheese"
-msgstr "Fromage"
+msgstr "Formaggio"
 
 #: cow.lua
 msgid "Cheese Block"
-msgstr "Bloc de fromage"
+msgstr "Blocco di formaggio"
 
 #: init.lua
 msgid "[MOD] Mobs Redo 'Animals' loaded"
-msgstr "[MOD] Mobs Redo 'Animals' chargé"
+msgstr "[MOD] Mobs Redo 'Animals' caricato"
 
 #: kitten.lua
 msgid "Kitten"
-msgstr "Chaton"
+msgstr "Gattino"
 
 #: penguin.lua
 msgid "Penguin"
-msgstr "Manchot"
+msgstr "Pinguino"
 
 #: rat.lua
 msgid "Rat"
-msgstr "Rat"
+msgstr "Ratto"
 
 #: rat.lua
 msgid "Cooked Rat"
-msgstr "Rat cuit"
+msgstr "Ratto cotto"
 
 #: sheep.lua
 msgid "Black"
-msgstr "noir"
+msgstr "Nera"
 
 #: sheep.lua
 msgid "Blue"
-msgstr "bleu"
+msgstr "Blu"
 
 #: sheep.lua
 msgid "Brown"
-msgstr "marron"
+msgstr "Marrone"
 
 #: sheep.lua
 msgid "Cyan"
-msgstr "cyan"
+msgstr "Ciano"
 
 #: sheep.lua
 msgid "Dark Green"
-msgstr "vert foncé"
+msgstr "Verde scuro"
 
 #: sheep.lua
 msgid "Dark Grey"
-msgstr "gris foncé"
+msgstr "Grigio scuro"
 
 #: sheep.lua
 msgid "Green"
-msgstr "vert"
+msgstr "Verde"
 
 #: sheep.lua
 msgid "Grey"
-msgstr "gris"
+msgstr "Grigia"
 
 #: sheep.lua
 msgid "Magenta"
-msgstr "magenta"
+msgstr "Magenta"
 
 #: sheep.lua
 msgid "Orange"
-msgstr "orange"
+msgstr "Arancione"
 
 #: sheep.lua
 msgid "Pink"
-msgstr "rose"
+msgstr "Rosa"
 
 #: sheep.lua
 msgid "Red"
-msgstr "rouge"
+msgstr "Rossa"
 
 #: sheep.lua
 msgid "Violet"
-msgstr "violet"
+msgstr "Viola"
 
 #: sheep.lua
 msgid "White"
-msgstr "blanc"
+msgstr "Bianca"
 
 #: sheep.lua
 msgid "Yellow"
-msgstr "jaune"
+msgstr "Gialla"
 
 #: sheep.lua
-#, fuzzy
 msgid "@1 Sheep"
-msgstr "Mouton @1"
+msgstr "Pecora @1"
 
 #: sheep.lua
 msgid "Raw Mutton"
-msgstr "Mouton Cru"
+msgstr "Montone Crudo"
 
 #: sheep.lua
 #, fuzzy
 msgid "Cooked Mutton"
-msgstr "Mouton Cuit"
+msgstr "Montone Cotto"
 
 #: warthog.lua
 msgid "Warthog"
-msgstr "Sanglier"
+msgstr "Facocero"
 
 #: warthog.lua
 msgid "Raw Porkchop"
-msgstr "Côte de sanglier crue"
+msgstr "Bistecca di maiale cruda"
 
 #: warthog.lua
 msgid "Cooked Porkchop"
-msgstr "Côte de sanglier cuite"
+msgstr "Bistecca di maiale cotta"

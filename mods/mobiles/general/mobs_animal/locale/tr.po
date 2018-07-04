@@ -38,6 +38,19 @@ msgstr "Bal bloğu"
 msgid "Bunny"
 msgstr "Tavşan"
 
+#: bunny.lua
+msgid "Raw Rabbit"
+msgstr "çiğ tavşan"
+
+#: bunny.lua
+#, fuzzy
+msgid "Cooked Rabbit"
+msgstr "pişmiş tavşan"
+
+#: bunny.lua
+msgid "Rabbit Hide"
+msgstr "tavşan kürkü"
+
 #: chicken.lua
 msgid "Chicken"
 msgstr "Tavuk"
@@ -166,6 +179,15 @@ msgstr "Sarı"
 #, fuzzy
 msgid "@1 Sheep"
 msgstr "@1 Koyun"
+
+#: sheep.lua
+msgid "Raw Mutton"
+msgstr "çiğ kuzu"
+
+#: sheep.lua
+#, fuzzy
+msgid "Cooked Mutton"
+msgstr "pişmiş kuzu"
 
 #: warthog.lua
 msgid "Warthog"

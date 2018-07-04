@@ -39,14 +39,19 @@ mobs:register_mob("mobs_animal:bee", {
 	on_rightclick = function(self, clicker)
 		mobs:capture_mob(self, clicker, 50, 90, 0, true, "mobs_animal:bee")
 	end,
+--	after_activate = function(self, staticdata, def, dtime)
+--		print ("------", self.name, dtime, self.health)
+--	end,
 })
 
 mobs:spawn({
 	name = "mobs_animal:bee",
 	nodes = {"group:flower"},
-	min_light = 10,
-	chance = 9000,
-	min_height = 0,
+	min_light = 14,
+	interval = 60,
+	chance = 7000,
+	min_height = 3,
+	max_height = 200,
 	day_toggle = true,
 })
 
@@ -59,7 +64,8 @@ mobs:alias_mob("mobs:bee", "mobs_animal:bee")
 minetest.register_craftitem(":mobs:honey", {
 	description = S("Honey"),
 	inventory_image = "mobs_honey_inv.png",
-	on_use = minetest.item_eat(6),
+	on_use = minetest.item_eat(4),
+	groups = {food_honey = 1, food_sugar = 1, flammable = 1},
 })
 
 -- beehive (when placed spawns bee)
@@ -90,7 +96,7 @@ minetest.register_node(":mobs:beehive", {
 
 	after_place_node = function(pos, placer, itemstack)
 
-		if placer:is_player() then
+		if placer and placer:is_player() then
 
 			minetest.set_node(pos, {name = "mobs:beehive", param2 = 1})
 

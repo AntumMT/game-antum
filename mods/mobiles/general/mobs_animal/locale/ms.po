@@ -7,196 +7,193 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-31 11:28+0200\n"
-"PO-Revision-Date: 2017-07-31 09:18+0200\n"
-"Last-Translator: fat115 <fat115@framasoft.org>\n"
+"POT-Creation-Date: 2018-02-06 00:17+0800\n"
+"PO-Revision-Date: 2018-02-06 00:25+0800\n"
+"Last-Translator: MuhdNurHidayat (MNH48) <mnh48mail@gmail.com>\n"
 "Language-Team: \n"
-"Language: fr\n"
+"Language: ms\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.12\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 2.0.6\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: bee.lua
 msgid "Bee"
-msgstr "Abeille"
+msgstr "Lebah"
 
 #: bee.lua
 msgid "Honey"
-msgstr "Miel"
+msgstr "Madu"
 
 #: bee.lua
 msgid "Beehive"
-msgstr "Ruche"
+msgstr "Sarang Lebah"
 
 #: bee.lua
 msgid "Honey Block"
-msgstr "Bloc de miel"
+msgstr "Blok Madu"
 
 #: bunny.lua
 msgid "Bunny"
-msgstr "Lapin"
+msgstr "Arnab"
 
 #: bunny.lua
 msgid "Raw Rabbit"
-msgstr "Lapin Cru"
+msgstr "Daging Arnab Mentah"
 
 #: bunny.lua
-#, fuzzy
 msgid "Cooked Rabbit"
-msgstr "Lapin Cuit"
+msgstr "Daging Arnab Bakar"
 
 #: bunny.lua
 msgid "Rabbit Hide"
-msgstr "Fourrure de Lapin"
+msgstr "Belulang Arnab"
 
 #: chicken.lua
 msgid "Chicken"
-msgstr "Poule"
+msgstr "Ayam"
 
 #: chicken.lua
 msgid "Chicken Egg"
-msgstr "Œuf"
+msgstr "Telur Ayam"
 
 #: chicken.lua
 msgid "Fried Egg"
-msgstr "Œuf au plat"
+msgstr "Telur Goreng"
 
 #: chicken.lua
 msgid "Raw Chicken"
-msgstr "Poulet cru"
+msgstr "Ayam Mentah"
 
 #: chicken.lua
 msgid "Cooked Chicken"
-msgstr "Poulet cuit"
+msgstr "Ayam Bakar"
 
 #: chicken.lua
 msgid "Feather"
-msgstr "Plume"
+msgstr "Bulu"
 
 #: cow.lua
 msgid "Cow already milked!"
-msgstr "Vache déjà traite !"
+msgstr "Lembu telah diperah susunya!"
 
 #: cow.lua
 msgid "Cow"
-msgstr "Vache"
+msgstr "Lembu"
 
 #: cow.lua
 msgid "Bucket of Milk"
-msgstr "Seau de lait"
+msgstr "Baldi Susu"
 
 #: cow.lua
 msgid "Cheese"
-msgstr "Fromage"
+msgstr "Keju"
 
 #: cow.lua
 msgid "Cheese Block"
-msgstr "Bloc de fromage"
+msgstr "Blok Keju"
 
 #: init.lua
 msgid "[MOD] Mobs Redo 'Animals' loaded"
-msgstr "[MOD] Mobs Redo 'Animals' chargé"
+msgstr "[MODS] Mobs Redo 'Animals' telah dimuatkan"
 
 #: kitten.lua
 msgid "Kitten"
-msgstr "Chaton"
+msgstr "Anak Kucing"
 
 #: penguin.lua
 msgid "Penguin"
-msgstr "Manchot"
+msgstr "Penguin"
 
 #: rat.lua
 msgid "Rat"
-msgstr "Rat"
+msgstr "Tikus"
 
 #: rat.lua
 msgid "Cooked Rat"
-msgstr "Rat cuit"
+msgstr "Tikus Bakar"
 
 #: sheep.lua
 msgid "Black"
-msgstr "noir"
+msgstr "Hitam"
 
 #: sheep.lua
 msgid "Blue"
-msgstr "bleu"
+msgstr "Biru"
 
 #: sheep.lua
 msgid "Brown"
-msgstr "marron"
+msgstr "Perang"
 
 #: sheep.lua
 msgid "Cyan"
-msgstr "cyan"
+msgstr "Sian"
 
 #: sheep.lua
 msgid "Dark Green"
-msgstr "vert foncé"
+msgstr "Hijau Gelap"
 
 #: sheep.lua
 msgid "Dark Grey"
-msgstr "gris foncé"
+msgstr "Kelabu Gelap"
 
 #: sheep.lua
 msgid "Green"
-msgstr "vert"
+msgstr "Hijau"
 
 #: sheep.lua
 msgid "Grey"
-msgstr "gris"
+msgstr "Kelabu"
 
 #: sheep.lua
 msgid "Magenta"
-msgstr "magenta"
+msgstr "Merah Lembayung"
 
 #: sheep.lua
 msgid "Orange"
-msgstr "orange"
+msgstr "Jingga"
 
 #: sheep.lua
 msgid "Pink"
-msgstr "rose"
+msgstr "Merah Jambu"
 
 #: sheep.lua
 msgid "Red"
-msgstr "rouge"
+msgstr "Merah"
 
 #: sheep.lua
 msgid "Violet"
-msgstr "violet"
+msgstr "Ungu"
 
 #: sheep.lua
 msgid "White"
-msgstr "blanc"
+msgstr "Putih"
 
 #: sheep.lua
 msgid "Yellow"
-msgstr "jaune"
+msgstr "Kuning"
 
 #: sheep.lua
-#, fuzzy
 msgid "@1 Sheep"
-msgstr "Mouton @1"
+msgstr "Biri-biri @1"
 
 #: sheep.lua
 msgid "Raw Mutton"
-msgstr "Mouton Cru"
+msgstr "Daging Biri-biri Mentah"
 
 #: sheep.lua
-#, fuzzy
 msgid "Cooked Mutton"
-msgstr "Mouton Cuit"
+msgstr "Daging Biri-biri Bakar"
 
 #: warthog.lua
 msgid "Warthog"
-msgstr "Sanglier"
+msgstr "Babi Hutan"
 
 #: warthog.lua
 msgid "Raw Porkchop"
-msgstr "Côte de sanglier crue"
+msgstr "Daging Babi Mentah"
 
 #: warthog.lua
 msgid "Cooked Porkchop"
-msgstr "Côte de sanglier cuite"
+msgstr "Daging Babi Bakar"

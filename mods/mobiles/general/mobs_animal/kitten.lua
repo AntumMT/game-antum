@@ -5,8 +5,15 @@ local S = mobs.intllib
 -- Kitten by Jordach / BFD
 
 mobs:register_mob("mobs_animal:kitten", {
+stepheight = 0.6,
 	type = "animal",
-	passive = true,
+	specific_attack = {"mobs_animal:rat"},
+	damage = 1,
+	attack_type = "dogfight",
+	attack_animals = true, -- so it can attack rat
+	attack_players = false,
+	reach = 1,
+	passive = false,
 	hp_min = 5,
 	hp_max = 10,
 	armor = 200,
@@ -52,13 +59,21 @@ mobs:register_mob("mobs_animal:kitten", {
 })
 
 
+local spawn_on = "default:dirt_with_grass"
+
+if minetest.get_modpath("ethereal") then
+	spawn_on = "ethereal:grove_dirt"
+end
+
 mobs:spawn({
 	name = "mobs_animal:kitten",
-	nodes = {"default:dirt_with_grass", "ethereal:grove_dirt"},
-	min_light = 12,
-	chance = 22000,
-	min_height = 0,
-	max_height = 31000,
+	nodes = {spawn_on},
+	neighbors = {"group:grass"},
+	min_light = 14,
+	interval = 60,
+	chance = 10000, -- 22000
+	min_height = 5,
+	max_height = 200,
 	day_toggle = true,
 })
 
