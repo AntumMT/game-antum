@@ -482,7 +482,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.workbench]: https://github.com/minetest-mods/workbench/tree/bd14f59
 [ver.worldedge]: https://github.com/minetest-mods/worldedge/tree/608462d
 
-[patch.3d_armor]: https://github.com/AntumMT/mp-3d_armor/tree/95b36b7
+[patch.3d_armor]: https://github.com/AntumMT/mp-3d_armor/tree/d563fe4
 [patch.airtanks]: https://github.com/AntumMT/mod-airtanks/tree/71ea616
 [patch.away]: https://github.com/AntumMT/mod-away/tree/3b0bf9e
 [patch.bedrock2]: https://github.com/AntumMT/mod-bedrock2/tree/344fdae

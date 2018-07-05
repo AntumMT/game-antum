@@ -2457,6 +2457,137 @@ areas.self_protection_max_areas = 10
 ## MODPACKS ##
 ##############
 
+
+# *** 3d_armor ***
+
+# ## 3d_armor
+
+## Enable wood armor.
+#    type:    bool
+#    default: true
+#armor_material_wood = true
+
+## Enable cactus armor.
+#    type:    bool
+#    default: true
+#armor_material_cactus = true
+
+## Enable steel armor.
+#    type:    bool
+#    default: true
+#armor_material_steel = true
+
+## Enable bronze armor.
+#    type:    bool
+#    default: true
+#armor_material_bronze = true
+
+## Enable diamond armor.
+#    type:    bool
+#    default: true
+#armor_material_diamond = true
+
+## Enable gold armor.
+#    type:    bool
+#    default: true
+#armor_material_gold = true
+
+## Enable mithril armor.
+#    type:    bool
+#    default: true
+#armor_material_mithril = true
+
+## Enable crystal armor.
+#    type:    bool
+#    default: true
+#armor_material_crystal = true
+
+## Increase this if you get initialization glitches when a player first joins.
+#    type:    int
+#    default: 2
+#armor_init_delay = 2
+
+## Number of initialization attempts.
+#  Use in conjunction with armor_init_delay if initialization problems persist.
+#    type:    int
+#    default: 10
+#armor_init_times = 10
+
+## Increase this if armor is not getting into bones due to server lag.
+#    type:    int
+#    default: 1
+#armor_bones_delay = 1
+
+## How often player armor items are updated.
+#    type:    int
+#    default: 1
+#armor_update_time = 1
+
+## Drop armor when a player dies.
+#  Uses bones mod if present, otherwise items are dropped around the player.
+#    type:    bool
+#    default: true
+#armor_drop = true
+
+## Pulverize armor when a player dies, overrides armor_drop.
+#    type:    bool
+#    default: false
+#armor_destroy = false
+
+## You can use this to increase or decrease overall armor effectiveness,
+#  eg: level_multiplier = 0.5 will reduce armor level by half.
+#    type:    float
+#    default: 1
+#armor_level_multiplier = 1
+
+## You can use this to increase or decrease overall armor healing,
+#  eg: armor_heal_multiplier = 0 will disable healing altogether.
+#    type:    float
+#    default: 1
+#armor_heal_multiplier = 1
+
+## Enable water protection (periodically restores breath when activated).
+#    type:    bool
+#    default: true
+#armor_water_protect = true
+
+## Enable fire protection (defaults true if using ethereal mod).
+#    type:    bool
+#    default: false
+#armor_fire_protect = false
+
+## Enable punch damage effects.
+#    type:    bool
+#    default: true
+#armor_punch_damage = true
+
+## Enable migration of old armor inventories.
+#    type:    bool
+#    default: true
+#armor_migrate_old_inventory = true
+
+
+# ## shields
+
+## Disable shield sounds.
+#    type:    bool
+#    default: false
+#shields_disable_sounds = false
+
+
+# ## wieldview
+
+## Set number of seconds between visible wielded item updates.
+#    type:    int
+#    default: 2
+#wieldview_update_time = 2
+
+## Show nodes as tiles, disabled by default.
+#    type:    bool
+#    default: false
+#wieldview_node_tiles = false
+
+
 # *** animalmaterials ***
 
 # ## animalmaterials
