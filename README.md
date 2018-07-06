@@ -45,7 +45,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [crops][] ([LGPL / CC BY-SA / CC BY / CC0][lic.crops]) -- version: [1][ver.crops] *2017-09-30*
 	* [farming_plus][] ([WTFPL][lic.farming_plus]) -- version: [7e0d976 Git][ver.farming_plus] *2014-07-31* ([patched][patch.farming_plus])
 * furniture/
-	* [jukebox][] ([WTFPL / CC0][lic.jukebox]) -- version: [21fdffa Git][ver.jukebox] *2017-08-12* ***UPDATES***
+	* [jukebox][] ([WTFPL / CC0][lic.jukebox]) -- version: [d1cd9e1 Git][ver.jukebox] *2017-09-01*
     * [trampoline][] ([GPL][lic.gpl3.0]) -- version: [0.2 (41366ac Git)][ver.trampoline] *2017-08-30*
     * [trash_can][] ([MIT][lic.trash_can]) -- version: [5fd3df7 Git][ver.trash_can] *2016-01-14* ([patched][patch.trash_can])
     * [waffles][] ([CC0][lic.cc0]) -- version [b02ffbf Git][ver.waffles] *2017-08-04* ***UPDATES***
@@ -429,7 +429,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.ilights]: https://github.com/minetest-mods/ilights/tree/fa085fd
 [ver.intllib]: https://github.com/minetest-mods/intllib/tree/9192771
 [ver.invisibility]: https://github.com/tenplus1/invisibility/tree/bf4156b
-[ver.jukebox]: https://github.com/minetest-mods/jukebox/tree/21fdffa
+[ver.jukebox]: https://github.com/minetest-mods/jukebox/tree/d1cd9e1
 [ver.lightning]: https://github.com/minetest-mods/lightning/tree/39bd36c
 [ver.mesecons]: https://github.com/minetest-mods/mesecons/tree/7013f2e
 [ver.minetest_game]: https://github.com/minetest/minetest_game/tree/f855bee
