@@ -48,7 +48,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [jukebox][] ([WTFPL / CC0][lic.jukebox]) -- version: [d1cd9e1 Git][ver.jukebox] *2017-09-01*
     * [trampoline][] ([GPL][lic.gpl3.0]) -- version: [0.2 (41366ac Git)][ver.trampoline] *2017-08-30*
     * [trash_can][] ([MIT][lic.trash_can]) -- version: [5fd3df7 Git][ver.trash_can] *2016-01-14* ([patched][patch.trash_can])
-    * [waffles][] ([CC0][lic.cc0]) -- version [b02ffbf Git][ver.waffles] *2017-08-04* ***UPDATES***
+    * [waffles][] ([MIT][lic.waffles]) -- version [15bcdce Git][ver.waffles] *2018-05-13*
 * [intllib][] ([Unlicense][lic.unlicense]) -- version: [9192771 Git][ver.intllib] *2017-09-10*
 * inventory/
     * [bags][] ([BSD 3-Clause][lic.bags]) -- version: [bc87b45 Git][ver.bags] *2018-04-11*
@@ -345,6 +345,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.tools_obsidian]: mods/tools/tools_obsidian/README.md
 [lic.trash_can]: mods/furniture/trash_can/LICENSE.txt
 [lic.vector_extras]: mods/vector_extras/LICENSE.txt
+[lic.waffles]: mods/furniture/waffles/LICENSE.txt
 [lic.walking_light]: mods/lighting/walking_light/README.md
 [lic.windmill]: mods/buildings/windmill/README.md
 
@@ -474,7 +475,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.trash_can]: https://github.com/minetest-mods/trash_can/tree/5fd3df7
 [ver.unifieddyes]: https://github.com/minetest-mods/unifieddyes/tree/stable-20170925
 [ver.vector_extras]: https://github.com/HybridDog/vector_extras/tree/472deb6
-[ver.waffles]: https://github.com/GreenXenith/waffles/tree/b02ffbf
+[ver.waffles]: https://github.com/GreenXenith/waffles/tree/15bcdce
 [ver.walking_light]: https://github.com/petermaloney/walking_light/tree/b23d836
 [ver.wardrobe]: https://github.com/prestidigitator/minetest-mod-wardrobe/tree/c48b011
 [ver.whitelist]: https://github.com/AntumMT/mod-whitelist/tree/b813b19
