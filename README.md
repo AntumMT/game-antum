@@ -58,7 +58,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [ilights][] ([CC BY-SA][lic.ccbysa]) -- version [fa085fd Git][ver.ilights] *2017-07-19*
     * walking_light ([petermalone fork][walking_light]) ([WTFPL / CC BY-SA][lic.walking_light]) -- version: [b23d836 Git][ver.walking_light] *2017-06-21* ([patched][patch.walking_light])
 * materials/
-	* [amber][] ([LGPL][lic.lgpl2.1]) -- version: [21637e8 Git][ver.amber] *2017-08-09* ***UPDATES***
+	* [amber][] ([LGPL][lic.lgpl2.1]) -- version: [56627fa Git][ver.amber] *2017-10-29*
 	* [gems_encrustable][] ([WTFPL][lic.wtfpl]) -- version: [81d513d Git][ver.gems_encrustable] *2012-07-31* ([patched][patch.gems_encrustable])
 	* [gems_tools][] ([GPL][lic.gpl3.0]) -- version: [b375432 Git][ver.gems_tools] *2016-09-03* ([patched][patch.gems_tools])
 	* [moreores][] ([zlib][lic.moreores] / [CC BY-SA][lic.ccbysa3.0]) -- version: [2316595 Git][ver.moreores] *2018-04-21* ([patched][patch.moreores])
@@ -375,7 +375,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 [ver.3d_armor]: https://github.com/stujones11/minetest-3d_armor/tree/656bcf3
 [ver.airtanks]: https://github.com/minetest-mods/airtanks/tree/868c3a7
-[ver.amber]: https://github.com/theraven262/amber/tree/21637e8
+[ver.amber]: https://github.com/theraven262/amber/tree/56627fa
 [ver.animals_aggressive]: https://github.com/AntumMT/mp-animals_aggressive/tree/4eede4d
 [ver.animals_harmless]: https://github.com/AntumMT/mp-animals_harmless/tree/e9b02a8
 [ver.antum]: https://github.com/AntumMT/mp-antum/tree/69b39a4
