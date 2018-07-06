@@ -1,12 +1,3 @@
-# Fort Spikes
-Mod for Minetest game
+# Moved to GitLab
 
-Improve your base defense with wood and iron spikes around.
-
-License of source code:
------------------------
-MIT
-
-Media
------------------------
-Texture files are created by xeranas and lisensed under CC-0
+https://gitlab.com/zombiebot/fort_spikes

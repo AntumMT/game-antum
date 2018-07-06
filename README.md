@@ -24,7 +24,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [bridges][] ([GPL][lic.gpl3.0]) -- version: [5b5f475 Git][ver.bridges] *2015-08-23* ([patched][patch.bridges])
     * [christmas][] ([MIT][lic.christmas]) -- version [d3bd872 Git][ver.christmas] *2013-01-11* ([patched][patch.christmas])
     * [elevator][] ([WTFPL][lic.elevator])
-    * [fort_spikes][] ([MIT][lic.fort_spikes] / [CC0][lic.cc0]) -- version: [3c7d7c6 Git][ver.fort_spikes] *2017-05-06* ***UPDATES***
+    * [fort_spikes][] ([MIT][lic.fort_spikes] / [CC0][lic.cc0]) -- version: [3b98b46 Git][ver.fort_spikes] *2018-06-05*
     * [glass][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- version [d61a6c6 Git][ver.glass] *2017-08-15*
     * [moreblocks][] ([zlib][lic.moreblocks]) -- version: [1.1.0][ver.moreblocks] *2018-04-21* ([patched][patch.moreblocks]) ***UNSTABLE UPDATES***
     * [windmill][] ([WTFPL][lic.windmill]) -- version: [47b029d Git][ver.windmill] *2014-08-21* ([patched][patch.windmill])
@@ -315,7 +315,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.enchanting]: mods/enchanting/LICENSE
 [lic.ethereal]: mods/world/ethereal/license.txt
 [lic.farming_plus]: mods/farming/farming_plus/README.txt
-[lic.fort_spikes]: mods/buildings/fort_spikes/README.md
+[lic.fort_spikes]: mods/buildings/fort_spikes/LICENSE
 [lic.home_gui]: mods/ui/home_gui/LICENSE
 [lic.hill_nodebox]: mods/world/hill_nodebox/LICENSE
 [lic.homedecor]: mods/modpacks/homedecor/LICENSE
@@ -411,7 +411,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.enchanting]: https://github.com/minetest-mods/enchanting/tree/13ea31c
 [ver.ethereal]: https://notabug.org/TenPlus1/ethereal/src/4641fecbe9415201ee077cf75ee87c886f9a7b55
 [ver.farming_plus]: https://github.com/PilzAdam/farming_plus/tree/7e0d976
-[ver.fort_spikes]: https://github.com/xeranas/fort_spikes/tree/3c7d7c6
+[ver.fort_spikes]: https://github.com/xeranas/fort_spikes/tree/3b98b46
 [ver.gems_encrustable]: https://github.com/wowiamdiamonds/gems/tree/81d513d
 [ver.gems_tools]: https://github.com/captainLAD/gems/tree/b375432
 [ver.glass]: https://github.com/AntumMT/mod-glass/tree/d61a6c6
