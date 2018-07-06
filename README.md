@@ -37,7 +37,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [currency][] ([WTFPL][lic.currency]) -- version: [bb3fd1a Git][ver.currency] *2018-05-24*
 * [enchanting][] ([GPL / WTFPL / CC BY-SA-NA][lic.enchanting]) -- version: [13ea31c Git][ver.enchanting] *2016-12-16* ([patched][patch.enchanting])
 * equipment/
-	* [airtanks][] ([MIT][lic.airtanks]) -- version: [5787956 Git][ver.airtanks] *2017-05-13* ([patched][patch.airtanks]) ***UPDATES***
+	* [airtanks][] ([MIT][lic.airtanks]) -- version: [868c3a7 Git][ver.airtanks] *2018-05-26* ([patched][patch.airtanks])
 	* [slingshot][] ([MIT][lic.slingshot] / [CC0][lic.cc0]) -- version [0.1][ver.slingshot] *2017-08-16*
     * [throwing][] ([WTFPL][lic.wtfpl]) -- version: [90bcf43 Git][ver.throwing] *2013-09-27* ([patched][patch.throwing])
 	* [xtraarmor][] ([CC BY-SA][lic.ccbysa3.0]) -- version: 0.3
@@ -373,7 +373,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.zlib]: doc/licenses/zlib.txt
 
 [ver.3d_armor]: https://github.com/stujones11/minetest-3d_armor/tree/656bcf3
-[ver.airtanks]: https://github.com/minetest-mods/airtanks/tree/5787956
+[ver.airtanks]: https://github.com/minetest-mods/airtanks/tree/868c3a7
 [ver.amber]: https://github.com/theraven262/amber/tree/21637e8
 [ver.animals_aggressive]: https://github.com/AntumMT/mp-animals_aggressive/tree/4eede4d
 [ver.animals_harmless]: https://github.com/AntumMT/mp-animals_harmless/tree/e9b02a8
@@ -483,7 +483,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.worldedge]: https://github.com/minetest-mods/worldedge/tree/608462d
 
 [patch.3d_armor]: https://github.com/AntumMT/mp-3d_armor/tree/d563fe4
-[patch.airtanks]: https://github.com/AntumMT/mod-airtanks/tree/71ea616
+[patch.airtanks]: https://github.com/AntumMT/mod-airtanks/tree/42d31cb
 [patch.away]: https://github.com/AntumMT/mod-away/tree/3b0bf9e
 [patch.bedrock2]: https://github.com/AntumMT/mod-bedrock2/tree/344fdae
 [patch.biome_lib]: https://github.com/AntumMT/mod-biome_lib/tree/7fd5c51
