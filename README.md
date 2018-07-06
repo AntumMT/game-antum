@@ -28,7 +28,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [glass][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- version [d61a6c6 Git][ver.glass] *2017-08-15*
     * [moreblocks][] ([zlib][lic.moreblocks]) -- version: [1.1.0][ver.moreblocks] *2018-04-21* ([patched][patch.moreblocks]) ***UNSTABLE UPDATES***
     * [windmill][] ([WTFPL][lic.windmill]) -- version: [47b029d Git][ver.windmill] *2014-08-21* ([patched][patch.windmill])
-* [campfire][] ([GPL][lic.gpl2.0] / [CC BY-SA][lic.ccbysa] / [WTFPL][lic.campfire]) -- version: [04b4ea5 Git][ver.campfire] *2017-06-08* ***UPDATES***
+* [campfire][] ([GPL][lic.gpl2.0] / [CC BY-SA][lic.ccbysa] / [WTFPL][lic.campfire]) -- version: [04b4ea5 Git][ver.campfire] *2017-06-08* ***UNSTABLE UPDATES***
 * chat/
     * [away][] ([GPL][lic.gpl2.0]) -- version: [4c1e5a9 Git][ver.away] *2012-03-09* ([patched][patch.away])
     * [chatlog][] ([CC0][lic.cc0]) -- version [1.0][ver.chatlog] *2017-08-12*
