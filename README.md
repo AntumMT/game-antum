@@ -39,6 +39,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * equipment/
 	* [airtanks][] ([MIT][lic.airtanks]) -- version: [868c3a7 Git][ver.airtanks] *2018-05-26* ([patched][patch.airtanks])
 	* [slingshot][] ([MIT][lic.slingshot] / [CC0][lic.cc0]) -- version [0.1][ver.slingshot] *2017-08-16*
+	* [technic_armor][] ([LGPL / WTFPL][lic.technic_armor]) -- version [694642f Git][ver.technic_armor] *2018-02-11*
     * [throwing][] ([WTFPL][lic.wtfpl]) -- version: [90bcf43 Git][ver.throwing] *2013-09-27* ([patched][patch.throwing])
 	* [xtraarmor][] ([CC BY-SA][lic.ccbysa3.0]) -- version: 0.3
 * farming/
@@ -274,6 +275,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [spawneggs]: https://forum.minetest.net/viewtopic.php?t=6214
 [spectator_mode]: https://forum.minetest.net/viewtopic.php?t=13718
 [technic]: https://forum.minetest.net/viewtopic.php?t=2538
+[technic_armor]: https://github.com/stujones11/technic_armor
 [throwing]: https://forum.minetest.net/viewtopic.php?t=687
 [tnt]: https://forum.minetest.net/viewtopic.php?id=2902
 [tools_obsidian]: https://forum.minetest.net/viewtopic.php?t=14236
@@ -342,6 +344,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.snowdrift]: mods/weather/snowdrift/license.txt
 [lic.spawneggs]: mods/spawning/spawneggs/README.txt
 [lic.spectator_mode]: mods/admin/spectator_mode/LICENSE
+[lic.technic_armor]: mods/equipment/technic_armor/LICENSE.txt
 [lic.tools_obsidian]: mods/tools/tools_obsidian/README.md
 [lic.trash_can]: mods/furniture/trash_can/LICENSE.txt
 [lic.vector_extras]: mods/vector_extras/LICENSE.txt
@@ -468,6 +471,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.spawneggs]: https://github.com/thefamilygrog66/spawneggs/tree/4650370
 [ver.spectator_mode]: https://github.com/minetest-mods/spectator_mode/tree/7d68bec
 [ver.technic]: https://github.com/minetest-mods/technic/tree/6664714
+[ver.technic_armor]: https://github.com/stujones11/technic_armor/tree/694642f
 [ver.throwing]: https://github.com/PilzAdam/throwing/tree/90bcf43
 [ver.tnt]: https://github.com/PilzAdam/TNT/tree/d6a0b7d
 [ver.tools_obsidian]: https://github.com/Dragonop/tools_obsidian/tree/f77fd79
