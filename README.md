@@ -103,7 +103,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [drawers][] ([MIT / CC0 / CC BY][lic.drawers]) -- version: [279d0ab Git][ver.drawers] *2018-06-18*
 	* [more_chests][] ([GPL][lic.gpl2.0]) -- version [c597779 Git][ver.more_chests] *2017-02-27*
 * tools/
-	* [compassgps][] ([WTFPL][lic.wtfpl] / [CC0][lic.cc0] / [CC BY-SA][lic.ccbysa]) -- version: [96892a0 Git][ver.compassgps] *2015-07-31* ([patched][patch.compassgps]) ***UPDATES***
+	* [compassgps][] ([WTFPL][lic.wtfpl] / [CC0][lic.cc0] / [CC BY-SA][lic.ccbysa]) -- version: [ec96e18 Git][ver.compassgps] *2018-02-12*
     * [tools_obsidian][] ([LGPL / CC BY-SA][lic.tools_obsidian]) -- version: [f77fd79][ver.tools_obsidian] *2016-03-19* ([patched][patch.tools_obsidian])
     * [workbench][] ([LGPL / WTFPL](mods/tools/workbench/LICENSE)) -- version: [bd14f59 Git][ver.workbench] *2017-08-08*
 * transport/
@@ -409,7 +409,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.christmas]: https://github.com/TheZenKitteh/minetest-christmas/tree/d3bd872
 [ver.cleaner]: https://github.com/AntumMT/mod-cleaner/tree/68222b1
 [ver.coloredwood]: https://github.com/minetest-mods/coloredwood/tree/bd490be
-[ver.compassgps]: https://github.com/Kilarin/compassgps/tree/96892a0
+[ver.compassgps]: https://github.com/Kilarin/compassgps/tree/ec96e18
 [ver.crafting_bench]: https://github.com/minetest-mods/crafting_bench/tree/ca21489
 [ver.craftguide]: https://github.com/minetest-mods/craftguide/tree/1.1
 [ver.crops]: https://github.com/minetest-mods/crops/tree/v1
@@ -503,7 +503,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.bridges]: https://github.com/AntumMT/mod-bridges/tree/ba8f71a
 [patch.castle_weapons]: https://github.com/AntumMT/mod-castle_weapons/tree/669db13
 [patch.christmas]: https://github.com/AntumMT/mod-christmas/tree/7ffdc67
-[patch.compassgps]: https://github.com/AntumMT/mod-compassgps/tree/b900f30
 [patch.craftguide]: https://github.com/AntumMT/mod-craftguide/tree/3930813
 [patch.drawers]: https://github.com/AntumMT/mod-drawers/tree/a77f809
 [patch.enchanting]: https://github.com/AntumMT/mod-enchanting/tree/7a01f2f
