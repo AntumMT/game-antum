@@ -117,7 +117,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [hudbars][] ([MIT][lic.mit] / [CC BY-SA][lic.ccbysa3.0]) -- version [1.11.0][ver.hudbars] *2018-02-05*
     * [hudmap][] ([LGPL][lic.lgpl2.1] / [WTFPL][lic.wtfpl]) -- version: [3b8bdc0 Git][ver.hudmap] *2017-05-14*
     * [mthudclock][] ([WTFPL][lic.wtfpl]) -- version [d86e745 Git][ver.mthudclock] *2018-01-06*
-* [vector_extras][] ([WTFPL][lic.vector_extras]) -- version: [472deb6 Git][ver.vector_extras] *2017-01-25* ***UPDATES***
+* [vector_extras][] ([WTFPL][lic.wtfpl]) -- version: [8d78f3c Git][ver.vector_extras] *2017-12-25*
 * weather/
     * [lightning][] ([LGPL / CC BY-SA][lic.lightning]) -- version: [39bd36c Git][ver.lightning] *2017-02-20*
     * [snowdrift][] ([MIT][lic.snowdrift]) -- version: [fcb0537 Git][ver.snowdrift] *2017-04-15* ([patched][patch.snowdrift]) ***UPDATES***
@@ -352,7 +352,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.technic_armor]: mods/equipment/technic_armor/LICENSE.txt
 [lic.tools_obsidian]: mods/tools/tools_obsidian/README.md
 [lic.trash_can]: mods/furniture/trash_can/LICENSE.txt
-[lic.vector_extras]: mods/vector_extras/LICENSE.txt
 [lic.waffles]: mods/furniture/waffles/LICENSE.txt
 [lic.walking_light]: mods/lighting/walking_light/README.md
 [lic.windmill]: mods/buildings/windmill/README.md
@@ -485,7 +484,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.trampoline]: https://github.com/AntumMT/mod-trampoline/tree/41366ac
 [ver.trash_can]: https://github.com/minetest-mods/trash_can/tree/5fd3df7
 [ver.unifieddyes]: https://github.com/minetest-mods/unifieddyes/tree/stable-20170925
-[ver.vector_extras]: https://github.com/HybridDog/vector_extras/tree/472deb6
+[ver.vector_extras]: https://github.com/HybridDog/vector_extras/tree/8d78f3c
 [ver.waffles]: https://github.com/GreenXenith/waffles/tree/15bcdce
 [ver.walking_light]: https://github.com/petermaloney/walking_light/tree/b23d836
 [ver.wardrobe]: https://github.com/prestidigitator/minetest-mod-wardrobe/tree/c48b011

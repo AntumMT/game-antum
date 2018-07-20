@@ -1,4 +1,4 @@
-local load_time_start = os.clock()
+local load_time_start = minetest.get_us_time()
 
 local funcs = {}
 
@@ -207,7 +207,8 @@ function funcs.threeline(x, y, z)
 		return line
 	end
 	if x ~= math.floor(x) then
-		minetest.log("error", "[vector_extras] INFO: The position used for vector.threeline isn't round.")
+		minetest.log("error", "[vector_extras] INFO: The position used for " ..
+			"vector.threeline isn't round.")
 	end
 	local two_line = vector.twoline(x, y)
 	line = {}
@@ -264,6 +265,19 @@ function funcs.cross(v1, v2)
 		y = v1.z*v2.x - v1.x*v2.z,
 		z = v1.x*v2.y - v1.y*v2.x
 	}
+end
+
+-- Tschebyschew norm
+function funcs.maxnorm(v)
+	return math.max(math.max(math.abs(v.x), math.abs(v.y)), math.abs(v.z))
+end
+
+function funcs.sumnorm(v)
+	return math.abs(v.x) + math.abs(v.y) + math.abs(v.z)
+end
+
+function funcs.pnorm(v, p)
+	return (math.abs(v.x)^p + math.abs(v.y)^p + math.abs(v.z)^p)^(1 / p)
 end
 
 --not optimized
@@ -392,7 +406,7 @@ function funcs.explosion_table(r)
 		return table
 	end
 
-	local t1 = os.clock()
+	--~ local t1 = os.clock()
 	local tab, n = {}, 1
 
 	local tmp = r*r + r
@@ -413,7 +427,7 @@ function funcs.explosion_table(r)
 		end
 	end
 	explosion_tables[r] = tab
-	minetest.log("info", string.format("[vector_extras] table created after ca. %.2fs", os.clock() - t1))
+	--~ minetest.log("info", string.format("[vector_extras] table created after ca. %.2fs", os.clock() - t1))
 	return tab
 end
 
@@ -552,7 +566,8 @@ function funcs.ring(r)
 		end
 	end
 
-	local tab2, n = {}, 1
+	local tab2 = {}
+	n = 1
 	for _,i in ipairs(tab) do
 		for _,j in ipairs({
 			{i.x, i.z},
@@ -567,6 +582,276 @@ function funcs.ring(r)
 	ring_tables[r] = tab2
 	minetest.log("info", string.format("[vector_extras] table created after ca. %.2fs", os.clock() - t1))
 	return tab2
+end
+
+	--~ posy(t) = att + bt + c
+	--~ vely(t) = 2at + b
+	--~ accy(t) = 2a
+
+	--~ a = -0.5gravity
+	--~ vely(0) = b = vel.y
+	--~ posy(0) = c = pos.y
+
+	--~ posy(t) = -0.5 * gravity * t * t + vel.y * t + pos.y
+	--~ vely(t) = -gravity*t + vel.y
+
+	--~ Scheitel:
+	--~ vely(t) = 0 = -gravity*t + vel.y
+	--~ t = vel.y / gravity
+
+	--~ 45°
+	--~ vely(t)^2 = velx(t)^2 + velz(t)^2
+	--~ (-gravity*t + vel.y)^2 = vel.x * vel.x + vel.z * vel.z
+	--~ gravity^2 * t^2 + vel.y^2 - -2*gravity*t*vel.y = vel.x * vel.x + vel.z * vel.z
+	--~ gravity^2 * t^2 - 2*gravity*vel.y * t + (vel.y^2 - vel.x^2 - vel.z^2) = 0
+	--~ t = (2*gravity*vel.y .. rt((2*gravity*vel.y)^2 - 4*gravity^2*(vel.y^2 - vel.x^2 - vel.z^2))) / (2*gravity^2)
+	--~ t = (2*gravity*vel.y .. rt(4*gravity^2*vel.y^2 - 4*gravity^2*(vel.y^2) + 4*gravity^2*(vel.x^2 + vel.z^2))) / (2*gravity^2)
+	--~ t = (2*gravity*vel.y .. 2*gravity*rt(vel.x^2 + vel.z^2)) / (2*gravity^2)
+	--~ t = (vel.y .. rt(vel.x^2 + vel.z^2)) / gravity
+	--~ t1 = (vel.y - math.sqrt(vel.x * vel.x + vel.z * vel.z)) / gravity
+	--~ t2 = (vel.y + math.sqrt(vel.x * vel.x + vel.z * vel.z)) / gravity
+
+	--~ yswitch = posy(t1) (= posy(t2)) //links und rechts gleich
+	--~ yswitch = -0.5 * gravity * ((vel.y + math.sqrt(vel.x * vel.x + vel.z * vel.z)) / gravity)^2 + vel.y * ((vel.y + math.sqrt(vel.x * vel.x + vel.z * vel.z)) / gravity) + pos.y
+	--~ yswitch = -0.5 * gravity * (vel.y + math.sqrt(vel.x * vel.x + vel.z * vel.z))^2 / gravity^2 + vel.y * ((vel.y + math.sqrt(vel.x * vel.x + vel.z * vel.z)) / gravity) + pos.y
+	--~ yswitch = -0.5 * (vel.y^2 + 2*vel.y*math.sqrt(vel.x * vel.x + vel.z * vel.z) + vel.x^2 + vel.z^2) / gravity + ((vel.y^2 + vel.y*math.sqrt(vel.x * vel.x + vel.z * vel.z)) / gravity) + pos.y
+	--~ yswitch = (-0.5 * (vel.y^2 + 2*vel.y*math.sqrt(vel.x * vel.x + vel.z * vel.z) + vel.x^2 + vel.z^2) + ((vel.y^2 + vel.y*math.sqrt(vel.x * vel.x + vel.z * vel.z)))) / gravity + pos.y
+	--~ yswitch = (-0.5 * vel.y^2 - vel.y*math.sqrt(vel.x * vel.x + vel.z * vel.z) - 0.5 * vel.x^2 - 0.5 * vel.z^2 + vel.y^2 + vel.y*math.sqrt(vel.x * vel.x + vel.z * vel.z)) / gravity + pos.y
+	--~ yswitch = (-0.5 * vel.y^2 - 0.5 * vel.x^2 - 0.5 * vel.z^2 + vel.y^2) / gravity + pos.y
+	--~ yswitch = (0.5 * vel.y^2 - 0.5 * vel.x^2 - 0.5 * vel.z^2) / gravity + pos.y
+	--~ yswitch = -0.5 * (vel.x * vel.x + vel.z * vel.z - vel.y * vel.y) / gravity + pos.y
+
+
+	--~ 45° Zeitpunkte kleineres beim Aufstieg, größeres beim Fall
+	--~ (-gravity*t + vel.y)^2 = vel.x * vel.x + vel.z * vel.z
+	--~ -gravity*t + vel.y = ..math.sqrt(vel.x * vel.x + vel.z * vel.z)
+	--~ t = (..math.sqrt(vel.x * vel.x + vel.z * vel.z) + vel.y) / gravity
+	--~ t_raise = (-math.sqrt(vel.x * vel.x + vel.z * vel.z) + vel.y) / gravity
+	--~ t_fall = (math.sqrt(vel.x * vel.x + vel.z * vel.z) + vel.y) / gravity
+
+	--~ posy nach t umstellen
+	--~ y = -0.5 * gravity * t * t + vel.y * t + pos.y
+	--~ 0 = -0.5 * gravity * t * t + vel.y * t + pos.y - y
+	--~ t = (-vel.y .. math.sqrt(vel.y^2 + 2 * gravity * (pos.y - y))) / (-gravity)
+	--~ t = (vel.y .. math.sqrt(vel.y^2 + 2 * gravity * (pos.y - y))) / gravity
+	--~ t_up = (vel.y - math.sqrt(vel.y^2 + 2 * gravity * (pos.y - y))) / gravity
+	--~ t_down = (vel.y + math.sqrt(vel.y^2 + 2 * gravity * (pos.y - y))) / gravity
+
+	--~ posx(t) = vel.x * t + pos.x
+	--~ posz(t) = vel.z * t + pos.z
+
+	--~ posx nach t umstellen
+	--~ posx - pos.x = vel.x * t
+	--~ t = (posx - pos.x) / vel.x
+
+
+local function get_parabola_points(pos, vel, gravity, waypoints, max_pointcount,
+		time)
+	local pointcount = 0
+
+	-- the height of the 45° angle point
+	local yswitch = -0.5 * (vel.x^2 + vel.z^2 - vel.y^2)
+		/ gravity + pos.y
+
+	-- the times of the 45° angle point
+	local i = math.sqrt(vel.x^2 + vel.z^2)
+	local t_raise_end = (-i + vel.y) / gravity
+	local t_fall_start = (i + vel.y) / gravity
+	if t_fall_start > 0 then
+		-- the right 45° angle point wasn't passed yet
+		if t_raise_end > 0 then
+			-- put points from before the 45° angle
+			for y = math.ceil(pos.y), math.floor(yswitch +.5) do
+				local t = (vel.y -
+					math.sqrt(vel.y^2 + 2 * gravity * (pos.y - y))) / gravity
+				if t > time then
+					return
+				end
+				local p = {
+					x = math.floor(vel.x * t + pos.x +.5),
+					y = y,
+					z = math.floor(vel.z * t + pos.z +.5),
+				}
+				pointcount = pointcount+1
+				waypoints[pointcount] = {p, t}
+				if pointcount == max_pointcount then
+					return
+				end
+			end
+		end
+		-- smaller and bigger horizonzal pivot
+		local shp, bhp
+		if math.abs(vel.x) > math.abs(vel.z) then
+			shp = "z"
+			bhp = "x"
+		else
+			shp = "x"
+			bhp = "z"
+		end
+		-- put points between the 45° angles
+		local cstart, cdir
+		local cend = math.floor(vel[bhp] * t_fall_start + pos[bhp] +.5)
+		if vel[bhp] > 0 then
+			cstart = math.floor(math.max(pos[bhp],
+				vel[bhp] * t_raise_end + pos[bhp]) +.5)
+			cdir = 1
+		else
+			cstart = math.floor(math.min(pos[bhp],
+				vel[bhp] * t_raise_end + pos[bhp]) +.5)
+			cdir = -1
+		end
+		for i = cstart, cend, cdir do
+			local t = (i - pos[bhp]) / vel[bhp]
+			if t > time then
+				return
+			end
+			local p = {
+				[bhp] = i,
+				y = math.floor(-0.5 * gravity * t * t + vel.y * t + pos.y +.5),
+				[shp] = math.floor(vel[shp] * t + pos[shp] +.5),
+			}
+			pointcount = pointcount+1
+			waypoints[pointcount] = {p, t}
+			if pointcount == max_pointcount then
+				return
+			end
+		end
+	end
+	-- put points from after the 45° angle
+	local y = yswitch
+	if vel.y < 0
+	and pos.y < yswitch then
+		y = pos.y
+	end
+	y = math.floor(y +.5)
+	while pointcount < max_pointcount do
+		local t = (vel.y +
+			math.sqrt(vel.y^2 + 2 * gravity * (pos.y - y))) / gravity
+		if t > time then
+			return
+		end
+		local p = {
+			x = math.floor(vel.x * t + pos.x +.5),
+			y = y,
+			z = math.floor(vel.z * t + pos.z +.5),
+		}
+		pointcount = pointcount+1
+		waypoints[pointcount] = {p, t}
+		y = y-1
+	end
+end
+--[[
+minetest.override_item("default:axe_wood", {
+	on_use = function(_, player)
+		local dir = player:get_look_dir()
+		local pos = player:getpos()
+		local grav = 0.03
+		local ps = vector.throw_parabola(pos, dir, grav, 80)
+		for i = 1,#ps do
+			minetest.set_node(ps[i], {name="default:stone"})
+		end
+		--~ for t = 0,50,3 do
+			--~ local p = {
+				--~ x = dir.x * t + pos.x,
+				--~ y = -0.5*grav*t*t + dir.y*t + pos.y,
+				--~ z = dir.z * t + pos.z
+			--~ }
+			--~ minetest.set_node(p, {name="default:sandstone"})
+		--~ end
+	end,
+})--]]
+
+function funcs.throw_parabola(pos, vel, gravity, point_count, time)
+	local waypoints = {}
+	get_parabola_points(pos, vel, gravity, waypoints, point_count,
+			time or math.huge)
+	local ps = {}
+	local ptscnt = #waypoints
+	local i = 1
+	while i < ptscnt do
+		local p,t = unpack(waypoints[i])
+		i = i+1
+		local p2,t2 = unpack(waypoints[i])
+		ps[#ps+1] = p
+		local dist = vector.distance(p, p2)
+		if dist < 1.1 then
+			if dist < 0.9 then
+				-- same position
+				i = i+1
+			end
+			-- touching
+		elseif dist < 1.7 then
+			-- common edge
+			-- get a list of possible positions between
+			local diff = vector.subtract(p2, p)
+			local possible_positions = {}
+			for i,v in pairs(diff) do
+				if v ~= 0 then
+					local p = vector.new(p)
+					p[i] = p[i] + v
+					possible_positions[#possible_positions+1] = p
+				end
+			end
+			-- test which one fits best
+			t = 0.5 * (t + t2)
+			local near_p = {
+				x = vel.x * t + pos.x,
+				y = -0.5 * gravity * t * t + vel.y * t + pos.y,
+				z = vel.z * t + pos.z,
+			}
+			local d = math.huge
+			for i = 1,2 do
+				local pos = possible_positions[i]
+				local dist = vector.distance(pos, near_p)
+				if dist < d then
+					p = pos
+					d = dist
+				end
+			end
+			-- add it
+			ps[#ps+1] = p
+		elseif dist < 1.8 then
+			-- common vertex
+			for k = 1,2 do
+				-- get a list of possible positions between
+				local diff = vector.subtract(p2, p)
+				local possible_positions = {}
+				for i,v in pairs(diff) do
+					if v ~= 0 then
+						local p = vector.new(p)
+						p[i] = p[i] + v
+						possible_positions[#possible_positions+1] = p
+					end
+				end
+				-- test which one fits best
+				t = k / 3 * (t + t2)
+				local near_p = {
+					x = vel.x * t + pos.x,
+					y = -0.5 * gravity * t * t + vel.y * t + pos.y,
+					z = vel.z * t + pos.z,
+				}
+				local d = math.huge
+				assert(#possible_positions == 4-k, "how, number positions?")
+				for i = 1,4-k do
+					local pos = possible_positions[i]
+					local dist = vector.distance(pos, near_p)
+					if dist < d then
+						p = pos
+						d = dist
+					end
+				end
+				-- add it
+				ps[#ps+1] = p
+			end
+		else
+			minetest.log("warning", "[vector_extras] A gap: " .. dist)
+			--~ error("A gap, it's a gap!: " .. dist)
+		end
+	end
+	if i == ptscnt then
+		ps[#ps+1] = waypoints[i]
+	end
+	return ps
 end
 
 function funcs.chunkcorner(pos)
@@ -592,7 +877,7 @@ function funcs.point_distance_minmax(p1, p2)
 end
 
 function funcs.collision(p1, p2)
-	local clear, node_pos, collision_pos, max, min, dmax, dcmax, pt
+	local clear, node_pos, collision_pos, max, dmax, dcmax, pt
 	clear, node_pos = minetest.line_of_sight(p1, p2)
 	if clear then
 		return false
@@ -612,83 +897,6 @@ function funcs.collision(p1, p2)
 		collision_pos[i] = p2[i] - (p2[i] - node_pos[i]) * pt
 	end
 	return true, collision_pos, node_pos
-end
-
-function funcs.get_data_from_pos(tab, z,y,x)
-	local data = tab[z]
-	if data then
-		data = data[y]
-		if data then
-			return data[x]
-		end
-	end
-end
-
-function funcs.set_data_to_pos(tab, z,y,x, data)
-	if tab[z] then
-		if tab[z][y] then
-			tab[z][y][x] = data
-			return
-		end
-		tab[z][y] = {[x] = data}
-		return
-	end
-	tab[z] = {[y] = {[x] = data}}
-end
-
-function funcs.set_data_to_pos_optional(tab, z,y,x, data)
-	if vector.get_data_from_pos(tab, z,y,x) ~= nil then
-		return
-	end
-	funcs.set_data_to_pos(tab, z,y,x, data)
-end
-
-function funcs.remove_data_from_pos(tab, z,y,x)
-	if vector.get_data_from_pos(tab, z,y,x) == nil then
-		return
-	end
-	tab[z][y][x] = nil
-	if not next(tab[z][y]) then
-		tab[z][y] = nil
-	end
-	if not next(tab[z]) then
-		tab[z] = nil
-	end
-end
-
-function funcs.get_data_pos_table(tab)
-	local t,n = {},1
-	local minz, miny, minx, maxz, maxy, maxx
-	for z,yxs in pairs(tab) do
-		if not minz then
-			minz = z
-			maxz = z
-		else
-			minz = math.min(minz, z)
-			maxz = math.max(maxz, z)
-		end
-		for y,xs in pairs(yxs) do
-			if not miny then
-				miny = y
-				maxy = y
-			else
-				miny = math.min(miny, y)
-				maxy = math.max(maxy, y)
-			end
-			for x,v in pairs(xs) do
-				if not minx then
-					minx = x
-					maxx = x
-				else
-					minx = math.min(minx, x)
-					maxx = math.max(maxx, x)
-				end
-				t[n] = {z,y,x, v}
-				n = n+1
-			end
-		end
-	end
-	return t, {x=minx, y=miny, z=minz}, {x=maxx, y=maxy, z=maxz}, n-1
 end
 
 function funcs.update_minp_maxp(minp, maxp, pos)
@@ -751,14 +959,29 @@ function funcs.serialize(vec)
 end
 
 
+vector_extras_functions = funcs
+
+local path = minetest.get_modpath"vector_extras"
+dofile(path .. "/legacy.lua")
 --dofile(minetest.get_modpath("vector_extras").."/vector_meta.lua")
+
+vector_extras_functions = nil
+
 
 for name,func in pairs(funcs) do
 	if vector[name] then
-		minetest.log("error", "[vector_extras] vector."..name.." already exists.")
+		minetest.log("error", "[vector_extras] vector."..name..
+			" already exists.")
 	else
 		vector[name] = func
 	end
 end
 
-minetest.log("info", string.format("[vector_extras] loaded after ca. %.2fs", os.clock() - load_time_start))
+
+local time = (minetest.get_us_time() - load_time_start) / 1000000
+local msg = "[vector_extras] loaded after ca. " .. time .. " seconds."
+if time > 0.01 then
+	print(msg)
+else
+	minetest.log("info", msg)
+end
