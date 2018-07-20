@@ -87,7 +87,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * player/action/
 	* [hbsprint][] ([LGPL][lic.lgpl2.1]) -- version: [de3e77e Git][ver.hbsprint] *2018-04-11* ([patched][patch.hbsprint])
 * player/visuals/
-    * [invisibility][] ([MIT][lic.invisibility]) -- version: [bf4156b Git][ver.invisibility] *2016-08-19* ([patched][patch.invisibility]) ***UPDATES***
+    * [invisibility][] ([MIT][lic.invisibility]) -- version: [e3f04a2 Git][ver.invisibility] *2017-10-09* ([patched][patch.invisibility])
     * [playeranim][] ([BSD 2-Clause][lic.playeranim]) - version [560af7e Git][ver.playeranim] *2018-06-09* ([patched][patch.playeranim])
     * [wardrobe][] ([WTFPL][lic.wtfpl]) -- version: [1.1-2-c48b011 Git][ver.wardrobe] *2015-05-21*
 * protection/
@@ -438,7 +438,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.hudmap]: https://github.com/stujones11/hudmap/tree/3b8bdc0
 [ver.ilights]: https://github.com/minetest-mods/ilights/tree/fa085fd
 [ver.intllib]: https://github.com/minetest-mods/intllib/tree/9192771
-[ver.invisibility]: https://github.com/tenplus1/invisibility/tree/bf4156b
+[ver.invisibility]: https://notabug.org/TenPlus1/invisibility/src/e3f04a25c22fa6f9ac044de0bf2f5978c0a95cdf
 [ver.jukebox]: https://github.com/minetest-mods/jukebox/tree/d1cd9e1
 [ver.lightning]: https://github.com/minetest-mods/lightning/tree/39bd36c
 [ver.mesecons]: https://github.com/minetest-mods/mesecons/tree/7013f2e
@@ -517,7 +517,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.homedecor]: https://github.com/AntumMT/mp-homedecor/tree/b882d73
 [patch.hovercraft]: https://github.com/AntumMT/mod-hovercraft/tree/73a6223
 [patch.hud]: https://github.com/AntumMT/mod-hud/tree/6846e20
-[patch.invisibility]: https://github.com/AntumMT/mod-invisibility/tree/f045c7c
+[patch.invisibility]: https://github.com/AntumMT/mod-invisibility/tree/0ef4c18
 [patch.mesecons]: https://github.com/AntumMT/mp-mesecons/tree/96784e2
 [patch.minetest_game]: https://github.com/AntumMT/mtgame-minetest/tree/355a756
 [patch.mob-engine]: https://github.com/AntumMT/mp-mob-engine/tree/2aa511d

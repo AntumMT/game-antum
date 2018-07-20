@@ -1,10 +1,10 @@
 
 invisibility = {}
 
-local effect_time = 300 -- 5 minutes
+local effect_time = 180 -- 3 minutes
+
 
 -- reset player invisibility if they go offline
-
 minetest.register_on_leaveplayer(function(player)
 
 	local name = player:get_player_name()
@@ -14,8 +14,15 @@ minetest.register_on_leaveplayer(function(player)
 	end
 end)
 
--- invisibility potion
 
+-- creative check
+local creative_mode_cache = minetest.settings:get_bool("creative_mode")
+function is_creative(name)
+	return creative_mode_cache or minetest.check_player_privs(name, {creative = true})
+end
+
+
+-- invisibility potion
 minetest.register_node("invisibility:potion", {
 	description = "Invisibility Potion",
 	drawtype = "plantlike",
@@ -87,7 +94,7 @@ minetest.register_node("invisibility:potion", {
 		end)
 
 		-- take potion, return empty bottle (and rest of potion stack)
-		if not minetest.settings:get_bool("creative_mode") then
+		if not is_creative(user:get_player_name()) then
 
 			local item_count = user:get_wielded_item():get_count()
 			local inv = user:get_inventory()
@@ -114,16 +121,23 @@ minetest.register_node("invisibility:potion", {
 	end,
 })
 
--- craft recipe
 
+-- craft recipe
 minetest.register_craft( {
 	output = "invisibility:potion",
 	type = "shapeless",
-	recipe = {"default:nyancat_rainbow", "vessels:glass_bottle"},
+	recipe = {
+		"default:sapling", "default:junglesapling",
+		"default:pine_sapling", "default:acacia_sapling",
+		"default:aspen_sapling", "default:bush_sapling",
+		"default:acacia_bush_sapling",
+		"vessels:glass_bottle", "flowers:mushroom_red",
+		
+	},
 })
 
--- invisibility function
 
+-- invisibility function
 local toggle_invisible = function(player, toggle)
 
 	if not player then return false end
@@ -139,7 +153,7 @@ local toggle_invisible = function(player, toggle)
 		-- hide player and name tag
 		prop = {
 			visual_size = {x = 0, y = 0},
-			collisionbox = {0, 0, 0, 0, 0, 0}
+--			collisionbox = {0, 0, 0, 0, 0, 0}
 		}
 
 		player:set_nametag_attributes({
@@ -149,7 +163,7 @@ local toggle_invisible = function(player, toggle)
 		-- show player and tag
 		prop = {
 			visual_size = {x = 1, y = 1},
-			collisionbox = {-0.35, -1, -0.35, 0.35, 1, 0.35}
+--			collisionbox = {-0.35, -1, -0.35, 0.35, 1, 0.35}
 		}
 
 		player:set_nametag_attributes({
@@ -161,8 +175,8 @@ local toggle_invisible = function(player, toggle)
 
 end
 
--- vanish command (admin only)
 
+-- vanish command (admin only)
 minetest.register_chatcommand("vanish", {
 	params = "<name>",
 	description = "Make player invisible",
