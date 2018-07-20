@@ -100,7 +100,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * spawning/
 	* [spawneggs][] ([WTFPL][lic.spawneggs]) -- version [4650370 Git][ver.spawneggs] *2013-09-09* ([patched][patch.spawneggs])
 * storage/
-	* [drawers][] ([MIT][lic.drawers]) -- version: [0.4.3 (7063e2b Git)][ver.drawers] *2017-06-04* ([patched][patch.drawers]) ***UPDATES***
+	* [drawers][] ([MIT / CC0 / CC BY][lic.drawers]) -- version: [279d0ab Git][ver.drawers] *2018-06-18*
 	* [more_chests][] ([GPL][lic.gpl2.0]) -- version [c597779 Git][ver.more_chests] *2017-02-27*
 * tools/
 	* [compassgps][] ([WTFPL][lic.wtfpl] / [CC0][lic.cc0] / [CC BY-SA][lic.ccbysa]) -- version: [96892a0 Git][ver.compassgps] *2015-07-31* ([patched][patch.compassgps]) ***UPDATES***
@@ -417,7 +417,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.deploy_nodes]: https://github.com/cornernote/minetest-deploy_nodes/tree/b67e162
 [ver.desert_life]: https://github.com/NathanSalapat/desert_life/tree/d448fa3
 [ver.dinosaurs_aggressive]: https://github.com/AntumMT/mp-dinosaurs_aggressive/tree/874f299
-[ver.drawers]: https://github.com/minetest-mods/drawers/tree/7063e2b
+[ver.drawers]: https://github.com/minetest-mods/drawers/tree/279d0ab
 [ver.enchanting]: https://github.com/minetest-mods/enchanting/tree/13ea31c
 [ver.ethereal]: https://notabug.org/TenPlus1/ethereal/src/4641fecbe9415201ee077cf75ee87c886f9a7b55
 [ver.farming_plus]: https://github.com/PilzAdam/farming_plus/tree/7e0d976

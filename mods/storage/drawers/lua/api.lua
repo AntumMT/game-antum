@@ -67,7 +67,7 @@ function drawers.drawer_on_construct(pos)
 		meta:set_int("count"..vid, 0)
 		meta:set_int("max_count"..vid, base_stack_max * stack_max_factor)
 		meta:set_int("base_stack_max"..vid, base_stack_max)
-		meta:set_string("entity_infotext"..vid, drawers.gen_info_text("Empty", 0,
+		meta:set_string("entity_infotext"..vid, drawers.gen_info_text(S("Empty"), 0,
 			stack_max_factor, base_stack_max))
 		meta:set_int("stack_max_factor"..vid, stack_max_factor)
 
@@ -100,7 +100,10 @@ function drawers.drawer_on_dig(pos, node, player)
 	if core.registered_nodes[node.name] then
 		drawerType = core.registered_nodes[node.name].groups.drawer
 	end
-
+	if core.is_protected(pos,player:get_player_name()) then
+	   core.record_protection_violation(pos,player:get_player_name())
+	   return 0
+	end
 	local meta = core.get_meta(pos)
 
 	local k = 1
@@ -144,6 +147,10 @@ function drawers.drawer_on_dig(pos, node, player)
 end
 
 function drawers.drawer_allow_metadata_inventory_put(pos, listname, index, stack, player)
+	if core.is_protected(pos,player:get_player_name()) then
+	   core.record_protection_violation(pos,player:get_player_name())
+	   return 0
+	end
 	if listname ~= "upgrades" then
 		return 0
 	end
@@ -181,6 +188,19 @@ function drawers.drawer_insert_object(pos, node, stack, direction)
 	return leftover
 end
 
+function drawers.drawer_can_insert_object(pos, node, stack, direction)
+   	local drawer_visuals = drawers.drawer_visuals[core.serialize(pos)]
+	if not drawer_visuals then return false end
+
+
+	for _, visual in pairs(drawer_visuals) do
+	   if visual.itemName == "" or (visual.itemName == stack:get_name() and visual.count ~= visual.maxCount) then
+	      return true
+	   end
+	end
+	return false
+end
+
 function drawers.register_drawer(name, def)
 	def.description = def.description or S("Wooden")
 	def.drawtype = "nodebox"
@@ -198,6 +218,7 @@ function drawers.register_drawer(name, def)
 	def.on_destruct = drawers.drawer_on_destruct
 	def.on_dig = drawers.drawer_on_dig
 	def.allow_metadata_inventory_put = drawers.drawer_allow_metadata_inventory_put
+	def.allow_metadata_inventory_take = drawers.drawer_allow_metadata_inventory_put
 	def.on_metadata_inventory_put = drawers.add_drawer_upgrade
 	def.on_metadata_inventory_take = drawers.remove_drawer_upgrade
 
@@ -210,7 +231,10 @@ function drawers.register_drawer(name, def)
 		def.groups.tubedevice_receiver = 1
 		def.tube = def.tube or {}
 		def.tube.insert_object = def.tube.insert_object or
-			drawers.drawer_insert_object
+		   drawers.drawer_insert_object
+		def.tube.can_insert = def.tube.can_insert or
+		   drawers.drawer_can_insert_object
+
 		def.tube.connect_sides = {left = 1, right = 1, back = 1, top = 1,
 			bottom = 1}
 		def.after_place_node = pipeworks.after_place
