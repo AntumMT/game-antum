@@ -120,7 +120,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [vector_extras][] ([WTFPL][lic.wtfpl]) -- version: [8d78f3c Git][ver.vector_extras] *2017-12-25*
 * weather/
     * [lightning][] ([LGPL / CC BY-SA][lic.lightning]) -- version: [39bd36c Git][ver.lightning] *2017-02-20*
-    * [snowdrift][] ([MIT][lic.snowdrift]) -- version: [fcb0537 Git][ver.snowdrift] *2017-04-15* ([patched][patch.snowdrift]) ***UPDATES***
+    * [snowdrift][] ([MIT / CC BY / CC BY-SA][lic.snowdrift]) -- version: [0.5.2 (0a0787a Git)][ver.snowdrift] *2017-12-12*
 * wood/
 	* [coloredwood][] ([LGPL][lic.lgpl3.0]) -- version: [bd490be Git][ver.coloredwood] *2017-05-18*
 * world/
@@ -473,7 +473,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.signs_lib]: https://github.com/minetest-mods/signs_lib/tree/a2f7f62
 [ver.simple_protection]: https://github.com/SmallJoker/simple_protection/tree/5aa2f24
 [ver.slingshot]: https://github.com/AntumMT/mod-slingshot/tree/bb77525
-[ver.snowdrift]: https://github.com/paramat/snowdrift/tree/fcb0537
+[ver.snowdrift]: https://github.com/paramat/snowdrift/tree/0a0787a
 [ver.spawneggs]: https://github.com/thefamilygrog66/spawneggs/tree/4650370
 [ver.spectator_mode]: https://github.com/minetest-mods/spectator_mode/tree/7d68bec
 [ver.technic]: https://github.com/minetest-mods/technic/tree/6664714
@@ -531,7 +531,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.pvp_areas]: https://github.com/AntumMT/mod-pvp_areas/tree/7f2f5b2
 [patch.quartz]: https://github.com/AntumMT/mod-quartz/tree/c6813dc
 [patch.rainbow_ore]: https://github.com/AntumMT/mod-rainbow_ore/tree/0227a86
-[patch.snowdrift]: https://github.com/AntumMT/mod-snowdrift/tree/1b9da4f
 [patch.spawneggs]: https://github.com/AntumMT/mod-spawneggs/tree/f2cc4cc
 [patch.technic]: https://github.com/AntumMT/mp-technic/tree/cdb31be
 [patch.throwing]: https://github.com/AntumMT/mod-throwing/tree/b33ffde
