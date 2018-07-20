@@ -502,7 +502,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.gems_tools]: https://github.com/AntumMT/mod-gems_tools/tree/cc86c61
 [patch.hbarmor]: https://github.com/AntumMT/mod-hbarmor/tree/12a7dea
 [patch.hbsprint]: https://github.com/AntumMT/mod-hbsprint/tree/3fb29a9
-[patch.homedecor]: https://github.com/AntumMT/mp-homedecor/tree/d2c78e2
+[patch.homedecor]: https://github.com/AntumMT/mp-homedecor/tree/b882d73
 [patch.hovercraft]: https://github.com/AntumMT/mod-hovercraft/tree/73a6223
 [patch.hud]: https://github.com/AntumMT/mod-hud/tree/6846e20
 [patch.invisibility]: https://github.com/AntumMT/mod-invisibility/tree/f045c7c
