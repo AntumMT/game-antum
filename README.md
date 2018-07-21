@@ -60,6 +60,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * walking_light ([petermalone fork][walking_light]) ([WTFPL / CC BY-SA][lic.walking_light]) -- version: [b23d836 Git][ver.walking_light] *2017-06-21* ([patched][patch.walking_light])
 * materials/
 	* [amber][] ([LGPL][lic.lgpl2.1]) -- version: [56627fa Git][ver.amber] *2017-10-29*
+	* [bonemeal][] ([MIT][lic.bonemeal]) -- version: [a0cb865 Git][ver.bonemeal] *2018-07-03*
 	* [gems_encrustable][] ([WTFPL][lic.wtfpl]) -- version: [81d513d Git][ver.gems_encrustable] *2012-07-31* ([patched][patch.gems_encrustable])
 	* [gems_tools][] ([GPL][lic.gpl3.0]) -- version: [b375432 Git][ver.gems_tools] *2016-09-03* ([patched][patch.gems_tools])
 	* [moreores][] ([zlib][lic.moreores] / [CC BY-SA][lic.ccbysa3.0]) -- version: [2316595 Git][ver.moreores] *2018-04-21* ([patched][patch.moreores])
@@ -185,6 +186,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [bedrock2]: https://forum.minetest.net/viewtopic.php?t=11271
 [biome_lib]: https://forum.minetest.net/viewtopic.php?f=11&t=12999
 [boats2]: https://github.com/amadin/boats
+[bonemeal]: https://forum.minetest.net/viewtopic.php?t=16446
 [bookmarks_gui]: http://cornernote.github.io/minetest-bookmarks_gui/
 [bridges]: https://forum.minetest.net/viewtopic.php?t=3488
 [campfire]: https://forum.minetest.net/viewtopic.php?t=10569
@@ -302,6 +304,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.antum]: mods/antum/LICENSE.txt
 [lic.awards]: mods/awards/LICENSE.txt
 [lic.bags]: mods/inventory/bags/LICENSE
+[lic.bonemeal]: mods/materials/bonemeal/license.txt
 [lic.bookmarks_gui]: mods/ui/bookmarks_gui/LICENSE
 [lic.bridges]: mods/buildings/bridges/README.md
 [lic.campfire]: mods/campfire/README.md
@@ -388,6 +391,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.bedrock2]: http://repo.or.cz/minetest_bedrock2.git/tree/63dbab8
 [ver.biome_lib]: https://github.com/minetest-mods/biome_lib/tree/8fd0789
 [ver.boats2]: https://github.com/amadin/boats/tree/b83231e
+[ver.bonemeal]: https://notabug.org/TenPlus1/bonemeal/src/a0cb8657df797c36011ab61311ef2e15960d530b
 [ver.bookmarks_gui]: https://github.com/cornernote/minetest-bookmarks_gui/tree/f7ae10a
 [ver.bridges]: https://github.com/Sokomine/bridges/tree/5b5f475
 [ver.campfire]: https://github.com/Napiophelios/campfire/tree/04b4ea5
