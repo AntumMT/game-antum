@@ -91,7 +91,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [playeranim][] ([BSD 2-Clause][lic.playeranim]) - version [560af7e Git][ver.playeranim] *2018-06-09* ([patched][patch.playeranim])
     * [wardrobe][] ([WTFPL][lic.wtfpl]) -- version: [1.1-2-c48b011 Git][ver.wardrobe] *2015-05-21*
 * protection/
-    * [pvp_areas][] ([LGPL][lic.lgpl2.1]) -- version [0188945 Git][ver.pvp_areas] *2018-01-16*
+    * [pvp_areas][] ([LGPL][lic.lgpl2.1]) -- version [0188945 Git][ver.pvp_areas] *2018-01-16* ([patched][patch.pvp_areas])
     * [simple_protection][] ([CC0][lic.cc0]) -- version [5aa2f24 Git][ver.simple_protection] *2018-04-29*
 * signs/
 	* [signs_lib][] ([BSD][lic.signs_lib] / [WTFPL][lic.wtfpl]) -- version: [a2f7f62 Git][ver.signs_lib] *2018-05-24*
@@ -529,6 +529,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.mysheetmetal]: https://github.com/AntumMT/mod-mysheetmetal/tree/b7d644b
 [patch.nether]: https://github.com/AntumMT/mod-nether/tree/d4e5a2a
 [patch.playeranim]: https://github.com/AntumMT/mod-playeranim/tree/2540530
+[patch.pvp_areas]: https://github.com/AntumMT/mod-pvp_areas/tree/7f2f5b2
 [patch.quartz]: https://github.com/AntumMT/mod-quartz/tree/c6813dc
 [patch.rainbow_ore]: https://github.com/AntumMT/mod-rainbow_ore/tree/0227a86
 [patch.snowdrift]: https://github.com/AntumMT/mod-snowdrift/tree/1b9da4f

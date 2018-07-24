@@ -8,15 +8,50 @@ local pvp_areas_modname = minetest.get_current_modname()
 
 local hasareasmod = minetest.get_modpath("areas")
 
-local safemode = minetest.setting_getbool("pvp_areas.safemode") or false
-local area_label = minetest.setting_get("pvp_areas.label") or "Defined area."
+-- Get Minetest version info
+local mtversion = string.split(minetest.get_version().string, ".")
+local mtmaj = tonumber(mtversion[1])
+local mtmin = tonumber(mtversion[2])
+local mtrel = tonumber(mtversion[3])
+
+--- Function to retrieve a setting value.
+--
+-- Checks Minetest version before calling the core function from the appropriate API.
+--
+-- @function setting_get
+-- @param setting **string** setting name
+local function setting_get(setting)
+	if mtmaj <= 0 and mtmin <= 4 and mtrel <= 15 then
+		return minetest.setting_get(setting)
+	else
+		return minetest.settings:get(setting)
+	end
+end
+
+--- Function to retrieve a boolean setting value.
+--
+-- Checks Minetest version before calling the core function from the appropriate API.
+--
+-- @function setting_getbool
+-- @param setting **string** setting name
+-- @return **bool**: True if setting is enabled
+local function setting_getbool(setting)
+	if mtmaj <= 0 and mtmin <= 4 and mtrel <= 15 then
+		return minetest.setting_getbool(setting)
+	else
+		return minetest.settings:get_bool(setting)
+	end
+end
+
+local safemode = setting_getbool("pvp_areas.safemode") or false
+local area_label = setting_get("pvp_areas.label") or "Defined area."
 -- if false Mob does Damage
 local mobsDoNoDamage = false
 
 local pvp_areas_store = AreaStore()
 pvp_areas_store:from_file(pvp_areas_worlddir .. "/pvp_areas_store.dat")
 
-local pvp_default = minetest.is_yes(minetest.setting_getbool("pvp_areas_enable_pvp"))
+local pvp_default = minetest.is_yes(setting_getbool("pvp_areas.enable_pvp"))
 minetest.log("action", "[" .. pvp_areas_modname .. "] PvP by Default: " .. tostring(pvp_default))
 
 local pvp_areas_players = {}

@@ -1,2 +1,9 @@
 # Allow PvP by default.
-pvp_areas_enable_pvp (PvP by Default) bool false
+pvp_areas.enable_pvp (PvP by default) bool false
+
+# When not enabled PvP Control areas are kill zones.
+pvp_areas.safemode (PvP Control areas are safe zones) bool false
+
+# If ShadowNinja's `areas` mod is also present with HUD registration feature,
+# this label will be displayed anywhere a PvP Control area has been set.
+pvp_areas.label (Show PvP area labels) string Defined area.

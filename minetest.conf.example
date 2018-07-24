@@ -2179,7 +2179,18 @@ mobs_animal:sheep_white = 0
 ## Allow PvP by default.
 #    type:    bool
 #    default: false
-#pvp_areas_enable_pvp = false
+#pvp_areas.enable_pvp = false
+
+## When not enabled PvP Control areas are kill zones.
+#    type:    bool
+#    default: false
+#pvp_areas.safemode = false
+
+## If ShadowNinja's `areas` mod is also present with HUD registration feature,
+#  this label will be displayed anywhere a PvP Control area has been set.
+#    type:    string
+#    default: Defined area.
+#pvp_areas.label = Defined area.
 
 
 
