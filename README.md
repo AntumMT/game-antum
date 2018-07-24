@@ -91,6 +91,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [playeranim][] ([BSD 2-Clause][lic.playeranim]) - version [560af7e Git][ver.playeranim] *2018-06-09* ([patched][patch.playeranim])
     * [wardrobe][] ([WTFPL][lic.wtfpl]) -- version: [1.1-2-c48b011 Git][ver.wardrobe] *2015-05-21*
 * protection/
+    * [pvp_areas][] ([LGPL][lic.lgpl2.1]) -- version [0188945 Git][ver.pvp_areas] *2018-01-16*
     * [simple_protection][] ([CC0][lic.cc0]) -- version [5aa2f24 Git][ver.simple_protection] *2018-04-29*
 * signs/
 	* [signs_lib][] ([BSD][lic.signs_lib] / [WTFPL][lic.wtfpl]) -- version: [a2f7f62 Git][ver.signs_lib] *2018-05-24*
@@ -267,6 +268,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [playeranim]: https://forum.minetest.net/viewtopic.php?t=12189
 [privilegeareas]: https://forum.minetest.net/viewtopic.php?t=5545
 [privs]: mods/admin/privs
+[pvp_areas]: https://forum.minetest.net/viewtopic.php?t=15480
 [quartz]: https://forum.minetest.net/viewtopic.php?t=5682
 [rainbow_ore]: https://forum.minetest.net/viewtopic.php?id=13519
 [sfinv_buttons]: https://forum.minetest.net/viewtopic.php?t=16079
@@ -465,6 +467,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.pipeworks]: https://github.com/minetest-mods/pipeworks/tree/a5e1bfa
 [ver.playeranim]: https://github.com/minetest-mods/playeranim/tree/560af7e
 [ver.privilegeareas]: https://github.com/minetest-mods/privilegeareas/tree/18a803c
+[ver.pvp_areas]: https://github.com/everamzah/pvp_areas/tree/0188945
 [ver.quartz]: https://github.com/minetest-mods/quartz/tree/1c5dca2
 [ver.rainbow_ore]: https://github.com/FsxShader2012/rainbow_ore/tree/6e77693
 [ver.sfinv_buttons]: http://repo.or.cz/minetest_sfinv_buttons.git/tree/4f3b075

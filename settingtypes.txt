@@ -446,6 +446,12 @@ playeranim.animation_speed (The speed of an animation) float 2.4
 playeranim.animation_speed_sneak (The speed of an animation in sneaking) float 0.8
 
 
+[*pvp_areas]
+
+# Allow PvP by default.
+pvp_areas_enable_pvp (PvP by Default) bool false
+
+
 [*slingshot]
 
 # Require rubber band as additional ingredient in slingshot craft recipes.

@@ -2170,6 +2170,19 @@ mobs_animal:sheep_white = 0
 
 
 
+################
+## PROTECTION ##
+################
+
+# *** pvp_areas ***
+
+## Allow PvP by default.
+#    type:    bool
+#    default: false
+#pvp_areas_enable_pvp = false
+
+
+
 ##############
 ## SPAWNING ##
 ##############
