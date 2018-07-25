@@ -113,7 +113,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * ui/
     * [bookmarks_gui][] ([BSD 3-Clause][lic.bookmarks_gui]) -- version: [f7ae10a Git][ver.bookmarks_gui] *2017-08-29*
     * [hbarmor][] ([MIT][lic.mit] / [CC BY-SA][lic.ccbysa3.0]) -- version [0.4.0][ver.hbarmor] *2017-09-18* ([patched][patch.hbarmor])
-    * [home_gui][] ([BSD 3-Clause][lic.home_gui]) -- version: [90086d0 Git][ver.home_gui] *2018-03-15*
+    * [home_gui][] ([BSD 3-Clause][lic.home_gui]) -- version: [90086d0 Git][ver.home_gui] *2018-03-15* ([patched][patch.home_gui])
     * [hudbars][] ([MIT][lic.mit] / [CC BY-SA][lic.ccbysa3.0]) -- version [1.11.0][ver.hudbars] *2018-02-05*
     * [hudmap][] ([LGPL][lic.lgpl2.1] / [WTFPL][lic.wtfpl]) -- version: [3b8bdc0 Git][ver.hudmap] *2017-05-14*
     * [mthudclock][] ([WTFPL][lic.wtfpl]) -- version [d86e745 Git][ver.mthudclock] *2018-01-06*
@@ -513,6 +513,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.gems_tools]: https://github.com/AntumMT/mod-gems_tools/tree/cc86c61
 [patch.hbarmor]: https://github.com/AntumMT/mod-hbarmor/tree/12a7dea
 [patch.hbsprint]: https://github.com/AntumMT/mod-hbsprint/tree/3fb29a9
+[patch.home_gui]: https://github.com/AntumMT/mod-home_gui/tree/5409fb1
 [patch.homedecor]: https://github.com/AntumMT/mp-homedecor/tree/b882d73
 [patch.hovercraft]: https://github.com/AntumMT/mod-hovercraft/tree/73a6223
 [patch.hud]: https://github.com/AntumMT/mod-hud/tree/6846e20
