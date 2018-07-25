@@ -2179,7 +2179,7 @@ mobs_animal:sheep_white = 0
 ## Allow PvP by default.
 #    type:    bool
 #    default: false
-#pvp_areas.enable_pvp = false
+pvp_areas.enable_pvp = true
 
 ## When not enabled PvP Control areas are kill zones.
 #    type:    bool
