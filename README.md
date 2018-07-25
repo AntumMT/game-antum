@@ -39,7 +39,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * equipment/
 	* [airtanks][] ([MIT][lic.airtanks]) -- version: [868c3a7 Git][ver.airtanks] *2018-05-26* ([patched][patch.airtanks])
 	* [slingshot][] ([MIT][lic.slingshot] / [CC0][lic.cc0]) -- version [0.1][ver.slingshot] *2017-08-16*
-	* [technic_armor][] ([LGPL / WTFPL][lic.technic_armor]) -- version [694642f Git][ver.technic_armor] *2018-02-11*
+	* [technic_armor][] ([LGPL / WTFPL][lic.technic_armor]) -- version [694642f Git][ver.technic_armor] *2018-02-11* ***UPDATES***
     * [throwing][] ([WTFPL][lic.wtfpl]) -- version: [90bcf43 Git][ver.throwing] *2013-09-27* ([patched][patch.throwing])
 	* [xtraarmor][] ([CC BY-SA][lic.ccbysa3.0]) -- version: 0.3
 * farming/
