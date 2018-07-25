@@ -3,6 +3,12 @@
 -- TODO Ignore group:flower
 farming.registered_plants = {}
 
+local tool_wear = minetest.settings:get_bool('enable_tool_wear')
+if tool_wear == nil then
+	-- Default is enabled
+	tool_wear = true
+end
+
 farming.hoe_on_use = function(itemstack, user, pointed_thing, uses)
 	local pt = pointed_thing
 	-- check if pointing at a node
@@ -59,12 +65,14 @@ farming.hoe_on_use = function(itemstack, user, pointed_thing, uses)
 
 	if not (creative and creative.is_enabled_for
 			and creative.is_enabled_for(user:get_player_name())) then
-		-- wear tool
-		local wdef = itemstack:get_definition()
-		itemstack:add_wear(65535/(uses-1))
-		-- tool break sound
-		if itemstack:get_count() == 0 and wdef.sound and wdef.sound.breaks then
-			minetest.sound_play(wdef.sound.breaks, {pos = pt.above, gain = 0.5})
+		if tool_wear then
+			-- wear tool
+			local wdef = itemstack:get_definition()
+			itemstack:add_wear(65535/(uses-1))
+			-- tool break sound
+			if itemstack:get_count() == 0 and wdef.sound and wdef.sound.breaks then
+				minetest.sound_play(wdef.sound.breaks, {pos = pt.above, gain = 0.5})
+			end
 		end
 	end
 	return itemstack
