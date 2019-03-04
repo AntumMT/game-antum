@@ -186,7 +186,7 @@ hudbars_bar_type (HUD bars style) enum progress_bar progress_bar,statbar_classic
 
 
 # If enabled (default), the breath indicators in the HUD will be automatically hidden shortly
-# after the breath has been filled up. Otherwise, the breath will always be displayed. 
+# after the breath has been filled up. Otherwise, the breath will always be displayed.
 hudbars_autohide_breath (Automatically hide breath indicators) bool true
 
 # This setting changes the way the HUD bars are ordered on the display. You can choose
@@ -537,7 +537,7 @@ armor_init_times (Initialization attempts) int 10
 armor_bones_delay (Delay for bones) int 1
 
 # How often player armor items are updated.
-armor_update_time (Armor refresh rate (seconds)) int 1
+armor_update_time (Armor refresh rate [seconds]) int 1
 
 # Drop armor when a player dies.
 # Uses bones mod if present, otherwise items are dropped around the player.
@@ -575,7 +575,7 @@ shields_disable_sounds (Disable shield sounds) bool false
 [**wieldview]
 
 # Set number of seconds between visible wielded item updates.
-wieldview_update_time (Wieldview refresh rate (seconds)) int 2
+wieldview_update_time (Wieldview refresh rate [seconds]) int 2
 
 # Show nodes as tiles, disabled by default.
 wieldview_node_tiles (Show nodes as tiles) bool false
