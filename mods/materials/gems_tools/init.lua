@@ -1425,7 +1425,13 @@ minetest.register_craft({
 
 --Generation
 
-local mg_params = minetest.get_mapgen_params()
+local mg_params = {}
+if minetest.get_mapgen_setting then
+	mg_params.mgname = minetest.get_mapgen_setting('mg_name')
+else
+	mg_params = minetest.get_mapgen_params()
+end
+
 if mg_params.mgname == "v6" then
 	default.register_ores()
 	default.register_mgv6_decorations()
