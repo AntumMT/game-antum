@@ -75,64 +75,64 @@ function awards.get_formspec(name, to, sid)
 		formspec = formspec .. "button_exit[4.2,2.3;3,1;close;"..minetest.formspec_escape(S("OK")).."]"
 		return formspec
 	end
+	sid = awards_list[sid] and sid or 1
 
 	-- Sidebar
-	if sid then
-		local item = awards_list[sid+0]
-		local def  = item.def
+	local sitem = awards_list[sid]
+	local sdef = sitem.def
+	if sdef and sdef.secret and not sitem.unlocked then
+		formspec = formspec .. "label[1,2.75;"..
+				minetest.formspec_escape(S("(Secret Award)")).."]"..
+				"image[1,0;3,3;awards_unknown.png]"
+		if sdef and sdef.description then
+			formspec = formspec	.. "textarea[0.25,3.25;4.8,1.7;;"..
+					minetest.formspec_escape(
+							S("Unlock this award to find out what it is."))..";]"
+		end
+	else
+		local title = sitem.name
+		if sdef and sdef.title then
+			title = sdef.title
+		end
+		local status = "%s"
+		if sitem.unlocked then
+			status = S("%s (unlocked)")
+		end
 
-		if def and def.secret and not item.unlocked then
-			formspec = formspec .. "label[1,2.75;"..
-					minetest.formspec_escape(S("(Secret Award)")).."]"..
-					"image[1,0;3,3;awards_unknown.png]"
-			if def and def.description then
-				formspec = formspec	.. "textarea[0.25,3.25;4.8,1.7;;"..
-						minetest.formspec_escape(
-								S("Unlock this award to find out what it is."))..";]"
-			end
-		else
-			local title = item.name
-			if def and def.title then
-				title = def.title
-			end
-			local status = "%s"
-			if item.unlocked then
-				status = S("%s (unlocked)")
-			end
+		formspec = formspec .. "textarea[0.5,3.1;4.8,1.45;;" ..
+			string.format(status, minetest.formspec_escape(title)) ..
+			";]"
 
-			formspec = formspec .. "textarea[0.5,2.7;4.8,1.45;;" ..
-				string.format(status, minetest.formspec_escape(title)) ..
-				";]"
-
-			if def and def.icon then
-				formspec = formspec .. "image[1,0;3,3;" .. def.icon .. "]"
+		if sdef and sdef.icon then
+			formspec = formspec .. "image[0.6,0;3,3;" .. sdef.icon .. "]"
+		end
+		local barwidth = 3.95
+		local perc = nil
+		local label = nil
+		if sdef.getProgress and data then
+			local res = sdef:getProgress(data)
+			perc = res.perc
+			label = res.label
+		end
+		if perc then
+			if perc > 1 then
+				perc = 1
 			end
-			local barwidth = 4.6
-			local perc = nil
-			local label = nil
-			if def.getProgress and data then
-				local res = def:getProgress(data)
-				perc = res.perc
-				label = res.label
+			formspec = formspec .. "background[0,8.24;" .. barwidth ..",0.4;awards_progress_gray.png;false]"
+			formspec = formspec .. "background[0,8.24;" .. (barwidth * perc) ..",0.4;awards_progress_green.png;false]"
+			if label then
+				formspec = formspec .. "label[1.6,8.15;" .. minetest.formspec_escape(label) .. "]"
 			end
-			if perc then
-				if perc > 1 then
-					perc = 1
-				end
-				formspec = formspec .. "background[0,4.80;" .. barwidth ..",0.25;awards_progress_gray.png;false]"
-				formspec = formspec .. "background[0,4.80;" .. (barwidth * perc) ..",0.25;awards_progress_green.png;false]"
-				if label then
-					formspec = formspec .. "label[1.75,4.63;" .. minetest.formspec_escape(label) .. "]"
-				end
-			end
-			if def and def.description then
-				formspec = formspec	.. "textarea[0.25,3.75;4.8,1.7;;"..minetest.formspec_escape(def.description)..";]"
-			end
+		end
+		if sdef and sdef.description then
+			formspec = formspec .. "box[-0.05,3.75;3.9,4.2;#000]"
+			formspec = formspec	.. "textarea[0.25,3.75;3.9,4.2;;" ..
+					minetest.formspec_escape(sdef.description) .. ";]"
 		end
 	end
 
 	-- Create list box
-	formspec = formspec .. "textlist[4.75,0;6,5;awards;"
+	formspec = formspec .. "textlist[4,0;3.8,8.6;awards;"
 	local first = true
 	for _, award in pairs(awards_list) do
 		local def = award.def
@@ -199,19 +199,34 @@ function awards.show_to(name, to, sid, text)
 			end
 		end
 	else
-		if sid == nil or sid < 1 then
-			sid = 1
-		end
 		local deco = ""
 		if minetest.global_exists("default") then
 			deco = default.gui_bg .. default.gui_bg_img
 		end
 		-- Show formspec to user
 		minetest.show_formspec(to,"awards:awards",
-			"size[11,5]" .. deco ..
+			"size[8,8.6]" .. deco ..
 			awards.get_formspec(name, to, sid))
 	end
 end
+
+minetest.register_on_player_receive_fields(function(player, formname, fields)
+	if formname ~= "awards:awards" then
+		return false
+	end
+	if fields.quit then
+		return true
+	end
+	local name = player:get_player_name()
+	if fields.awards then
+		local event = minetest.explode_textlist_event(fields.awards)
+		if event.type == "CHG" then
+			awards.show_to(name, name, event.index, false)
+		end
+	end
+
+	return true
+end)
 
 if minetest.get_modpath("sfinv") then
 	sfinv.register_page("awards:awards", {
@@ -226,8 +241,8 @@ if minetest.get_modpath("sfinv") then
 		get = function(self, player, context)
 			local name = player:get_player_name()
 			return sfinv.make_formspec(player, context,
-				awards.get_formspec(name, name, context.awards_idx or 1),
-				false, "size[11,5]")
+				awards.get_formspec(name, name, context.awards_idx),
+				false)
 		end,
 		on_player_receive_fields = function(self, player, context, fields)
 			if fields.awards then
@@ -239,6 +254,22 @@ if minetest.get_modpath("sfinv") then
 			end
 		end
 	})
+
+	local function check_and_reshow(name)
+		local player = minetest.get_player_by_name(name)
+		if not player then
+			return
+		end
+
+		local context = sfinv.get_or_create_context(player)
+		if context.page ~= "awards:awards" then
+			return
+		end
+
+		sfinv.set_player_inventory_formspec(player, context)
+	end
+
+	awards.register_on_unlock(check_and_reshow)
 end
 
 if minetest.get_modpath("unified_inventory") ~= nil then
