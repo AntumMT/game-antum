@@ -11,7 +11,7 @@ mobs_goblins.remove = minetest.settings:get_bool("remove_far_mobs") or false
 
 function mobs_goblins:register_mob(name, def)
 	minetest.register_entity(name, {
-		debugging_goblins = false,
+		debugging_goblins = true,
 		stepheight = def.stepheight or 0.6,
 		name = name,
 		description = def.description or name,
@@ -219,7 +219,7 @@ function mobs_goblins:register_mob(name, def)
 				self.lifetimer = self.lifetimer - dtime
 				if self.lifetimer <= 0
 				and self.state ~= "attack" then
-					--minetest.log("action","lifetimer expired, removed "..self.description)
+					minetest.log("action","lifetimer expired, removed "..self.description)
 					effect(self.object:getpos(), 15, "tnt_smoke.png")
 					self.object:remove()
 					return
@@ -245,14 +245,12 @@ function mobs_goblins:register_mob(name, def)
 				pos1.z = pos1.z - self.search_offset	
 				pos2.x = pos2.x + self.search_offset
 				pos2.z = pos2.z + self.search_offset
-				--[[
 				if self.debugging_goblins == true then
 					--print (self.name)
 			        	--print ("at                  " .. self.object:getpos().x, self.object:getpos().y, self.object:getpos().z)
 					--print ("is searching between" .. pos1.x, pos1.y, pos1.z)
 					--print ("and                 " .. pos2.x, pos2.y, pos2.z)
 				end
-				]]--
 				local nodelist = minetest.find_nodes_in_area(pos1, pos2, self.replace_what)
 				if self.replace_what
 				and #nodelist > 0 then
@@ -267,11 +265,9 @@ function mobs_goblins:register_mob(name, def)
 								else
 									minetest.set_node(value, {name = self.replace_with})
 								end
-								--[[
 								if self.debugging_goblins == true then
 									print(self.replace_with.." placed by " .. self.name .. " at " .. self.object:getpos().x, self.object:getpos().y, self.object:getpos().z)
 								end
-								]]--
 								minetest.sound_play(self.sounds.replace, {
 								object = self.object,
 								max_hear_distance = self.sounds.distance })
@@ -1324,16 +1320,14 @@ function mobs_goblins:spawn_specific(name, nodes, neighbors, min_light, max_ligh
 				return
 			end
 
-			--[[
 			if minetest.settings:get_bool("display_mob_spawn") then
 				minetest.chat_send_all("[mobs_goblins] Spawned "..name.." at "..minetest.pos_to_string(pos))
 			end
-			]]--
 
 			-- spawn mob half block higher
 			pos.y = pos.y - 0.5
 			minetest.add_entity(pos, name)
-			--print ("Spawned "..name.." at "..minetest.pos_to_string(pos).." on "..node.name.." near "..neighbors)
+			print ("Spawned "..name.." at "..minetest.pos_to_string(pos).." on "..node.name.." near "..neighbors)
 
 		end
 	})
