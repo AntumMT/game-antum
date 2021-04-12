@@ -6,7 +6,7 @@ HUD display and refreshing
 ]]
 
 
-local S = s_protect.gettext
+local S = s_protect.translator
 
 s_protect.player_huds = {}
 
@@ -15,6 +15,7 @@ local prefix = ""
 local align_x = 1
 local pos_x = 0.02
 
+-- If areas is installed: Move the HUD to th opposite side
 if minetest.get_modpath("areas") then
 	prefix = "Simple Protection:\n"
 	align_x = -1
@@ -28,7 +29,7 @@ local function generate_hud(player, current_owner, has_access)
 		color = 0x00CC00
 	end
 	s_protect.player_huds[player:get_player_name()] = {
-		hudID = player:hud_add({
+		hud_id = player:hud_add({
 			hud_elem_type = "text",
 			name          = "area_hud",
 			number        = color,
@@ -50,7 +51,7 @@ minetest.register_globalstep(function(dtime)
 	end
 	hud_time = 0
 
-	local shared = s_protect.share
+	local is_shared = s_protect.is_shared
 	for _, player in ipairs(minetest.get_connected_players()) do
 		local player_name = player:get_player_name()
 
@@ -63,11 +64,11 @@ minetest.register_globalstep(function(dtime)
 		local has_access = (current_owner == player_name)
 		if not has_access and data then
 			-- Check if this area is shared with this player
-			has_access = table_contains(data.shared, player_name)
+			has_access = is_shared(data, player_name)
 		end
 		if not has_access then
 			-- Check if all areas are shared with this player
-			has_access = table_contains(shared[current_owner], player_name)
+			has_access = is_shared(current_owner, player_name)
 		end
 		local changed = true
 
@@ -78,12 +79,12 @@ minetest.register_globalstep(function(dtime)
 			changed = false
 		end
 
-		if hud_table and changed then
-			player:hud_remove(hud_table.hudID)
+		if changed and hud_table then
+			player:hud_remove(hud_table.hud_id)
 			s_protect.player_huds[player_name] = nil
 		end
 
-		if current_owner ~= "" and changed then
+		if changed and current_owner ~= "" then
 			generate_hud(player, current_owner, has_access)
 		end
 	end

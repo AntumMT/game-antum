@@ -12,10 +12,10 @@ You can claim areas by punching those with a claim stick.
 License: CC0
 
 **Dependencies**
+- Minetest 5.0.0+
 - default: Crafting recipes
 
 **Optional dependencies**
-- [intllib](https://github.com/minetest-mods/intllib/): Translations
 - [areas](https://github.com/ShadowNinja/areas): HUD compatibility
 
 
@@ -23,7 +23,7 @@ Features
 --------
 
 - Easy, single-click protection
-- Fixed claim grid: 16x80x16 by default
+- Fixed claim grid: 16x150x16 by default
 	- To configure: see `default_settings.lua` header text
 - Minimap-like radar to see areas nearby
 - Visual area border feedback, as seen in the [protector](https://github.com/tenplus1/protector) mod

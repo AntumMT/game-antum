@@ -6,7 +6,7 @@ Node placement checks
 Claim Stick item definition
 ]]
 
-local S = s_protect.gettext
+local S = s_protect.translator
 
 local function notify_player(pos, player_name)
 	local data = s_protect.get_claim(pos)
@@ -26,19 +26,6 @@ minetest.is_protected = function(pos, player_name)
 		return s_protect.old_is_protected(pos, player_name)
 	end
 	return true
-end
-
-local old_item_place = minetest.item_place
-minetest.item_place = function(itemstack, placer, pointed_thing)
-	local player_name = placer and placer:get_player_name() or ""
-
-	if s_protect.can_access(pointed_thing.above, player_name)
-			or not minetest.registered_nodes[itemstack:get_name()] then
-		return old_item_place(itemstack, placer, pointed_thing)
-	end
-
-	notify_player(pointed_thing.above, player_name)
-	return itemstack
 end
 
 minetest.register_on_protection_violation(notify_player)
