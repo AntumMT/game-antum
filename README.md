@@ -128,7 +128,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [bedrock2][] ([WTFPL][lic.wtfpl]) -- version [63dbab8 Git][ver.bedrock2] *2017-06-20* ([patched][patch.bedrock2])
     * [biome_lib][] ([WTFPL][lic.wtfpl]) -- version: [8fd0789 Git][ver.biome_lib] *2017-11-06* ([patched][patch.biome_lib])
     * [desert_life][] ([CC BY-SA][lic.ccbysa4.0]) -- version: [d448fa3 Git][ver.desert_life] *2017-01-01*
-    * [ethereal][] ([MIT][lic.ethereal]) -- version [4641fec Git][ver.ethereal] *2018-06-07* ([patched][patch.ethereal])
+    * [ethereal][] ([MIT][lic.ethereal]) -- version [9d6103d][ver.ethereal] *2021-04-09*
     * [hill_nodebox][] ([BSD 3-Clause][lic.hill_nodebox]) -- version [41bbfa2 Git][ver.hill_nodebox] *2014-12-13*
     * [nether][] ([WTFPL / CC BY-SA][lic.nether]) -- version: [bc2ccfb Git][ver.nether] *2017-01-04* ([patched][patch.nether])
 
@@ -421,7 +421,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.dinosaurs_aggressive]: https://github.com/AntumMT/mp-dinosaurs_aggressive/tree/874f299
 [ver.drawers]: https://github.com/minetest-mods/drawers/tree/279d0ab
 [ver.enchanting]: https://github.com/minetest-mods/enchanting/tree/13ea31c
-[ver.ethereal]: https://notabug.org/TenPlus1/ethereal/src/4641fecbe9415201ee077cf75ee87c886f9a7b55
+[ver.ethereal]: https://notabug.org/TenPlus1/ethereal/src/9d6103d9bb2be7b7ff761c85a6e7285bfe7700a0
 [ver.farming_plus]: https://github.com/PilzAdam/farming_plus/tree/7e0d976
 [ver.fort_spikes]: https://github.com/xeranas/fort_spikes/tree/3b98b46
 [ver.gems_encrustable]: https://github.com/wowiamdiamonds/gems/tree/81d513d

@@ -6,15 +6,58 @@ Ethereal Mapgen mod for Minetest (works on all except v6)
 - https://forum.minetest.net/viewtopic.php?f=11&t=14638
 
 ## Lucky Blocks
-38
+47
 
 ## Changelog
+
+### 1.28
+
+ - Added new Meditteranean biome with Lemon and Olive trees (thanks Felfa)
+ - Added Candied Lemon and Olive Oil items and recipe
+ - Rewrite stairs and add auto-select function
+ - Added Lemonade
+ - Added smaller redwood trees, to grow large variety 2 saplings required
+ - Added Flight Potion (etherium dust arch, fire dust middle, empty bottle bottom)
+ - Added new Fishing mechanics (inspired by Rootyjr's on mineclone2)
+ - Added fishing api to add new items (read API.txt file)
+ - Certain fish can only be found in specific biomes
+ - Rename textures so they begin with ethereal_ (sorry texture pack folks)
+
+### 1.27
+
+ - Added Etherium ore and dust
+ - Added sparse decoration of dry grass and shrub to caves biome
+ - Added sponges that spawn near coral, dry sponge in furnace to soak up water
+ - Added new savanna dirt and decorations
+ - Use default grass abms
+ - Split and re-write mapgen files for tidier generation
+ - Giant Mushroom tops now decay when trunk removed
+ - Added Blue Marble to grey biomes and Blue Marble Tile recipe
+
+### 1.26
+
+ - Added Sakura biome, pink sakura trees and saplings
+ - 1 in 10 chance of sakura sapling growing into white sakura
+ - Bamboo grows in higher elevation while sakura grows in lower
+ - Added sakura wood, stairs, fence, gate and door
+ - Added 5.0 checks to add new biomes and decorations
+ - Fixed water abm for dry dirt and added check for minetest 5.1 dry dirt also
+
+### 1.25
+
+ - Converted .mts files into schematic tables for easier editing
+ - Added firethorn shrub in glacier areas (can be crafted into jelly)
+ - Tweaked mapgen decorations
+ - Added more lucky blocks
+ - Added igloo to glacier biome
+ - 2x2 bamboo = bamboo floor, 3x3 bamboo or 2x bamboo floor = bamboo block, blocks can be made into sticks, bamboo stairs need blocks to craft
 
 ### 1.24
 
  - Updating code to newer functions, requires Minetest 0.4.16 and above
  - Added food groups to be more compatible with other food mods
  - Bonemeal removed (use Bonemeal mod to replace https://forum.minetest.net/viewtopic.php?f=9&t=16446 )
+ - Crystal Ingot recipe requires a bucket of water, unless you are using builtin_item mod where you can mix ingredients by dropping in a pool of water instead
 
 ### 1.23
 

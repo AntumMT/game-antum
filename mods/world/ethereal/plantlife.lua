@@ -1,6 +1,26 @@
 
 local S = ethereal.intllib
 
+-- Firethorn (poisonous when eaten raw, must be crushed and washed in flowing water 1st)
+minetest.register_node("ethereal:firethorn", {
+	description = S("Firethorn Shrub"),
+	drawtype = "plantlike",
+	tiles = {"ethereal_firethorn.png"},
+	inventory_image = "ethereal_firethorn.png",
+	wield_image = "ethereal_firethorn.png",
+	paramtype = "light",
+	sunlight_propagates = true,
+	waving = 1,
+	walkable = false,
+	buildable_to = true,
+	groups = {snappy = 3, flora = 1, attached_node = 1},
+	sounds = default.node_sound_leaves_defaults(),
+	selection_box = {
+		type = "fixed",
+		fixed = {-5 / 16, -0.5, -5 / 16, 5 / 16, 4 / 16, 5 / 16}
+	}
+})
+
 -- Fire Flower
 minetest.register_node("ethereal:fire_flower", {
 	description = S("Fire Flower"),
@@ -18,7 +38,7 @@ minetest.register_node("ethereal:fire_flower", {
 	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
-		fixed = {-5 / 16, -0.5, -5 / 16, 5 / 16, 1 / 2, 5 / 16},
+		fixed = {-5 / 16, -0.5, -5 / 16, 5 / 16, 1 / 2, 5 / 16}
 	},
 
 	on_punch = function(pos, node, puncher)
@@ -27,52 +47,52 @@ minetest.register_node("ethereal:fire_flower", {
 			full_punch_interval = 1.0,
 			damage_groups = {fleshy = 2}
 		}, nil)
-	end,
+	end
 })
 
 minetest.register_craft({
 	type = "fuel",
 	recipe = "ethereal:fire_flower",
-	burntime = 20,
+	burntime = 20
 })
 
 -- Fire Dust
 minetest.register_craftitem("ethereal:fire_dust", {
 	description = S("Fire Dust"),
-	inventory_image = "fire_dust.png",
+	inventory_image = "ethereal_fire_dust.png"
 })
 
 minetest.register_craft({
 	output = "ethereal:fire_dust 2",
 	recipe = {
-		{'ethereal:fire_flower'},
+		{"ethereal:fire_flower"}
 	}
 })
 
 minetest.register_craft({
 	type = "fuel",
 	recipe = "ethereal:fire_dust",
-	burntime = 10,
+	burntime = 10
 })
 
 -- vines
 minetest.register_node("ethereal:vine", {
 	description = S("Vine"),
 	drawtype = "signlike",
-	tiles = {"vine.png"},
-	inventory_image = "vine.png",
-	wield_image = "vine.png",
+	tiles = {"ethereal_vine.png"},
+	inventory_image = "ethereal_vine.png",
+	wield_image = "ethereal_vine.png",
 	paramtype = "light",
 	paramtype2 = "wallmounted",
 	walkable = false,
 	climbable = true,
 	is_ground_content = false,
 	selection_box = {
-		type = "wallmounted",
+		type = "wallmounted"
 	},
 	groups = {choppy = 3, oddly_breakable_by_hand = 1, flammable = 2},
 	legacy_wallmounted = true,
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = default.node_sound_leaves_defaults()
 })
 
 minetest.register_craft({
@@ -80,7 +100,7 @@ minetest.register_craft({
 	recipe = {
 		{"group:leaves", "", "group:leaves"},
 		{"", "group:leaves", ""},
-		{"group:leaves", "", "group:leaves"},
+		{"group:leaves", "", "group:leaves"}
 	}
 })
 
@@ -88,9 +108,9 @@ minetest.register_craft({
 minetest.register_node("ethereal:lightstring", {
 	description = S("Light String Vine"),
 	drawtype = "signlike",
-	tiles = {"lightstring.png"},
-	inventory_image = "lightstring.png",
-	wield_image = "lightstring.png",
+	tiles = {"ethereal_lightstring.png"},
+	inventory_image = "ethereal_lightstring.png",
+	wield_image = "ethereal_lightstring.png",
 	paramtype = "light",
 	paramtype2 = "wallmounted",
 	light_source = 10,
@@ -98,11 +118,11 @@ minetest.register_node("ethereal:lightstring", {
 	climbable = true,
 	is_ground_content = false,
 	selection_box = {
-		type = "wallmounted",
+		type = "wallmounted"
 	},
 	groups = {choppy = 3, oddly_breakable_by_hand = 1, flammable = 2},
 	legacy_wallmounted = true,
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = default.node_sound_leaves_defaults()
 })
 
 minetest.register_craft({
@@ -110,8 +130,8 @@ minetest.register_craft({
 	recipe = {
 		{"ethereal:vine", "ethereal:vine", "ethereal:vine"},
 		{"ethereal:vine", "ethereal:fire_dust", "ethereal:vine"},
-		{"ethereal:vine", "ethereal:vine", "ethereal:vine"},
-	},
+		{"ethereal:vine", "ethereal:vine", "ethereal:vine"}
+	}
 })
 
 -- Fern (boston)
@@ -119,9 +139,9 @@ minetest.register_node("ethereal:fern", {
 	description = S("Fern"),
 	drawtype = "plantlike",
 	visual_scale = 1.4,
-	tiles = {"fern.png"},
-	inventory_image = "fern.png",
-	wield_image = "fern.png",
+	tiles = {"ethereal_fern.png"},
+	inventory_image = "ethereal_fern.png",
+	wield_image = "ethereal_fern.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	waving = 1,
@@ -138,16 +158,16 @@ minetest.register_node("ethereal:fern", {
 	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
-		fixed = {-5 / 16, -0.5, -5 / 16, 5 / 16, 0.67, 5 / 16},
-	},
+		fixed = {-5 / 16, -0.5, -5 / 16, 5 / 16, 0.67, 5 / 16}
+	}
 })
 
 -- Boston Ferns sometimes drop edible Tubers (heals 1/2 heart when eaten)
 minetest.register_craftitem("ethereal:fern_tubers", {
 	description = S("Fern Tubers"),
-	inventory_image = "fern_tubers.png",
+	inventory_image = "ethereal_fern_tubers.png",
 	groups = {food_tuber = 1, flammable = 2},
-	on_use = minetest.item_eat(1),
+	on_use = minetest.item_eat(1)
 })
 
 -- Red Shrub (not flammable)
@@ -162,12 +182,12 @@ minetest.register_node("ethereal:dry_shrub", {
 	waving = 1,
 	walkable = false,
 	buildable_to = true,
-	groups = {snappy = 3, flora = 1, attached_node = 1, flammable = 2},
+	groups = {snappy = 3, flora = 1, attached_node = 1},
 	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
-		fixed = {-5 / 16, -0.5, -5 / 16, 5 / 16, 4 / 16, 5 / 16},
-	},
+		fixed = {-5 / 16, -0.5, -5 / 16, 5 / 16, 4 / 16, 5 / 16}
+	}
 })
 
 -- Grey Shrub (not Flammable - too cold to burn)
@@ -187,8 +207,8 @@ minetest.register_node("ethereal:snowygrass", {
 	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
-		fixed = {-5 / 16, -0.5, -5 / 16, 5 / 16, 5 / 16, 5 / 16},
-	},
+		fixed = {-5 / 16, -0.5, -5 / 16, 5 / 16, 5 / 16, 5 / 16}
+	}
 })
 
 -- Crystal Shrub (not Flammable - too cold to burn)
@@ -208,12 +228,12 @@ minetest.register_node("ethereal:crystalgrass", {
 	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
-		fixed = {-5 / 16, -0.5, -5 / 16, 5 / 16, 5 / 16, 5 / 16},
-	},
+		fixed = {-5 / 16, -0.5, -5 / 16, 5 / 16, 5 / 16, 5 / 16}
+	}
 })
 
 -- Define Moss Types (Has grass textures on all sides)
-function ethereal.add_moss(typ, descr, texture, receipe_item)
+local add_moss = function(typ, descr, texture, receipe_item)
 
 	minetest.register_node("ethereal:" .. typ .. "_moss", {
 		description = S(descr .. " Moss"),
@@ -225,68 +245,68 @@ function ethereal.add_moss(typ, descr, texture, receipe_item)
 
 	minetest.register_craft({
 		type = "shapeless",
-		output = "ethereal:"..typ.."_moss",
-		recipe = {"default:dirt", receipe_item }
+		output = "ethereal:" .. typ .. "_moss",
+		recipe = {"default:dirt", receipe_item}
 	})
 end
 
-ethereal.add_moss( "crystal", "Crystal", "ethereal_grass_crystal_top.png", "ethereal:frost_leaves")
-ethereal.add_moss( "mushroom", "Mushroom", "ethereal_grass_mushroom_top.png", "ethereal:mushroom")
-ethereal.add_moss( "fiery", "Fiery", "ethereal_grass_fiery_top.png", "ethereal:dry_shrub")
-ethereal.add_moss( "gray", "Gray", "ethereal_grass_gray_top.png", "ethereal:snowygrass")
-ethereal.add_moss( "green", "Green", "default_grass.png", "default:jungleleaves")
+add_moss( "crystal", "Crystal", "ethereal_grass_crystal_top.png", "ethereal:frost_leaves")
+add_moss( "mushroom", "Mushroom", "ethereal_grass_mushroom_top.png", "ethereal:mushroom")
+add_moss( "fiery", "Fiery", "ethereal_grass_fiery_top.png", "ethereal:dry_shrub")
+add_moss( "gray", "Gray", "ethereal_grass_gray_top.png", "ethereal:snowygrass")
+add_moss( "green", "Green", "default_grass.png", "default:jungleleaves")
 
 -- Illuminated Cave Shrooms (Red, Green and Blue)
 minetest.register_node("ethereal:illumishroom", {
 	description = S("Red Illumishroom"),
 	drawtype = "plantlike",
-	tiles = { "illumishroom.png" },
-	inventory_image = "illumishroom.png",
-	wield_image = "illumishroom.png",
+	tiles = {"ethereal_illumishroom_red.png"},
+	inventory_image = "ethereal_illumishroom_red.png",
+	wield_image = "ethereal_illumishroom_red.png",
 	paramtype = "light",
 	light_source = 5,
 	sunlight_propagates = true,
 	walkable = false,
-	groups = {dig_immediate = 3, attached_node = 1,flammable = 3},
+	groups = {dig_immediate = 3, attached_node = 1, flammable = 3},
 	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
-		fixed = {-6 / 16, -0.5, -6 / 16, 6 / 16, 0.47, 6 / 16},
-	},
+		fixed = {-6 / 16, -0.5, -6 / 16, 6 / 16, 0.47, 6 / 16}
+	}
 })
 
 minetest.register_node("ethereal:illumishroom2", {
 	description = S("Green Illumishroom"),
 	drawtype = "plantlike",
-	tiles = { "illumishroom2.png" },
-	inventory_image = "illumishroom2.png",
-	wield_image = "illumishroom2.png",
+	tiles = {"ethereal_illumishroom_green.png"},
+	inventory_image = "ethereal_illumishroom_green.png",
+	wield_image = "ethereal_illumishroom_green.png",
 	paramtype = "light",
 	light_source = 5,
 	sunlight_propagates = true,
 	walkable = false,
-	groups = {dig_immediate = 3, attached_node = 1,flammable = 3},
+	groups = {dig_immediate = 3, attached_node = 1, flammable = 3},
 	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
-		fixed = {-6 / 16, -0.5, -6 / 16, 6 / 16, 0.47, 6 / 16},
-	},
+		fixed = {-6 / 16, -0.5, -6 / 16, 6 / 16, 0.47, 6 / 16}
+	}
 })
 
 minetest.register_node("ethereal:illumishroom3", {
 	description = S("Cyan Illumishroom"),
 	drawtype = "plantlike",
-	tiles = { "illumishroom3.png" },
-	inventory_image = "illumishroom3.png",
-	wield_image = "illumishroom3.png",
+	tiles = {"ethereal_illumishroom_cyan.png"},
+	inventory_image = "ethereal_illumishroom_cyan.png",
+	wield_image = "ethereal_illumishroom_cyan.png",
 	paramtype = "light",
 	light_source = 5,
 	sunlight_propagates = true,
 	walkable = false,
-	groups = {dig_immediate = 3, attached_node = 1,flammable = 3},
+	groups = {dig_immediate = 3, attached_node = 1, flammable = 3},
 	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
-		fixed = {-6 / 16, -0.5, -6 / 16, 6 / 16, 0.47, 6 / 16},
-	},
+		fixed = {-6 / 16, -0.5, -6 / 16, 6 / 16, 0.47, 6 / 16}
+	}
 })

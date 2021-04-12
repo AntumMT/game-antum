@@ -4,26 +4,26 @@ local S = ethereal.intllib
 -- Ice Brick
 minetest.register_node("ethereal:icebrick", {
 	description = S("Ice Brick"),
-	tiles = {"brick_ice.png"},
+	tiles = {"ethereal_brick_ice.png"},
 	paramtype = "light",
 	freezemelt = "default:water_source",
 	is_ground_content = false,
 	groups = {cracky = 3, puts_out_fire = 1, cools_lava = 1},
-	sounds = default.node_sound_glass_defaults(),
+	sounds = default.node_sound_glass_defaults()
 })
 
 minetest.register_craft({
-	output = 'ethereal:icebrick 4',
+	output = "ethereal:icebrick 4",
 	recipe = {
-		{'default:ice', 'default:ice'},
-		{'default:ice', 'default:ice'},
+		{"default:ice", "default:ice"},
+		{"default:ice", "default:ice"}
 	}
 })
 
 -- Snow Brick
 minetest.register_node("ethereal:snowbrick", {
 	description = S("Snow Brick"),
-	tiles = {"brick_snow.png"},
+	tiles = {"ethereal_brick_snow.png"},
 	paramtype = "light",
 	freezemelt = "default:water_source",
 	is_ground_content = false,
@@ -31,15 +31,15 @@ minetest.register_node("ethereal:snowbrick", {
 	sounds = default.node_sound_dirt_defaults({
 		footstep = {name = "default_snow_footstep", gain = 0.15},
 		dug = {name = "default_snow_footstep", gain = 0.2},
-		dig = {name = "default_snow_footstep", gain = 0.2},
-	}),
+		dig = {name = "default_snow_footstep", gain = 0.2}
+	})
 })
 
 minetest.register_craft({
-	output = 'ethereal:snowbrick 4',
+	output = "ethereal:snowbrick 4",
 	recipe = {
-		{'default:snowblock', 'default:snowblock'},
-		{'default:snowblock', 'default:snowblock'},
+		{"default:snowblock", "default:snowblock"},
+		{"default:snowblock", "default:snowblock"}
 	}
 })
 
@@ -65,7 +65,7 @@ minetest.register_abm({
 	end,
 })
 
--- If Heat Source near Ice or Snow then melt
+-- If Heat Source near Ice or Snow then melt.
 minetest.register_abm({
 	label = "Ethereal melt snow/ice",
 	nodenames = {
@@ -74,7 +74,8 @@ minetest.register_abm({
 	},
 	neighbors = {
 		"fire:basic_fire", "default:lava_source", "default:lava_flowing",
-		"default:furnace_active", "group:torch", "default:torch"
+		"default:furnace_active", "default:torch", "default:torch_wall",
+		"default:torch_ceiling"
 	},
 	interval = 5,
 	chance = 4,
@@ -107,36 +108,31 @@ minetest.register_abm({
 -- If Water Source near Dry Dirt, change to normal Dirt
 minetest.register_abm({
 	label = "Ethereal wet dry dirt",
-	nodenames = {"ethereal:dry_dirt", "default:dirt_with_dry_grass"},
+	nodenames = {
+		"ethereal:dry_dirt", "default:dirt_with_dry_grass",
+		"default:dry_dirt", "default:dry_dirt_with_dry_grass"
+	},
 	neighbors = {"group:water"},
 	interval = 15,
 	chance = 2,
 	catch_up = false,
 	action = function(pos, node)
 
-		if node == "ethereal:dry_dirt" then
+		if node.name == "ethereal:dry_dirt"
+		or node.name == "default:dry_dirt" then
 			minetest.swap_node(pos, {name = "default:dirt"})
 		else
-			minetest.swap_node(pos, {name = "default:dirt_with_grass"})
+			minetest.swap_node(pos, {name = "default:dirt_with_dry_grass"})
 		end
 	end,
 })
 
--- If torch touching water then drop as item (when enabled)
-if ethereal.torchdrop == true then
-
-local torch_drop = "default:torch"
-local drop_sound = "fire_extinguish_flame"
-
-if minetest.get_modpath("real_torch") then
-	torch_drop = "real_torch:torch"
-	drop_sound = "real_torch_extinguish"
-end
+-- when enabled, drop torches that are touching water
+if ethereal.torchdrop == true and not minetest.get_modpath("real_torch") then
 
 minetest.register_abm({
 	label = "Ethereal drop torch",
-	nodenames = {"default:torch", "default:torch_wall", "default:torch_ceiling",
-	"real_torch:torch", "real_torch:torch_wall", "real_torch:torch_ceiling"},
+	nodenames = {"default:torch", "default:torch_wall", "default:torch_ceiling"},
 	neighbors = {"group:water"},
 	interval = 5,
 	chance = 1,
@@ -166,12 +162,11 @@ minetest.register_abm({
 
 			minetest.set_node(pos, {name = "air"})
 
-			minetest.sound_play({name = drop_sound, gain = 0.2},
-				{pos = pos, max_hear_distance = 10})
+			minetest.sound_play("fire_extinguish_flame",
+					{pos = pos, gain = 0.2, max_hear_distance = 10})
 
-			minetest.add_item(pos, {name = torch_drop})
+			minetest.add_item(pos, {name = "default:torch"})
 		end
-	end,
+	end
 })
-
 end

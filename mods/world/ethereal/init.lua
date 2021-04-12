@@ -8,46 +8,49 @@
 
 ]]
 
-ethereal = {} -- DO NOT change settings below, use the settings.conf file
-ethereal.version = "1.24"
-ethereal.leaftype = 0 -- 0 for 2D plantlike, 1 for 3D allfaces
-ethereal.leafwalk = false -- true for walkable leaves, false to fall through
-ethereal.cavedirt = true -- caves chop through dirt when true
-ethereal.torchdrop = true -- torches drop when touching water
-ethereal.papyruswalk = true -- papyrus can be walked on
-ethereal.lilywalk = true -- waterlilies can be walked on
-ethereal.xcraft = true -- allow cheat crafts for cobble->gravel->dirt->sand, ice->snow, dry dirt->desert sand
-ethereal.glacier   = 1 -- Ice glaciers with snow
-ethereal.bamboo    = 1 -- Bamboo with sprouts
-ethereal.mesa      = 1 -- Mesa red and orange clay with giant redwood
-ethereal.alpine    = 1 -- Snowy grass
-ethereal.healing   = 1 -- Snowy peaks with healing trees
-ethereal.snowy     = 1 -- Cold grass with pine trees and snow spots
-ethereal.frost     = 1 -- Blue dirt with blue/pink frost trees
-ethereal.grassy    = 1 -- Green grass with flowers and trees
-ethereal.caves     = 1 -- Desert stone ares with huge caverns underneath
-ethereal.grayness  = 1 -- Grey grass with willow trees
-ethereal.grassytwo = 1 -- Sparse trees with old trees and flowers
-ethereal.prairie   = 1 -- Flowery grass with many plants and flowers
-ethereal.jumble    = 1 -- Green grass with trees and jungle grass
-ethereal.junglee   = 1 -- Jungle grass with tall jungle trees
-ethereal.desert    = 1 -- Desert sand with cactus
-ethereal.grove     = 1 -- Banana groves and ferns
-ethereal.mushroom  = 1 -- Purple grass with giant mushrooms
-ethereal.sandstone = 1 -- Sandstone with smaller cactus
-ethereal.quicksand = 1 -- Quicksand banks
-ethereal.plains    = 1 -- Dry dirt with scorched trees
-ethereal.savannah  = 1 -- Dry yellow grass with acacia tree's
-ethereal.fiery     = 1 -- Red grass with lava craters
-ethereal.sandclay  = 1 -- Sand areas with clay underneath
-ethereal.swamp     = 1 -- Swamp areas with vines on tree's, mushrooms, lilly's and clay sand
-ethereal.sealife   = 1 -- Enable coral and seaweed
-ethereal.reefs     = 1 -- Enable new 0.4.15 coral reefs in default
+ -- DO NOT change settings below, use the settings.conf file instead
+ethereal = {
 
-ethereal.use_animalmaterials = false
-if minetest.get_modpath("animalmaterials") and minetest.settings:get_bool("ethereal.use_animalmaterials") then
-	ethereal.use_animalmaterials = true
-end
+	version = "20210406",
+	leaftype = minetest.settings:get('ethereal.leaftype') or 0,
+	leafwalk = minetest.settings:get_bool('ethereal.leafwalk', false),
+	cavedirt = minetest.settings:get_bool('ethereal.cavedirt', true),
+	torchdrop = minetest.settings:get_bool('ethereal.torchdrop', true),
+	papyruswalk = minetest.settings:get_bool('ethereal.papyruswalk', true),
+	lilywalk = minetest.settings:get_bool('ethereal.lilywalk', true),
+	xcraft = minetest.settings:get_bool('ethereal.xcraft', true),
+	flight = minetest.settings:get_bool('ethereal.flight', true),
+
+	glacier = minetest.settings:get('ethereal.glacier') or 1,
+	bamboo = minetest.settings:get('ethereal.bamboo') or 1,
+	mesa = minetest.settings:get('ethereal.mesa') or 1,
+	alpine = minetest.settings:get('ethereal.alpine') or 1,
+	healing = minetest.settings:get('ethereal.healing') or 1,
+	snowy = minetest.settings:get('ethereal.snowy') or 1,
+	frost = minetest.settings:get('ethereal.frost') or 1,
+	grassy = minetest.settings:get('ethereal.grassy') or 1,
+	caves = minetest.settings:get('ethereal.caves') or 1,
+	grayness = minetest.settings:get('ethereal.grayness') or 1,
+	grassytwo = minetest.settings:get('ethereal.grassytwo') or 1,
+	prairie = minetest.settings:get('ethereal.prairie') or 1,
+	jumble = minetest.settings:get('ethereal.jumble') or 1,
+	junglee = minetest.settings:get('ethereal.junglee') or 1,
+	desert = minetest.settings:get('ethereal.desert') or 1,
+	grove = minetest.settings:get('ethereal.grove') or 1,
+	mushroom = minetest.settings:get('ethereal.mushroom') or 1,
+	sandstone = minetest.settings:get('ethereal.sandstone') or 1,
+	quicksand = minetest.settings:get('ethereal.quicksand') or 1,
+	plains = minetest.settings:get('ethereal.plains') or 1,
+	savanna = minetest.settings:get('ethereal.savanna') or 1,
+	fiery = minetest.settings:get('ethereal.fiery') or 1,
+	sandclay = minetest.settings:get('ethereal.sandclay') or 1,
+	swamp = minetest.settings:get('ethereal.swamp') or 1,
+	sealife = minetest.settings:get('ethereal.sealife') or 1,
+	reefs = minetest.settings:get('ethereal.reefs') or 1,
+	sakura = minetest.settings:get('ethereal.sakura') or 1,
+	tundra = minetest.settings:get('ethereal.tundra') or 1,
+	mediterranean = minetest.settings:get('ethereal.mediterranean') or 1
+}
 
 local path = minetest.get_modpath("ethereal")
 
@@ -61,12 +64,12 @@ end
 
 -- Intllib
 local S
-if minetest.global_exists("intllib") then
+if minetest.get_translator then
+	S = minetest.get_translator("ethereal")
+elseif minetest.global_exists("intllib") then
 	if intllib.make_gettext_pair then
-		-- New method using gettext.
 		S = intllib.make_gettext_pair()
 	else
-		-- Old method using text files.
 		S = intllib.Getter()
 	end
 else
@@ -98,11 +101,17 @@ dofile(path .. "/fishing.lua")
 dofile(path .. "/extra.lua")
 dofile(path .. "/sealife.lua")
 dofile(path .. "/fences.lua")
-dofile(path .. "/gates.lua")
-dofile(path .. "/mapgen.lua")
+dofile(path .. "/biomes.lua")
+dofile(path .. "/ores.lua")
+dofile(path .. "/schems.lua")
+dofile(path .. "/decor.lua")
 dofile(path .. "/compatibility.lua")
 dofile(path .. "/stairs.lua")
 dofile(path .. "/lucky_block.lua")
+
+if ethereal.flight then
+	dofile(path .. "/flight.lua")
+end
 
 -- Set bonemeal aliases
 if minetest.get_modpath("bonemeal") then

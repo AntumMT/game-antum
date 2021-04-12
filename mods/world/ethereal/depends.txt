@@ -8,4 +8,3 @@ moreblocks?
 intllib?
 lucky_block?
 toolranks?
-animalmaterials?

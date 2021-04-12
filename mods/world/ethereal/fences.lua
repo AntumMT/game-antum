@@ -1,74 +1,99 @@
 
 local S = ethereal.intllib
 
-default.register_fence("ethereal:fence_scorched", {
-	description = S("Scorched Fence"),
-	texture = "scorched_tree.png",
-	material = "ethereal:scorched_tree",
-	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-	sounds = default.node_sound_wood_defaults()
+
+local add_fence = function(name, node, desc, texture)
+
+	if default.register_fence then
+
+		default.register_fence("ethereal:fence_" .. name, {
+			description = S(desc .. " Fence"),
+			texture = texture .. ".png",
+			material = "ethereal:" .. node,
+			groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
+			sounds = default.node_sound_wood_defaults(),
+			check_for_pole = true
+		})
+	end
+
+	if default.register_fence_rail then
+
+		default.register_fence_rail("ethereal:fence_rail_" .. name, {
+			description = S(desc .. " Fence Rail"),
+			texture = texture .. ".png",
+			material = "ethereal:" .. node,
+			groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
+			sounds = default.node_sound_wood_defaults()
+		})
+	end
+
+	if doors.register_fencegate then
+
+		doors.register_fencegate("ethereal:fencegate_" .. name, {
+			description = S(desc .. " Fence Gate"),
+			texture = texture .. ".png",
+			material = "ethereal:" .. node,
+			groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2}
+		})
+	end
+
+	if default.register_mesepost then
+
+		default.register_mesepost("ethereal:mese_post_" .. name, {
+			description = S(desc .. " Mese Post Light"),
+			texture = texture .. ".png",
+			material = "ethereal:" .. node,
+		})
+	end
+end
+
+
+add_fence("scorched", "scorched_tree", "Scorched", "ethereal_scorched_tree")
+add_fence("frostwood", "frost_wood", "Frost", "ethereal_frost_wood")
+add_fence("redwood", "redwood_wood", "Redwood", "ethereal_redwood_wood")
+add_fence("willow", "willow", "Willow", "ethereal_willow_wood")
+add_fence("yellowwood", "yellow_wood", "Healing Wood", "ethereal_yellow_wood")
+add_fence("palm", "palm_wood", "Palm", "moretrees_palm_wood")
+add_fence("banana", "banana_wood", "Banana Wood", "ethereal_banana_wood")
+add_fence("mushroom", "mushroom_trunk", "Mushroom", "ethereal_mushroom_trunk")
+add_fence("birch", "birch_wood", "Birch", "moretrees_birch_wood")
+add_fence("sakura", "sakura_wood", "Sakura", "ethereal_sakura_wood")
+
+
+-- add compatibility for ethereal's to default wooden gates
+minetest.register_alias("ethereal:fencegate_wood_open", "doors:gate_wood_open")
+minetest.register_alias("ethereal:fencegate_wood_closed", "doors:gate_wood_closed")
+
+minetest.register_alias("ethereal:fencegate_acacia_open", "doors:gate_acacia_wood_open")
+minetest.register_alias("ethereal:fencegate_acacia_closed", "doors:gate_acacia_wood_closed")
+
+minetest.register_alias("ethereal:fencegate_junglewood_open", "doors:gate_junglewood_open")
+minetest.register_alias("ethereal:fencegate_junglewood_closed", "doors:gate_junglewood_closed")
+
+minetest.register_alias("ethereal:fencegate_pine_open", "doors:gate_pine_wood_open")
+minetest.register_alias("ethereal:fencegate_pine_closed", "doors:gate_pine_wood_closed")
+
+
+-- sakura door
+doors.register_door("ethereal:door_sakura", {
+	tiles = {
+		{name = "ethereal_sakura_door.png", backface_culling = true}
+	},
+	description = S("Sakura Wood Door"),
+	inventory_image = "ethereal_sakura_door_inv.png",
+	groups = {
+		snappy = 1, choppy = 2, oddly_breakable_by_hand = 2,
+		flammable = 2
+	},
+	sound_open = "doors_glass_door_open",
+	sound_close = "doors_glass_door_close",
+	recipe = {
+		{"group:stick",  "default:paper"},
+		{"default:paper",  "group:stick"},
+		{"ethereal:sakura_wood", "ethereal:sakura_wood"}
+	}
 })
 
-default.register_fence("ethereal:fence_frostwood", {
-	description = S("Frost Fence"),
-	texture = "frost_wood.png",
-	material = "ethereal:frost_wood",
-	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-	sounds = default.node_sound_wood_defaults()
-})
-
-default.register_fence("ethereal:fence_redwood", {
-	description = S("Redwood Fence"),
-	texture = "redwood_wood.png",
-	material = "ethereal:redwood_wood",
-	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-	sounds = default.node_sound_wood_defaults()
-})
-
-default.register_fence("ethereal:fence_willow", {
-	description = S("Willow Fence"),
-	texture = "willow_wood.png",
-	material = "ethereal:willow_wood",
-	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-	sounds = default.node_sound_wood_defaults()
-})
-
-default.register_fence("ethereal:fence_yellowwood", {
-	description = S("Healing Wood Fence"),
-	texture = "yellow_wood.png",
-	material = "ethereal:yellow_wood",
-	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-	sounds = default.node_sound_wood_defaults()
-})
-
-default.register_fence("ethereal:fence_palm", {
-	description = S("Palm Fence"),
-	texture = "moretrees_palm_wood.png",
-	material = "ethereal:palm_wood",
-	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-	sounds = default.node_sound_wood_defaults()
-})
-
-default.register_fence("ethereal:fence_banana", {
-	description = S("Banana Wood Fence"),
-	texture = "banana_wood.png",
-	material = "ethereal:banana_wood",
-	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-	sounds = default.node_sound_wood_defaults()
-})
-
-default.register_fence("ethereal:fence_mushroom", {
-	description = S("Mushroom Fence"),
-	texture = "mushroom_trunk.png",
-	material = "ethereal:mushroom_trunk",
-	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-	sounds = default.node_sound_wood_defaults()
-})
-
-default.register_fence("ethereal:fence_birch", {
-	description = S("Birch Fence"),
-	texture = "moretrees_birch_wood.png",
-	material = "ethereal:birch_wood",
-	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-	sounds = default.node_sound_wood_defaults()
-})
+minetest.register_alias("ethereal:sakura_door", "ethereal:door_sakura")
+minetest.register_alias("ethereal:sakura_door_a", "ethereal:door_sakura_a")
+minetest.register_alias("ethereal:sakura_door_b", "ethereal:door_sakura_b")

@@ -1,42 +1,54 @@
 
--- orange tree
-
-local ai = {name = "air", param1 = 000}
-local lp = {name = "ethereal:orange_leaves", param1 = 255}
-local lr = {name = "ethereal:orange_leaves", param1 = 200}
-local tr = {name = "default:tree", param1 = 255}
-local of = {name = "ethereal:orange", param1 = 100}
+local _ = {name = "air", param1 = 0}
+local L = {name = "ethereal:orange_leaves", param1 = 255}
+local l = {name = "ethereal:orange_leaves", param1 = 200}
+local T = {name = "default:tree", param1 = 255}
+local o = {name = "ethereal:orange", param1 = 200}
 
 ethereal.orangetree = {
 
-	size = {x = 3, y = 6, z = 3},
+	size = {x = 5, y = 6, z = 5},
+
+	yslice_prob = {
+		{ypos = 0, prob = 127},
+	},
 
 	data = {
 
-		ai, ai, ai,
-		ai, ai, ai,
-		ai, ai, ai,
-		lr, lr, of,
-		lp, lp, lp,
-		lr, of, lr,
+	_,_,_,_,_,
+	_,_,_,_,_,
+	_,_,_,_,_,
+	_,_,L,_,_,
+	_,_,L,_,_,
+	_,_,_,_,_,
 
-		ai, tr, ai,
-		ai, tr, ai,
-		ai, tr, ai,
-		lr, tr, lr,
-		lp, tr, lp,
-		lr, lp, lr,
+	_,_,_,_,_,
+	_,_,_,_,_,
+	_,_,_,_,_,
+	_,o,L,o,_,
+	_,L,L,L,_,
+	_,_,L,_,_,
 
-		ai, ai, ai,
-		ai, ai, ai,
-		ai, ai, ai,
-		of, lr, lr,
-		lp, lp, lp,
-		lr, lr, lr,
+	_,_,T,_,_,
+	_,_,T,_,_,
+	_,_,T,_,_,
+	L,L,T,L,L,
+	L,T,L,T,L,
+	_,L,L,L,_,
 
-	},
+	_,_,_,_,_,
+	_,_,_,_,_,
+	_,_,_,_,_,
+	_,o,L,o,_,
+	_,L,L,L,_,
+	_,_,L,_,_,
 
-	yslice_prob = {
-		{ypos = 1, prob = 127},
-	},
+	_,_,_,_,_,
+	_,_,_,_,_,
+	_,_,_,_,_,
+	_,_,L,_,_,
+	_,_,L,_,_,
+	_,_,_,_,_,
+
+	}
 }

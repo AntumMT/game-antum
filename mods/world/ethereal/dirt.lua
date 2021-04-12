@@ -37,11 +37,14 @@ for n = 1, #dirts do
 		tiles = {
 			"ethereal_grass_"..name.."_top.png",
 			"default_dirt.png",
-			{name = "default_dirt.png^ethereal_grass_"..name.."_side.png",
-					tileable_vertical = false}
+			{
+				name = "default_dirt.png^ethereal_grass_"
+				.. name .."_side.png",
+				tileable_vertical = false
+			}
 		},
 		is_ground_content = ethereal.cavedirt,
-		groups = {crumbly = 3, soil = 1, ethereal_grass = 1},
+		groups = {crumbly = 3, soil = 1, spreading_dirt_type = 1},
 		soil = {
 			base = "ethereal:"..name.."_dirt",
 			dry = "farming:soil",
@@ -55,74 +58,6 @@ for n = 1, #dirts do
 
 end
 
--- re-register dirt types for abm
-dirts = {
-	"ethereal:bamboo_dirt", "ethereal:jungle_dirt", "ethereal:grove_dirt",
-	"ethereal:prairie_dirt", "ethereal:cold_dirt", "ethereal:crystal_dirt",
-	"ethereal:mushroom_dirt", "ethereal:fiery_dirt", "ethereal:gray_dirt",
-	"default:dirt_with_grass", "default:dirt_with_dry_grass",
-	"default:dirt_with_snow", "default:dirt_with_dry_grass",
-	"default:dirt_with_rainforest_litter"
-}
-
--- check surrounding grass and change dirt to same colour
-local grass_spread = function(pos, node)
-
-	local above = {x = pos.x, y = pos.y + 1, z = pos.z}
-
-	-- not enough light
-	if (minetest.get_node_light(above) or 0) < 13 then
-		return
-	end
-
-	local name = minetest.get_node(above).name
-	local def = minetest.registered_nodes[name]
-
-	-- water above grass
-	if name == "ignore" or not def or def.liquidtype ~= "none" then
-		return
-	end
-
-	local curr_max, curr_type, num  = 0, ""
-
-	-- find all default and ethereal grasses in area around dirt
-	local positions, grasses = minetest.find_nodes_in_area(
-		{x = pos.x - 1, y = pos.y - 2, z = pos.z - 1},
-		{x = pos.x + 1, y = pos.y + 2, z = pos.z + 1}, dirts)
-
-	-- count new grass nodes
-	for n = 1, #dirts do
-
-		num = grasses[ dirts[n] ] or 0
-
-		if num > curr_max then
-			curr_max = num
-			curr_type = dirts[n]
-		end
-	end
-
-	-- no grass nearby, keep as dirt
-	if curr_type == "" then
-		return
-	end
-
-	minetest.swap_node(pos, {name = curr_type})
-end
-
--- any grass with a block above will turn into dirt
-local grass_devoid = function(pos, node)
-
-	local above = {x = pos.x, y = pos.y + 1, z = pos.z}
-	local name = minetest.get_node(above).name
-	local nodedef = minetest.registered_nodes[name]
-
-	if name ~= "ignore" and nodedef and not ((nodedef.sunlight_propagates or
-			nodedef.paramtype == "light") and
-			nodedef.liquidtype == "none") then
-
-		minetest.swap_node(pos, {name = "default:dirt"})
-	end
-end
 
 -- flower spread, also crystal and fire flower regeneration
 local flower_spread = function(pos, node)
@@ -191,17 +126,22 @@ local flower_spread = function(pos, node)
 		return
 	end
 
+	pos.y = pos.y - 1
+
+	local under = minetest.get_node(pos)
+
+	-- make sure we have soil underneath
+	if minetest.get_item_group(under.name, "soil") == 0
+	or under.name == "default:desert_sand" then
+		return
+	end
+
 	local seedling = minetest.find_nodes_in_area_under_air(
-		pos0, pos1, {"group:soil"})
+			pos0, pos1, {under.name})
 
 	if #seedling > 0 then
 
 		pos = seedling[math.random(#seedling)]
-
-		-- default farming has desert sand as soil, so dont spread on this
-		if minetest.get_node(pos).name == "default:desert_sand" then
-			return
-		end
 
 		pos.y = pos.y + 1
 
@@ -268,32 +208,7 @@ for _, ab in pairs(minetest.registered_abms) do
 	local node2 = ab.nodenames and ab.nodenames[2] or ""
 	local neigh = ab.neighbors and ab.neighbors[1] or ""
 
-	-- find 'dirt to grass abm' and replace with spread function
-	if label == "Grass spread"
-	or (node1 == "default:dirt"
-	and neigh == "default:dirt_with_grass") then
-
-		--ab.interval = 2
-		--ab.chance = 1
-		ab.nodenames = {"default:dirt"}
-		ab.neighbors = {"air"}
-		ab.action = grass_spread
-
-	-- find 'grass devoid of light to dirt' abm and change to devoid function
-	elseif label == "Grass covered"
-	or (node1 == "default:dirt_with_grass"
-	and node2 == "default:dirt_with_dry_grass") then
-
-		--ab.interval = 2
-		--ab.chance = 1
-		ab.nodenames = {
-			"default:dirt_with_grass", "default:dirt_with_dry_grass",
-			"default:dirt_with_snow", "group:ethereal_grass"
-		}
-		ab.action = grass_devoid
-
-	-- find flower spread abm and change to spread function
-	elseif label == "Flower spread"
+	if label == "Flower spread"
 	or node1 == "group:flora" then
 
 		--ab.interval = 1
@@ -322,7 +237,7 @@ if not minetest.get_modpath("bakedclay") then
 		tiles = {"baked_clay_red.png"},
 		groups = {cracky = 3},
 		is_ground_content = ethereal.cavedirt,
-		sounds = default.node_sound_stone_defaults(),
+		sounds = default.node_sound_stone_defaults()
 	})
 
 	minetest.register_node(":bakedclay:orange", {
@@ -330,7 +245,7 @@ if not minetest.get_modpath("bakedclay") then
 		tiles = {"baked_clay_orange.png"},
 		groups = {cracky = 3},
 		is_ground_content = ethereal.cavedirt,
-		sounds = default.node_sound_stone_defaults(),
+		sounds = default.node_sound_stone_defaults()
 	})
 
 	minetest.register_node(":bakedclay:grey", {
@@ -338,7 +253,7 @@ if not minetest.get_modpath("bakedclay") then
 		tiles = {"baked_clay_grey.png"},
 		groups = {cracky = 3},
 		is_ground_content = ethereal.cavedirt,
-		sounds = default.node_sound_stone_defaults(),
+		sounds = default.node_sound_stone_defaults()
 	})
 
 end
@@ -360,14 +275,14 @@ minetest.register_node("ethereal:quicksand", {
 	climbable = false,
 	post_effect_color = {r = 230, g = 210, b = 160, a = 245},
 	groups = {crumbly = 3, sand = 1, liquid = 3, disable_jump = 1},
-	sounds = default.node_sound_sand_defaults(),
+	sounds = default.node_sound_sand_defaults()
 })
 
 -- Quicksand (new style, sinking inside shows yellow effect with or without noclip,
 -- but old quicksand is shown as black until block placed nearby to update light)
 minetest.register_node("ethereal:quicksand2", {
 	description = S("Quicksand"),
-	tiles = {"default_sand.png"},
+	tiles = {"default_sand.png^[colorize:#00004F10"},
 	drawtype = "glasslike",
 	paramtype = "light",
 	drop = "default:sand",
@@ -382,7 +297,7 @@ minetest.register_node("ethereal:quicksand2", {
 	climbable = false,
 	post_effect_color = {r = 230, g = 210, b = 160, a = 245},
 	groups = {crumbly = 3, sand = 1, liquid = 3, disable_jump = 1},
-	sounds = default.node_sound_sand_defaults(),
+	sounds = default.node_sound_sand_defaults()
 })
 
 -- craft quicksand
@@ -390,10 +305,10 @@ minetest.register_craft({
 	output = "ethereal:quicksand2",
 	recipe = {
 		{"group:sand", "group:sand", "group:sand"},
-		{"group:sand", "group:water_bucket", "group:sand"},
-		{"group:sand", "group:sand", "group:sand"},
+		{"group:sand", "bucket:bucket_water", "group:sand"},
+		{"group:sand", "group:sand", "group:sand"}
 	},
 	replacements = {
-		{"group:water_bucket", "bucket:bucket_empty"}
+		{"bucket:bucket_water", "bucket:bucket_empty"}
 	}
 })

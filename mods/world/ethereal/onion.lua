@@ -4,8 +4,8 @@ local S = ethereal.intllib
 -- wild onion
 minetest.register_craftitem("ethereal:wild_onion_plant", {
 	description = S("Wild Onion"),
-	inventory_image = "wild_onion.png",
-	wield_image = "wild_onion.png",
+	inventory_image = "ethereal_wild_onion.png",
+	wield_image = "ethereal_wild_onion.png",
 	groups = {food_onion = 1, flammable = 2},
 	on_place = function(itemstack, placer, pointed_thing)
 		return farming.place_seed(itemstack, placer, pointed_thing, "ethereal:wild_onion_1")
@@ -56,7 +56,7 @@ minetest.register_node("ethereal:onion_4", table.copy(crop_def))
 
 --stage 5
 crop_def.tiles = {"ethereal_wild_onion_5.png"}
-crop_def.groups.growing = 0
+crop_def.groups.growing = nil
 crop_def.drop = {
 	items = {
 		{items = {"ethereal:wild_onion_plant 2"}, rarity = 1},
@@ -83,7 +83,7 @@ minetest.register_abm({
 			return
 		end
 		pos.y = pos.y + 1
-		
+
 		-- do we have enough light?
 		local light = minetest.get_node_light(pos)
 
@@ -91,7 +91,7 @@ minetest.register_abm({
 		or light < 13 then
 			return
 		end
-		
+
 		-- grow to next stage
 		local num = node.name:split("_")[2]
 
