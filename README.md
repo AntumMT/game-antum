@@ -67,7 +67,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [moreores][] ([zlib][lic.moreores] / [CC BY-SA][lic.ccbysa3.0]) -- version: [2316595 Git][ver.moreores] *2018-04-21* ([patched][patch.moreores])
 	* [quartz][] ([MIT][lic.quartz]) -- version: [1c5dca2 Git][ver.quartz] *2017-10-03* ([patched][patch.quartz])
 	* [rainbow_ore][] ([LGPL][lic.rainbow_ore]) -- version: [6e77693 Git][ver.rainbow_ore] *2015-11-02* ([patched][patch.rainbow_ore])
-	* [unifieddyes][] ([GPL][lic.gpl2.0]) -- version: [stable-20170925][ver.unifieddyes] *2017-08-12* ([patched][patch.unifieddyes])
+	* [unifieddyes][] ([GPL][lic.gpl2.0]) -- version: [2021-03-26-1][ver.unifieddyes]
 * mobiles/
 	* [animals_aggressive][] -- version: [4eede4d Git][ver.animals_aggressive] *2017-08-28*
 		* mob_shark ([CC BY-SA][lic.ccbysa3.0]) -- forked from [Animals Modpack][animals]
@@ -486,7 +486,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.tools_obsidian]: https://github.com/Dragonop/tools_obsidian/tree/f77fd79
 [ver.trampoline]: https://github.com/AntumMT/mod-trampoline/tree/41366ac
 [ver.trash_can]: https://github.com/minetest-mods/trash_can/tree/5fd3df7
-[ver.unifieddyes]: https://github.com/minetest-mods/unifieddyes/tree/stable-20170925
+[ver.unifieddyes]: https://gitlab.com/VanessaE/unifieddyes/tags/2021-03-26-1
 [ver.vector_extras]: https://github.com/HybridDog/vector_extras/tree/8d78f3c
 [ver.waffles]: https://github.com/GreenXenith/waffles/tree/15bcdce
 [ver.walking_light]: https://github.com/petermaloney/walking_light/tree/b23d836
