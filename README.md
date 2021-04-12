@@ -59,7 +59,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [ilights][] ([LGPL][lic.lgpl3.0]) -- version: [2021-02-25-01][ver.ilights] ([patched][patch.ilights])
     * walking_light ([petermalone fork][walking_light]) ([WTFPL / CC BY-SA][lic.walking_light]) -- version: [b23d836 Git][ver.walking_light] *2017-06-21* ([patched][patch.walking_light])
 * materials/
-	* [amber][] ([LGPL][lic.lgpl2.1]) -- version: [56627fa Git][ver.amber] *2017-10-29*
+	* [amber][] ([LGPL][lic.lgpl2.1]) -- version: [56627fa Git][ver.amber] *2017-10-29* ([patched][patch.amber])
 	* [basic_materials][] ([LGPL][lic.lgpl3.0]) -- version: [2021-01-30][ver.basic_materials]
 	* [bonemeal][] ([MIT][lic.bonemeal]) -- version: [a0cb865 Git][ver.bonemeal] *2018-07-03*
 	* [gems_encrustable][] ([WTFPL][lic.wtfpl]) -- version: [81d513d Git][ver.gems_encrustable] *2012-07-31* ([patched][patch.gems_encrustable])
@@ -498,6 +498,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 [patch.3d_armor]: https://github.com/AntumMT/mp-3d_armor/tree/0561ad9
 [patch.airtanks]: https://github.com/AntumMT/mod-airtanks/tree/42d31cb
+[patch.amber]: https://github.com/AntumMT/mod-amber/tree/b7bd9f0
 [patch.away]: https://github.com/AntumMT/mod-away/tree/3b0bf9e
 [patch.bedrock2]: https://github.com/AntumMT/mod-bedrock2/tree/344fdae
 [patch.biome_lib]: https://github.com/AntumMT/mod-biome_lib/tree/7fd5c51
