@@ -461,7 +461,7 @@ end)
 minetest.register_tool("unifieddyes:airbrush", {
 	description = S("Dye Airbrush"),
 	inventory_image = "unifieddyes_airbrush.png",
-	use_texture_alpha = true,
+	use_texture_alpha = "opaque",
 	tool_capabilities = {
 		full_punch_interval=0.1,
 	},

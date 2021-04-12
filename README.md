@@ -67,7 +67,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [moreores][] ([zlib][lic.moreores] / [CC BY-SA][lic.ccbysa3.0]) -- version: [2316595 Git][ver.moreores] *2018-04-21* ([patched][patch.moreores])
 	* [quartz][] ([MIT][lic.quartz]) -- version: [1c5dca2 Git][ver.quartz] *2017-10-03* ([patched][patch.quartz])
 	* [rainbow_ore][] ([LGPL][lic.rainbow_ore]) -- version: [6e77693 Git][ver.rainbow_ore] *2015-11-02* ([patched][patch.rainbow_ore])
-	* [unifieddyes][] ([GPL][lic.gpl2.0]) -- version: [2021-03-26-1][ver.unifieddyes]
+	* [unifieddyes][] ([GPL][lic.gpl2.0]) -- version: [2021-03-26-1][ver.unifieddyes] ([patched][patch.unifieddyes])
 * mobiles/
 	* [animals_aggressive][] -- version: [4eede4d Git][ver.animals_aggressive] *2017-08-28*
 		* mob_shark ([CC BY-SA][lic.ccbysa3.0]) -- forked from [Animals Modpack][animals]
@@ -541,6 +541,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.throwing]: https://github.com/AntumMT/mod-throwing/tree/b33ffde
 [patch.tools_obsidian]: https://github.com/AntumMT/mod-tools_obsidian/tree/2d19297
 [patch.trash_can]: https://github.com/AntumMT/mod-trash_can/tree/5a92bf4
-[patch.unifieddyes]: https://github.com/AntumMT/mod-unifieddyes/tree/9e301b9
+[patch.unifieddyes]: https://github.com/AntumMT/mod-unifieddyes/tree/3013964
 [patch.walking_light]: https://github.com/AntumMT/mod-walking_light/tree/e602515
 [patch.windmill]: https://github.com/AntumMT/mod-windmill/tree/7756ab4
