@@ -1,3 +1,4 @@
+local S = minetest.get_translator("pipeworks")
 local autocrafterCache = {}  -- caches some recipe data to avoid to call the slow function minetest.get_craft_result() every second
 
 local craft_time = 1
@@ -16,7 +17,7 @@ end
 local function get_item_info(stack)
 	local name = stack:get_name()
 	local def = minetest.registered_items[name]
-	local description = def and def.description or "Unknown item"
+	local description = def and def.description or S("Unknown item")
 	return description, name
 end
 
@@ -46,7 +47,7 @@ local function autocraft(inventory, craft)
 	end
 	-- consume material
 	for itemname, number in pairs(consumption) do
-		for i = 1, number do -- We have to do that since remove_item does not work if count > stack_max
+		for _ = 1, number do -- We have to do that since remove_item does not work if count > stack_max
 			inventory:remove_item("src", ItemStack(itemname))
 		end
 	end
@@ -68,11 +69,11 @@ local function run_autocrafter(pos, elapsed)
 	local output_item = craft.output.item
 	-- only use crafts that have an actual result
 	if output_item:is_empty() then
-		meta:set_string("infotext", "unconfigured Autocrafter: unknown recipe")
+		meta:set_string("infotext", S("unconfigured Autocrafter: unknown recipe"))
 		return false
 	end
 
-	for step = 1, math.floor(elapsed/craft_time) do
+	for _ = 1, math.floor(elapsed/craft_time) do
 		local continue = autocraft(inventory, craft)
 		if not continue then return false end
 	end
@@ -101,11 +102,10 @@ local function after_recipe_change(pos, inventory)
 	if inventory:is_empty("recipe") then
 		minetest.get_node_timer(pos):stop()
 		autocrafterCache[minetest.hash_node_position(pos)] = nil
-		meta:set_string("infotext", "unconfigured Autocrafter")
+		meta:set_string("infotext", S("unconfigured Autocrafter"))
 		inventory:set_stack("output", 1, "")
 		return
 	end
-	local recipe_changed = false
 	local recipe = inventory:get_list("recipe")
 
 	local hash = minetest.hash_node_position(pos)
@@ -126,7 +126,7 @@ local function after_recipe_change(pos, inventory)
 	craft = craft or get_craft(pos, inventory, hash)
 	local output_item = craft.output.item
 	local description, name = get_item_info(output_item)
-	meta:set_string("infotext", string.format("'%s' Autocrafter (%s)", description, name))
+	meta:set_string("infotext", S("'@1' Autocrafter (@2)", description, name))
 	inventory:set_stack("output", 1, output_item)
 
 	after_inventory_change(pos)
@@ -190,8 +190,8 @@ local function update_meta(meta, enabled)
 			"listring[context;dst]" ..
 			"listring[current_player;main]"
 	if minetest.get_modpath("digilines") then
-		fs = fs.."field[1,3.5;4,1;channel;Channel;${channel}]"
-		fs = fs.."button_exit[5,3.2;2,1;save;Save]"
+		fs = fs.."field[1,3.5;4,1;channel;"..S("Channel")..";${channel}]"
+		fs = fs.."button_exit[5,3.2;2,1;save;"..S("Save").."]"
 	end
 	meta:set_string("formspec",fs)
 
@@ -200,13 +200,13 @@ local function update_meta(meta, enabled)
 	-- this might be more written code, but actually executes less
 	local output = meta:get_inventory():get_stack("output", 1)
 	if output:is_empty() then -- doesn't matter if paused or not
-		meta:set_string("infotext", "unconfigured Autocrafter")
+		meta:set_string("infotext", S("unconfigured Autocrafter"))
 		return false
 	end
 
 	local description, name = get_item_info(output)
-	local infotext = enabled and string.format("'%s' Autocrafter (%s)", description, name)
-				or string.format("paused '%s' Autocrafter", description)
+	local infotext = enabled and S("'@1' Autocrafter (@2)", description, name)
+				or S("paused '@1' Autocrafter", description)
 
 	meta:set_string("infotext", infotext)
 	return enabled
@@ -226,7 +226,7 @@ local function upgrade_autocrafter(pos, meta)
 		update_meta(meta, true)
 
 		if meta:get_string("virtual_items") == "1" then -- we are version 2
-			-- we allready dropped stuff, so lets remove the metadatasetting (we are not being called again for this node)
+			-- we already dropped stuff, so lets remove the metadatasetting (we are not being called again for this node)
 			meta:set_string("virtual_items", "")
 		else -- we are version 1
 			local recipe = inv:get_list("recipe")
@@ -248,7 +248,7 @@ local function upgrade_autocrafter(pos, meta)
 end
 
 minetest.register_node("pipeworks:autocrafter", {
-	description = "Autocrafter",
+	description = S("Autocrafter"),
 	drawtype = "normal",
 	tiles = {"pipeworks_autocrafter.png"},
 	groups = {snappy = 3, tubedevice = 1, tubedevice_receiver = 1},
@@ -388,6 +388,27 @@ minetest.register_node("pipeworks:autocrafter", {
 						end
 					end
 					after_recipe_change(pos,inv)
+				elseif msg == "get_recipe" then
+					local meta = minetest.get_meta(pos)
+					local inv = meta:get_inventory()
+					local recipe = {}
+					for y=0,2,1 do
+						local row = {}
+						for x=1,3,1 do
+							local slot = y*3+x
+							table.insert(row, inv:get_stack("recipe",slot):get_name())
+						end
+						table.insert(recipe, row)
+					end
+					local setchan = meta:get_string("channel")
+					local output = inv:get_stack("output", 1)
+					digiline:receptor_send(pos, digiline.rules.default, setchan, {
+						recipe = recipe,
+						result = {
+							name = output:get_name(),
+							count = output:get_count(),
+						}
+					  })
 				elseif msg == "off" then
 					update_meta(meta, false)
 					minetest.get_node_timer(pos):stop()
@@ -407,7 +428,7 @@ minetest.register_craft( {
 	output = "pipeworks:autocrafter 2",
 	recipe = {
 	        { "default:steel_ingot", "default:mese_crystal", "default:steel_ingot" },
-	        { "homedecor:plastic_sheeting", "default:steel_ingot", "homedecor:plastic_sheeting" },
+	        { "basic_materials:plastic_sheet", "default:steel_ingot", "basic_materials:plastic_sheet" },
 	        { "default:steel_ingot", "default:mese_crystal", "default:steel_ingot" }
 	},
 })

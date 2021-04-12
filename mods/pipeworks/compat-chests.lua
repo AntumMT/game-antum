@@ -44,6 +44,7 @@ local function chest_lid_obstructed(pos)
 	local above = { x = pos.x, y = pos.y + 1, z = pos.z }
 	local def = minetest.registered_nodes[minetest.get_node(above).name]
 	-- allow ladders, signs, wallmounted things and torches to not obstruct
+	if not def then return true end
 	if def.drawtype == "airlike" or
 			def.drawtype == "signlike" or
 			def.drawtype == "torchlike" or
@@ -64,7 +65,7 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
 				local node = minetest.get_node(pos)
 
 				open_chests[pn] = nil
-				for k, v in pairs(open_chests) do
+				for _, v in pairs(open_chests) do
 					if v.pos.x == pos.x and v.pos.y == pos.y and v.pos.z == pos.z then
 						return true
 					end
@@ -76,10 +77,8 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
 					pipeworks.after_place(pos)
 				end)
 				minetest.sound_play(sound, {gain = 0.3, pos = pos, max_hear_distance = 10})
-			end
-
-			-- Pipeworks Switch
-			if pipeworks.may_configure(pos, player) and not fields.quit then
+			elseif pipeworks.may_configure(pos, player) then
+				-- Pipeworks Switch
 				fs_helpers.on_receive_fields(pos, fields)
 				minetest.show_formspec(player:get_player_name(), "pipeworks:chest_formspec", get_chest_formspec(pos))
 			end
@@ -145,7 +144,8 @@ override_protected = {
 		input_inventory = "main",
 		connect_sides = {left = 1, right = 1, back = 1, bottom = 1, top = 1}
 	},
-	after_dig_node = pipeworks.after_dig
+	after_dig_node = pipeworks.after_dig,
+	on_rotate = pipeworks.on_rotate
 }
 override = {
 	tiles = {
@@ -189,7 +189,8 @@ override = {
 		connect_sides = {left = 1, right = 1, back = 1, bottom = 1, top = 1}
 	},
 	after_place_node = pipeworks.after_place,
-	after_dig_node = pipeworks.after_dig
+	after_dig_node = pipeworks.after_dig,
+	on_rotate = pipeworks.on_rotate
 }
 --[[local override_common = {
 
@@ -229,7 +230,7 @@ override.tiles = {
 }
 
 -- Add the extra groups
-for i,v in ipairs({override_protected, override, override_open, override_protected_open}) do
+for _,v in ipairs({override_protected, override, override_open, override_protected_open}) do
 	v.groups.tubedevice = 1
 	v.groups.tubedevice_receiver = 1
 end

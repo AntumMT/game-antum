@@ -83,7 +83,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [monsters_aggressive][] (see individual mods for licensing) -- version: [89a8187 Git][ver.monsters_aggressive] *2017-08-30*
 	* [monsters_passive][] (see individual mods for licensing) -- version: [b07fe19 Git][ver.monsters_passive] *2017-08-09*
 * [painting][] (???) -- version [8961849 Git][ver.painting] *2016-05-05*
-* [pipeworks][] ([WTFPL][lic.wtfpl]) -- version: [a5e1bfa Git][ver.pipeworks] *2017-08-20* ***UNSTABLE UPDATES***
+* [pipeworks][] ([LGPL][lic.lgpl3.0]) -- version: [2021-02-19][ver.pipeworks]
 * plantlife/
 * player/action/
 	* [hbsprint][] ([LGPL][lic.lgpl2.1]) -- version: [de3e77e Git][ver.hbsprint] *2018-04-11* ([patched][patch.hbsprint])
@@ -466,7 +466,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.nether]: https://github.com/PilzAdam/nether/tree/bc2ccfb
 [ver.override]: https://github.com/AntumMT/mod-override/tree/e6dda7a
 [ver.painting]: https://github.com/minetest-mods/painting/tree/8961849
-[ver.pipeworks]: https://github.com/minetest-mods/pipeworks/tree/a5e1bfa
+[ver.pipeworks]: https://gitlab.com/VanessaE/pipeworks/-/tags/2021-02-19
 [ver.playeranim]: https://github.com/minetest-mods/playeranim/tree/560af7e
 [ver.privilegeareas]: https://github.com/minetest-mods/privilegeareas/tree/18a803c
 [ver.pvp_areas]: https://github.com/everamzah/pvp_areas/tree/0188945

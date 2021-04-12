@@ -10,6 +10,13 @@ minetest.register_craft( {
 })
 
 minetest.register_craft( {
+        output = "pipeworks:straight_pipe_empty 3",
+        recipe = {
+                { "pipeworks:pipe_1_empty", "pipeworks:pipe_1_empty", "pipeworks:pipe_1_empty" },
+        },
+})
+
+minetest.register_craft( {
         output = "pipeworks:spigot 3",
         recipe = {
                 { "pipeworks:pipe_1_empty", "" },
@@ -78,74 +85,3 @@ minetest.register_craft( {
 				{ "pipeworks:pipe_1_empty" }
         },
 })
-
-
--- Crafting recipes for pneumatic tubes
-
--- If homedecor is not installed, we need to register its crafting chain for
--- plastic sheeting so that pipeworks remains compatible with it.
-
-if minetest.get_modpath("homedecor") == nil then
-
-	minetest.register_craftitem(":homedecor:oil_extract", {
-		    description = "Oil extract",
-		    inventory_image = "homedecor_oil_extract.png",
-	})
-
-	minetest.register_craftitem(":homedecor:paraffin", {
-		    description = "Unprocessed paraffin",
-		    inventory_image = "homedecor_paraffin.png",
-	})
-
-	minetest.register_alias("homedecor:plastic_base", "homedecor:paraffin")
-
-	minetest.register_craftitem(":homedecor:plastic_sheeting", {
-		    description = "Plastic sheet",
-		    inventory_image = "homedecor_plastic_sheeting.png",
-	})
-
-	minetest.register_craft({
-		type = "shapeless",
-		output = "homedecor:oil_extract 4",
-		recipe = {
-			"group:leaves",
-			"group:leaves",
-			"group:leaves",
-			"group:leaves",
-			"group:leaves",
-			"group:leaves"
-		}
-	})
-
-	minetest.register_craft({
-		    type = "cooking",
-		    output = "homedecor:paraffin",
-		    recipe = "homedecor:oil_extract",
-	})
-
-	minetest.register_craft({
-		    type = "cooking",
-		    output = "homedecor:plastic_sheeting",
-		    recipe = "homedecor:paraffin",
-	})
-
-	minetest.register_craft({
-		    type = "fuel",
-		    recipe = "homedecor:oil_extract",
-		    burntime = 30,
-	})
-
-	minetest.register_craft({
-		    type = "fuel",
-		    recipe = "homedecor:paraffin",
-		    burntime = 30,
-	})
-
-	minetest.register_craft({
-		    type = "fuel",
-		    recipe = "homedecor:plastic_sheeting",
-		    burntime = 30,
-	})
-end
-
-

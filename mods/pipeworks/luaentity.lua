@@ -9,16 +9,16 @@ local filename = minetest.get_worldpath().."/luaentities"
 local function read_file()
 	local f = io.open(filename, "r")
 	if f == nil then return {} end
-    	local t = f:read("*all")
-    	f:close()
+	local t = f:read("*all")
+	f:close()
 	if t == "" or t == nil then return {} end
 	return minetest.deserialize(t) or {}
 end
 
 local function write_file(tbl)
 	local f = io.open(filename, "w")
-    	f:write(minetest.serialize(tbl))
-    	f:close()
+	f:write(minetest.serialize(tbl))
+	f:close()
 end
 
 local function read_entities()
@@ -36,7 +36,7 @@ local function read_entities()
 		y=math.min(30927,y)
 		z=math.min(30927,z)
 
-		entity.start_pos.x = x                 
+		entity.start_pos.x = x
 		entity.start_pos.y = y
 		entity.start_pos.z = z
 
@@ -46,6 +46,11 @@ local function read_entities()
 end
 
 local function write_entities()
+	if not luaentity.entities then
+		-- This can happen if crashing on startup, causing another error that
+		-- masks the original one. Return gracefully in that case instead.
+		return
+	end
 	for _, entity in pairs(luaentity.entities) do
 		setmetatable(entity, nil)
 		for _, attached in pairs(entity._attached_entities) do
@@ -74,7 +79,7 @@ local move_entities_globalstep_part1 = function(dtime)
 	local active_block_range = tonumber(minetest.settings:get("active_block_range")) or 2
 	local new_active_blocks = {}
 	for _, player in ipairs(minetest.get_connected_players()) do
-		local blockpos = get_blockpos(player:getpos())
+		local blockpos = get_blockpos(player:get_pos())
 		local minp = vector.subtract(blockpos, active_block_range)
 		local maxp = vector.add(blockpos, active_block_range)
 
@@ -114,9 +119,9 @@ local entitydef_default = {
 		if not def.entity then
 			return
 		end
-		def.entity:setpos(vector.add(self._pos, def.offset))
-		def.entity:setvelocity(self._velocity)
-		def.entity:setacceleration(self._acceleration)
+		def.entity:set_pos(vector.add(self._pos, def.offset))
+		def.entity:set_velocity(self._velocity)
+		def.entity:set_acceleration(self._acceleration)
 	end,
 	_attach_all = function(self)
 		local master = self._attached_entities_master
@@ -186,43 +191,43 @@ local entitydef_default = {
 			self:_add_attached(id)
 		end
 	end,
-	getid = function(self)
+	get_id = function(self)
 		return self._id
 	end,
-	getpos = function(self)
+	get_pos = function(self)
 		return vector.new(self._pos)
 	end,
-	setpos = function(self, pos)
+	set_pos = function(self, pos)
 		self._pos = vector.new(pos)
 		--for _, entity in pairs(self._attached_entities) do
 		--	if entity.entity then
-		--		entity.entity:setpos(vector.add(self._pos, entity.offset))
+		--		entity.entity:set_pos(vector.add(self._pos, entity.offset))
 		--	end
 		--end
 		local master = self._attached_entities_master
 		if master then
 			local master_def = self._attached_entities[master]
-			master_def.entity:setpos(vector.add(self._pos, master_def.offset))
+			master_def.entity:set_pos(vector.add(self._pos, master_def.offset))
 		end
 	end,
-	getvelocity = function(self)
-		return vector.new(self._velocity)	
+	get_velocity = function(self)
+		return vector.new(self._velocity)
 	end,
-	setvelocity = function(self, velocity)
+	set_velocity = function(self, velocity)
 		self._velocity = vector.new(velocity)
 		local master = self._attached_entities_master
 		if master then
-			self._attached_entities[master].entity:setvelocity(self._velocity)
+			self._attached_entities[master].entity:set_velocity(self._velocity)
 		end
 	end,
-	getacceleration = function(self)
+	get_acceleration = function(self)
 		return vector.new(self._acceleration)
 	end,
-	setacceleration = function(self, acceleration)
+	set_acceleration = function(self, acceleration)
 		self._acceleration = vector.new(acceleration)
 		local master = self._attached_entities_master
 		if master then
-			self._attached_entities[master].entity:setacceleration(self._acceleration)
+			self._attached_entities[master].entity:set_acceleration(self._acceleration)
 		end
 	end,
 	remove = function(self)
@@ -284,7 +289,7 @@ function luaentity.add_entity(pos, name)
 		_acceleration = {x = 0, y = 0, z = 0},
 		_attached_entities = {},
 	}
-	
+
 	local prototype = luaentity.registered_entities[name]
 	setmetatable(entity, prototype) -- Default to prototype for other methods
 	luaentity.entities[index] = entity
@@ -313,28 +318,31 @@ end
 function luaentity.get_objects_inside_radius(pos, radius)
 	local objects = {}
 	local index = 1
-	for id, entity in pairs(luaentity.entities) do
-		if vector.distance(pos, entity:getpos()) <= radius then
+	for _, entity in pairs(luaentity.entities) do
+		if vector.distance(pos, entity:get_pos()) <= radius then
 			objects[index] = entity
 			index = index + 1
 		end
 	end
+	return objects
 end
 
 local move_entities_globalstep_part2 = function(dtime)
 	if not luaentity.entities then
 		luaentity.entities = read_entities()
 	end
-	for id, entity in pairs(luaentity.entities) do
+	for _, entity in pairs(luaentity.entities) do
 		local master = entity._attached_entities_master
 		local master_def = master and entity._attached_entities[master]
 		local master_entity = master_def and master_def.entity
-		local master_entity_pos = master_entity and master_entity:getpos()
+		local master_entity_pos = master_entity and master_entity:get_pos()
 		if master_entity_pos then
 			entity._pos = vector.subtract(master_entity_pos, master_def.offset)
-			entity._velocity = master_entity:getvelocity()
-			entity._acceleration = master_entity:getacceleration()
+			entity._velocity = master_entity:get_velocity()
+			entity._acceleration = master_entity:get_acceleration()
 		else
+			entity._velocity = entity._velocity or vector.new(0,0,0)
+			entity._acceleration = entity._acceleration or vector.new(0,0,0)
 			entity._pos = vector.add(vector.add(
 				entity._pos,
 				vector.multiply(entity._velocity, dtime)),
