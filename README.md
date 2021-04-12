@@ -138,7 +138,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 ### This is a list of installed modpacks & their components (trying to keep them listed separate for sake of organization):
 
-* [3d_armor][] ([LGPL / CC BY-SA][lic.3d_armor]) - version: [7e2d942 Git][ver.3d_armor] *2019-01-19* ([patched][patch.3d_armor])
+* [3d_armor][] ([LGPL / CC BY-SA][lic.3d_armor]) - version: [47ecef4 Git][ver.3d_armor] *2019-05-27* ([patched][patch.3d_armor])
 * [deploy_nodes][] ([BSD 3-Clause][lic.deploy_nodes]) -- version [b67e162 Git][ver.deploy_nodes] *2017-06-08*
 * [homedecor][] ([LGPL / WTFPL / CC BY-SA / CC0][lic.homedecor]) -- version: [81e0d4e Git][ver.homedecor] *2021-03-30* ([patched][patch.homedecor])
 * [mesecons][] ([LGPL / CC BY-SA][lic.mesecons]) -- version [1.2 (d4e05f3 Git)][ver.mesecons] *2018-07-23*
@@ -385,7 +385,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.wtfpl]: doc/licenses/WTFPL.txt
 [lic.zlib]: doc/licenses/zlib.txt
 
-[ver.3d_armor]: https://github.com/stujones11/minetest-3d_armor/tree/7e2d942
+[ver.3d_armor]: https://github.com/stujones11/minetest-3d_armor/tree/47ecef4
 [ver.airtanks]: https://github.com/minetest-mods/airtanks/tree/868c3a7
 [ver.amber]: https://github.com/theraven262/amber/tree/56627fa
 [ver.animals_aggressive]: https://github.com/AntumMT/mp-animals_aggressive/tree/4eede4d
@@ -500,7 +500,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.workbench]: https://github.com/minetest-mods/workbench/tree/bd14f59
 [ver.worldedge]: https://github.com/minetest-mods/worldedge/tree/608462d
 
-[patch.3d_armor]: https://github.com/AntumMT/mp-3d_armor/tree/0561ad9
+[patch.3d_armor]: https://github.com/AntumMT/mp-3d_armor/tree/19d1001
 [patch.airtanks]: https://github.com/AntumMT/mod-airtanks/tree/42d31cb
 [patch.amber]: https://github.com/AntumMT/mod-amber/tree/b7bd9f0
 [patch.away]: https://github.com/AntumMT/mod-away/tree/3b0bf9e
