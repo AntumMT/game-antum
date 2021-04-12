@@ -142,7 +142,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [mesecons][] ([LGPL / CC BY-SA][lic.mesecons]) -- version [1.2 (d4e05f3 Git)][ver.mesecons] *2018-07-23*
 * [minetest_game][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- version: [5.4.1][ver.minetest_game] *2021-04-10*
 * [moremesecons][] ([MPL][lic.mpl2.0]) -- version [8a56370 Git][ver.moremesecons] *2018-02-27*
-* [technic][] ([LGPL][lic.lgpl2.0]) -- version: [6664714 Git][ver.technic] *2018-06-28* ([patched][patch.technic])
+* [technic][] ([LGPL][lic.lgpl2.0]) -- version: [43acec2 Git][ver.technic] *2021-02-09*
 
 
 ---
@@ -476,7 +476,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.snowdrift]: https://github.com/paramat/snowdrift/tree/0a0787a
 [ver.spawneggs]: https://github.com/thefamilygrog66/spawneggs/tree/4650370
 [ver.spectator_mode]: https://github.com/minetest-mods/spectator_mode/tree/7d68bec
-[ver.technic]: https://github.com/minetest-mods/technic/tree/6664714
+[ver.technic]: https://github.com/minetest-mods/technic/tree/43acec2
 [ver.technic_armor]: https://github.com/stujones11/technic_armor/tree/694642f
 [ver.throwing]: https://github.com/PilzAdam/throwing/tree/90bcf43
 [ver.tnt]: https://github.com/PilzAdam/TNT/tree/d6a0b7d

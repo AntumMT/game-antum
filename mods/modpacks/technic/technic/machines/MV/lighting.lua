@@ -7,31 +7,14 @@
 local S
 if (minetest.get_modpath("intllib")) then
 	dofile(minetest.get_modpath("intllib").."/intllib.lua")
-	if (intllib.make_gettext_pair) then
-		S = intllib.make_gettext_pair(minetest.get_current_modname())
-	else
-		S = intllib.Getter(minetest.get_current_modname())
-	end
+	S = intllib.Getter(minetest.get_current_modname())
 else
 	S = function (s) return s end
 end
 
 function technic_homedecor_node_is_owned(pos, placer)
         local ownername = false
-        if type(IsPlayerNodeOwner) == "function" then -- node_ownership mod
-                if HasOwner(pos, placer) then
-                        if not IsPlayerNodeOwner(pos, placer:get_player_name()) then
-                                if type(getLastOwner) == "function" then -- ...is an old version
-                                        ownername = getLastOwner(pos)
-                                elseif type(GetNodeOwnerName) == "function" then -- ...is a recent version
-                                        ownername = GetNodeOwnerName(pos)
-                                else
-                                        ownername = S("someone")
-                                end
-                        end
-                end
-
-        elseif type(isprotect) == "function" then -- glomie's protection mod
+        if type(isprotect) == "function" then -- glomie's protection mod
                 if not isprotect(5, pos, placer) then
                         ownername = S("someone")
                 end
@@ -49,11 +32,10 @@ function technic_homedecor_node_is_owned(pos, placer)
         end
 end
 
-local dirs1 = {20, 23, 22, 21}
 local dirs2 = {9,  18,  7, 12}
 
 local technic_homedecor_rotate_and_place = function(itemstack, placer, pointed_thing)
-	if not technic_homedecor_node_is_owned(pointed_thing.under, placer) 
+	if not technic_homedecor_node_is_owned(pointed_thing.under, placer)
 	   and not technic_homedecor_node_is_owned(pointed_thing.above, placer) then
 		local node = minetest.get_node(pointed_thing.under)
 		if not minetest.registered_nodes[node.name] or not minetest.registered_nodes[node.name].on_rightclick then
@@ -62,7 +44,6 @@ local technic_homedecor_rotate_and_place = function(itemstack, placer, pointed_t
 			local under = pointed_thing.under
 			local pitch = placer:get_look_pitch()
 			local pname = minetest.get_node(under).name
-			local node = minetest.get_node(above)
 			local fdir = minetest.dir_to_facedir(placer:get_look_dir())
 			local wield_name = itemstack:get_name()
 
@@ -80,7 +61,7 @@ local technic_homedecor_rotate_and_place = function(itemstack, placer, pointed_t
 
 				if not minetest.registered_nodes[minetest.get_node(pos1).name]["buildable_to"] then return end
 
-				if iswall then 
+				if iswall then
 					minetest.add_node(pos1, {name = wield_name, param2 = dirs2[fdir+1] }) -- place wall variant
 				elseif isceiling then
 					minetest.add_node(pos1, {name = wield_name, param2 = 20 }) -- place upside down variant
@@ -163,7 +144,7 @@ minetest.register_node('technic:homedecor_glowlight_half_yellow_active', {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	walkable = true,
-	light_source = LIGHT_MAX,
+	light_source = minetest.LIGHT_MAX,
 	sounds = default.node_sound_wood_defaults(),
 
 	groups = { snappy = 3, not_in_creative_inventory=1},
@@ -244,7 +225,7 @@ minetest.register_node('technic:homedecor_glowlight_quarter_yellow_active', {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	walkable = true,
-	light_source = LIGHT_MAX-1,
+	light_source = minetest.LIGHT_MAX-1,
 	sounds = default.node_sound_wood_defaults(),
 
 	groups = { snappy = 3, not_in_creative_inventory=1},
@@ -326,7 +307,7 @@ minetest.register_node('technic:homedecor_glowlight_half_white_active', {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	walkable = true,
-	light_source = LIGHT_MAX,
+	light_source = minetest.LIGHT_MAX,
 	sounds = default.node_sound_wood_defaults(),
 
 	groups = { snappy = 3, not_in_creative_inventory=1},
@@ -407,7 +388,7 @@ minetest.register_node('technic:homedecor_glowlight_quarter_white_active', {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	walkable = true,
-	light_source = LIGHT_MAX-1,
+	light_source = minetest.LIGHT_MAX-1,
 	sounds = default.node_sound_wood_defaults(),
 
 	groups = { snappy = 3, not_in_creative_inventory=1},
@@ -488,7 +469,7 @@ minetest.register_node('technic:homedecor_glowlight_small_cube_yellow_active', {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	walkable = true,
-	light_source = LIGHT_MAX-1,
+	light_source = minetest.LIGHT_MAX-1,
 	sounds = default.node_sound_wood_defaults(),
 
 	groups = { snappy = 3, not_in_creative_inventory=1},
@@ -569,7 +550,7 @@ minetest.register_node('technic:homedecor_glowlight_small_cube_white_active', {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	walkable = true,
-	light_source = LIGHT_MAX-1,
+	light_source = minetest.LIGHT_MAX-1,
 	sounds = default.node_sound_wood_defaults(),
 
 	groups = { snappy = 3, not_in_creative_inventory=1},

@@ -7,6 +7,13 @@ minetest.clear_craft({
 	type = "shapeless",
 	output = "default:bronze_ingot"
 })
+-- Restore recipe for bronze block to ingots
+minetest.register_craft({
+	output = "default:bronze_ingot 9",
+	recipe = {
+		{"default:bronzeblock"}
+	}
+})
 
 -- Accelerator tube
 if pipeworks.enable_accelerator_tube then
@@ -37,6 +44,18 @@ if pipeworks.enable_teleport_tube then
 			}
 	})
 end
+
+-- basic materials' brass ingot
+
+minetest.clear_craft({
+	output = "basic_materials:brass_ingot",
+})
+
+minetest.register_craft( {
+	type = "shapeless",
+	output = "basic_materials:brass_ingot 9",
+	recipe = { "basic_materials:brass_block" },
+})
 
 -- tubes crafting recipes
 
@@ -71,54 +90,24 @@ minetest.register_craft({
 	output = 'technic:red_energy_crystal',
 	recipe = {
 		{'moreores:silver_ingot', 'technic:battery', 'dye:red'},
-		{'technic:battery', 'default:diamondblock', 'technic:battery'},
+		{'technic:battery', 'basic_materials:energy_crystal_simple', 'technic:battery'},
 		{'dye:red', 'technic:battery', 'moreores:silver_ingot'},
-	}
-})
-
-minetest.register_craft({
-	output = 'technic:fine_copper_wire 2',
-	recipe = {
-		{'', 'default:copper_ingot', ''},
-		{'', 'default:copper_ingot', ''},
-		{'', 'default:copper_ingot', ''},
-	}
-})
-
-minetest.register_craft({
-	output = 'technic:fine_gold_wire 2',
-	recipe = {
-		{'', 'default:gold_ingot', ''},
-		{'', 'default:gold_ingot', ''},
-		{'', 'default:gold_ingot', ''},
-	}
-})
-
-minetest.register_craft({
-	output = 'technic:fine_silver_wire 2',
-	recipe = {
-		{'', 'moreores:silver_ingot', ''},
-		{'', 'moreores:silver_ingot', ''},
-		{'', 'moreores:silver_ingot', ''},
 	}
 })
 
 minetest.register_craft({
 	output = 'technic:copper_coil 1',
 	recipe = {
-		{'technic:fine_copper_wire', 'technic:wrought_iron_ingot', 'technic:fine_copper_wire'},
+		{'basic_materials:copper_wire', 'technic:wrought_iron_ingot', 'basic_materials:copper_wire'},
 		{'technic:wrought_iron_ingot', '', 'technic:wrought_iron_ingot'},
-		{'technic:fine_copper_wire', 'technic:wrought_iron_ingot', 'technic:fine_copper_wire'},
-	}
-})
-
-minetest.register_craft({
-	output = 'technic:motor',
-	recipe = {
-		{'technic:carbon_steel_ingot', 'technic:copper_coil', 'technic:carbon_steel_ingot'},
-		{'technic:carbon_steel_ingot', 'technic:copper_coil', 'technic:carbon_steel_ingot'},
-		{'technic:carbon_steel_ingot', 'default:copper_ingot', 'technic:carbon_steel_ingot'},
-	}
+		{'basic_materials:copper_wire', 'technic:wrought_iron_ingot', 'basic_materials:copper_wire'},
+	},
+	replacements = {
+		{"basic_materials:copper_wire", "basic_materials:empty_spool"},
+		{"basic_materials:copper_wire", "basic_materials:empty_spool"},
+		{"basic_materials:copper_wire", "basic_materials:empty_spool"},
+		{"basic_materials:copper_wire", "basic_materials:empty_spool"}
+	},
 })
 
 local isolation = mesecons_materials and "mesecons_materials:fiber" or "technic:rubber"
@@ -153,10 +142,11 @@ minetest.register_craft({
 minetest.register_craft({
 	output = 'technic:control_logic_unit',
 	recipe = {
-		{'', 'technic:fine_gold_wire', ''},
+		{'', 'basic_materials:gold_wire', ''},
 		{'default:copper_ingot', 'technic:silicon_wafer', 'default:copper_ingot'},
 		{'', 'technic:chromium_ingot', ''},
-	}
+	},
+	replacements = { {"basic_materials:gold_wire", "basic_materials:empty_spool"}, },
 })
 
 minetest.register_craft({
@@ -164,7 +154,7 @@ minetest.register_craft({
 	recipe = {
 		{'technic:stainless_steel_ingot', 'technic:stainless_steel_ingot', 'technic:stainless_steel_ingot'},
 		{'default:bronze_ingot',          'default:bronze_ingot',          'default:bronze_ingot'},
-		{'moreores:tin_ingot',            'moreores:tin_ingot',            'moreores:tin_ingot'},
+		{'default:tin_ingot',             'default:tin_ingot',             'default:tin_ingot'},
 	}
 })
 
@@ -179,11 +169,10 @@ minetest.register_craft({
 	output = "technic:machine_casing",
 	recipe = {
 		{ "technic:cast_iron_ingot", "technic:cast_iron_ingot", "technic:cast_iron_ingot" },
-		{ "technic:cast_iron_ingot", "technic:brass_ingot", "technic:cast_iron_ingot" },
+		{ "technic:cast_iron_ingot", "basic_materials:brass_ingot", "technic:cast_iron_ingot" },
 		{ "technic:cast_iron_ingot", "technic:cast_iron_ingot", "technic:cast_iron_ingot" },
 	},
 })
-
 
 minetest.register_craft({
 	output = "default:dirt 2",
@@ -195,4 +184,26 @@ minetest.register_craft({
 		"bucket:bucket_water",
 		"group:sand",
 	},
+})
+
+minetest.register_craft({
+	output = "technic:rubber_goo",
+	type = "shapeless",
+	recipe = {
+		"technic:raw_latex",
+		"default:coal_lump",
+		"default:coal_lump",
+		"default:coal_lump",
+		"default:coal_lump",
+		"default:coal_lump",
+		"default:coal_lump",
+		"default:coal_lump",
+		"default:coal_lump",
+	},
+})
+
+minetest.register_craft({
+	output = "technic:rubber",
+	type = "cooking",
+	recipe = "technic:rubber_goo",
 })

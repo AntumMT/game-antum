@@ -14,11 +14,7 @@ technic.modpath = modpath
 
 -- Boilerplate to support intllib
 if rawget(_G, "intllib") then
-	if intllib.make_gettext_pair then
-		technic.getter = intllib.make_gettext_pair()
-	else
-		technic.getter = intllib.Getter()
-	end
+	technic.getter = intllib.Getter()
 else
 	technic.getter = function(s,a,...)if a==nil then return s end a={a,...}return s:gsub("(@?)@(%(?)(%d+)(%)?)",function(e,o,n,c)if e==""then return a[tonumber(n)]..(o==""and c or"")else return"@"..o..n..c end end) end
 end
@@ -30,10 +26,10 @@ dofile(modpath.."/config.lua")
 -- Helper functions
 dofile(modpath.."/helpers.lua")
 
--- Items 
+-- Items
 dofile(modpath.."/items.lua")
 
--- Craft recipes for items 
+-- Craft recipes for items
 dofile(modpath.."/crafts.lua")
 
 -- Register functions

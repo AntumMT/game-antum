@@ -11,19 +11,23 @@ minetest.register_craft({
 	output = 'technic:geothermal',
 	recipe = {
 		{'technic:granite',          'default:diamond',        'technic:granite'},
-		{'technic:fine_copper_wire', 'technic:machine_casing', 'technic:fine_copper_wire'},
+		{'basic_materials:copper_wire', 'technic:machine_casing', 'basic_materials:copper_wire'},
 		{'technic:granite',          'technic:lv_cable',       'technic:granite'},
-	}
+	},
+	replacements = {
+		{"basic_materials:copper_wire", "basic_materials:empty_spool"},
+		{"basic_materials:copper_wire", "basic_materials:empty_spool"}
+	},
 })
 
 minetest.register_craftitem("technic:geothermal", {
 	description = S("Geothermal %s Generator"):format("LV"),
-}) 
+})
 
 local check_node_around = function(pos)
 	local node = minetest.get_node(pos)
 	if node.name == "default:water_source" or node.name == "default:water_flowing" then return 1 end
-	if node.name == "default:lava_source"  or node.name == "default:lava_flowing"  then return 2 end	
+	if node.name == "default:lava_source"  or node.name == "default:lava_flowing"  then return 2 end
 	return 0
 end
 

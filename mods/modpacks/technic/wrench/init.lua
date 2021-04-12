@@ -20,7 +20,7 @@ dofile(modpath.."/support.lua")
 dofile(modpath.."/technic.lua")
 
 -- Boilerplate to support localized strings if intllib mod is installed.
-local S = rawget(_G, "intllib") and (intllib.make_gettext_pair() or intllib.Getter()) or function(s) return s end
+local S = rawget(_G, "intllib") and intllib.Getter() or function(s) return s end
 
 local function get_meta_type(name, metaname)
 	local def = wrench.registered_nodes[name]
@@ -84,13 +84,6 @@ for name, info in pairs(wrench.registered_nodes) do
 	end
 end
 
--- Setting for enabling/disabling tool wear & break
-local tool_wear = minetest.settings:get_bool("enable_tool_wear")
-if tool_wear == nil then
-	-- Default is enabled
-	tool_wear = true
-end
-
 minetest.register_tool("wrench:wrench", {
 	description = S("Wrench"),
 	inventory_image = "technic_wrench.png",
@@ -127,7 +120,7 @@ minetest.register_tool("wrench:wrench", {
 			return
 		end
 		local meta = minetest.get_meta(pos)
-		if def.owned then
+		if def.owned and not minetest.check_player_privs(placer, "protection_bypass") then
 			local owner = meta:get_string("owner")
 			if owner and owner ~= player_name then
 				minetest.log("action", player_name..
@@ -167,9 +160,7 @@ minetest.register_tool("wrench:wrench", {
 
 		item_meta:set_string("data", minetest.serialize(metadata))
 		minetest.remove_node(pos)
-		if tool_wear then
-			itemstack:add_wear(65535 / 20)
-		end
+		itemstack:add_wear(65535 / 20)
 		player_inv:add_item("main", stack)
 		return itemstack
 	end,

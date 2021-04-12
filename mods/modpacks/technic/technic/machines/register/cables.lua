@@ -117,6 +117,19 @@ local function clear_networks(pos)
 	end
 end
 
+local function item_place_override_node(itemstack, placer, pointed, node)
+	-- Call the default on_place function with a fake itemstack
+	local temp_itemstack = ItemStack(itemstack)
+	temp_itemstack:set_name(node.name)
+	local original_count = temp_itemstack:get_count()
+	temp_itemstack =
+		minetest.item_place(temp_itemstack, placer, pointed, node.param2) or
+		temp_itemstack
+	-- Remove the same number of items from the real itemstack
+	itemstack:take_item(original_count - temp_itemstack:get_count())
+	return itemstack
+end
+
 function technic.register_cable(tier, size)
 	local ltier = string.lower(tier)
 	cable_tier["technic:"..ltier.."_cable"] = tier
@@ -202,7 +215,7 @@ function technic.register_cable(tier, size)
 		if i == 1 then
 			def.on_place = function(itemstack, placer, pointed_thing)
 				local pointed_thing_diff = vector.subtract(pointed_thing.above, pointed_thing.under)
-				local num
+				local num = 1
 				local changed
 				for k, v in pairs(pointed_thing_diff) do
 					if v ~= 0 then
@@ -212,7 +225,7 @@ function technic.register_cable(tier, size)
 					end
 				end
 				local crtl = placer:get_player_control()
-				if (crtl.aux1 or crtl.sneak) and not (crtl.aux1 and crtl.sneak) then
+				if (crtl.aux1 or crtl.sneak) and not (crtl.aux1 and crtl.sneak) and changed then
 					local fine_pointed = minetest.pointed_thing_to_face_pos(placer, pointed_thing)
 					fine_pointed = vector.subtract(fine_pointed, pointed_thing.above)
 					fine_pointed[changed] = nil
@@ -228,11 +241,10 @@ function technic.register_cable(tier, size)
 						num = xyz[((fine_pointed[bigger] < 0 and "-") or "") .. bigger]
 					end
 				end
-				minetest.set_node(pointed_thing.above, {name = "technic:"..ltier.."_cable_plate_"..num})
-				if not (creative and creative.is_enabled_for(placer)) then
-					itemstack:take_item()
-				end
-				return itemstack
+				return item_place_override_node(
+					itemstack, placer, pointed_thing,
+					{name = "technic:"..ltier.."_cable_plate_"..num}
+				)
 			end
 		else
 			def.groups.not_in_creative_inventory = 1

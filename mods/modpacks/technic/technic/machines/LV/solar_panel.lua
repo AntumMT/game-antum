@@ -9,9 +9,9 @@ minetest.register_craft({
 	output = 'technic:solar_panel',
 	recipe = {
 		{'technic:doped_silicon_wafer', 'technic:doped_silicon_wafer', 'technic:doped_silicon_wafer'},
-		{'technic:fine_silver_wire',    'technic:lv_cable',            'mesecons_materials:glue'},
-
-	}
+		{'basic_materials:silver_wire',    'technic:lv_cable',            'mesecons_materials:glue'},
+	},
+	replacements = { {"basic_materials:silver_wire", "basic_materials:empty_spool"}, },
 })
 
 
@@ -35,7 +35,8 @@ local run = function(pos, node)
 		local charge_to_give = math.floor((light + pos1.y) * 3)
 		charge_to_give = math.max(charge_to_give, 0)
 		charge_to_give = math.min(charge_to_give, 200)
-		meta:set_string("infotext", S("@1 Active (@2 EU)", machine_name, technic.pretty_num(charge_to_give)))
+		meta:set_string("infotext", S("@1 Active (@2)", machine_name,
+			technic.EU_string(charge_to_give)))
 		meta:set_int("LV_EU_supply", charge_to_give)
 	else
 		meta:set_string("infotext", S("%s Idle"):format(machine_name))
@@ -50,11 +51,11 @@ minetest.register_node("technic:solar_panel", {
 		technic_machine=1, technic_lv=1},
 	connect_sides = {"bottom"},
 	sounds = default.node_sound_wood_defaults(),
-    	description = S("Small Solar %s Generator"):format("LV"),
+	description = S("Small Solar %s Generator"):format("LV"),
 	active = false,
 	drawtype = "nodebox",
 	paramtype = "light",
-	is_ground_content = true,	
+	is_ground_content = true,
 	node_box = {
 		type = "fixed",
 		fixed = {-0.5, -0.5, -0.5, 0.5, 0, 0.5},

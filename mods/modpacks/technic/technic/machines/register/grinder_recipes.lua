@@ -15,6 +15,7 @@ local recipes = {
 	{"default:desert_stone",       "default:desert_sand"},
 	{"default:gold_lump",          "technic:gold_dust 2"},
 	{"default:iron_lump",          "technic:wrought_iron_dust 2"},
+	{"default:tin_lump",           "technic:tin_dust 2"},
 	{"technic:chromium_lump",      "technic:chromium_dust 2"},
 	{"technic:uranium_lump",       "technic:uranium_dust 2"},
 	{"technic:zinc_lump",          "technic:zinc_dust 2"},
@@ -22,17 +23,31 @@ local recipes = {
 	{"technic:sulfur_lump",        "technic:sulfur_dust 2"},
 	{"default:stone",              "technic:stone_dust"},
 	{"default:sand",               "technic:stone_dust"},
-	
+
 	-- Other
-	{"default:cobble",          "default:gravel"},
-	{"default:gravel",          "default:sand"},
-	{"default:sandstone",       "default:sand 2"}, -- reverse recipe can be found in the compressor
+	{"default:cobble",           "default:gravel"},
+	{"default:gravel",           "default:sand"},
+	{"default:sandstone",        "default:sand 2"}, -- reverse recipe can be found in the compressor
+	{"default:desert_sandstone", "default:desert_sand 2"}, -- reverse recipe can be found in the compressor
+	{"default:silver_sandstone", "default:silver_sand 2"}, -- reverse recipe can be found in the compressor
+
+	{"default:ice",              "default:snowblock"},
 }
 
 -- defuse the sandstone -> 4 sand recipe to avoid infinite sand bugs (also consult the inverse compressor recipe)
 minetest.clear_craft({
 	recipe = {
-		{'default:sandstone'}
+		{"default:sandstone"}
+	},
+})
+minetest.clear_craft({
+	recipe = {
+		{"default:desert_sandstone"}
+	},
+})
+minetest.clear_craft({
+	recipe = {
+		{"default:silver_sandstone"}
 	},
 })
 
@@ -43,7 +58,6 @@ end
 if minetest.get_modpath("moreores") then
 	table.insert(recipes, {"moreores:mithril_lump",   "technic:mithril_dust 2"})
 	table.insert(recipes, {"moreores:silver_lump",    "technic:silver_dust 2"})
-	table.insert(recipes, {"moreores:tin_lump",       "technic:tin_dust 2"})
 end
 
 if minetest.get_modpath("gloopores") or minetest.get_modpath("glooptest") then
@@ -81,7 +95,7 @@ local function register_dust(name, ingot)
 end
 
 -- Sorted alphibeticaly
-register_dust("Brass",           "technic:brass_ingot")
+register_dust("Brass",           "basic_materials:brass_ingot")
 register_dust("Bronze",          "default:bronze_ingot")
 register_dust("Carbon Steel",    "technic:carbon_steel_ingot")
 register_dust("Cast Iron",       "technic:cast_iron_ingot")
@@ -94,9 +108,9 @@ register_dust("Gold",            "default:gold_ingot")
 register_dust("Mithril",         "moreores:mithril_ingot")
 register_dust("Silver",          "moreores:silver_ingot")
 register_dust("Stainless Steel", "technic:stainless_steel_ingot")
-register_dust("Stone",            "default:stone")
+register_dust("Stone",           "default:stone")
 register_dust("Sulfur",          nil)
-register_dust("Tin",             "moreores:tin_ingot")
+register_dust("Tin",             "default:tin_ingot")
 register_dust("Wrought Iron",    "technic:wrought_iron_ingot")
 register_dust("Zinc",            "technic:zinc_ingot")
 if minetest.get_modpath("gloopores") or minetest.get_modpath("glooptest") then

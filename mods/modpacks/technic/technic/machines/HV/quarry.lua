@@ -7,7 +7,7 @@ local cable_entry = "^technic_cable_connection_overlay.png"
 minetest.register_craft({
 	recipe = {
 		{"technic:carbon_plate",       "pipeworks:filter",       "technic:composite_plate"},
-		{"technic:motor",              "technic:machine_casing", "technic:diamond_drill_head"},
+		{"basic_materials:motor",              "technic:machine_casing", "technic:diamond_drill_head"},
 		{"technic:carbon_steel_block", "technic:hv_cable",       "technic:carbon_steel_block"}},
 	output = "technic:quarry",
 })
@@ -60,6 +60,12 @@ local function set_quarry_demand(meta)
 end
 
 local function quarry_receive_fields(pos, formname, fields, sender)
+	local player_name = sender:get_player_name()
+	if minetest.is_protected(pos, player_name) then
+		minetest.chat_send_player(player_name, "You are not allowed to edit this!")
+		minetest.record_protection_violation(pos, player_name)
+		return
+	end
 	local meta = minetest.get_meta(pos)
 	if fields.size and string.find(fields.size, "^[0-9]+$") then
 		local size = tonumber(fields.size)
@@ -112,6 +118,11 @@ local function quarry_run(pos, node)
 
 	if meta:get_int("enabled") and meta:get_int("HV_EU_input") >= quarry_demand and meta:get_int("purge_on") == 0 then
 		local pdir = minetest.facedir_to_dir(node.param2)
+		if pdir.y ~= 0 then
+			-- faces up or down, not valid, otherwise depth-check would run endless and hang up the server
+			return
+		end
+
 		local qdir = pdir.x == 1 and vector.new(0,0,-1) or
 			(pdir.z == -1 and vector.new(-1,0,0) or
 			(pdir.x == -1 and vector.new(0,0,1) or
@@ -124,7 +135,7 @@ local function quarry_run(pos, node)
 			vector.multiply(qdir, -radius))
 		local owner = meta:get_string("owner")
 		local nd = meta:get_int("dug")
-		while nd ~= diameter*diameter * (quarry_dig_above_nodes+1+quarry_max_depth) do
+		while nd < diameter*diameter * (quarry_dig_above_nodes+1+quarry_max_depth) do
 			local ry = math.floor(nd / (diameter*diameter))
 			local ndl = nd % (diameter*diameter)
 			if ry % 2 == 1 then
@@ -146,15 +157,9 @@ local function quarry_run(pos, node)
 				dignode = technic.get_or_load_node(digpos) or minetest.get_node(digpos)
 				local dignodedef = minetest.registered_nodes[dignode.name] or {diggable=false}
 				-- doors mod among other thing does NOT like a nil digger...
-				local fakedigger = {
-					get_player_name = function()
-						return "!technic_quarry_fake_digger"
-					end,
-					is_player = function() return false end,
-					get_wielded_item = function()
-						return ItemStack("air")
-					end,
-				}
+				local fakedigger = pipeworks.create_fake_player({
+					name = owner
+				})
 				if not dignodedef.diggable or (dignodedef.can_dig and not dignodedef.can_dig(digpos, fakedigger)) then
 					can_dig = false
 				end

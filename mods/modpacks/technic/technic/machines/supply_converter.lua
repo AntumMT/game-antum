@@ -149,7 +149,9 @@ local run = function(pos, node, run_stage)
 		meta:set_int(from.."_EU_supply", 0)
 		meta:set_int(to.."_EU_demand", 0)
 		meta:set_int(to.."_EU_supply", input * remain)
-		meta:set_string("infotext", S("@1 (@2 @3 -> @4 @5)", machine_name, technic.pretty_num(input), from, technic.pretty_num(input * remain), to))
+		meta:set_string("infotext", S("@1 (@2 @3 -> @4 @5)", machine_name,
+			technic.EU_string(input), from,
+			technic.EU_string(input * remain), to))
 	else
 		meta:set_string("infotext", S("%s Has Bad Cabling"):format(machine_name))
 		if to then
@@ -199,10 +201,11 @@ minetest.register_node("technic:supply_converter", {
 minetest.register_craft({
 	output = 'technic:supply_converter 1',
 	recipe = {
-		{'technic:fine_gold_wire', 'technic:rubber',         'technic:doped_silicon_wafer'},
+		{'basic_materials:gold_wire', 'technic:rubber',         'technic:doped_silicon_wafer'},
 		{'technic:mv_transformer', 'technic:machine_casing', 'technic:lv_transformer'},
 		{'technic:mv_cable',       'technic:rubber',         'technic:lv_cable'},
-	}
+	},
+	replacements = { {"basic_materials:gold_wire", "basic_materials:empty_spool"}, },
 })
 
 for tier, machines in pairs(technic.machines) do

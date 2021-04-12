@@ -18,7 +18,7 @@ minetest.register_craft({
 	output = "technic:battery",
 	recipe = {
 		{"group:wood", "default:copper_ingot", "group:wood"},
-		{"group:wood", "moreores:tin_ingot",   "group:wood"},
+		{"group:wood", "default:tin_ingot",    "group:wood"},
 		{"group:wood", "default:copper_ingot", "group:wood"},
 	}
 })
@@ -129,11 +129,11 @@ local tube = {
 }
 
 local function add_on_off_buttons(meta, ltier, charge_percent)
-	local formspec = ""
-	if ltier == "mv" or ltier == "hv" then
-		formspec = "image[1,1;1,2;technic_power_meter_bg.png"
+	local formspec = "image[1,1;1,2;technic_power_meter_bg.png"
 			.."^[lowpart:"..charge_percent
-			..":technic_power_meter_fg.png]"..
+			..":technic_power_meter_fg.png]"
+	if ltier == "mv" or ltier == "hv" then
+		formspec = formspec..
 			fs_helpers.cycling_button(
 				meta,
 				"image_button[3,2.0;1,0.6",
@@ -255,8 +255,9 @@ function technic.register_battery_box(data)
 
 		local charge_percent = math.floor(current_charge / max_charge * 100)
 		meta:set_string("formspec", formspec..add_on_off_buttons(meta, ltier, charge_percent))
-		local infotext = S("@1 Battery Box: @2/@3", tier,
-				technic.pretty_num(current_charge), technic.pretty_num(max_charge))
+		local infotext = S("@1 Battery Box: @2 / @3", tier,
+				technic.EU_string(current_charge),
+				technic.EU_string(max_charge))
 		if eu_input == 0 then
 			infotext = S("%s Idle"):format(infotext)
 		end
@@ -311,7 +312,6 @@ function technic.register_battery_box(data)
 				local charge = meta:get_int("internal_EU_charge")
 				local cpercent = math.floor(charge / max_charge * 100)
 				local inv = meta:get_inventory()
-				local node = minetest.get_node(pos)
 				meta:set_string("infotext", S("%s Battery Box"):format(tier))
 				meta:set_string("formspec", formspec..add_on_off_buttons(meta, ltier, cpercent))
 				meta:set_string("channel", ltier.."_battery_box"..minetest.pos_to_string(pos))
@@ -334,7 +334,6 @@ function technic.register_battery_box(data)
 			after_dig_node = technic.machine_after_dig_node,
 			on_receive_fields = function(pos, formname, fields, sender)
 				local meta = minetest.get_meta(pos)
-				local nodename = minetest.get_node(pos).name
 				if fields.edit_channel then
 					minetest.show_formspec(sender:get_player_name(),
 						"technic:battery_box_edit_channel"..minetest.pos_to_string(pos),
@@ -343,7 +342,7 @@ function technic.register_battery_box(data)
 				  or   fields["fs_helpers_cycling:0:split_dst_stacks"]
 				  or   fields["fs_helpers_cycling:1:split_src_stacks"]
 				  or   fields["fs_helpers_cycling:1:split_dst_stacks"] then
-					local meta = minetest.get_meta(pos)
+					meta = minetest.get_meta(pos)
 					if not pipeworks.may_configure(pos, sender) then return end
 					fs_helpers.on_receive_fields(pos, fields)
 					local EU_upgrade, tube_upgrade = 0, 0
@@ -451,7 +450,7 @@ function technic.discharge_tools(meta, batt_charge, charge_step, max_charge)
 	if inv:is_empty("dst") then
 		return batt_charge, false
 	end
-	srcstack = inv:get_stack("dst", 1)
+	local srcstack = inv:get_stack("dst", 1)
 	local toolname = srcstack:get_name()
 	if technic.power_tools[toolname] == nil then
 		return batt_charge, false

@@ -54,6 +54,7 @@ local rad_resistance_node = {
 	["default:lava_source"] = 17,
 	["default:mese"] = 21,
 	["default:mossycobble"] = 15,
+	["default:tinblock"] = 37,
 	["pbj_pup:pbj_pup"] = 10000,
 	["pbj_pup:pbj_pup_candies"] = 10000,
 	["gloopblocks:rainbow_block_diagonal"] = 5000,
@@ -76,6 +77,7 @@ local rad_resistance_node = {
 	["default:stone_with_gold"] = 34,
 	["default:stone_with_iron"] = 20,
 	["default:stone_with_mese"] = 17,
+	["default:stone_with_tin"] = 19,
 	["default:stonebrick"] = 17,
 	["default:water_flowing"] = 2.8,
 	["default:water_source"] = 5.6,
@@ -141,12 +143,10 @@ local rad_resistance_node = {
 	["moreblocks:wood_tile_up"] = 1.7,
 	["moreores:mineral_mithril"] = 18,
 	["moreores:mineral_silver"] = 21,
-	["moreores:mineral_tin"] = 19,
 	["moreores:mithril_block"] = 26,
 	["moreores:silver_block"] = 53,
-	["moreores:tin_block"] = 37,
 	["snow:snow_brick"] = 2.8,
-	["technic:brass_block"] = 43,
+	["basic_materials:brass_block"] = 43,
 	["technic:carbon_steel_block"] = 40,
 	["technic:cast_iron_block"] = 40,
 	["technic:chernobylite_block"] = 40,
@@ -244,7 +244,6 @@ to be safe, and limits the range at which source/player interactions
 need to be considered.
 --]]
 local abdomen_offset = 1
-local cache_scaled_shielding = {}
 local rad_dmg_cutoff = 0.2
 local radiated_players = {}
 
@@ -294,6 +293,8 @@ local function calculate_damage_multiplier(object)
 	end
 	if ag.radiation then
 		return 0.01 * ag.radiation
+	elseif armor_enabled then
+		return 0
 	end
 	if ag.fleshy then
 		return math.sqrt(0.01 * ag.fleshy)
@@ -309,7 +310,7 @@ local function calculate_object_center(object)
 end
 
 local function dmg_object(pos, object, strength)
-	local obj_pos = vector.add(object:getpos(), calculate_object_center(object))
+	local obj_pos = vector.add(object:get_pos(), calculate_object_center(object))
 	local mul
 	if armor_enabled or entity_damage then
 		-- we need to check may the object be damaged even if armor is disabled
@@ -338,7 +339,7 @@ local function dmg_abm(pos, node)
 	local max_dist = strength * rad_dmg_mult_sqrt
 	for _, o in pairs(minetest.get_objects_inside_radius(pos,
 			max_dist + abdomen_offset)) do
-		if entity_damage or o:is_player() then
+		if (entity_damage or o:is_player()) and o:get_hp() > 0 then
 			dmg_object(pos, o, strength)
 		end
 	end
@@ -513,4 +514,3 @@ if griefing then
 		end,
 	})
 end
-
