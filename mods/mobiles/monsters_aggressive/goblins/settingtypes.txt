@@ -1,0 +1,42 @@
+# goblins_hud_timer: time in seconds the goblins HUD will be visible following interactions (0 disables HUD)
+goblins_hud_timer (goblins HUD timer for interactions) int 0
+# goblins_aggro_on_wield: will goblins attack when a weapon is wielded?
+goblins_aggro_on_wield (goblins attack when a weapon is wielded) bool true
+# goblins_defend_groups: will goblins and gobdogs defend other mobs?
+goblins_defend_groups (goblins and gobdogs defend other mobs) bool true
+
+# trade shrewdness increases trade difficulty
+goblins_trade_shrewdness (trade shrewdness increases trade difficulty) int 20 
+
+# use strict protection if node protection is activated (otherwise mobs can replace nodes they are close to)
+goblins_node_protect_strict (use strict protection if node protection is activated) bool true
+
+# utilities debug output announce_spawning
+debug_goblins_announce_spawning (utilities debug output announce_spawning) bool false
+# utilities debug output goblins_relations
+debug_goblins_relations (utilities debug output goblins_relations) bool false
+# utilities debug output goblins_secret
+debug_goblins_secret (utilities debug output goblins_secret) bool false
+# utilities debug output goblins_territories
+debug_goblins_territories (utilities debug output goblins_territories) bool false
+# utilities debug output goblins_territory_relations
+debug_goblins_territory_relations (utilities debug output goblins_territory_relations) bool false
+# utilities debug output goblins_trade_relations
+debug_goblins_trade_relations (utilities debug output goblins_trade_relations) bool false
+
+# behaviors debug output attack
+debug_goblins_attack (behaviors debug output attack) bool false
+# behaviors debug output find
+debug_goblins_find (behaviors debug output find) bool false
+# behaviors debug output replace
+debug_goblins_replace (behaviors debug output replace) bool false
+# debug output replace2
+debug_goblins_replace2 (behaviors debug output replace2) bool false
+# behaviors debug output search
+debug_goblins_search  (behaviors debug output search) bool false
+# behaviors debug output tunneling
+debug_goblins_tunneling (behaviors debug output tunneling) bool false
+# behaviors debug output trade
+debug_goblins_trade (behaviors debug output trade) bool false
+
+

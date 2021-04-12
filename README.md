@@ -81,7 +81,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* general/
 		* [mobs_animal][] ([MIT][lic.mobs_animal]) -- version: [52889c7 Git][ver.mobs_animal] *2018-06-27* ([patched][patch.mobs_animal])
 	* [monsters_aggressive][] (see individual mods for licensing) -- version: [89a8187 Git][ver.monsters_aggressive] *2017-08-30*
-    * [mobs_goblins][] ([CC BY-SA][lic.mobs_goblins]) -- version: [0ac7755 Git][ver.mobs_goblins] *2017-11-16*
+		* [goblins][] ([CC BY-SA][lic.goblins]) -- version: [eb9055b Git][ver.goblins] *2021-03-21*
 	* [monsters_passive][] (see individual mods for licensing) -- version: [b07fe19 Git][ver.monsters_passive] *2017-08-09*
 * [painting][] (???) -- version [8961849 Git][ver.painting] *2016-05-05*
 * [pipeworks][] ([LGPL][lic.lgpl3.0]) -- version: [2021-02-19][ver.pipeworks]
@@ -246,7 +246,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [minetest_game]: https://github.com/minetest/minetest_game
 [mob-engine]: https://github.com/minetest-mods/mob-engine
 [mobs_animal]: https://github.com/tenplus1/mobs_animal
-[mobs_goblins]: https://github.com/FreeLikeGNU/mobs_goblins
+[goblins]: https://forum.minetest.net/viewtopic.php?t=13004
 [mobs_redo]: https://forum.minetest.net/viewtopic.php?t=9917
 [monsters_aggressive]: https://github.com/AntumMT/mp-monsters_aggressive
 [monsters_passive]: https://github.com/AntumMT/mp-monsters_passive
@@ -338,7 +338,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.mesecons]: mods/modpacks/mesecons/COPYING.txt
 [lic.mob-engine]: mods/modpacks/mob-engine/LICENSE
 [lic.mobs_animal]: mods/mobiles/general/mobs_animal/license.txt
-[lic.mobs_goblins]: mods/mobiles/monsters_aggressive/goblins/README.md
+[lic.goblins]: mods/mobiles/monsters_aggressive/goblins/README.md
 [lic.mobs_redo]: mods/mobiles/engine/mobs_redo/license.txt
 [lic.moreblocks]: mods/buildings/moreblocks/LICENSE.md
 [lic.moreores]: mods/materials/moreores/LICENSE.md
@@ -450,7 +450,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.minetest_game]: https://github.com/minetest/minetest_game/tree/5.4.1
 [ver.mob-engine]: https://github.com/minetest-mods/mob-engine/tree/c2bedc3
 [ver.mobs_animal]: https://github.com/tenplus1/mobs_animal/tree/52889c7
-[ver.mobs_goblins]: https://github.com/FreeLikeGNU/mobs_goblins/tree/0ac7755
+[ver.goblins]: https://github.com/FreeLikeGNU/goblins/tree/eb9055b
 [ver.mobs_redo]: https://notabug.org/TenPlus1/mobs_redo/src/f6e16a550330cf6a641753c03ebe331682294939
 [ver.monsters_aggressive]: https://github.com/AntumMT/mp-monsters_aggressive/tree/89a8187
 [ver.monsters_passive]: https://github.com/AntumMT/mp-monsters_passive/tree/b07fe19
