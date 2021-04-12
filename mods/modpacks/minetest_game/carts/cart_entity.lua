@@ -1,10 +1,17 @@
+-- carts/cart_entity.lua
+
+-- support for MT game translation.
+local S = carts.get_translator
+
 local cart_entity = {
-	physical = false, -- otherwise going uphill breaks
-	collisionbox = {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5},
-	visual = "mesh",
-	mesh = "carts_cart.b3d",
-	visual_size = {x=1, y=1},
-	textures = {"carts_cart.png"},
+	initial_properties = {
+		physical = false, -- otherwise going uphill breaks
+		collisionbox = {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5},
+		visual = "mesh",
+		mesh = "carts_cart.b3d",
+		visual_size = {x=1, y=1},
+		textures = {"carts_cart.png"},
+	},
 
 	driver = nil,
 	punched = false, -- used to re-send velocity and position
@@ -27,6 +34,10 @@ function cart_entity:on_rightclick(clicker)
 	elseif not self.driver then
 		self.driver = player_name
 		carts:manage_attachment(clicker, self.object)
+
+		-- player_api does not update the animation
+		-- when the player is attached, reset to default animation
+		player_api.set_animation(clicker, "stand")
 	end
 end
 
@@ -36,29 +47,33 @@ function cart_entity:on_activate(staticdata, dtime_s)
 		return
 	end
 	local data = minetest.deserialize(staticdata)
-	if not data or type(data) ~= "table" then
+	if type(data) ~= "table" then
 		return
 	end
 	self.railtype = data.railtype
 	if data.old_dir then
 		self.old_dir = data.old_dir
 	end
-	if data.old_vel then
-		self.old_vel = data.old_vel
-	end
 end
 
 function cart_entity:get_staticdata()
 	return minetest.serialize({
 		railtype = self.railtype,
-		old_dir = self.old_dir,
-		old_vel = self.old_vel
+		old_dir = self.old_dir
 	})
 end
 
+-- 0.5.x and later: When the driver leaves
+function cart_entity:on_detach_child(child)
+	if child and child:get_player_name() == self.driver then
+		self.driver = nil
+		carts:manage_attachment(child, nil)
+	end
+end
+
 function cart_entity:on_punch(puncher, time_from_last_punch, tool_capabilities, direction)
-	local pos = self.object:getpos()
-	local vel = self.object:getvelocity()
+	local pos = self.object:get_pos()
+	local vel = self.object:get_velocity()
 	if not self.railtype or vector.equals(vel, {x=0, y=0, z=0}) then
 		local node = minetest.get_node(pos).name
 		self.railtype = minetest.get_item_group(node, "connect_to_raillike")
@@ -81,25 +96,24 @@ function cart_entity:on_punch(puncher, time_from_last_punch, tool_capabilities, 
 		-- Detach driver and items
 		if self.driver then
 			if self.old_pos then
-				self.object:setpos(self.old_pos)
+				self.object:set_pos(self.old_pos)
 			end
 			local player = minetest.get_player_by_name(self.driver)
 			carts:manage_attachment(player, nil)
 		end
-		for _,obj_ in ipairs(self.attached_items) do
+		for _, obj_ in ipairs(self.attached_items) do
 			if obj_ then
 				obj_:set_detach()
 			end
 		end
 		-- Pick up cart
 		local inv = puncher:get_inventory()
-		if not (creative and creative.is_enabled_for
-				and creative.is_enabled_for(puncher:get_player_name()))
+		if not minetest.is_creative_enabled(puncher:get_player_name())
 				or not inv:contains_item("main", "carts:cart") then
 			local leftover = inv:add_item("main", "carts:cart")
 			-- If no room in inventory add a replacement cart to the world
 			if not leftover:is_empty() then
-				minetest.add_item(self.object:getpos(), leftover)
+				minetest.add_item(self.object:get_pos(), leftover)
 			end
 		end
 		self.object:remove()
@@ -152,7 +166,7 @@ local function rail_sound(self, dtime)
 		self.sound_handle = nil
 		minetest.after(0.2, minetest.sound_stop, handle)
 	end
-	local vel = self.object:getvelocity()
+	local vel = self.object:get_velocity()
 	local speed = vector.length(vel)
 	if speed > 0 then
 		self.sound_handle = minetest.sound_play(
@@ -169,32 +183,23 @@ local function get_railparams(pos)
 	return carts.railparams[node.name] or {}
 end
 
+local v3_len = vector.length
 local function rail_on_step(self, dtime)
-	local vel = self.object:getvelocity()
+	local vel = self.object:get_velocity()
 	if self.punched then
 		vel = vector.add(vel, self.velocity)
-		self.object:setvelocity(vel)
+		self.object:set_velocity(vel)
 		self.old_dir.y = 0
 	elseif vector.equals(vel, {x=0, y=0, z=0}) then
 		return
 	end
 
-	local pos = self.object:getpos()
+	local pos = self.object:get_pos()
+	local cart_dir = carts:velocity_to_dir(vel)
+	local same_dir = vector.equals(cart_dir, self.old_dir)
 	local update = {}
 
-	-- stop cart if velocity vector flips
-	if self.old_vel and self.old_vel.y == 0 and
-			(self.old_vel.x * vel.x < 0 or self.old_vel.z * vel.z < 0) then
-		self.old_vel = {x = 0, y = 0, z = 0}
-		self.old_pos = pos
-		self.object:setvelocity(vector.new())
-		self.object:setacceleration(vector.new())
-		rail_on_step_event(get_railparams(pos).on_step, self, dtime)
-		return
-	end
-	self.old_vel = vector.new(vel)
-
-	if self.old_pos and not self.punched then
+	if self.old_pos and not self.punched and same_dir then
 		local flo_pos = vector.round(pos)
 		local flo_old = vector.round(self.old_pos)
 		if vector.equals(flo_pos, flo_old) then
@@ -213,20 +218,29 @@ local function rail_on_step(self, dtime)
 		end
 	end
 
-	if self.old_pos then
-		-- Detection for "skipping" nodes
-		local found_path = carts:pathfinder(
-			pos, self.old_pos, self.old_dir, ctrl, self.old_switch, self.railtype
+	local stop_wiggle = false
+	if self.old_pos and same_dir then
+		-- Detection for "skipping" nodes (perhaps use average dtime?)
+		-- It's sophisticated enough to take the acceleration in account
+		local acc = self.object:get_acceleration()
+		local distance = dtime * (v3_len(vel) + 0.5 * dtime * v3_len(acc))
+
+		local new_pos, new_dir = carts:pathfinder(
+			pos, self.old_pos, self.old_dir, distance, ctrl,
+			self.old_switch, self.railtype
 		)
 
-		if not found_path then
-			-- No rail found: reset back to the expected position
-			pos = vector.new(self.old_pos)
+		if new_pos then
+			-- No rail found: set to the expected position
+			pos = new_pos
 			update.pos = true
+			cart_dir = new_dir
 		end
+	elseif self.old_pos and self.old_dir.y ~= 1 and not self.punched then
+		-- Stop wiggle
+		stop_wiggle = true
 	end
 
-	local cart_dir = carts:velocity_to_dir(vel)
 	local railparams
 
 	-- dir:         New moving direction of the cart
@@ -234,16 +248,25 @@ local function rail_on_step(self, dtime)
 	local dir, switch_keys = carts:get_rail_direction(
 		pos, cart_dir, ctrl, self.old_switch, self.railtype
 	)
+	local dir_changed = not vector.equals(dir, self.old_dir)
 
 	local new_acc = {x=0, y=0, z=0}
-	if vector.equals(dir, {x=0, y=0, z=0}) then
+	if stop_wiggle or vector.equals(dir, {x=0, y=0, z=0}) then
 		vel = {x = 0, y = 0, z = 0}
-		pos = vector.round(pos)
+		local pos_r = vector.round(pos)
+		if not carts:is_rail(pos_r, self.railtype)
+				and self.old_pos then
+			pos = self.old_pos
+		elseif not stop_wiggle then
+			pos = pos_r
+		else
+			pos.y = math.floor(pos.y + 0.5)
+		end
 		update.pos = true
 		update.vel = true
 	else
 		-- Direction change detected
-		if not vector.equals(dir, self.old_dir) then
+		if dir_changed then
 			vel = vector.multiply(dir, math.abs(vel.x + vel.z))
 			update.vel = true
 			if dir.y ~= self.old_dir.y then
@@ -294,9 +317,9 @@ local function rail_on_step(self, dtime)
 		end
 	end
 
-	self.object:setacceleration(new_acc)
-	self.old_pos = vector.new(pos)
-	if not vector.equals(dir, {x=0, y=0, z=0}) then
+	self.object:set_acceleration(new_acc)
+	self.old_pos = vector.round(pos)
+	if not vector.equals(dir, {x=0, y=0, z=0}) and not stop_wiggle then
 		self.old_dir = vector.new(dir)
 	end
 	self.old_switch = switch_keys
@@ -304,11 +327,10 @@ local function rail_on_step(self, dtime)
 	if self.punched then
 		-- Collect dropped items
 		for _, obj_ in pairs(minetest.get_objects_inside_radius(pos, 1)) do
-			if not obj_:is_player() and
-					obj_:get_luaentity() and
-					not obj_:get_luaentity().physical_state and
-					obj_:get_luaentity().name == "__builtin:item" then
-
+			local ent = obj_:get_luaentity()
+			-- Careful here: physical_state and disable_physics are item-internal APIs
+			if ent and ent.name == "__builtin:item" and ent.physical_state then
+				ent:disable_physics()
 				obj_:set_attach(self.object, "", {x=0, y=0, z=0}, {x=0, y=0, z=0})
 				self.attached_items[#self.attached_items + 1] = obj_
 			end
@@ -332,7 +354,7 @@ local function rail_on_step(self, dtime)
 	elseif self.old_dir.z < 0 then
 		yaw = 1
 	end
-	self.object:setyaw(yaw * math.pi)
+	self.object:set_yaw(yaw * math.pi)
 
 	local anim = {x=0, y=0}
 	if dir.y == -1 then
@@ -342,9 +364,15 @@ local function rail_on_step(self, dtime)
 	end
 	self.object:set_animation(anim, 1, 0)
 
-	self.object:setvelocity(vel)
+	if update.vel then
+		self.object:set_velocity(vel)
+	end
 	if update.pos then
-		self.object:setpos(pos)
+		if dir_changed then
+			self.object:set_pos(pos)
+		else
+			self.object:move_to(pos)
+		end
 	end
 
 	-- call event handler
@@ -359,9 +387,9 @@ end
 minetest.register_entity("carts:cart", cart_entity)
 
 minetest.register_craftitem("carts:cart", {
-	description = "Cart (Sneak+Click to pick up)",
-	inventory_image = minetest.inventorycube("carts_cart_top.png", "carts_cart_side.png", "carts_cart_side.png"),
-	wield_image = "carts_cart_side.png",
+	description = S("Cart") .. "\n" .. S("(Sneak+Click to pick up)"),
+	inventory_image = minetest.inventorycube("carts_cart_top.png", "carts_cart_front.png", "carts_cart_side.png"),
+	wield_image = "carts_cart_front.png",
 	on_place = function(itemstack, placer, pointed_thing)
 		local under = pointed_thing.under
 		local node = minetest.get_node(under)
@@ -385,10 +413,9 @@ minetest.register_craftitem("carts:cart", {
 		end
 
 		minetest.sound_play({name = "default_place_node_metal", gain = 0.5},
-			{pos = pointed_thing.above})
+			{pos = pointed_thing.above}, true)
 
-		if not (creative and creative.is_enabled_for
-				and creative.is_enabled_for(placer:get_player_name())) then
+		if not minetest.is_creative_enabled(placer:get_player_name()) then
 			itemstack:take_item()
 		end
 		return itemstack
