@@ -130,7 +130,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [desert_life][] ([CC BY-SA][lic.ccbysa4.0]) -- version: [d448fa3 Git][ver.desert_life] *2017-01-01*
     * [ethereal][] ([MIT][lic.ethereal]) -- version [9d6103d][ver.ethereal] *2021-04-09*
     * [hill_nodebox][] ([BSD 3-Clause][lic.hill_nodebox]) -- version [41bbfa2 Git][ver.hill_nodebox] *2014-12-13*
-    * [nether][] ([WTFPL / CC BY-SA][lic.nether]) -- version: [bc2ccfb Git][ver.nether] *2017-01-04* ([patched][patch.nether])
+    * [nether][] ([ISC / CC BY / CC BY-SA / CC0][lic.nether]) -- version: [3][ver.nether] *2021-01-22*
 
 
 ---
@@ -463,7 +463,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.myroofs]: https://github.com/minetest-mods/myroofs/tree/fe98461
 [ver.mysheetmetal]: https://github.com/minetest-mods/mysheetmetal/tree/7c5ab71
 [ver.mywoodslopes]: https://github.com/minetest-mods/mywoodslopes/tree/3a1b531
-[ver.nether]: https://github.com/PilzAdam/nether/tree/bc2ccfb
+[ver.nether]: https://github.com/minetest-mods/nether/tree/v3
 [ver.override]: https://github.com/AntumMT/mod-override/tree/e6dda7a
 [ver.painting]: https://github.com/minetest-mods/painting/tree/8961849
 [ver.pipeworks]: https://gitlab.com/VanessaE/pipeworks/-/tags/2021-02-19
