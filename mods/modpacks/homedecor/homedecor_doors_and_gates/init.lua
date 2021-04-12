@@ -183,12 +183,12 @@ for _, door in ipairs(door_list) do
 
 	if door.alpha then
 		local def = table.copy(minetest.registered_nodes[nn_a])
-			def.use_texture_alpha = true
+			def.use_texture_alpha = "clip"
 			def.mesh = "door_a.obj"                -- leaving this out will break the _a model
 			minetest.register_node(":"..nn_a, def) -- assignment when the override takes place
 
 		def = table.copy(minetest.registered_nodes[nn_b])
-			def.use_texture_alpha = true
+			def.use_texture_alpha = "clip"
 			minetest.register_node(":"..nn_b, def)
 	end
 

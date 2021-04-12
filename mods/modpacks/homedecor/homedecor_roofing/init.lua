@@ -20,7 +20,7 @@ minetest.register_node(":homedecor:skylight_frosted", {
 	tiles = { "homedecor_skylight_frosted.png" },
 	wield_image = "homedecor_skylight_frosted.png",
 	inventory_image = "homedecor_skylight_frosted_inv.png",
-	use_texture_alpha = true,
+	use_texture_alpha = "clip",
 	groups = { snappy = 3 },
 	paramtype = "light",
 	sounds = default.node_sound_glass_defaults(),
