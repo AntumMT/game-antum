@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# IFRFSX<1079092922@qq.com>, 2020.
 #
 #, fuzzy
 msgid ""
@@ -19,118 +19,112 @@ msgstr ""
 
 #: api.lua
 msgid "** Peaceful Mode Active - No Monsters Will Spawn"
-msgstr ""
+msgstr "** 和平模式已激活——没有怪物会产生"
 
 #: api.lua
 msgid "Mob has been protected!"
-msgstr ""
+msgstr "Mob 已经被保护了！"
 
 #: api.lua
 msgid "@1 (Tamed)"
-msgstr ""
+msgstr "@1（已驯服）"
 
 #: api.lua
 msgid "Not tamed!"
-msgstr ""
+msgstr "没有驯服！"
 
 #: api.lua
 msgid "@1 is owner!"
-msgstr ""
+msgstr "@1 是主人"
 
 #: api.lua
 msgid "Missed!"
-msgstr ""
+msgstr "没抓住！"
 
 #: api.lua
 msgid "Already protected!"
-msgstr ""
+msgstr "已经被保护！"
 
 #: api.lua
 msgid "@1 at full health (@2)"
-msgstr ""
+msgstr "@1已经满血（@2）"
 
 #: api.lua
 msgid "@1 has been tamed!"
-msgstr ""
+msgstr "@1已经被驯服！"
 
 #: api.lua
 msgid "Enter name:"
-msgstr ""
+msgstr "输入名称："
 
 #: api.lua
 msgid "Rename"
-msgstr ""
+msgstr "重新命名"
 
 #: crafts.lua
 msgid "Name Tag"
-msgstr ""
+msgstr "名称标签"
 
 #: crafts.lua
 msgid "Leather"
-msgstr ""
+msgstr "皮革"
 
 #: crafts.lua
 msgid "Raw Meat"
-msgstr ""
+msgstr "生肉"
 
 #: crafts.lua
 msgid "Meat"
-msgstr ""
+msgstr "肉"
 
 #: crafts.lua
 msgid "Lasso (right-click animal to put in inventory)"
-msgstr ""
+msgstr "套索（右键单击动物以放入物品栏）"
 
 #: crafts.lua
 msgid "Net (right-click animal to put in inventory)"
-msgstr ""
+msgstr "网（右键单击动物以放入物品栏）"
 
 #: crafts.lua
 msgid "Steel Shears (right-click to shear)"
-msgstr ""
+msgstr "钢剪（右键单击以剪切）"
 
 #: crafts.lua
 msgid "Mob Protection Rune"
-msgstr ""
+msgstr "Mob 保护符文"
 
 #: crafts.lua
 msgid "Saddle"
-msgstr ""
+msgstr "鞍"
 
 #: crafts.lua
 msgid "Mob Fence"
-msgstr ""
-
-#: crafts.lua
-msgid "Mob Fence Top"
-msgstr ""
+msgstr "Mob 栅栏"
 
 #: spawner.lua
 msgid "Mob Spawner"
-msgstr ""
+msgstr "Mob 孵化器"
 
 #: spawner.lua
-msgid "(mob name) (min light) (max light) (amount) (player distance) (Y offset)"
-msgstr ""
+msgid "Mob MinLight MaxLight Amount PlayerDist"
+msgstr "Mob/最小光量/最大光量/玩家距离"
 
 #: spawner.lua
 msgid "Spawner Not Active (enter settings)"
-msgstr ""
-
-#@ spawner.lua
-msgid "Command:"
-msgstr ""
+msgstr "孵化器未使用（输入设置）"
 
 #: spawner.lua
 msgid "Spawner Active (@1)"
-msgstr ""
+msgstr "孵化器正在运转（@1）"
 
 #: spawner.lua
 msgid "Mob Spawner settings failed!"
-msgstr ""
+msgstr "Mob 孵化器设置失败！"
 
 #: spawner.lua
 msgid ""
 "Syntax: “name min_light[0-14] max_light[0-14] max_mobs_in_area[0 to disable] "
 "distance[1-20] y_offset[-10 to 10]”"
 msgstr ""
+"语法: “物品名称 最小光亮[0-14] 最大光亮[0-14] 范围内的最大Mob数量[0 to disable] "
+"距离[1-20] y_offset[-10 to 10]”"

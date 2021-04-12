@@ -77,7 +77,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* velociraptor ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- forked from *mobs_farlands* (part of [farlands][] sub-game)
 	* engine/
 		* [creatures][mob-engine] ([zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [c2bedc3 Git][ver.mob-engine] *2018-04-23* ([patched][patch.mob-engine])
-		* [mobs_redo][] ([MIT][lic.mobs_redo] / [CC BY][lic.ccby3.0] / [CC0][lic.cc0]) -- version: [adc4e71 Git][ver.mobs_redo] *2018-07-02* ([patched][patch.mobs_redo])
+		* [mobs_redo][] ([MIT][lic.mobs_redo] / [CC BY][lic.ccby3.0] / [CC0][lic.cc0]) -- version: [f6e16a5 Git][ver.mobs_redo] *2021-04-11*
 	* general/
 		* [mobs_animal][] ([MIT][lic.mobs_animal]) -- version: [52889c7 Git][ver.mobs_animal] *2018-06-27* ([patched][patch.mobs_animal])
 	* [monsters_aggressive][] (see individual mods for licensing) -- version: [89a8187 Git][ver.monsters_aggressive] *2017-08-30*
@@ -447,7 +447,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.minetest_game]: https://github.com/minetest/minetest_game/tree/5.4.1
 [ver.mob-engine]: https://github.com/minetest-mods/mob-engine/tree/c2bedc3
 [ver.mobs_animal]: https://github.com/tenplus1/mobs_animal/tree/52889c7
-[ver.mobs_redo]: https://notabug.org/TenPlus1/mobs_redo/src/adc4e71a01728061e47f5af3a9055afb21e53179
+[ver.mobs_redo]: https://notabug.org/TenPlus1/mobs_redo/src/f6e16a550330cf6a641753c03ebe331682294939
 [ver.monsters_aggressive]: https://github.com/AntumMT/mp-monsters_aggressive/tree/89a8187
 [ver.monsters_passive]: https://github.com/AntumMT/mp-monsters_passive/tree/b07fe19
 [ver.more_chests]: https://github.com/minetest-mods/more_chests/tree/c597779
