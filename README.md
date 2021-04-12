@@ -53,7 +53,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [intllib][] ([Unlicense][lic.unlicense]) -- version: [20180811][ver.intllib] *2018-08-11*
 * inventory/
     * [bags][] ([BSD 3-Clause][lic.bags]) -- version: [bc87b45 Git][ver.bags] *2018-04-11*
-    * [sfinv_buttons][] ([MIT][lic.mit]) -- version [1.0.0 (4f3b075 Git)][ver.sfinv_buttons] *2017-03-19*
+    * [sfinv_buttons][] ([MIT][lic.mit]) -- version [1.1.0 (ebb1f7c Git)][ver.sfinv_buttons] *2021-01-14*
 * lighting/
     * [glow][] ([GPL][lic.gpl2.0]) -- version: [c611ae0 Git][ver.glow] *2017-07-18*
 	* [ilights][] ([CC BY-SA][lic.ccbysa]) -- version [fa085fd Git][ver.ilights] *2017-07-19*
@@ -472,7 +472,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.pvp_areas]: https://github.com/everamzah/pvp_areas/tree/0188945
 [ver.quartz]: https://github.com/minetest-mods/quartz/tree/1c5dca2
 [ver.rainbow_ore]: https://github.com/FsxShader2012/rainbow_ore/tree/6e77693
-[ver.sfinv_buttons]: http://repo.or.cz/minetest_sfinv_buttons.git/tree/4f3b075
+[ver.sfinv_buttons]: http://repo.or.cz/minetest_sfinv_buttons.git/tree/ebb1f7c
 [ver.signs_lib]: https://github.com/minetest-mods/signs_lib/tree/a2f7f62
 [ver.simple_protection]: https://github.com/SmallJoker/simple_protection/tree/5aa2f24
 [ver.slingshot]: https://github.com/AntumMT/mod-slingshot/tree/bb77525
