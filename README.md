@@ -130,7 +130,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [desert_life][] ([CC BY-SA][lic.ccbysa4.0]) -- version: [d448fa3 Git][ver.desert_life] *2017-01-01*
     * [ethereal][] ([MIT][lic.ethereal]) -- version [9d6103d][ver.ethereal] *2021-04-09*
     * [hill_nodebox][] ([BSD 3-Clause][lic.hill_nodebox]) -- version [41bbfa2 Git][ver.hill_nodebox] *2014-12-13*
-    * [nether][] ([ISC / CC BY / CC BY-SA / CC0][lic.nether]) -- version: [3][ver.nether] *2021-01-22*
+    * [nether][] ([ISC / CC BY / CC BY-SA / CC0][lic.nether]) -- version: [3][ver.nether] *2021-01-22* ([patched][patch.nether])
 
 
 ---
@@ -531,7 +531,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.mydoors]: https://github.com/AntumMT/mp-mydoors/tree/e36c9d1
 [patch.mypaint]: https://github.com/AntumMT/mod-mypaint/tree/10a5359
 [patch.mysheetmetal]: https://github.com/AntumMT/mod-mysheetmetal/tree/b7d644b
-[patch.nether]: https://github.com/AntumMT/mod-nether/tree/d4e5a2a
+[patch.nether]: https://github.com/AntumMT/mod-nether/tree/7a84ddd
 [patch.playeranim]: https://github.com/AntumMT/mod-playeranim/tree/2540530
 [patch.pvp_areas]: https://github.com/AntumMT/mod-pvp_areas/tree/7f2f5b2
 [patch.quartz]: https://github.com/AntumMT/mod-quartz/tree/c6813dc
