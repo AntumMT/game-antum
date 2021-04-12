@@ -48,7 +48,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * furniture/
 	* [jukebox][] ([WTFPL / CC0][lic.jukebox]) -- version: [d1cd9e1 Git][ver.jukebox] *2017-09-01*
     * [trampoline][] ([GPL][lic.gpl3.0]) -- version: [0.2 (41366ac Git)][ver.trampoline] *2017-08-30*
-    * [trash_can][] ([MIT][lic.trash_can]) -- version: [5fd3df7 Git][ver.trash_can] *2016-01-14* ([patched][patch.trash_can])
+    * [trash_can][] ([MIT][lic.trash_can]) -- version: [423b0f2 Git][ver.trash_can] *2020-08-12*
     * [waffles][] ([MIT][lic.waffles]) -- version [15bcdce Git][ver.waffles] *2018-05-13*
 * [intllib][] ([Unlicense][lic.unlicense]) -- version: [20180811][ver.intllib] *2018-08-11*
 * inventory/
@@ -485,7 +485,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.tnt]: https://github.com/PilzAdam/TNT/tree/d6a0b7d
 [ver.tools_obsidian]: https://github.com/Dragonop/tools_obsidian/tree/f77fd79
 [ver.trampoline]: https://github.com/AntumMT/mod-trampoline/tree/41366ac
-[ver.trash_can]: https://github.com/minetest-mods/trash_can/tree/5fd3df7
+[ver.trash_can]: https://github.com/minetest-mods/trash_can/tree/423b0f2
 [ver.unifieddyes]: https://gitlab.com/VanessaE/unifieddyes/tags/2021-03-26-1
 [ver.vector_extras]: https://github.com/HybridDog/vector_extras/tree/8d78f3c
 [ver.waffles]: https://github.com/GreenXenith/waffles/tree/15bcdce
