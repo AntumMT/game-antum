@@ -43,7 +43,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [throwing][] ([WTFPL][lic.wtfpl]) -- version: [90bcf43 Git][ver.throwing] *2013-09-27* ([patched][patch.throwing])
 	* [xtraarmor][] ([CC BY-SA][lic.ccbysa3.0]) -- version: 0.3
 * farming/
-	* [crops][] ([LGPL / CC BY-SA / CC BY / CC0][lic.crops]) -- version: [1][ver.crops] *2017-09-30*
+	* [crops][] ([LGPL / CC BY-SA / CC BY / CC0][lic.crops]) -- version: [1][ver.crops] *2017-09-30* ([patched][patch.crops])
 	* [farming_plus][] ([WTFPL][lic.farming_plus]) -- version: [7e0d976 Git][ver.farming_plus] *2014-07-31* ([patched][patch.farming_plus])
 * furniture/
 	* [jukebox][] ([WTFPL / CC0][lic.jukebox]) -- version: [d1cd9e1 Git][ver.jukebox] *2017-09-01*
@@ -506,6 +506,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.castle_weapons]: https://github.com/AntumMT/mod-castle_weapons/tree/669db13
 [patch.christmas]: https://github.com/AntumMT/mod-christmas/tree/7ffdc67
 [patch.craftguide]: https://github.com/AntumMT/mod-craftguide/tree/3930813
+[patch.crops]: https://github.com/AntumMT/mod-crops/tree/a1cce06
 [patch.drawers]: https://github.com/AntumMT/mod-drawers/tree/a77f809
 [patch.enchanting]: https://github.com/AntumMT/mod-enchanting/tree/7a01f2f
 [patch.ethereal]: https://github.com/AntumMT/mod-ethereal/tree/e3ba6b1
