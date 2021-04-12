@@ -56,7 +56,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [sfinv_buttons][] ([MIT][lic.mit]) -- version [1.1.0 (ebb1f7c Git)][ver.sfinv_buttons] *2021-01-14*
 * lighting/
     * [glow][] ([GPL][lic.gpl2.0]) -- version: [c611ae0 Git][ver.glow] *2017-07-18*
-	* [ilights][] ([LGPL][lic.lgpl3.0]) -- version: [2021-02-25-01][ver.ilights]
+	* [ilights][] ([LGPL][lic.lgpl3.0]) -- version: [2021-02-25-01][ver.ilights] ([patched][patch.ilights])
     * walking_light ([petermalone fork][walking_light]) ([WTFPL / CC BY-SA][lic.walking_light]) -- version: [b23d836 Git][ver.walking_light] *2017-06-21* ([patched][patch.walking_light])
 * materials/
 	* [amber][] ([LGPL][lic.lgpl2.1]) -- version: [56627fa Git][ver.amber] *2017-10-29*
@@ -520,6 +520,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.hovercraft]: https://github.com/AntumMT/mod-hovercraft/tree/73a6223
 [patch.hud]: https://github.com/AntumMT/mod-hud/tree/6846e20
 [patch.invisibility]: https://github.com/AntumMT/mod-invisibility/tree/0ef4c18
+[patch.ilights]: https://github.com/AntumMT/mod-ilights/tree/fe1dae4
 [patch.minetest_game]: https://github.com/AntumMT/mtgame-minetest/tree/355a756
 [patch.mob-engine]: https://github.com/AntumMT/mp-mob-engine/tree/2aa511d
 [patch.mobs_animal]: https://github.com/AntumMT/mod-mobs_animal/tree/e275046

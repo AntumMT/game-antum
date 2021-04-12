@@ -185,7 +185,7 @@ for _, onoff in ipairs({"on", "off"}) do
 			{ name = "ilights_lamp_bulb_base.png", color = 0xffffffff },
 			"ilights_lamp_lens_"..onoff..".png"
 		},
-		use_texture_alpha = true,
+		use_texture_alpha = "clip",
 		groups = {cracky=3, ud_param2_colorable = 1, not_in_creative_inventory = nici},
 		paramtype = "light",
 		paramtype2 = "colorwallmounted",
