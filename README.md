@@ -56,7 +56,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [sfinv_buttons][] ([MIT][lic.mit]) -- version [1.1.0 (ebb1f7c Git)][ver.sfinv_buttons] *2021-01-14*
 * lighting/
     * [glow][] ([GPL][lic.gpl2.0]) -- version: [c611ae0 Git][ver.glow] *2017-07-18*
-	* [ilights][] ([CC BY-SA][lic.ccbysa]) -- version [fa085fd Git][ver.ilights] *2017-07-19*
+	* [ilights][] ([LGPL][lic.lgpl3.0]) -- version: [2021-02-25-01][ver.ilights]
     * walking_light ([petermalone fork][walking_light]) ([WTFPL / CC BY-SA][lic.walking_light]) -- version: [b23d836 Git][ver.walking_light] *2017-06-21* ([patched][patch.walking_light])
 * materials/
 	* [amber][] ([LGPL][lic.lgpl2.1]) -- version: [56627fa Git][ver.amber] *2017-10-29*
@@ -438,7 +438,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.hovercraft]: https://github.com/stujones11/hovercraft/tree/4d50e68
 [ver.hudbars]: http://repo.or.cz/minetest_hudbars.git/tree/ba21f47
 [ver.hudmap]: https://github.com/stujones11/hudmap/tree/3b8bdc0
-[ver.ilights]: https://github.com/minetest-mods/ilights/tree/fa085fd
+[ver.ilights]: https://gitlab.com/VanessaE/ilights/tags/2021-02-25-01
 [ver.intllib]: https://github.com/minetest-mods/intllib/releases/tag/20180811
 [ver.invisibility]: https://notabug.org/TenPlus1/invisibility/src/e3f04a25c22fa6f9ac044de0bf2f5978c0a95cdf
 [ver.jukebox]: https://github.com/minetest-mods/jukebox/tree/d1cd9e1
