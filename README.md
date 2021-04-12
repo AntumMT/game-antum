@@ -124,7 +124,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [lightning][] ([LGPL / CC BY-SA][lic.lightning]) -- version: [39bd36c Git][ver.lightning] *2017-02-20*
     * [snowdrift][] ([MIT / CC BY / CC BY-SA][lic.snowdrift]) -- version: [3342939 Git][ver.snowdrift] *2020-04-24*
 * wood/
-	* [coloredwood][] ([LGPL][lic.lgpl3.0]) -- version: [bd490be Git][ver.coloredwood] *2017-05-18*
+	* [coloredwood][] ([LGPL][lic.lgpl3.0]) -- version: [2021-01-30][ver.coloredwood]
 * world/
     * [bedrock2][] ([WTFPL][lic.wtfpl]) -- version [63dbab8 Git][ver.bedrock2] *2017-06-20* ([patched][patch.bedrock2])
     * [biome_lib][] ([WTFPL][lic.wtfpl]) -- version: [8fd0789 Git][ver.biome_lib] *2017-11-06* ([patched][patch.biome_lib])
@@ -413,7 +413,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.chatlog]: https://github.com/AntumMT/mod-chatlog/tree/v1.0
 [ver.christmas]: https://github.com/TheZenKitteh/minetest-christmas/tree/d3bd872
 [ver.cleaner]: https://github.com/AntumMT/mod-cleaner/tree/68222b1
-[ver.coloredwood]: https://github.com/minetest-mods/coloredwood/tree/bd490be
+[ver.coloredwood]: https://gitlab.com/VanessaE/coloredwood/tags/2021-01-30
 [ver.compassgps]: https://github.com/Kilarin/compassgps/tree/ec96e18
 [ver.crafting_bench]: https://github.com/minetest-mods/crafting_bench/tree/ca21489
 [ver.craftguide]: https://github.com/minetest-mods/craftguide/tree/1.1

@@ -1,19 +1,11 @@
--- Colored Wood mod by Vanessa Ezekowitz
+-- Colored Wood mod by Vanessa "VanessaE" Dannenberg
 -- based on my unifieddyes template.
 --
--- License:  WTFPL
+-- This mod provides many colors of wood and fences, with crafting recipes
+-- as appropriate.  Works with the airbrush, too.
 --
--- This mod provides 89 colors of wood, fences, and sticks, and enough
--- cross-compatible recipes to make everything fit together naturally.
---
--- Colored wood is created by placing a regular wood block on the ground
--- and then right-clicking on it with some dye.
 -- All materials are flammable and can be used as fuel.
---
--- Hues are on a 30 degree spacing starting at red = 0 degrees.
--- "s50" in a file/item name means "saturation: 50%".
--- Texture brightness levels for the colors are 100%, 66% ("medium"),
--- and 33% ("dark").
+
 
 coloredwood = {}
 
@@ -22,103 +14,14 @@ if minetest.settings:get_bool("coloredwood_enable_stairsplus") == false or not m
 	coloredwood.enable_stairsplus = false
 end
 
-coloredwood.shades = {
-	"dark_",
-	"medium_",
-	""		-- represents "no special shade name", e.g. full.
-}
-
-coloredwood.shades2 = {
-	"Dark ",
-	"Medium ",
-	""		-- represents "no special shade name", e.g. full.
-}
-
-coloredwood.default_hues = {
-	"white",
-	"grey",
-	"dark_grey",
-	"black",
-	"violet",
-	"blue",
-	"cyan",
-	"dark_green",
-	"green",
-	"yellow",
-	"orange",
-	"red",
-	"magenta"
-}
-
-coloredwood.hues = {
-	"red",
-	"orange",
-	"yellow",
-	"lime",
-	"green",
-	"aqua",
-	"cyan",
-	"skyblue",
-	"blue",
-	"violet",
-	"magenta",
-	"redviolet"
-}
-
-coloredwood.hues2 = {
-	"Red ",
-	"Orange ",
-	"Yellow ",
-	"Lime ",
-	"Green ",
-	"Aqua ",
-	"Cyan ",
-	"Sky Blue ",
-	"Blue ",
-	"Violet ",
-	"Magenta ",
-	"Red-violet "
-}
-
-coloredwood.greys = {
-	"black",
-	"darkgrey",
-	"grey",
-	"lightgrey",
-	"white"
-}
-
-coloredwood.greys2 = {
-	"Black ",
-	"Dark Grey ",
-	"Medium Grey ",
-	"Light Grey ",
-	"White "
-}
-
-coloredwood.greys3 = {
-	"dye:black",
-	"dye:dark_grey",
-	"dye:grey",
-	"dye:light_grey",
-	"dye:white"
-}
-
-coloredwood.hues_plus_greys = {}
-
-for _, hue in ipairs(coloredwood.hues) do
-	table.insert(coloredwood.hues_plus_greys, hue)
-end
-
-table.insert(coloredwood.hues_plus_greys, "grey")
-
 -- helper functions
 
 local function is_stairsplus(name, colorized)
 
 	-- the format of a coloredwood stairsplus node is:
-	-- moreblocks:class_wood_color_shape
-	-- where class is "slab", "stair", etc. and shape is "three quarter", "alt", etc.
+	-- "coloredwood:$CLASS_wood_$COLOR_$SHAPE"
+	-- where $CLASS is "slab", "stair", etc., $SHAPE is "three quarter", "alt", etc.,
+	-- and $COLOR is one of the 13 color sets (counting "grey")
 
 	local a = string.find(name, ":")
 	local b = string.find(name, "_")
@@ -126,6 +29,7 @@ local function is_stairsplus(name, colorized)
 	local class = string.sub(name, a+1, b-1) -- from colon to underscore is the class
 	local shape = ""
 	local rest
+	local colorshape
 
 	if class == "stair"
 	  or class == "slab"
@@ -147,23 +51,23 @@ end
 
 -- the actual nodes!
 
+local groups = table.copy(minetest.registered_items["default:wood"].groups)
+groups.ud_param2_colorable = 1
+groups.not_in_creative_inventory=1
+
 minetest.register_node("coloredwood:wood_block", {
 	description = "Colored wooden planks",
 	tiles = { "coloredwood_base.png" },
 	paramtype = "light",
 	paramtype2 = "color",
 	palette = "unifieddyes_palette_extended.png",
-	place_param2 = 240,
 	walkable = true,
 	sunlight_propagates = false,
-	groups = {snappy=1,choppy=2,oddly_breakable_by_hand=2,flammable=2, not_in_creative_inventory=1, ud_param2_colorable = 1},
+	groups = groups,
 	sounds = default.node_sound_wood_defaults(),
-	after_place_node = unifieddyes.recolor_on_place,
-	after_dig_node = unifieddyes.after_dig_node,
-	drop = "default:wood"
 })
 
-for _, color in ipairs(coloredwood.hues_plus_greys) do
+for _, color in ipairs(unifieddyes.HUES_WITH_GREY) do
 
 	-- moreblocks/stairsplus support
 
@@ -182,75 +86,84 @@ for _, color in ipairs(coloredwood.hues_plus_greys) do
 				paramtype2 = "colorfacedir",
 				palette = "unifieddyes_palette_"..color.."s.png",
 				after_place_node = function(pos, placer, itemstack, pointed_thing)
-					print("after_place_node on "..minetest.get_node(pos).name)
 					minetest.rotate_node(itemstack, placer, pointed_thing)
-					unifieddyes.recolor_on_place(pos, placer, itemstack, pointed_thing)
 				end,
+				on_dig = unifieddyes.on_dig,
 				groups = {snappy=1,choppy=2,oddly_breakable_by_hand=2,flammable=2, not_in_creative_inventory=1, ud_param2_colorable = 1},
-				after_dig_node = unifieddyes.after_dig_node
 			}
 		)
 	end
 end
 
--- force replacement node type for stairsplus default wood stair/slab/etc nodes
+local coloredwood_cuts = {}
 
-	if coloredwood.enable_stairsplus then
+-- force settings for stairsplus default wood stair/slab/etc nodes
+-- and fix other stuff for colored versions of stairsplus nodes
+
+if coloredwood.enable_stairsplus then
+
+	local groups2 = table.copy(minetest.registered_items["default:wood"].groups)
+	groups2.wood = nil
+	groups2.ud_param2_colorable = 1
+	groups2.not_in_creative_inventory=1
 
 	for _, i in pairs(minetest.registered_nodes) do
-		if string.find(i.name, "moreblocks:stair_wood")
-		  or string.find(i.name, "moreblocks:slab_wood")
-		  or string.find(i.name, "moreblocks:panel_wood")
-		  or string.find(i.name, "moreblocks:micro_wood")
-		  or string.find(i.name, "moreblocks:slope_wood") then
-			local a,b = string.find(i.name, "wood_tile")
-			if not a then
-				local s1, s2 = is_stairsplus(i.name, false)
-				minetest.override_item(i.name, {
-					ud_replacement_node = "coloredwood:"..s1.."_wood_grey"..s2,
-					paramtype2 = "colorfacedir",
-					after_place_node = function(pos, placer, itemstack, pointed_thing)
-						print("overridden after_place_node on "..i.name)
-						minetest.rotate_node(itemstack, placer, pointed_thing)
-						unifieddyes.recolor_on_place(pos, placer, itemstack, pointed_thing)
-					end,
-					on_place = minetest.item_place,
-					groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, wood = 1, not_in_creative_inventory=1, ud_param2_colorable = 1},
-				})
+
+		local chk = string.sub(i.name, 1, 20)
+
+		if   chk == "moreblocks:stair_woo"
+		  or chk == "moreblocks:slab_wood"
+		  or chk == "moreblocks:panel_woo"
+		  or chk == "moreblocks:micro_woo"
+		  or chk == "moreblocks:slope_woo"
+		  and not string.find(i.name, "wood_tile") then
+
+			local class = string.sub(i.name, 12, 15)
+			local shape = string.sub(i.name, 22)
+
+			table.insert(coloredwood_cuts, i.name)
+
+			if chk ~= "moreblocks:slab_wood" then
+				class = string.sub(i.name, 12, 16)
+				shape = string.sub(i.name, 23)
 			end
-		end
-	end
 
-	-- fix drops and other stuff for colored versions of stairsplus nodes
-
-	for _, i in pairs(minetest.registered_nodes) do
-		if string.find(i.name, "coloredwood:stair_")
-		  or string.find(i.name, "coloredwood:slab_")
-		  or string.find(i.name, "coloredwood:panel_")
-		  or string.find(i.name, "coloredwood:micro_")
-		  or string.find(i.name, "coloredwood:slope_")
-			then
-
-			mname = string.gsub(i.name, "coloredwood:", "moreblocks:")
-			local s1, s2 = is_stairsplus(mname, true)
 			minetest.override_item(i.name, {
-				after_place_node = function(pos, placer, itemstack, pointed_thing)
-					print("overridden after_place_node on "..i.name)
-					minetest.rotate_node(itemstack, placer, pointed_thing)
-					unifieddyes.recolor_on_place(pos, placer, itemstack, pointed_thing)
-				end,
-				on_place = minetest.item_place,
-				drop = "moreblocks:"..s1.."_wood"..s2
+				groups = groups2,
+				paramtype2 = "colorfacedir",
+				palette = "unifieddyes_palette_greys.png",
+				airbrush_replacement_node = "coloredwood:"..class.."_wood_grey_"..shape
 			})
 		end
 	end
 end
 
+-- "coloredwood:slope_wood_outer_half_raised"
+
+for _, mname in ipairs(coloredwood_cuts) do
+
+	local class, shape = is_stairsplus(mname, nil)
+
+	unifieddyes.register_color_craft({
+		output_prefix = "coloredwood:"..class.."_wood_",
+		output_suffix = shape,
+		palette = "split",
+		type = "shapeless",
+		neutral_node = mname,
+		recipe = {
+			"NEUTRAL_NODE",
+			"MAIN_DYE"
+		}
+	})
+end
+
+groups = table.copy(minetest.registered_items["default:wood"].groups)
+groups.ud_param2_colorable = 1
+
 minetest.override_item("default:wood", {
 	palette = "unifieddyes_palette_extended.png",
-	ud_replacement_node = "coloredwood:wood_block",
-	after_place_node = unifieddyes.recolor_on_place,
-	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, wood = 1, ud_param2_colorable = 1},
+	airbrush_replacement_node = "coloredwood:wood_block",
+	groups = groups,
 })
 
 default.register_fence("coloredwood:fence", {
@@ -258,175 +171,60 @@ default.register_fence("coloredwood:fence", {
 	texture = "coloredwood_fence_base.png",
 	paramtype2 = "color",
 	palette = "unifieddyes_palette_extended.png",
-	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, ud_param2_colorable = 1},
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, ud_param2_colorable = 1, not_in_creative_inventory=1},
 	sounds = default.node_sound_wood_defaults(),
-	after_place_node = unifieddyes.recolor_on_place,
-	after_dig_node = unifieddyes.after_dig_node,
-	drop = "default:fence_wood",
-	material = "default:wood"
+	material = "coloredwood:wood_block",
+	on_dig = unifieddyes.on_dig,
 })
+
+groups = table.copy(minetest.registered_items["default:fence_wood"].groups)
+groups.ud_param2_colorable = 1
 
 minetest.override_item("default:fence_wood", {
 	palette = "unifieddyes_palette_extended.png",
-	ud_replacement_node = "coloredwood:fence",
-	after_place_node = unifieddyes.recolor_on_place,
-	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, ud_param2_colorable = 1}
+	airbrush_replacement_node = "coloredwood:fence",
+	groups = groups
 })
 
--- ============================
--- convert the old static nodes
+-- Crafts
 
-coloredwood.old_static_nodes = {}
-coloredwood.old_13_color_nodes = {}
-
-for _, hue in ipairs(coloredwood.hues) do
-	table.insert(coloredwood.old_13_color_nodes, "coloredwood:wood_"..hue)
-	for _, sat in ipairs({"", "_s50"}) do
-		for _, val in ipairs ({"dark_", "medium_", "light_", ""}) do
-			table.insert(coloredwood.old_static_nodes, "coloredwood:wood_"..val..hue..sat)
-			table.insert(coloredwood.old_static_nodes, "coloredwood:fence_"..val..hue..sat)
-		end
-	end
-end
-
-for _, shade in ipairs(coloredwood.greys) do
-	table.insert(coloredwood.old_static_nodes, "coloredwood:wood_"..shade)
-	table.insert(coloredwood.old_static_nodes, "coloredwood:fence_"..shade)
-end
-
-table.insert(coloredwood.old_13_color_nodes, "coloredwood:wood_grey")
-
-
--- add all of the stairsplus nodes, if moreblocks is installed.
-if coloredwood.enable_stairsplus then
-	for _, shape in ipairs(circular_saw.names) do
-		local a = shape[1]
-		local b = shape[2]
-		for _, hue in ipairs(coloredwood.hues) do
-			for _, shade in ipairs(coloredwood.shades) do
-				table.insert(coloredwood.old_static_nodes, "coloredwood:"..a.."_wood_"..shade..hue..b)
-				table.insert(coloredwood.old_static_nodes, "coloredwood:"..a.."_wood_"..shade..hue.."_s50"..b)
-			end
-			table.insert(coloredwood.old_static_nodes, "coloredwood:"..a.."_wood_light_"..hue..b) -- light doesn't have extra shades or s50
-		end
-	end
-
-	for _, shape in ipairs(circular_saw.names) do
-		local a = shape[1]
-		local b = shape[2]
-		for _, hue in ipairs(coloredwood.greys) do
-			for _, shade in ipairs(coloredwood.shades) do
-				table.insert(coloredwood.old_static_nodes, "coloredwood:"..a.."_wood_"..hue..b)
-			end
-		end
-	end
-end
-
-local old_shades = {
-	"",
-	"",
-	"",
-	"light_",
-	"medium_",
-	"medium_",
-	"dark_",
-	"dark_"
-}
-
-local old_greys = {
-	"white",
-	"white",
-	"light_grey",
-	"grey",
-	"dark_grey",
-	"black",
-	"white",
-	"white"
-}
-
-minetest.register_lbm({
-	name = "coloredwood:convert",
-	label = "Convert wood blocks, fences, stairsplus stuff, etc to use param2 color",
-	run_at_every_load = false,
-	nodenames = coloredwood.old_static_nodes,
-	action = function(pos, node)
-		local meta = minetest.get_meta(pos)
-
-		local name = node.name
-		local hue, sat, val = unifieddyes.get_hsv(name)
-		local color = val..hue..sat
-		local s1, s2 = is_stairsplus(name, true)
-
-		if meta and (meta:get_string("dye") ~= "") then return end -- node has already been converted before.
-
-		if s1 then
-
-			if not s2 then print("impossible conversion request!  name = "..node.name.." --> ".."coloredwood:"..s1.."_wood_"..hue.."*nil*") return end
-
-			local paletteidx, _ = unifieddyes.getpaletteidx("unifieddyes:"..color, true)
-			local cfdir = paletteidx + (node.param2 % 32)
-			local newname = "coloredwood:"..s1.."_wood_"..hue..s2
-
-			minetest.set_node(pos, { name = newname, param2 = cfdir })
-			local meta = minetest.get_meta(pos)
-			meta:set_string("dye", "unifieddyes:"..color)
-
-		elseif string.find(name, ":fence") then
-			local paletteidx, hue = unifieddyes.getpaletteidx("unifieddyes:"..color, "extended")
-			minetest.set_node(pos, { name = "coloredwood:fence", param2 = paletteidx })
-			meta:set_string("dye", "unifieddyes:"..color)
-			meta:set_string("palette", "ext")
-		else
-			if hue == "aqua" then
-				hue = "spring"
-			elseif hue == "skyblue" then
-				hue = "azure"
-			elseif hue == "redviolet" then
-				hue = "rose"
-			end
-
-			color = val..hue..sat
-
-			local paletteidx, hue = unifieddyes.getpaletteidx("unifieddyes:"..color, "extended")
-			minetest.set_node(pos, { name = "coloredwood:wood_block", param2 = paletteidx })
-			meta:set_string("dye", "unifieddyes:"..color)
-			meta:set_string("palette", "ext")
-		end
-	end
+unifieddyes.register_color_craft({
+	output = "coloredwood:wood_block",
+	palette = "extended",
+	type = "shapeless",
+	neutral_node = "default:wood",
+	recipe = {
+		"NEUTRAL_NODE",
+		"MAIN_DYE"
+	}
 })
 
-table.insert(coloredwood.old_13_color_nodes, "coloredwood:fence")
-
-minetest.register_lbm({
-	name = "coloredwood:recolor_basics",
-	label = "Convert fences and base 13-color wood to use UD extended palette",
-	run_at_every_load = false,
-	nodenames = coloredwood.old_13_color_nodes,
-	action = function(pos, node)
-		local meta = minetest.get_meta(pos)
-		if meta:get_string("palette") ~= "ext" then
-			if node.name == "coloredwood:fence" then
-				minetest.swap_node(pos, { name = node.name, param2 = unifieddyes.convert_classic_palette[node.param2] })
-			else
-				local hue = string.sub(node.name, 18)
-				local shadenum = math.floor(node.param2/32) + 1
-				local shade = old_shades[shadenum]
-				local sat = ""
-
-				if hue == "grey" then
-					hue = old_greys[shadenum]
-					shade = ""
-					sat = ""
-				elseif shadenum == 3 or shadenum == 6 or shadenum == 8 then
-					sat = "_s50"
-				end
-
-				local newcolor = unifieddyes.convert_classic_palette[unifieddyes.getpaletteidx("unifieddyes:"..shade..hue..sat)]
-				minetest.swap_node(pos, { name = "coloredwood:wood_block", param2 = newcolor })
-			end
-			meta:set_string("palette", "ext")
-		end
-	end
+unifieddyes.register_color_craft({
+	output = "coloredwood:fence",
+	palette = "extended",
+	type = "shapeless",
+	neutral_node = "default:fence_wood",
+	recipe = {
+		"NEUTRAL_NODE",
+		"MAIN_DYE"
+	}
 })
+
+unifieddyes.register_color_craft({
+	output = "coloredwood:fence",
+	palette = "extended",
+	type = "shapeless",
+	neutral_node = "coloredwood:fence",
+	recipe = {
+		"NEUTRAL_NODE",
+		"MAIN_DYE"
+	}
+})
+
+if minetest.get_modpath("signs_lib") then
+	minetest.override_item("coloredwood:fence", {
+		check_for_pole = true
+	})
+end
 
 print("[Colored Wood] Loaded!")
