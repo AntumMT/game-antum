@@ -1,8 +1,7 @@
-
-local S = homedecor_i18n.gettext
+local S = minetest.get_translator("itemframes")
 
 local tmp = {}
-screwdriver = screwdriver or {}
+local sd_disallow = minetest.get_modpath("screwdriver") and screwdriver.disallow or nil
 
 minetest.register_entity("itemframes:item",{
 	hp_max = 1,
@@ -31,6 +30,25 @@ minetest.register_entity("itemframes:item",{
 		end
 		if self.nodename == "itemframes:pedestal" then
 			self.object:set_properties({automatic_rotate = 1})
+		end
+		if self.texture ~= nil and self.nodename ~= nil then
+			local entity_pos = vector.round(self.object:get_pos())
+			local objs = minetest.get_objects_inside_radius(entity_pos, 0.5)
+			for _, obj in ipairs(objs) do
+				if obj ~= self.object and
+				   obj:get_luaentity() and
+				   obj:get_luaentity().name == "itemframes:item" and
+				   obj:get_luaentity().nodename == self.nodename and
+				   obj:get_properties() and
+				   obj:get_properties().textures and
+				   obj:get_properties().textures[1] == self.texture then
+					minetest.log("action","[itemframes] Removing extra " ..
+						self.texture .. " found in " .. self.nodename .. " at " ..
+						minetest.pos_to_string(entity_pos))
+					self.object:remove()
+					break
+				end
+			end
 		end
 	end,
 	get_staticdata = function(self)
@@ -119,8 +137,8 @@ minetest.register_node("itemframes:frame",{
 	sunlight_propagates = true,
 	groups = {choppy = 2, dig_immediate = 2},
 	legacy_wallmounted = true,
-	sounds = default.node_sound_defaults(),
-	on_rotate = screwdriver.disallow,
+	sounds = default.node_sound_wood_defaults(),
+	on_rotate = sd_disallow or nil,
 	after_place_node = function(pos, placer, itemstack)
 		local meta = minetest.get_meta(pos)
 		meta:set_string("owner",placer:get_player_name())
@@ -135,6 +153,19 @@ minetest.register_node("itemframes:frame",{
 			drop_item(pos,node)
 			local s = itemstack:take_item()
 			meta:set_string("item",s:to_string())
+			local item_meta = s:get_meta()
+			local description = item_meta:get_string("description")
+			if description == "" then
+				local item_name = s:get_name()
+				if minetest.registered_items[item_name]
+					and minetest.registered_items[item_name].description
+				then
+					description = minetest.registered_items[item_name].description
+				else
+					description = item_name
+				end
+			end
+			meta:set_string("infotext", S("Item frame (owned by @1)", name) .. "\n" .. description)
 			update_item(pos,node)
 		end
 		return itemstack
@@ -145,6 +176,7 @@ minetest.register_node("itemframes:frame",{
 		if name == meta:get_string("owner") or
 				minetest.check_player_privs(name, "protection_bypass") then
 			drop_item(pos, node)
+			meta:set_string("infotext", S("Item frame (owned by @1)", name))
 		end
 	end,
 	can_dig = function(pos,player)
@@ -182,8 +214,8 @@ minetest.register_node("itemframes:pedestal",{
 	tiles = {"itemframes_pedestal.png"},
 	paramtype = "light",
 	groups = {cracky = 3},
-	sounds = default.node_sound_defaults(),
-	on_rotate = screwdriver.disallow,
+	sounds = default.node_sound_stone_defaults(),
+	on_rotate = sd_disallow or nil,
 	after_place_node = function(pos, placer, itemstack)
 		local meta = minetest.get_meta(pos)
 		meta:set_string("owner",placer:get_player_name())
@@ -198,6 +230,19 @@ minetest.register_node("itemframes:pedestal",{
 			drop_item(pos,node)
 			local s = itemstack:take_item()
 			meta:set_string("item",s:to_string())
+			local item_meta = s:get_meta()
+			local description = item_meta:get_string("description")
+			if description == "" then
+				local item_name = s:get_name()
+				if minetest.registered_items[item_name]
+					and minetest.registered_items[item_name].description
+				then
+					description = minetest.registered_items[item_name].description
+				else
+					description = item_name
+				end
+			end
+			meta:set_string("infotext", S("Pedestal (owned by @1)", name) .. "\n" .. description)
 			update_item(pos,node)
 		end
 		return itemstack
@@ -208,6 +253,7 @@ minetest.register_node("itemframes:pedestal",{
 		if name == meta:get_string("owner") or
 				minetest.check_player_privs(name, "protection_bypass") then
 			drop_item(pos,node)
+			meta:set_string("infotext", S("Pedestal (owned by @1)", name))
 		end
 	end,
 	can_dig = function(pos,player)
@@ -228,24 +274,31 @@ minetest.register_node("itemframes:pedestal",{
 
 -- automatically restore entities lost from frames/pedestals
 -- due to /clearobjects or similar
-
-minetest.register_abm({
+minetest.register_lbm({
+	label = "Maintain itemframe and pedestal entities",
+	name = "itemframes:maintain_entities",
 	nodenames = {"itemframes:frame", "itemframes:pedestal"},
-	interval = 15,
-	chance = 1,
-	action = function(pos, node, active_object_count, active_object_count_wider)
-		local num
-
-		if node.name == "itemframes:frame" then
-			num = #minetest.get_objects_inside_radius(pos, 0.5)
-		elseif node.name == "itemframes:pedestal" then
-			pos.y = pos.y + 1
-			num = #minetest.get_objects_inside_radius(pos, 0.5)
-			pos.y = pos.y - 1
-		end
-
-		if num > 0 then return end
-		update_item(pos, node)
+	run_at_every_load = true,
+	action = function(pos1, node1)
+		minetest.after(0,
+			function(pos, node)
+				local meta = minetest.get_meta(pos)
+				local itemstring = meta:get_string("item")
+				if itemstring ~= "" then
+					local entity_pos = pos
+					if node.name == "itemframes:pedestal" then
+						entity_pos = {x=pos.x,y=pos.y+1,z=pos.z}
+					end
+					local objs = minetest.get_objects_inside_radius(entity_pos, 0.5)
+					if #objs == 0 then
+						minetest.log("action","[itemframes] Replacing missing " ..
+							itemstring .. " in " .. node.name .. " at " ..
+							minetest.pos_to_string(pos))
+						update_item(pos, node)
+					end
+				end
+			end,
+		pos1, node1)
 	end
 })
 
@@ -274,3 +327,4 @@ if minetest.get_modpath("mesecons_mvps") then
 	mesecon.register_mvps_stopper("itemframes:frame")
 	mesecon.register_mvps_stopper("itemframes:pedestal")
 end
+

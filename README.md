@@ -139,7 +139,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 * [3d_armor][] ([LGPL / CC BY-SA][lic.3d_armor]) - version: [7e2d942 Git][ver.3d_armor] *2019-01-19* ([patched][patch.3d_armor])
 * [deploy_nodes][] ([BSD 3-Clause][lic.deploy_nodes]) -- version [b67e162 Git][ver.deploy_nodes] *2017-06-08*
-* [homedecor][] ([LGPL / WTFPL / CC BY-SA / CC0][lic.homedecor]) -- version [stable-20170925-3 (48be7dd Git)][ver.homedecor] *2017-09-25* ([patched][patch.homedecor]) ***UNSTABLE UPDATES***
+* [homedecor][] ([LGPL / WTFPL / CC BY-SA / CC0][lic.homedecor]) -- version: [2021-03-27-1][ver.homedecor]
 * [mesecons][] ([LGPL / CC BY-SA][lic.mesecons]) -- version [1.2 (d4e05f3 Git)][ver.mesecons] *2018-07-23*
 * [minetest_game][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- version: [5.4.1][ver.minetest_game] *2021-04-10*
 * [moremesecons][] ([MPL][lic.mpl2.0]) -- version [8a56370 Git][ver.moremesecons] *2018-02-27*
@@ -434,7 +434,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.helicopter_pm]: https://github.com/petermaloney/helicopter/tree/95c5287
 [ver.hill_nodebox]: https://github.com/cornernote/minetest-hill_nodebox/tree/41bbfa2
 [ver.home_gui]: https://github.com/cornernote/minetest-home_gui/tree/90086d0
-[ver.homedecor]: https://gitlab.com/VanessaE/homedecor_modpack/tree/48be7dd
+[ver.homedecor]: https://gitlab.com/VanessaE/homedecor_modpack/tree/2021-03-27-1
 [ver.hovercraft]: https://github.com/stujones11/hovercraft/tree/4d50e68
 [ver.hudbars]: http://repo.or.cz/minetest_hudbars.git/tree/ba21f47
 [ver.hudmap]: https://github.com/stujones11/hudmap/tree/3b8bdc0
