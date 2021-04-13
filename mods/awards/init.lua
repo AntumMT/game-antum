@@ -3,7 +3,9 @@
 -- The global award namespace
 awards = {
 	show_mode = "hud",
+	registered_awards = {},
 	registered_triggers = {},
+	on_unlock = {},
 }
 
 -- Internationalization support.
@@ -16,7 +18,11 @@ dofile(minetest.get_modpath("awards").."/src/api_triggers.lua")
 dofile(minetest.get_modpath("awards").."/src/chat_commands.lua")
 dofile(minetest.get_modpath("awards").."/src/gui.lua")
 dofile(minetest.get_modpath("awards").."/src/triggers.lua")
-dofile(minetest.get_modpath("awards").."/src/awards.lua")
+
+-- Optionally add default awards.
+if minetest.settings:get_bool("awards.add_defaults", true) then
+	dofile(minetest.get_modpath("awards").."/src/awards.lua")
+end
 
 awards.load()
 minetest.register_on_shutdown(awards.save)

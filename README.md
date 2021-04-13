@@ -18,7 +18,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [privs][] ([CC0][lic.cc0])
     * [spectator_mode][] ([WTFPL][lic.spectator_mode]) -- version: [7d68bec Git][ver.spectator_mode] *2017-03-30*
     * [whitelist][] ([CC0][lic.cc0]) -- version [0.1 (b813b19 Git)][ver.whitelist] *2017-08-18*
-* [awards][] ([MIT][lic.awards]) -- version: [3.3.0][ver.awards] *2018-09-14* ***UNSTABLE UPDATES***
+* [awards][] ([MIT][lic.awards]) -- version: [3.4.0][ver.awards] *2021-01-10*
 * [antum][] ([MIT][lic.antum]) -- version: [69b39a4 Git][ver.antum] *2017-08-30*
 * buildings/
     * [bridges][] ([GPL][lic.gpl3.0]) -- version: [5b5f475 Git][ver.bridges] *2015-08-23* ([patched][patch.bridges])
@@ -391,7 +391,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.animals_aggressive]: https://github.com/AntumMT/mp-animals_aggressive/tree/4eede4d
 [ver.animals_harmless]: https://github.com/AntumMT/mp-animals_harmless/tree/e9b02a8
 [ver.antum]: https://github.com/AntumMT/mp-antum/tree/69b39a4
-[ver.awards]: https://github.com/rubenwardy/awards/tree/v3.3.0
+[ver.awards]: https://github.com/rubenwardy/awards/tree/v3.4.0
 [ver.away]: https://github.com/kahrl/minetest-mod-away/tree/4c1e5a9
 [ver.bags]: https://github.com/cornernote/minetest-bags/tree/bc87b45
 [ver.basic_materials]: https://gitlab.com/VanessaE/basic_materials/-/tags/2021-01-30

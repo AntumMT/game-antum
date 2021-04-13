@@ -2,9 +2,7 @@
 
 local S, NS = awards.gettext, awards.ngettext
 
-awards.registered_awards = {}
 awards.on = {}
-awards.on_unlock = {}
 
 local default_def = {}
 
@@ -43,11 +41,12 @@ function awards.register_trigger(tname, tdef)
 			}
 			tdef.register(tmp)
 
-			function def.getProgress(_, data)
-				local done = math.min(data[tname] or 0, tmp.target)
+			function def.get_progress(_, data)
+				local current = math.min(data[tname] or 0, tmp.target)
 				return {
-					perc = done / tmp.target,
-					label = S(tdef.progress, done, tmp.target),
+					current = current,
+					target = tmp.target,
+					label = S(tdef.progress, current, tmp.target),
 				}
 			end
 
@@ -102,7 +101,7 @@ function awards.register_trigger(tname, tdef)
 			end
 
 			-- Called to get progress values and labels
-			function def.getProgress(_, data)
+			function def.get_progress(_, data)
 				data[tname] = data[tname] or {}
 
 				local done
@@ -114,7 +113,8 @@ function awards.register_trigger(tname, tdef)
 				done = math.min(done, tmp.target)
 
 				return {
-					perc = done / tmp.target,
+					current = done,
+					target = tmp.target,
 					label = S(tdef.progress, done, tmp.target),
 				}
 			end
@@ -144,8 +144,8 @@ function awards.register_trigger(tname, tdef)
 			if tdef.key_is_item and key:sub(1, 6) ~= "group:" then
 				local itemdef = minetest.registered_items[key]
 				if itemdef then
-					for groupname, _ in pairs(itemdef.groups or {}) do
-						if tdef.watched_groups[groupname] then
+					for groupname,rating in pairs(itemdef.groups or {}) do
+						if rating ~= 0 and tdef.watched_groups[groupname] then
 							tdef.notify(player, "group:" .. groupname, n)
 						end
 					end
@@ -160,8 +160,9 @@ function awards.register_trigger(tname, tdef)
 			data[tname] = data[tname] or {}
 			local currentVal = (data[tname][key] or 0) + n
 			data[tname][key] = currentVal
+			data[tname].__total = (data[tname].__total or 0)
 			if key:sub(1, 6) ~= "group:" then
-				data[tname].__total = (data[tname].__total or 0) + n
+				data[tname].__total = data[tname].__total + n
 			end
 
 			tdef:run_callbacks(player, data, function(entry)
@@ -173,7 +174,6 @@ function awards.register_trigger(tname, tdef)
 				else
 					return
 				end
-
 				if current >= entry.target then
 					return entry.award
 				end
@@ -201,7 +201,7 @@ end
 
 function awards.increment_item_counter(data, field, itemname, count)
 	itemname = minetest.registered_aliases[itemname] or itemname
-	data[field][itemname] = (data[field][itemname] or 0) + 1
+	data[field][itemname] = (data[field][itemname] or 0) + (count or 1)
 end
 
 function awards.get_item_count(data, field, itemname)
