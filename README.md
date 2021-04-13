@@ -25,8 +25,8 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [christmas][] ([MIT][lic.christmas]) -- version [d3bd872 Git][ver.christmas] *2013-01-11* ([patched][patch.christmas])
     * [elevator][] ([WTFPL][lic.elevator])
     * [fort_spikes][] ([MIT][lic.fort_spikes] / [CC0][lic.cc0]) -- version: [3b98b46 Git][ver.fort_spikes] *2018-06-05*
-    * [glass][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- version [d61a6c6 Git][ver.glass] *2017-08-15*
-    * [moreblocks][] ([zlib][lic.moreblocks]) -- version: [1.1.0][ver.moreblocks] *2018-04-21* ([patched][patch.moreblocks]) ***UNSTABLE UPDATES***
+    * [glass][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- version: [d61a6c6 Git][ver.glass] *2017-08-15*
+    * [moreblocks][] ([zlib][lic.moreblocks]) -- version: [2.1.0][ver.moreblocks] *2020-12-14*
     * [windmill][] ([WTFPL][lic.windmill]) -- version: [47b029d Git][ver.windmill] *2014-08-21* ([patched][patch.windmill])
 * [campfire][] ([GPL][lic.gpl2.0] / [CC BY-SA][lic.ccbysa] / [WTFPL][lic.campfire]) -- version: [04b4ea5 Git][ver.campfire] *2017-06-08* ***UNSTABLE UPDATES***
 * chat/
@@ -444,7 +444,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.monsters_aggressive]: https://github.com/AntumMT/mp-monsters_aggressive/tree/89a8187
 [ver.monsters_passive]: https://github.com/AntumMT/mp-monsters_passive/tree/b07fe19
 [ver.more_chests]: https://github.com/minetest-mods/more_chests/tree/c597779
-[ver.moreblocks]: https://github.com/minetest-mods/moreblocks/tree/1.1.0
+[ver.moreblocks]: https://github.com/minetest-mods/moreblocks/tree/v2.1.0
 [ver.moremesecons]: https://github.com/minetest-mods/MoreMesecons/tree/8a56370
 [ver.moreores]: https://github.com/minetest-mods/moreores/tree/2316595
 [ver.mthudclock]: https://gitlab.com/Rochambeau/mthudclock/tree/d86e745

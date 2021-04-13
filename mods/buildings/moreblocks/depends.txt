@@ -1,4 +1,0 @@
-default
-intllib?
-farming?
-wool?

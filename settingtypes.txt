@@ -354,6 +354,13 @@ mob_chance_multiplier (Mob chance multiplier) float 1.0
 mobs_drop_items (Mob drops) bool true
 
 
+[*moreblocks]
+
+# If enabled, Stairs+ nodes will be displayed in the inventory when playing in creative mode.
+# Disabling this can speed up loading times for clients as fewer nodes need to be registered in the creative inventory.
+moreblocks.stairsplus_in_creative_inventory (Display Stairs+ nodes in creative inventory) bool true
+
+
 [*pipeworks]
 
 #Enable pipes.
