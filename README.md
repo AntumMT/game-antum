@@ -50,7 +50,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [trampoline][] ([GPL][lic.gpl3.0]) -- version: [0.2 (41366ac Git)][ver.trampoline] *2017-08-30*
     * [trash_can][] ([MIT][lic.trash_can]) -- version: [423b0f2 Git][ver.trash_can] *2020-08-12*
     * [waffles][] ([MIT][lic.waffles]) -- version [15bcdce Git][ver.waffles] *2018-05-13*
-* [intllib][] ([Unlicense][lic.unlicense]) -- version: [20180811][ver.intllib] *2018-08-11*
+* [intllib][] ([Unlicense][lic.unlicense]) -- version: [6ebdc53][ver.intllib] *2021-02-23* ***DEPRECATED***
 * inventory/
     * [bags][] ([BSD 3-Clause][lic.bags]) -- version: [bc87b45 Git][ver.bags] *2018-04-11*
     * [sfinv_buttons][] ([MIT][lic.mit]) -- version [1.1.0 (ebb1f7c Git)][ver.sfinv_buttons] *2021-01-14*
@@ -431,7 +431,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.hudbars]: http://repo.or.cz/minetest_hudbars.git/tree/ba21f47
 [ver.hudmap]: https://github.com/stujones11/hudmap/tree/3b8bdc0
 [ver.ilights]: https://gitlab.com/VanessaE/ilights/tags/2021-02-25-01
-[ver.intllib]: https://github.com/minetest-mods/intllib/releases/tag/20180811
+[ver.intllib]: https://github.com/minetest-mods/intllib/tree/6ebdc53
 [ver.invisibility]: https://notabug.org/TenPlus1/invisibility/src/e3f04a25c22fa6f9ac044de0bf2f5978c0a95cdf
 [ver.invisible]: https://github.com/AiTechEye/invisible/tree/a2a6504
 [ver.jukebox]: https://github.com/minetest-mods/jukebox/tree/0d871f2
