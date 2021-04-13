@@ -16,7 +16,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [override][] ([MIT][lic.override]) -- version: [0.2 (e6dda7a Git)][ver.override] *2017-08-30*
     * [privilegeareas][] ([WTFPL][lic.privilegeareas] / [CC0][lic.cc0]) -- version: [15eae20 Git][ver.privilegeareas] *2018-11-16*
     * [privs][] ([CC0][lic.cc0])
-    * [spectator_mode][] ([WTFPL][lic.spectator_mode]) -- version: [7d68bec Git][ver.spectator_mode] *2017-03-30*
+    * [spectator_mode][] ([WTFPL][lic.spectator_mode]) -- version: [3648371 Git][ver.spectator_mode] *2020-07-15*
     * [whitelist][] ([CC0][lic.cc0]) -- version: [0.1 (b813b19 Git)][ver.whitelist] *2017-08-18*
 * [awards][] ([MIT][lic.awards]) -- version: [3.4.0][ver.awards] *2021-01-10*
 * [antum][] ([MIT][lic.antum]) -- version: [69b39a4 Git][ver.antum] *2017-08-30*
@@ -470,7 +470,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.slingshot]: https://github.com/AntumMT/mod-slingshot/tree/bb77525
 [ver.snowdrift]: https://github.com/paramat/snowdrift/tree/3342939
 [ver.spawneggs]: https://github.com/thefamilygrog66/spawneggs/tree/4650370
-[ver.spectator_mode]: https://github.com/minetest-mods/spectator_mode/tree/7d68bec
+[ver.spectator_mode]: https://github.com/minetest-mods/spectator_mode/tree/3648371
 [ver.technic]: https://github.com/minetest-mods/technic/tree/43acec2
 [ver.technic_armor]: https://github.com/stujones11/technic_armor/tree/694642f
 [ver.throwing]: https://github.com/PilzAdam/throwing/tree/90bcf43
