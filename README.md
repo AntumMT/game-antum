@@ -55,7 +55,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [bags][] ([BSD 3-Clause][lic.bags]) -- version: [bc87b45 Git][ver.bags] *2018-04-11*
     * [sfinv_buttons][] ([MIT][lic.mit]) -- version [1.1.0 (ebb1f7c Git)][ver.sfinv_buttons] *2021-01-14*
 * lighting/
-    * [glow][] ([GPL][lic.gpl2.0]) -- version: [c611ae0 Git][ver.glow] *2017-07-18*
+    * [glow][] ([GPL][lic.gpl2.0]) -- version: [4c015a0 Git][ver.glow] *2019-02-05*
 	* [ilights][] ([LGPL][lic.lgpl3.0]) -- version: [2021-02-25-01][ver.ilights] ([patched][patch.ilights])
     * walking_light ([petermalone fork][walking_light]) ([WTFPL / CC BY-SA][lic.walking_light]) -- version: [b23d836 Git][ver.walking_light] *2017-06-21* ([patched][patch.walking_light])
 * materials/
@@ -419,7 +419,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.gems_encrustable]: https://github.com/wowiamdiamonds/gems/tree/81d513d
 [ver.gems_tools]: https://github.com/captainLAD/gems/tree/b375432
 [ver.glass]: https://github.com/AntumMT/mod-glass/tree/d61a6c6
-[ver.glow]: https://github.com/bdjnk/glow/tree/c611ae0
+[ver.glow]: https://github.com/bdjnk/glow/tree/4c015a0
 [ver.hbarmor]: http://repo.or.cz/minetest_hbarmor.git/tree/e513aeb
 [ver.hbsprint]: https://github.com/tacotexmex/hbsprint/tree/de3e77e
 [ver.helicopter]: https://github.com/SokolovPavel/helicopter/tree/10f1433

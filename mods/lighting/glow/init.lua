@@ -205,7 +205,7 @@ local function add_shrooms(pos)
 	end
 end
 
-minetest.register_on_generated(function(minp, maxp, seed)
+minetest.register_on_generated(function(minp, maxp)
 	for _,pos in pairs(minetest.find_nodes_in_area(minp, maxp, "default:tree")) do
 		if math.random() < 0.2
 		and minetest.get_node({x=pos.x, y=pos.y-1, z=pos.z}).name ~= "default:tree" then
