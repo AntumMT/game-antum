@@ -117,7 +117,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [hudbars][] ([MIT][lic.mit] / [CC BY-SA][lic.ccbysa3.0]) -- version [1.11.0][ver.hudbars] *2018-02-05*
     * [hudmap][] ([LGPL][lic.lgpl2.1] / [WTFPL][lic.wtfpl]) -- version: [3b8bdc0 Git][ver.hudmap] *2017-05-14*
     * [mthudclock][] ([WTFPL][lic.wtfpl]) -- version [d86e745 Git][ver.mthudclock] *2018-01-06*
-* [vector_extras][] ([WTFPL][lic.wtfpl]) -- version: [8d78f3c Git][ver.vector_extras] *2017-12-25*
 * weather/
     * [lightning][] ([LGPL / CC BY-SA][lic.lightning]) -- version: [39bd36c Git][ver.lightning] *2017-02-20*
     * [snowdrift][] ([MIT / CC BY / CC BY-SA][lic.snowdrift]) -- version: [3342939 Git][ver.snowdrift] *2020-04-24*
@@ -289,7 +288,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [trees]: https://forum.minetest.net/viewtopic.php?f=11&t=5713
 [unified_inventory]: https://forum.minetest.net/viewtopic.php?id=3933
 [unifieddyes]: https://forum.minetest.net/viewtopic.php?t=2178
-[vector_extras]: https://forum.minetest.net/viewtopic.php?t=8533
 [vines]: https://forum.minetest.net/viewtopic.php?f=11&t=2344
 [waffles]: https://forum.minetest.net/viewtopic.php?t=16669
 [walking_light]: https://github.com/petermaloney/walking_light
@@ -484,7 +482,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.trampoline]: https://github.com/AntumMT/mod-trampoline/tree/41366ac
 [ver.trash_can]: https://github.com/minetest-mods/trash_can/tree/423b0f2
 [ver.unifieddyes]: https://gitlab.com/VanessaE/unifieddyes/tags/2021-03-26-1
-[ver.vector_extras]: https://github.com/HybridDog/vector_extras/tree/8d78f3c
 [ver.waffles]: https://github.com/GreenXenith/waffles/tree/15bcdce
 [ver.walking_light]: https://github.com/petermaloney/walking_light/tree/b23d836
 [ver.wardrobe]: https://github.com/prestidigitator/minetest-mod-wardrobe/tree/c48b011
