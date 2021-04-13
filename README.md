@@ -28,7 +28,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [glass][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- version: [d61a6c6 Git][ver.glass] *2017-08-15*
     * [moreblocks][] ([zlib][lic.moreblocks]) -- version: [2.1.0][ver.moreblocks] *2020-12-14*
     * [windmill][] ([WTFPL][lic.windmill]) -- version: [47b029d Git][ver.windmill] *2014-08-21* ([patched][patch.windmill])
-* [campfire][] ([GPL][lic.gpl2.0] / [CC BY-SA][lic.ccbysa] / [WTFPL][lic.campfire]) -- version: [04b4ea5 Git][ver.campfire] *2017-06-08* ***UNSTABLE UPDATES***
+* [campfire][] ([GPL][lic.gpl2.0] / [CC BY-SA][lic.ccbysa] / [WTFPL][lic.campfire]) -- version: [1058f1d Git][ver.campfire] *2019-11-28*
 * chat/
     * [away][] ([GPL][lic.gpl2.0]) -- version: [4c1e5a9 Git][ver.away] *2012-03-09* ([patched][patch.away])
     * [chatlog][] ([CC0][lic.cc0]) -- version [1.0][ver.chatlog] *2017-08-12*
@@ -391,7 +391,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.bonemeal]: https://notabug.org/TenPlus1/bonemeal/src/a0cb8657df797c36011ab61311ef2e15960d530b
 [ver.bookmarks_gui]: https://github.com/cornernote/minetest-bookmarks_gui/tree/f7ae10a
 [ver.bridges]: https://github.com/Sokomine/bridges/tree/5b5f475
-[ver.campfire]: https://github.com/Napiophelios/campfire/tree/04b4ea5
+[ver.campfire]: https://github.com/Napiophelios/campfire/tree/1058f1d
 [ver.castle_farming]: https://github.com/minetest-mods/castle_farming/tree/b6503cf
 [ver.castle_gates]: https://github.com/minetest-mods/castle_gates/tree/dc53584
 [ver.castle_lighting]: https://github.com/minetest-mods/castle_lighting/tree/a7110c6

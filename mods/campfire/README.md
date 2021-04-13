@@ -1,29 +1,37 @@
 CampFire mod by Doc
 
-[modified by Napiophelios-rev014]
+[modified by Napiophelios]
 
-Depends: default, fire,  wool
+Depends: default, fire, beds, tnt, wool
 
-For Minetest 0.4.10 development build (commit d2219171 or later)
+For Minetest 0.5.0
+
+WARNING:
+
+This mod requires the use of a 16px texture pack.
+
+Inventory and weild images will look distorted if any thing other is used.
+
+-----------------------------------------------
 
 Original CampFire mod by Doc
+
 License of code : WTFPL
 
 https://github.com/Doc22/campfire-mod
 
+-----------------------------------------------
 
-Node Swap ABM from NateS's More_fire mod
+Particles Function adapted from New Campfire mod by Pavel Litvinoff
 
-(solves the glitchy formspec transition)
+License of code : GPLv2.1
 
-More_fire mod
-Licensed : CC by SA
+Copyright (C) 2017 Pavel Litvinoff <googolgl@gmail.com>
 
-https://github.com/NathanSalapat/more_fire
+<https://forum.minetest.net/viewtopic.php?f=9&t=16611>
 
+-----------------------------------------------
 
-The smoke particles from LazyJ's Fork of Semmett9's "Fake Fire" Mod
+Node Timers and miscellaneous code fixes by Bell07
 
-code by: VanessaE and JP
-
-License:  GPL v2
+-----------------------------------------------
