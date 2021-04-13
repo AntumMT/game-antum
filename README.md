@@ -11,13 +11,13 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 ***"UPDATES" Denotes updates available***
 
 * admin/
-    * [cleaner][] ([CC0][lic.cc0]) -- version [0.4 (68222b1 Git)][ver.cleaner] *2017-08-30*
-    * [invisible][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0])
-    * [override][] ([MIT][lic.override]) -- version [0.2 (e6dda7a Git)][ver.override] *2017-08-30*
-    * [privilegeareas][] ([WTFPL][lic.privilegeareas] / [CC0][lic.cc0]) -- version: [18a803c Git][ver.privilegeareas] *2017-12-04*
+    * [cleaner][] ([CC0][lic.cc0]) -- version: [0.4 (68222b1 Git)][ver.cleaner] *2017-08-30*
+    * [invisible][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa4.0]) -- version: [4 (a2a6504 Git)][ver.invisible]
+    * [override][] ([MIT][lic.override]) -- version: [0.2 (e6dda7a Git)][ver.override] *2017-08-30*
+    * [privilegeareas][] ([WTFPL][lic.privilegeareas] / [CC0][lic.cc0]) -- version: [15eae20 Git][ver.privilegeareas] *2018-11-16*
     * [privs][] ([CC0][lic.cc0])
     * [spectator_mode][] ([WTFPL][lic.spectator_mode]) -- version: [7d68bec Git][ver.spectator_mode] *2017-03-30*
-    * [whitelist][] ([CC0][lic.cc0]) -- version [0.1 (b813b19 Git)][ver.whitelist] *2017-08-18*
+    * [whitelist][] ([CC0][lic.cc0]) -- version: [0.1 (b813b19 Git)][ver.whitelist] *2017-08-18*
 * [awards][] ([MIT][lic.awards]) -- version: [3.4.0][ver.awards] *2021-01-10*
 * [antum][] ([MIT][lic.antum]) -- version: [69b39a4 Git][ver.antum] *2017-08-30*
 * buildings/
@@ -434,6 +434,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.ilights]: https://gitlab.com/VanessaE/ilights/tags/2021-02-25-01
 [ver.intllib]: https://github.com/minetest-mods/intllib/releases/tag/20180811
 [ver.invisibility]: https://notabug.org/TenPlus1/invisibility/src/e3f04a25c22fa6f9ac044de0bf2f5978c0a95cdf
+[ver.invisible]: https://github.com/AiTechEye/invisible/tree/a2a6504
 [ver.jukebox]: https://github.com/minetest-mods/jukebox/tree/d1cd9e1
 [ver.mesecons]: https://github.com/minetest-mods/mesecons/tree/v1.2
 [ver.minetest_game]: https://github.com/minetest/minetest_game/tree/5.4.1
@@ -459,7 +460,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.override]: https://github.com/AntumMT/mod-override/tree/e6dda7a
 [ver.painting]: https://github.com/minetest-mods/painting/tree/8961849
 [ver.pipeworks]: https://gitlab.com/VanessaE/pipeworks/-/tags/2021-02-19
-[ver.privilegeareas]: https://github.com/minetest-mods/privilegeareas/tree/18a803c
+[ver.privilegeareas]: https://github.com/minetest-mods/privilegeareas/tree/15eae20
 [ver.pvp_areas]: https://github.com/everamzah/pvp_areas/tree/0188945
 [ver.quartz]: https://github.com/minetest-mods/quartz/tree/1c5dca2
 [ver.rainbow_ore]: https://github.com/FsxShader2012/rainbow_ore/tree/6e77693

@@ -1,26 +1,25 @@
--- Code by UjEdwin
+minetest.register_alias("i", "invisible:tool")
 
-invisible={time=0,armor=minetest.get_modpath("3d_armor")}
+invisible = { time = 0, armor = minetest.get_modpath("3d_armor")}
 minetest.register_privilege("invisible", {
-	description = "Be invisible",
-	give_to_singleplayer= false,
+	description = "Allows the player to become invisible.",
+	give_to_singleplayer = false,
 })
 
-invisible.toogle=function(user,sneak)
+invisible.toggle=function(user,sneak)
 	local name=user:get_player_name()
 	if minetest.check_player_privs(user:get_player_name(), {invisible=true}) then
 		if not invisible[name] then
 			user:set_nametag_attributes({color = {a = 0, r = 255, g = 255, b = 255}})
 			invisible[name]={}
 			invisible[name].tool=sneak
-			invisible[name].collisionbox=user:get_properties().collisionbox
 			invisible[name].visual_size=user:get_properties().visual_size
 			invisible[name].textures=user:get_properties().textures
 			user:set_properties({
 				visual = "mesh",
 				textures={"invisible_skin.png"},
 				visual_size = {x=0, y=0},
-				collisionbox = {0,0,0, 0,0,0},
+				pointable=false,
 			})
 			minetest.chat_send_player(name, "invisible on")			
 		else
@@ -29,7 +28,7 @@ invisible.toogle=function(user,sneak)
 				visual = "mesh",
 				textures=invisible[name].textures,
 				visual_size = invisible[name].visual_size,
-				collisionbox=invisible[name].collisionbox
+				pointable=true,
 			})
 			invisible[name]=nil
 
@@ -37,7 +36,6 @@ invisible.toogle=function(user,sneak)
 				armor:set_player_armor(user)
 				armor:update_inventory(user)
 			end
-
 
 			minetest.chat_send_player(name, "invisible off")
 		end
@@ -53,13 +51,13 @@ invisible.toogle=function(user,sneak)
 	end
 end
 
-minetest.register_tool("invisible:wand", {
-	description = "Invisibility Wand",
-	inventory_image = "wand.png",
+minetest.register_tool("invisible:tool", {
+	description = "invisible",
+	inventory_image = "default_stick.png",
 	groups = {not_in_creative_inventory=1},
 	on_use = function(itemstack, user, pointed_thing)
 		if minetest.check_player_privs(user:get_player_name(), {invisible=true}) then
-				invisible.toogle(user,true)
+				invisible.toggle(user,true)
 		else
 			itemstack:replace(nil)
 		end
@@ -75,7 +73,7 @@ minetest.register_globalstep(function(dtime)
 		local name=player:get_player_name()
 		local sneak=player:get_player_control().sneak
 		if (sneak and not invisible[name]) or (sneak==false and invisible[name] and not invisible[name].tool) then
-			invisible.toogle(player)
+			invisible.toggle(player)
 		end
 	end
 end)
