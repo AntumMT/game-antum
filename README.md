@@ -89,7 +89,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [hbsprint][] ([LGPL][lic.lgpl2.1]) -- version: [de3e77e Git][ver.hbsprint] *2018-04-11* ([patched][patch.hbsprint])
 * player/visuals/
     * [invisibility][] ([MIT][lic.invisibility]) -- version: [e3f04a2 Git][ver.invisibility] *2017-10-09* ([patched][patch.invisibility])
-    * [playeranim][] ([BSD 2-Clause][lic.playeranim]) - version [560af7e Git][ver.playeranim] *2018-06-09* ([patched][patch.playeranim])
     * [wardrobe][] ([WTFPL][lic.wtfpl]) -- version: [1.1-2-c48b011 Git][ver.wardrobe] *2015-05-21*
 * protection/
     * [pvp_areas][] ([LGPL][lic.lgpl2.1]) -- version: [0188945 Git][ver.pvp_areas] *2018-01-16* ([patched][patch.pvp_areas])
@@ -268,7 +267,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [painting]: https://github.com/minetest-mods/painting
 [pipeworks]: https://forum.minetest.net/viewtopic.php?t=2155
 [plantlife_modpack]: https://forum.minetest.net/viewtopic.php?f=11&t=3898
-[playeranim]: https://forum.minetest.net/viewtopic.php?t=12189
 [privilegeareas]: https://forum.minetest.net/viewtopic.php?t=5545
 [privs]: mods/admin/privs
 [pvp_areas]: https://forum.minetest.net/viewtopic.php?t=15480
@@ -343,7 +341,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.mydoors]: mods/modpacks/mydoors/README.md
 [lic.nether]: mods/world/nether/README.md
 [lic.override]: mods/admin/override/LICENSE.txt
-[lic.playeranim]: mods/player/visuals/playeranim/LICENSE.md
 [lic.privilegeareas]: mods/admin/privilegeareas/README.md
 [lic.quartz]: mods/materials/quartz/LICENSE.txt
 [lic.rainbow_ore]: mods/materials/rainbow_ore/README.md
@@ -468,7 +465,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.override]: https://github.com/AntumMT/mod-override/tree/e6dda7a
 [ver.painting]: https://github.com/minetest-mods/painting/tree/8961849
 [ver.pipeworks]: https://gitlab.com/VanessaE/pipeworks/-/tags/2021-02-19
-[ver.playeranim]: https://github.com/minetest-mods/playeranim/tree/560af7e
 [ver.privilegeareas]: https://github.com/minetest-mods/privilegeareas/tree/18a803c
 [ver.pvp_areas]: https://github.com/everamzah/pvp_areas/tree/0188945
 [ver.quartz]: https://github.com/minetest-mods/quartz/tree/1c5dca2
@@ -533,7 +529,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.mypaint]: https://github.com/AntumMT/mod-mypaint/tree/10a5359
 [patch.mysheetmetal]: https://github.com/AntumMT/mod-mysheetmetal/tree/b7d644b
 [patch.nether]: https://github.com/AntumMT/mod-nether/tree/7a84ddd
-[patch.playeranim]: https://github.com/AntumMT/mod-playeranim/tree/2540530
 [patch.pvp_areas]: https://github.com/AntumMT/mod-pvp_areas/tree/7f2f5b2
 [patch.quartz]: https://github.com/AntumMT/mod-quartz/tree/c6813dc
 [patch.rainbow_ore]: https://github.com/AntumMT/mod-rainbow_ore/tree/0227a86
