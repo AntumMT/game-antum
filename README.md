@@ -31,9 +31,9 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [campfire][] ([GPL][lic.gpl2.0] / [CC BY-SA][lic.ccbysa] / [WTFPL][lic.campfire]) -- version: [1058f1d Git][ver.campfire] *2019-11-28*
 * chat/
     * [away][] ([GPL][lic.gpl2.0]) -- version: [4c1e5a9 Git][ver.away] *2012-03-09* ([patched][patch.away])
-    * [chatlog][] ([CC0][lic.cc0]) -- version [1.0][ver.chatlog] *2017-08-12*
+    * [chatlog][] ([CC0][lic.cc0]) -- version: [1.0][ver.chatlog] *2017-08-12*
 * crafting/
-    * [craftguide][] ([MIT][lic.craftguide]) -- version: [1.1][ver.craftguide] *2018-05-29* ([patched][patch.craftguide])
+    * [craftguide][] ([MIT][lic.craftguide]) -- version: [f379998 Git][ver.craftguide] *2021-02-08* ([patched][patch.craftguide])
 * [currency][] ([WTFPL][lic.currency]) -- version: [bb3fd1a Git][ver.currency] *2018-05-24*
 * [enchanting][] ([GPL / WTFPL / CC BY-SA-NA][lic.enchanting]) -- version: [13ea31c Git][ver.enchanting] *2016-12-16* ([patched][patch.enchanting])
 * equipment/
@@ -311,7 +311,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.christmas]: mods/buildings/christmas/LICENSE.txt
 [lic.creatures]: mods/mobiles/engine/creatures/LICENSE.txt
 [lic.crops]: mods/farming/crops/LICENSE
-[lic.craftguide]: mods/crafting/craftguide/LICENSE
+[lic.craftguide]: mods/crafting/craftguide/license.txt
 [lic.currency]: https://forum.minetest.net/viewtopic.php?t=7002
 [lic.deploy_nodes]: mods/modpacks/deploy_nodes/LICENSE
 [lic.drawers]: mods/storage/drawers/LICENSE.txt
@@ -406,7 +406,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.coloredwood]: https://gitlab.com/VanessaE/coloredwood/tags/2021-01-30
 [ver.compassgps]: https://github.com/Kilarin/compassgps/tree/ec96e18
 [ver.crafting_bench]: https://github.com/minetest-mods/crafting_bench/tree/ca21489
-[ver.craftguide]: https://github.com/minetest-mods/craftguide/tree/1.1
+[ver.craftguide]: https://github.com/minetest-mods/craftguide/tree/f379998
 [ver.crops]: https://github.com/minetest-mods/crops/tree/v1
 [ver.currency]: https://github.com/minetest-mods/currency/tree/bb3fd1a
 [ver.deploy_nodes]: https://github.com/cornernote/minetest-deploy_nodes/tree/b67e162
@@ -497,7 +497,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.bridges]: https://github.com/AntumMT/mod-bridges/tree/ba8f71a
 [patch.castle_weapons]: https://github.com/AntumMT/mod-castle_weapons/tree/669db13
 [patch.christmas]: https://github.com/AntumMT/mod-christmas/tree/7ffdc67
-[patch.craftguide]: https://github.com/AntumMT/mod-craftguide/tree/3930813
+[patch.craftguide]: https://github.com/AntumMT/mod-craftguide/tree/aef18f2
 [patch.crops]: https://github.com/AntumMT/mod-crops/tree/a1cce06
 [patch.drawers]: https://github.com/AntumMT/mod-drawers/tree/a77f809
 [patch.enchanting]: https://github.com/AntumMT/mod-enchanting/tree/7a01f2f
