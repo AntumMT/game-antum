@@ -118,7 +118,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [hudmap][] ([LGPL][lic.lgpl2.1] / [WTFPL][lic.wtfpl]) -- version: [3b8bdc0 Git][ver.hudmap] *2017-05-14*
     * [mthudclock][] ([WTFPL][lic.wtfpl]) -- version [d86e745 Git][ver.mthudclock] *2018-01-06*
 * weather/
-    * [lightning][] ([LGPL / CC BY-SA][lic.lightning]) -- version: [39bd36c Git][ver.lightning] *2017-02-20*
     * [snowdrift][] ([MIT / CC BY / CC BY-SA][lic.snowdrift]) -- version: [3342939 Git][ver.snowdrift] *2020-04-24*
 * wood/
 	* [coloredwood][] ([LGPL][lic.lgpl3.0]) -- version: [2021-01-30][ver.coloredwood]
@@ -238,7 +237,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [invisible]: https://forum.minetest.net/viewtopic.php?t=14399
 [jukebox]: https://forum.minetest.net/viewtopic.php?t=13505
 [jumping]: https://forum.minetest.net/viewtopic.php?t=2957
-[lightning]: https://forum.minetest.net/viewtopic.php?t=13886
 [mesecons]: https://forum.minetest.net/viewtopic.php?t=628
 [minetest_game]: https://github.com/minetest/minetest_game
 [mob-engine]: https://github.com/minetest-mods/mob-engine
@@ -329,7 +327,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.invisibility]: mods/player/visuals/invisibility/license.txt
 [lic.invisible]: mods/admin/invisible/readme.txt
 [lic.jukebox]: mods/furniture/jukebox/README.txt
-[lic.lightning]: mods/weather/lightning/README.md
 [lic.mesecons]: mods/modpacks/mesecons/COPYING.txt
 [lic.mob-engine]: mods/modpacks/mob-engine/LICENSE
 [lic.mobs_animal]: mods/mobiles/general/mobs_animal/license.txt
@@ -438,7 +435,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.intllib]: https://github.com/minetest-mods/intllib/releases/tag/20180811
 [ver.invisibility]: https://notabug.org/TenPlus1/invisibility/src/e3f04a25c22fa6f9ac044de0bf2f5978c0a95cdf
 [ver.jukebox]: https://github.com/minetest-mods/jukebox/tree/d1cd9e1
-[ver.lightning]: https://github.com/minetest-mods/lightning/tree/39bd36c
 [ver.mesecons]: https://github.com/minetest-mods/mesecons/tree/v1.2
 [ver.minetest_game]: https://github.com/minetest/minetest_game/tree/5.4.1
 [ver.mob-engine]: https://github.com/minetest-mods/mob-engine/tree/c2bedc3
