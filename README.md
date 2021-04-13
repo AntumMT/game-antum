@@ -57,15 +57,15 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * lighting/
     * [glow][] ([GPL][lic.gpl2.0]) -- version: [4c015a0 Git][ver.glow] *2019-02-05*
 	* [ilights][] ([LGPL][lic.lgpl3.0]) -- version: [2021-02-25-01][ver.ilights] ([patched][patch.ilights])
-    * walking_light ([petermalone fork][walking_light]) ([WTFPL / CC BY-SA][lic.walking_light]) -- version: [b23d836 Git][ver.walking_light] *2017-06-21* ([patched][patch.walking_light])
+    * walking_light ([petermalone fork][walking_light]) ([WTFPL / CC BY-SA][lic.walking_light]) -- version: [b23d836 Git][ver.walking_light] *2017-06-21* ([patched][patch.walking_light]) ***UPDATES***
 * materials/
 	* [amber][] ([LGPL][lic.lgpl2.1]) -- version: [56627fa Git][ver.amber] *2017-10-29* ([patched][patch.amber])
 	* [basic_materials][] ([LGPL][lic.lgpl3.0]) -- version: [2021-01-30][ver.basic_materials]
-	* [bonemeal][] ([MIT][lic.bonemeal]) -- version: [a0cb865 Git][ver.bonemeal] *2018-07-03*
-	* [gems_encrustable][] ([WTFPL][lic.wtfpl]) -- version: [81d513d Git][ver.gems_encrustable] *2012-07-31* ([patched][patch.gems_encrustable])
+	* [bonemeal][] ([MIT][lic.bonemeal]) -- version: [a0cb865 Git][ver.bonemeal] *2018-07-03* ***UPDATES***
+	* [gems_encrustable][] ([WTFPL][lic.wtfpl]) -- version: [81d513d Git][ver.gems_encrustable] *2012-07-31* ([patched][patch.gems_encrustable]) ***UPDATES***
 	* [gems_tools][] ([GPL][lic.gpl3.0]) -- version: [b375432 Git][ver.gems_tools] *2016-09-03* ([patched][patch.gems_tools])
-	* [moreores][] ([zlib][lic.moreores] / [CC BY-SA][lic.ccbysa3.0]) -- version: [2316595 Git][ver.moreores] *2018-04-21* ([patched][patch.moreores])
-	* [quartz][] ([MIT][lic.quartz]) -- version: [1c5dca2 Git][ver.quartz] *2017-10-03* ([patched][patch.quartz])
+	* [moreores][] ([zlib][lic.moreores] / [CC BY-SA][lic.ccbysa3.0]) -- version: [2316595 Git][ver.moreores] *2018-04-21* ([patched][patch.moreores]) ***UPDATES***
+	* [quartz][] ([MIT][lic.quartz]) -- version: [1c5dca2 Git][ver.quartz] *2017-10-03* ([patched][patch.quartz]) ***UPDATES***
 	* [rainbow_ore][] ([LGPL][lic.rainbow_ore]) -- version: [6e77693 Git][ver.rainbow_ore] *2015-11-02* ([patched][patch.rainbow_ore])
 	* [unifieddyes][] ([GPL][lic.gpl2.0]) -- version: [2021-03-26-1][ver.unifieddyes] ([patched][patch.unifieddyes])
 * mobiles/
@@ -79,42 +79,42 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* [creatures][mob-engine] ([zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [c2bedc3 Git][ver.mob-engine] *2018-04-23* ([patched][patch.mob-engine])
 		* [mobs_redo][] ([MIT][lic.mobs_redo] / [CC BY][lic.ccby3.0] / [CC0][lic.cc0]) -- version: [f6e16a5 Git][ver.mobs_redo] *2021-04-11* ([patched][patch.mobs_redo])
 	* general/
-		* [mobs_animal][] ([MIT][lic.mobs_animal]) -- version: [52889c7 Git][ver.mobs_animal] *2018-06-27* ([patched][patch.mobs_animal])
+		* [mobs_animal][] ([MIT][lic.mobs_animal]) -- version: [52889c7 Git][ver.mobs_animal] *2018-06-27* ([patched][patch.mobs_animal]) ***UPDATES***
 	* [monsters_aggressive][] (see individual mods for licensing) -- version: [89a8187 Git][ver.monsters_aggressive] *2017-08-30*
 	* [monsters_passive][] (see individual mods for licensing) -- version: [b07fe19 Git][ver.monsters_passive] *2017-08-09*
 * [painting][] (???) -- version [8961849 Git][ver.painting] *2016-05-05*
 * [pipeworks][] ([LGPL][lic.lgpl3.0]) -- version: [2021-02-19][ver.pipeworks]
 * plantlife/
 * player/action/
-	* [hbsprint][] ([LGPL][lic.lgpl2.1]) -- version: [de3e77e Git][ver.hbsprint] *2018-04-11* ([patched][patch.hbsprint])
+	* [hbsprint][] ([LGPL][lic.lgpl2.1]) -- version: [de3e77e Git][ver.hbsprint] *2018-04-11* ([patched][patch.hbsprint]) ***UPDATES***
 * player/visuals/
-    * [invisibility][] ([MIT][lic.invisibility]) -- version: [e3f04a2 Git][ver.invisibility] *2017-10-09* ([patched][patch.invisibility])
+    * [invisibility][] ([MIT][lic.invisibility]) -- version: [e3f04a2 Git][ver.invisibility] *2017-10-09* ([patched][patch.invisibility]) ***UPDATES***
     * [wardrobe][] ([WTFPL][lic.wtfpl]) -- version: [1.1-2-c48b011 Git][ver.wardrobe] *2015-05-21*
 * protection/
-    * [pvp_areas][] ([LGPL][lic.lgpl2.1]) -- version: [0188945 Git][ver.pvp_areas] *2018-01-16* ([patched][patch.pvp_areas])
+    * [pvp_areas][] ([LGPL][lic.lgpl2.1]) -- version: [0188945 Git][ver.pvp_areas] *2018-01-16* ([patched][patch.pvp_areas]) ***UPDATES***
     * [simple_protection][] ([CC0][lic.cc0]) -- version: [3630fe9 Git][ver.simple_protection] *2021-04-07* ([patched][patch.simple_protection])
 * signs/
-	* [signs_lib][] ([BSD][lic.signs_lib] / [WTFPL][lic.wtfpl]) -- version: [a2f7f62 Git][ver.signs_lib] *2018-05-24*
+	* [signs_lib][] ([BSD][lic.signs_lib] / [WTFPL][lic.wtfpl]) -- version: [a2f7f62 Git][ver.signs_lib] *2018-05-24* ***UPDATES***
 * sound/
     * [ambience][ambience_ultralite] ([WTFPL][lic.wtfpl] / [CC BY / CC BY-SA / CC BY-NC-SA / CC0][lic.ambience_ultralite]) -- version: 0.36
 * spawning/
 	* [spawneggs][] ([WTFPL][lic.spawneggs]) -- version [4650370 Git][ver.spawneggs] *2013-09-09* ([patched][patch.spawneggs])
 * storage/
-	* [drawers][] ([MIT / CC0 / CC BY][lic.drawers]) -- version: [279d0ab Git][ver.drawers] *2018-06-18*
-	* [more_chests][] ([GPL][lic.gpl2.0]) -- version [c597779 Git][ver.more_chests] *2017-02-27*
+	* [drawers][] ([MIT / CC0 / CC BY][lic.drawers]) -- version: [279d0ab Git][ver.drawers] *2018-06-18* ***UPDATES***
+	* [more_chests][] ([GPL][lic.gpl2.0]) -- version [c597779 Git][ver.more_chests] *2017-02-27* ***UPDATES***
 * tools/
-	* [compassgps][] ([WTFPL][lic.wtfpl] / [CC0][lic.cc0] / [CC BY-SA][lic.ccbysa]) -- version: [ec96e18 Git][ver.compassgps] *2018-02-12*
-    * [tools_obsidian][] ([LGPL / CC BY-SA][lic.tools_obsidian]) -- version: [f77fd79][ver.tools_obsidian] *2016-03-19* ([patched][patch.tools_obsidian])
+	* [compassgps][] ([WTFPL][lic.wtfpl] / [CC0][lic.cc0] / [CC BY-SA][lic.ccbysa]) -- version: [ec96e18 Git][ver.compassgps] *2018-02-12* ***UPDATES***
+    * [tools_obsidian][] ([LGPL / CC BY-SA][lic.tools_obsidian]) -- version: [f77fd79][ver.tools_obsidian] *2016-03-19* ([patched][patch.tools_obsidian]) ***UPDATES***
     * [workbench][] ([LGPL / WTFPL](mods/tools/workbench/LICENSE)) -- version: [bd14f59 Git][ver.workbench] *2017-08-08*
 * transport/
-	* [boats][boats2] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa3.0]) -- version [b83231e Git][ver.boats2] *2016-10-14* ([patched][patch.boats2])
+	* [boats][boats2] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa3.0]) -- version [b83231e Git][ver.boats2] *2016-10-14* ([patched][patch.boats2]) ***UPSTREAM MOVED***
 	* [helicopter][] ([GPL][lic.gpl2.0]) -- version: [10f1433 Git][ver.helicopter] *2014-03-28* ([patched][ver.helicopter_pm]) ***UPSTREAM UPDATES***
     * [hovercraft][] ([LGPL / CC BY-SA / CC0][lic.hovercraft]) -- version: [4d50e68 Git][ver.hovercraft] *2017-05-14* ([patched][patch.hovercraft])
 * ui/
     * [bookmarks_gui][] ([BSD 3-Clause][lic.bookmarks_gui]) -- version: [f7ae10a Git][ver.bookmarks_gui] *2017-08-29*
-    * [hbarmor][] ([MIT][lic.mit] / [CC BY-SA][lic.ccbysa3.0]) -- version [0.4.0][ver.hbarmor] *2017-09-18* ([patched][patch.hbarmor])
-    * [home_gui][] ([BSD 3-Clause][lic.home_gui]) -- version: [90086d0 Git][ver.home_gui] *2018-03-15* ([patched][patch.home_gui])
-    * [hudbars][] ([MIT][lic.mit] / [CC BY-SA][lic.ccbysa3.0]) -- version [1.11.0][ver.hudbars] *2018-02-05*
+    * [hbarmor][] ([MIT][lic.mit] / [CC BY-SA][lic.ccbysa3.0]) -- version [0.4.0][ver.hbarmor] *2017-09-18* ([patched][patch.hbarmor]) ***UPDATES***
+    * [home_gui][] ([BSD 3-Clause][lic.home_gui]) -- version: [90086d0 Git][ver.home_gui] *2018-03-15* ([patched][patch.home_gui]) ***UPDATES***
+    * [hudbars][] ([MIT][lic.mit] / [CC BY-SA][lic.ccbysa3.0]) -- version [1.11.0][ver.hudbars] *2018-02-05* ***UPDATES***
     * [hudmap][] ([LGPL][lic.lgpl2.1] / [WTFPL][lic.wtfpl]) -- version: [3b8bdc0 Git][ver.hudmap] *2017-05-14*
     * [mthudclock][] ([WTFPL][lic.wtfpl]) -- version [d86e745 Git][ver.mthudclock] *2018-01-06*
 * weather/
@@ -122,9 +122,9 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * wood/
 	* [coloredwood][] ([LGPL][lic.lgpl3.0]) -- version: [2021-01-30][ver.coloredwood]
 * world/
-    * [bedrock2][] ([WTFPL][lic.wtfpl]) -- version [63dbab8 Git][ver.bedrock2] *2017-06-20* ([patched][patch.bedrock2])
-    * [biome_lib][] ([WTFPL][lic.wtfpl]) -- version: [8fd0789 Git][ver.biome_lib] *2017-11-06* ([patched][patch.biome_lib])
-    * [desert_life][] ([CC BY-SA][lic.ccbysa4.0]) -- version: [d448fa3 Git][ver.desert_life] *2017-01-01*
+    * [bedrock2][] ([WTFPL][lic.wtfpl]) -- version [63dbab8 Git][ver.bedrock2] *2017-06-20* ([patched][patch.bedrock2]) ***UPDATES***
+    * [biome_lib][] ([WTFPL][lic.wtfpl]) -- version: [8fd0789 Git][ver.biome_lib] *2017-11-06* ([patched][patch.biome_lib]) ***UPDATES***
+    * [desert_life][] ([CC BY-SA][lic.ccbysa4.0]) -- version: [d448fa3 Git][ver.desert_life] *2017-01-01* ***UPDATES***
     * [ethereal][] ([MIT][lic.ethereal]) -- version [9d6103d][ver.ethereal] *2021-04-09*
     * [hill_nodebox][] ([BSD 3-Clause][lic.hill_nodebox]) -- version [41bbfa2 Git][ver.hill_nodebox] *2014-12-13*
     * [nether][] ([ISC / CC BY / CC BY-SA / CC0][lic.nether]) -- version: [3][ver.nether] *2021-01-22* ([patched][patch.nether])
@@ -135,11 +135,11 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 ### This is a list of installed modpacks & their components (trying to keep them listed separate for sake of organization):
 
 * [3d_armor][] ([LGPL / CC BY-SA][lic.3d_armor]) - version: [47ecef4 Git][ver.3d_armor] *2019-05-27* ([patched][patch.3d_armor])
-* [deploy_nodes][] ([BSD 3-Clause][lic.deploy_nodes]) -- version [b67e162 Git][ver.deploy_nodes] *2017-06-08*
+* [deploy_nodes][] ([BSD 3-Clause][lic.deploy_nodes]) -- version: [b67e162 Git][ver.deploy_nodes] *2017-06-08*
 * [homedecor][] ([LGPL / WTFPL / CC BY-SA / CC0][lic.homedecor]) -- version: [81e0d4e Git][ver.homedecor] *2021-03-30* ([patched][patch.homedecor])
-* [mesecons][] ([LGPL / CC BY-SA][lic.mesecons]) -- version [1.2 (d4e05f3 Git)][ver.mesecons] *2018-07-23*
+* [mesecons][] ([LGPL / CC BY-SA][lic.mesecons]) -- version [1.2 (d4e05f3 Git)][ver.mesecons] *2018-07-23* ***UPDATES***
 * [minetest_game][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- version: [5.4.1][ver.minetest_game] *2021-04-10*
-* [moremesecons][] ([MPL][lic.mpl2.0]) -- version [8a56370 Git][ver.moremesecons] *2018-02-27*
+* [moremesecons][] ([MPL][lic.mpl2.0]) -- version: [8a56370 Git][ver.moremesecons] *2018-02-27* ***UPDATES***
 * [technic][] ([LGPL][lic.lgpl2.0]) -- version: [43acec2 Git][ver.technic] *2021-02-09*
 
 
@@ -154,9 +154,9 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [castle_masonry][] -- version [2ed4f19 Git][ver.castle_masonry] *2017-02-28* ***UPDATES***
 	* [castle_shields][] -- version [ce853d7 Git][ver.castle_shields] *2017-02-28* ***UPDATES***
 	* [castle_storage][] -- version [c60b9ec Git][ver.castle_storage] *2017-06-04* ***UPDATES***
-	* [castle_tapestries][] -- version [78b6e36 Git][ver.castle_tapestries] *2017-03-19*
+	* [castle_tapestries][] -- version [78b6e36 Git][ver.castle_tapestries] *2017-03-19* ***UPDATES***
 	* [castle_weapons][] -- version [5f5ebcc Git][ver.castle_weapons] *2017-06-07* ([patched][patch.castle_weapons]) ***UPDATES***
-	* [crafting_bench][] -- version [ca21489 Git][ver.crafting_bench] *2017-06-07*
+	* [crafting_bench][] -- version [ca21489 Git][ver.crafting_bench] *2017-06-07* ***UPDATES***
 * [mob-engine][] ([zlib][lic.mob-engine] / [CC BY-SA][lic.ccbysa3.0]) -- version: [c2bedc3 Git][ver.mob-engine] *2018-04-23* ([patched][patch.mob-engine])
 * [mymods](https://github.com/AntumMT/mp-mymods)
 	* [mydoors][] ([CC-BY / CC-BY-SA][lic.mydoors] / [WTFPL][lic.wtfpl] / [DWYWFPL][lic.dwywpl]) -- version: [63aef13 Git][ver.mydoors] *2017-03-31* ([patched][patch.mydoors]) ***UPDATES***
@@ -385,7 +385,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.bags]: https://github.com/cornernote/minetest-bags/tree/bc87b45
 [ver.basic_materials]: https://gitlab.com/VanessaE/basic_materials/-/tags/2021-01-30
 [ver.bedrock2]: http://repo.or.cz/minetest_bedrock2.git/tree/63dbab8
-[ver.biome_lib]: https://github.com/minetest-mods/biome_lib/tree/8fd0789
+[ver.biome_lib]: https://gitlab.com/VanessaE/biome_lib/tree/8fd0789
 [ver.boats2]: https://github.com/amadin/boats/tree/b83231e
 [ver.bonemeal]: https://notabug.org/TenPlus1/bonemeal/src/a0cb8657df797c36011ab61311ef2e15960d530b
 [ver.bookmarks_gui]: https://github.com/cornernote/minetest-bookmarks_gui/tree/f7ae10a
@@ -438,7 +438,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.mesecons]: https://github.com/minetest-mods/mesecons/tree/v1.2
 [ver.minetest_game]: https://github.com/minetest/minetest_game/tree/5.4.1
 [ver.mob-engine]: https://github.com/minetest-mods/mob-engine/tree/c2bedc3
-[ver.mobs_animal]: https://github.com/tenplus1/mobs_animal/tree/52889c7
+[ver.mobs_animal]: https://notabug.org/TenPlus1/mobs_animal/src/52889c7
 [ver.mobs_redo]: https://notabug.org/TenPlus1/mobs_redo/src/f6e16a550330cf6a641753c03ebe331682294939
 [ver.monsters_aggressive]: https://github.com/AntumMT/mp-monsters_aggressive/tree/89a8187
 [ver.monsters_passive]: https://github.com/AntumMT/mp-monsters_passive/tree/b07fe19
@@ -464,7 +464,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.quartz]: https://github.com/minetest-mods/quartz/tree/1c5dca2
 [ver.rainbow_ore]: https://github.com/FsxShader2012/rainbow_ore/tree/6e77693
 [ver.sfinv_buttons]: http://repo.or.cz/minetest_sfinv_buttons.git/tree/ebb1f7c
-[ver.signs_lib]: https://github.com/minetest-mods/signs_lib/tree/a2f7f62
+[ver.signs_lib]: https://gitlab.com/VanessaE/signs_lib/tree/a2f7f62
 [ver.simple_protection]: https://github.com/SmallJoker/simple_protection/tree/3630fe9
 [ver.slingshot]: https://github.com/AntumMT/mod-slingshot/tree/bb77525
 [ver.snowdrift]: https://github.com/paramat/snowdrift/tree/3342939
