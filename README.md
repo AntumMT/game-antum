@@ -37,7 +37,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [currency][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2021-01-30][ver.currency]
 * [enchanting][] ([GPL / WTFPL / CC BY-SA-NA][lic.enchanting]) -- version: [13ea31c Git][ver.enchanting] *2016-12-16* ([patched][patch.enchanting])
 * equipment/
-	* [airtanks][] ([MIT][lic.airtanks]) -- version: [868c3a7 Git][ver.airtanks] *2018-05-26* ([patched][patch.airtanks])
+	* [airtanks][] ([MIT][lic.airtanks]) -- version: [b686694 Git][ver.airtanks] *2021-03-13* ([patched][patch.airtanks])
 	* [slingshot][] ([MIT][lic.slingshot] / [CC0][lic.cc0]) -- version [0.1][ver.slingshot] *2017-08-16*
 	* [technic_armor][] ([LGPL / WTFPL][lic.technic_armor]) -- version [694642f Git][ver.technic_armor] *2018-02-11* ***UPDATES***
     * [throwing][] ([WTFPL][lic.wtfpl]) -- version: [90bcf43 Git][ver.throwing] *2013-09-27* ([patched][patch.throwing])
@@ -375,7 +375,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.zlib]: doc/licenses/zlib.txt
 
 [ver.3d_armor]: https://github.com/stujones11/minetest-3d_armor/tree/47ecef4
-[ver.airtanks]: https://github.com/minetest-mods/airtanks/tree/868c3a7
+[ver.airtanks]: https://github.com/minetest-mods/airtanks/tree/b686694
 [ver.amber]: https://github.com/theraven262/amber/tree/56627fa
 [ver.animals_aggressive]: https://github.com/AntumMT/mp-animals_aggressive/tree/4eede4d
 [ver.animals_harmless]: https://github.com/AntumMT/mp-animals_harmless/tree/e9b02a8
@@ -487,7 +487,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.worldedge]: https://github.com/minetest-mods/worldedge/tree/608462d
 
 [patch.3d_armor]: https://github.com/AntumMT/mp-3d_armor/tree/19d1001
-[patch.airtanks]: https://github.com/AntumMT/mod-airtanks/tree/42d31cb
+[patch.airtanks]: https://github.com/AntumMT/mod-airtanks/tree/fd52265
 [patch.amber]: https://github.com/AntumMT/mod-amber/tree/b7bd9f0
 [patch.away]: https://github.com/AntumMT/mod-away/tree/3b0bf9e
 [patch.bedrock2]: https://github.com/AntumMT/mod-bedrock2/tree/344fdae

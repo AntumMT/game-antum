@@ -1,10 +1,4 @@
 
-# If 'enable_tool_wear' is enabled, air tanks will begin to wear out when used.
-airtanks_enable_wear (Wear out when used) bool true
-
-# If 'airtanks_enable_wear' is enabled, air tanks will wear out even in creative mode.
-airtanks_wear_in_creative (Wear out in creative mode) bool true
-
 # Number of uses for steel air tanks.
 airtanks_steel_uses (Steel air tank uses) int 30 2 1000
 
@@ -13,3 +7,18 @@ airtanks_copper_uses (Copper air tank uses) int 10 2 1000
 
 # Number of uses for bronze air tanks.
 airtanks_bronze_uses (Bronze air tank uses) int 20 2 1000
+
+# If 'enable_tool_wear' is enabled, air tanks will begin to wear out when used.
+airtanks_enable_wear (Wear out when used) bool true
+
+# Air tanks will wear out even in creative mode.
+airtanks_wear_in_creative (Wear out in creative mode) bool true
+
+# Enable double tanks.
+airtanks_enable_double (Enable double tanks) bool true
+
+# Enable triple tanks.
+airtanks_enable_triple (Enable triple tanks) bool true
+
+# Compressor requires fuel.
+airtanks_compressor_needs_fuel (Compressor requires fuel) bool true
