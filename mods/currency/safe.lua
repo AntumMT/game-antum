@@ -1,8 +1,6 @@
--- internationalization boilerplate
-local MP = minetest.get_modpath(minetest.get_current_modname())
-local S, NS = dofile(MP.."/intllib.lua")
+local S = minetest.get_translator("currency")
 
-function default.get_safe_formspec(pos)
+function currency.get_safe_formspec(pos)
 	local spos = pos.x .. "," .. pos.y .. "," ..pos.z
 	local formspec =
 		"size[8,9]"..
@@ -11,6 +9,10 @@ function default.get_safe_formspec(pos)
 		"listring[nodemeta:".. spos .. ";main]"..
 		"listring[current_player;main]"
 	return formspec
+end
+
+if minetest.global_exists("default") then
+	default.get_safe_formspec = currency.get_safe_formspec
 end
 
 local function has_safe_privilege(meta, player)
@@ -33,7 +35,7 @@ minetest.register_node("currency:safe", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"safe_side.png",
-	        "safe_side.png",
+			"safe_side.png",
 			"safe_side.png",
 			"safe_side.png",
 			"safe_side.png",
@@ -60,38 +62,41 @@ minetest.register_node("currency:safe", {
 	allow_metadata_inventory_move = function(pos, from_list, from_index, to_list, to_index, count, player)
 		local meta = minetest.get_meta(pos)
 		if not has_safe_privilege(meta, player) then
-			minetest.log("action", S("@1 tried to access a safe belonging to @2 at @3",
-				player:get_player_name(), meta:get_string("owner"),	minetest.pos_to_string(pos)))
+			minetest.log("action", player:get_player_name().." tried to access a safe belonging to "
+				..meta:get_string("owner").." at "
+				..minetest.pos_to_string(pos))
 			return 0
 		end
 		return count
 	end,
-    allow_metadata_inventory_put = function(pos, listname, index, stack, player)
+	allow_metadata_inventory_put = function(pos, listname, index, stack, player)
 		local meta = minetest.get_meta(pos)
 		if not has_safe_privilege(meta, player) then
-			minetest.log("action", S("@1 tried to access a safe belonging to @2 at @3",
-				player:get_player_name(), meta:get_string("owner"), minetest.pos_to_string(pos)))
+			minetest.log("action", player:get_player_name().." tried to access a safe belonging to "
+				..meta:get_string("owner").." at "
+				..minetest.pos_to_string(pos))
 			return 0
 		end
 		return stack:get_count()
 	end,
-    allow_metadata_inventory_take = function(pos, listname, index, stack, player)
+	allow_metadata_inventory_take = function(pos, listname, index, stack, player)
 		local meta = minetest.get_meta(pos)
 		if not has_safe_privilege(meta, player) then
-			minetest.log("action", S("@1 tried to access a safe belonging to @2 at @3",
-				player:get_player_name(), meta:get_string("owner"), minetest.pos_to_string(pos)))
+			minetest.log("action", player:get_player_name().." tried to access a safe belonging to "
+				..meta:get_string("owner").." at "
+				..minetest.pos_to_string(pos))
 			return 0
 		end
 		return stack:get_count()
 	end,
 	on_metadata_inventory_move = function(pos, from_list, from_index, to_list, to_index, count, player)
-		minetest.log("action", S("@1 moves stuff in safe at @2", player:get_player_name(), minetest.pos_to_string(pos)))
+		minetest.log("action", player:get_player_name().." moves stuff in safe at "..minetest.pos_to_string(pos))
 	end,
-    on_metadata_inventory_put = function(pos, listname, index, stack, player)
-		minetest.log("action", S("@1 moves stuff to safe at @2", player:get_player_name(), minetest.pos_to_string(pos)))
+	on_metadata_inventory_put = function(pos, listname, index, stack, player)
+		minetest.log("action", player:get_player_name().." moves stuff to safe at "..minetest.pos_to_string(pos))
 	end,
-    on_metadata_inventory_take = function(pos, listname, index, stack, player)
-		minetest.log("action", S("@1 takes stuff from safe at @2", player:get_player_name(), minetest.pos_to_string(pos)))
+	on_metadata_inventory_take = function(pos, listname, index, stack, player)
+		minetest.log("action", player:get_player_name().." takes stuff from safe at "..minetest.pos_to_string(pos))
 	end,
 	on_rightclick = function(pos, node, clicker)
 		local meta = minetest.get_meta(pos)
@@ -99,7 +104,7 @@ minetest.register_node("currency:safe", {
 			minetest.show_formspec(
 				clicker:get_player_name(),
 				"currency:safe",
-				default.get_safe_formspec(pos)
+				currency.get_safe_formspec(pos)
 			)
 		end
 	end,

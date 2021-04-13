@@ -34,7 +34,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [chatlog][] ([CC0][lic.cc0]) -- version: [1.0][ver.chatlog] *2017-08-12*
 * crafting/
     * [craftguide][] ([MIT][lic.craftguide]) -- version: [f379998 Git][ver.craftguide] *2021-02-08* ([patched][patch.craftguide])
-* [currency][] ([WTFPL][lic.currency]) -- version: [bb3fd1a Git][ver.currency] *2018-05-24*
+* [currency][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2021-01-30][ver.currency]
 * [enchanting][] ([GPL / WTFPL / CC BY-SA-NA][lic.enchanting]) -- version: [13ea31c Git][ver.enchanting] *2016-12-16* ([patched][patch.enchanting])
 * equipment/
 	* [airtanks][] ([MIT][lic.airtanks]) -- version: [868c3a7 Git][ver.airtanks] *2018-05-26* ([patched][patch.airtanks])
@@ -207,7 +207,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [craftguide]: https://forum.minetest.net/viewtopic.php?t=14088
 [crafting_bench]: https://github.com/minetest-mods/crafting_bench
 [crops]: https://forum.minetest.net/viewtopic.php?t=11795
-[currency]: https://github.com/minetest-mods/currency
+[currency]: https://forum.minetest.net/viewtopic.php?t=21339
 [deploy_nodes]: https://cornernote.github.io/minetest-deploy_nodes/
 [desert_life]: https://forum.minetest.net/viewtopic.php?t=16054
 [dinosaurs_aggressive]: https://github.com/AntumMT/mp-dinosaurs_aggressive
@@ -312,7 +312,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.creatures]: mods/mobiles/engine/creatures/LICENSE.txt
 [lic.crops]: mods/farming/crops/LICENSE
 [lic.craftguide]: mods/crafting/craftguide/license.txt
-[lic.currency]: https://forum.minetest.net/viewtopic.php?t=7002
 [lic.deploy_nodes]: mods/modpacks/deploy_nodes/LICENSE
 [lic.drawers]: mods/storage/drawers/LICENSE.txt
 [lic.elevator]: mods/buildings/elevator/readme.txt
@@ -408,7 +407,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.crafting_bench]: https://github.com/minetest-mods/crafting_bench/tree/ca21489
 [ver.craftguide]: https://github.com/minetest-mods/craftguide/tree/f379998
 [ver.crops]: https://github.com/minetest-mods/crops/tree/v1
-[ver.currency]: https://github.com/minetest-mods/currency/tree/bb3fd1a
+[ver.currency]: https://gitlab.com/VanessaE/currency/tree/2021-01-30
 [ver.deploy_nodes]: https://github.com/cornernote/minetest-deploy_nodes/tree/b67e162
 [ver.desert_life]: https://github.com/NathanSalapat/desert_life/tree/d448fa3
 [ver.dinosaurs_aggressive]: https://github.com/AntumMT/mp-dinosaurs_aggressive/tree/874f299
