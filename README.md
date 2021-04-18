@@ -143,6 +143,34 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [technic][] ([LGPL][lic.lgpl2.0]) -- version: [43acec2 Git][ver.technic] *2021-02-09*
 
 
+### Mods I am looking at:
+
+* [adv_vehicles](https://forum.minetest.net/viewtopic.php?t=22777) (Advanced Vehicles)
+* [billboard](https://forum.minetest.net/viewtopic.php?t=15260)
+* [bows](https://forum.minetest.net/viewtopic.php?t=14384)
+* [bright_night](https://forum.minetest.net/viewtopic.php?t=20078)
+* [cherrytree](https://forum.minetest.net/viewtopic.php?t=22118)
+* [christmas](https://forum.minetest.net/viewtopic.php?t=23782)
+* [draconis](https://forum.minetest.net/viewtopic.php?t=22595) (dragons)
+* [hangglider](https://forum.minetest.net/viewtopic.php?t=21425)
+* [helicopter](https://forum.minetest.net/viewtopic.php?t=24613)
+* [hot_air_balloons](https://forum.minetest.net/viewtopic.php?t=22367)
+* [mobf_trader](https://forum.minetest.net/viewtopic.php?t=9013) (Traders)
+* [mobkit](https://forum.minetest.net/viewtopic.php?t=22112)
+* [motorbike](https://forum.minetest.net/viewtopic.php?t=24244)
+* [motorboat](https://forum.minetest.net/viewtopic.php?t=24652)
+* [murder](https://forum.minetest.net/viewtopic.php?t=24884) (Murder mini-game)
+* [petz](https://forum.minetest.net/viewtopic.php?t=22245)
+* [pull_cart](https://forum.minetest.net/viewtopic.php?t=26400)
+* [rainf](https://forum.minetest.net/viewtopic.php?t=25554) (Temperate Rainforest biome)
+* [sailing](https://forum.minetest.net/viewtopic.php?t=23520)
+* [slimes](https://forum.minetest.net/viewtopic.php?t=15878)
+* [swaz](https://forum.minetest.net/viewtopic.php?t=25143) (Swampz biome)
+* [wildcow](https://forum.minetest.net/viewtopic.php?t=25739)
+* [xpro](https://forum.minetest.net/viewtopic.php?t=20499) (XP and Levels)
+* [zoonami](https://forum.minetest.net/viewtopic.php?t=25356)
+
+
 ---
 
 ### Stored in 'modpacks' directory
