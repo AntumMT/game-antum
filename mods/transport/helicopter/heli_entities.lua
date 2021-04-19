@@ -273,7 +273,8 @@ minetest.register_entity("helicopter:heli", {
             end
 
             if self.hp_max <= 0 then
-                helicopter.destroy(self)
+                self.object:remove()
+                puncher:get_inventory():add_item("main", "helicopter:heli")
             end
 
         end
