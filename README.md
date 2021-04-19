@@ -63,9 +63,9 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [amber][] ([LGPL][lic.lgpl2.1]) -- version: [56627fa Git][ver.amber] *2017-10-29* ([patched][patch.amber])
 	* [basic_materials][] ([LGPL][lic.lgpl3.0]) -- version: [2021-01-30][ver.basic_materials]
 	* [bonemeal][] ([MIT][lic.bonemeal]) -- version: [b5819d0 Git][ver.bonemeal] *2021-04-13*
-	* [gems_encrustable][] ([WTFPL][lic.wtfpl]) -- version: [81d513d Git][ver.gems_encrustable] *2012-07-31* ([patched][patch.gems_encrustable]) ***UPDATES***
+	* [gems_encrustable][] ([WTFPL][lic.wtfpl]) -- version: [81d513d Git][ver.gems_encrustable] *2012-07-31* ([patched][patch.gems_encrustable])
 	* [gems_tools][] ([GPL][lic.gpl3.0]) -- version: [b375432 Git][ver.gems_tools] *2016-09-03* ([patched][patch.gems_tools])
-	* [moreores][] ([zlib][lic.moreores] / [CC BY-SA][lic.ccbysa3.0]) -- version: [2316595 Git][ver.moreores] *2018-04-21* ([patched][patch.moreores]) ***UPDATES***
+	* [moreores][] ([zlib][lic.moreores] / [CC BY-SA][lic.ccbysa3.0]) -- version: [3fe0ba8 Git][ver.moreores] *2020-10-28* ([patched][patch.moreores])
 	* [quartz][] ([MIT][lic.quartz]) -- version: [1c5dca2 Git][ver.quartz] *2017-10-03* ([patched][patch.quartz]) ***UPDATES***
 	* [rainbow_ore][] ([LGPL][lic.rainbow_ore]) -- version: [6e77693 Git][ver.rainbow_ore] *2015-11-02* ([patched][patch.rainbow_ore])
 	* [unifieddyes][] ([GPL][lic.gpl2.0]) -- version: [2021-03-26-1][ver.unifieddyes] ([patched][patch.unifieddyes])
@@ -481,7 +481,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.more_chests]: https://github.com/minetest-mods/more_chests/tree/c597779
 [ver.moreblocks]: https://github.com/minetest-mods/moreblocks/tree/3b97ea5
 [ver.moremesecons]: https://github.com/minetest-mods/MoreMesecons/tree/8a56370
-[ver.moreores]: https://github.com/minetest-mods/moreores/tree/2316595
+[ver.moreores]: https://github.com/minetest-mods/moreores/tree/3fe0ba8
 [ver.mthudclock]: https://gitlab.com/Rochambeau/mthudclock/tree/d86e745
 [ver.mydoors]: https://github.com/minetest-mods/mydoors/tree/63aef13
 [ver.myfences]: https://github.com/DonBatman/myfences/tree/c6e529a
@@ -553,7 +553,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.mobs_animal]: https://github.com/AntumMT/mod-mobs_animal/tree/e275046
 [patch.mobs_redo]: https://github.com/AntumMT/mod-mobs_redo/tree/12e9367
 [patch.moreblocks]: https://github.com/AntumMT/mod-moreblocks/tree/6dda839
-[patch.moreores]: https://github.com/AntumMT/mod-moreores/tree/1cd9011
+[patch.moreores]: https://github.com/AntumMT/mod-moreores/tree/3697850
 [patch.mydoors]: https://github.com/AntumMT/mp-mydoors/tree/e36c9d1
 [patch.mypaint]: https://github.com/AntumMT/mod-mypaint/tree/10a5359
 [patch.mysheetmetal]: https://github.com/AntumMT/mod-mysheetmetal/tree/b7d644b
