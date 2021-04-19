@@ -40,8 +40,8 @@ local function eject_drops(drops, pos, radius)
 			local obj = core.add_item(drop_pos, item)
 			if obj then
 				obj:get_luaentity().collect = true
-				obj:setacceleration({x=0, y=-10, z=0})
-				obj:setvelocity({x=math.random(-3, 3), y=10,
+				obj:set_acceleration({x=0, y=-10, z=0})
+				obj:set_velocity({x=math.random(-3, 3), y=10,
 						z=math.random(-3, 3)})
 			end
 			count = count - max
@@ -103,12 +103,12 @@ local function entity_physics(pos, radius)
 	radius = radius * 2
 	local objs = core.get_objects_inside_radius(pos, radius)
 	for _, obj in pairs(objs) do
-		local obj_pos = obj:getpos()
-		local obj_vel = obj:getvelocity()
+		local obj_pos = obj:get_pos()
+		local obj_vel = obj:get_velocity()
 		local dist = math.max(1, vector.distance(pos, obj_pos))
 
 		if obj_vel ~= nil then
-			obj:setvelocity(calc_velocity(pos, obj_pos,
+			obj:set_velocity(calc_velocity(pos, obj_pos,
 					obj_vel, radius * 10))
 		end
 

@@ -82,6 +82,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* general/
 		* [mobs_animal][] ([MIT][lic.mobs_animal]) -- version: [80e72a4 Git][ver.mobs_animal] *2021-04-13* ([patched][patch.mobs_animal])
 	* [monsters_aggressive][] (see individual mods for licensing) -- version: [89a8187 Git][ver.monsters_aggressive] *2017-08-30*
+		* [sneeker][] ([CC0][lic.cc0]) -- version: [7c05c4d Git][ver.sneeker] *2021-04-19*
 	* [monsters_passive][] (see individual mods for licensing) -- version: [b07fe19 Git][ver.monsters_passive] *2017-08-09*
 * [painting][] (???) -- version [8961849 Git][ver.painting] *2016-05-05*
 * [pipeworks][] ([LGPL][lic.lgpl3.0]) -- version: [2021-02-19][ver.pipeworks]
@@ -305,6 +306,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [signs_lib]: https://forum.minetest.net/viewtopic.php?f=11&t=13762
 [simple_protection]: https://forum.minetest.net/viewtopic.php?t=9035
 [slingshot]: https://github.com/AntumMT/mod-slingshot
+[sneeker]: https://github.com/AntumMT/mod-sneeker
 [snowdrift]: https://forum.minetest.net/viewtopic.php?t=6854
 [spawneggs]: https://forum.minetest.net/viewtopic.php?t=6214
 [spectator_mode]: https://forum.minetest.net/viewtopic.php?t=13718
@@ -505,6 +507,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.signs_lib]: https://gitlab.com/VanessaE/signs_lib/tree/2021-03-04-2
 [ver.simple_protection]: https://github.com/SmallJoker/simple_protection/tree/3630fe9
 [ver.slingshot]: https://github.com/AntumMT/mod-slingshot/tree/bb77525
+[ver.sneeker]: https://github.com/AntumMT/mod-sneeker/tree/7c05c4d
 [ver.snowdrift]: https://github.com/paramat/snowdrift/tree/3342939
 [ver.spawneggs]: https://github.com/thefamilygrog66/spawneggs/tree/4650370
 [ver.spectator_mode]: https://github.com/minetest-mods/spectator_mode/tree/3648371

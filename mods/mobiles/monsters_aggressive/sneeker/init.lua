@@ -27,9 +27,9 @@ for I in pairs(scripts) do
 end
 
 local function jump(self,pos,direction)
-	local velocity = self.object:getvelocity()
+	local velocity = self.object:get_velocity()
 	if core.registered_nodes[core.get_node(pos).name].climbable then
-		self.object:setvelocity({x=velocity.x,y=4,z=velocity.z})
+		self.object:set_velocity({x=velocity.x,y=4,z=velocity.z})
 		return
 	end
 	
@@ -47,7 +47,7 @@ local function jump(self,pos,direction)
 	if def and def.walkable
 	and def2 and not def2.walkable
 	and def.drawtype ~= 'fencelike' then
-		self.object:setvelocity({
+		self.object:set_velocity({
 			x=velocity.x*2.2,
 			y=self.jump_height,
 			z=velocity.z*2.2
@@ -103,7 +103,7 @@ def.on_activate = function(self,staticdata)
 	self.powered = false
 	self.knockback = false
 	self.state = math.random(1,2)
-	self.old_y = self.object:getpos().y
+	self.old_y = self.object:get_pos().y
 	
 	local data = core.deserialize(staticdata)
 	if data and type(data) == 'table' then
@@ -127,13 +127,13 @@ def.on_step = function(self, dtime)
 	local ANIM_STAND = 1
 	local ANIM_WALK  = 2
 	
-	local pos = self.object:getpos()
-	local yaw = self.object:getyaw()
+	local pos = self.object:get_pos()
+	local yaw = self.object:get_yaw()
 	local inside = core.get_objects_inside_radius(pos,10)
 	local walk_speed = self.walk_speed
 	local animation = self.animation
 	local anim_speed = self.animation_speed
-	local velocity = self.object:getvelocity()
+	local velocity = self.object:get_velocity()
 	
 	self.timer = self.timer+0.01
 	self.turn_timer = self.turn_timer+0.01
@@ -151,10 +151,10 @@ def.on_step = function(self, dtime)
 
 	if self.turn == 'right' then
 		self.yaw = self.yaw+self.turn_speed
-		self.object:setyaw(self.yaw)
+		self.object:set_yaw(self.yaw)
 	elseif self.turn == 'left' then
 		self.yaw = self.yaw-self.turn_speed
-		self.object:setyaw(self.yaw)
+		self.object:set_yaw(self.yaw)
 	end
 	
 	if self.chase and self.visualx < 2 then
@@ -192,7 +192,7 @@ def.on_step = function(self, dtime)
 		
 		if velocity.x ~= 0
 		or velocity.z ~= 0 then
-			self.object:setvelocity({x=0,y=velocity.y,z=0})
+			self.object:set_velocity({x=0,y=velocity.y,z=0})
 		end
 	end
 
@@ -204,12 +204,12 @@ def.on_step = function(self, dtime)
 		
 		self.direction = {x=math.sin(yaw)*-1,y=-10,z=math.cos(yaw)}
 		if self.direction then
-			self.object:setvelocity({x=self.direction.x*walk_speed,y=velocity.y,z=self.direction.z*walk_speed})
+			self.object:set_velocity({x=self.direction.x*walk_speed,y=velocity.y,z=self.direction.z*walk_speed})
 		end
 		
 		random_turn(self)
 
-		local velocity = self.object:getvelocity()
+		local velocity = self.object:get_velocity()
 		
 		if self.turn_timer > 1 then
 			local direction = self.direction
@@ -268,24 +268,24 @@ def.on_step = function(self, dtime)
 									self.object:set_animation({x=animation.stand_START,y=animation.stand_END},anim_speed,0)
 									self.anim = ANIM_STAND
 								end
-								self.object:setvelocity({x=0,y=velocity.y,z=0})
+								self.object:set_velocity({x=0,y=velocity.y,z=0})
 								return
 							end
 						end
 					end
 				
-					local ppos = object:getpos()
+					local ppos = object:get_pos()
 					self.vec = {x=ppos.x-pos.x,y=ppos.y-pos.y,z=ppos.z-pos.z}
 					self.yaw = math.atan(self.vec.z/self.vec.x)+math.pi^2
 					if ppos.x > pos.x then
 						self.yaw = self.yaw+math.pi
 					end
 					self.yaw = self.yaw-2
-					self.object:setyaw(self.yaw)
+					self.object:set_yaw(self.yaw)
 					self.direction = {x=math.sin(self.yaw)*-1,y=0,z=math.cos(self.yaw)}
 				
 					local direction = self.direction
-					self.object:setvelocity({x=direction.x*2.5,y=velocity.y,z=direction.z*2.5})
+					self.object:set_velocity({x=direction.x*2.5,y=velocity.y,z=direction.z*2.5})
 
 					-- Jump
 					if self.jump_timer > 0.2 then
@@ -301,29 +301,29 @@ def.on_step = function(self, dtime)
 	-- Swim
 	local node = core.get_node(pos)
 	if core.get_item_group(node.name,'water') ~= 0 then
-		self.object:setacceleration({x=0,y=1,z=0})
-		local velocity = self.object:getvelocity()
-		if self.object:getvelocity().y > 5 then
-			self.object:setvelocity({x=0,y=velocity.y-velocity.y/2,z=0})
+		self.object:set_acceleration({x=0,y=1,z=0})
+		local velocity = self.object:get_velocity()
+		if self.object:get_velocity().y > 5 then
+			self.object:set_velocity({x=0,y=velocity.y-velocity.y/2,z=0})
 		else
-			self.object:setvelocity({x=0,y=velocity.y+1,z=0})
+			self.object:set_velocity({x=0,y=velocity.y+1,z=0})
 		end
 	else
-		self.object:setacceleration({x=0,y=-10,z=0})
+		self.object:set_acceleration({x=0,y=-10,z=0})
 	end
 end
 
 def.on_punch = function(self,puncher,time_from_last_punch,tool_capabilities,dir)
 	if self.knockback == false then
 		local knockback_level = self.knockback_level
-		self.object:setvelocity({x=dir.x*knockback_level,y=3,z=dir.z*knockback_level})
+		self.object:set_velocity({x=dir.x*knockback_level,y=3,z=dir.z*knockback_level})
 		self.knockback = true
 		core.after(0.6,function()
 			self.knockback = false
 		end)
 	end
 	if self.object:get_hp() < 1 then
-		local pos = self.object:getpos()
+		local pos = self.object:get_pos()
 		local x = 1/math.random(1,5)*dir.x
 		local z = 1/math.random(1,5)*dir.z
 		local p = {x=pos.x+x,y=pos.y,z=pos.z+z}
