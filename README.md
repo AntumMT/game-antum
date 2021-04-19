@@ -116,7 +116,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [bookmarks_gui][] ([BSD 3-Clause][lic.bookmarks_gui]) -- version: [f7ae10a Git][ver.bookmarks_gui] *2017-08-29*
     * [hbarmor][] ([MIT][lic.mit] / [CC BY-SA][lic.ccbysa3.0]) -- version: [1.0.0][ver.hbarmor] *2019-04-01*
     * [home_gui][] ([BSD 3-Clause][lic.home_gui]) -- version: [a291a09 Git][ver.home_gui] *2018-08-09*
-    * [hudbars][] ([MIT][lic.mit] / [CC BY-SA][lic.ccbysa3.0]) -- version [1.11.0][ver.hudbars] *2018-02-05* ***UPDATES***
+    * [hudbars][] ([MIT][lic.mit] / [CC BY-SA][lic.ccbysa3.0]) -- version: [2.3.1][ver.hudbars] *2020-07-11*
     * [hudmap][] ([LGPL][lic.lgpl2.1] / [WTFPL][lic.wtfpl]) -- version: [3b8bdc0 Git][ver.hudmap] *2017-05-14*
     * [mthudclock][] ([WTFPL][lic.wtfpl]) -- version [d86e745 Git][ver.mthudclock] *2018-01-06*
 * weather/
@@ -466,7 +466,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.home_gui]: https://github.com/cornernote/minetest-home_gui/tree/a291a09
 [ver.homedecor]: https://gitlab.com/VanessaE/homedecor_modpack/tree/81e0d4e
 [ver.hovercraft]: https://github.com/stujones11/hovercraft/tree/4d50e68
-[ver.hudbars]: http://repo.or.cz/minetest_hudbars.git/tree/ba21f47
+[ver.hudbars]: http://repo.or.cz/minetest_hudbars.git/tree/0684bac
 [ver.hudmap]: https://github.com/stujones11/hudmap/tree/3b8bdc0
 [ver.ilights]: https://gitlab.com/VanessaE/ilights/tags/2021-02-25-01
 [ver.intllib]: https://github.com/minetest-mods/intllib/tree/6ebdc53
