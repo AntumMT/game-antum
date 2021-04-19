@@ -8,12 +8,12 @@ tooltypes = {
 			"Sword"
 }
 amber.create_description = function(n)
-	description = "Amber " .. tooltypes[n]
+	local description = "Amber " .. tooltypes[n]
   return description
 end
 
 amber.create_ancient_description = function(n)
-	description = "Ancient Amber " .. tooltypes[n]
+	local description = "Ancient Amber " .. tooltypes[n]
   return description
 end
 

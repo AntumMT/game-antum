@@ -533,7 +533,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 [patch.3d_armor]: https://github.com/AntumMT/mp-3d_armor/tree/19d1001
 [patch.airtanks]: https://github.com/AntumMT/mod-airtanks/tree/fd52265
-[patch.amber]: https://github.com/AntumMT/mod-amber/tree/b7bd9f0
+[patch.amber]: https://github.com/AntumMT/mod-amber/tree/39b852a
 [patch.away]: https://github.com/AntumMT/mod-away/tree/3b0bf9e
 [patch.bedrock2]: https://github.com/AntumMT/mod-bedrock2/tree/9da5912
 [patch.boats2]: https://github.com/AntumMT/mod-boats2/tree/9b2bcb7
