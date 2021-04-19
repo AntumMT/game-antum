@@ -115,7 +115,7 @@ function mt_get_node_or_nil(pos)
 		return nil
 	end
 
-	node = minetest.get_node_or_nil(pos)
+	local node = minetest.get_node_or_nil(pos)
 	if not node then
 		-- Load the map at pos and try again
 		minetest.get_voxel_manip():read_from_map(pos, pos)
@@ -157,7 +157,7 @@ end
 -- return true if the player moved since last player_positions update
 local function player_moved(player)
 	local player_name = player:get_player_name()
-	local pos = player:getpos()
+	local pos = player:get_pos()
 	local rounded_pos = vector.round(pos)
 	local oldpos = player_positions[player_name]
 	if oldpos == nil or not poseq(rounded_pos, oldpos) then
@@ -394,7 +394,7 @@ local function update_light_player(player)
 	local wielded_item = get_wielded_light_item(player)
 
 	local player_name = player:get_player_name()
-	local pos = player:getpos()
+	local pos = player:get_pos()
 	local rounded_pos = vector.round(pos)
 
 	-- check for a nil node where the player is; if it is nil, we assume the block is not loaded, so we return without updating player_positions
@@ -495,7 +495,7 @@ minetest.register_on_joinplayer(function(player)
 	local player_name = player:get_player_name()
 	table.insert(players, player_name)
 	last_wielded[player_name] = get_wielded_light_item(player)
-	local pos = player:getpos()
+	local pos = player:get_pos()
 	player_positions[player_name] = nil
 	light_positions[player_name] = {}
 	update_light_player(player)
@@ -662,7 +662,7 @@ minetest.register_chatcommand("walking_light_clear_light", {
 			return false, "You need the server privilege to use mapclearlight"
 		end
 
-		local pos = vector.round(minetest.get_player_by_name(name):getpos())
+		local pos = vector.round(minetest.get_player_by_name(name):get_pos())
 		local size = tonumber(param) or 40
 
 		for i,v in ipairs({"walking_light:light", "walking_light:light_debug"}) do
@@ -688,7 +688,7 @@ minetest.register_chatcommand("walking_light_add_light", {
 			return false, "You need the server privilege to use mapaddlight"
 		end
 
-		local pos = vector.round(minetest.get_player_by_name(name):getpos())
+		local pos = vector.round(minetest.get_player_by_name(name):get_pos())
 		pos = vector.new(pos.x, pos.y + 1, pos.z)
 
 		if pos then
