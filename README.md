@@ -66,7 +66,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [gems_encrustable][] ([WTFPL][lic.wtfpl]) -- version: [81d513d Git][ver.gems_encrustable] *2012-07-31* ([patched][patch.gems_encrustable])
 	* [gems_tools][] ([GPL][lic.gpl3.0]) -- version: [b375432 Git][ver.gems_tools] *2016-09-03* ([patched][patch.gems_tools])
 	* [moreores][] ([zlib][lic.moreores] / [CC BY-SA][lic.ccbysa3.0]) -- version: [3fe0ba8 Git][ver.moreores] *2020-10-28* ([patched][patch.moreores])
-	* [quartz][] ([MIT][lic.quartz]) -- version: [1c5dca2 Git][ver.quartz] *2017-10-03* ([patched][patch.quartz]) ***UPDATES***
+	* [quartz][] ([MIT][lic.quartz]) -- version: [72ec06f Git][ver.quartz] *2021-01-04* ([patched][patch.quartz])
 	* [rainbow_ore][] ([LGPL][lic.rainbow_ore]) -- version: [6e77693 Git][ver.rainbow_ore] *2015-11-02* ([patched][patch.rainbow_ore])
 	* [unifieddyes][] ([GPL][lic.gpl2.0]) -- version: [2021-03-26-1][ver.unifieddyes] ([patched][patch.unifieddyes])
 * mobiles/
@@ -497,7 +497,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.pipeworks]: https://gitlab.com/VanessaE/pipeworks/-/tags/2021-02-19
 [ver.privilegeareas]: https://github.com/minetest-mods/privilegeareas/tree/15eae20
 [ver.pvp_areas]: https://github.com/everamzah/pvp_areas/tree/0188945
-[ver.quartz]: https://github.com/minetest-mods/quartz/tree/1c5dca2
+[ver.quartz]: https://github.com/minetest-mods/quartz/tree/72ec06f
 [ver.rainbow_ore]: https://github.com/FsxShader2012/rainbow_ore/tree/6e77693
 [ver.sfinv_buttons]: http://repo.or.cz/minetest_sfinv_buttons.git/tree/ebb1f7c
 [ver.signs_lib]: https://gitlab.com/VanessaE/signs_lib/tree/a2f7f62
@@ -559,7 +559,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.mysheetmetal]: https://github.com/AntumMT/mod-mysheetmetal/tree/b7d644b
 [patch.nether]: https://github.com/AntumMT/mod-nether/tree/7a84ddd
 [patch.pvp_areas]: https://github.com/AntumMT/mod-pvp_areas/tree/7f2f5b2
-[patch.quartz]: https://github.com/AntumMT/mod-quartz/tree/c6813dc
+[patch.quartz]: https://github.com/AntumMT/mod-quartz/tree/adc759e
 [patch.rainbow_ore]: https://github.com/AntumMT/mod-rainbow_ore/tree/0227a86
 [patch.simple_protection]: https://github.com/AntumMT/mod-simple_protection/tree/95e6e59
 [patch.spawneggs]: https://github.com/AntumMT/mod-spawneggs/tree/f2cc4cc
