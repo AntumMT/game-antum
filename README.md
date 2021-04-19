@@ -108,6 +108,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [tools_obsidian][] ([LGPL / CC BY-SA][lic.tools_obsidian]) -- version: [f77fd79][ver.tools_obsidian] *2016-03-19* ([patched][patch.tools_obsidian]) ***UPDATES***
     * [workbench][] ([LGPL / WTFPL](mods/tools/workbench/LICENSE)) -- version: [bd14f59 Git][ver.workbench] *2017-08-08*
 * transport/
+  * [bike][] ([MIT][lic.bike]) -- version: [1.2][ver.bike] *2021-04-12*
 	* [boats][boats2] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa3.0]) -- version [b83231e Git][ver.boats2] *2016-10-14* ([patched][patch.boats2]) ***UPSTREAM MOVED***
   * [helicopter][] ([GPL][lic.gpl2.0] / [CC0][lic.cc0] / CC BY-NC) -- version: [1955cdd Git][ver.helicopter] *2021-03-28*
     * [hovercraft][] ([LGPL / CC BY-SA / CC0][lic.hovercraft]) -- version: [4d50e68 Git][ver.hovercraft] *2017-05-14* ([patched][patch.hovercraft])
@@ -212,6 +213,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [bags]: http://cornernote.github.io/minetest-bags/
 [basic_materials]: https://gitlab.com/VanessaE/basic_materials
 [bedrock2]: https://forum.minetest.net/viewtopic.php?t=11271
+[bike]: https://forum.minetest.net/viewtopic.php?t=20726
 [biofuel]: https://forum.minetest.net/viewtopic.php?t=24622
 [biome_lib]: https://forum.minetest.net/viewtopic.php?f=11&t=12999
 [boats2]: https://github.com/amadin/boats
@@ -333,6 +335,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.antum]: mods/antum/LICENSE.txt
 [lic.awards]: mods/awards/LICENSE.txt
 [lic.bags]: mods/inventory/bags/LICENSE
+[lic.bike]: mods/transport/bike/license.txt
 [lic.biofuel]: mods/biofuel/Licence.txt
 [lic.bonemeal]: mods/materials/bonemeal/license.txt
 [lic.bookmarks_gui]: mods/ui/bookmarks_gui/LICENSE
@@ -416,6 +419,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.bags]: https://github.com/cornernote/minetest-bags/tree/bc87b45
 [ver.basic_materials]: https://gitlab.com/VanessaE/basic_materials/-/tags/2021-01-30
 [ver.bedrock2]: http://repo.or.cz/minetest_bedrock2.git/tree/63dbab8
+[ver.bike]: https://gitlab.com/h2mm/bike/tree/1.2
 [ver.biofuel]: https://github.com/APercy/minetest_biofuel/tree/ca480ce
 [ver.biome_lib]: https://gitlab.com/VanessaE/biome_lib/tree/8fd0789
 [ver.boats2]: https://github.com/amadin/boats/tree/b83231e
