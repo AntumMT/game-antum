@@ -1,6 +1,8 @@
--- internationalization boilerplate
-local MP = minetest.get_modpath(minetest.get_current_modname())
-local S, NS = dofile(MP.."/intllib.lua")
+-- Used for localization, choose either built-in or intllib.
+local S = minetest.get_translator("castle_tapestries")
+
+-- cottages support
+local use_cottages = minetest.get_modpath("cottages")
 
 local tapestry = {}
 
@@ -69,25 +71,13 @@ minetest.register_node("castle_tapestries:tapestry", {
 	paramtype = "light",
 	paramtype2 = "colorwallmounted",
 	palette = "unifieddyes_palette_colorwallmounted.png",
-	walkable = false,
 	selection_box = {
 		type = "wallmounted",
 		wall_side = {-0.5,-0.5,0.4375,0.5,1.5,0.5},
 	},
-	after_place_node = function(pos, placer, itemstack, pointed_thing)
-		unifieddyes.fix_rotation_nsew(pos, placer, itemstack, pointed_thing)
-		unifieddyes.recolor_on_place(pos, placer, itemstack, pointed_thing)
-	end,
-	after_dig_node = unifieddyes.after_dig_node,
+	after_place_node = unifieddyes.fix_rotation_nsew,
+	on_dig = unifieddyes.on_dig,
 	on_rotate = unifieddyes.fix_after_screwdriver_nsew
-})
-
--- Crafting from wool and a stick
-
-minetest.register_craft({
-	type = "shapeless",
-	output = 'castle_tapestries:tapestry',
-	recipe = {'wool:white', 'default:stick'},
 })
 
 -- Long tapestry
@@ -103,25 +93,13 @@ minetest.register_node("castle_tapestries:tapestry_long", {
 	paramtype = "light",
 	paramtype2 = "colorwallmounted",
 	palette = "unifieddyes_palette_colorwallmounted.png",
-	walkable = false,
 	selection_box = {
 		type = "wallmounted",
 		wall_side = {-0.5,-0.5,0.4375,0.5,2.5,0.5},
 	},
-	after_place_node = function(pos, placer, itemstack, pointed_thing)
-		unifieddyes.fix_rotation_nsew(pos, placer, itemstack, pointed_thing)
-		unifieddyes.recolor_on_place(pos, placer, itemstack, pointed_thing)
-	end,
-	after_dig_node = unifieddyes.after_dig_node,
+	after_place_node = unifieddyes.fix_rotation_nsew,
+	on_dig = unifieddyes.on_dig,
 	on_rotate = unifieddyes.fix_after_screwdriver_nsew
-})
-
--- Crafting from normal tapestry and wool
-
-minetest.register_craft({
-	type = "shapeless",
-	output = 'castle_tapestries:tapestry_long',
-	recipe = {'wool:white', 'castle_tapestries:tapestry'},
 })
 
 -- Very long tapestry
@@ -137,25 +115,87 @@ minetest.register_node("castle_tapestries:tapestry_very_long", {
 	paramtype = "light",
 	paramtype2 = "colorwallmounted",
 	palette = "unifieddyes_palette_colorwallmounted.png",
-	walkable = false,
 	selection_box = {
 		type = "wallmounted",
 		wall_side = {-0.5,-0.5,0.4375,0.5,3.5,0.5},
 	},
-	after_place_node = function(pos, placer, itemstack, pointed_thing)
-		unifieddyes.fix_rotation_nsew(pos, placer, itemstack, pointed_thing)
-		unifieddyes.recolor_on_place(pos, placer, itemstack, pointed_thing)
-	end,
-	after_dig_node = unifieddyes.after_dig_node,
+	after_place_node = unifieddyes.fix_rotation_nsew,
+	on_dig = unifieddyes.on_dig,
 	on_rotate = unifieddyes.fix_after_screwdriver_nsew
 })
 
--- Crafting from long tapestry and wool
+-- Crafting
+
+minetest.register_craft({
+	type = "shapeless",
+	output = 'castle_tapestries:tapestry',
+	recipe = {'wool:white', 'default:stick'},
+})
+
+minetest.register_craft({
+	type = "shapeless",
+	output = 'castle_tapestries:tapestry_long',
+	recipe = {'wool:white', 'castle_tapestries:tapestry'},
+})
 
 minetest.register_craft({
 	type = "shapeless",
 	output = 'castle_tapestries:tapestry_very_long',
 	recipe = {'wool:white', 'castle_tapestries:tapestry_long'},
+})
+
+if use_cottages then
+	minetest.register_craft({
+		type = "shapeless",
+		output = 'castle_tapestries:tapestry',
+		recipe = {'cottages:wool', 'default:stick'},
+	})
+
+
+	minetest.register_craft({
+		type = "shapeless",
+		output = 'castle_tapestries:tapestry_long',
+		recipe = {'cottages:wool', 'castle_tapestries:tapestry'},
+	})
+	minetest.register_craft({
+		type = "shapeless",
+		output = 'castle_tapestries:tapestry_very_long',
+		recipe = {'cottages:wool', 'castle_tapestries:tapestry_long'},
+	})
+end
+
+
+unifieddyes.register_color_craft({
+	output = "castle_tapestries:tapestry",
+	palette = "wallmounted",
+	type = "shapeless",
+	neutral_node = "castle_tapestries:tapestry",
+	recipe = {
+		"NEUTRAL_NODE",
+		"MAIN_DYE",
+	}
+})
+
+unifieddyes.register_color_craft({
+	output = "castle_tapestries:tapestry_long",
+	palette = "wallmounted",
+	type = "shapeless",
+	neutral_node = "castle_tapestries:tapestry_long",
+	recipe = {
+		"NEUTRAL_NODE",
+		"MAIN_DYE",
+	}
+})
+
+unifieddyes.register_color_craft({
+	output = "castle_tapestries:tapestry_very_long",
+	palette = "wallmounted",
+	type = "shapeless",
+	neutral_node = "castle_tapestries:tapestry_very_long",
+	recipe = {
+		"NEUTRAL_NODE",
+		"MAIN_DYE",
+	}
 })
 
 -- Convert static tapestries to param2 color

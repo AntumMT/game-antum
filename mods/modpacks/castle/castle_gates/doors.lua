@@ -1,6 +1,18 @@
--- internationalization boilerplate
-local MP = minetest.get_modpath(minetest.get_current_modname())
-local S, NS = dofile(MP.."/intllib.lua")
+
+-- Used for localization, choose either built-in or intllib.
+
+local MP, S, NS = nil
+
+if (minetest.get_modpath("intllib") == nil) then
+	S = minetest.get_translator("castle_gates")
+
+else
+	-- internationalization boilerplate
+	MP = minetest.get_modpath(minetest.get_current_modname())
+	S, NS = dofile(MP.."/intllib.lua")
+
+end
+
 
 if minetest.get_modpath("doors") then
 	doors.register("castle_gates:oak_door", {
@@ -16,6 +28,21 @@ if minetest.get_modpath("doors") then
 			{"default:tree", "default:tree"},
 		}
 	})
+
+	local door_recipe
+	if minetest.get_modpath("xpanes") then
+		door_recipe = {
+			{"xpanes:jailbars_flat", "xpanes:jailbars_flat"},
+			{"xpanes:jailbars_flat", "xpanes:jailbars_flat"},
+			{"xpanes:jailbars_flat", "xpanes:jailbars_flat"},
+		}
+	else
+		door_recipe = {
+			{"default:steel_ingot", ""},
+			{"", "default:steel_ingot"},
+			{"default:steel_ingot", ""},
+		}
+	end
 	
 	doors.register("castle_gates:jail_door", {
 		tiles = {{ name = "castle_door_jail.png", backface_culling = true }},
@@ -25,11 +52,7 @@ if minetest.get_modpath("doors") then
 		groups = { cracky = 2, door = 1, flow_through = 1},
 		sound_open = "doors_steel_door_open",
 		sound_close = "doors_steel_door_close",
-		recipe = {
-			{"castle_gates:jailbars", "castle_gates:jailbars"},
-			{"castle_gates:jailbars", "castle_gates:jailbars"},
-			{"castle_gates:jailbars", "castle_gates:jailbars"},
-		}
+		recipe = door_recipe,
 	})
 	
 	minetest.register_alias("castle:oak_door_a", "castle_gates:oak_door_a")
@@ -44,7 +67,7 @@ if minetest.get_modpath("xpanes") then
 		tiles = {"castle_jailbars.png"},
 		drawtype = "airlike",
 		paramtype = "light",
-		textures = {"castle_jailbars.png", "castle_jailbars.png", "xpanes_space.png"},
+		textures = {"castle_jailbars.png", "castle_jailbars.png", "castle_jailbars.png"},
 		inventory_image = "castle_jailbars.png",
 		wield_image = "castle_jailbars.png",
 		sounds = default.node_sound_metal_defaults(),

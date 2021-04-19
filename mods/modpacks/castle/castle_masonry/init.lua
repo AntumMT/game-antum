@@ -7,7 +7,20 @@ dofile(MP.."/murder_holes.lua")
 dofile(MP.."/stone_wall.lua")
 dofile(MP.."/paving.lua")
 
-local S, NS = dofile(MP.."/intllib.lua")
+
+-- Used for localization, choose either built-in or intllib.
+
+local S, NS = nil
+
+if (minetest.get_modpath("intllib") == nil) then
+	S = minetest.get_translator("castle_masonry")
+
+else
+	-- internationalization boilerplate
+	S, NS = dofile(MP.."/intllib.lua")
+
+end
+
 
 local read_setting = function(name, default)
 	local setting = minetest.settings:get_bool(name)
@@ -26,7 +39,7 @@ end
 
 castle_masonry.materials = {}
 if read_setting("castle_masonry_stonewall", true) then
-	table.insert(castle_masonry.materials, {name="stonewall", desc=S("Stonewall"), tile="castle_stonewall.png", craft_material="castle:stonewall"})
+	table.insert(castle_masonry.materials, {name="stonewall", desc=S("Stonewall"), tile="castle_stonewall.png", craft_material="castle_masonry:stonewall"})
 end
 if read_setting("castle_masonry_cobble", true) then
 	table.insert(castle_masonry.materials, {name="cobble", desc=S("Cobble"), tile="default_cobble.png", craft_material="default:cobble"})
@@ -40,6 +53,12 @@ end
 if read_setting("castle_masonry_desertstonebrick", true) then
 	table.insert(castle_masonry.materials, {name="desertstonebrick", desc=S("Desert Stone Brick"), tile="default_desert_stone_brick.png", craft_material="default:desert_stonebrick"})
 end
+if read_setting("castle_masonry_desertsandstonebrick", true) then
+	table.insert(castle_masonry.materials, {name="desertsandstonebrick", desc=S("Desert Sandstone Brick"), tile="default_desert_sandstone_brick.png", craft_material="default:desert_sandstone_brick"})
+end
+if read_setting("castle_masonry_silversandstonebrick", true) then
+	table.insert(castle_masonry.materials, {name="silversandstonebrick", desc=S("Silver Sandstone Brick"), tile="default_silver_sandstone_brick.png", craft_material="default:silver_sandstone_brick"})
+end
 if read_setting("castle_masonry_stone", true) then
 	table.insert(castle_masonry.materials, {name="stone", desc=S("Stone"), tile="default_stone.png", craft_material="default:stone"})
 end
@@ -48,6 +67,12 @@ if read_setting("castle_masonry_sandstone", true) then
 end
 if read_setting("castle_masonry_desertstone", true) then
 	table.insert(castle_masonry.materials, {name="desertstone", desc=S("Desert Stone"), tile="default_desert_stone.png", craft_material="default:desert_stone"})
+end
+if read_setting("castle_masonry_desertsandstone", true) then
+	table.insert(castle_masonry.materials, {name="desertsandstone", desc=S("Desert Sandstone"), tile="default_desert_sandstone.png", craft_material="default:desert_sandstone"})
+end
+if read_setting("castle_masonry_silversandstone", true) then
+	table.insert(castle_masonry.materials, {name="silversandstone", desc=S("Silver Sandstone"), tile="default_silver_sandstone.png", craft_material="default:silver_sandstone"})
 end
 if read_setting("castle_masonry_wood", false) then
 	table.insert(castle_masonry.materials, {name="wood", desc=S("Wood"), tile="default_wood.png", craft_material="group:wood", composition_material="default:wood"})
@@ -70,9 +95,9 @@ castle_masonry.get_material_properties = function(material)
 		burn_time = minetest.get_craft_result({method="fuel", width=1, items={ItemStack(material.composition_material)}}).time
 	else
 		composition_def = minetest.registered_nodes[material.craft_material]
-		burn_time = minetest.get_craft_result({method="fuel", width=1, items={ItemStack(material.craft_materia)}}).time
+		burn_time = minetest.get_craft_result({method="fuel", width=1, items={ItemStack(material.craft_material)}}).time
 	end
-	
+
 	local tiles = material.tile
 	if tiles == nil then
 		tiles = composition_def.tile
@@ -84,7 +109,7 @@ castle_masonry.get_material_properties = function(material)
 	if desc == nil then
 		desc = composition_def.description
 	end
-	
+
 	return composition_def, burn_time, tiles, desc
 end
 
@@ -117,7 +142,7 @@ minetest.register_alias("castle:arrowslit_cross", "castle_masonry:arrowslit_ston
 for _, material in pairs(castle_masonry.materials) do
 	castle_masonry.register_murderhole_alias("castle", material.name, "castle_masonry", material.name)
 	castle_masonry.register_pillar_alias("castle", material.name, "castle_masonry", material.name)
-	
+
 	-- Arrowslit upgrade has special handling because the castle mod arrow slit is reversed relative to current build-from-inside standard
 	local lbm_def = {
 		name = "castle_masonry:arrowslit_flip_front_to_back"..material.name,

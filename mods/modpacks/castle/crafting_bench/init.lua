@@ -1,6 +1,4 @@
--- internationalization boilerplate
-local MP = minetest.get_modpath(minetest.get_current_modname())
-local S, NS = dofile(MP.."/intllib.lua")
+local S = minetest.get_translator("crafting_bench")
 
 minetest.register_alias("castle:workbench", "crafting_bench:workbench")
 
@@ -11,13 +9,12 @@ if minetest.get_modpath("hopper") and hopper ~= nil and hopper.add_container ~= 
 end
 
 
-local crafting_rate = minetest.settings:get("crafting_bench_crafting_rate")
-if crafting_rate == nil then crafting_rate = 5 end
+local crafting_rate = tonumber(minetest.settings:get("crafting_bench_crafting_rate")) or 5
 
 
 minetest.register_node("crafting_bench:workbench",{
 	description = S("Workbench"),
-	_doc_items_longdesc = string.format(S("A workbench that does work for you. Set a crafting recipe and provide raw materials and items will magically craft themselves once every %i seconds."), crafting_rate),
+	_doc_items_longdesc = S("A workbench that does work for you. Set a crafting recipe and provide raw materials and items will magically craft themselves once every @1 seconds.", crafting_rate),
 	_doc_items_usagehelp = usage_help,
 	tiles = {
 		"crafting_bench_workbench_top.png",
@@ -58,13 +55,13 @@ minetest.register_node("crafting_bench:workbench",{
 		return inv:is_empty("main")
 	end,
 	on_metadata_inventory_move = function(pos, from_list, from_index, to_list, to_index, count, player)
-		minetest.log("action", S("@1 moves stuff in workbench at @2", player:get_player_name(), minetest.pos_to_string(pos)))
+		minetest.log("action", player:get_player_name().." moves stuff in workbench at "..minetest.pos_to_string(pos))
 	end,
 	on_metadata_inventory_put = function(pos, listname, index, stack, player)
-		minetest.log("action", S("@1 moves stuff to workbench at @2", player:get_player_name(), minetest.pos_to_string(pos)))
+		minetest.log("action", player:get_player_name().." moves stuff to workbench at "..minetest.pos_to_string(pos))
 	end,
 	on_metadata_inventory_take = function(pos, listname, index, stack, player)
-		minetest.log("action", S("@1 takes stuff from workbench at @2", player:get_player_name(), minetest.pos_to_string(pos)))
+		minetest.log("action", player:get_player_name().." takes stuff from workbench at "..minetest.pos_to_string(pos))
 	end,
 })
 local get_recipe = function ( inv )

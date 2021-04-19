@@ -1,6 +1,15 @@
--- internationalization boilerplate
-local MP = minetest.get_modpath(minetest.get_current_modname())
-local S, NS = dofile(MP.."/intllib.lua")
+local MP, S, NS = nil
+
+if (minetest.get_modpath("intllib") == nil) then
+	S = minetest.get_translator("castle_gates")
+
+else
+	-- internationalization boilerplate
+	MP = minetest.get_modpath(minetest.get_current_modname())
+	S, NS = dofile(MP.."/intllib.lua")
+
+end
+
 
 -- copied from castle_masonry in case that mod is not loaded
 local get_material_properties = function(material)
@@ -91,34 +100,33 @@ castle_gates.register_gate_slot = function(material)
 	
 	
 	minetest.register_craft({
-	output = mod_name..":"..material.name.."_portcullis_slot 3",
+	output = mod_name..":"..material.name.."_gate_slot 2",
 	recipe = {
-		{material.craft_material,"",material.craft_material},
 		{material.craft_material,"",material.craft_material},
 		{material.craft_material,"",material.craft_material},
 		},
 	})
 	
 	minetest.register_craft({
-		output = mod_name..":"..material.name.."_portcullis_slot",
+		output = mod_name..":"..material.name.."_gate_slot",
 		type = "shapeless",
-		recipe = {mod_name..":"..material.name.."_portcullis_slot_reverse"},
+		recipe = {mod_name..":"..material.name.."_gate_slot_reverse"},
 	})
 	minetest.register_craft({
-		output = mod_name..":"..material.name.."_portcullis_slot_reverse",
+		output = mod_name..":"..material.name.."_gate_slot_reverse",
 		type = "shapeless",
-		recipe = {mod_name..":"..material.name.."_portcullis_slot"},
+		recipe = {mod_name..":"..material.name.."_gate_slot"},
 	})
 	
 	if burn_time > 0 then
 		minetest.register_craft({
 			type = "fuel",
-			recipe = mod_name..":"..material.name.."_portcullis_slot",
+			recipe = mod_name..":"..material.name.."_gate_slot",
 			burntime = burn_time * 2,
 		})
 		minetest.register_craft({
 			type = "fuel",
-			recipe = mod_name..":"..material.name.."_portcullis_slot_reverse",
+			recipe = mod_name..":"..material.name.."_gate_slot_reverse",
 			burntime = burn_time * 2,
 		})	
 	end

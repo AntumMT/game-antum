@@ -1,6 +1,18 @@
--- internationalization boilerplate
-local MP = minetest.get_modpath(minetest.get_current_modname())
-local S, NS = dofile(MP.."/intllib.lua")
+
+-- Used for localization, choose either built-in or intllib.
+
+local MP, S, NS = nil
+
+if (minetest.get_modpath("intllib") == nil) then
+	S = minetest.get_translator("castle_masonry")
+
+else
+	-- internationalization boilerplate
+	MP = minetest.get_modpath(minetest.get_current_modname())
+	S, NS = dofile(MP.."/intllib.lua")
+
+end
+
 
 castle_masonry.register_pillar = function(material)
 	local composition_def, burn_time, tile, desc = castle_masonry.get_material_properties(material)
@@ -173,11 +185,11 @@ castle_masonry.register_pillar = function(material)
 	})
 
 	minetest.register_craft({
-		output = mod_name..":pillar_"..material.name.."_middle 4",
+		output = mod_name..":pillar_"..material.name.."_middle 2",
 		recipe = {
-			{material.craft_material,material.craft_material},
-			{material.craft_material,material.craft_material},
-			{material.craft_material,material.craft_material} },
+			{material.craft_material},
+			{material.craft_material},
+			{material.craft_material} },
 	})
 	
 	minetest.register_craft({
