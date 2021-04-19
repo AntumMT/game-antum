@@ -124,6 +124,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * world/
     * [bedrock2][] ([WTFPL][lic.wtfpl]) -- version [63dbab8 Git][ver.bedrock2] *2017-06-20* ([patched][patch.bedrock2]) ***UPDATES***
     * [biome_lib][] ([WTFPL][lic.wtfpl]) -- version: [8fd0789 Git][ver.biome_lib] *2017-11-06* ([patched][patch.biome_lib]) ***UPDATES***
+    * [bright_night][] ([Unlicense][lic.unlicense]) -- version: [69b750a Git][ver.bright_night] *2018-06-03*
     * [desert_life][] ([CC BY-SA][lic.ccbysa4.0]) -- version: [d448fa3 Git][ver.desert_life] *2017-01-01* ***UPDATES***
     * [ethereal][] ([MIT][lic.ethereal]) -- version [9d6103d][ver.ethereal] *2021-04-09*
     * [hill_nodebox][] ([BSD 3-Clause][lic.hill_nodebox]) -- version [41bbfa2 Git][ver.hill_nodebox] *2014-12-13*
@@ -148,7 +149,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [adv_vehicles](https://forum.minetest.net/viewtopic.php?t=22777) (Advanced Vehicles)
 * [billboard](https://forum.minetest.net/viewtopic.php?t=15260)
 * [bows](https://forum.minetest.net/viewtopic.php?t=14384)
-* [bright_night](https://forum.minetest.net/viewtopic.php?t=20078)
 * [cherrytree](https://forum.minetest.net/viewtopic.php?t=22118)
 * [christmas](https://forum.minetest.net/viewtopic.php?t=23782)
 * [draconis](https://forum.minetest.net/viewtopic.php?t=22595) (dragons)
@@ -217,6 +217,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [bonemeal]: https://forum.minetest.net/viewtopic.php?t=16446
 [bookmarks_gui]: http://cornernote.github.io/minetest-bookmarks_gui/
 [bridges]: https://forum.minetest.net/viewtopic.php?t=3488
+[bright_night]: https://forum.minetest.net/viewtopic.php?t=20078
 [campfire]: https://forum.minetest.net/viewtopic.php?t=10569
 [castle_farming]: https://github.com/minetest-mods/castle_farming
 [castle_gates]: https://github.com/minetest-mods/castle_gates
@@ -418,6 +419,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.bonemeal]: https://notabug.org/TenPlus1/bonemeal/src/a0cb8657df797c36011ab61311ef2e15960d530b
 [ver.bookmarks_gui]: https://github.com/cornernote/minetest-bookmarks_gui/tree/f7ae10a
 [ver.bridges]: https://github.com/Sokomine/bridges/tree/5b5f475
+[ver.bright_night]: https://github.com/Yukitty/minetest-bright_night/tree/69b750a
 [ver.campfire]: https://github.com/Napiophelios/campfire/tree/1058f1d
 [ver.castle_farming]: https://github.com/minetest-mods/castle_farming/tree/b6503cf
 [ver.castle_gates]: https://github.com/minetest-mods/castle_gates/tree/dc53584

@@ -91,6 +91,12 @@ bedrock2_y (Bedrock height) int -30912
 biome_lib_queue_run_ratio (Queue playback speed) int 100 1 100
 
 
+[*bright_night]
+
+# Minimum light level for night time. Must be between 3 and 15.
+bright_night_light (Night light level) int 4
+
+
 [*chatlog]
 
 # Whether month is displayed before day in timestamp (E.g. 'dd/mm/yyyy' vs. 'mm/dd/yy').
