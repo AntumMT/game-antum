@@ -25,26 +25,11 @@
 --]]
 
 
-local modoverrides = {
-	'bags',
-	'carts',
-	'castle_weapons',
-	'craftguide',
-	'currency',
-	'dye',
-	'ethereal',
-	'farming',
-	'helicopter',
-	'invisibility',
-	'biofuel',
-}
-
-for index, modname in ipairs(modoverrides) do
-	if core.get_modpath(modname) then
-		if antum.verbose then
-			antum.logAction('DEBUG: found mod \"' .. modname .. '\"')
-		end
-		
-		antum.loadScript('crafting/' .. modname)
-	end
-end
+antum.registerCraft({
+	output = 'biofuel:biofuel',
+	recipe = {
+		{'group:leaves', 'group:leaves', 'group:leaves'},
+		{'group:leaves', 'group:leaves', 'group:leaves'},
+		{'group:leaves', 'group:leaves', 'group:leaves'},
+	}
+})

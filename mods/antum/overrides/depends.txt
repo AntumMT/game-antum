@@ -25,3 +25,4 @@ walking_light?
 wool?
 craftguide?
 craft_guide?
+biofuel?
