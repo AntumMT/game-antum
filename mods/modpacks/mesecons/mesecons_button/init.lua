@@ -8,21 +8,24 @@ mesecon.button_turnoff = function (pos)
 		return
 	end
 	minetest.swap_node(pos, {name = "mesecons_button:button_off", param2 = node.param2})
-	minetest.sound_play("mesecons_button_pop", {pos = pos})
+	minetest.sound_play("mesecons_button_pop", { pos = pos }, true)
 	local rules = mesecon.rules.buttonlike_get(node)
 	mesecon.receptor_off(pos, rules)
 end
 
+local use_texture_alpha = minetest.features.use_texture_alpha_string_modes and "opaque" or nil
+
 minetest.register_node("mesecons_button:button_off", {
 	drawtype = "nodebox",
 	tiles = {
-	"jeija_wall_button_sides.png",
-	"jeija_wall_button_sides.png",
-	"jeija_wall_button_sides.png",
-	"jeija_wall_button_sides.png",
-	"jeija_wall_button_sides.png",
-	"jeija_wall_button_off.png"
+		"jeija_wall_button_sides.png",
+		"jeija_wall_button_sides.png",
+		"jeija_wall_button_sides.png",
+		"jeija_wall_button_sides.png",
+		"jeija_wall_button_sides.png",
+		"jeija_wall_button_off.png"
 	},
+	use_texture_alpha = use_texture_alpha,
 	paramtype = "light",
 	paramtype2 = "facedir",
 	is_ground_content = false,
@@ -46,7 +49,7 @@ minetest.register_node("mesecons_button:button_off", {
 	on_rightclick = function (pos, node)
 		minetest.swap_node(pos, {name = "mesecons_button:button_on", param2=node.param2})
 		mesecon.receptor_on(pos, mesecon.rules.buttonlike_get(node))
-		minetest.sound_play("mesecons_button_push", {pos=pos})
+		minetest.sound_play("mesecons_button_push", { pos = pos }, true)
 		minetest.get_node_timer(pos):start(1)
 	end,
 	sounds = default.node_sound_stone_defaults(),
@@ -66,14 +69,15 @@ minetest.register_node("mesecons_button:button_on", {
 		"jeija_wall_button_sides.png",
 		"jeija_wall_button_sides.png",
 		"jeija_wall_button_on.png"
-		},
+	},
+	use_texture_alpha = use_texture_alpha,
 	paramtype = "light",
 	paramtype2 = "facedir",
 	is_ground_content = false,
 	legacy_wallmounted = true,
 	walkable = false,
 	on_rotate = false,
-	light_source = default.LIGHT_MAX-7,
+	light_source = minetest.LIGHT_MAX-7,
 	sunlight_propagates = true,
 	selection_box = {
 		type = "fixed",

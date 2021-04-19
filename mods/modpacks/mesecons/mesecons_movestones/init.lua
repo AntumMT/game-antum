@@ -43,10 +43,16 @@ function mesecon.register_movestone(name, def, is_sticky, is_vertical)
 	local function movestone_move(pos, node, rulename)
 		local direction = get_movestone_direction(rulename, is_vertical)
 		local frontpos = vector.add(pos, direction)
+		local meta = minetest.get_meta(pos)
+		local owner = meta:get_string("owner")
 
 		-- ### Step 1: Push nodes in front ###
-		local success, stack, oldstack = mesecon.mvps_push(frontpos, direction, max_push)
+		local success, stack, oldstack = mesecon.mvps_push(frontpos, direction, max_push, owner)
 		if not success then
+			if stack == "protected" then
+				meta:set_string("infotext", "Can't move: protected area on the way")
+				return
+			end
 			minetest.get_node_timer(pos):start(timer_interval)
 			return
 		end
@@ -54,15 +60,18 @@ function mesecon.register_movestone(name, def, is_sticky, is_vertical)
 
 		-- ### Step 2: Move the movestone ###
 		minetest.set_node(frontpos, node)
+		local meta2 = minetest.get_meta(frontpos)
+		meta2:set_string("owner", owner)
 		minetest.remove_node(pos)
 		mesecon.on_dignode(pos, node)
 		mesecon.on_placenode(frontpos, node)
 		minetest.get_node_timer(frontpos):start(timer_interval)
+		minetest.sound_play("movestone", { pos = pos, max_hear_distance = 20, gain = 0.5 }, true)
 
 		-- ### Step 3: If sticky, pull stack behind ###
 		if is_sticky then
 			local backpos = vector.subtract(pos, direction)
-			success, stack, oldstack = mesecon.mvps_pull_all(backpos, direction, max_pull)
+			success, stack, oldstack = mesecon.mvps_pull_all(backpos, direction, max_pull, owner)
 			if success then
 				mesecon.mvps_move_objects(backpos, vector.multiply(direction, -1), oldstack, -1)
 			end
@@ -82,6 +91,16 @@ function mesecon.register_movestone(name, def, is_sticky, is_vertical)
 		end,
 		rules = mesecon.rules.default,
 	}}
+
+	def.after_place_node = mesecon.mvps_set_owner
+
+	def.on_punch = function(pos, node, player)
+		local player_name = player and player.get_player_name and player:get_player_name()
+		if mesecon.mvps_claim(pos, player_name) then
+			minetest.get_node_timer(pos):start(timer_interval)
+			minetest.chat_send_player(player_name, "Reclaimed movestone")
+		end
+	end
 
 	def.on_timer = function(pos, elapsed)
 		local sourcepos = mesecon.is_powered(pos)
@@ -143,12 +162,12 @@ mesecon.register_movestone("mesecons_movestones:movestone_vertical", {
 
 mesecon.register_movestone("mesecons_movestones:sticky_movestone_vertical", {
 	tiles = {
-		"jeija_movestone_side.png",
-		"jeija_movestone_side.png",
-		"jeija_sticky_movestone.png^[transformFXR90",
-		"jeija_sticky_movestone.png^[transformR90",
-		"jeija_sticky_movestone.png^[transformFXR90",
-		"jeija_sticky_movestone.png^[transformR90",
+		"jeija_movestone_side.png^(mesecons_glue.png^[opacity:127)",
+		"jeija_movestone_side.png^(mesecons_glue.png^[opacity:127)",
+		"jeija_movestone_arrows.png^[transformFXR90",
+		"jeija_movestone_arrows.png^[transformR90",
+		"jeija_movestone_arrows.png^[transformFXR90",
+		"jeija_movestone_arrows.png^[transformR90",
 	},
 	groups = {cracky = 3},
     description = "Vertical Sticky Movestone",

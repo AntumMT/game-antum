@@ -140,7 +140,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [3d_armor][] ([LGPL / CC BY-SA][lic.3d_armor]) - version: [47ecef4 Git][ver.3d_armor] *2019-05-27* ([patched][patch.3d_armor])
 * [deploy_nodes][] ([BSD 3-Clause][lic.deploy_nodes]) -- version: [b67e162 Git][ver.deploy_nodes] *2017-06-08*
 * [homedecor][] ([LGPL / WTFPL / CC BY-SA / CC0][lic.homedecor]) -- version: [81e0d4e Git][ver.homedecor] *2021-03-30* ([patched][patch.homedecor])
-* [mesecons][] ([LGPL / CC BY-SA][lic.mesecons]) -- version [1.2 (d4e05f3 Git)][ver.mesecons] *2018-07-23* ***UPDATES***
+* [mesecons][] ([LGPL / CC BY-SA][lic.mesecons]) -- version [6579351 Git][ver.mesecons] *2021-04-09*
 * [minetest_game][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- version: [5.4.1][ver.minetest_game] *2021-04-10*
 * [moremesecons][] ([MPL][lic.mpl2.0]) -- version: [8a56370 Git][ver.moremesecons] *2018-02-27* ***UPDATES***
 * [technic][] ([LGPL][lic.lgpl2.0]) -- version: [43acec2 Git][ver.technic] *2021-02-09*
@@ -473,7 +473,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.invisibility]: https://notabug.org/TenPlus1/invisibility/src/65c0823d6a28b62046cdadc67ff1e462d37e3643
 [ver.invisible]: https://github.com/AiTechEye/invisible/tree/a2a6504
 [ver.jukebox]: https://github.com/minetest-mods/jukebox/tree/0d871f2
-[ver.mesecons]: https://github.com/minetest-mods/mesecons/tree/v1.2
+[ver.mesecons]: https://github.com/minetest-mods/mesecons/tree/6579351
 [ver.minetest_game]: https://github.com/minetest/minetest_game/tree/5.4.1
 [ver.mob-engine]: https://github.com/minetest-mods/mob-engine/tree/c2bedc3
 [ver.mobs_animal]: https://notabug.org/TenPlus1/mobs_animal/src/80e72a4edce6b0393a0cdf48f5d06312c99d7133

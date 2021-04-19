@@ -2,13 +2,14 @@ local screwdriver_exists = minetest.global_exists("screwdriver")
 
 local tjunction_nodebox = {
 	type = "fixed",
+	-- ±0.001 is to prevent z-fighting
 	fixed = {{ -16/32-0.001, -17/32, -3/32, 16/32+0.001, -13/32, 3/32 },
 		 { -3/32, -17/32, -16/32+0.001, 3/32, -13/32, -3/32},}
 }
 
 local tjunction_selectionbox = {
 		type = "fixed",
-		fixed = { -16/32-0.001, -18/32, -16/32, 16/32+0.001, -12/32, 7/32 },
+		fixed = { -16/32, -16/32, -16/32, 16/32, -12/32, 7/32 },
 }
 
 local tjunction_get_rules = function (node)
@@ -87,7 +88,6 @@ minetest.register_node("mesecons_extrawires:tjunction_off", {
 minetest.register_craft({
 	output = "mesecons_extrawires:tjunction_off 3",
 	recipe = {
-		{"", "", ""},
 		{"mesecons_insulated:insulated_off", "mesecons_insulated:insulated_off", "mesecons_insulated:insulated_off"},
 		{"", "mesecons_insulated:insulated_off", ""},
 	}
