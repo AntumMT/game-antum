@@ -127,7 +127,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [bedrock2][] ([WTFPL][lic.wtfpl]) -- version: [a572dd0 Git][ver.bedrock2] *2020-04-06* ([patched][patch.bedrock2])
     * [biome_lib][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2021-04-16-2][ver.biome_lib]
     * [bright_night][] ([Unlicense][lic.unlicense]) -- version: [69b750a Git][ver.bright_night] *2018-06-03*
-    * [desert_life][] ([CC BY-SA][lic.ccbysa4.0]) -- version: [d448fa3 Git][ver.desert_life] *2017-01-01* ***UPDATES***
+    * [desert_life][] ([CC BY-SA][lic.ccbysa4.0]) -- version: [188f984 Git][ver.desert_life] *2020-01-24*
     * [ethereal][] ([MIT][lic.ethereal]) -- version [9d6103d][ver.ethereal] *2021-04-09*
     * [hill_nodebox][] ([BSD 3-Clause][lic.hill_nodebox]) -- version [41bbfa2 Git][ver.hill_nodebox] *2014-12-13*
     * [nether][] ([ISC / CC BY / CC BY-SA / CC0][lic.nether]) -- version: [3][ver.nether] *2021-01-22* ([patched][patch.nether])
@@ -448,7 +448,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.crops]: https://github.com/minetest-mods/crops/tree/v1
 [ver.currency]: https://gitlab.com/VanessaE/currency/tree/2021-01-30
 [ver.deploy_nodes]: https://github.com/cornernote/minetest-deploy_nodes/tree/b67e162
-[ver.desert_life]: https://github.com/NathanSalapat/desert_life/tree/d448fa3
+[ver.desert_life]: https://github.com/NathanSalapat/desert_life/tree/188f984
 [ver.dinosaurs_aggressive]: https://github.com/AntumMT/mp-dinosaurs_aggressive/tree/874f299
 [ver.drawers]: https://github.com/minetest-mods/drawers/releases/tag/v0.6.2
 [ver.enchanting]: https://github.com/minetest-mods/enchanting/tree/13ea31c
