@@ -1,6 +1,6 @@
 # HUD bar for `3d_armor` [`hbarmor`]
 
-* Version: 0.4.0
+* Version: 1.0.0
 
 ## Description
 This mod adds a simple HUD bar which displays the current damage
@@ -16,8 +16,8 @@ only how worn out it already is.
 By default, the armor bar is hidden if the player wears no armor.
 
 ## Dependencies
-* HUD bars [`hudbars`], major version 1
-* 3D Armor [`3d_armor`] (tested with Minetest 0.4.14)
+* HUD bars [`hudbars`], major version 2
+* 3D Armor [`3d_armor`] (tested with Minetest 5.0.0)
 
 ## Licensing
 This mod is entirly free softare.

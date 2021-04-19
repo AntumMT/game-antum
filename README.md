@@ -109,12 +109,12 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [workbench][] ([LGPL / WTFPL](mods/tools/workbench/LICENSE)) -- version: [bd14f59 Git][ver.workbench] *2017-08-08*
 * transport/
   * [bike][] ([MIT][lic.bike]) -- version: [1.2][ver.bike] *2021-04-12*
-	* [boats][boats2] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa3.0]) -- version [b83231e Git][ver.boats2] *2016-10-14* ([patched][patch.boats2]) ***UPSTREAM MOVED***
+  * [boats][boats2] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa3.0]) -- version: [b83231e Git][ver.boats2] *2016-10-14* ([patched][patch.boats2]) ***UPSTREAM MOVED***
   * [helicopter][] ([GPL][lic.gpl2.0] / [CC0][lic.cc0] / CC BY-NC) -- version: [1955cdd Git][ver.helicopter] *2021-03-28*
-    * [hovercraft][] ([LGPL / CC BY-SA / CC0][lic.hovercraft]) -- version: [4d50e68 Git][ver.hovercraft] *2017-05-14* ([patched][patch.hovercraft])
+  * [hovercraft][] ([LGPL / CC BY-SA / CC0][lic.hovercraft]) -- version: [4d50e68 Git][ver.hovercraft] *2017-05-14* ([patched][patch.hovercraft])
 * ui/
     * [bookmarks_gui][] ([BSD 3-Clause][lic.bookmarks_gui]) -- version: [f7ae10a Git][ver.bookmarks_gui] *2017-08-29*
-    * [hbarmor][] ([MIT][lic.mit] / [CC BY-SA][lic.ccbysa3.0]) -- version [0.4.0][ver.hbarmor] *2017-09-18* ([patched][patch.hbarmor]) ***UPDATES***
+    * [hbarmor][] ([MIT][lic.mit] / [CC BY-SA][lic.ccbysa3.0]) -- version: [1.0.0][ver.hbarmor] *2019-04-01*
     * [home_gui][] ([BSD 3-Clause][lic.home_gui]) -- version: [90086d0 Git][ver.home_gui] *2018-03-15* ([patched][patch.home_gui]) ***UPDATES***
     * [hudbars][] ([MIT][lic.mit] / [CC BY-SA][lic.ccbysa3.0]) -- version [1.11.0][ver.hudbars] *2018-02-05* ***UPDATES***
     * [hudmap][] ([LGPL][lic.lgpl2.1] / [WTFPL][lic.wtfpl]) -- version: [3b8bdc0 Git][ver.hudmap] *2017-05-14*
@@ -459,7 +459,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.gems_tools]: https://github.com/captainLAD/gems/tree/b375432
 [ver.glass]: https://github.com/AntumMT/mod-glass/tree/d61a6c6
 [ver.glow]: https://github.com/bdjnk/glow/tree/4c015a0
-[ver.hbarmor]: http://repo.or.cz/minetest_hbarmor.git/tree/e513aeb
+[ver.hbarmor]: http://repo.or.cz/minetest_hbarmor.git/tree/93d994c
 [ver.hbsprint]: https://github.com/tacotexmex/hbsprint/tree/f566d0f
 [ver.helicopter]: https://github.com/APercy/helicopter/tree/1955cdd
 [ver.hill_nodebox]: https://github.com/cornernote/minetest-hill_nodebox/tree/41bbfa2
