@@ -89,7 +89,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * player/action/
 	* [hbsprint][] ([LGPL][lic.lgpl2.1]) -- version: [f566d0f Git][ver.hbsprint] *2021-02-18* ([patched][patch.hbsprint])
 * player/visuals/
-    * [invisibility][] ([MIT][lic.invisibility]) -- version: [e3f04a2 Git][ver.invisibility] *2017-10-09* ([patched][patch.invisibility]) ***UPDATES***
+    * [invisibility][] ([MIT][lic.invisibility]) -- version: [65c0823 Git][ver.invisibility] *2021-01-21* ([patched][patch.invisibility])
     * [wardrobe][] ([WTFPL][lic.wtfpl]) -- version: [1.1-2-c48b011 Git][ver.wardrobe] *2015-05-21*
 * protection/
     * [pvp_areas][] ([LGPL][lic.lgpl2.1]) -- version: [0188945 Git][ver.pvp_areas] *2018-01-16* ([patched][patch.pvp_areas]) ***UPDATES***
@@ -468,7 +468,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.hudmap]: https://github.com/stujones11/hudmap/tree/3b8bdc0
 [ver.ilights]: https://gitlab.com/VanessaE/ilights/tags/2021-02-25-01
 [ver.intllib]: https://github.com/minetest-mods/intllib/tree/6ebdc53
-[ver.invisibility]: https://notabug.org/TenPlus1/invisibility/src/e3f04a25c22fa6f9ac044de0bf2f5978c0a95cdf
+[ver.invisibility]: https://notabug.org/TenPlus1/invisibility/src/65c0823d6a28b62046cdadc67ff1e462d37e3643
 [ver.invisible]: https://github.com/AiTechEye/invisible/tree/a2a6504
 [ver.jukebox]: https://github.com/minetest-mods/jukebox/tree/0d871f2
 [ver.mesecons]: https://github.com/minetest-mods/mesecons/tree/v1.2
@@ -546,7 +546,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.homedecor]: https://github.com/AntumMT/mp-homedecor/tree/e1ede67
 [patch.hovercraft]: https://github.com/AntumMT/mod-hovercraft/tree/73a6223
 [patch.hud]: https://github.com/AntumMT/mod-hud/tree/6846e20
-[patch.invisibility]: https://github.com/AntumMT/mod-invisibility/tree/0ef4c18
+[patch.invisibility]: https://github.com/AntumMT/mod-invisibility/tree/4a8edd0
 [patch.ilights]: https://github.com/AntumMT/mod-ilights/tree/fe1dae4
 [patch.minetest_game]: https://github.com/AntumMT/mtgame-minetest/tree/355a756
 [patch.mob-engine]: https://github.com/AntumMT/mp-mob-engine/tree/2aa511d

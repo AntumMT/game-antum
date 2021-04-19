@@ -41,7 +41,7 @@ minetest.register_node("invisibility:potion", {
 
 	on_use = function(itemstack, user)
 
-		local pos = user:getpos()
+		local pos = user:get_pos()
 		local name = user:get_player_name()
 
 		-- are we already invisible?
@@ -68,7 +68,7 @@ minetest.register_node("invisibility:potion", {
 		minetest.after(effect_time - 10, function()
 
 			if invisibility[name]
-			and user:getpos() then
+			and user:get_pos() then
 
 				minetest.chat_send_player(name,
 					">>> You have 10 seconds before invisibility wears off!")
@@ -79,7 +79,7 @@ minetest.register_node("invisibility:potion", {
 		minetest.after(effect_time, function()
 
 			if invisibility[name]
-			and user:getpos() then
+			and user:get_pos() then
 
 				-- show aready hidden player
 				toggle_invisible(user, nil)
