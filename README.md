@@ -87,7 +87,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [pipeworks][] ([LGPL][lic.lgpl3.0]) -- version: [2021-02-19][ver.pipeworks]
 * plantlife/
 * player/action/
-	* [hbsprint][] ([LGPL][lic.lgpl2.1]) -- version: [de3e77e Git][ver.hbsprint] *2018-04-11* ([patched][patch.hbsprint]) ***UPDATES***
+	* [hbsprint][] ([LGPL][lic.lgpl2.1]) -- version: [f566d0f Git][ver.hbsprint] *2021-02-18* ([patched][patch.hbsprint])
 * player/visuals/
     * [invisibility][] ([MIT][lic.invisibility]) -- version: [e3f04a2 Git][ver.invisibility] *2017-10-09* ([patched][patch.invisibility]) ***UPDATES***
     * [wardrobe][] ([WTFPL][lic.wtfpl]) -- version: [1.1-2-c48b011 Git][ver.wardrobe] *2015-05-21*
@@ -458,7 +458,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.glass]: https://github.com/AntumMT/mod-glass/tree/d61a6c6
 [ver.glow]: https://github.com/bdjnk/glow/tree/4c015a0
 [ver.hbarmor]: http://repo.or.cz/minetest_hbarmor.git/tree/e513aeb
-[ver.hbsprint]: https://github.com/tacotexmex/hbsprint/tree/de3e77e
+[ver.hbsprint]: https://github.com/tacotexmex/hbsprint/tree/f566d0f
 [ver.helicopter]: https://github.com/APercy/helicopter/tree/1955cdd
 [ver.hill_nodebox]: https://github.com/cornernote/minetest-hill_nodebox/tree/41bbfa2
 [ver.home_gui]: https://github.com/cornernote/minetest-home_gui/tree/90086d0
@@ -541,7 +541,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.gems_encrustable]: https://github.com/AntumMT/mod-gems_encrustable/tree/a043b9c
 [patch.gems_tools]: https://github.com/AntumMT/mod-gems_tools/tree/7f89843
 [patch.hbarmor]: https://github.com/AntumMT/mod-hbarmor/tree/12a7dea
-[patch.hbsprint]: https://github.com/AntumMT/mod-hbsprint/tree/3fb29a9
+[patch.hbsprint]: https://github.com/AntumMT/mod-hbsprint/tree/03aef67
 [patch.home_gui]: https://github.com/AntumMT/mod-home_gui/tree/5409fb1
 [patch.homedecor]: https://github.com/AntumMT/mp-homedecor/tree/e1ede67
 [patch.hovercraft]: https://github.com/AntumMT/mod-hovercraft/tree/73a6223
