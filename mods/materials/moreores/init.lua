@@ -67,6 +67,13 @@ local function get_recipe(material, item)
 			{"", "group:stick", ""},
 		}
 	end
+	if item == "hoe" then
+		return {
+			{material, material, ""},
+			{"", "group:stick", ""},
+			{"", "group:stick", ""},
+		}
+	end
 	if item == "block" then
 		return {
 			{material, material, material},
@@ -327,8 +334,8 @@ local oredefs = {
 				crumbly = {times = {[1] = 1.10, [2] = 0.40, [3] = 0.25}, uses = t_uses.shovel_silver, maxlevel = 1},
 			},
 			axe = {
-				choppy = {times = {[1] = 2.50, [2] = 0.80, [3] = 0.50}, t_uses.axe_silver = 100, maxlevel = 1},
-				fleshy = {times = {[2] = 1.10, [3] = 0.60}, t_uses.axe_silver = 100, maxlevel = 1}
+				choppy = {times = {[1] = 2.50, [2] = 0.80, [3] = 0.50}, uses = t_uses.axe_silver, maxlevel = 1},
+				fleshy = {times = {[2] = 1.10, [3] = 0.60}, uses = t_uses.axe_silver, maxlevel = 1}
 			},
 			sword = {
 				fleshy = {times = {[2] = 0.70, [3] = 0.30}, uses = t_uses.sword_silver, maxlevel = 1},

@@ -553,7 +553,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.mobs_animal]: https://github.com/AntumMT/mod-mobs_animal/tree/61f74e2
 [patch.mobs_redo]: https://github.com/AntumMT/mod-mobs_redo/tree/12e9367
 [patch.moreblocks]: https://github.com/AntumMT/mod-moreblocks/tree/6dda839
-[patch.moreores]: https://github.com/AntumMT/mod-moreores/tree/3697850
+[patch.moreores]: https://github.com/AntumMT/mod-moreores/tree/ae59578
 [patch.mydoors]: https://github.com/AntumMT/mp-mydoors/tree/f270a42
 [patch.mysheetmetal]: https://github.com/AntumMT/mod-mysheetmetal/tree/2ffb3a2
 [patch.nether]: https://github.com/AntumMT/mod-nether/tree/7a84ddd
