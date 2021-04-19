@@ -1,0 +1,17 @@
+# textdomain: more_chests
+Cobble Chest=
+Dropbox=
+Fridge=
+Big Fridge=
+Secret Chest=
+Shared Chest=
+Wifi Chest=
+Wooden Toolbox=
+Aspen Wood Toolbox=
+Acacia Wood Toolbox=
+Junglewood Toolbox=
+Pine Wood Toolbox=
+Steel Toolbox=
+@1 (owned by @2)=
+Shared with (separate names with spaces)=
+submit=

@@ -99,10 +99,10 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * sound/
     * [ambience][ambience_ultralite] ([WTFPL][lic.wtfpl] / [CC BY / CC BY-SA / CC BY-NC-SA / CC0][lic.ambience_ultralite]) -- version: 0.36
 * spawning/
-	* [spawneggs][] ([WTFPL][lic.spawneggs]) -- version [4650370 Git][ver.spawneggs] *2013-09-09* ([patched][patch.spawneggs])
+	* [spawneggs][] ([WTFPL][lic.spawneggs]) -- version: [4650370 Git][ver.spawneggs] *2013-09-09* ([patched][patch.spawneggs])
 * storage/
 	* [drawers][] ([MIT / CC0 / CC BY][lic.drawers]) -- version: [0.6.2][ver.drawers] *2021-03-27*
-	* [more_chests][] ([GPL][lic.gpl2.0]) -- version [c597779 Git][ver.more_chests] *2017-02-27* ***UPDATES***
+	* [more_chests][] ([GPL][lic.gpl2.0]) -- version: [6be8145 Git][ver.more_chests] *2021-04-05*
 * tools/
 	* [compassgps][] ([WTFPL][lic.wtfpl] / [CC0][lic.cc0] / [CC BY-SA][lic.ccbysa]) -- version: [ec96e18 Git][ver.compassgps] *2018-02-12* ***UPDATES***
     * [tools_obsidian][] ([LGPL / CC BY-SA][lic.tools_obsidian]) -- version: [f77fd79][ver.tools_obsidian] *2016-03-19* ([patched][patch.tools_obsidian]) ***UPDATES***
@@ -478,7 +478,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.mobs_redo]: https://notabug.org/TenPlus1/mobs_redo/src/f6e16a550330cf6a641753c03ebe331682294939
 [ver.monsters_aggressive]: https://github.com/AntumMT/mp-monsters_aggressive/tree/89a8187
 [ver.monsters_passive]: https://github.com/AntumMT/mp-monsters_passive/tree/b07fe19
-[ver.more_chests]: https://github.com/minetest-mods/more_chests/tree/c597779
+[ver.more_chests]: https://github.com/minetest-mods/more_chests/tree/6be8145
 [ver.moreblocks]: https://github.com/minetest-mods/moreblocks/tree/3b97ea5
 [ver.moremesecons]: https://github.com/minetest-mods/MoreMesecons/tree/8a56370
 [ver.moreores]: https://github.com/minetest-mods/moreores/tree/3fe0ba8

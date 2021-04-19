@@ -1,0 +1,17 @@
+# textdomain: more_chests
+Cobble Chest=Coffre en pierre taillée
+Dropbox=Boîte de dépôt
+Fridge=Réfrigérateur
+Big Fridge=Grand réfrigérateur
+Secret Chest=Coffre secret
+Shared Chest=Coffre partagé
+Wifi Chest=Coffre wifi
+Wooden Toolbox=Boîte à outils en bois
+Aspen Wood Toolbox=Boîte à outils en bois de tremble
+Acacia Wood Toolbox=Boîte à outils en bois d’acacia
+Junglewood Toolbox=Boîte à outils en bois de la jungle
+Pine Wood Toolbox=Boîte à outils en bois de pin
+Steel Toolbox=Boîte à outils en acier
+@1 (owned by @2)=@1 (appartient à @2)
+Shared with (separate names with spaces)=Partagé avec (séparez les noms avec des espaces)
+submit=valider
