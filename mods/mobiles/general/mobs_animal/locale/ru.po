@@ -9,9 +9,9 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-13 16:00 (UTC+5)\n"
-"PO-Revision-Date: 2018-03-29 18:00 (UTC+5)\n"
-"Last-Translator: Oleg720 <contact@oleg720.ru>\n"
-"Language-Team: 720 Locales <>\n"
+"PO-Revision-Date: 2020-06-19 19:00 (UTC+3)\n"
+"Last-Translator: YELLOW <pikayellow35@gmail.com>\n"
+"Language-Team: \n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=CHARSET\n"
@@ -39,16 +39,16 @@ msgstr "Кролик"
 
 #: bunny.lua
 msgid "Raw Rabbit"
-msgstr "Сырой кролик"
+msgstr "Сырая крольчатина"
 
 #: bunny.lua
 #, fuzzy
 msgid "Cooked Rabbit"
-msgstr "Приготовленный кролик"
+msgstr "Приготовленная крольчатина"
 
 #: bunny.lua
 msgid "Rabbit Hide"
-msgstr "Кролик скрыть"
+msgstr "Кроличья шкурка"
 
 #: chicken.lua
 msgid "Chicken"
@@ -56,11 +56,11 @@ msgstr "Курица"
 
 #: chicken.lua
 msgid "Chicken Egg"
-msgstr "Курино яйцо"
+msgstr "Куриное яйцо"
 
 #: chicken.lua
 msgid "Fried Egg"
-msgstr "Жареное яйцо"
+msgstr "Яичница"
 
 #: chicken.lua
 msgid "Raw Chicken"
@@ -68,7 +68,7 @@ msgstr "Сырая курятина"
 
 #: chicken.lua
 msgid "Cooked Chicken"
-msgstr "Вареная курятина"
+msgstr "Приготовленная курятина"
 
 #: chicken.lua
 msgid "Feather"
@@ -87,6 +87,14 @@ msgid "Bucket of Milk"
 msgstr "Ведро молока"
 
 #: cow.lua
+msgid "Glass of Milk"
+msgstr "Стакан молока"
+
+#: cow.lua
+msgid "Butter"
+msgstr "Масло"
+
+#: cow.lua
 msgid "Cheese"
 msgstr "Сыр"
 
@@ -102,6 +110,14 @@ msgstr "[МОД] Mobs Redo 'Animals' загружен"
 msgid "Kitten"
 msgstr "Котенок"
 
+#: kitten.lua
+msgid "Hairball"
+msgstr "Комочек шерсти"
+
+#: panda.lua
+msgid "Panda"
+msgstr "Панда"
+
 #: penguin.lua
 msgid "Penguin"
 msgstr "Пингвин"
@@ -116,76 +132,76 @@ msgstr "Приготовленная крыса"
 
 #: sheep.lua
 msgid "Black"
-msgstr "Черный"
+msgstr "Черная"
 
 #: sheep.lua
 msgid "Blue"
-msgstr "Синий"
+msgstr "Синяя"
 
 #: sheep.lua
 msgid "Brown"
-msgstr "Коричневый"
+msgstr "Коричневая"
 
 #: sheep.lua
 msgid "Cyan"
-msgstr "Голубой"
+msgstr "Голубая"
 
 #: sheep.lua
 msgid "Dark Green"
-msgstr "Темно-зеленый"
+msgstr "Темно-зеленая"
 
 #: sheep.lua
 msgid "Dark Grey"
-msgstr "Темно-серый"
+msgstr "Темно-серая"
 
 #: sheep.lua
 msgid "Green"
-msgstr "Зеленый"
+msgstr "Зеленая"
 
 #: sheep.lua
 msgid "Grey"
-msgstr "Серый"
+msgstr "Серая"
 
 #: sheep.lua
 msgid "Magenta"
-msgstr "Пурпурный"
+msgstr "Пурпурная"
 
 #: sheep.lua
 msgid "Orange"
-msgstr "Оранжевый"
+msgstr "Оранжевая"
 
 #: sheep.lua
 msgid "Pink"
-msgstr "Розовый"
+msgstr "Розовая"
 
 #: sheep.lua
 msgid "Red"
-msgstr "Красный"
+msgstr "Красная"
 
 #: sheep.lua
 msgid "Violet"
-msgstr "Фиолетовый"
+msgstr "Фиолетовая"
 
 #: sheep.lua
 msgid "White"
-msgstr "Белый"
+msgstr "Белая"
 
 #: sheep.lua
 msgid "Yellow"
-msgstr "Желтый"
+msgstr "Желтая"
 
 #: sheep.lua
 msgid "@1 Sheep"
-msgstr "@1 Овец"
+msgstr "@1 овца"
 
 #: sheep.lua
 msgid "Raw Mutton"
-msgstr "сырой ягненок"
+msgstr "Сырая баранина"
 
 #: sheep.lua
 #, fuzzy
 msgid "Cooked Mutton"
-msgstr "приготовленный ягненок"
+msgstr "Приготовленная баранина"
 
 #: warthog.lua
 msgid "Warthog"
@@ -193,8 +209,8 @@ msgstr "Бородавочник"
 
 #: warthog.lua
 msgid "Raw Porkchop"
-msgstr "Отбивные из свинины"
+msgstr "Свиные отбивные"
 
 #: warthog.lua
 msgid "Cooked Porkchop"
-msgstr "Приготовленные отбивные"
+msgstr "Приготовленные свиные отбивные"

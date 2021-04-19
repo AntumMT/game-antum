@@ -31,9 +31,9 @@ stepheight = 0.6,
 	jump_height = 6,
 	drops = {
 		{name = "mobs:rabbit_raw", chance = 1, min = 1, max = 1},
-		{name = "mobs:rabbit_hide", chance = 1, min = 1, max = 1},
+		{name = "mobs:rabbit_hide", chance = 1, min = 0, max = 1},
 	},
-	water_damage = 1,
+	water_damage = 0,
 	lava_damage = 4,
 	light_damage = 0,
 	fear_height = 2,
@@ -74,6 +74,7 @@ stepheight = 0.6,
 
 			self.type = "monster"
 			self.health = 20
+			self.passive = false
 
 			return
 		end
@@ -112,6 +113,7 @@ if minetest.get_modpath("ethereal") then
 	spawn_on = "ethereal:prairie_dirt"
 end
 
+if not mobs.custom_spawn_animal then
 mobs:spawn({
 	name = "mobs_animal:bunny",
 	nodes = {spawn_on},
@@ -123,6 +125,7 @@ mobs:spawn({
 	max_height = 200,
 	day_toggle = true,
 })
+end
 
 
 mobs:register_egg("mobs_animal:bunny", S("Bunny"), "mobs_bunny_inv.png", 0)
@@ -158,7 +161,7 @@ minetest.register_craft({
 minetest.register_craftitem(":mobs:rabbit_hide", {
 	description = S("Rabbit Hide"),
 	inventory_image = "mobs_rabbit_hide.png",
-	groups = {flammable = 2},
+	groups = {flammable = 2, pelt = 1},
 })
 
 minetest.register_craft({
@@ -169,9 +172,9 @@ minetest.register_craft({
 
 minetest.register_craft({
 	output = "mobs:leather",
-	type = "shapeless",
+--	type = "shapeless",
 	recipe = {
-		"mobs:rabbit_hide", "mobs:rabbit_hide",
-		"mobs:rabbit_hide", "mobs:rabbit_hide"
+		{"mobs:rabbit_hide", "mobs:rabbit_hide"},
+		{"mobs:rabbit_hide", "mobs:rabbit_hide"}
 	}
 })

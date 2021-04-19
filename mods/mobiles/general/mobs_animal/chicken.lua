@@ -2,7 +2,7 @@
 local S = mobs.intllib
 
 
--- Chicken by JK Murray
+-- Chicken by JK Murray and Sirrobzeroone
 
 mobs:register_mob("mobs_animal:chicken", {
 stepheight = 0.6,
@@ -13,17 +13,14 @@ stepheight = 0.6,
 	armor = 200,
 	collisionbox = {-0.3, -0.75, -0.3, 0.3, 0.1, 0.3},
 	visual = "mesh",
-	mesh = "mobs_chicken.x",
-	-- seems a lot of textures but this fixes the problem with the model
+	mesh = "mobs_chicken.b3d",
 	textures = {
-		{"mobs_chicken.png", "mobs_chicken.png", "mobs_chicken.png", "mobs_chicken.png",
-		"mobs_chicken.png", "mobs_chicken.png", "mobs_chicken.png", "mobs_chicken.png", "mobs_chicken.png"},
-		{"mobs_chicken_black.png", "mobs_chicken_black.png", "mobs_chicken_black.png", "mobs_chicken_black.png",
-		"mobs_chicken_black.png", "mobs_chicken_black.png", "mobs_chicken_black.png", "mobs_chicken_black.png", "mobs_chicken_black.png"},
+		{"mobs_chicken.png"}, -- white
+		{"mobs_chicken_brown.png"},
+		{"mobs_chicken_black.png"},
 	},
 	child_texture = {
-		{"mobs_chick.png", "mobs_chick.png", "mobs_chick.png", "mobs_chick.png",
-		"mobs_chick.png", "mobs_chick.png", "mobs_chick.png", "mobs_chick.png", "mobs_chick.png"},
+		{"mobs_chick.png"},
 	},
 	makes_footstep_sound = true,
 	sounds = {
@@ -34,23 +31,34 @@ stepheight = 0.6,
 	runaway = true,
 	runaway_from = {"player", "mobs_animal:pumba"},
 	drops = {
-		{name = "mobs:chicken_raw", chance = 1, min = 2, max = 2},
-		{name = "mobs:chicken_feather", chance = 3, min = 1, max = 2},
+		{name = "mobs:chicken_raw", chance = 1, min = 1, max = 1},
+		{name = "mobs:chicken_feather", chance = 1, min = 0, max = 2},
 	},
 	water_damage = 1,
 	lava_damage = 5,
 	light_damage = 0,
 	fall_damage = 0,
-	fall_speed = -8,
+	fall_speed = -4,
 	fear_height = 5,
 	animation = {
 		speed_normal = 15,
-		stand_start = 0,
-		stand_end = 1, -- 20
-		walk_start = 20,
-		walk_end = 40,
+		stand_start = 1,
+		stand_end = 30,
+		stand_speed = 28,
+		stand1_start = 31,
+		stand1_end = 70,
+		stand1_speed = 32,
+		walk_start = 71,
+		walk_end = 90,
+		walk_speed = 24,
+		run_start = 91,
+		run_end = 110,
+		run_speed = 24,
 	},
-	follow = {"farming:seed_wheat", "farming:seed_cotton"},
+	follow = {
+		"farming:seed_wheat", "farming:seed_cotton", "farming:seed_barley",
+		"farming:seed_oat", "farming:seed_rye"
+	},
 	view_range = 5,
 
 	on_rightclick = function(self, clicker)
@@ -73,7 +81,7 @@ stepheight = 0.6,
 			return
 		end
 
-		local pos = self.object:get_pos()
+		local pos = self.object:get_pos() ; if not pos then return end
 
 		minetest.add_item(pos, "mobs:egg")
 
@@ -86,15 +94,17 @@ stepheight = 0.6,
 })
 
 
-local spawn_on = "default:dirt_with_grass"
+local spawn_on = {"default:dirt_with_grass"}
 
 if minetest.get_modpath("ethereal") then
-	spawn_on = "ethereal:bamboo_dirt"
+	spawn_on = {"ethereal:bamboo_dirt", "ethereal:prairie_dirt"}
 end
 
+
+if not mobs.custom_spawn_animal then
 mobs:spawn({
 	name = "mobs_animal:chicken",
-	nodes = {spawn_on},
+	nodes = spawn_on,
 	neighbors = {"group:grass"},
 	min_light = 14,
 	interval = 60,
@@ -103,6 +113,7 @@ mobs:spawn({
 	max_height = 200,
 	day_toggle = true,
 })
+end
 
 
 mobs:register_egg("mobs_animal:chicken", S("Chicken"), "mobs_chicken_inv.png", 0)
@@ -127,7 +138,7 @@ mobs:register_arrow("mobs_animal:egg_entity", {
 	end,
 
 	hit_mob = function(self, player)
-		player:punch(minetest.get_player_by_name(self.playername) or self.object, 1.0, {
+		player:punch(self.object, 1.0, {
 			full_punch_interval = 1.0,
 			damage_groups = {fleshy = 1},
 		}, nil)
@@ -202,6 +213,7 @@ local mobs_shoot_egg = function (item, player, pointed_thing)
 
 	ent.velocity = egg_VELOCITY -- needed for api internal timing
 	ent.switch = 1 -- needed so that egg doesn't despawn straight away
+	ent._is_arrow = true -- tell advanced mob protection this is an arrow
 
 	obj:setvelocity({
 		x = dir.x * egg_VELOCITY,
@@ -291,7 +303,7 @@ minetest.register_craft({
 minetest.register_craftitem(":mobs:chicken_feather", {
 	description = S("Feather"),
 	inventory_image = "mobs_chicken_feather.png",
-	groups = {flammable = 2},
+	groups = {flammable = 2, feather = 1},
 })
 
 minetest.register_craft({

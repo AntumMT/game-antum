@@ -80,7 +80,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* [creatures][mob-engine] ([zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [c2bedc3 Git][ver.mob-engine] *2018-04-23* ([patched][patch.mob-engine])
 		* [mobs_redo][] ([MIT][lic.mobs_redo] / [CC BY][lic.ccby3.0] / [CC0][lic.cc0]) -- version: [f6e16a5 Git][ver.mobs_redo] *2021-04-11* ([patched][patch.mobs_redo])
 	* general/
-		* [mobs_animal][] ([MIT][lic.mobs_animal]) -- version: [52889c7 Git][ver.mobs_animal] *2018-06-27* ([patched][patch.mobs_animal]) ***UPDATES***
+		* [mobs_animal][] ([MIT][lic.mobs_animal]) -- version: [80e72a4 Git][ver.mobs_animal] *2021-04-13* ([patched][patch.mobs_animal])
 	* [monsters_aggressive][] (see individual mods for licensing) -- version: [89a8187 Git][ver.monsters_aggressive] *2017-08-30*
 	* [monsters_passive][] (see individual mods for licensing) -- version: [b07fe19 Git][ver.monsters_passive] *2017-08-09*
 * [painting][] (???) -- version [8961849 Git][ver.painting] *2016-05-05*
@@ -474,7 +474,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.mesecons]: https://github.com/minetest-mods/mesecons/tree/v1.2
 [ver.minetest_game]: https://github.com/minetest/minetest_game/tree/5.4.1
 [ver.mob-engine]: https://github.com/minetest-mods/mob-engine/tree/c2bedc3
-[ver.mobs_animal]: https://notabug.org/TenPlus1/mobs_animal/src/52889c7
+[ver.mobs_animal]: https://notabug.org/TenPlus1/mobs_animal/src/80e72a4edce6b0393a0cdf48f5d06312c99d7133
 [ver.mobs_redo]: https://notabug.org/TenPlus1/mobs_redo/src/f6e16a550330cf6a641753c03ebe331682294939
 [ver.monsters_aggressive]: https://github.com/AntumMT/mp-monsters_aggressive/tree/89a8187
 [ver.monsters_passive]: https://github.com/AntumMT/mp-monsters_passive/tree/b07fe19
@@ -550,7 +550,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.ilights]: https://github.com/AntumMT/mod-ilights/tree/fe1dae4
 [patch.minetest_game]: https://github.com/AntumMT/mtgame-minetest/tree/355a756
 [patch.mob-engine]: https://github.com/AntumMT/mp-mob-engine/tree/2aa511d
-[patch.mobs_animal]: https://github.com/AntumMT/mod-mobs_animal/tree/e275046
+[patch.mobs_animal]: https://github.com/AntumMT/mod-mobs_animal/tree/61f74e2
 [patch.mobs_redo]: https://github.com/AntumMT/mod-mobs_redo/tree/12e9367
 [patch.moreblocks]: https://github.com/AntumMT/mod-moreblocks/tree/6dda839
 [patch.moreores]: https://github.com/AntumMT/mod-moreores/tree/3697850

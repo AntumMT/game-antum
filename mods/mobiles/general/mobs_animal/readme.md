@@ -17,7 +17,7 @@ Wanders around eating grass/wheat and can be right-clicked with empty bucket to 
 
 ---
 ### Kitten
-Found on green grass these cute cats walk around and can be picked up and placed in inventory as pets or right-clicked with 4x live rats or raw fish (found in ethereal) and tamed.
+Found on green grass these cute cats walk around and can be picked up and placed in inventory as pets or right-clicked with 4x live rats or raw fish (found in ethereal) and tamed.  They can sometimes leave you little gifts of a hairball.
 
 ---
 ### Rat
@@ -36,6 +36,10 @@ Warthogs unlike pigs defend themselves when hit and give 1-3 raw pork when kille
 These little guys can be found in glacier biomes on top of snow and have the ability to swim if they fall into water.
 
 ---
-*Note: After breeding animals need to rest for 4 minutes, baby animals take 4 minutes to grow up and feeding them helps them grow quicker...*
+### Panda
+These monochrome cuties spawn in Ethereal's bamboo biome and can be tamed with bamboo stalks :)  Remember they have claws though.
 
-#### Lucky Blocks: 14
+---
+*Note: After breeding, animals need to rest for 4 minutes and baby animals take 4 minutes to grow up, also feeding them helps them grow quicker...*
+
+#### Lucky Blocks: 20
