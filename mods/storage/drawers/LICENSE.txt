@@ -1,10 +1,9 @@
 Minetest Mod Storage Drawers
 ============================
-Version 0.4.3
 
 License of source code:
 -----------------------
-Copyright (C) 2017 LNJ <git@lnj.li>
+Copyright (C) 2017-2020 Linus Jahn <lnj@kaidan.im>
 Copyright (C) 2016 Mango Tango <mtango688@gmail.com>
 
 MIT License
@@ -76,6 +75,9 @@ Copyright (C) 2014 Justin Aquadro (MIT):
   textures/drawers_birch_wood_front_2.png
   textures/drawers_birch_wood_front_4.png
   textures/drawers_birch_wood.png
+  textures/drawers_controller_front.png
+  textures/drawers_controller_side.png
+  textures/drawers_controller_top.png
   textures/drawers_dark_oak_wood_front_1.png
   textures/drawers_dark_oak_wood_front_2.png
   textures/drawers_dark_oak_wood_front_4.png
@@ -96,10 +98,12 @@ Copyright (C) 2014 Justin Aquadro (MIT):
   textures/drawers_spruce_wood_front_2.png
   textures/drawers_spruce_wood_front_4.png
   textures/drawers_spruce_wood.png
+  textures/drawers_trim.png
   textures/drawers_upgrade_diamond.png
   textures/drawers_upgrade_emerald.png
   textures/drawers_upgrade_gold.png
   textures/drawers_upgrade_iron.png
+  textures/drawers_upgrade_mithril.png (colors adapted by Linus Jahn <lnj@kaidan.im>, 2020)
   textures/drawers_upgrade_obsidian.png
   textures/drawers_upgrade_steel.png
   textures/drawers_upgrade_slot_bg.png (extracted from gui/drawers_1.png by LNJ <git@lnj.li>)
@@ -108,8 +112,6 @@ Copyright (C) 2014 Justin Aquadro (MIT):
   textures/drawers_wood_front_2.png
   textures/drawers_wood_front_4.png
   textures/drawers_wood.png
-  textures/drawer_controller_side.png
-  textures/drawer_controller_top_bottom.png
 
 Everything not listed in here:
-Copyright (C) 2017 LNJ <git@lnj.li> (MIT)
+Copyright (C) 2017-2020 Linus Jahn <lnj@kaidan.im> (MIT)

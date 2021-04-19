@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-17 11:36-0500\n"
-"PO-Revision-Date: 2017-09-04 21:55+0000\n"
-"Last-Translator: pitchblack <pitchblack@mail.ru>\n"
+"POT-Creation-Date: 2021-03-27 18:43+0100\n"
+"PO-Revision-Date: 2019-12-05 03:05+0000\n"
+"Last-Translator: Andrei Stepanov <adem4ik@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/minetest/mod-"
 "storage-drawers/ru/>\n"
 "Language: ru\n"
@@ -18,17 +18,9 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 2.17-dev\n"
+"X-Generator: Weblate 3.10-dev\n"
 
-#: lua/helpers.lua
-msgid "@1 (@2% full)"
-msgstr "@1 (@2% полон)"
-
-#: lua/helpers.lua
-msgid "@1 @2 (@3% full)"
-msgstr "@1 @2 (@3% полон)"
-
-#: lua/visual.lua
+#: lua/visual.lua lua/api.lua
 msgid "Empty"
 msgstr "Пусто"
 
@@ -49,24 +41,24 @@ msgid "@1 Drawers (2x2)"
 msgstr "@1 Ящики (2x2)"
 
 #: lua/controller.lua
-msgid "Current State: "
-msgstr ""
-
-#: lua/controller.lua
-msgid "Stopped"
-msgstr ""
-
-#: lua/controller.lua
-msgid "Running"
-msgstr ""
-
-#: lua/controller.lua
-msgid "Jammed"
-msgstr ""
-
-#: lua/controller.lua
 msgid "Drawer Controller"
+msgstr "Контролер ящика"
+
+#: lua/controller.lua
+msgid "Digiline Channel"
 msgstr ""
+
+#: lua/controller.lua
+msgid "Save"
+msgstr ""
+
+#: lua/helpers.lua
+msgid "@1 (@2% full)"
+msgstr "@1 (@2% полон)"
+
+#: lua/helpers.lua
+msgid "@1 @2 (@3% full)"
+msgstr "@1 @2 (@3% полон)"
 
 #: init.lua
 msgid "Acacia Wood"
@@ -90,11 +82,11 @@ msgstr "Дуб"
 
 #: init.lua
 msgid "Birch Wood"
-msgstr "Береза"
+msgstr "Берёза"
 
 #: init.lua
 msgid "Dark Oak Wood"
-msgstr "Темный дуб"
+msgstr "Тёмный дуб"
 
 #: init.lua
 msgid "Spruce Wood"
@@ -109,7 +101,8 @@ msgid "Gold Drawer Upgrade (x3)"
 msgstr "Золотой ящик Улучшение (x3)"
 
 #: init.lua
-msgid "Obsidian Drawer Upgrade (x5)"
+#, fuzzy
+msgid "Obsidian Drawer Upgrade (x4)"
 msgstr "Обсидиановый ящик Улучшение (x5)"
 
 #: init.lua
@@ -125,5 +118,26 @@ msgid "Emerald Drawer Upgrade (x13)"
 msgstr "Изумрудный ящик Улучшение (x13)"
 
 #: init.lua
+#, fuzzy
+msgid "Mithril Drawer Upgrade (x13)"
+msgstr "Изумрудный ящик Улучшение (x13)"
+
+#: init.lua
+msgid "Wooden Trim"
+msgstr "Деревянная отделка"
+
+#: init.lua
 msgid "Drawer Upgrade Template"
 msgstr "Шаблон улучшения ящика"
+
+#~ msgid "Current State: "
+#~ msgstr "Текущее состояние: "
+
+#~ msgid "Stopped"
+#~ msgstr "остановлен"
+
+#~ msgid "Running"
+#~ msgstr "в действии"
+
+#~ msgid "Jammed"
+#~ msgstr "замкнут"

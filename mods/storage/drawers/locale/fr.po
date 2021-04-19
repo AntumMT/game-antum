@@ -7,65 +7,45 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-17 11:36-0500\n"
-"PO-Revision-Date: 2017-10-15 17:45+0000\n"
-"Last-Translator: xin <xin@riseup.net>\n"
-"Language-Team: French <https://hosted.weblate.org/projects/minetest/mod-"
-"storage-drawers/fr/>\n"
+"POT-Creation-Date: 2018-12-07 21:50+0100\n"
+"PO-Revision-Date: 2020-03-03 03:32+0000\n"
+"Last-Translator: Lucas Burlingham <lucas.burlingham@icloud.com>\n"
+"Language-Team: French <https://hosted.weblate.org/projects/minetest/"
+"mod-storage-drawers/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 2.17\n"
+"X-Generator: Weblate 4.0-dev\n"
 
-#: lua/helpers.lua
-msgid "@1 (@2% full)"
-msgstr "@1 (@2% plein)"
+#: lua/controller.lua
+msgid "Current State: "
+msgstr "État Actuel : "
 
-#: lua/helpers.lua
-msgid "@1 @2 (@3% full)"
-msgstr "@1 @2 (@3% plein)"
+#: lua/controller.lua
+msgid "Stopped"
+msgstr "Arreté"
 
-#: lua/visual.lua
+#: lua/controller.lua
+msgid "Running"
+msgstr "En cours d'exécution"
+
+#: lua/controller.lua
+msgid "Jammed"
+msgstr "Bloqué"
+
+#: lua/controller.lua
+msgid "Drawer Controller"
+msgstr "Contrôleur de Tiroir"
+
+#: lua/visual.lua lua/api.lua
 msgid "Empty"
 msgstr "Vide"
 
 #: lua/api.lua init.lua
 msgid "Wooden"
 msgstr "En bois"
-
-#: lua/api.lua
-msgid "@1 Drawer"
-msgstr "Tiroir @1"
-
-#: lua/api.lua
-msgid "@1 Drawers (1x2)"
-msgstr "Tiroirs (1x2) @1"
-
-#: lua/api.lua
-msgid "@1 Drawers (2x2)"
-msgstr "Tiroirs (2x2) @1"
-
-#: lua/controller.lua
-msgid "Current State: "
-msgstr ""
-
-#: lua/controller.lua
-msgid "Stopped"
-msgstr ""
-
-#: lua/controller.lua
-msgid "Running"
-msgstr ""
-
-#: lua/controller.lua
-msgid "Jammed"
-msgstr ""
-
-#: lua/controller.lua
-msgid "Drawer Controller"
-msgstr ""
 
 #: init.lua
 msgid "Acacia Wood"
@@ -108,7 +88,8 @@ msgid "Gold Drawer Upgrade (x3)"
 msgstr "Amélioration tiroir en or (x3)"
 
 #: init.lua
-msgid "Obsidian Drawer Upgrade (x5)"
+#, fuzzy
+msgid "Obsidian Drawer Upgrade (x4)"
 msgstr "Amélioration tiroir en obsidienne (x5)"
 
 #: init.lua
@@ -124,5 +105,58 @@ msgid "Emerald Drawer Upgrade (x13)"
 msgstr "Amélioration tiroir en émeraude (x13)"
 
 #: init.lua
+#, fuzzy
+msgid "Mithril Drawer Upgrade (x13)"
+msgstr "Amélioration tiroir en émeraude (x13)"
+
+#: init.lua
+msgid "Wooden Trim"
+msgstr "Habillage en bois"
+
+#: init.lua
 msgid "Drawer Upgrade Template"
 msgstr "Amélioration modèle de tiroir"
+
+#: lua/controller.lua
+msgid "Current State: "
+msgstr "État Actuel : "
+
+#: lua/controller.lua
+msgid "Stopped"
+msgstr "Arreté"
+
+#: lua/controller.lua
+msgid "Running"
+msgstr "En cours d'exécution"
+
+#: lua/controller.lua
+msgid "Jammed"
+msgstr "Bloqué"
+
+#: lua/controller.lua
+msgid "Drawer Controller"
+msgstr "Contrôleur de Tiroirs"
+
+#: lua/api.lua lua/visual.lua
+msgid "Empty"
+msgstr "Vide"
+
+#: lua/api.lua
+msgid "@1 Drawer"
+msgstr "Tiroir @1"
+
+#: lua/api.lua
+msgid "@1 Drawers (1x2)"
+msgstr "Tiroirs (1x2) @1"
+
+#: lua/api.lua
+msgid "@1 Drawers (2x2)"
+msgstr "Tiroirs (2x2) @1"
+
+#: lua/helpers.lua
+msgid "@1 (@2% full)"
+msgstr "@1 (@2% plein)"
+
+#: lua/helpers.lua
+msgid "@1 @2 (@3% full)"
+msgstr "@1 @2 (@3% plein)"

@@ -8,41 +8,40 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-03-27 18:43+0100\n"
-"PO-Revision-Date: 2019-09-11 16:23+0000\n"
-"Last-Translator: Mateusz Mendel <mendelm9@gmail.com>\n"
-"Language-Team: Polish <https://hosted.weblate.org/projects/minetest/mod-"
-"storage-drawers/pl/>\n"
-"Language: pl\n"
+"PO-Revision-Date: 2020-05-10 12:32+0000\n"
+"Last-Translator: Oymate <dhruboadittya96@gmail.com>\n"
+"Language-Team: Bengali (Bangladesh) <https://hosted.weblate.org/projects/"
+"minetest/mod-storage-drawers/bn_BD/>\n"
+"Language: bn_BD\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
-"|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 3.9-dev\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.1-dev\n"
 
 #: lua/visual.lua lua/api.lua
 msgid "Empty"
-msgstr "Pusta"
+msgstr "খালি"
 
 #: lua/api.lua init.lua
 msgid "Wooden"
-msgstr "Drewniany"
+msgstr "কাঠের"
 
 #: lua/api.lua
 msgid "@1 Drawer"
-msgstr "@1 Szuflada"
+msgstr "@১ ড্রয়ার"
 
 #: lua/api.lua
 msgid "@1 Drawers (1x2)"
-msgstr "@1 Szuflady (1x2)"
+msgstr "@১ ড্রয়ার (১x২)"
 
 #: lua/api.lua
 msgid "@1 Drawers (2x2)"
-msgstr "@1 Szuflady (2x2)"
+msgstr "@১ ড্রয়ার (২x২)"
 
 #: lua/controller.lua
 msgid "Drawer Controller"
-msgstr "Kontroler szuflady"
+msgstr "ড্রয়ার কন্ট্রোলার"
 
 #: lua/controller.lua
 msgid "Digiline Channel"
@@ -54,90 +53,88 @@ msgstr ""
 
 #: lua/helpers.lua
 msgid "@1 (@2% full)"
-msgstr "@1 (@2% napełnione)"
+msgstr "@1 (@2% পূর্ণ)"
 
 #: lua/helpers.lua
 msgid "@1 @2 (@3% full)"
-msgstr "@1 @2 (@3% napełnione)"
+msgstr "@1 @2 (@3% পূর্ণ)"
 
 #: init.lua
 msgid "Acacia Wood"
-msgstr "Drewno akacjowe"
+msgstr "বাবলা কাঠ"
 
 #: init.lua
 msgid "Aspen Wood"
-msgstr "Drewno osikowe"
+msgstr "ভূর্জ কাঠ"
 
 #: init.lua
 msgid "Junglewood"
-msgstr "Drewno jungli"
+msgstr "জংলিকাঠ"
 
 #: init.lua
 msgid "Pine Wood"
-msgstr "Drewno sosnowe"
+msgstr "পাইন কাঠ"
 
 #: init.lua
 msgid "Oak Wood"
-msgstr "Drewno dębowe"
+msgstr ""
 
 #: init.lua
 msgid "Birch Wood"
-msgstr "Drewno brzozowe"
+msgstr "ভূর্জ কাঠ"
 
 #: init.lua
 msgid "Dark Oak Wood"
-msgstr "Drewno ciemne dębowe"
+msgstr ""
 
 #: init.lua
 msgid "Spruce Wood"
-msgstr "Drwno świerkowe"
+msgstr ""
 
 #: init.lua
 msgid "Steel Drawer Upgrade (x2)"
-msgstr "Ulepszenie stalowej szuflady(x2)"
+msgstr ""
 
 #: init.lua
 msgid "Gold Drawer Upgrade (x3)"
-msgstr "Ulepszenie złotej szuflady (x3)"
+msgstr ""
 
 #: init.lua
-#, fuzzy
 msgid "Obsidian Drawer Upgrade (x4)"
-msgstr "Ulepszenie obsydianowej szuflady (x5)"
+msgstr ""
 
 #: init.lua
 msgid "Diamond Drawer Upgrade (x8)"
-msgstr "Ulepszenie diamentowej szuflady (x8)"
+msgstr ""
 
 #: init.lua
 msgid "Iron Drawer Upgrade (x2)"
-msgstr "Żelazna aktualizacja szuflady (x2)"
+msgstr ""
 
 #: init.lua
 msgid "Emerald Drawer Upgrade (x13)"
-msgstr "Ulepszenie szmaragdowej szuflady (x13)"
+msgstr ""
 
 #: init.lua
-#, fuzzy
 msgid "Mithril Drawer Upgrade (x13)"
-msgstr "Ulepszenie szmaragdowej szuflady (x13)"
+msgstr ""
 
 #: init.lua
 msgid "Wooden Trim"
-msgstr "Drewniane wykończenia"
+msgstr ""
 
 #: init.lua
 msgid "Drawer Upgrade Template"
-msgstr "Szablon ulepszenia szuflady"
+msgstr ""
 
 #~ msgid "Current State: "
-#~ msgstr "Stan aktulany: "
+#~ msgstr "বর্তমান অবস্থা: "
 
 #~ msgid "Stopped"
-#~ msgstr "Zatrzymany"
+#~ msgstr "বন্ধ"
 
 #~ msgid "Running"
-#~ msgstr "Uruchomiona"
+#~ msgstr "চলছে"
 
 #~ msgid "Jammed"
-#~ msgstr "Zablokowany"
+#~ msgstr "জ্যামড"

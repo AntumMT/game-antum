@@ -1,7 +1,7 @@
 --[[
 Minetest Mod Storage Drawers - A Mod adding storage drawers
 
-Copyright (C) 2017 LNJ <git@lnj.li>
+Copyright (C) 2017-2019 Linus Jahn <lnj@kaidan.im>
 
 MIT License
 
@@ -77,13 +77,19 @@ core.register_entity("drawers:visual", {
 			self.drawerType = drawers.last_drawer_type
 		end
 
+		local node = minetest.get_node(self.object:get_pos())
+		if core.get_item_group(node.name, "drawer") == 0 then
+			self.object:remove()
+			return
+		end
+
 		-- add self to public drawer visuals
 		-- this is needed because there is no other way to get this class
 		-- only the underlying LuaEntitySAO
 		-- PLEASE contact me, if this is wrong
 		local vId = self.visualId
 		if vId == "" then vId = 1 end
-		local posstr = core.serialize(self.drawer_pos)
+		local posstr = core.hash_node_position(self.drawer_pos)
 		if not drawers.drawer_visuals[posstr] then
 			drawers.drawer_visuals[posstr] = {[vId] = self}
 		else
@@ -94,7 +100,7 @@ core.register_entity("drawers:visual", {
 		self.meta = core.get_meta(self.drawer_pos)
 
 		-- collisionbox
-		local node = core.get_node(self.drawer_pos)
+		node = core.get_node(self.drawer_pos)
 		local colbox
 		if self.drawerType ~= 2 then
 			if node.param2 == 1 or node.param2 == 3 then
@@ -147,28 +153,77 @@ core.register_entity("drawers:visual", {
 	end,
 
 	on_rightclick = function(self, clicker)
-	        if core.is_protected(self.drawer_pos, clicker:get_player_name()) then
-		   core.record_protection_violation(self.drawer_pos, clicker:get_player_name())
-		   return
+		if core.is_protected(self.drawer_pos, clicker:get_player_name()) then
+			core.record_protection_violation(self.drawer_pos, clicker:get_player_name())
+			return
 		end
-		local leftover = self.try_insert_stack(self, clicker:get_wielded_item(),
-			not clicker:get_player_control().sneak)
 
-		-- if smth. was added play the interact sound
-		if clicker:get_wielded_item():get_count() > leftover:get_count() then
+		-- used to check if we need to play a sound in the end
+		local inventoryChanged = false
+
+		-- When the player uses the drawer with their bare hand all
+		-- stacks from the inventory will be added to the drawer.
+		if self.itemName ~= "" and
+		   clicker:get_wielded_item():get_name() == "" and
+		   not clicker:get_player_control().sneak then
+			-- try to insert all items from inventory
+			local i = 0
+			local inv = clicker:get_inventory()
+
+			while i <= inv:get_size("main") do
+				-- set current stack to leftover of insertion
+				local leftover = self.try_insert_stack(
+					self,
+					inv:get_stack("main", i),
+					true
+				)
+
+				-- check if something was added
+				if leftover:get_count() < inv:get_stack("main", i):get_count() then
+					inventoryChanged = true
+				end
+
+				-- set new stack
+				inv:set_stack("main", i, leftover)
+				i = i + 1
+			end
+		else
+			-- try to insert wielded item only
+			local leftover = self.try_insert_stack(
+				self,
+				clicker:get_wielded_item(),
+				not clicker:get_player_control().sneak
+			)
+
+			-- check if something was added
+			if clicker:get_wielded_item():get_count() > leftover:get_count() then
+				inventoryChanged = true
+			end
+			-- set the leftover as new wielded item for the player
+			clicker:set_wielded_item(leftover)
+		end
+
+		if inventoryChanged then
 			self:play_interact_sound()
 		end
-		-- set the leftover as new wielded item for the player
-		clicker:set_wielded_item(leftover)
 	end,
 
 	on_punch = function(self, puncher, time_from_last_punch, tool_capabilities, dir)
+		local node = minetest.get_node(self.object:get_pos())
+
+		if core.get_item_group(node.name, "drawer") == 0 then
+			self.object:remove()
+			return
+		end
 		local add_stack = not puncher:get_player_control().sneak
 		if core.is_protected(self.drawer_pos, puncher:get_player_name()) then
 		   core.record_protection_violation(self.drawer_pos, puncher:get_player_name())
 		   return
 		end
 		local inv = puncher:get_inventory()
+		if inv == nil then
+			return
+		end
 		local spaceChecker = ItemStack(self.itemName)
 		if add_stack then
 			spaceChecker:set_count(spaceChecker:get_stack_max())
@@ -177,7 +232,13 @@ core.register_entity("drawers:visual", {
 			return
 		end
 
-		stack = self:take_items(add_stack)
+		local stack
+		if add_stack then
+			stack = self:take_stack()
+		else
+			stack = self:take_items(1)
+		end
+
 		if stack ~= nil then
 			-- add removed stack to player's inventory
 			inv:add_item("main", stack)
@@ -187,17 +248,13 @@ core.register_entity("drawers:visual", {
 		end
 	end,
 
-	take_items = function(self, take_stack)
+	take_items = function(self, removeCount)
 		local meta = core.get_meta(self.drawer_pos)
 
 		if self.count <= 0 then
 			return
 		end
 
-		local removeCount = 1
-		if take_stack then
-			removeCount = ItemStack(self.itemName):get_stack_max()
-		end
 		if removeCount > self.count then
 			removeCount = self.count
 		end
@@ -216,57 +273,64 @@ core.register_entity("drawers:visual", {
 		return stack
 	end,
 
-	try_insert_stack = function(self, itemstack, insert_stack)
+	take_stack = function(self)
+		return self:take_items(ItemStack(self.itemName):get_stack_max())
+	end,
+
+	can_insert_stack = function(self, stack)
+		if stack:get_name() == "" or stack:get_count() <= 0 then
+			return 0
+		end
+
+		-- don't allow unstackable stacks
+		if self.itemName == "" and stack:get_stack_max() ~= 1 then
+			return stack:get_count()
+		end
+
+		if self.itemName ~= stack:get_name() then
+			return 0
+		end
+
+		if (self.count + stack:get_count()) <= self.maxCount then
+			return stack:get_count()
+		end
+		return self.maxCount - self.count
+	end,
+
+	try_insert_stack = function(self, itemstack, insert_all)
 		local stackCount = itemstack:get_count()
 		local stackName = itemstack:get_name()
 
-		-- if nothing to be added, return
-		if stackCount <= 0 then return itemstack end
-		-- if no itemstring, return
-		if stackName == "" then return itemstack end
+		local insertCount = self:can_insert_stack(itemstack)
 
-		-- only add one, if player holding sneak key
-		if not insert_stack then
-			stackCount = 1
-		end
-
-		-- if current itemstring is not empty
-		if self.itemName ~= "" then
-			-- check if same item
-			if stackName ~= self.itemName then return itemstack end
-		else -- is empty
-			self.itemName = stackName
-			self.count = 0
-
-			-- get new stack max
-			self.itemStackMax = ItemStack(self.itemName):get_stack_max()
-			self.maxCount = self.itemStackMax * self.stackMaxFactor
-		end
-
-		-- Don't add items stackable only to 1
-		if self.itemStackMax == 1 then
-			self.itemName = ""
+		if insertCount == 0 then
 			return itemstack
 		end
 
-		-- set new counts:
-		-- if new count is more than max_count
-		if (self.count + stackCount) > self.maxCount then
-			itemstack:set_count(self.count + stackCount - self.maxCount)
-			self.count = self.maxCount
-		else -- new count fits
-			self.count = self.count + stackCount
-			-- this is for only removing one
-			itemstack:set_count(itemstack:get_count() - stackCount)
+		-- only add one, if player holding sneak key
+		if not insert_all then
+			insertCount = 1
 		end
 
-		-- update infotext, texture
+		-- in case the drawer was empty, initialize count, itemName, maxCount
+		if self.itemName == "" then
+			self.count = 0
+			self.itemName = itemstack:get_name()
+			self.maxCount = itemstack:get_stack_max() * self.stackMaxFactor
+			self.itemStackMax = itemstack:get_stack_max()
+		end
+
+		-- update everything
+		self.count = self.count + insertCount
 		self:updateInfotext()
 		self:updateTexture()
-
 		self:saveMetaData()
 
-		if itemstack:get_count() == 0 then itemstack = ItemStack("") end
+		-- return leftover
+		itemstack:take_item(insertCount)
+		if itemstack:get_count() == 0 then
+			return ItemStack("")
+		end
 		return itemstack
 	end,
 
@@ -351,7 +415,7 @@ core.register_entity("drawers:visual", {
 
 	play_interact_sound = function(self)
 		core.sound_play("drawers_interact", {
-			pos = self.pos,
+			pos = self.object:get_pos(),
 			max_hear_distance = 6,
 			gain = 2.0
 		})
@@ -380,7 +444,7 @@ core.register_lbm({
 		-- count the drawer visuals
 		local drawerType = core.registered_nodes[node.name].groups.drawer
 		local foundVisuals = 0
-		local objs = core.get_objects_inside_radius(pos, 0.537)
+		local objs = core.get_objects_inside_radius(pos, 0.56)
 		if objs then
 			for _, obj in pairs(objs) do
 				if obj and obj:get_luaentity() and

@@ -1,7 +1,7 @@
 --[[
 Minetest Mod Storage Drawers - A Mod adding storage drawers
 
-Copyright (C) 2017 LNJ <git@lnj.li>
+Copyright (C) 2017-2020 Linus Jahn <lnj@kaidan.im>
 Copyright (C) 2016 Mango Tango <mtango688@gmail.com>
 
 MIT License
@@ -89,8 +89,8 @@ function drawers.drawer_on_destruct(pos)
 	drawers.remove_visuals(pos)
 
 	-- clean up visual cache
-	if drawers.drawer_visuals[core.serialize(pos)] then
-		drawers.drawer_visuals[core.serialize(pos)] = nil
+	if drawers.drawer_visuals[core.hash_node_position(pos)] then
+		drawers.drawer_visuals[core.hash_node_position(pos)] = nil
 	end
 end
 
@@ -177,28 +177,105 @@ function drawers.remove_drawer_upgrade(pos, listname, index, stack, player)
 	drawers.update_drawer_upgrades(pos)
 end
 
-function drawers.drawer_insert_object(pos, node, stack, direction)
-	local drawer_visuals = drawers.drawer_visuals[core.serialize(pos)]
-	if not drawer_visuals then return stack end
+--[[
+	Inserts an incoming stack into a specific slot of a drawer.
+]]
+function drawers.drawer_insert_object(pos, stack, visualid)
+	local visual = drawers.get_visual(pos, visualid)
+	if not visual then
+		return stack
+	end
 
+	return visual:try_insert_stack(stack, true)
+end
+
+--[[
+	Inserts an incoming stack into a drawer and uses all slots.
+]]
+function drawers.drawer_insert_object_from_tube(pos, node, stack, direction)
+	local drawer_visuals = drawers.drawer_visuals[core.hash_node_position(pos)]
+	if not drawer_visuals then
+        return stack
+    end
+
+	-- first try to insert in the correct slot (if there are already items)
 	local leftover = stack
 	for _, visual in pairs(drawer_visuals) do
-		leftover = visual:try_insert_stack(leftover, true)
+		if visual.itemName == stack:get_name() then
+			leftover = visual:try_insert_stack(leftover, true)
+		end
+	end
+
+	-- if there's still something left, also use other slots
+	if leftover:get_count() > 0 then
+		for _, visual in pairs(drawer_visuals) do
+			leftover = visual:try_insert_stack(leftover, true)
+		end
 	end
 	return leftover
 end
 
-function drawers.drawer_can_insert_object(pos, node, stack, direction)
-   	local drawer_visuals = drawers.drawer_visuals[core.serialize(pos)]
-	if not drawer_visuals then return false end
+--[[
+	Returns how much (count) of a stack can be inserted to a drawer slot.
+]]
+function drawers.drawer_can_insert_stack(pos, stack, visualid)
+	local visual = drawers.get_visual(pos, visualid)
+	if not visual then
+		return 0
+	end
 
+	return visual:can_insert_stack(stack)
+end
+
+--[[
+	Returns whether a stack can be (partially) inserted to any slot of a drawer.
+]]
+function drawers.drawer_can_insert_stack_from_tube(pos, node, stack, direction)
+	local drawer_visuals = drawers.drawer_visuals[core.hash_node_position(pos)]
+	if not drawer_visuals then
+		return false
+	end
 
 	for _, visual in pairs(drawer_visuals) do
-	   if visual.itemName == "" or (visual.itemName == stack:get_name() and visual.count ~= visual.maxCount) then
+	   if visual:can_insert_stack(stack) > 0 then
 	      return true
 	   end
 	end
 	return false
+end
+
+function drawers.drawer_take_item(pos, itemstack)
+	local drawer_visuals = drawers.drawer_visuals[core.hash_node_position(pos)]
+
+	if not drawer_visuals then
+		return ItemStack("")
+	end
+
+	-- check for max count
+	if itemstack:get_count() > itemstack:get_stack_max() then
+		itemstack:set_count(itemstack:get_stack_max())
+	end
+
+	for _, visual in pairs(drawer_visuals) do
+		if visual.itemName == itemstack:get_name() then
+			return visual:take_items(itemstack:get_count())
+		end
+	end
+
+	return ItemStack()
+end
+
+--[[
+	Returns the content of a drawer slot.
+]]
+function drawers.drawer_get_content(pos, visualid)
+	local drawer_meta = core.get_meta(pos)
+
+	return {
+		name = drawer_meta:get_string("name" .. visualid),
+		count = drawer_meta:get_int("count" .. visualid),
+		maxCount = drawer_meta:get_int("max_count" .. visualid)
+	}
 end
 
 function drawers.register_drawer(name, def)
@@ -231,15 +308,17 @@ function drawers.register_drawer(name, def)
 		def.groups.tubedevice_receiver = 1
 		def.tube = def.tube or {}
 		def.tube.insert_object = def.tube.insert_object or
-		   drawers.drawer_insert_object
+		   drawers.drawer_insert_object_from_tube
 		def.tube.can_insert = def.tube.can_insert or
-		   drawers.drawer_can_insert_object
+		   drawers.drawer_can_insert_stack_from_tube
 
 		def.tube.connect_sides = {left = 1, right = 1, back = 1, top = 1,
 			bottom = 1}
 		def.after_place_node = pipeworks.after_place
 		def.after_dig_node = pipeworks.after_dig
 	end
+
+	local has_mesecons_mvps = minetest.get_modpath("mesecons_mvps")
 
 	if drawers.enable_1x1 then
 		-- normal drawer 1x1 = 1
@@ -252,6 +331,11 @@ function drawers.register_drawer(name, def)
 		def1.groups.drawer = 1
 		core.register_node(name .. "1", def1)
 		core.register_alias(name, name .. "1") -- 1x1 drawer is the default one
+		if has_mesecons_mvps then
+			-- don't let drawers be moved by pistons, visual glitches and
+			-- possible duplication bugs occur otherwise
+			mesecon.register_mvps_stopper(name .. "1")
+		end
 	end
 
 	if drawers.enable_1x2 then
@@ -264,6 +348,9 @@ function drawers.register_drawer(name, def)
 		def2.tiles4 = nil
 		def2.groups.drawer = 2
 		core.register_node(name .. "2", def2)
+		if has_mesecons_mvps then
+			mesecon.register_mvps_stopper(name .. "2")
+		end
 	end
 
 	if drawers.enable_2x2 then
@@ -276,6 +363,9 @@ function drawers.register_drawer(name, def)
 		def4.tiles4 = nil
 		def4.groups.drawer = 4
 		core.register_node(name .. "4", def4)
+		if has_mesecons_mvps then
+			mesecon.register_mvps_stopper(name .. "4")
+		end
 	end
 
 	if (not def.no_craft) and def.material then
@@ -334,3 +424,4 @@ function drawers.register_drawer_upgrade(name, def)
 		})
 	end
 end
+

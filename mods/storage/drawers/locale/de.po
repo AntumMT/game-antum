@@ -7,27 +7,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-17 11:36-0500\n"
-"PO-Revision-Date: 2018-06-18 16:42+0000\n"
+"POT-Creation-Date: 2021-03-27 18:43+0100\n"
+"PO-Revision-Date: 2018-12-08 09:04+0000\n"
 "Last-Translator: LNJ <git@lnj.li>\n"
-"Language-Team: German <https://hosted.weblate.org/projects/minetest/"
-"mod-storage-drawers/de/>\n"
+"Language-Team: German <https://hosted.weblate.org/projects/minetest/mod-"
+"storage-drawers/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.0.1\n"
+"X-Generator: Weblate 3.4-dev\n"
 
-#: lua/helpers.lua
-msgid "@1 (@2% full)"
-msgstr "@1 (@2% voll)"
-
-#: lua/helpers.lua
-msgid "@1 @2 (@3% full)"
-msgstr "@1 @2 (@3% voll)"
-
-#: lua/visual.lua
+#: lua/visual.lua lua/api.lua
 msgid "Empty"
 msgstr "Leer"
 
@@ -48,24 +40,24 @@ msgid "@1 Drawers (2x2)"
 msgstr "@1schubfächer (2×2)"
 
 #: lua/controller.lua
-msgid "Current State: "
-msgstr "Momentaner Zustand: "
-
-#: lua/controller.lua
-msgid "Stopped"
-msgstr "Angehalten"
-
-#: lua/controller.lua
-msgid "Running"
-msgstr "Läuft"
-
-#: lua/controller.lua
-msgid "Jammed"
-msgstr "Gestaut"
-
-#: lua/controller.lua
 msgid "Drawer Controller"
 msgstr "Schubfach Steuerung"
+
+#: lua/controller.lua
+msgid "Digiline Channel"
+msgstr ""
+
+#: lua/controller.lua
+msgid "Save"
+msgstr ""
+
+#: lua/helpers.lua
+msgid "@1 (@2% full)"
+msgstr "@1 (@2% voll)"
+
+#: lua/helpers.lua
+msgid "@1 @2 (@3% full)"
+msgstr "@1 @2 (@3% voll)"
 
 #: init.lua
 msgid "Acacia Wood"
@@ -108,7 +100,8 @@ msgid "Gold Drawer Upgrade (x3)"
 msgstr "Gold-Schubfachverbesserung (×3)"
 
 #: init.lua
-msgid "Obsidian Drawer Upgrade (x5)"
+#, fuzzy
+msgid "Obsidian Drawer Upgrade (x4)"
 msgstr "Obsidian-Schubfachverbesserung (×5)"
 
 #: init.lua
@@ -124,5 +117,26 @@ msgid "Emerald Drawer Upgrade (x13)"
 msgstr "Smaragd-Schubfachverbesserung (×13)"
 
 #: init.lua
+#, fuzzy
+msgid "Mithril Drawer Upgrade (x13)"
+msgstr "Smaragd-Schubfachverbesserung (×13)"
+
+#: init.lua
+msgid "Wooden Trim"
+msgstr "Holzverkleidung"
+
+#: init.lua
 msgid "Drawer Upgrade Template"
 msgstr "Schubfachverbesserungsvorlage"
+
+#~ msgid "Current State: "
+#~ msgstr "Momentaner Zustand: "
+
+#~ msgid "Stopped"
+#~ msgstr "Angehalten"
+
+#~ msgid "Running"
+#~ msgstr "Läuft"
+
+#~ msgid "Jammed"
+#~ msgstr "Gestaut"

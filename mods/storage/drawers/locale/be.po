@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-17 11:36-0500\n"
-"PO-Revision-Date: 2017-06-03 21:34+0000\n"
-"Last-Translator: Viktar Vauchkevich <victorenator@gmail.com>\n"
+"POT-Creation-Date: 2021-03-27 18:43+0100\n"
+"PO-Revision-Date: 2019-03-15 09:03+0000\n"
+"Last-Translator: Zmicer Turok <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian <https://hosted.weblate.org/projects/minetest/mod-"
 "storage-drawers/be/>\n"
 "Language: be\n"
@@ -18,17 +18,9 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 2.15-dev\n"
+"X-Generator: Weblate 3.6-dev\n"
 
-#: lua/helpers.lua
-msgid "@1 (@2% full)"
-msgstr "@1 (@2% поўны)"
-
-#: lua/helpers.lua
-msgid "@1 @2 (@3% full)"
-msgstr "@1 @2 (@3% поўны)"
-
-#: lua/visual.lua
+#: lua/visual.lua lua/api.lua
 msgid "Empty"
 msgstr "Пустая"
 
@@ -49,24 +41,24 @@ msgid "@1 Drawers (2x2)"
 msgstr "@1 шуфляды (2x2)"
 
 #: lua/controller.lua
-msgid "Current State: "
-msgstr ""
-
-#: lua/controller.lua
-msgid "Stopped"
-msgstr ""
-
-#: lua/controller.lua
-msgid "Running"
-msgstr ""
-
-#: lua/controller.lua
-msgid "Jammed"
-msgstr ""
-
-#: lua/controller.lua
 msgid "Drawer Controller"
+msgstr "Кантролер шуфляды"
+
+#: lua/controller.lua
+msgid "Digiline Channel"
 msgstr ""
+
+#: lua/controller.lua
+msgid "Save"
+msgstr ""
+
+#: lua/helpers.lua
+msgid "@1 (@2% full)"
+msgstr "@1 (@2% поўны)"
+
+#: lua/helpers.lua
+msgid "@1 @2 (@3% full)"
+msgstr "@1 @2 (@3% поўны)"
 
 #: init.lua
 msgid "Acacia Wood"
@@ -74,7 +66,7 @@ msgstr "Драўніна акацыі"
 
 #: init.lua
 msgid "Aspen Wood"
-msgstr "Драўніна асіны"
+msgstr "Асінавая драўніна"
 
 #: init.lua
 msgid "Junglewood"
@@ -82,23 +74,23 @@ msgstr "Джунглевая драўніна"
 
 #: init.lua
 msgid "Pine Wood"
-msgstr "Драўніна хвоі"
+msgstr "Хваёвая драўніна"
 
 #: init.lua
 msgid "Oak Wood"
-msgstr "Драўніна дуба"
+msgstr "Дубовая драўніна"
 
 #: init.lua
 msgid "Birch Wood"
-msgstr "Драўніна бярозы"
+msgstr "Бярозавая драўніна"
 
 #: init.lua
 msgid "Dark Oak Wood"
-msgstr "Цёмная драўніна дуба"
+msgstr "Цёмная дубовая драўніна"
 
 #: init.lua
 msgid "Spruce Wood"
-msgstr "Драўніна яліны"
+msgstr "Ялінавая драўніна"
 
 #: init.lua
 msgid "Steel Drawer Upgrade (x2)"
@@ -109,12 +101,13 @@ msgid "Gold Drawer Upgrade (x3)"
 msgstr "Мадэрнізацыя залатой шуфляды (x3)"
 
 #: init.lua
-msgid "Obsidian Drawer Upgrade (x5)"
+#, fuzzy
+msgid "Obsidian Drawer Upgrade (x4)"
 msgstr "Мадэрнізацыя абсідыянавай шуфляды (x5)"
 
 #: init.lua
 msgid "Diamond Drawer Upgrade (x8)"
-msgstr "Мадэрнізацыя алмазнай шуфляды (x8)"
+msgstr "Мадэрнізацыя дыяментавай шуфляды (x8)"
 
 #: init.lua
 msgid "Iron Drawer Upgrade (x2)"
@@ -125,5 +118,26 @@ msgid "Emerald Drawer Upgrade (x13)"
 msgstr "Мадэрнізацыя смарагдавай шуфляды (x13)"
 
 #: init.lua
+#, fuzzy
+msgid "Mithril Drawer Upgrade (x13)"
+msgstr "Мадэрнізацыя смарагдавай шуфляды (x13)"
+
+#: init.lua
+msgid "Wooden Trim"
+msgstr "Драўлянае аздабленне"
+
+#: init.lua
 msgid "Drawer Upgrade Template"
 msgstr "Шаблон мадэрнізацыі шуфляды"
+
+#~ msgid "Current State: "
+#~ msgstr "Бягучы стан: "
+
+#~ msgid "Stopped"
+#~ msgstr "Спынены"
+
+#~ msgid "Running"
+#~ msgstr "Працуе"
+
+#~ msgid "Jammed"
+#~ msgstr "Затрыманы"

@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-17 11:36-0500\n"
-"PO-Revision-Date: 2017-09-19 19:45+0000\n"
-"Last-Translator: Oscar <kingoscargames@gmail.com>\n"
+"POT-Creation-Date: 2021-03-27 18:43+0100\n"
+"PO-Revision-Date: 2020-05-28 16:41+0000\n"
+"Last-Translator: Miniontoby <tobias.gaarenstroom@gmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/minetest/mod-"
 "storage-drawers/nl/>\n"
 "Language: nl\n"
@@ -17,17 +17,9 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.17-dev\n"
+"X-Generator: Weblate 4.1-dev\n"
 
-#: lua/helpers.lua
-msgid "@1 (@2% full)"
-msgstr "@1 (@2% vol)"
-
-#: lua/helpers.lua
-msgid "@1 @2 (@3% full)"
-msgstr "@1 @2 (@3% vol)"
-
-#: lua/visual.lua
+#: lua/visual.lua lua/api.lua
 msgid "Empty"
 msgstr "Leeg"
 
@@ -48,24 +40,24 @@ msgid "@1 Drawers (2x2)"
 msgstr "@1 Lades (2x2)"
 
 #: lua/controller.lua
-msgid "Current State: "
-msgstr ""
-
-#: lua/controller.lua
-msgid "Stopped"
-msgstr ""
-
-#: lua/controller.lua
-msgid "Running"
-msgstr ""
-
-#: lua/controller.lua
-msgid "Jammed"
-msgstr ""
-
-#: lua/controller.lua
 msgid "Drawer Controller"
 msgstr ""
+
+#: lua/controller.lua
+msgid "Digiline Channel"
+msgstr ""
+
+#: lua/controller.lua
+msgid "Save"
+msgstr ""
+
+#: lua/helpers.lua
+msgid "@1 (@2% full)"
+msgstr "@1 (@2% vol)"
+
+#: lua/helpers.lua
+msgid "@1 @2 (@3% full)"
+msgstr "@1 @2 (@3% vol)"
 
 #: init.lua
 msgid "Acacia Wood"
@@ -109,8 +101,8 @@ msgstr "Gouden Lade Upgrade (x3)"
 
 #: init.lua
 #, fuzzy
-msgid "Obsidian Drawer Upgrade (x5)"
-msgstr "Obsidiaanse Lade Upgrade (x5)"
+msgid "Obsidian Drawer Upgrade (x4)"
+msgstr "Obsidianen Lade Upgrade (x5)"
 
 #: init.lua
 msgid "Diamond Drawer Upgrade (x8)"
@@ -123,6 +115,15 @@ msgstr "Ijzeren Lade Upgrade (x2)"
 #: init.lua
 msgid "Emerald Drawer Upgrade (x13)"
 msgstr "Smaragden Lade upgrade (x13)"
+
+#: init.lua
+#, fuzzy
+msgid "Mithril Drawer Upgrade (x13)"
+msgstr "Smaragden Lade upgrade (x13)"
+
+#: init.lua
+msgid "Wooden Trim"
+msgstr "Houten bekleding"
 
 #: init.lua
 msgid "Drawer Upgrade Template"
