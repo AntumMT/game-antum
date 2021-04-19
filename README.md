@@ -20,6 +20,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [whitelist][] ([CC0][lic.cc0]) -- version: [0.1 (b813b19 Git)][ver.whitelist] *2017-08-18*
 * [awards][] ([MIT][lic.awards]) -- version: [3.4.0][ver.awards] *2021-01-10*
 * [antum][] ([MIT][lic.antum]) -- version: [69b39a4 Git][ver.antum] *2017-08-30*
+	* [hidename][] ([MIT][lic.hidename]) -- version: [7b3aa52 Git][ver.hidename] *2021-04-19*
 * [biofuel][] ([MIT](lic.biofuel)) -- version: [ca480ce Git][ver.biofuel] *2020-07-20*
 * buildings/
     * [bridges][] ([GPL][lic.gpl3.0]) -- version: [5b5f475 Git][ver.bridges] *2015-08-23* ([patched][patch.bridges])
@@ -258,6 +259,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [hbarmor]: https://forum.minetest.net/viewtopic.php?t=11337
 [hbsprint]: https://forum.minetest.net/viewtopic.php?t=18069
 [helicopter]: https://forum.minetest.net/viewtopic.php?t=24613
+[hidename]: https://forum.minetest.net/viewtopic.php?t=18190
 [hill_nodebox]: https://cornernote.github.io/minetest-hill_nodebox/
 [home_gui]: http://cornernote.github.io/minetest-home_gui/
 [homedecor]: https://forum.minetest.net/viewtopic.php?t=2041
@@ -357,6 +359,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.farming_plus]: mods/farming/farming_plus/README.txt
 [lic.fort_spikes]: mods/buildings/fort_spikes/LICENSE
 [lic.home_gui]: mods/ui/home_gui/LICENSE
+[lic.hidename]: mods/antum/hidename/LICENSE.txt
 [lic.hill_nodebox]: mods/world/hill_nodebox/LICENSE
 [lic.homedecor]: mods/modpacks/homedecor/LICENSE
 [lic.hovercraft]: mods/transport/hovercraft/LICENSE.txt
@@ -464,6 +467,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.hbarmor]: http://repo.or.cz/minetest_hbarmor.git/tree/93d994c
 [ver.hbsprint]: https://github.com/tacotexmex/hbsprint/tree/f566d0f
 [ver.helicopter]: https://github.com/APercy/helicopter/tree/1955cdd
+[ver.hidename]: https://github.com/AntumMT/mod-hidename/tree/7b3aa52
 [ver.hill_nodebox]: https://github.com/cornernote/minetest-hill_nodebox/tree/41bbfa2
 [ver.home_gui]: https://github.com/cornernote/minetest-home_gui/tree/a291a09
 [ver.homedecor]: https://gitlab.com/VanessaE/homedecor_modpack/tree/81e0d4e
