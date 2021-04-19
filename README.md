@@ -92,7 +92,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [invisibility][] ([MIT][lic.invisibility]) -- version: [65c0823 Git][ver.invisibility] *2021-01-21* ([patched][patch.invisibility])
     * [wardrobe][] ([WTFPL][lic.wtfpl]) -- version: [1.1-2-c48b011 Git][ver.wardrobe] *2015-05-21*
 * protection/
-    * [pvp_areas][] ([LGPL][lic.lgpl2.1]) -- version: [0188945 Git][ver.pvp_areas] *2018-01-16* ([patched][patch.pvp_areas]) ***UPDATES***
+    * [pvp_areas][] ([LGPL][lic.lgpl2.1]) -- version: [6e4d66d Git][ver.pvp_areas] *2018-07-26*
     * [simple_protection][] ([CC0][lic.cc0]) -- version: [3630fe9 Git][ver.simple_protection] *2021-04-07* ([patched][patch.simple_protection])
 * signs/
 	* [signs_lib][] ([BSD][lic.signs_lib] / [WTFPL][lic.wtfpl]) -- version: [a2f7f62 Git][ver.signs_lib] *2018-05-24* ***UPDATES***
@@ -496,7 +496,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.painting]: https://github.com/minetest-mods/painting/tree/8961849
 [ver.pipeworks]: https://gitlab.com/VanessaE/pipeworks/-/tags/2021-02-19
 [ver.privilegeareas]: https://github.com/minetest-mods/privilegeareas/tree/15eae20
-[ver.pvp_areas]: https://github.com/everamzah/pvp_areas/tree/0188945
+[ver.pvp_areas]: https://github.com/everamzah/pvp_areas/tree/6e4d66d
 [ver.quartz]: https://github.com/minetest-mods/quartz/tree/72ec06f
 [ver.rainbow_ore]: https://github.com/FsxShader2012/rainbow_ore/tree/6e77693
 [ver.sfinv_buttons]: http://repo.or.cz/minetest_sfinv_buttons.git/tree/ebb1f7c
@@ -558,7 +558,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.mypaint]: https://github.com/AntumMT/mod-mypaint/tree/10a5359
 [patch.mysheetmetal]: https://github.com/AntumMT/mod-mysheetmetal/tree/b7d644b
 [patch.nether]: https://github.com/AntumMT/mod-nether/tree/7a84ddd
-[patch.pvp_areas]: https://github.com/AntumMT/mod-pvp_areas/tree/7f2f5b2
 [patch.quartz]: https://github.com/AntumMT/mod-quartz/tree/adc759e
 [patch.rainbow_ore]: https://github.com/AntumMT/mod-rainbow_ore/tree/0227a86
 [patch.simple_protection]: https://github.com/AntumMT/mod-simple_protection/tree/95e6e59

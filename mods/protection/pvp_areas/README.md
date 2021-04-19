@@ -7,6 +7,10 @@ Use safemode to make areas be safe zones; otherwise they are killzones by defaul
 ## Config
 in minetest.conf
 
+* `pvp_areas.enable_pvp`
+	* Allow PvP by default.
+	* default is `false`, PvP is disabled
+
 * `pvp_areas.safemode`
 	* safemode = true --> PvP Control areas are safe zones
 	* default is `false`, making PvP Control areas kill zones
