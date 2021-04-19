@@ -4,7 +4,7 @@ local kill_nearest_player = function(pos)
 	-- Search the nearest player
 	local nearest
 	local min_distance = MAX_DISTANCE
-	for index, player in pairs(minetest.get_connected_players()) do
+	for _, player in pairs(minetest.get_connected_players()) do
 		local distance = vector.distance(pos, player:getpos())
 		if distance < min_distance then
 			min_distance = distance
@@ -30,7 +30,7 @@ local kill_nearest_player = function(pos)
 
 	-- And kill him
 	nearest:set_hp(0)
-	minetest.log("action", "Player "..owner.." kills player "..nearest.." using a MoreMesecons Player Killer.")
+	minetest.log("action", "Player "..owner.." kills player "..nearest:get_player_name().." using a MoreMesecons Player Killer.")
 end
 
 minetest.register_craft({

@@ -1,6 +1,6 @@
 local function dual_delayer_get_input_rules(node)
 	local rules = {{x=1, y=0, z=0}}
-	for i = 0, node.param2 do
+	for _ = 0, node.param2 do
 		rules = mesecon.rotate_rules_left(rules)
 	end
 	return rules
@@ -8,7 +8,7 @@ end
 
 local function dual_delayer_get_output_rules(node)
 	local rules = {{x=0, y=0, z=1}, {x=0, y=0, z=-1}}
-	for i = 0, node.param2 do
+	for _ = 0, node.param2 do
 		rules = mesecon.rotate_rules_left(rules)
 	end
 	return rules
@@ -17,19 +17,19 @@ end
 local dual_delayer_activate = function(pos, node)
 	mesecon.receptor_on(pos, {dual_delayer_get_output_rules(node)[1]}) -- Turn on the port 1
 	minetest.swap_node(pos, {name = "moremesecons_dual_delayer:dual_delayer_10", param2 = node.param2})
-	minetest.after(0.4, function(pos, node)
+	minetest.after(0.4, function()
 		mesecon.receptor_on(pos, {dual_delayer_get_output_rules(node)[2]}) -- Turn on the port 2
 		minetest.swap_node(pos, {name = "moremesecons_dual_delayer:dual_delayer_11", param2 = node.param2})
-	end, pos, node)
+	end)
 end
 
 local dual_delayer_deactivate = function(pos, node, link)
 	mesecon.receptor_off(pos, {dual_delayer_get_output_rules(node)[2]}) -- Turn off the port 2
 	minetest.swap_node(pos, {name = "moremesecons_dual_delayer:dual_delayer_10", param2 = node.param2})
-	minetest.after(0.4, function(pos, node)
+	minetest.after(0.4, function()
 		mesecon.receptor_off(pos, {dual_delayer_get_output_rules(node)[1]}) -- Turn off the port 1
 		minetest.swap_node(pos, {name = "moremesecons_dual_delayer:dual_delayer_00", param2 = node.param2})
-	end, pos, node)
+	end)
 end
 
 
@@ -58,6 +58,10 @@ for n,i in pairs({{0,0},{1,0},{1,1}}) do
 		top_texture = pre..top_texture
 	end
 
+	local use_texture_alpha
+	if minetest.features.use_texture_alpha_string_modes then
+		use_texture_alpha = "opaque"
+	end
 	minetest.register_node("moremesecons_dual_delayer:dual_delayer_"..i1 ..i2, {
 		description = "Dual Delayer",
 		drop = "moremesecons_dual_delayer:dual_delayer_00",
@@ -74,6 +78,7 @@ for n,i in pairs({{0,0},{1,0},{1,1}}) do
 		},
 		groups = groups,
 		tiles = {top_texture, "moremesecons_dual_delayer_bottom.png", "moremesecons_dual_delayer_side_left.png", "moremesecons_dual_delayer_side_right.png", "moremesecons_dual_delayer_ends.png", "moremesecons_dual_delayer_ends.png"},
+		use_texture_alpha = use_texture_alpha,
 		mesecons = {
 			receptor = {
 				state = mesecon.state.off,

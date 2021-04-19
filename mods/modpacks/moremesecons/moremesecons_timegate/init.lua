@@ -1,6 +1,6 @@
 local timegate_get_output_rules = function(node)
 	local rules = {{x = 0, y = 0, z = 1}}
-	for i = 0, node.param2 do
+	for _ = 0, node.param2 do
 		rules = mesecon.rotate_rules_left(rules)
 	end
 	return rules
@@ -8,7 +8,7 @@ end
 
 local timegate_get_input_rules = function(node)
 	local rules = {{x = 0, y = 0, z = -1}}
-	for i = 0, node.param2 do
+	for _ = 0, node.param2 do
 		rules = mesecon.rotate_rules_left(rules)
 	end
 	return rules
@@ -25,14 +25,17 @@ local function timegate_activate(pos, node)
 	node.name = "moremesecons_timegate:timegate_on"
 	minetest.swap_node(pos, node)
 	mesecon.receptor_on(pos)
-	minetest.after(time, function(pos, node)
-		mesecon.receptor_off(pos)
-		node.name = "moremesecons_timegate:timegate_off"
-		minetest.swap_node(pos, node)
-	end, pos, node)
+	minetest.after(time, function()
+		local node = minetest.get_node(pos)
+		if node.name == "moremesecons_timegate:timegate_on" then
+			mesecon.receptor_off(pos)
+			node.name = "moremesecons_timegate:timegate_off"
+			minetest.swap_node(pos, node)
+		end
+	end)
 end
 
-boxes = {{ -6/16, -8/16, -6/16, 6/16, -7/16, 6/16 },		-- the main slab
+local boxes = {{ -6/16, -8/16, -6/16, 6/16, -7/16, 6/16 },		-- the main slab
 
 	 { -2/16, -7/16, -4/16, 2/16, -26/64, -3/16 },		-- the jeweled "on" indicator
 	 { -3/16, -7/16, -3/16, 3/16, -26/64, -2/16 },
@@ -44,6 +47,10 @@ boxes = {{ -6/16, -8/16, -6/16, 6/16, -7/16, 6/16 },		-- the main slab
 	 { -8/16, -8/16, -1/16, -6/16, -7/16, 1/16 },		-- the two wire stubs
 	 { 6/16, -8/16, -1/16, 8/16, -7/16, 1/16 }}
 
+local use_texture_alpha
+if minetest.features.use_texture_alpha_string_modes then
+	use_texture_alpha = "opaque"
+end
 mesecon.register_node("moremesecons_timegate:timegate", {
 	description = "Time Gate",
 	drawtype = "nodebox",
@@ -81,6 +88,7 @@ mesecon.register_node("moremesecons_timegate:timegate", {
 			"moremesecons_timegate_sides_off.png",
 			"moremesecons_timegate_sides_off.png"
 		},
+		use_texture_alpha = use_texture_alpha,
 		groups = {bendy=2,snappy=1,dig_immediate=2},
 		mesecons = {
 			receptor =
@@ -103,6 +111,7 @@ mesecon.register_node("moremesecons_timegate:timegate", {
 			"moremesecons_timegate_sides_on.png",
 			"moremesecons_timegate_sides_on.png"
 		},
+		use_texture_alpha = use_texture_alpha,
 		groups = {bendy=2,snappy=1,dig_immediate=2, not_in_creative_inventory=1},
 		mesecons = {
 			receptor = {

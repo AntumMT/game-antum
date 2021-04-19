@@ -1,20 +1,21 @@
-local md5 = dofile(minetest.get_modpath(minetest.get_current_modname()).."/md5_lua/md5.lua")
 local storage = minetest.get_mod_storage()
-local hash_table = minetest.deserialize(storage:get_string("hash_table")) or {}
+local pos_data = moremesecons.get_storage_data(storage, "pos_data")
 
-local function set_md5(pos, code)
-	vector.set_data_to_pos(hash_table, pos.z,pos.y,pos.x, md5.sum(code))
-	storage:set_string("hash_table", minetest.serialize(hash_table))
+local function set_data(pos, code, owner)
+	local data = {
+		code = code,
+		owner = owner
+	}
+	moremesecons.set_data_to_pos(pos_data, pos, data)
 end
 
-local function check_md5(pos, code)
-	local stored_sum = vector.get_data_from_pos(hash_table, pos.z,pos.y,pos.x)
-	if not stored_sum then
-		-- Legacy
-		set_md5(pos, code)
-		return true
+local function check_data(pos, code, owner)
+	local stored_data = moremesecons.get_data_from_pos(pos_data, pos)
+	if not stored_data then
+		return false
 	end
-	if md5.sum(code) ~= stored_sum then
+	if code ~= stored_data.code
+			or owner ~= stored_data.owner then
 		return false
 	end
 	return true
@@ -22,11 +23,11 @@ end
 
 
 local function make_formspec(meta, pos)
-	local code = meta:get_string("code")
+	local code = minetest.formspec_escape(meta:get_string("code"))
 	local errmsg = minetest.formspec_escape(meta:get_string("errmsg"))
 	meta:set_string("formspec",
 		"size[10,8;]" ..
-		"textarea[0.5,0.5;10,7;code;Code;"..code.."]" ..
+		"textarea[0.5,0.5;9.5,7;code;Code;"..code.."]" ..
 		"label[0.1,7;"..errmsg.."]" ..
 		"button_exit[4,7.5;2,1;submit;Submit]")
 end
@@ -97,49 +98,63 @@ minetest.register_node("moremesecons_luablock:luablock", {
 		end
 
 		meta:set_string("code", fields.code)
-		set_md5(pos, fields.code)
+		set_data(pos, fields.code, name)
 		make_formspec(meta, pos)
 	end,
 	can_dig = function(pos, player)
 		local meta = minetest.get_meta(pos)
 		return meta:get_string("owner") == player:get_player_name()
 	end,
+	on_destruct = function(pos)
+		moremesecons.remove_data_from_pos(pos_data, pos)
+	end,
 	mesecons = {effector = {
 		action_on = function(npos, node)
 			local meta = minetest.get_meta(npos)
 			local code = meta:get_string("code")
+			local owner = meta:get_string("owner")
 			if code == "" then
 				return
 			end
-			if not check_md5(npos, code) then
-				minetest.log("warning", "[moremesecons_luablock] Code of LuaBlock at pos "..minetest.pos_to_string(npos).." does not match with its md5 checksum!")
+			if not check_data(npos, code, owner) then
+				minetest.log("warning", "[moremesecons_luablock] Metadata of LuaBlock at pos "..minetest.pos_to_string(npos).." does not match its mod storage data!")
 				return
 			end
-			-- We do absolutely no check there.
-			-- There is no limitation in the number of instruction the LuaBlock can execute
-			-- or the usage it can make of loops.
-			-- It is executed in the global namespace.
-			-- Remember: *The LuaBlock is highly dangerous and should be manipulated cautiously!*
-			local func, err = loadstring(code)
-			if not func then
-				meta:set_string("errmsg", err)
-				make_formspec(meta, pos)
-				return
-			end
-			-- Set the "pos" global
-			local old_pos = pos -- In case there's already an existing "pos" global
-			pos = table.copy(npos)
-			local good, err = pcall(func)
-			pos = old_pos
 
-			if not good then -- Runtime error
-				meta:set_string("errmsg", err)
-				make_formspec(meta, pos)
+			local env = {}
+			for k, v in pairs(_G) do
+				env[k] = v
+			end
+			env.pos = table.copy(npos)
+			env.mem = minetest.deserialize(meta:get_string("mem")) or {}
+
+			local func, err_syntax
+			if _VERSION == "Lua 5.1" then
+				func, err_syntax = loadstring(code)
+				if func then
+					setfenv(func, env)
+				end
+			else
+				func, err_syntax = load(code, nil, "t", env)
+			end
+			if not func then
+				meta:set_string("errmsg", err_syntax)
+				make_formspec(meta, npos)
 				return
 			end
+
+			local good, err_runtime = pcall(func)
+
+			if not good then
+				meta:set_string("errmsg", err_runtime)
+				make_formspec(meta, npos)
+				return
+			end
+
+			meta:set_string("mem", minetest.serialize(env.mem))
 
 			meta:set_string("errmsg", "")
-			make_formspec(meta, pos)
+			make_formspec(meta, npos)
 		end
 	}}
 })
