@@ -97,7 +97,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * signs/
 	* [signs_lib][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2021-03-04-2][ver.signs_lib]
 * sound/
-    * [ambience][ambience_ultralite] ([WTFPL][lic.wtfpl] / [CC BY / CC BY-SA / CC BY-NC-SA / CC0][lic.ambience_ultralite]) -- version: 0.36
+    * [ambience][] ([MIT][lic.ambience] / [CC BY / CC BY-SA / CC BY-NC-SA / CC0][lic.ambience_sounds]) -- version: [e317f72 Git][ver.ambience] *2021-04-14*
 * spawning/
 	* [spawneggs][] ([WTFPL][lic.spawneggs]) -- version: [4650370 Git][ver.spawneggs] *2013-09-09* ([patched][patch.spawneggs])
 * storage/
@@ -203,7 +203,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [3d_armor]: https://forum.minetest.net/viewtopic.php?t=4654
 [airtanks]: https://forum.minetest.net/viewtopic.php?t=17102
 [amber]: https://forum.minetest.net/viewtopic.php?t=18186
-[ambience_ultralite]: https://forum.minetest.net/viewtopic.php?p=151166#p151166
+[ambience]: https://forum.minetest.net/viewtopic.php?t=2807
 [animals]: https://forum.minetest.net/viewtopic.php?t=629
 [animals_aggressive]: https://github.com/AntumMT/mp-animals_aggressive
 [animals_harmless]: https://github.com/AntumMT/mp-animals_harmless
@@ -331,7 +331,8 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 [lic.3d_armor]: mods/modpacks/3d_armor/LICENSE.md
 [lic.airtanks]: mods/equipment/airtanks/LICENSE.txt
-[lic.ambience_ultralite]: mods/sound/ambience/sounds/SoundLicenses.txt
+[lic.ambience]: mods/sound/ambience/README.md
+[lic.ambience_sounds]: mods/sound/ambience/sounds/SoundLicenses.txt
 [lic.antum]: mods/antum/LICENSE.txt
 [lic.awards]: mods/awards/LICENSE.txt
 [lic.bags]: mods/inventory/bags/LICENSE
@@ -411,6 +412,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.3d_armor]: https://github.com/stujones11/minetest-3d_armor/tree/47ecef4
 [ver.airtanks]: https://github.com/minetest-mods/airtanks/tree/b686694
 [ver.amber]: https://github.com/theraven262/amber/tree/56627fa
+[ver.ambience]: https://notabug.org/TenPlus1/ambience/src/e317f727d00d5c034226c0e7217ed0559c208038
 [ver.animals_aggressive]: https://github.com/AntumMT/mp-animals_aggressive/tree/4eede4d
 [ver.animals_harmless]: https://github.com/AntumMT/mp-animals_harmless/tree/e9b02a8
 [ver.antum]: https://github.com/AntumMT/mp-antum/tree/69b39a4
