@@ -188,7 +188,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [crafting_bench][] -- version [ca21489 Git][ver.crafting_bench] *2017-06-07* ***UPDATES***
 * [mob-engine][] ([zlib][lic.mob-engine] / [CC BY-SA][lic.ccbysa3.0]) -- version: [c2bedc3 Git][ver.mob-engine] *2018-04-23* ([patched][patch.mob-engine])
 * [mymods](https://github.com/AntumMT/mp-mymods)
-	* [mydoors][] ([CC-BY / CC-BY-SA][lic.mydoors] / [WTFPL][lic.wtfpl] / [DWYWFPL][lic.dwywpl]) -- version: [63aef13 Git][ver.mydoors] *2017-03-31* ([patched][patch.mydoors]) ***UPDATES***
+	* [mydoors][] ([CC-BY / CC-BY-SA][lic.mydoors] / [WTFPL][lic.wtfpl] / [DWYWFPL][lic.dwywpl]) -- version: [eef3b5f Git][ver.mydoors] *2018-06-12* ([patched][patch.mydoors])
 	* [myfences][] ([DWYWPL][lic.dwywpl]) -- version: [c6e529a Git][ver.myfences] *2016-04-04*
 	* [mylights][] ([DWYWPL][lic.dwywpl]) -- version: [0d734b7 Git][ver.mylights] *2017-07-14*
 	* [mypaint][] ([DWYWPL][lic.dwywpl]) -- version: [9288e8d Git][ver.mypaint] *2017-11-16*
@@ -485,7 +485,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.moremesecons]: https://github.com/minetest-mods/MoreMesecons/tree/1dab017
 [ver.moreores]: https://github.com/minetest-mods/moreores/tree/3fe0ba8
 [ver.mthudclock]: https://gitlab.com/Rochambeau/mthudclock/tree/d86e745
-[ver.mydoors]: https://github.com/minetest-mods/mydoors/tree/63aef13
+[ver.mydoors]: https://github.com/minetest-mods/mydoors/tree/eef3b5f
 [ver.myfences]: https://github.com/DonBatman/myfences/tree/c6e529a
 [ver.mylights]: https://github.com/minetest-mods/mylights/tree/0d734b7
 [ver.mypaint]: https://github.com/DonBatman/mypaint/tree/9288e8d
@@ -554,7 +554,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.mobs_redo]: https://github.com/AntumMT/mod-mobs_redo/tree/12e9367
 [patch.moreblocks]: https://github.com/AntumMT/mod-moreblocks/tree/6dda839
 [patch.moreores]: https://github.com/AntumMT/mod-moreores/tree/3697850
-[patch.mydoors]: https://github.com/AntumMT/mp-mydoors/tree/e36c9d1
+[patch.mydoors]: https://github.com/AntumMT/mp-mydoors/tree/f270a42
 [patch.mysheetmetal]: https://github.com/AntumMT/mod-mysheetmetal/tree/b7d644b
 [patch.nether]: https://github.com/AntumMT/mod-nether/tree/7a84ddd
 [patch.quartz]: https://github.com/AntumMT/mod-quartz/tree/adc759e
