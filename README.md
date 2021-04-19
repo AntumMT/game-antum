@@ -105,7 +105,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [more_chests][] ([GPL][lic.gpl2.0]) -- version: [6be8145 Git][ver.more_chests] *2021-04-05*
 * tools/
 	* [compassgps][] ([WTFPL][lic.wtfpl] / [CC0][lic.cc0] / [CC BY-SA][lic.ccbysa]) -- version: [567b95f Git][ver.compassgps] *2018-09-24*
-    * [tools_obsidian][] ([LGPL / CC BY-SA][lic.tools_obsidian]) -- version: [f77fd79][ver.tools_obsidian] *2016-03-19* ([patched][patch.tools_obsidian]) ***UPDATES***
+    * [tools_obsidian][] ([LGPL / CC BY-SA][lic.tools_obsidian]) -- version: [1.0][ver.tools_obsidian] *2021-01-15*
     * [workbench][] ([LGPL / WTFPL](mods/tools/workbench/LICENSE)) -- version: [bd14f59 Git][ver.workbench] *2017-08-08*
 * transport/
   * [bike][] ([MIT][lic.bike]) -- version: [1.2][ver.bike] *2021-04-12*
@@ -512,7 +512,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.technic_armor]: https://github.com/stujones11/technic_armor/tree/694642f
 [ver.throwing]: https://github.com/PilzAdam/throwing/tree/90bcf43
 [ver.tnt]: https://github.com/PilzAdam/TNT/tree/d6a0b7d
-[ver.tools_obsidian]: https://github.com/Dragonop/tools_obsidian/tree/f77fd79
+[ver.tools_obsidian]: https://github.com/Dragonop/tools_obsidian/releases/tag/1.0
 [ver.trampoline]: https://github.com/AntumMT/mod-trampoline/tree/41366ac
 [ver.trash_can]: https://github.com/minetest-mods/trash_can/tree/423b0f2
 [ver.unifieddyes]: https://gitlab.com/VanessaE/unifieddyes/tags/2021-03-26-1
@@ -566,7 +566,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.spawneggs]: https://github.com/AntumMT/mod-spawneggs/tree/f2cc4cc
 [patch.technic]: https://github.com/AntumMT/mp-technic/tree/cdb31be
 [patch.throwing]: https://github.com/AntumMT/mod-throwing/tree/b33ffde
-[patch.tools_obsidian]: https://github.com/AntumMT/mod-tools_obsidian/tree/2d19297
 [patch.trash_can]: https://github.com/AntumMT/mod-trash_can/tree/5a92bf4
 [patch.unifieddyes]: https://github.com/AntumMT/mod-unifieddyes/tree/3013964
 [patch.walking_light]: https://github.com/AntumMT/mod-walking_light/tree/b94ee23
