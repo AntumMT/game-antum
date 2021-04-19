@@ -20,6 +20,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [whitelist][] ([CC0][lic.cc0]) -- version: [0.1 (b813b19 Git)][ver.whitelist] *2017-08-18*
 * [awards][] ([MIT][lic.awards]) -- version: [3.4.0][ver.awards] *2021-01-10*
 * [antum][] ([MIT][lic.antum]) -- version: [69b39a4 Git][ver.antum] *2017-08-30*
+* [biofuel][] ([MIT](lic.biofuel)) -- version: [ca480ce Git][ver.biofuel] *2020-07-20*
 * buildings/
     * [bridges][] ([GPL][lic.gpl3.0]) -- version: [5b5f475 Git][ver.bridges] *2015-08-23* ([patched][patch.bridges])
     * [christmas][] ([MIT][lic.christmas]) -- version [d3bd872 Git][ver.christmas] *2013-01-11* ([patched][patch.christmas])
@@ -108,7 +109,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [workbench][] ([LGPL / WTFPL](mods/tools/workbench/LICENSE)) -- version: [bd14f59 Git][ver.workbench] *2017-08-08*
 * transport/
 	* [boats][boats2] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa3.0]) -- version [b83231e Git][ver.boats2] *2016-10-14* ([patched][patch.boats2]) ***UPSTREAM MOVED***
-	* [helicopter][] ([GPL][lic.gpl2.0]) -- version: [10f1433 Git][ver.helicopter] *2014-03-28* ([patched][ver.helicopter_pm]) ***UPSTREAM UPDATES***
+  * [helicopter][] ([GPL][lic.gpl2.0] / [CC0][lic.cc0] / CC BY-NC) -- version: [1955cdd Git][ver.helicopter] *2021-03-28*
     * [hovercraft][] ([LGPL / CC BY-SA / CC0][lic.hovercraft]) -- version: [4d50e68 Git][ver.hovercraft] *2017-05-14* ([patched][patch.hovercraft])
 * ui/
     * [bookmarks_gui][] ([BSD 3-Clause][lic.bookmarks_gui]) -- version: [f7ae10a Git][ver.bookmarks_gui] *2017-08-29*
@@ -153,7 +154,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [christmas](https://forum.minetest.net/viewtopic.php?t=23782)
 * [draconis](https://forum.minetest.net/viewtopic.php?t=22595) (dragons)
 * [hangglider](https://forum.minetest.net/viewtopic.php?t=21425)
-* [helicopter](https://forum.minetest.net/viewtopic.php?t=24613)
 * [hot_air_balloons](https://forum.minetest.net/viewtopic.php?t=22367)
 * [mobf_trader](https://forum.minetest.net/viewtopic.php?t=9013) (Traders)
 * [mobkit](https://forum.minetest.net/viewtopic.php?t=22112)
@@ -212,6 +212,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [bags]: http://cornernote.github.io/minetest-bags/
 [basic_materials]: https://gitlab.com/VanessaE/basic_materials
 [bedrock2]: https://forum.minetest.net/viewtopic.php?t=11271
+[biofuel]: https://forum.minetest.net/viewtopic.php?t=24622
 [biome_lib]: https://forum.minetest.net/viewtopic.php?f=11&t=12999
 [boats2]: https://github.com/amadin/boats
 [bonemeal]: https://forum.minetest.net/viewtopic.php?t=16446
@@ -253,7 +254,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [glow]: https://forum.minetest.net/viewtopic.php?t=6300
 [hbarmor]: https://forum.minetest.net/viewtopic.php?t=11337
 [hbsprint]: https://forum.minetest.net/viewtopic.php?t=18069
-[helicopter]: https://forum.minetest.net/viewtopic.php?t=6183
+[helicopter]: https://forum.minetest.net/viewtopic.php?t=24613
 [hill_nodebox]: https://cornernote.github.io/minetest-hill_nodebox/
 [home_gui]: http://cornernote.github.io/minetest-home_gui/
 [homedecor]: https://forum.minetest.net/viewtopic.php?t=2041
@@ -332,6 +333,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.antum]: mods/antum/LICENSE.txt
 [lic.awards]: mods/awards/LICENSE.txt
 [lic.bags]: mods/inventory/bags/LICENSE
+[lic.biofuel]: mods/biofuel/Licence.txt
 [lic.bonemeal]: mods/materials/bonemeal/license.txt
 [lic.bookmarks_gui]: mods/ui/bookmarks_gui/LICENSE
 [lic.bridges]: mods/buildings/bridges/README.md
@@ -414,6 +416,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.bags]: https://github.com/cornernote/minetest-bags/tree/bc87b45
 [ver.basic_materials]: https://gitlab.com/VanessaE/basic_materials/-/tags/2021-01-30
 [ver.bedrock2]: http://repo.or.cz/minetest_bedrock2.git/tree/63dbab8
+[ver.biofuel]: https://github.com/APercy/minetest_biofuel/tree/ca480ce
 [ver.biome_lib]: https://gitlab.com/VanessaE/biome_lib/tree/8fd0789
 [ver.boats2]: https://github.com/amadin/boats/tree/b83231e
 [ver.bonemeal]: https://notabug.org/TenPlus1/bonemeal/src/a0cb8657df797c36011ab61311ef2e15960d530b
@@ -452,8 +455,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.glow]: https://github.com/bdjnk/glow/tree/4c015a0
 [ver.hbarmor]: http://repo.or.cz/minetest_hbarmor.git/tree/e513aeb
 [ver.hbsprint]: https://github.com/tacotexmex/hbsprint/tree/de3e77e
-[ver.helicopter]: https://github.com/SokolovPavel/helicopter/tree/10f1433
-[ver.helicopter_pm]: https://github.com/petermaloney/helicopter/tree/95c5287
+[ver.helicopter]: https://github.com/APercy/helicopter/tree/1955cdd
 [ver.hill_nodebox]: https://github.com/cornernote/minetest-hill_nodebox/tree/41bbfa2
 [ver.home_gui]: https://github.com/cornernote/minetest-home_gui/tree/90086d0
 [ver.homedecor]: https://gitlab.com/VanessaE/homedecor_modpack/tree/81e0d4e
