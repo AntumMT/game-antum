@@ -30,8 +30,8 @@ antum.clearCraftOutput("helicopter:cabin")
 antum.registerCraft({
 	output = 'helicopter:cabin',
 	recipe = {
-		{'', 'group:wood', ''},
-		{'group:wood', 'homedecor:motor','default:glass'},
-		{'group:wood','group:wood','group:wood'},		
+		{'default:steel_ingot', 'default:steel_ingot', ''},
+		{'default:steel_ingot', 'homedecor:motor','default:glass'},
+		{'default:steel_ingot','default:steel_ingot','default:steel_ingot'},
 	}
 })
