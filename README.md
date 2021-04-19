@@ -40,12 +40,12 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * equipment/
 	* [airtanks][] ([MIT][lic.airtanks]) -- version: [b686694 Git][ver.airtanks] *2021-03-13* ([patched][patch.airtanks])
 	* [slingshot][] ([MIT][lic.slingshot] / [CC0][lic.cc0]) -- version [0.1][ver.slingshot] *2017-08-16*
-	* [technic_armor][] ([LGPL / WTFPL][lic.technic_armor]) -- version [694642f Git][ver.technic_armor] *2018-02-11* ***UPDATES***
+	* [technic_armor][] ([LGPL / WTFPL][lic.technic_armor]) -- version [694642f Git][ver.technic_armor] *2018-02-11*
     * [throwing][] ([WTFPL][lic.wtfpl]) -- version: [90bcf43 Git][ver.throwing] *2013-09-27* ([patched][patch.throwing])
 	* [xtraarmor][] ([CC BY-SA][lic.ccbysa3.0]) -- version: 0.3
 * farming/
 	* [crops][] ([LGPL / CC BY-SA / CC BY / CC0][lic.crops]) -- version: [1][ver.crops] *2017-09-30* ([patched][patch.crops])
-	* [farming_plus][] ([WTFPL][lic.farming_plus]) -- version: [7e0d976 Git][ver.farming_plus] *2014-07-31* ([patched][patch.farming_plus]) ***UPDATES***
+	* [farming_plus][] ([WTFPL][lic.farming_plus]) -- version: [7e0d976 Git][ver.farming_plus] *2014-10-01* ([patched][patch.farming_plus])
 * furniture/
 	* [jukebox][] ([WTFPL / CC0][lic.jukebox]) -- version: [0d871f2 Git][ver.jukebox] *2020-03-11*
     * [trampoline][] ([GPL][lic.gpl3.0]) -- version: [0.2 (41366ac Git)][ver.trampoline] *2017-08-30*
@@ -58,7 +58,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * lighting/
     * [glow][] ([GPL][lic.gpl2.0]) -- version: [4c015a0 Git][ver.glow] *2019-02-05*
 	* [ilights][] ([LGPL][lic.lgpl3.0]) -- version: [2021-02-25-01][ver.ilights] ([patched][patch.ilights])
-    * walking_light ([petermalone fork][walking_light]) ([WTFPL / CC BY-SA][lic.walking_light]) -- version: [b23d836 Git][ver.walking_light] *2017-06-21* ([patched][patch.walking_light]) ***UPDATES***
+    * walking_light ([petermalone fork][walking_light]) ([WTFPL / CC BY-SA][lic.walking_light]) -- version: [766ef0f Git][ver.walking_light] *2019-11-09* ([patched][patch.walking_light])
 * materials/
 	* [amber][] ([LGPL][lic.lgpl2.1]) -- version: [56627fa Git][ver.amber] *2017-10-29* ([patched][patch.amber])
 	* [basic_materials][] ([LGPL][lic.lgpl3.0]) -- version: [2021-01-30][ver.basic_materials]
@@ -515,7 +515,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.trash_can]: https://github.com/minetest-mods/trash_can/tree/423b0f2
 [ver.unifieddyes]: https://gitlab.com/VanessaE/unifieddyes/tags/2021-03-26-1
 [ver.waffles]: https://github.com/GreenXenith/waffles/tree/15bcdce
-[ver.walking_light]: https://github.com/petermaloney/walking_light/tree/b23d836
+[ver.walking_light]: https://github.com/petermaloney/walking_light/tree/766ef0f
 [ver.wardrobe]: https://github.com/prestidigitator/minetest-mod-wardrobe/tree/c48b011
 [ver.whitelist]: https://github.com/AntumMT/mod-whitelist/tree/b813b19
 [ver.windmill]: https://github.com/Sokomine/windmill/tree/47b029d
@@ -537,7 +537,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.drawers]: https://github.com/AntumMT/mod-drawers/tree/a77f809
 [patch.enchanting]: https://github.com/AntumMT/mod-enchanting/tree/7a01f2f
 [patch.ethereal]: https://github.com/AntumMT/mod-ethereal/tree/e3ba6b1
-[patch.farming_plus]: https://github.com/AntumMT/mod-farming_plus/tree/8bee49a
+[patch.farming_plus]: https://github.com/AntumMT/mod-farming_plus/tree/aa8f106
 [patch.gems_encrustable]: https://github.com/AntumMT/mod-gems_encrustable/tree/a043b9c
 [patch.gems_tools]: https://github.com/AntumMT/mod-gems_tools/tree/7f89843
 [patch.hbarmor]: https://github.com/AntumMT/mod-hbarmor/tree/12a7dea
@@ -568,5 +568,5 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.tools_obsidian]: https://github.com/AntumMT/mod-tools_obsidian/tree/2d19297
 [patch.trash_can]: https://github.com/AntumMT/mod-trash_can/tree/5a92bf4
 [patch.unifieddyes]: https://github.com/AntumMT/mod-unifieddyes/tree/3013964
-[patch.walking_light]: https://github.com/AntumMT/mod-walking_light/tree/e602515
+[patch.walking_light]: https://github.com/AntumMT/mod-walking_light/tree/b94ee23
 [patch.windmill]: https://github.com/AntumMT/mod-windmill/tree/7756ab4

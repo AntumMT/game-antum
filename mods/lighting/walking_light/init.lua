@@ -37,6 +37,26 @@ function walking_light.getLightItems()
 	return light_items
 end
 
+function walking_light.register_tool(tool)
+	local item, default, definition
+	item = 'walking_light:' .. tool .. '_mese'
+	default = 'default:' .. tool .. '_mese'
+
+	definition = table.copy(minetest.registered_items[default])
+	definition.description = definition.description .. ' with light'
+	definition.inventory_image = 'walking_light_mese' .. tool .. '.png'
+
+	minetest.register_tool(item, definition)
+	minetest.register_craft({
+		output = item,
+		recipe = {
+			{'default:torch'},
+			{ default },
+		}
+	})
+
+	walking_light.addLightItem(item)
+end
 
 -- from http://lua-users.org/wiki/IteratorsTutorial
 -- useful for removing things from a table because removing from the middle makes it skip elements otherwise
@@ -94,7 +114,16 @@ function mt_get_node_or_nil(pos)
 		print(debug.traceback("Current Callstack:\n"))
 		return nil
 	end
-	return minetest.get_node_or_nil(pos)
+
+	node = minetest.get_node_or_nil(pos)
+	if not node then
+		-- Load the map at pos and try again
+		minetest.get_voxel_manip():read_from_map(pos, pos)
+		node = minetest.get_node(pos)
+	end
+	-- If node.name is "ignore" here, the map probably isn't generated at pos.
+	return node
+
 end
 
 function mt_add_node(pos, sometable)
@@ -173,7 +202,7 @@ local function table_insert_pos(t, pos)
 end
 
 local function is_light(node)
-	if node ~= nil and ( node.name == "walking_light:light" or node.name == "walking_light:light_debug" ) then
+	if node ~= nil and node ~= "ignore" and( node.name == "walking_light:light" or node.name == "walking_light:light_debug" ) then
 		return true
 	end
 	return false
@@ -217,7 +246,10 @@ end
 
 local function can_add_light(pos)
 	local node  = mt_get_node_or_nil(pos)
-	if node == nil or node.name == "air" then
+	if node == nil or node == "ignore" then
+		-- if node is nil (unknown) or ignore (not generated), then we don't do anything.
+		return false
+	elseif node.name == "air" then
 --		print("walking_light can_add_light(), pos = " .. dumppos(pos) .. ", true")
 		return true
 	elseif is_light(node) then
@@ -320,8 +352,8 @@ end
 local function add_light(player, pos)
 	local player_name = player:get_player_name()
 	local node  = mt_get_node_or_nil(pos)
-	if node == nil then
-		-- don't do anything for nil blocks... they are non-loaded blocks, so we don't want to overwrite anything there
+	if node == nil or node == "ignore" then
+		-- don't do anything for nil (non-loaded) or ignore (non-generated) blocks, so we don't want to overwrite anything there
 --		print("DEBUG: walking_light.add_light(), node is nil, pos = " .. dumppos(pos))
 		return false
 	elseif node.name == "air" then
@@ -368,7 +400,7 @@ local function update_light_player(player)
 	-- check for a nil node where the player is; if it is nil, we assume the block is not loaded, so we return without updating player_positions
 	-- that way, it should add light next step
 	local node  = mt_get_node_or_nil(rounded_pos)
-	if node == nil then
+	if node == nil or node == "ignore" then
 		return
 	end
 
@@ -603,14 +635,6 @@ minetest.register_node("walking_light:megatorch", {
     groups = {choppy=2,dig_immediate=3,flammable=1,attached_node=1},
     legacy_wallmounted = true,
     --sounds = default.node_sound_defaults(),
-})
-
-minetest.register_craft({
-	output = 'walking_light:pick_mese',
-	recipe = {
-		{'default:torch'},
-		{'default:pick_mese'},
-	}
 })
 
 minetest.register_craft({
