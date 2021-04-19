@@ -62,7 +62,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * materials/
 	* [amber][] ([LGPL][lic.lgpl2.1]) -- version: [56627fa Git][ver.amber] *2017-10-29* ([patched][patch.amber])
 	* [basic_materials][] ([LGPL][lic.lgpl3.0]) -- version: [2021-01-30][ver.basic_materials]
-	* [bonemeal][] ([MIT][lic.bonemeal]) -- version: [a0cb865 Git][ver.bonemeal] *2018-07-03* ***UPDATES***
+	* [bonemeal][] ([MIT][lic.bonemeal]) -- version: [b5819d0 Git][ver.bonemeal] *2021-04-13*
 	* [gems_encrustable][] ([WTFPL][lic.wtfpl]) -- version: [81d513d Git][ver.gems_encrustable] *2012-07-31* ([patched][patch.gems_encrustable]) ***UPDATES***
 	* [gems_tools][] ([GPL][lic.gpl3.0]) -- version: [b375432 Git][ver.gems_tools] *2016-09-03* ([patched][patch.gems_tools])
 	* [moreores][] ([zlib][lic.moreores] / [CC BY-SA][lic.ccbysa3.0]) -- version: [2316595 Git][ver.moreores] *2018-04-21* ([patched][patch.moreores]) ***UPDATES***
@@ -423,7 +423,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.biofuel]: https://github.com/APercy/minetest_biofuel/tree/ca480ce
 [ver.biome_lib]: https://gitlab.com/VanessaE/biome_lib/tree/8fd0789
 [ver.boats2]: https://github.com/amadin/boats/tree/b83231e
-[ver.bonemeal]: https://notabug.org/TenPlus1/bonemeal/src/a0cb8657df797c36011ab61311ef2e15960d530b
+[ver.bonemeal]: https://notabug.org/TenPlus1/bonemeal/src/b5819d022ea79e702dee4e2e0c433ab28dfaf2ab
 [ver.bookmarks_gui]: https://github.com/cornernote/minetest-bookmarks_gui/tree/f7ae10a
 [ver.bridges]: https://github.com/Sokomine/bridges/tree/5b5f475
 [ver.bright_night]: https://github.com/Yukitty/minetest-bright_night/tree/69b750a
