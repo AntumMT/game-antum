@@ -11,6 +11,8 @@ ethereal?
 farming?
 farming_plus?
 flowers?
+gems_encrustable?
+gems_tools?
 helicopter?
 invisibility?
 mob_sheep?
