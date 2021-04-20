@@ -13,6 +13,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * admin/
     * [cleaner][] ([CC0][lic.cc0]) -- version: [0.4 (68222b1 Git)][ver.cleaner] *2017-08-30*
     * [invisible][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa4.0]) -- version: [4 (a2a6504 Git)][ver.invisible]
+    * [no_fall_damage][] ([MIT][lic.no_fall_damage]) -- version [1.0.0][ver.no_fall_damage] *2020-12-19*
     * [override][] ([MIT][lic.override]) -- version: [0.2 (e6dda7a Git)][ver.override] *2017-08-30*
     * [privilegeareas][] ([WTFPL][lic.privilegeareas] / [CC0][lic.cc0]) -- version: [15eae20 Git][ver.privilegeareas] *2018-11-16*
     * [privs][] ([CC0][lic.cc0])
@@ -295,6 +296,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [mysheetmetal]: https://forum.minetest.net/viewtopic.php?t=11702
 [mywoodslopes]: https://forum.minetest.net/viewtopic.php?t=11433
 [nether]: https://forum.minetest.net/viewtopic.php?t=5790
+[no_fall_damage]: https://forum.minetest.net/viewtopic.php?t=25876
 [override]: https://github.com/AntumMT/mod-override
 [painting]: https://github.com/minetest-mods/painting
 [pipeworks]: https://forum.minetest.net/viewtopic.php?t=2155
@@ -374,6 +376,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.moreores]: mods/materials/moreores/LICENSE.md
 [lic.mydoors]: mods/modpacks/mydoors/README.md
 [lic.nether]: mods/world/nether/README.md
+[lic.no_fall_damage]: mods/admin/no_fall_damage/README.md
 [lic.override]: mods/admin/override/LICENSE.txt
 [lic.privilegeareas]: mods/admin/privilegeareas/README.md
 [lic.quartz]: mods/materials/quartz/LICENSE.txt
@@ -500,6 +503,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.mysheetmetal]: https://github.com/minetest-mods/mysheetmetal/tree/7c5ab71
 [ver.mywoodslopes]: https://github.com/minetest-mods/mywoodslopes/tree/3a1b531
 [ver.nether]: https://github.com/minetest-mods/nether/tree/v3
+[ver.no_fall_damage]: https://repo.or.cz/minetest_no_fall_damage.git/shortlog/refs/tags/1.0.0
 [ver.override]: https://github.com/AntumMT/mod-override/tree/e6dda7a
 [ver.painting]: https://github.com/minetest-mods/painting/tree/8961849
 [ver.pipeworks]: https://gitlab.com/VanessaE/pipeworks/-/tags/2021-02-19
