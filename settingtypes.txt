@@ -264,6 +264,16 @@ sprint_breath (Breath) bool true
 sprint_breath_drain (Breath drain) float 1
 
 
+[*helicopter]
+
+# If enabled, places helicopter in inventory instead of destroying it
+# when punched.
+helicopter.pick_up (Place in inventory) bool false
+
+# If enabled, helicopter will be controlled via mouse by default.
+helicopter.mouse_default (Mouse control default) bool false
+
+
 [*hidename]
 
 # Use alpha color level to hide nametag instead of clearing text.

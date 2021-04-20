@@ -29,6 +29,7 @@ helicopter.colors ={
     yellow='#ffe400',
 }
 
+dofile(minetest.get_modpath("helicopter") .. DIR_DELIM .. "settings.lua")
 --dofile(minetest.get_modpath(minetest.get_current_modname()) .. DIR_DELIM .. "heli_hud.lua")
 dofile(minetest.get_modpath("helicopter") .. DIR_DELIM .. "heli_hud.lua")
 dofile(minetest.get_modpath("helicopter") .. DIR_DELIM .. "heli_utilities.lua")

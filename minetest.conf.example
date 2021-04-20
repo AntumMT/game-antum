@@ -2261,6 +2261,25 @@ torches_enable_ceiling = false
 
 
 
+###############
+## TRANSPORT ##
+###############
+
+# *** helicopter ***
+
+## If enabled, places helicopter in inventory instead of destroying it
+#  when punched.
+#    type:    bool
+#    default: false
+#helicopter.pick_up = true
+
+## If enabled, helicopter will be controlled via mouse by default.
+#    type:    bool
+#    default: false
+#helicopter.mouse_default = true
+
+
+
 ########
 ## UI ##
 ########

@@ -1,0 +1,7 @@
+
+# If enabled, places helicopter in inventory instead of destroying it
+# when punched.
+helicopter.pick_up (Place in inventory) bool false
+
+# If enabled, helicopter will be controlled via mouse by default.
+helicopter.mouse_default (Mouse control default) bool false

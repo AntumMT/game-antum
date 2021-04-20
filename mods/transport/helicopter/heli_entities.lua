@@ -50,7 +50,7 @@ minetest.register_entity("helicopter:heli", {
     hp_max = 50,
     color = "#0063b0",
     _passenger = nil,
-    _by_mouse = true,
+    _by_mouse = helicopter.mouse_default,
 
     get_staticdata = function(self) -- unloaded/unloads ... is now saved
         return minetest.serialize({
@@ -273,8 +273,12 @@ minetest.register_entity("helicopter:heli", {
             end
 
             if self.hp_max <= 0 then
-                self.object:remove()
-                puncher:get_inventory():add_item("main", "helicopter:heli")
+                if helicopter.pick_up then
+                    self.object:remove()
+                    puncher:get_inventory():add_item("main", "helicopter:heli")
+                else
+                    helicopter.destroy(self)
+                end
             end
 
         end
