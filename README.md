@@ -149,6 +149,36 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [technic][] ([LGPL][lic.lgpl2.0]) -- version: [43acec2 Git][ver.technic] *2021-02-09*
 
 
+---
+
+### Stored in 'modpacks' directory
+
+* castle ([MIT][lic.castle])
+	* [castle_farming][] -- version: [032f277 Git][ver.castle_farming] *2020-02-28*
+	* [castle_gates][] -- version: [21b5a6c Git][ver.castle_gates] *2021-03-14*
+	* [castle_lighting][] -- version: [32a42e3 Git][ver.castle_lighting] *2020-02-28*
+	* [castle_masonry][] -- version: [6e81ab1 Git][ver.castle_masonry] *2020-09-09*
+	* [castle_shields][] -- version: [78e74b0 Git][ver.castle_shields] *2019-11-23*
+	* [castle_storage][] -- version: [ad5e887 Git][ver.castle_storage] *2020-02-28*
+	* [castle_tapestries][] -- version: [f5e3ac1 Git][ver.castle_tapestries] *2020-02-16*
+	* [castle_weapons][] -- version: [d3cf095 Git][ver.castle_weapons] *2020-02-28* ([patched][patch.castle_weapons])
+	* [crafting_bench][] -- version: [69083ed Git][ver.crafting_bench] *2020-05-27*
+* [home_workshop][] -- version: [03325e8 Git][ver.home_workshop] *2021-04-15*
+* [mob-engine][] ([zlib][lic.mob-engine] / [CC BY-SA][lic.ccbysa3.0]) -- version: [c2bedc3 Git][ver.mob-engine] *2018-04-23* ([patched][patch.mob-engine])
+* [mymods](https://github.com/AntumMT/mp-mymods)
+	* [mydoors][] ([CC-BY / CC-BY-SA][lic.mydoors] / [WTFPL][lic.wtfpl] / [DWYWFPL][lic.dwywpl]) -- version: [eef3b5f Git][ver.mydoors] *2018-06-12* ([patched][patch.mydoors])
+	* [myfences][] ([DWYWPL][lic.dwywpl]) -- version: [c6e529a Git][ver.myfences] *2016-04-04*
+	* [mylights][] ([DWYWPL][lic.dwywpl]) -- version: [0d734b7 Git][ver.mylights] *2017-07-14*
+	* [mypaint][] ([DWYWPL][lic.dwywpl]) -- version: [9288e8d Git][ver.mypaint] *2017-11-16*
+	* [mypaths][] ([DWYWPL][lic.dwywpl]) -- version: [4de5e84 Git][ver.mypaths] *2016-03-23*
+	* [myroofs][] ([DWYWPL][lic.dwywpl]) -- version: [fe98461 Git][ver.myroofs] *2017-07-14*
+	* [mysheetmetal][] ([DWYWPL][lic.dwywpl]) -- version: [7c5ab71 Git][ver.mysheetmetal] *2016-04-12* ([patched][patch.mysheetmetal])
+	* [mywoodslopes][] ([DWYWPL][lic.dwywpl]) -- version: [3a1b531 Git][ver.mywoodslopes] *2016-03-23* (patched)
+	* [worldedge][] ([DWYWPL][lic.dwywpl]) -- version: [608462d Git][ver.worldedge] *2017-07-14*
+
+
+---
+
 ### Mods I am looking at:
 
 * [adv_vehicles](https://forum.minetest.net/viewtopic.php?t=22777) (Advanced Vehicles)
@@ -173,33 +203,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [wildcow](https://forum.minetest.net/viewtopic.php?t=25739)
 * [xpro](https://forum.minetest.net/viewtopic.php?t=20499) (XP and Levels)
 * [zoonami](https://forum.minetest.net/viewtopic.php?t=25356)
-
-
----
-
-### Stored in 'modpacks' directory
-
-* castle ([MIT][lic.castle])
-	* [castle_farming][] -- version: [032f277 Git][ver.castle_farming] *2020-02-28*
-	* [castle_gates][] -- version: [21b5a6c Git][ver.castle_gates] *2021-03-14*
-	* [castle_lighting][] -- version: [32a42e3 Git][ver.castle_lighting] *2020-02-28*
-	* [castle_masonry][] -- version: [6e81ab1 Git][ver.castle_masonry] *2020-09-09*
-	* [castle_shields][] -- version: [78e74b0 Git][ver.castle_shields] *2019-11-23*
-	* [castle_storage][] -- version: [ad5e887 Git][ver.castle_storage] *2020-02-28*
-	* [castle_tapestries][] -- version: [f5e3ac1 Git][ver.castle_tapestries] *2020-02-16*
-	* [castle_weapons][] -- version: [d3cf095 Git][ver.castle_weapons] *2020-02-28* ([patched][patch.castle_weapons])
-	* [crafting_bench][] -- version: [69083ed Git][ver.crafting_bench] *2020-05-27*
-* [mob-engine][] ([zlib][lic.mob-engine] / [CC BY-SA][lic.ccbysa3.0]) -- version: [c2bedc3 Git][ver.mob-engine] *2018-04-23* ([patched][patch.mob-engine])
-* [mymods](https://github.com/AntumMT/mp-mymods)
-	* [mydoors][] ([CC-BY / CC-BY-SA][lic.mydoors] / [WTFPL][lic.wtfpl] / [DWYWFPL][lic.dwywpl]) -- version: [eef3b5f Git][ver.mydoors] *2018-06-12* ([patched][patch.mydoors])
-	* [myfences][] ([DWYWPL][lic.dwywpl]) -- version: [c6e529a Git][ver.myfences] *2016-04-04*
-	* [mylights][] ([DWYWPL][lic.dwywpl]) -- version: [0d734b7 Git][ver.mylights] *2017-07-14*
-	* [mypaint][] ([DWYWPL][lic.dwywpl]) -- version: [9288e8d Git][ver.mypaint] *2017-11-16*
-	* [mypaths][] ([DWYWPL][lic.dwywpl]) -- version: [4de5e84 Git][ver.mypaths] *2016-03-23*
-	* [myroofs][] ([DWYWPL][lic.dwywpl]) -- version: [fe98461 Git][ver.myroofs] *2017-07-14*
-	* [mysheetmetal][] ([DWYWPL][lic.dwywpl]) -- version: [7c5ab71 Git][ver.mysheetmetal] *2016-04-12* ([patched][patch.mysheetmetal])
-	* [mywoodslopes][] ([DWYWPL][lic.dwywpl]) -- version: [3a1b531 Git][ver.mywoodslopes] *2016-03-23* (patched)
-	* [worldedge][] ([DWYWPL][lic.dwywpl]) -- version: [608462d Git][ver.worldedge] *2017-07-14*
 
 
 
@@ -263,6 +266,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [hidename]: https://forum.minetest.net/viewtopic.php?t=18190
 [hill_nodebox]: https://cornernote.github.io/minetest-hill_nodebox/
 [home_gui]: http://cornernote.github.io/minetest-home_gui/
+[home_workshop]: https://gitlab.com/VanessaE/home_workshop_modpack
 [homedecor]: https://forum.minetest.net/viewtopic.php?t=2041
 [hovercraft]: https://forum.minetest.net/viewtopic.php?t=6722
 [hudbars]: https://forum.minetest.net/viewtopic.php?t=11153
@@ -473,6 +477,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.hidename]: https://github.com/AntumMT/mod-hidename/tree/7b3aa52
 [ver.hill_nodebox]: https://github.com/cornernote/minetest-hill_nodebox/tree/41bbfa2
 [ver.home_gui]: https://github.com/cornernote/minetest-home_gui/tree/a291a09
+[ver.home_workshop]: https://gitlab.com/VanessaE/home_workshop_modpack/tree/03325e8
 [ver.homedecor]: https://gitlab.com/VanessaE/homedecor_modpack/tree/81e0d4e
 [ver.hovercraft]: https://github.com/stujones11/hovercraft/tree/4d50e68
 [ver.hudbars]: http://repo.or.cz/minetest_hudbars.git/tree/0684bac
