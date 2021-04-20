@@ -14,7 +14,7 @@ Minetest mod that replaces glass nodes from the [default][] mod in [minetest_gam
 ### **Features:**
 
 - Creates glass-like nodes.
-- If *[unifieddyes][]* is present, nodes can be colored with dyes.
+- If *[unifieddyes][]* is present, nodes can be colored with `unifieddyes:airbrush`.
 - Compatible with *[default][]* mod.
 
 
