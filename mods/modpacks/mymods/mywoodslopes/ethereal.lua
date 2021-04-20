@@ -31,12 +31,12 @@ local ocorner_cbox = {
 	}
 }
 local moretrees_slopes = {   --Material , Description , Item, Image
-	{"willow" ,  "Willow Wood" ,         "ethereal:willow_wood",      "willow"},
-	{"redwood",  "RedWood Wood",         "ethereal:redwood_wood",     "redwood"},
-	{"frost",	 "Frost Wood",           "ethereal:frost_wood",       "frost"},
-	{"yellow",	 "Healing Tree Wood",    "ethereal:yellow_wood",      "yellow"},
+	{"willow" ,  "Willow Wood" ,         "ethereal:willow_wood",      "ethereal_willow"},
+	{"redwood",  "RedWood Wood",         "ethereal:redwood_wood",     "ethereal_redwood"},
+	{"frost",	 "Frost Wood",           "ethereal:frost_wood",       "ethereal_frost"},
+	{"yellow",	 "Healing Tree Wood",    "ethereal:yellow_wood",      "ethereal_yellow"},
 	{"palm",	 "Palm Wood",    		 "ethereal:palm_wood",        "moretrees_palm"},
-	{"banana",	 "Banana Wood",    		 "ethereal:banana_wood",      "banana"},
+	{"banana",	 "Banana Wood",    		 "ethereal:banana_wood",      "ethereal_banana"},
 	{"birch",	 "Birch Wood",    		 "ethereal:birch_wood",       "moretrees_birch"},
 }
 
