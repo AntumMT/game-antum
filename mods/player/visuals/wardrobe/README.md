@@ -1,5 +1,7 @@
-Wardrobe Minetest Mod
-=====================
+# Wardrobe Minetest Mod
+
+
+Originally by [prestidigitator](https://forum.minetest.net/viewtopic.php?t=9680).
 
 This mod provides a very simple way to change the skin on the default character
 mesh.  Unlike other skin-changing mods out there, it does not attempt to change
@@ -31,8 +33,9 @@ higher resolution as long as they have an aspect ratio of 2:1.  The author of
 this mod created a very high resolution version of the default character and it
 works well (but has not been included to simplify mod licensing).
 
-Skins File Syntax
------------------
+
+---
+## Skins File Syntax
 
 A comment line starts with two dashes (like in Lua), but must be the only thing
 on the line:
@@ -67,12 +70,13 @@ particular world), prepend a minus sign (-) to the line.  For example:
 would remove the "skin_other_texture_file_name.png" skin no matter where it was
 specified or what name it was given.
 
-Mod Details
------------
 
-Required Minetest Version: >=0.4.9 (not tested in earlier versions)
+---
+### Mod Details
 
-Dependencies: default, wool (both included in minetest_game)
+Required Minetest Version: >=0.5.0
+
+Dependencies: default, player_api, wool (included in minetest_game)
 
 Recipies:
 
@@ -80,24 +84,27 @@ Recipies:
    * S - any stick
    * L - any wool
 
+```
    wardrobe:
       W S W
       W L W
       W L W
+```
 
-Git Repo: https://github.com/prestidigitator/minetest-mod-wardrobe
+Git Repo: https://github.com/AntumMT/mod-wardrobe
 
-Copyright and Licensing
------------------------
+
+---
+## Copyright and Licensing
 
 All contents, including source code, documentation, and images, are the
 original creations of the mod author.
 
-Author: prestidigitator (as registered on forum.minetest.net)
-License: WTFPL (all content)
+License: [MIT](LICENSE.txt)
 
-Change History
---------------
+
+---
+## Change History
 
 Version 1.0
 
@@ -111,3 +118,12 @@ Version 1.1
 * Auto-detection of player mesh name (thank you indriApollo).
 * Removed warning caused by access of uninitialized global variale (even though
   it was just a check for nil).
+
+Version 1.2
+
+* Released 2021-04-20
+* License changed to MIT.
+* Added player_api as dependency.
+* External mods can register skins.
+* Skins can be registered individually from within mod code.
+* Number of displayed skins can be set in server configuration file.

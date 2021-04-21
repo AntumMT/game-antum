@@ -1,0 +1,5 @@
+
+## Number of skins shown per page.
+#
+#  default: 8
+wardrobe.skins_per_page (Skins per page) int 8

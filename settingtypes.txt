@@ -607,6 +607,14 @@ spawneggs.enable_node_spawn (Enable node spawn) bool true
 trampoline.damage_absorb (Trampoline damage absorption) int 100 0 100
 
 
+[*wardrobe]
+
+## Number of skins shown per page.
+#
+#  default: 8
+wardrobe.skins_per_page (Skins per page) int 8
+
+
 [*whitelist]
 
 # Enables/Disables whitelist feature.

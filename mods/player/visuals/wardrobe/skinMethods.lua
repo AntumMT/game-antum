@@ -12,92 +12,92 @@ local SKIN_CHANGE_METHOD = '3d_armor';
 
 local playerMesh = "character.b3d";
 do  -- autodetect version of player mesh used by default
-   if default and default.registered_player_models then
-      local haveCharName = false;  -- 'character.*' has priority
-      local name = nil;
-      local nNames = 0;
+	if default and default.registered_player_models then
+		local haveCharName = false;  -- 'character.*' has priority
+		local name = nil;
+		local nNames = 0;
 
-      for k in pairs(default.registered_player_models) do
-         if string.find(k, "^character\\.[^\\.]+$") then
-            if haveCharName then nNames = 2; break; end;
-            name = k;
-            nNames = 1;
-            haveCharName = true;
-         elseif not haveCharName then
-            name = k;
-            nNames = nNames + 1;
-         end;
-      end;
+		for k in pairs(default.registered_player_models) do
+			if string.find(k, "^character\\.[^\\.]+$") then
+				if haveCharName then nNames = 2; break; end;
+				name = k;
+				nNames = 1;
+				haveCharName = true;
+			elseif not haveCharName then
+				name = k;
+				nNames = nNames + 1;
+			end;
+		end;
 
-      if nNames == 1 then playerMesh = name; end;
-   end;
+		if nNames == 1 then playerMesh = name; end;
+	end;
 end;
 
 local function changeWardrobeSkin(playerName, skin)
-   local player = minetest.get_player_by_name(playerName);
-   if not player then
-      error("unknown player '"..playerName.."'");
-   end;
-   if skin and not wardrobe.skinNames[skin] then
-      error("unknown skin '"..skin.."'");
-   end;
+	local player = core.get_player_by_name(playerName);
+	if not player then
+		error("unknown player '"..playerName.."'");
+	end;
+	if skin and not wardrobe.skinNames[skin] then
+		error("unknown skin '"..skin.."'");
+	end;
 
-   wardrobe.playerSkins[playerName] = skin;
-   wardrobe.storage.savePlayerSkins();
+	wardrobe.playerSkins[playerName] = skin;
+	wardrobe.savePlayerSkins();
 end;
 
 local function defaultUpdateSkin(player)
-   local playerName = player:get_player_name();
-   if not playerName or playerName == "" then return; end;
+	local playerName = player:get_player_name();
+	if not playerName or playerName == "" then return; end;
 
-   local skin = wardrobe.playerSkins[playerName];
-   if not skin or not wardrobe.skinNames[skin] then return; end;
+	local skin = wardrobe.playerSkins[playerName];
+	if not skin or not wardrobe.skinNames[skin] then return; end;
 
-   player:set_properties(
-      {
-         visual = "mesh",
-         visual_size = { x = 1, y = 1 },
-         mesh = playerMesh,
-         textures = { skin }
-      });
+	player:set_properties(
+		{
+			visual = "mesh",
+			visual_size = { x = 1, y = 1 },
+			mesh = playerMesh,
+			textures = { skin }
+		});
 end;
 
 --- Method for updating the player skin, IF the dependent mod is enabled.
 local SKIN_CHANGE_METHODS =
-   {
-      default =
-      {
-         required_mods = {},
+	{
+		default =
+		{
+			required_mods = {},
 
-         initSkin = defaultUpdateSkin,
+			initSkin = defaultUpdateSkin,
 
-         changeSkin = changeWardrobeSkin,
+			changeSkin = changeWardrobeSkin,
 
-         updateSkin = defaultUpdateSkin
-      },
+			updateSkin = defaultUpdateSkin
+		},
 
-      ["3d_armor"] =
-      {
-         required_mods = { '3d_armor' },
+		["3d_armor"] =
+		{
+			required_mods = { '3d_armor' },
 
-         initSkin = nil,
+			initSkin = nil,
 
-         changeSkin = function(playerName, skin)
-            changeWardrobeSkin(playerName, skin);
-            armor.textures[playerName].skin = skin;
-         end,
+			changeSkin = function(playerName, skin)
+				changeWardrobeSkin(playerName, skin);
+				armor.textures[playerName].skin = skin;
+			end,
 
-         updateSkin = function(player)
-            armor:update_player_visuals(player);
-         end,
-      },
-   };
+			updateSkin = function(player)
+				armor:update_player_visuals(player);
+			end,
+		},
+	};
 
 local methods = SKIN_CHANGE_METHODS[SKIN_CHANGE_METHOD];
 if methods then
-   for _, mod in ipairs(methods.required_mods) do
-      if not minetest.get_modpath(mod) then methods = nil; break; end;
-   end;
+	for _, mod in ipairs(methods.required_mods) do
+		if not core.get_modpath(mod) then methods = nil; break; end;
+	end;
 end;
 if not methods then methods = SKIN_CHANGE_METHODS.default; end;
 

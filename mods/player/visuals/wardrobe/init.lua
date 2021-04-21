@@ -1,15 +1,17 @@
-local MOD_NAME = minetest.get_current_modname();
-local MOD_PATH = minetest.get_modpath(MOD_NAME);
-local WORLD_PATH = minetest.get_worldpath();
 
-if MOD_NAME ~= "wardrobe" then
-   error("mod directory must be named 'wardrobe'");
-end
+local world_path = core.get_worldpath();
+
 wardrobe = {};
+wardrobe.name = core.get_current_modname();
+wardrobe.path = core.get_modpath(wardrobe.name)
+wardrobe.player_skin_db = world_path.."/playerSkins.txt"
+wardrobe.skin_files = {wardrobe.path.."/skins.txt", world_path.."/skins.txt"};
+wardrobe.playerSkins = {}
 
-local initSkin, changeSkin, updateSkin = dofile(MOD_PATH.."/skinMethods.lua");
-dofile(MOD_PATH.."/storage.lua");
-dofile(MOD_PATH.."/wardrobe.lua");
+dofile(wardrobe.path.."/settings.lua")
+local initSkin, changeSkin, updateSkin = dofile(wardrobe.path.."/skinMethods.lua");
+dofile(wardrobe.path.."/storage.lua");
+dofile(wardrobe.path.."/wardrobe.lua");
 
 
 -- API
@@ -39,27 +41,27 @@ wardrobe.setPlayerSkin = updateSkin;
  --    Name of the skin.
  --
 function wardrobe.changePlayerSkin(playerName, skin)
-   changeSkin(playerName, skin);
+	changeSkin(playerName, skin);
 
-   local player = minetest.get_player_by_name(playerName);
-   if player then updateSkin(player); end;
+	local player = core.get_player_by_name(playerName);
+	if player then updateSkin(player); end;
 end
 
 
-wardrobe.storage.loadSkins();
-wardrobe.storage.loadPlayerSkins();
+wardrobe.loadSkins();
+wardrobe.loadPlayerSkins();
 
 if initSkin then
-   minetest.register_on_joinplayer(
-      function(player)
-         minetest.after(1, initSkin, player)
-      end);
+	core.register_on_joinplayer(
+		function(player)
+			core.after(1, initSkin, player)
+		end);
 end;
 
 if not changeSkin then
-   error("No wardrobe skin change method registered.  Check skinMethods.lua.");
+	error("No wardrobe skin change method registered.  Check skinMethods.lua.");
 end;
 if not updateSkin then
-   error("No wardrobe skin update method registered.  Check skinMethods.lua.");
+	error("No wardrobe skin update method registered.  Check skinMethods.lua.");
 end;
 

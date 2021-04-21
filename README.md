@@ -93,7 +93,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [hbsprint][] ([LGPL][lic.lgpl2.1]) -- version: [f566d0f Git][ver.hbsprint] *2021-02-18* ([patched][patch.hbsprint])
 * player/visuals/
     * [invisibility][] ([MIT][lic.invisibility]) -- version: [65c0823 Git][ver.invisibility] *2021-01-21* ([patched][patch.invisibility])
-    * [wardrobe][] ([WTFPL][lic.wtfpl]) -- version: [1.1-2-c48b011 Git][ver.wardrobe] *2015-05-21*
+    * [wardrobe][] ([MIT][lic.wardrobe]) -- version: [1.2][ver.wardrobe] *2021-04-20*
 * protection/
     * [pvp_areas][] ([LGPL][lic.lgpl2.1]) -- version: [6e4d66d Git][ver.pvp_areas] *2018-07-26*
     * [simple_protection][] ([CC0][lic.cc0]) -- version: [3630fe9 Git][ver.simple_protection] *2021-04-07* ([patched][patch.simple_protection])
@@ -333,7 +333,8 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [vines]: https://forum.minetest.net/viewtopic.php?f=11&t=2344
 [waffles]: https://forum.minetest.net/viewtopic.php?t=16669
 [walking_light]: https://github.com/petermaloney/walking_light
-[wardrobe]: https://forum.minetest.net/viewtopic.php?t=9680
+[wardrobe]: https://github.com/AntumMT/mod-wardrobe
+[wardrobe.old]: https://forum.minetest.net/viewtopic.php?t=9680
 [weather]: https://forum.minetest.net/viewtopic.php?t=5245
 [whitelist]: https://forum.minetest.net/viewtopic.php?t=8434
 [windmill]: https://forum.minetest.net/viewtopic.php?id=7440
@@ -397,6 +398,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.trash_can]: mods/furniture/trash_can/LICENSE.txt
 [lic.waffles]: mods/furniture/waffles/LICENSE.txt
 [lic.walking_light]: mods/lighting/walking_light/README.md
+[lic.wardrobe]: mods/player/visuals/wardrobe/LICENSE.txt
 [lic.windmill]: mods/buildings/windmill/README.md
 
 [lic.cc0]: doc/licenses/CC0.txt
@@ -536,7 +538,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.unifieddyes]: https://gitlab.com/VanessaE/unifieddyes/tags/2021-03-26-1
 [ver.waffles]: https://github.com/GreenXenith/waffles/tree/15bcdce
 [ver.walking_light]: https://github.com/petermaloney/walking_light/tree/766ef0f
-[ver.wardrobe]: https://github.com/prestidigitator/minetest-mod-wardrobe/tree/c48b011
+[ver.wardrobe]: https://github.com/AntumMT/mod-wardrobe/releases/tag/v1.2
 [ver.whitelist]: https://github.com/AntumMT/mod-whitelist/tree/b813b19
 [ver.windmill]: https://github.com/Sokomine/windmill/tree/47b029d
 [ver.workbench]: https://github.com/minetest-mods/workbench/tree/bd14f59

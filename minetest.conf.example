@@ -2156,6 +2156,14 @@ mobs_animal:sheep_white = 0
 #playeranim.animation_speed_sneak = 0.8
 
 
+# *** wardrobe ***
+
+## Number of skins shown per page.
+#    type:    int
+#    default: 8
+#wardrobe.skins_per_page = 8
+
+
 # *** wieldview ***
 
 # ???
