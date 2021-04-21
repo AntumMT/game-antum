@@ -43,6 +43,7 @@ local skins = {
 	{"NERD.png", "NERD",},
 	{"Older_Man_Sam.png", "Sam (older man)",},
 	{"philipbenr.png", "PhilipBenR",},
+	{"Skeleton.png", "Skeleton",},
 	{"skin_minecraft_repris.png", "Minecraft Repris",},
 	{"Space_Sam.png", "Sam (space)",},
 	{"SuperSam.png", "Sam (super)",},

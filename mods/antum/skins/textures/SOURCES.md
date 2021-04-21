@@ -23,6 +23,7 @@
 - [NERD.png](http://minetest.fensta.bplaced.net/#id=) by DJOZZY (CC BY-SA)
 - [Older_Man_Sam.png](http://minetest.fensta.bplaced.net/#id=21) by philipbenr (CC BY-SA)
 - [philipbenr.png](http://minetest.fensta.bplaced.net/#id=54) by philipbenr (CC BY-SA)
+- [Skeleton.png](http://minetest.fensta.bplaced.net/#id=1141) by I don't know (CC BY-SA)
 - [skin_minecraft_repris.png](http://minetest.fensta.bplaced.net/#id=856) by Sporax (CC BY-SA)
 - [Space_Sam.png](http://minetest.fensta.bplaced.net/#id=37) by philipbenr (CC BY-SA)
 - [SuperSam.png](http://minetest.fensta.bplaced.net/#id=) by AMMOnym (CC BY-SA)
