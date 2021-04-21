@@ -72,3 +72,6 @@ for _, skin in ipairs(skins) do
 
 	wardrobe.registerSkin(skin[1], skin[2])
 end
+
+-- put skins in alphabetical order
+wardrobe.sortNames()
