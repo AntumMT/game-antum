@@ -182,6 +182,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 ### Mods I am looking at:
 
 * [adv_vehicles](https://forum.minetest.net/viewtopic.php?t=22777) (Advanced Vehicles)
+* [basic_signs](https://gitlab.com/VanessaE/basic_signs)
 * [billboard](https://forum.minetest.net/viewtopic.php?t=15260)
 * [bows](https://forum.minetest.net/viewtopic.php?t=14384)
 * [cherrytree](https://forum.minetest.net/viewtopic.php?t=22118)
@@ -198,6 +199,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [pull_cart](https://forum.minetest.net/viewtopic.php?t=26400)
 * [rainf](https://forum.minetest.net/viewtopic.php?t=25554) (Temperate Rainforest biome)
 * [sailing](https://forum.minetest.net/viewtopic.php?t=23520)
+* [signs_lib-extrafonts](https://gitlab.com/VanessaE/minetest-signs_lib-extrafonts)
 * [slimes](https://forum.minetest.net/viewtopic.php?t=15878)
 * [swaz](https://forum.minetest.net/viewtopic.php?t=25143) (Swampz biome)
 * [wildcow](https://forum.minetest.net/viewtopic.php?t=25739)
