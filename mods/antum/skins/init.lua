@@ -62,7 +62,7 @@ local skins = {
 	{"tessas_skin.png", "Tessa",},
 }
 
-for skin in pairs(skins) do
+for _, skin in ipairs(skins) do
 	local key = skin[1]
 	local value = skin[2]
 
