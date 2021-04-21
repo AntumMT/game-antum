@@ -107,13 +107,36 @@ local function loadSkinsFromFiles(filePaths)
 	return keyList, values;
 end
 
+local function getSkinIndex(skin)
+	local idx = nil
+	for i, k in ipairs(wardrobe.skins) do
+		if k == skin then
+			idx = i
+			break
+		end
+	end
+
+	return idx
+end
+
 --- Organizes outfit names alphabetically.
 --
 --  @function wardrobe.sortNames
 function wardrobe.sortNames()
+	local default_skin = "character.png"
+	local default_idx = getSkinIndex(default_skin)
+	if default_idx then
+		table.remove(wardrobe.skins, default_idx)
+	end
+
 	table.sort(wardrobe.skins, function(sL, sR)
 		return wardrobe.skinNames[sL] < wardrobe.skinNames[sR];
-	end);
+	end)
+
+	if default_idx then
+		-- keep default skin at top
+		table.insert(wardrobe.skins, 1, default_skin)
+	end
 end
 
 --- Registers a single skin.

@@ -127,3 +127,4 @@ Version 1.2
 * External mods can register skins.
 * Skins can be registered individually from within mod code.
 * Number of displayed skins can be set in server configuration file.
+* Keep default skin as first item.
