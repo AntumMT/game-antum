@@ -28,4 +28,9 @@
 - [SuperSam.png](http://minetest.fensta.bplaced.net/#id=) by AMMOnym (CC BY-SA)
 - [villiantest_III.png](http://minetest.fensta.bplaced.net/#id=) by marshrover (CC BY-SA)
 - [Witch.png](http://minetest.fensta.bplaced.net/#id=884) by loupicate (CC BY-SA)
+- [Zelda.png](http://minetest.fensta.bplaced.net/#id=1120) by AuroreTheWolf (CC BY-SA)
 - [Zenohelds.png](http://minetest.fensta.bplaced.net/#id=25) by sdzen (CC BY-SA)
+
+<!-- Template:
+- [.png](http://minetest.fensta.bplaced.net/#id=) by  ()
+-->

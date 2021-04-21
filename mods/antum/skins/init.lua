@@ -48,6 +48,7 @@ local skins = {
 	{"SuperSam.png", "Sam (super)",},
 	{"villiantest_III.png", "VillianTest",},
 	{"Witch.png", "Witch",},
+	{"Zelda.png", "Zelda",},
 	{"Zenohelds.png", "Zenohelds",},
 }
 
