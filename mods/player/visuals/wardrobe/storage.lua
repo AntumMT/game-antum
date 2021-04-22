@@ -1,6 +1,7 @@
 
 wardrobe.skins = {}
 wardrobe.skinNames = {}
+wardrobe.skin_count = 0
 
 
 local function removePrefix(str, prefix)
@@ -149,6 +150,8 @@ end
 function wardrobe.registerSkin(k, v)
 	table.insert(wardrobe.skins, k)
 	wardrobe.skinNames[k] = v
+
+	wardrobe.skin_count = wardrobe.skin_count+1
 end
 
 --- Loads skin names from skin files, storing the result in wardrobe.skins and
@@ -185,6 +188,7 @@ function wardrobe.loadSkins(skin_files)
 	-- overwrite registered skins
 	wardrobe.skins = skins;
 	wardrobe.skinNames = skinNames;
+	wardrobe.skin_count = #wardrobe.skins
 
 	wardrobe.sortNames()
 end
@@ -224,10 +228,6 @@ function wardrobe.registerSkinFiles(skin_files)
 
 	-- add to registered skins
 	for _, sk in ipairs(skins) do
-		--[[
-		table.insert(wardrobe.skins, sk)
-		wardrobe.skinNames[sk] = skinNames[sk]
-		]]
 		wardrobe.registerSkin(sk, skinNames[sk])
 	end
 

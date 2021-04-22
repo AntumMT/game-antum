@@ -1,1 +1,1 @@
-character.png: Default Skin
+character.png: Sam (default)

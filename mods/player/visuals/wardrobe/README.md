@@ -128,3 +128,9 @@ Version 1.2
 * Skins can be registered individually from within mod code.
 * Number of displayed skins can be set in server configuration file.
 * Keep default skin as first item.
+
+Version 1.3
+
+* Released 2021-04-22
+* Formspec doesn't close & re-open when changing page (fixes cursor being centered).
+* "prev" & "next" buttons cycle back to last & first page respectively.
