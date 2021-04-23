@@ -190,6 +190,8 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [draconis](https://forum.minetest.net/viewtopic.php?t=22595) (dragons)
 * [hangglider](https://forum.minetest.net/viewtopic.php?t=21425)
 * [hot_air_balloons](https://forum.minetest.net/viewtopic.php?t=22367)
+* [formspec](https://github.com/Bremaweb/formspec (Formspec Framework)
+* [formspec-editor](https://gitlab.com/luk3yx/minetest-formspec-editor)
 * [mobf_trader](https://forum.minetest.net/viewtopic.php?t=9013) (Traders)
 * [mobkit](https://forum.minetest.net/viewtopic.php?t=22112)
 * [motorbike](https://forum.minetest.net/viewtopic.php?t=24244)
