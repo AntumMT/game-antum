@@ -35,6 +35,8 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * chat/
     * [away][] ([GPL][lic.gpl2.0]) -- version: [4c1e5a9 Git][ver.away] *2012-03-09* ([patched][patch.away])
     * [chatlog][] ([CC0][lic.cc0]) -- version: [1.0][ver.chatlog] *2017-08-12*
+* commerce/
+    * [atm][] ([GPL][lic.gpl3.0]) -- version: [1.0.2][ver.atm] *2021-04-21*
 * crafting/
     * [craftguide][] ([MIT][lic.craftguide]) -- version: [f379998 Git][ver.craftguide] *2021-02-08* ([patched][patch.craftguide])
 * [currency][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2021-01-30][ver.currency]
@@ -219,6 +221,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [animals_aggressive]: https://github.com/AntumMT/mp-animals_aggressive
 [animals_harmless]: https://github.com/AntumMT/mp-animals_harmless
 [antum]: https://github.com/AntumMT/mp-antum
+[atm]: https://forum.minetest.net/viewtopic.php?t=15029
 [awards]: https://forum.minetest.net/viewtopic.php?t=4870
 [away]: https://forum.minetest.net/viewtopic.php?t=1211
 [bags]: http://cornernote.github.io/minetest-bags/
@@ -437,6 +440,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.animals_aggressive]: https://github.com/AntumMT/mp-animals_aggressive/tree/4eede4d
 [ver.animals_harmless]: https://github.com/AntumMT/mp-animals_harmless/tree/e9b02a8
 [ver.antum]: https://github.com/AntumMT/mp-antum/tree/69b39a4
+[ver.atm]: https://github.com/Git-Forked/atm/releases/tag/v1.0.2
 [ver.awards]: https://github.com/rubenwardy/awards/tree/v3.4.0
 [ver.away]: https://github.com/kahrl/minetest-mod-away/tree/4c1e5a9
 [ver.bags]: https://github.com/cornernote/minetest-bags/tree/bc87b45
