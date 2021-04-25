@@ -25,28 +25,7 @@
 --]]
 
 
-local modoverrides = {
-	'atm',
-	'bags',
-	'biofuel',
-	'carts',
-	'castle_weapons',
-	'craftguide',
-	'currency',
-	'dye',
-	'ethereal',
-	'farming',
-	'helicopter',
-	'invisibility',
-	'simple_protection',
-}
-
-for index, modname in ipairs(modoverrides) do
-	if core.get_modpath(modname) then
-		if antum.verbose then
-			antum.logAction('Executing craft overrides for "' .. modname .. '" mod')
-		end
-
-		antum.loadScript('crafting/' .. modname)
-	end
+if not core.settings:get_bool("allow_atm_craft", true) then
+	core.clear_craft({output="atm:atm"})
+	core.clear_craft({output="atm:wtt"})
 end

@@ -1617,6 +1617,11 @@ log_mods = true
 #    default: sfinv
 inventory = sfinv
 
+## Allow players to craft ATM machines.
+#    type:    bool
+#    default: true
+#allow_atm_craft = false
+
 
 
 ###########

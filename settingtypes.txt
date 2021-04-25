@@ -22,6 +22,9 @@ liquid_finite (Finite liquid) bool false
 # Inventory interface to use.
 inventory (Inventory interface) enum sfinv sfinv,inventory_plus
 
+# Allow players to craft ATM machines.
+allow_atm_craft (Allow ATM crafting) bool true
+
 
 [*Mobiles (Mobs)]
 
