@@ -1,0 +1,40 @@
+# textdomain: folks
+
+
+### commands.lua ###
+
+Couldn't retrieve player texture (is it online?)=
+You need skins_collectible to use this feature=
+Manage folks npcs=
+
+### commands.lua ###
+### formspecs.lua ###
+
+You are not editing an NPC. Click the NPC you want to edit with the NPC editor item.=
+Edited NPC: @1=
+
+### formspecs.lua ###
+
+Edit Folk=
+Folk name=
+Folk Name Color=
+Folk Texture (with or without .png)=
+Messages (every line is a message)=
+Save=
+Spawn NPC=
+Spawn=
+Exited from NPC: @1=
+Spawned NPC: @1=
+No NPC selected=
+
+### items.lua ###
+
+Use this to create a new NPC  at your position=
+Use this to edit the NPC you click=
+You are now editing NPC: @1=
+Use this to remove the NPC you click=
+Use this to spawn an NPC that you had already created=
+Use this to despawn without deleting the NPC you click=
+
+### NPC messages ###
+Hey, I'm a Folk!=

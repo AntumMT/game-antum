@@ -84,6 +84,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* [creatures][mob-engine] ([zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [c2bedc3 Git][ver.mob-engine] *2018-04-23* ([patched][patch.mob-engine])
 		* [mobkit][] ([MIT][lic.mobkit]) -- version: [ddea141 Git][ver.mobkit] *2021-02-01*
 		* [mobs_redo][] ([MIT][lic.mobs_redo] / [CC BY][lic.ccby3.0] / [CC0][lic.cc0]) -- version: [f6e16a5 Git][ver.mobs_redo] *2021-04-11* ([patched][patch.mobs_redo])
+	* [folks][] ([GPL][lic.gpl3.0]) -- version: [0.2.0][ver.folks] *2021-02-23*
 	* general/
 		* [mobs_animal][] ([MIT][lic.mobs_animal]) -- version: [80e72a4 Git][ver.mobs_animal] *2021-04-13* ([patched][patch.mobs_animal])
 	* [monsters_aggressive][] (see individual mods for licensing) -- version: [89a8187 Git][ver.monsters_aggressive] *2017-08-30*
@@ -264,6 +265,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ethereal]: https://forum.minetest.net/viewtopic.php?t=14638
 [farlands]: https://forum.minetest.net/viewtopic.php?t=16921
 [farming_plus]: https://forum.minetest.net/viewtopic.php?t=2787
+[folks]: https://forum.minetest.net/viewtopic.php?t=26121
 [fort_spikes]: https://forum.minetest.net/viewtopic.php?t=14574
 [gems_encrustable]: https://forum.minetest.net/viewtopic.php?t=2596
 [gems_tools]: https://forum.minetest.net/viewtopic.php?t=4294
@@ -482,6 +484,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.equip_exam]: https://github.com/AntumMT/mod-equip_exam/releases/tag/v1.0
 [ver.ethereal]: https://notabug.org/TenPlus1/ethereal/src/9d6103d9bb2be7b7ff761c85a6e7285bfe7700a0
 [ver.farming_plus]: https://github.com/PilzAdam/farming_plus/tree/7e0d976
+[ver.folks]: https://gitlab.com/SonoMichele/folks/tags/v0.2.0
 [ver.fort_spikes]: https://github.com/xeranas/fort_spikes/tree/3b98b46
 [ver.gems_encrustable]: https://github.com/wowiamdiamonds/gems/tree/81d513d
 [ver.gems_tools]: https://github.com/captainLAD/gems/tree/b375432

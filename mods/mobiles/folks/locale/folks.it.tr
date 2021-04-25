@@ -1,0 +1,40 @@
+# textdomain: folks
+
+
+### commands.lua ###
+
+Couldn't retrieve player texture (is it online?)=Impossibile ottenere la skin del giocatore (è online?)
+You need skins_collectible to use this feature=Hai bisogno di skins_collectible per usare questa funzione
+Manage folks npcs=Gestisci gli npc di folks
+
+### commands.lua ###
+### formspecs.lua ###
+
+You are not editing an NPC. Click the NPC you want to edit with the NPC editor item.=Non stai modificando nessun NPC. Clicca l'NPC che vuoi modificare con l'oggetto NPC editor.
+Edited NPC: @1=Modificato NPC: @1
+
+### formspecs.lua ###
+
+Edit Folk=Modifica Folk
+Folk name=Nome Folk
+Folk Name Color=Colore del nome Folk
+Folk Texture (with or without .png)=Texture del Folk (con o senza .png)
+Messages (every line is a message)=Messaggi (ogni riga è un messaggio)
+Save=Salva
+Spawn NPC=Piazza NPC
+Spawn=Piazza
+Exited from NPC: @1=Uscito dall'NPC: @1
+Spawned NPC: @1=Piazzato NPC: @1
+No NPC selected=Nessun NPC selezionato
+
+### items.lua ###
+
+Use this to create a new NPC  at your position=Usa questo per creare un NPC nella tua posizione
+Use this to edit the NPC you click=Usa questo per modificare l'NPC che clicchi
+You are now editing NPC: @1=Stai modificando l'NPC: @1
+Use this to remove the NPC you click=Usa questo per rimuovere l'NPC che clicchi
+Use this to spawn an NPC that you had already created=Usa questo per piazzare un NPC che hai già creato
+Use this to despawn without deleting the NPC you click=Usa questo per rimuovere l'NPC che clicchi senza eliminarlo
+
+### NPC messages ###
+Hey, I'm a Folk!=Ciao, sono un Folk!
