@@ -1,0 +1,2 @@
+
+equip_exam_examiner*.png: https://opengameart.org/node/19848 (CC0)

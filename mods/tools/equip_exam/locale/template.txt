@@ -1,0 +1,14 @@
+## Translated by:
+
+Equipment Examiner=
+Specs:=
+Specs unavailable=
+Close=
+Name: @1=
+ID: @1=
+Attack: @1=
+Defense: @1=
+Mine level: @1=
+Chop level: @1=
+Dig level: @1=
+Snap level: @1=
