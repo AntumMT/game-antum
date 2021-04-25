@@ -82,6 +82,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* velociraptor ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- forked from *mobs_farlands* (part of [farlands][] sub-game)
 	* engine/
 		* [creatures][mob-engine] ([zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [c2bedc3 Git][ver.mob-engine] *2018-04-23* ([patched][patch.mob-engine])
+		* [mobkit][] ([MIT][lic.mobkit]) -- version: [ddea141 Git][ver.mobkit] *2021-02-01*
 		* [mobs_redo][] ([MIT][lic.mobs_redo] / [CC BY][lic.ccby3.0] / [CC0][lic.cc0]) -- version: [f6e16a5 Git][ver.mobs_redo] *2021-04-11* ([patched][patch.mobs_redo])
 	* general/
 		* [mobs_animal][] ([MIT][lic.mobs_animal]) -- version: [80e72a4 Git][ver.mobs_animal] *2021-04-13* ([patched][patch.mobs_animal])
@@ -196,7 +197,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [formspec](https://github.com/Bremaweb/formspec (Formspec Framework)
 * [formspec-editor](https://gitlab.com/luk3yx/minetest-formspec-editor)
 * [mobf_trader](https://forum.minetest.net/viewtopic.php?t=9013) (Traders)
-* [mobkit](https://forum.minetest.net/viewtopic.php?t=22112)
 * [motorbike](https://forum.minetest.net/viewtopic.php?t=24244)
 * [motorboat](https://forum.minetest.net/viewtopic.php?t=24652)
 * [murder](https://forum.minetest.net/viewtopic.php?t=24884) (Murder mini-game)
@@ -289,6 +289,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [mesecons]: https://forum.minetest.net/viewtopic.php?t=628
 [minetest_game]: https://github.com/minetest/minetest_game
 [mob-engine]: https://github.com/minetest-mods/mob-engine
+[mobkit]: https://forum.minetest.net/viewtopic.php?t=22112
 [mobs_animal]: https://github.com/tenplus1/mobs_animal
 [goblins]: https://forum.minetest.net/viewtopic.php?t=13004
 [mobs_redo]: https://forum.minetest.net/viewtopic.php?t=9917
@@ -385,6 +386,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.jukebox]: mods/furniture/jukebox/README.txt
 [lic.mesecons]: mods/modpacks/mesecons/COPYING.txt
 [lic.mob-engine]: mods/modpacks/mob-engine/LICENSE
+[lic.mobkit]: mods/mobiles/engine/mobkit/LICENSE
 [lic.mobs_animal]: mods/mobiles/general/mobs_animal/license.txt
 [lic.mobs_redo]: mods/mobiles/engine/mobs_redo/license.txt
 [lic.moreblocks]: mods/buildings/moreblocks/LICENSE.md
@@ -504,6 +506,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.mesecons]: https://github.com/minetest-mods/mesecons/tree/6579351
 [ver.minetest_game]: https://github.com/minetest/minetest_game/tree/5.4.1
 [ver.mob-engine]: https://github.com/minetest-mods/mob-engine/tree/c2bedc3
+[ver.mobkit]: https://github.com/TheTermos/mobkit/tree/ddea141
 [ver.mobs_animal]: https://notabug.org/TenPlus1/mobs_animal/src/80e72a4edce6b0393a0cdf48f5d06312c99d7133
 [ver.mobs_redo]: https://notabug.org/TenPlus1/mobs_redo/src/f6e16a550330cf6a641753c03ebe331682294939
 [ver.monsters_aggressive]: https://github.com/AntumMT/mp-monsters_aggressive/tree/89a8187
