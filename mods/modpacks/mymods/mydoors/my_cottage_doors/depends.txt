@@ -1,4 +1,3 @@
 default
 doors
-coloredwood
-craft_guide?
+my_door_wood

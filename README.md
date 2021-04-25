@@ -167,7 +167,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [home_workshop][] -- version: [03325e8 Git][ver.home_workshop] *2021-04-15*
 * [mob-engine][] ([zlib][lic.mob-engine] / [CC BY-SA][lic.ccbysa3.0]) -- version: [c2bedc3 Git][ver.mob-engine] *2018-04-23* ([patched][patch.mob-engine])
 * [mymods](https://github.com/AntumMT/mp-mymods)
-	* [mydoors][] ([CC-BY / CC-BY-SA][lic.mydoors] / [WTFPL][lic.wtfpl] / [DWYWFPL][lic.dwywpl]) -- version: [eef3b5f Git][ver.mydoors] *2018-06-12* ([patched][patch.mydoors])
+	* [mydoors][] ([CC-BY / CC-BY-SA][lic.mydoors] / [WTFPL][lic.wtfpl] / [DWYWFPL][lic.dwywpl]) -- version: [eef3b5f Git][ver.mydoors] *2018-06-12*
 	* [myfences][] ([DWYWPL][lic.dwywpl]) -- version: [c6e529a Git][ver.myfences] *2016-04-04*
 	* [mylights][] ([DWYWPL][lic.dwywpl]) -- version: [0d734b7 Git][ver.mylights] *2017-07-14*
 	* [mypaint][] ([DWYWPL][lic.dwywpl]) -- version: [9288e8d Git][ver.mypaint] *2017-11-16*
@@ -581,7 +581,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.mobs_redo]: https://github.com/AntumMT/mod-mobs_redo/tree/12e9367
 [patch.moreblocks]: https://github.com/AntumMT/mod-moreblocks/tree/6dda839
 [patch.moreores]: https://github.com/AntumMT/mod-moreores/tree/ae59578
-[patch.mydoors]: https://github.com/AntumMT/mp-mydoors/tree/f270a42
 [patch.mysheetmetal]: https://github.com/AntumMT/mod-mysheetmetal/tree/2ffb3a2
 [patch.nether]: https://github.com/AntumMT/mod-nether/tree/7a84ddd
 [patch.quartz]: https://github.com/AntumMT/mod-quartz/tree/adc759e
