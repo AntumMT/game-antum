@@ -96,6 +96,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * player/action/
 	* [hbsprint][] ([LGPL][lic.lgpl2.1]) -- version: [f566d0f Git][ver.hbsprint] *2021-02-18* ([patched][patch.hbsprint])
 * player/visuals/
+    * [headanim][] ([MIT][lic.headanim]) -- version: [1.01][ver.headanim] *2021-01-16*
     * [invisibility][] ([MIT][lic.invisibility]) -- version: [65c0823 Git][ver.invisibility] *2021-01-21* ([patched][patch.invisibility])
     * [wardrobe][] ([MIT][lic.wardrobe]) -- version: [1.3][ver.wardrobe] *2021-04-22*
 * protection/
@@ -273,6 +274,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [glow]: https://forum.minetest.net/viewtopic.php?t=6300
 [hbarmor]: https://forum.minetest.net/viewtopic.php?t=11337
 [hbsprint]: https://forum.minetest.net/viewtopic.php?t=18069
+[headanim]: https://content.minetest.net/packages/Lone_Wolf/headanim/
 [helicopter]: https://forum.minetest.net/viewtopic.php?t=24613
 [hidename]: https://forum.minetest.net/viewtopic.php?t=18190
 [hill_nodebox]: https://cornernote.github.io/minetest-hill_nodebox/
@@ -378,6 +380,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.ethereal]: mods/world/ethereal/license.txt
 [lic.farming_plus]: mods/farming/farming_plus/README.txt
 [lic.fort_spikes]: mods/buildings/fort_spikes/LICENSE
+[lic.headanim]: mods/player/visuals/headanim/LICENSE
 [lic.home_gui]: mods/ui/home_gui/LICENSE
 [lic.hidename]: mods/antum/hidename/LICENSE.txt
 [lic.hill_nodebox]: mods/world/hill_nodebox/LICENSE
@@ -492,6 +495,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.glow]: https://github.com/bdjnk/glow/tree/4c015a0
 [ver.hbarmor]: http://repo.or.cz/minetest_hbarmor.git/tree/93d994c
 [ver.hbsprint]: https://github.com/tacotexmex/hbsprint/tree/f566d0f
+[ver.headanim]: https://github.com/LoneWolfHT/headanim/releases/tag/v1.01
 [ver.helicopter]: https://github.com/APercy/helicopter/tree/1955cdd
 [ver.hidename]: https://github.com/AntumMT/mod-hidename/tree/7b3aa52
 [ver.hill_nodebox]: https://github.com/cornernote/minetest-hill_nodebox/tree/41bbfa2
