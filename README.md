@@ -193,6 +193,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [bows](https://forum.minetest.net/viewtopic.php?t=14384)
 * [cherrytree](https://forum.minetest.net/viewtopic.php?t=22118)
 * [christmas](https://forum.minetest.net/viewtopic.php?t=23782)
+* [commodotymarket](https://forum.minetest.net/viewtopic.php?t=22926)
 * [draconis](https://forum.minetest.net/viewtopic.php?t=22595) (dragons)
 * [hangglider](https://forum.minetest.net/viewtopic.php?t=21425)
 * [hot_air_balloons](https://forum.minetest.net/viewtopic.php?t=22367)
