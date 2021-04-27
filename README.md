@@ -113,7 +113,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [more_chests][] ([GPL][lic.gpl2.0]) -- version: [6be8145 Git][ver.more_chests] *2021-04-05*
 * tools/
 	* [compassgps][] ([WTFPL][lic.wtfpl] / [CC0][lic.cc0] / [CC BY-SA][lic.ccbysa]) -- version: [567b95f Git][ver.compassgps] *2018-09-24*
-	* [equip_exam][] ([MIT][lic.equip_exam]) - version: [1.0][ver.equip_exam] *2021-04-25*
+	* [equip_exam][] ([MIT][lic.equip_exam]) - version: [1.1][ver.equip_exam] *2021-04-27*
     * [tools_obsidian][] ([LGPL / CC BY-SA][lic.tools_obsidian]) -- version: [1.0][ver.tools_obsidian] *2021-01-15*
     * [workbench][] ([LGPL / WTFPL](mods/tools/workbench/LICENSE)) -- version: [bd14f59 Git][ver.workbench] *2017-08-08*
 * transport/
@@ -485,7 +485,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.dinosaurs_aggressive]: https://github.com/AntumMT/mp-dinosaurs_aggressive/tree/874f299
 [ver.drawers]: https://github.com/minetest-mods/drawers/releases/tag/v0.6.2
 [ver.enchanting]: https://github.com/minetest-mods/enchanting/tree/13ea31c
-[ver.equip_exam]: https://github.com/AntumMT/mod-equip_exam/releases/tag/v1.0
+[ver.equip_exam]: https://github.com/AntumMT/mod-equip_exam/releases/tag/v1.1
 [ver.ethereal]: https://notabug.org/TenPlus1/ethereal/src/9d6103d9bb2be7b7ff761c85a6e7285bfe7700a0
 [ver.farming_plus]: https://github.com/PilzAdam/farming_plus/tree/7e0d976
 [ver.folks]: https://gitlab.com/SonoMichele/folks/tags/v0.2.0

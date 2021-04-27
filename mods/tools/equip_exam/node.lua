@@ -11,12 +11,16 @@ local node_def = {
 	tiles = {
 		"equip_exam_examiner.png",
 		"equip_exam_examiner.png",
+		"equip_exam_examiner.png",
+		"equip_exam_examiner.png",
+		"equip_exam_examiner.png",
 		"equip_exam_examiner_front.png",
 		"equip_exam_examiner.png",
 	},
 	groups = {oddly_breakable_by_hand=1,},
 	is_gound_content = false,
 	stack_max = 1,
+	paramtype2 = "facedir",
 	on_construct = function(pos)
 		local meta = core.get_meta(pos)
 		meta:set_string("infotext", common_name)
