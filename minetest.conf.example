@@ -731,7 +731,7 @@ connected_glass = true
 
 
 ## Administrator account
-name = AntumDeluge
+#name =
 
 ## Name of the server, to be displayed when players join and in the serverlist.
 #    type: string
