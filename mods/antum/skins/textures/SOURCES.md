@@ -25,6 +25,7 @@
 - [skeleton_disguise.png](http://minetest.fensta.bplaced.net/#id=1991) by TenPlus1 (CC BY-SA)
 - [skin_minecraft_repris.png](http://minetest.fensta.bplaced.net/#id=856) by Sporax (CC BY-SA)
 - [Space_Sam.png](http://minetest.fensta.bplaced.net/#id=37) by philipbenr (CC BY-SA)
+- [Super_Nerd.png](http://minetest.fensta.bplaced.net/#id=1030) by julito (CC BY-SA 3.0)
 - [SuperSam.png](http://minetest.fensta.bplaced.net/#id=155) by AMMOnym (CC BY-SA 3.0)
 - [villiantest_III.png](http://minetest.fensta.bplaced.net/#id=109) by marshrover (CC BY-SA 3.0)
 - [wheat_farmer.png](http://minetest.fensta.bplaced.net/#id=1974) by Addi (CC BY-SA 4.0)
