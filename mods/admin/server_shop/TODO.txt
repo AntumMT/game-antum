@@ -11,7 +11,6 @@ TODO:
   - touch up textures
   - fix texture tiling
   - make 2 nodes high using mesh
-  - show image of selected item
 - Misc.:
   - make usable with "folks" mod
   - add localization support
@@ -20,3 +19,5 @@ TODO:
   - clean up code
   - check if shop is already registered before re-registering
   - let shops with deposit balance be dug, & drop balance on ground
+  - create shop that gives money for items
+  - add chat command to reload shops file in world directory

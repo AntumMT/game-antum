@@ -133,15 +133,31 @@ local function get_formspec(pos, player)
 			meta:set_int("selected", meta:get_int("default_selected"))
 		end
 
+		-- get item name for displaying image
+		local selected_item = nil
+		local shop = get_shop(id)
+		if shop then
+			selected_item = shop.def[meta:get_int("selected")][1]
+		end
+
+		local margin_r = fs_width-(btn_w+0.2)
+
 		formspec = formspec
 			.. "label[0.2,1;Deposited: " .. tostring(deposited) .. " MG]"
 			.. "list[context;deposit;0.2,1.5;1,1;0]"
 			.. "textlist[2.15,1.5;9.75,3;products;" .. get_product_list(id) .. ";"
 				.. tostring(meta:get_int("selected")) .. ";false]"
-			.. "button[0.2," .. tostring(btn_y) .. ";" .. tostring(btn_w) .. ",0.75;btn_refund;Refund]"
-			.. "button[" .. tostring(fs_width-(btn_w+0.2)) .. "," .. tostring(btn_y) .. ";" .. tostring(btn_w) .. ",0.75;btn_buy;Buy]"
-			.. "list[current_player;main;2.15,5.5;8,4;0]"
 
+		if selected_item and selected_item ~= "" then
+			formspec = formspec
+				.. "item_image[" .. tostring(fs_width-1.2) .. ",1.5;1,1;" .. selected_item .. "]"
+		end
+
+		formspec = formspec
+			.. "button[0.2," .. tostring(btn_y) .. ";" .. tostring(btn_w) .. ",0.75;btn_refund;Refund]"
+			.. "button[" .. tostring(margin_r) .. "," .. tostring(btn_y) .. ";" .. tostring(btn_w) .. ",0.75;btn_buy;Buy]"
+			.. "list[current_player;main;2.15,5.5;8,4;0]"
+			.. "button_exit[" .. tostring(margin_r) .. ",10;" .. tostring(btn_w) .. ",0.75;btn_close;Close]"
 		local formname = "server_shop"
 		if id and id ~= "" then
 			formname = formname .. "_" .. id
@@ -333,7 +349,8 @@ end
 
 core.register_node(node_name, {
 	description = "Shop",
-	drawtype = "nodebox",
+	--drawtype = "nodebox",
+	drawtype = "normal",
 	tiles = {
 		"server_shop_side.png",
 		"server_shop_side.png",
