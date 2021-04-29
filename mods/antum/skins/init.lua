@@ -39,7 +39,6 @@ local skins = {
 	{"lisa.png", "Lisa",},
 	{"Male_angel.png", "Angel (male)",},
 	{"Morgane.png", "Morgane",},
-	{"Naruto.png", "Naruto",},
 	{"Older_Man_Sam.png", "Sam (older man)",},
 	{"philipbenr.png", "PhilipBenR",},
 	{"Skeleton.png", "Skeleton",},
@@ -50,7 +49,6 @@ local skins = {
 	{"wheat_farmer.png", "Wheat Farmer",},
 	{"villiantest_III.png", "VillianTest",},
 	{"Witch.png", "Witch",},
-	{"Zelda.png", "Zelda",},
 	{"Zenohelds.png", "Zenohelds",},
 }
 

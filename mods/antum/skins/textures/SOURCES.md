@@ -19,7 +19,6 @@
 - [lisa.png](http://minetest.fensta.bplaced.net/#id=88) by hansuke123 (CC BY-SA)
 - [Male_angel.png](http://minetest.fensta.bplaced.net/#id=895) by loupicate (CC BY-SA)
 - [Morgane.png](http://minetest.fensta.bplaced.net/#id=864) by loupicate (CC BY-SA)
-- [Naruto.png](http://minetest.fensta.bplaced.net/#id=136) by LuxAtheris (CC BY-SA)
 - [Older_Man_Sam.png](http://minetest.fensta.bplaced.net/#id=21) by philipbenr (CC BY-SA)
 - [philipbenr.png](http://minetest.fensta.bplaced.net/#id=54) by philipbenr (CC BY-SA)
 - [Skeleton.png](http://minetest.fensta.bplaced.net/#id=1141) by I don't know (CC BY-SA)
@@ -30,7 +29,6 @@
 - [villiantest_III.png](http://minetest.fensta.bplaced.net/#id=109) by marshrover (CC BY-SA 3.0)
 - [wheat_farmer.png](http://minetest.fensta.bplaced.net/#id=1974) by Addi (CC BY-SA 4.0)
 - [Witch.png](http://minetest.fensta.bplaced.net/#id=884) by loupicate (CC BY-SA)
-- [Zelda.png](http://minetest.fensta.bplaced.net/#id=1120) by AuroreTheWolf (CC BY-SA)
 - [Zenohelds.png](http://minetest.fensta.bplaced.net/#id=25) by sdzen (CC BY-SA)
 
 <!-- Template:
