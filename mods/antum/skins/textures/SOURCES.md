@@ -20,7 +20,6 @@
 - [Male_angel.png](http://minetest.fensta.bplaced.net/#id=895) by loupicate (CC BY-SA)
 - [Morgane.png](http://minetest.fensta.bplaced.net/#id=864) by loupicate (CC BY-SA)
 - [Naruto.png](http://minetest.fensta.bplaced.net/#id=136) by LuxAtheris (CC BY-SA)
-- [NERD.png](http://minetest.fensta.bplaced.net/#id=) by DJOZZY (CC BY-SA)
 - [Older_Man_Sam.png](http://minetest.fensta.bplaced.net/#id=21) by philipbenr (CC BY-SA)
 - [philipbenr.png](http://minetest.fensta.bplaced.net/#id=54) by philipbenr (CC BY-SA)
 - [Skeleton.png](http://minetest.fensta.bplaced.net/#id=1141) by I don't know (CC BY-SA)

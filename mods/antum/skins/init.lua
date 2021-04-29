@@ -40,7 +40,6 @@ local skins = {
 	{"Male_angel.png", "Angel (male)",},
 	{"Morgane.png", "Morgane",},
 	{"Naruto.png", "Naruto",},
-	{"NERD.png", "NERD",},
 	{"Older_Man_Sam.png", "Sam (older man)",},
 	{"philipbenr.png", "PhilipBenR",},
 	{"Skeleton.png", "Skeleton",},
