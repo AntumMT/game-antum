@@ -1,4 +1,0 @@
-default
-technic
-coloredwood?
-craft_guide?

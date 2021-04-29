@@ -1,0 +1,18 @@
+
+0.3
+- API cleanup
+- Only single tramp now registered that can be colored if unifieddyes available
+- Added "bouncing" sound when walking on tramp
+- default & technic mods only required for craft recipes to be registered
+- Crafting only requires two sticks
+- Any items from group:wood & group:stick can be used for crafting
+
+0.2
+- Added global "trampoline"
+- Made some global functions methods of "trampoline" object
+- Added aliases for regular & brown trampolines
+- Trampolines bounce higher
+- Added setting to lessen or disable damage from falling on trampolines
+
+0.1
+- Forked from Jeija's "jumping" mod @ Git commit 47df671

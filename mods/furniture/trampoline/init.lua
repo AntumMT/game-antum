@@ -2,58 +2,35 @@
 trampoline = {}
 trampoline.modname = minetest.get_current_modname()
 trampoline.modpath = minetest.get_modpath(trampoline.modname)
-trampoline.bounce = 20
-
--- Bounce multipliers
-trampoline.multi = 5
-trampoline.multi_brown = 6
-trampoline.multi_colors = 7
 
 
-minetest.log('action', '[MOD] Loading \'' .. trampoline.modname .. '\' ...')
+-- Log messages specific to trampoline mod
+trampoline.log = function(lvl, msg)
+	if msg == nil then
+		msg = lvl
+		lvl = nil
+	end
 
-
---- Percent of damage absorbed when falling on tramp.
---
--- min 0 (full damage)
--- max 100 (no damage)
-trampoline.damage_absorb = core.settings:get('trampoline.damage_absorb')
-if trampoline.damage_absorb == nil then
-	-- Defaults to no damage
-	trampoline.damage_absorb = 100
-else
-	trampoline.damage_absorb = tonumber(trampoline.damage_absorb)
+	if lvl == nil then
+		core.log(msg)
+	else
+		core.log(lvl, "[" .. trampoline.modname .. "] " .. msg)
+	end
 end
 
-
-trampoline.box = {
-	type = 'fixed',
-	fixed = {
-		{-0.5, -0.2, -0.5,  0.5,    0,  0.5},
-
-		{-0.5, -0.5, -0.5, -0.4, -0.2, -0.4},
-		{ 0.4, -0.5, -0.5,  0.5, -0.2, -0.4},
-		{ 0.4, -0.5,  0.4,  0.5, -0.2,  0.5},
-		{-0.5, -0.5,  0.4, -0.4, -0.2,  0.5},
-		}
-}
+trampoline.log("action", "loading ...")
 
 
 local scripts = {
-	'functions',
-	'nodes',
-	'crafting',
-	'aliases',
+	"settings",
+	"api",
+	"nodes",
+	"crafting",
 }
 
 for I in pairs(scripts) do
-	dofile(trampoline.modpath .. '/' .. scripts[I] .. '.lua')
-end
-
--- Register other colored trampolines
-if minetest.global_exists('coloredwood') then
-	dofile(trampoline.modpath .. '/colored.lua')
+	dofile(trampoline.modpath .. "/" .. scripts[I] .. ".lua")
 end
 
 
-minetest.log('action', '[MOD] \'' .. trampoline.modname .. '\' loaded')
+trampoline.log("action", "loaded")

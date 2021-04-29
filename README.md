@@ -53,7 +53,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [farming_plus][] ([WTFPL][lic.farming_plus]) -- version: [7e0d976 Git][ver.farming_plus] *2014-10-01* ([patched][patch.farming_plus])
 * furniture/
 	* [jukebox][] ([WTFPL / CC0][lic.jukebox]) -- version: [0d871f2 Git][ver.jukebox] *2020-03-11*
-    * [trampoline][] ([GPL][lic.gpl3.0]) -- version: [0.2 (41366ac Git)][ver.trampoline] *2017-08-30*
+    * [trampoline][] ([GPL][lic.gpl3.0]) -- version: [0.3][ver.trampoline] *2021-04-28*
     * [trash_can][] ([MIT][lic.trash_can]) -- version: [423b0f2 Git][ver.trash_can] *2020-08-12*
     * [waffles][] ([MIT][lic.waffles]) -- version [15bcdce Git][ver.waffles] *2018-05-13*
 * [intllib][] ([Unlicense][lic.unlicense]) -- version: [6ebdc53][ver.intllib] *2021-02-23* ***DEPRECATED***
@@ -558,7 +558,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.throwing]: https://github.com/PilzAdam/throwing/tree/90bcf43
 [ver.tnt]: https://github.com/PilzAdam/TNT/tree/d6a0b7d
 [ver.tools_obsidian]: https://github.com/Dragonop/tools_obsidian/releases/tag/1.0
-[ver.trampoline]: https://github.com/AntumMT/mod-trampoline/tree/41366ac
+[ver.trampoline]: https://github.com/AntumMT/mod-trampoline/releases/tag/v0.3
 [ver.trash_can]: https://github.com/minetest-mods/trash_can/tree/423b0f2
 [ver.unifieddyes]: https://gitlab.com/VanessaE/unifieddyes/tags/2021-03-26-1
 [ver.waffles]: https://github.com/GreenXenith/waffles/tree/15bcdce

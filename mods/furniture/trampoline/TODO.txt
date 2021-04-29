@@ -1,1 +1,3 @@
-Make trampolines bounce higher.
+
+TODO:
+- makes sounds play only when "bounced"
