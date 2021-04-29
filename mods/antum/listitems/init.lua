@@ -1,9 +1,9 @@
 --[[ LICENSE HEADER
-  
+
   MIT Licensing
-  
-  Copyright © 2017 Jordan Irwin
-  
+
+  Copyright © 2017 Jordan Irwin (AntumDeluge)
+
   See: LICENSE.txt
 --]]
 
@@ -15,14 +15,14 @@ listitems.modname = core.get_current_modname()
 listitems.modpath = core.get_modpath(listitems.modname)
 
 local scripts = {
-	'settings',
-	'logging',
-	'api',
+	"settings",
+	"logging",
+	"api",
 }
 
 for index, script in ipairs(scripts) do
-	dofile(listitems.modpath .. '/' .. script .. '.lua')
+	dofile(listitems.modpath .. "/" .. script .. ".lua")
 end
 
 -- DEBUG:
-listitems.logDebug('Loaded')
+listitems.logDebug("Loaded")

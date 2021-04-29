@@ -1,9 +1,9 @@
 --[[ LICENSE HEADER
-  
+
   MIT Licensing
-  
+
   Copyright © 2017 Jordan Irwin
-  
+
   See: LICENSE.txt
 --]]
 
@@ -12,8 +12,8 @@
 
 -- Custom logging function
 function listitems.log(level, msg)
-	local prefix = '[' .. listitems.modname .. '] '
-	
+	local prefix = "[" .. listitems.modname .. "] "
+
 	if msg == nil then
 		core.log(prefix .. level)
 	else
@@ -24,19 +24,19 @@ end
 
 -- Custom "info" level logging function
 function listitems.logInfo(msg)
-	listitems.log('info', msg)
+	listitems.log("info", msg)
 end
 
 
 -- Custom "warning" level logging function
 function listitems.logWarn(msg)
-	listitems.log('warning', msg)
+	listitems.log("warning", msg)
 end
 
 
 -- Custom debug logging function
 function listitems.logDebug(msg)
 	if listitems.debug then
-		core.log('[DEBUG: ' .. listitems.modname .. '] ' .. msg)
+		core.log("[DEBUG: " .. listitems.modname .. "] " .. msg)
 	end
 end

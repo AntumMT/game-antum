@@ -437,11 +437,8 @@ hudbars_tick (Default HUD bars update interval) float 0.1 0.0 4.0
 # Displays items in a bulleted list.
 listitems.bullet_list (Bulleted list) bool true
 
-# Enables/Disables "list" chat command.
-listitems.enable_generic (Enable generic "list" command) bool false
-
-# Enables/Disables "listmobs" chat command (requires "mobs").
-listitems.enable_mobs (Enable "listmobs" command) bool true
+# Registers "/list<type>" commands.
+listitems.enable_singleword (Enable singleword commands) bool true
 
 
 [*mobs_redo]

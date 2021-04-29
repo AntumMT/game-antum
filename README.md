@@ -1,6 +1,6 @@
 # ![Antum](menu/header.png)![icon](menu/icon.png)
 A custom game for [Minetest](http://www.minetest.net/) / [Freeminer](http://freeminer.org/)
-Requires Minetest server 0.4.16 or above
+Requires Minetest server 5.4.0 or above (I think)
 
 The game includes the mods from the default [minetest_game](https://github.com/minetest/minetest_game/tree/master/mods)
 
@@ -23,6 +23,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [awards][] ([MIT][lic.awards]) -- version: [3.4.0][ver.awards] *2021-01-10*
 * [antum][] ([MIT][lic.antum]) -- version: [69b39a4 Git][ver.antum] *2017-08-30*
 	* [hidename][] ([MIT][lic.hidename]) -- version: [7b3aa52 Git][ver.hidename] *2021-04-19*
+	* [listitems][] ([MIT][lic.listitems]) -- version: [0.7][ver.listitems] *2021-04-29*
 * [biofuel][] ([MIT](lic.biofuel)) -- version: [ca480ce Git][ver.biofuel] *2020-07-20*
 * buildings/
     * [bridges][] ([GPL][lic.gpl3.0]) -- version: [5b5f475 Git][ver.bridges] *2015-08-23* ([patched][patch.bridges])
@@ -292,6 +293,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [invisible]: https://forum.minetest.net/viewtopic.php?t=14399
 [jukebox]: https://forum.minetest.net/viewtopic.php?t=13505
 [jumping]: https://forum.minetest.net/viewtopic.php?t=2957
+[listitems]: https://forum.minetest.net/viewtopic.php?t=18049
 [mesecons]: https://forum.minetest.net/viewtopic.php?t=628
 [minetest_game]: https://github.com/minetest/minetest_game
 [mob-engine]: https://github.com/minetest-mods/mob-engine
@@ -392,6 +394,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.invisibility]: mods/player/visuals/invisibility/license.txt
 [lic.invisible]: mods/admin/invisible/readme.txt
 [lic.jukebox]: mods/furniture/jukebox/README.txt
+[lic.listitems]: mods/antum/listitems/LICENSE.txt
 [lic.mesecons]: mods/modpacks/mesecons/COPYING.txt
 [lic.mob-engine]: mods/modpacks/mob-engine/LICENSE
 [lic.mobkit]: mods/mobiles/engine/mobkit/LICENSE
@@ -514,6 +517,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.invisibility]: https://notabug.org/TenPlus1/invisibility/src/65c0823d6a28b62046cdadc67ff1e462d37e3643
 [ver.invisible]: https://github.com/AiTechEye/invisible/tree/a2a6504
 [ver.jukebox]: https://github.com/minetest-mods/jukebox/tree/0d871f2
+[ver.listitems]: https://github.com/AntumMT/mod-listitems/releases/tag/v0.7
 [ver.mesecons]: https://github.com/minetest-mods/mesecons/tree/6579351
 [ver.minetest_game]: https://github.com/minetest/minetest_game/tree/5.4.1
 [ver.mob-engine]: https://github.com/minetest-mods/mob-engine/tree/c2bedc3
