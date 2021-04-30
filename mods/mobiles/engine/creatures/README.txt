@@ -1,9 +1,11 @@
-Creatures MOB-Engine
+Creatures Revived
 ====================
 Copyright (c) 2015-2016 BlockMen <blockmen2015@gmail.com>
 
-Version: 2.0.2
+Version: 1.0
 
+
+A revived version of BlockMen's Creatures MOB-Engine mod.
 
 This mod provides an engine, that handles the base function for MOB in Minetest.
 It offers an easy way to register MOB and allows to custom handling for the needs
@@ -23,4 +25,5 @@ Media(textures and other media):
 
 Github:
 ~~~~~~~
-https://github.com/BlockMen/cme/creatures
+Revived: https://github.com/AntumMT/mod-creatures
+Orignal Creatures MOB-Engine: https://github.com/BlockMen/cme

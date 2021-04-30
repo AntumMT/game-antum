@@ -20,7 +20,7 @@
 --
 
 
-local allow_hostile = minetest.settings:get_bool("only_peaceful_mobs") ~= true
+local allow_hostile = core.settings:get_bool("only_peaceful_mobs") ~= true
 
 local function translate_def(def)
   local new_def = {
@@ -53,6 +53,18 @@ local function translate_def(def)
       --if name == "attack" then new_def.modes[name].chance = 0 end
     end
   end
+
+  -- Check if the modes have correct sum
+  local mode_chance_sum = creatures.sumChances(new_def.modes)
+  if mode_chance_sum > 1 then
+    throw_warning("Chance of modes too high for MOB: " .. def.name ..
+        ". Mode chances will be incorrect.")
+  elseif mode_chance_sum < 1 then
+    throw_warning("Chance of modes too low for MOB: " .. def.name ..
+        ". Filling up to correct mode chances.")
+    new_def.modes["_empty"] = {chance = 1 - mode_chance_sum, duration = 0}
+  end
+
   -- insert special mode "_run" which is used when in panic
   if def.stats.can_panic then
     if def.modes.walk then
@@ -168,18 +180,18 @@ local function translate_def(def)
 
     if not self.can_fly then
       if not self.in_water then
-        self.object:setacceleration({x = 0, y = -15, z = 0})
+        self.object:set_acceleration({x = 0, y = -15, z = 0})
       end
     end
 
     -- check if falling and set velocity only 0 when not falling
     if self.fall_dist == 0 then
-      self.object:setvelocity(nullVec)
+      self.object:set_velocity(nullVec)
     end
 
     self.object:set_hp(self.hp)
 
-    if not minetest.settings:get_bool("enable_damage") then
+    if not core.settings:get_bool("enable_damage") then
       self.hostile = false
     end
 
@@ -412,7 +424,7 @@ local function eggSpawn(itemstack, placer, pointed_thing, egg_def)
     local height = (egg_def.box[5] or 2) - (egg_def.box[2] or 0)
     if checkSpace(pos, height) == true then
       core.add_entity(pos, egg_def.mob_name)
-      if minetest.settings:get_bool("creative_mode") ~= true then
+      if core.settings:get_bool("creative_mode") ~= true then
         itemstack:take_item()
       end
     end
@@ -454,8 +466,8 @@ local function makeSpawnerEntiy(mob_name, model)
 
     on_activate = function(self)
       self.timer = 0
-		  self.object:setvelocity(nullVec)
-		  self.object:setacceleration(nullVec)
+		  self.object:set_velocity(nullVec)
+		  self.object:set_acceleration(nullVec)
 		  self.object:set_armor_groups({immortal = 1})
       --self.object:set_bone_position("Root", nullVec, {x=45,y=0,z=0})
 	   end,
@@ -464,7 +476,7 @@ local function makeSpawnerEntiy(mob_name, model)
        self.timer = self.timer + dtime
        if self.timer > 30 then
          self.timer = 0
-         local n = core.get_node_or_nil(self.object:getpos())
+         local n = core.get_node_or_nil(self.object:get_pos())
          if n and n.name and n.name ~= mob_name .. "_spawner" then
            self.object:remove()
          end
@@ -574,6 +586,49 @@ function creatures.register_spawner(spawner_def)
         spawnerSpawn(pos, spawner_def)
 			end
     })
+  end
+
+  return true
+end
+
+local function register_alias_entity(old_mob, new_mob)
+  core.register_entity(":" .. old_mob, {
+    physical = false,
+    collisionbox = {0, 0, 0, 0, 0, 0},
+    visual = "sprite",
+    visual_size = {x = 0, y = 0},
+    textures = {"creatures_spawner.png"}, -- dummy texture
+    makes_footstep_sound = false,
+
+    on_activate = function(self)
+      local pos = self.object:get_pos()
+      if pos then
+        core.add_entity(pos, new_mob)
+      end
+      if self.object then
+        self.object:remove()
+      end
+    end,
+  })
+end
+
+
+function creatures.register_alias(old_mob, new_mob) -- returns true if sucessfull
+  local def = core.registered_entities[new_mob]
+  if not def then
+    throw_error("No valid definition for given.")
+    return false
+  end
+
+  register_alias_entity(old_mob, new_mob)
+
+  if core.registered_nodes[new_mob .. "_spawner"] then
+    register_alias_entity(old_mob .. "_spawner_dummy", new_mob .. "_spawner_dummy")
+    core.register_alias(old_mob .. "_spawner", new_mob .. "_spawner")
+  end
+
+  if core.registered_items[new_mob .. "_spawn_egg"] then
+    core.register_alias(old_mob .. "_spawn_egg", new_mob .. "_spawn_egg")
   end
 
   return true

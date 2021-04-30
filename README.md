@@ -83,7 +83,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [dinosaurs_aggressive][] -- version: [874f299 Git][ver.dinosaurs_aggressive] *2017-07-27*
 		* velociraptor ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- forked from *mobs_farlands* (part of [farlands][] sub-game)
 	* engine/
-		* [creatures][mob-engine] ([zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [c2bedc3 Git][ver.mob-engine] *2018-04-23* ([patched][patch.mob-engine])
+		* [creatures][] ([zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [revived 1.0][ver.creatures] *2021-04-30*
 		* [mobkit][] ([MIT][lic.mobkit]) -- version: [ddea141 Git][ver.mobkit] *2021-02-01*
 		* [mobs_redo][] ([MIT][lic.mobs_redo] / [CC BY][lic.ccby3.0] / [CC0][lic.cc0]) -- version: [f6e16a5 Git][ver.mobs_redo] *2021-04-11* ([patched][patch.mobs_redo])
 	* [folks][] ([GPL][lic.gpl3.0]) -- version: [0.2.0][ver.folks] *2021-02-23*
@@ -172,7 +172,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [castle_weapons][] -- version: [d3cf095 Git][ver.castle_weapons] *2020-02-28* ([patched][patch.castle_weapons])
 	* [crafting_bench][] -- version: [69083ed Git][ver.crafting_bench] *2020-05-27*
 * [home_workshop][] -- version: [03325e8 Git][ver.home_workshop] *2021-04-15*
-* [mob-engine][] ([zlib][lic.mob-engine] / [CC BY-SA][lic.ccbysa3.0]) -- version: [c2bedc3 Git][ver.mob-engine] *2018-04-23* ([patched][patch.mob-engine])
 * [mymods](https://github.com/AntumMT/mp-mymods)
 	* [mydoors][] ([CC-BY / CC-BY-SA][lic.mydoors] / [WTFPL][lic.wtfpl] / [DWYWFPL][lic.dwywpl]) -- version: [eef3b5f Git][ver.mydoors] *2018-06-12*
 	* [myfences][] ([DWYWPL][lic.dwywpl]) -- version: [c6e529a Git][ver.myfences] *2016-04-04*
@@ -264,6 +263,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [compassgps]: https://forum.minetest.net/viewtopic.php?t=9373
 [craftguide]: https://forum.minetest.net/viewtopic.php?t=14088
 [crafting_bench]: https://github.com/minetest-mods/crafting_bench
+[creatures]: https://forum.minetest.net/viewtopic.php?t=8638
 [crops]: https://forum.minetest.net/viewtopic.php?t=11795
 [currency]: https://forum.minetest.net/viewtopic.php?t=21339
 [deploy_nodes]: https://cornernote.github.io/minetest-deploy_nodes/
@@ -381,9 +381,9 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.campfire]: mods/campfire/README.md
 [lic.castle]: mods/modpacks/castle/LICENSE
 [lic.christmas]: mods/buildings/christmas/LICENSE.txt
+[lic.craftguide]: mods/crafting/craftguide/license.txt
 [lic.creatures]: mods/mobiles/engine/creatures/LICENSE.txt
 [lic.crops]: mods/farming/crops/LICENSE
-[lic.craftguide]: mods/crafting/craftguide/license.txt
 [lic.deploy_nodes]: mods/modpacks/deploy_nodes/LICENSE
 [lic.drawers]: mods/storage/drawers/LICENSE.txt
 [lic.elevator]: mods/buildings/elevator/readme.txt
@@ -403,7 +403,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.jukebox]: mods/furniture/jukebox/README.txt
 [lic.listitems]: mods/antum/listitems/LICENSE.txt
 [lic.mesecons]: mods/modpacks/mesecons/COPYING.txt
-[lic.mob-engine]: mods/modpacks/mob-engine/LICENSE
 [lic.mobkit]: mods/mobiles/engine/mobkit/LICENSE
 [lic.mobs_animal]: mods/mobiles/general/mobs_animal/license.txt
 [lic.mobs_redo]: mods/mobiles/engine/mobs_redo/license.txt
@@ -491,6 +490,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.compassgps]: https://github.com/Kilarin/compassgps/tree/567b95f
 [ver.crafting_bench]: https://github.com/minetest-mods/crafting_bench/tree/69083ed
 [ver.craftguide]: https://github.com/minetest-mods/craftguide/tree/f379998
+[ver.creatures]: https://github.com/AntumMT/mod-creatures/releases/tag/revived-v1.0
 [ver.crops]: https://github.com/minetest-mods/crops/tree/v1
 [ver.currency]: https://gitlab.com/VanessaE/currency/tree/2021-01-30
 [ver.deploy_nodes]: https://github.com/cornernote/minetest-deploy_nodes/tree/b67e162
@@ -527,7 +527,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.listitems]: https://github.com/AntumMT/mod-listitems/releases/tag/v0.7
 [ver.mesecons]: https://github.com/minetest-mods/mesecons/tree/6579351
 [ver.minetest_game]: https://github.com/minetest/minetest_game/tree/5.4.1
-[ver.mob-engine]: https://github.com/minetest-mods/mob-engine/tree/c2bedc3
 [ver.mobkit]: https://github.com/TheTermos/mobkit/tree/ddea141
 [ver.mobs_animal]: https://notabug.org/TenPlus1/mobs_animal/src/80e72a4edce6b0393a0cdf48f5d06312c99d7133
 [ver.mobs_redo]: https://notabug.org/TenPlus1/mobs_redo/src/f6e16a550330cf6a641753c03ebe331682294939
@@ -607,7 +606,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.invisibility]: https://github.com/AntumMT/mod-invisibility/tree/4a8edd0
 [patch.ilights]: https://github.com/AntumMT/mod-ilights/tree/fe1dae4
 [patch.minetest_game]: https://github.com/AntumMT/mtgame-minetest/tree/355a756
-[patch.mob-engine]: https://github.com/AntumMT/mp-mob-engine/tree/2aa511d
 [patch.mobs_animal]: https://github.com/AntumMT/mod-mobs_animal/tree/61f74e2
 [patch.mobs_redo]: https://github.com/AntumMT/mod-mobs_redo/tree/12e9367
 [patch.moreblocks]: https://github.com/AntumMT/mod-moreblocks/tree/6dda839
