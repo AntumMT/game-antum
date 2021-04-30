@@ -29,7 +29,7 @@ local function timer(step, entity)
 	if entity.physical_state == false then
 		if entity.ref then
 			if math.random(1, 20) == 5 then
-				core.add_entity(entity.ref:getpos(), "creatures:chicken")
+				core.add_entity(entity.ref:get_pos(), "creatures:chicken")
 			end
 			entity.ref:remove()
 		end
@@ -39,7 +39,7 @@ local function timer(step, entity)
 end
 
 function throw_egg(player, strength)
-	local pos = player:getpos()
+	local pos = player:get_pos()
 	pos.y = pos.y + 1.5
 	local dir = player:get_look_dir()
 	pos.x = pos.x + dir.x
@@ -49,8 +49,8 @@ function throw_egg(player, strength)
 		local entity = obj:get_luaentity()
 		entity.ref = obj
 		entity.mergeable = false
-		obj:setvelocity({x = dir.x * strength, y = -3, z = dir.z * strength})
-		obj:setacceleration({x = dir.x * -5 + dir.y, y = -13, z = dir.z * -5 + dir.y})
+		obj:set_velocity({x = dir.x * strength, y = -3, z = dir.z * strength})
+		obj:set_acceleration({x = dir.x * -5 + dir.y, y = -13, z = dir.z * -5 + dir.y})
 		timer(0.1, entity)
 		return true
 	end

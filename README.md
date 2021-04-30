@@ -79,7 +79,8 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [animals_aggressive][] -- version: [4eede4d Git][ver.animals_aggressive] *2017-08-28*
 		* mob_shark ([CC BY-SA][lic.ccbysa3.0]) -- forked from [Animals Modpack][animals]
 	* [animals_harmless][] -- version: [e9b02a8][ver.animals_harmless] *2017-08-09*
-		* mob_sheep ([Zlib][lic.zlib]) -- forked from [mob-engine][]
+		* [chicken][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [c89960a Git][ver.chicken] *2021-04-30*
+		* [sheep][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [10523b6 Git][ver.sheep] *2021-04-30*
 	* [dinosaurs_aggressive][] -- version: [874f299 Git][ver.dinosaurs_aggressive] *2017-07-27*
 		* velociraptor ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- forked from *mobs_farlands* (part of [farlands][] sub-game)
 	* engine/
@@ -90,7 +91,10 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* general/
 		* [mobs_animal][] ([MIT][lic.mobs_animal]) -- version: [80e72a4 Git][ver.mobs_animal] *2021-04-13* ([patched][patch.mobs_animal])
 	* [monsters_aggressive][] (see individual mods for licensing) -- version: [89a8187 Git][ver.monsters_aggressive] *2017-08-30*
+		* [ghost][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [2d3308c Git][ver.ghost] *2021-04-30*
+		* [oerkki][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [eb98833 Git][ver.oerkki] *2021-04-30*
 		* [sneeker][] ([CC0][lic.cc0]) -- version: [7c05c4d Git][ver.sneeker] *2021-04-19*
+		* [zombie][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [213a05b Git][ver.zombie] *2021-04-30*
 	* [monsters_passive][] (see individual mods for licensing) -- version: [b07fe19 Git][ver.monsters_passive] *2017-08-09*
 * [painting][] (???) -- version [8961849 Git][ver.painting] *2016-05-05*
 * [pipeworks][] ([LGPL][lic.lgpl3.0]) -- version: [2021-02-19][ver.pipeworks]
@@ -303,7 +307,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [listitems]: https://forum.minetest.net/viewtopic.php?t=18049
 [mesecons]: https://forum.minetest.net/viewtopic.php?t=628
 [minetest_game]: https://github.com/minetest/minetest_game
-[mob-engine]: https://github.com/minetest-mods/mob-engine
 [mobkit]: https://forum.minetest.net/viewtopic.php?t=22112
 [mobs_animal]: https://github.com/tenplus1/mobs_animal
 [goblins]: https://forum.minetest.net/viewtopic.php?t=13004
@@ -484,6 +487,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.castle_tapestries]: https://github.com/minetest-mods/castle_tapestries/tree/f5e3ac1
 [ver.castle_weapons]: https://github.com/minetest-mods/castle_weapons/tree/d3cf095
 [ver.chatlog]: https://github.com/AntumMT/mod-chatlog/tree/v1.0
+[ver.chicken]: http://github.com/AntumMT/mod-creatures/tree/c89960a
 [ver.christmas]: https://github.com/TheZenKitteh/minetest-christmas/tree/d3bd872
 [ver.cleaner]: https://github.com/AntumMT/mod-cleaner/tree/68222b1
 [ver.coloredwood]: https://gitlab.com/VanessaE/coloredwood/tags/2021-01-30
@@ -505,6 +509,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.fort_spikes]: https://github.com/xeranas/fort_spikes/tree/3b98b46
 [ver.gems_encrustable]: https://github.com/wowiamdiamonds/gems/tree/81d513d
 [ver.gems_tools]: https://github.com/captainLAD/gems/tree/b375432
+[ver.ghost]: https://github.com/AntumMT/mod-creatures/tree/2d3308c
 [ver.glass]: https://github.com/AntumMT/mod-glass/releases/tag/v1.0
 [ver.glow]: https://github.com/bdjnk/glow/tree/4c015a0
 [ver.hbarmor]: http://repo.or.cz/minetest_hbarmor.git/tree/93d994c
@@ -547,6 +552,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.mywoodslopes]: https://github.com/minetest-mods/mywoodslopes/tree/3a1b531
 [ver.nether]: https://github.com/minetest-mods/nether/tree/v3
 [ver.no_fall_damage]: https://repo.or.cz/minetest_no_fall_damage.git/shortlog/refs/tags/1.0.0
+[ver.oerkki]: https://github.com/AntumMT/mod-creatures/tree/eb98833
 [ver.override]: https://github.com/AntumMT/mod-override/tree/e6dda7a
 [ver.painting]: https://github.com/minetest-mods/painting/tree/8961849
 [ver.pipeworks]: https://gitlab.com/VanessaE/pipeworks/-/tags/2021-02-19
@@ -556,6 +562,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.rainbow_ore]: https://github.com/FsxShader2012/rainbow_ore/tree/6e77693
 [ver.server_shop]: https://github.com/AntumMT/mod-server_shop/releases/tag/v1.1
 [ver.sfinv_buttons]: http://repo.or.cz/minetest_sfinv_buttons.git/tree/ebb1f7c
+[ver.sheep]: https://github.com/AntumMT/mod-creatures/tree/10523b6
 [ver.signs_lib]: https://gitlab.com/VanessaE/signs_lib/tree/2021-03-04-2
 [ver.simple_protection]: https://github.com/SmallJoker/simple_protection/tree/3630fe9
 [ver.slingshot]: https://github.com/AntumMT/mod-slingshot/tree/bb77525
@@ -578,6 +585,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.windmill]: https://github.com/Sokomine/windmill/tree/47b029d
 [ver.workbench]: https://github.com/minetest-mods/workbench/tree/bd14f59
 [ver.worldedge]: https://github.com/minetest-mods/worldedge/tree/608462d
+[ver.zombie]: https://github.com/AntumMT/mod-creatures/tree/213a05b
 
 [patch.3d_armor]: https://github.com/AntumMT/mp-3d_armor/tree/19d1001
 [patch.airtanks]: https://github.com/AntumMT/mod-airtanks/tree/fd52265

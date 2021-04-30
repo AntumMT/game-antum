@@ -48,7 +48,7 @@ end
 local function shear(self, drop_count, sound)
 	if self.has_wool == true then
 		self.has_wool = false
-		local pos = self.object:getpos()
+		local pos = self.object:get_pos()
 		if sound then
 			core.sound_play("creatures_shears", {pos = pos, gain = 1, max_hear_distance = 10})
 		end
@@ -60,7 +60,12 @@ end
 
 
 -- white, grey, brown, black (see wool colors as reference)
-local colors = {"white", "grey", "brown", "black"}
+local colors = {
+	white = {chance = 0.7},
+	grey = {chance = 0.1},
+	brown = {chance = 0.1},
+	black = {chance = 0.1}
+}
 
 local def = {
 	name = "creatures:sheep",
@@ -78,7 +83,7 @@ local def = {
 	model = {
 		mesh = "creatures_sheep.b3d",
 		textures = {"creatures_sheep.png^creatures_sheep_white.png"},
-		collisionbox = {-0.5, -0.01, -0.55, 0.5, 1.1, 0.55},
+		collisionbox = {-0.45, -0.01, -0.45, 0.45, 1.06, 0.45},
 		rotation = -90.0,
 		animations = {
 			idle = {start = 1, stop = 60, speed = 15},
@@ -119,7 +124,7 @@ local def = {
 		if self.has_wool then
 			table.insert(items, {"wool:" .. self.wool_color, {min = 1, max = 2}})
 		end
-		creatures.dropItems(self.object:getpos(), items)
+		creatures.dropItems(self.object:get_pos(), items)
 	end,
 
 	spawning = {
@@ -147,6 +152,10 @@ local def = {
 		}
 	},
 
+	on_punch = function(self, puncher)
+		shear(self)
+	end,
+
 	get_staticdata = function(self)
 		return {
 			has_wool = self.has_wool,
@@ -160,7 +169,7 @@ local def = {
 		end
 
 		if not self.wool_color then
-			self.wool_color =  colors[math.random(1, #colors)]
+			self.wool_color = creatures.rnd(colors) or "white"
 		end
 		-- update fur
 		setColor(self)
