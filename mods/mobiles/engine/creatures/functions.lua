@@ -294,6 +294,11 @@ creatures.on_step = function(self, dtime)
     return
   end
 
+  -- set default speed if not specified
+  if def.combat then
+    def.combat.attack_speed = def.combat.attack_speed or 1.0
+  end
+
   -- timer updates
   self.lifetimer = self.lifetimer + dtime
   self.modetimer = self.modetimer + dtime
@@ -482,7 +487,7 @@ creatures.on_step = function(self, dtime)
     local sn = core.get_node_or_nil(p)
     local eat_node
     for _,name in pairs(nodes) do
-      if name == self.last_node.name then
+      if self.last_node ~= nil and name == self.last_node.name then
         eat_node = current_pos
         break
       elseif sn and sn.name == name then

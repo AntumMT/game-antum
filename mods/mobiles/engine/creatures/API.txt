@@ -131,7 +131,7 @@ and with a chance of 100% 2 items of type "default:stone"
 
   combat = {              -- specifies behavior of hostile mobs in "attack" mode
     attack_damage = 1,       -- how much damage deals each hit
-    attack_speed = 0.6,      -- time in seconds between hits
+    attack_speed = 1.0,      -- time in seconds between hits (default: 1.0)
     attack_radius = 1.1,     -- distance in blocks mob can reach to hit
 
     search_enemy = true,     -- true to search enemies to attack
