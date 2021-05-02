@@ -76,8 +76,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [rainbow_ore][] ([LGPL][lic.rainbow_ore]) -- version: [6e77693 Git][ver.rainbow_ore] *2015-11-02* ([patched][patch.rainbow_ore])
 	* [unifieddyes][] ([GPL][lic.gpl2.0]) -- version: [2021-03-26-1][ver.unifieddyes] ([patched][patch.unifieddyes])
 * mobiles/
-	* [animals_aggressive][] -- version: [4eede4d Git][ver.animals_aggressive] *2017-08-28*
-		* mob_shark ([CC BY-SA][lic.ccbysa3.0]) -- forked from [Animals Modpack][animals]
 	* [animals_harmless][] -- version: [e9b02a8][ver.animals_harmless] *2017-08-09*
 		* [chicken][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [c89960a Git][ver.chicken] *2021-04-30*
 		* [sheep][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [10523b6 Git][ver.sheep] *2021-04-30*
@@ -96,6 +94,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* [sneeker][] ([CC0][lic.cc0]) -- version: [7c05c4d Git][ver.sneeker] *2021-04-19*
 		* [zombie][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [213a05b Git][ver.zombie] *2021-04-30*
 	* [monsters_passive][] (see individual mods for licensing) -- version: [b07fe19 Git][ver.monsters_passive] *2017-08-09*
+	* [shark][] ([CC0 / CC BY-SA][lic.shark]) -- version: [1.0-me][ver.shark] *2021-05-01*
 * [painting][] (???) -- version [8961849 Git][ver.painting] *2016-05-05*
 * [pipeworks][] ([LGPL][lic.lgpl3.0]) -- version: [2021-02-19][ver.pipeworks]
 * plantlife/
@@ -232,7 +231,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [airtanks]: https://forum.minetest.net/viewtopic.php?t=17102
 [amber]: https://forum.minetest.net/viewtopic.php?t=18186
 [ambience]: https://forum.minetest.net/viewtopic.php?t=2807
-[animals]: https://forum.minetest.net/viewtopic.php?t=629
 [animals_aggressive]: https://github.com/AntumMT/mp-animals_aggressive
 [animals_harmless]: https://github.com/AntumMT/mp-animals_harmless
 [antum]: https://github.com/AntumMT/mp-antum
@@ -340,6 +338,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [rainbow_ore]: https://forum.minetest.net/viewtopic.php?id=13519
 [server_shop]: https://forum.minetest.net/viewtopic.php?t=26645
 [sfinv_buttons]: https://forum.minetest.net/viewtopic.php?t=16079
+[shark]: https://github.com/AntumMT/mod-shark
 [signs_lib]: https://forum.minetest.net/viewtopic.php?f=11&t=13762
 [simple_protection]: https://forum.minetest.net/viewtopic.php?t=9035
 [slingshot]: https://github.com/AntumMT/mod-slingshot
@@ -419,6 +418,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.quartz]: mods/materials/quartz/LICENSE.txt
 [lic.rainbow_ore]: mods/materials/rainbow_ore/README.md
 [lic.server_shop]: mods/admin/server_shop/LICENSE.txt
+[lic.shark]: mods/mobiles/shark/LICENSE.txt
 [lic.signs_lib]: mods/signs/signs_lib/copyright.txt
 [lic.slingshot]: mods/equipment/slingshot/LICENSE.txt
 [lic.snowdrift]: mods/weather/snowdrift/license.txt
@@ -562,6 +562,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.rainbow_ore]: https://github.com/FsxShader2012/rainbow_ore/tree/6e77693
 [ver.server_shop]: https://github.com/AntumMT/mod-server_shop/releases/tag/v1.1
 [ver.sfinv_buttons]: http://repo.or.cz/minetest_sfinv_buttons.git/tree/ebb1f7c
+[ver.shark]: https://github.com/AntumMT/mod-shark/releases/tag/v1.0-me
 [ver.sheep]: https://github.com/AntumMT/mod-creatures/tree/10523b6
 [ver.signs_lib]: https://gitlab.com/VanessaE/signs_lib/tree/2021-03-04-2
 [ver.simple_protection]: https://github.com/SmallJoker/simple_protection/tree/3630fe9
