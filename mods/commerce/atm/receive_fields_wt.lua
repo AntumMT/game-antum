@@ -1,7 +1,7 @@
 
 -- Check the form
 
-minetest.register_on_player_receive_fields(function(player, form, pressed)
+function atm.on_receive_fields_wt(pos, form, pressed, player)
 
 	-- Wire transfer terminals
 	if form == "atm.form.wt" or form == "atm.form.wtc" or form == "atm.form.wtl" then
@@ -9,38 +9,54 @@ minetest.register_on_player_receive_fields(function(player, form, pressed)
 		local n = player:get_player_name()
 
 		if not pressed.Quit and not pressed.quit then
+			local meta = core.get_meta(pos)
+
 			if form == "atm.form.wt" and pressed.transactions then
 				-- transaction list (can be edited in the form, but than means nothing)
 				atm.read_transactions()
-				atm.showform_wtlist(player, atm.completed_transactions[n])
+				local formspec, formname = atm.getform_wtlist(player, atm.completed_transactions[n])
+				meta:set_string("formspec", formspec)
+				meta:set_string("formname", formname)
 			elseif form == "atm.form.wtl" and pressed.transfer then
-				atm.showform_wt(player)
+				local formspec, formname = atm.getform_wt(player)
+				meta:set_string("formspec", formspec)
+				meta:set_string("formname", formname)
 			elseif form == "atm.form.wtl" and pressed.clr then
 				-- clear all transactions in the player's list
 				atm.read_transactions()
 				atm.completed_transactions[n] = nil
 				atm.write_transactions()
 				minetest.chat_send_player(n, "Your transaction history has been cleared")
-				atm.showform_wtlist(player, atm.completed_transactions[n])
+				local formspec, formname = atm.getform_wtlist(player, atm.completed_transactions[n])
+				meta:set_string("formspec", formspec)
+				meta:set_string("formname", formname)
 			elseif form == "atm.form.wt" and pressed.pay then
 
 				-- perform the checks of validity for wire transfer order
 				-- if passed, store the data in a temporary table and show confirmation window
 				if not atm.balance[pressed.dstn] then
 					minetest.chat_send_player(n, "The recepient <" .. pressed.dstn ..
-            "> is not registered in the banking system, aborting")
-					atm.showform_wt(player)
+						"> is not registered in the banking system, aborting")
+					local formspec, formname = atm.getform_wt(player)
+					meta:set_string("formspec", formspec)
+					meta:set_string("formname", formname)
 				elseif not string.match(pressed.amnt, '^[0-9]+$') then
 					minetest.chat_send_player(n, "Invalid amount <" .. pressed.amnt ..
-            "> : must be an integer number, aborting")
-					atm.showform_wt(player)
+						"> : must be an integer number, aborting")
+					local formspec, formname = atm.getform_wt(player)
+					meta:set_string("formspec", formspec)
+					meta:set_string("formname", formname)
 				elseif atm.balance[n] < tonumber(pressed.amnt) then
 					minetest.chat_send_player(n, "Your account does not have enough " ..
-            "funds to complete this transfer, aborting")
-					atm.showform_wt(player)
+						"funds to complete this transfer, aborting")
+					local formspec, formname = atm.getform_wt(player)
+					meta:set_string("formspec", formspec)
+					meta:set_string("formname", formname)
 				else
 					atm.pending_transfers[n] = {to = pressed.dstn, sum = tonumber(pressed.amnt), desc = pressed.desc}
-					atm.showform_wtconf(player, pressed.dstn, pressed.amnt, pressed.desc)
+					local formspec, formname = atm.getform_wtconf(player, pressed.dstn, pressed.amnt, pressed.desc)
+					meta:set_string("formspec", formspec)
+					meta:set_string("formname", formname)
 				end
 
 			elseif form == "atm.form.wtc" then
@@ -58,7 +74,9 @@ minetest.register_on_player_receive_fields(function(player, form, pressed)
 					-- you can never be too paranoid about the funds availaible
 				   minetest.chat_send_player(n, "Your account does not have enough funds to complete this transfer, aborting")
 				   if not t.extern then
-				      atm.showform_wt(player)
+							local formspec, formname = atm.getform_wt(player)
+							meta:set_string("formspec", formspec)
+							meta:set_string("formname", formname)
 				   else
 				      minetest.close_formspec(n, "atm.form.wtc")
 				   end
@@ -81,7 +99,9 @@ minetest.register_on_player_receive_fields(function(player, form, pressed)
 				   return
 				end
 				atm.pending_transfers[n] = nil
-				atm.showform_wt(player)
+				local formspec, formname = atm.getform_wt(player)
+				meta:set_string("formspec", formspec)
+				meta:set_string("formname", formname)
 			end
 		else
 			-- clear the pending transaction of the player, just in case
@@ -92,4 +112,4 @@ minetest.register_on_player_receive_fields(function(player, form, pressed)
 
 	end
 
-end)
+end

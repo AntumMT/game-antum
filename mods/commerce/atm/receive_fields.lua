@@ -1,7 +1,7 @@
 
 -- Check the form
 
-minetest.register_on_player_receive_fields(function(player, form, pressed)
+function atm.on_receive_fields(pos, form, pressed, player)
 
 	-- ATMs
 	if form == "atm.form" then
@@ -10,7 +10,7 @@ minetest.register_on_player_receive_fields(function(player, form, pressed)
 		local pinv=player:get_inventory()
 
 		-- single note transactions
-		for _,i in pairs({1, 5, 10, 50, 100, -1, -5, -10, -50, -100}) do
+		for _,i in pairs({-1, -5, -10, -50, -100}) do
 			if pressed["i"..i] then
 				transaction.amount = i
 				transaction.denomination = '_' .. math.abs(i)
@@ -23,7 +23,7 @@ minetest.register_on_player_receive_fields(function(player, form, pressed)
 		end
 
 		-- 10x banknote transactions
-		for _,t in pairs({10, 50, 100, 500, 1000, -10, -50, -100, -500, -1000}) do
+		for _,t in pairs({-10, -50, -100, -500, -1000}) do
 			if pressed["t"..t] then
 				transaction.amount = t
 				transaction.denomination = '_' .. math.abs(t/10)
@@ -36,7 +36,7 @@ minetest.register_on_player_receive_fields(function(player, form, pressed)
 		end
 
 		-- 100x banknote transactions
-		for _,c in pairs({100, 500, 1000, 5000, 10000, -100, -500, -1000, -5000, -10000}) do
+		for _,c in pairs({-100, -500, -1000, -5000, -10000}) do
 			if pressed["c"..c] then
 				transaction.amount = c
 				transaction.denomination = '_' .. math.abs(c/100)
@@ -62,21 +62,16 @@ minetest.register_on_player_receive_fields(function(player, form, pressed)
 			else
 				minetest.chat_send_player(n, "Not enough room in your inventory")
 			end
-
-		elseif transaction.amount > 0 then
-			if pinv:contains_item("main", item) then
-				pinv:remove_item("main", item)
-				atm.balance[n] = atm.balance[n] + transaction.amount
-			else
-				minetest.chat_send_player(n, "Not enough money in your inventory")
-			end
 		end
 
 		atm.saveaccounts()
 
 		if not pressed.Quit and not pressed.quit then
-				atm.showform(player)
+			local formspec, formname = atm.getform(player)
+			local meta = core.get_meta(pos)
+			meta:set_string("formspec", formspec)
+			meta:set_string("formname", formname)
 		end
 	end
 
-end)
+end

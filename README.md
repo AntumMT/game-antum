@@ -38,7 +38,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [away][] ([GPL][lic.gpl2.0]) -- version: [4c1e5a9 Git][ver.away] *2012-03-09* ([patched][patch.away])
     * [chatlog][] ([CC0][lic.cc0]) -- version: [1.0][ver.chatlog] *2017-08-12*
 * commerce/
-    * [atm][] ([GPL][lic.gpl3.0]) -- version: [1.0.2][ver.atm] *2021-04-21* ([patched][patch.atm])
+    * [atm][] ([GPL][lic.gpl3.0]) -- version: [1.0.4][ver.atm] *2021-04-21* ([patched][patch.atm])
     * [currency][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2021-01-30][ver.currency]
 * crafting/
     * [craftguide][] ([MIT][lic.craftguide]) -- version: [f379998 Git][ver.craftguide] *2021-02-08* ([patched][patch.craftguide])
@@ -466,7 +466,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.animals_aggressive]: https://github.com/AntumMT/mp-animals_aggressive/tree/4eede4d
 [ver.animals_harmless]: https://github.com/AntumMT/mp-animals_harmless/tree/e9b02a8
 [ver.antum]: https://github.com/AntumMT/mp-antum/tree/69b39a4
-[ver.atm]: https://github.com/Git-Forked/atm/releases/tag/v1.0.2
+[ver.atm]: https://github.com/Git-Forked/atm/releases/tag/v1.0.4
 [ver.awards]: https://github.com/rubenwardy/awards/tree/v3.4.0
 [ver.away]: https://github.com/kahrl/minetest-mod-away/tree/4c1e5a9
 [ver.bags]: https://github.com/cornernote/minetest-bags/tree/bc87b45
@@ -595,7 +595,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.3d_armor]: https://github.com/AntumMT/mp-3d_armor/tree/19d1001
 [patch.airtanks]: https://github.com/AntumMT/mod-airtanks/tree/fd52265
 [patch.amber]: https://github.com/AntumMT/mod-amber/tree/39b852a
-[patch.atm]: https://github.com/AntumMT/mod-atm/tree/39df604
+[patch.atm]: https://github.com/AntumMT/mod-atm/tree/7771aa0
 [patch.away]: https://github.com/AntumMT/mod-away/tree/3b0bf9e
 [patch.bedrock2]: https://github.com/AntumMT/mod-bedrock2/tree/9da5912
 [patch.boats2]: https://github.com/AntumMT/mod-boats2/tree/9b2bcb7

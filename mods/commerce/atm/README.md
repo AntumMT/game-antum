@@ -1,6 +1,6 @@
 # ATM Redo mod for Minetest
 
-original by gpcf: git://gpcf.eu/atm.git
+original by gpcf: http://gpcf.eu/atm.git (no longer available)
 
 updated and improved by RB
 

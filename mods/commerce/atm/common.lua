@@ -1,10 +1,10 @@
 
 function atm.ensure_init(name)
-   -- Ensure the atm account for the placer specified by name exists
-   atm.readaccounts()
-   if not atm.balance[name] then
-      atm.balance[name] = atm.startbalance
-   end
+	-- Ensure the atm account for the placer specified by name exists
+	atm.readaccounts()
+	if not atm.balance[name] then
+		atm.balance[name] = atm.startbalance
+	end
 end
 
 
