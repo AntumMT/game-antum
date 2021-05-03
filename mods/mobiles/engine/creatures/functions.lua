@@ -199,11 +199,14 @@ local function changeHP(self, value)
 end
 
 local function checkWielded(wielded, itemList)
+	if not itemList then return false end
+
 	for s,w in pairs(itemList) do
 		if w == wielded then
 			return true
 		end
 	end
+
 	return false
 end
 

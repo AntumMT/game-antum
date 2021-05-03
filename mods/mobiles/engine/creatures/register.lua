@@ -23,16 +23,12 @@
 local allow_hostile = core.settings:get_bool("only_peaceful_mobs") ~= true
 
 local function translate_def(def)
-	local dwt = def.dies_when_tamed
-	if dwt == nil then dwt = false end
-
 	local new_def = {
 		physical = true,
 		visual = "mesh",
 		stepheight = 0.6, -- ensure we get over slabs/stairs
 		automatic_face_movement_dir = def.model.rotation or 0.0,
 		ownable = def.ownable,
-		dies_when_tamed = dwt,
 
 		mesh = def.model.mesh,
 		textures = def.model.textures,
