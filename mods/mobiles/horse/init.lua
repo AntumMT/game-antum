@@ -48,10 +48,47 @@ function horse:on_rightclick(clicker)
 		return
 	end
 
+	local pname = clicker:get_player_name()
+
+	if not self.owner then
+		local wielded = clicker:get_wielded_item()
+		-- FIXME: should be done with left click/punch
+		if wielded and wielded:get_name() == "default:apple" then
+			wielded:set_count(wielded:get_count()-1)
+			clicker:set_wielded_item(wielded)
+			core.sound_play({name="creatures_apple_bite",}, {clicker:get_pos()})
+
+			if self._appetite == nil then
+				self._appetite = 1
+			else
+				self._appetite = self._appetite + 1
+
+				if self._appetite == 10 then
+					self.owner = pname
+					self._appetite = nil
+					core.chat_send_player(pname, "You now own this horse!")
+					return
+				end
+			end
+
+			core.chat_send_player(pname, "This horse is still hungry. Keep feeding it.")
+			return
+		else
+			-- can't ride wild horses
+			core.chat_send_player(pname, "This horse is too wild to ride. Try feeding it some apples.")
+			return
+		end
+	end
+
+	-- only owner can ride
+	if self.owner and pname ~= self.owner then
+		core.chat_send_player(pname, "This horse is owned by " .. self.owner)
+		return
+	end
+
 	if self.driver and clicker == self.driver then
 		self.driver = nil
 		clicker:set_detach()
-	-- FIXME: only owner shoud be able to ride
 	elseif not self.driver then
 		self.driver = clicker
 		clicker:set_attach(self.object, "", {x=0,y=5,z=0}, {x=0,y=0,z=0})
@@ -73,17 +110,24 @@ end
 
 function horse:on_punch(puncher, time_from_last_punch, tool_capabilities, dir, damage)
 	if puncher and puncher:is_player() then
+		local pname = puncher:get_player_name()
+		local owner = self.owner
+
+		-- don't allow owned horses to be killed or owned by other players
+		if owner and pname ~= owner then
+			core.chat_send_player(pname, "This horse is owned by " .. owner)
+			return true
+		end
+
 		local wielded = puncher:get_wielded_item()
 		if wielded then
 			local wname = wielded:get_name()
-			local idx = wname:find(":")+1
+			local idx = wname:find(":")
 
 			-- can be tamed with any item named "lasso"
-			if wname and idx and wname:sub(idx) == "lasso" then
-				local pname = puncher:get_player_name()
-				local owner = self.owner
-				if owner and pname ~= owner then
-					core.chat_send_player(pname, "This horse is owned by " .. owner)
+			if wname and idx and wname:sub(idx+1) == "lasso" then
+				if not owner then
+					core.chat_send_player(pname, "This horse is too wild to tame. Try feeding it some apples.")
 					return true
 				else
 					self.object:remove()
@@ -101,6 +145,11 @@ end
 function horse:on_step(dtime)
 	if not self.driver then return false end
 
+	-- FIXME: let owners control horse
+	self.object:set_velocity({x=0, y=0, z=0})
+	self.object:set_animation()
+
+	--[[
 	self.v = get_v(self.object:get_velocity())*get_sign(self.v)
 	if self.driver then
 		local ctrl = self.driver:get_player_control()
@@ -170,266 +219,18 @@ function horse:on_step(dtime)
 			end
 		end
 	end
+	]]
 
 	return true
 end
 
---[[
---horse white
-
-local horsepeg = {
-	physical = true,
-	collisionbox = {-0.4, -0.01, -0.4, 0.4, 1, 0.4},
-	visual = "mesh",
-	stepheight = 1.1,
-	visual_size = {x=1,y=1},
-	mesh = "mobs_horseh1.x",
-	textures = {"mobs_horsepegh1.png"},
-
-	driver = nil,
-	v = 0,
-}
-]]
-
-
 
 --[[
-function horsepeg:on_rightclick(clicker)
-	if not clicker or not clicker:is_player() then
-		return
-	end
-	if self.driver and clicker == self.driver then
-		self.driver = nil
-		clicker:set_detach()
-	elseif not self.driver then
-		self.driver = clicker
-		clicker:set_attach(self.object, "", {x=0,y=5,z=0}, {x=0,y=0,z=0})
-		self.object:set_yaw(clicker:get_look_horizontal())
-	end
-end
-
-
-function horsepeg:on_activate(staticdata, dtime_s)
-	self.object:set_armor_groups({immortal=1})
-	if staticdata then
-		self.v = tonumber(staticdata)
-	end
-end
-
-function horsepeg:get_staticdata()
-	return tostring(v)
-end
-
-function horsepeg:on_punch(puncher, time_from_last_punch, tool_capabilities, direction)
-	self.object:remove()
-	if puncher and puncher:is_player() then
-		puncher:get_inventory():add_item("main", "kpgmobs:horsepegh1")
-	end
-end
-
-
-function horsepeg:on_step(dtime)
-	self.v = get_v(self.object:get_velocity())*get_sign(self.v)
-	if self.driver then
-		local ctrl = self.driver:get_player_control()
-		if ctrl.up then
-			self.v = self.v+2
-		end
-		if ctrl.down then
-			self.v = self.v-0.1
-		end
-		if ctrl.left then
-			self.object:set_yaw(self.object:get_yaw()+math.pi/120+dtime*math.pi/120)
-		end
-		if ctrl.right then
-			self.object:set_yaw(self.object:get_yaw()-math.pi/120-dtime*math.pi/120)
-		end
-		if ctrl.jump then
-		local p = self.object:get_pos()
-		p.y = p.y-0.5
-		if is_ground(p) then
-		local pos = self.object:get_pos()
-				pos.y = math.floor(pos.y)+4
-				self.object:set_pos(pos)
-				self.object:set_velocity(get_velocity(self.v, self.object:get_yaw(), 0))
-		end
-		end
-	end
-	local s = get_sign(self.v)
-	self.v = self.v - 0.02*s
-	if s ~= get_sign(self.v) then
-		self.object:set_velocity({x=0, y=0, z=0})
-		self.v = 0
-		return
-	end
-	if math.abs(self.v) > 4.5 then
-		self.v = 4.5*get_sign(self.v)
-	end
-
-	local p = self.object:get_pos()
-	p.y = p.y-0.5
-	if not is_ground(p) then
-		if minetest.registered_nodes[minetest.get_node(p).name].walkable then
-			self.v = 0
-		end
-		self.object:set_acceleration({x=0, y=-10, z=0})
-		self.object:set_velocity(get_velocity(self.v, self.object:get_yaw(), self.object:get_velocity().y))
-	else
-		p.y = p.y+1
-		if is_ground(p) then
-			self.object:set_acceleration({x=0, y=3, z=0})
-			local y = self.object:get_velocity().y
-			if y > 2 then
-				y = 2
-			end
-			if y < 0 then
-				self.object:set_acceleration({x=0, y=10, z=0})
-			end
-			self.object:set_velocity(get_velocity(self.v, self.object:get_yaw(), y))
-		else
-			self.object:set_acceleration({x=0, y=0, z=0})
-			if math.abs(self.object:get_velocity().y) < 1 then
-				local pos = self.object:get_pos()
-				pos.y = math.floor(pos.y)+0.5
-				self.object:set_pos(pos)
-				self.object:set_velocity(get_velocity(self.v, self.object:get_yaw(), 0))
-			else
-				self.object:set_velocity(get_velocity(self.v, self.object:get_yaw(), self.object:get_velocity().y))
-			end
-		end
-	end
-end
-
---horse arabik
-  local horseara = {
-	physical = true,
-	collisionbox = {-0.4, -0.01, -0.4, 0.4, 1, 0.4},
-	visual = "mesh",
-	stepheight = 1.1,
-	visual_size = {x=1,y=1},
-	mesh = "mobs_horseh1.x",
-	textures = {"mobs_horsearah1.png"},
-	driver = nil,
-	v = 0,
-}
-]]
-
-
-
---[[
-function horseara:on_rightclick(clicker)
-	if not clicker or not clicker:is_player() then
-		return
-	end
-	if self.driver and clicker == self.driver then
-		self.driver = nil
-		clicker:set_detach()
-	elseif not self.driver then
-		self.driver = clicker
-		clicker:set_attach(self.object, "", {x=0,y=5,z=0}, {x=0,y=0,z=0})
-		self.object:set_yaw(clicker:get_look_horizontal())
-	end
-end
-
-
-function horseara:on_activate(staticdata, dtime_s)
-	self.object:set_armor_groups({immortal=1})
-	if staticdata then
-		self.v = tonumber(staticdata)
-	end
-end
-
-function horseara:get_staticdata()
-	return tostring(v)
-end
-
-function horseara:on_punch(puncher, time_from_last_punch, tool_capabilities, direction)
-	self.object:remove()
-	if puncher and puncher:is_player() then
-		puncher:get_inventory():add_item("main", "kpgmobs:horsearah1")
-	end
-end
-
-
-function horseara:on_step(dtime)
-	self.v = get_v(self.object:get_velocity())*get_sign(self.v)
-	if self.driver then
-		local ctrl = self.driver:get_player_control()
-		if ctrl.up then
-			self.v = self.v+3
-		end
-		if ctrl.down then
-			self.v = self.v-0.1
-		end
-		if ctrl.left then
-			self.object:set_yaw(self.object:get_yaw()+math.pi/120+dtime*math.pi/120)
-		end
-		if ctrl.right then
-			self.object:set_yaw(self.object:get_yaw()-math.pi/120-dtime*math.pi/120)
-		end
-		if ctrl.jump then
-		local p = self.object:get_pos()
-		p.y = p.y-0.5
-		if is_ground(p) then
-		local pos = self.object:get_pos()
-				pos.y = math.floor(pos.y)+4
-				self.object:set_pos(pos)
-				self.object:set_velocity(get_velocity(self.v, self.object:get_yaw(), 0))
-		end
-		end
-
-	end
-	local s = get_sign(self.v)
-	self.v = self.v - 0.02*s
-	if s ~= get_sign(self.v) then
-		self.object:set_velocity({x=0, y=0, z=0})
-		self.v = 0
-		return
-	end
-	if math.abs(self.v) > 4.5 then
-		self.v = 4.5*get_sign(self.v)
-	end
-
-	local p = self.object:get_pos()
-	p.y = p.y-0.5
-	if not is_ground(p) then
-		if minetest.registered_nodes[minetest.get_node(p).name].walkable then
-			self.v = 0
-		end
-		self.object:set_acceleration({x=0, y=-10, z=0})
-		self.object:set_velocity(get_velocity(self.v, self.object:get_yaw(), self.object:get_velocity().y))
-	else
-		p.y = p.y+1
-		if is_ground(p) then
-			self.object:set_acceleration({x=0, y=3, z=0})
-			local y = self.object:get_velocity().y
-			if y > 2 then
-				y = 2
-			end
-			if y < 0 then
-				self.object:set_acceleration({x=0, y=10, z=0})
-			end
-			self.object:set_velocity(get_velocity(self.v, self.object:get_yaw(), y))
-		else
-			self.object:set_acceleration({x=0, y=0, z=0})
-			if math.abs(self.object:get_velocity().y) < 1 then
-				local pos = self.object:get_pos()
-				pos.y = math.floor(pos.y)+0.5
-				self.object:set_pos(pos)
-				self.object:set_velocity(get_velocity(self.v, self.object:get_yaw(), 0))
-			else
-				self.object:set_velocity(get_velocity(self.v, self.object:get_yaw(), self.object:get_velocity().y))
-			end
-		end
-	end
-end
-]]
-
-
 local likes = {"default:apple"}
 if core.global_exists("farming") then
 	table.insert(likes, "farming:wheat")
 end
+]]
 
 local drops = {}
 if core.global_exists("mobs") then
@@ -437,9 +238,23 @@ if core.global_exists("mobs") then
 end
 
 
-local base_sound = {
-	name = "creatures_horse",
-	gain = 1.0,
+local sounds = {
+	neigh = {
+		name = "creatures_horse_neigh_01",
+		gain = 1.0,
+	},
+	snort1 = {
+		name = "creatures_horse_snort_01",
+		gain = 1.0,
+	},
+	snort2 = {
+		name = "creatures_horse_snort_02",
+		gain = 1.0,
+	},
+	distress = {
+		name = "creatures_horse_neigh_02",
+		gain = 1.0,
+	},
 }
 
 -- FIXME:
@@ -448,21 +263,27 @@ local base_def = {
 	--name = "creatures:horse_brown",
 	ownable = true,
 	stats = {
-		hp = 5,
+		hp = 16,
 		hostile = false,
 		lifetime = 300,
-		can_jump = 1.1,
+		can_jump = 0, -- FIXME: should only not be able to jump over certain nodes for coralling
+		--can_swim = true,
+		can_panic = true,
+		has_kockback = true,
 	},
 	modes = {
 		idle = {
 			chance = 0.3,
 		},
+		walk = {chance=0.7, moving_speed=1,},
 		--attack = {},
+		--[[
 		follow = {
 			chance = 0.7,
 			moving_speed = 1,
-			items = likes,
+			--items = likes,
 		},
+		]]
 		--eat = {},
 	},
 	model = {
@@ -477,17 +298,25 @@ local base_def = {
 				stop = 75,
 				speed = 15,
 			},
+			walk = {start=75, stop=100, speed=15,},
 			--attack = {},
+			--[[
 			follow = {
 				start = 75,
 				stop = 100,
 				speed = 15,
 			},
+			]]
 			--eat = {},
 		},
 	},
 	sounds = {
-		random = {idle=base_sound, follow=base_sound,},
+		on_damage = sounds.distress,
+		on_death = sounds.snort2,
+		random = {
+			idle = sounds.snort1,
+			follow = sounds.neigh,
+		}
 	},
 	drops = drops,
 	--[[
@@ -529,127 +358,6 @@ local base_def = {
 	end,
 }
 
---[[
-minetest.register_craftitem("kpgmobs:horseh1", {
-	description = "Horse",
-	inventory_image = "mobs_horse_inventar.png",
-
-	on_place = function(itemstack, placer, pointed_thing)
-		if pointed_thing.above then
-			minetest.env:add_entity(pointed_thing.above, "kpgmobs:horseh1")
-			itemstack:take_item()
-		end
-		return itemstack
-	end,
-})
-minetest.register_entity("kpgmobs:horseh1", horse)
-
-minetest.register_craftitem("kpgmobs:horsepegh1", {
-	description = "HorseWhite",
-	inventory_image = "mobs_horse_inventar.png",
-
-	on_place = function(itemstack, placer, pointed_thing)
-		if pointed_thing.above then
-			minetest.env:add_entity(pointed_thing.above, "kpgmobs:horsepegh1")
-			itemstack:take_item()
-		end
-		return itemstack
-	end,
-})
-minetest.register_entity("kpgmobs:horsepegh1", horsepeg)
-
-minetest.register_craftitem("kpgmobs:horsearah1", {
-	description = "HorseBlack",
-	inventory_image = "mobs_horse_inventar.png",
-
-	on_place = function(itemstack, placer, pointed_thing)
-		if pointed_thing.above then
-			minetest.env:add_entity(pointed_thing.above, "kpgmobs:horsearah1")
-			itemstack:take_item()
-		end
-		return itemstack
-	end,
-})
-minetest.register_entity("kpgmobs:horsearah1", horseara)
-
-kpgmobs:register_mob("kpgmobs:horse3", {
-	type = "animal",
-	hp_max = 5,
-	collisionbox = {-0.4, -0.01, -0.4, 0.4, 1, 0.4},
-	textures = {"mobs_horseara.png"},
-	visual = "mesh",
-	mesh = "mobs_horse.x",
-	makes_footstep_sound = true,
-	walk_velocity = 1,
-	armor = 200,
-	drops = {
-		{name = "kpgmobs:meat_raw",
-		chance = 1,
-		min = 2,
-		max = 3,},
-	},
-	drawtype = "front",
-	water_damage = 1,
-	lava_damage = 5,
-	light_damage = 0,
-	animation = {
-		speed_normal = 15,
-		stand_start = 25,
-		stand_end = 75,
-		walk_start = 75,
-		walk_end = 100,
-	},
-	follow = "farming:wheat",
-	view_range = 5,
-
-	on_rightclick = function(self, clicker)
-		if clicker:is_player() and clicker:get_inventory() then
-			clicker:get_inventory():add_item("main", "kpgmobs:horsearah1")
-			self.object:remove()
-		end
-	end,
-})
-kpgmobs:register_spawn("kpgmobs:horse3", {"default:desert_sand"}, 20, 8, 9000, 1, 31000)
-
-kpgmobs:register_mob("kpgmobs:horse2", {
-	type = "animal",
-	hp_max = 5,
-	collisionbox = {-0.4, -0.01, -0.4, 0.4, 1, 0.4},
-	textures = {"mobs_horsepeg.png"},
-	visual = "mesh",
-	mesh = "mobs_horse.x",
-	makes_footstep_sound = true,
-	walk_velocity = 1,
-	armor = 200,
-	drops = {
-		{name = "kpgmobs:meat_raw",
-		chance = 1,
-		min = 2,
-		max = 3,},
-	},
-	drawtype = "front",
-	water_damage = 1,
-	lava_damage = 5,
-	light_damage = 0,
-	animation = {
-		speed_normal = 15,
-		stand_start = 25,
-		stand_end = 75,
-		walk_start = 75,
-		walk_end = 100,
-	},
-	follow = "farming:wheat",
-	view_range = 5,
-
-	on_rightclick = function(self, clicker)
-		if clicker:is_player() and clicker:get_inventory() then
-			clicker:get_inventory():add_item("main", "kpgmobs:horsepegh1")
-			self.object:remove()
-		end
-	end,
-})
-kpgmobs:register_spawn("kpgmobs:horse2", {"default:dirt_with_grass"}, 20, 8, 10000, 1, 31000)
-]]
 
 local horses = {
 	{

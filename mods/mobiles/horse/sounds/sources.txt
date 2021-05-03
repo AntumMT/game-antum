@@ -1,5 +1,25 @@
 
-- creatures_horse:
+- creatures_apple_bite:
+  - author: sonicmariobrotha
+	- license: CC0
+	- link: https://freesound.org/people/sonicmariobrotha/sounds/333825/
+
+- creatures_horse_neigh_01:
   - author: GoodListener
   - license: CC BY 3.0
   - link: https://freesound.org/people/GoodListener/sounds/322443/
+
+- creatures_horse_neigh_02:
+  - author: foxen10
+	- license: CC0
+	- link: https://freesound.org/people/foxen10/sounds/149024/
+
+- creatures_horse_snort_01:
+  - author: madklown
+	- license: CC0
+	- link: https://freesound.org/people/madklown/sounds/184503/
+
+- creatures_horse_snort_02:
+  - author: 0_ciz
+	- license: CC0
+	- link: https://freesound.org/people/o_ciz/sounds/475480/

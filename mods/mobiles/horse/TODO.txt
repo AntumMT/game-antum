@@ -1,4 +1,5 @@
 
 TODO:
 - fix walking so player can control when riding
-- don't allow other players to kill owned horses
+- prevent owned horses from jumping fences to escape corrals
+- don't let horses "swim" in air
