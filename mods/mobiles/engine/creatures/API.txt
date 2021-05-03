@@ -66,6 +66,7 @@ and with a chance of 100% 2 items of type "default:stone"
 --------------------
 {
   name = "",                 -- e.g. "creatures:sheep"
+  ownable = false,           -- can be owned by player <optional>
   stats = {
     hp = 1,                  -- 1 HP = "1/2 player heart"
     hostile = false,         -- is mob hostile (required for mode "attack") <optional>

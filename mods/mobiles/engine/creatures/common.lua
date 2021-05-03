@@ -47,7 +47,7 @@ function creatures.rnd(tab, errval)
 		psum = psum + ((tonumber(w) or w.chance or 0) * res)
 		if psum > rn then
 			retval = s
-  		break
+			break
 		end
 	end
 
@@ -55,17 +55,17 @@ function creatures.rnd(tab, errval)
 end
 
 function throw_error(msg)
-  core.log("error", "#Creatures: ERROR: " .. msg)
+	core.log("error", "#Creatures: ERROR: " .. msg)
 end
 
 function throw_warning(msg)
-  core.log("warning", "#Creatures: WARNING: " .. msg)
+	core.log("warning", "#Creatures: WARNING: " .. msg)
 end
 
 function creatures.compare_pos(pos1, pos2)
-  if not pos1 or not pos2 then
-    return
-  end
+	if not pos1 or not pos2 then
+		return
+	end
 	if pos1.x == pos2.x and pos1.y == pos2.y and pos1.z == pos2.z then
 		return false
 	end
@@ -118,43 +118,43 @@ function creatures.findTarget(search_obj, pos, radius, search_type, ignore_mob, 
 end
 
 function creatures.dropItems(pos, drops)
-  if not pos or not drops then
-    return
-  end
+	if not pos or not drops then
+		return
+	end
 
-  -- convert drops table
-  local tab = {}
-  for _,elem in pairs(drops) do
-    local name = tostring(elem[1])
-    local v = elem[2]
-    local chance = elem.chance
-    local amount = ""
-    -- check if drops depending on defined chance
-    if name and chance then
-      local ct = {}
-      ct[name] = chance
-      ct["_fake"] = 1 - chance
-      local res = creatures.rnd(ct)
-      if res == "_fake" then
-        name = nil
-      end
-    end
-    -- get amount
-    if name and v then
-      if type(v) == "table" then
-        amount = math.random(v.min or 1, v.max or 1) or 1
-      elseif type(v) == "number" then
-        amount = v
-      end
-      if amount > 0 then
-        amount = " " .. amount
-      end
-    end
-    if name then
-      local obj = core.add_item(pos, name .. amount)
-      if not obj then
-        throw_error("Could not drop item '" .. name .. amount .. "'")
-      end
-    end
-  end
+	-- convert drops table
+	local tab = {}
+	for _,elem in pairs(drops) do
+		local name = tostring(elem[1])
+		local v = elem[2]
+		local chance = elem.chance
+		local amount = ""
+		-- check if drops depending on defined chance
+		if name and chance then
+			local ct = {}
+			ct[name] = chance
+			ct["_fake"] = 1 - chance
+			local res = creatures.rnd(ct)
+			if res == "_fake" then
+				name = nil
+			end
+		end
+		-- get amount
+		if name and v then
+			if type(v) == "table" then
+				amount = math.random(v.min or 1, v.max or 1) or 1
+			elseif type(v) == "number" then
+				amount = v
+			end
+			if amount > 0 then
+				amount = " " .. amount
+			end
+		end
+		if name then
+			local obj = core.add_item(pos, name .. amount)
+			if not obj then
+				throw_error("Could not drop item '" .. name .. amount .. "'")
+			end
+		end
+	end
 end
