@@ -1,0 +1,5 @@
+
+- creatures_horse:
+  - author: GoodListener
+  - license: CC BY 3.0
+  - link: https://freesound.org/people/GoodListener/sounds/322443/

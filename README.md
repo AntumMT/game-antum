@@ -88,6 +88,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [folks][] ([GPL][lic.gpl3.0]) -- version: [0.2.0][ver.folks] *2021-02-23*
 	* general/
 		* [mobs_animal][] ([MIT][lic.mobs_animal]) -- version: [80e72a4 Git][ver.mobs_animal] *2021-04-13* ([patched][patch.mobs_animal])
+	* [horse][] ([MIT][lic.horse]) -- version: [d7c73f6 Git][ver.horse] *2021-05-03*
 	* [monsters_aggressive][] (see individual mods for licensing) -- version: [89a8187 Git][ver.monsters_aggressive] *2017-08-30*
 		* [ghost][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [2d3308c Git][ver.ghost] *2021-04-30*
 		* [oerkki][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [eb98833 Git][ver.oerkki] *2021-04-30*
@@ -293,6 +294,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [home_gui]: http://cornernote.github.io/minetest-home_gui/
 [home_workshop]: https://gitlab.com/VanessaE/home_workshop_modpack
 [homedecor]: https://forum.minetest.net/viewtopic.php?t=2041
+[horse]: https://github.com/AntumMT/mod-horse
 [hovercraft]: https://forum.minetest.net/viewtopic.php?t=6722
 [hudbars]: https://forum.minetest.net/viewtopic.php?t=11153
 [hudmap]: https://github.com/stujones11/hudmap
@@ -396,6 +398,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.fort_spikes]: mods/buildings/fort_spikes/LICENSE
 [lic.headanim]: mods/player/visuals/headanim/LICENSE
 [lic.home_gui]: mods/ui/home_gui/LICENSE
+[lic.horse]: mods/mobiles/horse/LICENSE.txt
 [lic.hidename]: mods/antum/hidename/LICENSE.txt
 [lic.hill_nodebox]: mods/world/hill_nodebox/LICENSE
 [lic.homedecor]: mods/modpacks/homedecor/LICENSE
@@ -521,6 +524,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.home_gui]: https://github.com/cornernote/minetest-home_gui/tree/a291a09
 [ver.home_workshop]: https://gitlab.com/VanessaE/home_workshop_modpack/tree/03325e8
 [ver.homedecor]: https://gitlab.com/VanessaE/homedecor_modpack/tree/81e0d4e
+[ver.horse]: https://github.com/AntumMT/mod-horse/tree/d7c73f6
 [ver.hovercraft]: https://github.com/stujones11/hovercraft/tree/4d50e68
 [ver.hudbars]: http://repo.or.cz/minetest_hudbars.git/tree/0684bac
 [ver.hudmap]: https://github.com/stujones11/hudmap/tree/3b8bdc0
