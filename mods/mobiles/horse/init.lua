@@ -75,7 +75,11 @@ function horse:on_punch(puncher, time_from_last_punch, tool_capabilities, dir, d
 	if puncher and puncher:is_player() then
 		local wielded = puncher:get_wielded_item()
 		if wielded then
-			if wielded:get_name() == "mobs:lasso" then
+			local wname = wielded:get_name()
+			local idx = wname:find(":")+1
+
+			-- can be tamed with any item named "lasso"
+			if wname and idx and wname:sub(idx) == "lasso" then
 				local pname = puncher:get_player_name()
 				local owner = self.owner
 				if owner and pname ~= owner then

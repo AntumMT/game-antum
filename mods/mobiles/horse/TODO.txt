@@ -1,3 +1,4 @@
 
 TODO:
 - fix walking so player can control when riding
+- don't allow other players to kill owned horses
