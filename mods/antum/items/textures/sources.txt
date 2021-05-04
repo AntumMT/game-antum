@@ -1,0 +1,5 @@
+
+- antum_sword_daemondeath:
+  - author: Dungeon Crawl Stone Soup
+	- license: CC0
+	- link: https://opengameart.org/node/12210
