@@ -5,20 +5,7 @@ local CONFIG_FILE_PREFIX = "airtanks_"
 local config = {}
 
 -- Setting for air tanks to wear out & break
-local enable_wear = minetest.settings:get_bool("enable_tool_wear")
-if enable_wear == nil then
-	-- Default is enabled
-	enable_wear = true
-end
-
--- Check local setting if wear/break is enabled
-if enable_wear then
-	enable_wear = minetest.settings:get_bool("airtanks_enable_wear")
-	if enable_wear == nil then
-		-- Default is enabled
-		enable_wear = true
-	end
-end
+local enable_wear = minetest.settings:get_bool("airtanks_enable_wear", true)
 
 local function setting(stype, name, default, description)
 	local value
