@@ -62,7 +62,7 @@ end
 function equip_exam:get_formspec(item, empty)
 	local specs
 	if not empty then
-		specs = get_item_specs(core.registered_tools[item])
+		specs = get_item_specs(core.registered_items[item])
 	else
 		specs = "" -- empty
 	end
