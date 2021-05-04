@@ -89,7 +89,7 @@ end
 
 -- Chicken spawnegg
 if core.get_modpath('chicken') then
-	antum.spawneggs.addEgg('chicken', 'creatures:chicken', {'creatures:feather'})
+	antum.spawneggs.addEgg('chicken', 'creatures:chicken', {'antum:feather'})
 end
 
 -- mobs_redo monsters
