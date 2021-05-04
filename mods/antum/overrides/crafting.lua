@@ -50,3 +50,5 @@ for index, modname in ipairs(modoverrides) do
 		antum.loadScript('crafting/' .. modname)
 	end
 end
+
+antum.loadScript("crafting/homedecor")
