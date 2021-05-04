@@ -16,8 +16,6 @@ gems_encrustable?
 gems_tools?
 helicopter?
 invisibility?
-mob_sheep?
-mobs?
 moreblocks?
 simple_protection?
 stairsplus?
@@ -29,3 +27,7 @@ wool?
 craftguide?
 craft_guide?
 biofuel?
+
+creatures?
+mobs?
+sheep?
