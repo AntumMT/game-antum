@@ -381,7 +381,7 @@ function creatures.register_spawn(spawn_def)
 			local max
 			if active_object_count_wider > (spawn_def.max_number or 1) then
 				local mates_num = #creatures.findTarget(nil, pos, 16, "mate", spawn_def.mob_name, true)
-				if (mates_num or 0) >= spawn_def.max_number then
+				if not spawn_def.max_number or (mates_num or 0) >= spawn_def.max_number then
 					return
 				else
 					max = spawn_def.max_number - mates_num
