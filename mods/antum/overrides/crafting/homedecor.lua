@@ -1,6 +1,4 @@
 
-print("\nHOMEDECOR!!!\n")
-
 local i = {
 	pole = "homedecor:pole_wrought_iron",
 	glass = "vessels:drinking_glass",
