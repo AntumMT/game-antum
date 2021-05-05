@@ -53,6 +53,19 @@ end
 asm.addEggRecipe = asm.registerEggRecipe
 
 
+local function formatTitle(s)
+	s = s:gsub("_", " ")
+
+	local t = {}
+
+	for m in (s .. " "):gmatch("(.-) ") do
+		local v = m:gsub("^%l", string.upper)
+		table.insert(t, v)
+	end
+
+	return table.concat(t, " ") .. " Spawn Egg"
+end
+
 --- Registers new egg in game.
 --
 --  Alias: *asm.addEgg*
@@ -66,7 +79,7 @@ asm.registerEgg = function(def)
 	end
 
 	core.register_craftitem(":spawneggs:" .. def.name:lower(), {
-		description = def.name:gsub("^%l", string.upper) .. " Spawn Egg",
+		description = formatTitle(def.name),
 		inventory_image = img,
 
 		on_place = function(itemstack, placer, target)

@@ -1,4 +1,8 @@
 
+1.1
+- Egg names are titleized & underscores are replaced with space.
+
+
 1.0
 - Made independent of any other mods or games.
 - Renamed to "asm_spawneggs" (Another Spawneggs Mod).
