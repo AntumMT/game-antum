@@ -1,0 +1,9 @@
+
+1.0
+- Made independent of any other mods or games.
+- Renamed to "asm_spawneggs" (Another Spawneggs Mod).
+- Added API reference.
+
+
+0.1
+- Created mod for Antum game.

@@ -114,7 +114,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * sound/
     * [ambience][] ([MIT][lic.ambience] / [CC BY / CC BY-SA / CC BY-NC-SA / CC0][lic.ambience_sounds]) -- version: [e317f72 Git][ver.ambience] *2021-04-14*
 * spawning/
-	* [spawneggs][] ([WTFPL][lic.spawneggs]) -- version: [4650370 Git][ver.spawneggs] *2013-09-09* ([patched][patch.spawneggs])
+	* [asm_spawneggs][] ([MIT][lic.asm_spawneggs]) -- version: [1.0][ver.asm_spawneggs] *2021-05-05*
 * storage/
 	* [drawers][] ([MIT / CC0 / CC BY][lic.drawers]) -- version: [0.6.2][ver.drawers] *2021-03-27*
 	* [more_chests][] ([GPL][lic.gpl2.0]) -- version: [6be8145 Git][ver.more_chests] *2021-04-05*
@@ -348,7 +348,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [slingshot]: https://github.com/AntumMT/mod-slingshot
 [sneeker]: https://github.com/AntumMT/mod-sneeker
 [snowdrift]: https://forum.minetest.net/viewtopic.php?t=6854
-[spawneggs]: https://forum.minetest.net/viewtopic.php?t=6214
+[asm_spawneggs]: https://forum.minetest.net/viewtopic.php?t=26676
 [spectator_mode]: https://forum.minetest.net/viewtopic.php?t=13718
 [technic]: https://forum.minetest.net/viewtopic.php?t=2538
 [technic_armor]: https://github.com/stujones11/technic_armor
@@ -428,7 +428,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.signs_lib]: mods/signs/signs_lib/copyright.txt
 [lic.slingshot]: mods/equipment/slingshot/LICENSE.txt
 [lic.snowdrift]: mods/weather/snowdrift/license.txt
-[lic.spawneggs]: mods/spawning/spawneggs/README.txt
+[lic.asm_spawneggs]: mods/spawning/asm_spawneggs/LICENSE.txt
 [lic.spectator_mode]: mods/admin/spectator_mode/LICENSE
 [lic.technic_armor]: mods/equipment/technic_armor/LICENSE.txt
 [lic.tools_obsidian]: mods/tools/tools_obsidian/README.md
@@ -577,7 +577,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.slingshot]: https://github.com/AntumMT/mod-slingshot/tree/bb77525
 [ver.sneeker]: https://github.com/AntumMT/mod-sneeker/tree/7c05c4d
 [ver.snowdrift]: https://github.com/paramat/snowdrift/tree/3342939
-[ver.spawneggs]: https://github.com/thefamilygrog66/spawneggs/tree/4650370
+[ver.asm_spawneggs]: https://github.com/AntumMT/releases/tag/v1.0
 [ver.spectator_mode]: https://github.com/minetest-mods/spectator_mode/tree/3648371
 [ver.technic]: https://github.com/minetest-mods/technic/tree/43acec2
 [ver.technic_armor]: https://github.com/stujones11/technic_armor/tree/694642f
@@ -632,7 +632,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.quartz]: https://github.com/AntumMT/mod-quartz/tree/adc759e
 [patch.rainbow_ore]: https://github.com/AntumMT/mod-rainbow_ore/tree/0227a86
 [patch.simple_protection]: https://github.com/AntumMT/mod-simple_protection/tree/95e6e59
-[patch.spawneggs]: https://github.com/AntumMT/mod-spawneggs/tree/f2cc4cc
 [patch.technic]: https://github.com/AntumMT/mp-technic/tree/cdb31be
 [patch.throwing]: https://github.com/AntumMT/mod-throwing/tree/b33ffde
 [patch.trash_can]: https://github.com/AntumMT/mod-trash_can/tree/5a92bf4
