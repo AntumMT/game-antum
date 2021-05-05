@@ -114,7 +114,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * sound/
     * [ambience][] ([MIT][lic.ambience] / [CC BY / CC BY-SA / CC BY-NC-SA / CC0][lic.ambience_sounds]) -- version: [e317f72 Git][ver.ambience] *2021-04-14*
 * spawning/
-	* [asm_spawneggs][] ([MIT][lic.asm_spawneggs]) -- version: [1.1][ver.asm_spawneggs] *2021-05-05*
+	* [asm_spawneggs][] ([MIT][lic.asm_spawneggs]) -- version: [8579eac Git][ver.asm_spawneggs] *2021-05-05*
 * storage/
 	* [drawers][] ([MIT / CC0 / CC BY][lic.drawers]) -- version: [0.6.2][ver.drawers] *2021-03-27*
 	* [more_chests][] ([GPL][lic.gpl2.0]) -- version: [6be8145 Git][ver.more_chests] *2021-04-05*
@@ -577,7 +577,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.slingshot]: https://github.com/AntumMT/mod-slingshot/tree/bb77525
 [ver.sneeker]: https://github.com/AntumMT/mod-sneeker/tree/7c05c4d
 [ver.snowdrift]: https://github.com/paramat/snowdrift/tree/3342939
-[ver.asm_spawneggs]: https://github.com/AntumMT/mod-asm_spawneggs/releases/tag/v1.1
+[ver.asm_spawneggs]: https://github.com/AntumMT/mod-asm_spawneggs/tree/8579eac
 [ver.spectator_mode]: https://github.com/minetest-mods/spectator_mode/tree/3648371
 [ver.technic]: https://github.com/minetest-mods/technic/tree/43acec2
 [ver.technic_armor]: https://github.com/stujones11/technic_armor/tree/694642f

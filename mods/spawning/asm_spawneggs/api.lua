@@ -78,8 +78,13 @@ asm.registerEgg = function(def)
 		img = def.inventory_image
 	end
 
+	local title = def.title
+	if not title then
+		title = formatTitle(def.name)
+	end
+
 	core.register_craftitem(":spawneggs:" .. def.name:lower(), {
-		description = formatTitle(def.name),
+		description = title,
 		inventory_image = img,
 
 		on_place = function(itemstack, placer, target)
@@ -116,7 +121,8 @@ asm.addEgg = asm.registerEgg
 --- Egg definition table.
 --
 --  @table EggDef
---  @field name Human readable name.
---  @field inventory_image Image displayed in inventory.
---  @field spawn Entity that will be spawned from egg.
---  @field ingredients Ingredients to us, in addition to `spawneggs:egg`, to register craft recipe (optional).
+--  @tfield string name Name of the egg. Will be appended to "spawneggs:".
+--  @tfield[opt] string title Description displayed for item.
+--  @tfield string inventory_image Image displayed in inventory.
+--  @tfield string spawn Entity that will be spawned from egg.
+--  @tfield[opt] table ingredients Ingredients to use, in addition to `spawneggs:egg`, to register craft recipe. Can be a `table` or `string`.
