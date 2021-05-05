@@ -2,11 +2,13 @@
 alternode = {}
 alternode.name = core.get_current_modname()
 
+local S = core.get_translator(alternode.name)
+
 
 core.register_craftitem(alternode.name .. ":infostick", {
-	description = "Tool for retrieving information about node",
-	short_description = "Info Stick",
-	inventory_image = "default_stick.png",
+	description = S("Tool for retrieving information about a node"),
+	short_description = S("Info Stick"),
+	inventory_image = "alternode_infostick.png",
 	stack_max = 1,
 	on_use = function(itemstack, user, pointed_thing)
 		if not user:is_player() then return end
@@ -15,21 +17,26 @@ core.register_craftitem(alternode.name .. ":infostick", {
 
 		local granted, missing = core.check_player_privs(pname, {server=true,})
 		if not granted then
-			core.chat_send_player(pname, "You do not have privileges to use this item (missing priviliges: " .. table.concat(missing, ", ") .. ")")
+			core.chat_send_player(pname,
+				S("You do not have privileges to use this item (missing priviliges: @1)", table.concat(missing, ", ")))
 			return
 		end
 
 		if pointed_thing.type ~= "node" then
-			core.chat_send_player(pname, "This item only works on nodes")
+			core.chat_send_player(pname, S("This item only works on nodes"))
 			return
 		end
 
 		local pos = core.get_pointed_thing_position(pointed_thing, false)
+		local node = core.get_node_or_nil(pos)
+		if not node then
+			core.chat_send_player(pname, S("That doesn't seem to be a proper node"))
+			return
+		end
 		local meta = core.get_meta(pos)
 
-		local infostring = "pos: x=" .. tostring(pos.x)
-			.. ", y=" .. tostring(pos.y)
-			.. ", z=" .. tostring(pos.z)
+		local infostring = S("pos: x@=@1, y@=@2, z@=@3; name@=@4",
+			tostring(pos.x), tostring(pos.y), tostring(pos.z), node.name)
 
 		for _, key in ipairs({"infotext", "owner"}) do
 			local value = meta:get_string(key)
@@ -53,30 +60,22 @@ function alternode.set(pos, key, value)
 	return meta:get_string(key) == value
 end
 
-function alternode.set_int(pos, key, value)
-	local meta = core.get_meta(pos)
-	meta:set_int(key, value)
-	return meta:get_int(key) == value
-end
-
-function alternode.set_float(pos, key, value)
-	local meta = core.get_meta(pos)
-	meta:set_float(key, value)
-	return meta:get_float(key) == value
-end
-
 
 core.register_chatcommand("setmeta", {
-	params = "<x> <y> <z> string|int|float <key> <value>",
-	description = "Alter meta data of a node",
+	params = S("<x> <y> <z> <key> <value>"),
+	description = S("Alter meta data of a node"),
 	privs = {server=true,},
 	func = function(player, param)
 		local plist = string.split(param, " ")
 
+		if #plist < 3 then
+			core.chat_send_player(player, S("You must supply proper coordinates"))
+			return false
+		end
+
 		for _, p in ipairs({plist[1], plist[2], plist[3]}) do
 			if tonumber(p) == nil then
-				core.chat_send_player(player,
-					"Coordinate parameters must be numbers")
+				core.chat_send_player(player, S("You must supply proper coordinates"))
 				return false
 			end
 		end
@@ -87,43 +86,37 @@ core.register_chatcommand("setmeta", {
 			z = tonumber(plist[3]),
 		}
 
-		local vtype = plist[4]
-		local key = plist[5]
-		local value = plist[6]
-		local retval = false
-		if vtype == "int" then
-			retval = alternode.set_int(pos, key, tonumber(value))
-		elseif vtype == "float" then
-			retval = alternode.set_float(pos, key, tonumber(value))
-		elseif vtype == "string" then
-			local rem = {}
-			for idx, word in ipairs(plist) do
-				if idx > 5 then
-					table.insert(rem, word)
-				end
-			end
+		local key = plist[4]
+		if key then key = key:trim() end
 
-			retval = alternode.set(pos, key, table.concat(rem, " "))
-		else
-			core.chat_send_player(player,
-				"Unknown meta data type: " .. vtype)
+		if not key or key == "" then
+			core.chat_send_player(player, S("You must supply a key parameter"))
 			return false
 		end
 
+		local value = {}
+		for idx, word in ipairs(plist) do
+			if idx > 4 then
+				table.insert(value, word)
+			end
+		end
+
+		if #value == 0 then
+			core.chat_send_player(player, S("You must supply a value parameter"))
+			return false
+		end
+
+		local retval = alternode.set(pos, key, table.concat(value, " "):trim())
+
 		if not retval then
 			core.chat_send_player(player,
-				"Failed to set node meta at "
-				.. tostring(pos.x) .. ","
-				.. tostring(pos.y) .. ","
-				.. tostring(pos.z))
+				S("Failed to set node meta at @1,@2,@3",
+					tostring(pos.x), tostring(pos.y), tostring(pos.z)))
 		else
 			core.chat_send_player(player,
-				"Set meta \"" .. key .. "="
-				.. core.get_meta(pos):get_string(key)
-				.. "\" for node at "
-				.. tostring(pos.x) .. ","
-				.. tostring(pos.y) .. ","
-				.. tostring(pos.z))
+				S('Set meta "@1@=@2" for node at @3,@4,@5',
+					key, core.get_meta(pos):get_string(key),
+					tostring(pos.x), tostring(pos.y), tostring(pos.z)))
 		end
 
 		return retval
@@ -131,11 +124,24 @@ core.register_chatcommand("setmeta", {
 })
 
 core.register_chatcommand("getmeta", {
-	params = "<x> <y> <z> <key>",
-	description = "Retrieve meta data of a node",
+	params = S("<x> <y> <z> <key>"),
+	description = S("Retrieve meta data of a node"),
 	privs = {server=true,},
 	func = function(player, param)
 		local plist = string.split(param, " ")
+
+		if #plist < 3 then
+			core.chat_send_player(player, S("You must supply proper coordinates"))
+			return false
+		end
+
+		for _, p in ipairs({plist[1], plist[2], plist[3]}) do
+			if tonumber(p) == nil then
+				core.chat_send_player(player, S("You must supply proper coordinates"))
+				return false
+			end
+		end
+
 		local pos = {
 			x = tonumber(plist[1]),
 			y = tonumber(plist[2]),
@@ -143,13 +149,20 @@ core.register_chatcommand("getmeta", {
 		}
 
 		local key = plist[4]
+		if key then key = key:trim() end
+
+		if not key or key == "" then
+			core.chat_send_player(player, S("You must supply a key parameter"))
+			return false
+		end
+
 		local value = alternode.get(pos, key)
 		if not value or value == "" then
 			core.chat_send_player(player,
-				"\"" .. key .. "\" key value not present in node meta data")
+				S('"@1" key value not present in node meta data', key))
 		else
 			core.chat_send_player(player,
-				"Meta value: " .. key .. "=" .. value)
+				S("Meta value: @1@=@2", key, value))
 		end
 
 		return true

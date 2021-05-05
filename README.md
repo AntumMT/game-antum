@@ -11,6 +11,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 ***"UPDATES" Denotes updates available***
 
 * admin/
+    * [alternode][] ([MIT][lic.alternode]) -- version: [1.0][ver.alternode] *2021-05-03*
     * [cleaner][] ([CC0][lic.cc0]) -- version: [0.4 (68222b1 Git)][ver.cleaner] *2017-08-30*
     * [invisible][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa4.0]) -- version: [4 (a2a6504 Git)][ver.invisible]
     * [no_fall_damage][] ([MIT][lic.no_fall_damage]) -- version [1.0.0][ver.no_fall_damage] *2020-12-19*
@@ -230,6 +231,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 [3d_armor]: https://forum.minetest.net/viewtopic.php?t=4654
 [airtanks]: https://forum.minetest.net/viewtopic.php?t=17102
+[alternode]: https://forum.minetest.net/viewtopic.php?t=26667
 [amber]: https://forum.minetest.net/viewtopic.php?t=18186
 [ambience]: https://forum.minetest.net/viewtopic.php?t=2807
 [animals_aggressive]: https://github.com/AntumMT/mp-animals_aggressive
@@ -372,6 +374,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 [lic.3d_armor]: mods/modpacks/3d_armor/LICENSE.md
 [lic.airtanks]: mods/equipment/airtanks/LICENSE.txt
+[lic.alternode]: mods/admin/alternode/LICENSE.txt
 [lic.ambience]: mods/sound/ambience/README.md
 [lic.ambience_sounds]: mods/sound/ambience/sounds/SoundLicenses.txt
 [lic.antum]: mods/antum/LICENSE.txt
@@ -461,6 +464,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 [ver.3d_armor]: https://github.com/stujones11/minetest-3d_armor/tree/47ecef4
 [ver.airtanks]: https://github.com/minetest-mods/airtanks/tree/b686694
+[ver.alternode]: https://github.com/AntumMT/mod-alternode/releases/tag/v1.0
 [ver.amber]: https://github.com/theraven262/amber/tree/56627fa
 [ver.ambience]: https://notabug.org/TenPlus1/ambience/src/e317f727d00d5c034226c0e7217ed0559c208038
 [ver.animals_aggressive]: https://github.com/AntumMT/mp-animals_aggressive/tree/4eede4d
