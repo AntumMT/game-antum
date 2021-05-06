@@ -93,11 +93,6 @@ local def = {
     light = {min = 0, max = 8},
     height_limit = {min = -200, max = 50},
 
-    spawn_egg = {
-      description = "Zombie Spawn-Egg",
-      texture = "creatures_egg_zombie.png",
-    },
-
     spawner = {
       description = "Zombie Spawner",
       range = 8,
@@ -111,7 +106,16 @@ local def = {
   }
 }
 
-creatures.register_mob(def)
+cmer.register_mob(def)
+
+if core.global_exists("asm") then
+	asm.addEgg({
+		name = "zombie",
+		spawn = "creatures:zombie",
+		inventory_image = "creatures_egg_zombie.png",
+		ingredient = "creatures:rotten_flesh",
+	})
+end
 
 
 -- Place spawners in dungeons

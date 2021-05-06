@@ -92,10 +92,10 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [horse][] ([MIT][lic.horse]) -- version: [9c5c857 Git][ver.horse] *2021-05-05*
 	* [monsters_aggressive][] (see individual mods for licensing) -- version: [89a8187 Git][ver.monsters_aggressive] *2017-08-30*
 		* [sneeker][] ([CC0][lic.cc0]) -- version: [7c05c4d Git][ver.sneeker] *2021-04-19*
-		* [zombie][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [213a05b Git][ver.zombie] *2021-04-30*
 	* [monsters_passive][] (see individual mods for licensing) -- version: [b07fe19 Git][ver.monsters_passive] *2017-08-09*
 	* [oerkki][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [70410fe Git][ver.oerkki] *2021-05-05*
 	* [shark][] ([CC0 / CC BY-SA][lic.shark]) -- version: [ef2507b Git][ver.shark] *2021-05-05*
+	* [zombie][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [4edb18e Git][ver.zombie] *2021-05-05*
 * [painting][] (???) -- version [8961849 Git][ver.painting] *2016-05-05*
 * [pipeworks][] ([LGPL][lic.lgpl3.0]) -- version: [2021-02-19][ver.pipeworks]
 * plantlife/
@@ -593,7 +593,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.windmill]: https://github.com/Sokomine/windmill/tree/47b029d
 [ver.workbench]: https://github.com/minetest-mods/workbench/tree/bd14f59
 [ver.worldedge]: https://github.com/minetest-mods/worldedge/tree/608462d
-[ver.zombie]: https://github.com/AntumMT/mod-creatures/tree/213a05b
+[ver.zombie]: https://github.com/AntumMT/mod-cmer/tree/4edb18e
 
 [patch.3d_armor]: https://github.com/AntumMT/mp-3d_armor/tree/19d1001
 [patch.airtanks]: https://github.com/AntumMT/mod-airtanks/tree/8b7fd12
