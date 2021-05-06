@@ -1,2 +1,0 @@
-mobs_animal?
-animalmaterials?
