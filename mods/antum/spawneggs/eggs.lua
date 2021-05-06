@@ -40,49 +40,54 @@ if core.get_modpath("spawneggs") then
 end
 
 
--- Sheep spawnegg
-if core.get_modpath("sheep") and core.get_modpath("wool") then
-	asm.addEgg("sheep", "creatures:sheep", "group:wool")
-end
-
 -- Chicken spawnegg
-if core.get_modpath("chicken") then
-	asm.addEgg("chicken", "creatures:chicken", "antum:feather")
+if core.registered_entities["creatures:chicken"] then
+	asm.addEgg({
+		name = "chicken",
+		spawn = "creatures:chicken",
+		ingredients = "antum:feather",
+	})
 end
 
 -- cow
-if core.get_modpath("mobs_animal") and core.registered_items["mobs:bucket_milk"] then
-	asm.addEgg("cow", "mobs_animal:cow", "mobs:bucket_milk")
+if core.registered_entities["mobs_animal:cow"] and core.registered_items["mobs:bucket_milk"] then
+	asm.addEgg({
+		name = "cow",
+		spawn = "mobs_animal:cow",
+		ingredients = "mobs:bucket_milk",
+	})
 end
 
--- Oerrki spawnegg
-if core.get_modpath("oerkki") and core.registered_items["default:obsidian"] then
-	asm.addEgg("oerkki", "creatures:oerkki", "default:obsidian")
+-- spider (needs ingredient)
+if core.registered_entities["mobs:spider"] then
+	asm.addEgg({
+		name = "spider",
+		spawn = "mobs:spider",
+	})
 end
 
 
-local mobs_monster = core.get_modpath("mobs_monster") ~= nil
+local mobs_monster = {
+	{"dirt_monster", "mobs:dirt_monster", "default:dirt"},
+	{"mese_monster", "mobs:mese_monster", "default:mese"},
+	{"sand_monster", "mobs:sand_monster", "default:sand"},
+	{"stone_monster", "mobs_monster:stone_monster", "default:stone"},
+	{"tree_monster", "mobs:tree_monster", "default:sapling"},
+	{"dungeon_master", "mobs:dungeon_master"},
+}
 
--- mobs_redo monsters
-if mobs_monster and core.global_exists("default") then
-	-- dirt monster
-	asm.addEgg("dirt_monster", "mobs_monster:dirt_monster", "default:dirt")
+for _, mob in ipairs(mobs_monster) do
+	local monster = mob[1]
+	local spawn = mob[2]
+	local ingredients = mob[3]
 
-	-- mese monster
-	asm.addEgg("mese_monster", "mobs_monster:mese_monster", "default:mese")
-
-	-- sand monster
-	asm.addEgg("sand_monster", "mobs_monster:sand_monster", "default:sand")
-
-	-- tree monster
-	asm.addEgg("tree_monster", "mobs_monster:tree_monster", "default:sapling")
-
-	-- dungeon master (needs ingredient)
-	asm.addEgg("dungeon_master", "mobs_monster:dungeon_master")
-
-	-- spider (needs ingredient & texture, disabled)
-	--asm.addEgg("spider", "mobs_monster:spider")
-
-	-- stone monster (disabled: too graphic)
-	--asm.addEgg("stone_monster", "mobs_monster:stone_monster", "default:stone")
+	if not ingredients then
+		if core.registered_entities[spawn] then
+			asm.addEgg({name=monster, spawn=spawn})
+		end
+	else
+		if core.registered_entities[spawn] and core.registered_items[ingredients] then
+			asm.addEgg({name=monster, spawn=spawn, ingredients=ingredients})
+		end
+	end
 end
