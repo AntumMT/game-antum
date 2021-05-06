@@ -92,11 +92,6 @@ local def = {
     light = {min = 0, max = 8},
     height_limit = {min = -200, max = 50},
 
-    spawn_egg = {
-      description = "Oerkki Spawn-Egg",
-      texture = "creatures_egg_oerkki.png",
-    },
-
     spawner = {
       description = "Oerkki Spawner",
       range = 8,
@@ -107,7 +102,16 @@ local def = {
   },
 }
 
-creatures.register_mob(def)
+cmer.register_mob(def)
 
 -- Convert "Oerrki's" (caused by typo)
-creatures.register_alias("creatures:oerrki", "creatures:oerkki")
+cmer.register_alias("creatures:oerrki", "creatures:oerkki")
+
+if core.global_exists("asm") then
+	asm.addEgg({
+		name = "oerkki",
+		inventory_image = "creatures_egg_oerkki.png",
+		spawn = "creatures:oerkki",
+		ingredients = "default:obsidian",
+	})
+end

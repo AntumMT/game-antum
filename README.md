@@ -91,10 +91,10 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [ghost][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [dd22520 Git][ver.ghost] *2021-05-05*
 	* [horse][] ([MIT][lic.horse]) -- version: [9c5c857 Git][ver.horse] *2021-05-05*
 	* [monsters_aggressive][] (see individual mods for licensing) -- version: [89a8187 Git][ver.monsters_aggressive] *2017-08-30*
-		* [oerkki][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [eb98833 Git][ver.oerkki] *2021-04-30*
 		* [sneeker][] ([CC0][lic.cc0]) -- version: [7c05c4d Git][ver.sneeker] *2021-04-19*
 		* [zombie][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [213a05b Git][ver.zombie] *2021-04-30*
 	* [monsters_passive][] (see individual mods for licensing) -- version: [b07fe19 Git][ver.monsters_passive] *2017-08-09*
+	* [oerkki][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [70410fe Git][ver.oerkki] *2021-05-05*
 	* [shark][] ([CC0 / CC BY-SA][lic.shark]) -- version: [ef2507b Git][ver.shark] *2021-05-05*
 * [painting][] (???) -- version [8961849 Git][ver.painting] *2016-05-05*
 * [pipeworks][] ([LGPL][lic.lgpl3.0]) -- version: [2021-02-19][ver.pipeworks]
@@ -559,7 +559,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.mywoodslopes]: https://github.com/minetest-mods/mywoodslopes/tree/3a1b531
 [ver.nether]: https://github.com/minetest-mods/nether/tree/v3
 [ver.no_fall_damage]: https://repo.or.cz/minetest_no_fall_damage.git/shortlog/refs/tags/1.0.0
-[ver.oerkki]: https://github.com/AntumMT/mod-creatures/tree/eb98833
+[ver.oerkki]: https://github.com/AntumMT/mod-cmer/tree/70410fe
 [ver.override]: https://github.com/AntumMT/mod-override/tree/e6dda7a
 [ver.painting]: https://github.com/minetest-mods/painting/tree/8961849
 [ver.pipeworks]: https://gitlab.com/VanessaE/pipeworks/-/tags/2021-02-19
