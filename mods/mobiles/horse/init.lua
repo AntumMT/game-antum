@@ -266,14 +266,12 @@ local sounds = {
 -- FIXME:
 -- - mounted horse movement is incorrect
 local base_def = {
-	--name = "creatures:horse_brown",
 	ownable = true,
 	stats = {
 		hp = 16,
 		hostile = false,
 		lifetime = 300,
 		can_jump = 0, -- FIXME: should only not be able to jump over certain nodes for coralling
-		--can_swim = true,
 		can_panic = true,
 		has_kockback = true,
 	},
@@ -282,22 +280,11 @@ local base_def = {
 			chance = 0.3,
 		},
 		walk = {chance=0.7, moving_speed=1,},
-		--attack = {},
-		--[[
-		follow = {
-			chance = 0.7,
-			moving_speed = 1,
-			--items = likes,
-		},
-		]]
-		--eat = {},
 	},
 	model = {
 		mesh = "mobs_horse.x",
-		--textures = {"mobs_horse.png"},
 		collisionbox = {-0.4, -0.01, -0.4, 0.4, 1, 0.4},
 		rotation = -90.0,
-		--backface_culling = ,
 		animations = {
 			idle = {
 				start = 25,
@@ -305,15 +292,6 @@ local base_def = {
 				speed = 15,
 			},
 			walk = {start=75, stop=100, speed=15,},
-			--attack = {},
-			--[[
-			follow = {
-				start = 75,
-				stop = 100,
-				speed = 15,
-			},
-			]]
-			--eat = {},
 		},
 	},
 	sounds = {
@@ -325,10 +303,6 @@ local base_def = {
 		}
 	},
 	drops = drops,
-	--[[
-	combat = {
-	},
-	]]
 	spawning = {
 		abm_nodes = {
 			spawn_on = {"default:dirt_with_grass"},
@@ -336,16 +310,9 @@ local base_def = {
 		},
 		abm_interval = 60,
 		abm_chance = 9000,
-		max_number = 2,
-		--number = 1,
-		--time_range = {},
+		max_number = 1,
 		light = {min=8, max=20},
 		height_limit = {min=-50, max=31000},
-		spawn_egg = {
-			--description = "Brown Horse",
-			--texture = "mobs_horse_inv.png",
-		},
-		--spawner = {},
 	},
 	on_rightclick = function(self, clicker)
 		return horse.on_rightclick(self, clicker)
@@ -367,19 +334,19 @@ local base_def = {
 
 local horses = {
 	{
-		name = "creatures:horse_brown",
+		name = "horse_brown",
 		description = "Brown Horse",
 		textures = {"mobs_horse.png"},
 		inventory_image = "mobs_horse_brown_inv.png",
 	},
 	{
-		name = "creatures:horse_white",
+		name = "horse_white",
 		description = "White Horse",
 		textures = {"mobs_horsepeg.png"},
 		inventory_image = "mobs_horse_white_inv.png",
 	},
 	{
-		name = "creatures:horse_black",
+		name = "horse_black",
 		description = "Black Horse",
 		textures = {"mobs_horseara.png"},
 		inventory_image = "mobs_horse_black_inv.png",
@@ -388,16 +355,30 @@ local horses = {
 
 for _, horse in ipairs(horses) do
 	local def = table.copy(base_def)
-	def.name = horse.name
+	def.name = "creatures:" .. horse.name
 	def.model.textures = horse.textures
-	def.spawning.spawn_egg.description = horse.description
-	def.spawning.spawn_egg.texture = horse.inventory_image
 
-	creatures.register_mob(def)
+	if not core.global_exists("asm") then
+		def.spawning.spawn_egg = {}
+		def.spawning.spawn_egg.description = horse.description
+		def.spawning.spawn_egg.texture = horse.inventory_image
+	else
+		asm.addEgg({
+			name=horse.name,
+			title=horse.description .. " Spawn Egg",
+			inventory_image = horse.inventory_image,
+			spawn = def.name,
+		})
+
+		core.register_alias(def.name .. "_spawn_egg", "spawneggs:" .. horse.name)
+	end
+
+	cmer.register_mob(def)
 end
 
 if not core.global_exists("mobs") then
-	creatures.register_alias("mob_horse:horse", "creatures:horse_brown")
+	cmer.register_alias("mob_horse:horse", "creatures:horse_brown")
+	cmer.register_alias("mobs:horse", "creatures:horse_brown")
 end
 
 if core.settings:get_bool("log_mods", false) then
