@@ -1,5 +1,2 @@
-craft_guide?
-farming?
-wool?
 mobs_animal?
 animalmaterials?
