@@ -57,7 +57,7 @@ local function on_hit(me)
 	end)
 end
 
-local hasMoved = creatures.compare_pos
+local hasMoved = cmer.compare_pos
 
 local function getDir(pos1, pos2)
 	local retval
@@ -77,7 +77,7 @@ local function getDistance(vec, fly_offset)
 	return math.sqrt((vec.x)^2 + (vec.y)^2 + (vec.z)^2)
 end
 
-local findTarget = creatures.findTarget
+local findTarget = cmer.findTarget
 
 local function update_animation(obj_ref, mode, anim_def)
 	if anim_def and obj_ref then
@@ -111,7 +111,7 @@ local function getYaw(dirOrYaw)
 	return yaw
 end
 
-local dropItems = creatures.dropItems
+local dropItems = cmer.dropItems
 
 local function killMob(me, def)
 	if not def then
@@ -255,7 +255,7 @@ end
 -- Default entity functions
 -- --
 
-creatures.on_punch = function(self, puncher, time_from_last_punch, tool_capabilities, dir)
+cmer.on_punch = function(self, puncher, time_from_last_punch, tool_capabilities, dir)
 	if self.stunned == true then
 		return
 	end
@@ -286,10 +286,10 @@ creatures.on_punch = function(self, puncher, time_from_last_punch, tool_capabili
 	end
 end
 
-creatures.on_rightclick = function(self, clicker)
+cmer.on_rightclick = function(self, clicker)
 end
 
-creatures.on_step = function(self, dtime)
+cmer.on_step = function(self, dtime)
 	-- first get the relevant specs; exit if we don't know anything (1-3ms)
 	local def = core.registered_entities[self.mob_name]
 	if not def then
@@ -518,7 +518,7 @@ creatures.on_step = function(self, dtime)
 			(current_mode == "" or self.modetimer > (modes[current_mode].duration or 4)) then
 		self.modetimer = 0
 
-		local new_mode = creatures.rnd(modes) or "idle"
+		local new_mode = cmer.rnd(modes) or "idle"
 		if new_mode == "eat" and self.in_water == true then
 			new_mode = "idle"
 		end
@@ -675,7 +675,7 @@ creatures.on_step = function(self, dtime)
 end
 
 
-creatures.get_staticdata = function(self)
+cmer.get_staticdata = function(self)
 	return {
 		hp = self.object:get_hp(),
 		mode = self.mode,

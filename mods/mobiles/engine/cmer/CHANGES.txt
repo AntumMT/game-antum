@@ -1,0 +1,11 @@
+
+revived-1.1
+- Renamed to "cmer" to discern from other versions.
+
+
+revived-1.0
+- Forked from original Creatures MOB-Engine code by BlockMen.
+- Some nil check fixes.
+- Added default combat speed.
+- Added "owner" attribute.
+- Fixed so owned/tamed mobs don't die.

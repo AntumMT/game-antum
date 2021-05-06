@@ -19,6 +19,10 @@
 -- 3. This notice may not be removed or altered from any source distribution.
 --
 
+--- MOB Registration
+--
+--  @module register.lua
+
 
 local allow_hostile = core.settings:get_bool("only_peaceful_mobs") ~= true
 
@@ -56,7 +60,7 @@ local function translate_def(def)
 	end
 
 	-- Check if the modes have correct sum
-	local mode_chance_sum = creatures.sumChances(new_def.modes)
+	local mode_chance_sum = cmer.sumChances(new_def.modes)
 	if mode_chance_sum > 1 then
 		throw_warning("Chance of modes too high for MOB: " .. def.name ..
 				". Mode chances will be incorrect.")
@@ -99,7 +103,7 @@ local function translate_def(def)
 
 
 	new_def.get_staticdata = function(self)
-		local main_tab = creatures.get_staticdata(self)
+		local main_tab = cmer.get_staticdata(self)
 		-- is own staticdata function defined? If so, merge results
 		if def.get_staticdata then
 			local data = def.get_staticdata(self)
@@ -210,7 +214,7 @@ local function translate_def(def)
 			return
 		end
 
-		creatures.on_punch(self, puncher, time_from_last_punch, tool_capabilities, dir)
+		cmer.on_punch(self, puncher, time_from_last_punch, tool_capabilities, dir)
 	end
 
 	new_def.on_rightclick = function(self, clicker)
@@ -218,7 +222,7 @@ local function translate_def(def)
 			return
 		end
 
-		creatures.on_rightclick(self, clicker)
+		cmer.on_rightclick(self, clicker)
 	end
 
 	new_def.on_step = function(self, dtime)
@@ -226,13 +230,19 @@ local function translate_def(def)
 			return
 		end
 
-		creatures.on_step(self, dtime)
+		cmer.on_step(self, dtime)
 	end
 
 	return new_def
 end
 
-function creatures.register_mob(def) -- returns true if sucessfull
+
+--- Registers a new mob.
+--
+--  @function cmer.register_mob
+--  @tparam CreatureDef def Creature definition table.
+--  @treturn bool `true` if successfule.
+function cmer.register_mob(def) -- returns true if sucessfull
 	if not def or not def.name then
 		throw_error("Can't register mob. No name or Definition given.")
 		return false
@@ -247,7 +257,7 @@ function creatures.register_mob(def) -- returns true if sucessfull
 		local spawn_def = def.spawning
 		spawn_def.mob_name = def.name
 		spawn_def.mob_size = def.model.collisionbox
-		if creatures.register_spawn(spawn_def) ~= true then
+		if cmer.register_spawn(spawn_def) ~= true then
 			throw_error("Couldn't register spawning for '" .. def.name .. "'")
 		end
 
@@ -255,7 +265,7 @@ function creatures.register_mob(def) -- returns true if sucessfull
 			local egg_def = def.spawning.spawn_egg
 			egg_def.mob_name = def.name
 			egg_def.box = def.model.collisionbox
-			creatures.register_egg(egg_def)
+			cmer.register_egg(egg_def)
 		end
 
 		if spawn_def.spawner then
@@ -264,12 +274,231 @@ function creatures.register_mob(def) -- returns true if sucessfull
 			spawner_def.range = spawner_def.range or 4
 			spawner_def.number = spawner_def.number or 6
 			spawner_def.model = def.model
-			creatures.register_spawner(spawner_def)
+			cmer.register_spawner(spawner_def)
 		end
 	end
 
 	return true
 end
+
+--- Creature definition table.
+--
+--  @table CreatureDef
+--  @tfield string name E.g. "creatures:sheep".
+--  @tfield bool ownable Flag for defining if entity is ownable by players (default: *false*).
+--  @tfield StatsDef stats Stats definitions.
+--  @tfield ModeDef modes Entity bahavior defintions.
+--  @tfield ModelDef model Model definitions.
+--  @tfield[opt] table sounds Table of `SoundDef`.
+--  @tfield[opt] table drops List of item `DropDef`. Can also be a function. receives "self" reference.
+--  @tfield[opt] CombatDef combat Specifies behavior of hostile mobs in "attack" mode.
+--  @tfield[opt] SpawnDef spawning Defines spawning in world.
+--  @tfield callback on_rightclick see: `CreatureDef.on_rightclick`
+--  @tfield callback on_punch see: `CreatureDef.on_punch`
+--  @tfield callback on_step see: `CreatureDef.on_step`
+--  @tfield callback on_activate see: `CreatureDef.on_activate`
+--  @tfield callback get_staticdata see: `CreatureDef.get_staticdata`
+
+
+--- Definition Tables
+--
+--  @section defs
+
+--- Stats definition table.
+--
+--  @table StatsDef
+--  @tparam int hp Full health level (1 HP = 1/2 player heart).
+--  @tparam[opt] bool hostile Is mob hostile (required for mode "attack") (default: `false`).
+--  @tparam[opt] int lifetime After which time mob despawns, in seconds.
+--  @tparam[opt] bool dies_when_tamed Stop despawn when tamed (default: `false`).
+--  @tparam[opt] int can_jump Height in nodes (default: 0).
+--  @tparam[opt] bool can_swim Can mob swim or will it drown (default: `false`).
+--  @tparam[opt] bool can_fly Allows to fly (requires mode "fly") and disable step sounds (default: `false`).
+--  @tparam[opt] bool can_burn Takes damage of lava (default: `false`).
+--  @tparam[opt] bool can_panic Runs fast around when hit (requires mode "walk") (default: `false`).
+--  @tparam[opt] bool has_falldamage Deals damage if falling more than 3 blocks (default: `false`).
+--  @tparam[opt] bool has_kockback Get knocked back when hit (default: `false`).
+--  @tparam[opt] bool sneaky Disables step sounds if `true` (default: `false`).
+--  @tparam[opt] table light Which light level will burn creature (requires can_burn = true).
+--
+--  Example:
+--      light = {min=10, max=15}
+
+--- Modes definition table.
+--
+--  Entity behavior definition. Behavior types are ***idle***, ***walk***, ***attack***, ***follow***, ***eat***, ***death***, & ***panic***. The sum of all modes must be 1.0.
+--
+--  Example:
+--      modes = {
+--        idle = {chance=0.3,},
+--        walk = {chance=0.7, moving_speed=1,},
+--      }
+--
+--  @table ModeDef
+--  @tfield float chance Number between 0.0 and 1.0 (***NOTE:** sum of all modes MUST be 1.0*). If chance is 0 then mode is not chosen automatically.
+--  @tfield int duration Time in seconds until the next mode is chosen (depending on chance).
+--  @tfield[opt] int moving_speed Moving speed (walking/flying/swimming).
+--  @tfield[opt] int update_yaw Timer in seconds until the looking dir is changed. If moving_speed > 0 then the moving direction is also changed.
+--  @tfield int radius *(follow & eat modes only)* Search distance in blocks/nodes for player.
+--  @tfield int timer *(follow & eat modes only)* Time in seconds between each check for player.
+--  @tfield table items *(follow & eat modes only)* Table of items to make mob follow in format {&lt;Itemname&gt;, &lt;Itemname&gt;}; e.g. {"farming:wheat"}.
+--  @tfield table nodes *(eat mode only)* Eatable nodes in format {&lt;Itemname&gt;, &lt;Itemname&gt;}; e.g. {"default:dirt\_with\_grass"}.
+
+--- Model definition table.
+--
+--  @table ModelDef
+--  @tfield string mesh Mesh name (see Minetest Documentation for supported filetypes).
+--  @tfield table textures Table of textures (see Minetest Documentation).
+--  @tfield NodeBox collisionbox Defines mesh collision box (see Minetest Documentation).
+--  @tfield[opt] float rotation Sets rotation offset when moving (default: 0.0).
+--  @tfield[opt] bool backface_culling Set to `true` to enable backface culling.
+--  @tfield[opt] table animations Table of `AnimationDef` used if defined.
+
+--- Animations defiintion table.
+--
+--  Animations coincide with modes. E.g. ***idle***, ***walk***, etc.
+--
+--  Example:
+--      animations = {
+--        idle = {start=25, stop=75, speed=15,},
+--        walk = {start=75, stop=100, speed=15,},
+--      }
+--
+--  @table AnimationDef
+--  @tfield int start Start frame.
+--  @tfield int stop End frame.
+--  @tfield int speed Animation speed.
+--  @tfield[opt] bool loop If `false`, animation if just played once (default: `true`).
+--  @tfield[opt] int duration *(death mode only)* Sets time the animation needs until mob is removed.
+
+--- Sounds definition table.
+--
+--  Sounds can be defined for these actions: ***on_damage***, ***on_death***, ***swim***, & ***random***.
+--
+--  ***random*** is a table of `SoundDef` that will be played randomly during the modes for which they are set.
+--
+--  Example:
+--      sounds = {
+--        on_damage = {name="creatures_horse_neigh_02", gain=1.0},
+--        on_death = {name="creatures_horse_snort_02", gain=1.0},
+--        random = {
+--          idle = {name="creatures_horse_snort_01", gain=1.0},
+--          follow = {name="creatures_horse_neigh_01", gain=1.0, time_min=10},
+--        },
+--      }
+--
+--  @table SoundsDef
+--  @tparam[opt] SoundDef on_damage Sound played when entity is hit.
+--  @tparam[opt] SoundDef on_death Sound played when entity dies.
+--  @tparam[opt] SoundDef swim Sound played while entity is swimming.
+--  @tparam[opt] table Random Sounds that will play randomly during specified modes. E.g. ***idle***, ***walk***, etc.
+
+--- Sound definition.
+--
+--  @table SoundDef
+--  @tfield string name Sound file name without file type extension (e.g. "my_sound", not "my_sound.ogg") (see Minetest documentation).
+--  @tfield float gain Sound gain (see Minetest documentation).
+--  @tfield[opt] int distance Distance in blocks/nodes at which sound can be heard.
+--  @tfield[opt] int time_min *(random mode only)* Minimum time in seconds between sounds.
+--  @tfield[opt] int time_max *(random mode only)* Maximum time in seconds between sounds.
+
+--- Item drops definition table.
+--
+--  Example:
+--      drops = {
+--        {"default:wood"}, -- 1 item with 100% chance
+--        {"default:wool", 1, chance=0.3}, -- 1 item with 30% chance
+--        {"default:stick", {min=2, max=3}, chance=0.2}, -- between 2-3 items with 20% chance
+--      }
+--
+--  @table DropDef
+
+--- Combat definition table.
+--
+--  @table CombatDef
+--  @tfield int attack_damage How much damage is dealt on each hit.
+--  @tfield[opt] float attack_speed Time in seconds between hits (default: 1.0).
+--  @tfield float attack_radius Distance in blocks mob can reach to hit.
+--  @tfield bool search_enemy `true` to search enemies to attack.
+--  @tfield int search_timer Time in seconds to search an enemy (only if none found yet).
+--  @tfield int search_radius Radius in blocks within enemies are searched.
+--  @tfield string search_type What enemy is being searched (see types at `cmer.findTarget`).
+
+--- Spawning definition table.
+--
+--  @table SpawnDef
+--  @tfield ABMNodesDef abm_nodes On what nodes mob can spawn.
+--  @tfield int abm_interval Time in seconds until Minetest tries to find a node with set specs.
+--  @tfield int abm_chance Chance is 1/<chance>.
+--  @tfield int max_number Maximum mobs of this kind per mapblock (16x16x16).
+--  @tfield int number How many mobs are spawned if found suitable spawn position. Can be `int` or `table`: number = {min=&lt;value&gt;, max=&lt;value&gt;}
+--  @tfield[opt] table time_range Time range in time of day format (0-24000) (table with *min* & *max* values).
+--  @tfield[opt] table light Min and max lightvalue at spawn position (table with *min* & *max* values).
+--  @tfield[opt] table height_limit Min and max height (world Y coordinate) (table with *min* & *max* values).
+--  @tfield[opt] table spawn_egg Is set a spawn_egg is added to creative inventory (table with *description* & *texture* values).
+--  @tfield[opt] SpawnerDef spawner Is set a spawner_node is added to creative inventory.
+
+--- ABM nodes definition table.
+--
+--  @table ABMNodesDef
+--  @tfield[opt] table spawn_on List of nodes on which the mob can spawn.
+--  @tfield table neighbors List of nodes that should be neighbors where mob can spawn. Can be nil or table as above. "air" is forced always as neighbor.
+
+--- Spawner definition table.
+--
+--  @table SpawnerDef
+--  @tfield int range Defines an area (in blocks/nodes) within mobs are spawned.
+--  @tfield int number Maxmimum number of mobs spawned in area defined via range.
+--  @tfield[opt] string description Item description as string.
+--  @tfield[opt] table light Min and max lightvalue at spawn position.
+
+
+--- Callbacks
+--
+--  @section callbacks
+
+--- Called when mob is right-clicked.
+--
+--  @function CreatureDef.on_rightclick
+--  @param self
+--  @param clicker
+--  @treturn bool Prevents default action when returns `true`.
+
+--- Called when mob is punched.
+--
+--  @function CreatureDef.on_punch
+--  @param self
+--  @param puncher Can be `nil`.
+--  @treturn bool Prevents default action when returns `true`.
+
+--- Called each server step.
+--
+--  @function CreatureDef.on_step
+--  @param self
+--  @param dtime
+--  @treturn bool Prevents default action when returns `true`.
+
+--- Called when mob (re-)activated.
+--
+--  Note: staticdata is deserialized by MOB-Engine (including costum values).
+--
+--  @function CreatureDef.on_activate
+--  @param self
+--  @param staticdata
+
+--- Called when mob is punched.
+--
+--  Must return a table to save mob data (serialization is done by MOB-Engine).
+--  e.g:
+--  ```
+--    return {
+--      costum_mob_data = self.my_value,
+--    }
+--  ```
+--
+--  @function CreatureDef.get_staticdata
+--  @param self
+--  @treturn table
 
 
 local function inRange(min_max, value)
@@ -330,7 +559,7 @@ local function groupSpawn(pos, mob, group, nodes, range, max_loops)
 	end
 end
 
-function creatures.register_spawn(spawn_def)
+function cmer.register_spawn(spawn_def)
 	if not spawn_def or not spawn_def.abm_nodes then
 		throw_error("No valid definition for given.")
 		return false
@@ -380,7 +609,7 @@ function creatures.register_spawn(spawn_def)
 			-- creature count check
 			local max
 			if active_object_count_wider > (spawn_def.max_number or 1) then
-				local mates_num = #creatures.findTarget(nil, pos, 16, "mate", spawn_def.mob_name, true)
+				local mates_num = #cmer.findTarget(nil, pos, 16, "mate", spawn_def.mob_name, true)
 				if not spawn_def.max_number or (mates_num or 0) >= spawn_def.max_number then
 					return
 				else
@@ -438,7 +667,7 @@ local function eggSpawn(itemstack, placer, pointed_thing, egg_def)
 	end
 end
 
-function creatures.register_egg(egg_def)
+function cmer.register_egg(egg_def)
 	if not egg_def or not egg_def.mob_name or not egg_def.box then
 		throw_error("Can't register Spawn-Egg. Not enough parameters given.")
 		return false
@@ -492,7 +721,7 @@ local function makeSpawnerEntiy(mob_name, model)
 end
 
 local function spawnerSpawn(pos, spawner_def)
-	local mates = creatures.findTarget(nil, pos, spawner_def.range, "mate", spawner_def.mob_name, true) or {}
+	local mates = cmer.findTarget(nil, pos, spawner_def.range, "mate", spawner_def.mob_name, true) or {}
 	if #mates >= spawner_def.number then
 		return false
 	end
@@ -528,7 +757,7 @@ end
 
 
 local spawner_timers = {}
-function creatures.register_spawner(spawner_def)
+function cmer.register_spawner(spawner_def)
 	if not spawner_def or not spawner_def.mob_name or not spawner_def.model then
 		throw_error("Can't register Spawn-Egg. Not enough parameters given.")
 		return false
@@ -574,7 +803,7 @@ function creatures.register_spawner(spawner_def)
 					spawner_timers[id] = os.time()
 				end
 				local time_from_last_call = os.time() - spawner_timers[id]
-				local mobs,player_near = creatures.findTarget(nil, pos, spawner_def.player_range, "player", nil, true, true)
+				local mobs,player_near = cmer.findTarget(nil, pos, spawner_def.player_range, "player", nil, true, true)
 				if player_near == true and time_from_last_call > 10 and (math.random(1, 5) == 1 or (time_from_last_call ) > 27) then
 					spawner_timers[id] = os.time()
 
@@ -619,7 +848,13 @@ local function register_alias_entity(old_mob, new_mob)
 end
 
 
-function creatures.register_alias(old_mob, new_mob) -- returns true if sucessfull
+--- Registers an alias for other mob, e.g. from other mods or removed ones.
+--
+--  @function cmer.register_alias
+--  @tparam string old_mob Name of mob to be replaced. E.g. "creatures:oerrki"
+--  @tparam string new_mob Name of mob that will replace instances old one. E.g. "creatures:oerkki"
+--  @treturn bool `true` if successful.
+function cmer.register_alias(old_mob, new_mob) -- returns true if sucessfull
 	local def = core.registered_entities[new_mob]
 	if not def then
 		throw_error("No valid definition for given.")

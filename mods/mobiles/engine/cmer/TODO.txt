@@ -1,0 +1,4 @@
+
+TODO:
+- remove items
+- remove spawn eggs

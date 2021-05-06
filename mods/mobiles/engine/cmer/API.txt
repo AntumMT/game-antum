@@ -1,25 +1,25 @@
 Creatures MOB-Engine API
 ------------------------
 
-creatures.register_mob(#Creature definition)
+cmer.register_mob(#Creature definition)
  -registers a mob at MOB-Engine; returns true when sucessfull
 
-creatures.register_alias(old_mob, new_mob) -- returns true if sucessfull
+cmer.register_alias(old_mob, new_mob) -- returns true if sucessfull
  -registers an alias for other mob, e.g. from other mods or removed ones.
 	existent entities (MOBs), Spawners and Spawn Eggs are converted;
 	returns true when sucessfull
     ^ old_mob: name as string, e.g. "creatures:oerrki"
     ^ new_mob: name as string, e.g. "creatures:oerkki"
-    ^ example: creatures.register_alias("creatures:oerrki", "creatures:oerkki")
+    ^ example: cmer.register_alias("creatures:oerrki", "creatures:oerkki")
 
-creatures.rnd(chance_table)
+cmer.rnd(chance_table)
  -returns a weighted random table element; chance_sum of table must be 1
-    ^ example: creatures.rnd({elem1 = {chance = 0.7}, {elem2 = {chance = 0.3}})
+    ^ example: cmer.rnd({elem1 = {chance = 0.7}, {elem2 = {chance = 0.3}})
 
-creatures.compare_pos(pos1, pos2)
+cmer.compare_pos(pos1, pos2)
  -returns true if pos1 == pos2
 
-creatures.findTarget(search_obj, pos, radius, search_type, mob_name, xray, no_count)
+cmer.findTarget(search_obj, pos, radius, search_type, mob_name, xray, no_count)
  -returns table of found objects (as ObjectRef) and boolean player_near
   ^ search_obj is searching object; can be nil
   ^ pos is starting position for search radius
@@ -37,7 +37,7 @@ creatures.findTarget(search_obj, pos, radius, search_type, mob_name, xray, no_co
   ^ no_count skips collecting loop and returns just the boolean player_near
     ^ table is empty
 
-creatures.dropItems(pos, drops)
+cmer.dropItems(pos, drops)
  -drops items at position pos
   ^ pos where to drop Items
   ^ drops table in #ItemDrops format
@@ -138,7 +138,7 @@ and with a chance of 100% 2 items of type "default:stone"
     search_enemy = true,     -- true to search enemies to attack
     search_timer = 2,        -- time in seconds to search an enemy (only if none found yet)
     search_radius = 12,      -- radius in blocks within enemies are searched
-    search_type = "player",  -- what enemy is being searched (see types at creatures.findTarget())
+    search_type = "player",  -- what enemy is being searched (see types at cmer.findTarget())
   }
 
   spawning = {                  -- defines spawning in world <optional>

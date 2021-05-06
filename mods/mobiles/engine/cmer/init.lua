@@ -20,14 +20,23 @@
 --
 
 
-creatures = {}
+cmer = {}
 
-local modpath = core.get_modpath("creatures")
+if not core.global_exists("creatures") then
+	-- backward compat
+	creatures = cmer
+end
 
--- API and common functions
-dofile(modpath .."/common.lua")
-dofile(modpath .."/functions.lua")
-dofile(modpath .."/register.lua")
+cmer.modname = core.get_current_modname()
+cmer.modpath = core.get_modpath(cmer.modname)
 
--- Common items
-dofile(modpath .."/items.lua")
+local scripts = {
+	"common",
+	"functions",
+	"register",
+	"items",
+}
+
+for _, s in ipairs(scripts) do
+	dofile(cmer.modpath .. "/" .. s .. ".lua")
+end

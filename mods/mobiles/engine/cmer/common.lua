@@ -19,13 +19,17 @@
 -- 3. This notice may not be removed or altered from any source distribution.
 --
 
+---
+--
+--  @module common.lua
+
 
 -- constants
 nullVec = {x = 0, y = 0, z = 0}
 DEGTORAD = math.pi / 180.0
 
 -- common functions
-function creatures.sumChances(tab)
+function cmer.sumChances(tab)
 	local psum = 0
 	for s,w in pairs(tab) do
 		psum = psum + ((tonumber(w) or w.chance or 0))
@@ -33,7 +37,17 @@ function creatures.sumChances(tab)
 	return psum
 end
 
-function creatures.rnd(tab, errval)
+--- Returns a weighted random table element.
+--
+--  chance_sum of table must be 1.
+--
+--  Example: cmer.rnd({elem1 = {chance = 0.7}, {elem2 = {chance = 0.3}})
+--
+--  @function cmer.rnd
+--  @param tab
+--  @param errval
+--  @return Weighted random table element.
+function cmer.rnd(tab, errval)
 	if not errval then
 		errval = false
 	end
@@ -62,7 +76,13 @@ function throw_warning(msg)
 	core.log("warning", "#Creatures: WARNING: " .. msg)
 end
 
-function creatures.compare_pos(pos1, pos2)
+--- Compares two positions.
+--
+--  @function cmer.compare_pos
+--  @tparam pos pos1
+--  @tparam pos pos2
+--  @treturn bool `true` if pos1 == pos2.
+function cmer.compare_pos(pos1, pos2)
 	if not pos1 or not pos2 then
 		return
 	end
@@ -72,7 +92,18 @@ function creatures.compare_pos(pos1, pos2)
 	return true
 end
 
-function creatures.findTarget(search_obj, pos, radius, search_type, ignore_mob, xray, no_count)
+--- Returns table of found objects (as ObjectRef) and boolean player_near.
+--
+--  @function cmer.findTarget
+--  @param search_obj Searching object. Can be `nil`.
+--  @tparam pos pos Starting position for search radius.
+--  @tparam int radius Radius for searching in blocks/node.
+--  @tparam string search_type Specifies returned object requirements(One of ***all***, ***hostile*** (ignores `ignore_mob` if specified), ***nonhostile***, ***player***, ***mates*** (requires `ignore_mob` specifies)).
+--  @param ignore_mob Specifies creature that is ignored or searched, depending on `search_type`.
+--  @tparam[opt] bool xray Allows searching through blocks/nodes (default: `false`).
+--  @param no_count Skips collecting loop and returns just the boolean player_near.
+--  @return Table of found objects (as `ObjectRef`) and boolean player_near.
+function cmer.findTarget(search_obj, pos, radius, search_type, ignore_mob, xray, no_count)
 	local player_near = false
 	local mobs = {}
 	for  _,obj in ipairs(core.get_objects_inside_radius(pos, radius)) do
@@ -117,7 +148,12 @@ function creatures.findTarget(search_obj, pos, radius, search_type, ignore_mob, 
 	return mobs,player_near
 end
 
-function creatures.dropItems(pos, drops)
+--- Drops items at position `pos`.
+--
+--  @function cmer.dropItems
+--  @tparam pos pos Where to drop items.
+--  @tparam table drops List of item `DropDef`.
+function cmer.dropItems(pos, drops)
 	if not pos or not drops then
 		return
 	end
@@ -134,7 +170,7 @@ function creatures.dropItems(pos, drops)
 			local ct = {}
 			ct[name] = chance
 			ct["_fake"] = 1 - chance
-			local res = creatures.rnd(ct)
+			local res = cmer.rnd(ct)
 			if res == "_fake" then
 				name = nil
 			end
