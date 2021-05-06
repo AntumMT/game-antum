@@ -88,11 +88,6 @@ local def = {
     light = {min = 0, max = 8},
     height_limit = {min = 0, max = 80},
 
-    spawn_egg = {
-      description = "Ghost Spawn-Egg",
-      texture = "creatures_egg_ghost.png",
-    },
-
     spawner = {
       description = "Ghost Spawner",
       range = 8,
@@ -107,4 +102,12 @@ local def = {
 
 }
 
-creatures.register_mob(def)
+cmer.register_mob(def)
+
+if core.global_exists("asm") then
+	asm.addEgg({
+		name = "ghost",
+		inventory_image = "creatures_egg_ghost.png",
+		spawn = "creatures:ghost",
+	})
+end
