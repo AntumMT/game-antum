@@ -1,5 +1,12 @@
 
-antum.loadScript("animal")
+local scripts = {
+	"animal",
+	"misc",
+}
+
+for _, script in ipairs(scripts) do
+	antum.loadScript(script)
+end
 
 
 core.register_tool(":antum:sword_daemondeath", {

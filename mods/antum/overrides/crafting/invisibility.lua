@@ -29,6 +29,7 @@ local depends_satisfied = true
 
 local depends = {
 	'antum',
+	'antum_items',
 	'bucket',
 	'default',
 	'vessels',

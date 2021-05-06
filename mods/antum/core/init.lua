@@ -42,7 +42,6 @@ dofile(antum.modpath .. '/api.lua')
 
 -- Other scripts to load
 local scripts = {
-	'items',
 	'crafting',
 }
 
