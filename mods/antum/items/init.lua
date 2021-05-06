@@ -1,4 +1,7 @@
 
+antum.loadScript("animal")
+
+
 core.register_tool(":antum:sword_daemondeath", {
 	description = "Daemondeath Sword",
 	inventory_image = "antum_sword_daemondeath.png",

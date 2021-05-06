@@ -25,26 +25,6 @@
 --]]
 
 
--- Feather
-
---[[
-  The following mods have 'feather' items & should be added as soft dependencies to be overridden:
-    - mobs_animal
-    - animalmaterials
-]]
-
-local feathers = antum.getItemNames('feather')
-for index, feather in ipairs(feathers) do
-	antum.convertItemToAlias(feather, 'antum:feather')
-end
-
-core.register_craftitem(':antum:feather', {
-	description = 'Feather',
-	inventory_image = 'antum_feather_white.png',
-})
-core.register_alias('antum:feather_white', 'antum:feather')
-
-
 local depends_satisfied = true
 
 local depends = {
