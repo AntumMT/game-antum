@@ -1,19 +1,19 @@
 --[[ LICENSE HEADER
-  
+
   MIT License
-  
+
   Copyright © 2017 Jordan Irwin
-  
+
   Permission is hereby granted, free of charge, to any person obtaining a copy of
   this software and associated documentation files (the "Software"), to deal in
   the Software without restriction, including without limitation the rights to
   use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
   of the Software, and to permit persons to whom the Software is furnished to do
   so, subject to the following conditions:
-  
+
     The above copyright notice and this permission notice shall be included in
     all copies or substantial portions of the Software.
-  
+
   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -21,13 +21,13 @@
   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
   SOFTWARE.
-  
+
 --]]
 
 
 -- Displays a message in the log
 function antum.log(level, msg)
-	local prefix = '[' .. core.get_current_modname() .. '] '
+	local prefix = "[" .. core.get_current_modname() .. "] "
 	if msg == nil then
 		core.log(prefix .. level)
 	else
@@ -36,26 +36,26 @@ function antum.log(level, msg)
 end
 
 function antum.logAction(msg)
-	antum.log('action', msg)
+	antum.log("action", msg)
 end
 
 function antum.logWarn(msg)
-	antum.log('warning', msg)
+	antum.log("warning", msg)
 end
 
 function antum.logError(msg)
-	antum.log('error', msg)
+	antum.log("error", msg)
 end
 
 
 -- Checks if a file exists
 function antum.fileExists(file_path)
-	local fexists = io.open(file_path, 'r')
-	
+	local fexists = io.open(file_path, "r")
+
 	if fexists == nil then
 		return false
 	end
-	
+
 	return true
 end
 
@@ -80,16 +80,16 @@ function antum.loadScript(script_name, lua_ext)
 	if lua_ext == nil then
 		lua_ext = true
 	end
-	
-	local script = antum.getCurrentModPath() .. '/' .. script_name
+
+	local script = antum.getCurrentModPath() .. "/" .. script_name
 	if lua_ext then
-		script = script .. '.lua'
+		script = script .. ".lua"
 	end
-	
+
 	if antum.fileExists(script) then
 		dofile(script)
 	else
-		antum.logError('Could not load, script does not exists: ' .. script)
+		antum.logError("Could not load, script does not exists: " .. script)
 	end
 end
 
@@ -105,9 +105,9 @@ end
 -- Registers a craft & displays a log message
 function antum.registerCraft(def)
 	if antum.verbose then
-		antum.logAction('Registering craft recipe for "' .. def.output .. '"')
+		antum.logAction("Registering craft recipe for \"" .. def.output .. "\"")
 	end
-	
+
 	core.register_craft(def)
 end
 
@@ -115,9 +115,9 @@ end
 -- De-registers a craft by output
 function antum.clearCraftOutput(output)
 	if antum.verbose then
-		antum.logAction('Clearing craft by output: ' .. output)
+		antum.logAction("Clearing craft by output: " .. output)
 	end
-	
+
 	core.clear_craft({
 		output = output
 	})
@@ -127,25 +127,25 @@ end
 -- De-registers craft by recipe
 function antum.clearCraftRecipe(recipe)
 	if antum.verbose then
-		local recipe_string = ''
+		local recipe_string = ""
 		local icount = 0
 		for I in pairs(recipe) do
 			icount = icount + 1
 		end
-		
+
 		for I in pairs(recipe) do
 			if I == icount then
-				recipe_string = recipe_string .. ' ' .. recipe[I]
+				recipe_string = recipe_string .. " " .. recipe[I]
 			elseif I > 1 then
-				recipe_string = recipe_string .. ' + ' .. recipe[I]
+				recipe_string = recipe_string .. " + " .. recipe[I]
 			else
 				recipe_string = recipe[I]
 			end
 		end
-		
-		antum.logAction(' Clearing craft by recipe: ' .. recipe_string)
+
+		antum.logAction(" Clearing craft by recipe: " .. recipe_string)
 	end
-	
+
 	core.clear_craft({
 		recipe = {recipe}
 	})
@@ -173,14 +173,14 @@ function antum.dependsSatisfied(depends)
 			return false
 		end
 	end
-	
+
 	return true
 end
 
 
 --[[
   Retrieves an item from registered items using name string.
-  
+
   @param item_name
     Item name string to search for
   @return
@@ -205,27 +205,27 @@ end
     List of item names matching 'substring'
 ]]
 function antum.getItemNames(substring, case_sensitive)
-	antum.logAction('Checking registered items for "' .. substring .. '" in item name ...')
-	
+	antum.logAction("Checking registered items for \"" .. substring .. "\" in item name ...")
+
 	-- Convert to lowercase
 	if not case_sensitive then
 		substring = string.lower(substring)
 	end
-	
+
 	local item_names = {}
-	
+
 	for index in pairs(core.registered_items) do
 		local item_name = core.registered_items[index].name
 		if not case_sensitive then
 			item_name = string.lower(item_name)
 		end
-		
+
 		-- Check item name for substring
 		if string.find(item_name, substring) then
 			table.insert(item_names, item_name)
 		end
 	end
-	
+
 	return item_names
 end
 
@@ -238,7 +238,7 @@ end
     Name of the item to be aliased
 ]]
 function antum.convertItemToAlias(item_name, alias_of)
-	antum.logAction('Overridding "' .. item_name .. '" with "' .. alias_of .. '"')
+	antum.logAction("Overridding \"" .. item_name .. "\" with \"" .. alias_of .. "\"")
 	core.unregister_item(item_name)
 	core.register_alias(item_name, alias_of)
 end
@@ -256,11 +256,11 @@ function antum.overrideItemDescription(item_name, description)
 	local item = antum.getItem(item_name)
 	-- Change description
 	item.description = description
-	
+
 	-- Unregister original item
 	core.unregister_item(item.name)
-	
-	core.register_craftitem(':' .. item.name, item)
+
+	core.register_craftitem(":" .. item.name, item)
 end
 
 
@@ -272,6 +272,6 @@ end
     Item definition
 ]]
 function antum.registerItem(name, def)
-	name = ':' .. antum.namespace .. ':' .. name
+	name = ":" .. antum.namespace .. ":" .. name
 	core.register_craftitem(name, def)
 end
