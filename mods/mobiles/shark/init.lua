@@ -141,15 +141,18 @@ local shark_def = {
 		time_range = {min=shark.min_time, max=shark.max_time},
 		light = {min=shark.min_light, max=shark.max_light},
 		height_limit = {min=shark.min_height, max=shark.max_height},
-		spawn_egg = {
-			description = S("Shark"),
-			texture = "shark_inv.png",
-		},
-		--spawner = {},
 	},
 }
 
-creatures.register_mob(shark_def)
+cmer.register_mob(shark_def)
+
+if core.global_exists("asm") then
+	asm.addEgg({
+		name = "shark",
+		inventory_image = "shark_spawnegg.png",
+		spawn = mobname,
+	})
+end
 
 
 mlog("action", "v" .. version_full .. " loaded")

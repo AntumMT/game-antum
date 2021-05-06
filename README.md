@@ -95,7 +95,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 		* [sneeker][] ([CC0][lic.cc0]) -- version: [7c05c4d Git][ver.sneeker] *2021-04-19*
 		* [zombie][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [213a05b Git][ver.zombie] *2021-04-30*
 	* [monsters_passive][] (see individual mods for licensing) -- version: [b07fe19 Git][ver.monsters_passive] *2017-08-09*
-	* [shark][] ([CC0 / CC BY-SA][lic.shark]) -- version: [1.0-me][ver.shark] *2021-05-01*
+	* [shark][] ([CC0 / CC BY-SA][lic.shark]) -- version: [ef2507b Git][ver.shark] *2021-05-05*
 * [painting][] (???) -- version [8961849 Git][ver.painting] *2016-05-05*
 * [pipeworks][] ([LGPL][lic.lgpl3.0]) -- version: [2021-02-19][ver.pipeworks]
 * plantlife/
@@ -569,7 +569,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.rainbow_ore]: https://github.com/FsxShader2012/rainbow_ore/tree/6e77693
 [ver.server_shop]: https://github.com/AntumMT/mod-server_shop/releases/tag/v1.1
 [ver.sfinv_buttons]: http://repo.or.cz/minetest_sfinv_buttons.git/tree/ebb1f7c
-[ver.shark]: https://github.com/AntumMT/mod-shark/releases/tag/v1.0-me
+[ver.shark]: https://github.com/AntumMT/mod-shark/tree/ef2507b
 [ver.sheep]: https://github.com/AntumMT/mod-cmer/tree/7c91aaf
 [ver.signs_lib]: https://gitlab.com/VanessaE/signs_lib/tree/2021-03-04-2
 [ver.simple_protection]: https://github.com/SmallJoker/simple_protection/tree/3630fe9
