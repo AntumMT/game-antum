@@ -78,7 +78,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [unifieddyes][] ([GPL][lic.gpl2.0]) -- version: [2021-03-26-1][ver.unifieddyes] ([patched][patch.unifieddyes])
 * mobiles/
 	* [animals_harmless][] -- version: [e9b02a8][ver.animals_harmless] *2017-08-09*
-		* [chicken][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [c89960a Git][ver.chicken] *2021-04-30*
+		* [chicken][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [bce3b51 Git][ver.chicken] *2021-05-05*
 		* [sheep][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [10523b6 Git][ver.sheep] *2021-04-30*
 	* [dinosaurs_aggressive][] -- version: [874f299 Git][ver.dinosaurs_aggressive] *2017-07-27*
 		* velociraptor ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- forked from *mobs_farlands* (part of [farlands][] sub-game)
@@ -494,7 +494,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.castle_tapestries]: https://github.com/minetest-mods/castle_tapestries/tree/f5e3ac1
 [ver.castle_weapons]: https://github.com/minetest-mods/castle_weapons/tree/d3cf095
 [ver.chatlog]: https://github.com/AntumMT/mod-chatlog/tree/v1.0
-[ver.chicken]: http://github.com/AntumMT/mod-creatures/tree/c89960a
+[ver.chicken]: http://github.com/AntumMT/mod-cmer/tree/bce3b51
 [ver.christmas]: https://github.com/TheZenKitteh/minetest-christmas/tree/d3bd872
 [ver.cleaner]: https://github.com/AntumMT/mod-cleaner/tree/68222b1
 [ver.coloredwood]: https://gitlab.com/VanessaE/coloredwood/tags/2021-01-30
