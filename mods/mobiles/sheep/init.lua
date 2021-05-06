@@ -54,7 +54,7 @@ local function shear(self, drop_count, sound)
 		end
 
 		setColor(self)
-		creatures.dropItems(pos, {{"wool:" .. self.wool_color, drop_count}})
+		cmer.dropItems(pos, {{"wool:" .. self.wool_color, drop_count}})
 	end
 end
 
@@ -69,6 +69,7 @@ local colors = {
 
 local def = {
 	name = "creatures:sheep",
+	ownable = true,
 	stats = {
 		hp = 8,
 		lifetime = 450, -- 7,5 Minutes
@@ -124,7 +125,7 @@ local def = {
 		if self.has_wool then
 			table.insert(items, {"wool:" .. self.wool_color, {min = 1, max = 2}})
 		end
-		creatures.dropItems(self.object:get_pos(), items)
+		cmer.dropItems(self.object:get_pos(), items)
 	end,
 
 	spawning = {
@@ -138,11 +139,6 @@ local def = {
 		time_range = {min = 5100, max = 18300},
 		light = {min = 10, max = 15},
 		height_limit = {min = 0, max = 25},
-
-		spawn_egg = {
-			description = "Sheep Spawn-Egg",
-			texture = "creatures_egg_sheep.png",
-		},
 
 		spawner = {
 			description = "Sheep Spawner",
@@ -169,7 +165,7 @@ local def = {
 		end
 
 		if not self.wool_color then
-			self.wool_color = creatures.rnd(colors) or "white"
+			self.wool_color = cmer.rnd(colors) or "white"
 		end
 		-- update fur
 		setColor(self)
@@ -217,4 +213,13 @@ local def = {
 	end
 }
 
-creatures.register_mob(def)
+cmer.register_mob(def)
+
+if core.global_exists("asm") then
+	asm.addEgg({
+		name = "sheep",
+		inventory_image = "creatures_egg_sheep.png",
+		spawn = "creatures:sheep",
+		ingredients = "group:wool",
+	})
+end

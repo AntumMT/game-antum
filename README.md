@@ -77,9 +77,8 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [rainbow_ore][] ([LGPL][lic.rainbow_ore]) -- version: [6e77693 Git][ver.rainbow_ore] *2015-11-02* ([patched][patch.rainbow_ore])
 	* [unifieddyes][] ([GPL][lic.gpl2.0]) -- version: [2021-03-26-1][ver.unifieddyes] ([patched][patch.unifieddyes])
 * mobiles/
-	* [animals_harmless][] -- version: [e9b02a8][ver.animals_harmless] *2017-08-09*
-		* [chicken][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [bce3b51 Git][ver.chicken] *2021-05-05*
-		* [sheep][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [10523b6 Git][ver.sheep] *2021-04-30*
+	* [chicken][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [bce3b51 Git][ver.chicken] *2021-05-05*
+	* [sheep][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [7c91aaf Git][ver.sheep] *2021-05-05*
 	* [dinosaurs_aggressive][] -- version: [874f299 Git][ver.dinosaurs_aggressive] *2017-07-27*
 		* velociraptor ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- forked from *mobs_farlands* (part of [farlands][] sub-game)
 	* engine/
@@ -571,7 +570,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.server_shop]: https://github.com/AntumMT/mod-server_shop/releases/tag/v1.1
 [ver.sfinv_buttons]: http://repo.or.cz/minetest_sfinv_buttons.git/tree/ebb1f7c
 [ver.shark]: https://github.com/AntumMT/mod-shark/releases/tag/v1.0-me
-[ver.sheep]: https://github.com/AntumMT/mod-creatures/tree/10523b6
+[ver.sheep]: https://github.com/AntumMT/mod-cmer/tree/7c91aaf
 [ver.signs_lib]: https://gitlab.com/VanessaE/signs_lib/tree/2021-03-04-2
 [ver.simple_protection]: https://github.com/SmallJoker/simple_protection/tree/3630fe9
 [ver.slingshot]: https://github.com/AntumMT/mod-slingshot/tree/bb77525
