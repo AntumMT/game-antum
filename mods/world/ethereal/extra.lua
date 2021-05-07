@@ -5,7 +5,7 @@ local S = ethereal.intllib
 minetest.register_craftitem("ethereal:etherium_dust", {
 	description = S("Etherium Dust"),
 	inventory_image = "ethereal_etherium_dust.png",
-	wield_image = "ethereal_etherium_dust.png",
+	wield_image = "ethereal_etherium_dust.png"
 })
 
 -- Ethereium Ore
@@ -14,7 +14,15 @@ minetest.register_node("ethereal:etherium_ore", {
 	tiles = {"default_desert_stone.png^ethereal_etherium_ore.png"},
 	groups = {cracky = 3},
 	drop = "ethereal:etherium_dust",
-	sounds = default.node_sound_stone_defaults(),
+	sounds = default.node_sound_stone_defaults()
+})
+
+minetest.register_node("ethereal:stone_with_etherium_ore", {
+	description = S("Etherium Ore"),
+	tiles = {"default_stone.png^ethereal_etherium_ore.png"},
+	groups = {cracky = 3},
+	drop = "ethereal:etherium_dust",
+	sounds = default.node_sound_stone_defaults()
 })
 
 -- Bamboo Flooring
@@ -51,7 +59,7 @@ minetest.register_craft({
 	output = "ethereal:bamboo_block",
 	recipe = {
 		{"ethereal:bamboo_floor"},
-		{"ethereal:bamboo_floor"},
+		{"ethereal:bamboo_floor"}
 	}
 })
 
@@ -264,9 +272,13 @@ minetest.register_node("ethereal:glostone", {
 })
 
 minetest.register_craft({
-	type = "shapeless",
+--	type = "shapeless",
 	output = "ethereal:glostone",
-	recipe = {"default:torch", "default:stone", "dye:yellow"}
+	recipe = {
+		{"", "default:torch", ""},
+		{"default:torch", "default:stone", "default:torch"},
+		{"", "dye:yellow", ""}
+	}
 })
 
 -- Charcoal Lump
@@ -308,6 +320,7 @@ minetest.register_craft({
 minetest.register_tool("ethereal:light_staff", {
 	description = S("Staff of Light"),
 	inventory_image = "ethereal_light_staff.png",
+	light_source = 13, -- used by other mods
 	wield_image = "ethereal_light_staff.png",
 	sound = {breaks = "default_tool_breaks"},
 	stack_max = 1,

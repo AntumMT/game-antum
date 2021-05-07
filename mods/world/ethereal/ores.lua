@@ -90,3 +90,15 @@ minetest.register_ore({
 	y_max = 40,
 	biomes = {"caves"},
 })
+
+-- Etherium in floatlands
+minetest.register_ore({
+	ore_type = "scatter",
+	ore = "ethereal:stone_with_etherium_ore",
+	wherein = "default:stone",
+	clust_scarcity = 9*9*9,
+	clust_num_ores = 6,
+	clust_size = 2,
+	y_min = 1025,
+	y_max = 31000
+})

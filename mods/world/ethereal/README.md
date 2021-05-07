@@ -22,6 +22,7 @@ Ethereal Mapgen mod for Minetest (works on all except v6)
  - Added fishing api to add new items (read API.txt file)
  - Certain fish can only be found in specific biomes
  - Rename textures so they begin with ethereal_ (sorry texture pack folks)
+ - Override mushroom spread abm to use "group:mushroom"
 
 ### 1.27
 

@@ -166,6 +166,14 @@ local enough_height = function(pos, height)
 	end
 end
 
+local function in_dirt_group(node, dirts)
+	for _, d in ipairs(dirts) do
+		if node == d then return true end
+	end
+
+	return false
+end
+
 local grow_sapling = function(pos, node)
 
 	local under =  minetest.get_node({
@@ -195,7 +203,7 @@ local grow_sapling = function(pos, node)
 		ethereal.grow_big_tree(pos)
 
 	elseif node.name == "ethereal:banana_tree_sapling"
-	and under == "ethereal:grove_dirt" then
+	and in_dirt_group(under, {"default:dirt", "default:dirt_with_grass", "ethereal:grove_dirt"}) then
 		ethereal.grow_banana_tree(pos)
 
 	elseif node.name == "ethereal:frost_tree_sapling"
@@ -203,43 +211,43 @@ local grow_sapling = function(pos, node)
 		ethereal.grow_frost_tree(pos)
 
 	elseif node.name == "ethereal:mushroom_sapling"
-	and under == "ethereal:mushroom_dirt" then
+	and in_dirt_group(under, {"default:dirt", "default:dirt_with_grass", "ethereal:mushroom_dirt"}) then
 		ethereal.grow_mushroom_tree(pos)
 
 	elseif node.name == "ethereal:palm_sapling"
-	and under == "default:sand" then
+	and in_dirt_group(under, {"default:dirt", "default:dirt_with_grass", "default:sand"}) then
 		ethereal.grow_palm_tree(pos)
 
 	elseif node.name == "ethereal:willow_sapling"
-	and under == "ethereal:gray_dirt" then
+	and in_dirt_group(under, {"default:dirt", "default:dirt_with_grass", "ethereal:gray_dirt"}) then
 		ethereal.grow_willow_tree(pos)
 
 	elseif node.name == "ethereal:redwood_sapling"
-	and under == "default:dirt_with_dry_grass" then
+	and in_dirt_group(under, {"default:dirt", "default:dirt_with_grass", "default:dirt_with_dry_grass"}) then
 		ethereal.grow_redwood_tree(pos)
 
 	elseif node.name == "ethereal:orange_tree_sapling"
-	and under == "ethereal:prairie_dirt" then
+	and in_dirt_group(under, {"default:dirt", "default:dirt_with_grass", "ethereal:prairie_dirt"}) then
 		ethereal.grow_orange_tree(pos)
 
 	elseif node.name == "ethereal:bamboo_sprout"
-	and under == "ethereal:bamboo_dirt" then
+	and in_dirt_group(under, {"default:dirt", "default:dirt_with_grass", "ethereal:bamboo_dirt"}) then
 		ethereal.grow_bamboo_tree(pos)
 
 	elseif node.name == "ethereal:birch_sapling"
-	and under == "default:dirt_with_grass" then
+	and in_dirt_group(under, {"default:dirt", "default:dirt_with_grass"}) then
 		ethereal.grow_birch_tree(pos)
 
 	elseif node.name == "ethereal:sakura_sapling"
-	and under == "ethereal:bamboo_dirt" then
+	and in_dirt_group(under, {"default:dirt", "default:dirt_with_grass", "ethereal:bamboo_dirt"}) then
 		ethereal.grow_sakura_tree(pos)
 
 	elseif node.name == "ethereal:olive_tree_sapling"
-	and under == "ethereal:grove_dirt" then
+	and in_dirt_group(under, {"default:dirt", "default:dirt_with_grass", "ethereal:grove_dirt"}) then
 		ethereal.grow_olive_tree(pos)
 
 	elseif node.name == "ethereal:lemon_tree_sapling"
-	and under == "ethereal:grove_dirt" then
+	and in_dirt_group(under, {"default:dirt", "default:dirt_with_grass", "ethereal:grove_dirt"}) then
 		ethereal.grow_lemon_tree(pos)
 	end
 end

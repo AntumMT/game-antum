@@ -12,14 +12,14 @@ minetest.register_node("ethereal:blue_marble", {
 	description = S("Blue Marble"),
 	tiles = {"ethereal_blue_marble.png"},
 	groups = {cracky = 1, stone = 1},
-	sounds = default.node_sound_stone_defaults(),
+	sounds = default.node_sound_stone_defaults()
 })
 
 minetest.register_node("ethereal:blue_marble_tile", {
 	description = S("Blue Marble Tile"),
 	tiles = {"ethereal_blue_marble_tile.png"},
 	groups = {cracky = 1, stone = 1},
-	sounds = default.node_sound_stone_defaults(),
+	sounds = default.node_sound_stone_defaults()
 })
 
 minetest.register_craft({
@@ -27,7 +27,7 @@ minetest.register_craft({
 	recipe = {
 		{"ethereal:blue_marble", "ethereal:blue_marble", "ethereal:blue_marble"},
 		{"ethereal:blue_marble", "ethereal:blue_marble", "ethereal:blue_marble"},
-		{"ethereal:blue_marble", "ethereal:blue_marble", "ethereal:blue_marble"},
+		{"ethereal:blue_marble", "ethereal:blue_marble", "ethereal:blue_marble"}
 	}
 })
 
@@ -60,7 +60,7 @@ local add_biome = function(a, l, m, n, o, p, b, c, d, e, f, g, nd, na, ns)
 
 		node_dungeon = nd or "default:cobble",
 		node_dungeon_alt = (nd and "") or "default:mossycobble",
-		node_dungeon_stair = ns or "stairs:stair_cobble",
+		node_dungeon_stair = ns or "stairs:stair_cobble"
 	})
 end
 
@@ -116,6 +116,9 @@ add_biome("snowy", 4, 40, 10, 40, ethereal.snowy,
 add_biome("alpine", 40, 140, 10, 40, ethereal.alpine,
 	nil, "default:dirt_with_snow", 1, "default:dirt", 2)
 
+
+add_biome("frost_floatland", 1025, 1750, 10, 40, ethereal.frost,
+	nil, "ethereal:crystal_dirt", 1, "default:dirt", 1)
 
 add_biome("frost", 1, 71, 10, 40, ethereal.frost,
 	nil, "ethereal:crystal_dirt", 1, "default:dirt", 3)

@@ -47,7 +47,7 @@ local add_schem = function(a, b, c, d, e, f, g, h, i, j, k)
 		replacements = h,
 		spawn_by = i,
 		num_spawn_by = j,
-		rotation = k,
+		rotation = k
 	})
 end
 
@@ -72,12 +72,12 @@ add_schem({"ethereal:grove_dirt"}, 0.015, {"grove"}, 1, 100,
 
 -- healing tree
 add_schem({"default:dirt_with_snow"}, 0.01, {"alpine"}, 120, 140,
-	ethereal.yellowtree, ethereal.alpine)
+	ethereal.yellowtree, ethereal.alpine, nil, "default:dirt_with_snow", 8)
 
 -- crystal frost tree
-add_schem({"ethereal:crystal_dirt"}, 0.01, {"frost"}, 1, 100,
+add_schem({"ethereal:crystal_dirt"}, 0.01, {"frost", "frost_floatland"}, 1, 1750,
 	ethereal.frosttrees, ethereal.frost, nil,
-	"ethereal:crystal_dirt", 6)
+	"ethereal:crystal_dirt", 8)
 
 -- giant mushroom
 add_schem("ethereal:mushroom_dirt", 0.02, {"mushroom"}, 1, 100,

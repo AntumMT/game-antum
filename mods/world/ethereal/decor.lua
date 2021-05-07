@@ -159,7 +159,7 @@ add_node({"ethereal:prairie_dirt"}, 0.035, {"prairie"}, 1, 100,
 	ethereal.prairie)
 
 -- crystal spike & crystal grass
-add_node({"ethereal:crystal_dirt"}, 0.02, {"frost"}, 1, 100,
+add_node({"ethereal:crystal_dirt"}, 0.02, {"frost", "frost_floatland"}, 1, 1750,
 	{"ethereal:crystal_spike", "ethereal:crystalgrass"}, nil, nil, nil,
 	ethereal.frost)
 
@@ -191,7 +191,7 @@ local list = {
 	{"grassytwo", {"default:dirt_with_grass"}, ethereal.grassytwo},
 	{"prairie", {"ethereal:prairie_dirt"}, ethereal.prairie},
 	{"mushroom", {"ethereal:mushroom_dirt"}, ethereal.mushroom},
-	{"swamp", {"default:dirt_with_grass"}, ethereal.swamp},
+	{"swamp", {"default:dirt_with_grass"}, ethereal.swamp}
 }
 
 -- wild red and brown mushrooms
@@ -213,7 +213,7 @@ minetest.register_decoration({
 	biomes = {row[1]},
 	y_min = 1,
 	y_max = 120,
-	decoration = {"flowers:mushroom_brown", "flowers:mushroom_red"},
+	decoration = {"flowers:mushroom_brown", "flowers:mushroom_red"}
 })
 end
 
@@ -289,6 +289,9 @@ add_node({"ethereal:grove_dirt"}, 0.2, {"grove"}, 1, 100, {"ethereal:fern"},
 
 add_node({"default:dirt_with_grass"}, 0.1, {"swamp"}, 1, 100,
 	{"ethereal:fern"}, nil, nil, nil, ethereal.swamp)
+
+add_node({"ethereal:crystal_dirt"}, 0.001, {"frost_floatlands"}, 1025, 1750,
+	{"ethereal:fern"}, nil, nil, nil, ethereal.frost)
 
 -- snow
 add_node({"ethereal:cold_dirt", "default:dirt_with_coniferous_litter"},
@@ -408,7 +411,7 @@ minetest.register_decoration({
 		"farming:onion_5", "farming:hemp_7", "farming:pepper_7", "farming:soy_5"
 	},
 	spawn_by = "group:tree",
-	num_spawn_by = 1,
+	num_spawn_by = 1
 })
 
 minetest.register_decoration({
@@ -425,7 +428,7 @@ minetest.register_decoration({
 	},
 	y_min = 18,
 	y_max = 30,
-	decoration = {"farming:pineapple_8", "farming:soy_5"},
+	decoration = {"farming:pineapple_8", "farming:soy_5"}
 })
 
 minetest.register_decoration({
@@ -444,7 +447,7 @@ minetest.register_decoration({
 	y_max = 40,
 	decoration = {"farming:artichoke_5"},
 	spawn_by = "group:tree",
-	num_spawn_by = 1,
+	num_spawn_by = 1
 })
 end
 
@@ -469,7 +472,7 @@ minetest.register_decoration({
 	},
 	y_min = 10,
 	y_max = 90,
-	decoration = "bakedclay:delphinium",
+	decoration = "bakedclay:delphinium"
 })
 
 minetest.register_decoration({
@@ -489,7 +492,7 @@ minetest.register_decoration({
 	},
 	y_min = 15,
 	y_max = 90,
-	decoration = "bakedclay:thistle",
+	decoration = "bakedclay:thistle"
 })
 
 minetest.register_decoration({
@@ -508,7 +511,7 @@ minetest.register_decoration({
 	y_max = 90,
 	decoration = "bakedclay:lazarus",
 	spawn_by = "default:jungletree",
-	num_spawn_by = 1,
+	num_spawn_by = 1
 })
 
 minetest.register_decoration({
@@ -527,7 +530,7 @@ minetest.register_decoration({
 	y_max = 15,
 	decoration = "bakedclay:mannagrass",
 	spawn_by = "group:water",
-	num_spawn_by = 1,
+	num_spawn_by = 1
 })
 end
 
@@ -539,7 +542,7 @@ minetest.register_decoration({
 	sidelen = 16,
 	fill_ratio = 0.001,
 	biomes = {"desert"},
-	decoration = {"wine:blue_agave"},
+	decoration = {"wine:blue_agave"}
 })
 end
 
@@ -562,7 +565,7 @@ local function register_fern_decoration(seed, length)
 		},
 		y_max = 31000,
 		y_min = 6,
-		decoration = "default:fern_" .. length,
+		decoration = "default:fern_" .. length
 	})
 end
 
@@ -593,7 +596,7 @@ if ethereal.tundra and minetest.registered_nodes["default:permafrost"] then
 		y_min = 2,
 		decoration = "default:permafrost_with_moss",
 		place_offset_y = -1,
-		flags = "force_placement",
+		flags = "force_placement"
 	})
 
 	-- Tundra patchy snow
@@ -618,7 +621,7 @@ if ethereal.tundra and minetest.registered_nodes["default:permafrost"] then
 		biomes = {"tundra", "tundra_beach"},
 		y_max = 50,
 		y_min = 1,
-		decoration = "default:snow",
+		decoration = "default:snow"
 	})
 end
 
@@ -662,7 +665,7 @@ if minetest.get_modpath("fireflies") then
 		biomes = {"grassy", "grassytwo", "snowy", "junglee", "swamp"},
 		y_max = 31000,
 		y_min = -1,
-		decoration = "fireflies:hidden_firefly",
+		decoration = "fireflies:hidden_firefly"
 	})
 end
 
@@ -694,8 +697,8 @@ if minetest.registered_nodes["default:coral_green"] then
 		decoration = {
 			"default:coral_green", "default:coral_pink",
 			"default:coral_cyan", "default:coral_brown",
-			"default:coral_orange", "default:coral_skeleton",
-		},
+			"default:coral_orange", "default:coral_skeleton"
+		}
 	})
 
 	-- Kelp
@@ -721,7 +724,7 @@ if minetest.registered_nodes["default:coral_green"] then
 		flags = "force_placement",
 		decoration = "default:sand_with_kelp",
 		param2 = 48,
-		param2_max = 96,
+		param2_max = 96
 	})
 end
 

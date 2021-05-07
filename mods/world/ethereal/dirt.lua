@@ -226,6 +226,12 @@ for _, ab in pairs(minetest.registered_abms) do
 		ab.nodenames = {"default:papyrus", "ethereal:bamboo"}
 		ab.neighbors = {"group:soil"}
 		ab.action = grow_papyrus
+
+	elseif label == "Mushroom spread" then
+
+		--ab.interval = 1
+		--ab.chance = 1
+		ab.nodenames = {"group:mushroom"}
 	end
 end
 
