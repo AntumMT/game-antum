@@ -128,7 +128,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [helicopter][] ([GPL][lic.gpl2.0] / [CC0][lic.cc0] / CC BY-NC) -- version: [1955cdd Git][ver.helicopter] *2021-03-28* ([patched][patch.helicopter])
   * [hovercraft][] ([LGPL / CC BY-SA / CC0][lic.hovercraft]) -- version: [4d50e68 Git][ver.hovercraft] *2017-05-14* ([patched][patch.hovercraft])
   * [hot_air_balloons][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- version: [39a3572 Git][ver.hot_air_balloons] *2020-11-17*
-  * [motorbike][] ([MIT][lic.motorbike]) -- version: [9527d56 Git][ver.motorbike] *2021-04-01*
+  * [motorbike][] ([MIT][lic.motorbike]) -- version: [9527d56 Git][ver.motorbike] *2021-04-01* ([patched][patch.motorbike])
 * ui/
     * [bookmarks_gui][] ([BSD 3-Clause][lic.bookmarks_gui]) -- version: [f7ae10a Git][ver.bookmarks_gui] *2017-08-29*
     * [hbarmor][] ([MIT][lic.mit] / [CC BY-SA][lic.ccbysa3.0]) -- version: [1.0.0][ver.hbarmor] *2019-04-01*
@@ -635,6 +635,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.mobs_redo]: https://github.com/AntumMT/mod-mobs_redo/tree/12e9367
 [patch.moreblocks]: https://github.com/AntumMT/mod-moreblocks/tree/6dda839
 [patch.moreores]: https://github.com/AntumMT/mod-moreores/tree/ae59578
+[patch.motorbike]: https://github.com/AntumMT/mod-motorbike/tree/e9bcce2
 [patch.mysheetmetal]: https://github.com/AntumMT/mod-mysheetmetal/tree/2ffb3a2
 [patch.nether]: https://github.com/AntumMT/mod-nether/tree/7a84ddd
 [patch.quartz]: https://github.com/AntumMT/mod-quartz/tree/adc759e

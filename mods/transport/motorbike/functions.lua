@@ -175,7 +175,7 @@ end
 function biker.wheelspeed(bike)
 	if not bike then return end
 	if not bike.object then return end
-	if not bike.object:getvelocity() then return end
+	if not bike.object:get_velocity() then return end
 	local direction = 1
 	if bike.v then direction = get_sign(bike.v) end
 	local v = get_speed(bike.object:get_velocity())
@@ -210,7 +210,7 @@ function biker.attach(entity, player)
 	player_api.player_attached[player:get_player_name()] = true
 	player_api.set_model(player, "motorbike_biker.b3d")
 	player:set_eye_offset(eye_offset, { x = 0, y = 0, z = 0 })
-	player:set_look_yaw(entity.object:getyaw())
+	player:set_look_horizontal(entity.object:get_yaw())
 end
 
 local timer = 0
@@ -219,13 +219,13 @@ function biker.drive(entity, dtime)
 	timer = timer + dtime
 	local rot_steer, rot_view = math.pi / 2, 0
 	local acce_y = 2
-	local velo = entity.object:getvelocity()
+	local velo = entity.object:get_velocity()
 	entity.v = get_speed(velo) * get_sign(entity.v)
 	-- process controls
 	if entity.driver then
 		if not entity.driver:is_player() then return end
 		if entity.v then
-			local newv = entity.object:getvelocity()
+			local newv = entity.object:get_velocity()
 			if not entity.crash then entity.crash = false end
 			local crash = false
 			if math.abs(entity.lastv.x) > 5 and newv.x == 0 then crash = true end
@@ -239,12 +239,12 @@ function biker.drive(entity, dtime)
 		end
 		if not entity.wheelie then entity.wheelie = 0 end
 		if not entity.lastv then entity.lastv = { x = 0, y = 0, z = 0 } end
-		local driverlook = entity.driver:get_look_yaw()
+		local driverlook = entity.driver:get_look_horizontal()
 		local rots = entity.object:get_rotation()
 		local j = rots.y
 		local k = rots.x
 		local newrot = j
-		local rrot = driverlook - rot_steer
+		local rrot = driverlook
 		local ctrl = entity.driver:get_player_control()
 		if ctrl.up and not ctrl.sneak then
 			if get_sign(entity.v) >= 0 then entity.v = entity.v + biker.acceleration / 10
@@ -260,7 +260,7 @@ function biker.drive(entity, dtime)
 				entity.v = entity.v - biker.braking / 10
 				minetest.sound_play("motorbike_screech", { max_hear_distance = 48, gain = 0.5, object = entity.object })
 				local num = 1
-				local pos = entity.object:getpos()
+				local pos = entity.object:get_pos()
 				local d = 0.2
 				for _ = 0, 20, 1 do
 					local time = math.random(1, 2)
@@ -322,7 +322,7 @@ function biker.drive(entity, dtime)
 		end
 	end
 	-- enforce speed limit forward and reverse
-	local p = entity.object:getpos()
+	local p = entity.object:get_pos()
 	local ni = node_is(p)
 	local uni = node_is(vector.add(p, { x = 0, y = -1, z = 0 }))
 	local max_spd = biker.max_reverse
@@ -336,7 +336,7 @@ function biker.drive(entity, dtime)
 	local new_velo = { x = 0, y = 0, z = 0 }
 	local new_acce = { x = 0, y = -9.8, z = 0 }
 	p.y = p.y - 0.5
-	new_velo = get_velocity(entity.v, entity.object:getyaw() - rot_view, velo.y)
+	new_velo = get_velocity(entity.v, entity.object:get_yaw() - rot_view, velo.y)
 	new_acce.y = new_acce.y + acce_y
 	entity.object:set_velocity(new_velo)
 	entity.object:set_acceleration(new_acce)
@@ -346,7 +346,7 @@ function biker.drive(entity, dtime)
 		if entity.windsound then minetest.sound_fade(entity.windsound, 30, 0) end
 	end
 	if entity.lastv and vector.length(entity.lastv) == 0 and math.abs(entity.v) > 0 then biker.wheelspeed(entity) end
-	entity.lastv = entity.object:getvelocity()
+	entity.lastv = entity.object:get_velocity()
 	-- sound
 	if entity.v > 0 and entity.driver ~= nil then
 		entity.timer1 = entity.timer1 + dtime
