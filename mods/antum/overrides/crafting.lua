@@ -38,6 +38,7 @@ local modoverrides = {
 	'farming',
 	'helicopter',
 	'invisibility',
+	'motorbike',
 	'simple_protection',
 }
 

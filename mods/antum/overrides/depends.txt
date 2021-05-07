@@ -5,6 +5,7 @@ override
 animalmaterials?
 atm?
 bags?
+basic_materials?
 carts?
 castle_weapons?
 currency?
@@ -20,8 +21,10 @@ home_workshop_misc?
 homedecor?
 invisibility?
 moreblocks?
+motorbike?
 simple_protection?
 stairsplus?
+technic?
 throwing?
 unifieddyes?
 vessels?
