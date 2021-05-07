@@ -1,4 +1,5 @@
 # ![Antum](menu/header.png)![icon](menu/icon.png)
+
 A custom game for [Minetest](http://www.minetest.net/) / [Freeminer](http://freeminer.org/)
 Requires Minetest server 5.4.0 or above (I think)
 
@@ -154,18 +155,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 ### This is a list of installed modpacks & their components (trying to keep them listed separate for sake of organization):
 
 * [3d_armor][] ([LGPL / CC BY-SA][lic.3d_armor]) - version: [47ecef4 Git][ver.3d_armor] *2019-05-27* ([patched][patch.3d_armor])
-* [deploy_nodes][] ([BSD 3-Clause][lic.deploy_nodes]) -- version: [b67e162 Git][ver.deploy_nodes] *2017-06-08*
-* [homedecor][] ([LGPL / WTFPL / CC BY-SA / CC0][lic.homedecor]) -- version: [81e0d4e Git][ver.homedecor] *2021-03-30* ([patched][patch.homedecor])
-* [mesecons][] ([LGPL / CC BY-SA][lic.mesecons]) -- version [6579351 Git][ver.mesecons] *2021-04-09*
-* [minetest_game][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- version: [5.4.1][ver.minetest_game] *2021-04-10*
-* [moremesecons][] ([MPL][lic.mpl2.0]) -- version: [1dab017 Git][ver.moremesecons] *2021-04-14*
-* [technic][] ([LGPL][lic.lgpl2.0]) -- version: [43acec2 Git][ver.technic] *2021-02-09*
-
-
----
-
-### Stored in 'modpacks' directory
-
 * castle ([MIT][lic.castle])
 	* [castle_farming][] -- version: [032f277 Git][ver.castle_farming] *2020-02-28*
 	* [castle_gates][] -- version: [21b5a6c Git][ver.castle_gates] *2021-03-14*
@@ -176,7 +165,12 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [castle_tapestries][] -- version: [f5e3ac1 Git][ver.castle_tapestries] *2020-02-16*
 	* [castle_weapons][] -- version: [d3cf095 Git][ver.castle_weapons] *2020-02-28* ([patched][patch.castle_weapons])
 	* [crafting_bench][] -- version: [69083ed Git][ver.crafting_bench] *2020-05-27*
+* [deploy_nodes][] ([BSD 3-Clause][lic.deploy_nodes]) -- version: [b67e162 Git][ver.deploy_nodes] *2017-06-08*
 * [home_workshop][] -- version: [03325e8 Git][ver.home_workshop] *2021-04-15*
+* [homedecor][] ([LGPL / WTFPL / CC BY-SA / CC0][lic.homedecor]) -- version: [81e0d4e Git][ver.homedecor] *2021-03-30* ([patched][patch.homedecor])
+* [mesecons][] ([LGPL / CC BY-SA][lic.mesecons]) -- version [6579351 Git][ver.mesecons] *2021-04-09*
+* [minetest_game][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- version: [5.4.1][ver.minetest_game] *2021-04-10*
+* [moremesecons][] ([MPL][lic.mpl2.0]) -- version: [1dab017 Git][ver.moremesecons] *2021-04-14*
 * [mymods](https://github.com/AntumMT/mp-mymods)
 	* [mydoors][] ([CC-BY / CC-BY-SA][lic.mydoors] / [WTFPL][lic.wtfpl] / [DWYWFPL][lic.dwywpl]) -- version: [eef3b5f Git][ver.mydoors] *2018-06-12*
 	* [myfences][] ([DWYWPL][lic.dwywpl]) -- version: [c6e529a Git][ver.myfences] *2016-04-04*
@@ -187,11 +181,12 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [mysheetmetal][] ([DWYWPL][lic.dwywpl]) -- version: [7c5ab71 Git][ver.mysheetmetal] *2016-04-12* ([patched][patch.mysheetmetal])
 	* [mywoodslopes][] ([DWYWPL][lic.dwywpl]) -- version: [3a1b531 Git][ver.mywoodslopes] *2016-03-23* (patched)
 	* [worldedge][] ([DWYWPL][lic.dwywpl]) -- version: [608462d Git][ver.worldedge] *2017-07-14*
+* [technic][] ([LGPL][lic.lgpl2.0]) -- version: [43acec2 Git][ver.technic] *2021-02-09*
 
 
 ---
 
-### Mods I am looking at:
+### Mods to potentially add:
 
 * [adv_vehicles](https://forum.minetest.net/viewtopic.php?t=22777) (Advanced Vehicles)
 * [arena_lib](https://forum.minetest.net/viewtopic.php?t=24509)
