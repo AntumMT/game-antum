@@ -21,6 +21,44 @@ function is_creative(name)
 	return creative_mode_cache or minetest.check_player_privs(name, {creative = true})
 end
 
+-- invisibility function
+local toggle_invisible = function(player, toggle)
+
+	if not player then return false end
+
+	local name = player:get_player_name()
+
+	invisibility[name] = toggle
+
+	local prop
+
+	if toggle == true then
+
+		-- hide player and name tag
+		prop = {
+			visual_size = {x = 0, y = 0},
+--			collisionbox = {0, 0, 0, 0, 0, 0}
+		}
+
+		player:set_nametag_attributes({
+			color = {a = 0, r = 255, g = 255, b = 255}
+		})
+	else
+		-- show player and tag
+		prop = {
+			visual_size = {x = 1, y = 1},
+--			collisionbox = {-0.35, -1, -0.35, 0.35, 1, 0.35}
+		}
+
+		player:set_nametag_attributes({
+			color = {a = 255, r = 255, g = 255, b = 255}
+		})
+	end
+
+	player:set_properties(prop)
+
+end
+
 
 -- invisibility potion
 minetest.register_node("invisibility:potion", {
@@ -136,44 +174,6 @@ minetest.register_craft( {
 	},
 })
 
-
--- invisibility function
-local toggle_invisible = function(player, toggle)
-
-	if not player then return false end
-
-	local name = player:get_player_name()
-
-	invisibility[name] = toggle
-
-	local prop
-
-	if toggle == true then
-
-		-- hide player and name tag
-		prop = {
-			visual_size = {x = 0, y = 0},
---			collisionbox = {0, 0, 0, 0, 0, 0}
-		}
-
-		player:set_nametag_attributes({
-			color = {a = 0, r = 255, g = 255, b = 255}
-		})
-	else
-		-- show player and tag
-		prop = {
-			visual_size = {x = 1, y = 1},
---			collisionbox = {-0.35, -1, -0.35, 0.35, 1, 0.35}
-		}
-
-		player:set_nametag_attributes({
-			color = {a = 255, r = 255, g = 255, b = 255}
-		})
-	end
-
-	player:set_properties(prop)
-
-end
 
 
 -- vanish command (admin only)
