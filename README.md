@@ -128,6 +128,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [helicopter][] ([GPL][lic.gpl2.0] / [CC0][lic.cc0] / CC BY-NC) -- version: [1955cdd Git][ver.helicopter] *2021-03-28* ([patched][patch.helicopter])
   * [hovercraft][] ([LGPL / CC BY-SA / CC0][lic.hovercraft]) -- version: [4d50e68 Git][ver.hovercraft] *2017-05-14* ([patched][patch.hovercraft])
   * [hot_air_balloons][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- version: [39a3572 Git][ver.hot_air_balloons] *2020-11-17*
+  * [motorbike][] ([MIT][lic.motorbike]) -- version: [9527d56 Git][ver.motorbike] *2021-04-01*
 * ui/
     * [bookmarks_gui][] ([BSD 3-Clause][lic.bookmarks_gui]) -- version: [f7ae10a Git][ver.bookmarks_gui] *2017-08-29*
     * [hbarmor][] ([MIT][lic.mit] / [CC BY-SA][lic.ccbysa3.0]) -- version: [1.0.0][ver.hbarmor] *2019-04-01*
@@ -208,7 +209,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [magic_potions](https://forum.minetest.net/viewtopic.php?t=24208)
 * [mccarpet](https://forum.minetest.net/viewtopic.php?t=7419)
 * [mobf_trader](https://forum.minetest.net/viewtopic.php?t=9013) (Traders)
-* [motorbike](https://forum.minetest.net/viewtopic.php?t=24244)
 * [motorboat](https://forum.minetest.net/viewtopic.php?t=24652)
 * [murder](https://forum.minetest.net/viewtopic.php?t=24884) (Murder mini-game)
 * [naturalslopeslib](https://forum.minetest.net/viewtopic.php?t=18140)
@@ -320,6 +320,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [moremesecons]: https://forum.minetest.net/viewtopic.php?t=13150
 [moreores]: https://forum.minetest.net/viewtopic.php?t=549
 [moretrees]: https://forum.minetest.net/viewtopic.php?t=4394
+[motorbike]: https://forum.minetest.net/viewtopic.php?t=24244
 [mthudclock]: https://forum.minetest.net/viewtopic.php?t=11879
 [mydoors]: https://forum.minetest.net/viewtopic.php?t=10626
 [myfences]: https://forum.minetest.net/viewtopic.php?t=14275
@@ -416,6 +417,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.mobs_redo]: mods/mobiles/engine/mobs_redo/license.txt
 [lic.moreblocks]: mods/buildings/moreblocks/LICENSE.md
 [lic.moreores]: mods/materials/moreores/LICENSE.md
+[lic.motorbike]: mods/transport/motorbike/LICENSE
 [lic.mydoors]: mods/modpacks/mydoors/README.md
 [lic.nether]: mods/world/nether/README.md
 [lic.no_fall_damage]: mods/admin/no_fall_damage/README.md
@@ -550,6 +552,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.moreblocks]: https://github.com/minetest-mods/moreblocks/tree/3b97ea5
 [ver.moremesecons]: https://github.com/minetest-mods/MoreMesecons/tree/1dab017
 [ver.moreores]: https://github.com/minetest-mods/moreores/tree/3fe0ba8
+[ver.motorbike]: https://github.com/Extex101/motorbike/tree/9527d56
 [ver.mthudclock]: https://gitlab.com/Rochambeau/mthudclock/tree/d86e745
 [ver.mydoors]: https://github.com/minetest-mods/mydoors/tree/eef3b5f
 [ver.myfences]: https://github.com/DonBatman/myfences/tree/c6e529a

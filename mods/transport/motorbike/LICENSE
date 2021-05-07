@@ -1,0 +1,20 @@
+Minetest mod: Motorbike [motorbike]
+------------------------------------------------------------------------------
+Some code taken from lib_mount by blert2112 (https://github.com/blert2112/lib_mount)
+
+Code MIT (Extex101) 2020-
+
+
+Melkor (CC-BY-NC-SA 3.0) <https://forum.minetest.net/memberlist.php?mode=viewprofile&u=301>
+motorbike_body.b3d (Designed and textured by Melkor, rigged by Extex101 using .blend file provided here: https://forum.minetest.net/download/file.php?id=21223)
+motorbike_blue.png
+
+Extex101 (CC BY-SA 3.0)
+motorbike_burnout.png
+All other colours are edits of motorbike_blue.png by Melkor
+motorbike_wheel_inv.png
+motorbike_(colour)_imv.png (Render of Melkors bike)
+motorbike_biker.b3d (Edited version of minetest player model from 3d_armor)
+
+Alexander (CC BY-NC 4.0) <http://www.orangefreesounds.com/author/alexander/>
+Harley Davidson Motorcycle Slow Pass By > motoengine.ogg
