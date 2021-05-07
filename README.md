@@ -127,6 +127,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [boats][boats2] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa3.0]) -- version: [b83231e Git][ver.boats2] *2016-10-14* ([patched][patch.boats2]) ***UPSTREAM MOVED***
   * [helicopter][] ([GPL][lic.gpl2.0] / [CC0][lic.cc0] / CC BY-NC) -- version: [1955cdd Git][ver.helicopter] *2021-03-28* ([patched][patch.helicopter])
   * [hovercraft][] ([LGPL / CC BY-SA / CC0][lic.hovercraft]) -- version: [4d50e68 Git][ver.hovercraft] *2017-05-14* ([patched][patch.hovercraft])
+  * [hot_air_balloons][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- version: [39a3572 Git][ver.hot_air_balloons] *2020-11-17*
 * ui/
     * [bookmarks_gui][] ([BSD 3-Clause][lic.bookmarks_gui]) -- version: [f7ae10a Git][ver.bookmarks_gui] *2017-08-29*
     * [hbarmor][] ([MIT][lic.mit] / [CC BY-SA][lic.ccbysa3.0]) -- version: [1.0.0][ver.hbarmor] *2019-04-01*
@@ -202,7 +203,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [commodotymarket](https://forum.minetest.net/viewtopic.php?t=22926)
 * [draconis](https://forum.minetest.net/viewtopic.php?t=22595) (dragons)
 * [hangglider](https://forum.minetest.net/viewtopic.php?t=21425)
-* [hot_air_balloons](https://forum.minetest.net/viewtopic.php?t=22367)
 * [formspec](https://github.com/Bremaweb/formspec (Formspec Framework)
 * [formspec-editor](https://gitlab.com/luk3yx/minetest-formspec-editor)
 * [magic_potions](https://forum.minetest.net/viewtopic.php?t=24208)
@@ -296,6 +296,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [home_workshop]: https://gitlab.com/VanessaE/home_workshop_modpack
 [homedecor]: https://forum.minetest.net/viewtopic.php?t=2041
 [horse]: https://github.com/AntumMT/mod-horse
+[hot_air_balloons]: https://forum.minetest.net/viewtopic.php?t=22367
 [hovercraft]: https://forum.minetest.net/viewtopic.php?t=6722
 [hudbars]: https://forum.minetest.net/viewtopic.php?t=11153
 [hudmap]: https://github.com/stujones11/hudmap
@@ -528,6 +529,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.home_workshop]: https://gitlab.com/VanessaE/home_workshop_modpack/tree/03325e8
 [ver.homedecor]: https://gitlab.com/VanessaE/homedecor_modpack/tree/81e0d4e
 [ver.horse]: https://github.com/AntumMT/mod-horse/tree/9c5c857
+[ver.hot_air_balloons]: https://notabug.org/NetherEran/hot_air_balloons/src/39a3572ad1bf7fd800525d68b128981e1b2c37d1
 [ver.hovercraft]: https://github.com/stujones11/hovercraft/tree/4d50e68
 [ver.hudbars]: http://repo.or.cz/minetest_hudbars.git/tree/0684bac
 [ver.hudmap]: https://github.com/stujones11/hudmap/tree/3b8bdc0

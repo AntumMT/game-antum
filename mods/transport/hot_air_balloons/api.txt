@@ -1,0 +1,30 @@
+API functions:
+	hot_air_balloons.get_entity(name, mesh_name, texture_name)
+		arguments:
+			'name': string in the format "modname:entityname"
+			'mesh_name': string in the format "modname_meshFileName"
+			'texture_name': string in the format "modname_textureFileName"
+		Example usage: minetest.register_entity(hot_air_balloons.get_entity(foo, raa, see))
+		you can also store the values in a local variable and change the fields of the entity definition table before registering the entity.
+		passing the entity name to the function is used when a balloon pilot logs off
+
+
+
+	hot_air_balloons.get_item(name, description, texture, object_name)
+		arguments:
+			'name': string in the format "modname:itemname"
+			'description': string that appears in the tooltip. Use minetest.translate with this.
+			'texture': string in the format "modname_textureFileName"
+			'object_name' is the name specified in hot_air_balloons.get_entity
+		Example usage: minetest.register_craftitem(hot_air_balloons.get_item(foo, raa, see, mon))
+		returns an item name and an item definition table
+		as with get_entity you can store the item definition table and change its fields before registering the item.
+
+
+
+explanation of the custom fields of the entitiy definition table:
+	pilot: stores the player name of the pilot or nil if there is no pilot
+	heat: integer in the interval [0, 12000)
+		Decides wether to fly up or down
+	balloon_type: entity name of the balloon, e.g."hot_air_balloons:balloon".
+		used to make the balloon log off and log back in together with its pilot
