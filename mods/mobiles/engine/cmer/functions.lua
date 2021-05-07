@@ -659,7 +659,7 @@ cmer.on_step = function(self, dtime)
 	end
 
 	-- Random sounds
-	if def.sounds and def.sounds.random[current_mode] then
+	if def.sounds and def.sounds.random and def.sounds.random[current_mode] then
 		local rnd_sound = def.sounds.random[current_mode]
 		if not self.snd_rnd_time then
 			self.snd_rnd_time = rnd((rnd_sound.time_min or 5), (rnd_sound.time_max or 35))

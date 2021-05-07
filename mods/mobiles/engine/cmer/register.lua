@@ -261,13 +261,6 @@ function cmer.register_mob(def) -- returns true if sucessfull
 			throw_error("Couldn't register spawning for '" .. def.name .. "'")
 		end
 
-		if spawn_def.spawn_egg then
-			local egg_def = def.spawning.spawn_egg
-			egg_def.mob_name = def.name
-			egg_def.box = def.model.collisionbox
-			cmer.register_egg(egg_def)
-		end
-
 		if spawn_def.spawner then
 			local spawner_def = def.spawning.spawner
 			spawner_def.mob_name = def.name
@@ -435,7 +428,6 @@ end
 --  @tfield[opt] table time_range Time range in time of day format (0-24000) (table with *min* & *max* values).
 --  @tfield[opt] table light Min and max lightvalue at spawn position (table with *min* & *max* values).
 --  @tfield[opt] table height_limit Min and max height (world Y coordinate) (table with *min* & *max* values).
---  @tfield[opt] table spawn_egg Is set a spawn_egg is added to creative inventory (table with *description* & *texture* values).
 --  @tfield[opt] SpawnerDef spawner Is set a spawner_node is added to creative inventory.
 
 --- ABM nodes definition table.
@@ -647,43 +639,6 @@ function cmer.register_spawn(spawn_def)
 	return true
 end
 
-local function eggSpawn(itemstack, placer, pointed_thing, egg_def)
-	if pointed_thing.type == "node" then
-		local pos = pointed_thing.above
-		pos.y = pos.y + 0.5
-		local height = (egg_def.box[5] or 2) - (egg_def.box[2] or 0)
-		if checkSpace(pos, height) == true then
-			local ref = core.add_entity(pos, egg_def.mob_name)
-			if ref and placer:is_player() then
-				local entity = ref:get_luaentity()
-				-- set owner
-				if entity.ownable then entity.owner = placer:get_player_name() end
-			end
-			if core.settings:get_bool("creative_mode") ~= true then
-				itemstack:take_item()
-			end
-		end
-		return itemstack
-	end
-end
-
-function cmer.register_egg(egg_def)
-	if not egg_def or not egg_def.mob_name or not egg_def.box then
-		throw_error("Can't register Spawn-Egg. Not enough parameters given.")
-		return false
-	end
-
-	core.register_craftitem(":" .. egg_def.mob_name .. "_spawn_egg", {
-		description = egg_def.description or egg_def.mob_name .. " spawn egg",
-		inventory_image = egg_def.texture or "creatures_spawn_egg.png",
-		liquids_pointable = false,
-		on_place = function(itemstack, placer, pointed_thing)
-			return eggSpawn(itemstack, placer, pointed_thing, egg_def)
-		end,
-	})
-	return true
-end
-
 
 local function makeSpawnerEntiy(mob_name, model)
 	core.register_entity(":" .. mob_name .. "_spawner_dummy", {
@@ -759,7 +714,7 @@ end
 local spawner_timers = {}
 function cmer.register_spawner(spawner_def)
 	if not spawner_def or not spawner_def.mob_name or not spawner_def.model then
-		throw_error("Can't register Spawn-Egg. Not enough parameters given.")
+		throw_error("Can't register Spawner. Not enough parameters given.")
 		return false
 	end
 
@@ -866,10 +821,6 @@ function cmer.register_alias(old_mob, new_mob) -- returns true if sucessfull
 	if core.registered_nodes[new_mob .. "_spawner"] then
 		register_alias_entity(old_mob .. "_spawner_dummy", new_mob .. "_spawner_dummy")
 		core.register_alias(old_mob .. "_spawner", new_mob .. "_spawner")
-	end
-
-	if core.registered_items[new_mob .. "_spawn_egg"] then
-		core.register_alias(old_mob .. "_spawn_egg", new_mob .. "_spawn_egg")
 	end
 
 	return true

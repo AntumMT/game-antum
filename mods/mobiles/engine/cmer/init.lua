@@ -34,7 +34,6 @@ local scripts = {
 	"common",
 	"functions",
 	"register",
-	"items",
 }
 
 for _, s in ipairs(scripts) do

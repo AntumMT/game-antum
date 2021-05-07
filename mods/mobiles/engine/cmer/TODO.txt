@@ -1,4 +1,3 @@
 
 TODO:
-- remove items
-- remove spawn eggs
+- add debugging messages for missing required fields at registration

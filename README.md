@@ -82,7 +82,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [dinosaurs_aggressive][] -- version: [874f299 Git][ver.dinosaurs_aggressive] *2017-07-27*
 		* velociraptor ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- forked from *mobs_farlands* (part of [farlands][] sub-game)
 	* engine/
-		* [cmer][creatures] ([zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [revived 2fd06a7 Git][ver.cmer] *2021-05-05*
+		* [cmer][creatures] ([zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [revived 0d33dab Git][ver.cmer] *2021-05-07*
 		* [mobkit][] ([MIT][lic.mobkit]) -- version: [ddea141 Git][ver.mobkit] *2021-02-01*
 		* [mobs_redo][] ([MIT][lic.mobs_redo] / [CC BY][lic.ccby3.0] / [CC0][lic.cc0]) -- version: [f6e16a5 Git][ver.mobs_redo] *2021-04-11* ([patched][patch.mobs_redo])
 	* [folks][] ([GPL][lic.gpl3.0]) -- version: [0.2.0][ver.folks] *2021-02-23*
@@ -506,7 +506,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.compassgps]: https://github.com/Kilarin/compassgps/tree/567b95f
 [ver.crafting_bench]: https://github.com/minetest-mods/crafting_bench/tree/69083ed
 [ver.craftguide]: https://github.com/minetest-mods/craftguide/tree/f379998
-[ver.cmer]: https://github.com/AntumMT/mod-cmer/tree/2fd06a7
+[ver.cmer]: https://github.com/AntumMT/mod-cmer/tree/0d33dab
 [ver.crops]: https://github.com/minetest-mods/crops/tree/v1
 [ver.currency]: https://gitlab.com/VanessaE/currency/tree/2021-01-30
 [ver.deploy_nodes]: https://github.com/cornernote/minetest-deploy_nodes/tree/b67e162
