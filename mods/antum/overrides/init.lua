@@ -41,3 +41,8 @@ antum.loadScripts({
 	'crafting',
 	'temp_fixes',
 })
+
+
+if not core.registered_items["creatures:flesh"] and core.registered_items["mobs:meat_raw"] then
+	core.register_alias("creatures:flesh", "mobs:meat_raw")
+end
