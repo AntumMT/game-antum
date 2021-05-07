@@ -146,7 +146,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [bright_night][] ([Unlicense][lic.unlicense]) -- version: [69b750a Git][ver.bright_night] *2018-06-03*
     * [desert_life][] ([CC BY-SA][lic.ccbysa4.0]) -- version: [188f984 Git][ver.desert_life] *2020-01-24*
     * [ethereal][] ([MIT][lic.ethereal]) -- version: [90cdf94 Git][ver.ethereal] *2021-04-29* ([patched][patch.ethereal])
-    * [hill_nodebox][] ([BSD 3-Clause][lic.hill_nodebox]) -- version: [41bbfa2 Git][ver.hill_nodebox] *2014-12-13*
     * [nether][] ([ISC / CC BY / CC BY-SA / CC0][lic.nether]) -- version: [3][ver.nether] *2021-01-22* ([patched][patch.nether])
 
 
@@ -295,7 +294,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [headanim]: https://content.minetest.net/packages/Lone_Wolf/headanim/
 [helicopter]: https://forum.minetest.net/viewtopic.php?t=24613
 [hidename]: https://forum.minetest.net/viewtopic.php?t=18190
-[hill_nodebox]: https://cornernote.github.io/minetest-hill_nodebox/
 [home_gui]: http://cornernote.github.io/minetest-home_gui/
 [home_workshop]: https://gitlab.com/VanessaE/home_workshop_modpack
 [homedecor]: https://forum.minetest.net/viewtopic.php?t=2041
@@ -408,7 +406,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.home_gui]: mods/ui/home_gui/LICENSE
 [lic.horse]: mods/mobiles/horse/LICENSE.txt
 [lic.hidename]: mods/antum/hidename/LICENSE.txt
-[lic.hill_nodebox]: mods/world/hill_nodebox/LICENSE
 [lic.homedecor]: mods/modpacks/homedecor/LICENSE
 [lic.hovercraft]: mods/transport/hovercraft/LICENSE.txt
 [lic.invisibility]: mods/player/visuals/invisibility/license.txt
@@ -530,7 +527,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.headanim]: https://github.com/LoneWolfHT/headanim/releases/tag/v1.01
 [ver.helicopter]: https://github.com/APercy/helicopter/tree/1955cdd
 [ver.hidename]: https://github.com/AntumMT/mod-hidename/tree/7b3aa52
-[ver.hill_nodebox]: https://github.com/cornernote/minetest-hill_nodebox/tree/41bbfa2
 [ver.home_gui]: https://github.com/cornernote/minetest-home_gui/tree/a291a09
 [ver.home_workshop]: https://gitlab.com/VanessaE/home_workshop_modpack/tree/03325e8
 [ver.homedecor]: https://gitlab.com/VanessaE/homedecor_modpack/tree/81e0d4e
