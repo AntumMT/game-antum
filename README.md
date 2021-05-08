@@ -179,7 +179,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [myroofs][] ([DWYWPL][lic.dwywpl]) -- version: [fe98461 Git][ver.myroofs] *2017-07-14*
 	* [mysheetmetal][] ([DWYWPL][lic.dwywpl]) -- version: [7c5ab71 Git][ver.mysheetmetal] *2016-04-12* ([patched][patch.mysheetmetal])
 	* [mywoodslopes][] ([DWYWPL][lic.dwywpl]) -- version: [3a1b531 Git][ver.mywoodslopes] *2016-03-23* (patched)
-	* [worldedge][] ([DWYWPL][lic.dwywpl]) -- version: [608462d Git][ver.worldedge] *2017-07-14*
 * [technic][] ([LGPL][lic.lgpl2.0]) -- version: [43acec2 Git][ver.technic] *2021-02-09*
 
 
@@ -368,7 +367,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [whitelist]: https://forum.minetest.net/viewtopic.php?t=8434
 [windmill]: https://forum.minetest.net/viewtopic.php?id=7440
 [workbench]: https://forum.minetest.net/viewtopic.php?t=14085
-[worldedge]: https://forum.minetest.net/viewtopic.php?t=10753
 [xtraarmor]: https://forum.minetest.net/viewtopic.php?t=16645
 
 [lic.3d_armor]: mods/modpacks/3d_armor/LICENSE.md
@@ -593,7 +591,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.whitelist]: https://github.com/AntumMT/mod-whitelist/tree/b813b19
 [ver.windmill]: https://github.com/Sokomine/windmill/tree/47b029d
 [ver.workbench]: https://github.com/minetest-mods/workbench/tree/bd14f59
-[ver.worldedge]: https://github.com/minetest-mods/worldedge/tree/608462d
 [ver.zombie]: https://github.com/AntumMT/mod-cmer/tree/4edb18e
 
 [patch.3d_armor]: https://github.com/AntumMT/mp-3d_armor/tree/19d1001
