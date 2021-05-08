@@ -51,14 +51,13 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [technic_armor][] ([LGPL / WTFPL][lic.technic_armor]) -- version [694642f Git][ver.technic_armor] *2018-02-11*
     * [throwing][] ([WTFPL][lic.wtfpl]) -- version: [90bcf43 Git][ver.throwing] *2013-09-27* ([patched][patch.throwing])
 	* [xtraarmor][] ([CC BY-SA][lic.ccbysa3.0]) -- version: 0.3
-* farming/
-	* [crops][] ([LGPL / CC BY-SA / CC BY / CC0][lic.crops]) -- version: [1][ver.crops] *2017-09-30* ([patched][patch.crops])
-	* [farming_plus][] ([WTFPL][lic.farming_plus]) -- version: [7e0d976 Git][ver.farming_plus] *2014-10-01* ([patched][patch.farming_plus])
 * furniture/
 	* [jukebox][] ([WTFPL / CC0][lic.jukebox]) -- version: [0d871f2 Git][ver.jukebox] *2020-03-11*
     * [trampoline][] ([GPL][lic.gpl3.0]) -- version: [0.3][ver.trampoline] *2021-04-28*
     * [trash_can][] ([MIT][lic.trash_can]) -- version: [423b0f2 Git][ver.trash_can] *2020-08-12*
     * [waffles][] ([MIT][lic.waffles]) -- version [15bcdce Git][ver.waffles] *2018-05-13*
+* horticulture/
+	* [farming][] ([MIT][lic.farming]) -- version: [dedc33c Git][ver.farming] *2021-05-07*
 * [intllib][] ([Unlicense][lic.unlicense]) -- version: [6ebdc53][ver.intllib] *2021-02-23* ***DEPRECATED***
 * inventory/
     * [bags][] ([BSD 3-Clause][lic.bags]) -- version: [bc87b45 Git][ver.bags] *2018-04-11*
@@ -279,7 +278,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [equip_exam]: https://forum.minetest.net/viewtopic.php?t=26618
 [ethereal]: https://forum.minetest.net/viewtopic.php?t=14638
 [farlands]: https://forum.minetest.net/viewtopic.php?t=16921
-[farming_plus]: https://forum.minetest.net/viewtopic.php?t=2787
+[farming]: https://forum.minetest.net/viewtopic.php?t=9019
 [folks]: https://forum.minetest.net/viewtopic.php?t=26121
 [fort_spikes]: https://forum.minetest.net/viewtopic.php?t=14574
 [gems_encrustable]: https://forum.minetest.net/viewtopic.php?t=2596
@@ -397,7 +396,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.enchanting]: mods/enchanting/LICENSE
 [lic.equip_exam]: mods/tools/equip_exam/LICENSE.txt
 [lic.ethereal]: mods/world/ethereal/license.txt
-[lic.farming_plus]: mods/farming/farming_plus/README.txt
+[lic.farming]: mods/horticulture/farming/license.txt
 [lic.fort_spikes]: mods/buildings/fort_spikes/LICENSE
 [lic.headanim]: mods/player/visuals/headanim/LICENSE
 [lic.home_gui]: mods/ui/home_gui/LICENSE
@@ -511,7 +510,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.enchanting]: https://github.com/minetest-mods/enchanting/tree/13ea31c
 [ver.equip_exam]: https://github.com/AntumMT/mod-equip_exam/releases/tag/v1.2
 [ver.ethereal]: https://notabug.org/TenPlus1/ethereal/src/90cdf94ea6c54cd5e3fcc7f77d3b6121f963c379
-[ver.farming_plus]: https://github.com/PilzAdam/farming_plus/tree/7e0d976
+[ver.farming]: https://notabug.org/TenPlus1/farming/commit/dedc33cc46ec65782a5b8ab573d1fb6bb6915b63
 [ver.folks]: https://gitlab.com/SonoMichele/folks/tags/v0.2.0
 [ver.fort_spikes]: https://github.com/xeranas/fort_spikes/tree/3b98b46
 [ver.gems_encrustable]: https://github.com/wowiamdiamonds/gems/tree/81d513d
@@ -612,7 +611,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.drawers]: https://github.com/AntumMT/mod-drawers/tree/a77f809
 [patch.enchanting]: https://github.com/AntumMT/mod-enchanting/tree/7a01f2f
 [patch.ethereal]: https://github.com/AntumMT/mod-ethereal/tree/c404045
-[patch.farming_plus]: https://github.com/AntumMT/mod-farming_plus/tree/aa8f106
 [patch.gems_encrustable]: https://github.com/AntumMT/mod-gems_encrustable/tree/a043b9c
 [patch.gems_tools]: https://github.com/AntumMT/mod-gems_tools/tree/7f89843
 [patch.hbarmor]: https://github.com/AntumMT/mod-hbarmor/tree/12a7dea
