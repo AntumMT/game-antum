@@ -48,7 +48,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [jukebox][] ([WTFPL / CC0][lic.jukebox]) -- version: [0d871f2 Git][ver.jukebox] *2020-03-11*
   * [trampoline][] ([GPL][lic.gpl3.0]) -- version: [0.3][ver.trampoline] *2021-04-28*
   * [trash_can][] ([MIT][lic.trash_can]) -- version: [423b0f2 Git][ver.trash_can] *2020-08-12*
-  * [waffles][] ([MIT][lic.waffles]) -- version [15bcdce Git][ver.waffles] *2018-05-13*
+  * [waffles][] ([MIT][lic.waffles]) -- version: [15bcdce Git][ver.waffles] *2018-05-13* (patched)
 * horticulture/
   * [farming][] ([MIT][lic.farming]) -- version: [dedc33c Git][ver.farming] *2021-05-07*
 * inventory/

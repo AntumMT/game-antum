@@ -176,9 +176,12 @@ if minetest.get_modpath("homedecor") then
 	minetest.register_alias("homedecor:toaster", "waffles:toaster")
 end
 
-minetest.override_item("farming:bread", {
-	description = S("Bread"),
-})
+-- FIXME: need to replace with new bread item
+if core.registered_items["farming:bread"] then
+	minetest.override_item("farming:bread", {
+		description = S("Bread"),
+	})
+end
 
 local function breadslice_on_use(itemstack, user, pointed_thing)
 	local node, pos
