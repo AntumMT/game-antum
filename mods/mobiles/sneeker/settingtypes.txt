@@ -1,0 +1,52 @@
+
+# Extra debugging messages.
+enable_debug_mods (Mod debugging) bool false
+
+# How long (in seconds) sneeker remains in world after spawn.
+#
+# Default: 900 (15 minutes)
+sneeker.lifetime (Sneeker lifetime) int 900
+
+# Loudness of explosion.
+#
+# Those with a weak heart might want to turn it down.
+sneeker.boom_gain (Boom volume) float 1.5
+
+# Determines whether or not a player must be close for spawn to occur.
+sneeker.spawn_require_player_nearby (Require player nearby for spawn) bool true
+
+# Distance in nodes a player must be for spawn to occur.
+#
+# Only used if `sneeker.spawn_require_player_nearby` enabled.
+sneeker.spawn_player_radius (Player spawn detect radius) int 100
+
+# If enabled, mobs not near any players will despawn.
+sneeker.despawn_player_far (Despawn sneekers not near players) bool true
+
+# Distance determining if a player is near enough to prevent despawn.
+#
+# Only used if `sneeker.despawn_player_far` enabled.
+sneeker.despawn_player_radius (Player despawn detect radius) int 500
+
+# Sets possibility for spawn.
+#
+# Rate is the inverted value (e.g. 1/value).
+sneeker.spawn_chance (Sneeker spawn chance) int 10000
+
+# Sets frequency of spawn chance. Default 240 is equivalent to 4 minutes (60 * 4).
+sneeker.spawn_interval (Sneeker spawn interval) int 240
+
+# Sets the minimum light that a node must have for spawn to occur.
+sneeker.spawn_minlight (Sneeker min light for spawn) int 0 0 15
+
+# Sets the maximum light that a node can have for spawn to occur.
+sneeker.spawn_maxlight (Sneeker max light for spawn) int 4 0 15
+
+# Sets the lowest position at which sneeker can spawn.
+sneeker.spawn_minheight (Sneeker min spawn height) int -31000
+
+# Sets the highest position at which sneeker can spawn.
+sneeker.spawn_maxheight (Sneeker max spawn height) int 31000
+
+# Limits the number of entities that can spawn per mapblock (16x16x16).
+sneeker.spawn_mapblock_limit (Sneeker spawn limit) int 1
