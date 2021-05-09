@@ -80,12 +80,6 @@ airtanks_compressor_needs_fuel (Compressor requires fuel) bool true
 awards.add_defaults (Add Default Achievements) bool true
 
 
-[*bedrock2]
-
-# Sets the height (Y) at which the bedrock layer will be created.
-bedrock2_y (Bedrock height) int -30912
-
-
 [*bike]
 
 # The maximum speed of a bike in m/s

@@ -141,7 +141,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * wood/
 	* [coloredwood][] ([LGPL][lic.lgpl3.0]) -- version: [2021-01-30][ver.coloredwood]
 * world/
-    * [bedrock2][] ([WTFPL][lic.wtfpl]) -- version: [a572dd0 Git][ver.bedrock2] *2020-04-06* ([patched][patch.bedrock2])
     * [biome_lib][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2021-04-16-2][ver.biome_lib]
     * [bright_night][] ([Unlicense][lic.unlicense]) -- version: [69b750a Git][ver.bright_night] *2018-06-03*
     * [desert_life][] ([CC BY-SA][lic.ccbysa4.0]) -- version: [188f984 Git][ver.desert_life] *2020-01-24*
@@ -239,7 +238,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [away]: https://forum.minetest.net/viewtopic.php?t=1211
 [bags]: http://cornernote.github.io/minetest-bags/
 [basic_materials]: https://gitlab.com/VanessaE/basic_materials
-[bedrock2]: https://forum.minetest.net/viewtopic.php?t=11271
 [bike]: https://forum.minetest.net/viewtopic.php?t=20726
 [biofuel]: https://forum.minetest.net/viewtopic.php?t=24622
 [biome_lib]: https://forum.minetest.net/viewtopic.php?f=11&t=12999
@@ -473,7 +471,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.away]: https://github.com/kahrl/minetest-mod-away/tree/4c1e5a9
 [ver.bags]: https://github.com/cornernote/minetest-bags/tree/bc87b45
 [ver.basic_materials]: https://gitlab.com/VanessaE/basic_materials/-/tags/2021-01-30
-[ver.bedrock2]: http://repo.or.cz/minetest_bedrock2.git/tree/a572dd0
 [ver.bike]: https://gitlab.com/h2mm/bike/tree/1.2
 [ver.biofuel]: https://github.com/APercy/minetest_biofuel/tree/ca480ce
 [ver.biome_lib]: https://gitlab.com/VanessaE/biome_lib/tags/2021-04-16-2
@@ -599,7 +596,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.amber]: https://github.com/AntumMT/mod-amber/tree/39b852a
 [patch.atm]: https://github.com/AntumMT/mod-atm/tree/7771aa0
 [patch.away]: https://github.com/AntumMT/mod-away/tree/3b0bf9e
-[patch.bedrock2]: https://github.com/AntumMT/mod-bedrock2/tree/9da5912
 [patch.boats2]: https://github.com/AntumMT/mod-boats2/tree/9b2bcb7
 [patch.bridges]: https://github.com/AntumMT/mod-bridges/tree/ba8f71a
 [patch.castle_weapons]: https://github.com/AntumMT/mod-castle_weapons/tree/6ec6f46
