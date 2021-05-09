@@ -1,5 +1,7 @@
 
 TODO:
+- general:
+  - replace deprecated methods in mods: 'getpos', 'setyaw', etc.
 - waffles:
   - waffles:toaster not working as intended
   - tries to replace deprecated node name "homedecor:toaster"
@@ -9,3 +11,5 @@ TODO:
   - ethereal:candle
   - moreblocks:glow_glass
   - moreblocks:super_glow_glass
+- motorbike:
+  - option to put in inventory automatically
