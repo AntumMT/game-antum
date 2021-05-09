@@ -134,20 +134,14 @@ function antum.clearCraftRecipe(recipe)
 		end
 
 		for I in pairs(recipe) do
-			if I == icount then
-				recipe_string = recipe_string .. " " .. recipe[I]
-			elseif I > 1 then
-				recipe_string = recipe_string .. " + " .. recipe[I]
-			else
-				recipe_string = recipe[I]
-			end
+			recipe_string = recipe_string .. " {" .. table.concat(recipe[I], " + ") .. "}"
 		end
 
 		antum.logAction(" Clearing craft by recipe: " .. recipe_string)
 	end
 
 	core.clear_craft({
-		recipe = {recipe}
+		recipe = recipe,
 	})
 end
 
