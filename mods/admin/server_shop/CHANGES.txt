@@ -1,10 +1,17 @@
 
+1.1
+- use json format for shops configuration in world directory
+- switched id & name parameters positions in register_shop
+- show preview image of selected item
+- node owners can't set ID unless they have "server" priv
+
+
 1.0
 - created node
 - created simple textures
 - formspec displays items & prices of associated shop
 - minegeld notes can be deposited & refunded
 - shops are configured from world directory
-- players with "server" priv alter
+- players with "server" priv or node owners can set ID
 - players with "server" priv or node owners can dig
 - implemented deposit, purchase, & refund functionality

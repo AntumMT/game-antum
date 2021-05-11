@@ -12,11 +12,11 @@ No craft recipe is given as this for administrators, currently a machine can onl
 
 #### Usage:
 
-Shop lists are registered with the `server_shop.register_shop(name, id, def)` function. `name` is a human-readable string that will be displayed as the shop's title. `id` is a string identifier associated with the shop list. `def` is the shop list definition. Shop lists are defined in a table of tupes in `{itemname, price}` format.
+Shop lists are registered with the `server_shop.register_shop(id, name, def)` function. `id` is a string identifier associated with the shop list. `name` is a human-readable string that will be displayed as the shop's title. `def` is the shop list definition. Shop lists are defined in a table of tuples in `{itemname, price}` format.
 
 Registration example:
 ```
-server_shop.register_shop("Basic", "basic", {
+server_shop.register_shop("basic", "Basic Shop", {
 	{
 		{"default:wood", 2},
 		{"default:obsidian", 7},
@@ -24,7 +24,27 @@ server_shop.register_shop("Basic", "basic", {
 })
 ```
 
-Shops can optionally be registered in `<world_path>/server_shops.lua` file (this will be changed in the future to use configuration instead of Lua code).
+Shops can optionally be registered in `<world_path>/server_shops.json` file. Example:
+
+```json
+[
+  {
+    "id":"frank",
+    "name":"Frank's Shop",
+    "sells":
+    {"default:wood":1}
+  },
+  {
+    "id":"julie",
+    "name":"Julie's Shop",
+    "sells":
+    {
+      "default:iron_lump":5,
+      "default:copper_lump":5,
+    }
+  },
+]
+```
 
 Server admins use the chat command `/giveme server_shop:shop` to receive a shop node. After placing the node, the ID can be set with the "Set ID" button & text input field (only players with the "server" privilege can set ID). Set the ID to the shop ID you want associated with this shop node ("basic" for the example above) & the list will be populated with the registered products & prices.
 

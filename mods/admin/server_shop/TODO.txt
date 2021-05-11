@@ -2,11 +2,11 @@
 TODO:
 - Security:
   - don't allow other players to interfere with transactions
-  - make loading world directory file more secure (don't use raw Lua)
   - "Set ID" button is displayed to other players if admin makes changes while formspec visible
 - Functionality:
   - add option to buy multiple of an item
   - optimize how refunds are given (e.g. if there is no room for 50s, but room for 1s, then give out 1s instead)
+  - add shop for players to receive money for selling items
 - Visuals:
   - touch up textures
   - fix texture tiling
