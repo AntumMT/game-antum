@@ -74,6 +74,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [unifieddyes][] ([GPL][lic.gpl2.0]) -- version: [2021-03-26-1][ver.unifieddyes] ([patched][patch.unifieddyes])
 * misc/
   * [ambience][] ([MIT][lic.ambience] / [CC BY / CC BY-SA / CC BY-NC-SA / CC0][lic.ambience_sounds]) -- version: [e317f72 Git][ver.ambience] *2021-04-14*
+  * [asm_spawneggs][] ([MIT][lic.asm_spawneggs]) -- version: [8579eac Git][ver.asm_spawneggs] *2021-05-05*
   * [awards][] ([MIT][lic.awards]) -- version: [3.4.0][ver.awards] *2021-01-10*
   * [biofuel][] ([MIT](lic.biofuel)) -- version: [ca480ce Git][ver.biofuel] *2020-07-20*
   * [campfire][] ([GPL][lic.gpl2.0] / [CC BY-SA][lic.ccbysa] / [WTFPL][lic.campfire]) -- version: [1058f1d Git][ver.campfire] *2019-11-28*
@@ -113,8 +114,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * protection/
   * [pvp_areas][] ([LGPL][lic.lgpl2.1]) -- version: [6e4d66d Git][ver.pvp_areas] *2018-07-26*
   * [simple_protection][] ([CC0][lic.cc0]) -- version: [3630fe9 Git][ver.simple_protection] *2021-04-07* ([patched][patch.simple_protection])
-* spawning/
-  * [asm_spawneggs][] ([MIT][lic.asm_spawneggs]) -- version: [8579eac Git][ver.asm_spawneggs] *2021-05-05*
 * storage/
   * [drawers][] ([MIT / CC0 / CC BY][lic.drawers]) -- version: [0.6.2][ver.drawers] *2021-03-27*
   * [more_chests][] ([GPL][lic.gpl2.0]) -- version: [6be8145 Git][ver.more_chests] *2021-04-05*
