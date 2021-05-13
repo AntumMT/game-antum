@@ -28,6 +28,7 @@ minetest.register_node("pipeworks:steel_block_embedded_tube", {
 	after_dig_node = pipeworks.after_dig,
 	on_rotate = pipeworks.on_rotate,
 })
+pipeworks.ui_cat_tube_list[#pipeworks.ui_cat_tube_list+1] = "pipeworks:steel_block_embedded_tube"
 
 minetest.register_craft( {
 	output = "pipeworks:steel_block_embedded_tube 1",
@@ -45,6 +46,10 @@ local pane_box = {
 		{ -8/16, -8/16, -1/16, 8/16, 8/16, 1/16 } -- pane
 	}
 }
+
+local texture_alpha_mode = minetest.features.use_texture_alpha_string_modes
+	and "clip" or true
+
 minetest.register_node("pipeworks:steel_pane_embedded_tube", {
 	drawtype = "nodebox",
 	description = S("Airtight panel embedded tube"),
@@ -55,6 +60,7 @@ minetest.register_node("pipeworks:steel_pane_embedded_tube", {
 		"pipeworks_pane_embedded_tube_sides.png",
 		"pipeworks_pane_embedded_tube_ends.png", "pipeworks_pane_embedded_tube_ends.png",
 		},
+	use_texture_alpha = texture_alpha_mode,
 	node_box = pane_box,
 	selection_box = pane_box,
 	collision_box = pane_box,
@@ -76,6 +82,7 @@ minetest.register_node("pipeworks:steel_pane_embedded_tube", {
 	after_dig_node = pipeworks.after_dig,
 	on_rotate = pipeworks.on_rotate,
 })
+pipeworks.ui_cat_tube_list[#pipeworks.ui_cat_tube_list+1] = "pipeworks:steel_pane_embedded_tube"
 
 minetest.register_craft( {
 	output = "pipeworks:steel_pane_embedded_tube 1",

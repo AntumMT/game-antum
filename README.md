@@ -98,7 +98,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [sneeker][] ([MIT][lic.sneeker]) -- version: [1.0][ver.sneeker] *2021-05-08*
 	* [zombie][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [4edb18e Git][ver.zombie] *2021-05-05*
 * [painting][] (???) -- version [8961849 Git][ver.painting] *2016-05-05*
-* [pipeworks][] ([LGPL][lic.lgpl3.0]) -- version: [2021-02-19][ver.pipeworks]
+* [pipeworks][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2670fd8 Git][ver.pipeworks] *2021-05-06* ([patched][patch.pipeworks])
 * plantlife/
 * player/action/
 	* [hbsprint][] ([LGPL][lic.lgpl2.1]) -- version: [f566d0f Git][ver.hbsprint] *2021-02-18* ([patched][patch.hbsprint])
@@ -558,7 +558,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.oerkki]: https://github.com/AntumMT/mod-cmer/tree/70410fe
 [ver.override]: https://github.com/AntumMT/mod-override/tree/e6dda7a
 [ver.painting]: https://github.com/minetest-mods/painting/tree/8961849
-[ver.pipeworks]: https://gitlab.com/VanessaE/pipeworks/-/tags/2021-02-19
+[ver.pipeworks]: https://gitlab.com/VanessaE/pipeworks/tree/2670fd8
 [ver.privilegeareas]: https://github.com/minetest-mods/privilegeareas/tree/15eae20
 [ver.pvp_areas]: https://github.com/everamzah/pvp_areas/tree/6e4d66d
 [ver.quartz]: https://github.com/minetest-mods/quartz/tree/72ec06f
@@ -621,6 +621,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.motorbike]: https://github.com/AntumMT/mod-motorbike/tree/e9bcce2
 [patch.mysheetmetal]: https://github.com/AntumMT/mod-mysheetmetal/tree/2ffb3a2
 [patch.nether]: https://github.com/AntumMT/mod-nether/tree/7a84ddd
+[patch.pipeworks]: https://gitlab.com/AntumMT/mod-pipeworks/tree/48b082e
 [patch.quartz]: https://github.com/AntumMT/mod-quartz/tree/adc759e
 [patch.rainbow_ore]: https://github.com/AntumMT/mod-rainbow_ore/tree/0227a86
 [patch.simple_protection]: https://github.com/AntumMT/mod-simple_protection/tree/be873b5

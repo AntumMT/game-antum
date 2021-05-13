@@ -26,6 +26,11 @@ local texture_mt = {
 	end
 }
 
+-- This will remove any semi-transparent pixels
+-- because that is still buggy in Minetest, force this as default
+local texture_alpha_mode = minetest.features.use_texture_alpha_string_modes
+	and "clip" or true
+
 local register_one_tube = function(name, tname, dropname, desc, plain, noctrs, ends, short, inv, special, connects, style)
 	noctrs = noctrs or default_noctrs
 	setmetatable(noctrs, texture_mt)
@@ -82,6 +87,7 @@ local register_one_tube = function(name, tname, dropname, desc, plain, noctrs, e
 		description = tubedesc,
 		drawtype = "nodebox",
 		tiles = outimgs,
+		use_texture_alpha = texture_alpha_mode,
 		sunlight_propagates = true,
 		inventory_image = iimg,
 		wield_image = iimg,
@@ -107,6 +113,18 @@ local register_one_tube = function(name, tname, dropname, desc, plain, noctrs, e
 			connect_sides = {front = 1, back = 1, left = 1, right = 1, top = 1, bottom = 1},
 			priority = 50
 		},
+		on_punch = function(pos, node, player, pointed)
+			local playername = player:get_player_name()
+			if minetest.is_protected(pos, playername) and not minetest.check_player_privs(playername, {protection_bypass=true}) then
+				return minetest.node_punch(pos, node, player, pointed)
+			end
+			if pipeworks.check_and_wear_hammer(player) then
+				local wieldname = player:get_wielded_item():get_name()
+				pipeworks.logger(string.format("%s struck a tube at %s with %s to break it.", playername, minetest.pos_to_string(pos), wieldname))
+				pipeworks.break_tube(pos)
+			end
+			return minetest.node_punch(pos, node, player, pointed)
+		end,
 		after_place_node = pipeworks.after_place,
 		after_dig_node = pipeworks.after_dig,
 		on_rotate = false,
@@ -182,6 +200,7 @@ local register_all_tubes = function(name, desc, plain, noctrs, ends, short, inv,
 		end
 		end
 		end
+		pipeworks.ui_cat_tube_list[#pipeworks.ui_cat_tube_list+1] = name.."_000000"
 	else
 		-- 6d tubes: uses only 10 nodes instead of 64, but the textures must be rotated
 		local cconnects = {{}, {1}, {1, 2}, {1, 3}, {1, 3, 5}, {1, 2, 3}, {1, 2, 3, 5}, {1, 2, 3, 4}, {1, 2, 3, 4, 5}, {1, 2, 3, 4, 5, 6}}
@@ -204,6 +223,7 @@ local register_all_tubes = function(name, desc, plain, noctrs, ends, short, inv,
 				tube = {connect_sides = {front = 1, back = 1, left = 1, right = 1, top = 1, bottom = 1}},
 				drop = name.."_1",
 			})
+			pipeworks.ui_cat_tube_list[#pipeworks.ui_cat_tube_list+1] = name.."_1"
 			table.insert(tubenodes, cname)
 			for xm = 0, 1 do
 			for xp = 0, 1 do
