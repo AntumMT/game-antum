@@ -139,7 +139,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [desert_life][] ([CC BY-SA][lic.ccbysa4.0]) -- version: [188f984 Git][ver.desert_life] *2020-01-24*
   * [ethereal][] ([MIT][lic.ethereal]) -- version: [90cdf94 Git][ver.ethereal] *2021-04-29* ([patched][patch.ethereal])
   * [nether][] ([ISC / CC BY / CC BY-SA / CC0][lic.nether]) -- version: [3][ver.nether] *2021-01-22* ([patched][patch.nether])
-  * [snowdrift][] ([MIT / CC BY / CC BY-SA][lic.snowdrift]) -- version: [3342939 Git][ver.snowdrift] *2020-04-24*
+  * [snowdrift][] ([MIT / CC BY / CC BY-SA][lic.snowdrift]) -- version: [3342939 Git][ver.snowdrift] *2020-04-24* ([patched][patch.snowdrift])
 
 
 ---
@@ -616,6 +616,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.quartz]: https://github.com/AntumMT/mod-quartz/tree/adc759e
 [patch.rainbow_ore]: https://github.com/AntumMT/mod-rainbow_ore/tree/0227a86
 [patch.simple_protection]: https://github.com/AntumMT/mod-simple_protection/tree/be873b5
+[patch.snowdrift]: https://github.com/AntumMT/mod-snowdrift/tree/0a51aa1
 [patch.technic]: https://github.com/AntumMT/mp-technic/tree/b591884
 [patch.throwing]: https://github.com/AntumMT/mod-throwing/tree/b33ffde
 [patch.trash_can]: https://github.com/AntumMT/mod-trash_can/tree/5a92bf4

@@ -100,7 +100,7 @@ minetest.register_globalstep(function(dtime)
 
 	for _, player in ipairs(minetest.get_connected_players()) do
 		local player_name = player:get_player_name()
-		local ppos = player:getpos()
+		local ppos = player:get_pos()
 		-- Point just above player head, to ensure precipitation when swimming
 		local pposy = math.floor(ppos.y) + 2
 		if pposy >= YMIN and pposy <= YMAX then
@@ -119,9 +119,9 @@ minetest.register_globalstep(function(dtime)
 			local nobj_humid = nobj_humid or minetest.get_perlin(np_humid)
 			local nobj_prec = nobj_prec or minetest.get_perlin(np_prec)
 
-			local nval_temp = nobj_temp:get2d({x = pposx, y = pposz})
-			local nval_humid = nobj_humid:get2d({x = pposx, y = pposz})
-			local nval_prec = nobj_prec:get2d({x = time, y = 0})
+			local nval_temp = nobj_temp:get_2d({x = pposx, y = pposz})
+			local nval_humid = nobj_humid:get_2d({x = pposx, y = pposz})
+			local nval_prec = nobj_prec:get_2d({x = time, y = 0})
 
 			-- Default Minetest Game biome system:
 			-- Frozen biomes below heat 35
