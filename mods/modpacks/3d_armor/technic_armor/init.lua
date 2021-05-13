@@ -1,6 +1,10 @@
--- support for i18n
-local S = armor_i18n.gettext
-local F = armor_i18n.fgettext
+
+if not core.settings:get_bool("armor_enable_technic", true) then
+	return
+end
+
+-- support for translator
+local S = armor.get_translator
 
 if not minetest.get_modpath("technic_worldgen") then
 	minetest.log("warning", S("technic_armor: Mod loaded but unused."))

@@ -48,7 +48,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * equipment/
 	* [airtanks][] ([MIT][lic.airtanks]) -- version: [b686694 Git][ver.airtanks] *2021-03-13* ([patched][patch.airtanks])
 	* [slingshot][] ([MIT][lic.slingshot] / [CC0][lic.cc0]) -- version [0.1][ver.slingshot] *2017-08-16*
-	* [technic_armor][] ([LGPL / WTFPL][lic.technic_armor]) -- version [694642f Git][ver.technic_armor] *2018-02-11*
     * [throwing][] ([WTFPL][lic.wtfpl]) -- version: [90bcf43 Git][ver.throwing] *2013-09-27* ([patched][patch.throwing])
 	* [xtraarmor][] ([CC BY-SA][lic.ccbysa3.0]) -- version: 0.3
 * furniture/
@@ -347,7 +346,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [asm_spawneggs]: https://forum.minetest.net/viewtopic.php?t=26676
 [spectator_mode]: https://forum.minetest.net/viewtopic.php?t=13718
 [technic]: https://forum.minetest.net/viewtopic.php?t=2538
-[technic_armor]: https://github.com/stujones11/technic_armor
 [throwing]: https://forum.minetest.net/viewtopic.php?t=687
 [tnt]: https://forum.minetest.net/viewtopic.php?id=2902
 [tools_obsidian]: https://forum.minetest.net/viewtopic.php?t=14236
@@ -426,7 +424,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.snowdrift]: mods/weather/snowdrift/license.txt
 [lic.asm_spawneggs]: mods/spawning/asm_spawneggs/LICENSE.txt
 [lic.spectator_mode]: mods/admin/spectator_mode/LICENSE
-[lic.technic_armor]: mods/equipment/technic_armor/LICENSE.txt
 [lic.tools_obsidian]: mods/tools/tools_obsidian/README.md
 [lic.trash_can]: mods/furniture/trash_can/LICENSE.txt
 [lic.waffles]: mods/furniture/waffles/LICENSE.txt
@@ -576,7 +573,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.asm_spawneggs]: https://github.com/AntumMT/mod-asm_spawneggs/tree/8579eac
 [ver.spectator_mode]: https://github.com/minetest-mods/spectator_mode/tree/3648371
 [ver.technic]: https://github.com/minetest-mods/technic/tree/43acec2
-[ver.technic_armor]: https://github.com/stujones11/technic_armor/tree/694642f
 [ver.throwing]: https://github.com/PilzAdam/throwing/tree/90bcf43
 [ver.tnt]: https://github.com/PilzAdam/TNT/tree/d6a0b7d
 [ver.tools_obsidian]: https://github.com/Dragonop/tools_obsidian/releases/tag/1.0
@@ -591,7 +587,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.workbench]: https://github.com/minetest-mods/workbench/tree/bd14f59
 [ver.zombie]: https://github.com/AntumMT/mod-cmer/tree/4edb18e
 
-[patch.3d_armor]: https://github.com/AntumMT/mp-3d_armor/tree/cfba55c
+[patch.3d_armor]: https://github.com/AntumMT/mp-3d_armor/tree/269b6ae
 [patch.airtanks]: https://github.com/AntumMT/mod-airtanks/tree/8b7fd12
 [patch.amber]: https://github.com/AntumMT/mod-amber/tree/39b852a
 [patch.atm]: https://github.com/AntumMT/mod-atm/tree/7771aa0
