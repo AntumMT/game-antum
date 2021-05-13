@@ -77,6 +77,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [unifieddyes][] ([GPL][lic.gpl2.0]) -- version: [2021-03-26-1][ver.unifieddyes] ([patched][patch.unifieddyes])
 * misc/
   * [listitems][] ([MIT][lic.listitems]) -- version: [0.7][ver.listitems] *2021-04-29*
+  * [pipeworks][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2670fd8 Git][ver.pipeworks] *2021-05-06* ([patched][patch.pipeworks])
 * mobiles/
 	* [chicken][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [bce3b51 Git][ver.chicken] *2021-05-05*
 	* [dinosaurs_aggressive][] -- version: [874f299 Git][ver.dinosaurs_aggressive] *2017-07-27*
@@ -98,7 +99,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [sneeker][] ([MIT][lic.sneeker]) -- version: [1.0][ver.sneeker] *2021-05-08*
 	* [zombie][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [4edb18e Git][ver.zombie] *2021-05-05*
 * [painting][] (???) -- version [8961849 Git][ver.painting] *2016-05-05*
-* [pipeworks][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2670fd8 Git][ver.pipeworks] *2021-05-06* ([patched][patch.pipeworks])
 * plantlife/
 * player/action/
 	* [hbsprint][] ([LGPL][lic.lgpl2.1]) -- version: [f566d0f Git][ver.hbsprint] *2021-02-18* ([patched][patch.hbsprint])
