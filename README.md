@@ -132,7 +132,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [hbarmor][] ([MIT][lic.mit] / [CC BY-SA][lic.ccbysa3.0]) -- version: [1.0.0][ver.hbarmor] *2019-04-01*
   * [home_gui][] ([BSD 3-Clause][lic.home_gui]) -- version: [a291a09 Git][ver.home_gui] *2018-08-09*
   * [hudbars][] ([MIT][lic.mit] / [CC BY-SA][lic.ccbysa3.0]) -- version: [2.3.1][ver.hudbars] *2020-07-11*
-  * [hudmap][] ([LGPL][lic.lgpl2.1] / [WTFPL][lic.wtfpl]) -- version: [3b8bdc0 Git][ver.hudmap] *2017-05-14*
   * [mthudclock][] ([WTFPL][lic.wtfpl]) -- version [d86e745 Git][ver.mthudclock] *2018-01-06*
 * world/
   * [bright_night][] ([Unlicense][lic.unlicense]) -- version: [69b750a Git][ver.bright_night] *2018-06-03*
@@ -287,7 +286,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [hot_air_balloons]: https://forum.minetest.net/viewtopic.php?t=22367
 [hovercraft]: https://forum.minetest.net/viewtopic.php?t=6722
 [hudbars]: https://forum.minetest.net/viewtopic.php?t=11153
-[hudmap]: https://github.com/stujones11/hudmap
 [ilights]: https://forum.minetest.net/viewtopic.php?t=12200
 [intllib]: https://forum.minetest.net/viewtopic.php?t=4929
 [invisibility]: https://forum.minetest.net/viewtopic.php?t=14846
@@ -516,7 +514,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.hot_air_balloons]: https://notabug.org/NetherEran/hot_air_balloons/src/39a3572ad1bf7fd800525d68b128981e1b2c37d1
 [ver.hovercraft]: https://github.com/stujones11/hovercraft/tree/4d50e68
 [ver.hudbars]: http://repo.or.cz/minetest_hudbars.git/tree/0684bac
-[ver.hudmap]: https://github.com/stujones11/hudmap/tree/3b8bdc0
 [ver.ilights]: https://gitlab.com/VanessaE/ilights/tags/2021-02-25-01
 [ver.intllib]: https://github.com/minetest-mods/intllib/tree/6ebdc53
 [ver.invisibility]: https://notabug.org/TenPlus1/invisibility/src/65c0823d6a28b62046cdadc67ff1e462d37e3643
