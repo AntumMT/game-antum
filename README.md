@@ -56,6 +56,9 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [sfinv_buttons][] ([MIT][lic.mit]) -- version [1.1.0 (ebb1f7c Git)][ver.sfinv_buttons] *2021-01-14*
 * libs/
   * [biome_lib][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2021-04-16-2][ver.biome_lib]
+  * [cmer][creatures] ([zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [revived 0d33dab Git][ver.cmer] *2021-05-07*
+  * [mobkit][] ([MIT][lic.mobkit]) -- version: [ddea141 Git][ver.mobkit] *2021-02-01*
+  * [mobs_redo][] ([MIT][lic.mobs_redo] / [CC BY][lic.ccby3.0] / [CC0][lic.cc0]) -- version: [f6e16a5 Git][ver.mobs_redo] *2021-04-11* ([patched][patch.mobs_redo])
   * [signs_lib][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2021-03-04-2][ver.signs_lib]
 * lighting/
   * [glow][] ([GPL][lic.gpl2.0]) -- version: [4c015a0 Git][ver.glow] *2019-02-05*
@@ -86,10 +89,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [pipeworks][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2670fd8 Git][ver.pipeworks] *2021-05-06* ([patched][patch.pipeworks])
 * mobiles/
   * [chicken][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [bce3b51 Git][ver.chicken] *2021-05-05*
-  * engine/
-    * [cmer][creatures] ([zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [revived 0d33dab Git][ver.cmer] *2021-05-07*
-    * [mobkit][] ([MIT][lic.mobkit]) -- version: [ddea141 Git][ver.mobkit] *2021-02-01*
-    * [mobs_redo][] ([MIT][lic.mobs_redo] / [CC BY][lic.ccby3.0] / [CC0][lic.cc0]) -- version: [f6e16a5 Git][ver.mobs_redo] *2021-04-11* ([patched][patch.mobs_redo])
   * [folks][] ([GPL][lic.gpl3.0]) -- version: [0.2.0][ver.folks] *2021-02-23*
   * general/
     * [mobs_animal][] ([MIT][lic.mobs_animal]) -- version: [80e72a4 Git][ver.mobs_animal] *2021-04-13* ([patched][patch.mobs_animal])
