@@ -157,7 +157,7 @@ s_protect.load_config = function()
 	io.close(file)
 
 	-- Load existing config
-	simple_protection = {}
+	local simple_protection = {}
 	dofile(s_protect.conf)
 
 	-- Backwards compatibility
