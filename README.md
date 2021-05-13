@@ -21,8 +21,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [privs][] ([CC0][lic.cc0])
     * [spectator_mode][] ([WTFPL][lic.spectator_mode]) -- version: [3648371 Git][ver.spectator_mode] *2020-07-15*
     * [whitelist][] ([CC0][lic.cc0]) -- version: [0.1 (b813b19 Git)][ver.whitelist] *2017-08-18*
-* [awards][] ([MIT][lic.awards]) -- version: [3.4.0][ver.awards] *2021-01-10*
-* [biofuel][] ([MIT](lic.biofuel)) -- version: [ca480ce Git][ver.biofuel] *2020-07-20*
 * buildings/
     * [bridges][] ([GPL][lic.gpl3.0]) -- version: [5b5f475 Git][ver.bridges] *2015-08-23* ([patched][patch.bridges])
     * [christmas][] ([MIT][lic.christmas]) -- version [d3bd872 Git][ver.christmas] *2013-01-11* ([patched][patch.christmas])
@@ -76,6 +74,8 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [rainbow_ore][] ([LGPL][lic.rainbow_ore]) -- version: [6e77693 Git][ver.rainbow_ore] *2015-11-02* ([patched][patch.rainbow_ore])
 	* [unifieddyes][] ([GPL][lic.gpl2.0]) -- version: [2021-03-26-1][ver.unifieddyes] ([patched][patch.unifieddyes])
 * misc/
+  * [awards][] ([MIT][lic.awards]) -- version: [3.4.0][ver.awards] *2021-01-10*
+  * [biofuel][] ([MIT](lic.biofuel)) -- version: [ca480ce Git][ver.biofuel] *2020-07-20*
   * [listitems][] ([MIT][lic.listitems]) -- version: [0.7][ver.listitems] *2021-04-29*
   * [pipeworks][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2670fd8 Git][ver.pipeworks] *2021-05-06* ([patched][patch.pipeworks])
 * mobiles/
