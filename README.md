@@ -12,56 +12,56 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 ***"UPDATES" Denotes updates available***
 
 * admin/
-    * [alternode][] ([MIT][lic.alternode]) -- version: [1.0][ver.alternode] *2021-05-03*
-    * [cleaner][] ([CC0][lic.cc0]) -- version: [0.4 (68222b1 Git)][ver.cleaner] *2017-08-30*
-    * [invisible][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa4.0]) -- version: [4 (a2a6504 Git)][ver.invisible]
-    * [no_fall_damage][] ([MIT][lic.no_fall_damage]) -- version [1.0.0][ver.no_fall_damage] *2020-12-19*
-    * [override][] ([MIT][lic.override]) -- version: [0.2 (e6dda7a Git)][ver.override] *2017-08-30*
-    * [privilegeareas][] ([WTFPL][lic.privilegeareas] / [CC0][lic.cc0]) -- version: [15eae20 Git][ver.privilegeareas] *2018-11-16*
-    * [privs][] ([CC0][lic.cc0])
-    * [spectator_mode][] ([WTFPL][lic.spectator_mode]) -- version: [3648371 Git][ver.spectator_mode] *2020-07-15*
-    * [whitelist][] ([CC0][lic.cc0]) -- version: [0.1 (b813b19 Git)][ver.whitelist] *2017-08-18*
+  * [alternode][] ([MIT][lic.alternode]) -- version: [1.0][ver.alternode] *2021-05-03*
+  * [cleaner][] ([CC0][lic.cc0]) -- version: [0.4 (68222b1 Git)][ver.cleaner] *2017-08-30*
+  * [invisible][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa4.0]) -- version: [4 (a2a6504 Git)][ver.invisible]
+  * [no_fall_damage][] ([MIT][lic.no_fall_damage]) -- version [1.0.0][ver.no_fall_damage] *2020-12-19*
+  * [override][] ([MIT][lic.override]) -- version: [0.2 (e6dda7a Git)][ver.override] *2017-08-30*
+  * [privilegeareas][] ([WTFPL][lic.privilegeareas] / [CC0][lic.cc0]) -- version: [15eae20 Git][ver.privilegeareas] *2018-11-16*
+  * [privs][] ([CC0][lic.cc0])
+  * [spectator_mode][] ([WTFPL][lic.spectator_mode]) -- version: [3648371 Git][ver.spectator_mode] *2020-07-15*
+  * [whitelist][] ([CC0][lic.cc0]) -- version: [0.1 (b813b19 Git)][ver.whitelist] *2017-08-18*
 * buildings/
-    * [bridges][] ([GPL][lic.gpl3.0]) -- version: [5b5f475 Git][ver.bridges] *2015-08-23* ([patched][patch.bridges])
-    * [christmas][] ([MIT][lic.christmas]) -- version [d3bd872 Git][ver.christmas] *2013-01-11* ([patched][patch.christmas])
-    * [elevator][] ([WTFPL][lic.elevator])
-    * [fort_spikes][] ([MIT][lic.fort_spikes] / [CC0][lic.cc0]) -- version: [3b98b46 Git][ver.fort_spikes] *2018-06-05*
-    * [glass][] ([LGPL][lic.lgpl2.1]) -- version: [1.0][ver.glass] *2021-04-19*
-    * [moreblocks][] ([zlib][lic.moreblocks]) -- version: [3b97ea5 Git][ver.moreblocks] *2021-03-19*
-    * [windmill][] ([WTFPL][lic.windmill]) -- version: [47b029d Git][ver.windmill] *2014-08-21* ([patched][patch.windmill])
+  * [bridges][] ([GPL][lic.gpl3.0]) -- version: [5b5f475 Git][ver.bridges] *2015-08-23* ([patched][patch.bridges])
+  * [christmas][] ([MIT][lic.christmas]) -- version [d3bd872 Git][ver.christmas] *2013-01-11* ([patched][patch.christmas])
+  * [elevator][] ([WTFPL][lic.elevator])
+  * [fort_spikes][] ([MIT][lic.fort_spikes] / [CC0][lic.cc0]) -- version: [3b98b46 Git][ver.fort_spikes] *2018-06-05*
+  * [glass][] ([LGPL][lic.lgpl2.1]) -- version: [1.0][ver.glass] *2021-04-19*
+  * [moreblocks][] ([zlib][lic.moreblocks]) -- version: [3b97ea5 Git][ver.moreblocks] *2021-03-19*
+  * [windmill][] ([WTFPL][lic.windmill]) -- version: [47b029d Git][ver.windmill] *2014-08-21* ([patched][patch.windmill])
 * chat/
-    * [away][] ([GPL][lic.gpl2.0]) -- version: [4c1e5a9 Git][ver.away] *2012-03-09* ([patched][patch.away])
-    * [chatlog][] ([CC0][lic.cc0]) -- version: [1.0][ver.chatlog] *2017-08-12*
+  * [away][] ([GPL][lic.gpl2.0]) -- version: [4c1e5a9 Git][ver.away] *2012-03-09* ([patched][patch.away])
+  * [chatlog][] ([CC0][lic.cc0]) -- version: [1.0][ver.chatlog] *2017-08-12*
 * commerce/
-    * [atm][] ([GPL][lic.gpl3.0]) -- version: [1.0.4][ver.atm] *2021-04-21* ([patched][patch.atm])
-    * [currency][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2021-01-30][ver.currency]
-    * [server_shop][] ([MIT][lic.server_shop]) -- version: [f2ca797 Git][ver.server_shop] *2021-05-13*
+  * [atm][] ([GPL][lic.gpl3.0]) -- version: [1.0.4][ver.atm] *2021-04-21* ([patched][patch.atm])
+  * [currency][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2021-01-30][ver.currency]
+  * [server_shop][] ([MIT][lic.server_shop]) -- version: [f2ca797 Git][ver.server_shop] *2021-05-13*
 * core/
   * [antum][] ([MIT][lic.antum]) -- version: [69b39a4 Git][ver.antum] *2017-08-30*
   * [minetest_game][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- version: [5.4.1][ver.minetest_game] *2021-04-10*
 * [enchanting][] ([GPL / WTFPL / CC BY-SA-NA][lic.enchanting]) -- version: [13ea31c Git][ver.enchanting] *2016-12-16* ([patched][patch.enchanting])
 * equipment/
-	* [airtanks][] ([MIT][lic.airtanks]) -- version: [b686694 Git][ver.airtanks] *2021-03-13* ([patched][patch.airtanks])
-	* [slingshot][] ([MIT][lic.slingshot] / [CC0][lic.cc0]) -- version [0.1][ver.slingshot] *2017-08-16*
-    * [throwing][] ([WTFPL][lic.wtfpl]) -- version: [90bcf43 Git][ver.throwing] *2013-09-27* ([patched][patch.throwing])
-	* [xtraarmor][] ([CC BY-SA][lic.ccbysa3.0]) -- version: 0.3
+  * [airtanks][] ([MIT][lic.airtanks]) -- version: [b686694 Git][ver.airtanks] *2021-03-13* ([patched][patch.airtanks])
+  * [slingshot][] ([MIT][lic.slingshot] / [CC0][lic.cc0]) -- version [0.1][ver.slingshot] *2017-08-16*
+  * [throwing][] ([WTFPL][lic.wtfpl]) -- version: [90bcf43 Git][ver.throwing] *2013-09-27* ([patched][patch.throwing])
+  * [xtraarmor][] ([CC BY-SA][lic.ccbysa3.0]) -- version: 0.3
 * furniture/
-	* [jukebox][] ([WTFPL / CC0][lic.jukebox]) -- version: [0d871f2 Git][ver.jukebox] *2020-03-11*
-    * [trampoline][] ([GPL][lic.gpl3.0]) -- version: [0.3][ver.trampoline] *2021-04-28*
-    * [trash_can][] ([MIT][lic.trash_can]) -- version: [423b0f2 Git][ver.trash_can] *2020-08-12*
-    * [waffles][] ([MIT][lic.waffles]) -- version [15bcdce Git][ver.waffles] *2018-05-13*
+  * [jukebox][] ([WTFPL / CC0][lic.jukebox]) -- version: [0d871f2 Git][ver.jukebox] *2020-03-11*
+  * [trampoline][] ([GPL][lic.gpl3.0]) -- version: [0.3][ver.trampoline] *2021-04-28*
+  * [trash_can][] ([MIT][lic.trash_can]) -- version: [423b0f2 Git][ver.trash_can] *2020-08-12*
+  * [waffles][] ([MIT][lic.waffles]) -- version [15bcdce Git][ver.waffles] *2018-05-13*
 * horticulture/
-	* [farming][] ([MIT][lic.farming]) -- version: [dedc33c Git][ver.farming] *2021-05-07*
+  * [farming][] ([MIT][lic.farming]) -- version: [dedc33c Git][ver.farming] *2021-05-07*
 * inventory/
-    * [bags][] ([BSD 3-Clause][lic.bags]) -- version: [bc87b45 Git][ver.bags] *2018-04-11*
-    * [sfinv_buttons][] ([MIT][lic.mit]) -- version [1.1.0 (ebb1f7c Git)][ver.sfinv_buttons] *2021-01-14*
+  * [bags][] ([BSD 3-Clause][lic.bags]) -- version: [bc87b45 Git][ver.bags] *2018-04-11*
+  * [sfinv_buttons][] ([MIT][lic.mit]) -- version [1.1.0 (ebb1f7c Git)][ver.sfinv_buttons] *2021-01-14*
 * libs/
   * [biome_lib][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2021-04-16-2][ver.biome_lib]
   * [signs_lib][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2021-03-04-2][ver.signs_lib]
 * lighting/
-    * [glow][] ([GPL][lic.gpl2.0]) -- version: [4c015a0 Git][ver.glow] *2019-02-05*
-	* [ilights][] ([LGPL][lic.lgpl3.0]) -- version: [2021-02-25-01][ver.ilights] ([patched][patch.ilights])
-    * walking_light ([petermalone fork][walking_light]) ([WTFPL / CC BY-SA][lic.walking_light]) -- version: [766ef0f Git][ver.walking_light] *2019-11-09* ([patched][patch.walking_light])
+  * [glow][] ([GPL][lic.gpl2.0]) -- version: [4c015a0 Git][ver.glow] *2019-02-05*
+  * [ilights][] ([LGPL][lic.lgpl3.0]) -- version: [2021-02-25-01][ver.ilights] ([patched][patch.ilights])
+  * walking_light ([petermalone fork][walking_light]) ([WTFPL / CC BY-SA][lic.walking_light]) -- version: [766ef0f Git][ver.walking_light] *2019-11-09* ([patched][patch.walking_light])
 * materials/
   * [amber][] ([LGPL][lic.lgpl2.1]) -- version: [56627fa Git][ver.amber] *2017-10-29* ([patched][patch.amber])
   * [basic_materials][] ([LGPL][lic.lgpl3.0]) -- version: [2021-01-30][ver.basic_materials]
@@ -83,47 +83,47 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [painting][] (???) -- version [8961849 Git][ver.painting] *2016-05-05*
   * [pipeworks][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2670fd8 Git][ver.pipeworks] *2021-05-06* ([patched][patch.pipeworks])
 * mobiles/
-	* [chicken][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [bce3b51 Git][ver.chicken] *2021-05-05*
-	* [dinosaurs_aggressive][] -- version: [874f299 Git][ver.dinosaurs_aggressive] *2017-07-27*
-		* velociraptor ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- forked from *mobs_farlands* (part of [farlands][] sub-game)
-	* engine/
-		* [cmer][creatures] ([zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [revived 0d33dab Git][ver.cmer] *2021-05-07*
-		* [mobkit][] ([MIT][lic.mobkit]) -- version: [ddea141 Git][ver.mobkit] *2021-02-01*
-		* [mobs_redo][] ([MIT][lic.mobs_redo] / [CC BY][lic.ccby3.0] / [CC0][lic.cc0]) -- version: [f6e16a5 Git][ver.mobs_redo] *2021-04-11* ([patched][patch.mobs_redo])
-	* [folks][] ([GPL][lic.gpl3.0]) -- version: [0.2.0][ver.folks] *2021-02-23*
-	* general/
-		* [mobs_animal][] ([MIT][lic.mobs_animal]) -- version: [80e72a4 Git][ver.mobs_animal] *2021-04-13* ([patched][patch.mobs_animal])
-	* [ghost][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [dd22520 Git][ver.ghost] *2021-05-05*
-	* [horse][] ([MIT][lic.horse]) -- version: [9c5c857 Git][ver.horse] *2021-05-05*
-	* [monsters_aggressive][] (see individual mods for licensing) -- version: [89a8187 Git][ver.monsters_aggressive] *2017-08-30*
-	* [monsters_passive][] (see individual mods for licensing) -- version: [b07fe19 Git][ver.monsters_passive] *2017-08-09*
-	* [oerkki][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [70410fe Git][ver.oerkki] *2021-05-05*
-	* [shark][] ([CC0 / CC BY-SA][lic.shark]) -- version: [ef2507b Git][ver.shark] *2021-05-05*
-	* [sheep][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [ff39b4a Git][ver.sheep] *2021-05-13*
-	* [sneeker][] ([MIT][lic.sneeker]) -- version: [1.0][ver.sneeker] *2021-05-08*
-	* [zombie][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [4edb18e Git][ver.zombie] *2021-05-05*
+  * [chicken][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [bce3b51 Git][ver.chicken] *2021-05-05*
+  * [dinosaurs_aggressive][] -- version: [874f299 Git][ver.dinosaurs_aggressive] *2017-07-27*
+    * velociraptor ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- forked from *mobs_farlands* (part of [farlands][] sub-game)
+  * engine/
+    * [cmer][creatures] ([zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [revived 0d33dab Git][ver.cmer] *2021-05-07*
+    * [mobkit][] ([MIT][lic.mobkit]) -- version: [ddea141 Git][ver.mobkit] *2021-02-01*
+    * [mobs_redo][] ([MIT][lic.mobs_redo] / [CC BY][lic.ccby3.0] / [CC0][lic.cc0]) -- version: [f6e16a5 Git][ver.mobs_redo] *2021-04-11* ([patched][patch.mobs_redo])
+  * [folks][] ([GPL][lic.gpl3.0]) -- version: [0.2.0][ver.folks] *2021-02-23*
+  * general/
+    * [mobs_animal][] ([MIT][lic.mobs_animal]) -- version: [80e72a4 Git][ver.mobs_animal] *2021-04-13* ([patched][patch.mobs_animal])
+  * [ghost][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [dd22520 Git][ver.ghost] *2021-05-05*
+  * [horse][] ([MIT][lic.horse]) -- version: [9c5c857 Git][ver.horse] *2021-05-05*
+  * [monsters_aggressive][] (see individual mods for licensing) -- version: [89a8187 Git][ver.monsters_aggressive] *2017-08-30*
+  * [monsters_passive][] (see individual mods for licensing) -- version: [b07fe19 Git][ver.monsters_passive] *2017-08-09*
+  * [oerkki][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [70410fe Git][ver.oerkki] *2021-05-05*
+  * [shark][] ([CC0 / CC BY-SA][lic.shark]) -- version: [ef2507b Git][ver.shark] *2021-05-05*
+  * [sheep][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [ff39b4a Git][ver.sheep] *2021-05-13*
+  * [sneeker][] ([MIT][lic.sneeker]) -- version: [1.0][ver.sneeker] *2021-05-08*
+  * [zombie][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [4edb18e Git][ver.zombie] *2021-05-05*
 * player/action/
-	* [hbsprint][] ([LGPL][lic.lgpl2.1]) -- version: [f566d0f Git][ver.hbsprint] *2021-02-18* ([patched][patch.hbsprint])
+  * [hbsprint][] ([LGPL][lic.lgpl2.1]) -- version: [f566d0f Git][ver.hbsprint] *2021-02-18* ([patched][patch.hbsprint])
 * player/visuals/
   * [headanim][] ([MIT][lic.headanim]) -- version: [1.01][ver.headanim] *2021-01-16*
   * [hidename][] ([MIT][lic.hidename]) -- version: [7b3aa52 Git][ver.hidename] *2021-04-19*
   * [invisibility][] ([MIT][lic.invisibility]) -- version: [65c0823 Git][ver.invisibility] *2021-01-21* ([patched][patch.invisibility])
   * [wardrobe][] ([MIT][lic.wardrobe]) -- version: [1.3][ver.wardrobe] *2021-04-22*
 * protection/
-    * [pvp_areas][] ([LGPL][lic.lgpl2.1]) -- version: [6e4d66d Git][ver.pvp_areas] *2018-07-26*
-    * [simple_protection][] ([CC0][lic.cc0]) -- version: [3630fe9 Git][ver.simple_protection] *2021-04-07* ([patched][patch.simple_protection])
+  * [pvp_areas][] ([LGPL][lic.lgpl2.1]) -- version: [6e4d66d Git][ver.pvp_areas] *2018-07-26*
+  * [simple_protection][] ([CC0][lic.cc0]) -- version: [3630fe9 Git][ver.simple_protection] *2021-04-07* ([patched][patch.simple_protection])
 * sound/
-    * [ambience][] ([MIT][lic.ambience] / [CC BY / CC BY-SA / CC BY-NC-SA / CC0][lic.ambience_sounds]) -- version: [e317f72 Git][ver.ambience] *2021-04-14*
+  * [ambience][] ([MIT][lic.ambience] / [CC BY / CC BY-SA / CC BY-NC-SA / CC0][lic.ambience_sounds]) -- version: [e317f72 Git][ver.ambience] *2021-04-14*
 * spawning/
-	* [asm_spawneggs][] ([MIT][lic.asm_spawneggs]) -- version: [8579eac Git][ver.asm_spawneggs] *2021-05-05*
+  * [asm_spawneggs][] ([MIT][lic.asm_spawneggs]) -- version: [8579eac Git][ver.asm_spawneggs] *2021-05-05*
 * storage/
-	* [drawers][] ([MIT / CC0 / CC BY][lic.drawers]) -- version: [0.6.2][ver.drawers] *2021-03-27*
-	* [more_chests][] ([GPL][lic.gpl2.0]) -- version: [6be8145 Git][ver.more_chests] *2021-04-05*
+  * [drawers][] ([MIT / CC0 / CC BY][lic.drawers]) -- version: [0.6.2][ver.drawers] *2021-03-27*
+  * [more_chests][] ([GPL][lic.gpl2.0]) -- version: [6be8145 Git][ver.more_chests] *2021-04-05*
 * tools/
-	* [compassgps][] ([WTFPL][lic.wtfpl] / [CC0][lic.cc0] / [CC BY-SA][lic.ccbysa]) -- version: [567b95f Git][ver.compassgps] *2018-09-24*
-	* [equip_exam][] ([MIT][lic.equip_exam]) - version: [1.2][ver.equip_exam] *2021-05-03*
-    * [tools_obsidian][] ([LGPL / CC BY-SA][lic.tools_obsidian]) -- version: [1.0][ver.tools_obsidian] *2021-01-15*
-    * [workbench][] ([LGPL / WTFPL](mods/tools/workbench/LICENSE)) -- version: [bd14f59 Git][ver.workbench] *2017-08-08*
+  * [compassgps][] ([WTFPL][lic.wtfpl] / [CC0][lic.cc0] / [CC BY-SA][lic.ccbysa]) -- version: [567b95f Git][ver.compassgps] *2018-09-24*
+  * [equip_exam][] ([MIT][lic.equip_exam]) - version: [1.2][ver.equip_exam] *2021-05-03*
+  * [tools_obsidian][] ([LGPL / CC BY-SA][lic.tools_obsidian]) -- version: [1.0][ver.tools_obsidian] *2021-01-15*
+  * [workbench][] ([LGPL / WTFPL](mods/tools/workbench/LICENSE)) -- version: [bd14f59 Git][ver.workbench] *2017-08-08*
 * transport/
   * [bike][] ([MIT][lic.bike]) -- version: [1.2][ver.bike] *2021-04-12*
   * [boats][boats2] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa3.0]) -- version: [b83231e Git][ver.boats2] *2016-10-14* ([patched][patch.boats2]) ***UPSTREAM MOVED***
@@ -132,19 +132,19 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [hovercraft][] ([LGPL / CC BY-SA / CC0][lic.hovercraft]) -- version: [4d50e68 Git][ver.hovercraft] *2017-05-14* ([patched][patch.hovercraft])
   * [motorbike][] ([MIT][lic.motorbike]) -- version: [9527d56 Git][ver.motorbike] *2021-04-01* ([patched][patch.motorbike])
 * ui/
-    * [bookmarks_gui][] ([BSD 3-Clause][lic.bookmarks_gui]) -- version: [f7ae10a Git][ver.bookmarks_gui] *2017-08-29*
-    * [hbarmor][] ([MIT][lic.mit] / [CC BY-SA][lic.ccbysa3.0]) -- version: [1.0.0][ver.hbarmor] *2019-04-01*
-    * [home_gui][] ([BSD 3-Clause][lic.home_gui]) -- version: [a291a09 Git][ver.home_gui] *2018-08-09*
-    * [hudbars][] ([MIT][lic.mit] / [CC BY-SA][lic.ccbysa3.0]) -- version: [2.3.1][ver.hudbars] *2020-07-11*
-    * [hudmap][] ([LGPL][lic.lgpl2.1] / [WTFPL][lic.wtfpl]) -- version: [3b8bdc0 Git][ver.hudmap] *2017-05-14*
-    * [mthudclock][] ([WTFPL][lic.wtfpl]) -- version [d86e745 Git][ver.mthudclock] *2018-01-06*
+  * [bookmarks_gui][] ([BSD 3-Clause][lic.bookmarks_gui]) -- version: [f7ae10a Git][ver.bookmarks_gui] *2017-08-29*
+  * [hbarmor][] ([MIT][lic.mit] / [CC BY-SA][lic.ccbysa3.0]) -- version: [1.0.0][ver.hbarmor] *2019-04-01*
+  * [home_gui][] ([BSD 3-Clause][lic.home_gui]) -- version: [a291a09 Git][ver.home_gui] *2018-08-09*
+  * [hudbars][] ([MIT][lic.mit] / [CC BY-SA][lic.ccbysa3.0]) -- version: [2.3.1][ver.hudbars] *2020-07-11*
+  * [hudmap][] ([LGPL][lic.lgpl2.1] / [WTFPL][lic.wtfpl]) -- version: [3b8bdc0 Git][ver.hudmap] *2017-05-14*
+  * [mthudclock][] ([WTFPL][lic.wtfpl]) -- version [d86e745 Git][ver.mthudclock] *2018-01-06*
 * weather/
-    * [snowdrift][] ([MIT / CC BY / CC BY-SA][lic.snowdrift]) -- version: [3342939 Git][ver.snowdrift] *2020-04-24*
+  * [snowdrift][] ([MIT / CC BY / CC BY-SA][lic.snowdrift]) -- version: [3342939 Git][ver.snowdrift] *2020-04-24*
 * world/
-    * [bright_night][] ([Unlicense][lic.unlicense]) -- version: [69b750a Git][ver.bright_night] *2018-06-03*
-    * [desert_life][] ([CC BY-SA][lic.ccbysa4.0]) -- version: [188f984 Git][ver.desert_life] *2020-01-24*
-    * [ethereal][] ([MIT][lic.ethereal]) -- version: [90cdf94 Git][ver.ethereal] *2021-04-29* ([patched][patch.ethereal])
-    * [nether][] ([ISC / CC BY / CC BY-SA / CC0][lic.nether]) -- version: [3][ver.nether] *2021-01-22* ([patched][patch.nether])
+  * [bright_night][] ([Unlicense][lic.unlicense]) -- version: [69b750a Git][ver.bright_night] *2018-06-03*
+  * [desert_life][] ([CC BY-SA][lic.ccbysa4.0]) -- version: [188f984 Git][ver.desert_life] *2020-01-24*
+  * [ethereal][] ([MIT][lic.ethereal]) -- version: [90cdf94 Git][ver.ethereal] *2021-04-29* ([patched][patch.ethereal])
+  * [nether][] ([ISC / CC BY / CC BY-SA / CC0][lic.nether]) -- version: [3][ver.nether] *2021-01-22* ([patched][patch.nether])
 
 
 ---
@@ -153,29 +153,29 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 * [3d_armor][] ([LGPL / CC BY-SA][lic.3d_armor]) - version: [f07f050 Git][ver.3d_armor] *2021-04-15* ([patched][patch.3d_armor])
 * castle ([MIT][lic.castle])
-	* [castle_farming][] -- version: [032f277 Git][ver.castle_farming] *2020-02-28*
-	* [castle_gates][] -- version: [21b5a6c Git][ver.castle_gates] *2021-03-14*
-	* [castle_lighting][] -- version: [32a42e3 Git][ver.castle_lighting] *2020-02-28*
-	* [castle_masonry][] -- version: [6e81ab1 Git][ver.castle_masonry] *2020-09-09*
-	* [castle_shields][] -- version: [78e74b0 Git][ver.castle_shields] *2019-11-23*
-	* [castle_storage][] -- version: [ad5e887 Git][ver.castle_storage] *2020-02-28*
-	* [castle_tapestries][] -- version: [f5e3ac1 Git][ver.castle_tapestries] *2020-02-16*
-	* [castle_weapons][] -- version: [d3cf095 Git][ver.castle_weapons] *2020-02-28* ([patched][patch.castle_weapons])
-	* [crafting_bench][] -- version: [69083ed Git][ver.crafting_bench] *2020-05-27*
+  * [castle_farming][] -- version: [032f277 Git][ver.castle_farming] *2020-02-28*
+  * [castle_gates][] -- version: [21b5a6c Git][ver.castle_gates] *2021-03-14*
+  * [castle_lighting][] -- version: [32a42e3 Git][ver.castle_lighting] *2020-02-28*
+  * [castle_masonry][] -- version: [6e81ab1 Git][ver.castle_masonry] *2020-09-09*
+  * [castle_shields][] -- version: [78e74b0 Git][ver.castle_shields] *2019-11-23*
+  * [castle_storage][] -- version: [ad5e887 Git][ver.castle_storage] *2020-02-28*
+  * [castle_tapestries][] -- version: [f5e3ac1 Git][ver.castle_tapestries] *2020-02-16*
+  * [castle_weapons][] -- version: [d3cf095 Git][ver.castle_weapons] *2020-02-28* ([patched][patch.castle_weapons])
+  * [crafting_bench][] -- version: [69083ed Git][ver.crafting_bench] *2020-05-27*
 * [deploy_nodes][] ([BSD 3-Clause][lic.deploy_nodes]) -- version: [b67e162 Git][ver.deploy_nodes] *2017-06-08*
 * [home_workshop][] -- version: [03325e8 Git][ver.home_workshop] *2021-04-15*
 * [homedecor][] ([LGPL / WTFPL / CC BY-SA / CC0][lic.homedecor]) -- version: [81e0d4e Git][ver.homedecor] *2021-03-30* ([patched][patch.homedecor])
 * [mesecons][] ([LGPL / CC BY-SA][lic.mesecons]) -- version [6579351 Git][ver.mesecons] *2021-04-09*
 * [moremesecons][] ([MPL][lic.mpl2.0]) -- version: [1dab017 Git][ver.moremesecons] *2021-04-14*
 * [mymods](https://github.com/AntumMT/mp-mymods)
-	* [mydoors][] ([CC-BY / CC-BY-SA][lic.mydoors] / [WTFPL][lic.wtfpl] / [DWYWFPL][lic.dwywpl]) -- version: [eef3b5f Git][ver.mydoors] *2018-06-12*
-	* [myfences][] ([DWYWPL][lic.dwywpl]) -- version: [c6e529a Git][ver.myfences] *2016-04-04*
-	* [mylights][] ([DWYWPL][lic.dwywpl]) -- version: [0d734b7 Git][ver.mylights] *2017-07-14*
-	* [mypaint][] ([DWYWPL][lic.dwywpl]) -- version: [9288e8d Git][ver.mypaint] *2017-11-16*
-	* [mypaths][] ([DWYWPL][lic.dwywpl]) -- version: [4de5e84 Git][ver.mypaths] *2016-03-23*
-	* [myroofs][] ([DWYWPL][lic.dwywpl]) -- version: [fe98461 Git][ver.myroofs] *2017-07-14*
-	* [mysheetmetal][] ([DWYWPL][lic.dwywpl]) -- version: [7c5ab71 Git][ver.mysheetmetal] *2016-04-12* ([patched][patch.mysheetmetal])
-	* [mywoodslopes][] ([DWYWPL][lic.dwywpl]) -- version: [3a1b531 Git][ver.mywoodslopes] *2016-03-23* (patched)
+  * [mydoors][] ([CC-BY / CC-BY-SA][lic.mydoors] / [WTFPL][lic.wtfpl] / [DWYWFPL][lic.dwywpl]) -- version: [eef3b5f Git][ver.mydoors] *2018-06-12*
+  * [myfences][] ([DWYWPL][lic.dwywpl]) -- version: [c6e529a Git][ver.myfences] *2016-04-04*
+  * [mylights][] ([DWYWPL][lic.dwywpl]) -- version: [0d734b7 Git][ver.mylights] *2017-07-14*
+  * [mypaint][] ([DWYWPL][lic.dwywpl]) -- version: [9288e8d Git][ver.mypaint] *2017-11-16*
+  * [mypaths][] ([DWYWPL][lic.dwywpl]) -- version: [4de5e84 Git][ver.mypaths] *2016-03-23*
+  * [myroofs][] ([DWYWPL][lic.dwywpl]) -- version: [fe98461 Git][ver.myroofs] *2017-07-14*
+  * [mysheetmetal][] ([DWYWPL][lic.dwywpl]) -- version: [7c5ab71 Git][ver.mysheetmetal] *2016-04-12* ([patched][patch.mysheetmetal])
+  * [mywoodslopes][] ([DWYWPL][lic.dwywpl]) -- version: [3a1b531 Git][ver.mywoodslopes] *2016-03-23* (patched)
 * [technic][] ([LGPL][lic.lgpl2.0]) -- version: [43acec2 Git][ver.technic] *2021-02-09*
 
 
