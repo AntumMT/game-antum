@@ -156,12 +156,15 @@ minetest.register_globalstep(function(dtime)
 					sval = math.floor(NISVAL +
 						((time - 0.1875) / 0.0521) * difsval)
 				end
-				player:set_sky({r = sval, g = sval, b = sval + 16, a = 255},
-					"plain", {}, false)
+				player:set_sky({
+					base_color = {r=sval, g=sval, b=sval + 16, a=255},
+					type = "plain",
+					clouds = false,
+				})
 				skybox[player_name] = true
 			elseif not precip and skybox[player_name] then
 				-- Set normal sky only if skybox
-				player:set_sky({}, "regular", {}, true)
+				player:set_sky({type="regular"})
 				skybox[player_name] = nil
 			end
 
@@ -266,7 +269,7 @@ minetest.register_globalstep(function(dtime)
 			end
 			-- Set normal sky if skybox
 			if skybox[player_name] then
-				player:set_sky({}, "regular", {}, true)
+				player:set_sky({type="regular"})
 				skybox[player_name] = nil
 			end
 		end
