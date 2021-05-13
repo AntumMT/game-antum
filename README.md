@@ -57,6 +57,8 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * inventory/
     * [bags][] ([BSD 3-Clause][lic.bags]) -- version: [bc87b45 Git][ver.bags] *2018-04-11*
     * [sfinv_buttons][] ([MIT][lic.mit]) -- version [1.1.0 (ebb1f7c Git)][ver.sfinv_buttons] *2021-01-14*
+* libs/
+  * [biome_lib][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2021-04-16-2][ver.biome_lib]
 * lighting/
     * [glow][] ([GPL][lic.gpl2.0]) -- version: [4c015a0 Git][ver.glow] *2019-02-05*
 	* [ilights][] ([LGPL][lic.lgpl3.0]) -- version: [2021-02-25-01][ver.ilights] ([patched][patch.ilights])
@@ -143,7 +145,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * wood/
 	* [coloredwood][] ([LGPL][lic.lgpl3.0]) -- version: [2021-01-30][ver.coloredwood]
 * world/
-    * [biome_lib][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2021-04-16-2][ver.biome_lib]
     * [bright_night][] ([Unlicense][lic.unlicense]) -- version: [69b750a Git][ver.bright_night] *2018-06-03*
     * [desert_life][] ([CC BY-SA][lic.ccbysa4.0]) -- version: [188f984 Git][ver.desert_life] *2020-01-24*
     * [ethereal][] ([MIT][lic.ethereal]) -- version: [90cdf94 Git][ver.ethereal] *2021-04-29* ([patched][patch.ethereal])
