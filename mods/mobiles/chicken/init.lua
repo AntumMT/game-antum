@@ -78,7 +78,7 @@ local def = {
 
   modes = {
     idle = {chance = 0.25, duration = 5, update_yaw = 3},
-    idle2 = {chance = 0.69, duration = 0.8},
+    idle2 = {chance = 0.34, duration = 0.8},
     pick = {chance = 0.2, duration = 2},
     walk = {chance = 0.2, duration = 5.5, moving_speed = 0.7, update_yaw = 2},
     panic = {moving_speed = 3.1, update_yaw = 0.8},

@@ -88,7 +88,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [painting][] (???) -- version [8961849 Git][ver.painting] *2016-05-05*
   * [pipeworks][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2670fd8 Git][ver.pipeworks] *2021-05-06* ([patched][patch.pipeworks])
 * mobiles/
-  * [chicken][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [bce3b51 Git][ver.chicken] *2021-05-05*
+  * [chicken][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [ea980f9 Git][ver.chicken] *2021-05-13*
   * [folks][] ([GPL][lic.gpl3.0]) -- version: [0.2.0][ver.folks] *2021-02-23*
   * general/
     * [mobs_animal][] ([MIT][lic.mobs_animal]) -- version: [80e72a4 Git][ver.mobs_animal] *2021-04-13* ([patched][patch.mobs_animal])
@@ -479,7 +479,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.castle_tapestries]: https://github.com/minetest-mods/castle_tapestries/tree/f5e3ac1
 [ver.castle_weapons]: https://github.com/minetest-mods/castle_weapons/tree/d3cf095
 [ver.chatlog]: https://github.com/AntumMT/mod-chatlog/tree/v1.0
-[ver.chicken]: http://github.com/AntumMT/mod-cmer/tree/bce3b51
+[ver.chicken]: http://github.com/AntumMT/mod-cmer/tree/ea980f9
 [ver.christmas]: https://github.com/TheZenKitteh/minetest-christmas/tree/d3bd872
 [ver.cleaner]: https://github.com/AntumMT/mod-cleaner/tree/68222b1
 [ver.coloredwood]: https://gitlab.com/VanessaE/coloredwood/tags/2021-01-30
