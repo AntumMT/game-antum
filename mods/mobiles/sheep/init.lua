@@ -174,6 +174,12 @@ local def = {
 	on_rightclick = function(self, clicker)
 		local item = clicker:get_wielded_item()
 			if item then
+				-- in case shears have been overridden
+				local shears = core.registered_aliases["creatures:shears"]
+				if not shears then
+					shears = "creatures:shears"
+				end
+
 				local name = item:get_name()
 				if name == "farming:wheat" then
 					self.target = clicker
@@ -186,7 +192,7 @@ local def = {
 
 					-- play eat sound?
 					item:take_item()
-				elseif name == "creatures:shears" and self.has_wool then
+				elseif name == shears and self.has_wool then
 					shear(self, math.random(2, 3), true)
 					item:add_wear(65535/100)
 				end
