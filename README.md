@@ -41,7 +41,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * commerce/
     * [atm][] ([GPL][lic.gpl3.0]) -- version: [1.0.4][ver.atm] *2021-04-21* ([patched][patch.atm])
     * [currency][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2021-01-30][ver.currency]
-    * [server_shop][] ([MIT][lic.server_shop]) -- version: [e62f33e Git][ver.server_shop] *2021-05-12*
+    * [server_shop][] ([MIT][lic.server_shop]) -- version: [f2ca797 Git][ver.server_shop] *2021-05-13*
 * crafting/
     * [craftguide][] ([MIT][lic.craftguide]) -- version: [f379998 Git][ver.craftguide] *2021-02-08* ([patched][patch.craftguide])
 * [enchanting][] ([GPL / WTFPL / CC BY-SA-NA][lic.enchanting]) -- version: [13ea31c Git][ver.enchanting] *2016-12-16* ([patched][patch.enchanting])
@@ -564,7 +564,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.pvp_areas]: https://github.com/everamzah/pvp_areas/tree/6e4d66d
 [ver.quartz]: https://github.com/minetest-mods/quartz/tree/72ec06f
 [ver.rainbow_ore]: https://github.com/FsxShader2012/rainbow_ore/tree/6e77693
-[ver.server_shop]: https://github.com/AntumMT/mod-server_shop/tree/e62f33e
+[ver.server_shop]: https://github.com/AntumMT/mod-server_shop/tree/f2ca797
 [ver.sfinv_buttons]: http://repo.or.cz/minetest_sfinv_buttons.git/tree/ebb1f7c
 [ver.shark]: https://github.com/AntumMT/mod-shark/tree/ef2507b
 [ver.sheep]: https://github.com/AntumMT/mod-cmer/tree/7c91aaf

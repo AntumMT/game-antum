@@ -94,6 +94,9 @@ function ss.get_formspec(pos, player)
 		local id = smeta:get_string("id")
 		local deposited = pmeta:get_int(ss.modname .. ":" .. id .. ":deposited")
 
+		-- store ID in player meta for retrieval during transactions
+		pmeta:set_string(ss.modname .. ":id", id)
+
 		local formspec = "formspec_version[4]size[" .. tostring(fs_width) .. "," .. tostring(fs_height) .."]"
 
 		local shop_name = smeta:get_string("name"):trim()
