@@ -588,7 +588,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.boats2]: https://github.com/AntumMT/mod-boats2/tree/9b2bcb7
 [patch.bridges]: https://github.com/AntumMT/mod-bridges/tree/ba8f71a
 [patch.castle_weapons]: https://github.com/AntumMT/mod-castle_weapons/tree/6ec6f46
-[patch.christmas]: https://github.com/AntumMT/mod-christmas/tree/7ffdc67
+[patch.christmas]: https://github.com/AntumMT/mod-christmas/tree/50bda80
 [patch.craftguide]: https://github.com/AntumMT/mod-craftguide/tree/aef18f2
 [patch.crops]: https://github.com/AntumMT/mod-crops/tree/a1cce06
 [patch.drawers]: https://github.com/AntumMT/mod-drawers/tree/a77f809

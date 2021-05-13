@@ -124,7 +124,7 @@ minetest.register_node("christmas:ligs", {
 	inventory_image = "christmas_lig.png",
 	paramtype = "light",
 	paramtype2 = "wallmounted",
-	light_source = 20,
+	light_source = minetest.LIGHT_MAX,
         is_ground_content = true,
 	walkable = false,
 	climbable = false,
@@ -222,7 +222,7 @@ minetest.register_node("christmas:star", {
 	paramtype2 = "wallmounted",
 	sunlight_propagates = true,
 	walkable = false,
-	light_source = 40,
+	light_source = minetest.LIGHT_MAX,
 	selection_box = {
 		type = "wallmounted",
 		wall_top = {-0.1, 0.5-0.6, -0.1, 0.1, 0.5, 0.1},
@@ -246,7 +246,7 @@ minetest.register_node("christmas:fire", {
 	sunlight_propagates = true,
 	walkable = false,
 	paramtype2 = "wallmounted",
-	light_source = 30,
+	light_source = minetest.LIGHT_MAX,
 	selection_box = {
 		type = "wallmounted",
 		wall_top = {-0.1, 0.5-0.6, -0.1, 0.1, 0.5, 0.1},
