@@ -1,12 +1,12 @@
 
 TODO:
 - Security:
-  - don't allow other players to interfere with transactions
-  - "Set ID" button is displayed to other players if admin makes changes while formspec visible
+  - might be an issue if admin changes shop ID while player is using
 - Functionality:
   - add option to buy multiple of an item
   - optimize how refunds are given (e.g. if there is no room for 50s, but room for 1s, then give out 1s instead)
   - add shop for players to receive money for selling items
+  - allow any currency value, not just 1, 5, 10, 50, & 100
 - Visuals:
   - touch up textures
   - fix texture tiling
@@ -14,10 +14,5 @@ TODO:
 - Misc.:
   - make usable with "folks" mod
   - add localization support
-  - make "get_shop" global function
-  - allow registering custom types of currency
-  - clean up code
-  - check if shop is already registered before re-registering
-  - let shops with deposit balance be dug, & drop balance on ground
-  - create shop that gives money for items
   - add chat command to reload shops file in world directory
+  - set shop name from formspec instead of registration so shops with different names can use same content

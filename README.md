@@ -19,7 +19,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [override][] ([MIT][lic.override]) -- version: [0.2 (e6dda7a Git)][ver.override] *2017-08-30*
     * [privilegeareas][] ([WTFPL][lic.privilegeareas] / [CC0][lic.cc0]) -- version: [15eae20 Git][ver.privilegeareas] *2018-11-16*
     * [privs][] ([CC0][lic.cc0])
-    * [server_shop][] ([MIT][lic.server_shop]) -- version: [1.1][ver.server_shop] *2021-05-11*
+    * [server_shop][] ([MIT][lic.server_shop]) -- version: [993332e Git][ver.server_shop] *2021-05-12*
     * [spectator_mode][] ([WTFPL][lic.spectator_mode]) -- version: [3648371 Git][ver.spectator_mode] *2020-07-15*
     * [whitelist][] ([CC0][lic.cc0]) -- version: [0.1 (b813b19 Git)][ver.whitelist] *2017-08-18*
 * [antum][] ([MIT][lic.antum]) -- version: [69b39a4 Git][ver.antum] *2017-08-30*
@@ -564,7 +564,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.pvp_areas]: https://github.com/everamzah/pvp_areas/tree/6e4d66d
 [ver.quartz]: https://github.com/minetest-mods/quartz/tree/72ec06f
 [ver.rainbow_ore]: https://github.com/FsxShader2012/rainbow_ore/tree/6e77693
-[ver.server_shop]: https://github.com/AntumMT/mod-server_shop/releases/tag/v1.1
+[ver.server_shop]: https://github.com/AntumMT/mod-server_shop/tree/993332e
 [ver.sfinv_buttons]: http://repo.or.cz/minetest_sfinv_buttons.git/tree/ebb1f7c
 [ver.shark]: https://github.com/AntumMT/mod-shark/tree/ef2507b
 [ver.sheep]: https://github.com/AntumMT/mod-cmer/tree/7c91aaf

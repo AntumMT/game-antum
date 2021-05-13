@@ -7,13 +7,43 @@ local fs_height = 11
 local btn_w = 1.75
 local btn_y = 4.6
 
+--- Retrieves shop name by ID.
+--
+--  @local
+--  @function get_shop_name
+--  @tparam string id String identifier of shop.
+--  @treturn string Shop's name representation.
+local function get_shop_name(id)
+	local shop = ss.get_shop(id)
+	if shop then
+		return shop.name
+	end
+end
+
+--- Retrieves item name/id from shop list.
+--
+--  @local
+--  @function get_shop_index
+--  @param shop_id String identifier of shop.
+--  @param idx Index of the item to retrieve.
+--  @return String item identifier or `nil` if shop does not contain item.
+local function get_shop_index(shop_id, idx)
+	local shop = ss.get_shop(shop_id)
+	if shop then
+		local product = shop.def[idx]
+		if product then
+			return product[1]
+		end
+	end
+end
+
 --- Retrieves shop product list by ID.
 --
---  @function get_product_list
 --  @local
+--  @function get_product_list
 --  @param id String identifier of shop.
 --  @return String of shop contents.
-function get_product_list(id)
+local function get_product_list(id)
 	local products = ""
 	local shop = ss.get_shop(id)
 
@@ -53,29 +83,37 @@ function get_product_list(id)
 	return products
 end
 
-
-function server_shop.get_formspec(pos, player)
-		local meta = core.get_meta(pos)
-		local id = meta:get_string("id")
-		local deposited = meta:get_int("deposited")
+--- Retrieves formspec layout.
+--
+--  @function server_shop.get_formspec
+--  @param pos
+--  @param player
+function ss.get_formspec(pos, player)
+		local smeta = core.get_meta(pos)
+		local pmeta = player:get_meta()
+		local id = smeta:get_string("id")
+		local deposited = pmeta:get_int(ss.modname .. ":" .. id .. ":deposited")
 
 		local formspec = "formspec_version[4]size[" .. tostring(fs_width) .. "," .. tostring(fs_height) .."]"
 
-		local shop_name = meta:get_string("name"):trim()
+		local shop_name = smeta:get_string("name"):trim()
 		if shop_name ~= "" then
 			formspec = formspec .. "label[0.2,0.4;" .. shop_name .. "]"
 		end
 
-		if ss.is_shop_admin(pos, player) then
+		if ss.is_shop_admin(player) then
 			formspec = formspec
 				.. "button[" .. tostring(fs_width-6.2) .. ",0.2;" .. tostring(btn_w) .. ",0.75;btn_id;Set ID]"
 				.. "field[" .. tostring(fs_width-4.3) .. ",0.2;4.1,0.75;input_id;;" .. id .. "]"
 				.. "field_close_on_enter[input_id;false]"
 		end
 
-		-- ensure selected value in meta data
-		if meta:get_int("selected") < 1 then
-			meta:set_int("selected", meta:get_int("default_selected"))
+		local selected_idx = 1
+		if player then
+			selected_idx = pmeta:get_int(ss.modname .. ":selected")
+		end
+		if selected_idx < 1 then
+			selected_idx = 1
 		end
 
 		-- get item name for displaying image
@@ -84,12 +122,11 @@ function server_shop.get_formspec(pos, player)
 
 		if shop then
 			-- make sure we're not out of range of the shop list
-			local s_idx = meta:get_int("selected")
-			if s_idx > #shop.def then
-				s_idx = 1
+			if selected_idx > #shop.def then
+				selected_idx = #shop.def
 			end
 
-			selected_item = shop.def[meta:get_int("selected")]
+			selected_item = shop.def[selected_idx]
 			if selected_item then
 				selected_item = selected_item[1]
 			end
@@ -98,10 +135,18 @@ function server_shop.get_formspec(pos, player)
 		local margin_r = fs_width-(btn_w+0.2)
 
 		formspec = formspec
-			.. "label[0.2,1;Deposited: " .. tostring(deposited) .. " MG]"
-			.. "list[context;deposit;0.2,1.5;1,1;0]"
-			.. "textlist[2.15,1.5;9.75,3;products;" .. get_product_list(id) .. ";"
-				.. tostring(meta:get_int("selected")) .. ";false]"
+			.. "label[0.2,1;Deposited: " .. tostring(deposited)
+		if ss.currency_suffix and ss.currency_suffix ~= "" then
+			formspec = formspec .. " " .. ss.currency_suffix
+		end
+		formspec = formspec .. "]"
+
+		if id ~= "" then -- don't allow deposits to unregistered stores
+			formspec = formspec .. "list[detached:" .. ss.modname .. ";deposit;0.2,1.5;1,1;0]"
+		end
+
+		formspec = formspec .. "textlist[2.15,1.5;9.75,3;products;" .. get_product_list(id) .. ";"
+			.. tostring(selected_idx) .. ";false]"
 
 		if selected_item and selected_item ~= "" then
 			formspec = formspec
@@ -120,3 +165,110 @@ function server_shop.get_formspec(pos, player)
 
 		return formspec .. formname
 end
+
+--- Displays formspec to player.
+--
+--  @function server_shop.show_formspec
+--  @param pos
+--  @param player
+function ss.show_formspec(pos, player)
+	core.show_formspec(player:get_player_name(), ss.modname .. ":shop", ss.get_formspec(pos, player))
+end
+
+
+local transaction = dofile(ss.modpath .. "/transaction.lua")
+
+core.register_on_player_receive_fields(function(player, formname, fields)
+	if formname == ss.modname .. ":shop" then
+		local pmeta = player:get_meta()
+		local pos = core.deserialize(pmeta:get_string(ss.modname .. ":pos"))
+		if not pos then
+			ss.log("error", "cannot retrieve shop position from player meta data")
+			return false
+		end
+
+		local smeta = core.get_meta(pos)
+		local id = smeta:get_string("id")
+
+		if fields.quit then
+			-- return money to player if formspec closed
+			transaction.give_refund(id, player)
+			return false
+		elseif fields.btn_id or (fields.key_enter and fields.key_enter_field == "input_id") then
+			-- safety check that only server admin can set ID
+			if not ss.is_shop_admin(player) then
+				ss.log("warning", "non-admin player " .. player.get_player_name()
+					.. " attempted to change shop ID at ("
+					.. tostring(pos.x) .. "," .. tostring(pos.y) .. "," .. tostring(pos.z)
+					.. ")")
+				return false
+			end
+
+			-- should not happen
+			if not fields.input_id then
+				ss.log("error", "Cannot retrieve ID input")
+				return false
+			end
+
+			fields.input_id = fields.input_id:trim()
+			smeta:set_string("id", fields.input_id)
+
+			-- set or remove displayed text when pointed at
+			local shop_name = get_shop_name(fields.input_id)
+			if shop_name then
+				smeta:set_string("infotext", shop_name)
+				smeta:set_string("name", shop_name)
+			else
+				smeta:set_string("infotext", nil)
+				smeta:set_string("name", nil)
+			end
+
+			ss.log("action", "server admin " .. player:get_player_name()
+				.. " set shop ID at ("
+				.. tostring(pos.x) .. "," .. tostring(pos.y) .. "," .. tostring(pos.z)
+				.. ") to \"" .. id .. "\"")
+		elseif fields.products then
+			local idx = tonumber(fields.products:sub(5))
+			if type(idx) == "number" then
+				pmeta:set_int(ss.modname .. ":selected", idx)
+			end
+		elseif fields.btn_refund then
+			transaction.give_refund(id, player)
+		elseif fields.btn_buy then
+			local idx = pmeta:get_int(ss.modname .. ":selected")
+			local product = get_shop_index(id, idx)
+
+			if not product then
+				ss.log("warning", "Trying to buy undefined item from shop \""
+					.. tostring(id) .. "\"")
+				return false
+			end
+
+			-- FIXME: allow purchasing multiples
+			local product_count = 1
+			local total = transaction.calculate_price(id, product, product_count)
+
+			local deposited = transaction.get_deposit(id, player)
+			if total > deposited then
+				core.chat_send_player(player:get_player_name(), "You haven't deposited enough money.")
+				return false
+			end
+
+			product = ItemStack(product)
+			product:set_count(product_count)
+
+			-- subtract total from deposited money
+			transaction.set_deposit(id, player, deposited - total)
+
+			-- execute transaction
+			core.chat_send_player(player:get_player_name(), "You purchased " .. tostring(product:get_count())
+				.. " " .. product:get_description() .. " for " .. tostring(total) .. " MG.")
+			transaction.give_product(player, product, product_count)
+		end
+
+		-- refresh formspec view
+		ss.show_formspec(pos, player)
+
+		return false
+	end
+end)

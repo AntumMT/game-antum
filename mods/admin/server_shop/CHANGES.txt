@@ -1,4 +1,19 @@
 
+pre
+- custom currencies can be registered
+- changed format of world "server_shops.json":
+  - "sells" keyword changed to "products"
+  - added required "type" keyword can be:
+    - "sell" to register new seller shop
+    - "currency" to register new currency
+    - "suffix" to set a suffix to display after deposited amount
+  - currencies can be registered using "currency" type:
+    - subkeys are "name" (string) & "value" (number)
+- "currency" mod minegeld notes not registered automatically
+- displayed currency suffix can be customized or omitted
+- no longer uses node meta for formspec
+
+
 1.1
 - use json format for shops configuration in world directory
 - switched id & name parameters positions in register_shop
