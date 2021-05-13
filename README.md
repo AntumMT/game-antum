@@ -41,7 +41,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
     * [server_shop][] ([MIT][lic.server_shop]) -- version: [f2ca797 Git][ver.server_shop] *2021-05-13*
 * core/
   * [antum][] ([MIT][lic.antum]) -- version: [69b39a4 Git][ver.antum] *2017-08-30*
-    * [hidename][] ([MIT][lic.hidename]) -- version: [7b3aa52 Git][ver.hidename] *2021-04-19*
   * [minetest_game][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- version: [5.4.1][ver.minetest_game] *2021-04-10*
 * crafting/
     * [craftguide][] ([MIT][lic.craftguide]) -- version: [f379998 Git][ver.craftguide] *2021-02-08* ([patched][patch.craftguide])
@@ -104,9 +103,10 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * player/action/
 	* [hbsprint][] ([LGPL][lic.lgpl2.1]) -- version: [f566d0f Git][ver.hbsprint] *2021-02-18* ([patched][patch.hbsprint])
 * player/visuals/
-    * [headanim][] ([MIT][lic.headanim]) -- version: [1.01][ver.headanim] *2021-01-16*
-    * [invisibility][] ([MIT][lic.invisibility]) -- version: [65c0823 Git][ver.invisibility] *2021-01-21* ([patched][patch.invisibility])
-    * [wardrobe][] ([MIT][lic.wardrobe]) -- version: [1.3][ver.wardrobe] *2021-04-22*
+  * [headanim][] ([MIT][lic.headanim]) -- version: [1.01][ver.headanim] *2021-01-16*
+  * [hidename][] ([MIT][lic.hidename]) -- version: [7b3aa52 Git][ver.hidename] *2021-04-19*
+  * [invisibility][] ([MIT][lic.invisibility]) -- version: [65c0823 Git][ver.invisibility] *2021-01-21* ([patched][patch.invisibility])
+  * [wardrobe][] ([MIT][lic.wardrobe]) -- version: [1.3][ver.wardrobe] *2021-04-22*
 * protection/
     * [pvp_areas][] ([LGPL][lic.lgpl2.1]) -- version: [6e4d66d Git][ver.pvp_areas] *2018-07-26*
     * [simple_protection][] ([CC0][lic.cc0]) -- version: [3630fe9 Git][ver.simple_protection] *2021-04-07* ([patched][patch.simple_protection])
