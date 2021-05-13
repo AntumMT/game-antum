@@ -6,7 +6,9 @@ core.register_craftitem(":ritems:contract", {
 	stack_max=10,
 })
 
-override.replaceItems("animalmaterials:contract", "ritems:contract")
+if core.registered_items["animalmaterials:contract"] then
+	override.replaceItems("animalmaterials:contract", "ritems:contract")
+end
 
 if core.get_modpath("default") then
 	minetest.register_craft({
@@ -26,5 +28,7 @@ for _, color in pairs({"blue", "golden", "grey", "white"}) do
 		stack_max = 25
 	})
 
-	override.replaceItems("animalmaterials:scale_" .. color, "ritems:scale_" .. color)
+	if core.registered_items["animalmaterials:scale_" .. color] then
+		override.replaceItems("animalmaterials:scale_" .. color, "ritems:scale_" .. color)
+	end
 end
