@@ -152,7 +152,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 ### This is a list of installed modpacks & their components (trying to keep them listed separate for sake of organization):
 
-* [3d_armor][] ([LGPL / CC BY-SA][lic.3d_armor]) - version: [47ecef4 Git][ver.3d_armor] *2019-05-27* ([patched][patch.3d_armor])
+* [3d_armor][] ([LGPL / CC BY-SA][lic.3d_armor]) - version: [f07f050 Git][ver.3d_armor] *2021-04-15* ([patched][patch.3d_armor])
 * castle ([MIT][lic.castle])
 	* [castle_farming][] -- version: [032f277 Git][ver.castle_farming] *2020-02-28*
 	* [castle_gates][] -- version: [21b5a6c Git][ver.castle_gates] *2021-03-14*
@@ -458,7 +458,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.wtfpl]: doc/licenses/WTFPL.txt
 [lic.zlib]: doc/licenses/zlib.txt
 
-[ver.3d_armor]: https://github.com/stujones11/minetest-3d_armor/tree/47ecef4
+[ver.3d_armor]: https://github.com/minetest-mods/3d_armor/tree/f07f050
 [ver.airtanks]: https://github.com/minetest-mods/airtanks/tree/b686694
 [ver.alternode]: https://github.com/AntumMT/mod-alternode/releases/tag/v1.0
 [ver.amber]: https://github.com/theraven262/amber/tree/56627fa
@@ -591,7 +591,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.workbench]: https://github.com/minetest-mods/workbench/tree/bd14f59
 [ver.zombie]: https://github.com/AntumMT/mod-cmer/tree/4edb18e
 
-[patch.3d_armor]: https://github.com/AntumMT/mp-3d_armor/tree/19d1001
+[patch.3d_armor]: https://github.com/AntumMT/mp-3d_armor/tree/cfba55c
 [patch.airtanks]: https://github.com/AntumMT/mod-airtanks/tree/8b7fd12
 [patch.amber]: https://github.com/AntumMT/mod-amber/tree/39b852a
 [patch.atm]: https://github.com/AntumMT/mod-atm/tree/7771aa0
