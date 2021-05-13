@@ -103,7 +103,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 	* [sheep][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [ff39b4a Git][ver.sheep] *2021-05-13*
 	* [sneeker][] ([MIT][lic.sneeker]) -- version: [1.0][ver.sneeker] *2021-05-08*
 	* [zombie][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [4edb18e Git][ver.zombie] *2021-05-05*
-* plantlife/
 * player/action/
 	* [hbsprint][] ([LGPL][lic.lgpl2.1]) -- version: [f566d0f Git][ver.hbsprint] *2021-02-18* ([patched][patch.hbsprint])
 * player/visuals/
@@ -330,7 +329,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [override]: https://github.com/AntumMT/mod-override
 [painting]: https://github.com/minetest-mods/painting
 [pipeworks]: https://forum.minetest.net/viewtopic.php?t=2155
-[plantlife_modpack]: https://forum.minetest.net/viewtopic.php?f=11&t=3898
 [privilegeareas]: https://forum.minetest.net/viewtopic.php?t=5545
 [privs]: mods/admin/privs
 [pvp_areas]: https://forum.minetest.net/viewtopic.php?t=15480
