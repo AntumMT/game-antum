@@ -1,0 +1,3 @@
+
+# If currency mod is installed, automatically set up values for minegeld notes.
+server_shop.use_currency_defaults (Use currency mod defaults) bool true

@@ -97,7 +97,7 @@ bike_friction (Friction) float 0.79
 # The turning speed of a stopped bike in rad/s
 bike_turn_speed (Turn speed) float 1.58
 
-# The speed in m/s bellow which the bike accelerates linearily 
+# The speed in m/s bellow which the bike accelerates linearily
 bike_friction_cone (Friction cone) float 0.4
 
 # The factor by which the turning speed is increased by wheely
@@ -560,6 +560,12 @@ pvp_areas.safemode (PvP Control areas are safe zones) bool false
 # If ShadowNinja's `areas` mod is also present with HUD registration feature,
 # this label will be displayed anywhere a PvP Control area has been set.
 pvp_areas.label (Show PvP area labels) string Defined area.
+
+
+[*server_shop]
+
+# If currency mod is installed, automatically set up values for minegeld notes.
+server_shop.use_currency_defaults (Use currency mod defaults) bool true
 
 
 [*slingshot]

@@ -19,6 +19,7 @@ function ss.log(lvl, msg)
 end
 
 local scripts = {
+	"settings",
 	"api",
 	"deposit",
 	"formspec",

@@ -52,7 +52,7 @@ Example:
 ]
 ```
 
-Currencies can be registered with `server_shop.register_currency`:
+Currencies can be registered with `server_shop.register_currency` (***Note:** Only currency values of 1, 5, 10, 50, & 100 are currently supported*):
 ```lua
 server_shop.register_currency("currency:minegeld", 1)
 server_shop.register_currency("currency:minegeld_5", 5)
