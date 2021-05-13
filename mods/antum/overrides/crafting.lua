@@ -39,6 +39,7 @@ local modoverrides = {
 	'helicopter',
 	'invisibility',
 	'motorbike',
+	'mypaths',
 	'simple_protection',
 }
 

@@ -2,6 +2,10 @@ antum
 antum_items
 default
 override
+
+craftguide?
+craft_guide?
+
 animalmaterials?
 atm?
 bags?
@@ -22,6 +26,7 @@ homedecor?
 invisibility?
 moreblocks?
 motorbike?
+mypaths?
 simple_protection?
 stairsplus?
 technic?
@@ -30,8 +35,6 @@ unifieddyes?
 vessels?
 walking_light?
 wool?
-craftguide?
-craft_guide?
 biofuel?
 
 creatures?
