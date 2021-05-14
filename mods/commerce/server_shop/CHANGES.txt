@@ -1,5 +1,10 @@
 
-pre
+1.3
+- added buyer shops
+- changed json product list type to indexed array
+
+
+1.2
 - custom currencies can be registered
 - changed format of world "server_shops.json":
   - "sells" keyword changed to "products"

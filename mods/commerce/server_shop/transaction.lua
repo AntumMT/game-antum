@@ -2,6 +2,21 @@
 local ss = server_shop
 
 
+--- Formats a string from deposit identification.
+--
+--  @local
+--  @function format_deposit_id
+--  @tparam string id Shop identifier.
+--  @tparam bool buyer Denotes whether shop type is seller or buyer (default: false).
+--  @treturn string String formatted as "<modname>:<buy/sell>:<id>:deposited".
+local function format_deposit_id(id, buyer)
+	local deposit_id = ss.modname .. ":sell:"
+	if buyer then
+		deposit_id = ss.modname .. ":buy:"
+	end
+	return deposit_id .. id .. ":deposited"
+end
+
 --- Sets deposited amount for shop.
 --
 --  @local
@@ -9,9 +24,10 @@ local ss = server_shop
 --  @tparam string id Shop id.
 --  @param player Player for whom deposit is being set.
 --  @tparam int amount The amount deposit should be set to.
-local function set_deposit(id, player, amount)
+--  @tparam bool buyer Denotes whether shop is a seller or buyer
+local function set_deposit(id, player, amount, buyer)
 	local pmeta = player:get_meta()
-	local deposit_id = ss.modname .. ":" .. id .. ":deposited"
+	local deposit_id = format_deposit_id(id, buyer)
 
 	pmeta:set_int(deposit_id, amount)
 end
@@ -23,8 +39,8 @@ end
 --  @tparam string id Shop id.
 --  @param player Player to check.
 --  @treturn int Total amount currently deposited.
-local function get_deposit(id, player)
-	return player:get_meta():get_int(ss.modname .. ":" .. id .. ":deposited")
+local function get_deposit(id, player, buyer)
+	return player:get_meta():get_int(format_deposit_id(id, buyer))
 end
 
 --- Add item(s) to player inventory or drops on ground.
@@ -121,9 +137,9 @@ end
 --  @function give_refund
 --  @tparam string id Shop id.
 --  @param player Player to whom refund is given.
-local function give_refund(id, player)
+local function give_refund(id, player, buyer)
 	local pmeta = player:get_meta()
-	local deposit_id = ss.modname .. ":" .. id .. ":deposited"
+	local deposit_id = format_deposit_id(id, buyer)
 
 	local refund = calculate_refund(pmeta:get_int(deposit_id))
 	for _, istack in ipairs(refund) do
@@ -135,8 +151,6 @@ local function give_refund(id, player)
 end
 
 --- Calculates the price of item being purchased.
---
---  FIXME: might be broken after shop def change
 --
 --  @local
 --  @function calculate_price
