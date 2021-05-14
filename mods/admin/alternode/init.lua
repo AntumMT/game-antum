@@ -38,7 +38,7 @@ core.register_craftitem(alternode.name .. ":infostick", {
 		local infostring = S("pos: x@=@1, y@=@2, z@=@3; name@=@4",
 			tostring(pos.x), tostring(pos.y), tostring(pos.z), node.name)
 
-		for _, key in ipairs({"infotext", "owner"}) do
+		for _, key in ipairs({"id", "infotext", "owner"}) do
 			local value = meta:get_string(key)
 			if value and value ~= "" then
 				infostring = infostring .. "; "
@@ -60,10 +60,16 @@ function alternode.set(pos, key, value)
 	return meta:get_string(key) == value
 end
 
+function alternode.unset(pos, key)
+	local meta = core.get_meta(pos)
+	meta:set_string(key, nil)
+	return meta:get_string(key) == ""
+end
+
 
 core.register_chatcommand("setmeta", {
 	params = S("<x> <y> <z> <key> <value>"),
-	description = S("Alter meta data of a node"),
+	description = S("Set meta data of a node"),
 	privs = {server=true,},
 	func = function(player, param)
 		local plist = string.split(param, " ")
@@ -117,6 +123,54 @@ core.register_chatcommand("setmeta", {
 				S('Set meta "@1@=@2" for node at @3,@4,@5',
 					key, core.get_meta(pos):get_string(key),
 					tostring(pos.x), tostring(pos.y), tostring(pos.z)))
+		end
+
+		return retval
+	end,
+})
+
+core.register_chatcommand("unsetmeta", {
+	params = S("<x> <y> <z> <key>"),
+	description = S("Unset meta data of a node"),
+	privs = {server=true,},
+	func = function(player, param)
+		local plist = string.split(param, " ")
+
+		if #plist < 3 then
+			core.chat_send_player(player, S("You must supply proper coordinates"))
+			return false
+		end
+
+		for _, p in ipairs({plist[1], plist[2], plist[3]}) do
+			if tonumber(p) == nil then
+				core.chat_send_player(player, S("You must supply proper coordinates"))
+				return false
+			end
+		end
+
+		local pos = {
+			x = tonumber(plist[1]),
+			y = tonumber(plist[2]),
+			z = tonumber(plist[3]),
+		}
+
+		local key = plist[4]
+		if key then key = key:trim() end
+
+		if not key or key == "" then
+			core.chat_send_player(player, S("You must supply a key parameter"))
+			return false
+		end
+
+		local retval = alternode.unset(pos, key)
+		if not retval then
+			core.chat_send_player(player,
+				S("Failed to unset node meta at @1,@2,@3",
+					tostring(pos.x), tostring(pos.y), tostring(pos.z)))
+		else
+			core.chat_send_player(player,
+				S('Unset meta "@1" for node at @2,@3,@4',
+					key, tostring(pos.x), tostring(pos.y), tostring(pos.z)))
 		end
 
 		return retval

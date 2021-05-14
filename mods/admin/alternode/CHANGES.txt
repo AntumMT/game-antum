@@ -1,0 +1,13 @@
+
+1.1
+- added alternode.unset method to unset node meta data
+- added /unsetmeta chat command
+
+
+1.0
+- initial release
+- added alternode:infostick to get position & some meta info from nodes
+- added alternode.get method to retrieve meta value of a node
+- added alternode.set method to set meta value of a node
+- added /getmeta chat command
+- added /setmeta chat command

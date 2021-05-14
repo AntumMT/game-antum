@@ -16,12 +16,15 @@ Invoke `/giveme alternode:infostick`. Use the infostick on a node to receive coo
 **Chat commands:**
 
 - */getmeta <x> <y> <z> <key>*
-  - prints the value of `key` in the node's meta data at `x,y,z`.
-- */setmeta <x> <y> <z> string|int|float <key> <new_value>*
-  - Sets the value of `key` in the meta data of node at `x,y,z`.
+  - prints the value of `key` in meta data of node at `x,y,z`.
+- */setmeta <x> <y> <z> <key> <new_value>*
+  - Sets the value of `key` in meta data of node at `x,y,z`.
+- */unsetmeta <x> <y> <z> <key>*
+  - Unsets the value of `key` in meta data of node at `x,y,z`.
 
 ### Links:
 
 - [Forum](https://forum.minetest.net/viewtopic.php?t=26667)
 - [Git repo](http://github.com/AntumMT/mod-alternode)
+- [Changelog](CHANGES.txt)
 - [TODO](TODO.txt)

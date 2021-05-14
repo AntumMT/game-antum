@@ -9,12 +9,15 @@ That doesn't seem to be a proper node=
 pos: x@=@1, y@=@2, z@=@3; name@=@4=
 <x> <y> <z> <key>=
 <x> <y> <z> <key> <value>=
-Alter meta data of a node=
+Set meta data of a node=
+Unset meta data of a node=
 Retrieve meta data of a node=
 You must supply proper coordinates=
 You must supply a key parameter=
 You must supply a value parameter=
 Failed to set node meta at @1,@2,@3=
+Failed to unset node meta at @1,@2,@3=
 Set meta "@1@=@2" for node at @3,@4,@5=
+Unset meta "@1" for node at @2,@3,@4=
 "@1" key value not present in node meta data=
 Meta value: @1@=@2=
