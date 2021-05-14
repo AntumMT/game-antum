@@ -32,7 +32,7 @@ minetest.register_node(":lrfurn:armchair", {
 			return itemstack
 		end
 		pos.y = pos.y-0.5
-		clicker:setpos(pos)
+		clicker:set_pos(pos)
 		clicker:set_hp(20)
 		return itemstack
 	end

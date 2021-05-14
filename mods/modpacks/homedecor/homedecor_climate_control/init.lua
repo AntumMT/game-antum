@@ -28,13 +28,13 @@ local add_mesh_desk_fan_entity = function(pos)
 	local param2 = minetest.get_node(pos).param2
 	local entity = minetest.add_entity(pos, "homedecor:mesh_desk_fan")
 	if param2 == 0 then
-		entity:setyaw(3.142) -- 180 degrees
+		entity:set_yaw(3.142) -- 180 degrees
 	elseif minetest.get_node(pos).param2 == 1 then
-		entity:setyaw(3.142/2) -- 90 degrees
+		entity:set_yaw(3.142/2) -- 90 degrees
 	elseif minetest.get_node(pos).param2 == 3 then
-		entity:setyaw((-3.142/2)) -- 270 degrees
+		entity:set_yaw((-3.142/2)) -- 270 degrees
 	else
-		entity:setyaw(0)
+		entity:set_yaw(0)
 	end
 	return entity
 end

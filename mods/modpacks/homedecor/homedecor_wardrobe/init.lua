@@ -59,10 +59,11 @@ local function set_player_skin(player, skin, save)
 
 	if save and not skinsdb_mod_path then
 
+		local pmeta = player:get_meta()
 		if skin == default_skin then
-			player:set_attribute("homedecor:player_skin", "")
+			pmeta:set_string("homedecor:player_skin", "")
 		else
-			player:set_attribute("homedecor:player_skin", skin)
+			pmeta:set_string("homedecor:player_skin", skin)
 		end
 	end
 end
@@ -173,7 +174,7 @@ if not skinsdb_mod_path then -- If not managed by skinsdb
 
 	minetest.register_on_joinplayer(function(player)
 
-		local skin = player:get_attribute("homedecor:player_skin")
+		local skin = player:get_meta():get_string("homedecor:player_skin")
 
 		if skin and skin ~= "" then
 
