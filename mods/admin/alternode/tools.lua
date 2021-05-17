@@ -17,15 +17,6 @@ local function check_permissions(player)
 	return true
 end
 
-local function target_is_node(target)
-		if target.type ~= "node" then
-			core.chat_send_player(pname, S("This item only works on nodes"))
-			return false
-		end
-
-		return true
-end
-
 local function is_area_owner(pos, pname)
 	if not pname then return false end
 
@@ -61,9 +52,14 @@ core.register_craftitem(alternode.modname .. ":infostick", {
 	on_use = function(itemstack, user, pointed_thing)
 		if not user:is_player() then return end
 		if not check_permissions(user) then return end
-		if not target_is_node(pointed_thing) then return end
 
 		local pname = user:get_player_name()
+
+		if pointed_thing.type ~= "node" then
+			core.chat_send_player(pname, S("This item only works on nodes"))
+			return
+		end
+
 		local pos = core.get_pointed_thing_position(pointed_thing, false)
 		local node = core.get_node_or_nil(pos)
 		if not node then
@@ -88,7 +84,13 @@ core.register_craftitem(alternode.modname .. ":infostick", {
 	on_place = function(itemstack, placer, pointed_thing)
 		if not placer:is_player() then return end
 		if not check_permissions(placer) then return end
-		if not target_is_node(pointed_thing) then return end
+
+		local pname = user:get_player_name()
+
+		if pointed_thing.type ~= "node" then
+			core.chat_send_player(pname, S("This item only works on nodes"))
+			return
+		end
 
 		local pos = core.get_pointed_thing_position(pointed_thing, false)
 		local node = core.get_node_or_nil(pos)
@@ -118,6 +120,12 @@ core.register_craftitem(alternode.modname .. ":pencil", {
 		if not pos then return end
 
 		local pname = user:get_player_name()
+
+		if pointed_thing.type ~= "node" then
+			core.chat_send_player(pname, S("This item only works on nodes"))
+			return
+		end
+
 		if not is_area_owner(pos, pname) then
 			core.chat_send_player(pname, S("You cannot alter nodes in areas you do not own"))
 			return
@@ -161,13 +169,13 @@ end)
 
 --- Player tool to set/unset *owner* meta value.
 --
---  @craftitem alternode:wand
+--  @craftitem alternode:key
 --  @use
 --  @place
-core.register_craftitem(alternode.modname .. ":wand", {
+core.register_craftitem(alternode.modname .. ":key", {
 	description = S("Tool for setting node owner"),
-	short_description = S("Ownit Wand"),
-	inventory_image = "alternode_wand.png",
+	short_description = S("Node Key"),
+	inventory_image = "alternode_key.png",
 	stack_max = 1,
 	on_use = function(itemstack, user, pointed_thing)
 		if not user:is_player() then return end
@@ -214,4 +222,5 @@ core.register_craftitem(alternode.modname .. ":wand", {
 		end
 	end,
 })
-core.register_alias("ownit:wand", alternode.modname .. ":wand")
+core.register_alias("ownit:wand", alternode.modname .. ":key")
+core.register_alias(alternode.modname .. ":wand", alternode.modname .. ":key")

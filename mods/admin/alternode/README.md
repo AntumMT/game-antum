@@ -37,7 +37,7 @@ The `alternode:pencil` is a tool for players to set/unset the `infotext` meta va
 - Code: [MIT](LICENSE.txt)
 - Textures: CC0
   - `alternode_infostick.png & alternode_pencil.png:` by AntumDeluge
-  - `alternode_wand.png:` by [rcorre](https://opengameart.org/node/40598)
+  - [`alternode_wand.png`](https://opengameart.org/node/120374)
 
 ### Links:
 

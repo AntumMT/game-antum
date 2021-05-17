@@ -32,7 +32,7 @@ Infotext=
 Write=
 Erase=
 
-Ownit Wand=
+Node Key=
 Tool for setting node owner=
 You cannot take ownership of a node owned by @1=
 You cannot take ownership of nodes in areas you do not own=
