@@ -1,12 +1,6 @@
 # Translated by:
 
 
-Tool for retrieving information about a node=
-Info Stick=
-You do not have privileges to use this item (missing priviliges: @1)=
-This item only works on nodes=
-That doesn't seem to be a proper node=
-pos: x@=@1, y@=@2, z@=@3; name@=@4=
 <x> <y> <z> <key>=
 <x> <y> <z> <key> <value>=
 Set meta data of a node=
@@ -21,3 +15,28 @@ Set meta "@1@=@2" for node at @3,@4,@5=
 Unset meta "@1" for node at @2,@3,@4=
 "@1" key value not present in node meta data=
 Meta value: @1@=@2=
+
+# tools
+
+Info Stick=
+You do not have privileges to use this item (missing priviliges: @1)=
+This item only works on nodes=
+Tool for retrieving information about a node=
+That doesn't seem to be a proper node=
+pos: x@=@1, y@=@2, z@=@3; name@=@4=
+
+Pencil=
+Tool for editing node infotext=
+You cannot alter nodes in areas you do not own=
+Infotext=
+Write=
+Erase=
+
+Ownit Wand=
+Tool for setting node owner=
+You cannot take ownership of a node owned by @1=
+You cannot take ownership of nodes in areas you do not own=
+You no longer own this node=
+You now own this node=
+This node is unowned=
+This node is owned by @1=

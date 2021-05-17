@@ -2,18 +2,11 @@
 
 ### Description:
 
-A [Minetest](http://minetest.net/) mod that allows administrators with *server* privilege to examine & alter node meta data.
-
-### Licensing:
-
-- Code: [MIT](LICENSE.txt)
-- Textures: CC0
+A [Minetest](http://minetest.net/) mod that allows administrators with *server* privilege to examine & alter node meta data. Additionally, a pencil & wand tools are provided with limited use for players to alter *infotext* & *owner* meta value.
 
 ### Usage:
 
-Invoke `/giveme alternode:infostick`. Use the infostick on a node to receive coordinate & other information.
-
-**Chat commands:**
+#### Chat commands:
 
 - */getmeta <x> <y> <z> <key>*
   - prints the value of `key` in meta data of node at `x,y,z`.
@@ -21,6 +14,30 @@ Invoke `/giveme alternode:infostick`. Use the infostick on a node to receive coo
   - Sets the value of `key` in meta data of node at `x,y,z`.
 - */unsetmeta <x> <y> <z> <key>*
   - Unsets the value of `key` in meta data of node at `x,y,z`.
+
+#### Tools:
+
+**Info stick:**
+
+Invoke `/giveme alternode:infostick`. Use the infostick on a node to receive node coordinates, name, & some select meta info.
+
+**Pencil:**
+
+The `alternode:pencil` is a tool for players to set/unset the `infotext` meta value of nodes within protected/owned areas.
+
+- *left-click (use):* Opens formspec to set/unset infotext meta attribute.
+
+**Wand:**
+
+- *left-click (use):* Sets/Unsets user as owner.
+- *right-click (place):* Checks owner status & outputs to chat log.
+
+### Licensing:
+
+- Code: [MIT](LICENSE.txt)
+- Textures: CC0
+  - `alternode_infostick.png & alternode_pencil.png:` by AntumDeluge
+  - `alternode_wand.png:` by [rcorre](https://opengameart.org/node/40598)
 
 ### Links:
 
