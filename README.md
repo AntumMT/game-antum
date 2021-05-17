@@ -12,7 +12,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 ***"UPDATES" Denotes updates available***
 
 * admin/
-  * [alternode][] ([MIT][lic.alternode]) -- version: [990b6bb Git][ver.alternode] *2021-05-17*
+  * [alternode][] ([MIT][lic.alternode]) -- version: [e167e42 Git][ver.alternode] *2021-05-17*
   * [cleaner][] ([CC0][lic.cc0]) -- version: [0.4 (68222b1 Git)][ver.cleaner] *2017-08-30*
   * [invisible][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa4.0]) -- version: [4 (a2a6504 Git)][ver.invisible]
   * [no_fall_damage][] ([MIT][lic.no_fall_damage]) -- version [1.0.0][ver.no_fall_damage] *2020-12-19*
@@ -451,7 +451,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 [ver.3d_armor]: https://github.com/minetest-mods/3d_armor/tree/f07f050
 [ver.airtanks]: https://github.com/minetest-mods/airtanks/tree/b686694
-[ver.alternode]: https://github.com/AntumMT/mod-alternode/tree/990b6bb
+[ver.alternode]: https://github.com/AntumMT/mod-alternode/tree/e167e42
 [ver.amber]: https://github.com/theraven262/amber/tree/56627fa
 [ver.ambience]: https://notabug.org/TenPlus1/ambience/src/e317f727d00d5c034226c0e7217ed0559c208038
 [ver.animals_aggressive]: https://github.com/AntumMT/mp-animals_aggressive/tree/4eede4d

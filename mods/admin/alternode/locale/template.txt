@@ -22,8 +22,17 @@ Info Stick=
 You do not have privileges to use this item (missing priviliges: @1)=
 This item only works on nodes=
 Tool for retrieving information about a node=
-That doesn't seem to be a proper node=
-pos: x@=@1, y@=@2, z@=@3; name@=@4=
+Pos: x@=@1, y@=@2, z@=@3; Name: @4; Select meta info:=
+Key:=
+Value:=
+Get=
+Set=
+Unset=
+Key "@1" has been unset=
+Key "@1" has been set to "@2"=
+Key cannot be empty=
+Value cannot be empty=
+Key "@1" is not set=
 
 Pencil=
 Tool for editing node infotext=

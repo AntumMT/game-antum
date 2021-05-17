@@ -3,6 +3,11 @@ alternode = {}
 alternode.modname = core.get_current_modname()
 alternode.modpath = core.get_modpath(alternode.modname)
 
+function alternode.log(lvl, msg)
+	core.log(lvl, "[" .. alternode.modname .. "] " .. msg)
+end
+
+
 local scripts = {
 	"api",
 	"commands",

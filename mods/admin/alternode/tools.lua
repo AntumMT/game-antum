@@ -2,6 +2,7 @@
 local S = core.get_translator(alternode.modname)
 
 local use_s_protect = core.global_exists("s_protect")
+local misc = dofile(alternode.modpath .. "/misc_functions.lua")
 
 
 local function check_permissions(player)
@@ -30,12 +31,31 @@ local function is_area_owner(pos, pname)
 	return false
 end
 
-local function check_node_pos(target)
-		if target.type ~= "node" then return end
-		local pos = core.get_pointed_thing_position(target, false)
-		if not core.get_node_or_nil(pos) then return end
+--- Checks if a thing pointed at is a node.
+--
+--  @local
+--  @function check_node
+--  @param target pointed_thing
+--  @param pname Name of player pointing.
+--  @return `pos`, `node` if the pointed_thing is a node, `nil` otherwise.
+local function check_node(target, pname)
+	if not target then return false end
 
-		return pos
+	local pos = nil
+	local node = nil
+	if target.type == "node" then
+		pos = core.get_pointed_thing_position(target, false)
+		node = core.get_node_or_nil(pos)
+		if not node then
+			pos = nil
+		end
+	end
+
+	if not pos then
+		core.chat_send_player(pname, S("This item only works on nodes"))
+	end
+
+	return pos, node
 end
 
 
@@ -54,52 +74,33 @@ core.register_craftitem(alternode.modname .. ":infostick", {
 		if not check_permissions(user) then return end
 
 		local pname = user:get_player_name()
+		local pos, node = check_node(pointed_thing, pname)
+		if not pos then return end
 
-		if pointed_thing.type ~= "node" then
-			core.chat_send_player(pname, S("This item only works on nodes"))
-			return
-		end
+		-- store pos info for retrieval in callbacks
+		local pmeta = user:get_meta()
+		pmeta:set_string(alternode.modname .. ":pos", core.serialize(pos))
+		pmeta:set_string(alternode.modname .. ":node", core.serialize(node))
 
-		local pos = core.get_pointed_thing_position(pointed_thing, false)
-		local node = core.get_node_or_nil(pos)
-		if not node then
-			core.chat_send_player(pname, S("That doesn't seem to be a proper node"))
-			return
-		end
-		local meta = core.get_meta(pos)
-
-		local infostring = S("pos: x@=@1, y@=@2, z@=@3; name@=@4",
-			tostring(pos.x), tostring(pos.y), tostring(pos.z), node.name)
-
-		for _, key in ipairs({"id", "infotext", "owner"}) do
-			local value = meta:get_string(key)
-			if value and value ~= "" then
-				infostring = infostring .. "; "
-					.. key .. "=" .. value
-			end
-		end
-
-		core.chat_send_player(pname, infostring)
+		core.show_formspec(pname, alternode.modname .. ":infostick",
+			alternode.get_infostick_formspec(pos, node, user))
 	end,
 	on_place = function(itemstack, placer, pointed_thing)
 		if not placer:is_player() then return end
 		if not check_permissions(placer) then return end
 
-		local pname = user:get_player_name()
+		local pname = placer:get_player_name()
+		local pos, node = check_node(pointed_thing, pname)
+		if not pos then return end
 
-		if pointed_thing.type ~= "node" then
-			core.chat_send_player(pname, S("This item only works on nodes"))
-			return
-		end
+		local nmeta = core.get_meta(pos)
 
-		local pos = core.get_pointed_thing_position(pointed_thing, false)
-		local node = core.get_node_or_nil(pos)
-		if not node then
-			core.chat_send_player(pname, S("That doesn't seem to be a proper node"))
-			return
-		end
+		local infostring = S("Pos: x@=@1, y@=@2, z@=@3; Name: @4; Select meta info:",
+			tostring(pos.x), tostring(pos.y), tostring(pos.z), node.name)
+		-- some commonly used meta keys
+		infostring = infostring .. misc.format_meta_values(nmeta, {"id", "infotext", "owner"})
 
-		alternode.show_formspec(pos, node, placer)
+		core.chat_send_player(pname, infostring)
 	end,
 })
 
@@ -116,55 +117,22 @@ core.register_craftitem(alternode.modname .. ":pencil", {
 	stack_max = 1,
 	on_use = function(itemstack, user, pointed_thing)
 		if not user:is_player() then return end
-		local pos = check_node_pos(pointed_thing)
-		if not pos then return end
 
 		local pname = user:get_player_name()
-
-		if pointed_thing.type ~= "node" then
-			core.chat_send_player(pname, S("This item only works on nodes"))
-			return
-		end
+		local pos = check_node(pointed_thing, pname)
+		if not pos then return end
 
 		if not is_area_owner(pos, pname) then
 			core.chat_send_player(pname, S("You cannot alter nodes in areas you do not own"))
 			return
 		end
 
-		local infotext = core.get_meta(pos):get_string("infotext")
-		local formspec = "formspec_version[4]"
-			.. "size[6,4]"
-			.. "textarea[1,1;4,1.5;input;" .. S("Infotext") .. ";" .. infotext .. "]"
-			.. "button_exit[1.5,2.75;1.25,0.75;btn_write;" .. S("Write") .. "]"
-			.. "button_exit[3.3,2.75;1.25,0.75;btn_erase;" .. S("Erase") .. "]"
-
 		-- store pos info for retrieval in callbacks
-		user:get_meta():set_string(alternode.modname .. ":pencil:pos", core.serialize(pos))
-		core.show_formspec(pname, alternode.modname .. ":pencil", formspec)
+		user:get_meta():set_string(alternode.modname .. ":pos", core.serialize(pos))
+		core.show_formspec(pname, alternode.modname .. ":pencil",
+			alternode.get_pencil_formspec(pos))
 	end,
 })
-
-
-core.register_on_player_receive_fields(function(player, formname, fields)
-	if formname == alternode.modname .. ":pencil" then
-		-- FIXME: how to get node meta without storing in player meta?
-		local pmeta = player:get_meta()
-		local pos = core.deserialize(pmeta:get_string(alternode.modname .. ":pencil:pos"))
-		local nmeta = core.get_meta(pos)
-
-		if fields.btn_write then
-			if fields.input:trim() == "" then
-				nmeta:set_string("infotext", nil)
-			else
-				nmeta:set_string("infotext", fields.input)
-			end
-		elseif fields.btn_erase then
-			nmeta:set_string("infotext", nil)
-		end
-
-		pmeta:set_string(alternode.modname .. ":pencil:pos", nil)
-	end
-end)
 
 
 --- Player tool to set/unset *owner* meta value.
@@ -179,10 +147,11 @@ core.register_craftitem(alternode.modname .. ":key", {
 	stack_max = 1,
 	on_use = function(itemstack, user, pointed_thing)
 		if not user:is_player() then return end
-		local pos = check_node_pos(pointed_thing)
-		if not pos then return end
 
 		local pname = user:get_player_name()
+		local pos = check_node(pointed_thing, pname)
+		if not pos then return end
+
 		local nmeta = core.get_meta(pos)
 		local node_owner = nmeta:get_string("owner")
 
@@ -209,10 +178,11 @@ core.register_craftitem(alternode.modname .. ":key", {
 	end,
 	on_place = function(itemstack, placer, pointed_thing)
 		if not placer:is_player() then return end
-		local pos = check_node_pos(pointed_thing)
+
+		local pname = user:get_player_name()
+		local pos = check_node(pointed_thing, pname)
 		if not pos then return end
 
-		local pname = placer:get_player_name()
 		local node_owner = core.get_meta(pos):get_string("owner")
 
 		if node_owner == "" then
