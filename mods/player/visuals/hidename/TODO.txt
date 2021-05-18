@@ -1,0 +1,4 @@
+
+TODO:
+- retrieve custom nametag text if set when checking status
+- check if "nametag" chat command is already in use before registering

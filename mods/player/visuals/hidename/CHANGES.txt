@@ -1,0 +1,18 @@
+
+1.1
+- uses Minetest's built-in localization engine
+- updated for Minetest 5.0 API
+- fixed clearing text when "hidename.use_alpha" not enabled
+- custom nametag text will be restored if set instead of player name
+  - no longer requires setting nametag text on login
+
+
+1.0
+- added setting "hidename.use_alpha" to use nametag alpha level instead of clearing text
+- set player nametag text to player name on login
+- chat commands are not translated
+
+0.2
+- added "nametag" chat command
+- show nametag status when "/nametag" or "/nametag status" invoked
+- added localization support using intllib

@@ -1,44 +1,54 @@
-## Hide Name (***hidename***) mod for [Minetest][]
-
-
----
-### **Description**
-
-A Minetest mod for hiding player nametags from view.
-
-- Chat commands:
-  - **hidename**
-    - Invocation: ***/hidename***
-    - Hides player's nametag
-  - **showname**
-    - Invocation: ***/showname***
-    - Shows player's nametag
-- [API documentation](http://antummt.github.io/mod-hidename/api.html)
-
+## Hide Name mod for Minetest
 
 ---
-### **Licensing**
+### Description:
 
-- MIT (see [LICENSE.txt](LICENSE.txt))
-
+A [Minetest](http://www.minetest.net/) mod that allows players to hide their nametags from view.
 
 ---
-### **Requirements**
+### Usage:
 
-#### Dependencies
+Chat commands:
+
+- ***/nametag** [command]*
+  - commands:
+	  - *hide:* sets nametag hidden
+    - *show:* sets nametag visible
+    - *status:* prints the visible/hidden state of nametag (default)
+- ***/hidename***
+  - alias for `/nametag hide`
+- ***/showname***
+  - alias for `/nametag show`
+
+Settings:
+
+- ***hidename.use_alpha***
+  - use alpha color level to hide nametag instead of clearing text
+  - type: *bool*
+  - default: *false*
+
+---
+### Licensing:
+
+- [MIT](LICENSE.txt)
+
+---
+### Requirements:
+
+#### Dependencies:
+
 - **Required:** none
-- **Optional:**
-  - [intllib][]
+- **Optional:** none
 
-#### Privileges
+#### Privileges:
+
 - **Required:** none
 
-
 ---
-### **TODO**
+### Links:
 
-- Use empty nametag instead of transparency
-
-
-[Minetest]: http://www.minetest.net/
-[intllib]: https://forum.minetest.net/viewtopic.php?t=4929
+- [Forum](https://forum.minetest.net/viewtopic.php?t=18190)
+- [Git repo](https://github.com/AntumMT/mod-hidename)
+- [API](http://antummt.github.io/mod-hidename/docs/api.html)
+- [Changelog](https://github.com/AntumMT/mod-hidename/blob/master/CHANGES.txt)
+- [TODO](https://github.com/AntumMT/mod-hidename/blob/master/TODO.txt)

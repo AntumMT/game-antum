@@ -107,7 +107,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [hbsprint][] ([LGPL][lic.lgpl2.1]) -- version: [f566d0f Git][ver.hbsprint] *2021-02-18* ([patched][patch.hbsprint])
 * player/visuals/
   * [headanim][] ([MIT][lic.headanim]) -- version: [1.01][ver.headanim] *2021-01-16*
-  * [hidename][] ([MIT][lic.hidename]) -- version: [7b3aa52 Git][ver.hidename] *2021-04-19*
+  * [hidename][] ([MIT][lic.hidename]) -- version: [1.1][ver.hidename] *2021-05-17*
   * [invisibility][] ([MIT][lic.invisibility]) -- version: [65c0823 Git][ver.invisibility] *2021-01-21* ([patched][patch.invisibility])
   * [wardrobe][] ([MIT][lic.wardrobe]) -- version: [1.3][ver.wardrobe] *2021-04-22*
 * protection/
@@ -509,7 +509,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.hbsprint]: https://github.com/tacotexmex/hbsprint/tree/f566d0f
 [ver.headanim]: https://github.com/LoneWolfHT/headanim/releases/tag/v1.01
 [ver.helicopter]: https://github.com/APercy/helicopter/tree/1955cdd
-[ver.hidename]: https://github.com/AntumMT/mod-hidename/tree/7b3aa52
+[ver.hidename]: https://github.com/AntumMT/mod-hidename/releases/tag/v1.1
 [ver.home_gui]: https://github.com/cornernote/minetest-home_gui/tree/a291a09
 [ver.home_workshop]: https://gitlab.com/VanessaE/home_workshop_modpack/tree/03325e8
 [ver.homedecor]: https://gitlab.com/VanessaE/homedecor_modpack/tree/b6c64c6

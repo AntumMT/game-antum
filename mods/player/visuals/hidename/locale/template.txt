@@ -1,16 +1,17 @@
-# Translation by
+# Translation by:
 
 
-Nametag: =
-Status: hidden =
-Status: visible =
-Error: Unknown parameter: =
+Nametag: @1=
+Status: hidden=
+Status: visible=
 
-Make nametag hidden =
-Make nametag visible =
-Nametag is now hidden =
-Nametag is now visible =
-Nametag is already hidden =
-Nametag is already visible =
-ERROR: Could not hide nametag =
-ERROR: Could not show nametag =
+Make nametag hidden=
+Make nametag visible=
+Nametag is now hidden=
+Nametag is now visible=
+Nametag is already hidden=
+Nametag is already visible=
+
+ERROR: Unknown parameter: @1=
+ERROR: Could not hide nametag=
+ERROR: Could not show nametag=
