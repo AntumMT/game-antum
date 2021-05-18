@@ -1,6 +1,11 @@
 
 1.2
-- formspec shown when infostick "on_place" (right-click) method is called
+- infostick:
+  - left-click (use) shows formspec
+  - right-click (place) prints pos, name, & select meta info from node
+  - formspec can be used to view, set, & unset meta info
+- pencil item can be used to change or unset node "infotext" meta value
+- key item can be used to set/unset node "owner" meta value
 
 
 1.1

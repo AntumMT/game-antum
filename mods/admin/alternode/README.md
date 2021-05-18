@@ -2,24 +2,24 @@
 
 ### Description:
 
-A [Minetest](http://minetest.net/) mod that allows administrators with *server* privilege to examine & alter node meta data. Additionally, a pencil & wand tools are provided with limited use for players to alter *infotext* & *owner* meta value.
+A [Minetest](http://minetest.net/) mod that allows administrators with *server* privilege to examine & alter node meta data. Additionally, a pencil & key tools are provided with limited use for players to alter *infotext* & *owner* meta value.
 
 ### Usage:
 
 #### Chat commands:
 
-- */getmeta <x> <y> <z> <key>*
+- */getmeta &lt;x&gt; &lt;y&gt; &lt;z&gt; &lt;key&gt;*
   - prints the value of `key` in meta data of node at `x,y,z`.
-- */setmeta <x> <y> <z> <key> <new_value>*
+- */setmeta &lt;x&gt; &lt;y&gt; &lt;z&gt; &lt;key&gt; &lt;new_value&gt;*
   - Sets the value of `key` in meta data of node at `x,y,z`.
-- */unsetmeta <x> <y> <z> <key>*
+- */unsetmeta &lt;x&gt; &lt;y&gt; &lt;z&gt; &lt;key&gt;*
   - Unsets the value of `key` in meta data of node at `x,y,z`.
 
 #### Tools:
 
-**Info stick:**
+**Info Stick:**
 
-Invoke `/giveme alternode:infostick`. Use the infostick on a node to receive node coordinates, name, & some select meta info.
+Use the `alternode:infostick` on a node to receive node coordinates, name, & some select meta info. Only players with the `server` privilege can use this item
 
 - *left-click (use):* Opens formspec to retrieve & set/unset meta attributes.
 - *right-click (place):* Print node coordinates, name, & some select meta info.
@@ -30,10 +30,12 @@ The `alternode:pencil` is a tool for players to set/unset the `infotext` meta va
 
 - *left-click (use):* Opens formspec to set/unset infotext meta attribute.
 
-**Wand:**
+**Key:**
+
+The `alternode:key` is a tool that will set/unset the player wielding it as owner of a node (e.g. `owner` meta attribute will be set to player's name or cleared). Only nodes within an area owned/protected by the player can owned. Any node can be unowned.
 
 - *left-click (use):* Sets/Unsets user as owner.
-- *right-click (place):* Checks owner status & outputs to chat log.
+- *right-click (place):* Prints owner status to chat log.
 
 ### Licensing:
 
@@ -46,5 +48,6 @@ The `alternode:pencil` is a tool for players to set/unset the `infotext` meta va
 
 - [Forum](https://forum.minetest.net/viewtopic.php?t=26667)
 - [Git repo](http://github.com/AntumMT/mod-alternode)
+- [API](https://antummt.github.io/mod-alternode/docs/api.html)
 - [Changelog](CHANGES.txt)
 - [TODO](TODO.txt)

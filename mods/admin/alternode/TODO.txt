@@ -1,4 +1,4 @@
 
 TODO:
-- add HTML docs
+- fix displaying of select meta info in infostick formspec
 - clean up code

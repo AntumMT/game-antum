@@ -1,7 +1,19 @@
 
+--- Chat Commands
+--
+--  @module commands.lua
+
+
 local S = core.get_translator(alternode.modname)
 
 
+--- Retrieves node meta value of a given key.
+--
+--  @chatcmd getmeta
+--  @tparam number x X-coordinate of node.
+--  @tparam number y Y-coordinate of node.
+--  @tparam number z Z-coordinate of node.
+--  @tparam string key Key to be checked.
 core.register_chatcommand("getmeta", {
 	params = S("<x> <y> <z> <key>"),
 	description = S("Retrieve meta data of a node"),
@@ -48,6 +60,14 @@ core.register_chatcommand("getmeta", {
 	end,
 })
 
+--- Sets node meta value of a given key.
+--
+--  @chatcmd setmeta
+--  @tparam number x X-coordinate of node.
+--  @tparam number y Y-coordinate of node.
+--  @tparam number z Z-coordinate of node.
+--  @tparam string key Key to be set.
+--  @tparam string value Value to be set for `key`.
 core.register_chatcommand("setmeta", {
 	params = S("<x> <y> <z> <key> <value>"),
 	description = S("Set meta data of a node"),
@@ -110,6 +130,13 @@ core.register_chatcommand("setmeta", {
 	end,
 })
 
+--- Unsets node meta value of a given key.
+--
+--  @chatcmd unsetmeta
+--  @tparam number x X-coordinate of node.
+--  @tparam number y Y-coordinate of node.
+--  @tparam number z Z-coordinate of node.
+--  @tparam string key Key to be unset.
 core.register_chatcommand("unsetmeta", {
 	params = S("<x> <y> <z> <key>"),
 	description = S("Unset meta data of a node"),

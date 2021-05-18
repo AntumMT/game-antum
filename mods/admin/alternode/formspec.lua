@@ -1,4 +1,9 @@
 
+--- Formspecs
+--
+--  @module formspec.lua
+
+
 local S = core.get_translator(alternode.modname)
 
 local misc = dofile(alternode.modpath .. "/misc_functions.lua")
