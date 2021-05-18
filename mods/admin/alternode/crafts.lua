@@ -21,31 +21,17 @@ if core.global_exists("default") and
 end
 
 
--- wand
-local wand = {
-	head = nil,
-	handle = nil,
+-- key
+local key = {
+	main = "basic_materials:brass_ingot",
 }
 
-if core.registered_items["gems_encrustable:aquamarine"] then
-	wand.head = "gems_encrustable:aquamarine"
-elseif core.registered_items["gems:aquamarine"] then
-	wand.head = "gems:aquamarine"
-end
-
-if core.registered_items["gems_encrustable:opal"] then
-	wand.handle = "gems_encrustable:opal"
-elseif core.registered_items["gems:opal"] then
-	wand.handle = "gems:opal"
-end
-
-if wand.head and wand.handle then
+if core.registered_items[key.main] then
 	core.register_craft({
-		output = alternode.modname .. ":wand",
+		output = alternode.modname .. ":key",
 		recipe = {
-			{"", "", wand.head},
-			{"", wand.handle, ""},
-			{wand.handle, "", ""},
+			{"", key.main},
+			{key.main, ""},
 		},
 	})
 end

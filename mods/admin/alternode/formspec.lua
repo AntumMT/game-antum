@@ -14,16 +14,16 @@ local misc = dofile(alternode.modpath .. "/misc_functions.lua")
 --  @section fs_def
 
 
---- Retrieves formspec layout for `alternode:infostick` item.
+--- Retrieves formspec layout for `alternode:wand` item.
 --
 --  TODO: add fields for get, set, & unset meta data
 --
---  @function alternode.get_infostick_formspec
+--  @function alternode.get_wand_formspec
 --  @param pos
 --  @param node
 --  @param player
 --  @treturn string Formspec formatted string.
-function alternode.get_infostick_formspec(pos, node, player, key, msg)
+function alternode.get_wand_formspec(pos, node, player, key, msg)
 	local nmeta = core.get_meta(pos)
 	local infostring = S("Pos: x@=@1, y@=@2, z@=@3; Name: @4; Select meta info:",
 		tostring(pos.x), tostring(pos.y), tostring(pos.z), node.name)
@@ -83,7 +83,7 @@ end
 
 
 core.register_on_player_receive_fields(function(player, formname, fields)
-	if formname == alternode.modname .. ":infostick" then
+	if formname == alternode.modname .. ":wand" then
 		local pmeta = player:get_meta()
 
 		if fields.quit then
@@ -132,12 +132,13 @@ core.register_on_player_receive_fields(function(player, formname, fields)
 			msg = S('Key "@1" is not set', fields.input_key)
 		end
 
-		core.show_formspec(player:get_player_name(), alternode.modname .. ":infostick",
-			alternode.get_infostick_formspec(pos, node, player, fields.input_key, msg))
+		core.show_formspec(player:get_player_name(), alternode.modname .. ":wand",
+			alternode.get_wand_formspec(pos, node, player, fields.input_key, msg))
 	elseif formname == alternode.modname .. ":pencil" then
-		if not fields.quit then
+		local pmeta = player:get_meta()
+
+		if fields.btn_write or fields.btn_erase then
 			-- FIXME: how to get node meta without storing in player meta?
-			local pmeta = player:get_meta()
 			local pos = core.deserialize(pmeta:get_string(alternode.modname .. ":pos"))
 			local nmeta = core.get_meta(pos)
 

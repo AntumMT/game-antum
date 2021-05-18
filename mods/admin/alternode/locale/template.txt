@@ -18,10 +18,10 @@ Meta value: @1@=@2=
 
 # tools
 
-Info Stick=
+Node Wand=
+Tool for retrieving & setting node meta data=
 You do not have privileges to use this item (missing priviliges: @1)=
 This item only works on nodes=
-Tool for retrieving information about a node=
 Pos: x@=@1, y@=@2, z@=@3; Name: @4; Select meta info:=
 Key:=
 Value:=
@@ -34,7 +34,7 @@ Key cannot be empty=
 Value cannot be empty=
 Key "@1" is not set=
 
-Pencil=
+Node Pencil=
 Tool for editing node infotext=
 You cannot alter nodes in areas you do not own=
 Infotext=

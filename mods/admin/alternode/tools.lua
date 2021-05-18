@@ -68,14 +68,14 @@ end
 --
 --  Only players with the `server` privilege can use this item
 --
---  @craftitem alternode:infostick
+--  @craftitem alternode:wand
 --  @use Opens formspec to retrieve & set/unset meta attributes.
 --  @place Print node coordinates, name, & some select meta info.
---  @image alternode_infostick.png
-core.register_craftitem(alternode.modname .. ":infostick", {
-	description = S("Tool for retrieving information about a node"),
-	short_description = S("Info Stick"),
-	inventory_image = "alternode_infostick.png",
+--  @image alternode_wand.png
+core.register_craftitem(alternode.modname .. ":wand", {
+	description = S("Tool for retrieving & setting node meta data"),
+	short_description = S("Node Wand"),
+	inventory_image = "alternode_wand.png",
 	stack_max = 1,
 	on_use = function(itemstack, user, pointed_thing)
 		if not user:is_player() then return end
@@ -90,8 +90,8 @@ core.register_craftitem(alternode.modname .. ":infostick", {
 		pmeta:set_string(alternode.modname .. ":pos", core.serialize(pos))
 		pmeta:set_string(alternode.modname .. ":node", core.serialize(node))
 
-		core.show_formspec(pname, alternode.modname .. ":infostick",
-			alternode.get_infostick_formspec(pos, node, user))
+		core.show_formspec(pname, alternode.modname .. ":wand",
+			alternode.get_wand_formspec(pos, node, user))
 	end,
 	on_place = function(itemstack, placer, pointed_thing)
 		if not placer:is_player() then return end
@@ -111,6 +111,7 @@ core.register_craftitem(alternode.modname .. ":infostick", {
 		core.chat_send_player(pname, infostring)
 	end,
 })
+core.register_alias(alternode.modname .. ":infostick", alternode.modname .. ":wand")
 
 
 --- Player tool to alter *infotext* meta value.
@@ -120,7 +121,7 @@ core.register_craftitem(alternode.modname .. ":infostick", {
 --  @image alternode_pencil.png
 core.register_craftitem(alternode.modname .. ":pencil", {
 	description = S("Tool for editing node infotext"),
-	short_description = S("Pencil"),
+	short_description = S("Node Pencil"),
 	inventory_image = "alternode_pencil.png",
 	stack_max = 1,
 	on_use = function(itemstack, user, pointed_thing)
@@ -188,7 +189,7 @@ core.register_craftitem(alternode.modname .. ":key", {
 	on_place = function(itemstack, placer, pointed_thing)
 		if not placer:is_player() then return end
 
-		local pname = user:get_player_name()
+		local pname = placer:get_player_name()
 		local pos = check_node(pointed_thing, pname)
 		if not pos then return end
 
@@ -202,4 +203,3 @@ core.register_craftitem(alternode.modname .. ":key", {
 	end,
 })
 core.register_alias("ownit:wand", alternode.modname .. ":key")
-core.register_alias(alternode.modname .. ":wand", alternode.modname .. ":key")

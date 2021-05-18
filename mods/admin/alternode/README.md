@@ -17,9 +17,9 @@ A [Minetest](http://minetest.net/) mod that allows administrators with *server* 
 
 #### Tools:
 
-**Info Stick:**
+**Wand:**
 
-Use the `alternode:infostick` on a node to receive node coordinates, name, & some select meta info. Only players with the `server` privilege can use this item
+Use the `alternode:wand` on a node to receive node coordinates, name, & some select meta info. Only players with the `server` privilege can use this item
 
 - *left-click (use):* Opens formspec to retrieve & set/unset meta attributes.
 - *right-click (place):* Print node coordinates, name, & some select meta info.
@@ -41,8 +41,9 @@ The `alternode:key` is a tool that will set/unset the player wielding it as owne
 
 - Code: [MIT](LICENSE.txt)
 - Textures: CC0
-  - `alternode_infostick.png & alternode_pencil.png:` by AntumDeluge
-  - [`alternode_wand.png`](https://opengameart.org/node/120374)
+	- alternode_pencil.png:` by AntumDeluge
+	- [`alternode_key.png`](https://opengameart.org/node/120374)
+	- [`alternode_wand.png`](https://opengameart.org/node/40598) by rcorre
 
 ### Links:
 

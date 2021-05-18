@@ -1,4 +1,10 @@
 
+1.3
+- renamed "alternode:infostick" item to "alternode:wand" & changed texture
+- fixed broken pencil & key
+- fixed key craft recipe & removed wand recipe
+
+
 1.2
 - infostick:
   - left-click (use) shows formspec
