@@ -16,7 +16,6 @@ local modpath = minetest.get_modpath("atm")
 
 dofile(modpath .. "/common.lua")
 dofile(modpath .. "/forms.lua")
-dofile(modpath .. "/deposits.lua")
 dofile(modpath .. "/nodes.lua")
 dofile(modpath .. "/receive_fields.lua")
 dofile(modpath .. "/receive_fields_wt.lua")

@@ -1,7 +1,8 @@
 
 -- Check the form
 
-function atm.on_receive_fields(pos, form, pressed, player)
+-- only used for withdrawals
+minetest.register_on_player_receive_fields(function(player, form, pressed)
 
 	-- ATMs
 	if form == "atm.form" then
@@ -62,16 +63,21 @@ function atm.on_receive_fields(pos, form, pressed, player)
 			else
 				minetest.chat_send_player(n, "Not enough room in your inventory")
 			end
+
+		elseif transaction.amount > 0 then
+			if pinv:contains_item("main", item) then
+				pinv:remove_item("main", item)
+				atm.balance[n] = atm.balance[n] + transaction.amount
+			else
+				minetest.chat_send_player(n, "Not enough money in your inventory")
+			end
 		end
 
 		atm.saveaccounts()
 
 		if not pressed.Quit and not pressed.quit then
-			local formspec, formname = atm.getform(player)
-			local meta = core.get_meta(pos)
-			meta:set_string("formspec", formspec)
-			meta:set_string("formname", formname)
+				atm.showform(player)
 		end
 	end
 
-end
+end)

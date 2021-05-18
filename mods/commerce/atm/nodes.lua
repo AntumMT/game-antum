@@ -14,31 +14,8 @@ minetest.register_node("atm:atm", {
 	is_ground_content = false,
 	sounds = default.node_sound_stone_defaults(),
 
-	after_place_node = function(pos, placer, itemstack, pointed_thing)
-		local formspec, formname = atm.getform(placer)
-		local meta = core.get_meta(pos)
-		meta:set_string("formspec", formspec)
-		meta:set_string("formname", formname)
-	end,
-
-	on_rightclick = function(pos, node, player)
-		local formspec, formname = atm.getform(player)
-		local meta = core.get_meta(pos)
-		meta:set_string("formspec", formspec)
-		meta:set_string("formname", formname)
-		local inv = meta:get_inventory()
-		inv:set_size("deposit", 1)
-	end,
-
-	on_receive_fields = function(pos, formname, fields, sender)
-		formname = core.get_meta(pos):get_string("formname")
-		atm.on_receive_fields(pos, formname, fields, sender)
-	end,
-
-	allow_metadata_inventory_put = function(pos, listname, index, stack, player)
-		local retval = atm.deposit(player, stack)
-		core.get_meta(pos):set_string("formspec", atm.getform(player))
-		return retval
+	on_rightclick = function(_, _, player)
+		atm.showform(player)
 	end,
 })
 
@@ -59,22 +36,7 @@ minetest.register_node("atm:wtt", {
 	is_ground_content = false,
 	sounds = default.node_sound_stone_defaults(),
 
-	after_place_node = function(pos, placer, itemstack, pointed_thing)
-		local formspec, formname = atm.getform_wt(placer)
-		local meta = core.get_meta(pos)
-		meta:set_string("formspec", formspec)
-		meta:set_string("formname", formname)
-	end,
-
-	on_rightclick = function(pos, node, player)
-		local formspec, formname = atm.getform_wt(player)
-		local meta = core.get_meta(pos)
-		meta:set_string("formspec", formspec)
-		meta:set_string("formname", formname)
-	end,
-
-	on_receive_fields = function(pos, formname, fields, sender)
-		formname = core.get_meta(pos):get_string("formname")
-		atm.on_receive_fields_wt(pos, formname, fields, sender)
+	on_rightclick = function(_, _, player)
+		atm.showform_wt(player)
 	end,
 })
