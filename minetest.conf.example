@@ -1898,6 +1898,16 @@ coloredwood_enable_stairsplus = true
 #    default: 9000
 #chicken.spawn_chance = 9000
 
+## Spawn interval in seconds.
+#    type:    int
+#    default: 60
+#cow.spawn_interval = 60
+
+## Chance of spawn at interval.
+#    type:    int
+#    default: 8000
+#cow.spawn_chance = 8000
+
 
 # *** ghost ***
 

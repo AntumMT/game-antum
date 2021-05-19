@@ -89,6 +89,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [pipeworks][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2670fd8 Git][ver.pipeworks] *2021-05-06* ([patched][patch.pipeworks])
 * mobiles/
   * [chicken][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [b126cdb Git][ver.chicken] *2021-05-19*
+  * [cow][mobs_cow] ([MIT][lic.mobs_cow]) -- version: [85af09a Git][ver.mobs_cow] *2021-05-19*
   * [folks][] ([GPL][lic.gpl3.0]) -- version: [0.2.0][ver.folks] *2021-02-23*
   * [ghost][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [c09aacb Git][ver.ghost] *2021-05-19*
   * [horse][] ([MIT][lic.horse]) -- version: [3240dde Git][ver.horse] *2021-05-19*
@@ -315,6 +316,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [minetest_game]: https://github.com/minetest/minetest_game
 [mobkit]: https://forum.minetest.net/viewtopic.php?t=22112
 [goblins]: https://forum.minetest.net/viewtopic.php?t=13004
+[mobs_cow]: https://github.com/AntumMT/mod-mobs_animal/tree/cow
 [mobs_redo]: https://forum.minetest.net/viewtopic.php?t=9917
 [monsters_aggressive]: https://github.com/AntumMT/mp-monsters_aggressive
 [monsters_passive]: https://github.com/AntumMT/mp-monsters_passive
@@ -413,6 +415,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.listitems]: mods/antum/listitems/LICENSE.txt
 [lic.mesecons]: mods/modpacks/mesecons/COPYING.txt
 [lic.mobkit]: mods/mobiles/engine/mobkit/LICENSE
+[lic.mobs_cow]: mods/mobiles/cow/license.txt
 [lic.mobs_redo]: mods/mobiles/engine/mobs_redo/license.txt
 [lic.moreblocks]: mods/buildings/moreblocks/LICENSE.md
 [lic.moreores]: mods/materials/moreores/LICENSE.md
@@ -540,6 +543,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.mesecons]: https://github.com/minetest-mods/mesecons/tree/6579351
 [ver.minetest_game]: https://github.com/minetest/minetest_game/tree/5.4.1
 [ver.mobkit]: https://github.com/TheTermos/mobkit/tree/ddea141
+[ver.mobs_cow]: https://github.com/AntumMT/mod-mobs_animal/tree/85af09a
 [ver.mobs_redo]: https://notabug.org/TenPlus1/mobs_redo/src/f6e16a550330cf6a641753c03ebe331682294939
 [ver.monsters_aggressive]: https://github.com/AntumMT/mp-monsters_aggressive/tree/89a8187
 [ver.monsters_passive]: https://github.com/AntumMT/mp-monsters_passive/tree/b07fe19

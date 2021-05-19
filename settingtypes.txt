@@ -103,6 +103,21 @@ chicken.spawn_interval (Spawn interval) int 120 1
 chicken.spawn_chance (Spawn chance) int 9000 1
 
 
+[**cow]
+
+# Spawn interval in seconds.
+#
+# type:    int
+# default: 60
+cow.spawn_interval (Spawn interval) int 60 1
+
+# Chance of spawn at interval.
+#
+# type:    int
+# default: 8000
+cow.spawn_chance (Spawn chance) int 8000 1
+
+
 [**ghost]
 
 # Entity lifespan.
