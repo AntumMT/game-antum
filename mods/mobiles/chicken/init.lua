@@ -20,9 +20,21 @@
 --
 
 
+cmer_chicken = {}
+cmer_chicken.modname = core.get_current_modname()
+cmer_chicken.modpath = core.get_modpath(cmer_chicken.modname)
+
+local scripts = {
+	"settings",
+	"egg",
+}
+
+for _, script in ipairs(scripts) do
+	dofile(cmer_chicken.modpath .. "/" .. script .. ".lua")
+end
+
 
 -- Egg
-dofile(core.get_modpath(core.get_current_modname()) .. "/egg.lua")
 local function dropEgg(obj)
   local pos = obj:get_pos()
   if pos then
@@ -67,7 +79,7 @@ local def = {
 	ownable = true,
   stats = {
     hp = 5,
-    lifetime = 300, -- 5 Minutes
+    lifetime = cmer_chicken.lifetime,
     can_jump = 1,
     can_swim = true,
     can_burn = true,
@@ -116,8 +128,8 @@ local def = {
     abm_nodes = {
       spawn_on = {"default:dirt_with_grass", "default:dirt"},
     },
-    abm_interval = 55,
-    abm_chance = 7800,
+    abm_interval = cmer_chicken.spawn_interval,
+    abm_chance = cmer_chicken.spawn_chance,
     max_number = 1,
     number = 1,
     light = {min = 8, max = 15},

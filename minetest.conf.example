@@ -1903,6 +1903,24 @@ mobs_animal:sheep_white = 0
 #mobs_drop_items = true
 
 
+# *** chicken ***
+
+## Entity lifespan.
+#    type:    int
+#    default: 300
+#chicken.lifetime = 300
+
+## Spawn interval in seconds.
+#    type:    int
+#    default: 120
+#chicken.spawn_interval = 120
+
+## Chance of spawn at interval.
+#    type:    int
+#    default: 9000
+#chicken.spawn_chance = 9000
+
+
 # *** shark ***
 
 ## Interval in seconds that specifies how often shark spawns.
