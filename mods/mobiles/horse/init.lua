@@ -1,4 +1,9 @@
 
+cmer_horse = {}
+cmer_horse.modname = core.get_current_modname()
+cmer_horse.modpath = core.get_modpath(cmer_horse.modname)
+
+dofile(cmer_horse.modpath .. "/settings.lua")
 
 
 --HORSE go go goooo :)
@@ -56,7 +61,7 @@ function horse:on_rightclick(clicker)
 		if wielded and wielded:get_name() == "default:apple" then
 			wielded:set_count(wielded:get_count()-1)
 			clicker:set_wielded_item(wielded)
-			core.sound_play({name="creatures_apple_bite",}, {clicker:get_pos()})
+			core.sound_play("creatures_apple_bite", {object=self.object})
 
 			if self._appetite == nil then
 				self._appetite = 1
@@ -270,8 +275,8 @@ local base_def = {
 	stats = {
 		hp = 16,
 		hostile = false,
-		lifetime = 300,
-		can_jump = 0, -- FIXME: should only not be able to jump over certain nodes for coralling
+		lifetime = cmer_horse.lifetime,
+		can_jump = 1, -- FIXME: should only not be able to jump over certain nodes for coralling
 		can_panic = true,
 		has_kockback = true,
 	},
@@ -308,8 +313,8 @@ local base_def = {
 			spawn_on = {"default:dirt_with_grass"},
 			neighbors = {},
 		},
-		abm_interval = 60,
-		abm_chance = 9000,
+		abm_interval = cmer_horse.spawn_interval,
+		abm_chance = cmer_horse.spawn_chance,
 		max_number = 1,
 		light = {min=8, max=20},
 		height_limit = {min=-50, max=31000},

@@ -93,7 +93,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * general/
     * [mobs_animal][] ([MIT][lic.mobs_animal]) -- version: [80e72a4 Git][ver.mobs_animal] *2021-04-13* ([patched][patch.mobs_animal])
   * [ghost][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [dd22520 Git][ver.ghost] *2021-05-05*
-  * [horse][] ([MIT][lic.horse]) -- version: [9c5c857 Git][ver.horse] *2021-05-05*
+  * [horse][] ([MIT][lic.horse]) -- version: [3240dde Git][ver.horse] *2021-05-19*
   * [monsters_aggressive][] (see individual mods for licensing) -- version: [89a8187 Git][ver.monsters_aggressive] *2017-08-30*
   * [monsters_passive][] (see individual mods for licensing) -- version: [b07fe19 Git][ver.monsters_passive] *2017-08-09*
   * [oerkki][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [70410fe Git][ver.oerkki] *2021-05-05*
@@ -531,7 +531,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.home_gui]: https://github.com/cornernote/minetest-home_gui/tree/a291a09
 [ver.home_workshop]: https://gitlab.com/VanessaE/home_workshop_modpack/tree/03325e8
 [ver.homedecor]: https://gitlab.com/VanessaE/homedecor_modpack/tree/b6c64c6
-[ver.horse]: https://github.com/AntumMT/mod-horse/tree/9c5c857
+[ver.horse]: https://github.com/AntumMT/mod-horse/tree/3240dde
 [ver.hot_air_balloons]: https://notabug.org/NetherEran/hot_air_balloons/src/39a3572ad1bf7fd800525d68b128981e1b2c37d1
 [ver.hovercraft]: https://github.com/stujones11/hovercraft/tree/4d50e68
 [ver.hudbars]: http://repo.or.cz/minetest_hudbars.git/tree/0684bac
