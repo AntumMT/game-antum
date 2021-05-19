@@ -1943,8 +1943,8 @@ mobs_animal:sheep_white = 0
 
 ## Maximum height at which shark can spawn.
 #    type:    int
-#    default: -3
-#shark.max_height = -3
+#    default: 100
+#shark.max_height = 100
 
 ## Times that shark can spawn.
 #    type:    enum

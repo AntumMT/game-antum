@@ -97,7 +97,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [monsters_aggressive][] (see individual mods for licensing) -- version: [89a8187 Git][ver.monsters_aggressive] *2017-08-30*
   * [monsters_passive][] (see individual mods for licensing) -- version: [b07fe19 Git][ver.monsters_passive] *2017-08-09*
   * [oerkki][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [70410fe Git][ver.oerkki] *2021-05-05*
-  * [shark][] ([CC0 / CC BY-SA][lic.shark]) -- version: [ef2507b Git][ver.shark] *2021-05-05*
+  * [shark][] ([CC0 / CC BY-SA][lic.shark]) -- version: [9e0e048 Git][ver.shark] *2021-05-19*
   * [sheep][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [ff39b4a Git][ver.sheep] *2021-05-13*
   * [sneeker][] ([MIT][lic.sneeker]) -- version: [1.0][ver.sneeker] *2021-05-08*
   * velociraptor ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- forked from *mobs_farlands* (part of [farlands][] sub-game)
@@ -574,7 +574,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.rainbow_ore]: https://github.com/FsxShader2012/rainbow_ore/tree/6e77693
 [ver.server_shop]: https://github.com/AntumMT/mod-server_shop/tree/06f6691
 [ver.sfinv_buttons]: http://repo.or.cz/minetest_sfinv_buttons.git/tree/ebb1f7c
-[ver.shark]: https://github.com/AntumMT/mod-shark/tree/ef2507b
+[ver.shark]: https://github.com/AntumMT/mod-shark/tree/9e0e048
 [ver.sheep]: https://github.com/AntumMT/mod-cmer/tree/ff39b4a
 [ver.signs_lib]: https://gitlab.com/VanessaE/signs_lib/tree/2021-03-04-2
 [ver.simple_protection]: https://github.com/SmallJoker/simple_protection/tree/3630fe9

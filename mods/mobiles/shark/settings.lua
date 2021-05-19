@@ -35,7 +35,7 @@ shark.min_height = tonumber(core.settings:get("shark.min_height")) or -30
 --- Maximum height at which shark can spawn.
 --
 --  @setting shark.max_height
-shark.max_height = tonumber(core.settings:get("shark.max_height")) or -3
+shark.max_height = tonumber(core.settings:get("shark.max_height")) or 100
 
 --- Times that shark can spawn.
 --

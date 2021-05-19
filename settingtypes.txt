@@ -612,7 +612,7 @@ shark.max_light (Shark max spawn light) int 14 0 14
 shark.min_height (Shark min spawn height) int -30
 
 # Maximum height at which shark can spawn.
-shark.max_height (Shark max spawn height) int -3
+shark.max_height (Shark max spawn height) int 100
 
 # Times that shark can spawn.
 #
