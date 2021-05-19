@@ -26,20 +26,10 @@ inventory (Inventory interface) enum sfinv sfinv,inventory_plus
 allow_atm_craft (Allow ATM crafting) bool true
 
 
-[*Mobiles (Mobs)]
-
-# Announce to all players when & where a mob is spawned.
-display_mob_spawn (Announce spawn) bool false
-
-# Display blood spatter during battle.
-mobs_enable_blood (Enable blood) bool false
-
-mobs_spawn_protected (Spawn protected) int 0
+[*Mobiles General]
 
 # Only spawn mobs that don't attack players.
 only_peaceful_mobs (Peaceful only) bool false
-
-remove_far_mobs (Remove far mobs) bool false
 
 
 # ---------------------------------------------------------------------------------
@@ -47,7 +37,70 @@ remove_far_mobs (Remove far mobs) bool false
 [Mods]
 
 
-[*mobiles]
+[*Mobiles]
+
+
+[**mobs_redo]
+
+# If false then mobs no longer spawn in world without spawner or spawn egg
+mobs_spawn (Spawn Mobs) bool true
+
+# Disable blood splatter when attacking mobs.
+mobs_disable_blood (Disable Mob blood) bool false
+
+# If disabled then Mobs no longer destroy world blocks
+mobs_griefing (Griefing Mobs) bool true
+
+# If false then Mobs no longer spawn inside player protected areas
+mobs_spawn_protected (Spawn Mobs in protected areas) bool true
+
+# If true Mobs will be removed once a map chunk is out of view
+remove_far_mobs (Remove far Mobs) bool true
+
+# Sets Mob difficulty level by multiplying punch damage
+mob_difficulty (Mob difficulty) float 1.0
+
+# If disabled health status no longer appears above Mob when punched
+mob_show_health (Show Mob health) bool true
+
+# Contains a value used to multiply Mob spawn values
+mob_chance_multiplier (Mob chance multiplier) float 1.0
+
+# When false Mob no longer drop items when killed
+mobs_drop_items (Mob drops) bool true
+
+# Sets minimum distance around player that mobs cannot spawn
+mob_nospawn_range (Mob no-spawn range) float 12.0
+
+# Sets maximum number of active mobs in game (0 for unlimited)
+mob_active_limit (Mob Active Limit) float 0
+
+# Enables area check when spawning mobs
+mob_area_spawn (Mob Area Spawn) bool false
+
+# Enable peaceful player attack prevention
+enable_peaceful_player (Mobs do not attack peaceful player without reason) bool false
+
+
+[**chicken]
+
+# Entity lifespan.
+#
+# type:    int
+# default: 300
+chicken.lifetime (Lifespan) int 300 1
+
+# Spawn interval in seconds.
+#
+# type:    int
+# default: 120
+chicken.spawn_interval (Spawn interval) int 120 1
+
+# Chance of spawn at interval.
+#
+# type:    int
+# default: 9000
+chicken.spawn_chance (Spawn chance) int 9000 1
 
 
 [**ghost]
@@ -69,6 +122,150 @@ ghost.spawn_interval (Spawn interval) int 40 1
 # type:    int
 # default: 7300
 ghost.spawn_chance (Spawn chance) int 7300 1
+
+
+[**horse]
+
+# Entity lifespan.
+#
+# type:    int
+# default: 300
+horse.lifetime (Lifespan) int 300 1
+
+# Spawn interval in seconds.
+#
+# type:    int
+# default: 600 (10 minutes)
+horse.spawn_interval (Spawn interval) int 600 1
+
+# Chance of spawn at interval.
+#
+# type:    int
+# default: 9000
+horse.spawn_chance (Spawn chance) int 9000 1
+
+
+[**shark]
+
+# Interval in seconds that specifies how often shark spawns.
+shark.interval (Shark spawn interval) int 60 0
+
+# Chance for each node of spawning shark at each interval. The value
+# is inverted. So a chance of value of 9000 equals 1/9000.
+shark.chance (Shark spawn chance) int 9000 0
+
+# Minimum node light required for spawning. "0" is darkest & "14" is
+# lightest (daylight).
+# See: [Node definition] light_source
+shark.min_light (Shark min spawn light) int 4 0 14
+
+# Maximum node light required for spawning. "0" is darkest & "14" is
+# lightest (daylight).
+# See: [Node definition] light_source
+shark.max_light (Shark max spawn light) int 14 0 14
+
+# Minimum height at which shark can spawn.
+shark.min_height (Shark min spawn height) int -30
+
+# Maximum height at which shark can spawn.
+shark.max_height (Shark max spawn height) int 100
+
+# Times that shark can spawn.
+#
+# Modes supported:
+# | ■ day:   spawns during day
+# | ■ night: spawns during night
+# | ■ any:   spawns anytime
+shark.spawn_time (Shark spawn time) enum any day,night,any
+
+
+[**sneeker]
+
+# Extra debugging messages.
+enable_debug_mods (Mod debugging) bool false
+
+# How long (in seconds) sneeker remains in world after spawn.
+#
+# Default: 900 (15 minutes)
+sneeker.lifetime (Sneeker lifetime) int 900
+
+# Loudness of explosion.
+#
+# Those with a weak heart might want to turn it down.
+sneeker.boom_gain (Boom volume) float 1.5
+
+# Determines whether or not a player must be close for spawn to occur.
+sneeker.spawn_require_player_nearby (Require player nearby for spawn) bool true
+
+# Distance in nodes a player must be for spawn to occur.
+#
+# Only used if `sneeker.spawn_require_player_nearby` enabled.
+sneeker.spawn_player_radius (Player spawn detect radius) int 100
+
+# If enabled, mobs not near any players will despawn.
+sneeker.despawn_player_far (Despawn sneekers not near players) bool true
+
+# Distance determining if a player is near enough to prevent despawn.
+#
+# Only used if `sneeker.despawn_player_far` enabled.
+sneeker.despawn_player_radius (Player despawn detect radius) int 500
+
+# Sets possibility for spawn.
+#
+# Rate is the inverted value (e.g. 1/value).
+sneeker.spawn_chance (Sneeker spawn chance) int 10000
+
+# Sets frequency of spawn chance. Default 240 is equivalent to 4 minutes (60 * 4).
+sneeker.spawn_interval (Sneeker spawn interval) int 240
+
+# Sets the minimum light that a node must have for spawn to occur.
+sneeker.spawn_minlight (Sneeker min light for spawn) int 0 0 15
+
+# Sets the maximum light that a node can have for spawn to occur.
+sneeker.spawn_maxlight (Sneeker max light for spawn) int 4 0 15
+
+# Sets the lowest position at which sneeker can spawn.
+sneeker.spawn_minheight (Sneeker min spawn height) int -31000
+
+# Sets the highest position at which sneeker can spawn.
+sneeker.spawn_maxheight (Sneeker max spawn height) int 31000
+
+# Limits the number of entities that can spawn per mapblock (16x16x16).
+sneeker.spawn_mapblock_limit (Sneeker spawn limit) int 1
+
+
+[**velociraptor]
+
+# Used alternate "feathered" texture.
+mobs.velociraptor_feathered (Feathered velociraptor) bool false
+
+# Interval in seconds that specifies how often velociraptor spawns.
+mobs.velociraptor_interval (Velociraptor spawn interval) int 30 0
+
+# Chance for each node of spawning velociraptor at each interval. The value
+# is inverted. So a chance of value of 32000 equals 1/32000.
+mobs.velociraptor_chance (Velociraptor spawn chance) int 32000 0
+
+# Minimum node light required for spawning. "0" is darkest & "14" is
+# lightest (daylight).
+# See: [Node definition] light_source
+mobs.velociraptor_min_light (Velociraptor min spawn light) int 10 0 14
+
+# Maximum node light required for spawning. "0" is darkest & "14" is
+# lightest (daylight).
+# See: [Node definition] light_source
+mobs.velociraptor_max_light (Velociraptor max spawn light) int 14 0 14
+
+# Maximum height at which velociraptor can spawn.
+mobs.velociraptor_max_height (Velociraptor max spawn height) int 31000
+
+# Times that velociraptor can spawn.
+#
+# Modes supported:
+# | ■ day:   spawns during day
+# | ■ night: spawns during night
+# | ■ any:   spawns anytime
+mobs.velociraptor_spawn_time (Velociraptor spawn time) enum any day,night,any
 
 
 [*airtanks]
@@ -198,27 +395,6 @@ bright_night_light (Night light level) int 4
 chatlog.monthfirst (Timestamp shows month before day) bool true
 
 
-[*chicken]
-
-# Entity lifespan.
-#
-# type:    int
-# default: 300
-chicken.lifetime (Lifespan) int 300 1
-
-# Spawn interval in seconds.
-#
-# type:    int
-# default: 120
-chicken.spawn_interval (Spawn interval) int 120 1
-
-# Chance of spawn at interval.
-#
-# type:    int
-# default: 9000
-chicken.spawn_chance (Spawn chance) int 9000 1
-
-
 [*craftguide]
 
 # The progressive mode shows recipes you can craft from items you ever had in your inventory.
@@ -320,27 +496,6 @@ helicopter.mouse_default (Mouse control default) bool false
 
 # Use alpha color level to hide nametag instead of clearing text.
 hidename.use_alpha (Use nametag alpha level) bool false
-
-
-[*horse]
-
-# Entity lifespan.
-#
-# type:    int
-# default: 300
-horse.lifetime (Lifespan) int 300 1
-
-# Spawn interval in seconds.
-#
-# type:    int
-# default: 600 (10 minutes)
-horse.spawn_interval (Spawn interval) int 600 1
-
-# Chance of spawn at interval.
-#
-# type:    int
-# default: 9000
-horse.spawn_chance (Spawn chance) int 9000 1
 
 
 [*hudbars]
@@ -501,39 +656,6 @@ listitems.bullet_list (Bulleted list) bool true
 listitems.enable_singleword (Enable singleword commands) bool true
 
 
-[*mobs_redo]
-
-# If false then mobs no longer spawn in world without spawner or spawn egg
-mobs_spawn (Spawn Mobs) bool true
-
-# If enabled then monsters no longer spawn in world
-only_peaceful_mobs (Only spawn peaceful Mobs) bool false
-
-# Disable blood splatter when attacking mobs.
-mobs_disable_blood (Disable Mob blood) bool false
-
-# If disabled then Mobs no longer destroy world blocks
-mobs_griefing (Griefing Mobs) bool true
-
-# If false then Mobs no longer spawn inside player protected areas
-mobs_spawn_protected (Spawn Mobs in protected areas) bool true
-
-# If true Mobs will be removed once a map chunk is out of view
-remove_far_mobs (Remove far Mobs) bool true
-
-# Sets Mob difficulty level by multiplying punch damage
-mob_difficulty (Mob difficulty) float 1.0
-
-# If disabled health status no longer appears above Mob when punched
-mob_show_health (Show Mob health) bool true
-
-# Contains a value used to multiply Mob spawn values
-mob_chance_multiplier (Mob chance multiplier) float 1.0
-
-# When false Mob no longer drop items when killed
-mobs_drop_items (Mob drops) bool true
-
-
 [*moreblocks]
 
 # If enabled, Stairs+ nodes will be displayed in the inventory when playing in creative mode.
@@ -634,99 +756,10 @@ pvp_areas.label (Show PvP area labels) string Defined area.
 server_shop.use_currency_defaults (Use currency mod defaults) bool true
 
 
-[*shark]
-
-# Interval in seconds that specifies how often shark spawns.
-shark.interval (Shark spawn interval) int 60 0
-
-# Chance for each node of spawning shark at each interval. The value
-# is inverted. So a chance of value of 9000 equals 1/9000.
-shark.chance (Shark spawn chance) int 9000 0
-
-# Minimum node light required for spawning. "0" is darkest & "14" is
-# lightest (daylight).
-# See: [Node definition] light_source
-shark.min_light (Shark min spawn light) int 4 0 14
-
-# Maximum node light required for spawning. "0" is darkest & "14" is
-# lightest (daylight).
-# See: [Node definition] light_source
-shark.max_light (Shark max spawn light) int 14 0 14
-
-# Minimum height at which shark can spawn.
-shark.min_height (Shark min spawn height) int -30
-
-# Maximum height at which shark can spawn.
-shark.max_height (Shark max spawn height) int 100
-
-# Times that shark can spawn.
-#
-# Modes supported:
-# | ■ day:   spawns during day
-# | ■ night: spawns during night
-# | ■ any:   spawns anytime
-shark.spawn_time (Shark spawn time) enum any day,night,any
-
-
 [*slingshot]
 
 # Require rubber band as additional ingredient in slingshot craft recipes.
 slingshot.require_rubber_band (Require rubber band in craft recipe) bool true
-
-
-[*sneeker]
-
-# Extra debugging messages.
-enable_debug_mods (Mod debugging) bool false
-
-# How long (in seconds) sneeker remains in world after spawn.
-#
-# Default: 900 (15 minutes)
-sneeker.lifetime (Sneeker lifetime) int 900
-
-# Loudness of explosion.
-#
-# Those with a weak heart might want to turn it down.
-sneeker.boom_gain (Boom volume) float 1.5
-
-# Determines whether or not a player must be close for spawn to occur.
-sneeker.spawn_require_player_nearby (Require player nearby for spawn) bool true
-
-# Distance in nodes a player must be for spawn to occur.
-#
-# Only used if `sneeker.spawn_require_player_nearby` enabled.
-sneeker.spawn_player_radius (Player spawn detect radius) int 100
-
-# If enabled, mobs not near any players will despawn.
-sneeker.despawn_player_far (Despawn sneekers not near players) bool true
-
-# Distance determining if a player is near enough to prevent despawn.
-#
-# Only used if `sneeker.despawn_player_far` enabled.
-sneeker.despawn_player_radius (Player despawn detect radius) int 500
-
-# Sets possibility for spawn.
-#
-# Rate is the inverted value (e.g. 1/value).
-sneeker.spawn_chance (Sneeker spawn chance) int 10000
-
-# Sets frequency of spawn chance. Default 240 is equivalent to 4 minutes (60 * 4).
-sneeker.spawn_interval (Sneeker spawn interval) int 240
-
-# Sets the minimum light that a node must have for spawn to occur.
-sneeker.spawn_minlight (Sneeker min light for spawn) int 0 0 15
-
-# Sets the maximum light that a node can have for spawn to occur.
-sneeker.spawn_maxlight (Sneeker max light for spawn) int 4 0 15
-
-# Sets the lowest position at which sneeker can spawn.
-sneeker.spawn_minheight (Sneeker min spawn height) int -31000
-
-# Sets the highest position at which sneeker can spawn.
-sneeker.spawn_maxheight (Sneeker max spawn height) int 31000
-
-# Limits the number of entities that can spawn per mapblock (16x16x16).
-sneeker.spawn_mapblock_limit (Sneeker spawn limit) int 1
 
 
 [*trampoline]
@@ -841,16 +874,6 @@ wieldview_update_time (Wieldview refresh rate [seconds]) int 2
 wieldview_node_tiles (Show nodes as tiles) bool false
 
 
-[*Animal Materials]
-
-
-[**animalmaterials]
-
-# Registers 'animalmaterials:lass' as alias of 'mobs:magic_lasso' if 'mobs' mod
-# is available.
-animalmaterials.override_lasso (Use 'magic_lasso' from 'mobs' mod) bool false
-
-
 [*Castle]
 
 
@@ -880,42 +903,6 @@ castle_masonry_murderhole (Murder holes and machicolations) bool true
 
 # The number of seconds between each operation of the crafting bench.
 crafting_bench_crafting_rate (Crafting rate) int 5 1 60
-
-
-[*Dinosaurs (Aggressive)]
-
-[**velociraptor]
-
-# Used alternate "feathered" texture.
-mobs.velociraptor_feathered (Feathered velociraptor) bool false
-
-# Interval in seconds that specifies how often velociraptor spawns.
-mobs.velociraptor_interval (Velociraptor spawn interval) int 30 0
-
-# Chance for each node of spawning velociraptor at each interval. The value
-# is inverted. So a chance of value of 32000 equals 1/32000.
-mobs.velociraptor_chance (Velociraptor spawn chance) int 32000 0
-
-# Minimum node light required for spawning. "0" is darkest & "14" is
-# lightest (daylight).
-# See: [Node definition] light_source
-mobs.velociraptor_min_light (Velociraptor min spawn light) int 10 0 14
-
-# Maximum node light required for spawning. "0" is darkest & "14" is
-# lightest (daylight).
-# See: [Node definition] light_source
-mobs.velociraptor_max_light (Velociraptor max spawn light) int 14 0 14
-
-# Maximum height at which velociraptor can spawn.
-mobs.velociraptor_max_height (Velociraptor max spawn height) int 31000
-
-# Times that velociraptor can spawn.
-#
-# Modes supported:
-# | ■ day:   spawns during day
-# | ■ night: spawns during night
-# | ■ any:   spawns anytime
-mobs.velociraptor_spawn_time (Velociraptor spawn time) enum any day,night,any
 
 
 [*Mesecons]
@@ -1068,15 +1055,6 @@ enable_tnt (TNT) bool true
 
 # The radius in which nodes will be destroyed by a TNT explosion.
 tnt_radius (TNT radius) int 3 0
-
-
-[*Mob Engine]
-
-[**creatures]
-
-# Replace certain items with ones from "mobs" (mobs_redo) engine if available.
-# E.g., 'mobs:meat_raw' will be used instead of 'creatures:flesh'.
-creatures.mobs_replace_items (Use items from 'mobs' engine) bool false
 
 
 [*More Mesecons]

@@ -1807,39 +1807,78 @@ coloredwood_enable_stairsplus = true
 ## MOBS ##
 ##########
 
-# Announce to all players when & where a mob is spawned.
-#    type: bool
-#    default: false
-#display_mob_spawn = false
-
-# Show blood
-#    type: bool
-#    default: false
-#mobs_enable_blood = false
-
-# ???
-#    type: int
-#    default: 0
-#mobs_spawn_protected = 0
-
 # Only spawn mobs that don't attack players
 #    type: bool
 #    default: false
-only_peaceful_mobs = false
+#only_peaceful_mobs = false
 
-# ???
-#    type: bool
+
+# *** mobs_redo ***
+
+## If false then mobs no longer spawn in world without spawner or spawn egg
+#    type:    bool
+#    default: true
+#mobs_spawn = true
+
+## Disable blood splatter when attacking mobs.
+#    type:    bool
 #    default: false
-remove_far_mobs = true
+#mobs_disable_blood = false
 
+## If disabled then Mobs no longer destroy world blocks
+#    type:    bool
+#    default: true
+#mobs_griefing = true
 
-# *** mob-engine ***
+## If false then Mobs no longer spawn inside player protected areas
+#    type:    bool
+#    default: true
+#mobs_spawn_protected = true
 
-## Replace certain items with ones from "mobs" (mobs_redo) engine if available.
-#  E.g., 'mobs:meat_raw' will be used instead of 'creatures:flesh'.
-#    type: bool
+## If true Mobs will be removed once a map chunk is out of view
+#    type:    bool
+#    default: true
+#remove_far_mobs = true
+
+## Sets Mob difficulty level by multiplying punch damage
+#    type:    float
+#    default: 1.0
+#mob_difficulty = 1.0
+
+## If disabled health status no longer appears above Mob when punched
+#    type:    bool
+#    default: true
+#mob_show_health = true
+
+## Contains a value used to multiply Mob spawn values
+#    type:    float
+#    default: 1.0
+#mob_chance_multiplier = 1.0
+
+## When false Mob no longer drop items when killed
+#    type:    bool
+#    default: true
+#mobs_drop_items = true
+
+## Sets minimum distance around player that mobs cannot spawn
+#    type:    float
+#    default: 12.0
+#mob_nospawn_range = 12.0
+
+## Sets maximum number of active mobs in game (0 for unlimited)
+#    type:    float
+#    default: 0
+#mob_active_limit = 0
+
+## Enables area check when spawning mobs
+#    type:    bool
 #    default: false
-creatures.mobs_replace_items = true
+#mob_area_spawn = false
+
+## Enable peaceful player attack prevention
+#    type:    bool
+#    default: false
+#enable_peaceful_player = false
 
 
 # *** mobs_animal ***
@@ -1848,59 +1887,6 @@ creatures.mobs_replace_items = true
 #    type: int
 #    default: ???
 mobs_animal:sheep_white = 0
-
-
-# *** mobs_redo ***
-
-## If false then mobs no longer spawn in world without spawner or spawn egg.
-#    type:    bool
-#    default: true
-#mobs_spawn = true
-
-## If enabled then monsters no longer spawn in world.
-#    type:    bool
-#    default: false
-#only_peaceful_mobs = false
-
-## Disable blood splatter when attacking mobs.
-#    type:    bool
-#    default: false
-#mobs_disable_blood = false
-
-## If disabled then Mobs no longer destroy world blocks.
-#    type:    bool
-#    default: true
-#mobs_griefing = true
-
-## If false then Mobs no longer spawn inside player protected areas.
-#    type:    bool
-#    default: true
-#mobs_spawn_protected = true
-
-## If true Mobs will be removed once a map chunk is out of view.
-#    type:    bool
-#    default: true
-#remove_far_mobs = true
-
-## Sets Mob difficulty level by multiplying punch damage.
-#    type:    float
-#    default: 1.0
-#mob_difficulty = 1.0
-
-## If disabled health status no longer appears above Mob when punched.
-#    type:    bool
-#    default: true
-#mob_show_health = true
-
-## Contains a value used to multiply Mob spawn values.
-#    type:    float
-#    default: 1.0
-#mob_chance_multiplier = 1.0
-
-## When false Mob no longer drop items when killed.
-#    type:    bool
-#    default: true
-#mobs_drop_items = true
 
 
 # *** chicken ***
@@ -2750,17 +2736,6 @@ areas.self_protection_max_areas = 10
 #    type:    bool
 #    default: false
 #wieldview_node_tiles = false
-
-
-# *** animalmaterials ***
-
-# ## animalmaterials
-
-## Registers 'animalmaterials:lass' as alias of 'mobs:magic_lasso' if 'mobs' mod
-#  is available.
-#    type: bool
-#    default: false
-animalmaterials.override_lasso = true
 
 
 # *** castle ***
