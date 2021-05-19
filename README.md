@@ -58,7 +58,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [biome_lib][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2021-04-16-2][ver.biome_lib]
   * [cmer][creatures] ([zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [revived 20cd70e Git][ver.cmer] *2021-05-19*
   * [mobkit][] ([MIT][lic.mobkit]) -- version: [ddea141 Git][ver.mobkit] *2021-02-01*
-  * [mobs_redo][] ([MIT][lic.mobs_redo] / [CC BY][lic.ccby3.0] / [CC0][lic.cc0]) -- version: [f6e16a5 Git][ver.mobs_redo] *2021-04-11* ([patched][patch.mobs_redo])
+  * [mobs_redo][] ([MIT][lic.mobs_redo] / [CC BY][lic.ccby3.0] / [CC0][lic.cc0]) -- version: [f6e16a5 Git][ver.mobs_redo] *2021-04-11*
   * [signs_lib][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2021-03-04-2][ver.signs_lib]
 * lighting/
   * [glow][] ([GPL][lic.gpl2.0]) -- version: [4c015a0 Git][ver.glow] *2019-02-05*
@@ -618,7 +618,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.invisibility]: https://github.com/AntumMT/mod-invisibility/tree/00c0638
 [patch.ilights]: https://github.com/AntumMT/mod-ilights/tree/fe1dae4
 [patch.minetest_game]: https://github.com/AntumMT/mtgame-minetest/tree/355a756
-[patch.mobs_redo]: https://github.com/AntumMT/mod-mobs_redo/tree/12e9367
 [patch.moreblocks]: https://github.com/AntumMT/mod-moreblocks/tree/6dda839
 [patch.moreores]: https://github.com/AntumMT/mod-moreores/tree/ae59578
 [patch.motorbike]: https://github.com/AntumMT/mod-motorbike/tree/e9bcce2
