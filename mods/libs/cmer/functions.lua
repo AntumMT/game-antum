@@ -171,7 +171,7 @@ local function calcPunchDamage(obj, actual_interval, tool_caps)
 	return damage or 0
 end
 
-local function onDamage(self, hp)
+local function onDamage(self, hp, hitsound)
 	local me = self.object
 	local def = core.registered_entities[self.mob_name]
 	hp = hp or me:get_hp()
@@ -181,20 +181,26 @@ local function onDamage(self, hp)
 			killMob(me, def)
 	else
 		on_hit(me) -- red flashing
-		if def.sounds and def.sounds.on_damage then
-			local dmg_snd = def.sounds.on_damage
-			core.sound_play(dmg_snd.name, {pos = me:get_pos(), max_hear_distance = dmg_snd.distance or 5, gain = dmg_snd.gain or 1})
+		if def.sounds then
+			if def.sounds.on_damage then
+				local dmg_snd = def.sounds.on_damage
+				core.sound_play(dmg_snd.name, {pos = me:get_pos(), max_hear_distance = dmg_snd.distance or 5, gain = dmg_snd.gain or 1})
+			end
+
+			if hitsound and def.sounds.play_default_hit ~= false then
+				core.sound_play(hitsound, {object=me})
+			end
 		end
 	end
 end
 
-local function changeHP(self, value)
+local function changeHP(self, value, hitsound)
 	local me = self.object
 	local hp = me:get_hp()
 	hp = hp + math.floor(value)
 	me:set_hp(hp)
 	if value < 0 then
-		onDamage(self, hp)
+		onDamage(self, hp, hitsound)
 	end
 end
 
@@ -263,7 +269,9 @@ cmer.on_punch = function(self, puncher, time_from_last_punch, tool_capabilities,
 	local me = self.object
 	local mypos = me:get_pos()
 
-	changeHP(self, calcPunchDamage(me, time_from_last_punch, tool_capabilities) * -1)
+	changeHP(self, calcPunchDamage(me, time_from_last_punch, tool_capabilities) * -1, "cmer_hit_01")
+	-- reset lifetimer when attacked
+	self.lifetimer = 0
 	if puncher then
 		if self.hostile then
 			self.mode = "attack"
@@ -303,7 +311,9 @@ cmer.on_step = function(self, dtime)
 	end
 
 	-- timer updates
-	self.lifetimer = self.lifetimer + dtime
+	if not self.owner then
+		self.lifetimer = self.lifetimer + dtime
+	end
 	self.modetimer = self.modetimer + dtime
 	self.soundtimer = self.soundtimer + dtime
 	self.yawtimer = self.yawtimer + dtime
@@ -330,11 +340,13 @@ cmer.on_step = function(self, dtime)
 		return
 	end
 
-	if self.lifetimer > def.stats.lifetime and not (self.mode == "attack" and self.target) then
+	local no_death_modes = (self.mode == "attack" or self.mode == "follow" or self.mode == "panic")
+	if self.lifetimer > def.stats.lifetime and not (no_death_modes and self.target) then
 		self.lifetimer = 0
 		--if not self.tamed or (self.tamed and def.stats.dies_when_tamed) then
 		if not self.owner or def.stats.dies_when_tamed then
-			killMob(self.object, def)
+			self.object:remove()
+			return
 		end
 	end
 
@@ -345,7 +357,7 @@ cmer.on_step = function(self, dtime)
 	local me = self.object
 	local moved = false
 	local current_pos = me:get_pos()
-	if current_pos == nil then return end -- FIXME: why does this return nil sometimes?
+	if current_pos == nil then return end
 
 	current_pos.y = current_pos.y + 0.5
 	moved = hasMoved(current_pos, self.last_pos) or false

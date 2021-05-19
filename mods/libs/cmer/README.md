@@ -19,7 +19,9 @@ See API.txt for more informations on how to use this engine for mobs.
 ### Licensing:
 
 - Code: [modified Zlib](LICENSE.txt) : (c) Copyright 2015-2016 BlockMen
-- Media(textures and other media): (c) Copyright (2014-2016) BlockMen; CC-BY-SA 3.0
+- Sounds:
+	- cmer_hit_01.ogg: CC0
+- All other media (textures and sounds): (c) Copyright (2014-2016) BlockMen; CC-BY-SA 3.0
 
 ---
 ### Links:

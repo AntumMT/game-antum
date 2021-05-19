@@ -56,7 +56,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [sfinv_buttons][] ([MIT][lic.mit]) -- version [1.1.0 (ebb1f7c Git)][ver.sfinv_buttons] *2021-01-14*
 * libs/
   * [biome_lib][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2021-04-16-2][ver.biome_lib]
-  * [cmer][creatures] ([zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [revived 0d33dab Git][ver.cmer] *2021-05-07*
+  * [cmer][creatures] ([zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [revived 20cd70e Git][ver.cmer] *2021-05-19*
   * [mobkit][] ([MIT][lic.mobkit]) -- version: [ddea141 Git][ver.mobkit] *2021-02-01*
   * [mobs_redo][] ([MIT][lic.mobs_redo] / [CC BY][lic.ccby3.0] / [CC0][lic.cc0]) -- version: [f6e16a5 Git][ver.mobs_redo] *2021-04-11* ([patched][patch.mobs_redo])
   * [signs_lib][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2021-03-04-2][ver.signs_lib]
@@ -505,7 +505,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.compassgps]: https://github.com/Kilarin/compassgps/tree/567b95f
 [ver.crafting_bench]: https://github.com/minetest-mods/crafting_bench/tree/69083ed
 [ver.craftguide]: https://github.com/minetest-mods/craftguide/tree/f379998
-[ver.cmer]: https://github.com/AntumMT/mod-cmer/tree/0d33dab
+[ver.cmer]: https://github.com/AntumMT/mod-cmer/tree/20cd70e
 [ver.crops]: https://github.com/minetest-mods/crops/tree/v1
 [ver.currency]: https://gitlab.com/VanessaE/currency/tree/2021-01-30
 [ver.deploy_nodes]: https://github.com/cornernote/minetest-deploy_nodes/tree/b67e162

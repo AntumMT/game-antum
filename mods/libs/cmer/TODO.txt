@@ -1,3 +1,4 @@
 
 TODO:
 - add debugging messages for missing required fields at registration
+- allow customizing hit sound

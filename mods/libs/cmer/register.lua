@@ -282,7 +282,7 @@ end
 --  @tfield StatsDef stats Stats definitions.
 --  @tfield ModeDef modes Entity bahavior defintions.
 --  @tfield ModelDef model Model definitions.
---  @tfield[opt] table sounds Table of `SoundDef`.
+--  @tfield[opt] table sounds Table of `SoundDef`. Additionally, `play_default_hit` can be set to `false` here to disable default "hit" sound.
 --  @tfield[opt] table drops List of item `DropDef`. Can also be a function. receives "self" reference.
 --  @tfield[opt] CombatDef combat Specifies behavior of hostile mobs in "attack" mode.
 --  @tfield[opt] SpawnDef spawning Defines spawning in world.
