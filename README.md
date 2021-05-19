@@ -85,7 +85,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [enchanting][] ([GPL / WTFPL / CC BY-SA-NA][lic.enchanting]) -- version: [13ea31c Git][ver.enchanting] *2016-12-16* ([patched][patch.enchanting])
   * [intllib][] ([Unlicense][lic.unlicense]) -- version: [6ebdc53][ver.intllib] *2021-02-23* ***DEPRECATED***
   * [listitems][] ([MIT][lic.listitems]) -- version: [0.7][ver.listitems] *2021-04-29*
-  * [ownit][] ([MIT][lic.ownit]) -- version: [1.0][ver.ownit] *2021-05-15*
   * [painting][] (???) -- version [8961849 Git][ver.painting] *2016-05-05*
   * [pipeworks][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2670fd8 Git][ver.pipeworks] *2021-05-06* ([patched][patch.pipeworks])
 * mobiles/
@@ -340,7 +339,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [nether]: https://forum.minetest.net/viewtopic.php?t=5790
 [no_fall_damage]: https://forum.minetest.net/viewtopic.php?t=25876
 [override]: https://github.com/AntumMT/mod-override
-[ownit]: https://forum.minetest.net/viewtopic.php?t=26740
 [painting]: https://github.com/minetest-mods/painting
 [pipeworks]: https://forum.minetest.net/viewtopic.php?t=2155
 [privilegeareas]: https://forum.minetest.net/viewtopic.php?t=5545
@@ -427,7 +425,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.nether]: mods/world/nether/README.md
 [lic.no_fall_damage]: mods/admin/no_fall_damage/README.md
 [lic.override]: mods/admin/override/LICENSE.txt
-[lic.ownit]: mods/misc/ownit/LICENSE.txt
 [lic.privilegeareas]: mods/admin/privilegeareas/README.md
 [lic.quartz]: mods/materials/quartz/LICENSE.txt
 [lic.rainbow_ore]: mods/materials/rainbow_ore/README.md
@@ -569,7 +566,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.no_fall_damage]: https://repo.or.cz/minetest_no_fall_damage.git/shortlog/refs/tags/1.0.0
 [ver.oerkki]: https://github.com/AntumMT/mod-cmer/tree/70410fe
 [ver.override]: https://github.com/AntumMT/mod-override/tree/e6dda7a
-[ver.ownit]: https://github.com/AntumMT/mod-ownit/releases/tag/v1.0
 [ver.painting]: https://github.com/minetest-mods/painting/tree/8961849
 [ver.pipeworks]: https://gitlab.com/VanessaE/pipeworks/tree/2670fd8
 [ver.privilegeareas]: https://github.com/minetest-mods/privilegeareas/tree/15eae20
