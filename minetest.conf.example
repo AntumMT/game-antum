@@ -1881,14 +1881,6 @@ coloredwood_enable_stairsplus = true
 #enable_peaceful_player = false
 
 
-# *** mobs_animal ***
-
-# Sets spawn rate of sheep (0 = disabled).
-#    type: int
-#    default: ???
-mobs_animal:sheep_white = 0
-
-
 # *** chicken ***
 
 ## Entity lifespan.
