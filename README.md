@@ -13,7 +13,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 * admin/
   * [alternode][] ([MIT][lic.alternode]) -- version: [1.3][ver.alternode] *2021-05-18*
-  * [cleaner][] ([CC0][lic.cc0]) -- version: [0.4 (68222b1 Git)][ver.cleaner] *2017-08-30*
+  * [cleaner][] ([MIT][lic.cleaner]) -- version: [e8359d8 Git][ver.cleaner] *2021-05-18*
   * [invisible][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa4.0]) -- version: [4 (a2a6504 Git)][ver.invisible]
   * [no_fall_damage][] ([MIT][lic.no_fall_damage]) -- version [1.0.0][ver.no_fall_damage] *2020-12-19*
   * [override][] ([MIT][lic.override]) -- version: [0.2 (e6dda7a Git)][ver.override] *2017-08-30*
@@ -374,6 +374,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.campfire]: mods/campfire/README.md
 [lic.castle]: mods/modpacks/castle/LICENSE
 [lic.christmas]: mods/buildings/christmas/LICENSE.txt
+[lic.cleaner]: mods/admin/cleaner/LICENSE.txt
 [lic.craftguide]: mods/crafting/craftguide/license.txt
 [lic.creatures]: mods/mobiles/engine/creatures/LICENSE.txt
 [lic.crops]: mods/farming/crops/LICENSE
@@ -482,7 +483,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.chatlog]: https://github.com/AntumMT/mod-chatlog/tree/v1.0
 [ver.chicken]: http://github.com/AntumMT/mod-cmer/tree/ea980f9
 [ver.christmas]: https://github.com/TheZenKitteh/minetest-christmas/tree/d3bd872
-[ver.cleaner]: https://github.com/AntumMT/mod-cleaner/tree/68222b1
+[ver.cleaner]: https://github.com/AntumMT/mod-cleaner/tree/e8359d8
 [ver.coloredwood]: https://gitlab.com/VanessaE/coloredwood/tags/2021-01-30
 [ver.compassgps]: https://github.com/Kilarin/compassgps/tree/567b95f
 [ver.crafting_bench]: https://github.com/minetest-mods/crafting_bench/tree/69083ed
