@@ -47,6 +47,30 @@ remove_far_mobs (Remove far mobs) bool false
 [Mods]
 
 
+[*mobiles]
+
+
+[**ghost]
+
+# Entity lifespan.
+#
+# type:    int
+# default: 300
+ghost.lifetime (Lifespan) int 300 1
+
+# Spawn interval in seconds.
+#
+# type:    int
+# default: 40
+ghost.spawn_interval (Spawn interval) int 40 1
+
+# Chance of spawn at interval.
+#
+# type:    int
+# default: 7300
+ghost.spawn_chance (Spawn chance) int 7300 1
+
+
 [*airtanks]
 
 # Number of uses for steel air tanks.

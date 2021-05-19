@@ -19,13 +19,19 @@
 -- 3. This notice may not be removed or altered from any source distribution.
 --
 
+cmer_ghost = {}
+cmer_ghost.modname = core.get_current_modname()
+cmer_ghost.modpath = core.get_modpath(cmer_ghost.modname)
+
+dofile(cmer_ghost.modpath .. "/settings.lua")
+
 
 local def = {
   -- general
   name = "creatures:ghost",
   stats = {
     hp = 12,
-    lifetime = 300, -- 5 Minutes
+    lifetime = cmer_ghost.lifetime,
     can_burn = true,
     can_fly = true,
     has_falldamage = false,
@@ -80,8 +86,8 @@ local def = {
       spawn_on = {"default:gravel", "default:dirt_with_grass", "default:dirt",
         "group:leaves", "group:sand"},
     },
-    abm_interval = 40,
-    abm_chance = 7300,
+    abm_interval = cmer_ghost.spawn_interval,
+    abm_chance = cmer_ghost.spawn_chance,
     max_number = 1,
     number = 1,
     time_range = {min = 18500, max = 4000},

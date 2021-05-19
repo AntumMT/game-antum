@@ -1921,6 +1921,24 @@ mobs_animal:sheep_white = 0
 #chicken.spawn_chance = 9000
 
 
+# *** ghost ***
+
+## Entity lifespan.
+#    type:    int
+#    default: 300
+#ghost.lifetime = 300
+
+## Spawn interval in seconds.
+#    type:    int
+#    default: 40
+#ghost.spawn_interval = 40
+
+## Chance of spawn at interval.
+#    type:    int
+#    default: 7300
+#ghost.spawn_chance = 7300
+
+
 # *** shark ***
 
 ## Interval in seconds that specifies how often shark spawns.
