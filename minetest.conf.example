@@ -2731,6 +2731,11 @@ areas.self_protection_max_areas = 10
 #    default: true
 #armor_migrate_old_inventory = true
 
+## Don't show armor on character model.
+#    type:    bool
+#    default: false
+#armor_transparent = false
+
 
 # ## shields
 

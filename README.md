@@ -625,7 +625,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.workbench]: https://github.com/minetest-mods/workbench/tree/bd14f59
 [ver.zombie]: https://github.com/AntumMT/mod-cmer/tree/4edb18e
 
-[patch.3d_armor]: https://github.com/AntumMT/mp-3d_armor/tree/269b6ae
+[patch.3d_armor]: https://github.com/AntumMT/mp-3d_armor/tree/f30a747
 [patch.airtanks]: https://github.com/AntumMT/mod-airtanks/tree/8b7fd12
 [patch.amber]: https://github.com/AntumMT/mod-amber/tree/39b852a
 [patch.atm]: https://github.com/AntumMT/mod-atm/tree/2ab0e78
