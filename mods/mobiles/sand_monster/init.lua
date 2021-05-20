@@ -4,7 +4,7 @@ local S = mobs.intllib
 
 -- Sand Monster by PilzAdam
 
-mobs:register_mob("mobs:sand_monster", {
+mobs:register_mob(":mobs:sand_monster", {
 	type = "monster",
 	passive = false,
 	attack_type = "dogfight",
@@ -67,4 +67,16 @@ mobs:spawn({
 })
 
 
-mobs:register_egg("mobs:sand_monster", S("Sand Monster"), "default_desert_sand.png", 1)
+--mobs:register_egg("mobs:sand_monster", S("Sand Monster"), "default_desert_sand.png", 1)
+if core.global_exists("asm") then
+	asm.addEgg({
+		name = "sand_monster",
+		title = S("Sand Monster"),
+		inventory_image = "default_desert_sand.png",
+		spawn = "mobs:sand_monster",
+		ingredients = "default:desert_sand",
+	})
+end
+core.register_alias("mobs:sand_monster", "spawneggs:sand_monster")
+
+mobs:alias_mob("mobs_monster:sand_monster", "mobs:sand_monster") -- compatibility

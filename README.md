@@ -96,6 +96,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [kitten][mobs_kitten] ([MIT][lic.mobs_kitten]) -- version: [4efdd4b Git][ver.mobs_kitten] *2021-05-19*
   * [monsters_aggressive][] (see individual mods for licensing) -- version: [89a8187 Git][ver.monsters_aggressive] *2017-08-30*
   * [oerkki][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [70410fe Git][ver.oerkki] *2021-05-05*
+  * [sand_monster][] ([MIT][lic.sand_monster]) -- version: [cec855a Git][ver.sand_monster] *2021-05-19*
   * [shark][] ([CC0 / CC BY-SA][lic.shark]) -- version: [9e0e048 Git][ver.shark] *2021-05-19*
   * [sheep][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [ff39b4a Git][ver.sheep] *2021-05-13*
   * [sneeker][] ([MIT][lic.sneeker]) -- version: [1.0][ver.sneeker] *2021-05-08*
@@ -349,6 +350,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [pvp_areas]: https://forum.minetest.net/viewtopic.php?t=15480
 [quartz]: https://forum.minetest.net/viewtopic.php?t=5682
 [rainbow_ore]: https://forum.minetest.net/viewtopic.php?id=13519
+[sand_monster]: https://github.com/AntumMT/mod-mob_sand_monster
 [server_shop]: https://forum.minetest.net/viewtopic.php?t=26645
 [sfinv_buttons]: https://forum.minetest.net/viewtopic.php?t=16079
 [shark]: https://github.com/AntumMT/mod-shark
@@ -433,6 +435,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.privilegeareas]: mods/admin/privilegeareas/README.md
 [lic.quartz]: mods/materials/quartz/LICENSE.txt
 [lic.rainbow_ore]: mods/materials/rainbow_ore/README.md
+[lic.sand_monster]: mods/mobiles/sand_monster/license.txt
 [lic.server_shop]: mods/admin/server_shop/LICENSE.txt
 [lic.shark]: mods/mobiles/shark/LICENSE.txt
 [lic.signs_lib]: mods/signs/signs_lib/copyright.txt
@@ -579,6 +582,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.pvp_areas]: https://github.com/everamzah/pvp_areas/tree/6e4d66d
 [ver.quartz]: https://github.com/minetest-mods/quartz/tree/72ec06f
 [ver.rainbow_ore]: https://github.com/FsxShader2012/rainbow_ore/tree/6e77693
+[ver.sand_monster]: https://github.com/AntumMT/mod-mob_sand_monster/tree/cec855a
 [ver.server_shop]: https://github.com/AntumMT/mod-server_shop/tree/06f6691
 [ver.sfinv_buttons]: http://repo.or.cz/minetest_sfinv_buttons.git/tree/ebb1f7c
 [ver.shark]: https://github.com/AntumMT/mod-shark/tree/9e0e048
