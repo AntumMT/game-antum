@@ -4,7 +4,7 @@ local S = mobs.intllib
 
 -- Dungeon Master by PilzAdam
 
-mobs:register_mob("mobs:dungeon_master", {
+mobs:register_mob(":mobs:dungeon_master", {
 	type = "monster",
 	passive = false,
 	damage = 4,
@@ -71,11 +71,23 @@ mobs:spawn({
 })
 
 
-mobs:register_egg("mobs:dungeon_master", S("Dungeon Master"), "fire_basic_flame.png", 1, true)
+--mobs:register_egg("mobs:dungeon_master", S("Dungeon Master"), "fire_basic_flame.png", 1, true)
+if core.global_exists("asm") then
+	asm.addEgg({
+		name = "dungeon_master",
+		title = S("Dungeon Master"),
+		inventory_image = "fire_basic_flame.png",
+		spawn = "mobs:dungeon_master",
+		ingredients = "fire:permanent_flame",
+	})
+end
+core.register_alias("mobs:dungeon_master", "spawneggs:dungeon_master")
+
+mobs:alias_mob("mobs_monster:dungeon_master", "mobs:dungeon_master") -- compatibility
 
 
 -- fireball (weapon)
-mobs:register_arrow("mobs:fireball", {
+mobs:register_arrow(":mobs:fireball", {
 	visual = "sprite",
 	visual_size = {x = 1, y = 1},
 	textures = {"mobs_fireball.png"},
