@@ -164,7 +164,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [crafting_bench][] -- version: [69083ed Git][ver.crafting_bench] *2020-05-27*
 * [deploy_nodes][] ([BSD 3-Clause][lic.deploy_nodes]) -- version: [b67e162 Git][ver.deploy_nodes] *2017-06-08*
 * [home_workshop][] -- version: [03325e8 Git][ver.home_workshop] *2021-04-15*
-* [homedecor][] ([LGPL / WTFPL / CC BY-SA / CC0][lic.homedecor]) -- version: [b6c64c6 Git][ver.homedecor] *2021-04-15* ([patched][patch.homedecor])
+* [homedecor][] ([LGPL / WTFPL / CC BY-SA / CC0][lic.homedecor]) -- version: [f1dc68a Git][ver.homedecor] *2021-05-18* ([patched][patch.homedecor])
 * [mesecons][] ([LGPL / CC BY-SA][lic.mesecons]) -- version [6579351 Git][ver.mesecons] *2021-04-09*
 * [moremesecons][] ([MPL][lic.mpl2.0]) -- version: [1dab017 Git][ver.moremesecons] *2021-04-14*
 * [mymods](https://github.com/AntumMT/mp-mymods)
@@ -551,7 +551,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.hidename]: https://github.com/AntumMT/mod-hidename/releases/tag/v1.1
 [ver.home_gui]: https://github.com/cornernote/minetest-home_gui/tree/a291a09
 [ver.home_workshop]: https://gitlab.com/VanessaE/home_workshop_modpack/tree/03325e8
-[ver.homedecor]: https://gitlab.com/VanessaE/homedecor_modpack/tree/b6c64c6
+[ver.homedecor]: https://gitlab.com/VanessaE/homedecor_modpack/tree/f1dc68a
 [ver.horse]: https://github.com/AntumMT/mod-horse/tree/3240dde
 [ver.hot_air_balloons]: https://notabug.org/NetherEran/hot_air_balloons/src/39a3572ad1bf7fd800525d68b128981e1b2c37d1
 [ver.hovercraft]: https://github.com/stujones11/hovercraft/tree/4d50e68
@@ -644,7 +644,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.hbarmor]: https://github.com/AntumMT/mod-hbarmor/tree/12a7dea
 [patch.hbsprint]: https://github.com/AntumMT/mod-hbsprint/tree/03aef67
 [patch.helicopter]: https://github.com/AntumMT/mod-helicopter/tree/dc7066b
-[patch.homedecor]: https://github.com/AntumMT/mp-homedecor/tree/bc86ccd
+[patch.homedecor]: https://github.com/AntumMT/mp-homedecor/tree/efbc1bb
 [patch.hovercraft]: https://github.com/AntumMT/mod-hovercraft/tree/73a6223
 [patch.hud]: https://github.com/AntumMT/mod-hud/tree/6846e20
 [patch.invisibility]: https://github.com/AntumMT/mod-invisibility/tree/00c0638
