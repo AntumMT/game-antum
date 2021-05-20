@@ -4,7 +4,7 @@ local S = mobs.intllib
 
 -- Mese Monster by Zeg9
 
-mobs:register_mob("mobs:mese_monster", {
+mobs:register_mob(":mobs:mese_monster", {
 	type = "monster",
 	passive = false,
 	damage = 3,
@@ -66,11 +66,23 @@ mobs:spawn({
 })
 
 
-mobs:register_egg("mobs:mese_monster", S("Mese Monster"), "default_mese_block.png", 1)
+--mobs:register_egg("mobs:mese_monster", S("Mese Monster"), "default_mese_block.png", 1)
+if core.global_exists("asm") then
+	asm.addEgg({
+		name = "mese_monster",
+		title = S("Mese Monster"),
+		inventory_image = "default_mese_block.png",
+		spawn = "mobs:mese_monster",
+		ingredients = "default:mese_block",
+	})
+end
+core.register_alias("mobs:mese_monster", "spawneggs:mese_monster")
+
+mobs:alias_mob("mobs_monster:mese_monster", "mobs:mese_monster") -- compatibility
 
 
 -- mese arrow (weapon)
-mobs:register_arrow("mobs:mese_arrow", {
+mobs:register_arrow(":mobs:mese_arrow", {
 	visual = "sprite",
 --	visual = "wielditem",
 	visual_size = {x = 0.5, y = 0.5},

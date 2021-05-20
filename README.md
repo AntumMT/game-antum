@@ -96,6 +96,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [ghost][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [c09aacb Git][ver.ghost] *2021-05-19*
   * [horse][] ([MIT][lic.horse]) -- version: [3240dde Git][ver.horse] *2021-05-19*
   * [kitten][mobs_kitten] ([MIT][lic.mobs_kitten]) -- version: [4efdd4b Git][ver.mobs_kitten] *2021-05-19*
+  * [mese_monster][mobs_monster] ([MIT][lic.mese_monster]) -- version: [cd02839 Git][ver.mese_monster] *2021-05-20*
   * [oerkki][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [70410fe Git][ver.oerkki] *2021-05-05*
   * [sand_monster][mobs_monster] ([MIT][lic.sand_monster]) -- version: [3dd5954 Git][ver.sand_monster] *2021-05-20*
   * [shark][] ([CC0 / CC BY-SA][lic.shark]) -- version: [9e0e048 Git][ver.shark] *2021-05-19*
@@ -424,6 +425,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.invisible]: mods/admin/invisible/readme.txt
 [lic.jukebox]: mods/furniture/jukebox/README.txt
 [lic.listitems]: mods/antum/listitems/LICENSE.txt
+[lic.mese_monster]: mods/mobiles/mese_monster/license.txt
 [lic.mesecons]: mods/modpacks/mesecons/COPYING.txt
 [lic.mobkit]: mods/mobiles/engine/mobkit/LICENSE
 [lic.mobs_cow]: mods/mobiles/cow/license.txt
@@ -557,6 +559,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.invisible]: https://github.com/AiTechEye/invisible/tree/a2a6504
 [ver.jukebox]: https://github.com/minetest-mods/jukebox/tree/0d871f2
 [ver.listitems]: https://github.com/AntumMT/mod-listitems/releases/tag/v0.7
+[ver.mese_monster]: https://github.com/AntumMT/mod-mob_mese_monster/tree/cd02839
 [ver.mesecons]: https://github.com/minetest-mods/mesecons/tree/6579351
 [ver.minetest_game]: https://github.com/minetest/minetest_game/tree/5.4.1
 [ver.mobkit]: https://github.com/TheTermos/mobkit/tree/ddea141
