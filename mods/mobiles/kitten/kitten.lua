@@ -7,7 +7,7 @@ local hairball = minetest.settings:get("mobs_hairball")
 mobs:register_mob(":mobs:kitten", {
 stepheight = 0.6,
 	type = "animal",
-specific_attack = {"mobs_animal:rat"},
+specific_attack = {"mobs:rat"},
 damage = 1,
 attack_type = "dogfight",
 attack_animals = true, -- so it can attack rat
@@ -53,7 +53,7 @@ stepheight = 1.1,
 		stoodup_end = 0,
 	},
 	follow = {
-		"mobs_animal:rat", "group:food_fish_raw",
+		"mobs:rat", "group:food_fish_raw",
 		"mobs_fish:tropical", "xocean:fish_edible"
 	},
 	view_range = 8,
@@ -145,7 +145,7 @@ mobs:alias_mob("mobs_animal:kitten", "mobs:kitten") -- compatibility
 
 local hairball_items = {
 	"default:stick", "default:coal_lump", "default:dry_shrub", "flowers:rose",
-	"mobs_animal:rat", "default:grass_1", "farming:seed_wheat", "dye:green", "",
+	"mobs:rat", "default:grass_1", "farming:seed_wheat", "dye:green", "",
 	"farming:seed_cotton", "default:flint", "default:sapling", "dye:white", "",
 	"default:clay_lump", "default:paper", "default:dry_grass_1", "dye:red", "",
 	"farming:string", "mobs:chicken_feather", "default:acacia_bush_sapling", "",
