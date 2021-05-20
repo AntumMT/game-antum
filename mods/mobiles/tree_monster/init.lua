@@ -4,7 +4,7 @@ local S = mobs.intllib
 
 -- Tree Monster (or Tree Gollum) by PilzAdam
 
-mobs:register_mob("mobs:tree_monster", {
+mobs:register_mob(":mobs:tree_monster", {
 	type = "monster",
 	passive = false,
 	attack_type = "dogfight",
@@ -65,4 +65,16 @@ mobs:spawn({
 })
 
 
-mobs:register_egg("mobs:tree_monster", S("Tree Monster"), "default_tree_top.png", 1)
+--mobs:register_egg("mobs:tree_monster", S("Tree Monster"), "default_tree_top.png", 1)
+if core.global_exists("asm") then
+	asm.addEgg({
+		name = "tree_monster",
+		title = S("Tree Monster"),
+		inventory_image = "default_tree_top.png",
+		spawn = "mobs:tree_monster",
+		ingredients = "default:tree",
+	})
+end
+core.register_alias("mobs:tree_monster", "spawneggs:tree_monster")
+
+mobs:alias_mob("mobs_monster:tree_monster", "mobs:tree_monster") -- compatibility

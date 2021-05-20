@@ -104,6 +104,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [sneeker][] ([MIT][lic.sneeker]) -- version: [1.0][ver.sneeker] *2021-05-08*
   * [spider][cmer_spider] ([unilicense][lic.cmer_spider]) -- version: [d1a9a82 Git][ver.cmer_spider] *2021-05-19*
   * [stone_monster][mobs_monster] ([MIT][lic.stone_monster]) -- version: [fa52f6f Git][ver.stone_monster] *2021-05-20*
+  * [tree_monster][mobs_monster] ([MIT][lic.tree_monster]) -- version: [f2977ff Git][ver.tree_monster] *2021-05-20*
   * velociraptor ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- forked from *mobs_farlands* (part of [farlands][] sub-game)
   * [zombie][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [4edb18e Git][ver.zombie] *2021-05-05*
 * player/action/
@@ -453,6 +454,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.spectator_mode]: mods/admin/spectator_mode/LICENSE
 [lic.tools_obsidian]: mods/tools/tools_obsidian/README.md
 [lic.trash_can]: mods/furniture/trash_can/LICENSE.txt
+[lic.tree_monster]: mods/mobiles/tree_monster/license.txt
 [lic.waffles]: mods/furniture/waffles/LICENSE.txt
 [lic.walking_light]: mods/lighting/walking_light/README.md
 [lic.wardrobe]: mods/player/visuals/wardrobe/LICENSE.txt
@@ -611,6 +613,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.tools_obsidian]: https://github.com/Dragonop/tools_obsidian/releases/tag/1.0
 [ver.trampoline]: https://github.com/AntumMT/mod-trampoline/releases/tag/v0.3
 [ver.trash_can]: https://github.com/minetest-mods/trash_can/tree/423b0f2
+[ver.tree_monster]: https://github.com/AntumMT/mod-mob_tree_monster/tree/f2977ff
 [ver.unifieddyes]: https://gitlab.com/VanessaE/unifieddyes/tags/2021-03-26-1
 [ver.waffles]: https://github.com/GreenXenith/waffles/tree/15bcdce
 [ver.walking_light]: https://github.com/petermaloney/walking_light/tree/766ef0f
