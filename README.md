@@ -95,11 +95,11 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [horse][] ([MIT][lic.horse]) -- version: [3240dde Git][ver.horse] *2021-05-19*
   * [kitten][mobs_kitten] ([MIT][lic.mobs_kitten]) -- version: [4efdd4b Git][ver.mobs_kitten] *2021-05-19*
   * [monsters_aggressive][] (see individual mods for licensing) -- version: [89a8187 Git][ver.monsters_aggressive] *2017-08-30*
-  * [monsters_passive][] (see individual mods for licensing) -- version: [b07fe19 Git][ver.monsters_passive] *2017-08-09*
   * [oerkki][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [70410fe Git][ver.oerkki] *2021-05-05*
   * [shark][] ([CC0 / CC BY-SA][lic.shark]) -- version: [9e0e048 Git][ver.shark] *2021-05-19*
   * [sheep][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [ff39b4a Git][ver.sheep] *2021-05-13*
   * [sneeker][] ([MIT][lic.sneeker]) -- version: [1.0][ver.sneeker] *2021-05-08*
+  * [spider][cmer_spider] ([unilicense][lic.cmer_spider]) -- version: [d1a9a82 Git][ver.cmer_spider] *2021-05-19*
   * velociraptor ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- forked from *mobs_farlands* (part of [farlands][] sub-game)
   * [zombie][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [4edb18e Git][ver.zombie] *2021-05-05*
 * player/action/
@@ -270,6 +270,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [chatlog]: https://forum.minetest.net/viewtopic.php?t=18287
 [christmas]: https://forum.minetest.net/viewtopic.php?t=3950
 [cleaner]: https://github.com/AntumMT/mod-cleaner/tree/2404594
+[cmer_spider]: https://github.com/AntumMT/mod-spider
 [coloredwood]: https://forum.minetest.net/viewtopic.php?t=2411
 [compass]: https://forum.minetest.net/viewtopic.php?t=3785
 [compassgps]: https://forum.minetest.net/viewtopic.php?t=9373
@@ -394,6 +395,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.castle]: mods/modpacks/castle/LICENSE
 [lic.christmas]: mods/buildings/christmas/LICENSE.txt
 [lic.cleaner]: mods/admin/cleaner/LICENSE.txt
+[lic.cmer_spider]: mods/mobiles/spider/LICENSE
 [lic.craftguide]: mods/crafting/craftguide/license.txt
 [lic.creatures]: mods/mobiles/engine/creatures/LICENSE.txt
 [lic.crops]: mods/farming/crops/LICENSE
@@ -503,6 +505,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.chicken]: http://github.com/AntumMT/mod-cmer/tree/b126cdb
 [ver.christmas]: https://github.com/TheZenKitteh/minetest-christmas/tree/d3bd872
 [ver.cleaner]: https://github.com/AntumMT/mod-cleaner/tree/e8359d8
+[ver.cmer_spider]: https://github.com/AntumMT/mod-spider/tree/d1a9a82
 [ver.coloredwood]: https://gitlab.com/VanessaE/coloredwood/tags/2021-01-30
 [ver.compassgps]: https://github.com/Kilarin/compassgps/tree/567b95f
 [ver.crafting_bench]: https://github.com/minetest-mods/crafting_bench/tree/69083ed
