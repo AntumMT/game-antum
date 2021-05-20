@@ -4,7 +4,7 @@ local S = mobs.intllib
 
 -- Dirt Monster by PilzAdam
 
-mobs:register_mob("mobs:dirt_monster", {
+mobs:register_mob(":mobs:dirt_monster", {
 	type = "monster",
 	passive = false,
 	attack_type = "dogfight",
@@ -69,4 +69,16 @@ mobs:spawn({
 })
 
 
-mobs:register_egg("mobs:dirt_monster", S("Dirt Monster"), "default_dirt.png", 1)
+--mobs:register_egg("mobs:dirt_monster", S("Dirt Monster"), "default_dirt.png", 1)
+if core.global_exists("asm") then
+	asm.addEgg({
+		name = "dirt_monster",
+		title = S("Dirt Monster"),
+		inventory_image = "default_dirt.png",
+		spawn = "mobs:dirt_monster",
+		ingredients = "default:dirt",
+	})
+end
+core.register_alias("mobs:dirt_monster", "spawneggs:dirt_monster")
+
+mobs:alias_mob("mobs_monster:dirt_monster", "mobs:dirt_monster") -- compatibility
