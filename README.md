@@ -90,18 +90,18 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * mobiles/
   * [chicken][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [b126cdb Git][ver.chicken] *2021-05-19*
   * [cow][mobs_cow] ([MIT][lic.mobs_cow]) -- version: [85af09a Git][ver.mobs_cow] *2021-05-19*
-  * [dirt_monster][] ([MIT][lic.dirt_monster] -- version: [d8d7ef6 Git][ver.dirt_monster] *2021-05-19*
+  * [dirt_monster][mobs_monster] ([MIT][lic.dirt_monster] -- version: [d8d7ef6 Git][ver.dirt_monster] *2021-05-19*
   * [folks][] ([GPL][lic.gpl3.0]) -- version: [0.2.0][ver.folks] *2021-02-23*
   * [ghost][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [c09aacb Git][ver.ghost] *2021-05-19*
   * [horse][] ([MIT][lic.horse]) -- version: [3240dde Git][ver.horse] *2021-05-19*
   * [kitten][mobs_kitten] ([MIT][lic.mobs_kitten]) -- version: [4efdd4b Git][ver.mobs_kitten] *2021-05-19*
-  * [monsters_aggressive][] (see individual mods for licensing) -- version: [89a8187 Git][ver.monsters_aggressive] *2017-08-30*
   * [oerkki][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [70410fe Git][ver.oerkki] *2021-05-05*
-  * [sand_monster][] ([MIT][lic.sand_monster]) -- version: [cec855a Git][ver.sand_monster] *2021-05-19*
+  * [sand_monster][mobs_monster] ([MIT][lic.sand_monster]) -- version: [cec855a Git][ver.sand_monster] *2021-05-19*
   * [shark][] ([CC0 / CC BY-SA][lic.shark]) -- version: [9e0e048 Git][ver.shark] *2021-05-19*
   * [sheep][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [ff39b4a Git][ver.sheep] *2021-05-13*
   * [sneeker][] ([MIT][lic.sneeker]) -- version: [1.0][ver.sneeker] *2021-05-08*
   * [spider][cmer_spider] ([unilicense][lic.cmer_spider]) -- version: [d1a9a82 Git][ver.cmer_spider] *2021-05-19*
+  * [stone_monster][mobs_monster] ([MIT][lic.stone_monster]) -- version: [fa52f6f Git][ver.stone_monster] *2021-05-20*
   * velociraptor ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- forked from *mobs_farlands* (part of [farlands][] sub-game)
   * [zombie][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [4edb18e Git][ver.zombie] *2021-05-05*
 * player/action/
@@ -285,7 +285,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [deploy_nodes]: https://cornernote.github.io/minetest-deploy_nodes/
 [desert_life]: https://forum.minetest.net/viewtopic.php?t=16054
 [dinosaurs_aggressive]: https://github.com/AntumMT/mp-dinosaurs_aggressive
-[dirt_monster]: https://github.com/AntumMT/mod-mob_dirt_monster
 [drawers]: https://forum.minetest.net/viewtopic.php?t=17134
 [elevator]: https://forum.minetest.net/viewtopic.php?t=12944
 [enchanting]: https://forum.minetest.net/viewtopic.php?t=7354
@@ -352,7 +351,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [pvp_areas]: https://forum.minetest.net/viewtopic.php?t=15480
 [quartz]: https://forum.minetest.net/viewtopic.php?t=5682
 [rainbow_ore]: https://forum.minetest.net/viewtopic.php?id=13519
-[sand_monster]: https://github.com/AntumMT/mod-mob_sand_monster
 [server_shop]: https://forum.minetest.net/viewtopic.php?t=26645
 [sfinv_buttons]: https://forum.minetest.net/viewtopic.php?t=16079
 [shark]: https://github.com/AntumMT/mod-shark
@@ -363,6 +361,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [snowdrift]: https://forum.minetest.net/viewtopic.php?t=6854
 [asm_spawneggs]: https://forum.minetest.net/viewtopic.php?t=26676
 [spectator_mode]: https://forum.minetest.net/viewtopic.php?t=13718
+[mobs_monster]: https://content.minetest.net/packages/TenPlus1/mobs_monster/
 [technic]: https://forum.minetest.net/viewtopic.php?t=2538
 [throwing]: https://forum.minetest.net/viewtopic.php?t=687
 [tnt]: https://forum.minetest.net/viewtopic.php?id=2902
@@ -445,6 +444,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.slingshot]: mods/equipment/slingshot/LICENSE.txt
 [lic.sneeker]: mods/mobiles/sneeker/LICENSE.txt
 [lic.snowdrift]: mods/weather/snowdrift/license.txt
+[lic.stone_monster]: mods/mobiles/stone_monster/license.txt
 [lic.asm_spawneggs]: mods/spawning/asm_spawneggs/LICENSE.txt
 [lic.spectator_mode]: mods/admin/spectator_mode/LICENSE
 [lic.tools_obsidian]: mods/tools/tools_obsidian/README.md
@@ -596,6 +596,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.slingshot]: https://github.com/AntumMT/mod-slingshot/tree/bb77525
 [ver.sneeker]: https://github.com/AntumMT/mod-sneeker/releases/tag/v1.0
 [ver.snowdrift]: https://github.com/paramat/snowdrift/tree/3342939
+[ver.stone_monster]: https://github.com/AntumMT/mod-mob_stone_monster/tree/fa52f6f
 [ver.asm_spawneggs]: https://github.com/AntumMT/mod-asm_spawneggs/tree/8579eac
 [ver.spectator_mode]: https://github.com/minetest-mods/spectator_mode/tree/3648371
 [ver.technic]: https://github.com/minetest-mods/technic/tree/1c21948

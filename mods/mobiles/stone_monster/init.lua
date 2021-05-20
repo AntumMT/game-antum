@@ -4,7 +4,7 @@ local S = mobs.intllib
 
 -- Stone Monster by PilzAdam
 
-mobs:register_mob("mobs:stone_monster", {
+mobs:register_mob(":mobs:stone_monster", {
 	type = "monster",
 	passive = false,
 	attack_type = "dogfight",
@@ -19,7 +19,6 @@ mobs:register_mob("mobs:stone_monster", {
 	mesh = "mobs_stone_monster.b3d",
 	textures = {
 		{"mobs_stone_monster.png"},
-		{"mobs_stone_monster2.png"}, -- by AMMOnym
 	},
 	makes_footstep_sound = true,
 	sounds = {
@@ -63,4 +62,16 @@ mobs:spawn({
 })
 
 
-mobs:register_egg("mobs:stone_monster", S("Stone Monster"), "default_stone.png", 1)
+--mobs:register_egg("mobs:stone_monster", S("Stone Monster"), "default_stone.png", 1)
+if core.global_exists("asm") then
+	asm.addEgg({
+		name = "stone_monster",
+		title = S("Stone Monster"),
+		inventory_image = "default_stone.png",
+		spawn = "mobs:stone_monster",
+		ingredients = "default:stone",
+	})
+end
+core.register_alias("mobs:stone_monster", "spawneggs:stone_monster")
+
+mobs:alias_mob("mobs_monster:stone_monster", "mobs:stone_monster") -- compatibility
