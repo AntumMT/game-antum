@@ -211,6 +211,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [murder](https://forum.minetest.net/viewtopic.php?t=24884) (Murder mini-game)
 * [naturalslopeslib](https://forum.minetest.net/viewtopic.php?t=18140)
 * [nightandday](https://content.minetest.net/packages/sofar/nightandday/)
+* [paleotest](https://forum.minetest.net/viewtopic.php?t=22253) (for some of the mobs)
 * [petz](https://forum.minetest.net/viewtopic.php?t=22245)
 * [pull_cart](https://forum.minetest.net/viewtopic.php?t=26400)
 * [rainf](https://forum.minetest.net/viewtopic.php?t=25554) (Temperate Rainforest biome)
