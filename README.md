@@ -90,7 +90,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * mobiles/
   * [chicken][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [b126cdb Git][ver.chicken] *2021-05-19*
   * [cow][mobs_cow] ([MIT][lic.mobs_cow]) -- version: [85af09a Git][ver.mobs_cow] *2021-05-19*
-  * [dirt_monster][mobs_monster] ([MIT][lic.dirt_monster] -- version: [d8d7ef6 Git][ver.dirt_monster] *2021-05-19*
+  * [dirt_monster][mobs_monster] ([MIT][lic.dirt_monster] -- version: [40c48e0 Git][ver.dirt_monster] *2021-05-20*
   * [folks][] ([GPL][lic.gpl3.0]) -- version: [0.2.0][ver.folks] *2021-02-23*
   * [ghost][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [c09aacb Git][ver.ghost] *2021-05-19*
   * [horse][] ([MIT][lic.horse]) -- version: [3240dde Git][ver.horse] *2021-05-19*
@@ -523,7 +523,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.deploy_nodes]: https://github.com/cornernote/minetest-deploy_nodes/tree/b67e162
 [ver.desert_life]: https://github.com/NathanSalapat/desert_life/tree/188f984
 [ver.dinosaurs_aggressive]: https://github.com/AntumMT/mp-dinosaurs_aggressive/tree/874f299
-[ver.dirt_monster]: https://github.com/AntumMT/mod-mob_dirt_monster/tree/d8d7ef6
+[ver.dirt_monster]: https://github.com/AntumMT/mod-mob_dirt_monster/tree/40c48e0
 [ver.drawers]: https://github.com/minetest-mods/drawers/releases/tag/v0.6.2
 [ver.enchanting]: https://github.com/minetest-mods/enchanting/tree/13ea31c
 [ver.equip_exam]: https://github.com/AntumMT/mod-equip_exam/releases/tag/v1.2

@@ -1,5 +1,0 @@
-default
-mobs
-stone_monster
-intllib?
-asm_spawneggs?
