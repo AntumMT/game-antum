@@ -96,7 +96,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [horse][] ([MIT][lic.horse]) -- version: [3240dde Git][ver.horse] *2021-05-19*
   * [kitten][mobs_kitten] ([MIT][lic.mobs_kitten]) -- version: [4efdd4b Git][ver.mobs_kitten] *2021-05-19*
   * [oerkki][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [70410fe Git][ver.oerkki] *2021-05-05*
-  * [sand_monster][mobs_monster] ([MIT][lic.sand_monster]) -- version: [cec855a Git][ver.sand_monster] *2021-05-19*
+  * [sand_monster][mobs_monster] ([MIT][lic.sand_monster]) -- version: [3dd5954 Git][ver.sand_monster] *2021-05-20*
   * [shark][] ([CC0 / CC BY-SA][lic.shark]) -- version: [9e0e048 Git][ver.shark] *2021-05-19*
   * [sheep][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [ff39b4a Git][ver.sheep] *2021-05-13*
   * [sneeker][] ([MIT][lic.sneeker]) -- version: [1.0][ver.sneeker] *2021-05-08*
@@ -586,7 +586,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.pvp_areas]: https://github.com/everamzah/pvp_areas/tree/6e4d66d
 [ver.quartz]: https://github.com/minetest-mods/quartz/tree/72ec06f
 [ver.rainbow_ore]: https://github.com/FsxShader2012/rainbow_ore/tree/6e77693
-[ver.sand_monster]: https://github.com/AntumMT/mod-mob_sand_monster/tree/cec855a
+[ver.sand_monster]: https://github.com/AntumMT/mod-mob_sand_monster/tree/3dd5954
 [ver.server_shop]: https://github.com/AntumMT/mod-server_shop/tree/06f6691
 [ver.sfinv_buttons]: http://repo.or.cz/minetest_sfinv_buttons.git/tree/ebb1f7c
 [ver.shark]: https://github.com/AntumMT/mod-shark/tree/9e0e048

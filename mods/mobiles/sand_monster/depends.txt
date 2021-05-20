@@ -1,4 +1,0 @@
-default
-mobs
-intllib?
-asm_spawneggs?
