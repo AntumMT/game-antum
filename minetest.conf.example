@@ -1927,6 +1927,19 @@ coloredwood_enable_stairsplus = true
 #ghost.spawn_chance = 7300
 
 
+# *** kitten ***
+
+## Spawn interval in seconds.
+#    type:    int
+#    default: 60
+#kitten.spawn_interval = 60
+
+## Chance of spawn at interval.
+#    type:    int
+#    default: 10000
+#kitten.spawn_chance = 10000
+
+
 # *** shark ***
 
 ## Interval in seconds that specifies how often shark spawns.

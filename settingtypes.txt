@@ -160,6 +160,21 @@ horse.spawn_interval (Spawn interval) int 600 1
 horse.spawn_chance (Spawn chance) int 9000 1
 
 
+[**kitten]
+
+# Spawn interval in seconds.
+#
+# type:    int
+# default: 60
+kitten.spawn_interval (Spawn interval) int 60 1
+
+# Chance of spawn at interval.
+#
+# type:    int
+# default: 10000
+kitten.spawn_chance (Spawn chance) int 10000 1
+
+
 [**shark]
 
 # Interval in seconds that specifies how often shark spawns.
