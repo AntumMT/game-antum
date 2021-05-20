@@ -89,15 +89,16 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [pipeworks][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2670fd8 Git][ver.pipeworks] *2021-05-06* ([patched][patch.pipeworks])
 * mobiles/
   * [chicken][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [b126cdb Git][ver.chicken] *2021-05-19*
-  * [cow][mobs_cow] ([MIT][lic.mobs_cow]) -- version: [85af09a Git][ver.mobs_cow] *2021-05-19*
+  * [cow][mobs_animal] ([MIT][lic.mobs_cow]) -- version: [85af09a Git][ver.mobs_cow] *2021-05-19*
   * [dirt_monster][mobs_monster] ([MIT][lic.dirt_monster] -- version: [40c48e0 Git][ver.dirt_monster] *2021-05-20*
   * [dungeon_master][mobs_monster] ([MIT][lic.dungeon_master] -- version: [00c890f Git][ver.dungeon_master] *2021-05-20*
   * [folks][] ([GPL][lic.gpl3.0]) -- version: [0.2.0][ver.folks] *2021-02-23*
   * [ghost][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [c09aacb Git][ver.ghost] *2021-05-19*
   * [horse][] ([MIT][lic.horse]) -- version: [3240dde Git][ver.horse] *2021-05-19*
-  * [kitten][mobs_kitten] ([MIT][lic.mobs_kitten]) -- version: [4efdd4b Git][ver.mobs_kitten] *2021-05-19*
+  * [kitten][mobs_animal] ([MIT][lic.mobs_kitten]) -- version: [4efdd4b Git][ver.mobs_kitten] *2021-05-19*
   * [mese_monster][mobs_monster] ([MIT][lic.mese_monster]) -- version: [cd02839 Git][ver.mese_monster] *2021-05-20*
   * [oerkki][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [70410fe Git][ver.oerkki] *2021-05-05*
+  * [rat][mobs_rat] ([MIT][lic.mobs_rat]) -- version: [2a8d115 Git][ver.mobs_rat] *2021-05-20*
   * [sand_monster][mobs_monster] ([MIT][lic.sand_monster]) -- version: [3dd5954 Git][ver.sand_monster] *2021-05-20*
   * [shark][] ([CC0 / CC BY-SA][lic.shark]) -- version: [9e0e048 Git][ver.shark] *2021-05-19*
   * [sheep][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [ff39b4a Git][ver.sheep] *2021-05-13*
@@ -324,8 +325,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [minetest_game]: https://github.com/minetest/minetest_game
 [mobkit]: https://forum.minetest.net/viewtopic.php?t=22112
 [goblins]: https://forum.minetest.net/viewtopic.php?t=13004
-[mobs_cow]: https://github.com/AntumMT/mod-mobs_animal/tree/cow
-[mobs_kitten]: https://github.com/AntumMT/mod-mobs_animal/tree/kitten
+[mobs_animal]: https://content.minetest.net/packages/TenPlus1/mobs_animal/
 [mobs_redo]: https://forum.minetest.net/viewtopic.php?t=9917
 [monsters_aggressive]: https://github.com/AntumMT/mp-monsters_aggressive
 [monsters_passive]: https://github.com/AntumMT/mp-monsters_passive
@@ -431,6 +431,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.mobkit]: mods/mobiles/engine/mobkit/LICENSE
 [lic.mobs_cow]: mods/mobiles/cow/license.txt
 [lic.mobs_kitten]: mods/mobiles/kitten/license.txt
+[lic.mobs_rat]: mods/mobiles/rat/licenset.txt
 [lic.mobs_redo]: mods/mobiles/engine/mobs_redo/license.txt
 [lic.moreblocks]: mods/buildings/moreblocks/LICENSE.md
 [lic.moreores]: mods/materials/moreores/LICENSE.md
@@ -567,6 +568,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.mobkit]: https://github.com/TheTermos/mobkit/tree/ddea141
 [ver.mobs_cow]: https://github.com/AntumMT/mod-mobs_animal/tree/85af09a
 [ver.mobs_kitten]: https://github.com/AntumMT/mod-mobs_animal/tree/4efdd4b
+[ver.mobs_rat]: https://github.com/AntumMT/mod-mobs_animal/tree/2a8d115
 [ver.mobs_redo]: https://notabug.org/TenPlus1/mobs_redo/src/f6e16a550330cf6a641753c03ebe331682294939
 [ver.monsters_aggressive]: https://github.com/AntumMT/mp-monsters_aggressive/tree/89a8187
 [ver.monsters_passive]: https://github.com/AntumMT/mp-monsters_passive/tree/b07fe19
