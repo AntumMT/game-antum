@@ -1,5 +1,0 @@
-
-TODO:
-- fix walking so player can control when riding
-- prevent owned horses from jumping fences to escape corrals
-- don't let horses "swim" in air

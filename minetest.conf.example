@@ -2018,22 +2018,38 @@ coloredwood_enable_stairsplus = true
 #sneeker.spawn_maxlight = 5
 
 
-# *** horse ***
+# *** whinny ***
 
-## Entity lifespan.
-#    type:    int
-#    default: 300
-#horse.lifetime = 300
+## If enabled, messages all players when spawned.
+#    type:    bool
+#    default: false
+#display_mob_spawn = false
 
-## Spawn interval in seconds.
-#    type:    int
-#    default: 600 (10 minutes)
-#horse.spawn_interval = 600
+## If disabled, whinny will attack players.
+#    type:    bool
+#    default: true
+#whinny.peaceful_only = true
 
-## Chance of spawn at interval.
+## Inverted chance that entity will spawn.
 #    type:    int
-#    default: 9000
-#horse.spawn_chance = 9000
+#    min:     0
+#    default: 50000
+#whinny.spawn_chance = 50000
+
+## Minimum height at which entity can spawn.
+#    type:    int
+#    default: -500
+#whinny.spawn_height_min = -500
+
+## Maximum height at which entity can spawn.
+#    type:    int
+#    default: 500
+#whinny.spawn_height_max = 500
+
+## Use mouse to control direction instead of a/d keys.
+#    type:    bool
+#    default: true
+#whinny.enable_mouse_ctrl = true
 
 
 

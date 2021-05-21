@@ -94,7 +94,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [dungeon_master][mobs_monster] ([MIT][lic.dungeon_master] -- version: [00c890f Git][ver.dungeon_master] *2021-05-20*
   * [folks][] ([GPL][lic.gpl3.0]) -- version: [0.2.0][ver.folks] *2021-02-23*
   * [ghost][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [c09aacb Git][ver.ghost] *2021-05-19*
-  * [horse][] ([MIT][lic.horse]) -- version: [3240dde Git][ver.horse] *2021-05-19*
   * [kitten][mobs_animal] ([MIT][lic.mobs_kitten]) -- version: [34fac03 Git][ver.mobs_kitten] *2021-05-20*
   * [mese_monster][mobs_monster] ([MIT][lic.mese_monster]) -- version: [cd02839 Git][ver.mese_monster] *2021-05-20*
   * [oerkki][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [70410fe Git][ver.oerkki] *2021-05-05*
@@ -107,6 +106,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [stone_monster][mobs_monster] ([MIT][lic.stone_monster]) -- version: [fa52f6f Git][ver.stone_monster] *2021-05-20*
   * [tree_monster][mobs_monster] ([MIT][lic.tree_monster]) -- version: [f2977ff Git][ver.tree_monster] *2021-05-20*
   * velociraptor ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- forked from *mobs_farlands* (part of [farlands][] sub-game)
+  * [whinny][] ([MIT][lic.whinny]) -- version: [1.0][ver.whinny] *2021-05-21*
   * [zombie][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [4edb18e Git][ver.zombie] *2021-05-05*
 * player/action/
   * [hbsprint][] ([LGPL][lic.lgpl2.1]) -- version: [f566d0f Git][ver.hbsprint] *2021-02-18* ([patched][patch.hbsprint])
@@ -310,7 +310,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [home_gui]: http://cornernote.github.io/minetest-home_gui/
 [home_workshop]: https://gitlab.com/VanessaE/home_workshop_modpack
 [homedecor]: https://forum.minetest.net/viewtopic.php?t=2041
-[horse]: https://github.com/AntumMT/mod-horse
 [hot_air_balloons]: https://forum.minetest.net/viewtopic.php?t=22367
 [hovercraft]: https://forum.minetest.net/viewtopic.php?t=6722
 [hudbars]: https://forum.minetest.net/viewtopic.php?t=11153
@@ -380,6 +379,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [wardrobe]: https://github.com/AntumMT/mod-wardrobe
 [wardrobe.old]: https://forum.minetest.net/viewtopic.php?t=9680
 [weather]: https://forum.minetest.net/viewtopic.php?t=5245
+[whinny]: https://github.com/AntumMT/mod-whinny
 [whitelist]: https://forum.minetest.net/viewtopic.php?t=8434
 [windmill]: https://forum.minetest.net/viewtopic.php?id=7440
 [workbench]: https://forum.minetest.net/viewtopic.php?t=14085
@@ -418,7 +418,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.fort_spikes]: mods/buildings/fort_spikes/LICENSE
 [lic.headanim]: mods/player/visuals/headanim/LICENSE
 [lic.home_gui]: mods/ui/home_gui/LICENSE
-[lic.horse]: mods/mobiles/horse/LICENSE.txt
 [lic.hidename]: mods/antum/hidename/LICENSE.txt
 [lic.homedecor]: mods/modpacks/homedecor/LICENSE
 [lic.hovercraft]: mods/transport/hovercraft/LICENSE.txt
@@ -459,6 +458,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.waffles]: mods/furniture/waffles/LICENSE.txt
 [lic.walking_light]: mods/lighting/walking_light/README.md
 [lic.wardrobe]: mods/player/visuals/wardrobe/LICENSE.txt
+[lic.whinny]: mods/mobiles/whinny/LICENSE.txt
 [lic.windmill]: mods/buildings/windmill/README.md
 
 [lic.cc0]: doc/licenses/CC0.txt
@@ -552,7 +552,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.home_gui]: https://github.com/cornernote/minetest-home_gui/tree/a291a09
 [ver.home_workshop]: https://gitlab.com/VanessaE/home_workshop_modpack/tree/03325e8
 [ver.homedecor]: https://gitlab.com/VanessaE/homedecor_modpack/tree/f1dc68a
-[ver.horse]: https://github.com/AntumMT/mod-horse/tree/3240dde
 [ver.hot_air_balloons]: https://notabug.org/NetherEran/hot_air_balloons/src/39a3572ad1bf7fd800525d68b128981e1b2c37d1
 [ver.hovercraft]: https://github.com/stujones11/hovercraft/tree/4d50e68
 [ver.hudbars]: http://repo.or.cz/minetest_hudbars.git/tree/0684bac
@@ -620,6 +619,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.waffles]: https://github.com/GreenXenith/waffles/tree/15bcdce
 [ver.walking_light]: https://github.com/petermaloney/walking_light/tree/766ef0f
 [ver.wardrobe]: https://github.com/AntumMT/mod-wardrobe/releases/tag/v1.3
+[ver.whinny]: https://github.com/AntumMT/mod-whinny/releases/tag/v1.0
 [ver.whitelist]: https://github.com/AntumMT/mod-whitelist/tree/b813b19
 [ver.windmill]: https://github.com/Sokomine/windmill/tree/47b029d
 [ver.workbench]: https://github.com/minetest-mods/workbench/tree/bd14f59

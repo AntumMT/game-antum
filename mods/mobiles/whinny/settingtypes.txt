@@ -1,0 +1,18 @@
+
+# If enabled, messages all players when spawned.
+display_mob_spawn (Display spawn) bool false
+
+# If disabled, whinny will attack players.
+whinny.peaceful_only (Only peaceful) bool true
+
+# Inverted chance that entity will spawn.
+whinny.spawn_chance (Spawn chance) int 50000 0
+
+# Minimum height at which entity can spawn.
+whinny.spawn_height_min (Spawn min height) int -500
+
+# Maximum height at which entity can spawn.
+whinny.spawn_height_max (Spawn max height) int 500
+
+# Use mouse to control direction instead of a/d keys.
+whinny.enable_mouse_ctrl (Turn with mouse) bool true

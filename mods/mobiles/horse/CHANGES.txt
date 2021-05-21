@@ -1,3 +1,0 @@
-
-next
-- fixed apple eating sound so only nearby players hear it
