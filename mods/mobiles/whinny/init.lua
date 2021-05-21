@@ -28,3 +28,12 @@ local scripts = {
 for _, script in ipairs(scripts) do
 	dofile(whinny.modpath .. "/" .. script .. ".lua")
 end
+
+-- TODO:
+-- - can be removed in future
+-- - only meant to replace current horse instances
+if core.global_exists("mobs") then
+	for _, color in ipairs({"brown", "white", "black"}) do
+		mobs:alias_mob("creatures:horse_" .. color, "whinny:horse_" .. color)
+	end
+end
