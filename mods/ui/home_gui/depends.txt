@@ -1,2 +1,3 @@
 inventory_plus?
 sfinv_buttons?
+sethome?
