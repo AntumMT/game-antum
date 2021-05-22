@@ -653,7 +653,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.minetest_game]: https://github.com/AntumMT/mtgame-minetest/tree/355a756
 [patch.moreblocks]: https://github.com/AntumMT/mod-moreblocks/tree/6dda839
 [patch.moreores]: https://github.com/AntumMT/mod-moreores/tree/ae59578
-[patch.motorbike]: https://github.com/AntumMT/mod-motorbike/tree/e9bcce2
+[patch.motorbike]: https://github.com/AntumMT/mod-motorbike/tree/3bb0c6a
 [patch.mysheetmetal]: https://github.com/AntumMT/mod-mysheetmetal/tree/2ffb3a2
 [patch.nether]: https://github.com/AntumMT/mod-nether/tree/7a84ddd
 [patch.pipeworks]: https://gitlab.com/AntumMT/mod-pipeworks/tree/48b082e

@@ -27,6 +27,7 @@ for setting, default in pairs(settings) do
 	biker[setting] = value
 end
 biker.path = minetest.get_modpath"motorbike"
+dofile(biker.path .. "/settings.lua")
 dofile(biker.path .. "/functions.lua")
 local bikelist = {
 	"black",
@@ -96,9 +97,21 @@ for _, colour in pairs(bikelist) do
 			end
 			if not self.driver then
 				if biker.breakable then
-					local pos = self.object:get_pos()
-					local item = minetest.add_item(pos, self.drop)
-					if item then
+					if not biker.punch_inv then
+						local pos = self.object:get_pos()
+						local item = minetest.add_item(pos, self.drop)
+						if item then
+							self.object:remove()
+							if self.plate then self.plate:remove() end
+						end
+					else
+						local stack = ItemStack(self.drop)
+						local pinv = puncher:get_inventory()
+						if not pinv:room_for_item("main", stack) then
+							core.chat_send_player(puncher:get_player_name(), "You do not have room in your inventory")
+							return
+						end
+						pinv:add_item("main", stack)
 						self.object:remove()
 						if self.plate then self.plate:remove() end
 					end

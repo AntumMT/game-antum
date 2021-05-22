@@ -2417,6 +2417,15 @@ torches_enable_ceiling = false
 #helicopter.mouse_default = true
 
 
+# *** motorbike ***
+
+
+## If enabled, bike is placed in inventory when punched.
+#    type:    bool
+#    default: false
+#motorbike.punch_inv = false
+
+
 
 ########
 ## UI ##

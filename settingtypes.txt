@@ -693,6 +693,12 @@ listitems.enable_singleword (Enable singleword commands) bool true
 moreblocks.stairsplus_in_creative_inventory (Display Stairs+ nodes in creative inventory) bool true
 
 
+[*motorbike]
+
+# If enabled, bike is placed in inventory when punched.
+motorbike.punch_inv (Punch places in inventory) bool false
+
+
 [*pipeworks]
 
 #Enable pipes.

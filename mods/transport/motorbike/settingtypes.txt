@@ -1,0 +1,3 @@
+
+# If enabled, bike is placed in inventory when punched.
+motorbike.punch_inv (Punch places in inventory) bool false
