@@ -1,6 +1,4 @@
 
 TODO:
-- fix drops
 - add localization support
-- fix player position on horse
-- make turning gradual when using mouse control
+- remove unused code

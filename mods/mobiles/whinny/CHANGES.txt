@@ -1,4 +1,10 @@
 
+1.1
+- player "sits" on horse if player_api mod is available
+- fixed drops
+- added mobs:leather to drops if available
+
+
 1.0
 - forked from original whinny mod
 - updated for 0.4.16/5.x Minetest

@@ -1,4 +1,5 @@
 
+local use_player_api = core.global_exists("player_api")
 local rot_compensate = 4.7
 
 -- name, fill value
@@ -79,6 +80,9 @@ end
 local horse_drops = {}
 if core.registered_items["mobs:meat_raw"] then
 	table.insert(horse_drops, {name="mobs:meat_raw", chance=1, min=2, max=3})
+end
+if core.registered_items["mobs:leather"] then
+	table.insert(horse_drops, {name="mobs:leather", chance=1, min=1, max=1})
 end
 
 local function register_wildhorse(color)
@@ -415,6 +419,11 @@ local function register_basehorse(name, craftitem, horse)
 			clicker:set_detach()
 			clicker:set_eye_offset({x=0, y=0, z=0}, {x=0, y=0, z=0})
 
+			if use_player_api then
+				player_api.player_attached[clicker:get_player_name()] = false
+				player_api.set_animation(clicker, "stand", 30)
+			end
+
 			-- stop galloping sounds
 			if handle_is_playing(self.gallop_handle_1) or handle_is_playing(self.gallop_handle_2) then
 				if not self:stop_gallop() then
@@ -448,11 +457,27 @@ local function register_basehorse(name, craftitem, horse)
 				return true
 			end
 
+			local attach_x = 0
+			local attach_y = 18
+			if core.features.object_independent_selectionbox then
+				attach_y = 10
+			end
+
+			if use_player_api then
+				attach_x = attach_x - 2
+				attach_y = attach_y + 4
+			end
+
 			self.driver = clicker
-			clicker:set_attach(self.object, "", {x=0,y=18,z=0}, {x=0,y=90,z=0})
+			clicker:set_attach(self.object, "", {x=attach_x, y=attach_y, z=0}, {x=0, y=90, z=0})
 			clicker:set_eye_offset({x=0, y=8, z=0}, {x=0, y=0, z=0})
 			-- face same direction as horse
 			clicker:set_look_horizontal(self.object:get_yaw() + rot_compensate) -- FIXME: no idea why I need to add compensation
+
+			if use_player_api then
+				player_api.player_attached[pname] = true
+				player_api.set_animation(clicker, "sit", 30)
+			end
 		end
 	end
 
@@ -476,7 +501,7 @@ local function register_basehorse(name, craftitem, horse)
 		return core.serialize(data)
 	end
 
-	function horse:on_punch(puncher, time_from_last_punch, tool_capabilities, direction)
+	function horse:on_punch(puncher, time_from_last_punch, tool_capabilities, dir, damage)
 		if puncher:is_player() then
 			local pname = puncher:get_player_name()
 
@@ -491,11 +516,37 @@ local function register_basehorse(name, craftitem, horse)
 			if self.driver then return true end
 		end
 
-		core.sound_play("player_damage", {object=self.object,})
-		if self.sounds and self.sounds.on_damage then
-			core.sound_play(self.sounds.on_damage.name,
-				{object=self.object, self.sounds.on_damage.gain})
+		-- do damage
+		self.object:set_hp(self.object:get_hp() - damage)
+
+		local hp = self.object:get_hp()
+
+		if hp > 0 then
+			core.sound_play("player_damage", {object=self.object,})
+			if self.sounds and self.sounds.on_damage then
+				core.sound_play(self.sounds.on_damage.name,
+					{object=self.object, self.sounds.on_damage.gain})
+			end
+		else
+			if self.sounds.on_death ~= nil then
+				core.sound_play(self.sounds.on_death.name,
+					{object=self.object, self.sounds.on_death.gain})
+			end
+
+			local pos = self.object:get_pos()
+			self.object:remove()
+
+			if horse_drops then
+				for _, drop in ipairs(horse_drops) do
+					if math.random(1, drop.chance) == 1 then
+						core.add_item(pos, drop.name .. " "
+							.. tostring(math.random(drop.min, drop.max)))
+					end
+				end
+			end
 		end
+
+		return true
 	end
 
 	core.register_entity(name, horse)
