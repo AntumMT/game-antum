@@ -12,3 +12,4 @@ TODO:
   - moreblocks:glow_glass
   - moreblocks:super_glow_glass
 - fix kitten mod (spawning from inventory broken when captures with lasso)
+- save helicopter color & fuel level when picked up
