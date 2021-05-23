@@ -50,7 +50,7 @@ minetest.register_entity("helicopter:heli", {
     hp_max = 50,
     color = "#0063b0",
     _passenger = nil,
-    _by_mouse = helicopter.mouse_default,
+    _by_mouse = helicopter.turn_player_look,
 
     get_staticdata = function(self) -- unloaded/unloads ... is now saved
         return minetest.serialize({
@@ -170,7 +170,7 @@ minetest.register_entity("helicopter:heli", {
                     pitch = 1.0,
                 })
                 --[[if self.damage > 100 then --if acumulated damage is greater than 100, adieu
-                    helicopter.destroy(self)   
+                    helicopter.destroy(self, player)   
                 end]]--
             end
 
@@ -274,10 +274,21 @@ minetest.register_entity("helicopter:heli", {
 
             if self.hp_max <= 0 then
                 if helicopter.pick_up then
-                    self.object:remove()
-                    puncher:get_inventory():add_item("main", "helicopter:heli")
+                    local pinv = puncher:get_inventory()
+                    local stack = ItemStack("helicopter:heli")
+                    if not pinv:room_for_item("main", stack) then
+                        minetest.chat_send_player(puncher:get_player_name(),
+                            "You do not have room in your inventory")
+                    else
+                        if self.pointer then self.pointer:remove() end
+                        if self.pilot_seat_base then self.pilot_seat_base:remove() end
+                        if self.passenger_seat_base then self.passenger_seat_base:remove() end
+
+                        self.object:remove()
+                        pinv:add_item("main", stack)
+                    end
                 else
-                    helicopter.destroy(self)
+                    helicopter.destroy(self, puncher)
                 end
             end
 

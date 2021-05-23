@@ -2424,11 +2424,6 @@ torches_enable_ceiling = false
 #    default: false
 #helicopter.pick_up = true
 
-## If enabled, helicopter will be controlled via mouse by default.
-#    type:    bool
-#    default: false
-#helicopter.mouse_default = true
-
 
 # *** motorbike ***
 

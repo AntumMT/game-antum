@@ -1,12 +1,15 @@
 
+--- Determines gravity force on helicopter.
+helicopter.gravity = tonumber(minetest.settings:get("movement_gravity") or 9.8)
+
 --- Determines handling of punched helicopter.
 --
--- If `false`, helicopter is destroyed. Otherwise, it is added to inventory.
---   - Default: false
+--  If `false`, helicopter is destroyed. Otherwise, it is added to inventory.
+--    - Default: false
 helicopter.pick_up = minetest.settings:get_bool("helicopter.pick_up", false)
 
 --- Determines default control of helicopter.
 --
--- If enabled, helicopter will be controlled via mouse by default.
---   - Default: false
-helicopter.mouse_default = minetest.settings:get_bool("helicopter.mouse_default", false)
+--  Use facing direction to turn instead of a/d keys by default.
+--    - Default: false
+helicopter.turn_player_look = minetest.settings:get_bool("mount_turn_player_look", false)
