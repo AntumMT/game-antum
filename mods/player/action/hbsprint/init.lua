@@ -4,8 +4,8 @@ local function setting_get(name, default)
 	return minetest.settings:get(name) or default
 end
 
-local speed         = tonumber(setting_get("sprint_speed", "1.5"))
-local jump          = tonumber(setting_get("sprint_jump", "1.3"))
+local speed         = tonumber(setting_get("sprint_speed", "1.3"))
+local jump          = tonumber(setting_get("sprint_jump", "1.1"))
 local dir           = minetest.is_yes(setting_get("sprint_forward_only", "false"))
 local particles     = tonumber(setting_get("sprint_particles", "2"))
 local stamina       = minetest.is_yes(setting_get("sprint_stamina", "true"))

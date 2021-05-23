@@ -110,7 +110,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [whinny][] ([MIT][lic.whinny]) -- version: [1.2][ver.whinny] *2021-05-22*
   * [zombie][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [4edb18e Git][ver.zombie] *2021-05-05*
 * player/action/
-  * [hbsprint][] ([LGPL][lic.lgpl2.1]) -- version: [f566d0f Git][ver.hbsprint] *2021-02-18* ([patched][patch.hbsprint])
+  * [hbsprint][] ([LGPL][lic.lgpl2.1]) -- version: [f566d0f Git][ver.hbsprint] *2021-02-18*
   * [player_monoids][] ([Apache][lic.player_monoids]) -- version: [ed11a73 Git][ver.player_monoids] *2019-10-17*
 * player/visuals/
   * [headanim][] ([MIT][lic.headanim]) -- version: [1.01][ver.headanim] *2021-01-16*
@@ -651,7 +651,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.gems_encrustable]: https://github.com/AntumMT/mod-gems_encrustable/tree/a043b9c
 [patch.gems_tools]: https://github.com/AntumMT/mod-gems_tools/tree/7f89843
 [patch.hbarmor]: https://github.com/AntumMT/mod-hbarmor/tree/12a7dea
-[patch.hbsprint]: https://github.com/AntumMT/mod-hbsprint/tree/03aef67
 [patch.helicopter]: https://github.com/AntumMT/mod-helicopter/tree/1187168
 [patch.home_gui]: https://github.com/AntumMT/mod-home_gui/tree/014504a
 [patch.homedecor]: https://github.com/AntumMT/mp-homedecor/tree/efbc1bb

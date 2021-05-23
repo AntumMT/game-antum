@@ -511,10 +511,10 @@ hbarmor_tick (Armor HUD bar update frequency) float 0.1 0.0 4.0
 hudbars_autohide_stamina (Automatically hide staminal indicator) bool true
 
 # Sprint speed multiplier.
-sprint_speed (Sprint speed multiplier) float 1.5
+sprint_speed (Sprint speed multiplier) float 1.3
 
 # Sprint jump multiplier.
-sprint_jump (Sprint jump multiplier) float 1.3
+sprint_jump (Sprint jump multiplier) float 1.1
 
 # Which key to use for sprint. Default: "Use" ("E" key by default).
 sprint_key (Sprint key) enum Use Use
