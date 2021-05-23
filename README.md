@@ -652,7 +652,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.gems_tools]: https://github.com/AntumMT/mod-gems_tools/tree/7f89843
 [patch.hbarmor]: https://github.com/AntumMT/mod-hbarmor/tree/12a7dea
 [patch.helicopter]: https://github.com/AntumMT/mod-helicopter/tree/1187168
-[patch.home_gui]: https://github.com/AntumMT/mod-home_gui/tree/014504a
+[patch.home_gui]: https://github.com/AntumMT/mod-home_gui/tree/addee01
 [patch.homedecor]: https://github.com/AntumMT/mp-homedecor/tree/efbc1bb
 [patch.hovercraft]: https://github.com/AntumMT/mod-hovercraft/tree/fa431a2
 [patch.hud]: https://github.com/AntumMT/mod-hud/tree/6846e20

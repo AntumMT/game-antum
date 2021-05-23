@@ -11,34 +11,33 @@ License: BSD-3-Clause https://raw.github.com/cornernote/minetest-home_gui/master
 -- local api
 local home_gui = {}
 
-local use_sethome = core.global_exists("sethome")
+local use_sethome = false
 
-if not use_sethome then
-	-- filename
-	home_gui.filename = minetest.get_worldpath()..'/home_gui'
+-- filename
+home_gui.filename = minetest.get_worldpath()..'/home_gui'
 
-	-- load_home
-	local homepos = {}
-	local load_home = function()
-			local input = io.open(home_gui.filename..".home", "r")
-			if input then
-					while true do
-							local x = input:read("*n")
-							if x == nil then
-									break
-							end
-							local y = input:read("*n")
-							local z = input:read("*n")
-							local name = input:read("*l")
-							homepos[name:sub(2)] = {x = x, y = y, z = z}
-					end
-					io.close(input)
-			else
-					homepos = {}
-			end
-	end
-	load_home() -- run it now
+-- load_home
+local homepos = {}
+local load_home = function()
+		local input = io.open(home_gui.filename..".home", "r")
+		if input then
+				while true do
+						local x = input:read("*n")
+						if x == nil then
+								break
+						end
+						local y = input:read("*n")
+						local z = input:read("*n")
+						local name = input:read("*l")
+						homepos[name:sub(2)] = {x = x, y = y, z = z}
+				end
+				io.close(input)
+		else
+				homepos = {}
+				use_sethome = core.global_exists("sethome")
+		end
 end
+load_home() -- run it now
 
 -- set_home
 home_gui.set_home = function(player, pos)
