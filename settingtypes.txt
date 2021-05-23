@@ -199,6 +199,27 @@ shark.max_height (Shark max spawn height) int 100
 shark.spawn_time (Shark spawn time) enum any day,night,any
 
 
+[**skeleton]
+
+# Entity lifespan.
+#
+# type:    int
+# default: 900
+skeleton.lifetime (Lifespan) int 900 1
+
+# Spawn interval in seconds.
+#
+# type:    int
+# default: 120 (2 minutes)
+skeleton.spawn_interval (Spawn interval) int 120 1
+
+# Chance of spawn at interval.
+#
+# type:    int
+# default: 7000
+skeleton.spawn_chance (Spawn chance) int 7000 1
+
+
 [**sneeker]
 
 # Extra debugging messages.

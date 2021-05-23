@@ -1,0 +1,5 @@
+
+1.0
+- created cmer:skeleton entity
+- created cmer:bone item
+- created spawneggs:skeleton with asm_spawneggs

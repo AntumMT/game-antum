@@ -2007,6 +2007,24 @@ coloredwood_enable_stairsplus = true
 #shark.spawn_time = any
 
 
+# *** skeleton ***
+
+## Entity lifespan.
+#    type:    int
+#    default: 900
+#skeleton.lifetime = 900
+
+## Spawn interval in seconds.
+#    type:    int
+#    default: 120 (2 minutes)
+#skeleton.spawn_interval = 120
+
+## Chance of spawn at interval.
+#    type:    int
+#    default: 7000
+#skeleton.spawn_chance = 7000
+
+
 # *** sneeker ***
 
 # Sets maximum number of spawns that can exist in world.
