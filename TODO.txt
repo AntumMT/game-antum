@@ -11,5 +11,3 @@ TODO:
   - ethereal:candle
   - moreblocks:glow_glass
   - moreblocks:super_glow_glass
-- motorbike:
-  - option to put in inventory automatically
