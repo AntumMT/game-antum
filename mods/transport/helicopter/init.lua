@@ -49,7 +49,7 @@ if not minetest.global_exists("matrix3") then
 	dofile(minetest.get_modpath("helicopter") .. DIR_DELIM .. "matrix.lua")
 end
 
-local creative_exists = minetest.global_exists("creative")
+helicopter.creative = minetest.global_exists("creative")
 
 function helicopter.check_is_under_water(obj)
 	local pos_up = obj:get_pos()
