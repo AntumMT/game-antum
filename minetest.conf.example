@@ -1623,6 +1623,19 @@ inventory = sfinv
 #allow_atm_craft = false
 
 
+# *** mounts ***
+
+## Mounts turn with player look direction.
+#
+#  Often mounts use the a/d keys for turning. For mods that respect
+#  this setting, this will be changed to turn with the direction the
+#  player is looking.
+#
+#    type:    bool
+#    default: false
+#mount_turn_player_look = false
+
+
 
 ###########
 ## ADMIN ##

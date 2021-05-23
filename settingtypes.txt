@@ -32,6 +32,17 @@ allow_atm_craft (Allow ATM crafting) bool true
 only_peaceful_mobs (Peaceful only) bool false
 
 
+[*Mounts]
+
+# Mounts turn with player look direction.
+#
+# Often mounts use the a/d keys for turning. For mods that respect
+# this setting, this will be changed to turn with the direction the
+# player is looking.
+mount_turn_player_look (Turn with look direction) bool false
+
+
+
 # ---------------------------------------------------------------------------------
 
 [Mods]

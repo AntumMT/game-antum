@@ -24,3 +24,6 @@ bike_water_friction (Water friction) float 13.8
 
 # The factor by which the bike slows down per second offroad
 bike_offroad_friction (Offroad friction) float 1.62
+
+# Bike turns with player look direction instead of a/d keys.
+mount_turn_player_look (Turn with look direction) bool false

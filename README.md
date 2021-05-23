@@ -127,7 +127,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [tools_obsidian][] ([LGPL / CC BY-SA][lic.tools_obsidian]) -- version: [1.0][ver.tools_obsidian] *2021-01-15*
   * [workbench][] ([LGPL / WTFPL](mods/tools/workbench/LICENSE)) -- version: [bd14f59 Git][ver.workbench] *2017-08-08*
 * transport/
-  * [bike][] ([MIT][lic.bike]) -- version: [1.2][ver.bike] *2021-04-12*
+  * [bike][] ([MIT][lic.bike]) -- version: [1.2][ver.bike] *2021-04-12* ([patched][patch.bike])
   * [boats][boats2] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa3.0]) -- version: [b83231e Git][ver.boats2] *2016-10-14* ([patched][patch.boats2]) ***UPSTREAM MOVED***
   * [helicopter][] ([GPL][lic.gpl2.0] / [CC0][lic.cc0] / CC BY-NC) -- version: [1955cdd Git][ver.helicopter] *2021-03-28* ([patched][patch.helicopter])
   * [hot_air_balloons][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- version: [39a3572 Git][ver.hot_air_balloons] *2020-11-17*
@@ -631,6 +631,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.atm]: https://github.com/AntumMT/mod-atm/tree/2ab0e78
 [patch.away]: https://github.com/AntumMT/mod-away/tree/3b0bf9e
 [patch.boats2]: https://github.com/AntumMT/mod-boats2/tree/9b2bcb7
+[patch.bike]: https://gitlab.com/AntumMT/mod-bike/tree/4477732
 [patch.bridges]: https://github.com/AntumMT/mod-bridges/tree/ba8f71a
 [patch.castle_weapons]: https://github.com/AntumMT/mod-castle_weapons/tree/6ec6f46
 [patch.christmas]: https://github.com/AntumMT/mod-christmas/tree/50bda80
