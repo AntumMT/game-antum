@@ -12,3 +12,11 @@ TODO:
   - moreblocks:glow_glass
   - moreblocks:super_glow_glass
 - fix kitten mod (spawning from inventory broken when captures with lasso)
+- re-add mobs:bee (mobs_animal:bee)
+
+Warnings:
+- Undeclared global variable "moretrees" accessed at ...s\antum\mods\modpacks\technic\technic/tools/tree_tap.lua:70
+- Call to deprecated function 'getpos', please use 'get_pos' at ...inetest\bin\..\games\antum\mods\misc\enchanting\init.lua:233
+- Deprecated usage of get_node_group, use get_item_group instead (at ...\Minetest\bin\..\games\antum\mods\world\nether/nodes.lua:330)
+- core.env:[...] is deprecated and should be replaced with core.[...] (at ...\..\games\antum\mods\materials\gems_encrustable\init.lua:243)
+- Call to deprecated function 'get3d', please use 'get_3d' at ...\antum\mods\modpacks\technic\technic_worldgen/oregen.lua:170
