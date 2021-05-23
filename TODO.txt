@@ -13,6 +13,7 @@ TODO:
   - moreblocks:super_glow_glass
 - fix kitten mod (spawning from inventory broken when captures with lasso)
 - re-add mobs:bee (mobs_animal:bee)
+- disable griefing by sneeker
 
 Warnings:
 - Undeclared global variable "moretrees" accessed at ...s\antum\mods\modpacks\technic\technic/tools/tree_tap.lua:70
