@@ -14,5 +14,5 @@ whinny.spawn_height_min (Spawn min height) int -500
 # Maximum height at which entity can spawn.
 whinny.spawn_height_max (Spawn max height) int 500
 
-# Use mouse to control direction instead of a/d keys.
-whinny.enable_mouse_ctrl (Turn with mouse) bool true
+# Use facing direction to turn instead of a/d keys.
+mount_turn_player_look (Turn with look direction) bool true

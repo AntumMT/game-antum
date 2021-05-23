@@ -1,0 +1,10 @@
+Translated by:
+
+
+This horse is too wild to ride. Try feeding it.=
+This horse is still hungry. Keep feeding it.=
+This horse is now tame!=
+You do not have room in your inventory.=
+You cannot take @1's horse.=
+You cannot ride @1's horse.=
+Don't kill @1's horse!!!=

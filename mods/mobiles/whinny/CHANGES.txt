@@ -1,4 +1,10 @@
 
+1.2
+- use setting "mount_turn_player_look" instead of "whinny.enable_mouse_ctrl"
+- used proper method for setting rotation compensation between rider & horse
+- added localization support
+
+
 1.1
 - player "sits" on horse if player_api mod is available
 - fixed drops

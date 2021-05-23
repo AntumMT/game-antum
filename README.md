@@ -106,7 +106,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [stone_monster][mobs_monster] ([MIT][lic.stone_monster]) -- version: [fa52f6f Git][ver.stone_monster] *2021-05-20*
   * [tree_monster][mobs_monster] ([MIT][lic.tree_monster]) -- version: [f2977ff Git][ver.tree_monster] *2021-05-20*
   * velociraptor ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- forked from *mobs_farlands* (part of [farlands][] sub-game)
-  * [whinny][] ([MIT][lic.whinny]) -- version: [1.1][ver.whinny] *2021-05-21*
+  * [whinny][] ([MIT][lic.whinny]) -- version: [1.2][ver.whinny] *2021-05-22*
   * [zombie][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [4edb18e Git][ver.zombie] *2021-05-05*
 * player/action/
   * [hbsprint][] ([LGPL][lic.lgpl2.1]) -- version: [f566d0f Git][ver.hbsprint] *2021-02-18* ([patched][patch.hbsprint])
@@ -619,7 +619,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.waffles]: https://github.com/GreenXenith/waffles/tree/15bcdce
 [ver.walking_light]: https://github.com/petermaloney/walking_light/tree/766ef0f
 [ver.wardrobe]: https://github.com/AntumMT/mod-wardrobe/releases/tag/v1.3
-[ver.whinny]: https://github.com/AntumMT/mod-whinny/releases/tag/v1.1
+[ver.whinny]: https://github.com/AntumMT/mod-whinny/releases/tag/v1.2
 [ver.whitelist]: https://github.com/AntumMT/mod-whitelist/tree/b813b19
 [ver.windmill]: https://github.com/Sokomine/windmill/tree/47b029d
 [ver.workbench]: https://github.com/minetest-mods/workbench/tree/bd14f59

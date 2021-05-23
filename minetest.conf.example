@@ -1632,7 +1632,7 @@ inventory = sfinv
 #  player is looking.
 #
 #    type:    bool
-#    default: false
+#    default: (depends on mod)
 #mount_turn_player_look = false
 
 
