@@ -2416,6 +2416,66 @@ torches_enable_ceiling = false
 ## TRANSPORT ##
 ###############
 
+[*bike]
+
+## The maximum speed of a bike in m/s
+#    type:    float
+#    default: 6.9
+#bike_max_speed = 6.9
+
+## The acceleration of a bike in m/s^2
+#    type:    float
+#    default: 3.16
+#bike_acceleration = 3.16
+
+## The decceleration of a bike caused by braking in m/s^2
+#    type:    float
+#    default: 7.9
+#bike_decceleration = 7.9
+
+## The decceleration of a bike caused by friciton in m/s^2
+#    type:    float
+#    default: 0.79
+#bike_friction = 0.79
+
+## The turning speed of a stopped bike in rad/s
+#    type:    float
+#    default: 1.58
+#bike_turn_speed = 1.58
+
+## The speed in m/s bellow which the bike accelerates linearily
+#    type:    float
+#    default: 0.4
+#bike_friction_cone = 0.4
+
+## How many nodes can be climbed/jumped
+#    type:    float
+#    min:     0
+#    default: 0.6
+#bike_stepheight = 0.6
+
+## How many nodes can be climbed/jumped with wheely
+#    type:    float
+#    min:     0
+#    default: 0.6
+#bike_wheely_stepheight = 0.6
+
+## The factor by which the turning speed is increased by wheely
+#    type:    float
+#    default: 2.0
+#bike_wheely_factor = 2.0
+
+## The factor by which the bike slows down per second in water
+#    type:    float
+#    default: 13.8
+#bike_water_friction = 13.8
+
+## The factor by which the bike slows down per second offroad
+#    type:    float
+#    default: 1.62
+#bike_offroad_friction = 1.62
+
+
 # *** helicopter ***
 
 ## If enabled, places helicopter in inventory instead of destroying it
