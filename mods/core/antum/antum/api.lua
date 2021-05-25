@@ -14,7 +14,7 @@ function antum.log(lvl, msg)
 		lvl = nil
 	end
 
-	msg = "[" .. core.get_current_modname() .. "] " msg
+	msg = "[" .. core.get_current_modname() .. "] " .. msg
 	if not lvl then
 		core.log(msg)
 	else
@@ -23,17 +23,17 @@ function antum.log(lvl, msg)
 end
 
 function antum.logAction(msg)
-	antum.log("warning" "\antum.logAction\" deprecated, use \"antum.log\"")
+	antum.log("warning", "\antum.logAction\" deprecated, use \"antum.log\"")
 	antum.log("action", msg)
 end
 
 function antum.logWarn(msg)
-	antum.log("warning" "\antum.logWarn\" deprecated, use \"antum.log\"")
+	antum.log("warning", "\antum.logWarn\" deprecated, use \"antum.log\"")
 	antum.log("warning", msg)
 end
 
 function antum.logError(msg)
-	antum.log("warning" "\antum.logError\" deprecated, use \"antum.log\"")
+	antum.log("warning", "\antum.logError\" deprecated, use \"antum.log\"")
 	antum.log("error", msg)
 end
 
