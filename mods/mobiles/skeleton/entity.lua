@@ -38,7 +38,7 @@ creatures.register_mob({
 		lifetime = cmer_skeleton.lifetime,
 		can_jump = 1,
 		can_swim = true,
-		has_kockback = true,
+		has_knockback = true,
 	},
 	modes = {
 		idle = {chance=0.3,},
