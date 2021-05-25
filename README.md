@@ -93,7 +93,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [dungeon_master][mobs_monster] ([MIT][lic.dungeon_master] -- version: [00c890f Git][ver.dungeon_master] *2021-05-20*
   * [folks][] ([GPL][lic.gpl3.0]) -- version: [0.2.0][ver.folks] *2021-02-23*
   * [ghost][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [1ace22c Git][ver.cmer_ghost] *2021-05-24*
-  * [kitten][mobs_animal] ([MIT][lic.mobs_kitten]) -- version: [34fac03 Git][ver.mobs_kitten] *2021-05-20*
+  * [kitten][mobs_animal] ([MIT][lic.mobs_kitten]) -- version: [b3bf401 Git][ver.mobs_kitten] *2021-05-25*
   * [mese_monster][mobs_monster] ([MIT][lic.mese_monster]) -- version: [cd02839 Git][ver.mese_monster] *2021-05-20*
   * [oerkki][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [6e043e9 Git][ver.cmer_oerkki] *2021-05-24*
   * [rat][mobs_rat] ([MIT][lic.mobs_rat]) -- version: [2a8d115 Git][ver.mobs_rat] *2021-05-20*
@@ -574,7 +574,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.minetest_game]: https://github.com/minetest/minetest_game/tree/5.4.1
 [ver.mobkit]: https://github.com/TheTermos/mobkit/tree/ddea141
 [ver.mobs_cow]: https://github.com/AntumMT/mod-mobs_animal/tree/85af09a
-[ver.mobs_kitten]: https://github.com/AntumMT/mod-mobs_animal/tree/34fac03
+[ver.mobs_kitten]: https://github.com/AntumMT/mod-mobs_animal/tree/b3bf401
 [ver.mobs_rat]: https://github.com/AntumMT/mod-mobs_animal/tree/2a8d115
 [ver.mobs_redo]: https://notabug.org/TenPlus1/mobs_redo/src/f6e16a550330cf6a641753c03ebe331682294939
 [ver.monsters_aggressive]: https://github.com/AntumMT/mp-monsters_aggressive/tree/89a8187
