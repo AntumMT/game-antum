@@ -184,10 +184,16 @@ local def = {
 				-- in case shears have been overridden
 				local shears = core.registered_aliases["creatures:shears"]
 				if not shears then
-					shears = "creatures:shears"
+					shears = "mobs:shears"
 				end
 
 				local name = item:get_name()
+
+				if name ~= shears and name ~= "farming:wheet" then
+					-- allow default actions
+					return false
+				end
+
 				if name == "farming:wheat" then
 					self.target = clicker
 					self.mode = "follow"
