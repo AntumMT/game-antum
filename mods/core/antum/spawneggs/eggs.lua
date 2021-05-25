@@ -31,14 +31,6 @@ if core.registered_entities["mobs_animal:cow"] and core.registered_items["mobs:b
 	})
 end
 
--- spider (needs ingredient)
-if core.registered_entities["mobs:spider"] then
-	asm.addEgg({
-		name = "spider",
-		spawn = "mobs:spider",
-	})
-end
-
 
 local mobs_monster = {
 	{"dirt_monster", "mobs:dirt_monster", "default:dirt"},
