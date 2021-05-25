@@ -1,1 +1,0 @@
-Granting and revoking privileges based on position on the map.

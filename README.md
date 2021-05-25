@@ -17,7 +17,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [invisible][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa4.0]) -- version: [4 (a2a6504 Git)][ver.invisible]
   * [no_fall_damage][] ([MIT][lic.no_fall_damage]) -- version [1.0.0][ver.no_fall_damage] *2020-12-19*
   * [override][] ([MIT][lic.override]) -- version: [0.2 (e6dda7a Git)][ver.override] *2017-08-30*
-  * [privilegeareas][] ([WTFPL][lic.privilegeareas] / [CC0][lic.cc0]) -- version: [15eae20 Git][ver.privilegeareas] *2018-11-16*
   * [privs][] ([CC0][lic.cc0])
   * [spectator_mode][] ([WTFPL][lic.spectator_mode]) -- version: [3648371 Git][ver.spectator_mode] *2020-07-15*
   * [whitelist][] ([CC0][lic.cc0]) -- version: [0.1 (b813b19 Git)][ver.whitelist] *2017-08-18*
@@ -352,7 +351,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [painting]: https://github.com/minetest-mods/painting
 [pipeworks]: https://forum.minetest.net/viewtopic.php?t=2155
 [player_monoids]: https://github.com/minetest-mods/player_monoids
-[privilegeareas]: https://forum.minetest.net/viewtopic.php?t=5545
 [privs]: mods/admin/privs
 [pvp_areas]: https://forum.minetest.net/viewtopic.php?t=15480
 [quartz]: https://forum.minetest.net/viewtopic.php?t=5682
@@ -446,7 +444,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.no_fall_damage]: mods/admin/no_fall_damage/README.md
 [lic.override]: mods/admin/override/LICENSE.txt
 [lic.player_monoids]: mods/player/action/player_monoids/COPYING
-[lic.privilegeareas]: mods/admin/privilegeareas/README.md
 [lic.quartz]: mods/materials/quartz/LICENSE.txt
 [lic.rainbow_ore]: mods/materials/rainbow_ore/README.md
 [lic.sand_monster]: mods/mobiles/sand_monster/license.txt
@@ -602,7 +599,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.painting]: https://github.com/minetest-mods/painting/tree/8961849
 [ver.pipeworks]: https://gitlab.com/VanessaE/pipeworks/tree/2670fd8
 [ver.player_monoids]: https://github.com/minetest-mods/player_monoids/tree/ed11a73
-[ver.privilegeareas]: https://github.com/minetest-mods/privilegeareas/tree/15eae20
 [ver.pvp_areas]: https://github.com/everamzah/pvp_areas/tree/6e4d66d
 [ver.quartz]: https://github.com/minetest-mods/quartz/tree/72ec06f
 [ver.rainbow_ore]: https://github.com/FsxShader2012/rainbow_ore/tree/6e77693
