@@ -165,3 +165,13 @@ local def = {
 }
 
 creatures.register_mob(def)
+
+if core.global_exists("asm") then
+	asm.addEgg({
+		name = "chicken",
+		inventory_image = "creatures_chicken_spawnegg.png",
+		spawn = "creatures:chicken",
+		ingredients = "creatures:feather",
+	})
+end
+core.register_alias("creatures:chicken", "spawneggs:chicken")

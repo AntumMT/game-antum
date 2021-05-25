@@ -24,7 +24,7 @@ if antum.dependsSatisfied({"throwing", "antum"}) then
 	antum.registerCraft({
 		output = "castle_weapons:crossbow_bolt 6",
 		recipe = {
-			{"antum:feather", "default:stick", "default:steel_ingot"},
+			{"creatures:feather", "default:stick", "default:steel_ingot"},
 		},
 	})
 
@@ -32,7 +32,7 @@ if antum.dependsSatisfied({"throwing", "antum"}) then
 	antum.registerCraft({
 		output = "castle_weapons:crossbow_bolt 6",
 		recipe = {
-			{"default:steel_ingot", "default:stick", "antum:feather"},
+			{"default:steel_ingot", "default:stick", "creatures:feather"},
 		},
 	})
 end

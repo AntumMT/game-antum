@@ -22,16 +22,6 @@ if core.get_modpath("spawneggs") then
 	end
 end
 
-
--- Chicken spawnegg
-if core.registered_entities["creatures:chicken"] then
-	asm.addEgg({
-		name = "chicken",
-		spawn = "creatures:chicken",
-		ingredients = "antum:feather",
-	})
-end
-
 -- cow
 if core.registered_entities["mobs_animal:cow"] and core.registered_items["mobs:bucket_milk"] then
 	asm.addEgg({

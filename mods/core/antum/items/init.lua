@@ -1,6 +1,5 @@
 
 local scripts = {
-	"animal",
 	"tool",
 	"misc",
 	"spawneggs",
