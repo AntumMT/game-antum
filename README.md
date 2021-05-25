@@ -88,7 +88,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [painting][] (???) -- version [8961849 Git][ver.painting] *2016-05-05*
   * [pipeworks][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2670fd8 Git][ver.pipeworks] *2021-05-06* ([patched][patch.pipeworks])
 * mobiles/
-  * [chicken][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [b126cdb Git][ver.chicken] *2021-05-19*
+  * [chicken][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [5f451c1 Git][ver.cmer_chicken] *2021-05-24*
   * [cow][mobs_animal] ([MIT][lic.mobs_cow]) -- version: [85af09a Git][ver.mobs_cow] *2021-05-19*
   * [dirt_monster][mobs_monster] ([MIT][lic.dirt_monster] -- version: [40c48e0 Git][ver.dirt_monster] *2021-05-20*
   * [dungeon_master][mobs_monster] ([MIT][lic.dungeon_master] -- version: [00c890f Git][ver.dungeon_master] *2021-05-20*
@@ -522,12 +522,13 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.castle_tapestries]: https://github.com/minetest-mods/castle_tapestries/tree/f5e3ac1
 [ver.castle_weapons]: https://github.com/minetest-mods/castle_weapons/tree/d3cf095
 [ver.chatlog]: https://github.com/AntumMT/mod-chatlog/tree/v1.0
-[ver.chicken]: http://github.com/AntumMT/mod-cmer/tree/b126cdb
 [ver.christmas]: https://github.com/TheZenKitteh/minetest-christmas/tree/d3bd872
 [ver.cleaner]: https://github.com/AntumMT/mod-cleaner/tree/e8359d8
 [ver.cmer]: https://github.com/AntumMT/mod-cmer/tree/093d654
+[ver.cmer_chicken]: http://github.com/AntumMT/mod-cmer/tree/5f451c1
 [ver.cmer_skeleton]: https://github.com/AntumMT/mod-skeleton/tree/466c9a6
 [ver.cmer_spider]: https://github.com/AntumMT/mod-spider/tree/d1a9a82
+[ver.cmer_zombie]: https://github.com/AntumMT/mod-cmer/tree/5b84737
 [ver.coloredwood]: https://gitlab.com/VanessaE/coloredwood/tags/2021-01-30
 [ver.compassgps]: https://github.com/Kilarin/compassgps/tree/567b95f
 [ver.crafting_bench]: https://github.com/minetest-mods/crafting_bench/tree/69083ed
@@ -631,7 +632,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.whitelist]: https://github.com/AntumMT/mod-whitelist/tree/b813b19
 [ver.windmill]: https://github.com/Sokomine/windmill/tree/47b029d
 [ver.workbench]: https://github.com/minetest-mods/workbench/tree/bd14f59
-[ver.cmer_zombie]: https://github.com/AntumMT/mod-cmer/tree/5b84737
 
 [patch.3d_armor]: https://github.com/AntumMT/mp-3d_armor/tree/f30a747
 [patch.airtanks]: https://github.com/AntumMT/mod-airtanks/tree/8b7fd12
