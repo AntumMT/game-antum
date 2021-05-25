@@ -1,60 +1,36 @@
 --[[ LICENSE HEADER
-  
-  MIT License
-  
-  Copyright © 2017 Jordan Irwin
-  
-  Permission is hereby granted, free of charge, to any person obtaining a copy of
-  this software and associated documentation files (the "Software"), to deal in
-  the Software without restriction, including without limitation the rights to
-  use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
-  of the Software, and to permit persons to whom the Software is furnished to do
-  so, subject to the following conditions:
-  
-    The above copyright notice and this permission notice shall be included in
-    all copies or substantial portions of the Software.
-  
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-  SOFTWARE.
-  
+
+  The MIT License (MIT)
+
+  Copyright © 2017-2021 Jordan Irwin (AntumDeluge)
+
+	See: LICENSE.txt
 --]]
 
 
 local addLightItems = function(mod, itemlist)
 	if core.get_modpath(mod) then
-		for I in pairs(itemlist) do
-			walking_light.addLightItem(mod .. ':' .. itemlist[I])
+		for _, i in ipairs(itemlist) do
+			walking_light.addLightItem(mod .. ":" .. i)
 		end
 	end
 end
 
 
 -- Illuminate glow_glass & super_glow_glass
-addLightItems('moreblocks', {
-	'glow_glass', 'super_glow_glass',
+addLightItems("moreblocks", {
+	"glow_glass", "super_glow_glass",
 })
 
 
 -- Illuminate homedecor candles
-addLightItems('homedecor', {
-	'candle', 'candle_thin', 'candlestick_brass',
-	'candlestick_wrought_iron',
+addLightItems("homedecor", {
+	"candle", "candle_thin", "candlestick_brass",
+	"candlestick_wrought_iron",
 })
 
 
 -- Illuminate ethereal:candle
-addLightItems('ethereal', {
-		'candle',
+addLightItems("ethereal", {
+		"candle",
 })
-
---[[ DEBUG
-local light_items = walking_light.getLightItems()
-for I in pairs(light_items) do
-	core.log('action', '[walking_light] Light item: \"' .. light_items[I] .. '\"')
-end
---]]
