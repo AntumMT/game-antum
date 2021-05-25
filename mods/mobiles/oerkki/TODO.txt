@@ -1,0 +1,4 @@
+
+TODO:
+- add localization support
+- use settings to set lifetime, spawn interval, & spawn chance

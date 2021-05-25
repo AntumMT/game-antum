@@ -96,7 +96,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [ghost][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [c09aacb Git][ver.cmer_ghost] *2021-05-24*
   * [kitten][mobs_animal] ([MIT][lic.mobs_kitten]) -- version: [34fac03 Git][ver.mobs_kitten] *2021-05-20*
   * [mese_monster][mobs_monster] ([MIT][lic.mese_monster]) -- version: [cd02839 Git][ver.mese_monster] *2021-05-20*
-  * [oerkki][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [70410fe Git][ver.oerkki] *2021-05-05*
+  * [oerkki][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [3ff3e42 Git][ver.cmer_oerkki] *2021-05-24*
   * [rat][mobs_rat] ([MIT][lic.mobs_rat]) -- version: [2a8d115 Git][ver.mobs_rat] *2021-05-20*
   * [sand_monster][mobs_monster] ([MIT][lic.sand_monster]) -- version: [3dd5954 Git][ver.sand_monster] *2021-05-20*
   * [shark][] ([CC0 / CC BY-SA][lic.shark]) -- version: [9e0e048 Git][ver.shark] *2021-05-19*
@@ -527,6 +527,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.cmer]: https://github.com/AntumMT/mod-cmer/tree/093d654
 [ver.cmer_chicken]: http://github.com/AntumMT/mod-cmer/tree/5f451c1
 [ver.cmer_ghost]: https://github.com/AntumMT/mod-cmer/tree/b350486
+[ver.cmer_oerkki]: https://github.com/AntumMT/mod-cmer/tree/3ff3e42
 [ver.cmer_skeleton]: https://github.com/AntumMT/mod-skeleton/tree/466c9a6
 [ver.cmer_spider]: https://github.com/AntumMT/mod-spider/tree/d1a9a82
 [ver.cmer_zombie]: https://github.com/AntumMT/mod-cmer/tree/5b84737
@@ -595,7 +596,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.mywoodslopes]: https://github.com/minetest-mods/mywoodslopes/tree/3a1b531
 [ver.nether]: https://github.com/minetest-mods/nether/tree/v3
 [ver.no_fall_damage]: https://repo.or.cz/minetest_no_fall_damage.git/shortlog/refs/tags/1.0.0
-[ver.oerkki]: https://github.com/AntumMT/mod-cmer/tree/70410fe
 [ver.override]: https://github.com/AntumMT/mod-override/tree/e6dda7a
 [ver.painting]: https://github.com/minetest-mods/painting/tree/8961849
 [ver.pipeworks]: https://gitlab.com/VanessaE/pipeworks/tree/2670fd8
