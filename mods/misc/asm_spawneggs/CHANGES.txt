@@ -1,4 +1,8 @@
 
+1.2
+- Added method to retrieve registered egg by entity name.
+
+
 1.1
 - Egg names are titleized & underscores are replaced with space.
 

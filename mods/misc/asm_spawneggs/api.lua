@@ -29,6 +29,18 @@
 --  @module api.lua
 
 
+local registered_eggs = {}
+
+--- Retrieves egg that spawns specified entity.
+--
+--  @function asm.getEgg
+--  @tparam string entity Entity name spawned by egg.
+--  @treturn string Egg name or `nil`.
+function asm.getEgg(entity)
+	return registered_eggs[entity]
+end
+
+
 --- Adds a craft recipe for an egg.
 --
 --  Alias: *asm.addEggRecipe*
@@ -83,7 +95,9 @@ asm.registerEgg = function(def)
 		title = formatTitle(def.name)
 	end
 
-	core.register_craftitem(":spawneggs:" .. def.name:lower(), {
+	local egg_name = "spawneggs:" .. def.name:lower()
+
+	core.register_craftitem(":" .. egg_name, {
 		description = title,
 		inventory_image = img,
 
@@ -105,6 +119,9 @@ asm.registerEgg = function(def)
 			end
 		end
 	})
+
+	-- store registration
+	registered_eggs[def.spawn] = egg_name
 
 	if def.ingredients then
 		asm.registerEggRecipe(def.name:lower(), def.ingredients)
