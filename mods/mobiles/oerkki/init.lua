@@ -31,7 +31,7 @@ local def = {
 		can_burn = true,
 		can_panic = true,
 		has_falldamage = true,
-		has_kockback = true,
+		has_knockback = true,
 		sneaky = true,
 		hostile = true,
 	},
