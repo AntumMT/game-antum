@@ -55,7 +55,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [sfinv_buttons][] ([MIT][lic.mit]) -- version [1.1.0 (ebb1f7c Git)][ver.sfinv_buttons] *2021-01-14*
 * libs/
   * [biome_lib][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2021-04-16-2][ver.biome_lib]
-  * [cmer][creatures] ([zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [d426f61 Git][ver.cmer] *2021-05-24*
+  * [cmer][creatures] ([zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [1000562 Git][ver.cmer] *2021-05-24*
   * [mobkit][] ([MIT][lic.mobkit]) -- version: [ddea141 Git][ver.mobkit] *2021-02-01*
   * [mobs_redo][] ([MIT][lic.mobs_redo] / [CC BY][lic.ccby3.0] / [CC0][lic.cc0]) -- version: [f6e16a5 Git][ver.mobs_redo] *2021-04-11*
   * [signs_lib][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2021-03-04-2][ver.signs_lib]
@@ -521,7 +521,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.chatlog]: https://github.com/AntumMT/mod-chatlog/tree/v1.0
 [ver.christmas]: https://github.com/TheZenKitteh/minetest-christmas/tree/d3bd872
 [ver.cleaner]: https://github.com/AntumMT/mod-cleaner/tree/e8359d8
-[ver.cmer]: https://github.com/AntumMT/mod-cmer/tree/d426f61
+[ver.cmer]: https://github.com/AntumMT/mod-cmer/tree/1000562
 [ver.cmer_chicken]: http://github.com/AntumMT/mod-cmer/tree/d2ddf22
 [ver.cmer_ghost]: https://github.com/AntumMT/mod-cmer/tree/1ace22c
 [ver.cmer_oerkki]: https://github.com/AntumMT/mod-cmer/tree/6e043e9

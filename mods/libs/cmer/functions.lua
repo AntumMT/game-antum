@@ -325,7 +325,45 @@ cmer.on_death = function(self, killer)
 	end
 end
 
+
+local pick_up_items = {
+	["mobs:lasso"] = true,
+}
+
 cmer.on_rightclick = function(self, clicker)
+	if pick_up_items[clicker:get_wielded_item():get_name()] then
+		-- spawneggs required for picking up
+		if not core.global_exists("asm") then return end
+
+		local pname = clicker:get_player_name()
+		local mname = "entity"
+		if self.nametag then
+			mname = self.nametag:lower()
+		end
+
+		local egg = asm.getEgg(self.name)
+		if not egg then
+			core.chat_send_player(pname, "This " .. mname .. " cannot be picked up.")
+			return
+		end
+
+		if not self.owner then
+			core.chat_send_player(pname, "You cannot pick up a wild " .. mname .. ".")
+		elseif pname ~= self.owner then
+			core.chat_send_player(pname, "You cannot pick up this " .. mname
+				.. " owned by " .. self.owner .. ".")
+		else
+			local stack = ItemStack(egg)
+			local pinv = clicker:get_inventory()
+			if not pinv:room_for_item("main", stack) then
+				core.chat_send_player(pname, "You do not have room in your inventory.")
+				return
+			end
+
+			self.object:remove()
+			pinv:add_item("main", stack)
+		end
+	end
 end
 
 cmer.on_step = function(self, dtime)
