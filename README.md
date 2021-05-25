@@ -93,7 +93,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [dirt_monster][mobs_monster] ([MIT][lic.dirt_monster] -- version: [40c48e0 Git][ver.dirt_monster] *2021-05-20*
   * [dungeon_master][mobs_monster] ([MIT][lic.dungeon_master] -- version: [00c890f Git][ver.dungeon_master] *2021-05-20*
   * [folks][] ([GPL][lic.gpl3.0]) -- version: [0.2.0][ver.folks] *2021-02-23*
-  * [ghost][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [c09aacb Git][ver.ghost] *2021-05-19*
+  * [ghost][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [c09aacb Git][ver.cmer_ghost] *2021-05-24*
   * [kitten][mobs_animal] ([MIT][lic.mobs_kitten]) -- version: [34fac03 Git][ver.mobs_kitten] *2021-05-20*
   * [mese_monster][mobs_monster] ([MIT][lic.mese_monster]) -- version: [cd02839 Git][ver.mese_monster] *2021-05-20*
   * [oerkki][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [70410fe Git][ver.oerkki] *2021-05-05*
@@ -526,6 +526,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.cleaner]: https://github.com/AntumMT/mod-cleaner/tree/e8359d8
 [ver.cmer]: https://github.com/AntumMT/mod-cmer/tree/093d654
 [ver.cmer_chicken]: http://github.com/AntumMT/mod-cmer/tree/5f451c1
+[ver.cmer_ghost]: https://github.com/AntumMT/mod-cmer/tree/b350486
 [ver.cmer_skeleton]: https://github.com/AntumMT/mod-skeleton/tree/466c9a6
 [ver.cmer_spider]: https://github.com/AntumMT/mod-spider/tree/d1a9a82
 [ver.cmer_zombie]: https://github.com/AntumMT/mod-cmer/tree/5b84737
@@ -549,7 +550,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.fort_spikes]: https://github.com/xeranas/fort_spikes/tree/3b98b46
 [ver.gems_encrustable]: https://github.com/wowiamdiamonds/gems/tree/81d513d
 [ver.gems_tools]: https://github.com/captainLAD/gems/tree/b375432
-[ver.ghost]: https://github.com/AntumMT/mod-cmer/tree/c09aacb
 [ver.glass]: https://github.com/AntumMT/mod-glass/releases/tag/v1.0
 [ver.glow]: https://github.com/bdjnk/glow/tree/4c015a0
 [ver.hbarmor]: http://repo.or.cz/minetest_hbarmor.git/tree/93d994c
