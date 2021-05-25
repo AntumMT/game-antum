@@ -1901,10 +1901,20 @@ coloredwood_enable_stairsplus = true
 
 # *** cmer ***
 
-### Enable particles.
-#     type:    bool
-#     default: false
-#creatures_enable_particles = false
+## Enable particles.
+#    type:    bool
+#    default: false
+#mobs.particles = false
+
+## Displays nametags above mobs.
+#    type:    bool
+#    default: false
+#mobs.nametags = false
+
+## Determines if owned entities can be killed by non-owners.
+#    type:    bool
+#    default: false
+#mobs.grief_owned = false
 
 
 # *** chicken ***

@@ -6,13 +6,6 @@
 --  @module settings.lua
 
 
---- Enables particles when swimming.
---
---  @setting creatures_enable_particles
---  @settype bool
---  @default false
-cmer.enable_particles = core.settings:get_bool("creatures_enable_particles", false)
-
 --- Disables attacking players.
 --
 --  @setting only_peaceful_mobs
@@ -38,16 +31,26 @@ cmer.enable_damage = core.settings:get_bool("enable_damage", false)
 --  @default false
 cmer.creative = core.settings:get_bool("creative_mode", false)
 
---- Displays nametags above mobs.
+
+-- mobs specific settings
+
+--- Enables particles when swimming.
 --
---  @setting mobs_nametags
+--  @setting mobs.particles
 --  @settype bool
 --  @default false
-cmer.nametags = core.settings:get_bool("mobs_nametags", false)
+cmer.particles = core.settings:get_bool("mobs.particles", false)
+
+--- Displays nametags above mobs.
+--
+--  @setting mobs.nametags
+--  @settype bool
+--  @default false
+cmer.nametags = core.settings:get_bool("mobs.nametags", false)
 
 --- Determines if owned entities can be killed by non-owners.
 --
---  @setting mobs_griefing
+--  @setting mobs.grief_owned
 --  @settype bool
 --  @default false
-cmer.griefing = core.settings:get_bool("mobs_griefing", false)
+cmer.grief_owned = core.settings:get_bool("mobs.grief_owned", false)

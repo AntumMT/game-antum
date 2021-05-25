@@ -243,7 +243,7 @@ end
 local function spawnParticles(...)
 end
 
-if cmer.enable_particles then
+if cmer.particles then
 	spawnParticles = function(pos, velocity, texture_str)
 		local vel = vector.multiply(velocity, 0.5)
 		vel.y = 0
@@ -276,7 +276,7 @@ cmer.on_punch = function(self, puncher, tflp, tc, dir)
 		return
 	end
 
-	if self.owner and puncher:is_player() and not cmer.griefing then
+	if self.owner and puncher:is_player() and not cmer.grief_owned then
 		local pname = puncher:get_player_name()
 		if pname ~= self.owner then
 			if self.nametag then

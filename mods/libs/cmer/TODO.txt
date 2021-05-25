@@ -9,6 +9,7 @@ TODO:
 	- mobs_spawn_protected
 	- remove_far_mobs
 	- mobs_drop_items
+	- mobs_griefing
 	- mob_chance_multiplier
 	- enable_peaceful_player
 - add health bars
