@@ -62,7 +62,8 @@ if core.global_exists("ethereal") then
 end
 
 local shark_def = {
-	name = "creatures:shark",
+	name = ":creatures:shark",
+	nametag = creatures.feature_nametags and S("Shark") or nil,
 	stats = {
 		hp = 15, -- TODO: add setting to change
 		--hp_min = 10,
@@ -144,7 +145,7 @@ local shark_def = {
 	},
 }
 
-cmer.register_mob(shark_def)
+creatures.register_mob(shark_def)
 
 if core.global_exists("asm") then
 	asm.addEgg({

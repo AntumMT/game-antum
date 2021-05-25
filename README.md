@@ -99,7 +99,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [oerkki][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [3ff3e42 Git][ver.cmer_oerkki] *2021-05-24*
   * [rat][mobs_rat] ([MIT][lic.mobs_rat]) -- version: [2a8d115 Git][ver.mobs_rat] *2021-05-20*
   * [sand_monster][mobs_monster] ([MIT][lic.sand_monster]) -- version: [3dd5954 Git][ver.sand_monster] *2021-05-20*
-  * [shark][] ([CC0 / CC BY-SA][lic.shark]) -- version: [9e0e048 Git][ver.shark] *2021-05-19*
+  * [shark][] ([CC0 / CC BY-SA][lic.cmer_shark]) -- version: [a39634a Git][ver.cmer_shark] *2021-05-24*
   * [sheep][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [ff39b4a Git][ver.sheep] *2021-05-13*
   * [skeleton][cmer_skeleton] ([MIT][lic.cmer_skeleton]) -- version: [466c9a6 Git][ver.cmer_skeleton] *2021-05-24*
   * [sneeker][] ([MIT][lic.sneeker]) -- version: [1.0][ver.sneeker] *2021-05-08*
@@ -406,6 +406,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.castle]: mods/modpacks/castle/LICENSE
 [lic.christmas]: mods/buildings/christmas/LICENSE.txt
 [lic.cleaner]: mods/admin/cleaner/LICENSE.txt
+[lic.cmer_shark]: mods/mobiles/shark/LICENSE.txt
 [lic.cmer_skeleton]: mods/mobiles/skeleton/LICENSE.txt
 [lic.cmer_spider]: mods/mobiles/spider/LICENSE
 [lic.craftguide]: mods/crafting/craftguide/license.txt
@@ -450,7 +451,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.rainbow_ore]: mods/materials/rainbow_ore/README.md
 [lic.sand_monster]: mods/mobiles/sand_monster/license.txt
 [lic.server_shop]: mods/admin/server_shop/LICENSE.txt
-[lic.shark]: mods/mobiles/shark/LICENSE.txt
 [lic.signs_lib]: mods/signs/signs_lib/copyright.txt
 [lic.slingshot]: mods/equipment/slingshot/LICENSE.txt
 [lic.sneeker]: mods/mobiles/sneeker/LICENSE.txt
@@ -528,6 +528,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.cmer_chicken]: http://github.com/AntumMT/mod-cmer/tree/5f451c1
 [ver.cmer_ghost]: https://github.com/AntumMT/mod-cmer/tree/b350486
 [ver.cmer_oerkki]: https://github.com/AntumMT/mod-cmer/tree/3ff3e42
+[ver.cmer_shark]: https://github.com/AntumMT/mod-shark/tree/a39634a
 [ver.cmer_skeleton]: https://github.com/AntumMT/mod-skeleton/tree/466c9a6
 [ver.cmer_spider]: https://github.com/AntumMT/mod-spider/tree/d1a9a82
 [ver.cmer_zombie]: https://github.com/AntumMT/mod-cmer/tree/5b84737
@@ -607,7 +608,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.sand_monster]: https://github.com/AntumMT/mod-mob_sand_monster/tree/3dd5954
 [ver.server_shop]: https://github.com/AntumMT/mod-server_shop/tree/06f6691
 [ver.sfinv_buttons]: http://repo.or.cz/minetest_sfinv_buttons.git/tree/ebb1f7c
-[ver.shark]: https://github.com/AntumMT/mod-shark/tree/9e0e048
 [ver.sheep]: https://github.com/AntumMT/mod-cmer/tree/ff39b4a
 [ver.signs_lib]: https://gitlab.com/VanessaE/signs_lib/tree/2021-03-04-2
 [ver.simple_protection]: https://github.com/SmallJoker/simple_protection/tree/3630fe9
