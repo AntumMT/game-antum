@@ -36,7 +36,7 @@ local def = {
 		can_burn = true,
 		can_fly = true,
 		has_falldamage = false,
-		has_kockback = true,
+		has_knockback = true,
 		light = {min = 0, max = 8},
 		hostile = true,
 	},

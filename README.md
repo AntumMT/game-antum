@@ -93,7 +93,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [dirt_monster][mobs_monster] ([MIT][lic.dirt_monster] -- version: [40c48e0 Git][ver.dirt_monster] *2021-05-20*
   * [dungeon_master][mobs_monster] ([MIT][lic.dungeon_master] -- version: [00c890f Git][ver.dungeon_master] *2021-05-20*
   * [folks][] ([GPL][lic.gpl3.0]) -- version: [0.2.0][ver.folks] *2021-02-23*
-  * [ghost][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [c09aacb Git][ver.cmer_ghost] *2021-05-24*
+  * [ghost][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [1ace22c Git][ver.cmer_ghost] *2021-05-24*
   * [kitten][mobs_animal] ([MIT][lic.mobs_kitten]) -- version: [34fac03 Git][ver.mobs_kitten] *2021-05-20*
   * [mese_monster][mobs_monster] ([MIT][lic.mese_monster]) -- version: [cd02839 Git][ver.mese_monster] *2021-05-20*
   * [oerkki][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [3ff3e42 Git][ver.cmer_oerkki] *2021-05-24*
@@ -526,7 +526,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.cleaner]: https://github.com/AntumMT/mod-cleaner/tree/e8359d8
 [ver.cmer]: https://github.com/AntumMT/mod-cmer/tree/093d654
 [ver.cmer_chicken]: http://github.com/AntumMT/mod-cmer/tree/d2ddf22
-[ver.cmer_ghost]: https://github.com/AntumMT/mod-cmer/tree/b350486
+[ver.cmer_ghost]: https://github.com/AntumMT/mod-cmer/tree/1ace22c
 [ver.cmer_oerkki]: https://github.com/AntumMT/mod-cmer/tree/3ff3e42
 [ver.cmer_shark]: https://github.com/AntumMT/mod-shark/tree/a39634a
 [ver.cmer_sheep]: https://github.com/AntumMT/mod-cmer/tree/a981ab2
