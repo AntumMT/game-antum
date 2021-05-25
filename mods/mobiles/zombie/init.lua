@@ -44,7 +44,7 @@ local def = {
 		can_swim = true,
 		can_burn = true,
 		has_falldamage = true,
-		has_kockback = true,
+		has_knockback = true,
 		light = {min = 0, max = 8},
 		hostile = true,
 	},

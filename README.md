@@ -108,7 +108,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [tree_monster][mobs_monster] ([MIT][lic.tree_monster]) -- version: [f2977ff Git][ver.tree_monster] *2021-05-20*
   * velociraptor ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- forked from *mobs_farlands* (part of [farlands][] sub-game)
   * [whinny][] ([MIT][lic.whinny]) -- version: [1.2][ver.whinny] *2021-05-22*
-  * [zombie][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [5b84737 Git][ver.cmer_zombie] *2021-05-24*
+  * [zombie][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [5599035 Git][ver.cmer_zombie] *2021-05-24*
 * player/action/
   * [hbsprint][] ([LGPL][lic.lgpl2.1]) -- version: [f566d0f Git][ver.hbsprint] *2021-02-18*
   * [player_monoids][] ([Apache][lic.player_monoids]) -- version: [ed11a73 Git][ver.player_monoids] *2019-10-17*
@@ -532,7 +532,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.cmer_sheep]: https://github.com/AntumMT/mod-cmer/tree/fdac098
 [ver.cmer_skeleton]: https://github.com/AntumMT/mod-skeleton/tree/df839f1
 [ver.cmer_spider]: https://github.com/AntumMT/mod-spider/tree/dd31f74
-[ver.cmer_zombie]: https://github.com/AntumMT/mod-cmer/tree/5b84737
+[ver.cmer_zombie]: https://github.com/AntumMT/mod-cmer/tree/5599035
 [ver.coloredwood]: https://gitlab.com/VanessaE/coloredwood/tags/2021-01-30
 [ver.compassgps]: https://github.com/Kilarin/compassgps/tree/567b95f
 [ver.crafting_bench]: https://github.com/minetest-mods/crafting_bench/tree/69083ed
