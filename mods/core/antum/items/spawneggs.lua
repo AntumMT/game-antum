@@ -1,14 +1,22 @@
 
 if core.global_exists("asm") then
+	local kitty_image = "spawneggs_cat.png"
+	if core.registered_entities["mobs:kitten"] then
+		kitty_image = "mobs_kitten_inv.png"
+	end
+
 	if core.registered_entities["mobs:kitten"] then
 		asm.addEgg({
-			name = "cat",
-			inventory_image = "spawneggs_cat.png",
+			name = "kitten",
+			title = "Kitten",
+			inventory_image = kitty_image,
 			spawn = "mobs:kitten",
 		})
+		core.register_alias("mobs:kitten", "spawneggs:kitten")
+		core.register_alias("spawneggs:cat", "spawneggs:kitten")
 
 		if core.registered_items["farming:string"] then
-			asm.addEggRecipe("cat", "farming:string")
+			asm.addEggRecipe("kitten", "farming:string")
 		end
 	end
 

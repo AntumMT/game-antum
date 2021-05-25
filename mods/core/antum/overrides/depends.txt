@@ -38,5 +38,6 @@ wool?
 biofuel?
 
 creatures?
+cmer_sheep?
 mobs?
-sheep?
+mobs_kitten?
