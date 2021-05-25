@@ -1,0 +1,4 @@
+
+TODO:
+- add localization support
+- add harder zombie

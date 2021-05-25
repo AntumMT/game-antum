@@ -1,0 +1,18 @@
+
+# Entity lifespan.
+#
+# type:    int
+# default: 300 (5 minutes
+zombie.lifetime (Lifespan) int 300 1
+
+# Spawn interval in seconds.
+#
+# type:    int
+# default: 36
+zombie.spawn_interval (Spawn interval) int 36 1
+
+# Chance of spawn at interval.
+#
+# type:    int
+# default: 7600
+zombie.spawn_chance (Spawn chance) int 7600 1

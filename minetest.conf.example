@@ -2096,6 +2096,24 @@ coloredwood_enable_stairsplus = true
 #whinny.enable_mouse_ctrl = true
 
 
+# *** zombie ***
+
+## Entity lifespan.
+#    type:    int
+#    default: 300 (5 minutes)
+#zombie.lifetime = 300
+
+## Spawn interval in seconds.
+#    type:    int
+#    default: 36
+#zombie.spawn_interval = 36
+
+## Chance of spawn at interval.
+#    type:    int
+#    default: 7600
+#zombie.spawn_chance = 7600
+
+
 
 ###############
 ## PIPEWORKS ##
