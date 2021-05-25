@@ -276,6 +276,20 @@ cmer.on_punch = function(self, puncher, tflp, tc, dir)
 		return
 	end
 
+	if self.owner and puncher:is_player() and not cmer.griefing then
+		local pname = puncher:get_player_name()
+		if pname ~= self.owner then
+			if self.nametag then
+				core.chat_send_player(pname, "You cannot kill this " .. self.nametag:lower()
+					.. " owned by " .. self.owner .. ".")
+			else
+				core.chat_send_player(pname, "You cannot kill entities owned by " .. self.owner .. ".")
+			end
+
+			return
+		end
+	end
+
 	local me = self.object
 	local mypos = me:get_pos()
 
@@ -720,10 +734,10 @@ end
 cmer.get_staticdata = function(self)
 	return {
 		nametag = self.nametag,
+		owner = self.owner,
 		hp = self.object:get_hp(),
 		mode = self.mode,
 		tamed = self.tamed,
-		owner = self.owner,
 		modetimer = self.modetimer,
 		lifetimer = self.lifetimer,
 		soundtimer = self.soundtimer,

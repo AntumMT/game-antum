@@ -11,6 +11,7 @@ revived-1.1
 - 'has_kockback' deprecated, use 'has_knockback'
 - does not automatically prepend colon (:) when registering a mob name
 - option to set nametag
+- griefing is disabled unless 'mobs_griefing' setting enabled
 
 
 revived-1.0

@@ -39,7 +39,6 @@ local function translate_def(def)
 		visual = "mesh",
 		stepheight = 0.6, -- ensure we get over slabs/stairs
 		automatic_face_movement_dir = def.model.rotation or 0.0,
-		ownable = def.ownable,
 
 		mesh = def.model.mesh,
 		textures = def.model.textures,
@@ -49,14 +48,15 @@ local function translate_def(def)
 		collide_with_objects = def.model.collide_with_objects or true,
 		makes_footstep_sound = true,
 
+		nametag = cmer.nametags and def.nametag or nil,
+		ownable = def.ownable,
+
 		stats = def.stats,
 		model = def.model,
 		sounds = def.sounds,
 		combat = def.combat,
 		modes = {},
 		drops = def.drops,
-
-		nametag = cmer.enable_nametags and def.nametag or nil,
 	}
 
 	-- Tanslate modes to better accessable format
@@ -862,7 +862,7 @@ end
 --  @tparam string old_mob Name of mob to be replaced. E.g. "creatures:oerrki"
 --  @tparam string new_mob Name of mob that will replace instances old one. E.g. "creatures:oerkki"
 --  @treturn bool `true` if successful.
-function cmer.register_alias(old_mob, new_mob) -- returns true if sucessfull
+function cmer.register_alias(old_mob, new_mob)
 	local def = core.registered_entities[new_mob]
 	if not def then
 		throw_error("No valid definition for given.")

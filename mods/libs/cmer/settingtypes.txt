@@ -5,4 +5,7 @@ only_peaceful_mobs (Peaceful only) bool false
 creatures_enable_particles (Enable particles) bool false
 
 # Displays nametags above mobs.
-enable_mob_nametags (Enable mob nametags) bool false
+mobs_nametags (Enable mob nametags) bool false
+
+# Determines if owned entities can be killed by non-owners.
+mobs_griefing (Players can kill owned) bool false
