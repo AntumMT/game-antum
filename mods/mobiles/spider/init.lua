@@ -18,8 +18,9 @@ local spawn_nodes = {
 }
 
 
-cmer.register_mob({
-	name = "creatures:spider",
+creatures.register_mob({
+	name = ":creatures:spider",
+	nametag = creatures.feature_nametags and "Spider" or nil,
 	stats = {
 		hp = 30,
 		hostile = true,
