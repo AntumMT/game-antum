@@ -24,7 +24,14 @@
 --  @module register.lua
 
 
-local allow_hostile = core.settings:get_bool("only_peaceful_mobs") ~= true
+local function translate_name(name)
+	if name:find(":") == 1 then
+		name = name:sub(2)
+	end
+
+	return name
+end
+
 
 local function translate_def(def)
 	local new_def = {
@@ -37,7 +44,7 @@ local function translate_def(def)
 		mesh = def.model.mesh,
 		textures = def.model.textures,
 		collisionbox = def.model.collisionbox or {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5},
-		visual_size = def.model.scale or {x = 1, y = 1},
+		visual_size = def.model.scale or {x=1, y=1},
 		backface_culling = def.model.backface_culling or false,
 		collide_with_objects = def.model.collide_with_objects or true,
 		makes_footstep_sound = true,
@@ -48,10 +55,12 @@ local function translate_def(def)
 		combat = def.combat,
 		modes = {},
 		drops = def.drops,
+
+		nametag = cmer.enable_nametags and def.nametag or nil,
 	}
 
 	-- Tanslate modes to better accessable format
-	for mn,def in pairs(def.modes) do
+	for mn, def in pairs(def.modes) do
 		local name = tostring(mn)
 		if name ~= "update_time" then
 			new_def.modes[name] = def
@@ -108,7 +117,7 @@ local function translate_def(def)
 		if def.get_staticdata then
 			local data = def.get_staticdata(self)
 			if data and type(data) == "table" then
-				for s,w in pairs(data) do
+				for s, w in pairs(data) do
 					main_tab[s] = w
 				end
 			end
@@ -118,16 +127,22 @@ local function translate_def(def)
 		return core.serialize(main_tab)
 	end
 
-	new_def.on_activate = function(self, staticdata)
+	new_def.on_activate = function(self, staticdata, dtime_s)
 
 		-- Add everything we need as basis for the engine
-		self.mob_name = def.name
+		self.mob_name = translate_name(def.name)
 		self.hp = def.stats.hp
 		self.hostile = def.stats.hostile
 		self.mode = ""
 		self.stunned = false -- if knocked back or hit do nothing else
 
-		self.has_kockback = def.stats.has_kockback
+		if def.stats.has_kockback or def.stats.has_kockback == false then
+			cmer.log("warning",
+				def.name
+				.. ": \"def.stats.has_kockback\" is deprecated, please use \"def.stats.has_knockback\"")
+		end
+
+		self.has_knockback = def.stats.has_knockback or def.stats.has_kockback -- backward compat
 		self.has_falldamage = def.stats.has_falldamage
 		self.can_swim = def.stats.can_swim
 		self.can_fly = def.stats.can_fly
@@ -146,10 +161,10 @@ local function translate_def(def)
 
 		-- Timers
 		self.lifetimer = 0
-		self.modetimer = math.random()--0
+		self.modetimer = math.random() -- 0
 		self.soundtimer = math.random()
 		self.nodetimer = 2 -- ensure we get the first step
-		self.yawtimer = math.random() * 2--0
+		self.yawtimer = math.random() * 2 -- 0
 		self.followtimer = 0
 		if self.can_swim then
 			self.swimtimer = 2 -- ensure we get the first step
@@ -168,11 +183,10 @@ local function translate_def(def)
 
 		-- Other things
 
-
 		if staticdata then
 			local tab = core.deserialize(staticdata)
 			if tab and type(tab) == "table" then
-				for s,w in pairs(tab) do
+				for s, w in pairs(tab) do
 					self[tostring(s)] = w
 				end
 			end
@@ -196,25 +210,44 @@ local function translate_def(def)
 
 		self.object:set_hp(self.hp)
 
-		if not core.settings:get_bool("enable_damage") then
+		if not cmer.enable_damage then
 			self.hostile = false
 		end
 
-		-- immortal is needed to disable clientside smokepuff shit
-		self.object:set_armor_groups({fleshy = 100, immortal = 1})
+		-- immortal is needed to disable clientside smokepuff
+		self.object:set_armor_groups({fleshy=100, immortal=1})
+
+		if self.nametag then
+			local nt_attrib = self.object:get_nametag_attributes()
+			if self.hostile then
+				nt_attrib.color = {a=255, r=255, g=0, b=0}
+			else
+				nt_attrib.color = {a=255, r=0, g=255, b=0}
+			end
+
+			self.object:set_nametag_attributes(nt_attrib)
+		end
 
 		-- call custom on_activate if defined
 		if def.on_activate then
-			def.on_activate(self, staticdata)
+			def.on_activate(self, staticdata, dtime_s)
 		end
 	end
 
-	new_def.on_punch = function(self, puncher, time_from_last_punch, tool_capabilities, dir)
-		if def.on_punch and def.on_punch(self, puncher, time_from_last_punch, tool_capabilities, dir) == true then
+	new_def.on_punch = function(self, puncher, tflp, tc, dir, damage)
+		if def.on_punch and def.on_punch(self, puncher, tflp, tc, dir, damage) == true then
 			return
 		end
 
-		cmer.on_punch(self, puncher, time_from_last_punch, tool_capabilities, dir)
+		cmer.on_punch(self, puncher, tflp, tc, dir, damage)
+	end
+
+	new_def.on_death = function(self, killer)
+		if def.on_death and def.on_death(self, killer) == true then
+			return
+		end
+
+		cmer.on_death(self, killer)
 	end
 
 	new_def.on_rightclick = function(self, clicker)
@@ -250,10 +283,10 @@ function cmer.register_mob(def) -- returns true if sucessfull
 
 	local mob_def = translate_def(def)
 
-	core.register_entity(":" .. def.name, mob_def)
+	core.register_entity(def.name, mob_def)
 
 	-- register spawn
-	if def.spawning and not (def.stats.hostile and not allow_hostile) then
+	if def.spawning and not (def.stats.hostile and not cmer.allow_hostile) then
 		local spawn_def = def.spawning
 		spawn_def.mob_name = def.name
 		spawn_def.mob_size = def.model.collisionbox
@@ -278,7 +311,8 @@ end
 --
 --  @table CreatureDef
 --  @tfield string name E.g. "creatures:sheep".
---  @tfield bool ownable Flag for defining if entity is ownable by players (default: *false*).
+--  @tfield[opt] string nametag String to be displayed in entity's nametag.
+--  @tfield[opt] bool ownable Flag for defining if entity is ownable by players (default: *false*).
 --  @tfield StatsDef stats Stats definitions.
 --  @tfield ModeDef modes Entity bahavior defintions.
 --  @tfield ModelDef model Model definitions.
@@ -286,10 +320,11 @@ end
 --  @tfield[opt] table drops List of item `DropDef`. Can also be a function. receives "self" reference.
 --  @tfield[opt] CombatDef combat Specifies behavior of hostile mobs in "attack" mode.
 --  @tfield[opt] SpawnDef spawning Defines spawning in world.
---  @tfield callback on_rightclick see: `CreatureDef.on_rightclick`
---  @tfield callback on_punch see: `CreatureDef.on_punch`
---  @tfield callback on_step see: `CreatureDef.on_step`
 --  @tfield callback on_activate see: `CreatureDef.on_activate`
+--  @tfield callback on_step see: `CreatureDef.on_step`
+--  @tfield callback on_punch see: `CreatureDef.on_punch`
+--  @tfield callback on_rightclick see: `CreatureDef.on_rightclick`
+--  @tfield callback on_death see: `CreatureDef.on_death`
 --  @tfield callback get_staticdata see: `CreatureDef.get_staticdata`
 
 
@@ -310,22 +345,24 @@ end
 --  @tparam[opt] bool can_burn Takes damage of lava (default: `false`).
 --  @tparam[opt] bool can_panic Runs fast around when hit (requires mode "walk") (default: `false`).
 --  @tparam[opt] bool has_falldamage Deals damage if falling more than 3 blocks (default: `false`).
---  @tparam[opt] bool has_kockback Get knocked back when hit (default: `false`).
+--  @tparam[opt] bool has_knockback Get knocked back when hit (default: `false`).
 --  @tparam[opt] bool sneaky Disables step sounds if `true` (default: `false`).
 --  @tparam[opt] table light Which light level will burn creature (requires can_burn = true).
 --
 --  Example:
---      light = {min=10, max=15}
+--
+--    light = {min=10, max=15}
 
 --- Modes definition table.
 --
 --  Entity behavior definition. Behavior types are ***idle***, ***walk***, ***attack***, ***follow***, ***eat***, ***death***, & ***panic***. The sum of all modes must be 1.0.
 --
 --  Example:
---      modes = {
---        idle = {chance=0.3,},
---        walk = {chance=0.7, moving_speed=1,},
---      }
+--
+--    modes = {
+--      idle = {chance=0.3,},
+--      walk = {chance=0.7, moving_speed=1,},
+--    }
 --
 --  @table ModeDef
 --  @tfield float chance Number between 0.0 and 1.0 (***NOTE:** sum of all modes MUST be 1.0*). If chance is 0 then mode is not chosen automatically.
@@ -342,20 +379,23 @@ end
 --  @table ModelDef
 --  @tfield string mesh Mesh name (see Minetest Documentation for supported filetypes).
 --  @tfield table textures Table of textures (see Minetest Documentation).
---  @tfield NodeBox collisionbox Defines mesh collision box (see Minetest Documentation).
+--  @tfield[opt] NodeBox collisionbox Defines mesh collision box (see Minetest Documentation).
+--  @tfield[opt] table scale Sets visual scale (default: {x=1, y=1}).
 --  @tfield[opt] float rotation Sets rotation offset when moving (default: 0.0).
 --  @tfield[opt] bool backface_culling Set to `true` to enable backface culling.
 --  @tfield[opt] table animations Table of `AnimationDef` used if defined.
+--  @tfield[opt] bool collide_with_objects Collide with other objects (default: `true`).
 
 --- Animations defiintion table.
 --
 --  Animations coincide with modes. E.g. ***idle***, ***walk***, etc.
 --
 --  Example:
---      animations = {
---        idle = {start=25, stop=75, speed=15,},
---        walk = {start=75, stop=100, speed=15,},
---      }
+--
+--    animations = {
+--      idle = {start=25, stop=75, speed=15,},
+--      walk = {start=75, stop=100, speed=15,},
+--    }
 --
 --  @table AnimationDef
 --  @tfield int start Start frame.
@@ -371,14 +411,15 @@ end
 --  ***random*** is a table of `SoundDef` that will be played randomly during the modes for which they are set.
 --
 --  Example:
---      sounds = {
---        on_damage = {name="creatures_horse_neigh_02", gain=1.0},
---        on_death = {name="creatures_horse_snort_02", gain=1.0},
---        random = {
---          idle = {name="creatures_horse_snort_01", gain=1.0},
---          follow = {name="creatures_horse_neigh_01", gain=1.0, time_min=10},
---        },
---      }
+--
+--    sounds = {
+--      on_damage = {name="creatures_horse_neigh_02", gain=1.0},
+--      on_death = {name="creatures_horse_snort_02", gain=1.0},
+--      random = {
+--        idle = {name="creatures_horse_snort_01", gain=1.0},
+--        follow = {name="creatures_horse_neigh_01", gain=1.0, time_min=10},
+--      },
+--    }
 --
 --  @table SoundsDef
 --  @tparam[opt] SoundDef on_damage Sound played when entity is hit.
@@ -398,11 +439,12 @@ end
 --- Item drops definition table.
 --
 --  Example:
---      drops = {
---        {"default:wood"}, -- 1 item with 100% chance
---        {"default:wool", 1, chance=0.3}, -- 1 item with 30% chance
---        {"default:stick", {min=2, max=3}, chance=0.2}, -- between 2-3 items with 20% chance
---      }
+--
+--    drops = {
+--      {"default:wood"}, -- 1 item with 100% chance
+--      {"default:wool", 1, chance=0.3}, -- 1 item with 30% chance
+--      {"default:stick", {min=2, max=3}, chance=0.2}, -- between 2-3 items with 20% chance
+--    }
 --
 --  @table DropDef
 
@@ -413,7 +455,7 @@ end
 --  @tfield[opt] float attack_speed Time in seconds between hits (default: 1.0).
 --  @tfield float attack_radius Distance in blocks mob can reach to hit.
 --  @tfield bool search_enemy `true` to search enemies to attack.
---  @tfield int search_timer Time in seconds to search an enemy (only if none found yet).
+--  @tfield[opt] int search_timer Time in seconds to search an enemy (only if none found yet) (default: 2).
 --  @tfield int search_radius Radius in blocks within enemies are searched.
 --  @tfield string search_type What enemy is being searched (see types at `cmer.findTarget`).
 
@@ -449,44 +491,53 @@ end
 --
 --  @section callbacks
 
---- Called when mob is right-clicked.
+--- Called when mob (re-)activated.
 --
---  @function CreatureDef.on_rightclick
+--  Note: staticdata is deserialized by MOB-Engine (including custom values).
+--
+--  @function CreatureDef.on_activate
 --  @param self
---  @param clicker
+--  @tparam string staticdata Formatted string data to be deserialized.
+--  @tparam int dtime_s The time passed since the object was unloaded, which can be used for updating the entity state.
+
+--- Called each server step, after movement and collision processing.
+--
+--  @function CreatureDef.on_step
+--  @param self
+--  @tparam float dtime Usually 0.1 seconds, as per the `dedicated_server_step` setting in `minetest.conf`.
 --  @treturn bool Prevents default action when returns `true`.
 
 --- Called when mob is punched.
 --
 --  @function CreatureDef.on_punch
 --  @param self
---  @param puncher Can be `nil`.
+--  @tparam ObjectRef puncher
+--  @param time_from_last_punch Meant for disallowing spamming of clicks.
+--  @tparam table tool_capabilities See: http://minetest.gitlab.io/minetest/tools.html
+--  @param dir Unit vector of direction of punch. Always defined. Points from the puncher to the punched.
+--  @tparam int damage Damage that will be done to entity.
 --  @treturn bool Prevents default action when returns `true`.
 
---- Called each server step.
+--- Called when mob is right-clicked.
 --
---  @function CreatureDef.on_step
+--  @function CreatureDef.on_rightclick
 --  @param self
---  @param dtime
+--  @tparam ObjectRef clicker Entity that did the punching.
 --  @treturn bool Prevents default action when returns `true`.
 
---- Called when mob (re-)activated.
+--- Called when mob dies.
 --
---  Note: staticdata is deserialized by MOB-Engine (including costum values).
---
---  @function CreatureDef.on_activate
+--  @function CreatureDef.on_death
 --  @param self
---  @param staticdata
+--  @tparam ObjectRef killer (can be `nil`)
 
---- Called when mob is punched.
+--- Must return a table to save mob data (serialization is done by MOB-Engine).
 --
---  Must return a table to save mob data (serialization is done by MOB-Engine).
 --  e.g:
---  ```
+--
 --    return {
---      costum_mob_data = self.my_value,
+--      custom_mob_data = self.my_value,
 --    }
---  ```
 --
 --  @function CreatureDef.get_staticdata
 --  @param self
@@ -641,7 +692,9 @@ end
 
 
 local function makeSpawnerEntiy(mob_name, model)
-	core.register_entity(":" .. mob_name .. "_spawner_dummy", {
+	local t_name = translate_name(mob_name)
+
+	core.register_entity(mob_name .. "_spawner_dummy", {
 		hp_max = 1,
 		physical = false,
 		collide_with_objects = false,
@@ -652,7 +705,7 @@ local function makeSpawnerEntiy(mob_name, model)
 		textures = model.textures,
 		makes_footstep_sound = false,
 		automatic_rotate = math.pi * -2.9,
-		mob_name = "_" .. mob_name .. "_dummy",
+		mob_name = "_" .. t_name .. "_dummy",
 
 		on_activate = function(self)
 			self.timer = 0
@@ -667,7 +720,7 @@ local function makeSpawnerEntiy(mob_name, model)
 			 if self.timer > 30 then
 				 self.timer = 0
 				 local n = core.get_node_or_nil(self.object:get_pos())
-				 if n and n.name and n.name ~= mob_name .. "_spawner" then
+				 if n and n.name and n.name ~= t_name .. "_spawner" then
 					 self.object:remove()
 				 end
 			 end
@@ -720,7 +773,7 @@ function cmer.register_spawner(spawner_def)
 
 	makeSpawnerEntiy(spawner_def.mob_name, spawner_def.model)
 
-	core.register_node(":" .. spawner_def.mob_name .. "_spawner", {
+	core.register_node(spawner_def.mob_name .. "_spawner", {
 		description = spawner_def.description or spawner_def.mob_name .. " spawner",
 		paramtype = "light",
 		tiles = {"creatures_spawner.png"},

@@ -31,6 +31,9 @@ allow_atm_craft (Allow ATM crafting) bool true
 # Only spawn mobs that don't attack players.
 only_peaceful_mobs (Peaceful only) bool false
 
+# Displays nametags above mobs.
+enable_mob_nametags (Enable mob nametags) bool false
+
 
 [*Mounts]
 
@@ -91,6 +94,11 @@ mob_area_spawn (Mob Area Spawn) bool false
 
 # Enable peaceful player attack prevention
 enable_peaceful_player (Mobs do not attack peaceful player without reason) bool false
+
+
+[**cmer]
+
+creatures_enable_particles (Enable particles) bool false
 
 
 [**chicken]

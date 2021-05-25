@@ -1,0 +1,8 @@
+
+# Only spawn mobs that don't attack players.
+only_peaceful_mobs (Peaceful only) bool false
+
+creatures_enable_particles (Enable particles) bool false
+
+# Displays nametags above mobs.
+enable_mob_nametags (Enable mob nametags) bool false

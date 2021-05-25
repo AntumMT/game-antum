@@ -1820,10 +1820,15 @@ coloredwood_enable_stairsplus = true
 ## MOBS ##
 ##########
 
-# Only spawn mobs that don't attack players
+## Only spawn mobs that don't attack players
 #    type: bool
 #    default: false
 #only_peaceful_mobs = false
+
+## Displays nametags above mobs.
+#    type:    bool
+#    default: false
+#enable_mob_nametags = false
 
 
 # *** mobs_redo ***
@@ -1892,6 +1897,14 @@ coloredwood_enable_stairsplus = true
 #    type:    bool
 #    default: false
 #enable_peaceful_player = false
+
+
+# *** cmer ***
+
+### Enable particles.
+#     type:    bool
+#     default: false
+#creatures_enable_particles = false
 
 
 # *** chicken ***

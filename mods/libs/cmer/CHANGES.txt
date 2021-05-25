@@ -1,15 +1,16 @@
 
-1.2
-- entities whose lifetime expires do not drop items
-- default sound plays when hit (can be disabled in definition with sounds.play_default_hit = false)
-- entity's lifetime doesn't expire in modes "follow" & "panic"
-- entity's life timer is reset when attacked
-
-
 revived-1.1
 - Renamed to "cmer" to discern from other versions.
 - Removed built-in items.
 - Removed built-in spawnegg support.
+- entities whose lifetime expires do not drop items
+- default sound plays when hit (can be disabled in definition with sounds.play_default_hit = false)
+- entity's lifetime doesn't expire in modes "follow" & "panic"
+- entity's life timer is reset when attacked
+- can set custom on_death method
+- 'has_kockback' deprecated, use 'has_knockback'
+- does not automatically prepend colon (:) when registering a mob name
+- option to set nametag
 
 
 revived-1.0

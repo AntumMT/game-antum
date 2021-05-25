@@ -30,7 +30,24 @@ end
 cmer.modname = core.get_current_modname()
 cmer.modpath = core.get_modpath(cmer.modname)
 
+function cmer.log(lvl, msg)
+	if not msg then
+		msg = lvl
+		lvl = nil
+	end
+
+	msg = "[" .. cmer.modname .. "] " .. msg
+	if not lvl then
+		core.log(msg)
+	else
+		core.log(lvl, msg)
+	end
+end
+
+
 local scripts = {
+	"features",
+	"settings",
 	"common",
 	"functions",
 	"register",

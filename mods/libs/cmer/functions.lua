@@ -30,11 +30,11 @@ local function knockback(selfOrObject, dir, old_dir, strengh)
 		object = selfOrObject.object
 	end
 	local current_fmd = object:get_properties().automatic_face_movement_dir or 0
-	object:set_properties({automatic_face_movement_dir = false})
-	object:set_velocity(vector.add(old_dir, {x = dir.x * strengh, y = 3.5, z = dir.z * strengh}))
+	object:set_properties({automatic_face_movement_dir=false})
+	object:set_velocity(vector.add(old_dir, {x=dir.x * strengh, y=3.5, z=dir.z * strengh}))
 	old_dir.y = 0
 	core.after(0.4, function()
-		object:set_properties({automatic_face_movement_dir = current_fmd})
+		object:set_properties({automatic_face_movement_dir=current_fmd})
 		object:set_velocity(old_dir)
 		selfOrObject.falltimer = nil
 		if selfOrObject.stunned == true then
@@ -62,7 +62,7 @@ local hasMoved = cmer.compare_pos
 local function getDir(pos1, pos2)
 	local retval
 	if pos1 and pos2 then
-		retval = {x = pos2.x - pos1.x, y = pos2.y - pos1.y, z = pos2.z - pos1.z}
+		retval = {x=pos2.x - pos1.x, y=pos2.y - pos1.y, z=pos2.z - pos1.z}
 	end
 	return retval
 end
@@ -81,16 +81,16 @@ local findTarget = cmer.findTarget
 
 local function update_animation(obj_ref, mode, anim_def)
 	if anim_def and obj_ref then
-		obj_ref:set_animation({x = anim_def.start, y = anim_def.stop}, anim_def.speed, 0, anim_def.loop)
+		obj_ref:set_animation({x=anim_def.start, y=anim_def.stop}, anim_def.speed, 0, anim_def.loop)
 	end
 end
 
 local function update_velocity(obj_ref, dir, speed, add)
 	local velo = obj_ref:get_velocity()
 	if not dir.y then
-		dir.y = velo.y/speed
+		dir.y = velo.y / speed
 	end
-	local new_velo = {x = dir.x * speed, y = dir.y * speed or velo.y , z = dir.z * speed}
+	local new_velo = {x=dir.x * speed, y=dir.y * speed or velo.y ,z=dir.z * speed}
 	if add then
 		new_velo = vector.add(velo, new_velo)
 	end
@@ -121,14 +121,18 @@ local function killMob(me, def)
 	end
 	local pos = me:get_pos()
 	me:set_velocity(nullVec)
-	me:set_properties({collisionbox = nullVec})
+	me:set_properties({collisionbox=nullVec})
 	me:set_hp(0)
 	-- Must be non-zero otherwise mob is removed before death animation.
 	me:set_hp(1)
 
 	if def.sounds and def.sounds.on_death then
 		local death_snd = def.sounds.on_death
-		core.sound_play(death_snd.name, {pos = pos, max_hear_distance = death_snd.distance or 5, gain = death_snd.gain or 1})
+		core.sound_play(death_snd.name, {
+			pos = pos,
+			max_hear_distance = death_snd.distance or 5,
+			gain = death_snd.gain or 1,
+			})
 	end
 
 	if def.model.animations.death then
@@ -165,7 +169,7 @@ local function calcPunchDamage(obj, actual_interval, tool_caps)
 		return 0
 	end
 	local my_armor = obj:get_armor_groups() or {}
-	for group,_ in pairs(tool_caps.damage_groups) do
+	for group, _ in pairs(tool_caps.damage_groups) do
 		damage = damage + (tool_caps.damage_groups[group] or 0) * limit(actual_interval / tool_caps.full_punch_interval, 0.0, 1.0) * ((my_armor[group] or 0) / 100.0)
 	end
 	return damage or 0
@@ -178,13 +182,18 @@ local function onDamage(self, hp, hitsound)
 
 	if hp <= 0 then
 		self.stunned = true
+			self:on_death()
 			killMob(me, def)
 	else
 		on_hit(me) -- red flashing
 		if def.sounds then
 			if def.sounds.on_damage then
 				local dmg_snd = def.sounds.on_damage
-				core.sound_play(dmg_snd.name, {pos = me:get_pos(), max_hear_distance = dmg_snd.distance or 5, gain = dmg_snd.gain or 1})
+				core.sound_play(dmg_snd.name, {
+					pos = me:get_pos(),
+					max_hear_distance = dmg_snd.distance or 5,
+					gain = dmg_snd.gain or 1,
+					})
 			end
 
 			if hitsound and def.sounds.play_default_hit ~= false then
@@ -207,7 +216,7 @@ end
 local function checkWielded(wielded, itemList)
 	if not itemList then return false end
 
-	for s,w in pairs(itemList) do
+	for s, w in pairs(itemList) do
 		if w == wielded then
 			return true
 		end
@@ -218,12 +227,12 @@ end
 
 local tool_uses = {0, 30, 110, 150, 280, 300, 500, 1000}
 local function addWearout(player, tool_def)
-	if not core.settings:get_bool("creative_mode") then
+	if not cmer.creative then
 		local item = player:get_wielded_item()
 		if tool_def and tool_def.damage_groups and tool_def.damage_groups.fleshy then
 			local uses = tool_uses[tool_def.damage_groups.fleshy] or 0
 			if uses > 0 then
-				local wear = 65535/uses
+				local wear = 65535 / uses
 				item:add_wear(wear)
 				player:set_wielded_item(item)
 			end
@@ -233,7 +242,8 @@ end
 
 local function spawnParticles(...)
 end
-if core.settings:get_bool("creatures_enable_particles") == true then
+
+if cmer.enable_particles then
 	spawnParticles = function(pos, velocity, texture_str)
 		local vel = vector.multiply(velocity, 0.5)
 		vel.y = 0
@@ -242,8 +252,8 @@ if core.settings:get_bool("creatures_enable_particles") == true then
 			time = 1,
 			minpos = vector.add(pos, -0.7),
 			maxpos = vector.add(pos, 0.7),
-			minvel = vector.add(vel, {x = -0.1, y = -0.01, z = -0.1}),
-			maxvel = vector.add(vel, {x = 0.1,  y = 0,  z = 0.1}),
+			minvel = vector.add(vel, {x=-0.1, y=-0.01, z=-0.1}),
+			maxvel = vector.add(vel, {x=0.1, y=0, z=0.1}),
 			minacc = vector.new(),
 			maxacc = vector.new(),
 			minexptime = 0.8,
@@ -261,7 +271,7 @@ end
 -- Default entity functions
 -- --
 
-cmer.on_punch = function(self, puncher, time_from_last_punch, tool_capabilities, dir)
+cmer.on_punch = function(self, puncher, tflp, tc, dir)
 	if self.stunned == true then
 		return
 	end
@@ -269,7 +279,7 @@ cmer.on_punch = function(self, puncher, time_from_last_punch, tool_capabilities,
 	local me = self.object
 	local mypos = me:get_pos()
 
-	changeHP(self, calcPunchDamage(me, time_from_last_punch, tool_capabilities) * -1, "cmer_hit_01")
+	changeHP(self, calcPunchDamage(me, tflp, tc) * -1, "cmer_hit_01")
 	-- reset lifetimer when attacked
 	self.lifetimer = 0
 	if puncher then
@@ -277,20 +287,27 @@ cmer.on_punch = function(self, puncher, time_from_last_punch, tool_capabilities,
 			self.mode = "attack"
 			self.target = puncher
 		end
-		if time_from_last_punch >= 0.45 and self.stunned == false then
-			if self.has_kockback == true then
+		if tflp >= 0.45 and self.stunned == false then
+			if self.has_knockback == true then
 				local v = me:get_velocity()
 				v.y = 0
 				if not self.can_fly then
-					me:set_acceleration({x = 0, y = -15, z = 0})
+					me:set_acceleration({x=0, y=-15, z=0})
 				end
 				knockback(self, dir, v, 5)
 				self.stunned = true
 			end
 
 			-- add wearout to weapons/tools
-			addWearout(puncher, tool_capabilities)
+			addWearout(puncher, tc)
 		end
+	end
+end
+
+cmer.on_death = function(self, killer)
+	if self.object:get_nametag_attributes().text then
+		-- clear nametag
+		self.object:set_nametag_attributes({text=nil})
 	end
 end
 
@@ -342,6 +359,7 @@ cmer.on_step = function(self, dtime)
 
 	local no_death_modes = (self.mode == "attack" or self.mode == "follow" or self.mode == "panic")
 	if self.lifetimer > def.stats.lifetime and not (no_death_modes and self.target) then
+		-- reset life timer if engaging in combat
 		self.lifetimer = 0
 		--if not self.tamed or (self.tamed and def.stats.dies_when_tamed) then
 		if not self.owner or def.stats.dies_when_tamed then
@@ -384,7 +402,7 @@ cmer.on_step = function(self, dtime)
 			self.last_node = current_node
 			if def.stats.light then
 				local wtime = core.get_timeofday()
-				local llvl = core.get_node_light({x = current_pos.x, y = current_pos.y + 0.5, z = current_pos.z}) or 0
+				local llvl = core.get_node_light({x=current_pos.x, y=current_pos.y + 0.5, z=current_pos.z}) or 0
 				self.last_llvl = llvl
 			end
 		end
@@ -409,7 +427,7 @@ cmer.on_step = function(self, dtime)
 		fallen = false
 
 		local damage = 0
-		if dist > 3 and not self.in_water and falltime/dist < 0.2 then
+		if dist > 3 and not self.in_water and falltime / dist < 0.2 then
 			damage = dist - 3
 		end
 
@@ -445,9 +463,9 @@ cmer.on_step = function(self, dtime)
 			if self.attacktimer > def.combat.attack_speed then
 				self.attacktimer = 0
 				if core.line_of_sight(current_pos, p2) == true then
-					self.target:punch(me, 1.0,  {
+					self.target:punch(me, 1.0, {
 						full_punch_interval = def.combat.attack_speed,
-						damage_groups = {fleshy = def.combat.attack_damage}
+						damage_groups = {fleshy=def.combat.attack_damage},
 					})
 	      end
 				update_velocity(me, self.dir, 0)
@@ -503,10 +521,10 @@ cmer.on_step = function(self, dtime)
 
 	if current_mode == "eat" and not self.eat_node then
 		local nodes = modes[current_mode].nodes
-		local p = {x = current_pos.x, y = current_pos.y - 1, z = current_pos.z}
+		local p = {x=current_pos.x, y=current_pos.y - 1, z=current_pos.z}
 		local sn = core.get_node_or_nil(p)
 		local eat_node
-		for _,name in pairs(nodes) do
+		for _, name in pairs(nodes) do
 			if self.last_node ~= nil and name == self.last_node.name then
 				eat_node = current_pos
 				break
@@ -557,12 +575,16 @@ cmer.on_step = function(self, dtime)
 				 end
 			end
 			if nnn and nnn ~= n.name and core.registered_nodes[nnn] then
-				core.set_node(self.eat_node, {name = nnn})
+				core.set_node(self.eat_node, {name=nnn})
 				if not sounds then
 					sounds = def.sounds
 				end
 				if sounds and sounds.dug then
-					core.sound_play(sounds.dug, {pos = self.eat_node, max_hear_distance = 5, gain = 1})
+					core.sound_play(sounds.dug, {
+						pos = self.eat_node,
+						max_hear_distance = 5,
+						gain = 1,
+						})
 				end
 			end
 			self.eat_node = nil
@@ -577,7 +599,7 @@ cmer.on_step = function(self, dtime)
 		if moving_speed > 0 then
 			local yaw = (getYaw(me:get_yaw()) + 90.0) * DEGTORAD
 			me:set_yaw(yaw + 4.73)
-			self.dir = {x = math.cos(yaw), y = 0, z = math.sin(yaw)}
+			self.dir = {x=math.cos(yaw), y=0, z=math.sin(yaw)}
 			if self.can_fly then
 				if current_pos.y >= (modes["fly"].max_height or 50) and not self.target then
 					self.dir.y = -0.5
@@ -615,7 +637,7 @@ cmer.on_step = function(self, dtime)
 		me:set_yaw(yaw + 4.73)
 		local moving_speed = modes[current_mode].moving_speed or 0
 		if moving_speed > 0 then
-			self.dir = {x = math.cos(yaw), y = nil, z = math.sin(yaw)}
+			self.dir = {x=math.cos(yaw), y=nil, z=math.sin(yaw)}
 			update_velocity(me, self.dir, moving_speed)
 		end
 	end
@@ -628,13 +650,17 @@ cmer.on_step = function(self, dtime)
 			if name == "default:water_source" then
 				self.air_cnt = 0
 				local vel = me:get_velocity()
-				update_velocity(me, {x = vel.x, y = 0.9, z = vel.z}, 1)
-				me:set_acceleration({x = 0, y = -1.2, z = 0})
+				update_velocity(me, {x=vel.x, y=0.9, z=vel.z}, 1)
+				me:set_acceleration({x=0, y=-1.2, z=0})
 				self.in_water = true
 				-- play swimming sounds
 				if def.sounds and def.sounds.swim then
 					local swim_snd = def.sounds.swim
-					core.sound_play(swim_snd.name, {pos = current_pos, gain = swim_snd.gain or 1, max_hear_distance = swim_snd.distance or 10})
+					core.sound_play(swim_snd.name, {
+						pos = current_pos,
+						gain = swim_snd.gain or 1,
+						max_hear_distance = swim_snd.distance or 10,
+						})
 				end
 				spawnParticles(current_pos, vel, "bubble.png")
 			else
@@ -642,7 +668,7 @@ cmer.on_step = function(self, dtime)
 				if self.in_water == true and self.air_cnt > 5 then
 					self.in_water = false
 					if not self.can_fly then
-						me:set_acceleration({x = 0, y = -15, z = 0})
+						me:set_acceleration({x=0, y=-15, z=0})
 					end
 				end
 			end
@@ -679,7 +705,11 @@ cmer.on_step = function(self, dtime)
 		if rnd_sound and self.soundtimer > self.snd_rnd_time + rnd() then
 			self.soundtimer = 0
 			self.snd_rnd_time = nil
-			core.sound_play(rnd_sound.name, {pos = current_pos, gain = rnd_sound.gain or 1, max_hear_distance = rnd_sound.distance or 30})
+			core.sound_play(rnd_sound.name, {
+				pos = current_pos,
+				gain = rnd_sound.gain or 1,
+				max_hear_distance = rnd_sound.distance or 30,
+				})
 		end
 	end
 
@@ -689,6 +719,7 @@ end
 
 cmer.get_staticdata = function(self)
 	return {
+		nametag = self.nametag,
 		hp = self.object:get_hp(),
 		mode = self.mode,
 		tamed = self.tamed,
