@@ -27,12 +27,18 @@ core.register_tool(":creatures:shears", {
 })
 
 core.register_craft({
-	output = 'creatures:shears',
+	output = "creatures:shears",
 	recipe = {
-		{'', 'default:steel_ingot'},
-		{'default:steel_ingot', 'default:stick'},
+		{"", "default:steel_ingot"},
+		{"default:steel_ingot", "default:stick"},
 	}
 })
+
+
+local sheep_drops = {}
+if core.registered_items["mobs:meat_raw"] then
+	table.insert(sheep_drops, {"mobs:meat_raw"})
+end
 
 
 local function setColor(self)
@@ -54,7 +60,7 @@ local function shear(self, drop_count, sound)
 		end
 
 		setColor(self)
-		cmer.dropItems(pos, {{"wool:" .. self.wool_color, drop_count}})
+		creatures.dropItems(pos, {{"wool:" .. self.wool_color, drop_count}})
 	end
 end
 
@@ -68,7 +74,8 @@ local colors = {
 }
 
 local def = {
-	name = "creatures:sheep",
+	name = ":creatures:sheep",
+	nametag = creatures.feature_nametags and "Sheep" or nil,
 	ownable = true,
 	stats = {
 		hp = 8,
@@ -121,11 +128,11 @@ local def = {
 	},
 
 	drops = function(self)
-		local items = {{"creatures:flesh"}}
+		local items = sheep_drops
 		if self.has_wool then
 			table.insert(items, {"wool:" .. self.wool_color, {min = 1, max = 2}})
 		end
-		cmer.dropItems(self.object:get_pos(), items)
+		creatures.dropItems(self.object:get_pos(), items)
 	end,
 
 	spawning = {
@@ -165,7 +172,7 @@ local def = {
 		end
 
 		if not self.wool_color then
-			self.wool_color = cmer.rnd(colors) or "white"
+			self.wool_color = creatures.rnd(colors) or "white"
 		end
 		-- update fur
 		setColor(self)
@@ -219,7 +226,7 @@ local def = {
 	end
 }
 
-cmer.register_mob(def)
+creatures.register_mob(def)
 
 if core.global_exists("asm") then
 	asm.addEgg({
