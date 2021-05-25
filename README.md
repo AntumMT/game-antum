@@ -101,7 +101,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [sand_monster][mobs_monster] ([MIT][lic.sand_monster]) -- version: [3dd5954 Git][ver.sand_monster] *2021-05-20*
   * [shark][] ([CC0 / CC BY-SA][lic.shark]) -- version: [9e0e048 Git][ver.shark] *2021-05-19*
   * [sheep][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [ff39b4a Git][ver.sheep] *2021-05-13*
-  * [skeleton][cmer_skeleton] ([MIT][lic.cmer_skeleton]) -- version: [1.0][ver.cmer_skeleton] *2021-05-23*
+  * [skeleton][cmer_skeleton] ([MIT][lic.cmer_skeleton]) -- version: [466c9a6 Git][ver.cmer_skeleton] *2021-05-24*
   * [sneeker][] ([MIT][lic.sneeker]) -- version: [1.0][ver.sneeker] *2021-05-08*
   * [spider][cmer_spider] ([unilicense][lic.cmer_spider]) -- version: [d1a9a82 Git][ver.cmer_spider] *2021-05-19*
   * [stone_monster][mobs_monster] ([MIT][lic.stone_monster]) -- version: [fa52f6f Git][ver.stone_monster] *2021-05-20*
@@ -526,7 +526,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.christmas]: https://github.com/TheZenKitteh/minetest-christmas/tree/d3bd872
 [ver.cleaner]: https://github.com/AntumMT/mod-cleaner/tree/e8359d8
 [ver.cmer]: https://github.com/AntumMT/mod-cmer/tree/093d654
-[ver.cmer_skeleton]: https://github.com/AntumMT/mod-skeleton/releases/tag/v1.0
+[ver.cmer_skeleton]: https://github.com/AntumMT/mod-skeleton/tree/466c9a6
 [ver.cmer_spider]: https://github.com/AntumMT/mod-spider/tree/d1a9a82
 [ver.coloredwood]: https://gitlab.com/VanessaE/coloredwood/tags/2021-01-30
 [ver.compassgps]: https://github.com/Kilarin/compassgps/tree/567b95f

@@ -1,4 +1,11 @@
 
+1.1
+- made compatible with legacy Creatures MOB-Engine
+- added localization support
+- added nametag
+- added sounds
+
+
 1.0
 - created cmer:skeleton entity
 - created cmer:bone item

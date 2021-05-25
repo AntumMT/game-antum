@@ -1,4 +1,9 @@
 
+-- check for compatible engine
+if not core.global_exists("cmer") and not core.global_exists("creatures") then
+	error("A compatible API was not found, please install \"cmer\" or \"creatures\"")
+end
+
 cmer_skeleton = {}
 cmer_skeleton.modname = core.get_current_modname()
 cmer_skeleton.modpath = core.get_modpath(cmer_skeleton.modname)
