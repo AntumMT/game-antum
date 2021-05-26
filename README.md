@@ -87,7 +87,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [painting][] (???) -- version [8961849 Git][ver.painting] *2016-05-05*
   * [pipeworks][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2670fd8 Git][ver.pipeworks] *2021-05-06* ([patched][patch.pipeworks])
 * mobiles/
-  * [chicken][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [6d0c186 Git][ver.cmer_chicken] *2021-05-25*
+  * [chicken][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [085706f Git][ver.cmer_chicken] *2021-05-25*
   * [cow][mobs_animal] ([MIT][lic.mobs_cow]) -- version: [85af09a Git][ver.mobs_cow] *2021-05-19*
   * [dirt_monster][mobs_monster] ([MIT][lic.dirt_monster] -- version: [40c48e0 Git][ver.dirt_monster] *2021-05-20*
   * [dungeon_master][mobs_monster] ([MIT][lic.dungeon_master] -- version: [00c890f Git][ver.dungeon_master] *2021-05-20*
@@ -522,7 +522,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.christmas]: https://github.com/TheZenKitteh/minetest-christmas/tree/d3bd872
 [ver.cleaner]: https://github.com/AntumMT/mod-cleaner/tree/e8359d8
 [ver.cmer]: https://github.com/AntumMT/mod-cmer/tree/1000562
-[ver.cmer_chicken]: http://github.com/AntumMT/mod-cmer/tree/6d0c186
+[ver.cmer_chicken]: http://github.com/AntumMT/mod-cmer/tree/085706f
 [ver.cmer_ghost]: https://github.com/AntumMT/mod-cmer/tree/1ace22c
 [ver.cmer_oerkki]: https://github.com/AntumMT/mod-cmer/tree/6e043e9
 [ver.cmer_shark]: https://github.com/AntumMT/mod-shark/tree/cb35cb2
