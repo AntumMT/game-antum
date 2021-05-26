@@ -111,7 +111,7 @@ creatures.register_alias("creatures:oerrki", "creatures:oerkki")
 if core.global_exists("asm") then
 	asm.addEgg({
 		name = "oerkki",
-		inventory_image = "creatures_egg_oerkki.png",
+		inventory_image = "creatures_oerkki_inv.png",
 		spawn = "creatures:oerkki",
 		ingredients = "default:obsidian",
 	})
