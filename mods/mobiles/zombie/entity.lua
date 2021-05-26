@@ -96,10 +96,11 @@ if core.global_exists("asm") then
 	asm.addEgg({
 		name = "zombie",
 		spawn = "creatures:zombie",
-		inventory_image = "creatures_egg_zombie.png",
+		inventory_image = "creatures_zombie_inv.png",
 		ingredient = "creatures:rotten_flesh",
 	})
 end
+core.register_alias("creatures:zombie", "spawneggs:zombie")
 
 
 -- harder zombie
