@@ -237,7 +237,7 @@ creatures.register_mob(def)
 if core.global_exists("asm") then
 	asm.addEgg({
 		name = "sheep",
-		inventory_image = "creatures_egg_sheep.png",
+		inventory_image = "creatures_sheep_inv.png",
 		spawn = "creatures:sheep",
 		ingredients = "group:wool",
 	})

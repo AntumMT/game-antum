@@ -3,3 +3,4 @@ TODO:
 - add localization support
 - use settings for lifespan, spawn interval, & spawn chance
 - don't let owned sheep be killed by other players
+- store color & wool state in spawnegg when picked up
