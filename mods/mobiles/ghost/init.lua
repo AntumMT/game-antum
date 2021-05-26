@@ -114,7 +114,7 @@ creatures.register_mob(def)
 if core.global_exists("asm") then
 	asm.addEgg({
 		name = "ghost",
-		inventory_image = "creatures_egg_ghost.png",
+		inventory_image = "creatures_ghost_inv.png",
 		spawn = "creatures:ghost",
 	})
 end
