@@ -26,9 +26,9 @@
 -- @output 1
 -- @input group:sand
 core.register_craft({
-	type = 'cooking',
-	output = 'glass:plain',
-	recipe = 'group:sand',
+	type = "cooking",
+	output = "glass:plain",
+	recipe = "group:sand",
 })
 
 
@@ -39,7 +39,7 @@ core.register_craft({
 -- @output 1
 -- @input default:obsidian_shard
 core.register_craft({
-	type = 'cooking',
-	output = 'glass:obsidian',
-	recipe = 'default:obsidian_shard',
+	type = "cooking",
+	output = "glass:obsidian",
+	recipe = "default:obsidian_shard",
 })

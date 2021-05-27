@@ -1,0 +1,19 @@
+
+v1.1
+----
+- preserve old node name instead of registering new ones
+- simplified overriding method
+- changed to MIT license
+
+v1.0
+----
+- switched to Minetest built-in localization engine
+- updated for compatibility with unifieddyes version 2021-03-26-1
+- added Spanish translation
+- made obidian glass colorable
+- uses textures & sounds from default mod
+
+v0.1
+----
+- overrode glass nodes to be colorable using unifieddyes methods
+- added localization support with intllib

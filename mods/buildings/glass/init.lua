@@ -14,16 +14,30 @@
 
 
 glass = {}
-glass.name = core.get_current_modname()
-glass.path = core.get_modpath(glass.name)
+glass.modname = core.get_current_modname()
+glass.modpath = core.get_modpath(glass.modname)
+
+function glass.log(lvl, msg)
+		if not msg then
+			msg = lvl
+			lvl = nil
+		end
+
+		msg = "[" .. glass.modname .. "] " .. msg
+		if not lvl then
+			core.log(msg)
+		else
+			core.log(lvl, msg)
+		end
+end
 
 
 local scripts = {
-	'functions',
-	'nodes',
-	'crafting',
+	--"functions",
+	"nodes",
+	--"crafting",
 }
 
 for _, s in ipairs(scripts) do
-	dofile(glass.path .. '/' .. s .. '.lua')
+	dofile(glass.modpath .. "/" .. s .. ".lua")
 end

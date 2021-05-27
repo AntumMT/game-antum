@@ -1,35 +1,36 @@
-## Glass Mod for [Minetest][]
-
-
----
-### **Description:**
-
-Minetest mod that replaces glass nodes from the [default][] mod in [minetest_game][] & adds colored glass & other enhancements.
-
-***NOTE:*** *This mod is a **work-in-progress**. Not all glass nodes have been yet added.*
-
-![Screenshot](screenshot.png)
+## Glass Mod for Minetest
 
 ---
-### **Features:**
+### Description:
 
-- Creates glass-like nodes.
-- If *[unifieddyes][]* is present, nodes can be colored with `unifieddyes:airbrush`.
-- Compatible with *[default][]* mod.
+[Minetest][] mod that makes [default glass nodes][default] colorable.
 
+***NOTE:*** *This mod is a **work-in-progress**. Not all glass node types have been added.*
 
----
-### ***Licensing:***
+![screenshot](screenshot.png)
 
-- LGPL
-- CC BY-SA
-- See: [LICENSE.md](LICENSE.md)
+--------------
+### Licensing:
 
+- [MIT](LICENSE.txt)
+
+-----------------
+### Dependencies:
+
+Required:
+- [default][]
+- [unifieddyes][]
+
+----------
+### Links:
+
+- [Forum](https://forum.minetest.net/viewtopic.php?t=18307)
+- [Git repo](https://github.com/AntumMT/mod-glass)
+- [Changelog](changelog.txt)
+- [TODO](TODO.txt)
 
 
 [Minetest]: http://www.minetest.net/
-[node coloring]: https://github.com/minetest/minetest/pull/4986
 
 [default]: https://github.com/minetest/minetest_game/blob/master/mods/default
-[minetest_game]: https://github.com/minetest/minetest_game
 [unifieddyes]: https://forum.minetest.net/viewtopic.php?t=2178

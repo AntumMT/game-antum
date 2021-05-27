@@ -25,7 +25,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [christmas][] ([MIT][lic.christmas]) -- version [d3bd872 Git][ver.christmas] *2013-01-11* ([patched][patch.christmas])
   * [elevator][] ([WTFPL][lic.elevator])
   * [fort_spikes][] ([MIT][lic.fort_spikes] / [CC0][lic.cc0]) -- version: [3b98b46 Git][ver.fort_spikes] *2018-06-05*
-  * [glass][] ([LGPL][lic.lgpl2.1]) -- version: [1.0][ver.glass] *2021-04-19*
+  * [glass][] ([LGPL][lic.lgpl2.1]) -- version: [1.1][ver.glass] *2021-05-26*
   * [moreblocks][] ([zlib][lic.moreblocks]) -- version: [3b97ea5 Git][ver.moreblocks] *2021-03-19*
   * [windmill][] ([WTFPL][lic.windmill]) -- version: [47b029d Git][ver.windmill] *2014-08-21* ([patched][patch.windmill])
 * chat/
@@ -550,7 +550,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.fort_spikes]: https://github.com/xeranas/fort_spikes/tree/3b98b46
 [ver.gems_encrustable]: https://github.com/wowiamdiamonds/gems/tree/81d513d
 [ver.gems_tools]: https://github.com/captainLAD/gems/tree/b375432
-[ver.glass]: https://github.com/AntumMT/mod-glass/releases/tag/v1.0
+[ver.glass]: https://github.com/AntumMT/mod-glass/releases/tag/v1.1
 [ver.glow]: https://github.com/bdjnk/glow/tree/4c015a0
 [ver.hbarmor]: http://repo.or.cz/minetest_hbarmor.git/tree/93d994c
 [ver.hbsprint]: https://github.com/tacotexmex/hbsprint/tree/f566d0f

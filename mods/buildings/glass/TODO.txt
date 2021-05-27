@@ -1,0 +1,4 @@
+
+TODO:
+- add option to override nodes to "glass:" namespace
+- add some currently unsupported nodes
