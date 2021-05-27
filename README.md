@@ -16,7 +16,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [cleaner][] ([MIT][lic.cleaner]) -- version: [1.0][ver.cleaner] *2021-05-26*
   * [invisible][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa4.0]) -- version: [4 (a2a6504 Git)][ver.invisible]
   * [no_fall_damage][] ([MIT][lic.no_fall_damage]) -- version [1.0.0][ver.no_fall_damage] *2020-12-19*
-  * [override][] ([MIT][lic.override]) -- version: [0.2 (e6dda7a Git)][ver.override] *2017-08-30*
   * [privs][] ([CC0][lic.cc0])
   * [spectator_mode][] ([WTFPL][lic.spectator_mode]) -- version: [3648371 Git][ver.spectator_mode] *2020-07-15*
   * [whitelist][] ([CC0][lic.cc0]) -- version: [0.1 (b813b19 Git)][ver.whitelist] *2017-08-18*
@@ -347,7 +346,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [mywoodslopes]: https://forum.minetest.net/viewtopic.php?t=11433
 [nether]: https://forum.minetest.net/viewtopic.php?t=5790
 [no_fall_damage]: https://forum.minetest.net/viewtopic.php?t=25876
-[override]: https://github.com/AntumMT/mod-override
 [painting]: https://github.com/minetest-mods/painting
 [pipeworks]: https://forum.minetest.net/viewtopic.php?t=2155
 [player_monoids]: https://github.com/minetest-mods/player_monoids
@@ -442,7 +440,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.mydoors]: mods/modpacks/mydoors/README.md
 [lic.nether]: mods/world/nether/README.md
 [lic.no_fall_damage]: mods/admin/no_fall_damage/README.md
-[lic.override]: mods/admin/override/LICENSE.txt
 [lic.player_monoids]: mods/player/action/player_monoids/COPYING
 [lic.quartz]: mods/materials/quartz/LICENSE.txt
 [lic.rainbow_ore]: mods/materials/rainbow_ore/README.md
@@ -595,7 +592,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.mywoodslopes]: https://github.com/minetest-mods/mywoodslopes/tree/3a1b531
 [ver.nether]: https://github.com/minetest-mods/nether/tree/v3
 [ver.no_fall_damage]: https://repo.or.cz/minetest_no_fall_damage.git/shortlog/refs/tags/1.0.0
-[ver.override]: https://github.com/AntumMT/mod-override/tree/e6dda7a
 [ver.painting]: https://github.com/minetest-mods/painting/tree/8961849
 [ver.pipeworks]: https://gitlab.com/VanessaE/pipeworks/tree/2670fd8
 [ver.player_monoids]: https://github.com/minetest-mods/player_monoids/tree/ed11a73
