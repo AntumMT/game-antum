@@ -1,5 +1,6 @@
 
-revived-1.1
+v1.1-cmer
+---------
 - Renamed to "cmer" to discern from other versions.
 - Removed built-in items.
 - Removed built-in spawnegg support.
@@ -13,9 +14,10 @@ revived-1.1
 - option to set nametag
 - griefing is disabled unless 'mobs_griefing' setting enabled
 - owned entities can be picked up with mobs:lasso
+- owned entities cannot be killed by other players
 
-
-revived-1.0
+v1.0-revived
+------------
 - Forked from original Creatures MOB-Engine code by BlockMen.
 - Updated for Minetest 5.x API.
 - Removed built-in modpack mobs (engine only).
