@@ -24,7 +24,8 @@ core.register_craftitem(":ritems:contract", {
 })
 
 if core.registered_items["animalmaterials:contract"] then
-	override.replaceItems("animalmaterials:contract", "ritems:contract")
+	core.unregister_item("animalmaterials:contract")
+	core.register_alias("animalmaterials:contract", "ritems:contract")
 end
 
 if core.get_modpath("default") then
@@ -46,6 +47,7 @@ for _, color in pairs({"blue", "golden", "grey", "white"}) do
 	})
 
 	if core.registered_items["animalmaterials:scale_" .. color] then
-		override.replaceItems("animalmaterials:scale_" .. color, "ritems:scale_" .. color)
+		core.unregister_item("animalmaterials:scale_" .. color)
+		core.register_alias("animalmaterials:scale_" .. color, "ritems:scale_" .. color)
 	end
 end

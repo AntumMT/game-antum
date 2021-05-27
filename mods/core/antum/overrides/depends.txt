@@ -1,7 +1,6 @@
 antum
 antum_items
 default
-override
 
 craftguide?
 craft_guide?
