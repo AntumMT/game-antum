@@ -13,7 +13,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 * admin/
   * [alternode][] ([MIT][lic.alternode]) -- version: [1.3][ver.alternode] *2021-05-18*
-  * [cleaner][] ([MIT][lic.cleaner]) -- version: [e8359d8 Git][ver.cleaner] *2021-05-18*
+  * [cleaner][] ([MIT][lic.cleaner]) -- version: [1.0][ver.cleaner] *2021-05-26*
   * [invisible][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa4.0]) -- version: [4 (a2a6504 Git)][ver.invisible]
   * [no_fall_damage][] ([MIT][lic.no_fall_damage]) -- version [1.0.0][ver.no_fall_damage] *2020-12-19*
   * [override][] ([MIT][lic.override]) -- version: [0.2 (e6dda7a Git)][ver.override] *2017-08-30*
@@ -520,7 +520,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.castle_weapons]: https://github.com/minetest-mods/castle_weapons/tree/d3cf095
 [ver.chatlog]: https://github.com/AntumMT/mod-chatlog/tree/v1.0
 [ver.christmas]: https://github.com/TheZenKitteh/minetest-christmas/tree/d3bd872
-[ver.cleaner]: https://github.com/AntumMT/mod-cleaner/tree/e8359d8
+[ver.cleaner]: https://github.com/AntumMT/mod-cleaner/releases/tag/v1.0
 [ver.cmer]: https://github.com/AntumMT/mod-cmer/releases/tag/v1.1-cmer
 [ver.cmer_chicken]: http://github.com/AntumMT/mod-cmer/tree/085706f
 [ver.cmer_ghost]: https://github.com/AntumMT/mod-cmer/tree/2f70906
