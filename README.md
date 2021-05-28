@@ -13,7 +13,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 * admin/
   * [alternode][] ([MIT][lic.alternode]) -- version: [1.3][ver.alternode] *2021-05-18*
-  * [cleaner][] ([MIT][lic.cleaner]) -- version: [1.0][ver.cleaner] *2021-05-26*
+  * [cleaner][] ([MIT][lic.cleaner]) -- version: [1.1][ver.cleaner] *2021-05-27*
   * [invisible][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa4.0]) -- version: [4 (a2a6504 Git)][ver.invisible]
   * [no_fall_damage][] ([MIT][lic.no_fall_damage]) -- version [1.0.0][ver.no_fall_damage] *2020-12-19*
   * [privs][] ([CC0][lic.cc0])
@@ -276,7 +276,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [castle_weapons]: https://github.com/minetest-mods/castle_weapons
 [chatlog]: https://forum.minetest.net/viewtopic.php?t=18287
 [christmas]: https://forum.minetest.net/viewtopic.php?t=3950
-[cleaner]: https://github.com/AntumMT/mod-cleaner/tree/2404594
+[cleaner]: https://content.minetest.net/packages/AntumDeluge/cleaner/
 [cmer_skeleton]: https://github.com/AntumMT/mod-skeleton
 [cmer_spider]: https://github.com/AntumMT/mod-spider
 [coloredwood]: https://forum.minetest.net/viewtopic.php?t=2411
@@ -517,7 +517,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.castle_weapons]: https://github.com/minetest-mods/castle_weapons/tree/d3cf095
 [ver.chatlog]: https://github.com/AntumMT/mod-chatlog/tree/v1.0
 [ver.christmas]: https://github.com/TheZenKitteh/minetest-christmas/tree/d3bd872
-[ver.cleaner]: https://github.com/AntumMT/mod-cleaner/releases/tag/v1.0
+[ver.cleaner]: https://github.com/AntumMT/mod-cleaner/releases/tag/v1.1
 [ver.cmer]: https://github.com/AntumMT/mod-cmer/releases/tag/v1.1-cmer
 [ver.cmer_chicken]: http://github.com/AntumMT/mod-cmer/tree/085706f
 [ver.cmer_ghost]: https://github.com/AntumMT/mod-cmer/tree/2f70906
