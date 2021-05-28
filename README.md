@@ -85,6 +85,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [listitems][] ([MIT][lic.listitems]) -- version: [0.7][ver.listitems] *2021-04-29*
   * [painting][] (???) -- version [8961849 Git][ver.painting] *2016-05-05*
   * [pipeworks][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2670fd8 Git][ver.pipeworks] *2021-05-06* ([patched][patch.pipeworks])
+  * [wdata][] ([MIT][lic.wdata]) -- version: [e339375 Git][ver.wdata] *2021-05-28*
 * mobiles/
   * [chicken][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [085706f Git][ver.cmer_chicken] *2021-05-25*
   * [cow][mobs_animal] ([MIT][lic.mobs_cow]) -- version: [85af09a Git][ver.mobs_cow] *2021-05-19*
@@ -380,6 +381,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [walking_light]: https://github.com/petermaloney/walking_light
 [wardrobe]: https://github.com/AntumMT/mod-wardrobe
 [wardrobe.old]: https://forum.minetest.net/viewtopic.php?t=9680
+[wdata]: https://forum.minetest.net/viewtopic.php?t=26804
 [weather]: https://forum.minetest.net/viewtopic.php?t=5245
 [whinny]: https://github.com/AntumMT/mod-whinny
 [whitelist]: https://forum.minetest.net/viewtopic.php?t=8434
@@ -461,6 +463,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.waffles]: mods/furniture/waffles/LICENSE.txt
 [lic.walking_light]: mods/lighting/walking_light/README.md
 [lic.wardrobe]: mods/player/visuals/wardrobe/LICENSE.txt
+[lic.wdata]: mods/misc/wdata/LICENSE.txt
 [lic.whinny]: mods/mobiles/whinny/LICENSE.txt
 [lic.windmill]: mods/buildings/windmill/README.md
 
@@ -624,6 +627,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.waffles]: https://github.com/GreenXenith/waffles/tree/15bcdce
 [ver.walking_light]: https://github.com/petermaloney/walking_light/tree/766ef0f
 [ver.wardrobe]: https://github.com/AntumMT/mod-wardrobe/releases/tag/v1.3
+[ver.wdata]: https://github.com/AntumMT/mod-wdata/tree/e339375
 [ver.whinny]: https://github.com/AntumMT/mod-whinny/releases/tag/v1.2
 [ver.whitelist]: https://github.com/AntumMT/mod-whitelist/tree/b813b19
 [ver.windmill]: https://github.com/Sokomine/windmill/tree/47b029d
