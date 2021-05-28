@@ -138,7 +138,8 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [hbarmor][] ([MIT][lic.mit] / [CC BY-SA][lic.ccbysa3.0]) -- version: [1.0.0][ver.hbarmor] *2019-04-01*
   * [home_gui][] ([BSD 3-Clause][lic.home_gui]) -- version: [425466a Git][ver.home_gui] *2021-05-21* ([patched][home_gui.patch])
   * [hudbars][] ([MIT][lic.mit] / [CC BY-SA][lic.ccbysa3.0]) -- version: [2.3.1][ver.hudbars] *2020-07-11*
-  * [mthudclock][] ([WTFPL][lic.wtfpl]) -- version [d86e745 Git][ver.mthudclock] *2018-01-06*
+  * [mthudclock][] ([WTFPL][lic.wtfpl]) -- version: [d86e745 Git][ver.mthudclock] *2018-01-06*
+  * [pbmarks][] ([MIT][lic.pbmarks]) -- version: [00c3549 Git][ver.pbmarks] *2021-05-28*
 * world/
   * [bright_night][] ([Unlicense][lic.unlicense]) -- version: [69b750a Git][ver.bright_night] *2018-06-03*
   * [desert_life][] ([CC BY-SA][lic.ccbysa4.0]) -- version: [188f984 Git][ver.desert_life] *2020-01-24*
@@ -347,6 +348,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [nether]: https://forum.minetest.net/viewtopic.php?t=5790
 [no_fall_damage]: https://forum.minetest.net/viewtopic.php?t=25876
 [painting]: https://github.com/minetest-mods/painting
+[pbmarks]: https://github.com/AntumMT/mod-pbmarks
 [pipeworks]: https://forum.minetest.net/viewtopic.php?t=2155
 [player_monoids]: https://github.com/minetest-mods/player_monoids
 [privs]: mods/admin/privs
@@ -440,6 +442,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.mydoors]: mods/modpacks/mydoors/README.md
 [lic.nether]: mods/world/nether/README.md
 [lic.no_fall_damage]: mods/admin/no_fall_damage/README.md
+[lic.pbmarks]: mods/ui/pbmarks/LICENSE.txt
 [lic.player_monoids]: mods/player/action/player_monoids/COPYING
 [lic.quartz]: mods/materials/quartz/LICENSE.txt
 [lic.rainbow_ore]: mods/materials/rainbow_ore/README.md
@@ -593,6 +596,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.nether]: https://github.com/minetest-mods/nether/tree/v3
 [ver.no_fall_damage]: https://repo.or.cz/minetest_no_fall_damage.git/shortlog/refs/tags/1.0.0
 [ver.painting]: https://github.com/minetest-mods/painting/tree/8961849
+[ver.pbmarks]: https://github.com/AntumMT/mod-pbmarks/tree/00c3549
 [ver.pipeworks]: https://gitlab.com/VanessaE/pipeworks/tree/2670fd8
 [ver.player_monoids]: https://github.com/minetest-mods/player_monoids/tree/ed11a73
 [ver.pvp_areas]: https://github.com/everamzah/pvp_areas/tree/6e4d66d

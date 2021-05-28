@@ -1,0 +1,3 @@
+
+# Number of allowed bookmarks.
+pbmarks.max (Number of bookmarks) int 5 1 5
