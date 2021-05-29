@@ -1,0 +1,3 @@
+
+# Hovercrafts can only be used by owners.
+mount_ownable (Ownable hovercrafts) bool true

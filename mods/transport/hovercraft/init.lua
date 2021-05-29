@@ -1,4 +1,10 @@
-dofile(minetest.get_modpath("hovercraft").."/hover.lua")
+
+hover = {}
+hover.modname = core.get_current_modname()
+hover.modpath = core.get_modpath(hover.modname)
+
+dofile(hover.modpath .. "/settings.lua")
+dofile(hover.modpath .. "/hover.lua")
 
 hover:register_hovercraft("hovercraft:hover_red" ,{
 	description = "Red Hovercraft",

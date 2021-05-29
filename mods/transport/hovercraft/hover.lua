@@ -1,4 +1,3 @@
-hover = {}
 
 function hover:register_hovercraft(name, def)
 	minetest.register_entity(name, {
@@ -22,23 +21,41 @@ function hover:register_hovercraft(name, def)
 		on_activate = function(self, staticdata, dtime_s)
 			self.object:set_armor_groups({immortal=1})
 			self.object:set_animation({x=0, y=24}, 30)
+
+			local sdata = core.deserialize(staticdata)
+			self.owner = sdata.owner
 		end,
 		on_punch = function(self, puncher, time_from_last_punch, tool_capabilities, dir)
+			if not puncher or not puncher:is_player() then return end
+
 			if self.player then
 				return
 			end
+
+			local pname = puncher:get_player_name()
+			if hover.ownable and self.owner and pname ~= self.owner then
+				core.chat_send_player(pname, "You cannot take " .. self.owner .. "'s hovercraft.")
+				return
+			end
+
+			local stack = ItemStack(name)
+			local pinv = puncher:get_inventory()
+			if not pinv:room_for_item("main", stack) then
+				core.chat_send_player(pname, "You don't have room in your inventory.")
+				return
+			end
+
 			if self.sound then
 				minetest.sound_stop(self.sound)
 			end
 			self.object:remove()
-			if puncher and puncher:is_player() then
-				puncher:get_inventory():add_item("main", name)
-			end
+			pinv:add_item("main", stack)
 		end,
 		on_rightclick = function(self, clicker)
 			if not clicker or not clicker:is_player() then
 				return
 			end
+
 			local pos = self.object:get_pos()
 			if self.player and clicker == self.player then
 				if self.sound then
@@ -52,6 +69,12 @@ function hover:register_hovercraft(name, def)
 				clicker:set_animation({x=0, y=0})
 				clicker:set_detach()
 			elseif not self.player then
+				local pname = clicker:get_player_name()
+				if hover.ownable and self.owner and pname ~= self.owner then
+					core.chat_send_player(pname, "You cannot ride " .. self.owner .. "'s hovercraft.")
+					return
+				end
+
 				self.player = clicker
 
 				local attach_y = 16.5
@@ -167,7 +190,16 @@ function hover:register_hovercraft(name, def)
 			end
 			self.object:set_velocity(self.velocity)
 		end,
+
+		get_staticdata = function(self)
+			local sdata = {
+				owner = self.owner,
+			}
+
+			return core.serialize(sdata)
+		end,
 	})
+
 	minetest.register_craftitem(name, {
 		description = def.description,
 		inventory_image = def.inventory_image,
@@ -177,7 +209,7 @@ function hover:register_hovercraft(name, def)
 				return
 			end
 			pointed_thing.under.y = pointed_thing.under.y + 0.5
-			minetest.add_entity(pointed_thing.under, name)
+			minetest.add_entity(pointed_thing.under, name, core.serialize({owner=placer:get_player_name()}))
 			itemstack:take_item()
 			return itemstack
 		end,
