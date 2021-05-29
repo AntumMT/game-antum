@@ -291,7 +291,7 @@ minetest.register_entity("helicopter:heli", {
             end
 
             if self.hp_max <= 0 then
-                if helicopter.pick_up then
+                if helicopter.punch_inv then
                     local pinv = puncher:get_inventory()
                     local stack = ItemStack("helicopter:heli")
                     local imeta = stack:get_meta()

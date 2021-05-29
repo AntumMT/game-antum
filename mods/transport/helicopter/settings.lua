@@ -6,7 +6,7 @@ helicopter.gravity = tonumber(minetest.settings:get("movement_gravity") or 9.8)
 --
 --  If `false`, helicopter is destroyed. Otherwise, it is added to inventory.
 --    - Default: false
-helicopter.pick_up = minetest.settings:get_bool("helicopter.pick_up", false)
+helicopter.punch_inv = minetest.settings:get_bool("mount_punch_inv", false)
 
 --- Determines default control of helicopter.
 --

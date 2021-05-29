@@ -47,6 +47,9 @@ mount_turn_player_look (Turn with look direction) bool false
 # Mounted entities can only be used by owners.
 mount_ownable (Ownable mounts) bool true
 
+# Place mountable entities in inventory instead of breaking down when punched.
+mount_punch_inv (Place object in inventory) bool true
+
 
 
 # ---------------------------------------------------------------------------------
@@ -583,13 +586,6 @@ sprint_breath (Breath) bool true
 
 # The amount of air to drain while sprinting under water.
 sprint_breath_drain (Breath drain) float 1
-
-
-[*helicopter]
-
-# If enabled, places helicopter in inventory instead of destroying it
-# when punched.
-helicopter.pick_up (Place in inventory) bool false
 
 
 [*hidename]

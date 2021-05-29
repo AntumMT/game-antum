@@ -1627,13 +1627,25 @@ inventory = sfinv
 
 ## Mounts turn with player look direction.
 #
-#  Often mounts use the a/d keys for turning. For mods that respect
-#  this setting, this will be changed to turn with the direction the
-#  player is looking.
+#  Often mounts use the a/d keys for turning.
+#  For mods that respect this setting, this
+#  will be changed to turn with the direction
+#  the player is looking.
 #
 #    type:    bool
 #    default: (depends on mod)
 #mount_turn_player_look = false
+
+## Mounted entities can only be used by owners.
+#    type:    bool
+#    default: (depends on mod)
+#mount_ownable = true
+
+## Place mountable entities in inventory instead
+#  of breaking down when punched.
+#    type:    bool
+#    default: (depends on mod)
+#mount_punch_inv = true
 
 
 
@@ -2533,15 +2545,6 @@ torches_enable_ceiling = false
 #    type:    float
 #    default: 1.62
 #bike_offroad_friction = 1.62
-
-
-# *** helicopter ***
-
-## If enabled, places helicopter in inventory instead of destroying it
-#  when punched.
-#    type:    bool
-#    default: false
-#helicopter.pick_up = true
 
 
 # *** motorbike ***
