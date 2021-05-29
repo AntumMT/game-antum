@@ -44,6 +44,9 @@ enable_mob_nametags (Enable mob nametags) bool false
 # player is looking.
 mount_turn_player_look (Turn with look direction) bool false
 
+# Mounted entities can only be used by owners.
+mount_ownable (Ownable mounts) bool true
+
 
 
 # ---------------------------------------------------------------------------------

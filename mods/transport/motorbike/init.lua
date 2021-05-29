@@ -19,7 +19,11 @@ local settings = {
 	-- Ability to punch the motorbike to kick the rider
 	kick = true,
 	-- Enable custom plates, requires "signs" mod
-	custom_plates = true
+	custom_plates = true,
+	-- Bike is be placed directly in inventory when punched
+	punch_inv = true,
+	-- "owner" attribute is set when bike is placed
+	ownable = minetest.settings:get_bool("mount_ownable", true),
 }
 for setting, default in pairs(settings) do
 	local value = minetest.settings:get("motorbike." .. setting)
@@ -27,7 +31,6 @@ for setting, default in pairs(settings) do
 	biker[setting] = value
 end
 biker.path = minetest.get_modpath"motorbike"
-dofile(biker.path .. "/settings.lua")
 dofile(biker.path .. "/functions.lua")
 local bikelist = {
 	"black",
@@ -64,12 +67,16 @@ for _, colour in pairs(bikelist) do
 		},
 		drop = "motorbike:" .. colour,
 		on_activate = function(self, staticdata)
-			if staticdata and biker.signs then
-				self.platenumber = staticdata
-				local pos = self.object:get_pos()
-				self.plate = minetest.add_entity(pos, "motorbike:licenseplate")
-				if self.plate then
-					self.plate:set_attach(self.object, "", { x = -0.2, y = -1.9, z = -12.12 }, { x = 0, y = 0, z = 0 })
+			if staticdata then
+				local sdata = minetest.deserialize(staticdata)
+				self.owner = sdata.owner
+				if biker.signs then
+					self.platenumber = sdata.platenumber
+					local pos = self.object:get_pos()
+					self.plate = minetest.add_entity(pos, "motorbike:licenseplate")
+					if self.plate then
+						self.plate:set_attach(self.object, "", { x = -0.2, y = -1.9, z = -12.12 }, { x = 0, y = 0, z = 0 })
+					end
 				end
 			end
 			self.timer1 = 0
@@ -79,6 +86,11 @@ for _, colour in pairs(bikelist) do
 		end,
 		on_rightclick = function(self, clicker)
 			if not self.driver then
+				local pname = clicker:get_player_name()
+				if settings.ownable and self.owner and self.owner ~= pname then
+					minetest.chat_send_player(pname, "You cannot ride " .. self.owner .. "'s motorbike")
+					return
+				end
 				biker.attach(self, clicker, false)
 				minetest.sound_play("motorbike_start", {
 					max_hear_distance = 24,
@@ -96,8 +108,13 @@ for _, colour in pairs(bikelist) do
 				return
 			end
 			if not self.driver then
+				local pname = puncher:get_player_name()
+				if settings.ownable and self.owner and self.owner ~= pname then
+					minetest.chat_send_player(pname, "You cannot take " .. self.owner .. "'s motorbike")
+					return
+				end
 				if biker.breakable then
-					if not biker.punch_inv then
+					if not settings.punch_inv then
 						local pos = self.object:get_pos()
 						local item = minetest.add_item(pos, self.drop)
 						if item then
@@ -108,7 +125,7 @@ for _, colour in pairs(bikelist) do
 						local stack = ItemStack(self.drop)
 						local pinv = puncher:get_inventory()
 						if not pinv:room_for_item("main", stack) then
-							core.chat_send_player(puncher:get_player_name(), "You do not have room in your inventory")
+							core.chat_send_player(pname, "You do not have room in your inventory")
 							return
 						end
 						pinv:add_item("main", stack)
@@ -123,7 +140,13 @@ for _, colour in pairs(bikelist) do
 			end
 		end,
 		on_step = biker.drive,
-		get_staticdata = function(self) if biker.signs then return self.platenumber end end
+		get_staticdata = function(self)
+			local sdata = {
+				owner = self.owner,
+				platenumber = self.platenumber,
+			}
+			return minetest.serialize(sdata)
+		end
 	})
 	minetest.register_craftitem("motorbike:" .. colour, {
 		description = colour:gsub("^%l", string.upper):gsub("_", " ") .. " bike",
@@ -131,7 +154,9 @@ for _, colour in pairs(bikelist) do
 		on_place = function(itemstack, placer, pointed_thing)
 			if pointed_thing.type ~= "node" then return end
 			local pos = { x = pointed_thing.above.x, y = pointed_thing.above.y + 1, z = pointed_thing.above.z }
-			local bike = minetest.add_entity(pos, "motorbike:bike_" .. colour, biker.get_plate(placer:get_player_name()))
+			local pname = placer:get_player_name()
+			local sdata = {owner=pname, platenumber=biker.get_plate(pname)}
+			local bike = minetest.add_entity(pos, "motorbike:bike_" .. colour, minetest.serialize(sdata))
 			bike:set_yaw(placer:get_look_horizontal())
 			itemstack:take_item()
 			return itemstack

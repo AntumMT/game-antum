@@ -133,7 +133,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [helicopter][] ([GPL][lic.gpl2.0] / [CC0][lic.cc0] / CC BY-NC) -- version: [d3985b0 Git][ver.helicopter] *2021-04-27* ([patched][patch.helicopter])
   * [hot_air_balloons][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- version: [39a3572 Git][ver.hot_air_balloons] *2020-11-17*
   * [hovercraft][] ([LGPL / CC BY-SA / CC0][lic.hovercraft]) -- version: [4d50e68 Git][ver.hovercraft] *2017-05-14* ([patched][patch.hovercraft])
-  * [motorbike][] ([MIT][lic.motorbike]) -- version: [9527d56 Git][ver.motorbike] *2021-04-01* ([patched][patch.motorbike])
+  * [motorbike][] ([MIT][lic.motorbike]) -- version: [f918701 Git][ver.motorbike] *2021-05-22* ([patched][patch.motorbike])
 * ui/
   * [bookmarks_gui][] ([BSD 3-Clause][lic.bookmarks_gui]) -- version: [f7ae10a Git][ver.bookmarks_gui] *2017-08-29*
   * [hbarmor][] ([MIT][lic.mit] / [CC BY-SA][lic.ccbysa3.0]) -- version: [1.0.0][ver.hbarmor] *2019-04-01*
@@ -586,7 +586,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.moreblocks]: https://github.com/minetest-mods/moreblocks/tree/3b97ea5
 [ver.moremesecons]: https://github.com/minetest-mods/MoreMesecons/tree/1dab017
 [ver.moreores]: https://github.com/minetest-mods/moreores/tree/3fe0ba8
-[ver.motorbike]: https://github.com/Extex101/motorbike/tree/9527d56
+[ver.motorbike]: https://github.com/Extex101/motorbike/tree/f918701
 [ver.mthudclock]: https://gitlab.com/Rochambeau/mthudclock/tree/d86e745
 [ver.mydoors]: https://github.com/minetest-mods/mydoors/tree/eef3b5f
 [ver.myfences]: https://github.com/DonBatman/myfences/tree/c6e529a
@@ -661,7 +661,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.minetest_game]: https://github.com/AntumMT/mtgame-minetest/tree/355a756
 [patch.moreblocks]: https://github.com/AntumMT/mod-moreblocks/tree/6dda839
 [patch.moreores]: https://github.com/AntumMT/mod-moreores/tree/ae59578
-[patch.motorbike]: https://github.com/AntumMT/mod-motorbike/tree/3bb0c6a
+[patch.motorbike]: https://github.com/AntumMT/mod-motorbike/tree/fda6a40
 [patch.mysheetmetal]: https://github.com/AntumMT/mod-mysheetmetal/tree/2ffb3a2
 [patch.nether]: https://github.com/AntumMT/mod-nether/tree/7a84ddd
 [patch.pipeworks]: https://gitlab.com/AntumMT/mod-pipeworks/tree/48b082e
