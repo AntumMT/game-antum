@@ -1,24 +1,69 @@
 
 TODO:
-- general:
-  - replace deprecated methods in mods: 'getpos', 'setyaw', etc.
-- waffles:
-  - waffles:toaster not working as intended
-  - tries to replace deprecated node name "homedecor:toaster"
-- homedecor_bedroom:
-  - can't sleep in beds
+
+easy (priority 1):
+------------------
+- home_gui
+	- fix so players don't teleport into ground
+- re-add mobs:bee (mobs_animal:bee)
+- pbmarks:
+	- fix so players don't teleport into walls
+- whinny:
+	- use player facing direction to set horse direction when placed
+- hovercraft:
+	- make ownable
+
+easy (priority 2):
+------------------
 - to make work with 'walking_light':
   - ethereal:candle
   - moreblocks:glow_glass
   - moreblocks:super_glow_glass
-- fix kitten mod (spawning from inventory broken when captures with lasso)
-- re-add mobs:bee (mobs_animal:bee)
-- disable griefing by sneeker
-- create juicer: requires battery (or other type of fuel), empty glass (or other vessel), & food item to create juices
-- use setting "mounts_ownable" for:
-  - motorcycles
-  - bicycles
-  - hovercraft
+- trampoline:
+	- add setting for customizing bounce height
+
+hard (priority 1):
+------------------
+- hbsprint:
+	- create setting to change run duration
+- workbench:
+	- allow many more types of tools to be fixed
+- general:
+  - replace deprecated methods in mods: 'getpos', 'setyaw', etc.
+- homedecor_bedroom:
+  - can't sleep in beds
+- airtanks:
+	- fix so player can't breath with breathing tube if airtank is empty
+- pbmarks:
+	- add option to disallow setting bookmarks in areas owned/protected by other players
+- cmer_shark:
+	- fix spawning
+
+hard (priority 2):
+------------------
+- whitelist:
+	- add command parameter "query" to check for a whitelisted name
+	- add command parameter to display all whitelisted names
+- whinny:
+	- port to cmer API
+- waffles:
+  - waffles:toaster not working as intended
+  - tries to replace deprecated node name "homedecor:toaster"
+- chatlog:
+	- allow setting custom timestamp format
+	- split chat log files by date
+- sneeker:
+	- add sound when hit
+	- port to cmer API
+	- disable griefing
+- wardrobe:
+	- show preview image
+- server_shop:
+	- add player shops
+	- fix so unknown items don't mess up shop (replace with aliases or remove unregistered after server start)
+- create juicer (perhaps addon to another mod)
+	- requires battery (or other type of fuel), empty glass (or other vessel), & food item to create juices
+
 
 Warnings:
 - Undeclared global variable "moretrees" accessed at ...s\antum\mods\modpacks\technic\technic/tools/tree_tap.lua:70
