@@ -5,6 +5,7 @@ local skin_mod
 
 local skin_mods = {"skinsdb", "skins", "u_skins", "simple_skins", "wardrobe"}
 
+-- local settings
 local setting_max_speed = tonumber(minetest.settings:get("bike_max_speed")) or 6.9
 local setting_acceleration = tonumber(minetest.settings:get("bike_acceleration")) or 3.16
 local setting_decceleration = tonumber(minetest.settings:get("bike_decceleration")) or 7.9
@@ -17,7 +18,10 @@ local setting_stepheight = tonumber(minetest.settings:get("bike_stepheight")) or
 local setting_wheely_stepheight = tonumber(minetest.settings:get("bike_wheely_stepheight")) or 0.6
 local setting_water_friction = tonumber(minetest.settings:get("bike_water_friction")) or 13.8
 local setting_offroad_friction = tonumber(minetest.settings:get("bike_offroad_friction")) or 1.62
-local setting_turn_look = minetest.settings:get_bool("mount_turn_player_look", false) -- general setting for any mount
+
+-- general settings
+local setting_turn_look = minetest.settings:get_bool("mount_turn_player_look", false)
+local setting_ownable = minetest.settings:get_bool("mount_ownable", true)
 
 --[[ Crafts ]]--
 
@@ -238,6 +242,12 @@ function bike.on_rightclick(self, clicker)
 		return
 	end
 	if not self.driver then
+		local pname = clicker:get_player_name()
+		if setting_ownable and self.owner and pname ~= self.owner then
+			minetest.chat_send_player(pname, "You cannot ride " .. self.owner .. "'s bike.")
+			return
+		end
+
 		-- Make integrated player appear
 		self.object:set_properties({
 			textures = {
@@ -300,6 +310,7 @@ function bike.on_activate(self, staticdata, dtime_s)
 			self.v = data.v
 			self.color = data.color
 			self.alpha = data.alpha
+			self.owner = data.owner
 		end
 	end
 	self.object:set_properties({textures=default_tex(self.color, self.alpha)})
@@ -308,7 +319,12 @@ end
 
 -- Save velocity and color data for reload
 function bike.get_staticdata(self)
-	local data = {v=self.v,color=self.color,alpha=self.alpha}
+	local data = {
+		v = self.v,
+		color = self.color,
+		alpha = self.alpha,
+		owner = self.owner,
+	}
 	return minetest.serialize(data)
 end
 
@@ -351,6 +367,12 @@ function bike.on_punch(self, puncher)
 	end
 	-- Make sure no one is riding
 	if not self.driver then
+		local pname = puncher:get_player_name()
+		if setting_ownable and self.owner and pname ~= self.owner then
+			minetest.chat_send_player(pname, "You cannot take " .. self.owner .. "'s bike.")
+			return
+		end
+
 		local inv = puncher:get_inventory()
 		-- We can only carry one bike
 		if not inv:contains_item("main", "bike:bike") then
@@ -366,10 +388,10 @@ function bike.on_punch(self, puncher)
 			end
 		else
 			-- Turn it into raw materials
-			if not (creative and creative.is_enabled_for(puncher:get_player_name())) then
+			if not (creative and creative.is_enabled_for(pname)) then
 				local ctrl = puncher:get_player_control()
 				if not ctrl.sneak then
-					minetest.chat_send_player(puncher:get_player_name(), "Warning: Destroying the bike gives you only some resources back. If you are sure, hold sneak while destroying the bike.")
+					minetest.chat_send_player(pname, "Warning: Destroying the bike gives you only some resources back. If you are sure, hold sneak while destroying the bike.")
 					return
 				end
 				local leftover = inv:add_item("main", iron .. " 6")
@@ -472,6 +494,7 @@ function bike.on_step(self, dtime)
 	if math.abs(self.last_v - self.v) > 3 then
 		-- And is Minetest not being dumb
 		if not self.up then
+			minetest.log("info", "[bike] forcing stop")
 			self.v = 0
 		end
 	end
@@ -651,20 +674,25 @@ minetest.register_craftitem("bike:bike", {
 			return itemstack
 		end
 
-		-- Place bike with saved color
 		local meta = itemstack:get_meta()
-		local color = meta:get_string("color")
-		local alpha = tonumber(meta:get_string("alpha"))
+		local sdata = {
+			v = 0,
+			-- Place bike with saved color
+			color = meta:get_string("color"),
+			alpha = tonumber(meta:get_string("alpha")),
+			-- Store owner
+			owner = placer:get_player_name(),
+		}
 
 		-- If it's a new bike, give it default colors
-		if alpha == nil then
-			color, alpha = "#FFFFFF", 150
+		if sdata.alpha == nil then
+			sdata.color, sdata.alpha = "#FFFFFF", 150
 		end
 
 		local bike_pos = placer:get_pos()
 		bike_pos.y = bike_pos.y + 0.5
-		-- Use the saved color data and place the bike
-		bike = minetest.add_entity(bike_pos, "bike:bike", minetest.serialize({v=0,color=color,alpha=alpha}))
+		-- Use the saved attributes data and place the bike
+		bike = minetest.add_entity(bike_pos, "bike:bike", minetest.serialize(sdata))
 
 		-- Point it the right direction
 		if bike then
