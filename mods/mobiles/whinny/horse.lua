@@ -186,7 +186,10 @@ local function register_basehorse(name, craftitem, horse)
 	if craftitem ~= nil then
 		function craftitem.on_place(itemstack, placer, pointed_thing)
 			if pointed_thing.above then
-				core.add_entity(pointed_thing.above, name, core.serialize({owner=placer:get_player_name()}))
+				local ent = core.add_entity(pointed_thing.above, name, core.serialize({owner=placer:get_player_name()}))
+				if ent then
+					ent:set_yaw(placer:get_look_horizontal() + rot_compensate)
+				end
 
 				if not whinny.creative then
 					itemstack:take_item()

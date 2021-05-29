@@ -8,8 +8,6 @@ easy (priority 1):
 - re-add mobs:bee (mobs_animal:bee)
 - pbmarks:
 	- fix so players don't teleport into walls
-- whinny:
-	- use player facing direction to set horse direction when placed
 - hovercraft:
 	- make ownable
 
