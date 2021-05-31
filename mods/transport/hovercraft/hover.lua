@@ -22,8 +22,10 @@ function hover:register_hovercraft(name, def)
 			self.object:set_armor_groups({immortal=1})
 			self.object:set_animation({x=0, y=24}, 30)
 
-			local sdata = core.deserialize(staticdata)
-			self.owner = sdata.owner
+			local sdata = minetest.deserialize(staticdata)
+			if sdata then
+				self.owner = sdata.owner
+			end
 		end,
 		on_punch = function(self, puncher, time_from_last_punch, tool_capabilities, dir)
 			if not puncher or not puncher:is_player() then return end
@@ -34,14 +36,14 @@ function hover:register_hovercraft(name, def)
 
 			local pname = puncher:get_player_name()
 			if hover.ownable and self.owner and pname ~= self.owner then
-				core.chat_send_player(pname, "You cannot take " .. self.owner .. "'s hovercraft.")
+				minetest.chat_send_player(pname, "You cannot take " .. self.owner .. "'s hovercraft.")
 				return
 			end
 
 			local stack = ItemStack(name)
 			local pinv = puncher:get_inventory()
 			if not pinv:room_for_item("main", stack) then
-				core.chat_send_player(pname, "You don't have room in your inventory.")
+				minetest.chat_send_player(pname, "You don't have room in your inventory.")
 				return
 			end
 
@@ -71,7 +73,7 @@ function hover:register_hovercraft(name, def)
 			elseif not self.player then
 				local pname = clicker:get_player_name()
 				if hover.ownable and self.owner and pname ~= self.owner then
-					core.chat_send_player(pname, "You cannot ride " .. self.owner .. "'s hovercraft.")
+					minetest.chat_send_player(pname, "You cannot ride " .. self.owner .. "'s hovercraft.")
 					return
 				end
 
@@ -196,7 +198,7 @@ function hover:register_hovercraft(name, def)
 				owner = self.owner,
 			}
 
-			return core.serialize(sdata)
+			return minetest.serialize(sdata)
 		end,
 	})
 
@@ -209,7 +211,7 @@ function hover:register_hovercraft(name, def)
 				return
 			end
 			pointed_thing.under.y = pointed_thing.under.y + 0.5
-			minetest.add_entity(pointed_thing.under, name, core.serialize({owner=placer:get_player_name()}))
+			minetest.add_entity(pointed_thing.under, name, minetest.serialize({owner=placer:get_player_name()}))
 			itemstack:take_item()
 			return itemstack
 		end,
