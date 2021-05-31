@@ -78,10 +78,10 @@ creatures.register_mob({
 	spawning = {
 		abm_nodes = {
 			spawn_on = {
-				"default:sand",
-				"default:desert_sand",
-				"default:stone",
-				"default:desert_stone",
+				"group:sand",
+				"group:stone",
+				"nether:rack",
+				"nether:rack_deep",
 			},
 		},
 		abm_interval = cmer_skeleton.spawn_interval,
@@ -101,7 +101,7 @@ if core.global_exists("asm") then
 		title = S("Skeleton"),
 		inventory_image = "cmer_skeleton_inv.png",
 		spawn = mob_name,
-		ingredients = "cmer:bone",
+		ingredients = "creatures:bone",
 	})
 end
 if not core.registered_items["creatures:skeleton"] then
@@ -109,11 +109,11 @@ if not core.registered_items["creatures:skeleton"] then
 end
 
 
-core.register_craftitem(":cmer:bone", {
+core.register_craftitem(":creatures:bone", {
 	description = S("Bone"),
 	inventory_image = "cmer_skeleton_bone.png",
 	stack_max = 99,
 })
 if not core.registered_items["creatures:bone"] then
-	core.register_alias("creatures:bone", "cmer:bone")
+	core.register_alias("cmer:bone", "creatures:bone")
 end
