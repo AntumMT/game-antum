@@ -1717,11 +1717,21 @@ coloredwood_enable_stairsplus = true
 
 # *** chatlog ***
 
-## Whether month is displayed before day in timestamp
-#  (E.g. 'dd/mm/yyyy' vs. 'mm/dd/yy').
-#    type: bool
-#    default: true
-#chatlog.monthfirst = true
+## Timestamp format (see: https://www.lua.org/pil/22.1.html).
+#    type:    string
+#    default: %m/%d/%Y %H:%M:%S
+#chatlog.format = %m/%d/%Y %H:%M:%S
+
+## Chatlog is output to single file (chatlog.txt) instead
+#  of split into files by date (chatlog/YYYY_MM_DD.txt).
+#    type:    bool
+#    default: false
+#chatlog.single_file = false
+
+## Disables exporting chat.
+#    type:    bool
+#    default: false
+#chatlog.disable = false
 
 
 # *** listitems ***

@@ -497,8 +497,17 @@ bright_night_light (Night light level) int 4
 
 [*chatlog]
 
-# Whether month is displayed before day in timestamp (E.g. 'dd/mm/yyyy' vs. 'mm/dd/yy').
-chatlog.monthfirst (Timestamp shows month before day) bool true
+# Timestamp format (see: https://www.lua.org/pil/22.1.html).
+#
+# Default: %m/%d/%Y %H:%M:%S (mm/dd/yyyy hh:mm:ss)
+chatlog.format (Timestamp format) string %m/%d/%Y %H:%M:%S
+
+# Chatlog is output to single file (chatlog.txt) instead
+# of split into files by date (chatlog/YYYY_MM_DD.txt).
+chatlog.single_file (Single file chatlog) bool false
+
+# Disables exporting chat.
+chatlog.disable (Disable chatlog) bool false
 
 
 [*craftguide]

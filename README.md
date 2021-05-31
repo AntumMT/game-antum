@@ -29,7 +29,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [windmill][] ([WTFPL][lic.windmill]) -- version: [47b029d Git][ver.windmill] *2014-08-21* ([patched][patch.windmill])
 * chat/
   * [away][] ([GPL][lic.gpl2.0]) -- version: [4c1e5a9 Git][ver.away] *2012-03-09* ([patched][patch.away])
-  * [chatlog][] ([CC0][lic.cc0]) -- version: [1.0][ver.chatlog] *2017-08-12*
+  * [chatlog][] ([MIT][lic.chatlog]) -- version: [1.1][ver.chatlog] *2021-05-31*
 * commerce/
   * [atm][] ([GPL][lic.gpl3.0]) -- version: [1.0.4][ver.atm] *2021-04-21* ([patched][patch.atm])
   * [currency][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2021-01-30][ver.currency]
@@ -404,6 +404,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.bridges]: mods/buildings/bridges/README.md
 [lic.campfire]: mods/campfire/README.md
 [lic.castle]: mods/modpacks/castle/LICENSE
+[lic.chatlog]: mods/chat/chatlog/LICENSE.txt
 [lic.christmas]: mods/buildings/christmas/LICENSE.txt
 [lic.cleaner]: mods/admin/cleaner/LICENSE.txt
 [lic.cmer_shark]: mods/mobiles/shark/LICENSE.txt
@@ -521,7 +522,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.castle_storage]: https://github.com/minetest-mods/castle_storage/tree/ad5e887
 [ver.castle_tapestries]: https://github.com/minetest-mods/castle_tapestries/tree/f5e3ac1
 [ver.castle_weapons]: https://github.com/minetest-mods/castle_weapons/tree/d3cf095
-[ver.chatlog]: https://github.com/AntumMT/mod-chatlog/tree/v1.0
+[ver.chatlog]: https://github.com/AntumMT/mod-chatlog/tree/v1.1
 [ver.christmas]: https://github.com/TheZenKitteh/minetest-christmas/tree/d3bd872
 [ver.cleaner]: https://github.com/AntumMT/mod-cleaner/releases/tag/v1.1
 [ver.cmer]: https://github.com/AntumMT/mod-cmer/releases/tag/v1.1-cmer

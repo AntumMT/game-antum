@@ -45,9 +45,6 @@ hard (priority 2):
 - waffles:
   - waffles:toaster not working as intended
   - tries to replace deprecated node name "homedecor:toaster"
-- chatlog:
-	- allow setting custom timestamp format
-	- split chat log files by date
 - sneeker:
 	- add sound when hit
 	- port to cmer API

@@ -1,1 +1,0 @@
-Creates a *chatlog.txt* file in the world directory.
