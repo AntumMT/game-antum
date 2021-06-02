@@ -1,21 +1,27 @@
 
 TODO:
 - Security:
-  - might be an issue if admin changes shop ID while player is using
+	- might be an issue if admin changes shop ID while player is using
 - Functionality:
-  - add option to buy multiple of an item
-  - optimize how refunds are given (e.g. if there is no room for 50s, but room for 1s, then give out 1s instead)
-  - add shop for players to receive money for selling items
-  - allow any currency value, not just 1, 5, 10, 50, & 100
-  - allow custom currency types for buyer shops
+	- optimize how refunds are given (e.g. if there is no room for 50s, but room for 1s, then give out 1s instead)
+	- allow any currency value, not just 1, 5, 10, 50, & 100
+	- allow custom currency types for buyer shops
+	- buyer shops: hold items in inventory & don't process until "sell" button pressed
 - Visuals:
-  - touch up textures
-  - fix texture tiling
-  - make 2 nodes high using mesh
+	- touch up textures
+	- fix texture tiling
+	- make 2 nodes high using mesh
 - Misc.:
-  - make usable with "folks" mod
-  - add localization support
-  - add chat command to reload shops file in world directory
-  - set shop name from formspec instead of registration so shops with different names can use same content
-  - fix so unknown items don't mess up shop
-  - don't set node meta data "id" if not a registered shop ID
+	- make usable with "folks" mod
+	- add localization support
+	- set shop name from formspec instead of registration so shops with different names can use same content
+	- add player shops
+	- fix so unknown items don't mess up shop (may become a problem when shops are registered live)
+	- add chat command to reload shops file in world directory
+	- allow shops to be configured live
+	- register chat command "/server_shop" to register live
+		- "/server_shop register <buyer>|<seller> <id>"
+		- "/server_shop unregister <buyer>|<seller> <id>"
+		- "/server_shop add <buyer>|<seller> <id> <item> <price>"
+		- "/server_shop remove <buyer>|<seller> <id> <item>
+		- "/server_shop reload"

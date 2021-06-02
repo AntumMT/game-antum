@@ -10,6 +10,14 @@ local sellers = {}
 local buyers = {}
 local shops = sellers -- backward compat
 
+function ss.get_shops(buyer)
+	if buyer then
+		return buyers
+	end
+
+	return sellers
+end
+
 --- Currencies registered for trade.
 --
 --  @table server_shop.registered_currencies

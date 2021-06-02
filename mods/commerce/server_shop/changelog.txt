@@ -1,10 +1,17 @@
 
-1.3
+v1.4
+----
+- fixed custom suffix not reflected in product list & messages
+- custom quantity can be set
+- unregistered items are pruned from shops after server startup
+
+v1.3
+----
 - added buyer shops
 - changed json product list type to indexed array
 
-
-1.2
+v1.2
+----
 - custom currencies can be registered
 - changed format of world "server_shops.json":
   - "sells" keyword changed to "products"
@@ -18,15 +25,15 @@
 - displayed currency suffix can be customized or omitted
 - no longer uses node meta for formspec
 
-
-1.1
+v1.1
+----
 - use json format for shops configuration in world directory
 - switched id & name parameters positions in register_shop
 - show preview image of selected item
 - node owners can't set ID unless they have "server" priv
 
-
-1.0
+v1.0
+----
 - created node
 - created simple textures
 - formspec displays items & prices of associated shop

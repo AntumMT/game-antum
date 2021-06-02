@@ -72,9 +72,13 @@ function get_product_list(id, buyer)
 				if not item_price then
 					core.log("warning", "Price not set for item \"" .. p[1] .. "\" for shop ID \"" .. id .. "\"")
 				elseif products == "" then
-					products = item_name .. " : " .. tostring(item_price) .. " MG"
+					products = item_name .. " : " .. tostring(item_price)
 				else
-					products = products .. "," .. item_name .. " : " .. tostring(item_price) .. " MG"
+					products = products .. "," .. item_name .. " : " .. tostring(item_price)
+				end
+
+				if ss.currency_suffix then
+					products = products .. " " .. ss.currency_suffix
 				end
 			end
 		end
@@ -94,6 +98,25 @@ local function format_formname(buyer)
 	end
 
 	return ss.modname .. ":sell"
+end
+
+
+local quantities = {
+	1,
+	5,
+	10,
+	25,
+	50,
+	99,
+}
+quantities.get_idx = function(self, value)
+	local idx = 1
+	for _, v in ipairs(self) do
+		if value == self[idx] then return idx end
+		idx = idx + 1
+	end
+
+	return 1
 end
 
 --- Retrieves formspec layout.
@@ -138,8 +161,10 @@ function ss.get_formspec(pos, player, buyer)
 		end
 
 		local selected_idx = 1
+		local quant_idx = 1
 		if player then
 			selected_idx = pmeta:get_int(ss.modname .. ":selected")
+			quant_idx = quantities:get_idx(pmeta:get_int(ss.modname .. ":quant"))
 		end
 		if selected_idx < 1 then
 			selected_idx = 1
@@ -187,7 +212,12 @@ function ss.get_formspec(pos, player, buyer)
 			formspec = formspec .. btn_refund
 
 			-- buyers don't need a "Buy" button
-			if not buyer then formspec = formspec .. btn_buy end
+			if not buyer then
+				formspec = formspec
+					.. "dropdown[" .. tostring(margin_r) .. ",3.77;" .. tostring(btn_w) .. ",0.75;quant;"
+					.. table.concat(quantities, ",") .. ";" .. tostring(quant_idx) .. "]"
+					.. btn_buy
+			end
 		end
 
 		formspec = formspec	.. "list[current_player;main;2.15,5.5;8,4;0]"
@@ -226,9 +256,15 @@ core.register_on_player_receive_fields(function(player, formname, fields)
 		local smeta = core.get_meta(pos)
 		local id = smeta:get_string("id")
 
+		local product_quant = 1
+		if fields.quant then
+			product_quant = tonumber(fields.quant)
+		end
+
 		if fields.quit then
 			-- return money to player if formspec closed
 			transaction.give_refund(id, player)
+			pmeta:set_string(ss.modname .. ":quant", nil)
 			return false
 		elseif fields.btn_id or (fields.key_enter and fields.key_enter_field == "input_id") then
 			-- safety check that only server admin can set ID
@@ -280,9 +316,7 @@ core.register_on_player_receive_fields(function(player, formname, fields)
 				return false
 			end
 
-			-- FIXME: allow purchasing multiples
-			local product_count = 1
-			local total = transaction.calculate_price(id, product, product_count)
+			local total = transaction.calculate_price(id, product, product_quant)
 
 			local deposited = transaction.get_deposit(id, player)
 			if total > deposited then
@@ -291,18 +325,20 @@ core.register_on_player_receive_fields(function(player, formname, fields)
 			end
 
 			product = ItemStack(product)
-			product:set_count(product_count)
+			product:set_count(product_quant)
 
 			-- subtract total from deposited money
 			transaction.set_deposit(id, player, deposited - total, buyer)
 
 			-- execute transaction
 			core.chat_send_player(player:get_player_name(), "You purchased " .. tostring(product:get_count())
-				.. " " .. product:get_description() .. " for " .. tostring(total) .. " MG.")
-			transaction.give_product(player, product, product_count)
+				.. " " .. product:get_description() .. " for " .. tostring(total) .. " "
+				.. ss.currency_suffix .. ".")
+			transaction.give_product(player, product, product_quant)
 		end
 
 		-- refresh formspec view
+		pmeta:set_int(ss.modname .. ":quant", product_quant)
 		ss.show_formspec(pos, player, buyer)
 
 		return false
