@@ -29,6 +29,7 @@ mypaths?
 simple_protection?
 stairsplus?
 technic?
+technic_worldgen?
 throwing?
 unifieddyes?
 vessels?

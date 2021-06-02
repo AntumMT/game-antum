@@ -8,10 +8,10 @@
 --]]
 
 
-local modoverrides = {}
+local modoverrides = {
+	"technic_worldgen",
+}
 
 for _, mo in ipairs(modoverrides) do
-	if core.get_modpath(mo) then
-		antum.loadScript("nodes/" .. mo)
-	end
+	antum.loadScript("nodes/" .. mo)
 end
