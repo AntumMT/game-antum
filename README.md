@@ -100,7 +100,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [sand_monster][mobs_monster] ([MIT][lic.sand_monster]) -- version: [3dd5954 Git][ver.sand_monster] *2021-05-20*
   * [shark][] ([CC0 / CC BY-SA][lic.cmer_shark]) -- version: [0805b84 Git][ver.cmer_shark] *2021-06-01*
   * [sheep][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [e5e0e31 Git][ver.cmer_sheep] *2021-05-25*
-  * [skeleton][cmer_skeleton] ([MIT][lic.cmer_skeleton]) -- version: [2de6a1b Git][ver.cmer_skeleton] *2021-05-31*
+  * [skeleton][cmer_skeleton] ([MIT][lic.cmer_skeleton]) -- version: [e6448f5 Git][ver.cmer_skeleton] *2021-06-01*
   * [sneeker][] ([MIT][lic.sneeker]) -- version: [1.0][ver.sneeker] *2021-05-08*
   * [spider][cmer_spider] ([unilicense][lic.cmer_spider]) -- version: [dd31f74 Git][ver.cmer_spider] *2021-05-24*
   * [stone_monster][mobs_monster] ([MIT][lic.stone_monster]) -- version: [fa52f6f Git][ver.stone_monster] *2021-05-20*
@@ -531,7 +531,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.cmer_oerkki]: https://github.com/AntumMT/mod-cmer/tree/f7c5586
 [ver.cmer_shark]: https://github.com/AntumMT/mod-cmer_shark/tree/0805b84
 [ver.cmer_sheep]: https://github.com/AntumMT/mod-cmer/tree/e5e0e31
-[ver.cmer_skeleton]: https://github.com/AntumMT/mod-skeleton/tree/2de6a1b
+[ver.cmer_skeleton]: https://github.com/AntumMT/mod-skeleton/tree/e6448f5
 [ver.cmer_spider]: https://github.com/AntumMT/mod-spider/tree/dd31f74
 [ver.cmer_zombie]: https://github.com/AntumMT/mod-cmer/tree/3dd783c
 [ver.coloredwood]: https://gitlab.com/VanessaE/coloredwood/tags/2021-01-30

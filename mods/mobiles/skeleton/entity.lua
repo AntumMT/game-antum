@@ -66,7 +66,7 @@ creatures.register_mob({
 		},
 	},
 	drops = {
-		{"cmer:bone", 1, chance=1},
+		{"creatures:bone", 1, chance=1},
 	},
 	combat = {
 		attack_damage = 13,
@@ -114,6 +114,6 @@ core.register_craftitem(":creatures:bone", {
 	inventory_image = "cmer_skeleton_bone.png",
 	stack_max = 99,
 })
-if not core.registered_items["creatures:bone"] then
+if not core.registered_items["cmer:bone"] then
 	core.register_alias("cmer:bone", "creatures:bone")
 end
