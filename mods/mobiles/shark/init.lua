@@ -18,10 +18,10 @@
 local S = core.get_translator("shark")
 
 
-shark = {
+cmer_shark = {
 	modname = core.get_current_modname()
 }
-shark.modpath = core.get_modpath(shark.modname)
+cmer_shark.modpath = core.get_modpath(cmer_shark.modname)
 
 local version = "1.0"
 local variant = "me" -- Creatures MOB-Engine
@@ -35,9 +35,9 @@ local function mlog(lvl, msg)
 	end
 
 	if lvl == nil then
-		core.log("[" .. shark.modname .. "] " .. msg)
+		core.log("[" .. cmer_shark.modname .. "] " .. msg)
 	else
-		core.log(lvl, "[" .. shark.modname .. "] " .. msg)
+		core.log(lvl, "[" .. cmer_shark.modname .. "] " .. msg)
 	end
 end
 
@@ -52,11 +52,11 @@ local scripts = {
 }
 
 for _, script in ipairs(scripts) do
-	dofile(shark.modpath .. "/" .. script .. ".lua")
+	dofile(cmer_shark.modpath .. "/" .. script .. ".lua")
 end
 
 
-local spawn_nodes = {"default:sand", "default:desert_sand", "default:clay"}
+local spawn_nodes = {"group:sand", "default:clay"}
 if core.global_exists("ethereal") then
 	table.insert(spawn_nodes, "ethereal:seaweed")
 end
@@ -135,13 +135,13 @@ local shark_def = {
 			spawn_on = spawn_nodes,
 			neighbors = {"default:water_source", "default:water_flowing",},
 		},
-		abm_interval = shark.interval,
-		abm_chance = shark.chance,
+		abm_interval = cmer_shark.interval,
+		abm_chance = cmer_shark.chance,
 		--max_number = 1,
 		number = 1,
-		time_range = {min=shark.min_time, max=shark.max_time},
-		light = {min=shark.min_light, max=shark.max_light},
-		height_limit = {min=shark.min_height, max=shark.max_height},
+		time_range = {min=cmer_shark.min_time, max=cmer_shark.max_time},
+		light = {min=cmer_shark.min_light, max=cmer_shark.max_light},
+		height_limit = {min=cmer_shark.min_height, max=cmer_shark.max_height},
 	},
 }
 

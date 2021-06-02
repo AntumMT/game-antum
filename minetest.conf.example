@@ -2033,11 +2033,11 @@ coloredwood_enable_stairsplus = true
 #shark.interval = 60
 
 ## Chance for each node of spawning shark at each interval. The value
-#  is inverted. So a chance of value of 9000 equals 1/9000.
+#  is inverted. So a chance of value of 5000 equals 1/5000.
 #    type:    int
 #    min:     0
-#    default: 9000
-#shark.chance = 9000
+#    default: 5000
+#shark.chance = 5000
 
 ## Minimum node light required for spawning. "0" is darkest & "14" is
 #  lightest (daylight).
@@ -2059,13 +2059,13 @@ coloredwood_enable_stairsplus = true
 
 ## Minimum height at which shark can spawn.
 #    type:    int
-#    default: -30
-#shark.min_height = -30
+#    default: -500
+#shark.min_height = -500
 
 ## Maximum height at which shark can spawn.
 #    type:    int
-#    default: 100
-#shark.max_height = 100
+#    default: 500
+#shark.max_height = 500
 
 ## Times that shark can spawn.
 #    type:    enum

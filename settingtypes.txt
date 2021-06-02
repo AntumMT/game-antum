@@ -206,8 +206,8 @@ oerkki.spawn_chance (Spawn chance) int 7800 1
 shark.interval (Shark spawn interval) int 60 0
 
 # Chance for each node of spawning shark at each interval. The value
-# is inverted. So a chance of value of 9000 equals 1/9000.
-shark.chance (Shark spawn chance) int 9000 0
+# is inverted. So a chance of value of 5000 equals 1/5000.
+shark.chance (Shark spawn chance) int 5000 0
 
 # Minimum node light required for spawning. "0" is darkest & "14" is
 # lightest (daylight).
@@ -220,10 +220,10 @@ shark.min_light (Shark min spawn light) int 4 0 14
 shark.max_light (Shark max spawn light) int 14 0 14
 
 # Minimum height at which shark can spawn.
-shark.min_height (Shark min spawn height) int -30
+shark.min_height (Shark min spawn height) int -500
 
 # Maximum height at which shark can spawn.
-shark.max_height (Shark max spawn height) int 100
+shark.max_height (Shark max spawn height) int 500
 
 # Times that shark can spawn.
 #
