@@ -8,9 +8,7 @@
 --]]
 
 
-local modoverrides = {
-	"ethereal",
-}
+local modoverrides = {}
 
 for _, mo in ipairs(modoverrides) do
 	if core.get_modpath(mo) then
