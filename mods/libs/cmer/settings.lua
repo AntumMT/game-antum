@@ -6,33 +6,8 @@
 --  @module settings.lua
 
 
---- Disables attacking players.
---
---  @setting only_peaceful_mobs
---  @settype bool
---  @default false
-cmer.allow_hostile = core.settings:get_bool("only_peaceful_mobs") ~= true
+-- cmer specific settings
 
---- Enables damage.
---
---  Global setting.
---
---  @setting enable_damage
---  @settype bool
---  @default false
-cmer.enable_damage = core.settings:get_bool("enable_damage", false)
-
---- Enables creative mode.
---
---  Global setting.
---
---  @setting creative_mode
---  @settype bool
---  @default false
-cmer.creative = core.settings:get_bool("creative_mode", false)
-
-
--- mobs specific settings
 
 --- Enables particles when swimming.
 --
@@ -54,3 +29,39 @@ cmer.nametags = core.settings:get_bool("mobs.nametags", false)
 --  @settype bool
 --  @default false
 cmer.grief_owned = core.settings:get_bool("mobs.grief_owned", false)
+
+
+-- general mobs settings
+
+
+--- Disables attacking players.
+--
+--  @setting only_peaceful_mobs
+--  @settype bool
+--  @default false
+cmer.allow_hostile = core.settings:get_bool("only_peaceful_mobs") ~= true
+
+
+-- general settings
+
+
+--- Print extra debugging messages.
+--
+--  @setting debug_mods
+--  @settype bool
+--  @default false
+cmer.debug = core.settings:get_bool("debug_mods", false)
+
+--- Enables creative mode.
+--
+--  @setting creative_mode
+--  @settype bool
+--  @default false
+cmer.creative = core.settings:get_bool("creative_mode", false)
+
+--- Enables damage.
+--
+--  @setting enable_damage
+--  @settype bool
+--  @default false
+cmer.enable_damage = core.settings:get_bool("enable_damage", false)

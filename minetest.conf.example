@@ -1606,6 +1606,11 @@ motd = Antum Server
 #    default: false
 log_mods = true
 
+## Print extra debugging messages.
+#    type:    bool
+#    default: false
+#debug_mods = false
+
 ## Logs extra debug messages.
 #    type: bool
 #    default: false

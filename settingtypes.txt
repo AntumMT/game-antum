@@ -13,6 +13,9 @@ enable_tool_wear (Tools wear & break on use) bool true
 # Tools & weapons will wear down & break when used for attacking/fighting.
 enable_weapon_wear (Weapons wear & break when fighting) bool true
 
+# Print extra debugging messages.
+debug_mods (Debug mods) bool false
+
 # Logs extra debug messages.
 enable_debug_mods (Enable debugging messages) bool false
 

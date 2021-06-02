@@ -24,13 +24,7 @@
 --  @module register.lua
 
 
-local function translate_name(name)
-	if name:find(":") == 1 then
-		name = name:sub(2)
-	end
-
-	return name
-end
+local translate_name = dofile(cmer.modpath .. "/misc_functions.lua")
 
 
 local function translate_def(def)
@@ -130,13 +124,13 @@ local function translate_def(def)
 	new_def.on_activate = function(self, staticdata, dtime_s)
 
 		-- Add everything we need as basis for the engine
-		self.mob_name = translate_name(def.name)
+		self.mob_name = def.name
 		self.hp = def.stats.hp
 		self.hostile = def.stats.hostile
 		self.mode = ""
 		self.stunned = false -- if knocked back or hit do nothing else
 
-		if def.stats.has_kockback or def.stats.has_kockback == false then
+		if def.stats.has_kockback ~= nil then
 			cmer.log("warning",
 				def.name
 				.. ": \"def.stats.has_kockback\" is deprecated, please use \"def.stats.has_knockback\"")
@@ -286,7 +280,7 @@ function cmer.register_mob(def) -- returns true if sucessfull
 		spawn_def.mob_name = def.name
 		spawn_def.mob_size = def.model.collisionbox
 		if cmer.register_spawn(spawn_def) ~= true then
-			throw_error("Couldn't register spawning for '" .. def.name .. "'")
+			throw_error("Couldn't register spawning for '" .. translate_name(def.name) .. "'")
 		end
 
 		if spawn_def.spawner then
@@ -353,12 +347,18 @@ local function groupSpawn(pos, mob, group, nodes, range, max_loops)
 		p.y = p.y + 1
 		if checkSpace(p, mob.size) == true then
 			cnt = cnt + 1
-			core.add_entity(p, mob.name)
+			if not core.add_entity(p, mob.name) then
+				cmer.log("error", "could not spawn entity: " .. tostring(mob.name))
+			elseif cmer.debug then
+				print("Spawned entity: " .. tostring(mob.name) .. " number " .. tostring(cnt))
+			end
 		end
 	end
 	if cnt < group then
 		return false
 	end
+
+	return true
 end
 
 function cmer.register_spawn(spawn_def)
@@ -370,7 +370,16 @@ function cmer.register_spawn(spawn_def)
 	if not spawn_def.abm_nodes.neighbors then
 		spawn_def.abm_nodes.neighbors = {}
 	end
-	table.insert(spawn_def.abm_nodes.neighbors, "air")
+	if #spawn_def.abm_nodes.neighbors == 0 then
+		-- only add "air" if neighbors empty
+		table.insert(spawn_def.abm_nodes.neighbors, "air")
+	end
+
+	local mob_name = translate_name(spawn_def.mob_name)
+
+	if cmer.debug then
+		print("\nregistering spawn for: " .. tostring(mob_name))
+	end
 
 	core.register_abm({
 		nodenames = spawn_def.abm_nodes.spawn_on,
@@ -382,6 +391,10 @@ function cmer.register_spawn(spawn_def)
 			-- prevent abm-"feature"
 			if stopABMFlood() == true then
 				return
+			end
+
+			if cmer.debug then
+				print("ABM reached: " .. tostring(mob_name))
 			end
 
 			-- time check
@@ -408,10 +421,11 @@ function cmer.register_spawn(spawn_def)
 			if spawn_def.light and not inRange(spawn_def.light, llvl) then
 				return
 			end
+
 			-- creature count check
 			local max
 			if active_object_count_wider > (spawn_def.max_number or 1) then
-				local mates_num = #cmer.findTarget(nil, pos, 16, "mate", spawn_def.mob_name, true)
+				local mates_num = #cmer.findTarget(nil, pos, 16, "mate", mob_name, true)
 				if not spawn_def.max_number or (mates_num or 0) >= spawn_def.max_number then
 					return
 				else
@@ -435,13 +449,17 @@ function cmer.register_spawn(spawn_def)
 			end
 
 			if number > 1 then
-				groupSpawn(pos, {name = spawn_def.mob_name, size = height_min}, number, spawn_def.abm_nodes.spawn_on, 5)
+				groupSpawn(pos, {name=mob_name, size=height_min}, number, spawn_def.abm_nodes.spawn_on, 5)
 			else
 			-- space check
 				if not checkSpace(pos, height_min) then
 					return
 				end
-				core.add_entity(pos, spawn_def.mob_name)
+				if not core.add_entity(pos, mob_name) then
+					cmer.log("error", "could not spawn entity: " .. tostring(mob_name))
+				elseif cmer.debug then
+					print("Spawned entity: " .. tostring(mob_name))
+				end
 			end
 		end,
 	})
@@ -488,7 +506,9 @@ local function makeSpawnerEntiy(mob_name, model)
 end
 
 local function spawnerSpawn(pos, spawner_def)
-	local mates = cmer.findTarget(nil, pos, spawner_def.range, "mate", spawner_def.mob_name, true) or {}
+	local mob_name = translate_name(spawner_def.mob_name)
+
+	local mates = cmer.findTarget(nil, pos, spawner_def.range, "mate", mob_name, true) or {}
 	if #mates >= spawner_def.number then
 		return false
 	end
@@ -515,7 +535,7 @@ local function spawnerSpawn(pos, spawner_def)
 				local llvl = core.get_node_light(p)
 				if not spawner_def.light or (spawner_def.light and inRange(spawner_def.light, llvl)) then
 					cnt = cnt + 1
-					core.add_entity(p, spawner_def.mob_name)
+					core.add_entity(p, mob_name)
 				end
 			end
 		end
@@ -532,8 +552,10 @@ function cmer.register_spawner(spawner_def)
 
 	makeSpawnerEntiy(spawner_def.mob_name, spawner_def.model)
 
+	local mob_name = translate_name(spawner_def.mob_name)
+
 	core.register_node(spawner_def.mob_name .. "_spawner", {
-		description = spawner_def.description or spawner_def.mob_name .. " spawner",
+		description = spawner_def.description or mob_name .. " spawner",
 		paramtype = "light",
 		tiles = {"creatures_spawner.png"},
 		is_ground_content = true,
@@ -542,12 +564,12 @@ function cmer.register_spawner(spawner_def)
 		drop = "",
 		on_construct = function(pos)
 				pos.y = pos.y - 0.3
-				core.add_entity(pos, spawner_def.mob_name .. "_spawner_dummy")
+				core.add_entity(pos, mob_name .. "_spawner_dummy")
 		end,
 		on_destruct = function(pos)
 			for _,obj in ipairs(core.get_objects_inside_radius(pos, 1)) do
 				local entity = obj:get_luaentity()
-				if obj and entity and entity.mob_name == "_" .. spawner_def.mob_name .. "_dummy" then
+				if obj and entity and entity.mob_name == "_" .. mob_name .. "_dummy" then
 					obj:remove()
 				end
 			end
@@ -560,7 +582,7 @@ function cmer.register_spawner(spawner_def)
 
 	if spawner_def.player_range and type(spawner_def.player_range) == "number" then
 		core.register_abm({
-			nodenames = {spawner_def.mob_name .. "_spawner"},
+			nodenames = {mob_name .. "_spawner"},
 		  interval = 2,
 		  chance = 1,
 		  catch_up = false,
@@ -580,7 +602,7 @@ function cmer.register_spawner(spawner_def)
 		})
 	else
 		core.register_abm({
-			nodenames = {spawner_def.mob_name .. "_spawner"},
+			nodenames = {mob_name .. "_spawner"},
 		  interval = 10,
 		  chance = 3,
 		  action = function(pos)
@@ -803,8 +825,8 @@ end
 --
 --  @table SpawnDef
 --  @tfield ABMNodesDef abm_nodes On what nodes mob can spawn.
---  @tfield int abm_interval Time in seconds until Minetest tries to find a node with set specs.
---  @tfield int abm_chance Chance is 1/<chance>.
+--  @tfield[opt] int abm_interval Time in seconds until Minetest tries to find a node with set specs (default: 44).
+--  @tfield[opt] int abm_chance Chance is 1/&lt;chance&gt; (default: 7000).
 --  @tfield int max_number Maximum mobs of this kind per mapblock (16x16x16).
 --  @tfield int number How many mobs are spawned if found suitable spawn position. Can be `int` or `table`: number = {min=&lt;value&gt;, max=&lt;value&gt;}
 --  @tfield[opt] table time_range Time range in time of day format (0-24000) (table with *min* & *max* values).
@@ -816,7 +838,7 @@ end
 --
 --  @table ABMNodesDef
 --  @tfield[opt] table spawn_on List of nodes on which the mob can spawn.
---  @tfield table neighbors List of nodes that should be neighbors where mob can spawn. Can be nil or table as above. "air" is forced always as neighbor.
+--  @tfield[opt] table neighbors List of nodes that should be neighbors where mob can spawn. Can be nil or table as above (default: {"air"}).
 
 --- Spawner definition table.
 --

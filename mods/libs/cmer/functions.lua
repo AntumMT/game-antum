@@ -23,6 +23,8 @@
 -- Localizations
 local rnd = math.random
 
+local translate_name = dofile(cmer.modpath .. "/misc_functions.lua")
+
 
 local function knockback(selfOrObject, dir, old_dir, strengh)
 	local object = selfOrObject
@@ -177,7 +179,7 @@ end
 
 local function onDamage(self, hp, hitsound)
 	local me = self.object
-	local def = core.registered_entities[self.mob_name]
+	local def = core.registered_entities[translate_name(self.mob_name)]
 	hp = hp or me:get_hp()
 
 	if hp <= 0 then
@@ -368,7 +370,7 @@ end
 
 cmer.on_step = function(self, dtime)
 	-- first get the relevant specs; exit if we don't know anything (1-3ms)
-	local def = core.registered_entities[self.mob_name]
+	local def = core.registered_entities[translate_name(self.mob_name)]
 	if not def then
 		throw_error("Can't load creature-definition")
 		return
