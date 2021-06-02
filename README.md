@@ -87,6 +87,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [pipeworks][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2670fd8 Git][ver.pipeworks] *2021-05-06* ([patched][patch.pipeworks])
   * [wdata][] ([MIT][lic.wdata]) -- version: [e339375 Git][ver.wdata] *2021-05-28*
 * mobiles/
+  * [bee][mobs_animal] ([MIT][lic.mobs_bee]) -- version: [671c6c1 Git][ver.mobs_bee] *2021-06-02*
   * [chicken][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [085706f Git][ver.cmer_chicken] *2021-05-25*
   * [cow][mobs_animal] ([MIT][lic.mobs_cow]) -- version: [85af09a Git][ver.mobs_cow] *2021-05-19*
   * [dirt_monster][mobs_monster] ([MIT][lic.dirt_monster] -- version: [40c48e0 Git][ver.dirt_monster] *2021-05-20*
@@ -435,6 +436,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.mese_monster]: mods/mobiles/mese_monster/license.txt
 [lic.mesecons]: mods/modpacks/mesecons/COPYING.txt
 [lic.mobkit]: mods/mobiles/engine/mobkit/LICENSE
+[lic.mobs_bee]: mods/mobiles/bee/license.txt
 [lic.mobs_cow]: mods/mobiles/cow/license.txt
 [lic.mobs_kitten]: mods/mobiles/kitten/license.txt
 [lic.mobs_rat]: mods/mobiles/rat/licenset.txt
@@ -577,6 +579,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.mesecons]: https://github.com/minetest-mods/mesecons/tree/6579351
 [ver.minetest_game]: https://github.com/minetest/minetest_game/tree/5.4.1
 [ver.mobkit]: https://github.com/TheTermos/mobkit/tree/ddea141
+[ver.mobs_bee]: https://github.com/AntumMT/mod-mobs_animal/tree/671c6c1
 [ver.mobs_cow]: https://github.com/AntumMT/mod-mobs_animal/tree/85af09a
 [ver.mobs_kitten]: https://github.com/AntumMT/mod-mobs_animal/tree/b3bf401
 [ver.mobs_rat]: https://github.com/AntumMT/mod-mobs_animal/tree/2a8d115
