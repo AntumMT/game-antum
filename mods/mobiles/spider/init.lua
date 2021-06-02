@@ -1,5 +1,5 @@
 
-spidermob = {}
+cmer_spider = {}
 cmer_spider.modname = core.get_current_modname()
 cmer_spider.modpath = core.get_modpath(cmer_spider.modname)
 
