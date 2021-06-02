@@ -1,21 +1,16 @@
 
 spidermob = {}
-spidermob.modname = core.get_current_modname()
-spidermob.modpath = core.get_modpath(spidermob.modname)
+cmer_spider.modname = core.get_current_modname()
+cmer_spider.modpath = core.get_modpath(cmer_spider.modname)
 
---dofile(spidermob.modpath .. "/api.lua")
+dofile(cmer_spider.modpath .. "/settings.lua")
+--dofile(cmer_spider.modpath .. "/api.lua")
 
 
 local spider_drops = {}
 if core.registered_items["farming:string"] then
 	table.insert(spider_drops, {"farming:string", {min=1, max=3}, chance=0.5})
 end
-
-local spawn_nodes = {
-	"default:junglegrass",
-	"default:jungleleaves",
-	"default:jungletree",
-}
 
 
 creatures.register_mob({
@@ -24,7 +19,7 @@ creatures.register_mob({
 	stats = {
 		hp = 30,
 		hostile = true,
-		lifetime = 600, -- 10 minutes
+		lifetime = cmer_spider.lifetime,
 		can_jump = 1,
 	},
 	modes = {
@@ -58,13 +53,20 @@ creatures.register_mob({
 		search_type = "player",
 	},
 	spawning = {
-		abm_nodes = {spawn_on=spawn_nodes,},
-		abm_interval = 60,
-		abm_chance = 7500,
+		abm_nodes = {
+			spawn_on = {
+				"group:leaves",
+				"default:junglegrass",
+				"default:jungletree",
+				"default:dirt_with_grass",
+			},
+		},
+		abm_interval = cmer_spider.spawn_interval,
+		abm_chance = cmer_spider.spawn_chance,
 		max_number = 3,
-		number = 1,
+		number = {min=1, max=2},
 		time_range = {min=0, max=23999},
-		light = {min=-10, max=20},
+		light = {min=0, max=core.LIGHT_MAX},
 		height_limit = {min=-500, max=31000},
 	},
 })

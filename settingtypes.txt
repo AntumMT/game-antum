@@ -310,6 +310,18 @@ sneeker.spawn_maxheight (Sneeker max spawn height) int 31000
 sneeker.spawn_mapblock_limit (Sneeker spawn limit) int 1
 
 
+[**spider]
+
+# Entity lifespan.
+spider.lifetime (Spider lifetime) 600 1
+
+# Spawn rate frequency.
+spider.spawn_interval (Spawn interval) 60 1
+
+# Chance of spawn at interval.
+spider.spawn_chance (Spawn chance) 7500 1
+
+
 [**velociraptor]
 
 # Used alternate "feathered" texture.

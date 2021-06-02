@@ -2120,6 +2120,27 @@ coloredwood_enable_stairsplus = true
 #sneeker.spawn_maxlight = 5
 
 
+# *** spider ***
+
+## Entity lifespan.
+#    type:    int
+#    min:     1
+#    default: 600
+#spider.lifetime = 600
+
+## Spawn rate frequency.
+#    type:    int
+#    min:     1
+#    default: 60
+#spider.spawn_interval = 60
+
+## Chance of spawn at interval.
+#    type:    int
+#    min:     1
+#    default: 7500
+#spider.spawn_chance = 7500
+
+
 # *** whinny ***
 
 ## If enabled, messages all players when spawned.

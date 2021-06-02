@@ -1,5 +1,5 @@
 
-spidermob.disable_blood = core.settings:get_bool("mobs_disable_blood", false)
+cmer_spider.disable_blood = core.settings:get_bool("mobs_disable_blood", false)
 
 function spidermob:register_mob(name, def)
 	minetest.register_entity(name, {
@@ -698,7 +698,7 @@ function spidermob:register_mob(name, def)
 
 			--blood_particles
 
-			if not spidermob.disable_blood and self.blood_amount > 0 and pos then
+			if not cmer_spider.disable_blood and self.blood_amount > 0 and pos then
 				local p = pos
 				p.y = p.y + self.blood_offset
 
@@ -760,9 +760,9 @@ function spidermob:register_mob(name, def)
 	})
 end
 
-spidermob.spawning_spidermob = {}
+cmer_spider.spawning_spidermob = {}
 function spidermob:register_spawn(name, nodes, max_light, min_light, chance, active_object_count, max_height, spawn_func)
-	spidermob.spawning_spidermob[name] = true
+	cmer_spider.spawning_spidermob[name] = true
 	minetest.register_abm({
 		nodenames = nodes,
 		neighbors = {"air"},
@@ -772,7 +772,7 @@ function spidermob:register_spawn(name, nodes, max_light, min_light, chance, act
 			if active_object_count_wider > active_object_count then
 				return
 			end
-			if not spidermob.spawning_spidermob[name] then
+			if not cmer_spider.spawning_spidermob[name] then
 				return
 			end
 

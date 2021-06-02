@@ -2,4 +2,3 @@
 TODO:
 - add localization support
 - remove unused code
-- use settings for lifetime, spawn interval, & spawn chance
