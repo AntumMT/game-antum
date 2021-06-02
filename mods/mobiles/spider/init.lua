@@ -63,7 +63,7 @@ creatures.register_mob({
 		},
 		abm_interval = cmer_spider.spawn_interval,
 		abm_chance = cmer_spider.spawn_chance,
-		max_number = 3,
+		max_number = 1,
 		number = {min=1, max=2},
 		time_range = {min=0, max=23999},
 		light = {min=0, max=core.LIGHT_MAX},
