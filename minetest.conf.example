@@ -2003,6 +2003,27 @@ coloredwood_enable_stairsplus = true
 #kitten.spawn_chance = 10000
 
 
+# *** oerkki ***
+
+## Entity lifespan.
+#    type:    int
+#    min:     1
+#    default: 540
+#oerkki.lifetime = 540
+
+## Spawn interval in seconds.
+#    type:    int
+#    min:     1
+#    default: 55
+#oerkki.spawn_interval = 55
+
+## Chance of spawn at interval.
+#    type:    int
+#    min:     1
+#    default: 7800
+#oerkki.spawn_chance = 7800
+
+
 # *** shark ***
 
 ## Interval in seconds that specifies how often shark spawns.

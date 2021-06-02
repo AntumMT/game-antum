@@ -1,0 +1,9 @@
+
+# Entity lifespan.
+oerkki.lifetime (Lifespan) int 540 1
+
+# Spawn interval in seconds.
+oerkki.spawn_interval (Spawn interval) int 55 1
+
+# Chance of spawn at interval.
+oerkki.spawn_chance (Spawn chance) int 7800 1

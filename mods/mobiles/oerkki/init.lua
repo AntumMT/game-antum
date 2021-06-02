@@ -20,12 +20,19 @@
 --
 
 
+cmer_oerkki = {}
+cmer_oerkki.modname = core.get_current_modname()
+cmer_oerkki.modpath = core.get_modpath(cmer_oerkki.modname)
+
+dofile(cmer_oerkki.modpath .. "/settings.lua")
+
+
 local def = {
 	name = ":creatures:oerkki",
 	nametag = creatures.feature_nametags and "Oerkki" or nil,
 	stats = {
 		hp = 13,
-		lifetime = 540, -- 9 Minutes
+		lifetime = cmer_oerkki.lifetime,
 		can_jump = 1,
 		can_swim = true,
 		can_burn = true,
@@ -85,8 +92,8 @@ local def = {
 		abm_nodes = {
 			spawn_on = {"default:dirt_with_grass", "default:dirt", "default:stone"},
 		},
-		abm_interval = 55,
-		abm_chance = 7800,
+		abm_interval = cmer_oerkki.spawn_interval,
+		abm_chance = cmer_oerkki.spawn_chance,
 		max_number = 1,
 		number = {min = 1, max = 3},
 		time_range = {min = 18500, max = 5100},
