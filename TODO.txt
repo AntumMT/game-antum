@@ -24,8 +24,8 @@ hard (priority 1):
 	- create setting to change run duration
 - workbench:
 	- allow many more types of tools to be fixed
-- general:
-  - replace deprecated methods in mods: 'getpos', 'setyaw', etc.
+- replace deprecated methods in mods: 'getpos', 'setyaw', etc.
+	- enchanting
 - homedecor_bedroom:
   - can't sleep in beds
 - airtanks:
