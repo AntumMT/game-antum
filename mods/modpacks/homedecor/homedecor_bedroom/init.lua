@@ -67,9 +67,10 @@ homedecor.register("bed_regular", {
 		if itemname == "homedecor:bed_regular" then
 			homedecor.bed_expansion(pos, clicker, itemstack, pointed_thing, true)
 			return itemstack
---		else
+		else
 --			bed_on_rightclick(pos, node, clicker)
---			return itemstack
+			beds.on_rightclick(pos, clicker)
+			return itemstack
 		end
 	end
 })
@@ -96,10 +97,11 @@ homedecor.register("bed_extended", {
 		homedecor.unextend_bed(pos)
 	end,
 	on_dig = unifieddyes.on_dig,
---	on_rightclick = function(pos, node, clicker, itemstack, pointed_thing)
+	on_rightclick = function(pos, node, clicker, itemstack, pointed_thing)
 --		bed_on_rightclick(pos, node, clicker)
---		return itemstack
---	end,
+		beds.on_rightclick(pos, clicker)
+		return itemstack
+	end,
 	drop = "homedecor:bed_regular"
 })
 
@@ -133,10 +135,11 @@ homedecor.register("bed_kingsize", {
 		end
 	end,
 	on_dig = unifieddyes.on_dig,
---	on_rightclick = function(pos, node, clicker, itemstack, pointed_thing)
+	on_rightclick = function(pos, node, clicker, itemstack, pointed_thing)
 --		bed_on_rightclick(pos, node, clicker)
---		return itemstack
---	end,
+		beds.on_rightclick(pos, clicker)
+		return itemstack
+	end,
 })
 
 for w, d in pairs({ ["mahogany"] = S("mahogany"), ["oak"] = S("oak") }) do

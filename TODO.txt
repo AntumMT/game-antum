@@ -5,7 +5,6 @@ easy (priority 1):
 ------------------
 - home_gui
 	- fix so players don't teleport into ground
-- re-add mobs:bee (mobs_animal:bee)
 - pbmarks:
 	- fix so players don't teleport into walls
 
@@ -26,8 +25,6 @@ hard (priority 1):
 	- allow many more types of tools to be fixed
 - replace deprecated methods in mods: 'getpos', 'setyaw', etc.
 	- enchanting
-- homedecor_bedroom:
-  - can't sleep in beds
 - airtanks:
 	- fix so player can't breath with breathing tube if airtank is empty
 - pbmarks:
