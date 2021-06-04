@@ -80,7 +80,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [biofuel][] ([MIT](lic.biofuel)) -- version: [ca480ce Git][ver.biofuel] *2020-07-20*
   * [campfire][] ([GPL][lic.gpl2.0] / [CC BY-SA][lic.ccbysa] / [WTFPL][lic.campfire]) -- version: [1058f1d Git][ver.campfire] *2019-11-28*
   * [craftguide][] ([MIT][lic.craftguide]) -- version: [f379998 Git][ver.craftguide] *2021-02-08* ([patched][patch.craftguide])
-  * [enchanting][] ([GPL / WTFPL / CC BY-SA-NA][lic.enchanting]) -- version: [13ea31c Git][ver.enchanting] *2016-12-16* ([patched][patch.enchanting])
+  * [enchanting][] ([GPL / WTFPL / CC BY-SA-NA][lic.enchanting]) -- version: [dee7dde Git][ver.enchanting] *2021-06-04*
   * [intllib][] ([Unlicense][lic.unlicense]) -- version: [6ebdc53][ver.intllib] *2021-02-23* ***DEPRECATED***
   * [listitems][] ([MIT][lic.listitems]) -- version: [0.7][ver.listitems] *2021-04-29*
   * [painting][] (???) -- version [8961849 Git][ver.painting] *2016-05-05*
@@ -548,7 +548,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.dirt_monster]: https://github.com/AntumMT/mod-mob_dirt_monster/tree/40c48e0
 [ver.drawers]: https://github.com/minetest-mods/drawers/releases/tag/v0.6.2
 [ver.dungeon_master]: https://github.com/AntumMT/mod-mob_dungeon_master/tree/00c890f
-[ver.enchanting]: https://github.com/minetest-mods/enchanting/tree/13ea31c
+[ver.enchanting]: https://github.com/AntumMT/mod-enchanting/tree/dee7dde
 [ver.equip_exam]: https://github.com/AntumMT/mod-equip_exam/releases/tag/v1.2
 [ver.ethereal]: https://notabug.org/TenPlus1/ethereal/src/90cdf94ea6c54cd5e3fcc7f77d3b6121f963c379
 [ver.farming]: https://notabug.org/TenPlus1/farming/commit/dedc33cc46ec65782a5b8ab573d1fb6bb6915b63
@@ -650,7 +650,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.craftguide]: https://github.com/AntumMT/mod-craftguide/tree/aef18f2
 [patch.crops]: https://github.com/AntumMT/mod-crops/tree/a1cce06
 [patch.drawers]: https://github.com/AntumMT/mod-drawers/tree/a77f809
-[patch.enchanting]: https://github.com/AntumMT/mod-enchanting/tree/9cd1463
 [patch.ethereal]: https://github.com/AntumMT/mod-ethereal/tree/c404045
 [patch.gems_encrustable]: https://github.com/AntumMT/mod-gems_encrustable/tree/a043b9c
 [patch.gems_tools]: https://github.com/AntumMT/mod-gems_tools/tree/7f89843

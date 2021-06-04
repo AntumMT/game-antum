@@ -155,7 +155,7 @@ function enchanting.construct(pos)
 	inv:set_size("tool", 1)
 	inv:set_size("mese", 1)
 
-	minetest.add_entity({x=pos.x, y=pos.y+0.85, z=pos.z}, "xdecor:book_open")
+	minetest.add_entity({x=pos.x, y=pos.y+0.85, z=pos.z}, "enchanting:book_open")
 	local timer = minetest.get_node_timer(pos)
 	timer:start(5.0)
 end
@@ -163,7 +163,7 @@ end
 function enchanting.destruct(pos)
 	for _, obj in pairs(minetest.get_objects_inside_radius(pos, 0.9)) do
 		if obj and obj:get_luaentity() and
-				obj:get_luaentity().name == "xdecor:book_open" then
+				obj:get_luaentity().name == "enchanting:book_open" then
 			obj:remove() break
 		end
 	end
@@ -172,7 +172,7 @@ end
 function enchanting.timer(pos)
 	local num = #minetest.get_objects_inside_radius(pos, 0.9)
 	if num == 0 then
-		minetest.add_entity({x=pos.x, y=pos.y+0.85, z=pos.z}, "xdecor:book_open")
+		minetest.add_entity({x=pos.x, y=pos.y+0.85, z=pos.z}, "enchanting:book_open")
 	end
 
 	local minp = {x=pos.x-2, y=pos.y, z=pos.z-2}
@@ -198,7 +198,7 @@ function enchanting.timer(pos)
 	return true
 end
 
-minetest.register_node(":xdecor:enchantment_table", {
+minetest.register_node("enchanting:table", {
 	description = "Enchantment Table",
 	paramtype = "light",
 	paramtype2 = "facedir",
@@ -218,8 +218,9 @@ minetest.register_node(":xdecor:enchantment_table", {
 	allow_metadata_inventory_put = enchanting.put,
 	allow_metadata_inventory_move = function() return 0 end
 })
+core.register_alias("xdecor:enchantment_table", "enchanting:table")
 
-minetest.register_entity(":xdecor:book_open", {
+minetest.register_entity("enchanting:book_open", {
 	visual = "sprite",
 	visual_size = {x=0.75, y=0.75},
 	collisionbox = {0},
@@ -229,14 +230,15 @@ minetest.register_entity(":xdecor:book_open", {
 		local pos = self.object:get_pos()
 		local pos_under = {x=pos.x, y=pos.y-1, z=pos.z}
 
-		if minetest.get_node(pos_under).name ~= "xdecor:enchantment_table" then
+		if minetest.get_node(pos_under).name ~= "enchanting:table" then
 			self.object:remove()
 		end
 	end
 })
+core.register_alias("xdecor:book_open", "enchanting:table")
 
 minetest.register_craft({
-	output = "xdecor:enchantment_table",
+	output = "enchanting:table",
 	recipe = {
 		{"", "default:book", ""},
 		{"default:diamond", "default:obsidian", "default:diamond"},
