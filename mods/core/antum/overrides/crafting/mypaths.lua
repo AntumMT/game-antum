@@ -21,15 +21,6 @@ for _, out in ipairs({"mypaths:grass_slope", "mypaths:grass_slope_long",
 end
 
 antum.registerCraft({
-	output = "mypaths:grass",
-	recipe = {
-		{"default:dirt", "default:dirt", "default:dirt"},
-		{"default:dirt", "default:dirt", "default:dirt"},
-		{"default:dirt", "default:dirt", "default:dirt"},
-	},
-})
-
-antum.registerCraft({
 	output = "mypaths:grass_slope 6",
 	recipe = recipe_slope,
 })
