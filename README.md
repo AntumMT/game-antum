@@ -139,6 +139,8 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [bookmarks_gui][] ([BSD 3-Clause][lic.bookmarks_gui]) -- version: [f7ae10a Git][ver.bookmarks_gui] *2017-08-29*
   * [hbarmor][] ([MIT][lic.mit] / [CC BY-SA][lic.ccbysa3.0]) -- version: [1.0.0][ver.hbarmor] *2019-04-01*
   * [home_gui][] ([BSD 3-Clause][lic.home_gui]) -- version: [425466a Git][ver.home_gui] *2021-05-21* ([patched][home_gui.patch])
+  * [hud_compass][] (MIT / [CC BY-SA ][lic.ccbysa3.0]) -- version: [648c744
+ Git][ver.hud_compass] *2020-04-23*
   * [hudbars][] ([MIT][lic.mit] / [CC BY-SA][lic.ccbysa3.0]) -- version: [2.3.1][ver.hudbars] *2020-07-11*
   * [pbmarks][] ([MIT][lic.pbmarks]) -- version: [00c3549 Git][ver.pbmarks] *2021-05-28*
 * world/
@@ -315,6 +317,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [homedecor]: https://forum.minetest.net/viewtopic.php?t=2041
 [hot_air_balloons]: https://forum.minetest.net/viewtopic.php?t=22367
 [hovercraft]: https://forum.minetest.net/viewtopic.php?t=6722
+[hud_compass]: https://content.minetest.net/packages/kestral/hud_compass/
 [hudbars]: https://forum.minetest.net/viewtopic.php?t=11153
 [ilights]: https://forum.minetest.net/viewtopic.php?t=12200
 [intllib]: https://forum.minetest.net/viewtopic.php?t=4929
@@ -566,6 +569,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.homedecor]: https://gitlab.com/VanessaE/homedecor_modpack/tree/f1dc68a
 [ver.hot_air_balloons]: https://notabug.org/NetherEran/hot_air_balloons/src/39a3572ad1bf7fd800525d68b128981e1b2c37d1
 [ver.hovercraft]: https://github.com/stujones11/hovercraft/tree/4d50e68
+[ver.hud_compass]: https://github.com/kestral246/hud_compass/tree/648c744
 [ver.hudbars]: http://repo.or.cz/minetest_hudbars.git/tree/0684bac
 [ver.ilights]: https://gitlab.com/VanessaE/ilights/tags/2021-02-25-01
 [ver.intllib]: https://github.com/minetest-mods/intllib/tree/6ebdc53

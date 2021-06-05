@@ -1,0 +1,8 @@
+# This file contains settings for wand_of_illumination that can be changed in
+# minetest.conf
+
+#    Define default to place compass and whether to use clock.
+#    -1 to -4 = compass only (disabled), -5 to -8 = compass + clock (disabled)
+#    1 to 4 = compass only (enabled), 5 to 8 = compass + clock (enabled)
+#    (default = -2)
+compass_default_corner (Default corner to place compass) enum -2 -8,-7,-6,-5,-4,-3,-2,-1,1,2,3,4,5,6,7,8

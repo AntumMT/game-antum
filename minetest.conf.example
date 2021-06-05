@@ -2643,6 +2643,16 @@ torches_enable_ceiling = false
 #hidename.use_alpha = false
 
 
+# *** hud_compass *** #
+
+## Define default to place compass and whether to use clock.
+#  -1 to -4 = compass only (disabled), -5 to -8 = compass + clock (disabled)
+#  1 to 4 = compass only (enabled), 5 to 8 = compass + clock (enabled)
+#    type:    enum
+#    default: -2
+#compass_default_corner = -2
+
+
 # *** hudbars *** #
 
 ## Specifies how the value indicators (i.e. health, breath, etc.) look.
