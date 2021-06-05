@@ -140,7 +140,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [hbarmor][] ([MIT][lic.mit] / [CC BY-SA][lic.ccbysa3.0]) -- version: [1.0.0][ver.hbarmor] *2019-04-01*
   * [home_gui][] ([BSD 3-Clause][lic.home_gui]) -- version: [425466a Git][ver.home_gui] *2021-05-21* ([patched][home_gui.patch])
   * [hudbars][] ([MIT][lic.mit] / [CC BY-SA][lic.ccbysa3.0]) -- version: [2.3.1][ver.hudbars] *2020-07-11*
-  * [mthudclock][] ([WTFPL][lic.wtfpl]) -- version: [d86e745 Git][ver.mthudclock] *2018-01-06*
   * [pbmarks][] ([MIT][lic.pbmarks]) -- version: [00c3549 Git][ver.pbmarks] *2021-05-28*
 * world/
   * [bright_night][] ([Unlicense][lic.unlicense]) -- version: [69b750a Git][ver.bright_night] *2018-06-03*
@@ -338,7 +337,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [moreores]: https://forum.minetest.net/viewtopic.php?t=549
 [moretrees]: https://forum.minetest.net/viewtopic.php?t=4394
 [motorbike]: https://forum.minetest.net/viewtopic.php?t=24244
-[mthudclock]: https://forum.minetest.net/viewtopic.php?t=11879
 [mydoors]: https://forum.minetest.net/viewtopic.php?t=10626
 [myfences]: https://forum.minetest.net/viewtopic.php?t=14275
 [mylights]: https://forum.minetest.net/viewtopic.php?t=13154
@@ -591,7 +589,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.moremesecons]: https://github.com/minetest-mods/MoreMesecons/tree/1dab017
 [ver.moreores]: https://github.com/minetest-mods/moreores/tree/3fe0ba8
 [ver.motorbike]: https://github.com/Extex101/motorbike/tree/f918701
-[ver.mthudclock]: https://gitlab.com/Rochambeau/mthudclock/tree/d86e745
 [ver.mydoors]: https://github.com/minetest-mods/mydoors/tree/eef3b5f
 [ver.myfences]: https://github.com/DonBatman/myfences/tree/c6e529a
 [ver.mylights]: https://github.com/minetest-mods/mylights/tree/0d734b7
