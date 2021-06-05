@@ -24,7 +24,8 @@ hard (priority 1):
 - workbench:
 	- allow many more types of tools to be fixed
 - replace deprecated methods in mods: 'getpos', 'setyaw', etc.
-	- enchanting
+	- technic_worldgen (get3d)
+	- gems_encrustable (core.env)
 - pbmarks:
 	- add option to disallow setting bookmarks in areas owned/protected by other players
 - cmer_shark:
