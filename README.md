@@ -116,7 +116,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [headanim][] ([MIT][lic.headanim]) -- version: [1.01][ver.headanim] *2021-01-16*
   * [hidename][] ([MIT][lic.hidename]) -- version: [1.1][ver.hidename] *2021-05-17*
   * [invisibility][] ([MIT][lic.invisibility]) -- version: [65c0823 Git][ver.invisibility] *2021-01-21* ([patched][patch.invisibility])
-  * [wardrobe][] ([MIT][lic.wardrobe]) -- version: [1.3][ver.wardrobe] *2021-04-22*
+  * [wardrobe][] ([MIT][lic.wardrobe]) -- version: [2b7b03e Git][ver.wardrobe] *2021-06-07*
 * protection/
   * [pvp_areas][] ([LGPL][lic.lgpl2.1]) -- version: [6e4d66d Git][ver.pvp_areas] *2018-07-26*
   * [simple_protection][] ([CC0][lic.cc0]) -- version: [3630fe9 Git][ver.simple_protection] *2021-04-07* ([patched][patch.simple_protection])
@@ -631,7 +631,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.unifieddyes]: https://gitlab.com/VanessaE/unifieddyes/tags/2021-03-26-1
 [ver.waffles]: https://github.com/GreenXenith/waffles/tree/15bcdce
 [ver.walking_light]: https://github.com/petermaloney/walking_light/tree/766ef0f
-[ver.wardrobe]: https://github.com/AntumMT/mod-wardrobe/releases/tag/v1.3
+[ver.wardrobe]: https://github.com/AntumMT/mod-wardrobe/tree/2b7b03e
 [ver.wdata]: https://github.com/AntumMT/mod-wdata/tree/e339375
 [ver.whinny]: https://github.com/AntumMT/mod-whinny/tree/32f2d9f
 [ver.whitelist]: https://github.com/AntumMT/mod-whitelist/tree/b813b19

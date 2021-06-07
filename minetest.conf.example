@@ -2431,8 +2431,15 @@ coloredwood_enable_stairsplus = true
 
 ## Number of skins shown per page.
 #    type:    int
+#    min:     1
+#    max:     8
 #    default: 8
 #wardrobe.skins_per_page = 8
+
+## Show preview images.
+#    type:    bool
+#    default: true
+#wardrobe.previews = true
 
 
 # *** wieldview ***

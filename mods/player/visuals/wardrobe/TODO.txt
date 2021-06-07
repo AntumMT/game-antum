@@ -1,0 +1,5 @@
+
+TODO:
+- make wool optional dependency (required for craft only)
+- use wdata for writing/reading world data
+- rename to distinguish from upstream

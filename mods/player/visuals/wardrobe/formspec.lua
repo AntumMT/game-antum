@@ -29,9 +29,11 @@ function wardrobe.show_formspec(player, page)
 		table.insert(skins, {skin, skinName})
 	end
 
-	local formspec = "size[5,10]"
-		.. "label[0,0;Change Into:]"
-		.. "label[1.8,0.5;Page " .. tostring(page) .. " / " .. tostring(page_count) .. "]"
+	local formspec
+	if not wardrobe.previews then
+		formspec = "size[5,10]"
+			.. "label[0,0;Change Into:]"
+			.. "label[1.8,0.5;Page " .. tostring(page) .. " / " .. tostring(page_count) .. "]"
 
 		for idx, s in ipairs(skins) do
 			formspec = formspec
@@ -39,8 +41,35 @@ function wardrobe.show_formspec(player, page)
 		end
 
 		formspec = formspec
-			.. "button[0,9;1,1;n:p" .. tostring(page_prev) .. ";prev]"
-			.. "button[4,9;1,1;n:p" .. tostring(page_next) .. ";next]"
+			.. "button[1.5,9;1,1;n:p" .. tostring(page_prev) .. ";prev]"
+			.. "button[2.5,9;1,1;n:p" .. tostring(page_next) .. ";next]"
+	else
+		formspec = "size[12,10]"
+			.. "label[0,0;Change Into:]"
+			.. "label[5.3,0.5;Page " .. tostring(page) .. " / " .. tostring(page_count) .. "]"
+
+		local border_l = 0
+		local addon = 1
+		for idx, s in ipairs(skins) do
+			local preview = s[1]:split(".png")[1] .. "-preview.png"
+
+			if idx % 5 == 0 then
+				addon = 1
+				border_l = border_l + 6
+			end
+
+			formspec = formspec
+				.. "button_exit[" .. border_l .. "," .. addon+.5 ..";5,1;s:" .. s[1] .. ";" .. s[2] .. "]"
+				.. "image[" .. border_l+5 .. "," .. addon .. ";1,2;" .. preview .."]"
+
+			addon = addon + 2
+		end
+
+		formspec = formspec
+			.. "button[5,9;1,1;n:p" .. tostring(page_prev) .. ";prev]"
+			.. "button[6,9;1,1;n:p" .. tostring(page_next) .. ";next]"
+
+	end
 
 	core.show_formspec(playerName, wardrobe.formspec_name, formspec)
 end

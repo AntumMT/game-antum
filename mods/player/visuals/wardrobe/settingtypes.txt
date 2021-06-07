@@ -1,5 +1,6 @@
 
-## Number of skins shown per page.
-#
-#  default: 8
-wardrobe.skins_per_page (Skins per page) int 8
+# Number of skins shown per page.
+wardrobe.skins_per_page (Skins per page) int 8 1 8
+
+# Show preview images.
+wardrobe.previews (Show previews) bool true

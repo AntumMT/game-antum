@@ -8,6 +8,21 @@ wardrobe.player_skin_db = world_path.."/playerSkins.txt"
 wardrobe.skin_files = {wardrobe.path.."/skins.txt", world_path.."/skins.txt"};
 wardrobe.playerSkins = {}
 
+function wardrobe.log(lvl, msg)
+	if not msg then
+		msg = lvl
+		lvl = nil
+	end
+
+	msg = "[" .. wardrobe.name .. "] " .. msg
+	if not lvl then
+		core.log(msg)
+	else
+		core.log(lvl, msg)
+	end
+end
+
+
 dofile(wardrobe.path.."/settings.lua")
 dofile(wardrobe.path.."/formspec.lua")
 local initSkin, changeSkin, updateSkin = dofile(wardrobe.path.."/skinMethods.lua");
