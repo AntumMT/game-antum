@@ -67,8 +67,16 @@ workbench.defs = {
 			    { 0, 8,  0, 8,  8, 8  }}
 }
 
+local custom_repairable = {}
+
+function WB:register_repairable(item)
+	custom_repairable[item] = true
+end
+
 -- Tools allowed to be repaired
 function workbench:repairable(stack)
+	if custom_repairable[stack] then return true end
+
 	local tools = {"pick", "axe", "shovel", "sword", "hoe", "armor", "shield"}
 	for _, t in pairs(tools) do
 		if stack:find(t) then return true end

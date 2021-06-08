@@ -127,7 +127,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [compassgps][] ([WTFPL][lic.wtfpl] / [CC0][lic.cc0] / [CC BY-SA][lic.ccbysa]) -- version: [567b95f Git][ver.compassgps] *2018-09-24*
   * [equip_exam][] ([MIT][lic.equip_exam]) - version: [1.2][ver.equip_exam] *2021-05-03*
   * [tools_obsidian][] ([LGPL / CC BY-SA][lic.tools_obsidian]) -- version: [1.0][ver.tools_obsidian] *2021-01-15*
-  * [workbench][] ([LGPL / WTFPL](mods/tools/workbench/LICENSE)) -- version: [bd14f59 Git][ver.workbench] *2017-08-08*
+  * [workbench][] ([LGPL / WTFPL](mods/tools/workbench/LICENSE)) -- version: [bd14f59 Git][ver.workbench] *2017-08-08* ([patched][patch.workbench])
 * transport/
   * [bike][] ([MIT][lic.bike]) -- version: [1.2][ver.bike] *2021-04-12* ([patched][patch.bike])
   * [boats][boats2] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa3.0]) -- version: [b83231e Git][ver.boats2] *2016-10-14* ([patched][patch.boats2]) ***UPSTREAM MOVED***
@@ -679,3 +679,4 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.unifieddyes]: https://github.com/AntumMT/mod-unifieddyes/tree/3013964
 [patch.walking_light]: https://github.com/AntumMT/mod-walking_light/tree/b482369
 [patch.windmill]: https://github.com/AntumMT/mod-windmill/tree/7756ab4
+[patch.workbench]: https://github.com/AntumMT/mod-workbench/tree/980997b
