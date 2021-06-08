@@ -20,9 +20,7 @@ easy (priority 2):
 hard (priority 1):
 ------------------
 - hbsprint:
-	- create setting to change run duration
-- workbench:
-	- allow many more types of tools to be fixed
+	- don't deplete when attached to mount entity
 - replace deprecated methods in mods: 'getpos', 'setyaw', etc.
 	- technic_worldgen (get3d)
 	- gems_encrustable (core.env)
@@ -45,8 +43,7 @@ hard (priority 2):
 	- add sound when hit
 	- port to cmer API
 	- disable griefing
-- wardrobe:
-	- show preview image
+	- add wear to 3d_armor when hit by explosion
 - server_shop:
 	- add player shops
 	- fix so unknown items don't mess up shop (replace with aliases or remove unregistered after server start)
