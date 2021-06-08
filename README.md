@@ -638,7 +638,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.windmill]: https://github.com/Sokomine/windmill/tree/47b029d
 [ver.workbench]: https://github.com/minetest-mods/workbench/tree/bd14f59
 
-[patch.3d_armor]: https://github.com/AntumMT/mp-3d_armor/tree/f30a747
+[patch.3d_armor]: https://github.com/AntumMT/mp-3d_armor/tree/b3324f6
 [patch.airtanks]: https://github.com/AntumMT/mod-airtanks/tree/8b7fd12
 [patch.amber]: https://github.com/AntumMT/mod-amber/tree/39b852a
 [patch.atm]: https://github.com/AntumMT/mod-atm/tree/2ab0e78

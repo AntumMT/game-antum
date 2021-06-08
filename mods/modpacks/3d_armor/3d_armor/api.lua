@@ -61,9 +61,6 @@ armor = {
 		{"fire:permanent_flame",    3, 4},
 		{"ethereal:crystal_spike",  2, 1},
 		{"ethereal:fire_flower",    2, 1},
-		{"default:torch",           1, 1},
-		{"default:torch_ceiling",   1, 1},
-		{"default:torch_wall",      1, 1},
 	},
 	registered_groups = {["fleshy"]=100},
 	registered_callbacks = {
@@ -202,7 +199,7 @@ end
 
 
 -- armor is not visible on player model if enabled
-local transparent_armor = core.settings:get_bool("armor_transparent", false)
+local transparent_armor = minetest.settings:get_bool("armor_transparent", false)
 
 armor.set_player_armor = function(self, player)
 	local name, armor_inv = self:get_valid_player(player, "[set_player_armor]")
@@ -670,4 +667,11 @@ armor.drop_armor = function(pos, stack)
 			obj:set_velocity({x=math.random(-1, 1), y=5, z=math.random(-1, 1)})
 		end
 	end
+end
+
+--- Allows skin mod to be set manually.
+--
+--  Useful for skin mod forks that do not use the same name.
+armor.set_skin_mod = function(mod)
+	armor.skin_mod = mod
 end
