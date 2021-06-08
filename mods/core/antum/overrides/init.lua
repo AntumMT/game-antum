@@ -18,6 +18,7 @@ antum.loadScripts({
 	"misc",
 	"nodes",
 	"crafting",
+	"workbench_repairs",
 })
 
 
