@@ -1,136 +1,112 @@
-# Wardrobe Minetest Mod
+## Wardrobe mod for Minetest
 
+### Description:
 
-Originally by [prestidigitator](https://forum.minetest.net/viewtopic.php?t=9680).
+Forked from [prestidigitator's wardrobe mod](https://forum.minetest.net/viewtopic.php?t=9680).
 
-This mod provides a very simple way to change the skin on the default character
-mesh.  Unlike other skin-changing mods out there, it does not attempt to change
-the character mesh, does not provide for the old 2D billboard-type character
-appearance, and does not depend on any kind of inventory extension mods.  It
-also does not rely on running external scripts, downloading skins from a
-server, or anything of that nature.
+Provides a simple way to change skins on the default character mesh.
 
-Changing skins is done via a new "wardrobe" node, which brings up a form with
-skin names when you right-click on it (like a chest or furnace).  Choosing a
-skin instantly changes your character's appearance, and this change is kept if
-you log out (unless the skin is removed from the server, in which case your
-appearance will revert to the default when you log in).
+![screenshot](screenshot.png)
 
-The list of skins is static and determined when the server starts based on two
-files: <modsPath>/wardrobe/skins.txt and <worldPath>/skins.txt.  Both files
-have the same syntax (see "Skins File Syntax" below).  The simplest way to add
-a skin is to either drop the image into the <modsPath>/wardrobe/textures
-directory or add them to a texture pack, then add the simple name of the
-texture file to one of these skins.txt files.
+### Usage:
 
-For convenience, some SVG images have been included with this mod.  One
-("skinTemplate.svg") shows the exact layout of a Minetest skin for the default
-character model, and should be useful for creating new skins.  This layout is
-also (mostly?) compatible with Minecraft skins.  The others can be used to
-create higher resolution textures for the wardrobe object, in case you are
-using a texture pack with resolutions greater than 16x16.  Skins too may be
-higher resolution as long as they have an aspect ratio of 2:1.  The author of
-this mod created a very high resolution version of the default character and it
-works well (but has not been included to simplify mod licensing).
+Changing skins is done via a "wardrobe" node, which brings up a form with skin names when you right-click on it. Choosing a skin instantly changes your character's appearance, and this change is kept if you log out.
 
+#### Registering skins:
 
----
-## Skins File Syntax
+There are two ways to register skins:
 
-A comment line starts with two dashes (like in Lua), but must be the only thing
-on the line:
+1. adding the filenames to *skins.txt* located in this mod's directory or the world path (see "Skins file syntax" below)
+2. using the *wardrobe.registerSkin* method:
 
-   -- This is a comment and has no effect.
+`wardrobe.registerSkin(texture, displayname)`
 
-Except for empty lines and comments, each line names a texture (file) and a
-name, separated by optional whitespace and a colon (:):
+- *texture:* real filename of texture (e.g. "my_skin.png")
+- *displayname:* text shown to player (e.g. "My Skin")
 
-   texture_file_name.png: My Skin
-   skin_other_texture_file_name.png: Other Skin
+Minetest recognizes skins located in a mod's *textures* sub-directory (e.g. *&lt;mod_path&gt;/textures*), *&lt;minetest_install&gt;/textures*, & textures installed to the current user's home directory:
 
-The first string (e.g. "texture_file_name.png") will be passed to the minetest
-API just like any other node or item texture.  Generally it is simply the whole
-file name of an image in a mod "texture" directory or texture pack.  The second
-string (e.g. "My Skin") is presented to the player in-world as the name of the
-texture.  If this name is omitted, as in:
+- on Linux/Unix-like systems, this is *~/.minetest/textures*
+- on Windows, this is *%AppData%/Minetest/textures* (only if built with *-DRUN_IN_PLACE=FALSE* flag)
 
-   texture_file_name.png
-   skin_other_texture_file_name.png
+#### Skins file syntax:
 
-Then a name is constructed by removing any ".png" suffix any optional "skin_"
-or "wardrobe_skin_" prefix, and replacing underscores with spaces.  So the
-above skins would be named "texture file name" and "other texture file name",
-respectively.
+A comment line starts with two dashes (like in Lua), but must be the only thing on the line:
 
-To remove a skin that was added elsewhere (for example, to a remove a skin in a
-particular world), prepend a minus sign (-) to the line.  For example:
+> `-- This is a comment and has no effect.`
 
-   -skin_other_texture_file_name.png
+Except for empty lines and comments, each line names a texture (file) and a name, separated by optional whitespace and a colon (:):
 
-would remove the "skin_other_texture_file_name.png" skin no matter where it was
-specified or what name it was given.
+> `texture_file_name.png: My Skin`
+> `skin_other_texture_file_name.png: Other Skin`
 
+The first string (e.g. "texture_file_name.png") will be passed to the Minetest API just like any other node or item texture. Generally it is simply the whole file name of an image in a mod "texture" directory or texture pack. The second string (e.g. "My Skin") is presented to the player in-world as the name of the texture. If this name is omitted, as in:
 
----
-### Mod Details
+> `texture_file_name.png`
+> `skin_other_texture_file_name.png`
 
-Required Minetest Version: >=0.5.0
+Then a name is constructed by removing any ".png" suffix any optional "skin_" or "wardrobe_skin_" prefix, and replacing underscores with spaces. So the above skins would be named "texture file name" and "other texture file name", respectively.
 
-Dependencies: default, player_api, wool (included in minetest_game)
+To remove a skin that was added elsewhere (for example, to remove a skin in a particular world), prepend a minus sign (-) to the line:
 
-Recipies:
+> `-skin_other_texture_file_name.png`
 
-   * W - any wood (same kinds you can make a chest from)
-   * S - any stick
-   * L - any wool
+This would remove the "skin_other_texture_file_name.png" skin no matter where it was specified or what name it was given.
+
+#### Settings:
 
 ```
-   wardrobe:
-      W S W
-      W L W
-      W L W
+wardrobe.skins_per_page
+  - determines how many skins are shown on each page
+  - type:    int
+  - min:     1
+  - max:     8
+  - default: 8
+
+wardrobe.previews
+  - determines if preview images are shown in form
+  - type:    bool
+  - default: true
 ```
 
-Git Repo: https://github.com/AntumMT/mod-wardrobe
+#### Crafting:
 
+<details><summary>Spoiler:</summary>
 
----
-## Copyright and Licensing
+Key:
+```
+GW: any wood planks
+GS: any stick
+GL: any wool
+```
 
-All contents, including source code, documentation, and images, are the
-original creations of the mod author.
+Wardrobe node:
+```
+╔════╦════╦════╗
+║ GW ║ GS ║ GW ║
+╠════╬════╬════╣
+║ GW ║ GL ║ GW ║
+╠════╬════╬════╣
+║ GW ║ GL ║ GW ║
+╚════╩════╩════╝
+```
 
-License: [MIT](LICENSE.txt)
+</details>
 
+### Licensing:
 
----
-## Change History
+- Code: [MIT](LICENSE.txt)
+- Textures by prestidigitator: CC0
+- *character-preview.png* created from [player_api](https://github.com/minetest/minetest_game/blob/master/mods/player_api/models/character.png): ([CC BY-SA 3.0](https://github.com/minetest/minetest_game/blob/master/mods/player_api/license.txt))
 
-Version 1.0
+### Requirements:
 
-* Released 2014-07-05
-* First working version
+- Minetest v0.5.0
+- Depends: [default](https://github.com/minetest/minetest_game/tree/master/mods/default), [player_api](https://github.com/minetest/minetest_game/tree/master/mods/player_api)
+- Optional depends: [wool](https://github.com/minetest/minetest_game/tree/master/mods/wool) (craft recipe)
 
-Version 1.1
+### Links:
 
-* Released 2015-04-24
-* Removed farming as a dependency; wool is from wool.
-* Auto-detection of player mesh name (thank you indriApollo).
-* Removed warning caused by access of uninitialized global variale (even though
-  it was just a check for nil).
-
-Version 1.2
-
-* Released 2021-04-20
-* License changed to MIT.
-* Added player_api as dependency.
-* External mods can register skins.
-* Skins can be registered individually from within mod code.
-* Number of displayed skins can be set in server configuration file.
-* Keep default skin as first item.
-
-Version 1.3
-
-* Released 2021-04-22
-* Formspec doesn't close & re-open when changing page (fixes cursor being centered).
-* "prev" & "next" buttons cycle back to last & first page respectively.
+- [Git Repo](https://github.com/AntumMT/mod-wardrobe)
+- [Changelog](changelog.txt)
+- [TODO](TODO.txt)

@@ -1,4 +1,4 @@
-Original code by prestidigitator (WTFPL)
+Original code by prestidigitator (CC0)
 
 
 The MIT License (MIT)

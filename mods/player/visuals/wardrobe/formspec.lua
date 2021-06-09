@@ -2,8 +2,8 @@
 wardrobe.formspec_name = "wardrobe_wardrobeSkinForm"
 
 function wardrobe.show_formspec(player, page)
-	local playerName = player:get_player_name();
-	if not playerName or playerName == "" then return; end
+	local pname = player:get_player_name()
+	if not pname or pname == "" then return end
 
 	local page_count = math.ceil(wardrobe.skin_count / wardrobe.skins_per_page)
 	local page_prev = page-1
@@ -24,8 +24,8 @@ function wardrobe.show_formspec(player, page)
 
 	local skins = {}
 	for i = s, e do
-		local skin = wardrobe.skins[i];
-		local skinName = core.formspec_escape(wardrobe.skinNames[skin]);
+		local skin = wardrobe.skins[i]
+		local skinName = core.formspec_escape(wardrobe.skinNames[skin])
 		table.insert(skins, {skin, skinName})
 	end
 
@@ -71,5 +71,28 @@ function wardrobe.show_formspec(player, page)
 
 	end
 
-	core.show_formspec(playerName, wardrobe.formspec_name, formspec)
+	core.show_formspec(pname, wardrobe.formspec_name, formspec)
 end
+
+
+core.register_on_player_receive_fields(function(player, formName, fields)
+	if formName ~= wardrobe.formspec_name then return end
+
+	local pname = player:get_player_name()
+	if not pname or pname == "" then return end
+
+	for fieldName in pairs(fields) do
+		if #fieldName > 2 then
+			local action = string.sub(fieldName, 1, 1)
+			local value = string.sub(fieldName, 3)
+
+			if action == "n" then
+				wardrobe.show_formspec(player, tonumber(string.sub(value, 2)))
+				return
+			elseif action == "s" then
+				wardrobe.changePlayerSkin(pname, value)
+				return
+			end
+		end
+	end
+end)
