@@ -1,0 +1,11 @@
+# Translated by:
+
+
+This server is whitelisted and you are not on the whitelist.=
+Manipulate the whitelist=
+@1 is already on the whitelist.=
+Added @1 to the whitelist.=
+@1 is not on the whitelist.=
+Removed @1 from the whitelist.=
+Must supply name parameter.=
+Invalid action: @1=

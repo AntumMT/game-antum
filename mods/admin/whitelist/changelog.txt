@@ -1,0 +1,19 @@
+
+v1.1
+----
+- changed license to MIT
+- added localization support
+- executing "/whitelist" without parameters displays all whitelisted names
+- added command "query" to check if a name is whitelisted
+
+v1.0
+----
+- changed title to "Whiter List"
+
+v0.1
+----
+- forked from ShadowNinja's whitelist mod at Git commit 041737f
+- change license to CC0
+- added setting to enable/disable
+- allow setting custom access denied message
+- whitelist is reloaded on player login (allows list to be edited while server is running)

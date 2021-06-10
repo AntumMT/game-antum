@@ -18,7 +18,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [no_fall_damage][] ([MIT][lic.no_fall_damage]) -- version [1.0.0][ver.no_fall_damage] *2020-12-19*
   * [privs][] ([CC0][lic.cc0])
   * [spectator_mode][] ([WTFPL][lic.spectator_mode]) -- version: [3648371 Git][ver.spectator_mode] *2020-07-15*
-  * [whitelist][] ([CC0][lic.cc0]) -- version: [0.1 (b813b19 Git)][ver.whitelist] *2017-08-18*
+  * [whitelist][] ([MIT][lic.whitelist]) -- version: [1.1][ver.whitelist] *2021-06-09*
 * buildings/
   * [bridges][] ([GPL][lic.gpl3.0]) -- version: [5b5f475 Git][ver.bridges] *2015-08-23* ([patched][patch.bridges])
   * [christmas][] ([MIT][lic.christmas]) -- version [d3bd872 Git][ver.christmas] *2013-01-11* ([patched][patch.christmas])
@@ -469,6 +469,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.wardrobe]: mods/player/visuals/wardrobe/LICENSE.txt
 [lic.wdata]: mods/misc/wdata/LICENSE.txt
 [lic.whinny]: mods/mobiles/whinny/LICENSE.txt
+[lic.whitelist]: mods/admin/whitelist/LICENSE.txt
 [lic.windmill]: mods/buildings/windmill/README.md
 
 [lic.cc0]: doc/licenses/CC0.txt
@@ -634,7 +635,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.wardrobe]: https://github.com/AntumMT/mod-wardrobe/tree/0500a78
 [ver.wdata]: https://github.com/AntumMT/mod-wdata/tree/e339375
 [ver.whinny]: https://github.com/AntumMT/mod-whinny/tree/32f2d9f
-[ver.whitelist]: https://github.com/AntumMT/mod-whitelist/tree/b813b19
+[ver.whitelist]: https://github.com/AntumMT/mod-whitelist/releases/tag/v1.1
 [ver.windmill]: https://github.com/Sokomine/windmill/tree/47b029d
 [ver.workbench]: https://github.com/minetest-mods/workbench/tree/bd14f59
 
