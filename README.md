@@ -127,7 +127,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [compassgps][] ([WTFPL][lic.wtfpl] / [CC0][lic.cc0] / [CC BY-SA][lic.ccbysa]) -- version: [567b95f Git][ver.compassgps] *2018-09-24*
   * [equip_exam][] ([MIT][lic.equip_exam]) - version: [1.2][ver.equip_exam] *2021-05-03*
   * [tools_obsidian][] ([LGPL / CC BY-SA][lic.tools_obsidian]) -- version: [1.0][ver.tools_obsidian] *2021-01-15*
-  * [workbench][] ([LGPL / WTFPL](mods/tools/workbench/LICENSE)) -- version: [bd14f59 Git][ver.workbench] *2017-08-08* ([patched][patch.workbench])
+  * [workbench][] ([BSD][lic.workbench]) -- version: [1.0][ver.workbench] *2021-06-10*
 * transport/
   * [bike][] ([MIT][lic.bike]) -- version: [1.2][ver.bike] *2021-04-12* ([patched][patch.bike])
   * [boats][boats2] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa3.0]) -- version: [b83231e Git][ver.boats2] *2016-10-14* ([patched][patch.boats2]) ***UPSTREAM MOVED***
@@ -471,6 +471,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.whinny]: mods/mobiles/whinny/LICENSE.txt
 [lic.whitelist]: mods/admin/whitelist/LICENSE.txt
 [lic.windmill]: mods/buildings/windmill/README.md
+[lic.workbench]: mods/tools/workbench/LICENSE.txt
 
 [lic.cc0]: doc/licenses/CC0.txt
 [lic.ccby]: doc/licenses/CC_BY-4.0.txt
@@ -637,7 +638,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.whinny]: https://github.com/AntumMT/mod-whinny/tree/32f2d9f
 [ver.whitelist]: https://github.com/AntumMT/mod-whitelist/releases/tag/v1.1
 [ver.windmill]: https://github.com/Sokomine/windmill/tree/47b029d
-[ver.workbench]: https://github.com/minetest-mods/workbench/tree/bd14f59
+[ver.workbench]: https://github.com/AntumMT/mod-workbench/releases/tag/v1.0
 
 [patch.3d_armor]: https://github.com/AntumMT/mp-3d_armor/tree/b3324f6
 [patch.airtanks]: https://github.com/AntumMT/mod-airtanks/tree/8b7fd12
@@ -681,4 +682,3 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.unifieddyes]: https://github.com/AntumMT/mod-unifieddyes/tree/3013964
 [patch.walking_light]: https://github.com/AntumMT/mod-walking_light/tree/b482369
 [patch.windmill]: https://github.com/AntumMT/mod-windmill/tree/7756ab4
-[patch.workbench]: https://github.com/AntumMT/mod-workbench/tree/980997b

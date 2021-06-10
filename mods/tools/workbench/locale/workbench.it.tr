@@ -1,0 +1,12 @@
+# textdomain: xdecor
+# Author: Salvo 'LtWorf' Tomaselli <tiposchi@tiscali.it>
+
+### workbench.lua ###
+
+Back=Indietro
+Crafting=Fabbricare
+Cut=Tagliare
+Hammer=Martello
+Repair=Riparare
+Storage=Conservare
+Work Bench=Banco da lavoro

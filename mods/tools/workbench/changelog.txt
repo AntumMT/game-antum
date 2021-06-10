@@ -1,0 +1,9 @@
+
+v1.0
+----
+- forked from xdecor mod @ Git commit 8acc028 ( https://github.com/minetest-mods/xdecor/tree/8acc028 )
+- removed everything not relating to workbench
+- changed textures license to CC0
+- renamed mod to "workbench"
+- don't load if xdecor available & create aliases for compatibility
+- added method to register items as repairable

@@ -1,0 +1,3 @@
+#For enabling a subpart of X-Decor.
+
+enable_xdecor_workbench 	(Enable Workbench) 	bool true

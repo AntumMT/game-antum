@@ -1,0 +1,12 @@
+# textdomain: xdecor
+
+
+### workbench.lua ###
+
+Back=
+Crafting=
+Cut=
+Hammer=
+Repair=
+Storage=
+Work Bench=
