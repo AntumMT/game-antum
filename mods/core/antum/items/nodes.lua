@@ -2,7 +2,7 @@
 core.register_node(":antum:rainbow_block", {
 	description = "Rainbow Block",
 	tiles = {"rainbow_block.png"},
-	groups = {cracky=4},
+	groups = {cracky=3, level=3},
 	is_ground_content = false,
 })
 
