@@ -7,6 +7,10 @@ local function logit(lvl, msg)
 	core.log(lvl, "[" .. modname .. "] " .. msg)
 end
 
+if not core.global_exists("wardrobe") then
+	logit("warning", "compatible wardrobe mod not available")
+end
+
 local function texture_exists(fname)
 	local texture = texture_dir .. "/" .. fname
 	local f = io.open(texture, "r")
