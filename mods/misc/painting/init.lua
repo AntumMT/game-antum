@@ -189,9 +189,8 @@ minetest.register_entity("painting:paintent", {
 
 		--get player eye level
 		--see player.h line 129
-		local ppos = puncher:getpos()
-
-		ppos.y = ppos.y + 1.625
+		local ppos = vector.add(puncher:getpos(), puncher:get_eye_offset())
+		ppos.y = ppos.y + puncher:get_properties().eye_height
 
 		local pos = self.object:getpos()
 		local l = puncher:get_look_dir()

@@ -83,7 +83,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [enchanting][] ([GPL / WTFPL / CC BY-SA-NA][lic.enchanting]) -- version: [dee7dde Git][ver.enchanting] *2021-06-04*
   * [intllib][] ([Unlicense][lic.unlicense]) -- version: [6ebdc53][ver.intllib] *2021-02-23* ***DEPRECATED***
   * [listitems][] ([MIT][lic.listitems]) -- version: [0.7][ver.listitems] *2021-04-29*
-  * [painting][] (???) -- version [8961849 Git][ver.painting] *2016-05-05*
+  * [painting][] (WTFPL) -- version [8961849 Git][ver.painting] *2016-05-05* ([patched][patch.painting])
   * [pipeworks][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2670fd8 Git][ver.pipeworks] *2021-05-06* ([patched][patch.pipeworks])
   * [wdata][] ([MIT][lic.wdata]) -- version: [e339375 Git][ver.wdata] *2021-05-28*
 * mobiles/
@@ -669,6 +669,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.motorbike]: https://github.com/AntumMT/mod-motorbike/tree/0aa5c9c
 [patch.mysheetmetal]: https://github.com/AntumMT/mod-mysheetmetal/tree/2ffb3a2
 [patch.nether]: https://github.com/AntumMT/mod-nether/tree/7a84ddd
+[patch.painting]: https://github.com/AntumMT/mod-painting/tree/c7dc09a
 [patch.pipeworks]: https://gitlab.com/AntumMT/mod-pipeworks/tree/48b082e
 [patch.quartz]: https://github.com/AntumMT/mod-quartz/tree/adc759e
 [patch.rainbow_ore]: https://github.com/AntumMT/mod-rainbow_ore/tree/0227a86
