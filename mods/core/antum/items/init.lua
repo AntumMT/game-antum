@@ -2,6 +2,7 @@
 local scripts = {
 	"tool",
 	"misc",
+	"nodes",
 	"spawneggs",
 }
 
