@@ -1,38 +1,39 @@
-# Slingshot Mod for Minetest
+## Slingshot for Minetest
 
 ### Description:
 
 Adds a slingshot that can throw inventory items as ammunition.
 
-The original code was extracted from [hook][] mod by [AiTechEye][].
+The original code was extracted from [hook](https://forum.minetest.net/viewtopic.php?t=13634) mod by [AiTechEye](https://forum.minetest.net/memberlist.php?mode=viewprofile&u=16172).
 
 ![Screenshot](screenshot.png)
-
-Depends:
-- default
-
-Optional depends (soft):
-- technic
-
 
 ### Licensing:
 
 - Code
-  - Original code by AiTechEye: [CC0][lic.cc0]
-  - Code by Jordan Irwin (AntumDeluge): [MIT][lic.mit]
+	- Original code by AiTechEye: [CC0][lic.cc0]
+	- Code by Jordan Irwin (AntumDeluge): [MIT][lic.mit]
+- Textures: [CC0][lic.cc0]
 
-- Textures:
-  - slingshots: [CC0][lic.cc0]
-  - rubber band: [CC0][lic.cc0]
+### Requirements:
 
+- Minimum Minetest version: 5.0.0
+- Depends: none
+- Optional depends:
+	- [default](https://github.com/minetest/minetest_game/tree/master/mods/default) (required for craft recipe)
+	- [technic](https://content.minetest.net/packages/RealBadAngel/technic/) (changes craft recipes to use rubber band)
+	- [xdecor](https://content.minetest.net/packages/jp/xdecor/) (workbench can be used to repair slingshots)
+	- [workbench](https://github.com/AntumMT/mod-xdecor/tree/workbench) (can be used to repair slingshots)
 
-### Functions:
+### Usage:
 
-- *Right-click*: Changes ammo slot between left & right of slingshot
-- *Left-click*: Throws items from selected ammo slot
+- *Left-click*: Throws items from slot right of slingshot.
 
+#### Crafting:
 
-### Crafting:
+<details><summary>Spoiler</summary>
+
+**Legend:**
 
 * `SI` = default:steel_ingot
 * `ST` = default:stick
@@ -40,29 +41,19 @@ Optional depends (soft):
 * `TR` = technic:rubber
 * `TL` = technic:raw_latex
 
-##### Craft recipes:
+**Recipes:**
 
-slingshot:
-
-    ╔════╦════╦════╗
-    ║ SI ║    ║ SI ║
-    ╠════╬════╬════╣
-    ║    ║ SI ║    ║
-    ╠════╬════╬════╣
-    ║    ║ SI ║    ║
-    ╚════╩════╩════╝
-
-slingshot (with technic):
+wooden slingshot:
 
     ╔════╦════╦════╗
-    ║ SI ║    ║ SI ║
+    ║ ST ║    ║ ST ║
     ╠════╬════╬════╣
-    ║    ║ SI ║    ║
+    ║    ║ ST ║    ║
     ╠════╬════╬════╣
-    ║    ║ SI ║    ║
+    ║    ║ ST ║    ║
     ╚════╩════╩════╝
 
-wood slingshot:
+wooden slingshot (rubber band required with technic):
 
     ╔════╦════╦════╗
     ║ ST ║ RB ║ ST ║
@@ -72,14 +63,24 @@ wood slingshot:
     ║    ║ ST ║    ║
     ╚════╩════╩════╝
 
-wood slingshot (with technic):
+iron slingshot:
 
     ╔════╦════╦════╗
-    ║ ST ║ RB ║ ST ║
+    ║ SI ║    ║ SI ║
     ╠════╬════╬════╣
-    ║    ║ ST ║    ║
+    ║    ║ SI ║    ║
     ╠════╬════╬════╣
-    ║    ║ ST ║    ║
+    ║    ║ SI ║    ║
+    ╚════╩════╩════╝
+
+iron slingshot (rubber band required with technic):
+
+    ╔════╦════╦════╗
+    ║ SI ║ RB ║ SI ║
+    ╠════╬════╬════╣
+    ║    ║ SI ║    ║
+    ╠════╬════╬════╣
+    ║    ║ SI ║    ║
     ╚════╩════╩════╝
 
 rubber band:
@@ -98,11 +99,31 @@ rubber band (shapeless):
     ║ TR ║
     ╚════╝
 
+</details>
+
+#### Settings:
+
+```
+slingshot.old_textures
+	- Use old 16x16 textures.
+	- type:    bool
+	- default: false
+
+slingshot.ammos
+	- Value of these items will be added to slingshot attack when thrown.
+	- type:    string (comma-separated key=value list)
+	- default: default:mese_crystal=5
+```
 
 
-[AiTechEye]: https://forum.minetest.net/memberlist.php?mode=viewprofile&u=16172
+### Links:
 
-[hook]: https://forum.minetest.net/viewtopic.php?t=13634
+- [Forum](https://forum.minetest.net/viewtopic.php?t=18315)
+- [Git repo](https://github.com/AntumMT/mod-slingshot)
+- [API](https://antummt.github.io/mod-slingshot/docs/api.html)
+- [Changelog](changelog.txt)
+- [TODO](TODO.txt)
+
 
 [lic.cc0]: LICENSE-cc0.txt
 [lic.mit]: LICENSE.txt

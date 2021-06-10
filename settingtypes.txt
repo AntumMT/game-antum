@@ -905,8 +905,11 @@ server_shop.use_currency_defaults (Use currency mod defaults) bool true
 
 [*slingshot]
 
-# Require rubber band as additional ingredient in slingshot craft recipes.
-slingshot.require_rubber_band (Require rubber band in craft recipe) bool true
+# Use old 16x16 textures.
+slingshot.old_textures (Old slingshot textures) bool false
+
+# Value of these items will be added to slingshot attack when thrown.
+slingshot.ammos (Registered ammos) string default:mese_crystal=5
 
 
 [*trampoline]

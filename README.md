@@ -39,7 +39,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [minetest_game][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- version: [5.4.1][ver.minetest_game] *2021-04-10*
 * equipment/
   * [airtanks][] ([MIT][lic.airtanks]) -- version: [b686694 Git][ver.airtanks] *2021-03-13* ([patched][patch.airtanks])
-  * [slingshot][] ([MIT][lic.slingshot] / [CC0][lic.cc0]) -- version [0.1][ver.slingshot] *2017-08-16*
+  * [slingshot][] ([MIT][lic.slingshot] / [CC0][lic.cc0]) -- version [0.3][ver.slingshot] *2021-06-10*
   * [throwing][] ([WTFPL][lic.wtfpl]) -- version: [90bcf43 Git][ver.throwing] *2013-09-27* ([patched][patch.throwing])
   * [xtraarmor][] ([CC BY-SA][lic.ccbysa3.0]) -- version: 0.3
 * furniture/
@@ -617,7 +617,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.sfinv_buttons]: http://repo.or.cz/minetest_sfinv_buttons.git/tree/ebb1f7c
 [ver.signs_lib]: https://gitlab.com/VanessaE/signs_lib/tree/2021-03-04-2
 [ver.simple_protection]: https://github.com/SmallJoker/simple_protection/tree/3630fe9
-[ver.slingshot]: https://github.com/AntumMT/mod-slingshot/tree/bb77525
+[ver.slingshot]: https://github.com/AntumMT/mod-slingshot/releases/tag/v0.3
 [ver.sneeker]: https://github.com/AntumMT/mod-sneeker/releases/tag/v1.0
 [ver.snowdrift]: https://github.com/paramat/snowdrift/tree/3342939
 [ver.stone_monster]: https://github.com/AntumMT/mod-mob_stone_monster/tree/fa52f6f

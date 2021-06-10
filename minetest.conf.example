@@ -2527,10 +2527,15 @@ spawneggs.enable_node_spawn = false
 
 # *** slingshot ***
 
-## Require rubber band as additional ingredient in slingshot craft recipes.
-#    type: bool
-#    default: true
-#slingshot.require_rubber_band = true
+## Use old 16x16 textures.
+#    type:    bool
+#    default: false
+#slingshot.old_textures = false
+
+## Value of these items will be added to slingshot attack when thrown.
+#    type:    string (comma-separated key=value list)
+#    default: default:mese_crystal=5
+#slingshot.ammos = default:mese_crystal=5
 
 
 # *** torches ***
