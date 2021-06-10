@@ -8,7 +8,7 @@ local function logit(lvl, msg)
 end
 
 if not core.global_exists("wardrobe") then
-	logit("warning", "compatible wardrobe mod not available")
+	logit("error", "compatible wardrobe mod not available")
 end
 
 local function texture_exists(fname)
