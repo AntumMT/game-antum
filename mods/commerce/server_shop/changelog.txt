@@ -4,6 +4,14 @@ v1.4
 - fixed custom suffix not reflected in product list & messages
 - custom quantity can be set
 - unregistered items are pruned from shops after server startup
+- fixed buyer shop not refunding on formspec close
+- added setting to disable auto-refunding on formspec close
+- currencies can be registered with any whole number value
+- "currencies" key in server_shops.json used to register multiple currencies
+- buyer shops now have "sell" button instead of automatically selling when item is dropped
+- added localization support
+- money is placed directly into player inventory when selling instead of using deposit medium
+
 
 v1.3
 ----

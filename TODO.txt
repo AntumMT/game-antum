@@ -43,7 +43,6 @@ hard (priority 2):
 	- add wear to 3d_armor when hit by explosion
 - server_shop:
 	- add player shops
-	- fix so unknown items don't mess up shop (replace with aliases or remove unregistered after server start)
 - create juicer (perhaps addon to another mod)
 	- requires battery (or other type of fuel), empty glass (or other vessel), & food item to create juices
 

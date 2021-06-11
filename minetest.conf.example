@@ -1759,6 +1759,24 @@ coloredwood_enable_stairsplus = true
 
 
 ##############
+## COMMERCE ##
+##############
+
+# *** server_shop ***
+
+## If currency mod is installed, automatically set up values for minegeld notes.
+#    type:    bool
+#    default: true
+#server_shop.use_currency_defaults = true
+
+## Refunds deposited money when formspec is closed.
+#    type:    bool
+#    default: true
+#server_shop.refund_on_close = true
+
+
+
+##############
 ## CRAFTING ##
 ##############
 

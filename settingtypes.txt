@@ -902,6 +902,9 @@ pvp_areas.label (Show PvP area labels) string Defined area.
 # If currency mod is installed, automatically set up values for minegeld notes.
 server_shop.use_currency_defaults (Use currency mod defaults) bool true
 
+# Refunds deposited money when formspec is closed.
+server_shop.refund_on_close (Refund on close) bool true
+
 
 [*slingshot]
 

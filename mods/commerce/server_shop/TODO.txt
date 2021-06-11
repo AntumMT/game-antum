@@ -4,16 +4,13 @@ TODO:
 	- might be an issue if admin changes shop ID while player is using
 - Functionality:
 	- optimize how refunds are given (e.g. if there is no room for 50s, but room for 1s, then give out 1s instead)
-	- allow any currency value, not just 1, 5, 10, 50, & 100
-	- allow custom currency types for buyer shops
-	- buyer shops: hold items in inventory & don't process until "sell" button pressed
+	- allow swapping items in detached inventory
 - Visuals:
 	- touch up textures
 	- fix texture tiling
 	- make 2 nodes high using mesh
 - Misc.:
 	- make usable with "folks" mod
-	- add localization support
 	- set shop name from formspec instead of registration so shops with different names can use same content
 	- add player shops
 	- fix so unknown items don't mess up shop (may become a problem when shops are registered live)
@@ -25,3 +22,4 @@ TODO:
 		- "/server_shop add <buyer>|<seller> <id> <item> <price>"
 		- "/server_shop remove <buyer>|<seller> <id> <item>
 		- "/server_shop reload"
+	- use a spinner to select custom amount (example in terraform: https://github.com/x2048/terraform/blob/4b36d36/init.lua#L316 )

@@ -1,5 +1,6 @@
 
 local ss = server_shop
+local S = core.get_translator(ss.modname)
 
 
 --- Formats a string from deposit identification.
@@ -64,9 +65,9 @@ local function give_product(player, product, quantity)
 	-- add to player inventory or drop on ground
 	local pinv = player:get_inventory()
 	if not pinv:room_for_item("main", istack) then
-		core.chat_send_player(player:get_player_name(), "WARNING: "
-			.. tostring(istack:get_count()) .. " " .. istack:get_description()
-			.. " was dropped on the ground.")
+		core.chat_send_player(player:get_player_name(),
+			S("WARNING: @1 @2 was dropped on the ground.",
+				istack:get_count(), istack:get_description()))
 		core.item_drop(istack, player, player:get_pos())
 	else
 		pinv:add_item("main", istack)
@@ -75,60 +76,37 @@ end
 
 --- Calculates money to be returned to player.
 --
---  FIXME:
---    - not very intuitive
---    - doesn't allow currency values other than 1, 5, 10, 50, & 100
---
 --  @local
 --  @function calculate_refund
 --  @param total
+--  @return ItemStack list & remainder
 local function calculate_refund(total)
-	local refund = 0
+	local currencies = ss.get_currencies()
+	local keys = {}
 
-	local hun = math.floor(total / 100)
-	total = total - (hun * 100)
-
-	local fif = math.floor(total / 50)
-	total = total - (fif * 50)
-
-	local ten = math.floor(total / 10)
-	total = total - (ten * 10)
-
-	local fiv = math.floor(total / 5)
-	total = total - (fiv * 5)
-
-	-- at this point, 'total' should always be divisible by whole number
-	local one = total / 1
-	total = total - one
-
-	if total ~= 0 then
-		core.log("warning", "Refund did not result in 0 deposited balance")
+	-- sort currencies by value
+	for k in pairs(currencies) do
+		table.insert(keys, k)
 	end
+	table.sort(keys, function(kL, kR) return currencies[kL] > currencies[kR] end)
 
 	local refund = {}
-	for c, v in pairs(ss.registered_currencies) do
-		local icount = 0
+	local remain = total
 
-		if v == 1 then
-			icount = one
-		elseif v == 5 then
-			icount = fiv
-		elseif v == 10 then
-			icount = ten
-		elseif v == 50 then
-			icount = fif
-		elseif v == 100 then
-			icount = hun
-		end
+	for _, k in ipairs(keys) do
+		local v = currencies[k]
+		local count = math.floor(remain / v)
 
-		if icount > 0 then
-			local stack = ItemStack(c)
-			stack:set_count(icount)
+		if count > 0 then
+			local stack = ItemStack(k)
+			stack:set_count(count)
 			table.insert(refund, stack)
+
+			remain = remain - (count * v)
 		end
 	end
 
-	return refund
+	return refund, remain
 end
 
 --- Returns remaining deposited money to player.
@@ -138,12 +116,29 @@ end
 --  @tparam string id Shop id.
 --  @param player Player to whom refund is given.
 local function give_refund(id, player, buyer)
+	if not ss.currency_is_registered() then
+		ss.log("error", "no currencies registered, cannot give refund")
+		return
+	end
+
 	local pmeta = player:get_meta()
 	local deposit_id = format_deposit_id(id, buyer)
 
-	local refund = calculate_refund(pmeta:get_int(deposit_id))
+	local refund, remain = calculate_refund(pmeta:get_int(deposit_id))
 	for _, istack in ipairs(refund) do
 		give_product(player, istack)
+	end
+
+	if remain > 0 then
+		ss.log("warning", "refund left remaining balance: Shop ID: " .. id
+			.. ", Player: " .. player:get_player_name() .. ", Balance: " .. remain)
+		pmeta:set_int(deposit_id, remain)
+		return
+	end
+
+	if remain < 0 then
+		ss.log("warning", "refunded extra money: Shop ID: " .. id
+			.. ", Player: " .. player:get_player_name() .. ", Discrepancy: " .. remain)
 	end
 
 	-- reset deposited amount after refund
@@ -165,7 +160,7 @@ local function calculate_price(shop_id, item_id, quantity)
 	end
 
 	local price_per = 0
-	for _, i in ipairs(shop.def) do
+	for _, i in ipairs(shop.products) do
 		if i[1] == item_id then
 			price_per = i[2]
 			break
@@ -175,11 +170,57 @@ local function calculate_price(shop_id, item_id, quantity)
 	return price_per * quantity
 end
 
+--- Calculates value of an item stack against registered currencies.
+--
+--  @local
+--  @function calculate_currency_value
+--  @tparam ItemStack stack Item stack.
+--  @treturn int Total value of item stack.
+local function calculate_currency_value(stack)
+	local value = 0
+
+	for c, v in pairs(ss.get_currencies()) do
+		if stack:get_name() == c then
+			value = stack:get_count() * v
+			break
+		end
+	end
+
+	return value
+end
+
+--- Calculates value of an item stack against a registered shop's product list.
+--
+--  @local
+--  @function calculate_product_value
+--  @tparam ItemStack stack Item stack.
+--  @tparam string id Shop id.
+--  @tparam bool buyer Determines whether to parse buyer shops or seller shops.
+--  @treturn int Total value of item stack.
+local function calculate_product_value(stack, id, buyer)
+	local shop = ss.get_shop(id, buyer)
+	if not shop then return 0 end
+
+	local item_name = stack:get_name()
+	local value_per = 0
+	for _, product in ipairs(shop.products) do
+		if item_name == product[1] then
+			value_per = product[2]
+			break
+		end
+	end
+
+	return value_per * stack:get_count()
+end
+
 
 return {
 	set_deposit = set_deposit,
 	get_deposit = get_deposit,
 	give_product = give_product,
+	calculate_refund = calculate_refund,
 	give_refund = give_refund,
 	calculate_price = calculate_price,
+	calculate_currency_value = calculate_currency_value,
+	calculate_product_value = calculate_product_value,
 }

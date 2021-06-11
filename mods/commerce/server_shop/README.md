@@ -1,20 +1,18 @@
-## Server Shop
+## Server Shops
 
----
 ### Description:
 
 Shops intended to be set up by [Minetest](https://www.minetest.net/) server administrators.
 
-No craft recipe is given as this for administrators, currently a machine can only be set up with `/giveme server_shop:shop` command.
+No craft recipe is given as this for administrators, currently a shop can only be set up with the `/giveme` command. The two shop nodes are `server_shop:buy` & `server_shop:sell`.
 
 ![screenshot](screenshot.png)
 
----
 ### Usage:
 
 #### Registering Shops:
 
-There are two types of shops, seller & buyer. A seller shop can be registered with `server_shop.register_seller(id, name, def)`. A buyer with `server_shop.register_buyer(id, name, def)`. `id` is a string identifier associated with the shop list. `name` is a human-readable string that will be displayed as the shop's title. `def` is the shop list definition. Shop lists are defined in a table of tuples in `{itemname, value}` format. `itemname` is the technical string name of an item (e.g. `default:wood`). `value` is the number representation of what the item is worth.
+There are two types of shops, seller & buyer. A seller shop can be registered with `server_shop.register_seller(id, name, products)`. A buyer with `server_shop.register_buyer(id, name, products)`. `id` is a string identifier associated with the shop list. `name` is a human-readable string that will be displayed as the shop's title. `products` is the shop list definition. Shop lists are defined in a table of tuples in `{itemname, value}` format. `itemname` is the technical string name of an item (e.g. `default:wood`). `value` is the number representation of what the item is worth.
 
 *Example:*
 ```lua
@@ -60,23 +58,17 @@ server_shop.register_currency("currency:minegeld", 1)
 server_shop.register_currency("currency:minegeld_5", 5)
 ```
 
-When registering a new currency in `server_shops.json`, set `type` to "currency". `name` is the item to be used as currency & `value` is the item's worth:
+When registering new currencies in `server_shops.json`, set `type` to "currencies". `value` is a table of item names & worth:
 ```json
 	{
-		"type":"currency",
-		"name":"currency:minegeld",
-		"value":1,
-	},
-	{
-		"type":"currency",
-		"name":"currency:minegeld_5",
-		"value":5,
+		"type":"currencies",
+		"value":
+		{
+			"currency:minegeld":1,
+			"currency:minegeld_5":5,
+		},
 	},
 ```
-
-***Notes:***
-- *Only currency values of 1, 5, 10, 50, & 100 are currently supported*
-- *Buyer shops currently do not work with custom currencies, only minegeld notes from currency mod supported*
 
 You can also register a currency suffix to be displayed in the formspec. Simply set the string value of `server_shop.currency_suffix`:
 
@@ -106,13 +98,11 @@ To make purchases, player first deposits registered currency items into the depo
 
 For buyer shops, the product list shows what items can be sold to this shop & how much money a player will receive for each item. To sell to the shop, drop an item in the deposit slot. If the shop accepts the item, the value will be added to the deposited amount. Press the "Refund" button to retrieve the value of the items sold.
 
----
 ### Licensing:
 
 - Code: [MIT](LICENSE.txt)
 - Textures: CC0
 
----
 ### Dependencies:
 
 - Required:
@@ -120,7 +110,6 @@ For buyer shops, the product list shows what items can be sold to this shop & ho
 - Optional:
   - [currency][mod.currency]
 
----
 ### Links:
 
 - [GitHub repo](https://github.com/AntumMT/mod-server_shop)

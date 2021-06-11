@@ -1,9 +1,10 @@
 
 local ss = server_shop
+local S = core.get_translator(ss.modname)
 
 
 core.register_node(ss.modname .. ":sell", {
-	description = "Seller Shop",
+	description = S("Seller Shop"),
 	--drawtype = "nodebox",
 	drawtype = "normal",
 	tiles = {
@@ -57,7 +58,7 @@ core.register_alias(ss.modname .. ":shop", ss.modname .. ":sell") -- backward co
 
 if core.registered_items["currency:minegeld_50"] and core.registered_items["default:gold_ingot"] then
 	core.register_node(ss.modname .. ":buy", {
-	description = "Buyer Shop",
+	description = S("Buyer Shop"),
 	drawtype = "normal",
 	tiles = {
 		"server_shop_side.png",

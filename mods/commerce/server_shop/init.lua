@@ -11,10 +11,11 @@ function ss.log(lvl, msg)
 		lvl = nil
 	end
 
+	msg = "[" .. ss.modname .. "] " .. msg
 	if not lvl then
-		core.log("[" .. ss.modname .. "] " .. msg)
+		core.log(msg)
 	else
-		core.log(lvl, "[" .. ss.modname .. "] " .. msg)
+		core.log(lvl, msg)
 	end
 end
 
@@ -46,11 +47,18 @@ if fopen ~= nil then
 	if json then
 		for _, shop in ipairs(json) do
 			if shop.type == "currency" then
+				ss.log("warning", "using \"currency\" key in server_shops.json is deprecated, please use \"currencies\"")
+
 				if type(shop.value) ~= "number" or shop.value <= 0 then
 					shop_file_error("invalid or undeclared currency \"value\"; must be a number greater than 0")
 				end
 
 				ss.register_currency(shop.name, shop.value)
+			elseif shop.type == "currencies" then
+				if not shop.currencies then shop.currencies = shop.value end -- allow "value" to be used instead of "currencies"
+				for k, v in pairs(shop.currencies) do
+					ss.register_currency(k, v)
+				end
 			elseif shop.type == "suffix" then
 				if type(shop.value) ~= "string" or shop.value:trim() == "" then
 					shop_file_error("invalid or undeclared suffix \"value\"; must be non-empty string")
@@ -94,25 +102,71 @@ else
 end
 
 
--- prune unregistered items
 core.after(0, function()
+	-- show warning if no currencies are registered
+	if not ss.currency_is_registered() then
+		ss.log("warning", "no currencies registered")
+	else
+		local have_ones = false
+		for k, v in pairs(ss.get_currencies()) do
+			have_ones = v == 1
+			if have_ones then break end
+		end
+
+		if not have_ones then
+			ss.log("warning", "no currency registered with value 1, players may not be refunded all of their money")
+		end
+	end
+
+	-- prune unregistered items
 	for id, def in pairs(ss.get_shops()) do
-		-- FIXME: should rename "def" to "products" in shop table
-		for idx = #def.def, 1, -1 do
-			local pname = def.def[idx][1]
+		for idx = #def.products, 1, -1 do
+			local pname = def.products[idx][1]
+			local value = def.products[idx][2]
 			if not core.registered_items[pname] then
-				ss.log("warning", "removing unregistered item from seller shop id \"" .. id .. "\": " .. pname)
-				table.remove(def.def, idx)
+				ss.log("warning", "removing unregistered item \"" .. pname
+					.. "\" from seller shop id \"" .. id .. "\"")
+				table.remove(def.products, idx)
+			elseif not value then
+				-- FIXME: this should be done in registration method
+				ss.log("warning", "removing item \"" .. pname
+					.. "\" without value from seller shop id \"" .. id .. "\"")
+				table.remove(def.products, idx)
+			end
+
+			-- check aliases
+			local alias_of = core.registered_aliases[pname]
+			if alias_of then
+				ss.log("action", "replacing alias \"" .. pname .. "\" with \"" .. alias_of
+					.. "\" in seller shop id \"" .. id .. "\"")
+				table.remove(def.products, idx)
+				table.insert(def.products, idx, {alias_of, value})
 			end
 		end
 	end
 
 	for id, def in pairs(ss.get_shops(true)) do
-		for idx = #def.def, 1, -1 do
-			local pname = def.def[idx][1]
+		for idx = #def.products, 1, -1 do
+			local pname = def.products[idx][1]
+			local value = def.products[idx][2]
 			if not core.registered_items[pname] then
-				ss.log("warning", "removing unregistered item from buyer shop id \"" .. id .. "\": " .. pname)
-				table.remove(def.def, idx)
+				ss.log("warning", "removing unregistered item \"" .. pname
+					.. "\" from buyer shop id \"" .. id .. "\"")
+				table.remove(def.products, idx)
+			elseif not value then
+				-- FIXME: this should be done in registration method
+				ss.log("warning", "removing item \"" .. pname
+					.. "\" without value from buyer shop id \"" .. id .. "\"")
+				table.remove(def.products, idx)
+			end
+
+			-- check aliases
+			local alias_of = core.registered_aliases[pname]
+			if alias_of then
+				ss.log("action", "replacing alias \"" .. pname .. "\" with \"" .. alias_of
+					.. "\" in buyer shop id \"" .. id .. "\"")
+				table.remove(def.products, idx)
+				table.insert(def.products, idx, {alias_of, value})
 			end
 		end
 	end

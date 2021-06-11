@@ -18,13 +18,27 @@ function ss.get_shops(buyer)
 	return sellers
 end
 
---- Currencies registered for trade.
---
---  @table server_shop.registered_currencies
-ss.registered_currencies = {}
+local registered_currencies = {}
+local currency_count = 0
 
 -- Suffix displayed after deposited amount.
 ss.currency_suffix = nil
+
+--- Checks if there are registered currencies in order to give refunds.
+--
+--  @function server_shop.currency_is_registered
+--  @treturn bool `true` if at least one currency item is registered.
+function ss.currency_is_registered()
+	return currency_count > 0
+end
+
+--- Retrieves registered currencies & values.
+--
+--  @function server_shop.get_currencies
+--  @treturn table Registered currencies.
+function ss.get_currencies()
+	return table.copy(registered_currencies)
+end
 
 --- Registers an item that can be used as currency.
 --
@@ -46,14 +60,15 @@ function ss.register_currency(item, value)
 		return
 	end
 
-	local old_value = ss.registered_currencies[item]
+	local old_value = registered_currencies[item]
 	if old_value then
 		ss.log("warning", "Overwriting value for currency " .. item
 			.. " from " .. tostring(old_value)
 			.. " to " .. tostring(value))
 	end
 
-	ss.registered_currencies[item] = value
+	registered_currencies[item] = value
+	currency_count = currency_count + 1
 
 	ss.log("action", item .. " registered as currency with value of " .. tostring(value))
 end
@@ -88,16 +103,16 @@ end
 --  @function server_shop.register_seller
 --  @tparam string id Shop string identifier.
 --  @tparam string name Human readable name.
---  @tparam table[string,int] def List of products & prices in format `{item_name, price}`.
-function ss.register_seller(id, name, def)
+--  @tparam table[string,int] products List of products & prices in format `{item_name, price}`.
+function ss.register_seller(id, name, products)
 	if type(id) ~= "string" then
 		ss.log("error", ss.modname .. ".register_seller: invalid \"id\" parameter")
 		return
 	elseif type(name) ~= "string" then
 		ss.log("error", ss.modname .. ".register_seller: invalid \"name\" parameter")
 		return
-	elseif type(def) ~= "table" then
-		ss.log("error", ss.modname .. ".register_seller: invalid \"def\" parameter")
+	elseif type(products) ~= "table" then
+		ss.log("error", ss.modname .. ".register_seller: invalid \"products\" parameter")
 		return
 	end
 
@@ -107,7 +122,7 @@ function ss.register_seller(id, name, def)
 		ss.log("warning", "Overwriting shop with id: " .. id)
 	end
 
-	sellers[id] = {name=name:trim(), def=def,}
+	sellers[id] = {name=name:trim(), products=products,}
 
 	ss.log("action", "Registered seller shop: " .. id)
 end
@@ -117,16 +132,16 @@ end
 --  @function server_shop.register_buyer
 --  @tparam string id Shop string identifier.
 --  @tparam string name Human readable name.
---  @tparam table[string,int] def List of products & prices in format `{item_name, price}`.
-function ss.register_buyer(id, name, def)
+--  @tparam table[string,int] products List of products & prices in format `{item_name, price}`.
+function ss.register_buyer(id, name, products)
 	if type(id) ~= "string" then
 		ss.log("error", ss.modname .. ".register_buyer: invalid \"id\" parameter")
 		return
 	elseif type(name) ~= "string" then
 		ss.log("error", ss.modname .. ".register_buyer: invalid \"name\" parameter")
 		return
-	elseif type(def) ~= "table" then
-		ss.log("error", ss.modname .. ".register_buyer: invalid \"def\" parameter")
+	elseif type(products) ~= "table" then
+		ss.log("error", ss.modname .. ".register_buyer: invalid \"products\" parameter")
 		return
 	end
 
@@ -136,7 +151,7 @@ function ss.register_buyer(id, name, def)
 		ss.log("warning", "Overwriting buyer shop with id: " .. id)
 	end
 
-	buyers[id] = {name=name:trim(), def=def,}
+	buyers[id] = {name=name:trim(), products=products,}
 
 	ss.log("action", "Registered buyer shop: " .. id)
 end
@@ -148,13 +163,13 @@ end
 --  @function server_shop.register_shop
 --  @tparam string id Shop string identifier.
 --  @tparam string name Human readable name.
---  @tparam table[string,int] def List of products & prices in format `{item_name, price}`.
+--  @tparam table[string,int] products List of products & prices in format `{item_name, price}`.
 --  @tparam bool buyer Denotes whether to register seller or buyer shop (default: `false` (seller)).
-function ss.register_shop(id, name, def, buyer)
+function ss.register_shop(id, name, products, buyer)
 	if buyer then
-		ss.register_buyer(id, name, def)
+		ss.register_buyer(id, name, products)
 	else
-		ss.register_seller(id, name, def)
+		ss.register_seller(id, name, products)
 	end
 end
 
