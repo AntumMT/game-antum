@@ -4,7 +4,6 @@ TODO:
 	- might be an issue if admin changes shop ID while player is using
 - Functionality:
 	- optimize how refunds are given (e.g. if there is no room for 50s, but room for 1s, then give out 1s instead)
-	- allow swapping items in detached inventory
 - Visuals:
 	- touch up textures
 	- fix texture tiling
@@ -23,3 +22,4 @@ TODO:
 		- "/server_shop remove <buyer>|<seller> <id> <item>
 		- "/server_shop reload"
 	- use a spinner to select custom amount (example in terraform: https://github.com/x2048/terraform/blob/4b36d36/init.lua#L316 )
+	- support groups in buyer shops

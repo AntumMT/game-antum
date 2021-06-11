@@ -26,11 +26,6 @@ local seller_callbacks = {
 
 local buyer_callbacks = {
 	allow_put = function(inv, listname, index, stack, player)
-		if not inv:is_empty(listname) then
-			-- FIXME: how to swap held item
-			if inv:get_stack(listname, 1):get_name() ~= stack:get_name() then return 0 end
-		end
-
 		local pmeta = player:get_meta()
 		local id = pmeta:get_string(ss.modname .. ":id")
 		if id:trim() == "" then return 0 end
@@ -41,11 +36,7 @@ local buyer_callbacks = {
 		local pos = core.deserialize(pmeta:get_string(ss.modname .. ":pos"))
 		if not pos then return 0 end
 
-		return -1
-	end,
-
-	on_put = function(inv, listname, index, stack, player)
-		inv:add_item(listname, stack)
+		return stack:get_count()
 	end,
 }
 
