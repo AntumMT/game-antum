@@ -810,6 +810,15 @@ moreblocks.stairsplus_in_creative_inventory (Display Stairs+ nodes in creative i
 motorbike.punch_inv (Punch places in inventory) bool false
 
 
+[*pbmarks]
+
+# Number of allowed bookmarks.
+pbmarks.max (Number of bookmarks) int 5 1 5
+
+# Don't allow bookmarks to be set in areas not accessible to player.
+pbmarks.disallow_protected (Disallow bookmarking in protected areas) bool true
+
+
 [*pipeworks]
 
 #Enable pipes.

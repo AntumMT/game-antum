@@ -2792,6 +2792,21 @@ inventory_craft_small = false
 inventory_default = craft
 
 
+# *** pbmarks ***
+
+## Number of allowed bookmarks.
+#    type:    int
+#    min:     1
+#    max:     5
+#    default: 5
+#pbmarks.max = 5
+
+## Don't allow bookmarks to be set in areas not accessible to player.
+#    type:    bool
+#    default: true
+#pbmarks.disallow_protected = true
+
+
 
 ###########
 ## WORLD ##

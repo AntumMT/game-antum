@@ -142,7 +142,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [hud_compass][] (MIT / [CC BY-SA ][lic.ccbysa3.0]) -- version: [648c744
  Git][ver.hud_compass] *2020-04-23*
   * [hudbars][] ([MIT][lic.mit] / [CC BY-SA][lic.ccbysa3.0]) -- version: [2.3.1][ver.hudbars] *2020-07-11*
-  * [pbmarks][] ([MIT][lic.pbmarks]) -- version: [00c3549 Git][ver.pbmarks] *2021-05-28*
+  * [pbmarks][] ([MIT][lic.pbmarks]) -- version: [1.0][ver.pbmarks] *2021-06-15*
 * world/
   * [bright_night][] ([Unlicense][lic.unlicense]) -- version: [69b750a Git][ver.bright_night] *2018-06-03*
   * [desert_life][] ([CC BY-SA][lic.ccbysa4.0]) -- version: [188f984 Git][ver.desert_life] *2020-01-24*
@@ -606,7 +606,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.nether]: https://github.com/minetest-mods/nether/tree/v3
 [ver.no_fall_damage]: https://repo.or.cz/minetest_no_fall_damage.git/shortlog/refs/tags/1.0.0
 [ver.painting]: https://github.com/minetest-mods/painting/tree/8961849
-[ver.pbmarks]: https://github.com/AntumMT/mod-pbmarks/tree/00c3549
+[ver.pbmarks]: https://github.com/AntumMT/mod-pbmarks/releases/tag/v1.0
 [ver.pipeworks]: https://gitlab.com/VanessaE/pipeworks/tree/2670fd8
 [ver.player_monoids]: https://github.com/minetest-mods/player_monoids/tree/ed11a73
 [ver.pvp_areas]: https://github.com/everamzah/pvp_areas/tree/6e4d66d

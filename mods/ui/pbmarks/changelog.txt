@@ -2,3 +2,7 @@
 v1.0
 ----
 - initial release
+- created formspec that allows for managing 5 personal bookmarks
+- added localization support
+- added inventory support with sfinv_buttons
+- added protection support with simple_protection

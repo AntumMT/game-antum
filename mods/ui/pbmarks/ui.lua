@@ -1,4 +1,6 @@
 
+local S = core.get_translator(pbmarks.modname)
+
 local ui_handlers = {
 	"sfinv_buttons",
 }
@@ -11,7 +13,7 @@ end
 
 
 sfinv_buttons.register_button(pbmarks.modname, {
-	title = "Personal Bookmarks",
+	title = S("Personal Bookmarks"),
 	image = "pbmarks_check.png",
 	action = function(player)
 		pbmarks.show_formspec(player:get_player_name())

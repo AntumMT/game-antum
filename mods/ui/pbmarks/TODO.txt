@@ -1,2 +1,6 @@
 
 TODO:
+- resize formspec dependent on number of allowed bookmarks
+- increase maximum to 7 but keep default at 5
+- support protection mods (don't allow bookmarks to be set in protected areas that player can't access)
+	- areas
