@@ -6,9 +6,14 @@ A [Minetest][] library for managing data files in the world directory.
 
 It takes a little work to read from & write to data in the world directory. `wdata` aims to make that easier by utilizing just two simple methods.
 
+This mod is essentially an alternative to Minetest's built-in [StorageRef][] & was created before I realized the implementation existed. Some may still find wdata useful as it does allow for customizing sub-directories & filenames.
+
+<img src="screenshot.png" alt="icon" width="100px" />
+
 ### Licensing:
 
-- [MIT](LICENSE.txt)
+- Code: [MIT](LICENSE.txt)
+- Icon: [CC0](https://openclipart.org/detail/270878)
 
 ### Usage:
 
@@ -34,6 +39,7 @@ Optional depends: none
 
 ### Links
 
+- [![ContentDB](https://content.minetest.net/packages/AntumDeluge/wdata/shields/title/)](https://content.minetest.net/packages/AntumDeluge/wdata/)
 - [Forum](https://forum.minetest.net/viewtopic.php?t=26804)
 - [Git repo](https://github.com/AntumMT/mod-wdata)
 - [API](https://antummt.github.io/mod-wdata/docs/api.html)
@@ -42,3 +48,4 @@ Optional depends: none
 
 
 [Minetest]: http://minetest.net/
+[StorageRef]: https://github.com/minetest/minetest/blob/c9144ae/doc/lua_api.txt#L6883

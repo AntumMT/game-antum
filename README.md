@@ -85,7 +85,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [listitems][] ([MIT][lic.listitems]) -- version: [0.7][ver.listitems] *2021-04-29*
   * [painting][] (WTFPL) -- version [8961849 Git][ver.painting] *2016-05-05* ([patched][patch.painting])
   * [pipeworks][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2670fd8 Git][ver.pipeworks] *2021-05-06* ([patched][patch.pipeworks])
-  * [wdata][] ([MIT][lic.wdata]) -- version: [e339375 Git][ver.wdata] *2021-05-28*
+  * [wdata][] ([MIT][lic.wdata]) -- version: [1.1][ver.wdata] *2021-06-15*
 * mobiles/
   * [bee][mobs_animal] ([MIT][lic.mobs_bee]) -- version: [671c6c1 Git][ver.mobs_bee] *2021-06-02*
   * [chicken][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [085706f Git][ver.cmer_chicken] *2021-05-25*
@@ -634,7 +634,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.waffles]: https://github.com/GreenXenith/waffles/tree/15bcdce
 [ver.walking_light]: https://github.com/petermaloney/walking_light/tree/766ef0f
 [ver.wardrobe]: https://github.com/AntumMT/mod-wardrobe/tree/0500a78
-[ver.wdata]: https://github.com/AntumMT/mod-wdata/tree/e339375
+[ver.wdata]: https://github.com/AntumMT/mod-wdata/releases/tag/v1.1
 [ver.whinny]: https://github.com/AntumMT/mod-whinny/tree/32f2d9f
 [ver.whitelist]: https://github.com/AntumMT/mod-whitelist/releases/tag/v1.1
 [ver.windmill]: https://github.com/Sokomine/windmill/tree/47b029d
