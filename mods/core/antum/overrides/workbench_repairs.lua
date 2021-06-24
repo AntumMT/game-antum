@@ -1,5 +1,13 @@
 
-if core.global_exists("WB") and WB.register_repairable then
+local register_repairable
+
+if core.global_exists("workbench") and workbench.register_repairable then
+	register_repairable = workbench.register_repairable
+elseif core.global_exists("xdecor") and xdecor.register_repairable then
+	register_repairable = xdecor.register_repairable
+end
+
+if register_repairable then
 	local repairables = {
 		"castle_weapons:crossbow",
 		"fireflies:bug_net",
@@ -13,6 +21,6 @@ if core.global_exists("WB") and WB.register_repairable then
 	}
 
 	for _, tool in ipairs(repairables) do
-		WB:register_repairable(tool)
+		register_repairable(nil, tool)
 	end
 end
