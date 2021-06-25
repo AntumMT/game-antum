@@ -21,14 +21,22 @@ if core.global_exists("walking_light") then
 		})
 	end
 
+	-- TODO: add other helmets such as mese, rainbow, & helmets from technic_armor
 	if core.global_exists("armor") then
 		local helmets = {
+			"bronze",
+			"cactus",
+			"crystal",
 			"diamond",
 			"gold",
+			"mithril",
+			"steel",
+			"wood",
 		}
 
 		for _, material in ipairs(helmets) do
-			local def = core.registered_items["3d_armor:helmet_" .. material]
+			local orig_name = "3d_armor:helmet_" .. material
+			local def = core.registered_items[orig_name]
 			if def then
 				def = table.copy(def)
 
@@ -45,9 +53,11 @@ if core.global_exists("walking_light") then
 					output = light_name,
 					recipe = {
 						{"default:torch"},
-						{"3d_armor:helmet_" .. material},
+						{orig_name},
 					},
 				})
+			else
+				antum.log("warning", "\"" .. orig_name .. "\" not registered, not adding light item")
 			end
 		end
 	end
