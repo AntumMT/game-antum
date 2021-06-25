@@ -4,6 +4,7 @@ local scripts = {
 	"misc",
 	"nodes",
 	"spawneggs",
+	"equip",
 }
 
 for _, script in ipairs(scripts) do

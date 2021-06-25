@@ -33,29 +33,6 @@ core.register_craft({
 core.register_alias("animalmaterials:sword_deamondeath", "antum:sword_daemondeath")
 
 
-core.register_tool(":walking_light:helmet_gold", {
-	description = "Gold Helmet with light",
-	inventory_image = "walking_light_inv_helmet_gold.png",
-	wield_image = "3d_armor_inv_helmet_gold.png",
-	groups = {armor_head=10, armor_heal=6, armor_use=250},
-	wear = 0,
-})
-
-walking_light.addLightItem("walking_light", {
-	"helmet_gold",
-	}
-)
-
-
-antum.registerCraft({
-	output = "walking_light:helmet_gold",
-	recipe = {
-		{"default:torch"},
-		{"3d_armor:helmet_gold"},
-	}
-})
-
-
 local glowlight = {
 	cube = "homedecor:glowlight_small_cube_14",
 	quarter = "homedecor:glowlight_quarter_14",
