@@ -1,0 +1,7 @@
+
+v1.0
+- forked from petermaloney @ Git commit 766ef0f ( https://github.com/petermaloney/walking_light/tree/766ef0f )
+
+v0.7
+----
+- forked from walking_light v0.6 by Echo ( https://forum.minetest.net/viewtopic.php?t=2621 )

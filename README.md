@@ -61,7 +61,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * lighting/
   * [glow][] ([GPL][lic.gpl2.0]) -- version: [4c015a0 Git][ver.glow] *2019-02-05*
   * [ilights][] ([LGPL][lic.lgpl3.0]) -- version: [2021-02-25-01][ver.ilights] ([patched][patch.ilights])
-  * walking_light ([petermalone fork][walking_light]) ([WTFPL / CC BY-SA][lic.walking_light]) -- version: [766ef0f Git][ver.walking_light] *2019-11-09* ([patched][patch.walking_light])
+  * [walking_light][] ([WTFPL / CC BY-SA][lic.walking_light]) -- version: [919f310 Git][ver.walking_light] *2021-06-24*
 * materials/
   * [amber][] ([LGPL][lic.lgpl2.1]) -- version: [56627fa Git][ver.amber] *2017-10-29* ([patched][patch.amber])
   * [basic_materials][] ([LGPL][lic.lgpl3.0]) -- version: [2021-01-30][ver.basic_materials]
@@ -380,7 +380,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [unifieddyes]: https://forum.minetest.net/viewtopic.php?t=2178
 [vines]: https://forum.minetest.net/viewtopic.php?f=11&t=2344
 [waffles]: https://forum.minetest.net/viewtopic.php?t=16669
-[walking_light]: https://github.com/petermaloney/walking_light
+[walking_light]: https://forum.minetest.net/viewtopic.php?t=2621
 [wardrobe]: https://github.com/AntumMT/mod-wardrobe
 [wardrobe.old]: https://forum.minetest.net/viewtopic.php?t=9680
 [wdata]: https://forum.minetest.net/viewtopic.php?t=26804
@@ -632,7 +632,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.tree_monster]: https://github.com/AntumMT/mod-mob_tree_monster/tree/f2977ff
 [ver.unifieddyes]: https://gitlab.com/VanessaE/unifieddyes/tags/2021-03-26-1
 [ver.waffles]: https://github.com/GreenXenith/waffles/tree/15bcdce
-[ver.walking_light]: https://github.com/petermaloney/walking_light/tree/766ef0f
+[ver.walking_light]: https://github.com/AntumMT/mod-walking_light/tree/919f310
 [ver.wardrobe]: https://github.com/AntumMT/mod-wardrobe/tree/0500a78
 [ver.wdata]: https://github.com/AntumMT/mod-wdata/releases/tag/v1.1
 [ver.whinny]: https://github.com/AntumMT/mod-whinny/tree/32f2d9f
@@ -680,5 +680,4 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.throwing]: https://github.com/AntumMT/mod-throwing/tree/b33ffde
 [patch.trash_can]: https://github.com/AntumMT/mod-trash_can/tree/5a92bf4
 [patch.unifieddyes]: https://github.com/AntumMT/mod-unifieddyes/tree/3013964
-[patch.walking_light]: https://github.com/AntumMT/mod-walking_light/tree/b482369
 [patch.windmill]: https://github.com/AntumMT/mod-windmill/tree/7756ab4
