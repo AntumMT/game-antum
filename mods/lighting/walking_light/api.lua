@@ -463,15 +463,15 @@ function walking_light.get_wielded_light_item(player)
 		return wielded_item
 	end
 
-	-- check equipped armor - requires unified_inventory maybe
+	-- check equipped armor
 	if core.get_modpath("3d_armor") then
 		local player_name = player:get_player_name()
 		if player_name then
 			local armor_inv = core.get_inventory({type="detached", name=player_name.."_armor"})
 			if armor_inv then
-				-- FIXME: should be a more efficient method
-				for _, item_name in ipairs(light_armor) do
-					if armor_inv:contains_item("armor", ItemStack(item_name)) then
+				for k, stack in pairs(armor_inv:get_list("armor")) do
+					local item_name = stack:get_name()
+					if walking_light.is_light_item(item_name) then
 						return item_name
 					end
 				end
