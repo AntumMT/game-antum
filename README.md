@@ -61,7 +61,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * lighting/
   * [glow][] ([GPL][lic.gpl2.0]) -- version: [4c015a0 Git][ver.glow] *2019-02-05*
   * [ilights][] ([LGPL][lic.lgpl3.0]) -- version: [2021-02-25-01][ver.ilights] ([patched][patch.ilights])
-  * [walking_light][] ([WTFPL / CC BY-SA][lic.walking_light]) -- version: [919f310 Git][ver.walking_light] *2021-06-24*
+  * [walking_light][] ([WTFPL / CC BY-SA][lic.walking_light]) -- version: [67b9dab Git][ver.walking_light] *2021-06-24*
 * materials/
   * [amber][] ([LGPL][lic.lgpl2.1]) -- version: [56627fa Git][ver.amber] *2017-10-29* ([patched][patch.amber])
   * [basic_materials][] ([LGPL][lic.lgpl3.0]) -- version: [2021-01-30][ver.basic_materials]
@@ -632,7 +632,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.tree_monster]: https://github.com/AntumMT/mod-mob_tree_monster/tree/f2977ff
 [ver.unifieddyes]: https://gitlab.com/VanessaE/unifieddyes/tags/2021-03-26-1
 [ver.waffles]: https://github.com/GreenXenith/waffles/tree/15bcdce
-[ver.walking_light]: https://github.com/AntumMT/mod-walking_light/tree/919f310
+[ver.walking_light]: https://github.com/AntumMT/mod-walking_light/tree/67b9dab
 [ver.wardrobe]: https://github.com/AntumMT/mod-wardrobe/tree/0500a78
 [ver.wdata]: https://github.com/AntumMT/mod-wdata/releases/tag/v1.1
 [ver.whinny]: https://github.com/AntumMT/mod-whinny/tree/32f2d9f

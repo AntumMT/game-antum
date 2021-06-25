@@ -330,7 +330,7 @@ local function pick_light_position_radius(player, pos, ret, radius)
 		for y = pos.y - radius, pos.y + radius, step do
 			for z = pos.z - radius, pos.z + radius, step do
 				pos2 = vector.new(round(x*unstep)*step, round(y*unstep)*step, round(z*unstep)*step)
-				distance = math.sqrt(math.pow(pos.x - x, 2) + math.pow(pos.y - y, 2) + math.pow(pos.z - z, 2))
+				local distance = math.sqrt(math.pow(pos.x - x, 2) + math.pow(pos.y - y, 2) + math.pow(pos.z - z, 2))
 				if distance <= radius and can_add_light( pos2 ) then
 					table.insert(ret, pos2)
 				end
@@ -459,7 +459,7 @@ end
 -- returns a string, the name of the item found that is a light item
 function walking_light.get_wielded_light_item(player)
 	local wielded_item = player:get_wielded_item():get_name()
-	if walking_light.is_light_item(wielded_item) then
+	if wielded_item ~= "" and walking_light.is_light_item(wielded_item) then
 		return wielded_item
 	end
 
