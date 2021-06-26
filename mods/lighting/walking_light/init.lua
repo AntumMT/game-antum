@@ -19,6 +19,7 @@ end
 
 
 local scripts = {
+	"settings",
 	"api",
 	"chat",
 	"nodes",
@@ -26,4 +27,9 @@ local scripts = {
 
 for _, sc in ipairs(scripts) do
 	dofile(walking_light.modpath .. "/" .. sc .. ".lua")
+end
+
+
+if core.registered_items["default:torch"] then
+	walking_light.register_item("default:torch")
 end

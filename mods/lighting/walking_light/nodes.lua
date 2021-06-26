@@ -1,7 +1,10 @@
 
+local S = core.get_translator(walking_light.modname)
+
+
 core.register_node("walking_light:light_debug", {
 	drawtype = "glasslike",
-	tiles = {"walking_light_debug.png"},
+	tiles = {"walking_light_underlay.png"},
 	inventory_image = core.inventorycube("walking_light.png"),
 	paramtype = "light",
 	walkable = false,
@@ -29,61 +32,65 @@ core.register_node("walking_light:light", {
 	},
 })
 
-core.register_node("walking_light:megatorch", {
-	description = "Megatorch",
-	drawtype = "torchlike",
-	tiles = {
-		{
-			name = "default_torch_on_floor_animated.png",
-			animation = {
-				type = "vertical_frames",
-				aspect_w = 16,
-				aspect_h = 16,
-				length = 3.0,
+if walking_light.enable_megatorch and core.get_modpath("default") then
+	core.register_node("walking_light:megatorch", {
+		description = S("Megatorch"),
+		drawtype = "torchlike",
+		tiles = {
+			{
+				name = "default_torch_on_floor_animated.png",
+				animation = {
+					type = "vertical_frames",
+					aspect_w = 16,
+					aspect_h = 16,
+					length = 3.0,
+				},
+			},
+			{
+				name = "default_torch_on_ceiling_animated.png",
+				animation = {
+					type = "vertical_frames",
+					aspect_w = 16,
+					aspect_h = 16,
+					length = 3.0,
+				},
+			},
+			{
+				name = "default_torch_animated.png",
+				animation = {
+					type = "vertical_frames",
+					aspect_w = 16,
+					aspect_h = 16,
+					length = 3.0,
+				},
 			},
 		},
-		{
-			name = "default_torch_on_ceiling_animated.png",
-			animation = {
-				type = "vertical_frames",
-				aspect_w = 16,
-				aspect_h = 16,
-				length = 3.0,
-			},
+		inventory_image = "default_torch_on_floor.png",
+		wield_image = "default_torch_on_floor.png",
+		paramtype = "light",
+		paramtype2 = "wallmounted",
+		sunlight_propagates = true,
+		is_ground_content = false,
+		walkable = false,
+		light_source = 13,
+		selection_box = {
+			type = "wallmounted",
+			wall_top = {-0.1, 0.5-0.6, -0.1, 0.1, 0.5, 0.1},
+			wall_bottom = {-0.1, -0.5, -0.1, 0.1, -0.5+0.6, 0.1},
+			wall_side = {-0.5, -0.3, -0.1, -0.5+0.3, 0.3, 0.1},
 		},
-		{
-			name = "default_torch_animated.png",
-			animation = {
-				type = "vertical_frames",
-				aspect_w = 16,
-				aspect_h = 16,
-				length = 3.0,
-			},
-		},
-	},
-	inventory_image = "default_torch_on_floor.png",
-	wield_image = "default_torch_on_floor.png",
-	paramtype = "light",
-	paramtype2 = "wallmounted",
-	sunlight_propagates = true,
-	is_ground_content = false,
-	walkable = false,
-	light_source = 13,
-	selection_box = {
-		type = "wallmounted",
-		wall_top = {-0.1, 0.5-0.6, -0.1, 0.1, 0.5, 0.1},
-		wall_bottom = {-0.1, -0.5, -0.1, 0.1, -0.5+0.6, 0.1},
-		wall_side = {-0.5, -0.3, -0.1, -0.5+0.3, 0.3, 0.1},
-	},
-	groups = {choppy=2, dig_immediate=3, flammable=1, attached_node=1},
-	legacy_wallmounted = true,
-})
+		groups = {choppy=2, dig_immediate=3, flammable=1, attached_node=1},
+		legacy_wallmounted = true,
+	})
 
-core.register_craft({
-	output = "walking_light:megatorch",
-	recipe = {
-		{"default:torch", "default:torch", "default:torch"},
-		{"default:torch", "default:torch", "default:torch"},
-		{"default:torch", "default:torch", "default:torch"},
-	}
-})
+	walking_light.register_item("walking_light:megatorch", 10)
+
+	core.register_craft({
+		output = "walking_light:megatorch",
+		recipe = {
+			{"default:torch", "default:torch", "default:torch"},
+			{"default:torch", "default:torch", "default:torch"},
+			{"default:torch", "default:torch", "default:torch"},
+		}
+	})
+end

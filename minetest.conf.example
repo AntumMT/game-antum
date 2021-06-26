@@ -2445,6 +2445,14 @@ coloredwood_enable_stairsplus = true
 #playeranim.animation_speed_sneak = 0.8
 
 
+# *** walking_light
+
+## Enables walking_light:megatorch item.
+#    type:    bool
+#    default: true
+#walking_light.enable_megatorch = true
+
+
 # *** wardrobe ***
 
 ## Number of skins shown per page.

@@ -930,6 +930,12 @@ slingshot.ammos (Registered ammos) string default:mese_crystal=5
 trampoline.damage_absorb (Trampoline damage absorption) int 100 0 100
 
 
+[*walking_light]
+
+# Enables walking_light:megatorch item.
+walking_light.enable_megatorch (Enable megatorch) bool true
+
+
 [*wardrobe]
 
 # Number of skins shown per page.
