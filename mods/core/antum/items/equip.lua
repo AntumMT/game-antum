@@ -33,6 +33,15 @@ if core.global_exists("walking_light") then
 				"steel",
 				"wood",
 			},
+			["technic_armor"] = {
+				"brass",
+				"carbon",
+				"cast",
+				"lead",
+				"silver",
+				"stainless",
+				"tin",
+			},
 			["xtraarmor"] = {
 				"chainmail",
 				"copper",
