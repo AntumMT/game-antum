@@ -9,12 +9,9 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 ### The following mods are also included:
 
-***"UPDATES" Denotes updates available***
-
 * admin/
   * [alternode][] ([MIT][lic.alternode]) -- version: [1.3][ver.alternode] *2021-05-18*
   * [cleaner][] ([MIT][lic.cleaner]) -- version: [1.1][ver.cleaner] *2021-05-27*
-  * [invisible][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa4.0]) -- version: [4 (a2a6504 Git)][ver.invisible]
   * [no_fall_damage][] ([MIT][lic.no_fall_damage]) -- version [1.0.0][ver.no_fall_damage] *2020-12-19*
   * [privs][] ([CC0][lic.cc0])
   * [spectator_mode][] ([WTFPL][lic.spectator_mode]) -- version: [3648371 Git][ver.spectator_mode] *2020-07-15*
@@ -322,7 +319,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ilights]: https://forum.minetest.net/viewtopic.php?t=12200
 [intllib]: https://forum.minetest.net/viewtopic.php?t=4929
 [invisibility]: https://forum.minetest.net/viewtopic.php?t=14846
-[invisible]: https://forum.minetest.net/viewtopic.php?t=14399
 [jukebox]: https://forum.minetest.net/viewtopic.php?t=13505
 [jumping]: https://forum.minetest.net/viewtopic.php?t=2957
 [listitems]: https://forum.minetest.net/viewtopic.php?t=18049
@@ -431,7 +427,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.homedecor]: mods/modpacks/homedecor/LICENSE
 [lic.hovercraft]: mods/transport/hovercraft/LICENSE.txt
 [lic.invisibility]: mods/player/visuals/invisibility/license.txt
-[lic.invisible]: mods/admin/invisible/readme.txt
 [lic.jukebox]: mods/furniture/jukebox/README.txt
 [lic.listitems]: mods/antum/listitems/LICENSE.txt
 [lic.mese_monster]: mods/mobiles/mese_monster/license.txt
@@ -576,7 +571,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.ilights]: https://gitlab.com/VanessaE/ilights/tags/2021-02-25-01
 [ver.intllib]: https://github.com/minetest-mods/intllib/tree/6ebdc53
 [ver.invisibility]: https://notabug.org/TenPlus1/invisibility/src/65c0823d6a28b62046cdadc67ff1e462d37e3643
-[ver.invisible]: https://github.com/AiTechEye/invisible/tree/a2a6504
 [ver.jukebox]: https://github.com/minetest-mods/jukebox/tree/0d871f2
 [ver.listitems]: https://github.com/AntumMT/mod-listitems/releases/tag/v0.7
 [ver.mese_monster]: https://github.com/AntumMT/mod-mob_mese_monster/tree/cd02839
