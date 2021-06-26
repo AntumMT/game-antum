@@ -4,6 +4,31 @@
 
 # ---------------------------------------------------------------------------------
 
+[Built-in]
+
+# Defines the maximal player transfer distance in blocks (0 = unlimited).
+player_transfer_distance (Player transfer distance) int 0
+
+# If enabled, you can place blocks at the position (feet + eye level) where you stand.
+# This is helpful when working with nodeboxes in small areas.
+enable_build_where_you_stand (Build inside player) bool false
+
+# Player is able to fly without being affected by gravity.
+# This requires the "fly" privilege on the server.
+free_move (Flying) bool false
+
+# If enabled, makes move directions relative to the player's pitch when flying or swimming.
+pitch_move (Pitch move mode) bool false
+
+# Fast movement (via the "special" key).
+# This requires the "fast" privilege on the server.
+fast_move (Fast movement) bool false
+
+# If enabled together with fly mode, player is able to fly through solid nodes.
+# This requires the "noclip" privilege on the server.
+noclip (Noclip) bool false
+
+
 [General]
 
 
@@ -29,7 +54,7 @@ inventory (Inventory interface) enum sfinv sfinv,inventory_plus
 allow_atm_craft (Allow ATM crafting) bool true
 
 
-[*Mobiles General]
+[*Mobs General]
 
 # Only spawn mobs that don't attack players.
 only_peaceful_mobs (Peaceful only) bool false
@@ -566,8 +591,45 @@ currency.income_period (Currency income period) int 720
 
 [*ethereal]
 
-# Instead of registering new item 'ethereal:bone', registers alias of 'animalmaterials.bone'.
-ethereal.use_animalmaterials (Use bone from animalmaterials) bool false
+ethereal.leaftype (0 for 2D plantlike leaves or 1 for 3D) int 0
+ethereal.leafwalk (Walkable leaves) bool false
+
+ethereal.cavedirt (Caves cut through dirt) bool true
+ethereal.torchdrop (Torches drop when in water) bool true
+ethereal.papyruswalk (Papyrus and Bamboo are walkable) bool true
+ethereal.lilywalk (Lilypads are walkable) bool true
+ethereal.xcraft (Enable X-Craft cheats) bool true
+ethereal.flight (Enable Flight Potion) bool true
+
+ethereal.glacier (Glacier biome, 1 = Enable / 0 = Disable) int 1
+ethereal.bambo (Bamboo biome, 1 = Enable / 0 = Disable) int 1
+ethereal.mesa (Mesa biome, 1 = Enable / 0 = Disable) int 1
+ethereal.alpine (Alpine biome, 1 = Enable / 0 = Disable) int 1
+ethereal.healing (Healing Tree biome, 1 = Enable / 0 = Disable) int 1
+ethereal.snowy (Pine Tree biome, 1 = Enable / 0 = Disable) int 1
+ethereal.frost (Blue Frost biome, 1 = Enable / 0 = Disable) int 1
+ethereal.grassy (Grassy biome, 1 = Enable / 0 = Disable) int 1
+ethereal.caves (Desertstone biome, 1 = Enable / 0 = Disable) int 1
+ethereal.grayness (Grey Willow biome, 1 = Enable / 0 = Disable) int 1
+ethereal.grassytwo (GrassyTwo biome, 1 = Enable / 0 = Disable) int 1
+ethereal.prairie (Prairie biome, 1 = Enable / 0 = Disable) int 1
+ethereal.jumble (Jumble biome, 1 = Enable / 0 = Disable) int 1
+ethereal.junglee (Jungle biome, 1 = Enable / 0 = Disable) int 1
+ethereal.desert (Desert biome, 1 = Enable / 0 = Disable) int 1
+ethereal.grove (Banana Grove biome, 1 = Enable / 0 = Disable) int 1
+ethereal.mushroom (Mushroom biome, 1 = Enable / 0 = Disable) int 1
+ethereal.sandstone (Sandstone biome, 1 = Enable / 0 = Disable) int 1
+ethereal.quicksand (Quicksand Bank biome, 1 = Enable / 0 = Disable) int 1
+ethereal.plains (Scorched Plains biome, 1 = Enable / 0 = Disable) int 1
+ethereal.savanna (Savanna biome, 1 = Enable / 0 = Disable) int 1
+ethereal.fiery (Feiry Lava biome, 1 = Enable / 0 = Disable) int 1
+ethereal.sandclay (Sandy Clay biome, 1 = Enable / 0 = Disable) int 1
+ethereal.swamp (Swamp biome, 1 = Enable / 0 = Disable) int 1
+ethereal.sealife (Coral and Seaweed biome, 1 = Enable / 0 = Disable) int 1
+ethereal.reefs (MT5 Coral biome, 1 = Enable / 0 = Disable) int 1
+ethereal.sakura (Sakura biome, 1 = Enable / 0 = Disable) int 1
+ethereal.tundra (Tundra biome, 1 = Enable / 0 = Disable) int 1
+ethereal.mediterranean (Mediterranean biome, 1 = Enable / 0 = Disable) int 1
 
 
 [*hbarmor]
