@@ -98,7 +98,7 @@ minetest.register_entity("painting:picent", {
 
 	on_activate = function(self, staticdata)
 
-		local pos = self.object:getpos()
+		local pos = self.object:get_pos()
 		local meta = minetest.get_meta(pos)
 		local data = meta:get_string("painting:picturedata")
 
@@ -189,10 +189,10 @@ minetest.register_entity("painting:paintent", {
 
 		--get player eye level
 		--see player.h line 129
-		local ppos = vector.add(puncher:getpos(), puncher:get_eye_offset())
+		local ppos = vector.add(puncher:get_pos(), puncher:get_eye_offset())
 		ppos.y = ppos.y + puncher:get_properties().eye_height
 
-		local pos = self.object:getpos()
+		local pos = self.object:get_pos()
 		local l = puncher:get_look_dir()
 
 		local d = dirs[self.fd]
@@ -326,7 +326,7 @@ minetest.register_craftitem("painting:paintedcanvas", {
 		local p = minetest.add_entity(pos, "painting:picent"):get_luaentity()
 
 		p.object:set_properties({ textures = { to_imagestring(data.grid, data.res) }})
-		p.object:setyaw(math.pi * fd / -2)
+		p.object:set_yaw(math.pi * fd / -2)
 
 		return ItemStack("")
 	end
@@ -469,7 +469,7 @@ minetest.register_node("painting:easel", {
 
 		p.object:set_properties({ collisionbox = paintbox[fd % 2] })
 		p.object:set_armor_groups({immortal = 1})
-		p.object:setyaw(math.pi * fd / -2)
+		p.object:set_yaw(math.pi * fd / -2)
 		p.grid = initgrid(res)
 		p.res = res
 		p.fd = fd
