@@ -64,34 +64,40 @@ if core.global_exists("walking_light") then
 				"mese",
 				"studded",
 			},
+			["amber"] = {
+				"amber",
+				{"ancient", 10},
+			},
 			["rainbow_ore"] = {
-				"rainbow",
+				{"rainbow", 10},
 			},
 		}
 
 		for modname, materials in pairs(helmets) do
 			for _, material in ipairs(materials) do
-				local orig_name
 				local radius
-				if modname == "rainbow_ore" then
+				if type(material) == "table" then
+					radius = material[2]
+					material = material[1]
+				end
+
+				local orig_name
+				if modname == "amber" and material == "amber" then
+					orig_name = modname .. ":helmet"
+				elseif modname == "rainbow_ore" then
 					orig_name = modname .. ":" .. "rainbow_ore_helmet"
-					radius = 10
 				else
 					orig_name = modname .. ":helmet_" .. material
 				end
 
-				local def = core.registered_items[orig_name]
-				if def then
-					def = table.copy(def)
+				local old_def = core.registered_items[orig_name]
+				if old_def then
+					local def = table.copy(old_def)
 
 					def.description = def.description .. " with light"
 					def.inventory_image = "walking_light_underlay.png^" .. def.inventory_image
 					if not def.wield_image then
-						if modname == "rainbow_ore" then
-							def.wield_image = "rainbow_ore_helmet_inv.png"
-						else
-							def.wield_image = modname .. "_inv_helmet_" .. material .. ".png"
-						end
+						def.wield_image = old_def.inventory_image
 					end
 					if not def.preview then
 						if modname == "rainbow_ore" then
@@ -101,7 +107,13 @@ if core.global_exists("walking_light") then
 						end
 					end
 
-					local light_name = "walking_light:helmet_" .. material
+					local light_name = "walking_light:helmet_"
+					if modname == "amber" and material == "ancient" then
+						light_name = light_name .. "amber_ancient"
+					else
+						light_name = light_name .. material
+					end
+
 					armor:register_armor(":" .. light_name, def)
 					walking_light.register_armor(light_name, radius)
 
