@@ -33,7 +33,7 @@ technic_worldgen?
 throwing?
 unifieddyes?
 vessels?
-walking_light?
+wlight?
 workbench?
 wool?
 biofuel?
