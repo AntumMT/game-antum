@@ -1,16 +1,21 @@
 
-if core.global_exists("walking_light") then
+if core.global_exists("wlight") then
 	local mese_pick = core.registered_items["default:pick_mese"]
 	if mese_pick then
 		mese_pick = table.copy(mese_pick)
 
 		mese_pick.description = mese_pick.description .. " with light"
-		mese_pick.inventory_image = "walking_light_underlay.png^" .. mese_pick.inventory_image
+		mese_pick.inventory_image = "wlight_inv_underlay.png^" .. mese_pick.inventory_image
 		mese_pick.wield_image = "default_tool_mesepick.png"
 
-		local light_name = "walking_light:pick_mese"
+		local light_name = "wlight:pick_mese"
 		core.register_craftitem(":" .. light_name, mese_pick)
-		walking_light.register_item(light_name)
+		wlight.register_item(light_name)
+
+		-- backward compat
+		local legacy_name = "walking_light:pick_mese"
+		core.register_alias(legacy_name, light_name)
+		wlight.register_item(legacy_name)
 
 		core.register_craft({
 			output = light_name,
@@ -95,7 +100,7 @@ if core.global_exists("walking_light") then
 					local def = table.copy(old_def)
 
 					def.description = def.description .. " with light"
-					def.inventory_image = "walking_light_underlay.png^" .. def.inventory_image
+					def.inventory_image = "wlight_inv_underlay.png^" .. def.inventory_image
 					if not def.wield_image then
 						def.wield_image = old_def.inventory_image
 					end
@@ -107,7 +112,7 @@ if core.global_exists("walking_light") then
 						end
 					end
 
-					local light_name = "walking_light:helmet_"
+					local light_name = "wlight:helmet_"
 					if modname == "amber" and material == "ancient" then
 						light_name = light_name .. "amber_ancient"
 					else
@@ -115,7 +120,12 @@ if core.global_exists("walking_light") then
 					end
 
 					armor:register_armor(":" .. light_name, def)
-					walking_light.register_armor(light_name, radius)
+					wlight.register_armor(light_name, radius)
+
+					-- backward compat
+					local legacy_name = light_name:gsub("^wlight%:", "walking_light:")
+					core.register_alias(legacy_name, light_name)
+					wlight.register_armor(legacy_name, radius)
 
 					core.register_craft({
 						output = light_name,
