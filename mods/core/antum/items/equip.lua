@@ -21,43 +21,91 @@ if core.global_exists("walking_light") then
 		})
 	end
 
-	-- TODO: add other helmets such as mese, rainbow, & helmets from technic_armor
 	if core.global_exists("armor") then
 		local helmets = {
-			"bronze",
-			"cactus",
-			"crystal",
-			"diamond",
-			"gold",
-			"mithril",
-			"steel",
-			"wood",
+			["3d_armor"] = {
+				"bronze",
+				"cactus",
+				"crystal",
+				"diamond",
+				"gold",
+				"mithril",
+				"steel",
+				"wood",
+			},
+			["xtraarmor"] = {
+				"chainmail",
+				"copper",
+				"leather",
+				"leather_black",
+				"leather_blue",
+				"leather_brown",
+				"leather_cyan",
+				"leather_dark_green",
+				"leather_dark_grey",
+				"leather_green",
+				"leather_grey",
+				"leather_magenta",
+				"leather_orange",
+				"leather_pink",
+				"leather_red",
+				"leather_violet",
+				"leather_white",
+				"leather_yellow",
+				"mese",
+				"studded",
+			},
+			["rainbow_ore"] = {
+				"rainbow",
+			},
 		}
 
-		for _, material in ipairs(helmets) do
-			local orig_name = "3d_armor:helmet_" .. material
-			local def = core.registered_items[orig_name]
-			if def then
-				def = table.copy(def)
+		for modname, materials in pairs(helmets) do
+			for _, material in ipairs(materials) do
+				local orig_name
+				local radius
+				if modname == "rainbow_ore" then
+					orig_name = modname .. ":" .. "rainbow_ore_helmet"
+					radius = 10
+				else
+					orig_name = modname .. ":helmet_" .. material
+				end
 
-				def.description = def.description .. " with light"
-				def.inventory_image = "walking_light_underlay.png^3d_armor_inv_helmet_" .. material .. ".png"
-				def.wield_image = "3d_armor_inv_helmet_" .. material .. ".png"
-				def.preview = "3d_armor_helmet_" .. material .. "_preview.png"
+				local def = core.registered_items[orig_name]
+				if def then
+					def = table.copy(def)
 
-				local light_name = "walking_light:helmet_" .. material
-				armor:register_armor(":" .. light_name, def)
-				walking_light.register_armor(light_name)
+					def.description = def.description .. " with light"
+					def.inventory_image = "walking_light_underlay.png^" .. def.inventory_image
+					if not def.wield_image then
+						if modname == "rainbow_ore" then
+							def.wield_image = "rainbow_ore_helmet_inv.png"
+						else
+							def.wield_image = modname .. "_inv_helmet_" .. material .. ".png"
+						end
+					end
+					if not def.preview then
+						if modname == "rainbow_ore" then
+							def.preview = "rainbow_ore_rainbow_ore_helmet_preview.png"
+						else
+							def.preview = modname .. "_helmet_" .. material .. "_preview.png"
+						end
+					end
 
-				core.register_craft({
-					output = light_name,
-					recipe = {
-						{"default:torch"},
-						{orig_name},
-					},
-				})
-			else
-				antum.log("warning", "\"" .. orig_name .. "\" not registered, not adding light item")
+					local light_name = "walking_light:helmet_" .. material
+					armor:register_armor(":" .. light_name, def)
+					walking_light.register_armor(light_name, radius)
+
+					core.register_craft({
+						output = light_name,
+						recipe = {
+							{"default:torch"},
+							{orig_name},
+						},
+					})
+				else
+					antum.log("warning", "\"" .. orig_name .. "\" not registered, not adding light item")
+				end
 			end
 		end
 	end
