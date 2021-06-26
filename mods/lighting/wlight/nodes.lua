@@ -1,11 +1,11 @@
 
-local S = core.get_translator(walking_light.modname)
+local S = core.get_translator(wlight.modname)
 
 
-core.register_node("walking_light:light_debug", {
-	drawtype = "glasslike",
-	tiles = {"walking_light_underlay.png"},
-	inventory_image = core.inventorycube("walking_light.png"),
+core.register_node("wlight:light_debug", {
+	drawtype = "plantlike",
+	tiles = {"wlight_inv_underlay.png"},
+	inventory_image = core.inventorycube("wlight_inv_underlay.png"),
 	paramtype = "light",
 	walkable = false,
 	is_ground_content = true,
@@ -16,11 +16,12 @@ core.register_node("walking_light:light_debug", {
 		fixed = {0, 0, 0, 0, 0, 0},
 	},
 })
+core.register_alias("walking_light:light_debug", "wlight:light_debug")
 
-core.register_node("walking_light:light", {
+core.register_node("wlight:light", {
 	drawtype = "glasslike",
-	tiles = {"walking_light.png"},
-	inventory_image = core.inventorycube("walking_light.png"),
+	tiles = {"wlight_light.png"},
+	inventory_image = core.inventorycube("wlight_light.png"),
 	paramtype = "light",
 	walkable = false,
 	is_ground_content = true,
@@ -31,9 +32,10 @@ core.register_node("walking_light:light", {
 		fixed = {0, 0, 0, 0, 0, 0},
 	},
 })
+core.register_alias("walking_light:light", "wlight:light")
 
-if walking_light.enable_megatorch and core.get_modpath("default") then
-	core.register_node("walking_light:megatorch", {
+if wlight.enable_megatorch and core.get_modpath("default") then
+	core.register_node("wlight:megatorch", {
 		description = S("Megatorch"),
 		drawtype = "torchlike",
 		tiles = {
@@ -83,14 +85,16 @@ if walking_light.enable_megatorch and core.get_modpath("default") then
 		legacy_wallmounted = true,
 	})
 
-	walking_light.register_item("walking_light:megatorch", 10)
+	wlight.register_item("wlight:megatorch", 10)
 
 	core.register_craft({
-		output = "walking_light:megatorch",
+		output = "wlight:megatorch",
 		recipe = {
 			{"default:torch", "default:torch", "default:torch"},
 			{"default:torch", "default:torch", "default:torch"},
 			{"default:torch", "default:torch", "default:torch"},
 		}
 	})
+
+	core.register_alias("walking_light:megatorch", "wlight:megatorch")
 end

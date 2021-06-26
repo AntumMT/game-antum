@@ -13,6 +13,10 @@ v1.0
 - megatorch can be disabled via setting
 - added localization support
 - added option to set custom light radius when registering item or armor
+- removed method "walking_light.register_tool"
+- renamed to "wlight"
+- consolidated chat commands into single "wlight" command
+- fixed "/wlight add" command not able to illuminate more than one node
 
 petermaloney
 ------------

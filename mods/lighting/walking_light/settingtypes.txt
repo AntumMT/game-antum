@@ -1,3 +1,0 @@
-
-# Enables walking_light:megatorch item.
-walking_light.enable_megatorch (Enable megatorch) bool true

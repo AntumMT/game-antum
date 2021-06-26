@@ -1,5 +1,5 @@
 
---- walking_light Methods
+--- wlight Methods
 --
 --  @topic methods
 
@@ -14,16 +14,23 @@ local light_positions = {}
 local last_wielded = {}
 
 -- toggles debug mode
-local walking_light_debug = false
+local wlight_debug = false
 
 -- name of light node, changed by toggling debug mode
-walking_light_node = nil
+wlight_node = nil
 
 --- Sets debugging mode.
 --
 --  @tparam bool enabled Determines if debugging is enabled.
-function walking_light.set_debug(enabled)
-	walking_light_debug = enabled
+function wlight.set_debug(enabled)
+	wlight_debug = enabled
+end
+
+--- Checks if debugging is enabled.
+--
+--  @treturn bool
+function wlight.debug_enabled()
+	return wlight_debug == true
 end
 
 -- list of items that use walking light when wielded
@@ -36,9 +43,9 @@ local light_armor = {}
 --
 --  @tparam string iname Item technical name.
 --  @tparam[opt] int radius Distance light will reach (max: 10).
-function walking_light.register_item(iname, radius)
+function wlight.register_item(iname, radius)
 	if radius and radius > 10 then
-		walking_light.log("warning", "light radius too high, setting to 10")
+		wlight.log("warning", "light radius too high, setting to 10")
 		radius = 10
 	end
 
@@ -46,7 +53,7 @@ function walking_light.register_item(iname, radius)
 
 	for li in pairs(light_items) do
 		if iname == li then
-			walking_light.log("warning", "\"" .. iname .. "\" is already light item.")
+			wlight.log("warning", "\"" .. iname .. "\" is already light item.")
 			return
 		end
 	end
@@ -56,12 +63,12 @@ end
 
 --- DEPRECATED
 --
---  Use `walking_light.register_item`
-function walking_light.addLightItem(item)
-	walking_light.log("warning",
-		"\"walking_light.addLightItem\" is deprecated, use \"walking_light.register_item\"")
+--  Use `wlight.register_item`
+function wlight.addLightItem(item)
+	wlight.log("warning",
+		"\"wlight.addLightItem\" is deprecated, use \"wlight.register_item\"")
 
-	return walking_light.register_item(item)
+	return wlight.register_item(item)
 end
 
 --- Registers an item to emit light when equipped in armor inventory.
@@ -70,10 +77,10 @@ end
 --
 --  @tparam string iname Item technical name.
 --  @tparam[opt] int radius Distance light will reach (max: 10).
---  @tparam[opt] bool litem Whether or not this item should also be registered with `walking_light.register_item`.
-function walking_light.register_armor(iname, radius, litem)
+--  @tparam[opt] bool litem Whether or not this item should also be registered with `wlight.register_item`.
+function wlight.register_armor(iname, radius, litem)
 	if radius and radius > 10 then
-		walking_light.log("warning", "light radius too high, setting to 10")
+		wlight.log("warning", "light radius too high, setting to 10")
 		radius = 10
 	end
 
@@ -82,53 +89,29 @@ function walking_light.register_armor(iname, radius, litem)
 
 	for la in pairs(light_armor) do
 		if iname == la then
-			walking_light.log("warning", "\"" .. iname .. "\" is already light armor.")
+			wlight.log("warning", "\"" .. iname .. "\" is already light armor.")
 		end
 	end
 
 	light_armor[iname] = def
-	if litem then walking_light.register_item(iname, radius) end
+	if litem then wlight.register_item(iname, radius) end
 end
 
 --- Retrieves list of items registered as emitting light when wielded.
 --
 --  @treturn table Table indexed by key.
-function walking_light.get_light_items()
+function wlight.get_light_items()
 	return light_items
 end
 
 --- DEPRECATED
 --
---  Use `walking_light.get_light_items`
-function walking_light.getLightItems()
-	walking_light.log("warning",
-		"\"walking_light.getLightItems\" is deprecated, use \"walking_light.get_light_items\"")
+--  Use `wlight.get_light_items`
+function wlight.getLightItems()
+	wlight.log("warning",
+		"\"wlight.getLightItems\" is deprecated, use \"wlight.get_light_items\"")
 
-	return walking_light.get_light_items()
-end
-
---- DEPRECATED
-function walking_light.register_tool(tool)
-	walking_light.log("warning", "\"walking_light.register_tool\" method is deprecated")
-
-	local item, default, definition
-	item = "walking_light:" .. tool .. "_mese"
-	default = "default:" .. tool .. "_mese"
-
-	definition = table.copy(core.registered_items[default])
-	definition.description = definition.description .. " with light"
-	definition.inventory_image = "walking_light_mese" .. tool .. ".png"
-
-	core.register_tool(item, definition)
-	core.register_craft({
-		output = item,
-		recipe = {
-			{"default:torch"},
-			{ default },
-		}
-	})
-
-	walking_light.register_item(item)
+	return wlight.get_light_items()
 end
 
 -- from http://lua-users.org/wiki/IteratorsTutorial
@@ -184,7 +167,7 @@ end
 
 local function mt_get_node_or_nil(pos)
 	if pos == nil then
-		walking_light.log("error", "mt_get_node_or_nil(), pos is nil")
+		wlight.log("error", "mt_get_node_or_nil(), pos is nil")
 		print(debug.traceback("Current Callstack:\n"))
 		return nil
 	end
@@ -205,14 +188,14 @@ end
 --
 --  @tparam table pos Position.
 --  @tparam table sometable
-function walking_light.mt_add_node(pos, sometable)
+function wlight.mt_add_node(pos, sometable)
 	if pos == nil then
-		walking_light.log("error", "walking_light.mt_add_node(), pos is nil")
+		wlight.log("error", "wlight.mt_add_node(), pos is nil")
 		print(debug.traceback("Current Callstack:\n"))
 		return nil
 	end
 	if sometable == nil then
-		walking_light.log("error", "walking_light.mt_add_node(), sometable is nil")
+		wlight.log("error", "wlight.mt_add_node(), sometable is nil")
 		print(debug.traceback("Current Callstack:\n"))
 		return nil
 	end
@@ -222,11 +205,11 @@ end
 
 --- DEPRECATED
 --
---  Use `walking_light.mt_add_node`
+--  Use `wlight.mt_add_node`
 function mt_add_node(pos, sometable)
-	walking_light.log("warning", "\"mt_add_node\" is deprecated, use \"walking_light.mt_add_node\"")
+	wlight.log("warning", "\"mt_add_node\" is deprecated, use \"wlight.mt_add_node\"")
 
-	return walking_light.mt_add_node(pos, sometable)
+	return wlight.mt_add_node(pos, sometable)
 end
 
 local function round(num)
@@ -238,7 +221,7 @@ end
 --  @tparam table pos1
 --  @tparam table pos2
 --  @treturn bool
-function walking_light.poseq(pos1, pos2)
+function wlight.poseq(pos1, pos2)
 	if pos1 == nil and pos2 == nil then
 		return true
 	end
@@ -251,11 +234,11 @@ end
 
 --- DEPRECATED
 --
---  Use `walking_light.poseq`
+--  Use `wlight.poseq`
 function poseq(pos1, pos2)
-	walking_light.log("warning", "\"poseq\" is deprecated, use \"walking_light.poseq\"")
+	wlight.log("warning", "\"poseq\" is deprecated, use \"wlight.poseq\"")
 
-	return walking_light.poseq(pos1, pos2)
+	return wlight.poseq(pos1, pos2)
 end
 
 -- return true if the player moved since last player_positions update
@@ -264,7 +247,7 @@ local function player_moved(player)
 	local pos = player:get_pos()
 	local rounded_pos = vector.round(pos)
 	local oldpos = player_positions[player_name]
-	if oldpos == nil or not walking_light.poseq(rounded_pos, oldpos) then
+	if oldpos == nil or not wlight.poseq(rounded_pos, oldpos) then
 		-- if oldpos is nil, we assume they just logged in, so consider them moved
 		return true
 	end
@@ -272,20 +255,20 @@ local function player_moved(player)
 	return false
 end
 
--- same as table.remove(t, remove_pos), but uses walking_light.poseq instead of comparing references (does lua have comparator support, so this isn't needed?)
+-- same as table.remove(t, remove_pos), but uses wlight.poseq instead of comparing references (does lua have comparator support, so this isn't needed?)
 local function table_remove_pos(t, remove_pos)
 	for i, pos in ipairs(t) do
-		if walking_light.poseq(pos, remove_pos) then
+		if wlight.poseq(pos, remove_pos) then
 			table.remove(t, i)
 			break
 		end
 	end
 end
 
--- same as t[remove_pos], but uses walking_light.poseq instead of comparing references (does lua have comparator support, so this isn't needed?)
+-- same as t[remove_pos], but uses wlight.poseq instead of comparing references (does lua have comparator support, so this isn't needed?)
 local function table_contains_pos(t, remove_pos)
 	for i, pos in ipairs(t) do
-		if walking_light.poseq(pos, remove_pos) then
+		if wlight.poseq(pos, remove_pos) then
 			return true
 		end
 	end
@@ -301,7 +284,7 @@ local function table_insert_pos(t, pos)
 end
 
 local function is_light(node)
-	if node ~= nil and node ~= "ignore" and (node.name == "walking_light:light" or node.name == "walking_light:light_debug") then
+	if node ~= nil and node ~= "ignore" and (node.name == "wlight:light" or node.name == "wlight:light_debug") then
 		return true
 	end
 	return false
@@ -311,24 +294,24 @@ end
 --
 --  @tparam[opt] ObjectRef player
 --  @tparam table pos Posistion where light will be removed.
-function walking_light.remove_light(player, pos)
+function wlight.remove_light(player, pos)
 	local player_name
 	if player then
 		player_name = player:get_player_name()
 	end
 	local node = mt_get_node_or_nil(pos)
 	if is_light(node) then
-		walking_light.mt_add_node(pos, {type="node", name="air"})
+		wlight.mt_add_node(pos, {type="node", name="air"})
 		if player_name then
 			table_remove_pos(light_positions[player_name], pos)
 		end
 	else
 		if node ~= nil then
-			walking_light.log("warning", "walking_light.remove_light(), pos = "
+			wlight.log("warning", "wlight.remove_light(), pos = "
 				.. dumppos(pos) .. ", tried to remove light but node was " .. node.name)
 			table_remove_pos(light_positions[player_name], pos)
 		else
-			walking_light.log("warning", "walking_light.remove_light(), pos = "
+			wlight.log("warning", "wlight.remove_light(), pos = "
 				.. dumppos(pos) .. ", tried to remove light but node was nil")
 		end
 	end
@@ -336,11 +319,11 @@ end
 
 --- DEPRECATED
 --
---  Use `walking_light.remove_light`
+--  Use `wlight.remove_light`
 function remove_light(player, pos)
-	walking_light.log("warning", "\"remove_light\" is deprecated, use \"walking_light.remove_light\"")
+	wlight.log("warning", "\"remove_light\" is deprecated, use \"wlight.remove_light\"")
 
-	return walking_light.remove_light(player, pos)
+	return wlight.remove_light(player, pos)
 end
 
 -- removes all light owned by a player
@@ -349,7 +332,7 @@ local function remove_light_player(player)
 
 	for i, old_pos in ripairs(light_positions[player_name]) do
 		if old_pos then
-			walking_light.remove_light(player, old_pos)
+			wlight.remove_light(player, old_pos)
 		end
 	end
 end
@@ -460,7 +443,7 @@ local function add_light(player, pos)
 		return false
 	elseif node.name == "air" then
 		-- when the node that is already there is air, add light
-		walking_light.mt_add_node(pos, {type="node", name=walking_light_node})
+		wlight.mt_add_node(pos, {type="node", name=wlight_node})
 		if not table_contains_pos(light_positions[player_name], pos) then
 			table_insert_pos(light_positions[player_name], pos)
 		end
@@ -481,7 +464,7 @@ end
 -- returns a string, the name of the item found that is a light item
 local function get_wielded_light_item(player)
 	local wielded_item = player:get_wielded_item():get_name()
-	if wielded_item ~= "" and walking_light.is_light_item(wielded_item) then
+	if wielded_item ~= "" and wlight.is_light_item(wielded_item) then
 		return wielded_item
 	end
 
@@ -493,7 +476,7 @@ local function get_wielded_light_item(player)
 			if armor_inv then
 				for k, stack in pairs(armor_inv:get_list("armor")) do
 					local item_name = stack:get_name()
-					if walking_light.is_light_armor(item_name) then
+					if wlight.is_light_armor(item_name) then
 						return item_name, true
 					end
 				end
@@ -555,7 +538,7 @@ local function update_light_player(player)
 	-- go through all light owned by the player to remove all but what should be kept
 	for i, oldlightpos in ripairs(light_positions[player_name]) do
 		if not wantlightpos or oldlightpos and oldlightpos.x and not table_contains_pos(wantlightpos, oldlightpos) then
-			walking_light.remove_light(player, oldlightpos)
+			wlight.remove_light(player, oldlightpos)
 		end
 	end
 
@@ -574,7 +557,7 @@ end
 --
 --  @tparam string iname Item technical name.
 --  @treturn bool `true` if item is registered.
-function walking_light.is_light_item(iname)
+function wlight.is_light_item(iname)
 	for li in pairs(light_items) do
 		if iname == li then
 			return true
@@ -588,7 +571,7 @@ end
 --
 --  @tparam string iname Item technical name.
 --  @treturn bool `true` if item is registered.
-function walking_light.is_light_armor(iname)
+function wlight.is_light_armor(iname)
 	for la in pairs(light_armor) do
 		if iname == la then
 			return true
@@ -602,7 +585,7 @@ end
 --
 --  @tparam ObjectRef player Player to be checked.
 --  @treturn bool `true` if player is wielding registered item.
-function walking_light.wields_light(player)
+function wlight.wields_light(player)
 	return get_wielded_light_item(player) ~= nil
 end
 
@@ -642,12 +625,12 @@ end)
 --- Updates light node texture.
 --
 --  If debugging, node will display a marker, otherwise will be transparent.
-function walking_light.update_node()
-	if walking_light_debug then
-		walking_light_node = "walking_light:light_debug"
+function wlight.update_node()
+	if wlight_debug then
+		wlight_node = "wlight:light_debug"
 	else
-		walking_light_node = "walking_light:light"
+		wlight_node = "wlight:light"
 	end
 end
 
-walking_light.update_node()
+wlight.update_node()

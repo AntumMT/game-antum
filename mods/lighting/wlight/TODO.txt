@@ -1,0 +1,4 @@
+
+TODO:
+- wlight_debug should only enable debugging for player invoking command
+- use spherical area when calculating radius for chat commands

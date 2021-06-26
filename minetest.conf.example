@@ -1750,12 +1750,12 @@ coloredwood_enable_stairsplus = true
 #playeranim.animation_speed_sneak = 0.8
 
 
-# *** walking_light
+# *** wlight ***
 
-## Enables walking_light:megatorch item.
+## Enables wlight:megatorch item.
 #    type:    bool
 #    default: true
-#walking_light.enable_megatorch = true
+#wlight.enable_megatorch = true
 
 
 # *** wardrobe ***
