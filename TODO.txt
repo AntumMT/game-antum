@@ -47,6 +47,7 @@ hard (priority 2):
 	- requires battery (or other type of fuel), empty glass (or other vessel), & food item to create juices
 - snowdrift
 	- spread out time to reduce weather change occurrances
+- remove crafting_bench mod
 
 
 Warnings:
