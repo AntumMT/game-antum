@@ -4,6 +4,15 @@ local S = core.get_translator(equip_exam.name)
 
 local common_name = S("Equipment Examiner")
 
+local function update_formspec(pos)
+		local meta = core.get_meta(pos)
+		local inv = meta:get_inventory()
+		local contents = inv:get_list("input")[1]
+
+		meta:set_string("formspec", equip_exam:get_formspec(contents:get_name(),
+			inv:is_empty("input"), meta))
+end
+
 local node_def = {
 	description = common_name,
 	short_description = common_name,
@@ -24,12 +33,12 @@ local node_def = {
 	on_construct = function(pos)
 		local meta = core.get_meta(pos)
 		meta:set_string("infotext", common_name)
-		meta:set_string("formspec", equip_exam:get_formspec())
 		local inv = meta:get_inventory()
 		inv:set_size("input", 1)
+		update_formspec(pos)
 	end,
 	on_rightclick = function(pos, node, player, itemstack, pointed_thing)
-		equip_exam:show_formspec(pos, player)
+		update_formspec(pos)
 	end,
 	can_dig = function(pos, player)
 		local meta = core.get_meta(pos)
@@ -38,11 +47,23 @@ local node_def = {
 	end,
 	-- FIXME: both are called when item is replaced with another
 	on_metadata_inventory_put = function(pos, listname, index, stack, player)
-		equip_exam:show_formspec(pos, player)
+		update_formspec(pos)
 	end,
 	on_metadata_inventory_take = function(pos, listname, index, stack, player)
-		equip_exam:show_formspec(pos, player)
+		update_formspec(pos)
 	end,
+	on_receive_fields = function(pos, formname, fields, sender)
+		if fields.techname then
+			local nmeta = core.get_meta(pos)
+			if fields.techname == "true" then
+				nmeta:set_string("show_technical", "true")
+			else
+				nmeta:set_string("show_technical", nil)
+			end
+
+			update_formspec(pos)
+		end
+	end
 }
 
 core.register_node("equip_exam:examiner", node_def)

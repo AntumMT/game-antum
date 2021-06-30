@@ -1,0 +1,26 @@
+
+v1.3
+----
+- collects all specs from `item.groups`, `item.tool_capabilities`, & `item.armor_groups`
+- added option to show technical names
+
+v1.2
+----
+- any item can be examined
+
+v1.1
+----
+- fixed front texture position
+
+v1.0
+----
+- created equipment examiner node & formspec
+- reads common name & technical name
+- reads ability levels:
+  - attack (fleshy)
+  - defense (fleshy) (3d_armor)
+  - mine (cracky)
+  - chop (choppy)
+  - dig (crumbly)
+  - snap (snappy)
+- added craft recipe (requires default & optionally basic_materials)

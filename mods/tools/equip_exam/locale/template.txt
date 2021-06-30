@@ -1,14 +1,39 @@
 ## Translated by:
 
+
+# general
 Equipment Examiner=
 Specs:=
 Specs unavailable=
 Close=
+Technical Names=
 Name: @1=
 ID: @1=
-Attack: @1=
-Defense: @1=
-Mine level: @1=
-Chop level: @1=
-Dig level: @1=
-Snap level: @1=
+durability: @1=
+
+# tool
+Tool:=
+mine level: @1=
+chop level: @1=
+dig level: @1=
+snap level: @1=
+
+# weapon
+Weapon:=
+attack: @1=
+
+# armor
+Armor:=
+defense: @1=
+head def.: @1=
+torso def.: @1=
+legs def.: @1=
+feet def.: @1=
+shield def.: @1=
+healing: @1=
+radiation: @1=
+
+# other
+Other:=
+flammability: @1=
+speed interval: @1=

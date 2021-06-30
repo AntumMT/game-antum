@@ -2,7 +2,7 @@
 
 ### Description:
 
-Tool to examine item stats in [Minetest](https://www.minetest.net/).
+A [Minetest](https://www.minetest.net/) mod that adds a node that can be used to examine equipment & item specs.
 
 ![screenshot](screenshot.png)
 
@@ -11,13 +11,12 @@ Tool to examine item stats in [Minetest](https://www.minetest.net/).
 - Code: [MIT](LICENSE.txt)
 - Textures: [CC0](textures//sources.txt)
 
-### Dependencies:
+### Requirements:
 
-- Required:
-  - none
-- Optional:
-  - [default](https://github.com/minetest/minetest_game/tree/master/mods/default) *(required for craft recipe)*
-  - [basic_materials](https://forum.minetest.net/viewtopic.php?t=21000)
+- Depends: none
+- Optional depends:
+	- [![default](https://img.shields.io/static/v1?label=GitHub&message=default&color=%23375a7f&logo=github)](https://github.com/minetest/minetest_game/tree/master/mods/default) *(required for craft recipe)*
+	- [![basic_materials](https://img.shields.io/static/v1?label=ContentDB&message=basic_materials&color=%23375a7f&logo=minetest)](https://content.minetest.net/packages/VanessaE/basic_materials/)
 
 ### Crafting:
 
@@ -59,7 +58,8 @@ With `basic_materials`:
 
 ### Links:
 
-- [Minetest forum](https://forum.minetest.net/viewtopic.php?t=26618)
-- [GitHub repo](https://github.com/AntumMT/mod-equip_exam)
-- [Changelog](CHANGES.txt)
+- [![ContentDB](https://img.shields.io/static/v1?label=ContentDB&message=equip_exam&color=%23375a7f&logo=minetest)](https://content.minetest.net/packages/AntumDeluge/equip_exam/)
+- [Forum](https://forum.minetest.net/viewtopic.php?t=26618)
+- [Git repo](https://github.com/AntumMT/mod-equip_exam)
+- [Changelog](changelog.txt)
 - [TODO](TODO.txt)
