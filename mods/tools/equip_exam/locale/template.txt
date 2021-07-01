@@ -9,14 +9,33 @@ Close=
 Technical Names=
 Name: @1=
 ID: @1=
+Type: @1=
 durability: @1=
 
 # tool
 Tool:=
+repair disabled: @1=
+node drop level: @1=
+
+# node
+Node:=
+attached: @1=
+dig immediate: @1=
+added fall damage: @1=
+hand breakable: @1=
+bouncy: @1=
+colorable: @1=
+rail-like: @1=
+jump disabled: @1=
+fall: @1=
+liquid boyancy: @1=
+
+# tool & node
 mine level: @1=
 chop level: @1=
 dig level: @1=
 snap level: @1=
+explosive level: @1=
 
 # weapon
 Weapon:=
@@ -33,7 +52,18 @@ shield def.: @1=
 healing: @1=
 radiation: @1=
 
+# entity
+punch operable: @1=
+
 # other
 Other:=
-flammability: @1=
+flammable: @1=
 speed interval: @1=
+immortal: @1=
+color: @1=
+meat: @1=
+eatable: @1=
+wool: @1=
+metal: @1=
+weapon: @1=
+heavy: @1=

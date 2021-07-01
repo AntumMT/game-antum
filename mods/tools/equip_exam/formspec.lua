@@ -1,17 +1,46 @@
 
 local S = core.get_translator(equip_exam.name)
 
+local general_types = {
+	["uses"] = "durability",
+}
 
-local tool_types = {
+local tool_node_types = {
 	["cracky"] = "mine level",
 	["choppy"] = "chop level",
 	["crumbly"] = "dig level",
 	["snappy"] = "snap level",
+	["explody"] = "explosive level",
 }
+
+local tool_types = {
+	["disable_repair"] = "repair disabled",
+	["max_drop_level"] = "node drop level",
+}
+for k, v in pairs(tool_node_types) do
+	tool_types[k] = v
+end
+
+local node_types = {
+	["attached_node"] = "attached",
+	["dig_immediate"] = "dig immediate",
+	["fall_damage_add_percent"] = "added fall damage",
+	["oddly_breakable_by_hand"] = "hand breakable",
+	["bouncy"] = true,
+	["ud_param2_colorable"] = "colorable",
+	["connect_to_raillike"] = "rail-like",
+	["disable_jump"] = "jump disabled",
+	["falling_node"] = "fall",
+	["float"] = "liquid boyancy",
+	["level"] = true,
+	["slippery"] = true,
+}
+for k, v in pairs(tool_node_types) do
+	node_types[k] = v
+end
 
 local weapon_types = {
 	["fleshy"] = "attack",
-	["uses"] = "durability",
 	["punch_attack_uses"] = "durability",
 }
 
@@ -27,15 +56,51 @@ local armor_types = {
 	["armor_radiation"] = "radiation",
 }
 
-local other_types = {
-	["flammable"] = "flammability",
-	["full_punch_interval"] = "speed interval",
+local entity_types = {
+	["punch_operable"] = true,
 }
+
+local other_types = {
+	["flammable"] = true,
+	["full_punch_interval"] = "speed interval",
+	["immortal"] = true,
+	["meat"] = true,
+	["eatable"] = true,
+	["wool"] = true,
+	["metal"] = true,
+	["weapon"] = true,
+	["heavy"] = true,
+}
+
+-- excluded from automatic parsing
+local excluded_types = {
+	"punch_attack_uses",
+	"armor_use",
+}
+
+local function is_excluded(spec)
+	for _, ex in ipairs(excluded_types) do
+		if spec == ex then return true end
+	end
+
+	return false
+end
 
 local function format_spec(grp, name, value, technical)
 	if technical or not grp[name] then return name .. ": " .. value end
 
-	return S(grp[name] .. ": @1", value)
+	local nname = grp[name]
+	if nname == true then
+		nname = name:gsub("_", " ")
+	end
+
+	return S(nname .. ": @1", value)
+end
+
+local function get_durability(value)
+	if not value or value == 0 then return "∞" end
+
+	return value
 end
 
 local function get_item_specs(item, technical)
@@ -46,10 +111,9 @@ local function get_item_specs(item, technical)
 	if not name then name = item.description end
 	local id = item.name
 
-	if name then
-		table.insert(specs, S("Name: @1", name))
-	end
-	table.insert(specs, S("ID: @1", id))
+	-- remove multi-lines
+	if name:find("\n") then name = name:split("\n")[1]:trim() end
+	name = core.formspec_escape(name)
 
 	local groups = item.groups or {}
 	local tool_capabilities = item.tool_capabilities or {}
@@ -60,18 +124,30 @@ local function get_item_specs(item, technical)
 	local specs_tool = {}
 	local specs_weapon = {}
 	local specs_armor = {}
+	local specs_node = {}
+	local specs_entity = {}
 	local specs_other = {}
 
+	local item_types = {}
+	item_types.tool = groups.tool ~= nil and groups.tool > 0
+	item_types.node = core.registered_nodes[item.name] ~= nil
+	item_types.entity = core.registered_entities[item.name] ~= nil
+
 	for k, v in pairs(tool_capabilities) do
-		if type(v) ~= "table" then
-			if tool_types[k] then
-				table.insert(specs_tool, format_spec(tool_types, k, v, technical))
-			elseif weapon_types[k] then
-				table.insert(specs_other, format_spec(weapon_types, k, v, technical))
-			elseif armor_types[k] then
-				table.insert(specs_other, format_spec(armor_types, k, v, technical))
-			else
-				table.insert(specs_other, format_spec(other_types, k, v, technical))
+		if not is_excluded(k) then
+			if type(v) ~= "table" then
+				if tool_types[k] then
+					table.insert(specs_tool, format_spec(tool_types, k, v, technical))
+					item_types.tool = true
+				elseif weapon_types[k] then
+					table.insert(specs_weapon, format_spec(weapon_types, k, v, technical))
+					item_types.weapon = true
+				elseif armor_types[k] then
+					table.insert(specs_armor, format_spec(armor_types, k, v, technical))
+					item_types.armor = true
+				else
+					table.insert(specs_other, format_spec(other_types, k, v, technical))
+				end
 			end
 		end
 	end
@@ -83,14 +159,11 @@ local function get_item_specs(item, technical)
 			if v.maxlevel then
 				if tool_types[k] then
 					table.insert(specs_tool, format_spec(tool_types, k, v.maxlevel, technical))
-					if v.uses then
-						table.insert(specs_tool, S("durability: @1", v.uses))
-					end
+					table.insert(specs_tool, format_spec(general_types, "uses", get_durability(v.uses), technical))
+					item_types.tool = true
 				else
 					table.insert(specs_other, format_spec(other_types, k, v.maxlevel, technical))
-					if v.uses then
-						table.insert(specs_other, S("durability: @1", v.uses))
-					end
+					table.insert(specs_other, format_spec(general_types, "uses", get_durability(v.uses), technical))
 				end
 			end
 		end
@@ -99,29 +172,92 @@ local function get_item_specs(item, technical)
 	for k, v in pairs(tool_capabilities.damage_groups) do
 		if weapon_types[k] then
 			table.insert(specs_weapon, format_spec(weapon_types, k, v, technical))
+			item_types.weapon = true
 		else
 			table.insert(specs_other, format_spec(other_types, k, v, technical))
 		end
 	end
 
 	for k, v in pairs(armor_groups) do
-		if armor_types[k] then
-			table.insert(specs_armor, format_spec(armor_types, k, v, technical))
-		else
-			table.insert(specs_other, format_spec(other_types, k, v, technical))
+		if not is_excluded(k) then
+			if armor_types[k] then
+				if v ~= 0 then
+					table.insert(specs_armor, format_spec(armor_types, k, v, technical))
+					item_types.armor = true
+				end
+			else
+				table.insert(specs_other, format_spec(other_types, k, v, technical))
+			end
 		end
 	end
 
+	local type_group = tool_types
+	local spec_group = specs_tool
+	if item_types.node then
+		type_group = node_types
+		spec_group = specs_node
+	end
+
 	for k, v in pairs(groups) do
-		if tool_types[k] then
-			table.insert(specs_tool, format_spec(tool_types, k, v, technical))
-		elseif weapon_types[k] then
-			table.insert(specs_weapon, format_spec(weapon_types, k, v, technical))
-		elseif armor_types[k] then
-			table.insert(specs_armor, format_spec(armor_types, k, v, technical))
-		else
-			table.insert(specs_other, format_spec(other_types, k, v, technical))
+		if not is_excluded(k) then
+			if type_group[k] then
+				table.insert(spec_group, format_spec(type_group, k, v, technical))
+				if not item_types.node then
+					item_types.tool = true
+				end
+			elseif weapon_types[k] then
+				table.insert(specs_weapon, format_spec(weapon_types, k, v, technical))
+				item_types.weapon = true
+			elseif armor_types[k] then
+				if v ~= 0 then
+					table.insert(specs_armor, format_spec(armor_types, k, v, technical))
+					item_types.armor = true
+				end
+			elseif entity_types[k] then
+				table.insert(specs_entity, format_spec(entity_types, k, v, technical))
+				item_types.entity = true
+			else
+				table.insert(specs_other, format_spec(other_types, k, v, technical))
+			end
 		end
+	end
+
+	if item_types.weapon then
+		table.insert(specs_weapon, format_spec(weapon_types, "punch_attack_uses",
+			get_durability(tool_capabilities.punch_attack_uses), technical))
+	end
+
+	if item_types.armor then
+		local armor_use = groups.armor_use or armor_groups.armor_use
+		table.insert(specs_armor, format_spec(armor_types, "armor_use",
+			get_durability(armor_use), technical))
+	end
+
+	local imeta = ItemStack(item):get_meta()
+	local color = imeta:get_string("color")
+	if color ~= "" then
+		-- FIXME:
+		table.insert(specs_other, S("color: @1", color))
+	end
+
+	--[[
+	if item.color then
+		table.insert(specs_other, S("color: @1", item.color))
+	end
+	]]
+
+	if name then
+		table.insert(specs, S("Name: @1", name))
+	end
+	table.insert(specs, S("ID: @1", id))
+
+	local it = {}
+	for k, v in pairs(item_types) do
+		if v then table.insert(it, k) end
+	end
+
+	if #it > 0 then
+		table.insert(specs, S("Type: @1", core.formspec_escape(table.concat(it, ", "))))
 	end
 
 	if #specs_tool > 0 then
@@ -140,6 +276,12 @@ local function get_item_specs(item, technical)
 		table.insert(specs, S("Armor:"))
 		for _, sp in ipairs(specs_armor) do
 			table.insert(specs, "  " .. sp)
+		end
+	end
+	if #specs_node > 0 then
+		table.insert(specs, S("Node:"))
+		for _, sp in ipairs(specs_node) do
+			table.insert(specs, " " .. sp)
 		end
 	end
 	if #specs_other > 0 then

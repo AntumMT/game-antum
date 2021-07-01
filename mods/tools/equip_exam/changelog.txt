@@ -3,6 +3,9 @@ v1.3
 ----
 - collects all specs from `item.groups`, `item.tool_capabilities`, & `item.armor_groups`
 - added option to show technical names
+- item type(s) are displayed as a list
+- parses node specs
+- parses entity specs
 
 v1.2
 ----

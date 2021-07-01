@@ -1,3 +1,6 @@
 
 TODO:
 - place item back in inventory when formspec is closed
+- add healing value for foods
+- add slingshot support
+- support wlight
