@@ -885,15 +885,6 @@ disallow_empty_password = true
 ##   type: int
 #main_menu_mod_mgr = 1
 
-##   type: string
-#modstore_download_url = https://forum.minetest.net/media/
-
-##   type: string
-#modstore_listmods_url = https://forum.minetest.net/mmdb/mods/
-
-##   type: string
-#modstore_details_url = https://forum.minetest.net/mmdb/mod/*/
-
 
 
 # ************
