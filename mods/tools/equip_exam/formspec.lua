@@ -1,8 +1,52 @@
 
 local S = core.get_translator(equip_exam.name)
 
+
+-- START: wlight & wielded_light support
+
+local light_items = {}
+
+if core.global_exists("wlight") then
+	local wlight_register_item_old = wlight.register_item
+	local wlight_register_armor_old = wlight.register_armor
+
+	wlight.register_item = function(iname, radius)
+		light_items[iname] = {radius=radius}
+
+		return wlight_register_item_old(iname, radius)
+	end
+
+	wlight.register_armor = function(iname, radius, litem)
+		light_items[iname] = {radius=radius}
+
+		return wlight_register_armor_old(iname, radius, litem)
+	end
+
+	-- re-register torch & megatorch
+	if core.registered_items["default:torch"] then
+		wlight.register_item("default:torch")
+	end
+
+	if core.registered_items["wlight:megatorch"] then
+		wlight.register_item("wlight:megatorch", 10)
+	end
+end
+
+if core.global_exists("wielded_light") then
+	local wielded_light_register_old = wielded_light.register_item_light
+	wielded_light.register_item_light = function(iname, light_level)
+		light_items[iname] = {radius=light_level}
+
+		return wielded_light_register_old(iname, light_level)
+	end
+end
+
+-- END: wlight & wielded_light support
+
+
 local general_types = {
 	["uses"] = "durability",
+	["wear"] = true,
 }
 
 local tool_node_types = {
@@ -34,6 +78,7 @@ local node_types = {
 	["float"] = "liquid boyancy",
 	["level"] = true,
 	["slippery"] = true,
+	["drop"] = "drops",
 }
 for k, v in pairs(tool_node_types) do
 	node_types[k] = v
@@ -61,8 +106,9 @@ local entity_types = {
 }
 
 local other_types = {
+	["inventory_image"] = true,
+	["wield_image"] = true,
 	["flammable"] = true,
-	["full_punch_interval"] = "speed interval",
 	["immortal"] = true,
 	["meat"] = true,
 	["eatable"] = true,
@@ -70,12 +116,21 @@ local other_types = {
 	["metal"] = true,
 	["weapon"] = true,
 	["heavy"] = true,
+	["full_punch_interval"] = "speed interval",
+	["range"] = true,
+	["use_texture_alpha"] = "texture alpha mode",
+	["stackable"] = true,
+	["mod_origin"] = "mod",
 }
 
 -- excluded from automatic parsing
 local excluded_types = {
+	"name",
+	"description",
+	"type",
 	"punch_attack_uses",
 	"armor_use",
+	"stack_max",
 }
 
 local function is_excluded(spec)
@@ -129,7 +184,7 @@ local function get_item_specs(item, technical)
 	local specs_other = {}
 
 	local item_types = {}
-	item_types.tool = groups.tool ~= nil and groups.tool > 0
+	item_types.tool = core.registered_tools[item.name] ~= nil
 	item_types.node = core.registered_nodes[item.name] ~= nil
 	item_types.entity = core.registered_entities[item.name] ~= nil
 
@@ -222,7 +277,58 @@ local function get_item_specs(item, technical)
 		end
 	end
 
-	if item_types.weapon then
+	local is_ranged = false
+
+	for k, v in pairs(table.copy(item)) do
+		local v_type = type(v)
+		if v_type == "boolean" then
+			if v then
+				v = S("yes")
+			else
+				v = S("no")
+			end
+		elseif v_type == "table" or v_type == "function" or v_type == "userdata" then
+			v = nil
+		end
+
+		if v ~= nil and not is_excluded(k) then
+			if tool_types[k] then
+				table.insert(specs_tool, format_spec(tool_types, k, v, technical))
+				item_types.tool = true
+			elseif weapon_types[k] then
+				table.insert(specs_weapon, format_spec(weapon_types, k, v, technical))
+				item_types.weapon = true
+			elseif armor_types[k] then
+				table.insert(specs_armor, format_spec(armor_types, k, v, technical))
+				item_types.armor = true
+			elseif node_types[k] then
+				table.insert(specs_node, format_spec(node_types, k, v, technical))
+				item_types.node = true
+			elseif entity_types[k] then
+				table.insert(specs_entity, format_spec(entity_types, k, v, technical))
+				item_types.entity = true
+			else
+				local specs_group = specs_other
+				-- hack for slingshot
+				if k == "range" and id:find("^slingshot:") then
+					specs_group = specs_weapon
+					item_types.weapon = true
+					is_ranged = true
+				end
+
+				table.insert(specs_group, format_spec(other_types, k, v, technical))
+			end
+		end
+	end
+
+	local stackable = S("yes")
+	if item.stack_max == 1 then
+		stackable = S("no")
+	end
+
+	table.insert(specs_other, format_spec(other_types, "stackable", stackable, technical))
+
+	if item_types.weapon and not is_ranged then
 		table.insert(specs_weapon, format_spec(weapon_types, "punch_attack_uses",
 			get_durability(tool_capabilities.punch_attack_uses), technical))
 	end
@@ -233,18 +339,19 @@ local function get_item_specs(item, technical)
 			get_durability(armor_use), technical))
 	end
 
-	local imeta = ItemStack(item):get_meta()
-	local color = imeta:get_string("color")
+	local color = item.meta:get_string("color")
 	if color ~= "" then
-		-- FIXME:
 		table.insert(specs_other, S("color: @1", color))
 	end
 
-	--[[
-	if item.color then
-		table.insert(specs_other, S("color: @1", item.color))
+	if light_items[id] then
+		table.insert(specs_other, S("emits light: @1", S("yes")))
+
+		local radius = light_items[id].radius
+		if radius then
+			table.insert(specs_other, S("light radius: @1", radius))
+		end
 	end
-	]]
 
 	if name then
 		table.insert(specs, S("Name: @1", name))
@@ -306,13 +413,20 @@ function equip_exam:get_formspec(item, empty, nmeta)
 	local specs
 	local show_technical = nmeta:get_string("show_technical") == "true"
 	if not empty then
-		specs = get_item_specs(core.registered_items[item], show_technical)
+		local item_table = core.registered_items[item:get_name()]
+		-- make sure we're using a recognized item before copying
+		if item_table then
+			item_table = table.copy(item_table)
+			item_table.meta = item:get_meta()
+		end
+
+		specs = get_item_specs(item_table, show_technical)
 	else
 		specs = "" -- empty
 	end
 
 	if not specs then
-		specs = S("Specs unavailable")
+		specs = S("specs unavailable")
 	end
 
 	local formspec = "formspec_version[4]"

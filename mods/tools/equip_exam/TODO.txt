@@ -1,6 +1,5 @@
 
 TODO:
-- place item back in inventory when formspec is closed
 - add healing value for foods
-- add slingshot support
-- support wlight
+- show wear amount
+- retrieve color value from param2 attribute

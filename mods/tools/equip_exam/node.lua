@@ -9,7 +9,7 @@ local function update_formspec(pos)
 		local inv = meta:get_inventory()
 		local contents = inv:get_list("input")[1]
 
-		meta:set_string("formspec", equip_exam:get_formspec(contents:get_name(),
+		meta:set_string("formspec", equip_exam:get_formspec(contents,
 			inv:is_empty("input"), meta))
 end
 

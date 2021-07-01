@@ -4,13 +4,16 @@
 # general
 Equipment Examiner=
 Specs:=
-Specs unavailable=
+specs unavailable=
 Close=
 Technical Names=
 Name: @1=
 ID: @1=
 Type: @1=
 durability: @1=
+wear: @1=
+yes=
+no=
 
 # tool
 Tool:=
@@ -29,6 +32,9 @@ rail-like: @1=
 jump disabled: @1=
 fall: @1=
 liquid boyancy: @1=
+level: @1=
+slippery: @1=
+drops: @1=
 
 # tool & node
 mine level: @1=
@@ -57,8 +63,9 @@ punch operable: @1=
 
 # other
 Other:=
+inventory image: @1=
+wield image: @1=
 flammable: @1=
-speed interval: @1=
 immortal: @1=
 color: @1=
 meat: @1=
@@ -67,3 +74,10 @@ wool: @1=
 metal: @1=
 weapon: @1=
 heavy: @1=
+speed interval: @1=
+range: @1=
+texture alpha mode: @1=
+stackable: @1=
+mod: @1=
+emits light: @1=
+light radius: @1=
