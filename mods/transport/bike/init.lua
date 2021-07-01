@@ -21,7 +21,7 @@ local setting_offroad_friction = tonumber(minetest.settings:get("bike_offroad_fr
 
 -- general settings
 local setting_turn_look = minetest.settings:get_bool("mount_turn_player_look", false)
-local setting_ownable = minetest.settings:get_bool("mount_ownable", true)
+local setting_ownable = minetest.settings:get_bool("mount_ownable", false)
 
 --[[ Crafts ]]--
 

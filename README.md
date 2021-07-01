@@ -126,7 +126,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [tools_obsidian][] ([LGPL / CC BY-SA][lic.tools_obsidian]) -- version: [1.0][ver.tools_obsidian] *2021-01-15*
   * [workbench][] ([BSD][lic.workbench]) -- version: [1.0][ver.workbench] *2021-06-10*
 * transport/
-  * [bike][] ([MIT][lic.bike]) -- version: [1.2][ver.bike] *2021-04-12* ([patched][patch.bike])
+  * [bike][] ([MIT][lic.bike]) -- version: [e1474ff Git][ver.bike] *2021-06-30*
   * [boats][boats2] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa3.0]) -- version: [b83231e Git][ver.boats2] *2016-10-14* ([patched][patch.boats2]) ***UPSTREAM MOVED***
   * [helicopter][] ([GPL][lic.gpl2.0] / [CC0][lic.cc0] / CC BY-NC) -- version: [d3985b0 Git][ver.helicopter] *2021-04-27* ([patched][patch.helicopter])
   * [hot_air_balloons][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- version: [39a3572 Git][ver.hot_air_balloons] *2020-11-17*
@@ -505,7 +505,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.away]: https://github.com/kahrl/minetest-mod-away/tree/4c1e5a9
 [ver.bags]: https://github.com/cornernote/minetest-bags/tree/bc87b45
 [ver.basic_materials]: https://gitlab.com/VanessaE/basic_materials/-/tags/2021-01-30
-[ver.bike]: https://gitlab.com/h2mm/bike/tree/1.2
+[ver.bike]: https://gitlab.com/h2mm/bike/tree/e1474ff
 [ver.biofuel]: https://github.com/APercy/minetest_biofuel/tree/ca480ce
 [ver.biome_lib]: https://gitlab.com/VanessaE/biome_lib/tags/2021-04-16-2
 [ver.boats2]: https://github.com/amadin/boats/tree/b83231e
@@ -640,7 +640,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.atm]: https://github.com/AntumMT/mod-atm/tree/2ab0e78
 [patch.away]: https://github.com/AntumMT/mod-away/tree/3b0bf9e
 [patch.boats2]: https://github.com/AntumMT/mod-boats2/tree/9b2bcb7
-[patch.bike]: https://gitlab.com/AntumMT/mod-bike/tree/a133fe1
 [patch.bridges]: https://github.com/AntumMT/mod-bridges/tree/ba8f71a
 [patch.castle_weapons]: https://github.com/AntumMT/mod-castle_weapons/tree/6ec6f46
 [patch.christmas]: https://github.com/AntumMT/mod-christmas/tree/50bda80

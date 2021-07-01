@@ -35,4 +35,4 @@ bike_offroad_friction (Offroad friction) float 1.62
 mount_turn_player_look (Turn with look direction) bool false
 
 # Bikes can only be used and picked up by owners.
-mount_ownable (Ownable bikes) bool true
+mount_ownable (Ownable bikes) bool false
