@@ -45,8 +45,9 @@ end
 
 
 local general_types = {
+	["description"] = "Description",
+	["short_description"] = "Short Description",
 	["uses"] = "durability",
-	["wear"] = true,
 }
 
 local tool_node_types = {
@@ -58,8 +59,11 @@ local tool_node_types = {
 }
 
 local tool_types = {
-	["disable_repair"] = "repair disabled",
 	["max_drop_level"] = "node drop level",
+	["disable_repair"] = "repair disabled",
+	["not_repaired_by_anvil"] = "anvil repair disabled",
+	["_airtanks_uses"] = "uses",
+	["_airtanks_empty"] = "replace empty with",
 }
 for k, v in pairs(tool_node_types) do
 	tool_types[k] = v
@@ -79,6 +83,16 @@ local node_types = {
 	["level"] = true,
 	["slippery"] = true,
 	["drop"] = "drops",
+	["is_ground_content"] = "ground content",
+	["buildable_to"] = "replaced on build",
+	["sunlight_propagates"] = true,
+	["walkable"] = true,
+	["pointable"] = true,
+	["diggable"] = true,
+	["climable"] = true,
+	["floodable"] = true,
+	["liquidtype"] = "liquid type",
+	["drawtype"] = true,
 }
 for k, v in pairs(tool_node_types) do
 	node_types[k] = v
@@ -106,31 +120,21 @@ local entity_types = {
 }
 
 local other_types = {
-	["inventory_image"] = true,
-	["wield_image"] = true,
-	["flammable"] = true,
-	["immortal"] = true,
-	["meat"] = true,
-	["eatable"] = true,
-	["wool"] = true,
-	["metal"] = true,
-	["weapon"] = true,
-	["heavy"] = true,
 	["full_punch_interval"] = "speed interval",
-	["range"] = true,
 	["use_texture_alpha"] = "texture alpha mode",
-	["stackable"] = true,
-	["mod_origin"] = "mod",
+	["bagslots"] = "slots",
 }
 
 -- excluded from automatic parsing
 local excluded_types = {
 	"name",
 	"description",
+	"short_description",
 	"type",
 	"punch_attack_uses",
 	"armor_use",
 	"stack_max",
+	"mod_origin",
 }
 
 local function is_excluded(spec)
@@ -142,17 +146,33 @@ local function is_excluded(spec)
 end
 
 local function format_spec(grp, name, value, technical)
-	if technical or not grp[name] then return name .. ": " .. value end
+	local v_type = type(value)
+
+	if v_type == "boolean" then
+		if value then
+			value = S("yes")
+		else
+			value = S("no")
+		end
+	end
+
+	if v_type == "string" then
+		value = core.formspec_escape(value:gsub("\n", " "))
+	end
+
+	if technical then return name .. ": " .. value end
 
 	local nname = grp[name]
-	if nname == true then
+	if not nname or nname == true then
 		nname = name:gsub("_", " ")
 	end
 
+	-- FIXME: name may need formspec_escape as well
 	return S(nname .. ": @1", value)
 end
 
 local function get_durability(value)
+	-- FIXME: not sure if `nil` means unlimited
 	if not value or value == 0 then return "∞" end
 
 	return value
@@ -281,13 +301,7 @@ local function get_item_specs(item, technical)
 
 	for k, v in pairs(table.copy(item)) do
 		local v_type = type(v)
-		if v_type == "boolean" then
-			if v then
-				v = S("yes")
-			else
-				v = S("no")
-			end
-		elseif v_type == "table" or v_type == "function" or v_type == "userdata" then
+		if v_type == "table" or v_type == "function" or v_type == "userdata" then
 			v = nil
 		end
 
@@ -321,12 +335,7 @@ local function get_item_specs(item, technical)
 		end
 	end
 
-	local stackable = S("yes")
-	if item.stack_max == 1 then
-		stackable = S("no")
-	end
-
-	table.insert(specs_other, format_spec(other_types, "stackable", stackable, technical))
+	table.insert(specs_other, format_spec(other_types, "stackable", item.stack_max ~= 1, technical))
 
 	if item_types.weapon and not is_ranged then
 		table.insert(specs_weapon, format_spec(weapon_types, "punch_attack_uses",
@@ -357,6 +366,16 @@ local function get_item_specs(item, technical)
 		table.insert(specs, S("Name: @1", name))
 	end
 	table.insert(specs, S("ID: @1", id))
+
+	if item.mod_origin then
+		table.insert(specs, S("Mod: @1", item.mod_origin))
+	end
+
+	for _, desc in ipairs({"description", "short_description"}) do
+		if item[desc] and item[desc] ~= name then
+			table.insert(specs, format_spec(general_types, desc, item[desc], false))
+		end
+	end
 
 	local it = {}
 	for k, v in pairs(item_types) do

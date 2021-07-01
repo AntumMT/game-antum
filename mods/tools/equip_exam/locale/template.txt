@@ -1,5 +1,14 @@
 ## Translated by:
 
+# Any attribute keys not listed here can be added manually. Just replace
+# underscores ("_") with spaces (" ") and append it with ": @1" and it
+# will be translated.
+#
+# For example: In the `building_blocks` mod, some nodes and items have
+# the "slab_desc" attribute. To translate it, add the following line:
+#
+#   slab desc: @1=
+
 
 # general
 Equipment Examiner=
@@ -7,18 +16,24 @@ Specs:=
 specs unavailable=
 Close=
 Technical Names=
+yes=
+no=
 Name: @1=
 ID: @1=
+Mod: @1=
+Description: @1=
+Short Description: @1=
 Type: @1=
 durability: @1=
 wear: @1=
-yes=
-no=
 
 # tool
 Tool:=
-repair disabled: @1=
 node drop level: @1=
+repair disabled: @1=
+anvil repair disabled: @1=
+uses: @1=
+replace empty with: @1=
 
 # node
 Node:=
@@ -35,6 +50,16 @@ liquid boyancy: @1=
 level: @1=
 slippery: @1=
 drops: @1=
+ground content: @1=
+replaced on build: @1=
+sunlight propagates: @1=
+walkable: @1=
+pointable: @1=
+diggable: @1=
+climable: @1=
+floodable: @1=
+liquid type: @1=
+drawtype: @1=
 
 # tool & node
 mine level: @1=
@@ -78,6 +103,11 @@ speed interval: @1=
 range: @1=
 texture alpha mode: @1=
 stackable: @1=
-mod: @1=
 emits light: @1=
 light radius: @1=
+light source: @1=
+slots: @1=
+style: @1=
+not in creative inventory: @1=
+liquids pointable: @1=
+palette: @1=

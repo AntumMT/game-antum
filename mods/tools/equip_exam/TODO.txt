@@ -3,3 +3,4 @@ TODO:
 - add healing value for foods
 - show wear amount
 - retrieve color value from param2 attribute
+- add xdecor:workbench & workbench:workbench support
