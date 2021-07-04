@@ -44,6 +44,19 @@ end
 -- END: wlight & wielded_light support
 
 
+-- workbench support
+local workbench_repairable
+if core.global_exists("workbench") and workbench.repairable then
+	workbench_repairable = function(iname)
+		return workbench:repairable(iname) or false
+	end
+elseif core.global_exists("xdecor") and xdecor.workbench_repairable then
+	workbench_repairable = function(iname)
+		return xdecor:workbench_repairable(iname) or false
+	end
+end
+
+
 local general_types = {
 	["description"] = "Description",
 	["short_description"] = "Short Description",
@@ -64,6 +77,7 @@ local tool_types = {
 	["not_repaired_by_anvil"] = "anvil repair disabled",
 	["_airtanks_uses"] = "uses",
 	["_airtanks_empty"] = "replace empty with",
+	["radius"] = "light radius",
 }
 for k, v in pairs(tool_node_types) do
 	tool_types[k] = v
@@ -93,6 +107,7 @@ local node_types = {
 	["floodable"] = true,
 	["liquidtype"] = "liquid type",
 	["drawtype"] = true,
+	["light_source"] = "light level",
 }
 for k, v in pairs(tool_node_types) do
 	node_types[k] = v
@@ -135,6 +150,8 @@ local excluded_types = {
 	"armor_use",
 	"stack_max",
 	"mod_origin",
+	"light_source",
+	"ud_param2_colorable",
 }
 
 local function is_excluded(spec)
@@ -157,17 +174,16 @@ local function format_spec(grp, name, value, technical)
 	end
 
 	if v_type == "string" then
-		value = core.formspec_escape(value:gsub("\n", " "))
+		value = value:gsub("\n", " ")
 	end
 
 	if technical then return name .. ": " .. value end
 
 	local nname = grp[name]
 	if not nname or nname == true then
-		nname = name:gsub("_", " ")
+		nname = name:gsub("_", " "):trim()
 	end
 
-	-- FIXME: name may need formspec_escape as well
 	return S(nname .. ": @1", value)
 end
 
@@ -188,7 +204,6 @@ local function get_item_specs(item, technical)
 
 	-- remove multi-lines
 	if name:find("\n") then name = name:split("\n")[1]:trim() end
-	name = core.formspec_escape(name)
 
 	local groups = item.groups or {}
 	local tool_capabilities = item.tool_capabilities or {}
@@ -335,7 +350,13 @@ local function get_item_specs(item, technical)
 		end
 	end
 
-	table.insert(specs_other, format_spec(other_types, "stackable", item.stack_max ~= 1, technical))
+	local stackable = item.stack_max ~= 1
+	if not technical then
+		table.insert(specs_other, format_spec(other_types, "stackable", stackable, false))
+	end
+	if item.stack_max and (technical or stackable) then
+		table.insert(specs_other, format_spec(other_types, "stack_max", item.stack_max, technical))
+	end
 
 	if item_types.weapon and not is_ranged then
 		table.insert(specs_weapon, format_spec(weapon_types, "punch_attack_uses",
@@ -348,18 +369,47 @@ local function get_item_specs(item, technical)
 			get_durability(armor_use), technical))
 	end
 
-	local color = item.meta:get_string("color")
-	if color ~= "" then
-		table.insert(specs_other, S("color: @1", color))
+	if item.light_source then
+		item_types.node = true
+		if not technical then
+			table.insert(specs_node, S("emits light: @1", S("yes")))
+		end
+
+		table.insert(specs_node, format_spec(node_types, "light_source", item.light_source, technical))
 	end
 
 	if light_items[id] then
-		table.insert(specs_other, S("emits light: @1", S("yes")))
+		item_types.tool = true
+		if not technical then
+			table.insert(specs_tool, S("emits light: @1", S("yes")))
+		end
 
 		local radius = light_items[id].radius
 		if radius then
-			table.insert(specs_other, S("light radius: @1", radius))
+			table.insert(specs_tool, format_spec(tool_types, "light_radius", radius, technical))
 		end
+	end
+
+	local colorable = groups.ud_param2_colorable ~= nil
+	if colorable then
+		item_types.node = true
+		table.insert(specs_node, format_spec(node_types, "ud_param2_colorable", groups.ud_param2_colorable,
+			technical))
+
+		local p_idx = tonumber(item.meta:get_string("palette_index"))
+
+		-- FIXME: perhaps store this in local variable to reduce load (will need to add unifieddyes as opt depends)
+		if not technical and p_idx and core.global_exists("unifieddyes") then
+			local color = unifieddyes.color_to_name(p_idx, item)
+			if color then
+				table.insert(specs_node, S("color: @1", color))
+			end
+		end
+	end
+
+	if not technical and workbench_repairable then
+		table.insert(specs_other, format_spec(other_types, "workbench repairable",
+			workbench_repairable(id), false))
 	end
 
 	if name then
@@ -383,7 +433,7 @@ local function get_item_specs(item, technical)
 	end
 
 	if #it > 0 then
-		table.insert(specs, S("Type: @1", core.formspec_escape(table.concat(it, ", "))))
+		table.insert(specs, S("Type: @1", table.concat(it, ", ")))
 	end
 
 	if #specs_tool > 0 then
@@ -417,9 +467,30 @@ local function get_item_specs(item, technical)
 		end
 	end
 
+	local has_meta = false
+	local meta_table = item.meta:to_table().fields
+
+	-- clean excluded types
+	for _, ex in ipairs(excluded_types) do
+		meta_table[ex] = nil
+	end
+
+	-- check that meta is not empty
+	for k in pairs(meta_table) do
+		has_meta = true
+		break
+	end
+
+	if has_meta then
+		table.insert(specs, S("Meta:"))
+		for k, v in pairs(meta_table) do
+			table.insert(specs, "  " .. format_spec(other_types, k, v, technical))
+		end
+	end
+
 	if not specs then return end
 
-	return table.concat(specs, ",")
+	return core.formspec_escape(table.concat(specs, "|")):gsub("|", ",")
 end
 
 
@@ -445,16 +516,16 @@ function equip_exam:get_formspec(item, empty, nmeta)
 	end
 
 	if not specs then
-		specs = S("specs unavailable")
+		specs = S("ID: @1", item:get_name()) .. "," .. S("specs unavailable")
 	end
 
 	local formspec = "formspec_version[4]"
 		.. "size[13,9]"
 		.. "list[context;input;1,1;1,1;0]"
-		.. "checkbox[0.25,2.55;techname;" .. S("Technical Names"):gsub(" ", "\n") .. ";"
-			.. tostring(show_technical) .. "]"
-		.. "button_exit[0.25,3.1;2.5,0.8;close;" .. S("Close") .. "]"
-		.. "label[3,0.7;" .. S("Specs:") .. "]"
+		.. "checkbox[0.25,2.55;techname;" .. core.formspec_escape(S("Technical Names"):gsub(" ", "\n"))
+			.. ";" .. tostring(show_technical) .. "]"
+		.. "button_exit[0.25,3.1;2.5,0.8;close;" .. core.formspec_escape(S("Close")) .. "]"
+		.. "label[3,0.7;" .. core.formspec_escape(S("Specs:")) .. "]"
 		.. "textlist[3.5,1;8,3;speclist;" .. specs .. ";1;false]"
 		.. "list[current_player;main;1.65,4.1;8,4;0]"
 

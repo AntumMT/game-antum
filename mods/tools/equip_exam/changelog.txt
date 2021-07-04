@@ -1,4 +1,17 @@
 
+v1.5
+----
+- parses meta information
+- supports unifieddyes node coloring
+- non-real attributes are hidden in technical view
+- displays ID (technical name) of unknown items
+- added xdecor & workbench support to check if items are repairable
+- displays source mod
+
+v1.4
+----
+- bugfix: added missing optional dependency "default"
+
 v1.3
 ----
 - collects all specs from `item.groups`, `item.tool_capabilities`, & `item.armor_groups`
