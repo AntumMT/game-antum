@@ -1,0 +1,1 @@
+Adds visible gloves/gauntlets to 3d armor.

@@ -1,0 +1,22 @@
+3d_Armor_Gloves -- Crafting Guide
+--------------------------
+
++---+---+---+
+| X |   | X |
++---+---+---+
+| S |   | S |
++---+---+---+
+|   |   |   |
++---+---+---+
+
+[3d_armor_gloves:gloves_wood] X = [default:wood], S = [farming:string]
+[3d_armor_gloves:gloves_cactus] X = [default:cactus], S = [farming:string]
+[3d_armor_gloves:gloves_steel] X = [default:steel_ingot], S = [farming:string]
+[3d_armor_gloves:gloves_bronze] X = [default:bronze_ingot], S = [farming:string]
+[3d_armor_gloves:gloves_diamond] X = [default:diamond], S = [farming:string]
+[3d_armor_gloves:gloves_gold] X = [default:gold_ingot], S = [farming:string]
+[3d_armor_gloves:gloves_mithril] X = [moreores:mithril_ingot], S = [farming:string]
+[3d_armor_gloves:gloves_crystal] X = [ethereal:crystal_ingot], S = [farming:string]
+
+
+

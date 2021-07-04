@@ -1,0 +1,13 @@
+# textdomain: 3d_armor_gloves
+
+
+### init.lua ###
+
+Wood Gauntlets=
+Cactus Gauntlets=
+Steel Gauntlets=
+Bronze Gauntlets=
+Diamond Gauntlets=
+Gold Gauntlets=
+Mithril Gauntlets=
+Crystal Gauntlets=

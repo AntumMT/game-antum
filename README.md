@@ -35,6 +35,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [antum][] ([MIT][lic.antum]) -- version: [69b39a4 Git][ver.antum] *2017-08-30*
   * [minetest_game][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- version: [5.4.1][ver.minetest_game] *2021-04-10*
 * equipment/
+  * [3d_armor_gloves][] ([LGPL][lic.lgpl2.1]) -- version: [f099d76 Git][ver.3d_armor_gloves] *2021-02-27*
   * [airtanks][] ([MIT][lic.airtanks]) -- version: [b686694 Git][ver.airtanks] *2021-03-13* ([patched][patch.airtanks])
   * [slingshot][] ([MIT][lic.slingshot] / [CC0][lic.cc0]) -- version [0.3][ver.slingshot] *2021-06-10*
   * [throwing][] ([WTFPL][lic.wtfpl]) -- version: [90bcf43 Git][ver.throwing] *2013-09-27* ([patched][patch.throwing])
@@ -246,6 +247,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 
 [3d_armor]: https://forum.minetest.net/viewtopic.php?t=4654
+[3d_armor_gloves]: https://forum.minetest.net/viewtopic.php?t=25665
 [airtanks]: https://forum.minetest.net/viewtopic.php?t=17102
 [alternode]: https://forum.minetest.net/viewtopic.php?t=26667
 [amber]: https://forum.minetest.net/viewtopic.php?t=18186
@@ -493,6 +495,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.zlib]: doc/licenses/zlib.txt
 
 [ver.3d_armor]: https://github.com/minetest-mods/3d_armor/tree/f07f050
+[ver.3d_armor_gloves]: https://github.com/sirrobzeroone/3d_armor_gloves/tree/f099d76
 [ver.airtanks]: https://github.com/minetest-mods/airtanks/tree/b686694
 [ver.alternode]: https://github.com/AntumMT/mod-alternode/releases/tag/v1.3
 [ver.amber]: https://github.com/theraven262/amber/tree/56627fa
