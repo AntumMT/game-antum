@@ -30,7 +30,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * commerce/
   * [atm][] ([GPL][lic.gpl3.0]) -- version: [1.0.4][ver.atm] *2021-04-21* ([patched][patch.atm])
   * [currency][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2021-01-30][ver.currency]
-  * [server_shop][] ([MIT][lic.server_shop]) -- version: [ecf9322 Git][ver.server_shop] *2021-06-11*
+  * [server_shop][] ([MIT][lic.server_shop]) -- version: [1.4][ver.server_shop] *2021-07-08*
 * core/
   * [antum][] ([MIT][lic.antum]) -- version: [69b39a4 Git][ver.antum] *2017-08-30*
   * [minetest_game][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- version: [5.4.1][ver.minetest_game] *2021-04-10*
@@ -610,7 +610,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.quartz]: https://github.com/minetest-mods/quartz/tree/72ec06f
 [ver.rainbow_ore]: https://github.com/FsxShader2012/rainbow_ore/tree/6e77693
 [ver.sand_monster]: https://github.com/AntumMT/mod-mob_sand_monster/tree/3dd5954
-[ver.server_shop]: https://github.com/AntumMT/mod-server_shop/tree/ecf9322
+[ver.server_shop]: https://github.com/AntumMT/mod-server_shop/releases/tag/v1.4
 [ver.sfinv_buttons]: http://repo.or.cz/minetest_sfinv_buttons.git/tree/ebb1f7c
 [ver.signs_lib]: https://gitlab.com/VanessaE/signs_lib/tree/2021-03-04-2
 [ver.simple_protection]: https://github.com/SmallJoker/simple_protection/tree/3630fe9

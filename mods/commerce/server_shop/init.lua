@@ -102,7 +102,7 @@ else
 end
 
 
-core.after(0, function()
+core.register_on_mods_loaded(function()
 	-- show warning if no currencies are registered
 	if not ss.currency_is_registered() then
 		ss.log("warning", "no currencies registered")
