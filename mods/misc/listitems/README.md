@@ -1,50 +1,57 @@
-# List Items (***listitems***) chat command for [Minetest][]
+## List Items chat command for Minetest
 
+### Description:
 
----
-### **Description:**
+A mod for [Minetest][] that adds a command for listing registered items, entities, & nodes.
 
-#### Chat Commands:
-- ***list:*** Lists registered items or entities available in the game.
-  - Invocation: ```/list type [options] [string1] [string2] ...```
-    - ***type:*** List type (e.g. "items", "entities", etc.).
-    - ***options:*** Switches to control output behavior.
-      - ***-v:*** Display description (if available) after object name.
-    - ***string[1,2] ...:*** String parameter(s) to filter output.
+![screenshot](screenshot.png)
+
+### Usage:
+
+Chat Commands:
+```
+/list type [options] [string1] [string2] ...
+- Lists registered items or entities available in the game.
+- type: List type (e.g. "items", "entities", etc.).
+- options: Switches to control output behavior.
+    - -v: Display description (if available) after object name.
+    - -s: Use shallow search (don't search in descriptions).
+- string[1,2] ...: String parameter(s) to filter output.
     - Without any string parameters, all objects registered in game are listed.
     - With string parameters, only objects matching any of the strings will be listed.
+```
 
-![Screenshot](screenshot.png)
+Settings:
+```
+listitems.bullet_list
+- Displays items in a bulleted list.
+- type: boolean
+- default: true
 
+listitems.enable_singleword
+- Registers "/list<type>" commands (e.g. "/listitems", "/listentities", etc.).
+- type: boolean
+- default: true
+```
 
----
-### **Licensing:**
+### Licensing:
 
 - [MIT](LICENSE.txt)
 
+### Requirements:
 
----
-### **Requirements:**
+- Minetest minimum version: 5.0
+- Dependencies: none
+- Optional depends:
+	- [mobs_redo][] *(adds "list mobs" chat command)*
+- Privileges: none
 
-- **Dependencies:**
-  - Required: ***none***
-  - Optional:
-    - ***[mobs_redo][]*** *(optionally adds "list mobs" chat command)*
-- **Privileges:** none
+### Links:
 
-
----
-### **Documentation:**
-
-- [API Documentation](https://antummt.github.io/mod-listitems/api.html)
-
-
----
-### **TODO:**
-
-- Add ***-d*** option to search within descriptions.
+- [API Documentation](https://antummt.github.io/mod-listitems/docs/)
+- [Changelog](changelog.txt)
+- [TODO](TODO.txt)
 
 
 [Minetest]: http://www.minetest.net/
-[intllib]: https://forum.minetest.net/viewtopic.php?t=4929
 [mobs_redo]: https://forum.minetest.net/viewtopic.php?t=9917

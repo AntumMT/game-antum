@@ -1,3 +1,5 @@
 
 TODO:
-- display "searching..." text before search begins, not after
+- show formspec when "/list" called with no parameters
+- optimize search with regular expressions
+- clean up & optimize code

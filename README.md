@@ -80,7 +80,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [craftguide][] ([MIT][lic.craftguide]) -- version: [f379998 Git][ver.craftguide] *2021-02-08* ([patched][patch.craftguide])
   * [enchanting][] ([GPL / WTFPL / CC BY-SA-NA][lic.enchanting]) -- version: [dee7dde Git][ver.enchanting] *2021-06-04*
   * [intllib][] ([Unlicense][lic.unlicense]) -- version: [6ebdc53][ver.intllib] *2021-02-23* ***DEPRECATED***
-  * [listitems][] ([MIT][lic.listitems]) -- version: [0.7][ver.listitems] *2021-04-29*
+  * [listitems][] ([MIT][lic.listitems]) -- version: [aa1741f Git][ver.listitems] *2021-07-07*
   * [painting][] (WTFPL) -- version: [da8f4ba Git][ver.painting] *2021-06-25*
   * [pipeworks][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2670fd8 Git][ver.pipeworks] *2021-05-06* ([patched][patch.pipeworks])
   * [wdata][] ([MIT][lic.wdata]) -- version: [1.1][ver.wdata] *2021-06-15*
@@ -575,7 +575,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.intllib]: https://github.com/minetest-mods/intllib/tree/6ebdc53
 [ver.invisibility]: https://notabug.org/TenPlus1/invisibility/src/65c0823d6a28b62046cdadc67ff1e462d37e3643
 [ver.jukebox]: https://github.com/minetest-mods/jukebox/tree/0d871f2
-[ver.listitems]: https://github.com/AntumMT/mod-listitems/releases/tag/v0.7
+[ver.listitems]: https://github.com/AntumMT/mod-listitems/tree/aa1741f
 [ver.mese_monster]: https://github.com/AntumMT/mod-mob_mese_monster/tree/cd02839
 [ver.mesecons]: https://github.com/minetest-mods/mesecons/tree/6579351
 [ver.minetest_game]: https://github.com/minetest/minetest_game/tree/5.4.1

@@ -1,0 +1,55 @@
+
+v0.8
+----
+- fixed "searching" message to display before search begins
+
+
+v0.7
+----
+- always register "mobs" type if mobs mod available
+- more detailed help output
+- include descriptions in search criterea (disabled with "-s")
+- re-implemented singleword commands (can be disabled in config)
+
+
+v0.6
+----
+- use Minetest's built-in translation system instead of intllib
+- show optional switches in help output
+- use case-insensitive parsing
+- disallow unregistered list types
+- register "list" command to be invoked "/list <type>"
+- removed singleword "/list<type>" format
+- support listing registered entities
+- support listing registered ores
+- support listing registered nodes
+- support listing registered tools
+- support listing registered mobs when "mobs" mod available
+
+
+v0.5
+----
+- "-v" switch can be used to display descriptions when available
+- fixed bug when invoking command without parameters
+
+
+v0.4
+----
+- added setting to enable/disable using bulleted list
+
+
+v0.3
+----
+- added support for intllib
+
+
+v0.2
+----
+- output bulleted list
+- total listed items shown at end of output
+
+
+v0.1
+----
+- initial release
+- chat command to list registered items
