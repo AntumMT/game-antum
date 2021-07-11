@@ -6,10 +6,10 @@ mobs_disable_blood (Disable Mob blood) bool false
 only_peaceful_mobs (Peaceful only) bool false
 
 # Entity lifespan.
-spider.lifetime (Spider lifetime) 600 1
+spider.lifetime (Spider lifetime) int 600 1
 
 # Spawn rate frequency.
-spider.spawn_interval (Spawn interval) 60 1
+spider.spawn_interval (Spawn interval) int 60 1
 
 # Chance of spawn at interval.
-spider.spawn_chance (Spawn chance) 7500 1
+spider.spawn_chance (Spawn chance) int 7500 1
