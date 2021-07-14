@@ -262,7 +262,7 @@ minetest.register_on_generated(function(minp, maxp, seed)
 	generate_ore("gems_encrustable:mineral_garnet", "default:stone", minp, maxp, get_next_seed(), 1/7/7/7, 1, -31000, -64)
 	generate_ore("gems_encrustable:mineral_aquamarine", "default:stone", minp, maxp, get_next_seed(), 1/7/7/7, 1, -31000, -128)
 	generate_ore("gems_encrustable:mineral_topaz", "default:stone", minp, maxp, get_next_seed(), 1/7/7/7, 1, -31000, -256)
-	generate_ore("gems_encrustable:mineral_diamond", "default:stone", minp, maxp, get_next_seed(), 1/7/7/7, 1, -31000, -512)
+	--generate_ore("gems_encrustable:mineral_diamond", "default:stone", minp, maxp, get_next_seed(), 1/7/7/7, 1, -31000, -512)
 	generate_ore("gems_encrustable:mineral_opal", "default:stone", minp, maxp, get_next_seed(), 1/7/7/7, 1, -31000, -1024)
 end)
 
