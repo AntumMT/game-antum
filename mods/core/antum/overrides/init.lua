@@ -19,6 +19,7 @@ antum.loadScripts({
 	"nodes",
 	"crafting",
 	"workbench_repairs",
+	"mods/gems_encrustable",
 })
 
 

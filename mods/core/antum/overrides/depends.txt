@@ -1,6 +1,7 @@
 antum
 antum_items
 default
+cleaner
 
 craftguide?
 craft_guide?
