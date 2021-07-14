@@ -52,7 +52,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [sfinv][] ([MIT][lic.sfinv] -- version: [556f70e Git][ver.sfinv] *2021-02-17*
   * [sfinv_buttons][] ([MIT][lic.mit]) -- version [1.1.0 (ebb1f7c Git)][ver.sfinv_buttons] *2021-01-14*
 * libs/
-  * [biome_lib][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2021-04-16-2][ver.biome_lib]
   * [cmer][creatures] ([zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [2843875 Git][ver.cmer] *2021-06-01*
   * [config][] ([MIT][lic.config]) -- version: 1.1 *2020-03-26*
   * [formspecs][] ([MIT][lic.formspecs]) -- version: 2.6 *2020-03-12*
@@ -258,7 +257,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 ### Mods to replace/remove:
 
 - biofuel? (replace with [biofuel](https://content.minetest.net/packages/Lokrates/biofuel/) by Lokrates)
-- biome_lib (unused)
 - boats (minetest_game)
 - boats2 (fork & remove dependency on boats)
 - bonemeal?
@@ -301,7 +299,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [beds]: https://content.minetest.net/packages/sorcerykid/beds/
 [bike]: https://forum.minetest.net/viewtopic.php?t=20726
 [biofuel]: https://forum.minetest.net/viewtopic.php?t=24622
-[biome_lib]: https://forum.minetest.net/viewtopic.php?f=11&t=12999
 [boats2]: https://github.com/amadin/boats
 [bonemeal]: https://forum.minetest.net/viewtopic.php?t=16446
 [bookmarks_gui]: http://cornernote.github.io/minetest-bookmarks_gui/
@@ -554,7 +551,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.basic_materials]: https://gitlab.com/VanessaE/basic_materials/-/tags/2021-01-30
 [ver.bike]: https://gitlab.com/h2mm/bike/tree/e1474ff
 [ver.biofuel]: https://github.com/APercy/minetest_biofuel/tree/ca480ce
-[ver.biome_lib]: https://gitlab.com/VanessaE/biome_lib/tags/2021-04-16-2
 [ver.boats2]: https://github.com/amadin/boats/tree/b83231e
 [ver.bonemeal]: https://notabug.org/TenPlus1/bonemeal/src/b5819d022ea79e702dee4e2e0c433ab28dfaf2ab
 [ver.bookmarks_gui]: https://github.com/cornernote/minetest-bookmarks_gui/tree/f7ae10a
