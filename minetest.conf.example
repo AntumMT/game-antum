@@ -964,6 +964,14 @@ inventory = sfinv
 ## ADMIN ##
 ###########
 
+# *** cleaner ***
+
+## Enables unsafe methods.
+#    type:    bool
+#    default: false
+#cleaner.unsafe = false
+
+
 # *** whitelist ***
 
 ## Enables/Disables whitelist feature.

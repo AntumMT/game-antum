@@ -562,6 +562,14 @@ chatlog.single_file (Single file chatlog) bool false
 chatlog.disable (Disable chatlog) bool false
 
 
+[*cleaner]
+
+# Enables unsafe methods.
+#
+# - cleaner.remove_ore
+cleaner.unsafe (Enable unsafe methods) bool false
+
+
 [*craftguide]
 
 # The progressive mode shows recipes you can craft from items you ever had in your inventory.

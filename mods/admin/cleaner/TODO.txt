@@ -1,2 +1,7 @@
 
 TODO:
+- update world file when chat commands are used
+- update inventories when items are replaced:
+	- creative
+	- storage (chests, etc.)
+- fix top nodes disappearing with /replace_node command

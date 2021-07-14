@@ -30,11 +30,20 @@ function cleaner.log(lvl, msg)
 	end
 end
 
+local aux = dofile(cleaner.modpath .. "/misc_functions.lua")
+
+-- initialize world file
+aux.update_world_data()
+
 
 local scripts = {
+	"settings",
+	"api",
+	"chat",
 	"entities",
 	"nodes",
 	"items",
+	"ores",
 }
 
 for _, script in ipairs(scripts) do

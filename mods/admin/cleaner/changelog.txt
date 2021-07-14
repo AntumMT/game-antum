@@ -1,4 +1,18 @@
 
+v1.2
+----
+- added API
+- added chat commands:
+	- remove_entity
+	- remove_node
+	- replace_item
+	- replace_node
+	- find_unknown_nodes
+- added setting for enabling "unsafe" methods & commands
+- added support for unregistering ores
+- all types are loaded from <world_path>/cleaner.json file
+- added localization support
+
 v1.1
 ----
 - uses "register_lbm" with "run_at_every_load" instead of "register_abm" to save resources
