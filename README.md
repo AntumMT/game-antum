@@ -49,6 +49,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [farming][] ([MIT][lic.farming]) -- version: [dedc33c Git][ver.farming] *2021-05-07*
 * inventory/
   * [bags][] ([BSD 3-Clause][lic.bags]) -- version: [bc87b45 Git][ver.bags] *2018-04-11*
+  * [sfinv][] ([MIT][lic.sfinv] -- version: [556f70e Git][ver.sfinv] *2021-02-17*
   * [sfinv_buttons][] ([MIT][lic.mit]) -- version [1.1.0 (ebb1f7c Git)][ver.sfinv_buttons] *2021-01-14*
 * libs/
   * [biome_lib][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2021-04-16-2][ver.biome_lib]
@@ -357,6 +358,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [quartz]: https://forum.minetest.net/viewtopic.php?t=5682
 [rainbow_ore]: https://forum.minetest.net/viewtopic.php?id=13519
 [server_shop]: https://forum.minetest.net/viewtopic.php?t=26645
+[sfinv]: https://content.minetest.net/packages/rubenwardy/sfinv/
 [sfinv_buttons]: https://forum.minetest.net/viewtopic.php?t=16079
 [shark]: https://github.com/AntumMT/mod-shark
 [signs_lib]: https://forum.minetest.net/viewtopic.php?f=11&t=13762
@@ -451,6 +453,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.rainbow_ore]: mods/materials/rainbow_ore/README.md
 [lic.sand_monster]: mods/mobiles/sand_monster/license.txt
 [lic.server_shop]: mods/admin/server_shop/LICENSE.txt
+[lic.sfinv]: mods/inventory/sfinv/LICENSE.txt
 [lic.signs_lib]: mods/signs/signs_lib/copyright.txt
 [lic.slingshot]: mods/equipment/slingshot/LICENSE.txt
 [lic.sneeker]: mods/mobiles/sneeker/LICENSE.txt
@@ -611,6 +614,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.rainbow_ore]: https://github.com/FsxShader2012/rainbow_ore/tree/6e77693
 [ver.sand_monster]: https://github.com/AntumMT/mod-mob_sand_monster/tree/3dd5954
 [ver.server_shop]: https://github.com/AntumMT/mod-server_shop/releases/tag/v1.4
+[ver.sfinv]: https://github.com/rubenwardy/sfinv/tree/556f70e
 [ver.sfinv_buttons]: http://repo.or.cz/minetest_sfinv_buttons.git/tree/ebb1f7c
 [ver.signs_lib]: https://gitlab.com/VanessaE/signs_lib/tree/2021-03-04-2
 [ver.simple_protection]: https://github.com/SmallJoker/simple_protection/tree/3630fe9
