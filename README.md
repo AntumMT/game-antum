@@ -192,6 +192,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [anvil](https://github.com/minetest-mods/anvil)
 * [anvils](https://forum.minetest.net/viewtopic.php?t=20582)
 * [arena_lib](https://forum.minetest.net/viewtopic.php?t=24509)
+* [bakedclay](https://content.minetest.net/packages/TenPlus1/bakedclay/)
 * [basic_signs](https://gitlab.com/VanessaE/basic_signs)
 * [billboard](https://forum.minetest.net/viewtopic.php?t=15260)
 * [bows](https://forum.minetest.net/viewtopic.php?t=14384)
