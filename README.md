@@ -197,6 +197,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [basic_signs](https://gitlab.com/VanessaE/basic_signs)
 * [billboard](https://forum.minetest.net/viewtopic.php?t=15260)
 * [bows](https://forum.minetest.net/viewtopic.php?t=14384)
+* [bucket](https://content.minetest.net/packages/daret/bucket/) (bucket lite)
 * [carpet](https://forum.minetest.net/viewtopic.php?t=2875)
 * [carpets](https://forum.minetest.net/viewtopic.php?t=15459)
 * [castle_gates](https://content.minetest.net/packages/FaceDeer/castle_gates/)
@@ -207,14 +208,17 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [coloured_nametag](https://forum.minetest.net/viewtopic.php?t=12197)
 * [cottages](https://content.minetest.net/packages/Sokomine/cottages/)
 * [cozy](https://github.com/minetest-mods/cozy)
+* [dmobs](https://content.minetest.net/packages/TenPlus1/dmobs/) (DOOMed Mobs)
 * [doors](https://content.minetest.net/packages/TenPlus1/doors/) (Doors Redo)
 * [doors](https://content.minetest.net/packages/sorcerykid/doors/) (Doors Redux)
 * [draconis](https://forum.minetest.net/viewtopic.php?t=22595) (dragons)
 * [drinks](https://content.minetest.net/packages/Nathan.S/drinks/)
 * [extra_doors](https://content.minetest.net/packages/sorcerykid/extra_doors/)
+* [flying_carpet](https://content.minetest.net/packages/Wuzzy/flying_carpet/)
 * [formspec](https://github.com/Bremaweb/formspec) (Formspec Framework)
 * [greek](https://forum.minetest.net/viewtopic.php?t=26565)
 * [grunds](https://forum.minetest.net/viewtopic.php?t=24539)
+* [hbhunger](https://content.minetest.net/packages/Wuzzy/hbhunger/)
 * [lapis](https://forum.minetest.net/viewtopic.php?t=11287)
 * [magic_potions](https://forum.minetest.net/viewtopic.php?t=24208)
 * [mobs_skeletons](https://forum.minetest.net/viewtopic.php?t=26668)
@@ -241,6 +245,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [trike](https://forum.minetest.net/viewtopic.php?t=26391) (Ultralight Trike)
 * [vehicles](https://forum.minetest.net/viewtopic.php?t=15610)
 * [villagers](https://forum.minetest.net/viewtopic.php?t=17915)
+* [weather](https://content.minetest.net/packages/theFox/weather/)
 * [wielded_light](https://content.minetest.net/packages/bell07/wielded_light/)
 * [wildcow](https://forum.minetest.net/viewtopic.php?t=25739)
 * [witches](https://content.minetest.net/packages/FreeLikeGNU/witches/)
@@ -253,8 +258,33 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 ### Mods to replace/remove:
 
+- biofuel? (replace with [biofuel](https://content.minetest.net/packages/Lokrates/biofuel/) by Lokrates)
+- biome_lib (unused)
 - boats (minetest_game)
+- boats2 (fork & remove dependency on boats)
+- bonemeal?
+- bookmarks_gui? (replace with custom)
+- butterflies? (minetest_game)
+- campfire? (replace with [new campfire](https://content.minetest.net/packages/VanessaE/new_campfire/))
+- coloredwood?
+- compassgps?
 - doors (minetest_game) (replace with [doors redo](https://content.minetest.net/packages/TenPlus1/doors/) or [doors redux](https://content.minetest.net/packages/sorcerykid/doors/))
+- elevator?
+- env_sounds? (minetest_game) (replace with [sounds](https://content.minetest.net/packages/AntumDeluge/sounds/))
+- fireflies? (minetest_game)
+- fort_spikes?
+- game_commands (minetest_game)
+- give_initial_stuff (minetest_game) (replace with custom/add to core)
+- glow?
+- intllib (after mods dependency removed)
+- pipeworks? (if no other mods need it)
+- privs (add to core)
+- screwdriver (minetest_game) (replace with [better screwdriver](https://content.minetest.net/packages/12Me21/screwdriver2/))
+- snowdrift (fork or replace with other weather mod)
+- stairs (minetest_game) (replace with [stairs redo](https://content.minetest.net/packages/TenPlus1/stairs/))
+- throwing?
+- weather? (minetest_game)
+- walls? (minetest_game)
 
 
 [3d_armor]: https://forum.minetest.net/viewtopic.php?t=4654
