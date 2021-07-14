@@ -1,0 +1,3 @@
+ActiveFormspecs is a self-contained API that provides secure session tracking, session-based state tables, and localized event handling of formspecs for individual mods as well as entire subgames
+
+For more information: https://forum.minetest.net/viewtopic.php?f=9&t=19303

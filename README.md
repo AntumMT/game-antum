@@ -54,6 +54,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * libs/
   * [biome_lib][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2021-04-16-2][ver.biome_lib]
   * [cmer][creatures] ([zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [2843875 Git][ver.cmer] *2021-06-01*
+  * [formspecs][] ([MIT][lic.formspecs]) -- version: 2.6 *2020-03-12*
   * [mobkit][] ([MIT][lic.mobkit]) -- version: [ddea141 Git][ver.mobkit] *2021-02-01*
   * [mobs_redo][] ([MIT][lic.mobs_redo] / [CC BY][lic.ccby3.0] / [CC0][lic.cc0]) -- version: [f6e16a5 Git][ver.mobs_redo] *2021-04-11*
   * [signs_lib][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2021-03-04-2][ver.signs_lib]
@@ -302,6 +303,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [farlands]: https://forum.minetest.net/viewtopic.php?t=16921
 [farming]: https://forum.minetest.net/viewtopic.php?t=9019
 [folks]: https://forum.minetest.net/viewtopic.php?t=26121
+[formspecs]: https://content.minetest.net/packages/sorcerykid/formspecs/
 [fort_spikes]: https://forum.minetest.net/viewtopic.php?t=14574
 [gems_encrustable]: https://forum.minetest.net/viewtopic.php?t=2596
 [gems_tools]: https://forum.minetest.net/viewtopic.php?t=4294
@@ -424,6 +426,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.equip_exam]: mods/tools/equip_exam/LICENSE.txt
 [lic.ethereal]: mods/world/ethereal/license.txt
 [lic.farming]: mods/horticulture/farming/license.txt
+[lic.formspecs]: mods/libs/formspecs/README.txt
 [lic.fort_spikes]: mods/buildings/fort_spikes/LICENSE
 [lic.headanim]: mods/player/visuals/headanim/LICENSE
 [lic.home_gui]: mods/ui/home_gui/LICENSE
