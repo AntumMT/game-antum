@@ -54,6 +54,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * libs/
   * [biome_lib][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2021-04-16-2][ver.biome_lib]
   * [cmer][creatures] ([zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [2843875 Git][ver.cmer] *2021-06-01*
+  * [config][] ([MIT][lic.config]) -- version: 1.1 *2020-03-26*
   * [formspecs][] ([MIT][lic.formspecs]) -- version: 2.6 *2020-03-12*
   * [mobkit][] ([MIT][lic.mobkit]) -- version: [ddea141 Git][ver.mobkit] *2021-02-01*
   * [mobs_redo][] ([MIT][lic.mobs_redo] / [CC BY][lic.ccby3.0] / [CC0][lic.cc0]) -- version: [f6e16a5 Git][ver.mobs_redo] *2021-04-11*
@@ -287,6 +288,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [coloredwood]: https://forum.minetest.net/viewtopic.php?t=2411
 [compass]: https://forum.minetest.net/viewtopic.php?t=3785
 [compassgps]: https://forum.minetest.net/viewtopic.php?t=9373
+[config]: https://content.minetest.net/packages/sorcerykid/config/
 [craftguide]: https://forum.minetest.net/viewtopic.php?t=14088
 [crafting_bench]: https://github.com/minetest-mods/crafting_bench
 [creatures]: https://forum.minetest.net/viewtopic.php?t=8638
@@ -414,6 +416,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.cmer_shark]: mods/mobiles/shark/LICENSE.txt
 [lic.cmer_skeleton]: mods/mobiles/skeleton/LICENSE.txt
 [lic.cmer_spider]: mods/mobiles/spider/LICENSE
+[lic.config]: mods/libs/config/README.txt#L129
 [lic.craftguide]: mods/crafting/craftguide/license.txt
 [lic.creatures]: mods/mobiles/engine/creatures/LICENSE.txt
 [lic.crops]: mods/farming/crops/LICENSE
