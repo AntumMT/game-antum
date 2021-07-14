@@ -249,6 +249,13 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [zoonami](https://forum.minetest.net/viewtopic.php?t=25356)
 
 
+---
+
+### Mods to replace/remove:
+
+- boats (minetest_game)
+- doors (minetest_game) (replace with [doors redo](https://content.minetest.net/packages/TenPlus1/doors/) or [doors redux](https://content.minetest.net/packages/sorcerykid/doors/))
+
 
 [3d_armor]: https://forum.minetest.net/viewtopic.php?t=4654
 [3d_armor_gloves]: https://forum.minetest.net/viewtopic.php?t=25665
