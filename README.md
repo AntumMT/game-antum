@@ -273,7 +273,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 - env_sounds? (minetest_game) (replace with [sounds](https://content.minetest.net/packages/AntumDeluge/sounds/))
 - fireflies? (minetest_game)
 - fort_spikes?
-- game_commands (minetest_game)
 - give_initial_stuff (minetest_game) (replace with custom/add to core)
 - glow?
 - intllib (after mods dependency removed)
