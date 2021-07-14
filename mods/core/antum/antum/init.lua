@@ -20,3 +20,4 @@ end
 
 -- Load API functions
 dofile(antum.modpath .. "/api.lua")
+dofile(antum.modpath .. "/privs.lua")

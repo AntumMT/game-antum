@@ -13,7 +13,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [alternode][] ([MIT][lic.alternode]) -- version: [1.3][ver.alternode] *2021-05-18*
   * [cleaner][] ([MIT][lic.cleaner]) -- version: [9230e0c Git][ver.cleaner] *2021-07-12*
   * [no_fall_damage][] ([MIT][lic.no_fall_damage]) -- version [1.0.0][ver.no_fall_damage] *2020-12-19*
-  * [privs][] ([CC0][lic.cc0])
   * [spectator_mode][] ([WTFPL][lic.spectator_mode]) -- version: [3648371 Git][ver.spectator_mode] *2020-07-15*
   * [whitelist][] ([MIT][lic.whitelist]) -- version: [1.1][ver.whitelist] *2021-06-09*
 * buildings/
@@ -277,7 +276,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 - glow?
 - intllib (after mods dependency removed)
 - pipeworks? (if no other mods need it)
-- privs (add to core)
 - screwdriver (minetest_game) (replace with [better screwdriver](https://content.minetest.net/packages/12Me21/screwdriver2/))
 - snowdrift (fork or replace with other weather mod)
 - stairs (minetest_game) (replace with [stairs redo](https://content.minetest.net/packages/TenPlus1/stairs/))
@@ -395,7 +393,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [pbmarks]: https://github.com/AntumMT/mod-pbmarks
 [pipeworks]: https://forum.minetest.net/viewtopic.php?t=2155
 [player_monoids]: https://github.com/minetest-mods/player_monoids
-[privs]: mods/admin/privs
 [pvp_areas]: https://forum.minetest.net/viewtopic.php?t=15480
 [quartz]: https://forum.minetest.net/viewtopic.php?t=5682
 [rainbow_ore]: https://forum.minetest.net/viewtopic.php?id=13519
