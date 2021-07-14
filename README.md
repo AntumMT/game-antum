@@ -41,6 +41,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [throwing][] ([WTFPL][lic.wtfpl]) -- version: [90bcf43 Git][ver.throwing] *2013-09-27* ([patched][patch.throwing])
   * [xtraarmor][] ([CC BY-SA][lic.ccbysa3.0]) -- version: 0.3
 * furniture/
+  * [beds][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa3.0]) -- version: 1.0 *2020-09-15*
   * [jukebox][] ([WTFPL / CC0][lic.jukebox]) -- version: [0d871f2 Git][ver.jukebox] *2020-03-11*
   * [trampoline][] ([GPL][lic.gpl3.0]) -- version: [0.3][ver.trampoline] *2021-04-28*
   * [trash_can][] ([MIT][lic.trash_can]) -- version: [423b0f2 Git][ver.trash_can] *2020-08-12*
@@ -263,6 +264,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [away]: https://forum.minetest.net/viewtopic.php?t=1211
 [bags]: http://cornernote.github.io/minetest-bags/
 [basic_materials]: https://gitlab.com/VanessaE/basic_materials
+[beds]: https://content.minetest.net/packages/sorcerykid/beds/
 [bike]: https://forum.minetest.net/viewtopic.php?t=20726
 [biofuel]: https://forum.minetest.net/viewtopic.php?t=24622
 [biome_lib]: https://forum.minetest.net/viewtopic.php?f=11&t=12999
