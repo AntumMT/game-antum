@@ -1,6 +1,41 @@
+Doors Redo (Edited by TenPlus1)
+
+Based on
+
 Minetest Game mod: doors
 ========================
 See license.txt for license information.
+
+
+Usage
+-----
+
+Doors Redo allows the player to craft a key tool which can be used on any of the
+registered doors to flip between states (open, owned, protected)
+
+
+Key Tool
+--------
+
+The key tool is crafted using 5x steel ingots (2x2 box in lower left and 1 in
+top right).  When held in players hand you can punch a door to flip between each
+state to open, lock (own) and protect the door.
+
+
+Door States
+-----------
+
+OPEN - Doors can be opened by any player or dug up.
+
+OWNED - This locks the door so that only the owner can open or dig the door.
+
+PROTECTED - This also locks the door so that only the players listed for the
+protected area the door sits inside can open the door.
+
+Note: A protection mod must be installed to use Protected mode so that it works
+properly, not having one running will mean all protected doors will open for
+anyone who uses them.
+
 
 Authors of source code
 ----------------------
@@ -51,6 +86,9 @@ Obsidian door textures by red-001 based on textures by Pilzadam and BlockMen (CC
 Glass door textures by Krock and paramat based on textures by VanessaE (CC BY-SA 3.0):
   doors_door_glass.png
   doors_item_glass.png
+
+TenPlus1 (CC-BY-SA-3.0):
+  doors_key.png
 
 All other textures (created by PilzAdam) (CC BY-SA 3.0):
 

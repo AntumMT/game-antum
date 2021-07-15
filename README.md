@@ -18,6 +18,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * buildings/
   * [bridges][] ([GPL][lic.gpl3.0]) -- version: [5b5f475 Git][ver.bridges] *2015-08-23* ([patched][patch.bridges])
   * [christmas][] ([MIT][lic.christmas]) -- version [d3bd872 Git][ver.christmas] *2013-01-11* ([patched][patch.christmas])
+  * [doors][] ([MIT][lic.doors] / [CC BY-SA][lic.ccbysa3.0]) -- version: 2021-06-04
   * [elevator][] ([WTFPL][lic.elevator])
   * [fort_spikes][] ([MIT][lic.fort_spikes] / [CC0][lic.cc0]) -- version: [3b98b46 Git][ver.fort_spikes] *2018-06-05*
   * [glass][] ([LGPL][lic.lgpl2.1]) -- version: [1.1][ver.glass] *2021-05-26*
@@ -209,8 +210,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [cottages](https://content.minetest.net/packages/Sokomine/cottages/)
 * [cozy](https://github.com/minetest-mods/cozy)
 * [dmobs](https://content.minetest.net/packages/TenPlus1/dmobs/) (DOOMed Mobs)
-* [doors](https://content.minetest.net/packages/TenPlus1/doors/) (Doors Redo)
-* [doors](https://content.minetest.net/packages/sorcerykid/doors/) (Doors Redux)
 * [draconis](https://forum.minetest.net/viewtopic.php?t=22595) (dragons)
 * [drinks](https://content.minetest.net/packages/Nathan.S/drinks/)
 * [extra_doors](https://content.minetest.net/packages/sorcerykid/extra_doors/)
@@ -267,7 +266,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 - campfire? (replace with [new campfire](https://content.minetest.net/packages/VanessaE/new_campfire/))
 - coloredwood?
 - compassgps?
-- doors (minetest_game) (replace with [doors redo](https://content.minetest.net/packages/TenPlus1/doors/) or [doors redux](https://content.minetest.net/packages/sorcerykid/doors/))
 - elevator?
 - env_sounds? (minetest_game) (replace with [sounds](https://content.minetest.net/packages/AntumDeluge/sounds/))
 - fireflies? (minetest_game)
@@ -332,6 +330,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [deploy_nodes]: https://cornernote.github.io/minetest-deploy_nodes/
 [desert_life]: https://forum.minetest.net/viewtopic.php?t=16054
 [dinosaurs_aggressive]: https://github.com/AntumMT/mp-dinosaurs_aggressive
+[doors]: https://content.minetest.net/packages/sorcerykid/doors/
 [drawers]: https://forum.minetest.net/viewtopic.php?t=17134
 [elevator]: https://forum.minetest.net/viewtopic.php?t=12944
 [enchanting]: https://forum.minetest.net/viewtopic.php?t=7354
@@ -457,6 +456,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.crops]: mods/farming/crops/LICENSE
 [lic.deploy_nodes]: mods/modpacks/deploy_nodes/LICENSE
 [lic.dirt_monster]: mods/mobiles/dirt_monster/license.txt
+[lic.doors]: mods/buildings/doors/license.txt
 [lic.drawers]: mods/storage/drawers/LICENSE.txt
 [lic.dungeon_master]: mods/mobiles/dungeon_master/license.txt
 [lic.elevator]: mods/buildings/elevator/readme.txt
@@ -591,6 +591,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.desert_life]: https://github.com/NathanSalapat/desert_life/tree/188f984
 [ver.dinosaurs_aggressive]: https://github.com/AntumMT/mp-dinosaurs_aggressive/tree/874f299
 [ver.dirt_monster]: https://github.com/AntumMT/mod-mob_dirt_monster/tree/40c48e0
+[ver.doors]: https://notabug.org/TenPlus1/doors/src/f0fef3f66c4e002e37a27808719f9983ee630fb7
 [ver.drawers]: https://github.com/minetest-mods/drawers/releases/tag/v0.6.2
 [ver.dungeon_master]: https://github.com/AntumMT/mod-mob_dungeon_master/tree/00c890f
 [ver.enchanting]: https://github.com/AntumMT/mod-enchanting/tree/dee7dde
