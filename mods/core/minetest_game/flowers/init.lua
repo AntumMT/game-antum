@@ -30,6 +30,10 @@ minetest.register_alias("flowers:flower_geranium", "flowers:geranium")
 minetest.register_alias("flowers:flower_viola", "flowers:viola")
 minetest.register_alias("flowers:flower_dandelion_white", "flowers:dandelion_white")
 
+-- Available flower colors (used by dye mod)
+flowers.colors = {
+	'blue', 'orange', 'red', 'violet', 'white', 'yellow',
+}
 
 -- Flower registration
 
@@ -170,7 +174,6 @@ function flowers.flower_spread(pos, node)
 end
 
 minetest.register_abm({
-	label = "Flower spread",
 	nodenames = {"group:flora"},
 	interval = 13,
 	chance = 300,
@@ -247,8 +250,7 @@ function flowers.mushroom_spread(pos, node)
 end
 
 minetest.register_abm({
-	label = "Mushroom spread",
-	nodenames = {"flowers:mushroom_brown", "flowers:mushroom_red"},
+	nodenames = {"group:mushroom"},
 	interval = 11,
 	chance = 150,
 	action = function(...)
@@ -263,8 +265,6 @@ minetest.register_alias("flowers:mushroom_spores_brown", "flowers:mushroom_brown
 minetest.register_alias("flowers:mushroom_spores_red", "flowers:mushroom_red")
 minetest.register_alias("flowers:mushroom_fertile_brown", "flowers:mushroom_brown")
 minetest.register_alias("flowers:mushroom_fertile_red", "flowers:mushroom_red")
-minetest.register_alias("mushroom:brown_natural", "flowers:mushroom_brown")
-minetest.register_alias("mushroom:red_natural", "flowers:mushroom_red")
 
 
 --
@@ -276,7 +276,7 @@ local waterlily_def = {
 	drawtype = "nodebox",
 	paramtype = "light",
 	paramtype2 = "facedir",
-	tiles = {"flowers_waterlily.png", "flowers_waterlily_bottom.png"},
+	tiles = {"flowers_waterlily.png"},
 	inventory_image = "flowers_waterlily.png",
 	wield_image = "flowers_waterlily.png",
 	use_texture_alpha = "clip",
@@ -317,8 +317,7 @@ local waterlily_def = {
 					itemstack:take_item()
 				end
 			else
-				minetest.chat_send_player(player_name, "Node is protected")
-				minetest.record_protection_violation(pos, player_name)
+				minetest.chat_send_player(player_name, "This area is protected")
 			end
 		end
 

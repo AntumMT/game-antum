@@ -32,7 +32,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [server_shop][] ([MIT][lic.server_shop]) -- version: [1.4][ver.server_shop] *2021-07-08*
 * core/
   * [antum][] ([MIT][lic.antum]) -- version: [69b39a4 Git][ver.antum] *2017-08-30*
-  * [minetest_game][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- version: [5.4.1][ver.minetest_game] *2021-04-10*
+  * [minetest_game][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- version: [9270188 Git][ver.minetest_game] *2021-07-08*
 * equipment/
   * [3d_armor_gloves][] ([LGPL][lic.lgpl2.1]) -- version: [f099d76 Git][ver.3d_armor_gloves] *2021-02-27*
   * [airtanks][] ([MIT][lic.airtanks]) -- version: [b686694 Git][ver.airtanks] *2021-03-13* ([patched][patch.airtanks])
@@ -623,7 +623,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.listitems]: https://github.com/AntumMT/mod-listitems/tree/aa1741f
 [ver.mese_monster]: https://github.com/AntumMT/mod-mob_mese_monster/tree/cd02839
 [ver.mesecons]: https://github.com/minetest-mods/mesecons/tree/6579351
-[ver.minetest_game]: https://github.com/minetest/minetest_game/tree/5.4.1
+[ver.minetest_game]: https://github.com/minetest/minetest_game/tree/9270188
 [ver.mobkit]: https://github.com/TheTermos/mobkit/tree/ddea141
 [ver.mobs_bee]: https://github.com/AntumMT/mod-mobs_animal/tree/671c6c1
 [ver.mobs_cow]: https://github.com/AntumMT/mod-mobs_animal/tree/85af09a
@@ -704,7 +704,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.hud]: https://github.com/AntumMT/mod-hud/tree/6846e20
 [patch.invisibility]: https://github.com/AntumMT/mod-invisibility/tree/00c0638
 [patch.ilights]: https://github.com/AntumMT/mod-ilights/tree/fe1dae4
-[patch.minetest_game]: https://github.com/AntumMT/mtgame-minetest/tree/355a756
+[patch.minetest_game]: https://github.com/AntumMT/mtgame-minetest/tree/014188d
 [patch.moreblocks]: https://github.com/AntumMT/mod-moreblocks/tree/6dda839
 [patch.moreores]: https://github.com/AntumMT/mod-moreores/tree/ae59578
 [patch.motorbike]: https://github.com/AntumMT/mod-motorbike/tree/0aa5c9c
