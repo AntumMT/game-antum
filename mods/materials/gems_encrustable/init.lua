@@ -7,6 +7,11 @@
 --Adds gems and encrusted tools
 --
 
+local diamond
+if core.registered_items["default:diamond"] then
+	diamond = "default:diamond"
+end
+
 minetest.register_node("gems_encrustable:mineral_garnet", {
 	description = "Garnet",
 	tiles = {"default_stone.png^gems_mineral_garnet.png"},
@@ -31,14 +36,18 @@ minetest.register_node("gems_encrustable:mineral_topaz", {
 	drop = 'gems_encrustable:topaz',
 	sounds = default.node_sound_stone_defaults(),
 })
-minetest.register_node("gems_encrustable:mineral_diamond", {
-	description = "Diamond",
-	tiles = {"default_stone.png^gems_mineral_diamond.png"},
-	is_ground_content = true,
-	groups = {cracky=3},
-	drop = 'gems_encrustable:diamond',
-	sounds = default.node_sound_stone_defaults(),
-})
+
+if not diamond then
+	minetest.register_node("gems_encrustable:mineral_diamond", {
+		description = "Diamond",
+		tiles = {"default_stone.png^gems_mineral_diamond.png"},
+		is_ground_content = true,
+		groups = {cracky=3},
+		drop = 'gems_encrustable:diamond',
+		sounds = default.node_sound_stone_defaults(),
+	})
+end
+
 minetest.register_node("gems_encrustable:mineral_opal", {
 	description = "Opal",
 	tiles = {"default_stone.png^gems_mineral_opal.png"},
@@ -60,16 +69,24 @@ minetest.register_craftitem("gems_encrustable:topaz", {
 	description = "Topaz",
 	inventory_image = "gems_gem_topaz.png",
 })
-minetest.register_craftitem("gems_encrustable:diamond", {
-	description = "Diamond",
-	inventory_image = "gems_gem_diamond.png",
-})
+
+if not diamond then
+	minetest.register_craftitem("gems_encrustable:diamond", {
+		description = "Diamond",
+		inventory_image = "gems_gem_diamond.png",
+	})
+end
+
 minetest.register_craftitem("gems_encrustable:opal", {
 	description = "Opal",
 	inventory_image = "gems_gem_opal.png",
 })
 
 encrust_a_tool = function(result,crafttool,craftgem)
+	if craftgem == "gems_encrustable:diamond" and diamond then
+		craftgem = diamond
+	end
+
 	minetest.register_craft( {
        type = "shapeless",
        output = result,
@@ -87,26 +104,13 @@ gem = {"garnet","aquamarine","topaz","diamond","opal"}
 toolbenefit_one = {0.95,0.95,0.85,0.9,0.65}
 toolbenefit_two = {1.05,1.1,1.05,1.15,0.9}
 
-local t_uses = {}
-if core.settings:get_bool('enable_tool_wear') ~= false then
-	t_uses = {
-		l = {10,70,200},
-		h = {40,70,200},
-	}
-else
-	t_uses = {
-		l = {0,0,0},
-		h = {0,0,0},
-	}
-end
-
-pickbases = {{4,1.6,1,t_uses.l[1],2},{2,0.5,0.3,t_uses.l[2],1},{2.25,0.55,0.35,t_uses.l[3],1}}
-axecbases = {{2,1.6,1,t_uses.l[1],2},{1.7,0.4,0.35,t_uses.l[2],1},{1.75,0.45,0.45,t_uses.l[3],1}}
-axefbases = {{0,1.1,0.6,t_uses.h[1],1},{0,0.9,0.3,t_uses.h[2],1},{0,0.95,0.3,t_uses.h[3],1}}
-shovelbases = {{1,0.7,0.6,t_uses.l[1],2},{0.6,0.25,0.15,t_uses.l[2],1},{0.7,0.35,0.2,t_uses.l[3],1}}
-swordfbases = {{2,0.8,0.4,t_uses.l[1],2},{0,0.6,0.2,t_uses.l[2],1},{0,0.65,0.25,t_uses.l[3],1}}
-swordsbases = {{0,0.7,0.3,t_uses.h[1],1},{0,0.6,0.2,t_uses.h[2],1},{0,0.7,0.25,t_uses.h[3],1}}
-swordcbases = {{0,0,0.7,t_uses.h[1],0},{0,0,0.65,t_uses.h[2],0},{0,0,0.65,t_uses.h[3],0}}
+pickbases = {{4,1.6,1,10,2},{2,0.5,0.3,70,1},{2.25,0.55,0.35,200,1}}
+axecbases = {{2,1.6,1,10,2},{1.7,0.4,0.35,70,1},{1.75,0.45,0.45,200,1}}
+axefbases = {{0,1.1,0.6,40,1},{0,0.9,0.3,70,1},{0,0.95,0.3,200,1}}
+shovelbases = {{1,0.7,0.6,10,2},{0.6,0.25,0.15,70,1},{0.7,0.35,0.2,200,1}}
+swordfbases = {{2,0.8,0.4,10,2},{0,0.6,0.2,70,1},{0,0.65,0.25,200,1}}
+swordsbases = {{0,0.7,0.3,40,1},{0,0.6,0.2,70,1},{0,0.7,0.25,200,1}}
+swordcbases = {{0,0,0.7,40,0},{0,0,0.65,70,0},{0,0,0.65,200,0}}
 
 for selgem = 1,5 do
 	for selmat = 1,3 do
@@ -262,7 +266,11 @@ minetest.register_on_generated(function(minp, maxp, seed)
 	generate_ore("gems_encrustable:mineral_garnet", "default:stone", minp, maxp, get_next_seed(), 1/7/7/7, 1, -31000, -64)
 	generate_ore("gems_encrustable:mineral_aquamarine", "default:stone", minp, maxp, get_next_seed(), 1/7/7/7, 1, -31000, -128)
 	generate_ore("gems_encrustable:mineral_topaz", "default:stone", minp, maxp, get_next_seed(), 1/7/7/7, 1, -31000, -256)
-	--generate_ore("gems_encrustable:mineral_diamond", "default:stone", minp, maxp, get_next_seed(), 1/7/7/7, 1, -31000, -512)
+
+	if not diamond then
+		generate_ore("gems_encrustable:mineral_diamond", "default:stone", minp, maxp, get_next_seed(), 1/7/7/7, 1, -31000, -512)
+	end
+
 	generate_ore("gems_encrustable:mineral_opal", "default:stone", minp, maxp, get_next_seed(), 1/7/7/7, 1, -31000, -1024)
 end)
 

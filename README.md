@@ -695,7 +695,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.crops]: https://github.com/AntumMT/mod-crops/tree/a1cce06
 [patch.drawers]: https://github.com/AntumMT/mod-drawers/tree/a77f809
 [patch.ethereal]: https://github.com/AntumMT/mod-ethereal/tree/c404045
-[patch.gems_encrustable]: https://github.com/AntumMT/mod-gems_encrustable/tree/a043b9c
+[patch.gems_encrustable]: https://github.com/AntumMT/mod-gems_encrustable/tree/276fb25
 [patch.gems_tools]: https://github.com/AntumMT/mod-gems_tools/tree/7f89843
 [patch.helicopter]: https://github.com/AntumMT/mod-helicopter/tree/79d2d3e
 [patch.home_gui]: https://github.com/AntumMT/mod-home_gui/tree/addee01
