@@ -165,7 +165,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [castle_shields][] -- version: [78e74b0 Git][ver.castle_shields] *2019-11-23*
   * [castle_storage][] -- version: [ad5e887 Git][ver.castle_storage] *2020-02-28*
   * [castle_tapestries][] -- version: [f5e3ac1 Git][ver.castle_tapestries] *2020-02-16*
-  * [castle_weapons][] -- version: [d3cf095 Git][ver.castle_weapons] *2020-02-28* ([patched][patch.castle_weapons])
+  * [castle_weapons][] -- version: [d3cf095 Git][ver.castle_weapons] *2020-02-28*
   * [crafting_bench][] -- version: [69083ed Git][ver.crafting_bench] *2020-05-27*
 * [deploy_nodes][] ([BSD 3-Clause][lic.deploy_nodes]) -- version: [b67e162 Git][ver.deploy_nodes] *2017-06-08*
 * [home_workshop][] -- version: [03325e8 Git][ver.home_workshop] *2021-04-15*
@@ -690,7 +690,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.away]: https://github.com/AntumMT/mod-away/tree/3b0bf9e
 [patch.boats2]: https://github.com/AntumMT/mod-boats2/tree/9b2bcb7
 [patch.bridges]: https://github.com/AntumMT/mod-bridges/tree/ba8f71a
-[patch.castle_weapons]: https://github.com/AntumMT/mod-castle_weapons/tree/6ec6f46
 [patch.christmas]: https://github.com/AntumMT/mod-christmas/tree/50bda80
 [patch.craftguide]: https://github.com/AntumMT/mod-craftguide/tree/aef18f2
 [patch.crops]: https://github.com/AntumMT/mod-crops/tree/a1cce06
