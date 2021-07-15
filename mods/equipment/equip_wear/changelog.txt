@@ -1,0 +1,7 @@
+
+v0.1
+----
+- initial release
+- added disable tool wear
+- added disable weapon wear
+- added disable armor wear

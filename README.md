@@ -36,6 +36,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * equipment/
   * [3d_armor_gloves][] ([LGPL][lic.lgpl2.1]) -- version: [f099d76 Git][ver.3d_armor_gloves] *2021-02-27*
   * [airtanks][] ([MIT][lic.airtanks]) -- version: [b686694 Git][ver.airtanks] *2021-03-13* ([patched][patch.airtanks])
+  * [equip_wear][] ([MIT][lic.equip_wear]) -- version: [0.1][ver.equip_wear] *2021-07-14*
   * [slingshot][] ([MIT][lic.slingshot] / [CC0][lic.cc0]) -- version [0.3][ver.slingshot] *2021-06-10*
   * [throwing][] ([WTFPL][lic.wtfpl]) -- version: [90bcf43 Git][ver.throwing] *2013-09-27* ([patched][patch.throwing])
   * [xtraarmor][] ([CC BY-SA][lic.ccbysa3.0]) -- version: 0.3
@@ -335,6 +336,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [elevator]: https://forum.minetest.net/viewtopic.php?t=12944
 [enchanting]: https://forum.minetest.net/viewtopic.php?t=7354
 [equip_exam]: https://forum.minetest.net/viewtopic.php?t=26618
+[equip_wear]: https://content.minetest.net/packages/AntumDeluge/equip_wear/
 [ethereal]: https://forum.minetest.net/viewtopic.php?t=14638
 [farlands]: https://forum.minetest.net/viewtopic.php?t=16921
 [farming]: https://forum.minetest.net/viewtopic.php?t=9019
@@ -460,6 +462,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.elevator]: mods/buildings/elevator/readme.txt
 [lic.enchanting]: mods/enchanting/LICENSE
 [lic.equip_exam]: mods/tools/equip_exam/LICENSE.txt
+[lic.equip_wear]: mods/equipment/equip_wear/LICENSE.txt
 [lic.ethereal]: mods/world/ethereal/license.txt
 [lic.farming]: mods/horticulture/farming/license.txt
 [lic.formspecs]: mods/libs/formspecs/README.txt
@@ -592,6 +595,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.dungeon_master]: https://github.com/AntumMT/mod-mob_dungeon_master/tree/00c890f
 [ver.enchanting]: https://github.com/AntumMT/mod-enchanting/tree/dee7dde
 [ver.equip_exam]: https://github.com/AntumMT/mod-equip_exam/releases/tag/v1.5
+[ver.equip_wear]: https://github.com/AntumMT/mod-equip_wear/releases/tag/v0.1
 [ver.ethereal]: https://notabug.org/TenPlus1/ethereal/src/90cdf94ea6c54cd5e3fcc7f77d3b6121f963c379
 [ver.farming]: https://notabug.org/TenPlus1/farming/commit/dedc33cc46ec65782a5b8ab573d1fb6bb6915b63
 [ver.folks]: https://gitlab.com/SonoMichele/folks/tags/v0.2.0

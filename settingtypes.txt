@@ -1710,6 +1710,19 @@ ethereal.tundra (Tundra biome, 1 = Enable / 0 = Disable) int 1
 ethereal.mediterranean (Mediterranean biome, 1 = Enable / 0 = Disable) int 1
 
 
+[*equip_wear]
+
+# Enables/Disables wear for tools such as picks, axes,
+# shovels, etc.
+tool_wear (Enable tool wear) bool true
+
+# Enables/Disables wear for weapons.
+weapon_wear (Enable weapon wear) bool true
+
+# Enables/Disables wear for armor.
+armor_wear (Enable armor wear) bool true
+
+
 [*hbarmor]
 
 #If true, automatically hides the armor HUD bar when the player wears no
