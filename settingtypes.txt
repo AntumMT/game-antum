@@ -1245,6 +1245,11 @@ mob_area_spawn (Mob Area Spawn) bool false
 # Enable peaceful player attack prevention
 enable_peaceful_player (Mobs do not attack peaceful player without reason) bool false
 
+# If false then Monsters no longer spawn inside player protected areas
+mobs_spawn_monster_protected (Spawn Monsters in protected areas) bool true
+
+# Enable mobs smooth rotation
+mob_smooth_rotate (Smooth rotation for mobs) bool true
 
 [**cmer]
 
