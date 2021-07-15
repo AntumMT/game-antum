@@ -8,13 +8,18 @@
 --]]
 
 
-function antum.log(lvl, msg)
+function antum.log(lvl, msg, modname)
 	if not msg then
 		msg = lvl
 		lvl = nil
 	end
 
-	msg = "[" .. core.get_current_modname() .. "] " .. msg
+	modname = modname or core.get_current_modname()
+	if not modname then
+		modname = antum.modname
+	end
+
+	msg = "[" .. modname .. "] " .. msg
 	if not lvl then
 		core.log(msg)
 	else
