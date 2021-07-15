@@ -715,7 +715,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.rainbow_ore]: https://github.com/AntumMT/mod-rainbow_ore/tree/69a598b
 [patch.simple_protection]: https://github.com/AntumMT/mod-simple_protection/tree/be873b5
 [patch.snowdrift]: https://github.com/AntumMT/mod-snowdrift/tree/0b35cc3
-[patch.throwing]: https://github.com/AntumMT/mod-throwing/tree/b33ffde
+[patch.throwing]: https://github.com/AntumMT/mod-throwing/tree/6f55c67
 [patch.trash_can]: https://github.com/AntumMT/mod-trash_can/tree/5a92bf4
 [patch.unifieddyes]: https://github.com/AntumMT/mod-unifieddyes/tree/3013964
 [patch.windmill]: https://github.com/AntumMT/mod-windmill/tree/7756ab4

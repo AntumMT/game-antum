@@ -6,12 +6,7 @@ arrows = {
 	{"throwing:arrow_build", "throwing:arrow_build_entity"}
 }
 
-local creative = minetest.settings:get_bool("creative_mode")
-local weapon_wear = minetest.settings:get_bool("enable_weapon_wear")
-if weapon_wear == nil then
-	-- Default is enabled
-	weapon_wear = true
-end
+local creative = minetest.settings:get_bool("creative_mode", false)
 
 local throwing_shoot_arrow = function(itemstack, player)
 	for _,arrow in ipairs(arrows) do
@@ -42,7 +37,7 @@ minetest.register_tool("throwing:bow_wood", {
     stack_max = 1,
 	on_use = function(itemstack, user, pointed_thing)
 		if throwing_shoot_arrow(itemstack, user, pointed_thing) then
-			if not creative and weapon_wear then
+			if not creative then
 				itemstack:add_wear(65535/50)
 			end
 		end
@@ -65,7 +60,7 @@ minetest.register_tool("throwing:bow_stone", {
     stack_max = 1,
 	on_use = function(itemstack, user, pointed_thing)
 		if throwing_shoot_arrow(item, user, pointed_thing) then
-			if not creative and weapon_wear then
+			if not creative then
 				itemstack:add_wear(65535/100)
 			end
 		end
@@ -88,7 +83,7 @@ minetest.register_tool("throwing:bow_steel", {
     stack_max = 1,
 	on_use = function(itemstack, user, pointed_thing)
 		if throwing_shoot_arrow(item, user, pointed_thing) then
-			if not creative and weapon_wear then
+			if not creative then
 				itemstack:add_wear(65535/200)
 			end
 		end
