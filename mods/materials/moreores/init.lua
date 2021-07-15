@@ -22,17 +22,8 @@ if minetest.get_modpath("mg") then
 	dofile(modpath .. "/mg.lua")
 end
 
-local tool_wear = minetest.settings:get_bool('enable_tool_wear')
-if tool_wear == nil then
-	-- Default is enabled
-	tool_wear = true
-end
-
 -- `frame` support
 local use_frame = minetest.get_modpath("frame")
-
--- Utility functions
--- =================
 
 local default_stone_sounds = default.node_sound_stone_defaults()
 local default_metal_sounds = default.node_sound_metal_defaults()
@@ -98,7 +89,7 @@ local function add_ore(modname, description, mineral_name, oredef)
 	local item_base = tool_base .. mineral_name
 	local ingot = item_base .. "_ingot"
 	local lump_item = item_base .. "_lump"
-	
+
 	-- Use gold materials from 'default'
 	if mineral_name == "gold" then
 		ingot = "default:gold_ingot"
@@ -247,7 +238,7 @@ local function add_ore(modname, description, mineral_name, oredef)
 		if tool_name ~= "hoe" then
 			minetest.register_tool(fulltool_name, tdef)
 
-			if oredef.makes.ingot then
+			if oredef.makes.ingot or mineral_name == "gold" then
 				minetest.register_craft({
 					output = fulltool_name,
 					recipe = get_recipe(ingot, tool_name)
@@ -267,49 +258,7 @@ local function add_ore(modname, description, mineral_name, oredef)
 		if use_frame then
 			frame.register(fulltool_name)
 		end
-		if oredef.makes.ingot or mineral_name == "gold" then
-			minetest.register_craft({
-				output = fulltool_name,
-				recipe = get_recipe(ingot, tool_name)
-			})
-		end
 	end
-end
-
-
-local t_uses = {}
-if tool_wear then
-	t_uses.pick_silver = 100
-	t_uses.pick_gold = 150
-	t_uses.pick_mithril = 200
-	t_uses.hoe_silver = 300
-	t_uses.hoe_gold = 750
-	t_uses.hoe_mithril = 1000
-	t_uses.shovel_silver = 100
-	t_uses.shovel_gold = 150
-	t_uses.shovel_mithril = 200
-	t_uses.axe_silver = 100
-	t_uses.axe_gold = 150
-	t_uses.axe_mithril = 200
-	t_uses.sword_silver = 100
-	t_uses.sword_gold = 150
-	t_uses.sword_mithril = 200
-else
-	t_uses.pick_silver = 0
-	t_uses.pick_gold = 0
-	t_uses.pick_mithril = 0
-	t_uses.hoe_silver = 0
-	t_uses.hoe_gold = 0
-	t_uses.hoe_mithril = 0
-	t_uses.shovel_silver = 0
-	t_uses.shovel_gold = 0
-	t_uses.shovel_mithril = 0
-	t_uses.axe_silver = 0
-	t_uses.axe_gold = 0
-	t_uses.axe_mithril = 0
-	t_uses.sword_silver = 0
-	t_uses.sword_gold = 0
-	t_uses.sword_mithril = 0
 end
 
 local oredefs = {
@@ -325,22 +274,22 @@ local oredefs = {
 		},
 		tools = {
 			pick = {
-				cracky = {times = {[1] = 2.60, [2] = 1.00, [3] = 0.60}, uses = t_uses.pick_silver, maxlevel = 1},
+				cracky = {times = {[1] = 2.60, [2] = 1.00, [3] = 0.60}, uses = 100, maxlevel = 1},
 			},
 			hoe = {
-				uses = t_uses.hoe_silver,
+				uses = 300,
 			},
 			shovel = {
-				crumbly = {times = {[1] = 1.10, [2] = 0.40, [3] = 0.25}, uses = t_uses.shovel_silver, maxlevel = 1},
+				crumbly = {times = {[1] = 1.10, [2] = 0.40, [3] = 0.25}, uses = 100, maxlevel = 1},
 			},
 			axe = {
-				choppy = {times = {[1] = 2.50, [2] = 0.80, [3] = 0.50}, uses = t_uses.axe_silver, maxlevel = 1},
-				fleshy = {times = {[2] = 1.10, [3] = 0.60}, uses = t_uses.axe_silver, maxlevel = 1}
+				choppy = {times = {[1] = 2.50, [2] = 0.80, [3] = 0.50}, uses = 100, maxlevel = 1},
+				fleshy = {times = {[2] = 1.10, [3] = 0.60}, uses = 100, maxlevel = 1}
 			},
 			sword = {
-				fleshy = {times = {[2] = 0.70, [3] = 0.30}, uses = t_uses.sword_silver, maxlevel = 1},
-				snappy = {times = {[2] = 0.70, [3] = 0.30}, uses = t_uses.sword_silver, maxlevel = 1},
-				choppy = {times = {[3] = 0.80}, uses = t_uses.sword_silver, maxlevel = 0},
+				fleshy = {times = {[2] = 0.70, [3] = 0.30}, uses = 100, maxlevel = 1},
+				snappy = {times = {[2] = 0.70, [3] = 0.30}, uses = 100, maxlevel = 1},
+				choppy = {times = {[3] = 0.80}, uses = 100, maxlevel = 0},
 			},
 		},
 		full_punch_interval = 1.0,
@@ -353,22 +302,22 @@ local oredefs = {
 		oredef = {},
 		tools = {
 			pick = {
-				cracky = {times = {[1] = 2.45, [2] = 0.75, [3] = 0.50}, uses = t_uses.pick_gold, maxlevel= 1}
+				cracky = {times = {[1] = 2.45, [2] = 0.75, [3] = 0.50}, uses = 150, maxlevel= 1}
 			},
 			hoe = {
-				uses = t_uses.hoe_gold
+				uses = 750
 			},
 			shovel = {
-				crumbly = {times = {[1] = 0.90, [2] = 0.37, [3] = 0.23}, uses = t_uses.shovel_gold, maxlevel= 1}
+				crumbly = {times = {[1] = 0.90, [2] = 0.37, [3] = 0.23}, uses = 150, maxlevel= 1}
 			},
 			axe = {
-				choppy = {times = {[1] = 2.10, [2] = 0.60, [3] = 0.47}, uses = t_uses.axe_gold, maxlevel= 1},
-				fleshy = {times = {[2] = 1.05, [3] = 0.45}, uses = t_uses.axe_gold, maxlevel= 1}
+				choppy = {times = {[1] = 2.10, [2] = 0.60, [3] = 0.47}, uses = 150, maxlevel= 1},
+				fleshy = {times = {[2] = 1.05, [3] = 0.45}, uses = 150, maxlevel= 1}
 			},
 			sword = {
-				fleshy = {times = {[2] = 0.67, [3] = 0.27}, uses = t_uses.sword_gold, maxlevel= 1},
-				snappy = {times = {[2] = 0.70, [3] = 0.27}, uses = t_uses.sword_gold, maxlevel= 1},
-				choppy = {times = {[3] = 0.72}, uses = t_uses.sword_gold, maxlevel= 0}
+				fleshy = {times = {[2] = 0.67, [3] = 0.27}, uses = 150, maxlevel= 1},
+				snappy = {times = {[2] = 0.70, [3] = 0.27}, uses = 150, maxlevel= 1},
+				choppy = {times = {[3] = 0.72}, uses = 150, maxlevel= 0}
 			},
 		},
 		full_punch_interval = 0.90,
@@ -386,22 +335,22 @@ local oredefs = {
 		},
 		tools = {
 			pick = {
-				cracky = {times = {[1] = 2.25, [2] = 0.55, [3] = 0.35}, uses = t_uses.pick_mithril, maxlevel = 2}
+				cracky = {times = {[1] = 2.25, [2] = 0.55, [3] = 0.35}, uses = 200, maxlevel = 2}
 			},
 			hoe = {
-				uses = t_uses.hoe_mithril,
+				uses = 1000,
 			},
 			shovel = {
-				crumbly = {times = {[1] = 0.70, [2] = 0.35, [3] = 0.20}, uses = t_uses.shovel_mithril, maxlevel = 2},
+				crumbly = {times = {[1] = 0.70, [2] = 0.35, [3] = 0.20}, uses = 200, maxlevel = 2},
 			},
 			axe = {
-				choppy = {times = {[1] = 1.75, [2] = 0.45, [3] = 0.45}, uses = t_uses.axe_mithril, maxlevel = 2},
-				fleshy = {times = {[2] = 0.95, [3] = 0.30}, uses = t_uses.axe_mithril, maxlevel = 1}
+				choppy = {times = {[1] = 1.75, [2] = 0.45, [3] = 0.45}, uses = 200, maxlevel = 2},
+				fleshy = {times = {[2] = 0.95, [3] = 0.30}, uses = 200, maxlevel = 1}
 			},
 			sword = {
-				fleshy = {times = {[2] = 0.65, [3] = 0.25}, uses = t_uses.sword_mithril, maxlevel = 2},
-				snappy = {times = {[2] = 0.70, [3] = 0.25}, uses = t_uses.sword_mithril, maxlevel = 2},
-				choppy = {times = {[3] = 0.65}, uses = t_uses.sword_mithril, maxlevel = 0},
+				fleshy = {times = {[2] = 0.65, [3] = 0.25}, uses = 200, maxlevel = 2},
+				snappy = {times = {[2] = 0.70, [3] = 0.25}, uses = 200, maxlevel = 2},
+				choppy = {times = {[3] = 0.65}, uses = 200, maxlevel = 0},
 			},
 		},
 		full_punch_interval = 0.45,
