@@ -57,3 +57,4 @@ Warnings:
 - core.env:[...] is deprecated and should be replaced with core.[...]
 	- materials\gems_encrustable\init.lua:243
 - Call to deprecated function 'get3d', please use 'get_3d' at ...\antum\mods\modpacks\technic\technic_worldgen/oregen.lua:170
+- Undeclared global variable "item" accessed at ...test\bin\..\games\antum\mods\equipment\throwing\init.lua:85
