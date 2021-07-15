@@ -18,6 +18,9 @@ if register_repairable then
 		"slingshot:iron",
 		"slingshot:wood",
 		"technic:treetap",
+		"throwing:bow_steel",
+		"throwing:bow_stone",
+		"throwing:bow_wood",
 	}
 
 	for _, tool in ipairs(repairables) do
