@@ -181,7 +181,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [myroofs][] ([DWYWPL][lic.dwywpl]) -- version: [fe98461 Git][ver.myroofs] *2017-07-14*
   * [mysheetmetal][] ([DWYWPL][lic.dwywpl]) -- version: [7c5ab71 Git][ver.mysheetmetal] *2016-04-12* ([patched][patch.mysheetmetal])
   * [mywoodslopes][] ([DWYWPL][lic.dwywpl]) -- version: [3a1b531 Git][ver.mywoodslopes] *2016-03-23* (patched)
-* [technic][] ([LGPL][lic.lgpl2.0]) -- version: [1c21948 Git][ver.technic] *2021-04-14* ([patched][patch.technic])
+* [technic][] ([LGPL][lic.lgpl2.0]) -- version: [1c21948 Git][ver.technic] *2021-04-14*
 
 
 ---
@@ -698,7 +698,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.ethereal]: https://github.com/AntumMT/mod-ethereal/tree/c404045
 [patch.gems_encrustable]: https://github.com/AntumMT/mod-gems_encrustable/tree/a043b9c
 [patch.gems_tools]: https://github.com/AntumMT/mod-gems_tools/tree/7f89843
-[patch.hbarmor]: https://github.com/AntumMT/mod-hbarmor/tree/12a7dea
 [patch.helicopter]: https://github.com/AntumMT/mod-helicopter/tree/79d2d3e
 [patch.home_gui]: https://github.com/AntumMT/mod-home_gui/tree/addee01
 [patch.homedecor]: https://gitlab.com/AntumMT/mp-homedecor/tree/0a3aa91d
@@ -717,7 +716,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.rainbow_ore]: https://github.com/AntumMT/mod-rainbow_ore/tree/0227a86
 [patch.simple_protection]: https://github.com/AntumMT/mod-simple_protection/tree/be873b5
 [patch.snowdrift]: https://github.com/AntumMT/mod-snowdrift/tree/0b35cc3
-[patch.technic]: https://github.com/AntumMT/mp-technic/tree/b591884
 [patch.throwing]: https://github.com/AntumMT/mod-throwing/tree/b33ffde
 [patch.trash_can]: https://github.com/AntumMT/mod-trash_can/tree/5a92bf4
 [patch.unifieddyes]: https://github.com/AntumMT/mod-unifieddyes/tree/3013964

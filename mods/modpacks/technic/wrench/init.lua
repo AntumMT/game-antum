@@ -84,13 +84,6 @@ for name, info in pairs(wrench.registered_nodes) do
 	end
 end
 
--- Setting for enabling/disabling tool wear & break
-local tool_wear = minetest.settings:get_bool("enable_tool_wear")
-if tool_wear == nil then
-	-- Default is enabled
-	tool_wear = true
-end
-
 minetest.register_tool("wrench:wrench", {
 	description = S("Wrench"),
 	inventory_image = "technic_wrench.png",
@@ -167,9 +160,7 @@ minetest.register_tool("wrench:wrench", {
 
 		item_meta:set_string("data", minetest.serialize(metadata))
 		minetest.remove_node(pos)
-		if tool_wear then
-			itemstack:add_wear(65535 / 20)
-		end
+		itemstack:add_wear(65535 / 20)
 		player_inv:add_item("main", stack)
 		return itemstack
 	end,
