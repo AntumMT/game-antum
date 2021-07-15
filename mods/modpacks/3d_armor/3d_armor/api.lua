@@ -55,12 +55,17 @@ armor = {
 		crystal = "ethereal:crystal_ingot",
 	},
 	fire_nodes = {
+		{"nether:lava_source",      5, 8},
 		{"default:lava_source",     5, 8},
 		{"default:lava_flowing",    5, 8},
 		{"fire:basic_flame",        3, 4},
 		{"fire:permanent_flame",    3, 4},
 		{"ethereal:crystal_spike",  2, 1},
 		{"ethereal:fire_flower",    2, 1},
+		{"nether:lava_crust",       2, 1},
+		{"default:torch",           1, 1},
+		{"default:torch_ceiling",   1, 1},
+		{"default:torch_wall",      1, 1},
 	},
 	registered_groups = {["fleshy"]=100},
 	registered_callbacks = {
@@ -524,12 +529,14 @@ armor.remove_all = function(self, player)
 	self:save_armor_inventory(player)
 end
 
+local skin_mod
+
 armor.get_player_skin = function(self, name)
-	if (self.skin_mod == "skins" or self.skin_mod == "simple_skins") and skins.skins[name] then
+	if (skin_mod == "skins" or skin_mod == "simple_skins") and skins.skins[name] then
 		return skins.skins[name]..".png"
-	elseif self.skin_mod == "u_skins" and u_skins.u_skins[name] then
+	elseif skin_mod == "u_skins" and u_skins.u_skins[name] then
 		return u_skins.u_skins[name]..".png"
-	elseif self.skin_mod == "wardrobe" and wardrobe.playerSkins and wardrobe.playerSkins[name] then
+	elseif skin_mod == "wardrobe" and wardrobe.playerSkins and wardrobe.playerSkins[name] then
 		return wardrobe.playerSkins[name]
 	end
 	return armor.default_skin..".png"
@@ -673,5 +680,5 @@ end
 --
 --  Useful for skin mod forks that do not use the same name.
 armor.set_skin_mod = function(mod)
-	armor.skin_mod = mod
+	skin_mod = mod
 end
