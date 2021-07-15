@@ -1154,12 +1154,6 @@ serverlist_url (Serverlist URL) string servers.minetest.net
 
 [General]
 
-# Tools & weapons will wear down & break when used for digging, chopping, etc.
-enable_tool_wear (Tools wear & break on use) bool true
-
-# Tools & weapons will wear down & break when used for attacking/fighting.
-enable_weapon_wear (Weapons wear & break when fighting) bool true
-
 # Print extra debugging messages.
 debug_mods (Debug mods) bool false
 

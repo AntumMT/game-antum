@@ -986,21 +986,6 @@ inventory = sfinv
 
 
 
-#####################
-## TOOLS / WEAPONS ##
-#####################
-
-# Tools & weapons will wear down & break when used for digging, chopping, etc.
-#    type:    bool
-#    default: true
-enable_tool_wear = false
-
-# Tools & weapons will wear down & break when used for attacking/fighting.
-#    type:    bool
-#    default: true
-enable_weapon_wear = false
-
-
 ### MOD CONFIGURATIONS ###
 
 
