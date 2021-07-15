@@ -5,3 +5,4 @@
 
 @1's Mailbox=
 Mailbox=
+The mailbox is full.=
