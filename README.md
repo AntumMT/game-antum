@@ -104,7 +104,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [shark][] ([CC0 / CC BY-SA][lic.cmer_shark]) -- version: [0805b84 Git][ver.cmer_shark] *2021-06-01*
   * [sheep][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [e5e0e31 Git][ver.cmer_sheep] *2021-05-25*
   * [skeleton][cmer_skeleton] ([MIT][lic.cmer_skeleton]) -- version: [e6448f5 Git][ver.cmer_skeleton] *2021-06-01*
-  * [sneeker][] ([MIT][lic.sneeker]) -- version: [1.0][ver.sneeker] *2021-05-08*
+  * [sneeker][] ([MIT][lic.sneeker]) -- version: [1.1][ver.sneeker] *2021-07-20*
   * [spider][cmer_spider] ([unilicense][lic.cmer_spider]) -- version: [134aeae Git][ver.cmer_spider] *2021-07-10*
   * [stone_monster][mobs_monster] ([MIT][lic.stone_monster]) -- version: [fa52f6f Git][ver.stone_monster] *2021-05-20*
   * [tree_monster][mobs_monster] ([MIT][lic.tree_monster]) -- version: [f2977ff Git][ver.tree_monster] *2021-05-20*
@@ -662,7 +662,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.signs_lib]: https://gitlab.com/VanessaE/signs_lib/tree/2021-03-04-2
 [ver.simple_protection]: https://github.com/SmallJoker/simple_protection/tree/3630fe9
 [ver.slingshot]: https://github.com/AntumMT/mod-slingshot/releases/tag/v0.3
-[ver.sneeker]: https://github.com/AntumMT/mod-sneeker/releases/tag/v1.0
+[ver.sneeker]: https://github.com/AntumMT/mod-sneeker/releases/tag/v1.1
 [ver.snowdrift]: https://github.com/paramat/snowdrift/tree/3342939
 [ver.stone_monster]: https://github.com/AntumMT/mod-mob_stone_monster/tree/fa52f6f
 [ver.asm_spawneggs]: https://github.com/AntumMT/mod-asm_spawneggs/tree/5a72143

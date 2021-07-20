@@ -1,0 +1,21 @@
+
+v1.1
+----
+- added sound when hit
+- fixed entity vertical positioning
+- fixed tnt:boom node left after explosion
+- added setting to customize spawn nodes
+- added simple_protection support
+
+v1.0
+----
+- forked & renamed from Rui's original "creeper" mod
+- updated for Minetest 5.x API
+- changed to MIT license
+- changed spawn nodes:
+	- default:dirt_with_dry_grass
+	- default:dry_dirt
+	- default:dry_dirt_with_dry_grass
+	- default:desert_sand
+- spawns on "nether:rack" if nether mod available
+- spawning attributes can now be set in configuration file

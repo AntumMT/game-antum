@@ -1431,6 +1431,11 @@ coloredwood_enable_stairsplus = true
 #    default: 5
 #sneeker.spawn_maxlight = 5
 
+## Comma-separated list of nodes on which sneeker can spawn.
+#    type:    string
+#    default: default:dirt_with_dry_grass,default:dry_dirt,default:dry_dirt_with_dry_grass,default:desert_sand,nether:rack
+#sneeker.spawn_nodes = default:dirt_with_dry_grass,default:dry_dirt,default:dry_dirt_with_dry_grass,default:desert_sand,nether:rack
+
 
 # *** spider ***
 

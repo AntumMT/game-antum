@@ -106,3 +106,11 @@ sneeker.spawn_maxheight = tonumber(core.settings:get("sneeker.spawn_maxheight") 
 --  @settype int
 --  @default 1
 sneeker.spawn_mapblock_limit = tonumber(core.settings:get("sneeker.spawn_mapblock_limit") or 1)
+
+--- Comma-separated list of nodes on which sneeker can spawn.
+--
+--  @setting sneeker.spawn_nodes
+--  @settype string
+--  @default default:dirt_with_dry_grass,default:dry_dirt,default:dry_dirt_with_dry_grass,default:desert_sand,nether:rack
+sneeker.spawn_nodes = core.settings:get("sneeker.spawn_nodes") or "default:dirt_with_dry_grass,default:dry_dirt,default:dry_dirt_with_dry_grass,default:desert_sand,nether:rack"
+sneeker.spawn_nodes = sneeker.spawn_nodes:trim()

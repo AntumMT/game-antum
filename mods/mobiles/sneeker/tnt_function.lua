@@ -164,8 +164,21 @@ local function add_drop(drops, item)
 	end
 end
 
+local function is_protected(pos, name) return core.is_protected(pos, name) end
+if core.global_exists("s_protect") then
+	is_protected = function(pos, name)
+		local s_protect_name = name
+		-- simple_protection ignores names with empty strings
+		if s_protect_name == "" then
+			s_protect_name = " "
+		end
+
+		return core.is_protected(pos, name) or not s_protect.can_access(pos, s_protect_name)
+	end
+end
+
 local function destroy(drops, pos, cid)
-	if core.is_protected(pos, "") then
+	if is_protected(pos, "") then
 		return
 	end
 	local def = cid_data[cid]
@@ -288,6 +301,8 @@ local function explode(pos, radius)
 end
 
 function sneeker.boom(pos, large)
+	if not pos then return end
+
 	local radius = radius
 	if large then
 		radius = large_radius
@@ -299,4 +314,5 @@ function sneeker.boom(pos, large)
 	entity_physics(pos, radius)
 	eject_drops(drops, pos, radius)
 	add_effects(pos, radius)
+	core.remove_node(pos)
 end

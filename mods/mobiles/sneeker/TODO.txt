@@ -1,0 +1,5 @@
+
+TODO:
+- add version using mobs_redo API
+- add version using cmer API
+- add griefing option

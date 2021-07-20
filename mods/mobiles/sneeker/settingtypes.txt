@@ -50,3 +50,6 @@ sneeker.spawn_maxheight (Sneeker max spawn height) int 31000
 
 # Limits the number of entities that can spawn per mapblock (16x16x16).
 sneeker.spawn_mapblock_limit (Sneeker spawn limit) int 1
+
+# Comma-separated list of nodes on which sneeker can spawn.
+sneeker.spawn_nodes (Sneeker spawn nodes) string default:dirt_with_dry_grass,default:dry_dirt,default:dry_dirt_with_dry_grass,default:desert_sand,nether:rack

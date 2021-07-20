@@ -1,19 +1,20 @@
 
-local spawn_nodes = {
-	"default:dirt_with_dry_grass",
-	"default:dry_dirt",
-	"default:dry_dirt_with_dry_grass",
-	"default:desert_sand",
-}
-
-if core.global_exists("nether") then
-	table.insert(spawn_nodes, "nether:rack")
+local spawn_nodes = {}
+if sneeker.spawn_nodes ~= "" then
+	if not sneeker.spawn_nodes:find(",") then
+		table.insert(spawn_nodes, sneeker.spawn_nodes)
+	else
+		for _, node in ipairs(sneeker.spawn_nodes:split(",")) do
+			local node = node:trim()
+			if node ~= "" then
+				table.insert(spawn_nodes, node)
+			end
+		end
+	end
 end
 
-for _, node_name in ipairs(spawn_nodes) do
-	if not core.registered_nodes[node_name] then
-		sneeker.log("warning", "Invalid node for spawn: " .. node_name)
-	end
+if #spawn_nodes == 0 then
+	sneeker.log("warning", "no spawning nodes set, cannot spawn")
 end
 
 
