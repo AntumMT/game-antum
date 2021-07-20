@@ -63,7 +63,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * lighting/
   * [glow][] ([GPL][lic.gpl2.0]) -- version: [4c015a0 Git][ver.glow] *2019-02-05*
   * [ilights][] ([LGPL][lic.lgpl3.0]) -- version: [2021-02-25-01][ver.ilights] ([patched][patch.ilights])
-  * [wielded_light][] ([GPL][lic.gpl3.0]) -- version: 2021-07-15
+  * [wielded_light][] ([GPL][lic.gpl3.0]) -- version: [d1f310c Git][ver.wielded_light] *2021-07-16*
 * materials/
   * [amber][] ([LGPL][lic.lgpl2.1]) -- version: [56627fa Git][ver.amber] *2017-10-29* ([patched][patch.amber])
   * [basic_materials][] ([LGPL][lic.lgpl3.0]) -- version: [2021-01-30][ver.basic_materials]
@@ -678,6 +678,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.wdata]: https://github.com/AntumMT/mod-wdata/releases/tag/v1.1
 [ver.whinny]: https://github.com/AntumMT/mod-whinny/tree/32f2d9f
 [ver.whitelist]: https://github.com/AntumMT/mod-whitelist/releases/tag/v1.1
+[ver.wielded_light]: https://github.com/minetest-mods/wielded_light/tree/d1f310c
 [ver.windmill]: https://github.com/Sokomine/windmill/tree/47b029d
 [ver.workbench]: https://github.com/AntumMT/mod-workbench/releases/tag/v1.0
 
