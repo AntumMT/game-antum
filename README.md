@@ -127,7 +127,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [more_chests][] ([GPL][lic.gpl2.0]) -- version: [6be8145 Git][ver.more_chests] *2021-04-05*
 * tools/
   * [compassgps][] ([WTFPL][lic.wtfpl] / [CC0][lic.cc0] / [CC BY-SA][lic.ccbysa]) -- version: [567b95f Git][ver.compassgps] *2018-09-24*
-  * [equip_exam][] ([MIT][lic.equip_exam]) - version: [1.5][ver.equip_exam] *2021-07-04*
+  * [equip_exam][] ([MIT][lic.equip_exam]) - version: [1.6][ver.equip_exam] *2021-07-19*
   * [tools_obsidian][] ([LGPL / CC BY-SA][lic.tools_obsidian]) -- version: [1.0][ver.tools_obsidian] *2021-01-15*
   * [workbench][] ([BSD][lic.workbench]) -- version: [1.0][ver.workbench] *2021-06-10*
 * transport/
@@ -595,7 +595,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.drawers]: https://github.com/minetest-mods/drawers/releases/tag/v0.6.2
 [ver.dungeon_master]: https://github.com/AntumMT/mod-mob_dungeon_master/tree/00c890f
 [ver.enchanting]: https://github.com/AntumMT/mod-enchanting/tree/dee7dde
-[ver.equip_exam]: https://github.com/AntumMT/mod-equip_exam/releases/tag/v1.5
+[ver.equip_exam]: https://github.com/AntumMT/mod-equip_exam/releases/tag/v1.6
 [ver.equip_wear]: https://github.com/AntumMT/mod-equip_wear/releases/tag/v0.1
 [ver.ethereal]: https://notabug.org/TenPlus1/ethereal/src/90cdf94ea6c54cd5e3fcc7f77d3b6121f963c379
 [ver.farming]: https://notabug.org/TenPlus1/farming/commit/dedc33cc46ec65782a5b8ab573d1fb6bb6915b63

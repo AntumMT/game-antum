@@ -32,7 +32,6 @@ repair disabled: @1=
 anvil repair disabled: @1=
 uses: @1=
 replace empty with: @1=
-light radius: @1=
 
 # node
 Node:=
@@ -59,7 +58,6 @@ climable: @1=
 floodable: @1=
 liquid type: @1=
 drawtype: @1=
-light level: @1=
 
 # tool & node
 mine level: @1=
@@ -67,6 +65,7 @@ chop level: @1=
 dig level: @1=
 snap level: @1=
 explosive level: @1=
+light level: @1=
 
 # weapon
 Weapon:=

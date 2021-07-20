@@ -2,47 +2,17 @@
 local S = core.get_translator(equip_exam.name)
 
 
--- START: wlight & wielded_light support
-
-local light_items = {}
-
-if core.global_exists("wlight") then
-	local wlight_register_item_old = wlight.register_item
-	local wlight_register_armor_old = wlight.register_armor
-
-	wlight.register_item = function(iname, radius)
-		light_items[iname] = {radius=radius}
-
-		return wlight_register_item_old(iname, radius)
-	end
-
-	wlight.register_armor = function(iname, radius, litem)
-		light_items[iname] = {radius=radius}
-
-		return wlight_register_armor_old(iname, radius, litem)
-	end
-
-	-- re-register torch & megatorch
-	if core.registered_items["default:torch"] then
-		wlight.register_item("default:torch")
-	end
-
-	if core.registered_items["wlight:megatorch"] then
-		wlight.register_item("wlight:megatorch", 10)
-	end
+-- wielded_light support
+local function get_light_def(id) end
+if core.global_exists("wielded_light") and wielded_light.get_light_def then
+	get_light_def = wielded_light.get_light_def
 end
 
-if core.global_exists("wielded_light") then
-	local wielded_light_register_old = wielded_light.register_item_light
-	wielded_light.register_item_light = function(iname, light_level)
-		light_items[iname] = {radius=light_level}
-
-		return wielded_light_register_old(iname, light_level)
-	end
+-- 3d_armor_light support
+local function is_lighted_armor(id) end
+if core.global_exists("armor_light") and armor_light.is_lighted then
+	is_lighted_armor = armor_light.is_lighted
 end
-
--- END: wlight & wielded_light support
-
 
 -- workbench support
 local workbench_repairable
@@ -50,9 +20,9 @@ if core.global_exists("workbench") and workbench.repairable then
 	workbench_repairable = function(iname)
 		return workbench:repairable(iname) or false
 	end
-elseif core.global_exists("xdecor") and xdecor.workbench_repairable then
+elseif core.global_exists("xdecor") and xdecor.is_repairable then
 	workbench_repairable = function(iname)
-		return xdecor:workbench_repairable(iname) or false
+		return xdecor:is_repairable(iname) or false
 	end
 end
 
@@ -77,7 +47,6 @@ local tool_types = {
 	["not_repaired_by_anvil"] = "anvil repair disabled",
 	["_airtanks_uses"] = "uses",
 	["_airtanks_empty"] = "replace empty with",
-	["radius"] = "light radius",
 }
 for k, v in pairs(tool_node_types) do
 	tool_types[k] = v
@@ -378,16 +347,21 @@ local function get_item_specs(item, technical)
 		table.insert(specs_node, format_spec(node_types, "light_source", item.light_source, technical))
 	end
 
-	if light_items[id] then
-		item_types.tool = true
-		if not technical then
-			table.insert(specs_tool, S("emits light: @1", S("yes")))
+	local light_level = get_light_def(id)
+	if light_level and light_level > 0 then
+		local spec_list, type_list = specs_tool, tool_types
+		if is_lighted_armor(id) then
+			item_types.armor = true
+			spec_list, type_list = specs_armor, armor_types
+		else
+			item_types.tool = true
 		end
 
-		local radius = light_items[id].radius
-		if radius then
-			table.insert(specs_tool, format_spec(tool_types, "light_radius", radius, technical))
+		if not technical then
+			table.insert(spec_list, S("emits light: @1", S("yes")))
 		end
+
+		table.insert(spec_list, format_spec(type_list, "light level", light_level, technical))
 	end
 
 	local colorable = groups.ud_param2_colorable ~= nil

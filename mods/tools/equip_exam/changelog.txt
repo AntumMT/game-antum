@@ -1,4 +1,13 @@
 
+v1.6
+----
+- added nil check when updating formspec
+- updated for API:
+	- xdecor (Git commit 0dbf92e)
+	- wielded_light v2021-07-15
+- removed abandoned wlight support
+- added 3d_armor_light support
+
 v1.5
 ----
 - parses meta information

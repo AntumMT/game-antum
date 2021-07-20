@@ -7,9 +7,14 @@ local common_name = S("Equipment Examiner")
 local function update_formspec(pos)
 		local meta = core.get_meta(pos)
 		local inv = meta:get_inventory()
-		local contents = inv:get_list("input")[1]
 
-		meta:set_string("formspec", equip_exam:get_formspec(contents,
+		local inv_list = inv:get_list("input")
+		if not inv_list then
+			inv:set_size("input", 1)
+			inv_list = inv:get_list("input")
+		end
+
+		meta:set_string("formspec", equip_exam:get_formspec(inv_list[1],
 			inv:is_empty("input"), meta))
 end
 
@@ -33,8 +38,6 @@ local node_def = {
 	on_construct = function(pos)
 		local meta = core.get_meta(pos)
 		meta:set_string("infotext", common_name)
-		local inv = meta:get_inventory()
-		inv:set_size("input", 1)
 		update_formspec(pos)
 	end,
 	on_rightclick = function(pos, node, player, itemstack, pointed_thing)
