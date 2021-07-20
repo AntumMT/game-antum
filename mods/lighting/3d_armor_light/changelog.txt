@@ -1,0 +1,6 @@
+
+v1.0
+----
+- initial release
+- added method to register item to emit light when equipped to armor inventory
+- added method to check if an item should emit light in armor inventory

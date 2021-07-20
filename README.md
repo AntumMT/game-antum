@@ -61,6 +61,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [mobs_redo][] ([MIT][lic.mobs_redo] / [CC BY][lic.ccby3.0] / [CC0][lic.cc0]) -- version: [db3831d Git][ver.mobs_redo] *2021-07-14*
   * [signs_lib][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2021-03-04-2][ver.signs_lib]
 * lighting/
+  * [3d_armor_light][] ([MIT][lic.3d_armor_light]) -- version: [1.0][ver.3d_armor_light] *2021-07-17*
   * [glow][] ([GPL][lic.gpl2.0]) -- version: [4c015a0 Git][ver.glow] *2019-02-05*
   * [ilights][] ([LGPL][lic.lgpl3.0]) -- version: [2021-02-25-01][ver.ilights] ([patched][patch.ilights])
   * [wielded_light][] ([GPL][lic.gpl3.0]) -- version: [d1f310c Git][ver.wielded_light] *2021-07-16*
@@ -283,6 +284,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 [3d_armor]: https://forum.minetest.net/viewtopic.php?t=4654
 [3d_armor_gloves]: https://forum.minetest.net/viewtopic.php?t=25665
+[3d_armor_light]: https://content.minetest.net/packages/AntumDeluge/3d_armor_light/
 [airtanks]: https://forum.minetest.net/viewtopic.php?t=17102
 [alternode]: https://forum.minetest.net/viewtopic.php?t=26667
 [amber]: https://forum.minetest.net/viewtopic.php?t=18186
@@ -429,6 +431,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [xtraarmor]: https://forum.minetest.net/viewtopic.php?t=16645
 
 [lic.3d_armor]: mods/modpacks/3d_armor/LICENSE.md
+[lic.3d_armor_light]: mods/lighting/3d_armor_light/LICENSE.txt
 [lic.airtanks]: mods/equipment/airtanks/LICENSE.txt
 [lic.alternode]: mods/admin/alternode/LICENSE.txt
 [lic.ambience]: mods/sound/ambience/README.md
@@ -539,6 +542,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 [ver.3d_armor]: https://github.com/minetest-mods/3d_armor/tree/ac76152
 [ver.3d_armor_gloves]: https://github.com/sirrobzeroone/3d_armor_gloves/tree/f099d76
+[ver.3d_armor_light]: https://github.com/AntumMT/mod-3d_armor_light/releases/tag/v1.0
 [ver.airtanks]: https://github.com/minetest-mods/airtanks/tree/b686694
 [ver.alternode]: https://github.com/AntumMT/mod-alternode/releases/tag/v1.3
 [ver.amber]: https://github.com/theraven262/amber/tree/56627fa
