@@ -63,7 +63,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * lighting/
   * [glow][] ([GPL][lic.gpl2.0]) -- version: [4c015a0 Git][ver.glow] *2019-02-05*
   * [ilights][] ([LGPL][lic.lgpl3.0]) -- version: [2021-02-25-01][ver.ilights] ([patched][patch.ilights])
-  * [wlight][] ([MIT][lic.wlight]) -- version: [1.0][ver.wlight] *2021-06-26*
+  * [wielded_light][] ([GPL][lic.gpl3.0]) -- version: 2021-07-15
 * materials/
   * [amber][] ([LGPL][lic.lgpl2.1]) -- version: [56627fa Git][ver.amber] *2017-10-29* ([patched][patch.amber])
   * [basic_materials][] ([LGPL][lic.lgpl3.0]) -- version: [2021-01-30][ver.basic_materials]
@@ -245,7 +245,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [vehicles](https://forum.minetest.net/viewtopic.php?t=15610)
 * [villagers](https://forum.minetest.net/viewtopic.php?t=17915)
 * [weather](https://content.minetest.net/packages/theFox/weather/)
-* [wielded_light](https://content.minetest.net/packages/bell07/wielded_light/)
 * [wildcow](https://forum.minetest.net/viewtopic.php?t=25739)
 * [witches](https://content.minetest.net/packages/FreeLikeGNU/witches/)
 * [xpro](https://forum.minetest.net/viewtopic.php?t=20499) (XP and Levels)
@@ -424,8 +423,8 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [weather]: https://forum.minetest.net/viewtopic.php?t=5245
 [whinny]: https://github.com/AntumMT/mod-whinny
 [whitelist]: https://forum.minetest.net/viewtopic.php?t=8434
+[wielded_light]: https://content.minetest.net/packages/bell07/wielded_light/
 [windmill]: https://forum.minetest.net/viewtopic.php?id=7440
-[wlight]: https://content.minetest.net/packages/AntumDeluge/wlight/
 [workbench]: https://forum.minetest.net/viewtopic.php?t=14085
 [xtraarmor]: https://forum.minetest.net/viewtopic.php?t=16645
 
@@ -512,7 +511,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.whinny]: mods/mobiles/whinny/LICENSE.txt
 [lic.whitelist]: mods/admin/whitelist/LICENSE.txt
 [lic.windmill]: mods/buildings/windmill/README.md
-[lic.wlight]: mods/lighting/wlight/LICENSE.txt
 [lic.workbench]: mods/tools/workbench/LICENSE.txt
 
 [lic.cc0]: doc/licenses/CC0.txt
@@ -681,7 +679,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.whinny]: https://github.com/AntumMT/mod-whinny/tree/32f2d9f
 [ver.whitelist]: https://github.com/AntumMT/mod-whitelist/releases/tag/v1.1
 [ver.windmill]: https://github.com/Sokomine/windmill/tree/47b029d
-[ver.wlight]: https://github.com/AntumMT/mod-wlight/releases/tag/v1.0
 [ver.workbench]: https://github.com/AntumMT/mod-workbench/releases/tag/v1.0
 
 [patch.3d_armor]: https://github.com/AntumMT/mp-3d_armor/tree/e3e9877

@@ -1709,14 +1709,6 @@ coloredwood_enable_stairsplus = true
 ####################
 
 
-# *** wlight ***
-
-## Enables wlight:megatorch item.
-#    type:    bool
-#    default: true
-#wlight.enable_megatorch = true
-
-
 # *** wardrobe ***
 
 ## Number of skins shown per page.

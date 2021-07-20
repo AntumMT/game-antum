@@ -1,3 +1,0 @@
-
-# Enables wlight:megatorch item.
-wlight.enable_megatorch (Enable megatorch) bool true
