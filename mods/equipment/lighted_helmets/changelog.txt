@@ -1,0 +1,11 @@
+
+v1.0
+----
+- initial release
+- helmets equipped to armor inventory will emit light
+- added light to helmets crafted from 3d_armor helmets
+- added light to helmets crafted from technic_armor helmets
+- added light to helmets crafted from xtraarmor helmets
+- added light to helmets crafted from amber helmets
+- added light to helmets crafted from rainbow_ore helmets
+- added setting to exclude helmets

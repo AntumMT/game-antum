@@ -1,0 +1,5 @@
+
+# List of mods or helmets to exclude.
+#
+# Example: lighted_helmets.exclude = xtraarmor,amber:helmet
+lighted_helmets.exclude (Exclude helmets) string

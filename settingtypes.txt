@@ -1943,6 +1943,14 @@ hudbars_vmargin (Vertical distance between HUD bars) int 24 0
 hudbars_tick (Default HUD bars update interval) float 0.1 0.0 4.0
 
 
+[*lighted_helmets]
+
+# List of mods or helmets to exclude.
+#
+# Example: lighted_helmets.exclude = xtraarmor,amber:helmet
+lighted_helmets.exclude (Exclude helmets) string
+
+
 [*listitems]
 
 # Displays items in a bulleted list.
