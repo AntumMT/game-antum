@@ -30,11 +30,18 @@ local kbed_cbox = {
 	}
 }
 
+local beds_compat = {
+	on_rightclick = function(pos, node, clicker, itemstack, pointed_thing)
+		return itemstack
+	end,
+}
 
-local bed_on_rightclick = function(pos, node, clicker, itemstack, pointed_thing) return itemstack end
 local bed_node = minetest.registered_nodes["beds:bed"]
-if bed_node and bed_node.on_rightclick then
-	bed_on_rightclick = bed_node.on_rightclick
+if bed_node then
+	if bed_node.on_rightclick then
+		beds_compat.on_rightclick = bed_node.on_rightclick
+	end
+	beds_compat.transforms = bed_node.transforms
 end
 
 homedecor.register("bed_regular", {
@@ -72,10 +79,11 @@ homedecor.register("bed_regular", {
 			homedecor.bed_expansion(pos, clicker, itemstack, pointed_thing, true)
 			return itemstack
 		else
-			bed_on_rightclick(pos, node, clicker)
+			beds_compat.on_rightclick(pos, node, clicker, itemstack, pointed_thing)
 			return itemstack
 		end
-	end
+	end,
+	transforms = beds_compat.transforms,
 })
 
 homedecor.register("bed_extended", {
@@ -101,10 +109,11 @@ homedecor.register("bed_extended", {
 	end,
 	on_dig = unifieddyes.on_dig,
 	on_rightclick = function(pos, node, clicker, itemstack, pointed_thing)
-		bed_on_rightclick(pos, node, clicker)
+		beds_compat.on_rightclick(pos, node, clicker, itemstack, pointed_thing)
 		return itemstack
 	end,
-	drop = "homedecor:bed_regular"
+	drop = "homedecor:bed_regular",
+	transforms = beds_compat.transforms,
 })
 
 homedecor.register("bed_kingsize", {
@@ -138,9 +147,10 @@ homedecor.register("bed_kingsize", {
 	end,
 	on_dig = unifieddyes.on_dig,
 	on_rightclick = function(pos, node, clicker, itemstack, pointed_thing)
-		bed_on_rightclick(pos, node, clicker)
+		beds_compat.on_rightclick(pos, node, clicker, itemstack, pointed_thing)
 		return itemstack
 	end,
+	transforms = beds_compat.transforms,
 })
 
 for w, d in pairs({ ["mahogany"] = S("mahogany"), ["oak"] = S("oak") }) do
