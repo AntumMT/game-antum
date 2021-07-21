@@ -78,7 +78,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [rainbow_ore][] ([LGPL][lic.rainbow_ore]) -- version: [6e77693 Git][ver.rainbow_ore] *2015-11-02* ([patched][patch.rainbow_ore])
   * [unifieddyes][] ([GPL][lic.gpl2.0]) -- version: [2021-03-26-1][ver.unifieddyes] ([patched][patch.unifieddyes])
 * misc/
-  * [ambience][] ([MIT][lic.ambience] / [CC BY / CC BY-SA / CC BY-NC-SA / CC0][lic.ambience_sounds]) -- version: [e317f72 Git][ver.ambience] *2021-04-14*
+  * [ambience][] ([MIT][lic.ambience] / [CC BY / CC BY-SA / CC BY-NC-SA / CC0][lic.ambience_sounds]) -- version: [2021-07-13][ver.ambience]
   * [asm_spawneggs][] ([MIT][lic.asm_spawneggs]) -- version: [5a72143 Git][ver.asm_spawneggs] *2021-05-24*
   * [awards][] ([MIT][lic.awards]) -- version: [3.4.0][ver.awards] *2021-01-10*
   * [biofuel][] ([MIT](lic.biofuel)) -- version: [ca480ce Git][ver.biofuel] *2020-07-20*
@@ -289,7 +289,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [airtanks]: https://forum.minetest.net/viewtopic.php?t=17102
 [alternode]: https://forum.minetest.net/viewtopic.php?t=26667
 [amber]: https://forum.minetest.net/viewtopic.php?t=18186
-[ambience]: https://forum.minetest.net/viewtopic.php?t=2807
+[ambience]: https://content.minetest.net/packages/TenPlus1/ambience/
 [animals_aggressive]: https://github.com/AntumMT/mp-animals_aggressive
 [animals_harmless]: https://github.com/AntumMT/mp-animals_harmless
 [antum]: https://github.com/AntumMT/mp-antum
@@ -549,7 +549,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.airtanks]: https://github.com/minetest-mods/airtanks/tree/b686694
 [ver.alternode]: https://github.com/AntumMT/mod-alternode/releases/tag/v1.3
 [ver.amber]: https://github.com/theraven262/amber/tree/56627fa
-[ver.ambience]: https://notabug.org/TenPlus1/ambience/src/e317f727d00d5c034226c0e7217ed0559c208038
+[ver.ambience]: https://notabug.org/TenPlus1/ambience/src/e19fca84464352f3b70600baf3529976b7d06443
 [ver.animals_aggressive]: https://github.com/AntumMT/mp-animals_aggressive/tree/4eede4d
 [ver.animals_harmless]: https://github.com/AntumMT/mp-animals_harmless/tree/e9b02a8
 [ver.antum]: https://github.com/AntumMT/mp-antum/tree/69b39a4

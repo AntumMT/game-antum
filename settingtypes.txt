@@ -1571,6 +1571,14 @@ airtanks_enable_triple (Enable triple tanks) bool true
 airtanks_compressor_needs_fuel (Compressor requires fuel) bool true
 
 
+[*ambience]
+# If enabled will play a random music file from ./minetest/sounds at midnight
+ambience_music (Ambience music) bool true
+
+# If enabled then ambience will take over sounds when moving in water
+ambience_water_move (Ambience water movement) bool true
+
+
 [*awards]
 
 # Add default achievements from the awards mod.
