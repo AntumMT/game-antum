@@ -165,7 +165,7 @@ local function add_drop(drops, item)
 end
 
 local function is_protected(pos, name) return core.is_protected(pos, name) end
-if core.global_exists("s_protect") then
+if core.global_exists("simple_protection") and simple_protection.can_access then
 	is_protected = function(pos, name)
 		local s_protect_name = name
 		-- simple_protection ignores names with empty strings
@@ -173,7 +173,7 @@ if core.global_exists("s_protect") then
 			s_protect_name = " "
 		end
 
-		return core.is_protected(pos, name) or not s_protect.can_access(pos, s_protect_name)
+		return core.is_protected(pos, name) or not simple_protection.can_access(pos, s_protect_name)
 	end
 end
 
