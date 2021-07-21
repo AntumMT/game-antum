@@ -1,21 +1,24 @@
 
-if core.global_exists("wlight") then
+local lighted_helmets = core.get_modpath("lighted_helmets") ~= nil
+
+if core.global_exists("wielded_light") then
 	local mese_pick = core.registered_items["default:pick_mese"]
 	if mese_pick then
 		mese_pick = table.copy(mese_pick)
 
 		mese_pick.description = mese_pick.description .. " with light"
-		mese_pick.inventory_image = "wlight_inv_underlay.png^" .. mese_pick.inventory_image
+		if lighted_helmets then
+			mese_pick.inventory_image = "lighted_helmets_inv_underlay.png^" .. mese_pick.inventory_image
+		end
 		mese_pick.wield_image = "default_tool_mesepick.png"
 
 		local light_name = "wlight:pick_mese"
 		core.register_craftitem(":" .. light_name, mese_pick)
-		wlight.register_item(light_name)
+		wielded_light.register_item_light(light_name, 10)
 
 		-- backward compat
 		local legacy_name = "walking_light:pick_mese"
 		core.register_alias(legacy_name, light_name)
-		wlight.register_item(legacy_name)
 
 		core.register_craft({
 			output = light_name,
@@ -26,7 +29,8 @@ if core.global_exists("wlight") then
 		})
 	end
 
-	if core.global_exists("armor") then
+	-- update helmets with lighted_helmets
+	if lighted_helmets then
 		local helmets = {
 			["3d_armor"] = {
 				"bronze",
@@ -71,72 +75,33 @@ if core.global_exists("wlight") then
 			},
 			["amber"] = {
 				"amber",
-				{"ancient", 10},
+				"ancient",
 			},
 			["rainbow_ore"] = {
-				{"rainbow", 10},
+				"rainbow",
 			},
 		}
 
 		for modname, materials in pairs(helmets) do
 			for _, material in ipairs(materials) do
-				local radius
-				if type(material) == "table" then
-					radius = material[2]
-					material = material[1]
-				end
-
-				local orig_name
-				if modname == "amber" and material == "amber" then
-					orig_name = modname .. ":helmet"
-				elseif modname == "rainbow_ore" then
-					orig_name = modname .. ":" .. "rainbow_ore_helmet"
-				else
-					orig_name = modname .. ":helmet_" .. material
-				end
-
-				local old_def = core.registered_items[orig_name]
-				if old_def then
-					local def = table.copy(old_def)
-
-					def.description = def.description .. " with light"
-					def.inventory_image = "wlight_inv_underlay.png^" .. def.inventory_image
-					if not def.wield_image then
-						def.wield_image = old_def.inventory_image
-					end
-					if not def.preview then
-						if modname == "rainbow_ore" then
-							def.preview = "rainbow_ore_rainbow_ore_helmet_preview.png"
-						else
-							def.preview = modname .. "_helmet_" .. material .. "_preview.png"
-						end
-					end
-
-					local light_name = "wlight:helmet_"
+					local old_name = "wlight:helmet_"
 					if modname == "amber" and material == "ancient" then
-						light_name = light_name .. "amber_ancient"
+						old_name = old_name .. "amber_ancient"
 					else
-						light_name = light_name .. material
+						old_name = old_name .. material
 					end
 
-					armor:register_armor(":" .. light_name, def)
-					wlight.register_armor(light_name, radius)
+					local new_name = "lighted_helmets:"
+					if modname == "amber" and material == "ancient" then
+						new_name = new_name .. "amber_ancient"
+					else
+						new_name = new_name .. material
+					end
 
 					-- backward compat
-					local legacy_name = light_name:gsub("^wlight%:", "walking_light:")
-					core.register_alias(legacy_name, light_name)
-					wlight.register_armor(legacy_name, radius)
-
-					core.register_craft({
-						output = light_name,
-						recipe = {
-							{"default:torch"},
-							{orig_name},
-						},
-					})
-				else
-					antum.log("warning", "\"" .. orig_name .. "\" not registered, not adding light item")
-				end
+					core.register_alias(old_name, new_name)
+					local legacy_name = old_name:gsub("^wlight%:", "walking_light:")
+					core.register_alias(legacy_name, new_name)
 			end
 		end
 	end
