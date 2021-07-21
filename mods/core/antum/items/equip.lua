@@ -24,6 +24,7 @@ if core.global_exists("wielded_light") then
 			output = light_name,
 			recipe = {
 				{"default:torch"},
+				{"default:mese_crystal"},
 				{"default:pick_mese"},
 			}
 		})
