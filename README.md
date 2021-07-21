@@ -123,7 +123,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [wardrobe][] ([MIT][lic.wardrobe]) -- version: [0500a78 Git][ver.wardrobe] *2021-06-08*
 * protection/
   * [pvp_areas][] ([LGPL][lic.lgpl2.1]) -- version: [6e4d66d Git][ver.pvp_areas] *2018-07-26*
-  * [simple_protection][] ([CC0][lic.cc0]) -- version: [3630fe9 Git][ver.simple_protection] *2021-04-07* ([patched][patch.simple_protection])
+  * [simple_protection][] ([CC0][lic.cc0]) -- version: [f1f85aa Git][ver.simple_protection] *2021-07-18* ([patched][patch.simple_protection])
 * storage/
   * [drawers][] ([MIT / CC0 / CC BY][lic.drawers]) -- version: [0.6.2][ver.drawers] *2021-03-27*
   * [more_chests][] ([GPL][lic.gpl2.0]) -- version: [6be8145 Git][ver.more_chests] *2021-04-05*
@@ -666,7 +666,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.sfinv]: https://github.com/rubenwardy/sfinv/tree/556f70e
 [ver.sfinv_buttons]: http://repo.or.cz/minetest_sfinv_buttons.git/tree/ebb1f7c
 [ver.signs_lib]: https://gitlab.com/VanessaE/signs_lib/tree/2021-03-04-2
-[ver.simple_protection]: https://github.com/SmallJoker/simple_protection/tree/3630fe9
+[ver.simple_protection]: https://github.com/SmallJoker/simple_protection/tree/f1f85aa
 [ver.slingshot]: https://github.com/AntumMT/mod-slingshot/releases/tag/v0.3
 [ver.sneeker]: https://github.com/AntumMT/mod-sneeker/releases/tag/v1.1
 [ver.snowdrift]: https://github.com/paramat/snowdrift/tree/3342939
