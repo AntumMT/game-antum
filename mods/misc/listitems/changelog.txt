@@ -1,7 +1,9 @@
 
-v0.8
+v1.0
 ----
 - fixed "searching" message to display before search begins
+- duplicate ore names are filtered out
+- ore IDs are shown as description
 
 
 v0.7

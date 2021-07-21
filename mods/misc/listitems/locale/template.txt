@@ -26,5 +26,8 @@ Searching in names and descriptions ...=
 ## Number of items listed
 Objects listed:=
 
+## Ore IDs
+ID: @1=
+
 ## Bullet (change this if there are problems displaying the raw character "•")
 •=
