@@ -699,7 +699,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.amber]: https://github.com/AntumMT/mod-amber/tree/39b852a
 [patch.atm]: https://github.com/AntumMT/mod-atm/tree/2ab0e78
 [patch.away]: https://github.com/AntumMT/mod-away/tree/3b0bf9e
-[patch.beds]: https://github.com/AntumMT/mod-beds/commit/fec238a
+[patch.beds]: https://github.com/AntumMT/mod-beds/commit/56b1cc5
 [patch.boats2]: https://github.com/AntumMT/mod-boats2/tree/9b2bcb7
 [patch.bridges]: https://github.com/AntumMT/mod-bridges/tree/ba8f71a
 [patch.christmas]: https://github.com/AntumMT/mod-christmas/tree/50bda80
