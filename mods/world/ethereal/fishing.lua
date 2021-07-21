@@ -107,6 +107,8 @@ minetest.register_entity("ethereal:prebob_entity", {
 					bait = 20
 				end
 
+				self.lastpos.y = math.floor(self.lastpos.y)
+
 				local obj = minetest.add_entity(self.lastpos, "ethereal:bob_entity")
 				local ent = obj:get_luaentity()
 
@@ -182,12 +184,12 @@ minetest.register_entity("ethereal:bob_entity", {
 		local bob_pos = self.object:get_pos()
 		local pla_pos = player:get_pos()
 
-		if (pla_pos.y - bob_pos.y) > 25
-		or (pla_pos.y - bob_pos.y) < -25
-		or (pla_pos.x - bob_pos.x) > 25
-		or (pla_pos.x - bob_pos.x) < -25
-		or (pla_pos.z - bob_pos.z) > 25
-		or (pla_pos.z - bob_pos.z) < -25 then
+		if (pla_pos.y - bob_pos.y) > 15
+		or (pla_pos.y - bob_pos.y) < -15
+		or (pla_pos.x - bob_pos.x) > 15
+		or (pla_pos.x - bob_pos.x) < -15
+		or (pla_pos.z - bob_pos.z) > 15
+		or (pla_pos.z - bob_pos.z) < -15 then
 
 --print("-- out of range")
 
@@ -244,7 +246,7 @@ minetest.register_entity("ethereal:bob_entity", {
 					size = random(),
 					collisiondetection = false,
 					vertical = false,
-					texture = "bubble.png",
+					texture = "bubble.png"
 				})
 
 				-- handle timer
@@ -454,7 +456,7 @@ minetest.register_tool("ethereal:fishing_rod", {
 	wield_scale = {x = 1.5, y = 1.5, z = 1},
 	stack_max = 1,
 	on_use = use_rod,
-	sound = {breaks = "default_tool_breaks"},
+	sound = {breaks = "default_tool_breaks"}
 })
 
 minetest.register_craft({
@@ -462,14 +464,14 @@ minetest.register_craft({
 	recipe = {
 		{"","","group:stick"},
 		{"","group:stick","farming:string"},
-		{"group:stick","","farming:string"},
+		{"group:stick","","farming:string"}
 	}
 })
 
 minetest.register_craft({
 	type = "fuel",
 	recipe = "ethereal:fishing_rod",
-	burntime = 15,
+	burntime = 15
 })
 
 
@@ -517,14 +519,14 @@ minetest.register_craftitem(":ethereal:fish_cooked", {
 	inventory_image = "ethereal_fish_cooked.png",
 	wield_image = "ethereal_fish_cooked.png",
 	groups = {food_fish = 1, flammable = 3},
-	on_use = minetest.item_eat(5),
+	on_use = minetest.item_eat(5)
 })
 
 minetest.register_craft({
 	type = "cooking",
 	output = "ethereal:fish_cooked",
 	recipe = "group:ethereal_fish",
-	cooktime = 8,
+	cooktime = 8
 })
 
 -- Sashimi (Thanks to Natalia Grosner for letting me use the sashimi image)

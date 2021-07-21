@@ -22,6 +22,8 @@ minetest.register_node("ethereal:sakura_wood", {
 	is_ground_content = false,
 	groups = {wood = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
 	sounds = default.node_sound_wood_defaults(),
+	paramtype2 = "facedir",
+	on_place = minetest.rotate_node,
 })
 
 minetest.register_craft({
@@ -50,6 +52,8 @@ minetest.register_node("ethereal:willow_wood", {
 	is_ground_content = false,
 	groups = {wood = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
 	sounds = default.node_sound_wood_defaults(),
+	paramtype2 = "facedir",
+	on_place = minetest.rotate_node,
 })
 
 minetest.register_craft({
@@ -77,7 +81,9 @@ minetest.register_node("ethereal:redwood_wood", {
 	tiles = {"ethereal_redwood_wood.png"},
 	is_ground_content = false,
 	groups = {wood = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
-	sounds = default.node_sound_wood_defaults()
+	sounds = default.node_sound_wood_defaults(),
+	paramtype2 = "facedir",
+	on_place = minetest.rotate_node,
 })
 
 minetest.register_craft({
@@ -105,7 +111,9 @@ minetest.register_node("ethereal:frost_wood", {
 	tiles = {"ethereal_frost_wood.png"},
 	is_ground_content = false,
 	groups = {wood = 1, choppy = 2, oddly_breakable_by_hand = 1},
-	sounds = default.node_sound_wood_defaults()
+	sounds = default.node_sound_wood_defaults(),
+	paramtype2 = "facedir",
+	on_place = minetest.rotate_node,
 })
 
 minetest.register_craft({
@@ -133,7 +141,9 @@ minetest.register_node("ethereal:yellow_wood", {
 	tiles = {"ethereal_yellow_wood.png"},
 	is_ground_content = false,
 	groups = {wood = 1, choppy = 2, oddly_breakable_by_hand = 1},
-	sounds = default.node_sound_wood_defaults()
+	sounds = default.node_sound_wood_defaults(),
+	paramtype2 = "facedir",
+	on_place = minetest.rotate_node,
 })
 
 minetest.register_craft({
@@ -161,7 +171,9 @@ minetest.register_node("ethereal:palm_wood", {
 	tiles = {"moretrees_palm_wood.png"},
 	is_ground_content = false,
 	groups = {wood = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
-	sounds = default.node_sound_wood_defaults()
+	sounds = default.node_sound_wood_defaults(),
+	paramtype2 = "facedir",
+	on_place = minetest.rotate_node,
 })
 
 minetest.register_craft({
@@ -189,7 +201,9 @@ minetest.register_node("ethereal:banana_wood", {
 	tiles = {"ethereal_banana_wood.png"},
 	is_ground_content = false,
 	groups = {wood = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
-	sounds = default.node_sound_wood_defaults()
+	sounds = default.node_sound_wood_defaults(),
+	paramtype2 = "facedir",
+	on_place = minetest.rotate_node,
 })
 
 minetest.register_craft({
@@ -254,7 +268,9 @@ minetest.register_node("ethereal:birch_wood", {
 	tiles = {"moretrees_birch_wood.png"},
 	is_ground_content = false,
 	groups = {wood = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
-	sounds = default.node_sound_wood_defaults()
+	sounds = default.node_sound_wood_defaults(),
+	paramtype2 = "facedir",
+	on_place = minetest.rotate_node,
 })
 
 minetest.register_craft({
@@ -309,7 +325,9 @@ minetest.register_node("ethereal:olive_wood", {
 	tiles = {"ethereal_olive_wood.png"},
 	is_ground_content = false,
 	groups = {wood = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
-	sounds = default.node_sound_wood_defaults()
+	sounds = default.node_sound_wood_defaults(),
+	paramtype2 = "facedir",
+	on_place = minetest.rotate_node,
 })
 
 minetest.register_craft({

@@ -212,7 +212,7 @@ for _, ab in pairs(minetest.registered_abms) do
 	or node1 == "group:flora" then
 
 		--ab.interval = 1
-		--ab.chance = 1
+		ab.chance = 96 -- back to original chance from 300
 		ab.nodenames = {"group:flora"}
 		ab.neighbors = {"group:soil"}
 		ab.action = flower_spread
@@ -230,7 +230,7 @@ for _, ab in pairs(minetest.registered_abms) do
 	elseif label == "Mushroom spread" then
 
 		--ab.interval = 1
-		--ab.chance = 1
+		ab.chance = 50 -- back to original chance from 150
 		ab.nodenames = {"group:mushroom"}
 	end
 end

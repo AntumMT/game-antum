@@ -150,7 +150,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * world/
   * [bright_night][] ([Unlicense][lic.unlicense]) -- version: [69b750a Git][ver.bright_night] *2018-06-03*
   * [desert_life][] ([CC BY-SA][lic.ccbysa4.0]) -- version: [188f984 Git][ver.desert_life] *2020-01-24*
-  * [ethereal][] ([MIT][lic.ethereal]) -- version: [90cdf94 Git][ver.ethereal] *2021-04-29* ([patched][patch.ethereal])
+  * [ethereal][] ([MIT][lic.ethereal]) -- version: [2021-07-18][ver.ethereal] ([patched][patch.ethereal])
   * [nether][] ([ISC / CC BY / CC BY-SA / CC0][lic.nether]) -- version: [3][ver.nether] *2021-01-22* ([patched][patch.nether])
   * [snowdrift][] ([MIT / CC BY / CC BY-SA][lic.snowdrift]) -- version: [3342939 Git][ver.snowdrift] *2020-04-24* ([patched][patch.snowdrift])
 
@@ -602,7 +602,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.enchanting]: https://github.com/AntumMT/mod-enchanting/tree/dee7dde
 [ver.equip_exam]: https://github.com/AntumMT/mod-equip_exam/releases/tag/v1.6
 [ver.equip_wear]: https://github.com/AntumMT/mod-equip_wear/releases/tag/v0.1
-[ver.ethereal]: https://notabug.org/TenPlus1/ethereal/src/90cdf94ea6c54cd5e3fcc7f77d3b6121f963c379
+[ver.ethereal]: https://notabug.org/TenPlus1/ethereal/src/0373b40d70fd05137ef31e774488b3f86c85e758
 [ver.farming]: https://notabug.org/TenPlus1/farming/src/328e8b3223a7568ab3f07b16c341ee547694d225
 [ver.folks]: https://gitlab.com/SonoMichele/folks/tags/v0.2.0
 [ver.fort_spikes]: https://github.com/xeranas/fort_spikes/tree/3b98b46
@@ -701,7 +701,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.craftguide]: https://github.com/AntumMT/mod-craftguide/tree/aef18f2
 [patch.crops]: https://github.com/AntumMT/mod-crops/tree/a1cce06
 [patch.drawers]: https://github.com/AntumMT/mod-drawers/tree/a77f809
-[patch.ethereal]: https://github.com/AntumMT/mod-ethereal/tree/c404045
+[patch.ethereal]: https://github.com/AntumMT/mod-ethereal/tree/0d418d4
 [patch.gems_encrustable]: https://github.com/AntumMT/mod-gems_encrustable/tree/276fb25
 [patch.gems_tools]: https://github.com/AntumMT/mod-gems_tools/tree/25bca18
 [patch.helicopter]: https://github.com/AntumMT/mod-helicopter/tree/79d2d3e

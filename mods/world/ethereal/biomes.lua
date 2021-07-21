@@ -268,7 +268,7 @@ if ethereal.glacier == 1 then
 		node_river_water = "default:ice",
 		node_riverbed = "default:gravel",
 		depth_riverbed = 2,
-		node_dungeon = "default:ice",
+		node_dungeon = "ethereal:icebrick",--"default:ice",
 		node_dungeon_stair = "stairs:stair_ice",
 		y_min = -8,
 		y_max = 31000,

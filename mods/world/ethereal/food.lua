@@ -166,6 +166,14 @@ minetest.register_craftitem("ethereal:coconut_slice", {
 	on_use = minetest.item_eat(1)
 })
 
+minetest.register_craft({
+	output = "ethereal:coconut",
+	recipe = {
+		{"ethereal:coconut_slice", "ethereal:coconut_slice"},
+		{"ethereal:coconut_slice", "ethereal:coconut_slice"}
+	}
+})
+
 -- Golden Apple (Found on Healing Tree, heals all 10 hearts)
 minetest.register_node("ethereal:golden_apple", {
 	description = S("Golden Apple"),

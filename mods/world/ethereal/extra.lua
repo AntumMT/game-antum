@@ -168,6 +168,7 @@ minetest.register_node("ethereal:candle", {
 	}
 })
 
+-- candle recipe
 minetest.register_craft({
 	output = "ethereal:candle 2",
 	recipe = {
@@ -176,6 +177,70 @@ minetest.register_craft({
 		{"ethereal:palm_wax"}
 	}
 })
+
+local function add_candle(col, dcol)
+
+local rcol = ""
+
+if col ~= "" then
+	rcol = col
+	col = "_" .. col
+end
+
+minetest.register_node("ethereal:candle" .. col, {
+	description = S(dcol .. "Candle"),
+	drawtype = "plantlike",
+	inventory_image = "ethereal_candle" .. col .. "_static.png",
+	wield_image = "ethereal_candle" .. col .. "_static.png",
+	tiles = {
+		{
+			name = "ethereal_candle" .. col .. ".png",
+			animation = {
+				type="vertical_frames",
+				aspect_w = 32,
+				aspect_h = 32,
+				length = 1.0
+			}
+		}
+	},
+	paramtype = "light",
+	light_source = 11,
+	sunlight_propagates = true,
+	walkable = false,
+	groups = {dig_immediate = 3, attached_node = 1},
+	sounds = default.node_sound_defaults(),
+	selection_box = {
+		type = "fixed",
+		fixed = { -0.15, -0.5, -0.15, 0.15, 0, 0.15 }
+	}
+})
+
+	if col ~= "" then
+		minetest.register_craft({
+			output = "ethereal:candle" .. col,
+			recipe = {
+				{"ethereal:candle", "dye:" .. rcol},
+			}
+		})
+	end
+end
+
+add_candle("", "")
+add_candle("black", "Black ") -- candle colour textures by wRothbard
+add_candle("blue", "Blue ")
+add_candle("brown", "Brown ")
+add_candle("cyan", "Cyan ")
+add_candle("dark_green", "Dark Green ")
+add_candle("dark_grey", "Dark Grey ")
+add_candle("green", "Green ")
+add_candle("grey", "Grey ")
+add_candle("magenta", "Magenta ")
+add_candle("orange", "Orange ")
+add_candle("pink", "Pink ")
+add_candle("red", "Red ")
+add_candle("violet", "Violet ")
+add_candle("yellow", "Yellow ")
+
 
 -- Wooden Bowl
 minetest.register_craftitem("ethereal:bowl", {
@@ -341,14 +406,29 @@ minetest.register_tool("ethereal:light_staff", {
 		local node = minetest.get_node(pos).name
 		local def = minetest.registered_nodes[node]
 		local stone = def and def.groups and def.groups.stone and def.groups.stone == 1
+		local take = false
+		local glo = "ethereal:glostone"
 
-		if stone then
+		if node == "nether:rack" then
 
-			minetest.swap_node(pos, {name = "ethereal:glostone"})
+			glo = "nether:glowstone"
+			take = true
 
-			if not ethereal.check_creative(user:get_player_name()) then
-				itemstack:add_wear(65535 / 149) -- 150 uses
-			end
+		elseif node == "nether:rack_deep" then
+
+			glo = "nether:glowstone_deep"
+			take = true
+
+		elseif stone then
+
+			take = true
+		end
+
+		if take == true then
+
+			minetest.swap_node(pos, {name = glo})
+
+			itemstack:add_wear(65535 / 149) -- 150 uses
 
 			return itemstack
 		end

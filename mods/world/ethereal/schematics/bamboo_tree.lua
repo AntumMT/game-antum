@@ -12,6 +12,7 @@ ethereal.bambootree = {
 		{ypos = 0, prob = 127},
 		{ypos = 1, prob = 127},
 		{ypos = 2, prob = 127},
+		{ypos = 3, prob = 127},
 	},
 
 	data = {
@@ -50,7 +51,7 @@ ethereal.bambootree = {
 	_,B,_,
 	_,B,_,
 	_,B,_,
-	l,L,l,
+	l,B,l,
 	_,L,_,
 	_,l,_,
 

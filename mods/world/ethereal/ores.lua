@@ -1,43 +1,26 @@
 
--- Baked Clay
+-- Baked Clay (mesa biome is between 1 and 71)
 
-minetest.register_ore({
-	ore_type         = "blob",
-	ore              = "bakedclay:red",
-	wherein          = {"bakedclay:orange"},
-	clust_scarcity   = 4 * 4 * 4,
-	clust_num_ores = 8,
-	clust_size       = 6,
-	y_min            = -10,
-	y_max            = 71,
-	noise_params     = {
-		offset = 0.35,
-		scale = 0.2,
-		spread = {x = 5, y = 5, z = 5},
-		seed = -316,
-		octaves = 1,
-		persist = 0.5
-	},
-})
+local add_stratum = function(y_min, y_max, node)
 
-minetest.register_ore({
-	ore_type         = "blob",
-	ore              = "bakedclay:grey",
-	wherein          = {"bakedclay:orange"},
-	clust_scarcity   = 4 * 4 * 4,
-	clust_num_ores = 8,
-	clust_size       = 6,
-	y_min            = -10,
-	y_max            = 71,
-	noise_params     = {
-		offset = 0.35,
-		scale = 0.2,
-		spread = {x = 5, y = 5, z = 5},
-		seed = -613,
-		octaves = 1,
-		persist = 0.5
-	},
-})
+	minetest.register_ore({
+		ore_type         = "stratum",
+		ore              = node,
+		wherein          = {"bakedclay:orange"},
+		clust_scarcity   = 1,
+		y_max            = y_max,
+		y_min            = y_min,
+		biomes = {"mesa"}
+	})
+end
+
+add_stratum(5, 10, "bakedclay:red")
+add_stratum(15, 20, "bakedclay:grey")
+add_stratum(25, 30, "bakedclay:red")
+add_stratum(35, 40, "bakedclay:grey")
+add_stratum(45, 50, "bakedclay:red")
+add_stratum(55, 60, "bakedclay:grey")
+
 
 local add_ore = function(a, b, c, d, e, f, g)
 
@@ -49,7 +32,7 @@ local add_ore = function(a, b, c, d, e, f, g)
 		clust_num_ores = d,
 		clust_size = e,
 		y_min = f,
-		y_max = g,
+		y_max = g
 	})
 end
 
@@ -83,12 +66,12 @@ minetest.register_ore({
 	ore_type = "scatter",
 	ore = "ethereal:etherium_ore",
 	wherein = "default:desert_stone",
-	clust_scarcity = 10*10*10,
+	clust_scarcity = 10 * 10 * 10,
 	clust_num_ores = 1,
 	clust_size = 1,
 	y_min = 5,
 	y_max = 40,
-	biomes = {"caves"},
+	biomes = {"caves"}
 })
 
 -- Etherium in floatlands
@@ -96,7 +79,7 @@ minetest.register_ore({
 	ore_type = "scatter",
 	ore = "ethereal:stone_with_etherium_ore",
 	wherein = "default:stone",
-	clust_scarcity = 9*9*9,
+	clust_scarcity = 9 * 9 * 9,
 	clust_num_ores = 6,
 	clust_size = 2,
 	y_min = 1025,

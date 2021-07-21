@@ -18,7 +18,7 @@ local function set_flight(user, set)
 
 		local meta = user:get_meta() ; if not meta then return end
 
-		meta:set_string("ethereal:fly_timer", -99)
+		meta:set_string("ethereal:fly_timer", "-99")
 	end
 end
 
@@ -55,7 +55,7 @@ local function ethereal_set_flight(user)
 
 		minetest.chat_send_player(name,
 				minetest.get_color_escape_sequence("#ff5500")
-						.. S("Flight timer about to expire!"))
+				.. S("Flight timer about to expire!"))
 
 		minetest.sound_play("default_dig_dig_immediate",
 				{to_player = name, gain = 1.0}, true)
@@ -82,7 +82,7 @@ minetest.register_on_joinplayer(function(player)
 
 	local privs = minetest.get_player_privs(player:get_player_name())
 
-	if privs.fly and timer and timer > 0 then
+	if privs.fly and timer then
 
 		minetest.after(timer_check, function()
 			ethereal_set_flight(player)
@@ -120,13 +120,14 @@ minetest.register_node("ethereal:flight_potion", {
 
 			local msg = timer
 
-			if timer == "-99" then
+			if timer == "" or timer == "-99" then
 				msg = S("unlimited")
 			end
 
 			minetest.chat_send_player(name,
 				minetest.get_color_escape_sequence("#ffff00")
-						.. S("Flight already granted, @1 seconds left!", msg))
+				.. S("Flight already granted, @1 seconds left!", msg))
+
 			return
 		end
 
@@ -136,7 +137,7 @@ minetest.register_node("ethereal:flight_potion", {
 
 		minetest.chat_send_player(name,
 				minetest.get_color_escape_sequence("#1eff00")
-						.. S("Flight granted, you have @1 seconds!", flight_secs))
+				.. S("Flight granted, you have @1 seconds!", flight_secs))
 
 		ethereal_set_flight(user)
 
@@ -149,11 +150,7 @@ minetest.register_node("ethereal:flight_potion", {
 		if inv:room_for_item("main", {name = "vessels:glass_bottle"}) then
 			user:get_inventory():add_item("main", "vessels:glass_bottle")
 		else
-			local pos = user:get_pos()
-
-			pos.y = pos.y + 0.5
-
-			minetest.add_item(pos, {name = "vessels:glass_bottle"})
+			minetest.add_item(user:get_pos(), {name = "vessels:glass_bottle"})
 		end
 
 		return itemstack
@@ -167,6 +164,6 @@ minetest.register_craft({
 	recipe = {
 		{"ethereal:etherium_dust", "ethereal:etherium_dust", "ethereal:etherium_dust"},
 		{"ethereal:etherium_dust", "ethereal:fire_dust", "ethereal:etherium_dust"},
-		{"ethereal:etherium_dust", "vessels:glass_bottle", "ethereal:etherium_dust"},
+		{"ethereal:etherium_dust", "vessels:glass_bottle", "ethereal:etherium_dust"}
 	}
 })
