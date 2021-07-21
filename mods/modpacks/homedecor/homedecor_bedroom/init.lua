@@ -68,8 +68,12 @@ homedecor.register("bed_regular", {
 			homedecor.bed_expansion(pos, clicker, itemstack, pointed_thing, true)
 			return itemstack
 		else
---			bed_on_rightclick(pos, node, clicker)
-			beds.on_rightclick(pos, clicker)
+			-- FIXME: not compatible with current beds mod
+			if beds.on_rightclick then
+				--bed_on_rightclick(pos, node, clicker)
+				beds.on_rightclick(pos, clicker)
+			end
+
 			return itemstack
 		end
 	end

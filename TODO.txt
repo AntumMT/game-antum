@@ -8,6 +8,7 @@ easy (priority 1):
 	- edit <world_path>/players.sqlite database & add home_gui positions so <world_path>/home_gui.home can be deleted
 - pbmarks:
 	- fix so players don't teleport into walls
+- fix homedecor beds
 
 easy (priority 2):
 ------------------
@@ -29,6 +30,7 @@ hard (priority 1):
 	- add option to disallow setting bookmarks in areas owned/protected by other players
 - cmer_shark:
 	- fix spawning
+- fix throwing bows (not compatible with current wielded_light)
 
 hard (priority 2):
 ------------------
