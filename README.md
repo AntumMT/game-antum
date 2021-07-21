@@ -145,7 +145,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [home_gui][] ([BSD 3-Clause][lic.home_gui]) -- version: [425466a Git][ver.home_gui] *2021-05-21* ([patched][home_gui.patch])
   * [hud_compass][] (MIT / [CC BY-SA ][lic.ccbysa3.0]) -- version: [648c744
  Git][ver.hud_compass] *2020-04-23*
-  * [hudbars][] ([MIT][lic.mit] / [CC BY-SA][lic.ccbysa3.0]) -- version: [2.3.1][ver.hudbars] *2020-07-11*
+  * [hudbars][] ([MIT][lic.mit] / [CC BY-SA][lic.ccbysa3.0]) -- version: [2.3.3][ver.hudbars] *2021-07-08*
   * [pbmarks][] ([MIT][lic.pbmarks]) -- version: [1.0][ver.pbmarks] *2021-06-15*
 * world/
   * [bright_night][] ([Unlicense][lic.unlicense]) -- version: [69b750a Git][ver.bright_night] *2018-06-03*
@@ -621,7 +621,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.hot_air_balloons]: https://notabug.org/NetherEran/hot_air_balloons/src/39a3572ad1bf7fd800525d68b128981e1b2c37d1
 [ver.hovercraft]: https://github.com/stujones11/hovercraft/tree/4d50e68
 [ver.hud_compass]: https://github.com/kestral246/hud_compass/tree/648c744
-[ver.hudbars]: http://repo.or.cz/minetest_hudbars.git/tree/0684bac
+[ver.hudbars]: https://repo.or.cz/minetest_hudbars.git/shortlog/refs/tags/2.3.3
 [ver.ilights]: https://gitlab.com/VanessaE/ilights/tags/2021-02-25-01
 [ver.intllib]: https://github.com/minetest-mods/intllib/tree/6ebdc53
 [ver.invisibility]: https://notabug.org/TenPlus1/invisibility/src/65c0823d6a28b62046cdadc67ff1e462d37e3643
