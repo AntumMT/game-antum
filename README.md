@@ -43,7 +43,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [throwing][] ([WTFPL][lic.wtfpl]) -- version: [90bcf43 Git][ver.throwing] *2013-09-27* ([patched][patch.throwing])
   * [xtraarmor][] ([CC BY-SA][lic.ccbysa3.0]) -- version: 0.3
 * furniture/
-  * [beds][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa3.0]) -- version: 1.0 *2020-09-15*
+  * [beds][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa3.0]) -- version: 1.0 *2020-09-15* ([patched][patch.beds])
   * [jukebox][] ([WTFPL / CC0][lic.jukebox]) -- version: [0d871f2 Git][ver.jukebox] *2020-03-11*
   * [trampoline][] ([GPL][lic.gpl3.0]) -- version: [0.3][ver.trampoline] *2021-04-28*
   * [trash_can][] ([MIT][lic.trash_can]) -- version: [423b0f2 Git][ver.trash_can] *2020-08-12*
@@ -699,6 +699,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.amber]: https://github.com/AntumMT/mod-amber/tree/39b852a
 [patch.atm]: https://github.com/AntumMT/mod-atm/tree/2ab0e78
 [patch.away]: https://github.com/AntumMT/mod-away/tree/3b0bf9e
+[patch.beds]: https://github.com/AntumMT/mod-beds/commit/fec238a
 [patch.boats2]: https://github.com/AntumMT/mod-boats2/tree/9b2bcb7
 [patch.bridges]: https://github.com/AntumMT/mod-bridges/tree/ba8f71a
 [patch.christmas]: https://github.com/AntumMT/mod-christmas/tree/50bda80

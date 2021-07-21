@@ -40,7 +40,11 @@ end
 local function import_spawns( )
 	local file = io.open( world_path .. "/" .. config.filename, "r" )
 	if not file then
-		error( "Could not load player spawn data." )
+		export_spawns( )
+		file = io.open( world_path .. "/" .. config.filename, "r" )
+		if not file then
+			error("Could not load player spawn data.")
+		end
 	end
 
 	local data = file:read( "*all" )
