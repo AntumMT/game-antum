@@ -31,7 +31,11 @@ local kbed_cbox = {
 }
 
 
--- local bed_on_rightclick = minetest.registered_nodes["beds:bed"].on_rightclick
+local bed_on_rightclick = function(pos, node, clicker, itemstack, pointed_thing) return itemstack end
+local bed_node = minetest.registered_nodes["beds:bed"]
+if bed_node and bed_node.on_rightclick then
+	bed_on_rightclick = bed_node.on_rightclick
+end
 
 homedecor.register("bed_regular", {
 	mesh = "homedecor_bed_regular.obj",
@@ -68,12 +72,7 @@ homedecor.register("bed_regular", {
 			homedecor.bed_expansion(pos, clicker, itemstack, pointed_thing, true)
 			return itemstack
 		else
-			-- FIXME: not compatible with current beds mod
-			if beds.on_rightclick then
-				--bed_on_rightclick(pos, node, clicker)
-				beds.on_rightclick(pos, clicker)
-			end
-
+			bed_on_rightclick(pos, node, clicker)
 			return itemstack
 		end
 	end
@@ -102,8 +101,7 @@ homedecor.register("bed_extended", {
 	end,
 	on_dig = unifieddyes.on_dig,
 	on_rightclick = function(pos, node, clicker, itemstack, pointed_thing)
---		bed_on_rightclick(pos, node, clicker)
-		beds.on_rightclick(pos, clicker)
+		bed_on_rightclick(pos, node, clicker)
 		return itemstack
 	end,
 	drop = "homedecor:bed_regular"
@@ -140,8 +138,7 @@ homedecor.register("bed_kingsize", {
 	end,
 	on_dig = unifieddyes.on_dig,
 	on_rightclick = function(pos, node, clicker, itemstack, pointed_thing)
---		bed_on_rightclick(pos, node, clicker)
-		beds.on_rightclick(pos, clicker)
+		bed_on_rightclick(pos, node, clicker)
 		return itemstack
 	end,
 })
