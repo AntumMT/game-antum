@@ -49,7 +49,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [trash_can][] ([MIT][lic.trash_can]) -- version: [423b0f2 Git][ver.trash_can] *2020-08-12*
   * [waffles][] ([MIT][lic.waffles]) -- version: [15bcdce Git][ver.waffles] *2018-05-13* (patched)
 * horticulture/
-  * [farming][] ([MIT][lic.farming]) -- version: [dedc33c Git][ver.farming] *2021-05-07*
+  * [farming][] ([MIT][lic.farming]) -- version: [2021-07-18][ver.farming]
 * inventory/
   * [bags][] ([BSD 3-Clause][lic.bags]) -- version: [bc87b45 Git][ver.bags] *2018-04-11*
   * [sfinv][] ([MIT][lic.sfinv] -- version: [556f70e Git][ver.sfinv] *2021-02-17*
@@ -603,7 +603,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.equip_exam]: https://github.com/AntumMT/mod-equip_exam/releases/tag/v1.6
 [ver.equip_wear]: https://github.com/AntumMT/mod-equip_wear/releases/tag/v0.1
 [ver.ethereal]: https://notabug.org/TenPlus1/ethereal/src/90cdf94ea6c54cd5e3fcc7f77d3b6121f963c379
-[ver.farming]: https://notabug.org/TenPlus1/farming/commit/dedc33cc46ec65782a5b8ab573d1fb6bb6915b63
+[ver.farming]: https://notabug.org/TenPlus1/farming/src/328e8b3223a7568ab3f07b16c341ee547694d225
 [ver.folks]: https://gitlab.com/SonoMichele/folks/tags/v0.2.0
 [ver.fort_spikes]: https://github.com/xeranas/fort_spikes/tree/3b98b46
 [ver.gems_encrustable]: https://github.com/wowiamdiamonds/gems/tree/81d513d
