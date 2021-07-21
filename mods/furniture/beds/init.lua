@@ -221,6 +221,11 @@ end
 -- Public Methods -- 
 --------------------
 
+local default_transforms = {
+	sitting = { yaw = 7.9, pos = { x = 0, y = 0.1, z = 0 }, off = -7 },
+	laying = { yaw = 7.9, pos = { x = 0.5, y = 0.1, z = 0 }, off = -13 },
+}
+
 beds.sit_down = function ( name, pos )
 	if player_states[ name ] or default.player_attached[ name ] then return end
 
@@ -231,7 +236,8 @@ beds.sit_down = function ( name, pos )
 	if not transforms or not transforms.sitting then return end   -- quick sanity check for properties
 
 	-- prevent the player from sitting on air
-	apply_physics_override( pos, player, transforms.sitting[ node.param2 ] or transforms.sitting[ 1 ] )
+	apply_physics_override( pos, player, transforms.sitting[ node.param2 ]
+		or default_transforms.sitting )
 
 	default.player_set_animation( player, "sit", 30 )
 	default.player_attached[ name ] = true
@@ -249,7 +255,8 @@ beds.lay_down = function ( name, pos )
 	if not transforms or not transforms.laying then return end   -- quick sanity check for properties
 
 	-- prevent the player from sitting on air
-	apply_physics_override( pos, player, transforms.laying[ node.param2 ] or transforms.laying[ 1 ] )
+	apply_physics_override( pos, player, transforms.laying[ node.param2 ]
+		or default_transforms.laying )
 
 	default.player_set_animation( player, "lay", 0 )
 	default.player_attached[ name ] = true
