@@ -474,7 +474,7 @@ local function bike_anim(self)
 end
 
 -- Run every tick
-function bike.on_step(self, dtime)
+function bike.on_step(self, dtime, moveresult)
 	-- Player checks
 	if self.driver then
 		-- Is the actual player somehow still visible?
@@ -622,7 +622,16 @@ function bike.on_step(self, dtime)
 	end
 
 	-- Can we ride good here?
-	if not is_bike_friendly({x=p.x, y=p.y + self.collisionbox[2] - 0.05, z=p.z}) then
+	local bike_friendly = true
+	for _, collision in ipairs(moveresult.collisions) do
+		if collision.type == "node" and collision.axis == "y" then
+			if not is_bike_friendly(collision.node_pos) then
+				bike_friendly = false
+				break
+			end
+		end
+	end
+	if not bike_friendly then
 		self.v = self.v / math.pow(setting_offroad_friction, dtime)
 	end
 
