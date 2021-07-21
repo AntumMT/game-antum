@@ -5,6 +5,7 @@ easy (priority 1):
 ------------------
 - home_gui
 	- fix so players don't teleport into ground
+	- edit <world_path>/players.sqlite database & add home_gui positions so <world_path>/home_gui.home can be deleted
 - pbmarks:
 	- fix so players don't teleport into walls
 
