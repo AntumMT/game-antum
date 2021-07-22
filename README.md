@@ -88,6 +88,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [craftguide][] ([MIT][lic.craftguide]) -- version: [f379998 Git][ver.craftguide] *2021-02-08* ([patched][patch.craftguide])
   * [enchanting][] ([GPL / WTFPL / CC BY-SA-NA][lic.enchanting]) -- version: [dee7dde Git][ver.enchanting] *2021-06-04*
   * [intllib][] ([Unlicense][lic.unlicense]) -- version: [6ebdc53][ver.intllib] *2021-02-23* ***DEPRECATED***
+  * [item_drop][] ([LGPL][lic.gpl2.1]) -- version: [1545f82 Git][ver.item_drop] *2020-09-27*
   * [listitems][] ([MIT][lic.listitems]) -- version: [1.0][ver.listitems] *2021-07-20*
   * [painting][] (WTFPL) -- version: [da8f4ba Git][ver.painting] *2021-06-25*
   * [pipeworks][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2670fd8 Git][ver.pipeworks] *2021-05-06* ([patched][patch.pipeworks])
@@ -216,7 +217,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [dmobs](https://content.minetest.net/packages/TenPlus1/dmobs/) (DOOMed Mobs)
 * [draconis](https://forum.minetest.net/viewtopic.php?t=22595) (dragons)
 * [drinks](https://content.minetest.net/packages/Nathan.S/drinks/)
-* [extra_doors](https://content.minetest.net/packages/sorcerykid/extra_doors/)
 * [flying_carpet](https://content.minetest.net/packages/Wuzzy/flying_carpet/)
 * [formspec](https://github.com/Bremaweb/formspec) (Formspec Framework)
 * [greek](https://forum.minetest.net/viewtopic.php?t=26565)
@@ -369,6 +369,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ilights]: https://forum.minetest.net/viewtopic.php?t=12200
 [intllib]: https://forum.minetest.net/viewtopic.php?t=4929
 [invisibility]: https://forum.minetest.net/viewtopic.php?t=14846
+[item_drop]: https://content.minetest.net/packages/texmex/item_drop/
 [jukebox]: https://forum.minetest.net/viewtopic.php?t=13505
 [jumping]: https://forum.minetest.net/viewtopic.php?t=2957
 [lighted_helmets]: https://content.minetest.net/packages/AntumDeluge/lighted_helmets/
@@ -631,6 +632,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.ilights]: https://gitlab.com/VanessaE/ilights/tags/2021-02-25-01
 [ver.intllib]: https://github.com/minetest-mods/intllib/tree/6ebdc53
 [ver.invisibility]: https://notabug.org/TenPlus1/invisibility/src/65c0823d6a28b62046cdadc67ff1e462d37e3643
+[ver.item_drop]: https://github.com/minetest-mods/item_drop/tree/1545f82
 [ver.jukebox]: https://github.com/minetest-mods/jukebox/tree/0d871f2
 [ver.lighted_helmets]: https://github.com/AntumMT/mod-lighted_helmets/releases/tag/v1.0
 [ver.listitems]: https://github.com/AntumMT/mod-listitems/releases/tag/v1.0
