@@ -75,7 +75,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [gems_tools][] ([GPL][lic.gpl3.0]) -- version: [b375432 Git][ver.gems_tools] *2016-09-03* ([patched][patch.gems_tools])
   * [moreores][] ([zlib][lic.moreores] / [CC BY-SA][lic.ccbysa3.0]) -- version: [2.1.0][ver.moreores] *2021-06-28* ([patched][patch.moreores])
   * [quartz][] ([MIT][lic.quartz]) -- version: [72ec06f Git][ver.quartz] *2021-01-04* ([patched][patch.quartz])
-  * [rainbow_ore][] ([LGPL][lic.rainbow_ore]) -- version: [6e77693 Git][ver.rainbow_ore] *2015-11-02* ([patched][patch.rainbow_ore])
+  * [rainbow_ore][] ([LGPL][lic.rainbow_ore]) -- version: [830ac09 Git][ver.rainbow_ore] *2021-07-25*
   * [unifieddyes][] ([GPL][lic.gpl2.0]) -- version: [2021-03-26-1][ver.unifieddyes] ([patched][patch.unifieddyes])
 * misc/
   * [ambience][] ([MIT][lic.ambience] / [CC BY / CC BY-SA / CC BY-NC-SA / CC0][lic.ambience_sounds]) -- version: [2021-07-13][ver.ambience]
@@ -664,7 +664,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.player_monoids]: https://github.com/minetest-mods/player_monoids/tree/ed11a73
 [ver.pvp_areas]: https://github.com/everamzah/pvp_areas/tree/6e4d66d
 [ver.quartz]: https://github.com/minetest-mods/quartz/tree/72ec06f
-[ver.rainbow_ore]: https://github.com/FsxShader2012/rainbow_ore/tree/6e77693
+[ver.rainbow_ore]: https://github.com/FsxShader2012/rainbow_ore/tree/830ac09
 [ver.sand_monster]: https://github.com/AntumMT/mod-mob_sand_monster/tree/3dd5954
 [ver.server_shop]: https://github.com/AntumMT/mod-server_shop/releases/tag/v1.4
 [ver.sfinv]: https://github.com/rubenwardy/sfinv/tree/556f70e
@@ -724,7 +724,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.nether]: https://github.com/AntumMT/mod-nether/tree/7a84ddd
 [patch.pipeworks]: https://gitlab.com/AntumMT/mod-pipeworks/tree/48b082e
 [patch.quartz]: https://github.com/AntumMT/mod-quartz/tree/adc759e
-[patch.rainbow_ore]: https://github.com/AntumMT/mod-rainbow_ore/tree/69a598b
 [patch.simple_protection]: https://github.com/AntumMT/mod-simple_protection/tree/be873b5
 [patch.snowdrift]: https://github.com/AntumMT/mod-snowdrift/tree/0b35cc3
 [patch.throwing]: https://github.com/AntumMT/mod-throwing/tree/6f55c67
