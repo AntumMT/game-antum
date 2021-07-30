@@ -4,4 +4,9 @@ TODO:
 - update inventories when items are replaced:
 	- creative
 	- storage (chests, etc.)
-- fix top nodes disappearing with /replace_node command
+- add LBM when removing an item if it is a node
+- update localization files
+- add "radius" option for pencil or "xlen", "ylen", & "zlen" options
+- add "xrotate" & "zrorate" modes for pencil
+- fix pencil "write" mode when pointing to side of node (node gets placed below)
+- add config file usage to HTML docs

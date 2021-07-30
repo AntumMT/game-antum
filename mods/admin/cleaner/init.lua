@@ -1,7 +1,3 @@
---[[ Cleaner mod
-	License: MIT
-]]
-
 
 cleaner = {}
 cleaner.modname = core.get_current_modname()
@@ -40,6 +36,7 @@ local scripts = {
 	"settings",
 	"api",
 	"chat",
+	"tools",
 	"entities",
 	"nodes",
 	"items",
