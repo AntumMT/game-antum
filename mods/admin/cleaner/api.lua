@@ -141,9 +141,9 @@ function cleaner.register_node_replacement(src, tgt)
 end
 
 
---- Unsafe methods.
+--- Unsafe Methods.
 --
---  Enabled with `cleaner.unsafe` setting.
+--  Enabled with [cleaner.unsafe](settings.html#cleaner.unsafe) setting.
 --
 --  @section unsafe
 
@@ -153,7 +153,7 @@ if cleaner.unsafe then
 
 	--- Retrieves list of ores to be removed.
 	--
-	--  @treturn table Ores to be replaced.
+	--  @treturn table Ores to be removed.
 	function cleaner.get_remove_ores()
 		return remove_ores
 	end

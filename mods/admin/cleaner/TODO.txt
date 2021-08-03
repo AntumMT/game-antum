@@ -5,8 +5,7 @@ TODO:
 	- creative
 	- storage (chests, etc.)
 - add LBM when removing an item if it is a node
-- update localization files
 - add "radius" option for pencil or "xlen", "ylen", & "zlen" options
 - add "xrotate" & "zrorate" modes for pencil
-- fix pencil "write" mode when pointing to side of node (node gets placed below)
-- add config file usage to HTML docs
+- don't require "server" priv for "find_unknown_nodes" & "find_neaby_nodes" commands
+- add chat command to find nodes with specified attributes

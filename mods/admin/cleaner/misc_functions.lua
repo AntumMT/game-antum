@@ -98,8 +98,7 @@ local tool = {
 		imeta:set_string("mode", mode)
 
 		if pname then
-			core.chat_send_player(pname, iname .. ": "
-				.. S("mode set to: @1", imeta:get_string("mode")))
+			core.chat_send_player(pname, S("@1: mode set to: @2", iname, imeta:get_string("mode")))
 		end
 
 		local new_stack
@@ -120,7 +119,7 @@ local tool = {
 		local modes = self.modes[iname]
 
 		if not modes then
-			return false, stack, "modes for tool \"" .. stack:get_name() .. "\" not available."
+			return false, stack, S('Modes for tool "@1" not available.', stack:get_name())
 		end
 
 		local imeta = stack:get_meta()
@@ -145,20 +144,21 @@ local tool = {
 		imeta:set_string("node", node)
 
 		if pname then
-			core.chat_send_player(pname, stack:get_name() .. ": "
-				.. S("node set to: @1", imeta:get_string("node")))
+			core.chat_send_player(pname, S("@1: node set to: @2", stack:get_name(), imeta:get_string("node")))
 		end
 
 		return stack
 	end,
 }
 
+local sound_handle
+
 tool.on_use = function(stack, user, pointed_thing)
 	if not user:is_player() then return end
 
 	local pname = user:get_player_name()
 	if not core.get_player_privs(pname).server then
-		core.chat_send_player(pname, S("You do not have permission to use this item. Missing privs: server"))
+		core.chat_send_player(pname, S("You do not have permission to use this item. Missing privs: @1", "server"))
 		return stack
 	end
 
@@ -184,7 +184,7 @@ tool.on_use = function(stack, user, pointed_thing)
 			elseif mode == "write" then
 				local node_above = core.get_node_or_nil(pointed_thing.above)
 				if not node_above or node_above.name == "air" then
-					core.place_node(pointed_thing.above, {name=new_node_name})
+					core.set_node(pointed_thing.above, {name=new_node_name})
 					sound_handle = core.sound_play("cleaner_pencil_write", {object=user})
 				else
 					core.chat_send_player(pname, S("Can't place node there."))

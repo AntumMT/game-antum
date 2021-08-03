@@ -1644,9 +1644,10 @@ chatlog.disable (Disable chatlog) bool false
 
 [*cleaner]
 
-# Enables unsafe methods.
+# Enables unsafe methods & chat commands.
 #
 # - cleaner.remove_ore
+# - /remove_ores
 cleaner.unsafe (Enable unsafe methods) bool false
 
 

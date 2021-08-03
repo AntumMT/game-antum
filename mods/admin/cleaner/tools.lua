@@ -9,13 +9,11 @@ local S = core.get_translator(cleaner.modname)
 
 local aux = dofile(cleaner.modpath .. "/misc_functions.lua")
 
-local sound_handle
-
 --- Master Pencil
 --
 --  @tool cleaner:pencil
 --  @img cleaner_pencil.png
---  @privs server
+--  @priv server
 --  @usage
 --  place (right-click):
 --  - when not pointing at a node, changes modes
