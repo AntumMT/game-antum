@@ -38,7 +38,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [3d_armor_gloves][] ([LGPL][lic.lgpl2.1]) -- version: [f099d76 Git][ver.3d_armor_gloves] *2021-02-27*
   * [airtanks][] ([MIT][lic.airtanks]) -- version: [b686694 Git][ver.airtanks] *2021-03-13* ([patched][patch.airtanks])
   * [equip_wear][] ([MIT][lic.equip_wear]) -- version: [0.1][ver.equip_wear] *2021-07-14*
-  * [lighted_helmets][] ([MIT][lic.lighted_helmets]) -- version: [1.0][ver.lighted_helmets] *2021-07-18*
+  * [lighted_helmets][] ([MIT][lic.lighted_helmets]) -- version: [1.1][ver.lighted_helmets] *2021-08-03*
   * [slingshot][] ([MIT][lic.slingshot] / [CC0][lic.cc0]) -- version [0.3][ver.slingshot] *2021-06-10*
   * [throwing][] ([WTFPL][lic.wtfpl]) -- version: [90bcf43 Git][ver.throwing] *2013-09-27* ([patched][patch.throwing])
   * [xtraarmor][] ([CC BY-SA][lic.ccbysa3.0]) -- version: 0.3
@@ -630,7 +630,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.intllib]: https://github.com/minetest-mods/intllib/tree/6ebdc53
 [ver.invisibility]: https://notabug.org/TenPlus1/invisibility/src/65c0823d6a28b62046cdadc67ff1e462d37e3643
 [ver.jukebox]: https://github.com/minetest-mods/jukebox/tree/0d871f2
-[ver.lighted_helmets]: https://github.com/AntumMT/mod-lighted_helmets/releases/tag/v1.0
+[ver.lighted_helmets]: https://github.com/AntumMT/mod-lighted_helmets/releases/tag/v1.1
 [ver.listitems]: https://github.com/AntumMT/mod-listitems/releases/tag/v1.1
 [ver.mese_monster]: https://github.com/AntumMT/mod-mob_mese_monster/tree/cd02839
 [ver.mesecons]: https://github.com/minetest-mods/mesecons/tree/6579351

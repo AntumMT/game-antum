@@ -11,13 +11,13 @@ Supports helmets from the following mods:
 - [amber](https://forum.minetest.net/viewtopic.php?t=18186)
 - [rainbow_ore](https://forum.minetest.net/viewtopic.php?id=13519)
 
-![icon](screenshot.png)
+![screenshot](screenshot.png)
 
 ### Licensing:
 
 - Code: [MIT](LICENSE.txt)
 - Textures: CC0
-- Screenshot/Icon: [CC0](https://openclipart.org/detail/201890)
+- Icon: [CC0](https://openclipart.org/detail/201890)
 
 ### Usage:
 
@@ -37,10 +37,18 @@ Supports helmets from the following mods:
 
 </details>
 
+#### Settings:
+
+```
+lighted_helmets.exclude
+- List of mods or helmets to exclude.
+- Example: lighted_helmets.exclude = xtraarmor,amber:helmet
+```
+
 ### Requirements:
 
 ```
-Minimum Minetest verserion: 0.4
+Minimum Minetest version: 5.0
 
 Depends:
 - 3d_armor
@@ -52,15 +60,11 @@ Optional depends:
 - xtraarmor
 - amber
 - rainbow_ore
-
-Settings:
-- lighted_helmets.exclude
-  - List of mods or helmets to exclude.
-  - Example: lighted_helmets.exclude = xtraarmor,amber:helmet
 ```
 
 ### Links:
 
+- [![ContentDB](https://img.shields.io/static/v1?label=ContentDB&message=lighted_helmets&color=%23375a7f&logo=minetest)](https://content.minetest.net/packages/AntumDeluge/lighted_helmets/)
 - [Forum](https://forum.minetest.net/viewtopic.php?t=27035)
 - [Git repo](https://github.com/AntumMT/mod-lighted_helmets)
 - [Changelog](changelog.txt)

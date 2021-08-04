@@ -1,4 +1,11 @@
 
+v1.1
+----
+- added localization support
+- added Spanish translation
+- doesn't overwrite helmets if different mods use the same material
+
+
 v1.0
 ----
 - initial release

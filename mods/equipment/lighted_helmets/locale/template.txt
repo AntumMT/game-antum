@@ -1,0 +1,6 @@
+# textdomain:lighted_helmets
+
+# Translators:
+
+
+@1 with light=

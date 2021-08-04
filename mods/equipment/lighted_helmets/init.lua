@@ -1,4 +1,6 @@
 
+local S = core.get_translator("lighted_helmets")
+
 local excluded = {}
 
 local to_exclude = core.settings:get("lighted_helmets.exclude")
@@ -87,7 +89,7 @@ if core.global_exists("armor") then
 					if orig_def then
 						local def = table.copy(orig_def)
 
-						def.description = def.description .. " with light"
+						def.description = S("@1 with light", def.description)
 						def.inventory_image = "lighted_helmets_inv_underlay.png^" .. orig_def.inventory_image
 						if not def.texture then
 							if modname == "rainbow_ore" then
@@ -114,7 +116,12 @@ if core.global_exists("armor") then
 							helmet_name = helmet_name .. material
 						end
 
-						armor:register_armor(":" .. helmet_name, def)
+						if core.registered_tools[helmet_name] then
+							-- in the event two mods use the same material
+							helmet_name = helmet_name .. "_from_" .. modname
+						end
+
+						armor:register_armor(helmet_name, def)
 						armor_light.register(helmet_name, lvalue)
 
 						if core.registered_items["default:mese_crystal"] and core.registered_items["default:torch"] then
