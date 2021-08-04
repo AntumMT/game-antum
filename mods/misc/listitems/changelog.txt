@@ -1,4 +1,11 @@
 
+v1.1
+----
+- added missing "textdomain" line to localization files
+- updated localization template & Spanish translation
+- fixed "listmobs" command
+
+
 v1.0
 ----
 - fixed "searching" message to display before search begins

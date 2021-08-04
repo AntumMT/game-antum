@@ -3,4 +3,3 @@ TODO:
 - show formspec when "/list" called with no parameters
 - optimize search with regular expressions
 - clean up & optimize code
-- fix "listmobs" command

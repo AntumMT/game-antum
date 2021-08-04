@@ -19,6 +19,10 @@ local known_types = {
 	"tools",
 }
 
+if core.global_exists("mobs") then
+	table.insert(known_types, "mobs")
+end
+
 
 --- Checks if value is contained in list.
 --

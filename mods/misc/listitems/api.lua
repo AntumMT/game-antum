@@ -22,10 +22,6 @@ for k in pairs(aux.options) do
 	table.insert(known_switches, k)
 end
 
-if core.global_exists("mobs") then
-	table.insert(aux.known_types, "mobs")
-end
-
 
 --- Retrieves a simplified table containing string names of registered items or entities.
 --

@@ -1,16 +1,28 @@
-# Translation by Jordan Irwin (AntumDeluge)
+# textdomain:listitems
+
+# Translators: Jordan Irwin (AntumDeluge)
 
 
 ## Help output description
+List registered @1=Listar registro de @1
 List registered items or entities=Listar los artículos o los entidades registrados
 Display descriptions=Mostrar descripciones
 Don't search descriptions=No analizar descripciones
 Registered types:=Tipos registrados:
+Options:=Opciones:
 
 ## Help output parameters
 type=tipo
+options=opciones
 string1=cadena1
 string2=cadena2
+
+## Types
+items=artículos
+entities=entidades
+nodes=nodos
+ores=minerales
+tools=herramientas
 
 ## Player used unrecognized switch
 Error: Unknown option:=Error: Opción desconocida:

@@ -154,7 +154,7 @@ end
 -- @chatparam [string1] [string2] ...
 -- @treturn   boolean
 registerChatCommand("list", {
-	params = S("type") .. " [options] [" .. S("string1") .. "] [" .. S("string2") .. "] ...",
+	params = S("type") .. " [" .. S("options") .. "] [" .. S("string1") .. "] [" .. S("string2") .. "] ...",
 	description = help_string .. options_string .. types_string,
 	func = function(player, params)
 		local params = string.split(params, " ")
@@ -169,8 +169,8 @@ registerChatCommand("list", {
 if listitems.enable_singleword then
 	for _, kt in ipairs(aux.known_types) do
 		registerChatCommand("list" .. kt, {
-			params = "[options] [" .. S("string1") .. "] [" .. S("string2") .. "] ...",
-			description = S("List registered @1", kt) .. "\n\n\t" .. S("Options:") .. options_string,
+			params = "[" .. S("options") .. "] [" .. S("string1") .. "] [" .. S("string2") .. "] ...",
+			description = S("List registered @1", S(kt)) .. "\n\n\t" .. S("Options:") .. options_string,
 		func = function(player, params)
 			local params = string.split(params, " ")
 			params = table.concat(params, " ")
