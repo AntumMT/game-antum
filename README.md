@@ -79,7 +79,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [unifieddyes][] ([GPL][lic.gpl2.0]) -- version: [2021-03-26-1][ver.unifieddyes] ([patched][patch.unifieddyes])
 * misc/
   * [ambience][] ([MIT][lic.ambience] / [CC BY / CC BY-SA / CC BY-NC-SA / CC0][lic.ambience_sounds]) -- version: [2021-07-13][ver.ambience]
-  * [asm_spawneggs][] ([MIT][lic.asm_spawneggs]) -- version: [5a72143 Git][ver.asm_spawneggs] *2021-05-24*
+  * [asm_spawneggs][] ([MIT][lic.asm_spawneggs]) -- version: [1.2][ver.asm_spawneggs] *2021-08-03*
   * [awards][] ([MIT][lic.awards]) -- version: [3.4.0][ver.awards] *2021-01-10*
   * [biofuel][] ([MIT](lic.biofuel)) -- version: [ca480ce Git][ver.biofuel] *2020-07-20*
   * [campfire][] ([GPL][lic.gpl2.0] / [CC BY-SA][lic.ccbysa] / [WTFPL][lic.campfire]) -- version: [1058f1d Git][ver.campfire] *2019-11-28*
@@ -675,7 +675,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.sneeker]: https://github.com/AntumMT/mod-sneeker/releases/tag/v1.1-1
 [ver.snowdrift]: https://github.com/paramat/snowdrift/tree/3342939
 [ver.stone_monster]: https://github.com/AntumMT/mod-mob_stone_monster/tree/fa52f6f
-[ver.asm_spawneggs]: https://github.com/AntumMT/mod-asm_spawneggs/tree/5a72143
+[ver.asm_spawneggs]: https://github.com/AntumMT/mod-asm_spawneggs/releases/tag/v1.2
 [ver.spectator_mode]: https://github.com/minetest-mods/spectator_mode/tree/3648371
 [ver.technic]: https://github.com/minetest-mods/technic/tree/1c21948
 [ver.throwing]: https://github.com/PilzAdam/throwing/tree/90bcf43

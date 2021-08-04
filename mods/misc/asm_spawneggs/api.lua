@@ -29,6 +29,8 @@
 --  @module api.lua
 
 
+local S = core.get_translator(asm.modname)
+
 local registered_eggs = {}
 
 --- Retrieves egg that spawns specified entity.
@@ -75,7 +77,7 @@ local function formatTitle(s)
 		table.insert(t, v)
 	end
 
-	return table.concat(t, " ") .. " Spawn Egg"
+	return S("@1 Spawn Egg", table.concat(t, " "))
 end
 
 --- Registers new egg in game.

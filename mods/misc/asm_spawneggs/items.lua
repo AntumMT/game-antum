@@ -25,7 +25,9 @@
 --]]
 
 
+local S = core.get_translator(asm.modname)
+
 core.register_craftitem(":spawneggs:egg", {
-	description = "Spawn Egg",
+	description = S("Spawn Egg"),
 	inventory_image = "spawneggs_egg.png",
 })

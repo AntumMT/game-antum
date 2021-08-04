@@ -1,13 +1,11 @@
 ## Another Spawneggs Mod (***asm_spawneggs***) [Minetest][]
 
----
 ### Description:
 
 Mod for adding entity spawning eggs to game with a very simple application. It is used only for creating new "eggs" that will spawn a specified entity when used by a player.
 
 There are two function: *<span style="color:darkgreen;">asm.registerEgg</span>* & *<span style="color:darkgreen;">asm.registerEggRecipe</span>* (see: [API][api])
 
----
 ### Licensing:
 
 - Code: [MIT](LICENSE.txt)
@@ -20,7 +18,6 @@ There are two function: *<span style="color:darkgreen;">asm.registerEgg</span>* 
     - Based on ["Huevo negro. Black egg" by mediobit][img.egg_black]
 
 
----
 ### Dependencies:
 
 - Required:
@@ -28,13 +25,14 @@ There are two function: *<span style="color:darkgreen;">asm.registerEgg</span>* 
 - Optional:
   - none
 
-
----
 ### Links:
 
+- [![ContendDB](https://content.minetest.net/packages/AntumDeluge/asm_spawneggs/shields/title/)](https://content.minetest.net/packages/AntumDeluge/asm_spawneggs/)
+- [Forum](https://forum.minetest.net/viewtopic.php?t=26676)
 - [Git repo](https://github.com/AntumMT/mod-asm_spawneggs)
-- [API][api]
-- [Changelog](CHANGES.txt)
+- [Reference][api]
+- [Changelog](changelog.txt)
+- [TODO](TODO.txt)
 
 
 [Minetest]: http://www.minetest.net/

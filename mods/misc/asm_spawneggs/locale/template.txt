@@ -1,0 +1,7 @@
+# textdomain:asm_spawneggs
+
+# Translators:
+
+
+Spawn Egg=
+@1 Spawn Egg=

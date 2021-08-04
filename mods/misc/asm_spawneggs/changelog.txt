@@ -1,0 +1,24 @@
+
+v1.2
+----
+- added method to retrieve registered egg by entity name
+- added optional field "title" for EggDef
+- added localization support
+- added Spanish translation
+
+
+v1.1
+----
+- egg names are titleized & underscores are replaced with space
+
+
+v1.0
+----
+- made independent of any other mods or games
+- renamed to "asm_spawneggs" (Another Spawneggs Mod)
+- added API reference
+
+
+v0.1
+----
+- created mod for Antum game
