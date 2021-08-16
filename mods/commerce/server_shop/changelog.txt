@@ -1,4 +1,18 @@
 
+v1.5
+----
+- added "textdomain" line to localization template
+- added Spanish translation
+- added "tall" shop nodes
+- fixed buyer shop not being registered when currency & default mods not available
+- "buy" & "sell" functions are deteremined by shop "type" instead of separate registered nodes
+- default currencies not registered if currency mod not available
+- "get_currencies", "get_shops", & "get_shop" return table copy
+- added methods:
+	- server_shop.unregister
+	- server_shop.shop_type
+
+
 v1.4
 ----
 - fixed custom suffix not reflected in product list & messages
@@ -18,6 +32,7 @@ v1.3
 - added buyer shops
 - changed json product list type to indexed array
 
+
 v1.2
 ----
 - custom currencies can be registered
@@ -33,12 +48,14 @@ v1.2
 - displayed currency suffix can be customized or omitted
 - no longer uses node meta for formspec
 
+
 v1.1
 ----
 - use json format for shops configuration in world directory
 - switched id & name parameters positions in register_shop
 - show preview image of selected item
 - node owners can't set ID unless they have "server" priv
+
 
 v1.0
 ----

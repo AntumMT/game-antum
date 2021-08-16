@@ -1,4 +1,9 @@
 
+--- Server Shops Formspec
+--
+--  @topic formspec
+
+
 local ss = server_shop
 local S = core.get_translator(ss.modname)
 
@@ -18,8 +23,12 @@ local transaction = dofile(ss.modpath .. "/transaction.lua")
 --  @tparam string id String identifier of shop.
 --  @tparam bool buyer
 --  @treturn string Shop's name representation.
-local function get_shop_name(id, buyer)
-	local shop = ss.get_shop(id, buyer)
+local get_shop_name = function(id, buyer)
+	if buyer ~= nil then
+		ss.log("warning", "get_shop_name: \"buyer\" parameter is deprecated")
+	end
+
+	local shop = ss.get_shop(id)
 	if shop then
 		return shop.name
 	end
@@ -33,8 +42,12 @@ end
 --  @param idx Index of the item to retrieve.
 --  @tparam bool buyer
 --  @return String item identifier or `nil` if shop does not contain item.
-local function get_shop_index(shop_id, idx, buyer)
-	local shop = ss.get_shop(shop_id, buyer)
+local get_shop_index = function(shop_id, idx, buyer)
+	if buyer ~= nil then
+		ss.log("warning", "get_shop_index: \"buyer\" parameter is deprecated")
+	end
+
+	local shop = ss.get_shop(shop_id)
 	if shop then
 		local product = shop.products[idx]
 		if product then
@@ -50,9 +63,13 @@ end
 --  @param id String identifier of shop.
 --  @tparam bool buyer
 --  @return String of shop contents.
-function get_product_list(id, buyer)
+local get_product_list = function(id, buyer)
+	if buyer ~= nil then
+		ss.log("warning", "get_product_list: \"buyer\" parameter is deprecated")
+	end
+
 	local products = ""
-	local shop = ss.get_shop(id, buyer)
+	local shop = ss.get_shop(id)
 
 	if shop and shop.products then
 		for _, p in ipairs(shop.products) do
@@ -92,13 +109,26 @@ end
 --
 --  @local
 --  @function format_formname
---  @tparam bool buyer Denotes buyer or seller (default: `false` (seller)).
-local function format_formname(buyer)
-	if buyer then
-		return ss.modname .. ":buy"
+--  @tparam bool buyer Denotes buyer or seller (can be `true`, `false`, or `nil`).
+local format_formname = function(buyer)
+	local t = {
+		["buyer"] = true,
+		["seller"] = false,
+	}
+
+	if type(buyer) == "string" then
+		buyer = t[buyer]
 	end
 
-	return ss.modname .. ":sell"
+	if buyer == nil then
+		return ss.modname..":unregistered"
+	end
+
+	if buyer then
+		return ss.modname..":buy"
+	end
+
+	return ss.modname..":sell"
 end
 
 
@@ -123,22 +153,27 @@ end
 --- Retrieves formspec layout.
 --
 --  @function server_shop.get_formspec
---  @param pos
---  @param player
---  @tparam bool buyer
+--  @tparam vector pos Shop node coordinates.
+--  @tparam player ObjectRef Player to whom the formspec is shown.
+--  @tparam[opt] bool buyer `true` if the shop in question is a buyer shop (default: false).
 --  @treturn string Formspec formatted string.
-function ss.get_formspec(pos, player, buyer)
-		buyer = buyer == true
+ss.get_formspec = function(id, player, buyer)
+		if buyer ~= nil then
+			ss.log("warning", "get_formspec: \"buyer\" parameter is deprecated")
+		end
 
-		local smeta = core.get_meta(pos)
 		local pmeta = player:get_meta()
-		local id = smeta:get_string("id")
-		local deposited = transaction.get_deposit(id, player, buyer)
+		local shop = ss.get_shop(id)
 
-		-- store ID in player meta for retrieval during transactions
-		pmeta:set_string(ss.modname .. ":id", id)
+		local buyer, deposited
+		if shop then
+			buyer = shop.buyer == true
+			deposited = transaction.get_deposit(id, player)
 
-		local is_registered = ss.is_registered(id, buyer)
+			-- store ID in player meta for retrieval during transactions
+			pmeta:set_string(ss.modname .. ":id", id)
+		end
+
 		local margin_r = fs_width-(btn_w+0.2)
 		local btn_refund = "button[0.2," .. tostring(btn_y) .. ";"
 			.. tostring(btn_w) .. ",0.75;btn_refund;" .. S("Refund") .. "]"
@@ -148,13 +183,20 @@ function ss.get_formspec(pos, player, buyer)
 		local btn_sell = "button[" .. tostring(margin_r) .. ","
 			.. tostring(btn_y) .. ";" .. tostring(btn_w)
 			.. ",0.75;btn_sell;" .. S("Sell") .. "]"
+		local btn_close = "button_exit[" .. tostring(margin_r) .. ",10;" .. tostring(btn_w)
+			.. ",0.75;btn_close;" .. S("Close") .. "]"
 
 		local formspec = "formspec_version[4]"
 			.. "size[" .. tostring(fs_width) .. "," .. tostring(fs_height) .."]"
 
-		local shop_name = smeta:get_string("name"):trim()
-		if shop_name ~= "" then
-			formspec = formspec .. "label[0.2,0.4;" .. shop_name .. "]"
+		if not ss.currency_is_registered() then
+			return formspec.."label[0.2,1;"
+				..S("Cannot use shops because there are no registered currencies.").."]"
+					..btn_close
+		end
+
+		if shop and shop.name and shop.name ~= "" then
+			formspec = formspec .. "label[0.2,0.4;" .. shop.name .. "]"
 		end
 
 		if ss.is_shop_admin(player) then
@@ -177,7 +219,6 @@ function ss.get_formspec(pos, player, buyer)
 
 		-- get item name for displaying image
 		local selected_item = nil
-		local shop = ss.get_shop(id, buyer)
 		if shop then
 			-- make sure we're not out of range of the shop list
 			if selected_idx > #shop.products then
@@ -200,15 +241,14 @@ function ss.get_formspec(pos, player, buyer)
 			formspec = formspec .. "]"
 		end
 
-		if is_registered then -- don't allow deposits to unregistered stores
-			local inv_type = format_formname(false)
-			if buyer then inv_type = format_formname(true) end
+		if shop then -- don't allow deposits to unregistered stores
+			local inv_type = format_formname(buyer)
 
 			formspec = formspec .. "list[detached:" .. inv_type .. ";deposit;0.2,1.5;1,1;0]"
 		end
 
 		formspec = formspec .. "textlist[2.15,1.5;9.75,3;products;"
-			.. get_product_list(id, buyer) .. ";"
+			.. get_product_list(id) .. ";"
 			.. tostring(selected_idx) .. ";false]"
 
 		if selected_item and selected_item ~= "" then
@@ -216,7 +256,7 @@ function ss.get_formspec(pos, player, buyer)
 				.. "item_image[" .. tostring(fs_width-1.2) .. ",1.5;1,1;" .. selected_item .. "]"
 		end
 
-		if is_registered then
+		if shop then
 			if not buyer then
 				formspec = formspec .. btn_refund
 					.. "dropdown[" .. tostring(margin_r) .. ",3.77;" .. tostring(btn_w) .. ",0.75;quant;"
@@ -227,31 +267,29 @@ function ss.get_formspec(pos, player, buyer)
 			end
 		end
 
-		formspec = formspec	.. "list[current_player;main;2.15,5.5;8,4;0]"
-			.. "button_exit[" .. tostring(margin_r) .. ",10;" .. tostring(btn_w)
-			.. ",0.75;btn_close;" .. S("Close") .. "]"
-
-		local formname = format_formname(false)
-		if buyer then formname = format_formname(true) end
-		if id and id ~= "" then formname = formname .. ":" .. id end
-
-		return formspec .. formname
+		return formspec	.. "list[current_player;main;2.15,5.5;8,4;0]" .. btn_close
 end
 
 --- Displays formspec to player.
 --
 --  @function server_shop.show_formspec
---  @param pos
---  @param player
---  @tparam bool buyer
-function ss.show_formspec(pos, player, buyer)
-	core.show_formspec(player:get_player_name(), format_formname(buyer),
-		ss.get_formspec(pos, player, buyer))
+--  @tparam vector pos Shop node coordinates.
+--  @tparam player ObjectRef Player to whom the formspec is shown.
+--  @tparam[opt] bool buyer (deprecated)
+ss.show_formspec = function(pos, player, buyer)
+	if buyer ~= nil then
+		ss.log("warning", "show_formspec: \"buyer\" parameter is deprecated")
+	end
+
+	local id = core.get_meta(pos):get_string("id")
+
+	core.show_formspec(player:get_player_name(), format_formname(ss.shop_type(id)),
+		ss.get_formspec(id, player))
 end
 
 
 core.register_on_player_receive_fields(function(player, formname, fields)
-	if formname == format_formname(false) or formname == format_formname(true) then
+	if string.find(formname, ss.modname..":") == 1 then
 		local buyer = formname == format_formname(true)
 
 		local pmeta = player:get_meta()
@@ -312,7 +350,7 @@ core.register_on_player_receive_fields(function(player, formname, fields)
 			smeta:set_string("id", fields.input_id)
 
 			-- set or remove displayed text when pointed at
-			local shop_name = get_shop_name(fields.input_id, buyer)
+			local shop_name = get_shop_name(fields.input_id)
 			if shop_name then
 				smeta:set_string("infotext", shop_name)
 				smeta:set_string("name", shop_name)
@@ -360,6 +398,7 @@ core.register_on_player_receive_fields(function(player, formname, fields)
 			core.chat_send_player(player:get_player_name(),
 				S("You purchased @1 @2 for @3 @4.", product:get_count(),
 					product:get_description(), total, ss.currency_suffix))
+
 			transaction.give_product(player, product, product_quant)
 		elseif fields.btn_sell then
 			local inv = core.get_inventory({type="detached", name=ss.modname .. ":buy",})
@@ -396,7 +435,7 @@ core.register_on_player_receive_fields(function(player, formname, fields)
 
 		-- refresh formspec view
 		pmeta:set_int(ss.modname .. ":quant", product_quant)
-		ss.show_formspec(pos, player, buyer)
+		ss.show_formspec(pos, player)
 
 		return false
 	end

@@ -1,25 +1,19 @@
 
---- API
+--- Server Shops API
 --
---  @module api.lua
+--  @topic api.lua
 
 
 local ss = server_shop
 
-local sellers = {}
-local buyers = {}
-local shops = sellers -- backward compat
 
-function ss.get_shops(buyer)
-	if buyer then
-		return buyers
-	end
+local shops = {}
 
-	return sellers
+ss.get_shops = function()
+	return table.copy(shops)
 end
 
 local registered_currencies = {}
-local currency_count = 0
 
 -- Suffix displayed after deposited amount.
 ss.currency_suffix = nil
@@ -28,28 +22,28 @@ ss.currency_suffix = nil
 --
 --  @function server_shop.currency_is_registered
 --  @treturn bool `true` if at least one currency item is registered.
-function ss.currency_is_registered()
-	return currency_count > 0
+ss.currency_is_registered = function()
+	for k, v in pairs(registered_currencies) do
+		return true
+	end
+
+	return false
 end
 
 --- Retrieves registered currencies & values.
 --
 --  @function server_shop.get_currencies
 --  @treturn table Registered currencies.
-function ss.get_currencies()
+ss.get_currencies = function()
 	return table.copy(registered_currencies)
 end
 
 --- Registers an item that can be used as currency.
 --
---  TODO:
---
---  - after registering currency, should re-organize table from highest value to lowest
---
 --  @function server_shop.register_currency
 --  @tparam string item Item name.
 --  @tparam int value Value the item should represent.
-function ss.register_currency(item, value)
+ss.register_currency = function(item, value)
 	if not core.registered_items[item] then
 		ss.log("warning", "Registering unrecognized item as currency: " .. item)
 	end
@@ -68,25 +62,28 @@ function ss.register_currency(item, value)
 	end
 
 	registered_currencies[item] = value
-	currency_count = currency_count + 1
 
 	ss.log("action", item .. " registered as currency with value of " .. tostring(value))
 end
 
 if ss.use_currency_defaults then
-	local mg_notes = {
-		{"currency:minegeld", 1},
-		{"currency:minegeld_5", 5},
-		{"currency:minegeld_10", 10},
-		{"currency:minegeld_50", 50},
-		{"currency:minegeld_100", 100},
-	}
+	if not core.get_modpath("currency") then
+		ss.log("warning", "currency mod not found, not registering default currencies")
+	else
+		local mg_notes = {
+			{"currency:minegeld", 1},
+			{"currency:minegeld_5", 5},
+			{"currency:minegeld_10", 10},
+			{"currency:minegeld_50", 50},
+			{"currency:minegeld_100", 100},
+		}
 
-	for _, c in ipairs(mg_notes) do
-		ss.register_currency(c[1], c[2])
+		for _, c in ipairs(mg_notes) do
+			ss.register_currency(c[1], c[2])
+		end
+
+		ss.currency_suffix = "MG"
 	end
-
-	ss.currency_suffix = "MG"
 end
 
 --- Checks ID string for invalid characters.
@@ -94,8 +91,69 @@ end
 --  @function server_shop.format_id
 --  @tparam string id Shop identifier string.
 --  @treturn string Formatted string.
-function ss.format_id(id)
+ss.format_id = function(id)
 	return id:trim():gsub("%s", "_")
+end
+
+--- Registers a shop.
+--
+--  **Aliases:**
+--
+--  - server\_shop.register\_shop
+--
+--  @function server_shop.register
+--  @tparam string id Shop string identifier.
+--  @param name Can be a human readable `string` name or a `table` with fiels "name", "products", & "buyer".
+--  @tparam table[string,int] products List of products & prices in format `{item_name, price}`.
+--  @tparam[opt] bool buyer Denotes whether to register seller or buyer shop (default: `false` (seller)).
+ss.register = function(id, name, products, buyer)
+	if type(name) == "table" then
+		products = name.products
+		buyer = name.buyer
+		name = name.name
+	end
+
+	if type(id) ~= "string" then
+		ss.log("error", ss.modname .. ".register: invalid \"id\" parameter")
+		return
+	elseif type(name) ~= "string" then
+		ss.log("error", ss.modname .. ".register: invalid \"name\" parameter")
+		return
+	elseif type(products) ~= "table" then
+		ss.log("error", ss.modname .. ".register: invalid \"products\" parameter")
+		return
+	end
+
+	id = ss.format_id(id)
+
+	if shops[id] ~= nil then
+		ss.log("warning", "Overwriting shop with id: "..id)
+	end
+
+	shops[id] = {name=name:trim(), products=products, buyer=buyer}
+
+	ss.log("action", "Registered "..ss.shop_type(id).." shop with id: "..id)
+end
+
+-- backward compatibility
+ss.register_shop = ss.register
+
+--- Unregisters a shop.
+--
+--  @function server_shop.unregister
+--  @tparam string Shop ID.
+--  @treturn bool `true` if shop was unregistered.
+ss.unregister = function(id)
+	local unregistered = false
+	if shops[id] ~= nil then
+		local stype = ss.shop_type(id)
+		shops[id] = nil
+		ss.log("action", "Unregistered "..stype.." shop with id: "..id)
+		return true
+	end
+
+	ss.log("action", "Cannot unregister non-registered shop with id: "..id)
+	return false
 end
 
 --- Registers a seller shop.
@@ -104,27 +162,8 @@ end
 --  @tparam string id Shop string identifier.
 --  @tparam string name Human readable name.
 --  @tparam table[string,int] products List of products & prices in format `{item_name, price}`.
-function ss.register_seller(id, name, products)
-	if type(id) ~= "string" then
-		ss.log("error", ss.modname .. ".register_seller: invalid \"id\" parameter")
-		return
-	elseif type(name) ~= "string" then
-		ss.log("error", ss.modname .. ".register_seller: invalid \"name\" parameter")
-		return
-	elseif type(products) ~= "table" then
-		ss.log("error", ss.modname .. ".register_seller: invalid \"products\" parameter")
-		return
-	end
-
-	id = ss.format_id(id)
-
-	if sellers[id] then
-		ss.log("warning", "Overwriting shop with id: " .. id)
-	end
-
-	sellers[id] = {name=name:trim(), products=products,}
-
-	ss.log("action", "Registered seller shop: " .. id)
+ss.register_seller = function(id, name, products)
+	return ss.register(id, name, products)
 end
 
 --- Registers a buyer shop.
@@ -133,76 +172,66 @@ end
 --  @tparam string id Shop string identifier.
 --  @tparam string name Human readable name.
 --  @tparam table[string,int] products List of products & prices in format `{item_name, price}`.
-function ss.register_buyer(id, name, products)
-	if type(id) ~= "string" then
-		ss.log("error", ss.modname .. ".register_buyer: invalid \"id\" parameter")
-		return
-	elseif type(name) ~= "string" then
-		ss.log("error", ss.modname .. ".register_buyer: invalid \"name\" parameter")
-		return
-	elseif type(products) ~= "table" then
-		ss.log("error", ss.modname .. ".register_buyer: invalid \"products\" parameter")
-		return
-	end
-
-	id = ss.format_id(id)
-
-	if buyers[id] then
-		ss.log("warning", "Overwriting buyer shop with id: " .. id)
-	end
-
-	buyers[id] = {name=name:trim(), products=products,}
-
-	ss.log("action", "Registered buyer shop: " .. id)
-end
-
---- Registers a shop.
---
---  Added for backwards compatibility.
---
---  @function server_shop.register_shop
---  @tparam string id Shop string identifier.
---  @tparam string name Human readable name.
---  @tparam table[string,int] products List of products & prices in format `{item_name, price}`.
---  @tparam bool buyer Denotes whether to register seller or buyer shop (default: `false` (seller)).
-function ss.register_shop(id, name, products, buyer)
-	if buyer then
-		ss.register_buyer(id, name, products)
-	else
-		ss.register_seller(id, name, products)
-	end
+ss.register_buyer = function(id, name, products)
+	return ss.register(id, name, products, true)
 end
 
 --- Retrieves shop product list.
 --
 --  @function server_shop.get_shop
 --  @tparam string id String identifier of shop.
---  @tparam bool buyer Denotes whether seller or buyer shops will be parsed (default: false).
+--  @tparam bool buyer Denotes whether seller or buyer shops will be parsed (default: false) (deprecated).
 --  @treturn table Table of shop contents.
-function ss.get_shop(id, buyer)
-	if buyer then
-		return buyers[id]
+ss.get_shop = function(id, buyer)
+	if buyer ~= nil then
+		ss.log("warning", "get_shop: \"buyer\" parameter is deprecated")
 	end
 
-	return sellers[id]
+	local s = shops[id]
+	if s then
+		s = table.copy(s)
+	end
+
+	return s
 end
 
 --- Checks if a shop is registered.
 --
 --  @function server_shop.is_registered
 --  @tparam string id Shop string identifier.
---  @tparam bool buyer Denotes whether to check seller or buyer shops (default: false).
---  @tparam bool `true` if the shop ID is found.
-function ss.is_registered(id, buyer)
-	return ss.get_shop(id, buyer) ~= nil
+--  @tparam bool buyer Denotes whether to check seller or buyer shops (default: false) (deprecated).
+--  @treturn bool `true` if the shop ID is found.
+ss.is_registered = function(id, buyer)
+	if buyer ~= nil then
+		ss.log("warning", "is_registered: \"buyer\" parameter is deprecated")
+	end
+
+	return ss.get_shop(id) ~= nil
+end
+
+---
+--
+--  @function server_shop.shop_type
+--  @tparam string id
+ss.shop_type = function(id)
+	local shop = ss.get_shop(id)
+	if shop == nil then
+		return "unregistered"
+	end
+
+	if shop.buyer then
+		return "buyer"
+	end
+
+	return "seller"
 end
 
 --- Checks if a player has admin rights to for managing shop.
 --
 --  @function server_shop.is_shop_admin
---  @param player Player requesting permissions.
+--  @tparam ObjectRef player Player requesting permissions.
 --  @return `true` if player has *server* priv.
-function ss.is_shop_admin(player)
+ss.is_shop_admin = function(player)
 	if not player then
 		return false
 	end
@@ -213,10 +242,10 @@ end
 --- Checks if a player is the owner of node.
 --
 --  @function server_shop.is_shop_owner
---  @param pos Position of shop node.
---  @param player Player to be checked.
---  @return `true` if player is owner.
-function ss.is_shop_owner(pos, player)
+--  @tparam vector pos Position of shop node.
+--  @tparam ObjectRef player Player to be checked.
+--  @treturn bool `true` if player is owner.
+ss.is_shop_owner = function(pos, player)
 	if not player then
 		return false
 	end

@@ -120,6 +120,7 @@ core.register_on_mods_loaded(function()
 
 	-- prune unregistered items
 	for id, def in pairs(ss.get_shops()) do
+		local pruned = false
 		for idx = #def.products, 1, -1 do
 			local pname = def.products[idx][1]
 			local value = def.products[idx][2]
@@ -127,11 +128,13 @@ core.register_on_mods_loaded(function()
 				ss.log("warning", "removing unregistered item \"" .. pname
 					.. "\" from seller shop id \"" .. id .. "\"")
 				table.remove(def.products, idx)
+				pruned = true
 			elseif not value then
 				-- FIXME: this should be done in registration method
 				ss.log("warning", "removing item \"" .. pname
 					.. "\" without value from seller shop id \"" .. id .. "\"")
 				table.remove(def.products, idx)
+				pruned = true
 			end
 
 			-- check aliases
@@ -141,33 +144,13 @@ core.register_on_mods_loaded(function()
 					.. "\" in seller shop id \"" .. id .. "\"")
 				table.remove(def.products, idx)
 				table.insert(def.products, idx, {alias_of, value})
+				pruned = true
 			end
 		end
-	end
 
-	for id, def in pairs(ss.get_shops(true)) do
-		for idx = #def.products, 1, -1 do
-			local pname = def.products[idx][1]
-			local value = def.products[idx][2]
-			if not core.registered_items[pname] then
-				ss.log("warning", "removing unregistered item \"" .. pname
-					.. "\" from buyer shop id \"" .. id .. "\"")
-				table.remove(def.products, idx)
-			elseif not value then
-				-- FIXME: this should be done in registration method
-				ss.log("warning", "removing item \"" .. pname
-					.. "\" without value from buyer shop id \"" .. id .. "\"")
-				table.remove(def.products, idx)
-			end
-
-			-- check aliases
-			local alias_of = core.registered_aliases[pname]
-			if alias_of then
-				ss.log("action", "replacing alias \"" .. pname .. "\" with \"" .. alias_of
-					.. "\" in buyer shop id \"" .. id .. "\"")
-				table.remove(def.products, idx)
-				table.insert(def.products, idx, {alias_of, value})
-			end
+		if pruned then
+			ss.unregister(id)
+			ss.register(id, def)
 		end
 	end
 end)

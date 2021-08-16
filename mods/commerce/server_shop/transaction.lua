@@ -51,14 +51,8 @@ end
 --  @param product String identifier of the item.
 --  @param quantity Amount to give.
 local function give_product(player, product, quantity)
-	local istack = product
-	if type(istack) == "string" then
-		-- create the ItemStack
-		istack = ItemStack(product)
-		-- make sure we give at leaset 1
-		if not quantity then quantity = 1 end
-		istack:set_count(quantity)
-	elseif quantity and istack:get_count() ~= quantity then
+	local istack = ItemStack(product)
+	if quantity then
 		istack:set_count(quantity)
 	end
 

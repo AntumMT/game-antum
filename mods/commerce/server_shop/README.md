@@ -4,7 +4,7 @@
 
 Shops intended to be set up by [Minetest](https://www.minetest.net/) server administrators.
 
-No craft recipe is given as this for administrators, currently a shop can only be set up with the `/giveme` command. The two shop nodes are `server_shop:buy` & `server_shop:sell`.
+No craft recipe is given as this for administrators, currently a shop can only be set up with the `/giveme` command. The two shop nodes are `server_shop:shop_small` & `server_shop:shop_large` (they function identically).
 
 ![screenshot](screenshot.png)
 
@@ -88,7 +88,7 @@ By default, if the [currency][mod.currency] mod is installed, the minegeld notes
 
 #### Setting up Shops in Game:
 
-Server admins use the chat command `/giveme server_shop:sell` or `/giveme server_shop:buy` to receive a shop node. After placing the node, the ID can be set with the "Set ID" button & text input field (only players with the "server" privilege can set ID). Set the ID to the registered shop ID you want associated with this node ("frank" or "julie" for the examples above) & the list will be populated with the registered products & prices.
+Server admins use the chat command `/giveme server_shop:shop_small` or `/giveme server_shop:shop_large` to receive a shop node. After placing the node, the ID can be set with the "Set ID" button & text input field (only players with the "server" privilege can set ID). Set the ID to the registered shop ID you want associated with this node ("frank" or "julie" for the examples above) & the list will be populated with the registered products & prices.
 
 #### Using Seller Shops:
 
@@ -96,7 +96,7 @@ To make purchases, player first deposits registered currency items into the depo
 
 #### Using Buyer Shops:
 
-For buyer shops, the product list shows what items can be sold to this shop & how much money a player will receive for each item. To sell to the shop, drop an item in the deposit slot. If the shop accepts the item, the value will be added to the deposited amount. Press the "Refund" button to retrieve the value of the items sold.
+For buyer shops, the product list shows what items can be sold to this shop & how much money a player will receive for each item. To sell to the shop, place an item in the deposit slot. The slot will only accept items that the owner will purchase. Press the "Sell" button to recieve the value of the item(s).
 
 ### Licensing:
 
@@ -112,11 +112,12 @@ For buyer shops, the product list shows what items can be sold to this shop & ho
 
 ### Links:
 
+- [![ContentDB](https://content.minetest.net/packages/AntumDeluge/server_shop/shields/title/)](https://content.minetest.net/packages/AntumDeluge/server_shop/)
 - [GitHub repo](https://github.com/AntumMT/mod-server_shop)
-- [Minetest forum](https://forum.minetest.net/viewtopic.php?t=26645)
-- [API](https://antummt.github.io/mod-server_shop/docs/api.html)
+- [Forum](https://forum.minetest.net/viewtopic.php?t=26645)
+- [Reference](https://antummt.github.io/mod-server_shop/reference/latest/)
 - [Changelog](changelog.txt)
 - [TODO](TODO.txt)
 
 
-[mod.currency]: https://forum.minetest.net/viewtopic.php?t=21339
+[mod.currency]: https://content.minetest.net/packages/VanessaE/currency/

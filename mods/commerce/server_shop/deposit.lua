@@ -40,8 +40,5 @@ local buyer_callbacks = {
 	end,
 }
 
-local sinv = core.create_detached_inventory(ss.modname .. ":sell", seller_callbacks)
-sinv:set_size("deposit", 1)
-
-local binv = core.create_detached_inventory(ss.modname .. ":buy", buyer_callbacks)
-binv:set_size("deposit", 1)
+core.create_detached_inventory(ss.modname .. ":sell", seller_callbacks):set_size("deposit", 1)
+core.create_detached_inventory(ss.modname .. ":buy", buyer_callbacks):set_size("deposit", 1)

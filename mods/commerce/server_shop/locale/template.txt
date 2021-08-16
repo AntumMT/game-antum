@@ -1,8 +1,9 @@
-Translated by:
+# textdomain:server_shop
+
+# Translators:
 
 
-Seller Shop=
-Buyer Shop=
+Shop=
 Buy=
 Sell=
 Refund=

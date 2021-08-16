@@ -4,10 +4,9 @@ TODO:
 	- might be an issue if admin changes shop ID while player is using
 - Functionality:
 	- optimize how refunds are given (e.g. if there is no room for 50s, but room for 1s, then give out 1s instead)
-- Visuals:
-	- touch up textures
-	- fix texture tiling
-	- make 2 nodes high using mesh
+- Aestethics:
+	- make colorable with unifieddyes
+	- add sounds
 - Misc.:
 	- make usable with "folks" mod
 	- set shop name from formspec instead of registration so shops with different names can use same content

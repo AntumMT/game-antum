@@ -1,0 +1,17 @@
+# textdomain:server_shop
+
+# Translators: Jordan Irwin (AntumDeluge)
+
+
+Shop=Tienda
+Buy=Comprar
+Sell=Vender
+Refund=Reembolsar
+Close=Cerrar
+Set ID=Pon ID
+Deposited: @1=Depositado: @1
+Deposited: @1 @2=Depositado: @1 @2
+You haven't deposited enough money.=No has depositado suficiente dinero.
+You purchased @1 @2 for @3 @4.=Compraste @1 @2 por @3 @4.
+You sold @1 @2 for @3 @4.=Vendiste @1 @2 por @3 @4.
+WARNING: @1 @2 was dropped on the ground.=AVISO: @1 @2 se cayó en la tierra.

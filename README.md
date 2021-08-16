@@ -30,7 +30,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * commerce/
   * [atm][] ([GPL][lic.gpl3.0]) -- version: [1.0.4][ver.atm] *2021-04-21* ([patched][patch.atm])
   * [currency][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2021-01-30][ver.currency]
-  * [server_shop][] ([MIT][lic.server_shop]) -- version: [1.4][ver.server_shop] *2021-07-08*
+  * [server_shop][] ([MIT][lic.server_shop]) -- version: [1.5][ver.server_shop] *2021-08-15*
 * core/
   * [antum][] ([MIT][lic.antum]) -- version: [69b39a4 Git][ver.antum] *2017-08-30*
   * [minetest_game][] ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- version: [9270188 Git][ver.minetest_game] *2021-07-08*
@@ -366,7 +366,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [hudbars]: https://forum.minetest.net/viewtopic.php?t=11153
 [ilights]: https://forum.minetest.net/viewtopic.php?t=12200
 [intllib]: https://forum.minetest.net/viewtopic.php?t=4929
-[invisibility]: https://forum.minetest.net/viewtopic.php?t=14846
+[invisibility]: https://content.minetest.net/packages/TenPlus1/invisibility/
 [jukebox]: https://forum.minetest.net/viewtopic.php?t=13505
 [jumping]: https://forum.minetest.net/viewtopic.php?t=2957
 [lighted_helmets]: https://content.minetest.net/packages/AntumDeluge/lighted_helmets/
@@ -402,7 +402,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [pvp_areas]: https://forum.minetest.net/viewtopic.php?t=15480
 [quartz]: https://forum.minetest.net/viewtopic.php?t=5682
 [rainbow_ore]: https://forum.minetest.net/viewtopic.php?id=13519
-[server_shop]: https://forum.minetest.net/viewtopic.php?t=26645
+[server_shop]: https://content.minetest.net/packages/AntumDeluge/server_shop/
 [sfinv]: https://content.minetest.net/packages/rubenwardy/sfinv/
 [sfinv_buttons]: https://forum.minetest.net/viewtopic.php?t=16079
 [shark]: https://github.com/AntumMT/mod-shark
@@ -666,7 +666,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.quartz]: https://github.com/minetest-mods/quartz/tree/72ec06f
 [ver.rainbow_ore]: https://github.com/FsxShader2012/rainbow_ore/tree/830ac09
 [ver.sand_monster]: https://github.com/AntumMT/mod-mob_sand_monster/tree/3dd5954
-[ver.server_shop]: https://github.com/AntumMT/mod-server_shop/releases/tag/v1.4
+[ver.server_shop]: https://github.com/AntumMT/mod-server_shop/releases/tag/v1.5
 [ver.sfinv]: https://github.com/rubenwardy/sfinv/tree/556f70e
 [ver.sfinv_buttons]: http://repo.or.cz/minetest_sfinv_buttons.git/tree/ebb1f7c
 [ver.signs_lib]: https://gitlab.com/VanessaE/signs_lib/tree/2021-03-04-2

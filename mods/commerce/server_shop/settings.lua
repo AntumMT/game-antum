@@ -1,10 +1,10 @@
 
---- Settings for server_shop.
+--- Server Shops Settings
 --
---  @module settings.lua
+--  @topic settings.lua
 
 
---- If currency mod is installed, automatically set up values for minegeld notes.
+--- If `currency` mod is installed, automatically set up values for minegeld notes.
 --
 --  @setting server_shop.use_currency_defaults
 --  @settype bool
