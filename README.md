@@ -91,6 +91,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [listitems][] ([MIT][lic.listitems]) -- version: [1.1][ver.listitems] *2021-08-04*
   * [painting][] (WTFPL) -- version: [da8f4ba Git][ver.painting] *2021-06-25*
   * [pipeworks][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2670fd8 Git][ver.pipeworks] *2021-05-06* ([patched][patch.pipeworks])
+  * [simple_models][] ([CC0][lic.cc0]) -- version: [2021-08-16][ver.simple_models]
   * [wdata][] ([MIT][lic.wdata]) -- version: [1.1][ver.wdata] *2021-06-15*
 * mobiles/
   * [bee][mobs_animal] ([MIT][lic.mobs_bee]) -- version: [671c6c1 Git][ver.mobs_bee] *2021-06-02*
@@ -409,6 +410,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [sfinv_buttons]: https://forum.minetest.net/viewtopic.php?t=16079
 [shark]: https://github.com/AntumMT/mod-shark
 [signs_lib]: https://forum.minetest.net/viewtopic.php?f=11&t=13762
+[simple_models]: https://content.minetest.net/packages/AntumDeluge/simple_models/
 [simple_protection]: https://forum.minetest.net/viewtopic.php?t=9035
 [slingshot]: https://github.com/AntumMT/mod-slingshot
 [sneeker]: https://forum.minetest.net/viewtopic.php?t=26685
@@ -674,6 +676,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.sfinv]: https://github.com/rubenwardy/sfinv/tree/556f70e
 [ver.sfinv_buttons]: http://repo.or.cz/minetest_sfinv_buttons.git/tree/ebb1f7c
 [ver.signs_lib]: https://gitlab.com/VanessaE/signs_lib/tree/2021-03-04-2
+[ver.simple_models]: https://github.com/AntumMT/mod-simple_models/tree/07e8c1b
 [ver.simple_protection]: https://github.com/SmallJoker/simple_protection/tree/f1f85aa
 [ver.slingshot]: https://github.com/AntumMT/mod-slingshot/releases/tag/v0.3
 [ver.sneeker]: https://github.com/AntumMT/mod-sneeker/releases/tag/v1.1-1
