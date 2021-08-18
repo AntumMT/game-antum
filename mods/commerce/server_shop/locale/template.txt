@@ -15,3 +15,32 @@ You haven't deposited enough money.=
 You purchased @1 @2 for @3 @4.=
 You sold @1 @2 for @3 @4.=
 WARNING: @1 @2 was dropped on the ground.=
+
+# chat commands
+Manage shops configuration.=
+Usage:=
+command=
+params=
+Must provide a command: @1=
+"@1" command takes no parameters.=
+Too many parameters.=
+Unknown command: @1=
+Must provide ID.=
+
+# reload command
+Shops configuration loaded.=
+
+# register command
+ID=
+name=
+product1@=value,product2@=value,...=
+Must provide type.=
+Must provide name.=
+Shop type must be "@1" or "@2".=
+"@1" is not a recognized item.=
+Item value must be a number.=
+Registered shop with ID: @1=
+
+# unregister command
+Cannot unregister shop with ID: @1=
+Unregistered shop with ID: @1=

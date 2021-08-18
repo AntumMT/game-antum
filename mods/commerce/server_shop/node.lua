@@ -8,11 +8,17 @@ local ss = server_shop
 local S = core.get_translator(ss.modname)
 
 
+local node_sound
+if core.global_exists("sounds") then
+	node_sound = sounds.node_stone()
+end
+
 local def = {
 	base = {
 		description = S("Shop"),
 		groups = {oddly_breakable_by_hand=1},
 		paramtype2 = "facedir",
+		sounds = node_sound,
 		after_place_node = function(pos, placer)
 			-- set node owner
 			core.get_meta(pos):set_string("owner", placer:get_player_name())
@@ -54,7 +60,7 @@ local def = {
 	--  @img server_shop_front.png
 	large = {
 		drawtype = "mesh",
-		mesh = "server_shop.obj",
+		mesh = "node_1x2x1.obj",
 		tiles = {"server_shop_mesh.png",},
 		selection_box = {
 			type = "fixed",

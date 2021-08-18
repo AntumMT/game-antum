@@ -10,7 +10,7 @@ No craft recipe is given as this for administrators, currently a shop can only b
 
 ### Usage:
 
-#### Registering Shops:
+#### Registering Shops via API:
 
 There are two types of shops, seller & buyer. A seller shop can be registered with `server_shop.register_seller(id, name, products)`. A buyer with `server_shop.register_buyer(id, name, products)`. `id` is a string identifier associated with the shop list. `name` is a human-readable string that will be displayed as the shop's title. `products` is the shop list definition. Shop lists are defined in a table of tuples in `{itemname, value}` format. `itemname` is the technical string name of an item (e.g. `default:wood`). `value` is the number representation of what the item is worth.
 
@@ -25,6 +25,8 @@ server_shop.register_buyer("julie", "Julie's Shop",  {
 	{"default:iron_lump", 6},
 })
 ```
+
+#### Registering Shops via Configuration:
 
 Shops can optionally be configured in `<world_path>/server_shops.json` file. To register a shop, set `type` to "sell" or "buy". `id` is a string identifier for the shop. `name` is the string displayed in the formspec & when a player points at the node. `products` is an array of products sold at the shop in format "name,value".
 
@@ -48,6 +50,33 @@ Shops can optionally be configured in `<world_path>/server_shops.json` file. To 
     ]
   },
 ]
+```
+
+#### Registering Shops via Chat Command:
+
+The `server_shop` chat command is available to administrators with the `server` privilege. This is used for administering shops & updating configuration.
+
+Usage:
+```
+/server_shop <command> [<params>]
+
+# Commands:
+
+/server_shop reload
+- reloads data from configuration file
+
+/server_shop register <id> <type> <name> [product1=value,product2=value,...]
+- registers a shop & updates configuration file
+- parameters:
+  - id: shop identifier
+  - type: can be "buy" or "sell"
+  - name: displayed shop name ("_" is replaced with " ")
+	- product list: comma-separated list in format "item=value"
+
+/server_shop unregister <id>
+- unregisters a shop & updates configuration file
+- parameters:
+  - id: shop identifier
 ```
 
 #### Registering Currencies:
@@ -106,9 +135,11 @@ For buyer shops, the product list shows what items can be sold to this shop & ho
 ### Dependencies:
 
 - Required:
-  - none
+  - simple_models
+  - wdata
 - Optional:
   - [currency][mod.currency]
+  - sounds
 
 ### Links:
 

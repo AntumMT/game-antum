@@ -154,7 +154,7 @@ end
 --
 --  @function server_shop.get_formspec
 --  @tparam vector pos Shop node coordinates.
---  @tparam player ObjectRef Player to whom the formspec is shown.
+--  @tparam ObjectRef player Player to whom the formspec is shown.
 --  @tparam[opt] bool buyer `true` if the shop in question is a buyer shop (default: false).
 --  @treturn string Formspec formatted string.
 ss.get_formspec = function(id, player, buyer)
@@ -274,7 +274,7 @@ end
 --
 --  @function server_shop.show_formspec
 --  @tparam vector pos Shop node coordinates.
---  @tparam player ObjectRef Player to whom the formspec is shown.
+--  @tparam ObjectRef player Player to whom the formspec is shown.
 --  @tparam[opt] bool buyer (deprecated)
 ss.show_formspec = function(pos, player, buyer)
 	if buyer ~= nil then

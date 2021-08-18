@@ -1,4 +1,15 @@
 
+v1.6
+----
+- model moved to simple_models mod
+- added node sounds
+- uses wdata for reading/writing shops config
+- added "server_shop" chat command:
+	- reload: reloads shops configuration
+	- register: registers new shop & updates configuration
+	- unregister: unregister shop id & updates configuration
+
+
 v1.5
 ----
 - added "textdomain" line to localization template

@@ -15,3 +15,32 @@ You haven't deposited enough money.=No has depositado suficiente dinero.
 You purchased @1 @2 for @3 @4.=Compraste @1 @2 por @3 @4.
 You sold @1 @2 for @3 @4.=Vendiste @1 @2 por @3 @4.
 WARNING: @1 @2 was dropped on the ground.=AVISO: @1 @2 se cayó en la tierra.
+
+# chat commands
+Manage shops configuration.=Administrar configuración de tiendas.
+Usage:=Uso:
+command=orden
+params=parámetros
+Must provide a command: @1=Debe producir un orden: @1
+"@1" command takes no parameters.=Orden "@1" no requiere parametros.
+Too many parameters.=Demasiado parámetros.
+Unknown command: @1=Orden desconocido: @1
+Must provide ID.=Se requiere ID.
+
+# reload command
+Shops configuration loaded.=Configuración de tiendas cargada.
+
+# register command
+ID=
+name=nombre
+product1@=value,product2@=value,...=producto1@=valor,producto2@=valor,...
+Must provide type.=Se requiere tipo.
+Must provide name.=Se requiere nombre.
+Shop type must be "@1" or "@2".=Tipo de tienda debe ser "@1" o "@2".
+"@1" is not a recognized item.="@1" no es objeto conocido.
+Item value must be a number.=Valor de objeto debe ser número.
+Registered shop with ID: @1=Agregó al registro tienda con ID: @1
+
+# unregister command
+Cannot unregister shop with ID: @1=No puede quitar del registro tienda con ID: @1
+Unregistered shop with ID: @1=Se quitó del registro tienda con ID: @1
