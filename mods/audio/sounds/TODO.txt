@@ -1,0 +1,21 @@
+
+TODO:
+- add more methods for playing sounds
+- normalize sound files
+- add ambiance registration for biomes
+- add option to get sound by string name in "SoundGroup:get" using string.match
+- allow SoundGroup arithmetic expression using string
+- create SoundGroup instances for all cached mod sounds
+- fix "node_dug_meta" & "node_place_metal" are the same
+- add more sounds:
+	- hit/damage
+	- tree
+	- airplane
+	- car
+	- motorcycle
+	- train
+	- chalk
+	- generator
+	- horn
+- add sounds from:
+	- cmer

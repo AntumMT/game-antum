@@ -1,0 +1,153 @@
+
+v1.6
+----
+- added sounds:
+	- door_close_02
+	- door_close_03
+	- door_knock
+	- door_open
+	- doorbell
+	- fire_crackle
+	- leaves
+	- match_ignite
+	- tool_break
+	- vehicle_motor_idle
+	- vomit
+	- woodpecker_peck
+	- woosh
+
+
+v1.5
+----
+- added sounds:
+	- balloon_inflate
+	- balloon_pop
+	- bicycle_bell
+	- bicycle_horn
+	- bicycle_spokes
+	- cobra
+	- dolphin_chirp
+	- dolphin_click
+	- door_close
+	- door_creak
+	- goose
+	- lamb
+	- laugh_evil
+	- lava_cool
+	- leopard (many)
+	- raccoon_chatter
+	- rain_heavy
+	- rain_light
+	- rain_medium
+	- sea_lion
+	- seagull
+	- seagulls
+	- snake_rattle
+	- squirrel
+	- thunder
+	- whale
+	- wind
+- renamed sounds:
+	- sheep -> sheep_baa
+
+
+v1.4
+----
+- added sounds:
+	- bat
+	- bear
+	- camel
+	- canary
+	- cricket
+	- giraffe_hum
+	- gorilla_grunt
+	- gorilla_roar
+	- gorilla_snarl
+	- monkey
+	- parrot
+	- parrot_chirp
+	- parrot_whistle
+	- peacock_02
+	- penguin
+	- pig_snort
+	- pig_squeal
+	- puppy_bark
+	- toucan
+	- turkey_gobble
+- renamed sounds:
+	- elephant -> elephant_trumpet
+
+
+v1.3
+----
+- pencil sounds split into "pencil_erase" & "pencil_write" groups
+- fixed arithmetic operations on SoundGroup
+- renamed node sound files
+- SoundGroup:play returns handle or nil only
+- using built-in type function on SoundGroup instance will return "SoundGroup"
+- added sounds:
+	- bee
+	- bees
+	- bumble_bee
+	- chicken
+	- clock_tick
+	- coyote_howl
+	- crow_caw
+	- duck_quack
+	- goat_bleat
+	- grasshopper
+	- hyena
+	- jaguar_saw
+	- lion
+	- mouse
+	- owl
+	- peacock
+	- piano
+	- pigeon
+	- tiger_roar
+	- tiger_snarl
+	- undead_moan
+	- vulture
+	- watch_tick
+	- whistle
+	- wolf
+	- yak
+	- zebra
+	- zipper
+
+
+v1.2
+----
+- added API object "SoundGroup" for creating & playing sound groups
+- added sounds:
+	- apple_bite
+	- bird
+	- bounce
+	- cat_meow
+	- coins
+	- cow_moo
+	- dog_bark
+	- elephant
+	- explosion
+	- frog
+	- fuse
+	- gallop
+	- horse_neigh
+	- horse_snort
+	- pencil
+	- quail
+	- rooster
+	- sheep
+	- skeleton_bones
+
+
+v1.1
+----
+- added entity hit sound from default mod
+
+
+v1.0
+----
+- initial release
+- added node sounds from default mod
+- added methods for setting node sounds

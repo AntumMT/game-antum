@@ -15,6 +15,8 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [no_fall_damage][] ([MIT][lic.no_fall_damage]) -- version [1.0.0][ver.no_fall_damage] *2020-12-19*
   * [spectator_mode][] ([WTFPL][lic.spectator_mode]) -- version: [3648371 Git][ver.spectator_mode] *2020-07-15*
   * [whitelist][] ([MIT][lic.whitelist]) -- version: [1.1][ver.whitelist] *2021-06-09*
+* audio/
+  * [sounds][] ([MIT][lic.sounds] / [CC BY-SA][lic.ccbysa3.0]) -- version: [1.6][version.sounds] *2021-08-13*
 * buildings/
   * [bridges][] ([GPL][lic.gpl3.0]) -- version: [5b5f475 Git][ver.bridges] *2015-08-23* ([patched][patch.bridges])
   * [christmas][] ([MIT][lic.christmas]) -- version [d3bd872 Git][ver.christmas] *2013-01-11* ([patched][patch.christmas])
@@ -411,6 +413,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [slingshot]: https://github.com/AntumMT/mod-slingshot
 [sneeker]: https://forum.minetest.net/viewtopic.php?t=26685
 [snowdrift]: https://forum.minetest.net/viewtopic.php?t=6854
+[sounds]: https://content.minetest.net/packages/AntumDeluge/sounds/
 [asm_spawneggs]: https://forum.minetest.net/viewtopic.php?t=26676
 [spectator_mode]: https://forum.minetest.net/viewtopic.php?t=13718
 [mobs_monster]: https://content.minetest.net/packages/TenPlus1/mobs_monster/
@@ -511,6 +514,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.snowdrift]: mods/weather/snowdrift/license.txt
 [lic.stone_monster]: mods/mobiles/stone_monster/license.txt
 [lic.asm_spawneggs]: mods/spawning/asm_spawneggs/LICENSE.txt
+[lic.sounds]: mods/audio/sounds/LICENSE.txt
 [lic.spectator_mode]: mods/admin/spectator_mode/LICENSE
 [lic.tools_obsidian]: mods/tools/tools_obsidian/README.md
 [lic.trash_can]: mods/furniture/trash_can/LICENSE.txt
@@ -674,6 +678,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.slingshot]: https://github.com/AntumMT/mod-slingshot/releases/tag/v0.3
 [ver.sneeker]: https://github.com/AntumMT/mod-sneeker/releases/tag/v1.1-1
 [ver.snowdrift]: https://github.com/paramat/snowdrift/tree/3342939
+[ver.sounds]: https://github.com/AntumMT/mod-sounds/releases/tag/v1.6
 [ver.stone_monster]: https://github.com/AntumMT/mod-mob_stone_monster/tree/fa52f6f
 [ver.asm_spawneggs]: https://github.com/AntumMT/mod-asm_spawneggs/releases/tag/v1.2
 [ver.spectator_mode]: https://github.com/minetest-mods/spectator_mode/tree/3648371
