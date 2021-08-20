@@ -176,7 +176,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [deploy_nodes][] ([BSD 3-Clause][lic.deploy_nodes]) -- version: [b67e162 Git][ver.deploy_nodes] *2017-06-08*
 * [home_workshop][] -- version: [03325e8 Git][ver.home_workshop] *2021-04-15*
 * [homedecor][] ([LGPL / WTFPL / CC BY-SA / CC0][lic.homedecor]) -- version: [f1dc68a Git][ver.homedecor] *2021-05-18* ([patched][patch.homedecor])
-* [mesecons][] ([LGPL / CC BY-SA][lic.mesecons]) -- version [6579351 Git][ver.mesecons] *2021-04-09*
+* [mesecons][] ([LGPL / CC BY-SA][lic.mesecons]) -- version [2021-08-03][ver.mesecons]
 * [moremesecons][] ([MPL][lic.mpl2.0]) -- version: [1dab017 Git][ver.moremesecons] *2021-04-14*
 * [mymods](https://github.com/AntumMT/mp-mymods)
   * [mydoors][] ([CC-BY / CC-BY-SA][lic.mydoors] / [WTFPL][lic.wtfpl] / [DWYWFPL][lic.dwywpl]) -- version: [eef3b5f Git][ver.mydoors] *2018-06-12*
@@ -374,7 +374,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [jumping]: https://forum.minetest.net/viewtopic.php?t=2957
 [lighted_helmets]: https://content.minetest.net/packages/AntumDeluge/lighted_helmets/
 [listitems]: https://forum.minetest.net/viewtopic.php?t=18049
-[mesecons]: https://forum.minetest.net/viewtopic.php?t=628
+[mesecons]: https://content.minetest.net/packages/Jeija/mesecons/
 [minetest_game]: https://github.com/minetest/minetest_game
 [mobkit]: https://forum.minetest.net/viewtopic.php?t=22112
 [goblins]: https://forum.minetest.net/viewtopic.php?t=13004
@@ -639,7 +639,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.lighted_helmets]: https://github.com/AntumMT/mod-lighted_helmets/releases/tag/v1.1
 [ver.listitems]: https://github.com/AntumMT/mod-listitems/releases/tag/v1.1
 [ver.mese_monster]: https://github.com/AntumMT/mod-mob_mese_monster/tree/cd02839
-[ver.mesecons]: https://github.com/minetest-mods/mesecons/tree/6579351
+[ver.mesecons]: https://github.com/minetest-mods/mesecons/tree/e15c55c
 [ver.minetest_game]: https://github.com/minetest/minetest_game/tree/9270188
 [ver.mobkit]: https://github.com/TheTermos/mobkit/tree/ddea141
 [ver.mobs_bee]: https://github.com/AntumMT/mod-mobs_animal/tree/671c6c1
