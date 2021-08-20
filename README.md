@@ -154,7 +154,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [bright_night][] ([Unlicense][lic.unlicense]) -- version: [69b750a Git][ver.bright_night] *2018-06-03*
   * [desert_life][] ([CC BY-SA][lic.ccbysa4.0]) -- version: [188f984 Git][ver.desert_life] *2020-01-24*
   * [ethereal][] ([MIT][lic.ethereal]) -- version: [2021-07-18][ver.ethereal] ([patched][patch.ethereal])
-  * [nether][] ([ISC / CC BY / CC BY-SA / CC0][lic.nether]) -- version: [3][ver.nether] *2021-01-22* ([patched][patch.nether])
+  * [nether][] ([ISC / CC BY / CC BY-SA / CC0][lic.nether]) -- version: [3.1][ver.nether] *2021-07-31* ([patched][patch.nether])
   * [snowdrift][] ([MIT / CC BY / CC BY-SA][lic.snowdrift]) -- version: [3342939 Git][ver.snowdrift] *2020-04-24* ([patched][patch.snowdrift])
 
 
@@ -396,7 +396,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [myroofs]: https://forum.minetest.net/viewtopic.php?t=11416
 [mysheetmetal]: https://forum.minetest.net/viewtopic.php?t=11702
 [mywoodslopes]: https://forum.minetest.net/viewtopic.php?t=11433
-[nether]: https://forum.minetest.net/viewtopic.php?t=5790
+[nether]: https://content.minetest.net/packages/PilzAdam/nether/
 [no_fall_damage]: https://forum.minetest.net/viewtopic.php?t=25876
 [painting]: https://github.com/minetest-mods/painting
 [pbmarks]: https://github.com/AntumMT/mod-pbmarks
@@ -662,7 +662,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.myroofs]: https://github.com/minetest-mods/myroofs/tree/fe98461
 [ver.mysheetmetal]: https://github.com/minetest-mods/mysheetmetal/tree/7c5ab71
 [ver.mywoodslopes]: https://github.com/minetest-mods/mywoodslopes/tree/3a1b531
-[ver.nether]: https://github.com/minetest-mods/nether/tree/v3
+[ver.nether]: https://github.com/minetest-mods/nether/tree/v3.1
 [ver.no_fall_damage]: https://repo.or.cz/minetest_no_fall_damage.git/shortlog/refs/tags/1.0.0
 [ver.painting]: https://github.com/minetest-mods/painting/tree/da8f4ba
 [ver.pbmarks]: https://github.com/AntumMT/mod-pbmarks/releases/tag/v1.0

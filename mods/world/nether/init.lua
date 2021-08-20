@@ -42,12 +42,18 @@ end
 
 -- Global Nether namespace
 nether                = {}
+nether.mapgen         = {} -- Shared Nether mapgen namespace, for mapgen files to expose functions and constants
 nether.modname        = minetest.get_current_modname()
 nether.path           = minetest.get_modpath(nether.modname)
 nether.get_translator = S
                      -- nether.useBiomes allows other mods to know whether they can register ores etc. in the Nether.
                      -- See mapgen.lua for an explanation of why minetest.read_schematic is being checked
 nether.useBiomes      = minetest.get_mapgen_setting("mg_name") ~= "v6" and minetest.read_schematic ~= nil
+nether.fogColor = {	           -- only used if climate_api is installed
+	netherCaverns = "#1D0504", -- Distance-fog colour for classic nether
+	mantle        = "#070916", -- Distance-fog colour for the Mantle region
+	geodes        = "#300530"  -- Distance-fog colour for secondary region
+}
 
 
 -- Settings
@@ -70,6 +76,19 @@ if nether.DEPTH_FLOOR + 1000 > nether.DEPTH_CEILING then
 end
 nether.DEPTH = nether.DEPTH_CEILING -- Deprecated, use nether.DEPTH_CEILING instead.
 
+-- DEPTH_FLOOR_LAYERS gives the bottom Y of all locations that wish to be
+-- considered part of the Nether.
+-- DEPTH_FLOOR_LAYERS Allows mods to insert extra layers below the
+-- Nether, by knowing where their layer ceiling should start, and letting
+-- the layers be included in effects which only happen in the Nether.
+-- If a mod wishes to add a layer below the Nether it should read
+-- nether.DEPTH_FLOOR_LAYERS to find the bottom Y of the Nether and any
+-- other layers already under the Nether. The mod should leave a small gap
+-- between DEPTH_FLOOR_LAYERS and its ceiling (e.g. use DEPTH_FLOOR_LAYERS - 6
+-- for its ceiling Y, so there is room to shift edge-case biomes), then set
+-- nether.DEPTH_FLOOR_LAYERS to reflect the mod's floor Y value, and call
+-- shift_existing_biomes() with DEPTH_FLOOR_LAYERS as the floor_y argument.
+nether.DEPTH_FLOOR_LAYERS = nether.DEPTH_FLOOR
 
 -- A debug-print function that understands vectors etc. and does not
 -- evaluate when debugging is turned off.
@@ -149,7 +168,7 @@ This opens to a truly hellish place, though for small mercies the air there is s
 The expedition parties have found no diamonds or gold, and after an experienced search party failed to return from the trail of a missing expedition party, I must conclude this is a dangerous place.]], 10 * nether.FASTTRAVEL_FACTOR),
 
 		is_within_realm = function(pos) -- return true if pos is inside the Nether
-			return pos.y < nether.DEPTH_CEILING
+			return pos.y < nether.DEPTH_CEILING and pos.y > nether.DEPTH_FLOOR
 		end,
 
 		find_realm_anchorPos = function(surface_anchorPos, player_name)
@@ -157,7 +176,7 @@ The expedition parties have found no diamonds or gold, and after an experienced 
 			local destination_pos = vector.divide(surface_anchorPos, nether.FASTTRAVEL_FACTOR)
 			destination_pos.x = math.floor(0.5 + destination_pos.x) -- round to int
 			destination_pos.z = math.floor(0.5 + destination_pos.z) -- round to int
-			destination_pos.y = nether.DEPTH_CEILING - 1000 -- temp value so find_nearest_working_portal() returns nether portals
+			destination_pos.y = nether.DEPTH_CEILING - 1 -- temp value so find_nearest_working_portal() returns nether portals
 
 			-- a y_factor of 0 makes the search ignore the altitude of the portals (as long as they are in the Nether)
 			local existing_portal_location, existing_portal_orientation =
@@ -182,7 +201,7 @@ The expedition parties have found no diamonds or gold, and after an experienced 
 			local destination_pos = vector.multiply(realm_anchorPos, nether.FASTTRAVEL_FACTOR)
 			destination_pos.x = math.min(30900, math.max(-30900, destination_pos.x)) -- clip to world boundary
 			destination_pos.z = math.min(30900, math.max(-30900, destination_pos.z)) -- clip to world boundary
-			destination_pos.y = 0 -- temp value so find_nearest_working_portal() doesn't return nether portals
+			destination_pos.y = nether.DEPTH_CEILING + 1 -- temp value so find_nearest_working_portal() doesn't return nether portals
 
 			-- a y_factor of 0 makes the search ignore the altitude of the portals (as long as they are outside the Nether)
 			local existing_portal_location, existing_portal_orientation =
@@ -227,7 +246,91 @@ The expedition parties have found no diamonds or gold, and after an experienced 
 		end
 
 	})
-end
+
+
+	-- Set appropriate nether distance-fog if climate_api is available
+	--
+	-- Delegating to a mod like climate_api means nether won't unexpectedly stomp on the sky of
+	-- any other mod.
+	-- Skylayer is another mod which can perform this role, and skylayer support could be added
+	-- here as well. However skylayer doesn't provide a position-based method of specifying sky
+	-- colours out-of-the-box, so the nether mod will have to monitor when players enter and
+	-- leave the nether.
+	if minetest.get_modpath("climate_api") and minetest.global_exists("climate_api") and climate_api.register_weather ~= nil then
+
+		climate_api.register_influence(
+			"nether_biome",
+			function(pos)
+				local result = "surface"
+
+				if pos.y <= nether.DEPTH_CEILING and pos.y >= nether.DEPTH_FLOOR then
+					result = "nether"
+
+					-- since mapgen_nobiomes.lua has no regions it doesn't implement get_region(),
+					-- so only use get_region() if it exists
+					if nether.mapgen.get_region ~= nil then
+						-- the biomes-based mapgen supports 2 extra regions
+						local regions = nether.mapgen.RegionEnum
+						local region  = nether.mapgen.get_region(pos)
+						if region == regions.CENTER or region == regions.CENTERSHELL then
+							result = "mantle"
+						elseif region == regions.NEGATIVE or region == regions.NEGATIVESHELL then
+							result = "geode"
+						end
+					end
+				end
+
+				return result
+			end
+		)
+
+		-- using sky type "plain" unfortunately means we don't get smooth fading transitions when
+		-- the color of the sky changes, but it seems to be the only way to obtain a sky colour
+		-- which doesn't brighten during the daytime.
+		local undergroundSky = {
+			sky_data = {
+				base_color = nil,
+				type = "plain",
+				textures = nil,
+				clouds = false,
+			},
+			sun_data = {
+				visible = false,
+				sunrise_visible = false
+			},
+			moon_data = {
+				visible = false
+			},
+			star_data = {
+				visible = false
+			}
+		}
+
+		local netherSky, mantleSky, geodeSky = table.copy(undergroundSky), table.copy(undergroundSky), table.copy(undergroundSky)
+		netherSky.sky_data.base_color = nether.fogColor.netherCaverns
+		mantleSky.sky_data.base_color = nether.fogColor.mantle
+		geodeSky.sky_data.base_color  = nether.fogColor.geodes
+
+		climate_api.register_weather(
+			"nether:nether",
+			{ nether_biome = "nether" },
+			{ ["climate_api:skybox"] = netherSky }
+		)
+
+		climate_api.register_weather(
+			"nether:mantle",
+			{ nether_biome = "mantle" },
+			{ ["climate_api:skybox"] = mantleSky }
+		)
+
+		climate_api.register_weather(
+			"nether:geode",
+			{ nether_biome = "geode" },
+			{ ["climate_api:skybox"] = geodeSky }
+		)
+	end
+
+end -- end of "if nether.NETHER_REALM_ENABLED..."
 
 
 -- Play bubbling lava sounds if player killed by lava

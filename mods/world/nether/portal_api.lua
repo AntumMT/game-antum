@@ -2007,7 +2007,8 @@ local wormhole_nodedef_default = {
 		a = 160, r = 128, g = 0, b = 80
 	},
 	sunlight_propagates = true,
-	use_texture_alpha = "blend",
+	use_texture_alpha = minetest.features.use_texture_alpha_string_modes
+		and "blend" or true,
 	walkable = false,
 	diggable = false,
 	pointable = false,
@@ -2015,7 +2016,6 @@ local wormhole_nodedef_default = {
 	is_ground_content = false,
 	drop = "",
 	light_source = 5,
-	alpha = 192,
 	node_box = {
 		type = "fixed",
 		fixed = {
@@ -2073,7 +2073,7 @@ function nether.register_portal(name, portaldef)
 	end
 
 	portaldef.name     = name
-	portaldef.mod_name = minetest.get_current_modname()
+	portaldef.mod_name = minetest.get_current_modname() or "<mod name not recorded>"
 
 	-- use portaldef_default for any values missing from portaldef or portaldef.sounds
 	if portaldef.sounds ~= nil then setmetatable(portaldef.sounds, {__index = portaldef_default.sounds}) end
@@ -2211,7 +2211,7 @@ function nether.volume_is_natural_and_unprotected(minp, maxp, player_name)
 			if id ~= c_air and id ~= c_ignore and id ~= nil then -- checked for common natural or not emerged
 				local name = minetest.get_name_from_content_id(id)
 				local nodedef = minetest.registered_nodes[name]
-				if not nodedef.is_ground_content then
+				if nodedef and not nodedef.is_ground_content then
 					-- trees are natural but not "ground content"
 					local node_groups = nodedef.groups
 					if node_groups == nil or (node_groups.tree == nil and node_groups.leaves == nil and node_groups.leafdecay == nil) then

@@ -161,6 +161,13 @@ minetest.register_node("nether:fence_nether_brick", {
 	sounds = default.node_sound_stone_defaults(),
 })
 
+minetest.register_node("nether:brick_deep", {
+	description = S("Deep Nether Brick"),
+	tiles = {"nether_brick_deep.png"},
+	is_ground_content = false,
+	groups = {cracky = 2, level = 2},
+	sounds = default.node_sound_stone_defaults()
+})
 
 -- Register stair and slab
 
@@ -308,6 +315,8 @@ lavasea_source.tiles = {
 		},
 	},
 }
+lavasea_source.groups = { not_in_creative_inventory = 1 } -- Avoid having two lava source blocks in the inv.
+for key, value in pairs(lava_source.groups) do lavasea_source.groups[key] = value end
 lavasea_source.liquid_alternative_source = "nether:lava_source"
 lavasea_source.inventory_image = minetest.inventorycube(
 	"nether_lava_source_animated.png^[sheet:2x16:0,0",
@@ -327,8 +336,8 @@ nether.cool_lava = function(pos, node)
 
 	-- Evaporate water sitting above lava, if it's in the Nether.
 	-- (we don't want Nether mod to affect overworld lava mechanics)
-	if minetest.get_node_group(node_above.name, "water") > 0 and
-		pos.y < nether.DEPTH_CEILING and pos.y > nether.DEPTH_FLOOR then
+	if minetest.get_item_group(node_above.name, "water") > 0 and
+		pos.y < nether.DEPTH_CEILING and pos.y > nether.DEPTH_FLOOR_LAYERS then
 		-- cools_lava might be a better group to check for, but perhaps there's
 		-- something in that group that isn't a liquid and shouldn't be evaporated?
 		minetest.swap_node(pos_above, {name="air"})
@@ -374,7 +383,7 @@ minetest.register_on_mods_loaded(function()
 
 	-- register a bucket of Lava-sea source - but make it just the same bucket as default lava.
 	-- (by doing this in register_on_mods_loaded we don't need to declare a soft dependency)
-	if minetest.get_modpath("bucket") and minetest.global_exists("bucket") then
+	if minetest.get_modpath("bucket") and minetest.global_exists("bucket") and type(bucket.liquids) == "table" then
 		local lava_bucket = bucket.liquids["default:lava_source"]
 		if lava_bucket ~= nil then
 			local lavasea_bucket = {}
@@ -527,7 +536,7 @@ minetest.register_node("nether:lava_crust", {
 	paramtype = "light",
 	light_source = default.LIGHT_MAX - 3,
 	buildable_to = false,
-	walkable_to = true,
+	walkable = true,
 	is_ground_content = true,
 	drop = {
 		items = {{
@@ -595,7 +604,7 @@ local function fumarole_onTimer(pos, elapsed)
 
 	-- Fumaroles in the Nether can catch fire.
 	-- (if taken to the surface and used as cottage chimneys, they don't catch fire)
-	local inNether = pos.y <= nether.DEPTH and pos.y >= nether.DEPTH_FLOOR
+	local inNether = pos.y <= nether.DEPTH and pos.y >= nether.DEPTH_FLOOR_LAYERS
 	local canCatchFire = inNether and minetest.registered_nodes["fire:permanent_flame"] ~= nil
 	local smoke_offset   = 0
 	local timeout_factor = 1
