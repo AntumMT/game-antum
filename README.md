@@ -53,7 +53,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * horticulture/
   * [farming][] ([MIT][lic.farming]) -- version: [2021-07-18][ver.farming]
 * inventory/
-  * [bags][] ([BSD 3-Clause][lic.bags]) -- version: [bc87b45 Git][ver.bags] *2018-04-11*
+  * [bags][] ([BSD 3-Clause][lic.bags]) -- version: [bc87b45 Git][ver.bags] *2018-04-11* ([patched][patch.bags])
   * [sfinv][] ([MIT][lic.sfinv] -- version: [2023-04-14][ver.sfinv]
   * [sfinv_buttons][] ([MIT][lic.mit]) -- version [1.1.2][ver.sfinv_buttons] *2023-04-20*
 * libs/
@@ -706,6 +706,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.amber]: https://github.com/AntumMT/mod-amber/tree/39b852a
 [patch.atm]: https://github.com/AntumMT/mod-atm/tree/2ab0e78
 [patch.away]: https://github.com/AntumMT/mod-away/tree/3b0bf9e
+[patch.bags]: https://github.com/AntumMT/mod-bags/tree/db216eebc2e63a68061d9f865f649c0ae3490bdd
 [patch.beds]: https://github.com/AntumMT/mod-beds/commit/88155ca
 [patch.boats2]: https://github.com/AntumMT/mod-boats2/tree/9b2bcb7
 [patch.bookmarks_gui]: https://github.com/AntumMT/mod-bookmarks_gui/tree/8250b0169239b777a84d4b85d72ee4faed2a43eb
