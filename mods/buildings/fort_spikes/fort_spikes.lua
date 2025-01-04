@@ -18,12 +18,12 @@ end
 
 -- check nodes below/above to forbid construct spikes in two vertical rows.
 fort_spikes.is_allowed_position = function(pos)
-  local node = minetest.get_node({x = pos.x, y = pos.y - 1, z = pos.z})
-  if minetest.get_node_group(node.name, "spikes") > 0 then
+  local node = core.get_node({x = pos.x, y = pos.y - 1, z = pos.z})
+  if core.get_node_group(node.name, "spikes") > 0 then
     return false
   end
-  node = minetest.get_node({x = pos.x, y = pos.y + 1, z = pos.z})
-  if minetest.get_node_group(node.name, "spikes") > 0 then
+  node = core.get_node({x = pos.x, y = pos.y + 1, z = pos.z})
+  if core.get_node_group(node.name, "spikes") > 0 then
     return false
   end
   return true
@@ -37,7 +37,7 @@ fort_spikes.is_broken = function(durability_index)
   return false
 end
 
-minetest.register_node("fort_spikes:wood_spikes", {
+core.register_node("fort_spikes:wood_spikes", {
   description = "Wood spikes",
   drawtype = "plantlike",
   visual_scale = 1,
@@ -53,12 +53,12 @@ minetest.register_node("fort_spikes:wood_spikes", {
   end,
   on_construct = function(pos)
     if fort_spikes.is_allowed_position(pos) == false then
-      minetest.dig_node(pos)
+      core.dig_node(pos)
     end
   end,
 })
 
-minetest.register_node("fort_spikes:broken_wood_spikes", {
+core.register_node("fort_spikes:broken_wood_spikes", {
   description = "Broken wood spikes",
   drawtype = "plantlike",
   visual_scale = 1,
@@ -71,7 +71,7 @@ minetest.register_node("fort_spikes:broken_wood_spikes", {
   groups = {spikes=1, flammable=2, choppy = 2, oddly_breakable_by_hand = 1},
 })
 
-minetest.register_craft({
+core.register_craft({
   output = 'fort_spikes:wood_spikes 3',
   recipe = {
     {'default:stick', '', 'default:stick'},
@@ -85,7 +85,7 @@ minetest.register_craft({
   end,
 })
 
-minetest.register_node("fort_spikes:iron_spikes", {
+core.register_node("fort_spikes:iron_spikes", {
   description = "Iron spikes",
   drawtype = "plantlike",
   visual_scale = 1,
@@ -101,12 +101,12 @@ minetest.register_node("fort_spikes:iron_spikes", {
   end,
   on_construct = function(pos)
     if fort_spikes.is_allowed_position(pos) == false then
-      minetest.dig_node(pos)
+      core.dig_node(pos)
     end
   end,
 })
 
-minetest.register_node("fort_spikes:broken_iron_spikes", {
+core.register_node("fort_spikes:broken_iron_spikes", {
   description = "Broken  spikes",
   drawtype = "plantlike",
   visual_scale = 1,
@@ -119,7 +119,7 @@ minetest.register_node("fort_spikes:broken_iron_spikes", {
   groups = {cracky=2, spikes=1},
 })
 
-minetest.register_craft({
+core.register_craft({
   output = 'fort_spikes:iron_spikes 3',
   recipe = {
     {'default:steel_ingot', '', 'default:steel_ingot'},
@@ -133,37 +133,37 @@ minetest.register_craft({
   end,
 })
 
-minetest.register_abm(
+core.register_abm(
   {nodenames = {"fort_spikes:wood_spikes"},
     interval = 1.0,
     chance = 1,
     action = function(pos, node, active_object_count, active_object_count_wider)
       local times_broken = 0
-      local objs = minetest.get_objects_inside_radius(pos, 1)
+      local objs = core.get_objects_inside_radius(pos, 1)
       for k, obj in pairs(objs) do
         times_broken = times_broken + fort_spikes.do_damage(obj, fort_spikes.wood_durability_index)
       end
       if times_broken > 0 then
-        minetest.remove_node(pos)
-        minetest.place_node(pos, {name="fort_spikes:broken_wood_spikes"})
+        core.remove_node(pos)
+        core.place_node(pos, {name="fort_spikes:broken_wood_spikes"})
       end
     end,
   }
 )
 
-minetest.register_abm(
+core.register_abm(
   {nodenames = {"fort_spikes:iron_spikes"},
     interval = 1.0,
     chance = 1,
     action = function(pos, node, active_object_count, active_object_count_wider)
       local times_broken = 0
-      local objs = minetest.get_objects_inside_radius(pos, 1)
+      local objs = core.get_objects_inside_radius(pos, 1)
       for k, obj in pairs(objs) do
         times_broken = times_broken + fort_spikes.do_damage(obj, fort_spikes.iron_durability_index)
       end
       if times_broken > 0 then
-        minetest.remove_node(pos)
-        minetest.place_node(pos, {name="fort_spikes:broken_iron_spikes"})
+        core.remove_node(pos)
+        core.place_node(pos, {name="fort_spikes:broken_iron_spikes"})
       end
     end,
   }

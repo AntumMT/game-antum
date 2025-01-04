@@ -22,7 +22,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [christmas][] ([MIT][lic.christmas]) -- version [d3bd872 Git][ver.christmas] *2013-01-11* ([patched][patch.christmas])
   * [doors][] ([MIT][lic.doors] / [CC BY-SA][lic.ccbysa3.0]) -- version: 2024-11-09
   * [elevator][] ([WTFPL][lic.elevator])
-  * [fort_spikes][] ([MIT][lic.fort_spikes] / [CC0][lic.cc0]) -- version: [7c011f8 Git][ver.fort_spikes] *2019-10-06*
+  * [fort_spikes][] ([MIT][lic.fort_spikes] / [CC0][lic.cc0]) -- version: [7c011f8 Git][ver.fort_spikes] *2019-10-06* ([patched][patch.fort_spikes])
   * [glass][] ([LGPL][lic.lgpl2.1]) -- version: [1.1][ver.glass] *2021-05-26*
   * [moreblocks][] ([zlib][lic.moreblocks]) -- version: [3b97ea5 Git][ver.moreblocks] *2021-03-19*
   * [windmill][] ([WTFPL][lic.windmill]) -- version: [47b029d Git][ver.windmill] *2014-08-21* ([patched][patch.windmill])
@@ -718,6 +718,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.crops]: https://github.com/AntumMT/mod-crops/tree/a1cce06
 [patch.drawers]: https://github.com/AntumMT/mod-drawers/tree/a77f809
 [patch.ethereal]: https://github.com/AntumMT/mod-ethereal/tree/0d418d4
+[patch.fort_spikes]: https://github.com/AntumMT/mod-fort_spikes/tree/154c8c289989d0936c4f7b374569209021d3f84e
 [patch.gems_encrustable]: https://github.com/AntumMT/mod-gems_encrustable/tree/276fb25
 [patch.gems_tools]: https://github.com/AntumMT/mod-gems_tools/tree/25bca18
 [patch.helicopter]: https://github.com/AntumMT/mod-helicopter/tree/79d2d3e
