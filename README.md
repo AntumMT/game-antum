@@ -151,7 +151,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [hudbars][] ([MIT][lic.mit] / [CC BY-SA][lic.ccbysa3.0]) -- version: [2.3.3][ver.hudbars] *2021-07-08*
   * [pbmarks][] ([MIT][lic.pbmarks]) -- version: [1.0][ver.pbmarks] *2021-06-15*
 * world/
-  * [bright_night][] ([Unlicense][lic.unlicense]) -- version: [69b750a Git][ver.bright_night] *2018-06-03*
+  * [bright_night][] ([Unlicense][lic.unlicense]) -- version: [69b750a Git][ver.bright_night] *2018-06-03* ([patched][patch.bright_night])
   * [desert_life][] ([CC BY-SA][lic.ccbysa4.0]) -- version: [188f984 Git][ver.desert_life] *2020-01-24*
   * [ethereal][] ([MIT][lic.ethereal]) -- version: [2021-07-18][ver.ethereal] ([patched][patch.ethereal])
   * [nether][] ([ISC / CC BY / CC BY-SA / CC0][lic.nether]) -- version: [3.1][ver.nether] *2021-07-31* ([patched][patch.nether])
@@ -709,6 +709,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.beds]: https://github.com/AntumMT/mod-beds/commit/88155ca
 [patch.boats2]: https://github.com/AntumMT/mod-boats2/tree/9b2bcb7
 [patch.bridges]: https://github.com/AntumMT/mod-bridges/tree/ba8f71a
+[patch.bright_night]: https://github.com/AntumMT/mod-bright_night/tree/d39f20d0cc5a78c2cde282f4150260a2cb40bb4e
 [patch.christmas]: https://github.com/AntumMT/mod-christmas/tree/50bda80
 [patch.craftguide]: https://github.com/AntumMT/mod-craftguide/tree/aef18f2
 [patch.crops]: https://github.com/AntumMT/mod-crops/tree/a1cce06
