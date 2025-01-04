@@ -1,7 +1,7 @@
 # ![Antum](menu/header.png)![icon](menu/icon.png)
 
-A custom game for [Minetest](http://www.minetest.net/) / [Freeminer](http://freeminer.org/)
-Requires Minetest server 5.4.0 or above (I think)
+A custom game for [Luanti (Minetest)](http://www.luanti.org/) / [Freeminer](http://freeminer.org/)
+Requires Luanti server 5.4.0 or above (I think)
 
 The game includes the mods from the default [minetest_game](https://github.com/minetest/minetest_game/tree/master/mods)
 
@@ -194,251 +194,251 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 ### Mods to potentially add:
 
-* [adv_vehicles](https://forum.minetest.net/viewtopic.php?t=22777) (Advanced Vehicles)
-* [announce](https://forum.minetest.net/viewtopic.php?t=16823)
+* [adv_vehicles](https://forum.luanti.org/viewtopic.php?t=22777) (Advanced Vehicles)
+* [announce](https://forum.luanti.org/viewtopic.php?t=16823)
 * [anvil](https://github.com/minetest-mods/anvil)
-* [anvils](https://forum.minetest.net/viewtopic.php?t=20582)
-* [arena_lib](https://forum.minetest.net/viewtopic.php?t=24509)
-* [bakedclay](https://content.minetest.net/packages/TenPlus1/bakedclay/)
+* [anvils](https://forum.luanti.org/viewtopic.php?t=20582)
+* [arena_lib](https://forum.luanti.org/viewtopic.php?t=24509)
+* [bakedclay](https://content.luanti.org/packages/TenPlus1/bakedclay/)
 * [basic_signs](https://gitlab.com/VanessaE/basic_signs)
-* [billboard](https://forum.minetest.net/viewtopic.php?t=15260)
-* [bows](https://forum.minetest.net/viewtopic.php?t=14384)
-* [bucket](https://content.minetest.net/packages/daret/bucket/) (bucket lite)
-* [carpet](https://forum.minetest.net/viewtopic.php?t=2875)
-* [carpets](https://forum.minetest.net/viewtopic.php?t=15459)
-* [castle_gates](https://content.minetest.net/packages/FaceDeer/castle_gates/)
-* [cherrytree](https://forum.minetest.net/viewtopic.php?t=22118)
-* [christmas](https://forum.minetest.net/viewtopic.php?t=23782)
-* [clothing](https://forum.minetest.net/viewtopic.php?t=26443) (Clothing 2)
-* [commodotymarket](https://forum.minetest.net/viewtopic.php?t=22926)
-* [coloured_nametag](https://forum.minetest.net/viewtopic.php?t=12197)
-* [cottages](https://content.minetest.net/packages/Sokomine/cottages/)
+* [billboard](https://forum.luanti.org/viewtopic.php?t=15260)
+* [bows](https://forum.luanti.org/viewtopic.php?t=14384)
+* [bucket](https://content.luanti.org/packages/daret/bucket/) (bucket lite)
+* [carpet](https://forum.luanti.org/viewtopic.php?t=2875)
+* [carpets](https://forum.luanti.org/viewtopic.php?t=15459)
+* [castle_gates](https://content.luanti.org/packages/FaceDeer/castle_gates/)
+* [cherrytree](https://forum.luanti.org/viewtopic.php?t=22118)
+* [christmas](https://forum.luanti.org/viewtopic.php?t=23782)
+* [clothing](https://forum.luanti.org/viewtopic.php?t=26443) (Clothing 2)
+* [commodotymarket](https://forum.luanti.org/viewtopic.php?t=22926)
+* [coloured_nametag](https://forum.luanti.org/viewtopic.php?t=12197)
+* [cottages](https://content.luanti.org/packages/Sokomine/cottages/)
 * [cozy](https://github.com/minetest-mods/cozy)
-* [dmobs](https://content.minetest.net/packages/TenPlus1/dmobs/) (DOOMed Mobs)
-* [draconis](https://forum.minetest.net/viewtopic.php?t=22595) (dragons)
-* [drinks](https://content.minetest.net/packages/Nathan.S/drinks/)
-* [extra_doors](https://content.minetest.net/packages/sorcerykid/extra_doors/)
-* [flying_carpet](https://content.minetest.net/packages/Wuzzy/flying_carpet/)
+* [dmobs](https://content.luanti.org/packages/TenPlus1/dmobs/) (DOOMed Mobs)
+* [draconis](https://forum.luanti.org/viewtopic.php?t=22595) (dragons)
+* [drinks](https://content.luanti.org/packages/Nathan.S/drinks/)
+* [extra_doors](https://content.luanti.org/packages/sorcerykid/extra_doors/)
+* [flying_carpet](https://content.luanti.org/packages/Wuzzy/flying_carpet/)
 * [formspec](https://github.com/Bremaweb/formspec) (Formspec Framework)
-* [greek](https://forum.minetest.net/viewtopic.php?t=26565)
-* [grunds](https://forum.minetest.net/viewtopic.php?t=24539)
-* [hbhunger](https://content.minetest.net/packages/Wuzzy/hbhunger/)
-* [lapis](https://forum.minetest.net/viewtopic.php?t=11287)
-* [magic_potions](https://forum.minetest.net/viewtopic.php?t=24208)
-* [mobs_skeletons](https://forum.minetest.net/viewtopic.php?t=26668)
-* [motorboat](https://forum.minetest.net/viewtopic.php?t=24652)
-* [mtc_burger](https://content.minetest.net/packages/Can202/mtc_burger/)
-* [murder](https://forum.minetest.net/viewtopic.php?t=24884) (Murder mini-game)
-* [naturalslopeslib](https://forum.minetest.net/viewtopic.php?t=18140)
-* [nether](https://content.minetest.net/packages/Hybrid%20Dog/nether/) (alternate nether)
-* [nightandday](https://content.minetest.net/packages/sofar/nightandday/)
-* [paleotest](https://forum.minetest.net/viewtopic.php?t=22253) (for some of the mobs)
-* [petz](https://forum.minetest.net/viewtopic.php?t=22245)
-* [pull_cart](https://forum.minetest.net/viewtopic.php?t=26400)
-* [rainf](https://forum.minetest.net/viewtopic.php?t=25554) (Temperate Rainforest biome)
-* [replacer](https://content.minetest.net/packages/Sokomine/replacer/)
-* [rotate](https://content.minetest.net/packages/Argos/rotate/) (wrench)
-* [sailing](https://forum.minetest.net/viewtopic.php?t=23520)
-* [sea](https://forum.minetest.net/viewtopic.php?t=4627)
-* [servercleaner](https://content.minetest.net/packages/AiTechEye/servercleaner/)
+* [greek](https://forum.luanti.org/viewtopic.php?t=26565)
+* [grunds](https://forum.luanti.org/viewtopic.php?t=24539)
+* [hbhunger](https://content.luanti.org/packages/Wuzzy/hbhunger/)
+* [lapis](https://forum.luanti.org/viewtopic.php?t=11287)
+* [magic_potions](https://forum.luanti.org/viewtopic.php?t=24208)
+* [mobs_skeletons](https://forum.luanti.org/viewtopic.php?t=26668)
+* [motorboat](https://forum.luanti.org/viewtopic.php?t=24652)
+* [mtc_burger](https://content.luanti.org/packages/Can202/mtc_burger/)
+* [murder](https://forum.luanti.org/viewtopic.php?t=24884) (Murder mini-game)
+* [naturalslopeslib](https://forum.luanti.org/viewtopic.php?t=18140)
+* [nether](https://content.luanti.org/packages/Hybrid%20Dog/nether/) (alternate nether)
+* [nightandday](https://content.luanti.org/packages/sofar/nightandday/)
+* [paleotest](https://forum.luanti.org/viewtopic.php?t=22253) (for some of the mobs)
+* [petz](https://forum.luanti.org/viewtopic.php?t=22245)
+* [pull_cart](https://forum.luanti.org/viewtopic.php?t=26400)
+* [rainf](https://forum.luanti.org/viewtopic.php?t=25554) (Temperate Rainforest biome)
+* [replacer](https://content.luanti.org/packages/Sokomine/replacer/)
+* [rotate](https://content.luanti.org/packages/Argos/rotate/) (wrench)
+* [sailing](https://forum.luanti.org/viewtopic.php?t=23520)
+* [sea](https://forum.luanti.org/viewtopic.php?t=4627)
+* [servercleaner](https://content.luanti.org/packages/AiTechEye/servercleaner/)
 * [signs_lib-extrafonts](https://gitlab.com/VanessaE/minetest-signs_lib-extrafonts)
-* [slap_rotate](https://forum.minetest.net/viewtopic.php?t=25892)
-* [slimes](https://forum.minetest.net/viewtopic.php?t=15878)
-* [streets](https://forum.minetest.net/viewtopic.php?t=2984)
-* [swaz](https://forum.minetest.net/viewtopic.php?t=25143) (Swampz biome)
-* [terraform](https://forum.minetest.net/viewtopic.php?t=26305)
-* [towercrane](https://content.minetest.net/packages/joe7575/towercrane/)
-* [ts_doors](https://content.minetest.net/packages/Thomas-S/ts_doors/)
-* [trike](https://forum.minetest.net/viewtopic.php?t=26391) (Ultralight Trike)
-* [vehicles](https://forum.minetest.net/viewtopic.php?t=15610)
-* [villagers](https://forum.minetest.net/viewtopic.php?t=17915)
-* [weather](https://content.minetest.net/packages/theFox/weather/)
-* [wildcow](https://forum.minetest.net/viewtopic.php?t=25739)
-* [witches](https://content.minetest.net/packages/FreeLikeGNU/witches/)
-* [x_bows](https://content.minetest.net/packages/SaKeL/x_bows/)
-* [xpro](https://forum.minetest.net/viewtopic.php?t=20499) (XP and Levels)
-* [xtraores](https://forum.minetest.net/viewtopic.php?t=12798)
-* [zoonami](https://forum.minetest.net/viewtopic.php?t=25356)
+* [slap_rotate](https://forum.luanti.org/viewtopic.php?t=25892)
+* [slimes](https://forum.luanti.org/viewtopic.php?t=15878)
+* [streets](https://forum.luanti.org/viewtopic.php?t=2984)
+* [swaz](https://forum.luanti.org/viewtopic.php?t=25143) (Swampz biome)
+* [terraform](https://forum.luanti.org/viewtopic.php?t=26305)
+* [towercrane](https://content.luanti.org/packages/joe7575/towercrane/)
+* [ts_doors](https://content.luanti.org/packages/Thomas-S/ts_doors/)
+* [trike](https://forum.luanti.org/viewtopic.php?t=26391) (Ultralight Trike)
+* [vehicles](https://forum.luanti.org/viewtopic.php?t=15610)
+* [villagers](https://forum.luanti.org/viewtopic.php?t=17915)
+* [weather](https://content.luanti.org/packages/theFox/weather/)
+* [wildcow](https://forum.luanti.org/viewtopic.php?t=25739)
+* [witches](https://content.luanti.org/packages/FreeLikeGNU/witches/)
+* [x_bows](https://content.luanti.org/packages/SaKeL/x_bows/)
+* [xpro](https://forum.luanti.org/viewtopic.php?t=20499) (XP and Levels)
+* [xtraores](https://forum.luanti.org/viewtopic.php?t=12798)
+* [zoonami](https://forum.luanti.org/viewtopic.php?t=25356)
 
 
 ---
 
 ### Mods to replace/remove:
 
-- biofuel? (replace with [biofuel](https://content.minetest.net/packages/Lokrates/biofuel/) by Lokrates)
+- biofuel? (replace with [biofuel](https://content.luanti.org/packages/Lokrates/biofuel/) by Lokrates)
 - boats (minetest_game)
 - boats2 (fork & remove dependency on boats)
 - bonemeal?
 - bookmarks_gui? (replace with custom)
 - butterflies? (minetest_game)
-- campfire? (replace with [new campfire](https://content.minetest.net/packages/VanessaE/new_campfire/))
+- campfire? (replace with [new campfire](https://content.luanti.org/packages/VanessaE/new_campfire/))
 - coloredwood?
 - compassgps?
 - elevator?
-- env_sounds? (minetest_game) (replace with [sounds](https://content.minetest.net/packages/AntumDeluge/sounds/))
+- env_sounds? (minetest_game) (replace with [sounds](https://content.luanti.org/packages/AntumDeluge/sounds/))
 - fireflies? (minetest_game)
 - fort_spikes?
 - give_initial_stuff (minetest_game) (replace with custom/add to core)
 - glow?
 - intllib (after mods dependency removed)
 - pipeworks? (if no other mods need it)
-- screwdriver (minetest_game) (replace with [better screwdriver](https://content.minetest.net/packages/12Me21/screwdriver2/) or [rotate](https://content.minetest.net/packages/Argos/rotate/) (wrench))
+- screwdriver (minetest_game) (replace with [better screwdriver](https://content.luanti.org/packages/12Me21/screwdriver2/) or [rotate](https://content.luanti.org/packages/Argos/rotate/) (wrench))
 - snowdrift (fork or replace with other weather mod)
-- stairs (minetest_game) (replace with [stairs redo](https://content.minetest.net/packages/TenPlus1/stairs/))
+- stairs (minetest_game) (replace with [stairs redo](https://content.luanti.org/packages/TenPlus1/stairs/))
 - throwing?
 - weather? (minetest_game)
 - walls? (minetest_game)
 
 
-[3d_armor]: https://content.minetest.net/packages/stu/3d_armor/
-[3d_armor_gloves]: https://forum.minetest.net/viewtopic.php?t=25665
-[3d_armor_light]: https://content.minetest.net/packages/AntumDeluge/3d_armor_light/
-[airtanks]: https://content.minetest.net/packages/FaceDeer/airtanks/
-[alternode]: https://content.minetest.net/packages/AntumDeluge/alternode/
-[amber]: https://forum.minetest.net/viewtopic.php?t=18186
-[ambience]: https://content.minetest.net/packages/TenPlus1/ambience/
+[3d_armor]: https://content.luanti.org/packages/stu/3d_armor/
+[3d_armor_gloves]: https://forum.luanti.org/viewtopic.php?t=25665
+[3d_armor_light]: https://content.luanti.org/packages/AntumDeluge/3d_armor_light/
+[airtanks]: https://content.luanti.org/packages/FaceDeer/airtanks/
+[alternode]: https://content.luanti.org/packages/AntumDeluge/alternode/
+[amber]: https://forum.luanti.org/viewtopic.php?t=18186
+[ambience]: https://content.luanti.org/packages/TenPlus1/ambience/
 [animals_aggressive]: https://github.com/AntumMT/mp-animals_aggressive
 [animals_harmless]: https://github.com/AntumMT/mp-animals_harmless
-[atm]: https://content.minetest.net/packages/CodeMiner/atm/
-[awards]: https://content.minetest.net/packages/rubenwardy/awards/
-[away]: https://forum.minetest.net/viewtopic.php?t=1211
+[atm]: https://content.luanti.org/packages/CodeMiner/atm/
+[awards]: https://content.luanti.org/packages/rubenwardy/awards/
+[away]: https://forum.luanti.org/viewtopic.php?t=1211
 [bags]: http://cornernote.github.io/minetest-bags/
-[basic_materials]: https://content.minetest.net/packages/VanessaE/basic_materials/
-[beds]: https://content.minetest.net/packages/sorcerykid/beds/
-[bike]: https://content.minetest.net/packages/Hume2/bike/
-[biofuel]: https://forum.minetest.net/viewtopic.php?t=24622
+[basic_materials]: https://content.luanti.org/packages/VanessaE/basic_materials/
+[beds]: https://content.luanti.org/packages/sorcerykid/beds/
+[bike]: https://content.luanti.org/packages/Hume2/bike/
+[biofuel]: https://forum.luanti.org/viewtopic.php?t=24622
 [boats2]: https://github.com/amadin/boats
-[bonemeal]: https://content.minetest.net/packages/TenPlus1/bonemeal/
+[bonemeal]: https://content.luanti.org/packages/TenPlus1/bonemeal/
 [bookmarks_gui]: http://cornernote.github.io/minetest-bookmarks_gui/
-[bridges]: https://content.minetest.net/packages/Sokomine/bridges/
-[bright_night]: https://forum.minetest.net/viewtopic.php?t=20078
-[campfire]: https://forum.minetest.net/viewtopic.php?t=10569
-[castle_farming]: https://content.minetest.net/packages/FaceDeer/castle_farming/
-[castle_gates]: https://content.minetest.net/packages/FaceDeer/castle_gates/
-[castle_lighting]: https://content.minetest.net/packages/FaceDeer/castle_lighting/
-[castle_masonry]: https://content.minetest.net/packages/FaceDeer/castle_masonry/
-[castle_shields]: https://content.minetest.net/packages/FaceDeer/castle_shields/
+[bridges]: https://content.luanti.org/packages/Sokomine/bridges/
+[bright_night]: https://forum.luanti.org/viewtopic.php?t=20078
+[campfire]: https://forum.luanti.org/viewtopic.php?t=10569
+[castle_farming]: https://content.luanti.org/packages/FaceDeer/castle_farming/
+[castle_gates]: https://content.luanti.org/packages/FaceDeer/castle_gates/
+[castle_lighting]: https://content.luanti.org/packages/FaceDeer/castle_lighting/
+[castle_masonry]: https://content.luanti.org/packages/FaceDeer/castle_masonry/
+[castle_shields]: https://content.luanti.org/packages/FaceDeer/castle_shields/
 [castle_storage]: https://github.com/minetest-mods/castle_storage
-[castle_tapestries]: https://content.minetest.net/packages/FaceDeer/castle_tapestries/
-[castle_weapons]: https://content.minetest.net/packages/FaceDeer/castle_weapons/
-[chatlog]: https://content.minetest.net/packages/AntumDeluge/chatlog/
-[christmas]: https://forum.minetest.net/viewtopic.php?t=3950
-[cleaner]: https://content.minetest.net/packages/AntumDeluge/cleaner/
-[cmer_skeleton]: https://content.minetest.net/packages/AntumDeluge/skeleton/
+[castle_tapestries]: https://content.luanti.org/packages/FaceDeer/castle_tapestries/
+[castle_weapons]: https://content.luanti.org/packages/FaceDeer/castle_weapons/
+[chatlog]: https://content.luanti.org/packages/AntumDeluge/chatlog/
+[christmas]: https://forum.luanti.org/viewtopic.php?t=3950
+[cleaner]: https://content.luanti.org/packages/AntumDeluge/cleaner/
+[cmer_skeleton]: https://content.luanti.org/packages/AntumDeluge/skeleton/
 [cmer_spider]: https://github.com/AntumMT/mod-spider
-[coloredwood]: https://content.minetest.net/packages/VanessaE/coloredwood/
-[compass]: https://forum.minetest.net/viewtopic.php?t=3785
-[compassgps]: https://forum.minetest.net/viewtopic.php?t=9373
-[config]: https://content.minetest.net/packages/sorcerykid/config/
-[craftguide]: https://content.minetest.net/packages/jp/craftguide/
-[crafting_bench]: https://content.minetest.net/packages/FaceDeer/crafting_bench/
-[creatures]: https://forum.minetest.net/viewtopic.php?t=8638
-[crops]: https://content.minetest.net/packages/sofar/crops/
-[currency]: https://content.minetest.net/packages/VanessaE/currency/
+[coloredwood]: https://content.luanti.org/packages/VanessaE/coloredwood/
+[compass]: https://forum.luanti.org/viewtopic.php?t=3785
+[compassgps]: https://forum.luanti.org/viewtopic.php?t=9373
+[config]: https://content.luanti.org/packages/sorcerykid/config/
+[craftguide]: https://content.luanti.org/packages/jp/craftguide/
+[crafting_bench]: https://content.luanti.org/packages/FaceDeer/crafting_bench/
+[creatures]: https://forum.luanti.org/viewtopic.php?t=8638
+[crops]: https://content.luanti.org/packages/sofar/crops/
+[currency]: https://content.luanti.org/packages/VanessaE/currency/
 [deploy_nodes]: https://cornernote.github.io/minetest-deploy_nodes/
-[desert_life]: https://forum.minetest.net/viewtopic.php?t=16054
+[desert_life]: https://forum.luanti.org/viewtopic.php?t=16054
 [dinosaurs_aggressive]: https://github.com/AntumMT/mp-dinosaurs_aggressive
 [doors]: https://content.luanti.org/packages/TenPlus1/doors/
-[drawers]: https://content.minetest.net/packages/LNJ/drawers/
-[elevator]: https://forum.minetest.net/viewtopic.php?t=12944
-[enchanting]: https://forum.minetest.net/viewtopic.php?t=7354
-[equip_exam]: https://content.minetest.net/packages/AntumDeluge/equip_exam/
-[equip_wear]: https://content.minetest.net/packages/AntumDeluge/equip_wear/
-[ethereal]: https://content.minetest.net/packages/TenPlus1/ethereal/
-[farlands]: https://forum.minetest.net/viewtopic.php?t=16921
-[farming]: https://content.minetest.net/packages/TenPlus1/farming/
-[folks]: https://content.minetest.net/packages/SonoMichele/folks/
-[formspecs]: https://content.minetest.net/packages/sorcerykid/formspecs/
-[fort_spikes]: https://forum.minetest.net/viewtopic.php?t=14574
-[gems_encrustable]: https://forum.minetest.net/viewtopic.php?t=2596
-[gems_tools]: https://forum.minetest.net/viewtopic.php?t=4294
-[glass]: https://content.minetest.net/packages/AntumDeluge/glass/
-[glow]: https://forum.minetest.net/viewtopic.php?t=6300
-[hbarmor]: https://content.minetest.net/packages/Wuzzy/hbarmor/
-[hbsprint]: https://content.minetest.net/packages/texmex/hbsprint/
-[headanim]: https://content.minetest.net/packages/Lone_Wolf/headanim/
-[helicopter]: https://forum.minetest.net/viewtopic.php?t=24613
-[hidename]: https://content.minetest.net/packages/AntumDeluge/hidename/
+[drawers]: https://content.luanti.org/packages/LNJ/drawers/
+[elevator]: https://forum.luanti.org/viewtopic.php?t=12944
+[enchanting]: https://forum.luanti.org/viewtopic.php?t=7354
+[equip_exam]: https://content.luanti.org/packages/AntumDeluge/equip_exam/
+[equip_wear]: https://content.luanti.org/packages/AntumDeluge/equip_wear/
+[ethereal]: https://content.luanti.org/packages/TenPlus1/ethereal/
+[farlands]: https://forum.luanti.org/viewtopic.php?t=16921
+[farming]: https://content.luanti.org/packages/TenPlus1/farming/
+[folks]: https://content.luanti.org/packages/SonoMichele/folks/
+[formspecs]: https://content.luanti.org/packages/sorcerykid/formspecs/
+[fort_spikes]: https://forum.luanti.org/viewtopic.php?t=14574
+[gems_encrustable]: https://forum.luanti.org/viewtopic.php?t=2596
+[gems_tools]: https://forum.luanti.org/viewtopic.php?t=4294
+[glass]: https://content.luanti.org/packages/AntumDeluge/glass/
+[glow]: https://forum.luanti.org/viewtopic.php?t=6300
+[hbarmor]: https://content.luanti.org/packages/Wuzzy/hbarmor/
+[hbsprint]: https://content.luanti.org/packages/texmex/hbsprint/
+[headanim]: https://content.luanti.org/packages/Lone_Wolf/headanim/
+[helicopter]: https://forum.luanti.org/viewtopic.php?t=24613
+[hidename]: https://content.luanti.org/packages/AntumDeluge/hidename/
 [home_gui]: http://cornernote.github.io/minetest-home_gui/
-[home_workshop]: https://content.minetest.net/packages/VanessaE/home_workshop_modpack/
-[homedecor]: https://content.minetest.net/packages/VanessaE/homedecor_modpack/
-[hot_air_balloons]: https://content.minetest.net/packages/Eran/hot_air_balloons/
-[hovercraft]: https://forum.minetest.net/viewtopic.php?t=6722
-[hud_compass]: https://content.minetest.net/packages/kestral/hud_compass/
-[hudbars]: https://content.minetest.net/packages/Wuzzy/hudbars/
-[ilights]: https://content.minetest.net/packages/VanessaE/ilights/
-[intllib]: https://content.minetest.net/packages/kaeza/intllib/
-[invisibility]: https://content.minetest.net/packages/TenPlus1/invisibility/
-[jukebox]: https://forum.minetest.net/viewtopic.php?t=13505
-[jumping]: https://forum.minetest.net/viewtopic.php?t=2957
-[lighted_helmets]: https://content.minetest.net/packages/AntumDeluge/lighted_helmets/
-[listitems]: https://content.minetest.net/packages/AntumDeluge/listitems/
-[mesecons]: https://content.minetest.net/packages/Jeija/mesecons/
-[minetest_game]: https://content.minetest.net/packages/Minetest/minetest_game/
-[mobkit]: https://content.minetest.net/packages/Termos/mobkit/
-[goblins]: https://content.minetest.net/packages/FreeLikeGNU/goblins/
-[mobs_animal]: https://content.minetest.net/packages/TenPlus1/mobs_animal/
-[mobs_redo]: https://content.minetest.net/packages/TenPlus1/mobs/
+[home_workshop]: https://content.luanti.org/packages/VanessaE/home_workshop_modpack/
+[homedecor]: https://content.luanti.org/packages/VanessaE/homedecor_modpack/
+[hot_air_balloons]: https://content.luanti.org/packages/Eran/hot_air_balloons/
+[hovercraft]: https://forum.luanti.org/viewtopic.php?t=6722
+[hud_compass]: https://content.luanti.org/packages/kestral/hud_compass/
+[hudbars]: https://content.luanti.org/packages/Wuzzy/hudbars/
+[ilights]: https://content.luanti.org/packages/VanessaE/ilights/
+[intllib]: https://content.luanti.org/packages/kaeza/intllib/
+[invisibility]: https://content.luanti.org/packages/TenPlus1/invisibility/
+[jukebox]: https://forum.luanti.org/viewtopic.php?t=13505
+[jumping]: https://forum.luanti.org/viewtopic.php?t=2957
+[lighted_helmets]: https://content.luanti.org/packages/AntumDeluge/lighted_helmets/
+[listitems]: https://content.luanti.org/packages/AntumDeluge/listitems/
+[mesecons]: https://content.luanti.org/packages/Jeija/mesecons/
+[minetest_game]: https://content.luanti.org/packages/Minetest/minetest_game/
+[mobkit]: https://content.luanti.org/packages/Termos/mobkit/
+[goblins]: https://content.luanti.org/packages/FreeLikeGNU/goblins/
+[mobs_animal]: https://content.luanti.org/packages/TenPlus1/mobs_animal/
+[mobs_redo]: https://content.luanti.org/packages/TenPlus1/mobs/
 [monsters_aggressive]: https://github.com/AntumMT/mp-monsters_aggressive
 [monsters_passive]: https://github.com/AntumMT/mp-monsters_passive
 [more_chests]: https://github.com/minetest-mods/more_chests
-[moreblocks]: https://content.minetest.net/packages/Calinou/moreblocks/
-[moremesecons]: https://content.minetest.net/packages/Palige/moremesecons/
-[moreores]: https://content.minetest.net/packages/Calinou/moreores/
-[moretrees]: https://content.minetest.net/packages/VanessaE/moretrees/
-[motorbike]: https://content.minetest.net/packages/Extex/motorbike/
-[mydoors]: https://content.minetest.net/packages/Don/mydoors/
-[myfences]: https://forum.minetest.net/viewtopic.php?t=14275
-[mylights]: https://forum.minetest.net/viewtopic.php?t=13154
-[mypaint]: https://forum.minetest.net/viewtopic.php?t=14274
-[mypaths]: https://forum.minetest.net/viewtopic.php?t=11388
-[myroofs]: https://forum.minetest.net/viewtopic.php?t=11416
-[mysheetmetal]: https://forum.minetest.net/viewtopic.php?t=11702
-[mywoodslopes]: https://forum.minetest.net/viewtopic.php?t=11433
-[nether]: https://content.minetest.net/packages/PilzAdam/nether/
-[no_fall_damage]: https://content.minetest.net/packages/Wuzzy/no_fall_damage/
+[moreblocks]: https://content.luanti.org/packages/Calinou/moreblocks/
+[moremesecons]: https://content.luanti.org/packages/Palige/moremesecons/
+[moreores]: https://content.luanti.org/packages/Calinou/moreores/
+[moretrees]: https://content.luanti.org/packages/VanessaE/moretrees/
+[motorbike]: https://content.luanti.org/packages/Extex/motorbike/
+[mydoors]: https://content.luanti.org/packages/Don/mydoors/
+[myfences]: https://forum.luanti.org/viewtopic.php?t=14275
+[mylights]: https://forum.luanti.org/viewtopic.php?t=13154
+[mypaint]: https://forum.luanti.org/viewtopic.php?t=14274
+[mypaths]: https://forum.luanti.org/viewtopic.php?t=11388
+[myroofs]: https://forum.luanti.org/viewtopic.php?t=11416
+[mysheetmetal]: https://forum.luanti.org/viewtopic.php?t=11702
+[mywoodslopes]: https://forum.luanti.org/viewtopic.php?t=11433
+[nether]: https://content.luanti.org/packages/PilzAdam/nether/
+[no_fall_damage]: https://content.luanti.org/packages/Wuzzy/no_fall_damage/
 [painting]: https://github.com/minetest-mods/painting
-[pbmarks]: https://content.minetest.net/packages/AntumDeluge/pbmarks/
-[pipeworks]: https://content.minetest.net/packages/VanessaE/pipeworks/
-[player_monoids]: https://content.minetest.net/packages/Byakuren/player_monoids/
-[pvp_areas]: https://forum.minetest.net/viewtopic.php?t=15480
-[quartz]: https://content.minetest.net/packages/Evergreen/quartz/
-[rainbow_ore]: https://content.minetest.net/packages/KingSmarty/rainbow_ore/
-[server_shop]: https://content.minetest.net/packages/AntumDeluge/server_shop/
+[pbmarks]: https://content.luanti.org/packages/AntumDeluge/pbmarks/
+[pipeworks]: https://content.luanti.org/packages/VanessaE/pipeworks/
+[player_monoids]: https://content.luanti.org/packages/Byakuren/player_monoids/
+[pvp_areas]: https://forum.luanti.org/viewtopic.php?t=15480
+[quartz]: https://content.luanti.org/packages/Evergreen/quartz/
+[rainbow_ore]: https://content.luanti.org/packages/KingSmarty/rainbow_ore/
+[server_shop]: https://content.luanti.org/packages/AntumDeluge/server_shop/
 [sfinv]: https://content.luanti.org/packages/rubenwardy/sfinv/
 [sfinv_buttons]: https://content.luanti.org/packages/Wuzzy/sfinv_buttons/
 [shark]: https://github.com/AntumMT/mod-shark
-[signs_lib]: https://content.minetest.net/packages/VanessaE/signs_lib/
-[simple_models]: https://content.minetest.net/packages/AntumDeluge/simple_models/
-[simple_protection]: https://content.minetest.net/packages/Krock/simple_protection/
-[slingshot]: https://content.minetest.net/packages/AntumDeluge/slingshot/
-[sneeker]: https://content.minetest.net/packages/AntumDeluge/sneeker/
-[snowdrift]: https://content.minetest.net/packages/paramat/snowdrift/
-[sounds]: https://content.minetest.net/packages/AntumDeluge/sounds/
-[asm_spawneggs]: https://content.minetest.net/packages/AntumDeluge/asm_spawneggs/
-[spectator_mode]: https://content.minetest.net/packages/jp/spectator_mode/
-[mobs_monster]: https://content.minetest.net/packages/TenPlus1/mobs_monster/
-[technic]: https://content.minetest.net/packages/RealBadAngel/technic/
-[throwing]: https://forum.minetest.net/viewtopic.php?t=687
-[tnt]: https://forum.minetest.net/viewtopic.php?id=2902
-[tools_obsidian]: https://content.minetest.net/packages/Dragonop/tools_obsidian/
+[signs_lib]: https://content.luanti.org/packages/VanessaE/signs_lib/
+[simple_models]: https://content.luanti.org/packages/AntumDeluge/simple_models/
+[simple_protection]: https://content.luanti.org/packages/Krock/simple_protection/
+[slingshot]: https://content.luanti.org/packages/AntumDeluge/slingshot/
+[sneeker]: https://content.luanti.org/packages/AntumDeluge/sneeker/
+[snowdrift]: https://content.luanti.org/packages/paramat/snowdrift/
+[sounds]: https://content.luanti.org/packages/AntumDeluge/sounds/
+[asm_spawneggs]: https://content.luanti.org/packages/AntumDeluge/asm_spawneggs/
+[spectator_mode]: https://content.luanti.org/packages/jp/spectator_mode/
+[mobs_monster]: https://content.luanti.org/packages/TenPlus1/mobs_monster/
+[technic]: https://content.luanti.org/packages/RealBadAngel/technic/
+[throwing]: https://forum.luanti.org/viewtopic.php?t=687
+[tnt]: https://forum.luanti.org/viewtopic.php?id=2902
+[tools_obsidian]: https://content.luanti.org/packages/Dragonop/tools_obsidian/
 [trampoline]: https://github.com/AntumMT/mod-trampoline
-[trash_can]: https://content.minetest.net/packages/Evergreen/trash_can/
-[trees]: https://forum.minetest.net/viewtopic.php?f=11&t=5713
-[unified_inventory]: https://content.minetest.net/packages/RealBadAngel/unified_inventory/
-[unifieddyes]: https://content.minetest.net/packages/VanessaE/unifieddyes/
-[vines]: https://forum.minetest.net/viewtopic.php?f=11&t=2344
-[waffles]: https://content.minetest.net/packages/GreenDimond/waffles/
-[wardrobe]: https://content.minetest.net/packages/AntumDeluge/wardrobe_ad/
-[wardrobe.old]: https://forum.minetest.net/viewtopic.php?t=9680
-[wdata]: https://content.minetest.net/packages/AntumDeluge/wdata/
-[weather]: https://content.minetest.net/packages/theFox/weather/
+[trash_can]: https://content.luanti.org/packages/Evergreen/trash_can/
+[trees]: https://forum.luanti.org/viewtopic.php?f=11&t=5713
+[unified_inventory]: https://content.luanti.org/packages/RealBadAngel/unified_inventory/
+[unifieddyes]: https://content.luanti.org/packages/VanessaE/unifieddyes/
+[vines]: https://forum.luanti.org/viewtopic.php?f=11&t=2344
+[waffles]: https://content.luanti.org/packages/GreenDimond/waffles/
+[wardrobe]: https://content.luanti.org/packages/AntumDeluge/wardrobe_ad/
+[wardrobe.old]: https://forum.luanti.org/viewtopic.php?t=9680
+[wdata]: https://content.luanti.org/packages/AntumDeluge/wdata/
+[weather]: https://content.luanti.org/packages/theFox/weather/
 [whinny]: https://github.com/AntumMT/mod-whinny
-[whitelist]: https://content.minetest.net/packages/AntumDeluge/whitelist/
-[wielded_light]: https://content.minetest.net/packages/bell07/wielded_light/
-[windmill]: https://content.minetest.net/packages/Sokomine/windmill/
+[whitelist]: https://content.luanti.org/packages/AntumDeluge/whitelist/
+[wielded_light]: https://content.luanti.org/packages/bell07/wielded_light/
+[windmill]: https://content.luanti.org/packages/Sokomine/windmill/
 [workbench]: https://github.com/AntumMT/mod-workbench
-[xtraarmor]: https://forum.minetest.net/viewtopic.php?t=16645
+[xtraarmor]: https://forum.luanti.org/viewtopic.php?t=16645
 
 [lic.3d_armor]: mods/modpacks/3d_armor/LICENSE.md
 [lic.3d_armor_light]: mods/lighting/3d_armor_light/LICENSE.txt
