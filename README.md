@@ -54,7 +54,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [farming][] ([MIT][lic.farming]) -- version: [2021-07-18][ver.farming]
 * inventory/
   * [bags][] ([BSD 3-Clause][lic.bags]) -- version: [bc87b45 Git][ver.bags] *2018-04-11*
-  * [sfinv][] ([MIT][lic.sfinv] -- version: [556f70e Git][ver.sfinv] *2021-02-17*
+  * [sfinv][] ([MIT][lic.sfinv] -- version: [2023-04-14][ver.sfinv]
   * [sfinv_buttons][] ([MIT][lic.mit]) -- version [1.1.0 (ebb1f7c Git)][ver.sfinv_buttons] *2021-01-14*
 * libs/
   * [cmer][creatures] ([zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [2843875 Git][ver.cmer] *2021-06-01*
@@ -405,7 +405,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [quartz]: https://content.minetest.net/packages/Evergreen/quartz/
 [rainbow_ore]: https://content.minetest.net/packages/KingSmarty/rainbow_ore/
 [server_shop]: https://content.minetest.net/packages/AntumDeluge/server_shop/
-[sfinv]: https://content.minetest.net/packages/rubenwardy/sfinv/
+[sfinv]: https://content.luanti.org/packages/rubenwardy/sfinv/
 [sfinv_buttons]: https://content.minetest.net/packages/Wuzzy/sfinv_buttons/
 [shark]: https://github.com/AntumMT/mod-shark
 [signs_lib]: https://content.minetest.net/packages/VanessaE/signs_lib/
@@ -672,7 +672,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.rainbow_ore]: https://github.com/FsxShader2012/rainbow_ore/tree/830ac09
 [ver.sand_monster]: https://github.com/AntumMT/mod-mob_sand_monster/tree/3dd5954
 [ver.server_shop]: https://github.com/AntumMT/mod-server_shop/releases/tag/v1.6
-[ver.sfinv]: https://github.com/rubenwardy/sfinv/tree/556f70e
+[ver.sfinv]: https://github.com/rubenwardy/sfinv/tree/dbe59fd71b45542fe086bb18dfc0421aa323ca05
 [ver.sfinv_buttons]: http://repo.or.cz/minetest_sfinv_buttons.git/tree/ebb1f7c
 [ver.signs_lib]: https://gitlab.com/VanessaE/signs_lib/tree/2021-03-04-2
 [ver.simple_models]: https://github.com/AntumMT/mod-simple_models/tree/07e8c1b
