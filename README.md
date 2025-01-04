@@ -49,7 +49,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [jukebox][] ([WTFPL / CC0][lic.jukebox]) -- version: [0d871f2 Git][ver.jukebox] *2020-03-11*
   * [trampoline][] ([GPL][lic.gpl3.0]) -- version: [0.3][ver.trampoline] *2021-04-28*
   * [trash_can][] ([MIT][lic.trash_can]) -- version: [423b0f2 Git][ver.trash_can] *2020-08-12*
-  * [waffles][] ([MIT][lic.waffles]) -- version: [15bcdce Git][ver.waffles] *2018-05-13* (patched)
+  * [waffles][] ([MIT][lic.waffles]) -- version: [f9ee996 Git][ver.waffles] *2024-01-01*
 * horticulture/
   * [farming][] ([MIT][lic.farming]) -- version: [2021-07-18][ver.farming]
 * inventory/
@@ -692,7 +692,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.trash_can]: https://github.com/minetest-mods/trash_can/tree/423b0f2
 [ver.tree_monster]: https://github.com/AntumMT/mod-mob_tree_monster/tree/f2977ff
 [ver.unifieddyes]: https://gitlab.com/VanessaE/unifieddyes/tags/2021-03-26-1
-[ver.waffles]: https://github.com/GreenXenith/waffles/tree/15bcdce
+[ver.waffles]: https://github.com/GreenXenith/waffles/tree/f9ee9962795a44585a7584af34226acaa8bf9d77
 [ver.wardrobe]: https://github.com/AntumMT/mod-wardrobe/tree/0500a78
 [ver.wdata]: https://github.com/AntumMT/mod-wdata/releases/tag/v1.1
 [ver.whinny]: https://github.com/AntumMT/mod-whinny/tree/32f2d9f
