@@ -1,6 +1,6 @@
 --[[ LICENSE HEADER
 
-  This file is part of boats2 mod for Minetest.
+  This file is part of boats2 mod for Luanti.
 
   boats2 is free software: you can redistribute it and/or modify
   it under the terms of the GNU Lesser General Public License as
@@ -18,7 +18,7 @@
 ]]
 
 
-minetest.register_craft({
+core.register_craft({
 	output = "boats:row_boat",
 	recipe = {
 		{"",           "",           ""          },
@@ -28,7 +28,7 @@ minetest.register_craft({
 })
 
 
-minetest.register_craft({
+core.register_craft({
 	output = "boats:sail_boat",
 	recipe = {
 		{"", "group:wool", ""},
