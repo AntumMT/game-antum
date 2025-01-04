@@ -145,7 +145,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * ui/
   * [bookmarks_gui][] ([BSD 3-Clause][lic.bookmarks_gui]) -- version: [f7ae10a Git][ver.bookmarks_gui] *2017-08-29* ([patched][patch.bookmarks_gui])
   * [hbarmor][] ([MIT][lic.mit] / [CC BY-SA][lic.ccbysa3.0]) -- version: [1.0.0][ver.hbarmor] *2019-04-01*
-  * [home_gui][] ([BSD 3-Clause][lic.home_gui]) -- version: [44c2f15 Git][ver.home_gui] *2021-06-16*
+  * [home_gui][] ([BSD 3-Clause][lic.home_gui]) -- version: [44c2f15 Git][ver.home_gui] *2021-06-16* ([patched][patch.home_gui])
   * [hud_compass][] (MIT / [CC BY-SA ][lic.ccbysa3.0]) -- version: [648c744
  Git][ver.hud_compass] *2020-04-23*
   * [hudbars][] ([MIT][lic.mit] / [CC BY-SA][lic.ccbysa3.0]) -- version: [2.3.3][ver.hudbars] *2021-07-08*
@@ -719,6 +719,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.gems_encrustable]: https://github.com/AntumMT/mod-gems_encrustable/tree/276fb25
 [patch.gems_tools]: https://github.com/AntumMT/mod-gems_tools/tree/25bca18
 [patch.helicopter]: https://github.com/AntumMT/mod-helicopter/tree/79d2d3e
+[pathc.home_gui]: https://github.com/AntumMT/mod-home_gui/tree/32b2e355dd6b4bf2e2f0d0a7d62acb87b94c965c
 [patch.homedecor]: https://gitlab.com/AntumMT/mp-homedecor/commit/7728e969
 [patch.hovercraft]: https://github.com/AntumMT/mod-hovercraft/tree/0f864c4
 [patch.hud]: https://github.com/AntumMT/mod-hud/tree/6846e20
