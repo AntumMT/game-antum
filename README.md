@@ -18,7 +18,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * audio/
   * [sounds][] ([MIT][lic.sounds] / [CC BY-SA][lic.ccbysa3.0]) -- version: [1.6][version.sounds] *2021-08-13*
 * buildings/
-  * [bridges][] ([GPL][lic.gpl3.0]) -- version: [1.0.0][ver.bridges] *2023-02-13*
+  * [bridges][] ([GPL][lic.gpl3.0]) -- version: [1.0.0][ver.bridges] *2023-02-13* ([patched][patch.bridges])
   * [christmas][] ([MIT][lic.christmas]) -- version [d3bd872 Git][ver.christmas] *2013-01-11* ([patched][patch.christmas])
   * [doors][] ([MIT][lic.doors] / [CC BY-SA][lic.ccbysa3.0]) -- version: 2024-11-09
   * [elevator][] ([WTFPL][lic.elevator])
@@ -710,6 +710,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.beds]: https://github.com/AntumMT/mod-beds/commit/88155ca
 [patch.boats2]: https://github.com/AntumMT/mod-boats2/tree/4160a597b90d15a8b9447690caf0ee9f6c5b919f
 [patch.bookmarks_gui]: https://github.com/AntumMT/mod-bookmarks_gui/tree/8250b0169239b777a84d4b85d72ee4faed2a43eb
+[patch.bridges]: https://github.com/AntumMT/mod-bridges/tree/36b71392e218aac13ed5f0f2a7cd7e4a7667b9ed
 [patch.bright_night]: https://github.com/AntumMT/mod-bright_night/tree/d39f20d0cc5a78c2cde282f4150260a2cb40bb4e
 [patch.christmas]: https://github.com/AntumMT/mod-christmas/tree/50bda80
 [patch.compassgps]: https://github.com/AntumMT/mod-compassgps/tree/8a98085c482c360b53bd231195065d581dd89961

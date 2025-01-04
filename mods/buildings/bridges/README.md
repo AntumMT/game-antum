@@ -1,4 +1,4 @@
-Mod for Minetest that adds bridges (only one node wide!), slim handrails and a self-building-one-node-wide bridge.
+Mod for Luanti that adds bridges (only one node wide!), slim handrails and a self-building-one-node-wide bridge.
 
 Crafting recipes:
 <br> S stands for stick

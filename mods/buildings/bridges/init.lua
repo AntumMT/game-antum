@@ -1,5 +1,5 @@
 --[[
-Mod for Minetest that adds bridges (only one node wide!), slim handrails and a self-building-one-node-wide bridge.
+Mod for Luanti that adds bridges (only one node wide!), slim handrails and a self-building-one-node-wide bridge.
 
     Copyright (C) 2013 Sokomine
 
@@ -18,7 +18,7 @@ Mod for Minetest that adds bridges (only one node wide!), slim handrails and a s
 --]]
 
 -- to make life a bit easier
-local bild_pfad = minetest.get_modpath("default") and "default_wood.png" or "[combine:16x16^[noalpha^[colorize:#654321";
+local bild_pfad = core.get_modpath("default") and "default_wood.png" or "[combine:16x16^[noalpha^[colorize:#654321";
 local bild_pfad_s1 = bild_pfad;
 local bild_pfad_s2 = bild_pfad;
 
@@ -46,7 +46,7 @@ local RAIL  = "bridges:handrail_middle";
 local VINES = "vines:vines"; -- useful for ropes
 local ALT   = "group:leaves"; -- alternative for vines
 
-if( minetest.get_modpath( 'moon' ) or minetest.get_modpath( 'moonrealm') or minetest.get_modpath( 'moontest') ) then
+if( core.get_modpath( 'moon' ) or core.get_modpath( 'moonrealm') or core.get_modpath( 'moontest') ) then
 	STICK = "group:stick";
 	WOOD  = "default:steel_ingot";
 	VINES = "group:stone";
@@ -57,7 +57,7 @@ if( minetest.get_modpath( 'moon' ) or minetest.get_modpath( 'moonrealm') or mine
 	bild_pfad_s2       = bild_pfad; --"forniture_wood_s2.png";
 
 -- only if no moontest is installed
-elseif( minetest.get_modpath( 'moreblocks' )) then
+elseif( core.get_modpath( 'moreblocks' )) then
 	WOOD = 'moreblocks:slab_wood';
 end
 
@@ -197,7 +197,7 @@ local BRIDGE_PARTS = {
 
 
 for i in ipairs( BRIDGE_PARTS ) do
-	minetest.register_node("bridges:"..BRIDGE_PARTS[i][1], {
+	core.register_node("bridges:"..BRIDGE_PARTS[i][1], {
 		description = BRIDGE_PARTS[i][2],
 		tiles = {
 			bild_pfad,
@@ -223,14 +223,14 @@ for i in ipairs( BRIDGE_PARTS ) do
 		groups = {snappy=2,choppy=2,oddly_breakable_by_hand=2,flammable=3},
 	});
 
-	minetest.register_craft({
+	core.register_craft({
 		output = "bridges:"..BRIDGE_PARTS[i][1]..BRIDGE_PARTS[i][5],
 		recipe = BRIDGE_PARTS[i][4],
 	});
 end
 
 -- alternate receipe for the bridge basis
-minetest.register_craft({
+core.register_craft({
 	output = "bridges:bridge_basis 2",
 	recipe = {
 		{ ALT, ALT, ALT },
@@ -241,7 +241,7 @@ minetest.register_craft({
 
 -- a bridge with covers 3 nodes in size
 
-minetest.register_node("bridges:bridge_large",
+core.register_node("bridges:bridge_large",
 	{ description = 'large bridge',
 	tiles = {
 		bild_pfad,
@@ -279,7 +279,7 @@ minetest.register_node("bridges:bridge_large",
 	groups = {snappy=2,choppy=2,oddly_breakable_by_hand=2,flammable=2}
 })
 
-minetest.register_craft({
+core.register_craft({
 	output = "bridges:bridge_large",
 	recipe = {
 		{ "", "bridges:bridge_middle", "" },
@@ -290,10 +290,10 @@ minetest.register_craft({
 
 -- special: self-building automatic bridge
 
-minetest.register_node("bridges:bridge_auto", {
+core.register_node("bridges:bridge_auto", {
 	description = "self building bridge",
 	-- looks from all sides like the top of a chest
-	tiles = {(minetest.get_modpath("default") and "default_chest_top.png" or "[combine:16x16^[noalpha^[colorize:#654321")},
+	tiles = {(core.get_modpath("default") and "default_chest_top.png" or "[combine:16x16^[noalpha^[colorize:#654321")},
 	drawtype = "cube",
 	is_ground_content = true,
 	groups = {snappy=2,choppy=2,oddly_breakable_by_hand=2,flammable=3},
@@ -301,7 +301,7 @@ minetest.register_node("bridges:bridge_auto", {
 	drop = "", -- all leftover parts are in the "chest"
 
 	on_construct = function(pos)
-		local meta = minetest.get_meta(pos);
+		local meta = core.get_meta(pos);
 		meta:set_string("formspec",
 						"invsize[8,9;]"..
 						"list[current_name;main;0,0;8,4;]"..
@@ -312,7 +312,7 @@ minetest.register_node("bridges:bridge_auto", {
 	end,
 
 	can_dig = function(pos,player)
-		local meta = minetest.get_meta(pos);
+		local meta = core.get_meta(pos);
 		local inv = meta:get_inventory();
 		return inv:is_empty("main");
 	end,
@@ -326,7 +326,7 @@ minetest.register_node("bridges:bridge_auto", {
 
 		-- the bridge ought to unfold in the direction the player is looking
 		local dir = placer:get_look_dir();
-		local fdir = minetest.dir_to_facedir(dir);
+		local fdir = core.dir_to_facedir(dir);
 
 		-- the player is looking more in x- than in z-direction
 		if( math.abs( dir.x ) > math.abs( dir.z )) then
@@ -357,7 +357,7 @@ minetest.register_node("bridges:bridge_auto", {
 
 			-- is there space for a bridge?
 			p = {x=pos.x+(x_dir*i), y=pos.y, z=pos.z+(z_dir*i)};
-			n = minetest.get_node(p);
+			n = core.get_node(p);
 			if( n == nil or
 				(n.name ~= "air" and n.name ~= 'moonrealm:vacuum' and n.name ~= 'moonrealm:air'
 				and n.name ~= 'moontest:vacuum' and n.name ~= 'moontest:air')
@@ -366,10 +366,10 @@ minetest.register_node("bridges:bridge_auto", {
 			else
 			-- one small bridge is followed by two middle parts
 			if( i%3 == 1 ) then
-				minetest.add_node(p, {name="bridges:bridge_small", param1=0, param2=fdir});
+				core.add_node(p, {name="bridges:bridge_small", param1=0, param2=fdir});
 				rem_small  = rem_small - 1; -- one small bridge used
 			else
-				minetest.add_node(p, {name="bridges:bridge_middle", param1=0, param2=fdir});
+				core.add_node(p, {name="bridges:bridge_middle", param1=0, param2=fdir});
 				rem_middle = rem_middle -1; -- one middle part used
 			end
 
@@ -379,7 +379,7 @@ minetest.register_node("bridges:bridge_auto", {
 
 
 		-- do we have to give any leftover parts back?
-		local meta = minetest.get_meta(pos);
+		local meta = core.get_meta(pos);
 		local inv = meta:get_inventory();
 
 		if( rem_small > 0 ) then
@@ -393,7 +393,7 @@ minetest.register_node("bridges:bridge_auto", {
 })
 
 
-minetest.register_craft({
+core.register_craft({
 	output = "bridges:bridge_auto",
 	recipe = {
 		{ "bridges:bridge_large", "bridges:bridge_large", "bridges:bridge_large" },
