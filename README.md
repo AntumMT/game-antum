@@ -18,7 +18,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * audio/
   * [sounds][] ([MIT][lic.sounds] / [CC BY-SA][lic.ccbysa3.0]) -- version: [1.6][version.sounds] *2021-08-13*
 * buildings/
-  * [bridges][] ([GPL][lic.gpl3.0]) -- version: [ba8f71a Git][ver.bridges] *2017-06-08*
+  * [bridges][] ([GPL][lic.gpl3.0]) -- version: [1.0.0][ver.bridges] *2023-02-13*
   * [christmas][] ([MIT][lic.christmas]) -- version [d3bd872 Git][ver.christmas] *2013-01-11* ([patched][patch.christmas])
   * [doors][] ([MIT][lic.doors] / [CC BY-SA][lic.ccbysa3.0]) -- version: 2024-11-09
   * [elevator][] ([WTFPL][lic.elevator])
@@ -310,7 +310,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [boats2]: https://github.com/amadin/boats
 [bonemeal]: https://content.luanti.org/packages/TenPlus1/bonemeal/
 [bookmarks_gui]: http://cornernote.github.io/minetest-bookmarks_gui/
-[bridges]: https://content.luanti.org/packages/Sokomine/bridges/
+[bridges]: https://content.luanti.org/packages/mt-mods/bridges/
 [bright_night]: https://forum.luanti.org/viewtopic.php?t=20078
 [campfire]: https://forum.luanti.org/viewtopic.php?t=10569
 [castle_farming]: https://content.luanti.org/packages/FaceDeer/castle_farming/
@@ -572,7 +572,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.boats2]: https://github.com/amadin/boats/tree/b83231e
 [ver.bonemeal]: https://notabug.org/TenPlus1/bonemeal/src/75ec006643e9d5520436f327a3c33831e9d7bbf9
 [ver.bookmarks_gui]: https://github.com/cornernote/minetest-bookmarks_gui/tree/f7ae10a
-[ver.bridges]: https://github.com/mt-historical/bridges/tree/ba8f71a3d9b2da78a0c757473d856bfb78f5d542
+[ver.bridges]: https://github.com/mt-historical/bridges/tree/7748488b9cd991cb3bd58af86fe703172a556710
 [ver.bright_night]: https://github.com/Yukitty/minetest-bright_night/tree/69b750a
 [ver.campfire]: https://github.com/Napiophelios/campfire/tree/1058f1d
 [ver.castle_farming]: https://github.com/minetest-mods/castle_farming/tree/032f277
