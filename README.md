@@ -131,7 +131,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [drawers][] ([MIT / CC0 / CC BY][lic.drawers]) -- version: [0.6.2][ver.drawers] *2021-03-27*
   * [more_chests][] ([GPL][lic.gpl2.0]) -- version: [6be8145 Git][ver.more_chests] *2021-04-05*
 * tools/
-  * [compassgps][] ([WTFPL][lic.wtfpl] / [CC0][lic.cc0] / [CC BY-SA][lic.ccbysa]) -- version: [567b95f Git][ver.compassgps] *2018-09-24*
+  * [compassgps][] ([WTFPL][lic.wtfpl] / [CC0][lic.cc0] / [CC BY-SA][lic.ccbysa]) -- version: [567b95f Git][ver.compassgps] *2018-09-24* ([patched][patch.compassgps])
   * [equip_exam][] ([MIT][lic.equip_exam]) - version: [1.6][ver.equip_exam] *2021-07-19*
   * [tools_obsidian][] ([LGPL / CC BY-SA][lic.tools_obsidian]) -- version: [1.0][ver.tools_obsidian] *2021-01-15*
   * [workbench][] ([BSD][lic.workbench]) -- version: [1.0][ver.workbench] *2021-06-10*
@@ -712,6 +712,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.bridges]: https://github.com/AntumMT/mod-bridges/tree/ba8f71a
 [patch.bright_night]: https://github.com/AntumMT/mod-bright_night/tree/d39f20d0cc5a78c2cde282f4150260a2cb40bb4e
 [patch.christmas]: https://github.com/AntumMT/mod-christmas/tree/50bda80
+[patch.compassgps]: https://github.com/AntumMT/mod-compassgps/tree/8a98085c482c360b53bd231195065d581dd89961
 [patch.craftguide]: https://github.com/AntumMT/mod-craftguide/tree/aef18f2
 [patch.crops]: https://github.com/AntumMT/mod-crops/tree/a1cce06
 [patch.drawers]: https://github.com/AntumMT/mod-drawers/tree/a77f809
