@@ -7,7 +7,7 @@ The idea is to free users from typing in boring chat commands. ;-)
 
 Minetest version 5.0.0 or later is required.
 
-Version: 1.1.0
+Version: 1.1.2
 (This mod uses [semantic versioning](http://semver.org/) as of version 2.0.0 of the standard.)
 
 ## API

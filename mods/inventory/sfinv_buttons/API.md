@@ -13,7 +13,7 @@ one function: `sfinv_buttons.register_button`.
 * `action(player)`: Function is called when button is triggered
     * `player`: The `ObjectRef` of the player who triggered the button
     * Default behaviour: Nothing happens
-* `tooltip: A tooltip for the button (optional, only use it for an additional,
+* `tooltip`: A tooltip for the button (optional, only use it for an additional,
   non-critical explanation)
 * `image`: Texture name for the image to show left of the button (optional)
 * `show(player)`: Shall return `true` if the button should be displayed (optional)

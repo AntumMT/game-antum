@@ -55,7 +55,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * inventory/
   * [bags][] ([BSD 3-Clause][lic.bags]) -- version: [bc87b45 Git][ver.bags] *2018-04-11*
   * [sfinv][] ([MIT][lic.sfinv] -- version: [2023-04-14][ver.sfinv]
-  * [sfinv_buttons][] ([MIT][lic.mit]) -- version [1.1.0 (ebb1f7c Git)][ver.sfinv_buttons] *2021-01-14*
+  * [sfinv_buttons][] ([MIT][lic.mit]) -- version [1.1.2][ver.sfinv_buttons] *2023-04-20*
 * libs/
   * [cmer][creatures] ([zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [2843875 Git][ver.cmer] *2021-06-01*
   * [config][] ([MIT][lic.config]) -- version: 1.1 *2020-03-26*
@@ -406,7 +406,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [rainbow_ore]: https://content.minetest.net/packages/KingSmarty/rainbow_ore/
 [server_shop]: https://content.minetest.net/packages/AntumDeluge/server_shop/
 [sfinv]: https://content.luanti.org/packages/rubenwardy/sfinv/
-[sfinv_buttons]: https://content.minetest.net/packages/Wuzzy/sfinv_buttons/
+[sfinv_buttons]: https://content.luanti.org/packages/Wuzzy/sfinv_buttons/
 [shark]: https://github.com/AntumMT/mod-shark
 [signs_lib]: https://content.minetest.net/packages/VanessaE/signs_lib/
 [simple_models]: https://content.minetest.net/packages/AntumDeluge/simple_models/
@@ -673,7 +673,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.sand_monster]: https://github.com/AntumMT/mod-mob_sand_monster/tree/3dd5954
 [ver.server_shop]: https://github.com/AntumMT/mod-server_shop/releases/tag/v1.6
 [ver.sfinv]: https://github.com/rubenwardy/sfinv/tree/dbe59fd71b45542fe086bb18dfc0421aa323ca05
-[ver.sfinv_buttons]: http://repo.or.cz/minetest_sfinv_buttons.git/tree/ebb1f7c
+[ver.sfinv_buttons]: https://codeberg.org/Wuzzy/minetest_sfinv_buttons/src/commit/1.1.2
 [ver.signs_lib]: https://gitlab.com/VanessaE/signs_lib/tree/2021-03-04-2
 [ver.simple_models]: https://github.com/AntumMT/mod-simple_models/tree/07e8c1b
 [ver.simple_protection]: https://github.com/SmallJoker/simple_protection/tree/f1f85aa
