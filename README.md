@@ -125,7 +125,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [invisibility][] ([MIT][lic.invisibility]) -- version: [65c0823 Git][ver.invisibility] *2021-01-21* ([patched][patch.invisibility])
   * [wardrobe][] ([MIT][lic.wardrobe]) -- version: [0500a78 Git][ver.wardrobe] *2021-06-08*
 * protection/
-  * [pvp_areas][] ([LGPL][lic.lgpl2.1]) -- version: [6e4d66d Git][ver.pvp_areas] *2018-07-26*
+  * [pvp_areas][] ([LGPL][lic.lgpl2.1]) -- version: [4eafdee Git][ver.pvp_areas] *2025-01-03*
   * [simple_protection][] ([CC0][lic.cc0]) -- version: [f1f85aa Git][ver.simple_protection] *2021-07-18* ([patched][patch.simple_protection])
 * storage/
   * [drawers][] ([MIT / CC0 / CC BY][lic.drawers]) -- version: [0.6.2][ver.drawers] *2021-03-27*
@@ -667,7 +667,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.pbmarks]: https://github.com/AntumMT/mod-pbmarks/releases/tag/v1.0
 [ver.pipeworks]: https://gitlab.com/VanessaE/pipeworks/tree/2670fd8
 [ver.player_monoids]: https://github.com/minetest-mods/player_monoids/tree/ed11a73
-[ver.pvp_areas]: https://github.com/everamzah/pvp_areas/tree/6e4d66d
+[ver.pvp_areas]: https://github.com/everamzah/pvp_areas/tree/4eafdee7a9ff1d8e285fa0323d4bc5544c2830de
 [ver.quartz]: https://github.com/minetest-mods/quartz/tree/72ec06f
 [ver.rainbow_ore]: https://github.com/FsxShader2012/rainbow_ore/tree/830ac09
 [ver.sand_monster]: https://github.com/AntumMT/mod-mob_sand_monster/tree/3dd5954
