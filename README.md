@@ -89,7 +89,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [enchanting][] ([GPL / WTFPL / CC BY-SA-NA][lic.enchanting]) -- version: [dee7dde Git][ver.enchanting] *2021-06-04*
   * [intllib][] ([Unlicense][lic.unlicense]) -- version: [6ebdc53][ver.intllib] *2021-02-23* ***DEPRECATED***
   * [listitems][] ([MIT][lic.listitems]) -- version: [1.1][ver.listitems] *2021-08-04*
-  * [painting][] (WTFPL) -- version: [da8f4ba Git][ver.painting] *2021-06-25*
+  * [painting][] (WTFPL) -- version: [da8f4ba Git][ver.painting] *2021-06-25* ([patched][patch.painting])
   * [pipeworks][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2670fd8 Git][ver.pipeworks] *2021-05-06* ([patched][patch.pipeworks])
   * [simple_models][] ([CC0][lic.cc0]) -- version: [2021-08-16][ver.simple_models]
   * [wdata][] ([MIT][lic.wdata]) -- version: [1.1][ver.wdata] *2021-06-15*
@@ -733,6 +733,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.motorbike]: https://github.com/AntumMT/mod-motorbike/tree/0aa5c9c
 [patch.mysheetmetal]: https://github.com/AntumMT/mod-mysheetmetal/tree/2ffb3a2
 [patch.nether]: https://github.com/AntumMT/mod-nether/tree/7a84ddd
+[patch.painting]: https://github.com/AntumMT/mod-painting/tree/bdcb6727c49ee49d4d40c0a616464f8ac4b78cf3
 [patch.pipeworks]: https://gitlab.com/AntumMT/mod-pipeworks/tree/48b082e
 [patch.quartz]: https://github.com/AntumMT/mod-quartz/tree/adc759e
 [patch.simple_protection]: https://github.com/AntumMT/mod-simple_protection/tree/be873b5

@@ -39,7 +39,7 @@ local picbox = {
 	fixed = { -0.499, -0.499, 0.499, 0.499, 0.499, 0.499 - thickness }
 }
 
-minetest.register_node("painting:pic", {
+core.register_node("painting:pic", {
 	description = "Picture",
 	tiles = { "white.png" },
 	inventory_image = "painted.png",
@@ -57,7 +57,7 @@ minetest.register_node("painting:pic", {
 	after_dig_node = function(pos, oldnode, oldmetadata, digger)
 
 		--find and remove the entity
-		for _,e in pairs(minetest.get_objects_inside_radius(pos, 0.5)) do
+		for _,e in pairs(core.get_objects_inside_radius(pos, 0.5)) do
 
 			if e:get_luaentity()
 			and e:get_luaentity().name == "painting:picent" then
@@ -79,7 +79,7 @@ minetest.register_node("painting:pic", {
 
 		else
 			-- drop picture as item
-			minetest.add_item(pos, ItemStack({
+			core.add_item(pos, ItemStack({
 				name = "painting:paintedcanvas",
 				count = 1,
 				metadata = oldmetadata.fields["painting:picturedata"]
@@ -91,7 +91,7 @@ minetest.register_node("painting:pic", {
 local to_imagestring
 
 -- picture texture entity
-minetest.register_entity("painting:picent", {
+core.register_entity("painting:picent", {
 	collisionbox = { 0, 0, 0, 0, 0, 0 },
 	visual = "upright_sprite",
 	textures = { "white.png" },
@@ -99,10 +99,10 @@ minetest.register_entity("painting:picent", {
 	on_activate = function(self, staticdata)
 
 		local pos = self.object:get_pos()
-		local meta = minetest.get_meta(pos)
+		local meta = core.get_meta(pos)
 		local data = meta:get_string("painting:picturedata")
 
-		data = minetest.deserialize(data)
+		data = core.deserialize(data)
 
 		if not data or not data.grid then
 			return
@@ -171,7 +171,7 @@ local paintbox = {
 
 local dirs, intersect, clamp
 
-minetest.register_entity("painting:paintent", {
+core.register_entity("painting:paintent", {
 	collisionbox = { 0, 0, 0, 0, 0, 0 },
 	visual = "upright_sprite",
 	textures = { "white.png" },
@@ -248,7 +248,7 @@ minetest.register_entity("painting:paintent", {
 
 	on_activate = function(self, staticdata)
 
-		local data = minetest.deserialize(staticdata)
+		local data = core.deserialize(staticdata)
 
 		if not data then
 			return
@@ -273,7 +273,7 @@ minetest.register_entity("painting:paintent", {
 
 		local data = { fd = self.fd, res = self.res, grid = self.grid, x0 = self.x0, y0 = self.y0 }
 
-		return minetest.serialize(data)
+		return core.serialize(data)
 	end
 })
 
@@ -281,7 +281,7 @@ minetest.register_entity("painting:paintent", {
 local walltoface = {-1, -1, 1, 3, 0, 2}
 
 --paintedcanvas picture inventory item
-minetest.register_craftitem("painting:paintedcanvas", {
+core.register_craftitem("painting:paintedcanvas", {
 	description = "Painted Canvas",
 	inventory_image = "painted.png",
 	stack_max = 1,
@@ -292,13 +292,13 @@ minetest.register_craftitem("painting:paintedcanvas", {
 		--place node
 		local pos = pointed_thing.above
 
-		if minetest.is_protected(pos, placer:get_player_name()) then
+		if core.is_protected(pos, placer:get_player_name()) then
 			return
 		end
 
 		local under = pointed_thing.under
 
-		local wm = minetest.dir_to_wallmounted(vector.subtract(under, pos))
+		local wm = core.dir_to_wallmounted(vector.subtract(under, pos))
 
 		local fd = walltoface[wm + 1]
 
@@ -306,12 +306,12 @@ minetest.register_craftitem("painting:paintedcanvas", {
 			return itemstack
 		end
 
-		minetest.add_node(pos, {name = "painting:pic", param2 = fd})
+		core.add_node(pos, {name = "painting:pic", param2 = fd})
 
 		--save metadata
 		local data = itemstack:get_metadata()
 
-		minetest.get_meta(pos):set_string("painting:picturedata", data)
+		core.get_meta(pos):set_string("painting:picturedata", data)
 
 		--add entity
 		dir = dirs[fd]
@@ -321,9 +321,9 @@ minetest.register_craftitem("painting:paintedcanvas", {
 		pos.x = pos.x + dir.x * off
 		pos.z = pos.z + dir.z * off
 
-		data = minetest.deserialize(data)
+		data = core.deserialize(data)
 
-		local p = minetest.add_entity(pos, "painting:picent"):get_luaentity()
+		local p = core.add_entity(pos, "painting:picent"):get_luaentity()
 
 		p.object:set_properties({ textures = { to_imagestring(data.grid, data.res) }})
 		p.object:set_yaw(math.pi * fd / -2)
@@ -335,7 +335,7 @@ minetest.register_craftitem("painting:paintedcanvas", {
 --canvas inventory items
 for i = 4, 6 do
 
-	minetest.register_craftitem("painting:canvas_" .. 2 ^ i, {
+	core.register_craftitem("painting:canvas_" .. 2 ^ i, {
 		description = "Canvas " .. 2 ^ i,
 		inventory_image = "default_paper.png",
 		stack_max = 99,
@@ -348,7 +348,7 @@ local canvasbox = {
 	fixed = { -0.5, -0.5, 0, 0.5, 0.5, thickness }
 }
 
-minetest.register_node("painting:canvasnode", {
+core.register_node("painting:canvasnode", {
 	description = "Canvas",
 	tiles = { "white.png" },
 	inventory_image = "painted.png",
@@ -367,7 +367,7 @@ minetest.register_node("painting:canvasnode", {
 		--get data and remove pixels
 		local data = {}
 
-		for _,e in pairs(minetest.get_objects_inside_radius(pos, 0.1)) do
+		for _,e in pairs(core.get_objects_inside_radius(pos, 0.1)) do
 
 			e = e:get_luaentity()
 
@@ -383,14 +383,14 @@ minetest.register_node("painting:canvasnode", {
 
 		pos.y = pos.y - 1
 
-		minetest.get_meta(pos):set_int("has_canvas", 0)
+		core.get_meta(pos):set_int("has_canvas", 0)
 
 		if data.grid then
 
 			local item = {
 				name = "painting:paintedcanvas",
 				count = 1,
-				metadata = minetest.serialize(data)
+				metadata = core.serialize(data)
 			}
 
 			local inv = digger:get_inventory()
@@ -400,7 +400,7 @@ minetest.register_node("painting:canvasnode", {
 
 				digger:get_inventory():add_item("main", item)
 			else
-				minetest.add_item(pos, ItemStack(item))
+				core.add_item(pos, ItemStack(item))
 			end
 		end
 	end
@@ -423,7 +423,7 @@ local easelbox = {
 
 local initgrid
 
-minetest.register_node("painting:easel", {
+core.register_node("painting:easel", {
 	description = "Easel",
 	tiles = { "default_wood.png" },
 	drawtype = "nodebox",
@@ -449,23 +449,23 @@ minetest.register_node("painting:easel", {
 
 		local res = tonumber(wielded[2])
 
-		local meta = minetest.get_meta(pos)
+		local meta = core.get_meta(pos)
 		local fd = node.param2
 
 		pos.y = pos.y + 1
 
-		if minetest.get_node(pos).name ~= "air" then
+		if core.get_node(pos).name ~= "air" then
 			return
 		end
 
-		minetest.add_node(pos, { name = "painting:canvasnode", param2 = fd})
+		core.add_node(pos, { name = "painting:canvasnode", param2 = fd})
 
 		local dir = dirs[fd]
 
 		pos.x = pos.x - 0.01 * dir.x
 		pos.z = pos.z - 0.01 * dir.z
 
-		local p = minetest.add_entity(pos, "painting:paintent"):get_luaentity()
+		local p = core.add_entity(pos, "painting:paintent"):get_luaentity()
 
 		p.object:set_properties({ collisionbox = paintbox[fd % 2] })
 		p.object:set_armor_groups({immortal = 1})
@@ -482,7 +482,7 @@ minetest.register_node("painting:easel", {
 	end,
 
 	can_dig = function(pos)
-		return minetest.get_meta(pos):get_int("has_canvas") == 0
+		return core.get_meta(pos):get_int("has_canvas") == 0
 	end
 })
 
@@ -516,7 +516,7 @@ for color, _ in pairs(textures) do
 	brush_new.description = color:gsub("^%l", string.upper) .. " brush"
 	brush_new.inventory_image = "painting_brush_" .. color .. ".png"
 
-	minetest.register_tool("painting:brush_" .. color, brush_new)
+	core.register_tool("painting:brush_" .. color, brush_new)
 
 	-- compatibility
 	local col = color
@@ -526,7 +526,7 @@ for color, _ in pairs(textures) do
 		col = "dark_grey"
 	end
 
-	minetest.register_craft({
+	core.register_craft({
 		output = "painting:brush_" .. color,
 		recipe = {
 			{"dye:" .. col},
@@ -540,8 +540,8 @@ for i, color in ipairs(revcolors) do
 	colors[color] = i
 end
 
-minetest.register_alias("easel", "painting:easel")
-minetest.register_alias("canvas", "painting:canvas_16")
+core.register_alias("easel", "painting:easel")
+core.register_alias("canvas", "painting:canvas_16")
 
 function initgrid(res)
 
@@ -606,7 +606,7 @@ function clamp(num, res)
 end
 
 -- crafts
-minetest.register_craft({
+core.register_craft({
 	output = 'painting:easel',
 	recipe = {
 		{ '', 'default:wood', '' },
@@ -615,7 +615,7 @@ minetest.register_craft({
 	}
 })
 
-minetest.register_craft({
+core.register_craft({
 	output = 'painting:canvas_16',
 	recipe = {
 		{ '', '', '' },
@@ -624,7 +624,7 @@ minetest.register_craft({
 	}
 })
 
-minetest.register_craft({
+core.register_craft({
 	output = 'painting:canvas_32',
 	recipe = {
 		{ '', '', '' },
@@ -634,7 +634,7 @@ minetest.register_craft({
 })
 
 --[[
-minetest.register_craft({
+core.register_craft({
 	output = 'painting:canvas_64',
 	recipe = {
 		{ 'default:paper', 'default:paper', 'default:paper' },

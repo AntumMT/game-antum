@@ -1,4 +1,4 @@
 painting
 ========
 
-in-game painting mod for minetest
+In-game painting mod for [Luanti](https://luanti.org/).
