@@ -143,7 +143,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [hovercraft][] ([LGPL / CC BY-SA / CC0][lic.hovercraft]) -- version: [4d50e68 Git][ver.hovercraft] *2017-05-14* ([patched][patch.hovercraft])
   * [motorbike][] ([MIT][lic.motorbike]) -- version: [f918701 Git][ver.motorbike] *2021-05-22* ([patched][patch.motorbike])
 * ui/
-  * [bookmarks_gui][] ([BSD 3-Clause][lic.bookmarks_gui]) -- version: [f7ae10a Git][ver.bookmarks_gui] *2017-08-29*
+  * [bookmarks_gui][] ([BSD 3-Clause][lic.bookmarks_gui]) -- version: [f7ae10a Git][ver.bookmarks_gui] *2017-08-29* ([patched][patch.bookmarks_gui])
   * [hbarmor][] ([MIT][lic.mit] / [CC BY-SA][lic.ccbysa3.0]) -- version: [1.0.0][ver.hbarmor] *2019-04-01*
   * [home_gui][] ([BSD 3-Clause][lic.home_gui]) -- version: [425466a Git][ver.home_gui] *2021-05-21* ([patched][home_gui.patch])
   * [hud_compass][] (MIT / [CC BY-SA ][lic.ccbysa3.0]) -- version: [648c744
@@ -708,6 +708,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.away]: https://github.com/AntumMT/mod-away/tree/3b0bf9e
 [patch.beds]: https://github.com/AntumMT/mod-beds/commit/88155ca
 [patch.boats2]: https://github.com/AntumMT/mod-boats2/tree/9b2bcb7
+[patch.bookmarks_gui]: https://github.com/AntumMT/mod-bookmarks_gui/tree/8250b0169239b777a84d4b85d72ee4faed2a43eb
 [patch.bridges]: https://github.com/AntumMT/mod-bridges/tree/ba8f71a
 [patch.bright_night]: https://github.com/AntumMT/mod-bright_night/tree/d39f20d0cc5a78c2cde282f4150260a2cb40bb4e
 [patch.christmas]: https://github.com/AntumMT/mod-christmas/tree/50bda80
