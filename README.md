@@ -705,7 +705,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.airtanks]: https://github.com/AntumMT/mod-airtanks/tree/8b7fd12
 [patch.amber]: https://github.com/AntumMT/mod-amber/tree/39b852a
 [patch.atm]: https://github.com/AntumMT/mod-atm/tree/2ab0e78
-[patch.away]: https://github.com/AntumMT/mod-away/tree/3b0bf9e
+[patch.away]: https://github.com/AntumMT/mod-away/tree/ea80cdeeddd5f25526d3f1bc506f5bfa4c7fee0a
 [patch.bags]: https://github.com/AntumMT/mod-bags/tree/db216eebc2e63a68061d9f865f649c0ae3490bdd
 [patch.beds]: https://github.com/AntumMT/mod-beds/commit/88155ca
 [patch.boats2]: https://github.com/AntumMT/mod-boats2/tree/9b2bcb7

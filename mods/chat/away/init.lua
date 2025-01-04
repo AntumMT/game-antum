@@ -71,7 +71,7 @@ end
 function get_away_reason(name)
 	-- If a player's shout privilege has been revoked,
 	-- others shouldn't see the away reason
-	if is_away(name) and minetest.get_player_privs(name)['shout'] then
+	if is_away(name) and core.get_player_privs(name)['shout'] then
 		return away_reasons[name]
 	else
 		return ''
@@ -80,10 +80,10 @@ end
 
 function set_away(name, reason)
 	if is_away(name) then
-		minetest.chat_send_player(name, "You are still marked as away (away reason updated)")
+		core.chat_send_player(name, "You are still marked as away (away reason updated)")
 		away_reasons[name] = reason
 	else
-		minetest.chat_send_player(name, "You are now marked as away")
+		core.chat_send_player(name, "You are now marked as away")
 		away_players[name] = true
 		away_reasons[name] = reason
 		away_last_inform[name] = nil
@@ -95,7 +95,7 @@ function unset_away(name)
 		if away_last_inform[name] ~= nil then
 			table.insert(away_inform_outbox, name .. " is no longer away")
 		else
-			minetest.chat_send_player(name, "You are no longer marked as away")
+			core.chat_send_player(name, "You are no longer marked as away")
 		end
 		away_players[name] = nil
 		away_reasons[name] = nil
@@ -113,7 +113,7 @@ end
 
 -- Returns 'present' or 'away' or 'away (<reason>)' or 'disconnected'
 function get_away_status(name)
-	if minetest.get_player_by_name(name) == nil then
+	if core.get_player_by_name(name) == nil then
 		return 'disconnected'
 	elseif is_away(name) then
 		reason = get_away_reason(name)
@@ -128,7 +128,7 @@ function get_away_status(name)
 end
 
 
-minetest.register_on_chat_message(function(name, message)
+core.register_on_chat_message(function(name, message)
 	local cmd
 
 	cmd = AWAYP_COMMAND
@@ -137,10 +137,10 @@ minetest.register_on_chat_message(function(name, message)
 		local name2 = string.match(message, cmd:gsub("?", "[?]").." (.*)")
 		if name2 == nil or name2 == '' or name2 == name then
 			name2 = name
-			minetest.chat_send_player(name,
+			core.chat_send_player(name,
 				"Your status: " .. get_away_status(name2))
 		else
-			minetest.chat_send_player(name,
+			core.chat_send_player(name,
 				name2 .. "'s status: " .. get_away_status(name2))
 		end
 		return true -- Handled chat message
@@ -159,7 +159,7 @@ minetest.register_on_chat_message(function(name, message)
 
 	if message:sub(1, 1) ~= '/' then
 		-- Normal chat message (not a command)
-		if not minetest.get_player_privs(name)['shout'] then
+		if not core.get_player_privs(name)['shout'] then
 			-- Ignore if player has no shout privilege
 			return false -- Continue normal processing
 		end
@@ -192,13 +192,13 @@ minetest.register_on_chat_message(function(name, message)
 end)
 
 local away_check_disconnect_timer = 0
-minetest.register_globalstep(function(dtime)
+core.register_globalstep(function(dtime)
 	away_check_disconnect_timer = away_check_disconnect_timer + dtime
 	if away_check_disconnect_timer >= AWAY_CHECK_DISCONNECT_INTERVAL then
 		away_check_disconnect_timer = 0
 		local disconnected = {}
 		for name, _ in pairs(away_players) do
-			if minetest.get_player_by_name(name) == nil then
+			if core.get_player_by_name(name) == nil then
 				table.insert(disconnected, name)
 			end
 		end
@@ -211,7 +211,7 @@ minetest.register_globalstep(function(dtime)
 
 	if #away_inform_outbox ~= 0 then
 		for _, message in ipairs(away_inform_outbox) do
-			minetest.chat_send_all("Server: " .. message)
+			core.chat_send_all("Server: " .. message)
 		end
 		away_inform_outbox = {}
 	end
