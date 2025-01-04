@@ -1,5 +1,5 @@
-# Template
+# textdomain: glow
 
-Glow Worms in Stone = 
-Glow Shrooms = 
-Fireflies = 
+Glow Worms in Stone=
+Glow Shrooms=
+Fireflies=

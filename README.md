@@ -65,7 +65,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [signs_lib][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2021-03-04-2][ver.signs_lib]
 * lighting/
   * [3d_armor_light][] ([MIT][lic.3d_armor_light]) -- version: [1.0][ver.3d_armor_light] *2021-07-17*
-  * [glow][] ([GPL][lic.gpl2.0]) -- version: [4c015a0 Git][ver.glow] *2019-02-05*
+  * [glow][] ([GPL][lic.gpl2.0]) -- version: [4c015a0 Git][ver.glow] *2019-02-05* ([patched][patch.glow])
   * [ilights][] ([LGPL][lic.lgpl3.0]) -- version: [2021-02-25-01][ver.ilights] ([patched][patch.ilights])
   * [wielded_light][] ([GPL][lic.gpl3.0]) -- version: [d1f310c Git][ver.wielded_light] *2021-07-16*
 * materials/
@@ -721,6 +721,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.fort_spikes]: https://github.com/AntumMT/mod-fort_spikes/tree/154c8c289989d0936c4f7b374569209021d3f84e
 [patch.gems_encrustable]: https://github.com/AntumMT/mod-gems_encrustable/tree/276fb25
 [patch.gems_tools]: https://github.com/AntumMT/mod-gems_tools/tree/25bca18
+[patch.glow]: https://github.com/AntumMT/mod-glow/tree/f86a0c84c30b4ad46c993e2eb5161a24f8f84f92
 [patch.helicopter]: https://github.com/AntumMT/mod-helicopter/tree/79d2d3e
 [pathc.home_gui]: https://github.com/AntumMT/mod-home_gui/tree/32b2e355dd6b4bf2e2f0d0a7d62acb87b94c965c
 [patch.homedecor]: https://gitlab.com/AntumMT/mp-homedecor/commit/7728e969
