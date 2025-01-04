@@ -720,7 +720,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.ethereal]: https://github.com/AntumMT/mod-ethereal/tree/0d418d4
 [patch.fort_spikes]: https://github.com/AntumMT/mod-fort_spikes/tree/154c8c289989d0936c4f7b374569209021d3f84e
 [patch.gems_encrustable]: https://github.com/AntumMT/mod-gems_encrustable/tree/276fb25
-[patch.gems_tools]: https://github.com/AntumMT/mod-gems_tools/tree/25bca18
+[patch.gems_tools]: https://github.com/AntumMT/mod-gems_tools/tree/d9a3a726dc542171d7cf64c3692f3ac4c7c3630b
 [patch.glow]: https://github.com/AntumMT/mod-glow/tree/f86a0c84c30b4ad46c993e2eb5161a24f8f84f92
 [patch.helicopter]: https://github.com/AntumMT/mod-helicopter/tree/79d2d3e
 [pathc.home_gui]: https://github.com/AntumMT/mod-home_gui/tree/32b2e355dd6b4bf2e2f0d0a7d62acb87b94c965c
