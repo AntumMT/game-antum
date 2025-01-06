@@ -164,15 +164,15 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 * [3d_armor][] ([LGPL / CC BY-SA][lic.3d_armor]) - version: [2024-12-28][ver.3d_armor]
 * castle ([MIT][lic.castle])
-  * [castle_farming][] -- version: [032f277 Git][ver.castle_farming] *2020-02-28*
-  * [castle_gates][] -- version: [21b5a6c Git][ver.castle_gates] *2021-03-14*
-  * [castle_lighting][] -- version: [32a42e3 Git][ver.castle_lighting] *2020-02-28*
-  * [castle_masonry][] -- version: [6e81ab1 Git][ver.castle_masonry] *2020-09-09*
-  * [castle_shields][] -- version: [78e74b0 Git][ver.castle_shields] *2019-11-23*
-  * [castle_storage][] -- version: [ad5e887 Git][ver.castle_storage] *2020-02-28*
-  * [castle_tapestries][] -- version: [f5e3ac1 Git][ver.castle_tapestries] *2020-02-16*
-  * [castle_weapons][] -- version: [d3cf095 Git][ver.castle_weapons] *2020-02-28*
-  * [crafting_bench][] -- version: [69083ed Git][ver.crafting_bench] *2020-05-27*
+  * [castle_farming][] -- version: [2023-08-06][ver.castle_farming]
+  * [castle_gates][] -- version: [2024-11-27][ver.castle_gates]
+  * [castle_lighting][] -- version: [2023-09-04][ver.castle_lighting]
+  * [castle_masonry][] -- version: [2024-11-16][ver.castle_masonry]
+  * [castle_shields][] -- version: [2023-09-04][ver.castle_shields]
+  * [castle_storage][] -- version: [2023-12-02][ver.castle_storage]
+  * [castle_tapestries][] -- version: [2023-05-02][ver.castle_tapestries]
+  * [castle_weapons][] -- version: [2021-01-09][ver.castle_weapons] ([patched][patch.castle_weapons])
+  * [crafting_bench][] -- version: [2024-11-03][ver.crafting_bench]
 * [deploy_nodes][] ([BSD 3-Clause][lic.deploy_nodes]) -- version: [b67e162 Git][ver.deploy_nodes] *2017-06-08*
 * [home_workshop][] -- version: [03325e8 Git][ver.home_workshop] *2021-04-15*
 * [homedecor][] ([LGPL / WTFPL / CC BY-SA / CC0][lic.homedecor]) -- version: [2024-12-30][ver.homedecor] ([patched][patch.homedecor])
@@ -206,7 +206,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [bucket](https://content.luanti.org/packages/daret/bucket/) (bucket lite)
 * [carpet](https://forum.luanti.org/viewtopic.php?t=2875)
 * [carpets](https://forum.luanti.org/viewtopic.php?t=15459)
-* [castle_gates](https://content.luanti.org/packages/FaceDeer/castle_gates/)
 * [cherrytree](https://forum.luanti.org/viewtopic.php?t=22118)
 * [christmas](https://forum.luanti.org/viewtopic.php?t=23782)
 * [clothing](https://forum.luanti.org/viewtopic.php?t=26443) (Clothing 2)
@@ -318,7 +317,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [castle_lighting]: https://content.luanti.org/packages/FaceDeer/castle_lighting/
 [castle_masonry]: https://content.luanti.org/packages/FaceDeer/castle_masonry/
 [castle_shields]: https://content.luanti.org/packages/FaceDeer/castle_shields/
-[castle_storage]: https://github.com/minetest-mods/castle_storage
+[castle_storage]: https://content.luanti.org/packages/FaceDeer/castle_storage/
 [castle_tapestries]: https://content.luanti.org/packages/FaceDeer/castle_tapestries/
 [castle_weapons]: https://content.luanti.org/packages/FaceDeer/castle_weapons/
 [chatlog]: https://content.luanti.org/packages/AntumDeluge/chatlog/
@@ -578,14 +577,14 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.bridges]: https://github.com/mt-historical/bridges/tree/7748488b9cd991cb3bd58af86fe703172a556710
 [ver.bright_night]: https://github.com/Yukitty/minetest-bright_night/tree/69b750a
 [ver.campfire]: https://github.com/Napiophelios/campfire/tree/1058f1d
-[ver.castle_farming]: https://github.com/minetest-mods/castle_farming/tree/032f277
-[ver.castle_gates]: https://github.com/minetest-mods/castle_gates/tree/21b5a6c
-[ver.castle_lighting]: https://github.com/minetest-mods/castle_lighting/tree/32a42e3
-[ver.castle_masonry]: https://github.com/minetest-mods/castle_masonry/tree/6e81ab1
-[ver.castle_shields]: https://github.com/minetest-mods/castle_shields/tree/78e74b0
-[ver.castle_storage]: https://github.com/minetest-mods/castle_storage/tree/ad5e887
-[ver.castle_tapestries]: https://github.com/minetest-mods/castle_tapestries/tree/f5e3ac1
-[ver.castle_weapons]: https://github.com/minetest-mods/castle_weapons/tree/d3cf095
+[ver.castle_farming]: https://github.com/minetest-mods/castle_farming/tree/a2d5d22008ef85d51e9465498dd68369cd144104
+[ver.castle_gates]: https://github.com/minetest-mods/castle_gates/tree/b6c3af9ee030dfc57931dd926cc7d9502175371c
+[ver.castle_lighting]: https://github.com/minetest-mods/castle_lighting/tree/699a379acfd8461a323f6f00c74ebd3ce07ed509
+[ver.castle_masonry]: https://github.com/minetest-mods/castle_masonry/tree/1728e52a668db8dc8eb62317444ac3c9a24cf9f7
+[ver.castle_shields]: https://github.com/minetest-mods/castle_shields/tree/22f32827861b60a98a5c9eaecfe6d0ab850cdc17
+[ver.castle_storage]: https://github.com/minetest-mods/castle_storage/tree/4216b043143010a750f015905a4a8f7ba5fc4965
+[ver.castle_tapestries]: https://github.com/minetest-mods/castle_tapestries/tree/0d1240f44a47d949ac7ba59b239227b55f3644ef
+[ver.castle_weapons]: https://github.com/minetest-mods/castle_weapons/tree/d89b2519d1769940d22b594c507df47202555f16
 [ver.chatlog]: https://github.com/AntumMT/mod-chatlog/tree/v1.1
 [ver.christmas]: https://github.com/TheZenKitteh/minetest-christmas/tree/d3bd872
 [ver.cleaner]: https://github.com/AntumMT/mod-cleaner/releases/tag/v1.2
@@ -600,7 +599,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.cmer_zombie]: https://github.com/AntumMT/mod-cmer/tree/3dd783c
 [ver.coloredwood]: https://gitlab.com/VanessaE/coloredwood/tags/2021-01-30
 [ver.compassgps]: https://github.com/Kilarin/compassgps/tree/567b95f
-[ver.crafting_bench]: https://github.com/minetest-mods/crafting_bench/tree/69083ed
+[ver.crafting_bench]: https://github.com/minetest-mods/crafting_bench/tree/5d97e6d401d8d9788064d127e774453fed6913c9
 [ver.craftguide]: https://github.com/minetest-mods/craftguide/tree/f379998
 [ver.crops]: https://github.com/minetest-mods/crops/tree/v1
 [ver.currency]: https://github.com/mt-mods/currency/tree/d97edda151a0dcd26f3c0d192e2a9a64b5843ffb
@@ -715,6 +714,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.bookmarks_gui]: https://github.com/AntumMT/mod-bookmarks_gui/tree/8250b0169239b777a84d4b85d72ee4faed2a43eb
 [patch.bridges]: https://github.com/AntumMT/mod-bridges/tree/36b71392e218aac13ed5f0f2a7cd7e4a7667b9ed
 [patch.bright_night]: https://github.com/AntumMT/mod-bright_night/tree/d39f20d0cc5a78c2cde282f4150260a2cb40bb4e
+[patch.castle_weapons]: https://github.com/AntumMT/mod-castle_weapons/tree/e8827d7781e3a36996a4c8f6d2ce0bdaec7536cf
 [patch.christmas]: https://github.com/AntumMT/mod-christmas/tree/50bda80
 [patch.compassgps]: https://github.com/AntumMT/mod-compassgps/tree/8a98085c482c360b53bd231195065d581dd89961
 [patch.craftguide]: https://github.com/AntumMT/mod-craftguide/tree/aef18f2

@@ -49,7 +49,11 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "castle_farming:bound_straw 6",
 	type = "shapeless",
-	recipe = {"farming:straw", "farming:straw", "farming:straw", "farming:straw", "farming:straw", "farming:straw", "ropes:ropesegment",}
+	recipe = {
+		"farming:straw", "farming:straw", "farming:straw",
+		"farming:straw", "farming:straw", "farming:straw",
+		"ropes:ropesegment"
+	}
 })
 
 minetest.register_craft({

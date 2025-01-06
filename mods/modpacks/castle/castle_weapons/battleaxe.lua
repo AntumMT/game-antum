@@ -12,8 +12,8 @@ minetest.register_tool("castle_weapons:battleaxe", {
 		full_punch_interval = 2.0,
 		max_drop_level=1,
 		groupcaps={
-			choppy={times={[1]=2.10, [2]=0.90, [3]=0.50}, uses=20, maxlevel=3},
-			snappy={times={[1]=1.90, [2]=0.90, [3]=0.30}, uses=20, maxlevel=3},
+			choppy={times={[1]=2.10, [2]=0.90, [3]=0.50}, uses=0, maxlevel=3},
+			snappy={times={[1]=1.90, [2]=0.90, [3]=0.30}, uses=0, maxlevel=3},
 		},
 		damage_groups = {fleshy=7},
 	},

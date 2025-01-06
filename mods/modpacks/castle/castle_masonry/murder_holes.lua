@@ -1,17 +1,5 @@
 
--- Used for localization, choose either built-in or intllib.
-
-local MP, S, NS = nil
-
-if (minetest.get_modpath("intllib") == nil) then
-	S = minetest.get_translator("castle_masonry")
-
-else
-	-- internationalization boilerplate
-	MP = minetest.get_modpath(minetest.get_current_modname())
-	S, NS = dofile(MP.."/intllib.lua")
-
-end
+local S = minetest.get_translator("castle_masonry")
 
 -------------------------------------------------------------------------------------
 
@@ -25,6 +13,9 @@ castle_masonry.register_murderhole = function(material)
 		description = S("@1 Murder Hole", desc),
 		tiles = tile,
 		groups = composition_def.groups,
+		_mcl_hardness = composition_def._mcl_hardness or 0.8,
+		_mcl_blast_resistance = composition_def._mcl_blast_resistance or 1,
+		_mcl_stonecutter_recipes = {material.composition_material or material.craft_material},
 		sounds = composition_def.sounds,
 		paramtype = "light",
 		paramtype2 = "facedir",
@@ -44,6 +35,9 @@ castle_masonry.register_murderhole = function(material)
 		description = S("@1 Machicolation", desc),
 		tiles = tile,
 		groups = composition_def.groups,
+		_mcl_hardness = composition_def._mcl_hardness or 0.8,
+		_mcl_blast_resistance = composition_def._mcl_blast_resistance or 1,
+		_mcl_stonecutter_recipes = {material.composition_material or material.craft_material},
 		sounds = composition_def.sounds,
 		paramtype = "light",
 		paramtype2 = "facedir",

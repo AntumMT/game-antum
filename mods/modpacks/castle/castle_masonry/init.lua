@@ -1,6 +1,17 @@
 castle_masonry = {}
 
+castle_masonry.sounds = {}
+
+if minetest.get_modpath("default") then
+	castle_masonry.sounds = default
+end
+
+if minetest.get_modpath("mcl_sounds") then
+	castle_masonry.sounds = mcl_sounds
+end
+
 local MP = minetest.get_modpath(minetest.get_current_modname())
+
 dofile(MP.."/pillars.lua")
 dofile(MP.."/arrow_slits.lua")
 dofile(MP.."/murder_holes.lua")
@@ -8,23 +19,11 @@ dofile(MP.."/stone_wall.lua")
 dofile(MP.."/paving.lua")
 
 
--- Used for localization, choose either built-in or intllib.
-
-local S, NS = nil
-
-if (minetest.get_modpath("intllib") == nil) then
-	S = minetest.get_translator("castle_masonry")
-
-else
-	-- internationalization boilerplate
-	S, NS = dofile(MP.."/intllib.lua")
-
-end
-
+local S = minetest.get_translator("castle_masonry")
 
 local read_setting = function(name, default)
 	local setting = minetest.settings:get_bool(name)
-	if setting == nil then return default end
+	if not setting then return default end
 	return setting
 end
 
@@ -38,54 +37,62 @@ end
 --}
 
 castle_masonry.materials = {}
-if read_setting("castle_masonry_stonewall", true) then
-	table.insert(castle_masonry.materials, {name="stonewall", desc=S("Stonewall"), tile="castle_stonewall.png", craft_material="castle_masonry:stonewall"})
+
+local function register_material(def, setting_default)
+	if read_setting("castle_masonry_" .. def.name, setting_default) then
+		table.insert(castle_masonry.materials, def)
+	end
 end
-if read_setting("castle_masonry_cobble", true) then
-	table.insert(castle_masonry.materials, {name="cobble", desc=S("Cobble"), tile="default_cobble.png", craft_material="default:cobble"})
+
+-- castle masonry materials
+register_material({name="stonewall", desc=S("Stonewall"), tile="castle_stonewall.png", craft_material="castle_masonry:stonewall"}, true)
+
+-- MTG materials
+if minetest.get_modpath("default") then
+	register_material({name="cobble", desc=S("Cobble"), tile="default_cobble.png", craft_material="default:cobble"}, true)
+	register_material({name="stonebrick", desc=S("Stonebrick"), tile="default_stone_brick.png", craft_material="default:stonebrick"}, true)
+	register_material({name="stone", desc=S("Stone"), tile="default_stone.png", craft_material="default:stone"}, true)
+	register_material({name="wood", desc=S("Wood"), tile="default_wood.png", craft_material="group:wood", composition_material="default:wood"})
+	register_material({name="ice", desc=S("Ice"), tile="default_ice.png", craft_material="default:ice"})
+	register_material({name="snow", desc=S("Snow"), tile="default_snow.png", craft_material="default:snow"})
+	register_material({name="sandstone", desc=S("Sandstone"), tile="default_sandstone.png", craft_material="default:sandstone"}, true)
+	register_material({name="sandstonebrick", desc=S("Sandstone Brick"), tile="default_sandstone_brick.png", craft_material="default:sandstonebrick"}, true)
+	register_material({name="desertstonebrick", desc=S("Desert Stone Brick"), tile="default_desert_stone_brick.png", craft_material="default:desert_stonebrick"}, true)
+	register_material({name="desertsandstonebrick", desc=S("Desert Sandstone Brick"), tile="default_desert_sandstone_brick.png", craft_material="default:desert_sandstone_brick"}, true)
+	register_material({name="silversandstonebrick", desc=S("Silver Sandstone Brick"), tile="default_silver_sandstone_brick.png", craft_material="default:silver_sandstone_brick"}, true)
+	register_material({name="desertstone", desc=S("Desert Stone"), tile="default_desert_stone.png", craft_material="default:desert_stone"}, true)
+	register_material({name="desertsandstone", desc=S("Desert Sandstone"), tile="default_desert_sandstone.png", craft_material="default:desert_sandstone"}, true)
+	register_material({name="silversandstone", desc=S("Silver Sandstone"), tile="default_silver_sandstone.png", craft_material="default:silver_sandstone"}, true)
+	register_material({name="obsidianbrick", desc=S("Obsidian Brick"), tile="default_obsidian_brick.png", craft_material="default:obsidianbrick"})
 end
-if read_setting("castle_masonry_stonebrick", true) then
-	table.insert(castle_masonry.materials, {name="stonebrick", desc=S("Stonebrick"), tile="default_stone_brick.png", craft_material="default:stonebrick"})
+
+-- MCL materials
+if minetest.get_modpath("mcl_core") then
+	register_material({name="cobble", desc=S("Cobble"), craft_material="group:cobble", composition_material="mcl_core:cobble"}, true)
+	register_material({name="stonebrick", desc=S("Stonebrick"), craft_material="mcl_core:stonebrick"}, true)
+	register_material({name="stone", desc=S("Stone"), craft_material="group:stone", composition_material="mcl_core:stone"}, true)
+	register_material({name="ice", desc=S("Ice"), craft_material="mcl_core:packed_ice"})
+	register_material({name="snow", desc=S("Snow"), craft_material="mcl_core:snowblock"})
+	register_material({name="sandstone", desc=S("Sandstone"), craft_material="mcl_core:sandstone"}, true)
+	register_material({name="redsandstone", desc=S("Red Sandstone"), craft_material="mcl_core:redsandstone"}, true)
 end
-if read_setting("castle_masonry_sandstonebrick", true) then
-	table.insert(castle_masonry.materials, {name="sandstonebrick", desc=S("Sandstone Brick"), tile="default_sandstone_brick.png", craft_material="default:sandstonebrick"})
+-- wood ids are different in MineClonia and Mineclone2, mcl_trees is part of MineClonia
+if minetest.get_modpath("mcl_trees") then
+	register_material({name="wood", desc=S("Wood"), craft_material="group:wood", composition_material="mcl_trees:wood_oak"})
+elseif minetest.get_modpath("mcl_core") then
+	register_material({name="wood", desc=S("Wood"), craft_material="group:wood", composition_material="mcl_core:wood"})
 end
-if read_setting("castle_masonry_desertstonebrick", true) then
-	table.insert(castle_masonry.materials, {name="desertstonebrick", desc=S("Desert Stone Brick"), tile="default_desert_stone_brick.png", craft_material="default:desert_stonebrick"})
+if minetest.get_modpath("mcl_nether") then
+	register_material({name="quartz", desc=S("Quartz"), craft_material="mcl_nether:quartz_block"}, true)
 end
-if read_setting("castle_masonry_desertsandstonebrick", true) then
-	table.insert(castle_masonry.materials, {name="desertsandstonebrick", desc=S("Desert Sandstone Brick"), tile="default_desert_sandstone_brick.png", craft_material="default:desert_sandstone_brick"})
+if minetest.get_modpath("mcl_blackstone") then
+	register_material({name="blackstone", desc=S("Blackstone"), craft_material="mcl_blackstone:blackstone_brick_polished"}, true)
 end
-if read_setting("castle_masonry_silversandstonebrick", true) then
-	table.insert(castle_masonry.materials, {name="silversandstonebrick", desc=S("Silver Sandstone Brick"), tile="default_silver_sandstone_brick.png", craft_material="default:silver_sandstone_brick"})
+if minetest.get_modpath("mcl_deepslate") then
+	register_material({name="deepslate_bricks", desc=S("Deepslate Bricks"), craft_material="mcl_deepslate:deepslate_bricks"}, true)
+	register_material({name="deepslate_tiles", desc=S("Deepslate Tiles"), craft_material="mcl_deepslate:deepslate_tiles"}, true)
 end
-if read_setting("castle_masonry_stone", true) then
-	table.insert(castle_masonry.materials, {name="stone", desc=S("Stone"), tile="default_stone.png", craft_material="default:stone"})
-end
-if read_setting("castle_masonry_sandstone", true) then
-	table.insert(castle_masonry.materials, {name="sandstone", desc=S("Sandstone"), tile="default_sandstone.png", craft_material="default:sandstone"})
-end
-if read_setting("castle_masonry_desertstone", true) then
-	table.insert(castle_masonry.materials, {name="desertstone", desc=S("Desert Stone"), tile="default_desert_stone.png", craft_material="default:desert_stone"})
-end
-if read_setting("castle_masonry_desertsandstone", true) then
-	table.insert(castle_masonry.materials, {name="desertsandstone", desc=S("Desert Sandstone"), tile="default_desert_sandstone.png", craft_material="default:desert_sandstone"})
-end
-if read_setting("castle_masonry_silversandstone", true) then
-	table.insert(castle_masonry.materials, {name="silversandstone", desc=S("Silver Sandstone"), tile="default_silver_sandstone.png", craft_material="default:silver_sandstone"})
-end
-if read_setting("castle_masonry_wood", false) then
-	table.insert(castle_masonry.materials, {name="wood", desc=S("Wood"), tile="default_wood.png", craft_material="group:wood", composition_material="default:wood"})
-end
-if read_setting("castle_masonry_ice", false) then
-	table.insert(castle_masonry.materials, {name="ice", desc=S("Ice"), tile="default_ice.png", craft_material="default:ice"})
-end
-if read_setting("castle_masonry_snow", false) then
-	table.insert(castle_masonry.materials, {name="snow", desc=S("Snow"), tile="default_snow.png", craft_material="default:snow"})
-end
-if read_setting("castle_masonry_obsidianbrick", false) then
-	table.insert(castle_masonry.materials, {name="obsidianbrick", desc=S("Obsidian Brick"), tile="default_obsidian_brick.png", craft_material="default:obsidianbrick"})
-end
+
 
 castle_masonry.get_material_properties = function(material)
 	local composition_def
@@ -100,7 +107,7 @@ castle_masonry.get_material_properties = function(material)
 
 	local tiles = material.tile
 	if tiles == nil then
-		tiles = composition_def.tile
+		tiles = composition_def.tiles
 	elseif type(tiles) == "string" then
 		tiles = {tiles}
 	end
@@ -146,6 +153,7 @@ for _, material in pairs(castle_masonry.materials) do
 	-- Arrowslit upgrade has special handling because the castle mod arrow slit is reversed relative to current build-from-inside standard
 	local lbm_def = {
 		name = "castle_masonry:arrowslit_flip_front_to_back"..material.name,
+		run_at_every_load = false,
 		nodenames = {
 			"castle:arrowslit_"..material.name,
 			"castle:arrowslit_"..material.name.."_cross",

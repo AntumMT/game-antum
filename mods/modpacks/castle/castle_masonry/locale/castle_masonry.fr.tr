@@ -5,7 +5,7 @@
 @1 Arrowslit with Hole=Meurtrière avec trou en @1
 @1 Crossbrace=Travers en @1
 @1 Embrasure=Embrasure en @1
-@1 Extended Crossbrace=Travers entendu en @1
+@1 Extended Crossbrace=Travers étendu en @1
 @1 Half Pillar Base=Base de demi pilier en @1
 @1 Half Pillar Middle=Milieu de demi pilier en @1
 @1 Half Pillar Top=Haut de demi pilier en @1
@@ -28,9 +28,9 @@ Desert Sandstone=Pierre du désert
 Desert Sandstone Brick=Brique de pierre du désert
 Desert Stone=Pierre du désert
 Desert Stone Brick=Brique de pierre du désert
-Dungeon Stone=Pierre de dongeon
-Dungeon Stone Slab=Dalle en pierre de dongeon
-Dungeon Stone Stair=Escalier en pierre de dongeon
+Dungeon Stone=Pierre de donjon
+Dungeon Stone Slab=Dalle en pierre de donjon
+Dungeon Stone Stair=Escalier en pierre de donjon
 Ice=Glace
 Obsidian Brick=Brique d'obsidienne
 Pavement Brick=Brique de pavage
@@ -47,4 +47,3 @@ Stone Wall=Mur de pierre
 Stonebrick=Brique de pierre
 Stonewall=Pierre brune
 Wood=Bois
-##### not used anymore #####

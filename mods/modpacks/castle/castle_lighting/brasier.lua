@@ -3,6 +3,8 @@ if not minetest.get_modpath("fire") then return end
 local S = minetest.get_translator(minetest.get_current_modname())
 
 local brasier_longdesc = S("A brasier for producing copious amounts of light and heat.")
+
+-- luacheck: ignore
 local brasier_usagehelp = S("To ignite the brasier place a flammable fuel in its inventory slot. A lump of coal will burn for about half an hour.")
 
 local brasier_nodebox = {
@@ -34,19 +36,22 @@ local brasier_burn = function(pos)
 	local pos_above = {x=pos.x, y=pos.y+1, z=pos.z}
 	local node_above = minetest.get_node(pos_above)
 	local timer = minetest.get_node_timer(pos)
-	
-	if timer:is_started() and node_above.name == "fire:permanent_flame" then return end -- already burning, don't burn a new thing.
-	
+
+	-- already burning, don't burn a new thing.
+	if timer:is_started() and node_above.name == "fire:permanent_flame" then return end
+
 	local inv = minetest.get_inventory({type="node", pos=pos})
+	if not inv then return end -- Stop nodetimer
+
 	local item = inv:get_stack("fuel", 1)
 	local fuel_burned = minetest.get_craft_result({method="fuel", width=1, items={item:peek_item(1)}}).time
-	
+
 	if fuel_burned > 0 and (node_above.name == "air" or node_above.name == "fire:permanent_flame") then
 		item:set_count(item:get_count() - 1)
 		inv:set_stack("fuel", 1, item)
 
 		timer:start(fuel_burned * 60) -- one minute of flame per second of burn time, for balance.
-		
+
 		if node_above.name == "air" then
 			minetest.set_node(pos_above, {name = "fire:permanent_flame"})
 		end
@@ -60,9 +65,9 @@ end
 local brasier_on_construct = function(pos)
 	local inv = minetest.get_meta(pos):get_inventory()
 	inv:set_size("fuel", 1)
-	
+
 	local meta = minetest.get_meta(pos)
-	meta:set_string("formspec", 
+	meta:set_string("formspec",
 		"size[8,5.3]" ..
 		default.gui_bg ..
 		default.gui_bg_img ..
@@ -118,7 +123,7 @@ minetest.register_node("castle_lighting:brasier_floor", {
 	paramtype = "light",
 	node_box = brasier_nodebox,
 	selection_box = brasier_selection_box,
-	
+
 	on_construct = brasier_on_construct,
 	on_destruct = brasier_on_destruct,
 	can_dig = brasier_can_dig,
@@ -151,7 +156,8 @@ local materials
 if minetest.get_modpath("castle_masonry") then
 	materials = castle_masonry.materials
 else
-	materials = {{name="stonebrick", desc=S("Stonebrick"), tile="default_stone_brick.png", craft_material="default:stonebrick"}}
+	materials = {{name="stonebrick", desc=S("Stonebrick"), tile="default_stone_brick.png",
+			craft_material="default:stonebrick"}}
 end
 
 local get_material_properties = function(material)
@@ -164,17 +170,18 @@ local get_material_properties = function(material)
 		composition_def = minetest.registered_nodes[material.craft_material]
 		burn_time = minetest.get_craft_result({method="fuel", width=1, items={ItemStack(material.craft_materia)}}).time
 	end
-	
+
 	local tiles = material.tile
 	if tiles == nil then
 		tiles = composition_def.tile
 	elseif type(tiles) == "string" then
 		tiles = {tiles}
 	end
-	
+
 	-- Apply bed of coals to the texture.
 	if table.getn(tiles) == 1 then
-		tiles = {tiles[1].."^(castle_coal_bed.png^[mask:castle_brasier_bed_mask.png)", tiles[1], tiles[1], tiles[1], tiles[1], tiles[1]}
+		tiles = {tiles[1].."^(castle_coal_bed.png^[mask:castle_brasier_bed_mask.png)",
+				tiles[1], tiles[1], tiles[1], tiles[1], tiles[1]}
 	else
 		tiles[1] = tiles[1].."^(castle_coal_bed.png^[mask:castle_brasier_bed_mask.png)"
 	end
@@ -183,7 +190,7 @@ local get_material_properties = function(material)
 	if desc == nil then
 		desc = composition_def.description
 	end
-	
+
 	return composition_def, burn_time, tiles, desc
 end
 
@@ -211,14 +218,15 @@ local pillar_brasier_selection_box = {
 
 castle_lighting.register_pillar_brasier = function(material)
 	local composition_def, burn_time, tile, desc = get_material_properties(material)
-	if burn_time > 0 or composition_def.groups.puts_out_fire then return end -- No wooden brasiers, snow brasiers, or ice brasiers, alas.
-	
+	-- No wooden brasiers, snow brasiers, or ice brasiers, alas.
+	if burn_time > 0 or composition_def.groups.puts_out_fire then return end
+
 	local crossbrace_connectable_groups = {}
 	for group, val in pairs(composition_def.groups) do
 		crossbrace_connectable_groups[group] = val
-	end	
+	end
 	crossbrace_connectable_groups.crossbrace_connectable = 1
-	
+
 	local mod_name = minetest.get_current_modname()
 
 	minetest.register_node(mod_name..":"..material.name.."_pillar_brasier", {
@@ -231,10 +239,10 @@ castle_lighting.register_pillar_brasier = function(material)
 		paramtype2 = "facedir",
 		groups = crossbrace_connectable_groups,
 		sounds = composition_def.sounds,
-		
+
 		node_box = pillar_brasier_nodebox,
 		selection_box = pillar_brasier_selection_box,
-		
+
 		on_construct = brasier_on_construct,
 		on_destruct = brasier_on_destruct,
 		can_dig = brasier_can_dig,
@@ -250,7 +258,7 @@ castle_lighting.register_pillar_brasier = function(material)
 		{material.craft_material,material.craft_material,material.craft_material},
 		},
 	})
-	
+
 	if minetest.get_modpath("hopper") and hopper ~= nil and hopper.add_container ~= nil then
 		hopper:add_container({
 			{"top", mod_name..":"..material.name.."_pillar_brasier", "fuel"},

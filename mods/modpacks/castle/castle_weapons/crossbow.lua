@@ -368,6 +368,10 @@ minetest.register_entity("castle_weapons:crossbow_bolt_entity", {
 		inventory_image = "castle_crossbow_loaded.png",
 		groups = {not_in_creative_inventory=1},
 		on_use = function(itemstack, user, pointed_thing)
+			if type(user) ~= "userdata" then
+				-- Do not allow fake players to use crossbow
+				return itemstack
+			end
 			minetest.sound_play("castle_crossbow_click", {object=user})
 			if not minetest.settings:get_bool("creative_mode") then
 				itemstack:add_wear(65535/CROSSBOW_USES)
