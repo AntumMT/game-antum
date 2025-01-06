@@ -31,7 +31,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [chatlog][] ([MIT][lic.chatlog]) -- version: [1.1][ver.chatlog] *2021-05-31*
 * commerce/
   * [atm][] ([GPL][lic.gpl3.0]) -- version: [1.0.4][ver.atm] *2021-04-21* ([patched][patch.atm])
-  * [currency][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2021-01-30][ver.currency]
+  * [currency][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2024-02-29][ver.currency]
   * [server_shop][] ([MIT][lic.server_shop]) -- version: [1.6][ver.server_shop] *2021-08-18*
 * core/
   * [antum][] ([MIT][lic.antum]) -- version: [69b39a4 Git][ver.antum] *2017-08-30*
@@ -334,7 +334,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [crafting_bench]: https://content.luanti.org/packages/FaceDeer/crafting_bench/
 [creatures]: https://forum.luanti.org/viewtopic.php?t=8638
 [crops]: https://content.luanti.org/packages/sofar/crops/
-[currency]: https://content.luanti.org/packages/VanessaE/currency/
+[currency]: https://content.luanti.org/packages/mt-mods/currency/
 [deploy_nodes]: https://cornernote.github.io/minetest-deploy_nodes/
 [desert_life]: https://forum.luanti.org/viewtopic.php?t=16054
 [dinosaurs_aggressive]: https://github.com/AntumMT/mp-dinosaurs_aggressive
@@ -600,7 +600,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.crafting_bench]: https://github.com/minetest-mods/crafting_bench/tree/69083ed
 [ver.craftguide]: https://github.com/minetest-mods/craftguide/tree/f379998
 [ver.crops]: https://github.com/minetest-mods/crops/tree/v1
-[ver.currency]: https://gitlab.com/VanessaE/currency/tree/2021-01-30
+[ver.currency]: https://github.com/mt-mods/currency/tree/d97edda151a0dcd26f3c0d192e2a9a64b5843ffb
 [ver.deploy_nodes]: https://github.com/cornernote/minetest-deploy_nodes/tree/b67e162
 [ver.desert_life]: https://github.com/NathanSalapat/desert_life/tree/188f984
 [ver.dinosaurs_aggressive]: https://github.com/AntumMT/mp-dinosaurs_aggressive/tree/874f299
