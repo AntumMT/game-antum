@@ -33,7 +33,7 @@ local function generate_hud(player, current_owner, has_access)
 	end
 	sp.player_huds[player:get_player_name()] = {
 		hud_id = player:hud_add({
-			hud_elem_type = "text",
+			[minetest.features.hud_def_type_field and "type" or "hud_elem_type"] = "text",
 			name          = "area_hud",
 			number        = color,
 			position      = {x=pos_x, y=0.98},
@@ -43,7 +43,7 @@ local function generate_hud(player, current_owner, has_access)
 			alignment     = {x=align_x, y=-1},
 		}),
 		owner = current_owner,
-		had_access = has_access
+		had_access = has_access,
 	}
 end
 

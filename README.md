@@ -127,7 +127,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [wardrobe][] ([MIT][lic.wardrobe]) -- version: [0500a78 Git][ver.wardrobe] *2021-06-08*
 * protection/
   * [pvp_areas][] ([LGPL][lic.lgpl2.1]) -- version: [4eafdee Git][ver.pvp_areas] *2025-01-03*
-  * [simple_protection][] ([CC0][lic.cc0]) -- version: [f1f85aa Git][ver.simple_protection] *2021-07-18* ([patched][patch.simple_protection])
+  * [simple_protection][] ([CC0][lic.cc0]) -- version: [d357ba1 Git][ver.simple_protection] _2024-09-06_
 * storage/
   * [drawers][] ([MIT / CC0 / CC BY][lic.drawers]) -- version: [0.6.2][ver.drawers] *2021-03-27*
   * [more_chests][] ([GPL][lic.gpl2.0]) -- version: [6be8145 Git][ver.more_chests] *2021-04-05*
@@ -679,7 +679,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.sfinv_buttons]: https://codeberg.org/Wuzzy/minetest_sfinv_buttons/src/commit/1.1.2
 [ver.signs_lib]: https://gitlab.com/VanessaE/signs_lib/tree/2021-03-04-2
 [ver.simple_models]: https://github.com/AntumMT/mod-simple_models/tree/07e8c1b
-[ver.simple_protection]: https://github.com/SmallJoker/simple_protection/tree/f1f85aa
+[ver.simple_protection]: https://github.com/SmallJoker/simple_protection/tree/d357ba10d8f5f7b4327bfc61efbafe772df21589
 [ver.slingshot]: https://github.com/AntumMT/mod-slingshot/releases/tag/v0.3
 [ver.sneeker]: https://github.com/AntumMT/mod-sneeker/releases/tag/v1.1-1
 [ver.snowdrift]: https://github.com/paramat/snowdrift/tree/3342939
@@ -742,7 +742,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.painting]: https://github.com/AntumMT/mod-painting/tree/bdcb6727c49ee49d4d40c0a616464f8ac4b78cf3
 [patch.pipeworks]: https://gitlab.com/AntumMT/mod-pipeworks/tree/48b082e
 [patch.quartz]: https://github.com/AntumMT/mod-quartz/tree/adc759e
-[patch.simple_protection]: https://github.com/AntumMT/mod-simple_protection/tree/be873b5
 [patch.snowdrift]: https://github.com/AntumMT/mod-snowdrift/tree/0b35cc3
 [patch.technic_armor]: https://github.com/AntumMT/mod-technic_armor/tree/7434d00ebcf161179fbfd180c48f0fc42c3a7676
 [patch.throwing]: https://github.com/AntumMT/mod-throwing/tree/6f55c67
