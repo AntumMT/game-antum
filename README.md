@@ -186,7 +186,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [mypaint][] ([DWYWPL][lic.dwywpl]) -- version: [9288e8d Git][ver.mypaint] *2017-11-16*
   * [mypaths][] ([DWYWPL][lic.dwywpl]) -- version: [078f52c Git][ver.mypaths] _2024-02-29_
   * [myroofs][] ([DWYWPL][lic.dwywpl]) -- version: [fe98461 Git][ver.myroofs] *2017-07-14*
-  * [mysheetmetal][] ([DWYWPL][lic.dwywpl]) -- version: [7c5ab71 Git][ver.mysheetmetal] *2016-04-12* ([patched][patch.mysheetmetal])
+  * [mysheetmetal][] ([DWYWPL][lic.dwywpl]) -- version: [2ffb3a2 Git][ver.mysheetmetal] _2018-02-16_
   * [mywoodslopes][] ([DWYWPL][lic.dwywpl]) -- version: [3a1b531 Git][ver.mywoodslopes] *2016-03-23* (patched)
 * [technic][] ([LGPL][lic.lgpl2.0]) -- version: [1c21948 Git][ver.technic] *2021-04-14*
 
@@ -664,7 +664,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.mypaint]: https://github.com/DonBatman/mypaint/tree/9288e8d
 [ver.mypaths]: https://github.com/minetest-mods/mypaths/tree/078f52ce7d6bb993e2687a5643c8eab6a44804b1
 [ver.myroofs]: https://github.com/minetest-mods/myroofs/tree/fe98461
-[ver.mysheetmetal]: https://github.com/minetest-mods/mysheetmetal/tree/7c5ab71
+[ver.mysheetmetal]: https://github.com/minetest-mods/mysheetmetal/tree/2ffb3a253962dcb75d2ce292487a07793dc43e77
 [ver.mywoodslopes]: https://github.com/minetest-mods/mywoodslopes/tree/3a1b531
 [ver.nether]: https://github.com/minetest-mods/nether/tree/v3.1
 [ver.no_fall_damage]: https://repo.or.cz/minetest_no_fall_damage.git/shortlog/refs/tags/1.0.0
@@ -741,7 +741,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.moreblocks]: https://github.com/AntumMT/mod-moreblocks/tree/6dda839
 [patch.moreores]: https://github.com/AntumMT/mod-moreores/tree/a92c7e2
 [patch.motorbike]: https://github.com/AntumMT/mod-motorbike/tree/0aa5c9c
-[patch.mysheetmetal]: https://github.com/AntumMT/mod-mysheetmetal/tree/2ffb3a2
 [patch.nether]: https://github.com/AntumMT/mod-nether/tree/7a84ddd
 [patch.painting]: https://github.com/AntumMT/mod-painting/tree/bdcb6727c49ee49d4d40c0a616464f8ac4b78cf3
 [patch.pipeworks]: https://gitlab.com/AntumMT/mod-pipeworks/tree/48b082e
