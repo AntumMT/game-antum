@@ -254,7 +254,7 @@ core.register_node("glow:fireflies", {
 			},
 		},
 	},
-	alpha = 100,
+	[core.features.use_texture_alpha and "use_texture_alpha" or "alpha"] = core.features.use_texture_alpha and "clip" or 100,
 	paramtype = "light",
 	light_source = 4,
 	walkable = false,
