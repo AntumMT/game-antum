@@ -42,7 +42,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [equip_wear][] ([MIT][lic.equip_wear]) -- version: [0.1][ver.equip_wear] *2021-07-14*
   * [lighted_helmets][] ([MIT][lic.lighted_helmets]) -- version: [1.1][ver.lighted_helmets] *2021-08-03*
   * [slingshot][] ([MIT][lic.slingshot] / [CC0][lic.cc0]) -- version [0.3][ver.slingshot] *2021-06-10*
-  * [technic_armor][] ([LGPL / WTFPL][lic.technic_armor]) -- version [694642f Git][ver.technic_armor} *2018-02-11*
+  * [technic_armor][] ([LGPL / WTFPL][lic.technic_armor]) -- version [2024-03-24][ver.technic_armor]
   * [throwing][] ([WTFPL][lic.wtfpl]) -- version: [90bcf43 Git][ver.throwing] *2013-09-27* ([patched][patch.throwing])
   * [xtraarmor][] ([CC BY-SA][lic.ccbysa3.0]) -- version: 0.3
 * furniture/
@@ -688,7 +688,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.asm_spawneggs]: https://github.com/AntumMT/mod-asm_spawneggs/releases/tag/v1.2
 [ver.spectator_mode]: https://github.com/minetest-mods/spectator_mode/tree/3648371
 [ver.technic]: https://github.com/minetest-mods/technic/tree/1c21948
-[ver.technic_armor]: https://github.com/mt-mods/technic_armor/tree/694642f5619aa31ef81caadbddade5d007527ae9
+[ver.technic_armor]: https://github.com/mt-mods/technic_armor/tree/e581a7102a62bd9dec072198d2562a9ff7900654
 [ver.throwing]: https://github.com/PilzAdam/throwing/tree/90bcf43
 [ver.tnt]: https://github.com/PilzAdam/TNT/tree/d6a0b7d
 [ver.tools_obsidian]: https://github.com/Dragonop/tools_obsidian/releases/tag/1.0
