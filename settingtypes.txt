@@ -2275,10 +2275,7 @@ crafting_bench_crafting_rate (Crafting rate) int 5 1 60
 [**mesecons]
 
 mesecon.resumetime (Startup delay) int 4 1 10
-
-# The value at which circuits will overheat.
 mesecon.overheat_max (Device heat limit) int 20 1 100
-
 mesecon.cooldown_time (Device cooldown time) float 2.0 0.1 10.0
 mesecon.cooldown_granularity (Cooldown step length) float 0.5 0.0 1.0
 
@@ -2286,6 +2283,11 @@ mesecon.cooldown_granularity (Cooldown step length) float 0.5 0.0 1.0
 [**mesecons_blinkyplant]
 
 mesecon.blinky_plant_interval (Plant blinking interval) int 3 1 5
+
+
+[**mesecons_commandblock]
+
+mesecon.commandblock_param_maxlen (Maximum command parameter length) int 10000 100 1000000
 
 
 [**mesecons_detector]
@@ -2301,6 +2303,25 @@ mesecon.luacontroller_digiline_maxlen (Digiline message size limit) int 50000 10
 mesecon.luacontroller_maxevents (Controller execution time limit) int 10000 1000 100000
 mesecon.luacontroller_memsize (Controller memory limit) int 100000 10000 1000000
 
+# Use node timer for interrupts (runs in active blocks only).
+# IID is ignored and at most one interrupt may be queued if this setting is enabled.
+mesecon.luacontroller_lightweight_interrupts (Lightweight interrupts) bool false
+
+# Behavior of print() inside a luacontroller. By default, this emits a message into actionstream.
+# Set it to noop if you wish to disable that behavior.
+mesecon.luacontroller_print_behavior (Behavior of print) enum log log,noop
+
+[**mesecons_mvps]
+
+# In pre-existing world, MVPS may not be labelled with the owner.
+# Protection handling for them is configurable.
+# - normal: allow legacy MVPS to work in unprotected areas only
+# - compat: allow legacy MVPS to work everywhere
+# - ignore: allow all MVPS to work everywhere
+# - restrict: disallow legacy MVPS
+# Note that new unowned (e.g. machine-placed) MVPS are always
+# handled as in `normal` mode.
+mesecon.mvps_protection_mode (MVPS [movestones, pistons] protection handling) enum compat normal,compat,ignore,restrict
 
 [**mesecons_movestones]
 

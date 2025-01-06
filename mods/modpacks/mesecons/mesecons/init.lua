@@ -99,7 +99,6 @@ mesecon.queue:add_function("receptor_off", function (pos, rules)
 		local rulenames = mesecon.rules_link_rule_all(pos, rule)
 		for _, rulename in ipairs(rulenames) do
 			mesecon.vm_begin()
-			mesecon.changesignal(np, minetest.get_node(np), rulename, mesecon.state.off, 2)
 
 			-- Turnoff returns true if turnoff process was successful, no onstate receptor
 			-- was found along the way. Commit changes that were made in voxelmanip. If turnoff
@@ -118,11 +117,17 @@ function mesecon.receptor_off(pos, rules)
 end
 
 
-print("[OK] Mesecons")
-
 -- Deprecated stuff
 -- To be removed in future releases
 dofile(minetest.get_modpath("mesecons").."/legacy.lua");
 
 --Services like turnoff receptor on dignode and so on
 dofile(minetest.get_modpath("mesecons").."/services.lua");
+
+-- Automated test run
+if mesecon.setting("internal_test", false) then
+	-- currently does nothing, we only fail if some error happens right on startup
+	minetest.after(5, function()
+		minetest.request_shutdown()
+	end)
+end
