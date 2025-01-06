@@ -21,8 +21,10 @@ minetest.register_node("computers:vanio", {
 	tiles = {"computers_laptop.png"},
 	paramtype = "light",
 	paramtype2 = "facedir",
+	use_texture_alpha = "clip",
 	light_source = 4,
 	groups = {snappy=3},
+	is_ground_content = false,
 	walkable = false,
 	selection_box = {
 		type = "fixed",
@@ -41,7 +43,9 @@ minetest.register_node("computers:vanio_off", {
 	tiles = {"computers_laptop.png"},
 	paramtype = "light",
 	paramtype2 = "facedir",
+	use_texture_alpha = "clip",
 	groups = {snappy=3, not_in_creative_inventory=1},
+	is_ground_content = false,
 	walkable = false,
 	selection_box = {
 		type = "fixed",
@@ -79,8 +83,9 @@ minetest.register_node("computers:piepad", {
 	light_source = 8,
 	walkable = false,
 	groups = {oddly_breakable_by_hand=2},
+	is_ground_content = false,
 	selection_box = {type = "wallmounted"},
-	sounds = default.node_sound_wood_defaults()
+	sounds = xcompat.sounds.node_sound_wood_defaults()
 })
 
 -- Commodore 64 lookalike
@@ -116,11 +121,14 @@ minetest.register_node("computers:monitor", {
 	inventory_image = "computers_monitor_inv.png",
 	drawtype = "mesh",
 	mesh = "computers_monitor.obj",
-	tiles = {"computers_black.png", "computers_monitor_plastic.png", "computers_black.png", "computers_monitor_plastic.png"},
+	tiles = {
+		"computers_black.png", "computers_monitor_plastic.png", "computers_black.png", "computers_monitor_plastic.png"
+	},
 	paramtype = "light",
 	paramtype2 = "facedir",
 	walkable = false,
 	groups = {snappy=3},
+	is_ground_content = false,
 	selection_box = mo_sbox,
 	on_rightclick = function(pos, node, clicker, itemstack)
 		node.name = "computers:monitor_on"
@@ -132,12 +140,18 @@ minetest.register_node("computers:monitor", {
 minetest.register_node("computers:monitor_on", {
 	drawtype = "mesh",
 	mesh = "computers_monitor.obj",
-	tiles = {"computers_monitor_display.png^[transformFX", "computers_monitor_plastic.png", "computers_black.png", "computers_monitor_plastic.png"},
+	tiles = {
+		"computers_monitor_display.png^[transformFX",
+		"computers_monitor_plastic.png",
+		"computers_black.png",
+		"computers_monitor_plastic.png"
+	},
 	paramtype = "light",
 	paramtype2 = "facedir",
 	light_source = 9,
 	walkable = false,
 	groups = {snappy=3, not_in_creative_inventory=1},
+	is_ground_content = false,
 	selection_box = mo_sbox,
 	drop = "computers:monitor",
 	on_rightclick = function(pos, node, clicker, itemstack)
@@ -164,9 +178,11 @@ minetest.register_node("computers:router", {
 	}, --"computers_router_f.png"},
 	paramtype = "light",
 	paramtype2 = "facedir",
+	use_texture_alpha = "clip",
 	walkable = false,
 	groups = {snappy=3},
-	sound = default.node_sound_wood_defaults(),
+	is_ground_content = false,
+	sound = xcompat.sounds.node_sound_wood_defaults(),
 	drawtype = "nodebox",
 	node_box = {
 		type = "fixed",
@@ -194,7 +210,8 @@ minetest.register_node("computers:tower", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {snappy=3},
-	sound = default.node_sound_wood_defaults(),
+	is_ground_content = false,
+	sound = xcompat.sounds.node_sound_wood_defaults(),
 	selection_box = pct_cbox,
 	collision_box = pct_cbox
 })
@@ -214,7 +231,9 @@ minetest.register_node("computers:server", {
 	inventory_image = "computers_server_inv.png",
 	paramtype = "light",
 	paramtype2 = "facedir",
+	use_texture_alpha = "clip",
 	groups = {snappy=3},
+	is_ground_content = false,
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.5, -0.5, -0.25, 0.5, 1.125, 0.4375}
@@ -223,7 +242,7 @@ minetest.register_node("computers:server", {
 		type = "fixed",
 		fixed = {-0.5, -0.5, -0.25, 0.5, 1.125, 0.4375}
 	},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = xcompat.sounds.node_sound_wood_defaults(),
 	on_rightclick = function(pos, node, clicker, itemstack)
 		node.name = "computers:server_on"
 		minetest.set_node(pos, node)
@@ -253,7 +272,9 @@ minetest.register_node("computers:server_on", {
 	inventory_image = "computers_server_inv.png",
 	paramtype = "light",
 	paramtype2 = "facedir",
+	use_texture_alpha = "clip",
 	groups = {snappy=3,not_in_creative_inventory=1},
+	is_ground_content = false,
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.5, -0.5, -0.25, 0.5, 1.125, 0.4375}
@@ -262,7 +283,7 @@ minetest.register_node("computers:server_on", {
 		type = "fixed",
 		fixed = {-0.5, -0.5, -0.25, 0.5, 1.125, 0.4375}
 	},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = xcompat.sounds.node_sound_wood_defaults(),
 	drop = 'computers:server',
 	on_rightclick = function(pos, node, clicker, itemstack)
 		node.name = "computers:server"
@@ -280,9 +301,11 @@ minetest.register_node("computers:printer", {
 			"computers_printer_r.png","computers_printer_b.png","computers_printer_f.png"},
 	paramtype = "light",
 	paramtype2 = "facedir",
+	use_texture_alpha = "clip",
 	walkable = true,
 	groups = {snappy=3},
-	sound = default.node_sound_wood_defaults(),
+	is_ground_content = false,
+	sound = xcompat.sounds.node_sound_wood_defaults(),
 	drawtype = "nodebox",
 	node_box = {
 		type = "fixed",

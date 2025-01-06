@@ -174,7 +174,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [castle_weapons][] -- version: [2021-01-09][ver.castle_weapons] ([patched][patch.castle_weapons])
   * [crafting_bench][] -- version: [2024-11-03][ver.crafting_bench]
 * [deploy_nodes][] ([BSD 3-Clause][lic.deploy_nodes]) -- version: [b67e162 Git][ver.deploy_nodes] *2017-06-08*
-* [home_workshop][] -- version: [03325e8 Git][ver.home_workshop] *2021-04-15*
+* [home_workshop][] -- version: [2024-04-23][ver.home_workshop]
 * [homedecor][] ([LGPL / WTFPL / CC BY-SA / CC0][lic.homedecor]) -- version: [2024-12-30][ver.homedecor] ([patched][patch.homedecor])
 * [mesecons][] ([LGPL / CC BY-SA][lic.mesecons]) -- version [2025-01-03][ver.mesecons]
 * [moremesecons][] ([MPL][lic.mpl2.0]) -- version: [2024-12-20][ver.moremesecons]
@@ -359,7 +359,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [helicopter]: https://forum.luanti.org/viewtopic.php?t=24613
 [hidename]: https://content.luanti.org/packages/AntumDeluge/hidename/
 [home_gui]: http://cornernote.github.io/minetest-home_gui/
-[home_workshop]: https://content.luanti.org/packages/VanessaE/home_workshop_modpack/
+[home_workshop]: https://content.luanti.org/packages/mt-mods/home_workshop_modpack/
 [homedecor]: https://content.luanti.org/packages/mt-mods/homedecor_modpack/
 [hot_air_balloons]: https://content.luanti.org/packages/Eran/hot_air_balloons/
 [hovercraft]: https://forum.luanti.org/viewtopic.php?t=6722
@@ -627,7 +627,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.helicopter]: https://github.com/APercy/helicopter/tree/d3985b0
 [ver.hidename]: https://github.com/AntumMT/mod-hidename/releases/tag/v1.1
 [ver.home_gui]: https://github.com/cornernote/minetest-home_gui/tree/44c2f1533e1695b923cb3dae03bc6fce1b1b1432
-[ver.home_workshop]: https://gitlab.com/VanessaE/home_workshop_modpack/tree/03325e8
+[ver.home_workshop]: https://github.com/mt-mods/home_workshop_modpack/tree/c3f11977c710f6ef626f1f11d2920fbdb773a187
 [ver.homedecor]: https://github.com/mt-mods/homedecor_modpack/tree/f7d51645593600df14e1e693442e5e0d95d63c03
 [ver.hot_air_balloons]: https://notabug.org/NetherEran/hot_air_balloons/src/39a3572ad1bf7fd800525d68b128981e1b2c37d1
 [ver.hovercraft]: https://github.com/stujones11/hovercraft/tree/4d50e68

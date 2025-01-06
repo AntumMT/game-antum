@@ -298,8 +298,7 @@ local function step(pos, fields)
 		t.score, close, buttons }
 
 
-		meta:set_string("formspec", concat(scr)
-			..default.gui_bg..default.gui_bg_img..default.gui_slots)
+		meta:set_string("formspec", concat(scr))
 		meta:set_string("tetris", minetest.serialize(t))
 	end
 
@@ -314,6 +313,7 @@ minetest.register_node("computers:tetris_arcade", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {snappy=3},
+	is_ground_content = false,
 	on_rotate = minetest.get_modpath("screwdriver") and screwdriver.rotate_simple or nil,
 	selection_box = {
 		type = "fixed",
@@ -326,8 +326,7 @@ minetest.register_node("computers:tetris_arcade", {
 	on_construct = function(pos)
 		local meta = minetest.get_meta(pos)
 		meta:set_string("formspec", formsize
-			.."button[2,2.5;2,2;new;"..minetest.formspec_escape(S("New Game")).."]"
-			..default.gui_bg..default.gui_bg_img..default.gui_slots)
+			.."button[2,2.5;2,2;new;"..minetest.formspec_escape(S("New Game")).."]")
 	end,
 	on_timer = function(pos)
 		return step(pos, nil)

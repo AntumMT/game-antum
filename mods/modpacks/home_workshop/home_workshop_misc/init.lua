@@ -14,10 +14,12 @@ minetest.register_node("home_workshop_misc:tool_cabinet", {
 		"home_workshop_common_generic_metal_bright.png",
 		"home_workshop_misc_tool_cabinet_misc.png",
 	},
+	paramtype = "light",
 	paramtype2="facedir",
 	inventory_image = "home_workshop_misc_tool_cabinet_inv.png",
 	on_rotate = minetest.get_modpath("screwdriver") and screwdriver.rotate_simple or nil,
-	groups = { snappy=3 },
+	groups = { snappy=3, dig_tree=2 },
+	is_ground_content = false,
 	expand = { top="placeholder" },
 	inventory = {
 		size=24,
@@ -33,8 +35,10 @@ minetest.register_node("home_workshop_misc:beer_tap", {
 		{ name = "home_workshop_common_generic_metal.png", color = 0xff303030 }
 	},
 	inventory_image = "home_workshop_misc_beertap_inv.png",
+	paramtype = "light",
 	paramtype2 = "facedir",
-	groups = { snappy=3 },
+	groups = { snappy=3, dig_tree=2 },
+	is_ground_content = false,
 	walkable = false,
 	selection_box = {
 		type = "fixed",
@@ -42,13 +46,14 @@ minetest.register_node("home_workshop_misc:beer_tap", {
 	},
 	on_rightclick = function(pos, node, clicker, itemstack, pointed_thing)
 		local inv = clicker:get_inventory()
+		if not itemstack then return end
 
 		local wieldname = itemstack:get_name()
 		if wieldname == "vessels:drinking_glass" then
 			if inv:room_for_item("main", "home_workshop_misc:beer_mug 1") then
+				inv:add_item("main", "home_workshop_misc:beer_mug 1")
 				itemstack:take_item()
 				clicker:set_wielded_item(itemstack)
-				inv:add_item("main", "home_workshop_misc:beer_mug 1")
 				minetest.chat_send_player(clicker:get_player_name(),
 						S("Ahh, a frosty cold beer - look in your inventory for it!"))
 			else
@@ -70,63 +75,19 @@ minetest.register_node("home_workshop_misc:beer_mug", {
 	mesh = "home_workshop_misc_beer_mug.obj",
 	tiles = { "home_workshop_misc_beer_mug.png" },
 	inventory_image = "home_workshop_misc_beer_mug_inv.png",
+	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = { snappy=3, oddly_breakable_by_hand=3 },
+	is_ground_content = false,
 	walkable = false,
-	sounds = default.node_sound_glass_defaults(),
+	sounds = xcompat.sounds.node_sound_glass_defaults(),
 	selection_box = beer_cbox,
 	on_use = function(itemstack, user, pointed_thing)
-		if not creative.is_enabled_for(user:get_player_name()) then
+		if not minetest.is_creative_enabled(user:get_player_name()) then
 			minetest.do_item_eat(2, "vessels:drinking_glass 1", itemstack, user, pointed_thing)
 			return itemstack
 		end
 	end
-})
-
-local svm_cbox = {
-	type = "fixed",
-	fixed = {-0.5, -0.5, -0.5, 0.5, 1.5, 0.5}
-}
-
-minetest.register_node("home_workshop_misc:soda_machine", {
-	description = S("Soda vending machine"),
-	drawtype = "mesh",
-	mesh = "home_workshop_misc_soda_machine.obj",
-	tiles = {"home_workshop_misc_soda_machine.png"},
-	paramtype2 = "facedir",
-	groups = {snappy=3},
-	selection_box = svm_cbox,
-	collision_box = svm_cbox,
-	expand = { top="placeholder" },
-	sounds = default.node_sound_wood_defaults(),
-	on_rotate = minetest.get_modpath("screwdriver") and screwdriver.rotate_simple or nil,
-	on_rightclick = function(pos, node, clicker, itemstack, pointed_thing)
-		local playername = clicker:get_player_name()
-		local wielditem = clicker:get_wielded_item()
-		local wieldname = wielditem:get_name()
-		local fdir_to_fwd = { {0, -1}, {-1, 0}, {0, 1}, {1, 0} }
-		local fdir = node.param2
-		local pos_drop = { x=pos.x+fdir_to_fwd[fdir+1][1], y=pos.y, z=pos.z+fdir_to_fwd[fdir+1][2] }
-		if wieldname == "currency:minegeld_cent_25" then
-			minetest.spawn_item(pos_drop, "home_workshop_misc:soda_can")
-			minetest.sound_play("insert_coin", {
-				pos=pos, max_hear_distance = 5
-			})
-			if not creative.is_enabled_for(playername) then
-				wielditem:take_item()
-				clicker:set_wielded_item(wielditem)
-				return wielditem
-			end
-		else
-			minetest.chat_send_player(playername, S("Please insert a 25 Mg cent coin in the machine."))
-		end
-	end
-})
-
-minetest.register_craftitem("home_workshop_misc:soda_can", {
-	description = S("Soda Can"),
-	inventory_image = "home_workshop_misc_soda_can.png",
-	on_use = minetest.item_eat(2),
 })
 
 if minetest.get_modpath("homedecor_common") then
@@ -134,12 +95,14 @@ if minetest.get_modpath("homedecor_common") then
 else
 	minetest.register_craftitem("home_workshop_misc:drawer_small", {
 			description = S("Small Wooden Drawer"),
-			inventory_image = "home_workshop_machines_drawer_small.png",
+			inventory_image = "home_workshop_common_drawer_small.png",
 	})
 end
 
 local MODPATH = minetest.get_modpath("home_workshop_misc")
-dofile(MODPATH.."/crafts.lua")
+if minetest.get_modpath("basic_materials") then
+	dofile(MODPATH.."/crafts.lua")
+end
 
 minetest.register_alias("homedecor:tool_cabinet",        "home_workshop_misc:tool_cabinet")
 minetest.register_alias("homedecor:tool_cabinet_bottom", "home_workshop_misc:tool_cabinet")
