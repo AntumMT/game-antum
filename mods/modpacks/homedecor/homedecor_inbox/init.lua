@@ -79,6 +79,7 @@ homedecor.register("inbox", {
 			if inv:room_for_item("main", stack) then
 				return -1
 			else
+				core.chat_send_player(player:get_player_name(), S("The mailbox is full."))
 				return 0
 			end
 		end

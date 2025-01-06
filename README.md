@@ -175,7 +175,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [crafting_bench][] -- version: [69083ed Git][ver.crafting_bench] *2020-05-27*
 * [deploy_nodes][] ([BSD 3-Clause][lic.deploy_nodes]) -- version: [b67e162 Git][ver.deploy_nodes] *2017-06-08*
 * [home_workshop][] -- version: [03325e8 Git][ver.home_workshop] *2021-04-15*
-* [homedecor][] ([LGPL / WTFPL / CC BY-SA / CC0][lic.homedecor]) -- version: [2024-12-30][ver.homedecor]
+* [homedecor][] ([LGPL / WTFPL / CC BY-SA / CC0][lic.homedecor]) -- version: [2024-12-30][ver.homedecor] ([patched][patch.homedecor])
 * [mesecons][] ([LGPL / CC BY-SA][lic.mesecons]) -- version [2025-01-03][ver.mesecons]
 * [moremesecons][] ([MPL][lic.mpl2.0]) -- version: [2024-12-20][ver.moremesecons]
 * [mymods](https://github.com/AntumMT/mp-mymods)
@@ -726,7 +726,8 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.gems_tools]: https://github.com/AntumMT/mod-gems_tools/tree/d9a3a726dc542171d7cf64c3692f3ac4c7c3630b
 [patch.glow]: https://github.com/AntumMT/mod-glow/tree/544bfcbfc6498108380aad896b6d2ed8c4e02706
 [patch.helicopter]: https://github.com/AntumMT/mod-helicopter/tree/79d2d3e
-[pathc.home_gui]: https://github.com/AntumMT/mod-home_gui/tree/32b2e355dd6b4bf2e2f0d0a7d62acb87b94c965c
+[patch.home_gui]: https://github.com/AntumMT/mod-home_gui/tree/32b2e355dd6b4bf2e2f0d0a7d62acb87b94c965c
+[patch.homedecor]: https://github.com/AntumMT/mp-homedecor/commit/ca1024ccf151059e4db47408bf7d1c2fd9a74723
 [patch.hovercraft]: https://github.com/AntumMT/mod-hovercraft/tree/0f864c4
 [patch.hud]: https://github.com/AntumMT/mod-hud/tree/6846e20
 [patch.hud_compass]: https://github.com/AntumMT/mod-hud_compass/tree/3be32e45327c071cbe357f5bed871e47abd401b4

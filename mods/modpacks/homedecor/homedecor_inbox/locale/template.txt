@@ -1,3 +1,4 @@
 # textdomain: homedecor_inbox
 Mailbox=
 @1's Mailbox=
+The mailbox is full.=
