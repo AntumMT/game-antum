@@ -180,7 +180,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [mesecons][] ([LGPL / CC BY-SA][lic.mesecons]) -- version [2025-01-03][ver.mesecons]
 * [moremesecons][] ([MPL][lic.mpl2.0]) -- version: [2024-12-20][ver.moremesecons]
 * [mymods](https://github.com/AntumMT/mp-mymods)
-  * [mydoors][] ([CC-BY / CC-BY-SA][lic.mydoors] / [WTFPL][lic.wtfpl] / [DWYWFPL][lic.dwywpl]) -- version: [eef3b5f Git][ver.mydoors] *2018-06-12*
+  * [mydoors][] ([CC-BY / CC-BY-SA][lic.mydoors] / [WTFPL][lic.wtfpl] / [DWYWFPL][lic.dwywpl]) -- version: [2024-11-16][ver.mydoors]
   * [myfences][] ([DWYWPL][lic.dwywpl]) -- version: [c6e529a Git][ver.myfences] *2016-04-04*
   * [mylights][] ([DWYWPL][lic.dwywpl]) -- version: [0d734b7 Git][ver.mylights] *2017-07-14*
   * [mypaint][] ([DWYWPL][lic.dwywpl]) -- version: [9288e8d Git][ver.mypaint] *2017-11-16*
@@ -658,7 +658,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.moremesecons]: https://github.com/minetest-mods/MoreMesecons/tree/3e93b939f3bae14fb7a8c3f94e8db5d8fc0b2c24
 [ver.moreores]: https://github.com/minetest-mods/moreores/releases/tag/v2.1.0
 [ver.motorbike]: https://github.com/Extex101/motorbike/tree/f918701
-[ver.mydoors]: https://github.com/minetest-mods/mydoors/tree/eef3b5f
+[ver.mydoors]: https://github.com/minetest-mods/mydoors/tree/5d78183cf2d3eebc58dcbcd7cada378ca1004208
 [ver.myfences]: https://github.com/DonBatman/myfences/tree/c6e529a
 [ver.mylights]: https://github.com/minetest-mods/mylights/tree/0d734b7
 [ver.mypaint]: https://github.com/DonBatman/mypaint/tree/9288e8d

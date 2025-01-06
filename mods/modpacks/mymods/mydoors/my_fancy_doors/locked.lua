@@ -1,7 +1,7 @@
 local fdoor_list = {   --Number , Description , Inven Image , Image
 	{"Fancy Door 1" , "door1"},
---	{"Fancy Door 2" , "door2"},
---	{"Fancy Door 3" , "door3"},
+	{"Fancy Door 2" , "door2"},
+	{"Fancy Door 3" , "door3"},
 	{"Fancy Door 4" , "door4"},
 	{"Fancy Door 5" , "door5"},
 	{"Fancy Door 6" , "door6"},
@@ -9,20 +9,20 @@ local fdoor_list = {   --Number , Description , Inven Image , Image
 	{"Fancy Door 8" , "door8"},
 }
 
-
-for i in ipairs(fdoor_list) do
-	local desc = fdoor_list[i][1]
-	local img = fdoor_list[i][2]
-
-
-doors.register_door("my_fancy_doors:"..img.."_locked", {
-	description = desc.." Locked",
-	inventory_image = "myfdoors_"..img.."_inv.png",
-	groups = {choppy=2,cracky=2,door=1},
-	tiles = {{ name = "myfdoors_"..img..".png", backface_culling = true }},
-	protected = true,
-})
+local function add_door(desc, img)
+	doors.register_door("my_fancy_doors:"..img.."_locked", {
+		description = desc.." Locked",
+		inventory_image = "myfdoors_"..img.."_inv.png",
+		groups = {choppy=2,cracky=2,door=1},
+		tiles = {{ name = "myfdoors_"..img..".png", backface_culling = true }},
+		protected = true,
+	})
 end
+
+for _,fdoor in ipairs(fdoor_list) do
+	add_door(unpack(fdoor))
+end
+
 
 -- Crafts
 
@@ -84,9 +84,9 @@ minetest.register_craft({
 	}
 })
 minetest.register_craft({
-	output = "my_fancy_doors:door7_locked 1",
+	output = "my_fancy_doors:door8_locked 1",
 	recipe = {
-		{"default:glass", "my_door_wood:wood_red", ""},
+		{"my_door_wood:wood_red", "my_door_wood:wood_red", ""},
 		{"default:glass", "my_door_wood:wood_red", "default:steel_ingot"},
 		{"my_door_wood:wood_red", "my_door_wood:wood_red", ""}
 	}

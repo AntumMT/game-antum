@@ -1,12 +1,12 @@
 local cdoor_list = {   --Number , Description , Inven Image , Image
---	{"Castle Door 1" , "door1"},
---	{"Castle Door 2" , "door2"},
+	{"Castle Door 1" , "door1"},
+	{"Castle Door 2" , "door2"},
 	{"Castle Door 3" , "door3"},
 	{"Castle Door 4" , "door4"},
 	{"Castle Door 5" , "door5"},
---	{"Castle Door 6" , "door6"},
---	{"Castle Door 7" , "door7"},
---	{"Castle Door 8" , "door8"},
+	{"Castle Door 6" , "door6"},
+	{"Castle Door 7" , "door7"},
+	{"Castle Door 8" , "door8"},
 	{"Castle Door 9" , "door9"},
 	{"Castle Door 10" , "door10"},
 	{"Castle Door 11" , "door11"},
@@ -14,20 +14,20 @@ local cdoor_list = {   --Number , Description , Inven Image , Image
 	{"Castle Door 13" , "door13"},
 }
 
-
-for i in ipairs(cdoor_list) do
-	local desc = cdoor_list[i][1]
-	local img = cdoor_list[i][2]
-
-
-doors.register_door("my_castle_doors:"..img, {
-	description = desc,
-	inventory_image = "mydoors_"..img.."_inv.png",
-	groups = {choppy=2,cracky=2,door=1},
-	tiles = {{name="mydoors_"..img..".png", backface_culling = true}},
-	protected = false,
-})
+local function add_door(desc, img)
+	doors.register_door("my_castle_doors:"..img, {
+		description = desc,
+		inventory_image = "mydoors_"..img.."_inv.png",
+		groups = {choppy=2,cracky=2,door=1},
+		tiles = {{name="mydoors_"..img..".png", backface_culling = true}},
+		protected = false,
+	})
 end
+
+for _,cdoor in ipairs(cdoor_list) do
+	add_door(unpack(cdoor))
+end
+
 
 -- Crafts
 
@@ -59,8 +59,8 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "my_castle_doors:door4 1",
 	recipe = {
-		{"my_door_wood:wood_brown", "default:steel_ingot", ""},
 		{"my_door_wood:wood_brown", "my_door_wood:wood_brown", ""},
+		{"my_door_wood:wood_brown", "default:steel_ingot", ""},
 		{"my_door_wood:wood_brown", "my_door_wood:wood_brown", ""}
 	}
 })
