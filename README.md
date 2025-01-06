@@ -44,7 +44,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [slingshot][] ([MIT][lic.slingshot] / [CC0][lic.cc0]) -- version [0.3][ver.slingshot] *2021-06-10*
   * [technic_armor][] ([LGPL / WTFPL][lic.technic_armor]) -- version [2024-03-24][ver.technic_armor] ([patched][patch.technic_armor])
   * [throwing][] ([WTFPL][lic.wtfpl]) -- version: [90bcf43 Git][ver.throwing] *2013-09-27* ([patched][patch.throwing])
-  * [xtraarmor][] ([CC BY-SA][lic.ccbysa3.0]) -- version: 0.3
+  * [xtraarmor][] ([CC BY-SA][lic.ccbysa3.0]) -- version: [8f18f34 Git][ver.xtraarmor] _2025-01-06_
 * furniture/
   * [beds][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa3.0]) -- version: 1.0 *2020-09-15* ([patched][patch.beds])
   * [jukebox][] ([WTFPL / CC0][lic.jukebox]) -- version: [0d871f2 Git][ver.jukebox] *2020-03-11*
@@ -707,6 +707,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.windmill]: https://github.com/Sokomine/windmill/tree/9311f53f1bf0dadee89e9a5c70a848d210aaef3b
 [ver.workbench]: https://github.com/AntumMT/mod-workbench/releases/tag/v1.0
 [ver.xcompat]: https://github.com/mt-mods/xcompat/tree/7a136dc7393dcb8d50d34f55aa357b15811cbc59
+[ver.xtraarmor]: https://codeberg.org/AntumLuanti/mod-xtraarmor/commit/8f18f34fa405fa33959e800533905805bc603b86
 
 [patch.airtanks]: https://github.com/AntumMT/mod-airtanks/tree/8b7fd12
 [patch.amber]: https://github.com/AntumMT/mod-amber/tree/39b852a

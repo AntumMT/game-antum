@@ -1,4 +1,5 @@
+default
 3d_armor
 shields
-mobs?
-xpanes?
+mobs
+xpanes
