@@ -1,8 +1,16 @@
 -- signs_lib api, backported from street_signs
 
-local S = signs_lib.gettext
+local S = signs_lib.S
+local FS = function(...) return minetest.formspec_escape(S(...)) end
+local has_default_mod = minetest.get_modpath("default")
+
+local function log(level, messagefmt, ...)
+	minetest.log(level, "[signs_lib] " .. messagefmt:format(...))
+end
 
 local function get_sign_formspec() end
+
+signs_lib.glow_item = "basic_materials:energy_crystal_simple"
 
 signs_lib.lbm_restore_nodes = {}
 signs_lib.old_fenceposts = {}
@@ -14,21 +22,19 @@ signs_lib.standard_lines = 6
 signs_lib.standard_hscale = 1
 signs_lib.standard_vscale = 1
 signs_lib.standard_lspace = 1
-signs_lib.standard_fsize = 15
+signs_lib.standard_fsize = 16
 signs_lib.standard_xoffs = 4
 signs_lib.standard_yoffs = 0
 signs_lib.standard_cpl = 35
 
-signs_lib.standard_wood_groups = table.copy(minetest.registered_items["default:sign_wall_wood"].groups)
-signs_lib.standard_wood_groups.sign = 1
+signs_lib.standard_wood_groups = table.copy(has_default_mod and minetest.registered_items["default:sign_wall_wood"].groups or {})
 signs_lib.standard_wood_groups.attached_node = nil
 
-signs_lib.standard_steel_groups = table.copy(minetest.registered_items["default:sign_wall_steel"].groups)
-signs_lib.standard_steel_groups.sign = 1
+signs_lib.standard_steel_groups = table.copy(has_default_mod and minetest.registered_items["default:sign_wall_steel"].groups or {})
 signs_lib.standard_steel_groups.attached_node = nil
 
-signs_lib.standard_wood_sign_sounds  = table.copy(minetest.registered_items["default:sign_wall_wood"].sounds)
-signs_lib.standard_steel_sign_sounds = table.copy(minetest.registered_items["default:sign_wall_steel"].sounds)
+signs_lib.standard_wood_sign_sounds  = table.copy(has_default_mod and minetest.registered_items["default:sign_wall_wood"].sounds or {})
+signs_lib.standard_steel_sign_sounds = table.copy(has_default_mod and minetest.registered_items["default:sign_wall_steel"].sounds or {})
 
 signs_lib.default_text_scale = {x=10, y=10}
 
@@ -160,12 +166,23 @@ local ctexcache_wide = {}
 -- entity handling
 
 minetest.register_entity("signs_lib:text", {
-	collisionbox = { 0, 0, 0, 0, 0, 0 },
-	visual = "mesh",
-	mesh = "signs_lib_standard_sign_entity_wall.obj",
-	textures = {},
-	static_save = true,
-	backface_culling = false
+	initial_properties = {
+		collisionbox = { 0, 0, 0, 0, 0, 0 },
+		visual = "mesh",
+		mesh = "signs_lib_standard_sign_entity_wall.obj",
+		textures = {},
+		static_save = true,
+		backface_culling = false,
+	},
+	on_activate = function(self)
+		local node = minetest.get_node(self.object:get_pos())
+		if minetest.get_item_group(node.name, "sign") == 0 then
+			self.object:remove()
+		end
+	end,
+	on_blast = function(self, damage)
+		return false, false, {}
+	end,
 })
 
 function signs_lib.delete_objects(pos)
@@ -180,7 +197,7 @@ function signs_lib.delete_objects(pos)
 	end
 end
 
-function signs_lib.spawn_entity(pos, texture)
+function signs_lib.spawn_entity(pos, texture, glow)
 	local node = minetest.get_node(pos)
 	local def = minetest.registered_items[node.name]
 	if not def or not def.entity_info then return end
@@ -229,6 +246,10 @@ function signs_lib.spawn_entity(pos, texture)
 		end
 	end
 
+	if glow ~= "" then
+		obj:set_properties( {glow = tonumber(glow * 5)} )
+	end
+
 	if yaw then
 		obj:set_rotation({x = pitch, y = yaw, z=0})
 
@@ -247,14 +268,14 @@ function signs_lib.spawn_entity(pos, texture)
 	end
 end
 
-function signs_lib.set_obj_text(pos, text)
+function signs_lib.set_obj_text(pos, text, glow)
 	local split = signs_lib.split_lines_and_words
-	local text_ansi = Utf8ToAnsi(text)
-	local n = minetest.registered_nodes[minetest.get_node(pos).name]
+	local text_ansi = signs_lib.Utf8ToAnsi(text)
 	signs_lib.delete_objects(pos)
 	-- only create sign entity for actual text
 	if text_ansi and text_ansi ~= "" then
-		signs_lib.spawn_entity(pos, signs_lib.make_sign_texture(split(text_ansi), pos) )
+		signs_lib.spawn_entity(pos,
+				signs_lib.make_sign_texture(split(text_ansi), pos), glow)
 	end
 end
 
@@ -335,6 +356,7 @@ local TP = signs_lib.path .. "/textures"
 -- Font file formatter
 local CHAR_FILE = "%s_%02x.png"
 local CHAR_FILE_WIDE = "%s_%s.png"
+local UNIFONT_TEX = "signs_lib_uni%02x.png\\^[sheet\\:16x16\\:%d,%d"
 -- Fonts path
 local CHAR_PATH = TP .. "/" .. CHAR_FILE
 local CHAR_PATH_WIDE = TP .. "/" .. CHAR_FILE_WIDE
@@ -428,20 +450,18 @@ local function build_char_db(font_size)
 	return cw, cbw, cbh, (total_width / char_count), cw_wide
 end
 
-signs_lib.charwidth15,
-signs_lib.colorbgw15,
-signs_lib.lineheight15,
-signs_lib.avgwidth15,
-signs_lib.charwidth_wide15 = build_char_db(15)
+signs_lib.charwidth16,
+signs_lib.colorbgw16,
+signs_lib.lineheight16,
+signs_lib.avgwidth16,
+signs_lib.charwidth_wide16 = build_char_db(16)
 
-signs_lib.charwidth31,
-signs_lib.colorbgw31,
-signs_lib.lineheight31,
-signs_lib.avgwidth31,
-signs_lib.charwidth_wide31 = build_char_db(31)
+signs_lib.charwidth32,
+signs_lib.colorbgw32,
+signs_lib.lineheight32,
+signs_lib.avgwidth32,
+signs_lib.charwidth_wide32 = build_char_db(32)
 
-local sign_groups = {choppy=2, dig_immediate=2}
-local fences_with_sign = { }
 
 -- some local helper functions
 
@@ -450,8 +470,8 @@ local math_max = math.max
 local function fill_line(x, y, w, c, font_size, colorbgw)
 	c = c or "0"
 	local tex = { }
-	for xx = 0, math.max(0, w), colorbgw do
-		table.insert(tex, (":%d,%d=signs_lib_color_"..font_size.."px_%s.png"):format(x + xx, y, c))
+	for xx = x, w, colorbgw do
+		table.insert(tex, (":%d,%d=signs_lib_color_"..font_size.."px_%s.png"):format(xx, y, c))
 	end
 	return table.concat(tex)
 end
@@ -463,7 +483,8 @@ local function char_tex(font_name, ch)
 		return ctexcache[font_name..ch], true
 	else
 		local c = ch:byte()
-		local exists, tex = file_exists(CHAR_PATH:format(font_name, c))
+		local exists = file_exists(CHAR_PATH:format(font_name, c))
+		local tex
 		if exists and c ~= 14 then
 			tex = CHAR_FILE:format(font_name, c)
 		else
@@ -478,7 +499,8 @@ local function char_tex_wide(font_name, ch)
 	if ctexcache_wide[font_name..ch] then
 		return ctexcache_wide[font_name..ch], true
 	else
-		local exists, tex = file_exists(CHAR_PATH_WIDE:format(font_name, ch))
+		local exists = file_exists(CHAR_PATH_WIDE:format(font_name, ch))
+		local tex
 		if exists then
 			tex = CHAR_FILE_WIDE:format(font_name, ch)
 		else
@@ -489,7 +511,7 @@ local function char_tex_wide(font_name, ch)
 	end
 end
 
-local function make_line_texture(line, lineno, pos, line_width, line_height, cwidth_tab, font_size, colorbgw, cwidth_tab_wide)
+local function make_line_texture(line, lineno, pos, line_width, line_height, cwidth_tab, font_size, colorbgw, cwidth_tab_wide, force_unicode_font)
 	local width = 0
 	local maxw = 0
 	local font_name = "signs_lib_font_"..font_size.."px"
@@ -505,79 +527,97 @@ local function make_line_texture(line, lineno, pos, line_width, line_height, cwi
 	for word_i, word in ipairs(line) do
 		local chars = { }
 		local ch_offs = 0
-		word = string.gsub(word, "%^[12345678abcdefgh]", {
-			["^1"] = string.char(0x81),
-			["^2"] = string.char(0x82),
-			["^3"] = string.char(0x83),
-			["^4"] = string.char(0x84),
-			["^5"] = string.char(0x85),
-			["^6"] = string.char(0x86),
-			["^7"] = string.char(0x87),
-			["^8"] = string.char(0x88),
-			["^a"] = string.char(0x8a),
-			["^b"] = string.char(0x8b),
-			["^c"] = string.char(0x8c),
-			["^d"] = string.char(0x8d),
-			["^e"] = string.char(0x8e),
-			["^f"] = string.char(0x8f),
-			["^g"] = string.char(0x90),
-			["^h"] = string.char(0x91)
-		})
 		local word_l = #word
 		local i = 1
+		local escape = 0
 		while i <= word_l  do
-			local wide_c
-			if "&#x" == word:sub(i, i + 2) then
-				local j = i + 3
-				local collected = ""
-				while j <= word_l do
-					local c = word:sub(j, j)
-					if c == ";" then
-						wide_c = collected
-						break
-					elseif c < "0" then
-						break
-					elseif "f" < c then
-						break
-					elseif ("9" < c) and (c < "a") then
-						break
-					else
-						collected = collected .. c
-						j = j + 1
-					end
-				end
-			end
+			local wide_type, wide_c = string.match(word:sub(i), "^&#([xu])(%x+);")
 			local c = word:sub(i, i)
-			if c == "#" then
-				local cc = tonumber(word:sub(i+1, i+1), 16)
-				if cc then
-					i = i + 1
-					cur_color = cc
+			local c2 = word:sub(i+1, i+1)
+
+			if escape > 0 then escape = escape - 1 end
+			if c == "^" and escape == 0 and c2:find("[1-8a-h]") then
+				c = string.char(tonumber(c2,18)+0x80)
+				i = i + 1
+			end
+
+			local wide_skip = 0
+			if force_unicode_font then
+				if wide_c then
+					wide_skip = #wide_c + 3
+					wide_type = "u"
+				elseif c:byte() < 0x80 or c:byte() >= 0xa0 then
+					wide_type = "u"
+					local uchar = signs_lib.AnsiToUtf8(c)
+					local code
+					if #uchar == 1 then
+						code = uchar:byte()
+					else
+						code = uchar:byte() % (2 ^ (7 - #uchar))
+						for j = 1, #uchar do
+							code = code * (2 ^ 6) + uchar:byte(j) - 0x80
+						end
+					end
+					wide_c = string.format("%04x", code)
 				end
 			elseif wide_c then
-				local w = cwidth_tab_wide[wide_c]
+				wide_skip = #wide_c + 3
+			end
+
+			if c == "#" and escape == 0 and c2:find("[0-9A-Fa-f#^]") then
+				if c2 == "#" or c2 == "^" then
+					escape = 2
+				else
+					i = i + 1
+					cur_color = tonumber(c2, 16)
+				end
+			elseif wide_c then
+				local w, code
+				if wide_type == "x" then
+					w = cwidth_tab_wide[wide_c]
+				elseif wide_type == "u" and #wide_c <= 4 then
+					w = font_size
+					code = tonumber(wide_c, 16)
+					if signs_lib.unifont_halfwidth[code] then
+						w = math.floor(w / 2)
+					end
+				end
 				if w then
-					width = width + w + 1
-					if width >= (line_width - cwidth_tab[" "]) then
+					width = width + w
+					if width > line_width then
 						width = 0
 					else
 						maxw = math_max(width, maxw)
 					end
 					if #chars < MAX_INPUT_CHARS then
+						local tex
+						if wide_type == "u" then
+							local page = math.floor(code / 256)
+							local idx = code % 256
+							local x = idx % 16
+							local y = math.floor(idx / 16)
+							tex = UNIFONT_TEX:format(page, x, y)
+							if font_size == 32 then
+								tex = tex .. "\\^[resize\\:32x32"
+							end
+						else
+							tex = char_tex_wide(font_name, wide_c)
+						end
 						table.insert(chars, {
 							off = ch_offs,
-							tex = char_tex_wide(font_name, wide_c),
+							tex = tex,
 							col = ("%X"):format(cur_color),
+							w = w,
 						})
 					end
 					ch_offs = ch_offs + w
 				end
-				i = i + #wide_c + 3
+				i = i + wide_skip
 			else
 				local w = cwidth_tab[c]
 				if w then
-					width = width + w + 1
-					if width >= (line_width - cwidth_tab[" "]) then
+					width = width + w
+					if width > line_width then
 						width = 0
 					else
 						maxw = math_max(width, maxw)
@@ -587,6 +627,7 @@ local function make_line_texture(line, lineno, pos, line_width, line_height, cwi
 							off = ch_offs,
 							tex = char_tex(font_name, c),
 							col = ("%X"):format(cur_color),
+							w = w,
 						})
 					end
 					ch_offs = ch_offs + w
@@ -594,7 +635,7 @@ local function make_line_texture(line, lineno, pos, line_width, line_height, cwi
 			end
 			i = i + 1
 		end
-		width = width + cwidth_tab[" "] + 1
+		width = width + cwidth_tab[" "]
 		maxw = math_max(width, maxw)
 		table.insert(words, { chars=chars, w=ch_offs })
 	end
@@ -603,7 +644,8 @@ local function make_line_texture(line, lineno, pos, line_width, line_height, cwi
 
 	local texture = { }
 
-	local start_xpos = math.floor((line_width - maxw) / 2) + def.x_offset
+	local start_xpos = math.max(0, math.floor((line_width - maxw) / 2)) + def.x_offset
+	local end_xpos = math.min(start_xpos + maxw, line_width)
 
 	local xpos = start_xpos
 	local ypos = (line_height + def.line_spacing)* lineno + def.y_offset
@@ -612,31 +654,33 @@ local function make_line_texture(line, lineno, pos, line_width, line_height, cwi
 
 	for word_i, word in ipairs(words) do
 		local xoffs = (xpos - start_xpos)
-		if (xoffs > 0) and ((xoffs + word.w) > maxw) then
-			table.insert(texture, fill_line(xpos, ypos, maxw, "n", font_size, colorbgw))
+		if (xoffs > 0) and ((xoffs + word.w) > end_xpos) then
+			table.insert(texture, fill_line(xpos, ypos, end_xpos, "n", font_size, colorbgw))
 			xpos = start_xpos
 			ypos = ypos + line_height + def.line_spacing
 			lineno = lineno + 1
 			if lineno >= def.number_of_lines then break end
-			table.insert(texture, fill_line(xpos, ypos, maxw, cur_color, font_size, colorbgw))
+			table.insert(texture, fill_line(xpos, ypos, end_xpos, cur_color, font_size, colorbgw))
 		end
 		for ch_i, ch in ipairs(word.chars) do
+			if xpos + ch.off + ch.w > end_xpos then
+				table.insert(texture, fill_line(xpos + ch.off, ypos, end_xpos, "n", font_size, colorbgw))
+				break
+			end
 			if ch.col ~= cur_color then
 				cur_color = ch.col
-				table.insert(texture, fill_line(xpos + ch.off, ypos, maxw, cur_color, font_size, colorbgw))
+				table.insert(texture, fill_line(xpos + ch.off, ypos, end_xpos, cur_color, font_size, colorbgw))
 			end
 			table.insert(texture, (":%d,%d=%s"):format(xpos + ch.off, ypos, ch.tex))
 		end
-		table.insert(
-			texture,
-			(":%d,%d="):format(xpos + word.w, ypos) .. char_tex(font_name, " ")
-		)
-		xpos = xpos + word.w + cwidth_tab[" "]
-		if xpos >= (line_width + cwidth_tab[" "]) then break end
+		xpos = xpos + word.w
+		if xpos < end_xpos then
+			table.insert(texture, (":%d,%d="):format(xpos, ypos) .. char_tex(font_name, " "))
+			xpos = xpos + cwidth_tab[" "]
+		end
 	end
 
-	table.insert(texture, fill_line(xpos, ypos, maxw, "n", font_size, colorbgw))
-	table.insert(texture, fill_line(start_xpos, ypos + line_height, maxw, "n", font_size, colorbgw))
+	table.insert(texture, fill_line(xpos, ypos, end_xpos, "n", font_size, colorbgw))
 
 	return table.concat(texture), lineno
 end
@@ -654,26 +698,23 @@ function signs_lib.make_sign_texture(lines, pos)
 	local char_width
 	local char_width_wide
 	local colorbgw
-	local widemult = 1
+	local widemult = meta:get_int("widefont") == 1 and 0.5 or 1
+	local force_unicode_font = meta:get_int("unifont") == 1
 
-	if meta:get_int("widefont") == 1 then
-		widemult = 0.5
-	end
-
-	if def.font_size and def.font_size == 31 then
-		font_size = 31
-		line_width = math.floor(signs_lib.avgwidth31 * def.chars_per_line) * (def.horiz_scaling * widemult)
-		line_height = signs_lib.lineheight31
-		char_width = signs_lib.charwidth31
-		char_width_wide = signs_lib.charwidth_wide31
-		colorbgw = signs_lib.colorbgw31
+	if def.font_size and (def.font_size == 32 or def.font_size == 31) then
+		font_size = 32
+		line_width = math.floor(signs_lib.avgwidth32 * def.chars_per_line) * (def.horiz_scaling * widemult)
+		line_height = signs_lib.lineheight32
+		char_width = signs_lib.charwidth32
+		char_width_wide = signs_lib.charwidth_wide32
+		colorbgw = signs_lib.colorbgw32
 	else
-		font_size = 15
-		line_width = math.floor(signs_lib.avgwidth15 * def.chars_per_line) * (def.horiz_scaling * widemult)
-		line_height = signs_lib.lineheight15
-		char_width = signs_lib.charwidth15
-		char_width_wide = signs_lib.charwidth_wide15
-		colorbgw = signs_lib.colorbgw15
+		font_size = 16
+		line_width = math.floor(signs_lib.avgwidth16 * def.chars_per_line) * (def.horiz_scaling * widemult)
+		line_height = signs_lib.lineheight16
+		char_width = signs_lib.charwidth16
+		char_width_wide = signs_lib.charwidth_wide16
+		colorbgw = signs_lib.colorbgw16
 	end
 
 	local texture = { ("[combine:%dx%d"):format(line_width, (line_height + def.line_spacing) * def.number_of_lines * def.vert_scaling) }
@@ -681,7 +722,7 @@ function signs_lib.make_sign_texture(lines, pos)
 	local lineno = 0
 	for i = 1, #lines do
 		if lineno >= def.number_of_lines then break end
-		local linetex, ln = make_line_texture(lines[i], lineno, pos, line_width, line_height, char_width, font_size, colorbgw, char_width_wide)
+		local linetex, ln = make_line_texture(lines[i], lineno, pos, line_width, line_height, char_width, font_size, colorbgw, char_width_wide, force_unicode_font)
 		table.insert(texture, linetex)
 		lineno = ln + 1
 	end
@@ -700,14 +741,30 @@ end
 
 function signs_lib.rightclick_sign(pos, node, player, itemstack, pointed_thing)
 
-	if not signs_lib.can_modify(pos, player) then return end
+	if not player or not signs_lib.can_modify(pos, player) then return end
+	if not player.get_meta then return end
 
 	player:get_meta():set_string("signslib:pos", minetest.pos_to_string(pos))
 	minetest.show_formspec(player:get_player_name(), "signs_lib:sign", get_sign_formspec(pos, node.name))
 end
 
 function signs_lib.destruct_sign(pos)
+	local meta = minetest.get_meta(pos)
+	local glow = meta:get_string("glow")
+	if glow ~= "" and not minetest.is_creative_enabled("") then
+		local num = tonumber(glow)
+		minetest.add_item(pos, ItemStack(signs_lib.glow_item .. " " .. num))
+	end
 	signs_lib.delete_objects(pos)
+end
+
+function signs_lib.blast_sign(pos, intensity)
+	if signs_lib.can_modify(pos, "") then
+		local node = minetest.get_node(pos)
+		local drops = minetest.get_node_drops(node, "tnt:blast")
+		minetest.remove_node(pos)
+		return drops
+	end
 end
 
 local function make_infotext(text)
@@ -715,9 +772,35 @@ local function make_infotext(text)
 	local lines = signs_lib.split_lines_and_words(text) or {}
 	local lines2 = { }
 	for _, line in ipairs(lines) do
-		table.insert(lines2, (table.concat(line, " "):gsub("#[0-9a-fA-F]", ""):gsub("##", "#")))
+		table.insert(lines2, (table.concat(line, " "):gsub("#[0-9a-fA-F#^]", function (s)
+			return s:sub(2):find("[#^]") and s:sub(2) or ""
+		end)))
 	end
 	return table.concat(lines2, "\n")
+end
+
+function signs_lib.glow(pos, node, puncher)
+	local name = puncher:get_player_name()
+	if minetest.is_protected(pos, name) then
+		return
+	end
+	local tool = puncher:get_wielded_item()
+	if tool:get_name() == signs_lib.glow_item then
+		local meta = minetest.get_meta(pos)
+		local glow = tonumber(meta:get_string("glow"))
+		if not glow then
+			glow = 1
+		elseif glow < 3 then
+			glow = glow + 1
+		else
+			return -- already at brightest level
+		end
+		if not minetest.is_creative_enabled(name) then
+			tool:take_item()
+			puncher:set_wielded_item(tool)
+		end
+		meta:set_string("glow", glow)
+	end
 end
 
 function signs_lib.update_sign(pos, fields)
@@ -735,15 +818,29 @@ function signs_lib.update_sign(pos, fields)
 	local ownstr = ""
 	if owner ~= "" then ownstr = S("Locked sign, owned by @1\n", owner) end
 
+	-- Fix pasting from Windows: CR instead of LF
+	text = string.gsub(text, "\r\n?", "\n")
+
 	meta:set_string("text", text)
 	meta:set_string("infotext", ownstr..make_infotext(text).." ")
-	signs_lib.set_obj_text(pos, text)
+
+	local glow = meta:get_string("glow")
+	signs_lib.set_obj_text(pos, text, glow)
 end
 
 function signs_lib.can_modify(pos, player)
 	local meta = minetest.get_meta(pos)
 	local owner = meta:get_string("owner")
-	local playername = player:get_player_name()
+	local playername
+	if type(player) == "userdata" then
+		playername = player:get_player_name()
+
+	elseif type(player) == "string" then
+		playername = player
+
+	else
+		playername = ""
+	end
 
 	if minetest.is_protected(pos, playername) then
 		minetest.record_protection_violation(pos, playername)
@@ -752,7 +849,7 @@ function signs_lib.can_modify(pos, player)
 
 	if owner == ""
 	  or playername == owner
-	  or (minetest.check_player_privs(playername, {signslib_edit=true}))
+	  or minetest.get_player_privs(playername)[signs_lib.edit_priv]
 	  or (playername == minetest.settings:get("name")) then
 		return true
 	end
@@ -849,13 +946,15 @@ function signs_lib.after_place_node(pos, placer, itemstack, pointed_thing, locke
 	local controls = placer:get_player_control()
 
 	local signname = itemstack:get_name()
+
+	-- in case player has sign nodes they shouldn't, remove extensions for normal sign
 	local no_wall_name = string.gsub(signname, "_wall", "")
+	no_wall_name = string.gsub(no_wall_name, "_yard", "")
+	no_wall_name = string.gsub(no_wall_name, "_hanging", "")
+	no_wall_name = string.gsub(no_wall_name, "_onpole_horiz", "")
+	no_wall_name = string.gsub(no_wall_name, "_onpole", "")
 
 	local def = minetest.registered_items[signname]
-
-	local ppos = minetest.get_pointed_thing_position(pointed_thing)
-	local pnode = minetest.get_node(ppos)
-	local pdef = minetest.registered_items[pnode.name]
 
 	if def.allow_onpole and signs_lib.check_for_pole(pos, pointed_thing) and not controls.sneak then
 		local newparam2
@@ -865,7 +964,6 @@ function signs_lib.after_place_node(pos, placer, itemstack, pointed_thing, locke
 		else
 			newparam2 = minetest.dir_to_facedir(lookdir)
 		end
-		local node = minetest.get_node(pos)
 		minetest.swap_node(pos, {name = no_wall_name.."_onpole", param2 = newparam2})
 	elseif def.allow_onpole_horizontal and signs_lib.check_for_horizontal_pole(pos, pointed_thing) and not controls.sneak then
 		local newparam2
@@ -875,15 +973,12 @@ function signs_lib.after_place_node(pos, placer, itemstack, pointed_thing, locke
 		else
 			newparam2 = minetest.dir_to_facedir(lookdir)
 		end
-		local node = minetest.get_node(pos)
 		minetest.swap_node(pos, {name = no_wall_name.."_onpole_horiz", param2 = newparam2})
 	elseif def.allow_hanging and signs_lib.check_for_ceiling(pointed_thing) and not controls.sneak then
 		local newparam2 = minetest.dir_to_facedir(placer:get_look_dir())
-		local node = minetest.get_node(pos)
 		minetest.swap_node(pos, {name = no_wall_name.."_hanging", param2 = newparam2})
 	elseif def.allow_yard and signs_lib.check_for_floor(pointed_thing) and not controls.sneak then
 		local newparam2 = minetest.dir_to_facedir(placer:get_look_dir())
-		local node = minetest.get_node(pos)
 		minetest.swap_node(pos, {name = no_wall_name.."_yard", param2 = newparam2})
 	elseif def.paramtype2 == "facedir" and signs_lib.check_for_ceiling(pointed_thing) then
 		minetest.swap_node(pos, {name = signname, param2 = 6})
@@ -899,11 +994,29 @@ function signs_lib.after_place_node(pos, placer, itemstack, pointed_thing, locke
 end
 
 function signs_lib.register_fence_with_sign()
-	minetest.log("warning", "[signs_lib] ".."Attempt to call no longer used function signs_lib.register_fence_with_sign()")
+	log("warning", "Attempt to call no longer used function signs_lib.register_fence_with_sign()")
+end
+
+local use_glow = function(pos, node, puncher, pointed_thing)
+	if puncher then -- if e.g. a machine tries to punch; only a real person should change the lighting
+		signs_lib.glow(pos, node, puncher)
+	end
+	return signs_lib.update_sign(pos)
+end
+
+local glow_drops = function(pos, oldnode, oldmetadata, digger)
+	if digger and minetest.is_creative_enabled(digger:get_player_name()) then
+		return
+	end
+	local glow = oldmetadata and oldmetadata.fields and oldmetadata.fields.glow
+	if glow then
+		minetest.add_item(pos, ItemStack(signs_lib.glow_item .. " " .. glow))
+	end
 end
 
 function signs_lib.register_sign(name, raw_def)
 	local def = table.copy(raw_def)
+	def.is_ground_content = false
 
 	if raw_def.entity_info == "standard" then
 		def.entity_info = {
@@ -915,11 +1028,19 @@ function signs_lib.register_sign(name, raw_def)
 	end
 
 	def.after_place_node = raw_def.after_place_node or signs_lib.after_place_node
+	def.on_blast         = raw_def.on_blast         or signs_lib.blast_sign
 
 	if raw_def.entity_info then
+
+		if def.allow_glow ~= false then
+			def.on_punch        = raw_def.on_punch            or use_glow
+			def.after_dig_node  = raw_def.after_dig_node      or glow_drops
+		else
+			def.on_punch        = raw_def.on_punch            or signs_lib.update_sign
+		end
+
 		def.on_rightclick       = raw_def.on_rightclick       or signs_lib.rightclick_sign
 		def.on_destruct         = raw_def.on_destruct         or signs_lib.destruct_sign
-		def.on_punch            = raw_def.on_punch            or signs_lib.update_sign
 		def.number_of_lines     = raw_def.number_of_lines     or signs_lib.standard_lines
 		def.horiz_scaling       = raw_def.horiz_scaling       or signs_lib.standard_hscale
 		def.vert_scaling        = raw_def.vert_scaling        or signs_lib.standard_vscale
@@ -950,6 +1071,9 @@ function signs_lib.register_sign(name, raw_def)
 	else
 		def.groups = signs_lib.standard_wood_groups
 	end
+
+	-- force all signs into the sign group
+	def.groups.sign = def.groups.sign or 1
 
 	local cbox = signs_lib.make_selection_boxes(35, 25)
 
@@ -1161,7 +1285,7 @@ minetest.register_lbm({
 	run_at_every_load = true,
 	action = function(pos, node)
 		-- yeah, yeah... I know I'm hashing a block pos, but it's still just a set of coords
-		local hash = minetest.hash_node_position(vector.floor(vector.divide(pos, core.MAP_BLOCKSIZE)))
+		local hash = minetest.hash_node_position(vector.floor(vector.divide(pos, minetest.MAP_BLOCKSIZE)))
 		if not signs_lib.block_list[hash] then
 			signs_lib.block_list[hash] = true
 			signs_lib.totalblocks = signs_lib.totalblocks + 1
@@ -1172,15 +1296,15 @@ minetest.register_lbm({
 minetest.register_chatcommand("regen_signs", {
 	params = "",
 	privs = {server = true},
-	description = "Skims through all currently-loaded sign-bearing mapblocks, clears away any entities within each sign's node space, and regenerates their text entities, if any.",
+	description = S("Skims through all currently-loaded sign-bearing mapblocks, clears away any entities within each sign's node space, and regenerates their text entities, if any."),
 	func = function(player_name, params)
 		local allsigns = {}
 		local totalsigns = 0
 		for b in pairs(signs_lib.block_list) do
 			local blockpos = minetest.get_position_from_hash(b)
-			local pos1 = vector.multiply(blockpos, core.MAP_BLOCKSIZE)
-			local pos2 = vector.add(pos1, core.MAP_BLOCKSIZE - 1)
-			if minetest.get_node_or_nil(vector.add(pos1, core.MAP_BLOCKSIZE/2)) then
+			local pos1 = vector.multiply(blockpos, minetest.MAP_BLOCKSIZE)
+			local pos2 = vector.add(pos1, minetest.MAP_BLOCKSIZE - 1)
+			if minetest.get_node_or_nil(vector.add(pos1, minetest.MAP_BLOCKSIZE/2)) then
 				local signs_in_block = minetest.find_nodes_in_area(pos1, pos2, {"group:sign"})
 				allsigns[#allsigns + 1] = signs_in_block
 				totalsigns = totalsigns + #signs_in_block
@@ -1191,13 +1315,13 @@ minetest.register_chatcommand("regen_signs", {
 		end
 		if signs_lib.totalblocks < 0 then signs_lib.totalblocks = 0 end
 		if totalsigns == 0 then
-			minetest.chat_send_player(player_name, "There are no signs in the currently-loaded terrain.")
+			minetest.chat_send_player(player_name, S("There are no signs in the currently-loaded terrain."))
 			signs_lib.block_list = {}
 			return
 		end
 
-		minetest.chat_send_player(player_name, "Found a total of "..totalsigns.." sign nodes across "..signs_lib.totalblocks.." blocks.")
-		minetest.chat_send_player(player_name, "Regenerating sign entities...")
+		minetest.chat_send_player(player_name, S("Found a total of @1 sign nodes across @2 blocks.", totalsigns, signs_lib.totalblocks))
+		minetest.chat_send_player(player_name, S("Regenerating sign entities ..."))
 
 		for _, b in pairs(allsigns) do
 			for _, pos in ipairs(b) do
@@ -1209,11 +1333,15 @@ minetest.register_chatcommand("regen_signs", {
 				end
 			end
 		end
-		minetest.chat_send_player(player_name, "Finished.")
+		minetest.chat_send_player(player_name, S("Finished."))
 	end
 })
 
-minetest.register_privilege("signslib_edit", {})
+minetest.register_on_mods_loaded(function()
+	if not minetest.registered_privileges[signs_lib.edit_priv] then
+		minetest.register_privilege("signslib_edit", {})
+	end
+end)
 
 
 
@@ -1225,20 +1353,23 @@ function get_sign_formspec(pos, nodename)
 
 	local meta = minetest.get_meta(pos)
 	local txt = meta:get_string("text")
+	local state = meta:get_int("unifont") == 1 and "on" or "off"
 
 	local formspec = {
 		"size[6,4]",
 		"background[-0.5,-0.5;7,5;signs_lib_sign_bg.png]",
-		"image[0.1,2.4;7,1;signs_lib_sign_color_palette.png]", 
+		"image[0.1,2.4;7,1;signs_lib_sign_color_palette.png]",
 		"textarea[0.15,-0.2;6.3,2.8;text;;" .. minetest.formspec_escape(txt) .. "]",
-		"button_exit[3,3.4;2,1;ok;" .. S("Write") .. "]"
+		"button_exit[3.7,3.4;2,1;ok;" .. S("Write") .. "]",
+		"label[0.3,3.4;"..FS("Unicode font").."]",
+		"image_button[0.6,3.7;1,0.6;signs_lib_switch_" .. state .. ".png;uni_"
+			.. state .. ";;;false;signs_lib_switch_interm.png]",
 	}
 
 	if minetest.registered_nodes[nodename].allow_widefont then
-		local state = "off"
-		if meta:get_int("widefont") == 1 then state = "on" end
-		formspec[#formspec+1] = "label[0.9,3.4;Use wide font]"
-		formspec[#formspec+1] = "image_button[1.1,3.7;1,0.6;signs_lib_switch_" .. state .. ".png;"
+		state = meta:get_int("widefont") == 1 and "on" or "off"
+		formspec[#formspec+1] = "label[2.1,3.4;"..FS("Wide font").."]"
+		formspec[#formspec+1] = "image_button[2.3,3.7;1,0.6;signs_lib_switch_" .. state .. ".png;wide_"
 				.. state .. ";;;false;signs_lib_switch_interm.png]"
 	end
 
@@ -1255,31 +1386,48 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
 	local playername = player:get_player_name()
 
 	if fields.text and fields.ok then
-		minetest.log("action", S("@1 wrote \"@2\" to sign at @3",
+		log("action", "%s wrote %q to sign at %s",
 			(playername or ""),
-			fields.text:gsub('\\', '\\\\'):gsub("\n", "\\n"),
+			fields.text:gsub("\n", "\\n"),
 			pos_string
-		))
+		)
 		signs_lib.update_sign(pos, fields)
-	elseif fields.on or fields.off then
+	elseif fields.wide_on or fields.wide_off or fields.uni_on or fields.uni_off then
 		local node = minetest.get_node(pos)
 		local meta = minetest.get_meta(pos)
-		local change
+		local change_wide
+		local change_uni
 
-		if fields.on and meta:get_int("widefont") == 1 then
+		if fields.wide_on and meta:get_int("widefont") == 1 then
 			meta:set_int("widefont", 0)
-			change = true
-		elseif fields.off and meta:get_int("widefont") == 0 then
+			change_wide = true
+		elseif fields.wide_off and meta:get_int("widefont") == 0 then
 			meta:set_int("widefont", 1)
-			change = true
+			change_wide = true
+		end
+		if fields.uni_on and meta:get_int("unifont") == 1 then
+			meta:set_int("unifont", 0)
+			change_uni = true
+		elseif fields.uni_off and meta:get_int("unifont") == 0 then
+			meta:set_int("unifont", 1)
+			change_uni = true
 		end
 
-		if change then
-			minetest.log("action", S("@1 flipped the wide-font switch to \"@2\" at @3",
+		if change_wide then
+			log("action", "%s flipped the wide-font switch to %q at %s",
 				(playername or ""),
-				(fields.on and "off" or "on"),
+				(fields.wide_on and "off" or "on"),
 				minetest.pos_to_string(pos)
-			))
+			)
+			signs_lib.update_sign(pos, fields)
+			minetest.show_formspec(playername, "signs_lib:sign", get_sign_formspec(pos, node.name))
+		end
+		if change_uni then
+			log("action", "%s flipped the unicode-font switch to %q at %s",
+				(playername or ""),
+				(fields.uni_on and "off" or "on"),
+				minetest.pos_to_string(pos)
+			)
 			signs_lib.update_sign(pos, fields)
 			minetest.show_formspec(playername, "signs_lib:sign", get_sign_formspec(pos, node.name))
 		end

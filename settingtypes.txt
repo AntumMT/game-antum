@@ -2117,6 +2117,11 @@ server_shop.use_currency_defaults (Use currency mod defaults) bool true
 server_shop.refund_on_close (Refund on close) bool true
 
 
+[*signs_lib]
+
+signs_lib.edit_priv (Allows to rotate signs and to open (and consequently edit) any default sign formspec) string signslib_edit
+
+
 [*slingshot]
 
 # Use old 16x16 textures.

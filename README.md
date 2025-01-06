@@ -63,7 +63,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [formspecs][] ([MIT][lic.formspecs]) -- version: 2.6 *2020-03-12*
   * [mobkit][] ([MIT][lic.mobkit]) -- version: [ddea141 Git][ver.mobkit] *2021-02-01*
   * [mobs_redo][] ([MIT][lic.mobs_redo] / [CC BY][lic.ccby3.0] / [CC0][lic.cc0]) -- version: [db3831d Git][ver.mobs_redo] *2021-07-14*
-  * [signs_lib][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2021-03-04-2][ver.signs_lib]
+  * [signs_lib][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2024-09-07][ver.signs_lib]
 * lighting/
   * [3d_armor_light][] ([MIT][lic.3d_armor_light]) -- version: [1.0][ver.3d_armor_light] *2021-07-17*
   * [glow][] ([GPL][lic.gpl2.0]) -- version: [4c015a0 Git][ver.glow] *2019-02-05* ([patched][patch.glow])
@@ -408,7 +408,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [sfinv]: https://content.luanti.org/packages/rubenwardy/sfinv/
 [sfinv_buttons]: https://content.luanti.org/packages/Wuzzy/sfinv_buttons/
 [shark]: https://github.com/AntumMT/mod-shark
-[signs_lib]: https://content.luanti.org/packages/VanessaE/signs_lib/
+[signs_lib]: https://content.luanti.org/packages/mt-mods/signs_lib/
 [simple_models]: https://content.luanti.org/packages/AntumDeluge/simple_models/
 [simple_protection]: https://content.luanti.org/packages/Krock/simple_protection/
 [slingshot]: https://content.luanti.org/packages/AntumDeluge/slingshot/
@@ -677,7 +677,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.server_shop]: https://github.com/AntumMT/mod-server_shop/releases/tag/v1.6
 [ver.sfinv]: https://github.com/rubenwardy/sfinv/tree/dbe59fd71b45542fe086bb18dfc0421aa323ca05
 [ver.sfinv_buttons]: https://codeberg.org/Wuzzy/minetest_sfinv_buttons/src/commit/1.1.2
-[ver.signs_lib]: https://gitlab.com/VanessaE/signs_lib/tree/2021-03-04-2
+[ver.signs_lib]: https://github.com/mt-mods/signs_lib/tree/87d65439a1ec4de4ee26f45fce7f10a40bce28c6
 [ver.simple_models]: https://github.com/AntumMT/mod-simple_models/tree/07e8c1b
 [ver.simple_protection]: https://github.com/SmallJoker/simple_protection/tree/d357ba10d8f5f7b4327bfc61efbafe772df21589
 [ver.slingshot]: https://github.com/AntumMT/mod-slingshot/releases/tag/v0.3

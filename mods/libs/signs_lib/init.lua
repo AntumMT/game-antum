@@ -7,8 +7,9 @@ signs_lib = {}
 
 signs_lib.path = minetest.get_modpath(minetest.get_current_modname())
 
-local S, NS = dofile(signs_lib.path .. "/intllib.lua")
-signs_lib.gettext = S
+signs_lib.S = minetest.get_translator(minetest.get_current_modname())
+
+signs_lib.edit_priv = minetest.settings:get("signs_lib.edit_priv") or "signslib_edit"
 
 dofile(signs_lib.path.."/encoding.lua")
 dofile(signs_lib.path.."/api.lua")

@@ -1,5 +1,8 @@
 -- encoding borrowed from signs_lib fork at https://github.com/lord-server/lord
 
+-- The "ANSI" encoding here actually refers to "windows-1251", which shows up as
+-- "ANSI" on Russian version of MS Windows
+
 local ansi_decode = {
 	[128] = "\208\130",
 	[129] = "\208\131",
@@ -228,13 +231,14 @@ signs_lib.unicode_install({38,"26"})
 dofile(signs_lib.path.."/nonascii-de.lua")
 dofile(signs_lib.path.."/nonascii-fr.lua")
 dofile(signs_lib.path.."/nonascii-pl.lua")
+dofile(signs_lib.path.."/nonascii-ua.lua")
 
 local nmdc = {
 	[36] = "$",
 	[124] = "|"
 }
 
-function AnsiToUtf8(s)
+function signs_lib.AnsiToUtf8(s)
 	local r, b = ""
 	for i = 1, s and s:len() or 0 do
 		b = s:byte(i)
@@ -255,10 +259,14 @@ function AnsiToUtf8(s)
 	return r
 end
 
-function Utf8ToAnsi(s)
-	local a, j, r, b, scope = 0, 0, ""
+function signs_lib.Utf8ToAnsi(s)
+	local r, b = ""
+	local scope
+	local j, l, u
 	for i = 1, s and s:len() or 0 do
 		b = s:byte(i)
+
+		-- legacy parser
 		if b == 0x26 then
 			r = r .. "&#x26;"
 		elseif b < 128 then
@@ -271,18 +279,57 @@ function Utf8ToAnsi(s)
 			if scope[b] then
 				scope = scope[b]
 				if "string" == type(scope) then
-					r, scope = r .. scope
+					r, scope = r .. scope, nil
+					j = -1 -- supress general UTF-8 parser
 				end
 			else
-				r, scope = r .. "_"
+				scope = nil
 			end
 		elseif utf8_decode[b] then
 			scope = utf8_decode[b]
-		else
-			r = r .. "_"
 		end
+
+		-- general UTF-8 parser
+		if j == -1 then -- supressed by legacy parser
+			j = nil
+		elseif b < 0x80 then
+			if j then
+				r = r .. "&#ufffd;"
+				j = nil
+			end
+			-- ASCII handled by legacy parser
+		elseif b >= 0xc0 then
+			if j then
+				r = r .. "&#ufffd;"
+			end
+			j = i
+			if b >= 0xf8 then
+				r = r .. "&#ufffd;"
+				j = nil
+			elseif b >= 0xf0 then
+				l, u = 4, b % (2 ^ 3)
+			elseif b >= 0xe0 then
+				l, u = 3, b % (2 ^ 4)
+			else
+				l, u = 2, b % (2 ^ 5)
+			end
+		else
+			if j then
+				u = u * (2 ^ 6) + b % (2 ^ 6)
+				if i == j + l - 1 then
+					r = r .. string.format("&#u%x;", u)
+					j = nil
+				end
+			else
+				r = r .. "&#ufffd;"
+			end
+		end
+	end
+	if j then
+		r = r .. "&#ufffd;"
 	end
 	return r
 end
 
 signs_lib.wide_character_codes = wide_character_codes
+signs_lib.unifont_halfwidth = dofile(signs_lib.path.."/unifont-halfwidth.lua")

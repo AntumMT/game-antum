@@ -149,9 +149,11 @@ In this text, common terms such as `pos`, `node`, or `placer`/`digger` will not 
 
   * `font_size = int`
 
-    Selects which font to use, either 15 or 31 (pixel height).  This setting directly affects the sign's vertical resolution.
+    Selects which font to use, either 16 or 32 (pixel height).  This setting directly affects the sign's vertical resolution.
 
-    Default: 15
+    Default: 16
+
+    Note: Valid values were formerly 15 and 31, these are now aliases of 16 and 32 respectively.
 
   * `x_offset = int`
   * `y_offset = int`
@@ -234,7 +236,7 @@ signs_lib.register_sign("basic_signs:sign_wall_glass", {
 	allow_onpole = true,
 	allow_onpole_horizontal = true,
 	allow_yard = true,
-	use_texture_alpha = true,
+	use_texture_alpha = "blend",
 })
 ```
 
@@ -248,7 +250,7 @@ signs_lib.register_sign("basic_signs:sign_wall_glass", {
 
 * `signs_lib.rightclick_sign(pos, node, player, itemstack, pointed_thing)`
 
-  Open the default sign formspec, if the player has the `signslib_edit` privilege.
+  Open the default sign formspec, if the player has the `signslib_edit` privilege. (privilege can be set by `signs_lib.edit_priv` setting)
 
 * `signs_lib.destruct_sign(pos)`
 
