@@ -49,7 +49,7 @@ function unifieddyes.on_airbrush(itemstack, player, pointed_thing)
 		return
 	end
 
-	local palette = nil
+	local palette
 	local fdir = 0
 	if not def or not def.palette then
 		minetest.chat_send_player(player_name, "*** That node can't be colored -- it's either undefined or has no palette.")
@@ -71,12 +71,15 @@ function unifieddyes.on_airbrush(itemstack, player, pointed_thing)
 
 	local idx, hue = unifieddyes.getpaletteidx(painting_with, palette)
 	local inv = player:get_inventory()
-	if (not creative or not creative.is_enabled_for(player_name)) and not inv:contains_item("main", painting_with) then
+	if (not minetest.is_creative_enabled(player_name)) and not inv:contains_item("main", painting_with) then
 		local suff = ""
 		if not idx then
 			suff = "  Besides, "..string.sub(painting_with, 5).." can't be applied to that node."
 		end
-		minetest.chat_send_player(player_name, "*** You're in survival mode, and you're out of "..string.sub(painting_with, 5).."."..suff)
+		minetest.chat_send_player(
+			player_name,
+			"*** You're in survival mode, and you're out of "..string.sub(painting_with, 5).."."..suff
+		)
 		return
 	end
 
@@ -92,8 +95,8 @@ function unifieddyes.on_airbrush(itemstack, player, pointed_thing)
 
 		local modname = string.sub(name, 1, string.find(name, ":")-1)
 		local nodename2 = string.sub(name, string.find(name, ":")+1)
-		local oldcolor = "snozzberry"
-		local newcolor = "razzberry" -- intentionally misspelled ;-)
+		local oldcolor
+		local newcolor
 
 		if def.ud_color_start and def.ud_color_end then
 			oldcolor = string.sub(node.name, def.ud_color_start, def.ud_color_end)
@@ -123,7 +126,7 @@ function unifieddyes.on_airbrush(itemstack, player, pointed_thing)
 		return
 	end
 	minetest.swap_node(pos, {name = name, param2 = fdir + idx})
-	if not creative or not creative.is_enabled_for(player_name) then
+	if not minetest.is_creative_enabled(player_name) then
 		inv:remove_item("main", painting_with)
 		return
 	end
@@ -144,7 +147,7 @@ function unifieddyes.make_readable_color(color)
 	local s = string.gsub(color, "_s50", "")
 
         -- replace underscores with spaces to make it look nicer
-	local s = string.gsub(s, "_", " ")
+	s = string.gsub(s, "_", " ")
 
         -- capitalize words, you know, looks nicer ;)
         s = string.gsub(s, "(%l)(%w*)", function(a,b) return string.upper(a)..b end)
@@ -160,7 +163,8 @@ function unifieddyes.make_readable_color(color)
 	return s
 end
 
-function unifieddyes.make_colored_square(hexcolor, colorname, showall, creative, painting_with, nodepalette, hp, v2, selindic, inv, explist)
+function unifieddyes.make_colored_square(hexcolor, colorname, showall, creative, painting_with, nodepalette, hp, v2,
+	selindic, inv, explist)
 
 	local dye = "dye:"..colorname
 
@@ -216,7 +220,7 @@ function unifieddyes.show_airbrush_form(player)
 
 	local player_name = player:get_player_name()
 	local painting_with = unifieddyes.player_selected_dye[player_name] or unifieddyes.player_current_dye[player_name]
-	local creative = creative and creative.is_enabled_for(player_name)
+	local creative = minetest.is_creative_enabled(player_name)
 	local inv = player:get_inventory()
 	local nodepalette = "extended"
 	local showall = unifieddyes.player_showall[player_name]
@@ -226,7 +230,10 @@ function unifieddyes.show_airbrush_form(player)
 
 	local last_right_click = unifieddyes.player_last_right_clicked[player_name]
 	if last_right_click then
-		if last_right_click.def and last_right_click.def.palette then
+		if not last_right_click.def then
+			last_right_click.def = {}
+			last_right_click.undef = true
+		elseif last_right_click.def.palette then
 			if last_right_click.def.palette == "unifieddyes_palette_colorwallmounted.png" then
 				nodepalette = "wallmounted"
 			elseif last_right_click.def.palette == "unifieddyes_palette_extended.png" then
@@ -240,7 +247,9 @@ function unifieddyes.show_airbrush_form(player)
 		end
 	end
 
-	if not last_right_click.def.groups
+	if last_right_click.undef then
+		t[#t+1] = "label[0.5,8.25;"..S("(Right-clicked an undefined node, showing all colors)").."]"
+	elseif not last_right_click.def.groups
 	  or not last_right_click.def.groups.ud_param2_colorable
 	  or not last_right_click.def.palette
 	  or not string.find(last_right_click.def.palette, "unifieddyes_palette_") then
@@ -275,7 +284,8 @@ function unifieddyes.show_airbrush_form(player)
 
 			local hexcolor = string.format("%02x", r2)..string.format("%02x", g2)..string.format("%02x", b2)
 			local f
-			f, selindic = unifieddyes.make_colored_square(hexcolor, val..hue..sat, showall, creative, painting_with, nodepalette, hp, v2, selindic, inv, explist)
+			f, selindic = unifieddyes.make_colored_square(hexcolor, val..hue..sat, showall, creative, painting_with, nodepalette,
+			hp, v2, selindic, inv, explist)
 			t[#t+1] = f
 		end
 
@@ -308,7 +318,8 @@ function unifieddyes.show_airbrush_form(player)
 
 				local hexcolor = string.format("%02x", r3)..string.format("%02x", g3)..string.format("%02x", b3)
 				local f
-				f, selindic = unifieddyes.make_colored_square(hexcolor, val..hue..sat, showall, creative, painting_with, nodepalette, hp, v2, selindic, inv, explist)
+				f, selindic = unifieddyes.make_colored_square(hexcolor, val..hue..sat, showall, creative, painting_with,
+				nodepalette, hp, v2, selindic, inv, explist)
 				t[#t+1] = f
 			end
 		end
@@ -322,7 +333,7 @@ function unifieddyes.show_airbrush_form(player)
 		local hexgrey = string.format("%02x", y*17)..string.format("%02x", y*17)..string.format("%02x", y*17)
 		local grey = "grey_"..y
 
-		if y == 0 then grey = "black" 
+		if y == 0 then grey = "black"
 		elseif y == 4 then grey = "dark_grey"
 		elseif y == 8 then grey = "grey"
 		elseif y == 11 then grey = "light_grey"
@@ -330,7 +341,8 @@ function unifieddyes.show_airbrush_form(player)
 		end
 
 		local f
-		f, selindic = unifieddyes.make_colored_square(hexgrey, grey, showall, creative, painting_with, nodepalette, hp, v2, selindic, inv, explist)
+		f, selindic = unifieddyes.make_colored_square(hexgrey, grey, showall, creative, painting_with, nodepalette, hp, v2,
+		selindic, inv, explist)
 		t[#t+1] = f
 
 	end
@@ -407,11 +419,11 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
 			end
 		end
 
-		if fields.show_all then 
+		if fields.show_all then
 			unifieddyes.player_showall[player_name] = true
 			unifieddyes.show_airbrush_form(player)
 			return
-		elseif fields.show_avail then 
+		elseif fields.show_avail then
 			unifieddyes.player_showall[player_name] = false
 			unifieddyes.show_airbrush_form(player)
 			return
@@ -426,7 +438,8 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
 					minetest.chat_send_player(player_name, "*** Clicked \"Accept\", but the selected color can't be used on the")
 					minetest.chat_send_player(player_name, "*** node that was right-clicked (and \"Show All\" wasn't in effect).")
 					if unifieddyes.player_current_dye[player_name] then
-						minetest.chat_send_player(player_name, "*** Ignoring it and sticking with "..string.sub(unifieddyes.player_current_dye[player_name], 5)..".")
+						minetest.chat_send_player(player_name, "*** Ignoring it and sticking with "
+						..string.sub(unifieddyes.player_current_dye[player_name], 5)..".")
 					else
 						minetest.chat_send_player(player_name, "*** Ignoring it.")
 					end
@@ -442,16 +455,15 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
 				return
 			end
 		else
-			local s1 = string.sub(minetest.serialize(fields), 11)
-			local s3 = string.sub(s1,1, string.find(s1, '"')-1)
+			local color, _ = next(fields)
 
 			local inv = player:get_inventory()
-			local creative = creative and creative.is_enabled_for(player_name)
-			local dye = "dye:"..s3
+			local creative = minetest.is_creative_enabled(player_name)
+			local dye = "dye:"..color
 
-			if (showall or unifieddyes.palette_has_color[nodepalette.."_"..s3]) and
-				(minetest.registered_items[dye] and (creative or inv:contains_item("main", dye))) then
-				unifieddyes.player_selected_dye[player_name] = dye 
+			if (showall or unifieddyes.palette_has_color[nodepalette.."_"..color]) and
+				(creative or inv:contains_item("main", dye)) then
+				unifieddyes.player_selected_dye[player_name] = dye
 				unifieddyes.show_airbrush_form(player)
 			end
 		end
@@ -461,7 +473,7 @@ end)
 minetest.register_tool("unifieddyes:airbrush", {
 	description = S("Dye Airbrush"),
 	inventory_image = "unifieddyes_airbrush.png",
-	use_texture_alpha = "opaque",
+	use_texture_alpha = true,
 	tool_capabilities = {
 		full_punch_interval=0.1,
 	},
@@ -477,6 +489,10 @@ minetest.register_tool("unifieddyes:airbrush", {
 		if pos then node = minetest.get_node(pos) end
 		if node then def = minetest.registered_items[node.name] end
 
+		if keys.sneak and def and def.on_rightclick then
+			return def.on_rightclick(pos, node, placer, itemstack, pointed_thing)
+		end
+
 		unifieddyes.player_last_right_clicked[player_name] = {pos = pos, node = node, def = def}
 
 		if not keys.aux1 then
@@ -487,12 +503,10 @@ minetest.register_tool("unifieddyes:airbrush", {
 
 			if newcolor and string.find(def.paramtype2, "color") then
 				minetest.chat_send_player(player_name, "*** Switching to "..newcolor.." for the airbrush, to match that node.")
-				unifieddyes.player_current_dye[player_name] = "dye:"..newcolor 
+				unifieddyes.player_current_dye[player_name] = "dye:"..newcolor
 			else
 				minetest.chat_send_player(player_name, "*** That node is uncolored.")
 			end
-		elseif def.on_rightclick then
-			return def.on_rightclick(pos, node, placer, itemstack, pointed_thing)
 		end
 	end
 })

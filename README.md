@@ -80,7 +80,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [moreores][] ([zlib][lic.moreores] / [CC BY-SA][lic.ccbysa3.0]) -- version: [2.1.0][ver.moreores] *2021-06-28* ([patched][patch.moreores])
   * [quartz][] ([MIT][lic.quartz]) -- version: [72ec06f Git][ver.quartz] *2021-01-04* ([patched][patch.quartz])
   * [rainbow_ore][] ([LGPL][lic.rainbow_ore]) -- version: [830ac09 Git][ver.rainbow_ore] *2021-07-25*
-  * [unifieddyes][] ([GPL][lic.gpl2.0]) -- version: [2021-03-26-1][ver.unifieddyes] ([patched][patch.unifieddyes])
+  * [unifieddyes][] ([GPL][lic.gpl2.0]) -- version: [2024-04-20][ver.unifieddyes]
 * misc/
   * [ambience][] ([MIT][lic.ambience] / [CC BY / CC BY-SA / CC BY-NC-SA / CC0][lic.ambience_sounds]) -- version: [2021-07-13][ver.ambience]
   * [asm_spawneggs][] ([MIT][lic.asm_spawneggs]) -- version: [1.2][ver.asm_spawneggs] *2021-08-03*
@@ -427,7 +427,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [trash_can]: https://content.luanti.org/packages/Evergreen/trash_can/
 [trees]: https://forum.luanti.org/viewtopic.php?f=11&t=5713
 [unified_inventory]: https://content.luanti.org/packages/RealBadAngel/unified_inventory/
-[unifieddyes]: https://content.luanti.org/packages/VanessaE/unifieddyes/
+[unifieddyes]: https://content.luanti.org/packages/mt-mods/unifieddyes/
 [vines]: https://forum.luanti.org/viewtopic.php?f=11&t=2344
 [waffles]: https://content.luanti.org/packages/GreenDimond/waffles/
 [wardrobe]: https://content.luanti.org/packages/AntumDeluge/wardrobe_ad/
@@ -697,7 +697,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.trampoline]: https://github.com/AntumMT/mod-trampoline/releases/tag/v0.3
 [ver.trash_can]: https://github.com/minetest-mods/trash_can/tree/423b0f2
 [ver.tree_monster]: https://github.com/AntumMT/mod-mob_tree_monster/tree/f2977ff
-[ver.unifieddyes]: https://gitlab.com/VanessaE/unifieddyes/tags/2021-03-26-1
+[ver.unifieddyes]: https://github.com/mt-mods/unifieddyes/tree/de6e2e0e35f2f14390ef1d7ccdb0d7bc1acce2f8
 [ver.waffles]: https://github.com/GreenXenith/waffles/tree/f9ee9962795a44585a7584af34226acaa8bf9d77
 [ver.wardrobe]: https://github.com/AntumMT/mod-wardrobe/tree/0500a78
 [ver.wdata]: https://github.com/AntumMT/mod-wdata/releases/tag/v1.1
@@ -749,5 +749,4 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.snowdrift]: https://github.com/AntumMT/mod-snowdrift/tree/0b35cc3
 [patch.technic_armor]: https://github.com/AntumMT/mod-technic_armor/tree/7434d00ebcf161179fbfd180c48f0fc42c3a7676
 [patch.throwing]: https://github.com/AntumMT/mod-throwing/tree/6f55c67
-[patch.unifieddyes]: https://github.com/AntumMT/mod-unifieddyes/tree/3013964
 [patch.windmill]: https://github.com/AntumMT/mod-windmill/tree/35e18f9c6e9bee1bb27ebfc39bfd424d6357b113

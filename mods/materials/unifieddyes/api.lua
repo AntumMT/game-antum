@@ -1,7 +1,5 @@
 -- This file supplies the majority of Unified Dyes' API
 
-local S = minetest.get_translator("unifieddyes")
-
 unifieddyes.player_current_dye = {}
 unifieddyes.player_selected_dye = {}
 unifieddyes.player_last_right_clicked = {}
@@ -23,11 +21,14 @@ minetest.register_on_placenode(
 			return false
 		end
 
-		local param2
 		if not string.find(itemstack:to_string(), "palette_index") then
+			local param2
+			local color = 0
+
 			if def.palette == "unifieddyes_palette_extended.png"
 			  and def.paramtype2 == "color" then
 				param2 = 240
+				color = 240
 			elseif def.palette == "unifieddyes_palette_colorwallmounted.png"
 			  and def.paramtype2 == "colorwallmounted" then
 				param2 = newnode.param2 % 8
@@ -38,55 +39,135 @@ minetest.register_on_placenode(
 
 			if param2 then
 				minetest.swap_node(pos, {name = newnode.name, param2 = param2})
+				minetest.get_meta(pos):set_int("palette_index", color)
 			end
-		end
-
-		if def.palette ~= "" then
-			minetest.get_meta(pos):set_int("palette_index", param2 or 240)
 		end
 	end
 )
 
--- The complementary function:  strip-off the color if the node being dug is still white/neutral
+-- The complementary function: strip-off the color if the node being dug is still white/neutral
+-- adapted from
+-- https://github.com/minetest/minetest/blob/fe8d04d0b3c2e3af7c406fb6527f1b5230a30137/builtin/game/item.lua#L460-L562
+local function node_dig_without_color(pos, node, digger)
+	if not digger then return false end
+	local diggername = digger:get_player_name()
 
-local function move_item(item, pos, inv, digger, fix_color)
-	if not (digger and digger:is_player()) then return end
-	local creative = creative_mode or minetest.check_player_privs(digger, "creative")
-	item = unifieddyes.fix_bad_color_info(item, fix_color)
-	if inv:room_for_item("main", item)
-	  and (not creative or not inv:contains_item("main", item, true)) then
-		inv:add_item("main", item)
-	elseif not creative then
-		minetest.item_drop(ItemStack(item), digger, pos)
+	local def = ItemStack(node.name):get_definition()
+	-- Copy pos because the callback could modify it
+	if not def.diggable or (def.can_dig and not def.can_dig(vector.copy(pos), digger)) then
+		minetest.log("info", diggername .. " tried to dig "
+			.. node.name .. " which is not diggable "
+			.. minetest.pos_to_string(pos))
+		return false
 	end
+
+	if minetest.is_protected(pos, diggername) then
+		minetest.log("action", diggername
+			.. " tried to dig " .. node.name
+			.. " at protected position "
+			.. minetest.pos_to_string(pos))
+		minetest.record_protection_violation(pos, diggername)
+		return false
+	end
+
+	minetest.log('action', diggername .. " digs "
+		.. node.name .. " at " .. minetest.pos_to_string(pos))
+
+	local wielded = digger and digger:get_wielded_item()
+	local drops = {node.name}  -- this is instead of asking minetest to generate the node drops
+
+	if wielded then
+		local wdef = wielded:get_definition()
+		local tp = wielded:get_tool_capabilities()
+		local dp = minetest.get_dig_params(def and def.groups, tp, wielded:get_wear())
+		if wdef and wdef.after_use then
+			wielded = wdef.after_use(wielded, digger, node, dp) or wielded
+		else
+			-- Wear out tool
+			if not minetest.is_creative_enabled(diggername) then
+				wielded:add_wear(dp.wear)
+				if wielded:get_count() == 0 and wdef.sound and wdef.sound.breaks then
+					minetest.sound_play(wdef.sound.breaks, {
+						pos = pos,
+						gain = 0.5
+					}, true)
+				end
+			end
+		end
+		digger:set_wielded_item(wielded)
+	end
+
+	-- Check to see if metadata should be preserved.
+	if def and def.preserve_metadata then
+		local oldmeta = minetest.get_meta(pos):to_table().fields
+		-- Copy pos and node because the callback can modify them.
+		local pos_copy = vector.copy(pos)
+		local node_copy = { name = node.name, param1 = node.param1, param2 = node.param2 }
+		local drop_stacks = {}
+		for k, v in pairs(drops) do
+			drop_stacks[k] = ItemStack(v)
+		end
+		drops = drop_stacks
+		def.preserve_metadata(pos_copy, node_copy, oldmeta, drops)
+	end
+
+	-- Handle drops
+	minetest.handle_node_drops(pos, drops, digger)
+
+	local oldmetadata
+	if def and def.after_dig_node then
+		oldmetadata = minetest.get_meta(pos):to_table()
+	end
+
+	-- Remove node and update
 	minetest.remove_node(pos)
+
+	-- Play sound if it was done by a player
+	if diggername ~= "" and def and def.sounds and def.sounds.dug then
+		minetest.sound_play(def.sounds.dug, {
+			pos = pos,
+			exclude_player = diggername,
+		}, true)
+	end
+
+	-- Run callback
+	if def and def.after_dig_node then
+		-- Copy pos and node because callback can modify them
+		local pos_copy = vector.copy(pos)
+		local node_copy = { name = node.name, param1 = node.param1, param2 = node.param2 }
+		def.after_dig_node(pos_copy, node_copy, oldmetadata, digger)
+	end
+
+	-- Run script hook
+	for _, callback in ipairs(minetest.registered_on_dignodes) do
+		local origin = minetest.callback_origins[callback]
+		minetest.set_last_run_mod(origin.mod)
+
+		-- Copy pos and node because callback can modify them
+		local pos_copy = vector.copy(pos)
+		local node_copy = { name = node.name, param1 = node.param1, param2 = node.param2 }
+		callback(pos_copy, node_copy, digger)
+	end
+
+	return true
 end
 
 function unifieddyes.on_dig(pos, node, digger)
-	if not digger then return end
-	local playername = digger:get_player_name()
-	if minetest.is_protected(pos, playername) then 
-		minetest.record_protection_violation(pos, playername)
-		return
-	end
-
-	local oldparam2 = minetest.get_node(pos).param2
+	local param2 = minetest.get_node(pos).param2
 	local def = minetest.registered_items[node.name]
-	local fix_color
+	local del_color
 
-	if def.paramtype2 == "color" and oldparam2 == 240 and def.palette == "unifieddyes_palette_extended.png" then
-		fix_color = 240
-	elseif def.paramtype2 == "color" and oldparam2 == 0 and def.palette == "unifieddyes_palette_extended.png" then
-		fix_color = 0
-	elseif def.paramtype2 == "colorwallmounted" and math.floor(oldparam2 / 8) == 0 and def.palette == "unifieddyes_palette_colorwallmounted.png" then
-		fix_color = 0
-	elseif def.paramtype2 == "colorfacedir" and math.floor(oldparam2 / 32) == 0 and string.find(def.palette, "unifieddyes_palette_") then
-		fix_color = 0
+	if def.paramtype2 == "color" and param2 == 240 and def.palette == "unifieddyes_palette_extended.png" then
+		del_color = true
+	elseif (def.paramtype2 == "colorwallmounted" or def.paramtype2 == "colorfacedir")
+		and minetest.strip_param2_color(param2, def.paramtype2) == 0
+		and string.find(def.palette, "unifieddyes_palette_")
+	then
+		del_color = true
 	end
 
-	local inv = digger:get_inventory()
-	if fix_color then
-		move_item(node.name, pos, inv, digger, fix_color)
+	if del_color then
+		return node_dig_without_color(pos, node, digger)
 	else
 		return minetest.node_dig(pos, node, digger)
 	end
@@ -117,6 +198,7 @@ function unifieddyes.generate_split_palette_nodes(name, def, drop)
 		def2.palette = "unifieddyes_palette_"..color.."s.png"
 		def2.paramtype2 = "colorfacedir"
 		def2.groups.ud_param2_colorable = 1
+		def2.is_ground_content = false
 
 		if drop then
 			def2.drop = {
@@ -132,14 +214,11 @@ end
 
 -- This helper function creates a colored itemstack
 
-function unifieddyes.fix_bad_color_info(item, paletteidx)
-	local stack=minetest.itemstring_with_color(item, paletteidx)
-	return string.gsub(stack, "u0001color", "u0001palette_index")
-end
-
 function unifieddyes.make_colored_itemstack(item, palette, color)
 	local paletteidx = unifieddyes.getpaletteidx(color, palette)
-	return unifieddyes.fix_bad_color_info(item, paletteidx), paletteidx
+	local stack = ItemStack(item)
+	stack:get_meta():set_int("palette_index", paletteidx)
+	return stack:to_string(),paletteidx
 end
 
 -- these helper functions register all of the recipes needed to create colored
@@ -147,7 +226,7 @@ end
 
 local function register_c(craft, h, sat, val)
 	local hue = (type(h) == "table") and h[1] or h
-	local color = ""
+	local color
 	if val then
 		if craft.palette == "wallmounted" then
 			color = val..hue..sat
@@ -288,9 +367,9 @@ end
 
 function unifieddyes.get_hsv(name) -- expects a node/item name
 	local hue = ""
-	local a,b
+	local a
 	for _, i in ipairs(unifieddyes.HUES_EXTENDED) do
-		a,b = string.find(name, "_"..i[1])
+		a,_ = string.find(name, "_"..i[1])
 		if a then
 			hue = i[1]
 			break
@@ -327,8 +406,6 @@ end
 -- "wallmounted" = 32-color abridged palette
 
 function unifieddyes.getpaletteidx(color, palette_type)
-
-	local origcolor = color
 
 	if string.sub(color,1,4) == "dye:" then
 		color = string.sub(color,5,-1)
@@ -383,7 +460,8 @@ function unifieddyes.getpaletteidx(color, palette_type)
 		elseif color == "pink" then return 56,7
 		elseif color == "blue" and shade == "light" then return 40,5
 		elseif unifieddyes.gpidx_hues_wallmounted[color] and unifieddyes.gpidx_shades_wallmounted[shade] then
-			return (unifieddyes.gpidx_shades_wallmounted[shade] * 64 + unifieddyes.gpidx_hues_wallmounted[color] * 8), unifieddyes.gpidx_hues_wallmounted[color]
+			return (unifieddyes.gpidx_shades_wallmounted[shade] * 64 + unifieddyes.gpidx_hues_wallmounted[color] * 8),
+			unifieddyes.gpidx_hues_wallmounted[color]
 		end
 	else
 		if color == "brown" then
@@ -399,7 +477,8 @@ function unifieddyes.getpaletteidx(color, palette_type)
 			end
 		elseif palette_type == "extended" then
 			if unifieddyes.gpidx_hues_extended[color] and unifieddyes.gpidx_shades_extended[shade] then
-				return (unifieddyes.gpidx_hues_extended[color] + unifieddyes.gpidx_shades_extended[shade]*24), unifieddyes.gpidx_hues_extended[color]
+				return (unifieddyes.gpidx_hues_extended[color] + unifieddyes.gpidx_shades_extended[shade]*24),
+				unifieddyes.gpidx_hues_extended[color]
 			end
 		end
 	end
@@ -427,7 +506,7 @@ function unifieddyes.color_to_name(param2, def)
 		local color = param2
 
 		local v = 0
-		local s = 1 
+		local s = 1
 		if color < 24 then v = 1
 		elseif color > 23  and color < 48  then v = 2
 		elseif color > 47  and color < 72  then v = 3
@@ -445,7 +524,7 @@ function unifieddyes.color_to_name(param2, def)
 			elseif color == 244 then return "light_grey"
 			elseif color == 247 then return "grey"
 			elseif color == 251 then return "dark_grey"
-			elseif color == 255 then return "black" 
+			elseif color == 255 then return "black"
 			else return "grey_"..15-(color-240)
 			end
 		else
