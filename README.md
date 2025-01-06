@@ -187,7 +187,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [mypaths][] ([DWYWPL][lic.dwywpl]) -- version: [078f52c Git][ver.mypaths] _2024-02-29_
   * [myroofs][] ([DWYWPL][lic.dwywpl]) -- version: [fe98461 Git][ver.myroofs] *2017-07-14*
   * [mysheetmetal][] ([DWYWPL][lic.dwywpl]) -- version: [2ffb3a2 Git][ver.mysheetmetal] _2018-02-16_
-  * [mywoodslopes][] ([DWYWPL][lic.dwywpl]) -- version: [3a1b531 Git][ver.mywoodslopes] *2016-03-23* (patched)
+  * [mywoodslopes][] ([DWYWPL][lic.dwywpl]) -- version: [b661b28 Git][ver.mywoodslopes] _2021-04-28_ (patched)
 * [technic][] ([LGPL][lic.lgpl2.0]) -- version: [1c21948 Git][ver.technic] *2021-04-14*
 
 
@@ -665,7 +665,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.mypaths]: https://github.com/minetest-mods/mypaths/tree/078f52ce7d6bb993e2687a5643c8eab6a44804b1
 [ver.myroofs]: https://github.com/minetest-mods/myroofs/tree/fe98461
 [ver.mysheetmetal]: https://github.com/minetest-mods/mysheetmetal/tree/2ffb3a253962dcb75d2ce292487a07793dc43e77
-[ver.mywoodslopes]: https://github.com/minetest-mods/mywoodslopes/tree/3a1b531
+[ver.mywoodslopes]: https://github.com/minetest-mods/mywoodslopes/tree/b661b28582e0c3bd93199cb735bb81832d57a292
 [ver.nether]: https://github.com/minetest-mods/nether/tree/v3.1
 [ver.no_fall_damage]: https://repo.or.cz/minetest_no_fall_damage.git/shortlog/refs/tags/1.0.0
 [ver.painting]: https://github.com/minetest-mods/painting/tree/da8f4ba
