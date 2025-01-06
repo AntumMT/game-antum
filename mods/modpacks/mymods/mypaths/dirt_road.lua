@@ -14,8 +14,9 @@ minetest.register_node("mypaths:dirt_road_side", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {crumbly = 2},
+	is_ground_content = false,
 	sounds = default.node_sound_dirt_defaults(),
-	})
+})
 --Dirt Road Side Angle
 minetest.register_node("mypaths:dirt_road_side_angle", {
 	description = "Dirt Road Side Angle",
@@ -30,8 +31,9 @@ minetest.register_node("mypaths:dirt_road_side_angle", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {crumbly = 2},
+	is_ground_content = false,
 	sounds = default.node_sound_dirt_defaults(),
-	})
+})
 --Dirt Road Side Angle End
 minetest.register_node("mypaths:dirt_road_side_angle_end1", {
 	description = "Dirt Road Angle End 1",
@@ -46,8 +48,9 @@ minetest.register_node("mypaths:dirt_road_side_angle_end1", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {crumbly = 2},
+	is_ground_content = false,
 	sounds = default.node_sound_dirt_defaults(),
-	})
+})
 --Dirt Road Side Angle End
 minetest.register_node("mypaths:dirt_road_side_angle_end2", {
 	description = "Dirt Road Angle End 2",
@@ -62,8 +65,9 @@ minetest.register_node("mypaths:dirt_road_side_angle_end2", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {crumbly = 2},
+	is_ground_content = false,
 	sounds = default.node_sound_dirt_defaults(),
-	})
+})
 --Dirt Road Side Angle End
 minetest.register_node("mypaths:dirt_road_side_angle_end3", {
 	description = "Dirt Road Angle End 3",
@@ -78,8 +82,9 @@ minetest.register_node("mypaths:dirt_road_side_angle_end3", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {crumbly = 2},
+	is_ground_content = false,
 	sounds = default.node_sound_dirt_defaults(),
-	})
+})
 --Dirt Road Side Angle End
 minetest.register_node("mypaths:dirt_road_side_angle_end4", {
 	description = "Dirt Road Angle End 4",
@@ -94,8 +99,9 @@ minetest.register_node("mypaths:dirt_road_side_angle_end4", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {crumbly = 2},
+	is_ground_content = false,
 	sounds = default.node_sound_dirt_defaults(),
-	})
+})
 --Dirt Road Inside Corner
 minetest.register_node("mypaths:dirt_road_icorner", {
 	description = "Dirt Road Inside Corner",
@@ -110,8 +116,9 @@ minetest.register_node("mypaths:dirt_road_icorner", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {crumbly = 2},
+	is_ground_content = false,
 	sounds = default.node_sound_dirt_defaults(),
-	})
+})
 
 --Dirt Road Outside Corner
 minetest.register_node("mypaths:dirt_road_ocorner", {
@@ -127,6 +134,7 @@ minetest.register_node("mypaths:dirt_road_ocorner", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {crumbly = 2},
+	is_ground_content = false,
 	sounds = default.node_sound_dirt_defaults(),
-	})
+})
 

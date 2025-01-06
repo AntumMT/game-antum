@@ -5,8 +5,9 @@ minetest.register_node("mypaths:dirt_road", {
 	tiles = {"mypaths_dirt_road.png"},
 	drawtype = "normal",
 	groups = {crumbly = 2},
+	is_ground_content = false,
 	sounds = default.node_sound_dirt_defaults(),
-	})
+})
 --Craft
 minetest.register_craft({
 	type = "cooking",

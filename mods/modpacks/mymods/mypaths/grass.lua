@@ -59,7 +59,7 @@ local icorner_cbox_long = {
 		{-0.5, -0.5, -1.5, 1.25, -0.25, 0.5},
 		{-0.5, -0.5, -1.5, 1.5, -0.375, 0.5},
 		{-0.5, -0.5, -0.25, 1.5, 0.25, 0.5},
-		{-0.5, -0.5, -0.5, 1.5, 0.125, 0.5}, 
+		{-0.5, -0.5, -0.5, 1.5, 0.125, 0.5},
 		{-0.5, -0.5, -0.75, 1.5, 0, 0.5},
 		{-0.5, -0.5, -1, 1.5, -0.125, 0.5},
 		{-0.5, -0.5, -1.25, 1.5, -0.25, 0.5},
@@ -72,10 +72,10 @@ local ocorner_cbox_long = {
 		{-0.5, -0.5, 0.25, -0.25, 0.5, 0.5},
 		{-0.5, -0.5, 0, 0, 0.375, 0.5},
 		{-0.5, -0.5, -0.25, 0.25, 0.25, 0.5},
-		{-0.5, -0.5, -0.5, 0.5, 0.125, 0.5}, 
-		{-0.5, -0.5, -0.75, 0.75, 0, 0.5}, 
-		{-0.5, -0.5, -1, 1, -0.125, 0.5}, 
-		{-0.5, -0.5, -1.25, 1.25, -0.25, 0.5}, 
+		{-0.5, -0.5, -0.5, 0.5, 0.125, 0.5},
+		{-0.5, -0.5, -0.75, 0.75, 0, 0.5},
+		{-0.5, -0.5, -1, 1, -0.125, 0.5},
+		{-0.5, -0.5, -1.25, 1.25, -0.25, 0.5},
 		{-0.5, -0.5, -1.5, 1.5, -0.375, 0.5},
 	}
 }
@@ -88,6 +88,7 @@ minetest.register_node("mypaths:grass", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {crumbly = 2, soil=1},
+	is_ground_content = false,
 	sounds = default.node_sound_dirt_defaults({
 		footstep = {name="default_grass_footstep", gain=0.25},
 	}),
@@ -110,6 +111,7 @@ minetest.register_node("mypaths:grass_slope", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {crumbly = 2, soil=1},
+	is_ground_content = false,
 	sounds = default.node_sound_dirt_defaults({
 		footstep = {name="default_grass_footstep", gain=0.25},
 	}),
@@ -134,6 +136,7 @@ minetest.register_node("mypaths:grass_slope_long", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {crumbly = 2, soil=1},
+	is_ground_content = false,
 	sounds = default.node_sound_dirt_defaults({
 		footstep = {name="default_grass_footstep", gain=0.25},
 	}),
@@ -159,6 +162,7 @@ minetest.register_node("mypaths:grass_ocorner", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {crumbly = 2, soil=1},
+	is_ground_content = false,
 	sounds = default.node_sound_dirt_defaults({
 		footstep = {name="default_grass_footstep", gain=0.25},
 	}),
@@ -185,6 +189,7 @@ minetest.register_node("mypaths:grass_icorner", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {crumbly = 2, soil=1},
+	is_ground_content = false,
 	sounds = default.node_sound_dirt_defaults({
 		footstep = {name="default_grass_footstep", gain=0.25},
 	}),
@@ -209,6 +214,7 @@ minetest.register_node("mypaths:grass_slope_long_oc", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {crumbly = 2, soil=1},
+	is_ground_content = false,
 	sounds = default.node_sound_dirt_defaults({
 		footstep = {name="default_grass_footstep", gain=0.25},
 	}),
@@ -233,6 +239,7 @@ minetest.register_node("mypaths:grass_slope_long_ic", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {crumbly = 2, soil=1},
+	is_ground_content = false,
 	sounds = default.node_sound_dirt_defaults({
 		footstep = {name="default_grass_footstep", gain=0.25},
 	}),

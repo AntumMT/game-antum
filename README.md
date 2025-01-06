@@ -184,7 +184,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [myfences][] ([DWYWPL][lic.dwywpl]) -- version: [c6e529a Git][ver.myfences] *2016-04-04*
   * [mylights][] ([DWYWPL][lic.dwywpl]) -- version: [0d734b7 Git][ver.mylights] *2017-07-14*
   * [mypaint][] ([DWYWPL][lic.dwywpl]) -- version: [9288e8d Git][ver.mypaint] *2017-11-16*
-  * [mypaths][] ([DWYWPL][lic.dwywpl]) -- version: [4de5e84 Git][ver.mypaths] *2016-03-23*
+  * [mypaths][] ([DWYWPL][lic.dwywpl]) -- version: [078f52c Git][ver.mypaths] _2024-02-29_
   * [myroofs][] ([DWYWPL][lic.dwywpl]) -- version: [fe98461 Git][ver.myroofs] *2017-07-14*
   * [mysheetmetal][] ([DWYWPL][lic.dwywpl]) -- version: [7c5ab71 Git][ver.mysheetmetal] *2016-04-12* ([patched][patch.mysheetmetal])
   * [mywoodslopes][] ([DWYWPL][lic.dwywpl]) -- version: [3a1b531 Git][ver.mywoodslopes] *2016-03-23* (patched)
@@ -662,7 +662,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.myfences]: https://github.com/DonBatman/myfences/tree/c6e529a
 [ver.mylights]: https://github.com/minetest-mods/mylights/tree/0d734b7
 [ver.mypaint]: https://github.com/DonBatman/mypaint/tree/9288e8d
-[ver.mypaths]: https://github.com/minetest-mods/mypaths/tree/4de5e84
+[ver.mypaths]: https://github.com/minetest-mods/mypaths/tree/078f52ce7d6bb993e2687a5643c8eab6a44804b1
 [ver.myroofs]: https://github.com/minetest-mods/myroofs/tree/fe98461
 [ver.mysheetmetal]: https://github.com/minetest-mods/mysheetmetal/tree/7c5ab71
 [ver.mywoodslopes]: https://github.com/minetest-mods/mywoodslopes/tree/3a1b531
