@@ -6,7 +6,7 @@
 |-[Armor Configuration](#armor-configuration)                               |||- - [3d_Armor Item Storage](#3d_armor-item-storage)
 |- - [disable_specific_materials](#to-disable-individual-armor-materials)   |||- - [Armor Registration](#armor-registration)
 |- - [armor_init_delay](#initialization-glitches-when-a-player-first-joins) |||- - [Registering Armor Groups](#registering-armor-groups)
-|- - [armor_init_times](#number-of-initialization-attempts)                 |||- - [Groups used by 3d_Armor](#groups-used-by-3d_armor)
+|- - [wieldview_update_time](#how-often-player-wield-items-are-updated)     |||- - [Groups used by 3d_Armor](#groups-used-by-3d_armor)
 |- - [armor_bones_delay](#armor-not-in-bones-due-to-server-lag)             |||- - - [Elements](#elements)
 |- - [armor_update_time](#how-often-player-armor-items-are-updated)         |||- - - [Attributes](#attributes)
 |- - [armor_drop](#drop-armor-when-a-player-dies)                           |||- - - [Physics](#physics)
@@ -19,7 +19,7 @@
 |- - [armor_fire_protect](#enable-fire-protection)                          |||- - - [armor:remove_all](#armor-remove_all)
 |- - [armor_punch_damage](#enable-punch-damage-effects)                     |||- - - [armor:equip](#armor-equip)
 |- - [armor_migrate_old_inventory](#migration-of-old-armor-inventories)     |||- - - [armor:unequip](#armor-unequip)
-|- - [wieldview_update_time](#how-often-player-wield-items-are-updated)     |||- - - [armor:update_skin](#armor-update_skin)
+|                                                                           |||- - - [armor:update_skin](#armor-update_skin)
 |-[Credits](#credits)                                                       |||- - [Callbacks](#Callbacks)
 |                                                                           |||- - - [Item callbacks](#item-callbacks)
 |                                                                           |||- - - [Global callbacks](#global-callbacks)
@@ -53,16 +53,12 @@ Change the following default settings by going to Main Menu>>Settings(Tab)>>All 
     armor_material_gold = true
     armor_material_mithril = true
     armor_material_crystal = true
+    armor_material_nether = true
 
 ### Initialization glitches when a player first joins
  **Increase to prevent glitches**
  
     armor_init_delay = 2
-
-### Number of initialization attempts
- **Increase to prevent glitches - Use in conjunction with armor_init_delay if initialization problems persist.**
-
-    armor_init_times = 10
 
 ### Armor not in bones due to server lag
  **Increase to help resolve**
@@ -253,7 +249,7 @@ The above allows armor to block/prevent new damage types but you also need to as
 ## Groups used by 3d_Armor
 3d_armor has many default groups already registered, these are categorized under 4 main headings
  - **Elements:** armor_head, armor_torso, armor_legs, armor_feet
- - **Attributes:** armor_heal, armor_fire, armor_water
+ - **Attributes:** armor_heal, armor_fire, armor_water, armor_feather
  - **Physics:** physics_jump, physics_speed, physics_gravity
  - **Durability:** armor_use, flammable
  
@@ -333,6 +329,9 @@ The below Diamond chestplate has a 12% chance to completely block all damage (ar
 		damage_groups = {cracky=2, snappy=1, choppy=1, level=3},
 	})
 
+#### Armor_feather
+***"Armor_feather"*** will slow a player when falling. This only has one level or state, which is armor_feather=1
+
 ### Physics
 The physics attributes supported by 3d_armor are ***physics_jump, physics_speed and physics_gravity***. Although 3d_armor supports the use of this with no other mods it is recommended that the mod [player_monoids](https://forum.minetest.net/viewtopic.php?t=14895) is used to help with intermod compatability. 
 
@@ -395,6 +394,8 @@ If all of the above were made of material "wood" the player would recieve an ***
 ***Note: At the moment an armor item can only be made of one material***
 
 ## Armor Functions
+
+See also: [API Reference](https://minetest-mods.github.io/3d_armor/reference/)
 
 ### armor set_player_armor
 

@@ -162,7 +162,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 ### This is a list of installed modpacks & their components (trying to keep them listed separate for sake of organization):
 
-* [3d_armor][] ([LGPL / CC BY-SA][lic.3d_armor]) - version: [ac76152 Git][ver.3d_armor] *2021-07-13*
+* [3d_armor][] ([LGPL / CC BY-SA][lic.3d_armor]) - version: [2024-12-28][ver.3d_armor]
 * castle ([MIT][lic.castle])
   * [castle_farming][] -- version: [032f277 Git][ver.castle_farming] *2020-02-28*
   * [castle_gates][] -- version: [21b5a6c Git][ver.castle_gates] *2021-03-14*
@@ -552,7 +552,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.wtfpl]: doc/licenses/WTFPL.txt
 [lic.zlib]: doc/licenses/zlib.txt
 
-[ver.3d_armor]: https://github.com/minetest-mods/3d_armor/tree/ac7615212b5278a0c08f94fa5ac258f048d31d53
+[ver.3d_armor]: https://github.com/minetest-mods/3d_armor/tree/082e866274632c96c713817683e07cdafff81c93
 [ver.3d_armor_gloves]: https://github.com/sirrobzeroone/3d_armor_gloves/tree/f099d76
 [ver.3d_armor_light]: https://github.com/AntumMT/mod-3d_armor_light/releases/tag/v1.0
 [ver.airtanks]: https://github.com/minetest-mods/airtanks/tree/b686694
