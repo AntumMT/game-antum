@@ -121,7 +121,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [hbsprint][] ([LGPL][lic.lgpl2.1]) -- version: [f566d0f Git][ver.hbsprint] *2021-02-18*
   * [player_monoids][] ([Apache][lic.player_monoids]) -- version: [ed11a73 Git][ver.player_monoids] *2019-10-17*
 * player/visuals/
-  * [headanim][] ([MIT][lic.headanim]) -- version: [1.01][ver.headanim] *2021-01-16*
+  * [headanim][] ([MIT][lic.headanim]) -- version: [1.2.1][ver.headanim] _2024-12-14_
   * [hidename][] ([MIT][lic.hidename]) -- version: [1.1][ver.hidename] *2021-05-17*
   * [invisibility][] ([MIT][lic.invisibility]) -- version: [65c0823 Git][ver.invisibility] *2021-01-21* ([patched][patch.invisibility])
   * [wardrobe][] ([MIT][lic.wardrobe]) -- version: [0500a78 Git][ver.wardrobe] *2021-06-08*
@@ -624,7 +624,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.glow]: https://github.com/bdjnk/glow/tree/4c015a0
 [ver.hbarmor]: http://repo.or.cz/minetest_hbarmor.git/tree/93d994c
 [ver.hbsprint]: https://github.com/tacotexmex/hbsprint/tree/f566d0f
-[ver.headanim]: https://github.com/LoneWolfHT/headanim/releases/tag/v1.01
+[ver.headanim]: https://github.com/LoneWolfHT/headanim/tree/580816fb3a492d1ceca4e6cd2a1c0dc796e5c9f9
 [ver.helicopter]: https://github.com/APercy/helicopter/tree/d3985b0
 [ver.hidename]: https://github.com/AntumMT/mod-hidename/releases/tag/v1.1
 [ver.home_gui]: https://github.com/cornernote/minetest-home_gui/tree/44c2f1533e1695b923cb3dae03bc6fce1b1b1432
