@@ -16,7 +16,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [spectator_mode][] ([WTFPL][lic.spectator_mode]) -- version: [3648371 Git][ver.spectator_mode] *2020-07-15*
   * [whitelist][] ([MIT][lic.whitelist]) -- version: [1.1][ver.whitelist] *2021-06-09*
 * audio/
-  * [sounds][] ([MIT][lic.sounds] / [CC BY-SA][lic.ccbysa3.0]) -- version: [1.6][version.sounds] *2021-08-13*
+  * [sounds][] ([MIT][lic.sounds] / [CC BY-SA][lic.ccbysa3.0]) -- version: [1.6][ver.sounds] *2021-08-13*
 * buildings/
   * [bridges][] ([GPL][lic.gpl3.0]) -- version: [1.0.0][ver.bridges] *2023-02-13* ([patched][patch.bridges])
   * [christmas][] ([MIT][lic.christmas]) -- version [d3bd872 Git][ver.christmas] *2013-01-11* ([patched][patch.christmas])
