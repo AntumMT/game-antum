@@ -1,14 +1,16 @@
-minetest.override_item("default:bookshelf", {
-	drawtype = "mesh",
-	mesh = "homedecor_3d_bookshelf.obj",
-	tiles = {
-		"default_wood.png",
-		"default_wood.png^homedecor_3d_bookshelf_inside_back.png",
-		"homedecor_3d_bookshelf_books.png",
-	},
-	paramtype = "light",
-	paramtype2 = "facedir",
-})
+if minetest.get_modpath("default") then
+	minetest.override_item("default:bookshelf", {
+		drawtype = "mesh",
+		mesh = "homedecor_3d_bookshelf.obj",
+		tiles = {
+			"default_wood.png",
+			"default_wood.png^homedecor_3d_bookshelf_inside_back.png",
+			"homedecor_3d_bookshelf_books.png",
+		},
+		paramtype = "light",
+		paramtype2 = "facedir",
+	})
+end
 
 if minetest.get_modpath("vessels") then
 	minetest.override_item("vessels:shelf", {
@@ -21,7 +23,6 @@ if minetest.get_modpath("vessels") then
 		},
 		paramtype = "light",
 		paramtype2 = "facedir",
-		use_texture_alpha = "blend"
 	})
 
 	local sbox = {
@@ -35,7 +36,6 @@ if minetest.get_modpath("vessels") then
 		tiles = {"homedecor_3d_vessels_shelf_glass.png"},
 		inventory_image = "homedecor_3d_vessels_glass_bottle_inv.png",
 		wield_image = "homedecor_3d_vessels_glass_bottle_inv.png",
-		use_texture_alpha = "blend",
 		selection_box = sbox
 	})
 
@@ -54,7 +54,6 @@ if minetest.get_modpath("vessels") then
 		tiles = {"homedecor_3d_vessels_shelf_glass.png"},
 		inventory_image = "homedecor_3d_vessels_drinking_glass_inv.png",
 		wield_image = "homedecor_3d_vessels_drinking_glass_inv.png",
-		use_texture_alpha = "blend",
 		selection_box = sbox
 	})
 end
@@ -92,16 +91,22 @@ if minetest.get_modpath("doors") then
 	local def
 	for _,mat in ipairs({"wood", "steel"}) do
 		def = table.copy(minetest.registered_nodes["doors:door_"..mat.."_a"])
+			def.groups.handy = 1
+			def._mcl_hardness=0.6
 			def.mesh = "homedecor_3d_door_"..mat.."_a.obj"
 			minetest.register_node(":doors:door_"..mat.."_a", def)
 
 		def = table.copy(minetest.registered_nodes["doors:door_"..mat.."_b"])
+			def.groups.handy = 1
+			def._mcl_hardness=0.6
 			def.mesh = "homedecor_3d_door_"..mat.."_b.obj"
 			minetest.register_node(":doors:door_"..mat.."_b", def)
 	end
 
 	for _,mat in ipairs({"", "_steel"}) do
 		def = table.copy(minetest.registered_nodes["doors:trapdoor"..mat])
+			def.groups.handy = 1
+			def._mcl_hardness=0.6
 			def.drawtype = "mesh"
 			def.mesh = "homedecor_3d_trapdoor"..mat..".obj"
 			def.tiles = {
@@ -111,6 +116,8 @@ if minetest.get_modpath("doors") then
 			minetest.register_node(":doors:trapdoor"..mat, def)
 
 		def = table.copy(minetest.registered_nodes["doors:trapdoor"..mat.."_open"])
+			def.groups.handy = 1
+			def._mcl_hardness=0.6
 			def.mesh = "homedecor_3d_trapdoor"..mat.."_open.obj"
 			def.drawtype = "mesh"
 			def.tiles = {

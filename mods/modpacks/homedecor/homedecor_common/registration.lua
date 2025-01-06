@@ -6,6 +6,21 @@ local placeholder_node = "homedecor:expansion_placeholder"
 function homedecor.register(name, original_def)
 	local def = table.copy(original_def)
 
+	def.is_furnace = nil
+
+	if def.groups and (def.groups.crumbly or def.groups.oddly_breakable_by_hand) then
+		def.groups["handy"]=1
+		def._mcl_hardness=0.6
+	elseif def.groups and (def.groups.snappy or def.groups.choppy) then
+		def.groups["axey"]=5
+		def._mcl_hardness=1.6
+	elseif def.groups and (def.groups.cracky or def.groups.crumbly) then
+		def.groups["pickaxey"]=5
+		def._mcl_hardness=1.6
+	end
+
+	def.is_ground_content = def.is_ground_content == true
+
 	def.drawtype = def.drawtype
 		or (def.mesh and "mesh")
 		or (def.node_box and "nodebox")
@@ -44,9 +59,12 @@ function homedecor.register(name, original_def)
 	if expand then
 		-- dissallow rotating only half the expanded node by default
 		-- unless we know better
-		def.on_rotate = def.on_rotate
-			or (minetest.get_modpath("screwdriver") and (def.mesh and expand.top and screwdriver.rotate_simple)
-			or screwdriver.disallow) or nil
+		def.on_rotate = def.on_rotate or (
+			minetest.get_modpath("screwdriver") and (
+				(def.mesh and expand.top and screwdriver.rotate_simple) or
+				screwdriver.disallow
+			)
+		)
 
 		def.on_place = def.on_place or function(itemstack, placer, pointed_thing)
 			if expand.top then
@@ -94,6 +112,31 @@ function homedecor.register(name, original_def)
 		end
 	end
 
+	local crafts = def.crafts and table.copy(def.crafts) or {}
+	def.crafts = nil
+
 	-- register the actual minetest node
 	minetest.register_node(":homedecor:" .. name, def)
+
+	for _, cdef in pairs(crafts) do
+		if cdef.recipe then
+			for k, row in pairs(cdef.recipe) do
+				if type(row) == "string" and homedecor.materials[row] then
+					cdef.recipe[k] = homedecor.materials[row]
+				elseif type(row) == "table" then
+					for i, item in pairs(row) do
+						if homedecor.materials[item] then
+							cdef.recipe[k][i] = homedecor.materials[item]
+						end
+					end
+				end
+			end
+		end
+
+		if cdef.type ~= "toolrepair" and not cdef.output then
+			cdef.output = "homedecor:" .. name
+		end
+
+		minetest.register_craft(cdef)
+	end
 end

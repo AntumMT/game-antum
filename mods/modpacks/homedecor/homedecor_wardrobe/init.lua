@@ -1,5 +1,13 @@
+if not minetest.get_modpath("player_api") then
+	minetest.log(
+		"action",
+		"[homedecor_wardrobe]: minetest game not detected, disabling as this mod is minetest game only at this time"
+	)
+	return
+end
+
 local S = minetest.get_translator("homedecor_wardrobe")
-modpath = minetest.get_modpath("homedecor_wardrobe")
+local modpath = minetest.get_modpath("homedecor_wardrobe")
 
 local wd_cbox = {type = "fixed", fixed = {-0.5, -0.5, -0.5, 0.5, 1.5, 0.5}}
 
@@ -26,6 +34,9 @@ if skinsdb_mod_path then
 
 			skin_obj:set_preview("homedecor_clothes_"..skin_name.."_preview.png")
 			skin_obj:set_texture("homedecor_clothes_"..skin_name..".png")
+			if skin_obj.set_hand_from_texture then
+				skin_obj:set_hand_from_texture()
+			end
 			skin_obj:set_meta("name", S("Wardrobe").." "..skin_name)
 			skin_obj:set_meta("author", 'Calinou and Jordach')
 			skin_obj:set_meta("license", 'CC-by-SA-4.0')
@@ -59,11 +70,10 @@ local function set_player_skin(player, skin, save)
 
 	if save and not skinsdb_mod_path then
 
-		local pmeta = player:get_meta()
 		if skin == default_skin then
-			pmeta:set_string("homedecor:player_skin", "")
+			player:set_attribute("homedecor:player_skin", "")
 		else
-			pmeta:set_string("homedecor:player_skin", skin)
+			player:set_attribute("homedecor:player_skin", skin)
 		end
 	end
 end
@@ -83,7 +93,9 @@ local def = {
 	paramtype = "light",
 	paramtype2 = "facedir",
 
-	groups = {snappy = 3},
+	groups = {snappy = 3, axey=5},
+	is_ground_content = false,
+	_mcl_hardness=1.6,
 	selection_box = wd_cbox,
 	collision_box = wd_cbox,
 	sounds = default.node_sound_wood_defaults(),
@@ -174,7 +186,7 @@ if not skinsdb_mod_path then -- If not managed by skinsdb
 
 	minetest.register_on_joinplayer(function(player)
 
-		local skin = player:get_meta():get_string("homedecor:player_skin")
+		local skin = player:get_meta():get("homedecor:player_skin")
 
 		if skin and skin ~= "" then
 
@@ -189,7 +201,7 @@ end
 minetest.register_craft( {
 	output = "homedecor:wardrobe",
 	recipe = {
-		{ "homedecor:drawer_small", "homedecor:kitchen_cabinet" },
+		{ "homedecor:drawer_small", "homedecor:kitchen_cabinet_colorable" },
 		{ "homedecor:drawer_small", "group:wood" },
 		{ "homedecor:drawer_small", "group:wood" }
 	},

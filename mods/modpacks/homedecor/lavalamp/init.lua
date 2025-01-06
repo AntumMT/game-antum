@@ -22,7 +22,6 @@ minetest.register_node("lavalamp:lavalamp", {
 			},
 		},
 	},
-	use_texture_alpha = "opaque",
 	inventory_image = "lavalamp_lamp_inv.png",
 	paramtype = "light",
 	paramtype2 = "color",
@@ -34,8 +33,12 @@ minetest.register_node("lavalamp:lavalamp", {
 		type = "fixed",
 		fixed = { -0.25, -0.5, -0.25, 0.25,0.5, 0.25 },
 	},
-	groups = {snappy=2,cracky=3,oddly_breakable_by_hand=3, ud_param2_colorable = 1},
-	sounds = default.node_sound_glass_defaults(),
+	groups = {snappy=2,cracky=3,oddly_breakable_by_hand=3, ud_param2_colorable = 1, axey=5},
+	is_ground_content = false,
+	_mcl_hardness=1.6,
+	_sound_def = {
+		key = "node_sound_glass_defaults",
+	},
 	on_construct = unifieddyes.on_construct,
 	on_dig = unifieddyes.on_dig,
 	on_rightclick = function(pos, node, clicker, itemstack, pointed_thing)
@@ -62,8 +65,12 @@ minetest.register_node("lavalamp:lavalamp_off", {
 		type = "fixed",
 		fixed = { -0.25, -0.5, -0.25, 0.25,0.5, 0.25 },
 	},
-	groups = {snappy=2,cracky=3,oddly_breakable_by_hand=3, not_in_creative_inventory=1},
-	sounds = default.node_sound_glass_defaults(),
+	groups = {snappy=2,cracky=3,oddly_breakable_by_hand=3, not_in_creative_inventory=1, axey=5},
+	is_ground_content = false,
+	_mcl_hardness=1.6,
+	_sound_def = {
+		key = "node_sound_glass_defaults",
+	},
 	on_construct = unifieddyes.on_construct,
 	on_rightclick = function(pos, node, clicker, itemstack, pointed_thing)
 		node.name = "lavalamp:lavalamp"
@@ -80,9 +87,9 @@ minetest.register_node("lavalamp:lavalamp_off", {
 minetest.register_craft({
 	output = "lavalamp:lavalamp",
 	recipe = {
-		{"", "wool:white", "", },
-		{"", "bucket:bucket_water", "", },
-		{"", "wool:black", "", }
+		{"", homedecor.materials.wool_white, "", },
+		{"", homedecor.materials.water_bucket, "", },
+		{"", homedecor.materials.wool_black, "", }
 	}
 })
 

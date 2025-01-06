@@ -1,8 +1,0 @@
-# textdomain: inbox
-
-
-### init.lua ###
-
-@1's Mailbox=
-Mailbox=
-The mailbox is full.=

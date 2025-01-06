@@ -241,7 +241,7 @@ for brightness_level = 0, 14 do
 		}
 		overlay = {
 			{ name = "homedecor_glowlight_top_glare.png", color = "white"},
-			"",
+			{ name = "homedecor_glowlight_top_glare.png", color = "white"},
 			{ name = sides_glare, color = "white"},
 			{ name = sides_glare, color = "white"},
 			{ name = sides_glare, color = "white"},
@@ -263,7 +263,7 @@ for brightness_level = 0, 14 do
 		description = S("Thick Glowlight"),
 		tiles = tiles,
 		overlay_tiles = overlay,
-		use_texture_alpha = "opaque",
+		use_texture_alpha = "blend",
 		drawtype = "nodebox",
 		paramtype = "light",
 		paramtype2 = "colorwallmounted",
@@ -275,9 +275,13 @@ for brightness_level = 0, 14 do
 			wall_side =   { -0.5, -0.5, -0.5,   0, 0.5, 0.5 }
 		},
 		node_box = glowlight_nodebox.half,
-		groups = { snappy = 3, ud_param2_colorable = 1, not_in_creative_inventory = nici },
+		groups = { snappy = 3, ud_param2_colorable = 1, not_in_creative_inventory = nici, dig_glass=1, axey=5 },
+		is_ground_content = false,
+		_mcl_hardness=1.6,
 		light_source = brightness_level,
-		sounds = default.node_sound_glass_defaults(),
+		_sound_def = {
+			key = "node_sound_glass_defaults",
+		},
 		after_place_node = function(pos, placer, itemstack, pointed_thing)
 			unifieddyes.fix_rotation(pos, placer, itemstack, pointed_thing)
 		end,
@@ -307,7 +311,7 @@ for brightness_level = 0, 14 do
 		}
 		overlay = {
 			{ name = "homedecor_glowlight_top_glare.png", color = "white"},
-			"",
+			{ name = "homedecor_glowlight_top_glare.png", color = "white"},
 			{ name = sides_glare, color = "white"},
 			{ name = sides_glare, color = "white"},
 			{ name = sides_glare, color = "white"},
@@ -329,7 +333,7 @@ for brightness_level = 0, 14 do
 		description = S("Thin Glowlight"),
 		tiles = tiles,
 		overlay_tiles = overlay,
-		use_texture_alpha = "opaque",
+		use_texture_alpha = "blend",
 		drawtype = "nodebox",
 		paramtype = "light",
 		paramtype2 = "colorwallmounted",
@@ -341,9 +345,13 @@ for brightness_level = 0, 14 do
 			wall_side =   { -0.5, -0.5, -0.5, -0.25,   0.5, 0.5 }
 		},
 		node_box = glowlight_nodebox.quarter,
-		groups = { snappy = 3, ud_param2_colorable = 1, not_in_creative_inventory = nici },
+		groups = { snappy = 3, ud_param2_colorable = 1, not_in_creative_inventory = nici, dig_glass=1, axey=5 },
+		is_ground_content = false,
+		_mcl_hardness=1.6,
 		light_source = brightness_level,
-		sounds = default.node_sound_glass_defaults(),
+		_sound_def = {
+			key = "node_sound_glass_defaults",
+		},
 		after_place_node = function(pos, placer, itemstack, pointed_thing)
 			unifieddyes.fix_rotation(pos, placer, itemstack, pointed_thing)
 		end,
@@ -374,7 +382,7 @@ for brightness_level = 0, 14 do
 		}
 		overlay = {
 			{ name = "homedecor_glowlight_cube_top_glare.png", color = "white"},
-			"",
+			{ name = "homedecor_glowlight_cube_top_glare.png", color = "white"},
 			{ name = sides_glare, color = "white"},
 			{ name = sides_glare, color = "white"},
 			{ name = sides_glare, color = "white"},
@@ -396,7 +404,7 @@ for brightness_level = 0, 14 do
 		description = S("Small Glowlight Cube"),
 		tiles = tiles,
 		overlay_tiles = overlay,
-		use_texture_alpha = "opaque",
+		use_texture_alpha = "blend",
 		paramtype = "light",
 		paramtype2 = "colorwallmounted",
 		drawtype = "nodebox",
@@ -408,9 +416,13 @@ for brightness_level = 0, 14 do
 			wall_side =   {  -0.5, -0.25, -0.25,    0, 0.25, 0.25 }
 		},
 		node_box = glowlight_nodebox.small_cube,
-		groups = { snappy = 3, ud_param2_colorable = 1, not_in_creative_inventory = nici },
+		groups = { snappy = 3, ud_param2_colorable = 1, not_in_creative_inventory = nici, dig_glass=1, axey=5 },
+		is_ground_content = false,
+		_mcl_hardness=1.6,
 		light_source = brightness_level,
-		sounds = default.node_sound_glass_defaults(),
+		_sound_def = {
+			key = "node_sound_glass_defaults",
+		},
 		after_place_node = function(pos, placer, itemstack, pointed_thing)
 			unifieddyes.fix_rotation(pos, placer, itemstack, pointed_thing)
 		end,
@@ -440,19 +452,22 @@ for brightness_level = 0, 14 do
 		lighttex = "homedecor_plasma_lamp_off.png"
 	end
 
+	local gtex=homedecor.textures.metal.gold.block
 	homedecor.register("plasma_lamp_"..brightness_level, {
 		description = S("Plasma Lamp/Light"),
 		drawtype = "mesh",
 		mesh = "plasma_lamp.obj",
 		tiles = {
-			"default_gold_block.png",
+			gtex,
 			lighttex
 		},
 		use_texture_alpha = "blend",
 		light_source = brightness_level,
 		sunlight_propagates = true,
 		groups = {cracky=3, oddly_breakable_by_hand=3, not_in_creative_inventory = nici},
-		sounds = default.node_sound_glass_defaults(),
+		_sound_def = {
+			key = "node_sound_glass_defaults",
+		},
 		on_rightclick = homedecor_lighting.toggle_light,
 		drop = {
 			items = {
@@ -473,10 +488,9 @@ for brightness_level = 0, 14 do
 		description = S("Ground Lantern/Light"),
 		mesh = "homedecor_ground_lantern.obj",
 		tiles = { gen_ls_tex_yellow, "homedecor_generic_metal_wrought_iron.png" },
-		use_texture_alpha = "opaque",
 		inventory_image = "homedecor_ground_lantern_inv.png",
 		wield_image = "homedecor_ground_lantern_inv.png",
-		groups = {snappy=3, not_in_creative_inventory = nici},
+		groups = {snappy=3, not_in_creative_inventory = nici, dig_glass=1},
 		light_source = brightness_level,
 		selection_box = gl_cbox,
 		walkable = false,
@@ -500,10 +514,9 @@ for brightness_level = 0, 14 do
 		description = S("Hanging Lantern/Light"),
 		mesh = "homedecor_hanging_lantern.obj",
 		tiles = { "homedecor_generic_metal_wrought_iron.png", gen_ls_tex_yellow },
-		use_texture_alpha = "opaque",
 		inventory_image = "homedecor_hanging_lantern_inv.png",
 		wield_image = "homedecor_hanging_lantern_inv.png",
-		groups = {snappy=3, not_in_creative_inventory = nici},
+		groups = {snappy=3, not_in_creative_inventory = nici, dig_glass=1},
 		light_source = brightness_level,
 		selection_box = hl_cbox,
 		walkable = false,
@@ -527,10 +540,10 @@ for brightness_level = 0, 14 do
 		drawtype = "mesh",
 		mesh = "homedecor_ceiling_lantern.obj",
 		tiles = { gen_ls_tex_yellow, "homedecor_generic_metal_wrought_iron.png" },
-		use_texture_alpha = "opaque",
+		use_texture_alpha = "blend",
 		inventory_image = "homedecor_ceiling_lantern_inv.png",
 		description = S("Ceiling Lantern/Light"),
-		groups = {snappy=3, not_in_creative_inventory = nici},
+		groups = {snappy=3, not_in_creative_inventory = nici, dig_glass=1},
 		light_source = brightness_level,
 		selection_box = cl_cbox,
 		walkable = false,
@@ -549,9 +562,12 @@ for brightness_level = 0, 14 do
 		homedecor.register("lattice_lantern_large_"..brightness_level, {
 			description = S("Lattice lantern/Light (large)"),
 			tiles = { gen_ls_tex_yellow.."^homedecor_lattice_lantern_large_overlay.png" },
-			groups = { snappy = 3, not_in_creative_inventory = nici },
+			use_texture_alpha = "clip",
+			groups = { snappy = 3, not_in_creative_inventory = nici, dig_glass=1 },
 			light_source = brightness_level,
-			sounds = default.node_sound_glass_defaults(),
+			_sound_def = {
+				key = "node_sound_glass_defaults",
+			},
 			on_rightclick = homedecor_lighting.toggle_light,
 			drop = {
 				items = {
@@ -590,9 +606,12 @@ for brightness_level = 0, 14 do
 			type = "fixed",
 			fixed = { -0.25, -0.5, -0.25, 0.25, 0, 0.25 }
 		},
-		groups = { snappy = 3, not_in_creative_inventory = nici },
+		use_texture_alpha = "clip",
+		groups = { snappy = 3, not_in_creative_inventory = nici, dig_glass=1 },
 		light_source = brightness_level,
-		sounds = default.node_sound_glass_defaults(),
+		_sound_def = {
+			key = "node_sound_glass_defaults",
+		},
 		on_place = minetest.rotate_node,
 		on_rightclick = homedecor_lighting.toggle_light,
 		drop = {
@@ -628,7 +647,7 @@ for brightness_level = 0, 14 do
 		selection_box = dlamp_cbox,
 		node_box = dlamp_cbox,
 		walkable = false,
-		groups = {snappy=3, ud_param2_colorable = 1, not_in_creative_inventory = nici},
+		groups = {snappy=3, ud_param2_colorable = 1, not_in_creative_inventory = nici, dig_glass=1},
 		after_place_node = function(pos, placer, itemstack, pointed_thing)
 			unifieddyes.fix_rotation_nsew(pos, placer, itemstack, pointed_thing)
 		end,
@@ -659,7 +678,7 @@ for brightness_level = 0, 14 do
 		},
 		inventory_image = "homedecor_ceiling_lamp_inv.png",
 		light_source = brightness_level,
-		groups = {snappy=3, not_in_creative_inventory = nici},
+		groups = {snappy=3, not_in_creative_inventory = nici, dig_glass=1},
 		walkable = false,
 		on_rightclick = homedecor_lighting.toggle_light,
 		drop = {
@@ -682,7 +701,7 @@ for brightness_level = 0, 14 do
 		fixed = { -0.25, -0.5, -0.25, 0.25, 1.5, 0.25 }
 	}
 
-	local wool_brightened = "wool_grey.png^[colorize:#ffffff:"..(brightness_level * 15)
+	local wool_brightened=homedecor.textures.wool.grey .. "^[colorize:#ffffff:"..(brightness_level * 15)
 
 	homedecor.register("table_lamp_"..brightness_level, {
 		description = S("Table Lamp/Light"),
@@ -700,7 +719,9 @@ for brightness_level = 0, 14 do
 		walkable = false,
 		light_source = brightness_level,
 		selection_box = tlamp_cbox,
-		sounds = default.node_sound_wood_defaults(),
+		_sound_def = {
+			key = "node_sound_wood_defaults",
+		},
 		groups = {cracky=2,oddly_breakable_by_hand=1, ud_param2_colorable = 1, not_in_creative_inventory=nici },
 		drop = {
 			items = {
@@ -731,7 +752,9 @@ for brightness_level = 0, 14 do
 		light_source = brightness_level,
 		groups = {cracky=2,oddly_breakable_by_hand=1, ud_param2_colorable = 1, not_in_creative_inventory=nici },
 		selection_box = slamp_cbox,
-		sounds = default.node_sound_wood_defaults(),
+		_sound_def = {
+			key = "node_sound_wood_defaults",
+		},
 		on_rotate = minetest.get_modpath("screwdriver") and screwdriver.rotate_simple or nil,
 		--expand = { top="air" },
 		drop = {
@@ -770,7 +793,7 @@ for _, light_brightn_name in ipairs({"off", "on"}) do
 	local gen_ls_tex_yellow =          "homedecor_generic_light_source_off.png"
 	if onflag then gen_ls_tex_yellow = "homedecor_generic_light_source_yellow.png" end
 
-	local lighttex = "homedecor_blanktile.png"
+	local lighttex = "blank.png"
 	if onflag then
 		lighttex = {
 			name = "homedecor_plasma_ball_streamers.png",
@@ -793,10 +816,12 @@ for _, light_brightn_name in ipairs({"off", "on"}) do
 		},
 		walkable = false,
 		use_texture_alpha = "blend",
-		light_source = onflag and (default.LIGHT_MAX - 5) or nil,
+		light_source = onflag and (minetest.LIGHT_MAX - 5) or nil,
 		sunlight_propagates = true,
 		groups = {cracky=3, oddly_breakable_by_hand=3, not_in_creative_inventory = nici},
-		sounds = default.node_sound_glass_defaults(),
+		_sound_def = {
+			key = "node_sound_glass_defaults",
+		},
 		on_rightclick = homedecor_lighting.toggle_light,
 		drop = {
 			items = {
@@ -843,8 +868,12 @@ for _, light_brightn_name in ipairs({"off", "on"}) do
 			"homedecor:rope_light_on_floor_off",
 			"group:mesecon_conductor_craftable"
 		},
-		groups = {cracky=3, oddly_breakable_by_hand=3, not_in_creative_inventory = nici_m},
-		sounds =  default.node_sound_stone_defaults(),
+		groups = {cracky=3, oddly_breakable_by_hand=3, not_in_creative_inventory = nici_m, axey=5},
+		is_ground_content = false,
+		_mcl_hardness=1.6,
+		_sound_def = {
+			key = "node_sound_stone_defaults",
+		},
 		drop = {
 			items = {
 				{items = {"homedecor:rope_light_on_floor_"..di} },
@@ -889,8 +918,12 @@ for _, light_brightn_name in ipairs({"off", "on"}) do
 			"homedecor:rope_light_on_ceiling_off",
 			"group:mesecon_conductor_craftable"
 		},
-		groups = {cracky=3, oddly_breakable_by_hand=3, not_in_creative_inventory = nici_m},
-		sounds =  default.node_sound_stone_defaults(),
+		groups = {cracky=3, oddly_breakable_by_hand=3, not_in_creative_inventory = nici_m, axey=5},
+		is_ground_content = false,
+		_mcl_hardness=1.6,
+		_sound_def = {
+			key = "node_sound_stone_defaults",
+		},
 		drop = {
 			items = {
 				{items = {"homedecor:rope_light_on_ceiling_"..di}},
@@ -916,10 +949,9 @@ for _, light_brightn_name in ipairs({"off", "on"}) do
 			gen_ls_tex_yellow,
 			"homedecor_generic_metal_wrought_iron.png"
 		},
-		use_texture_alpha = "opaque",
 		inventory_image = "homedecor_wall_lamp_inv.png",
-		groups = {snappy=3, not_in_creative_inventory = nici},
-		light_source = onflag and (default.LIGHT_MAX - 3) or nil,
+		groups = {snappy=3, not_in_creative_inventory = nici, dig_glass=1},
+		light_source = onflag and (minetest.LIGHT_MAX - 3) or nil,
 		selection_box = wl_cbox,
 		walkable = false,
 		drop = {
@@ -954,8 +986,9 @@ homedecor.register("candle", {
 	inventory_image = "homedecor_candle_inv.png",
 	selection_box = tc_cbox,
 	walkable = false,
-	groups = { snappy = 3 },
-	light_source = default.LIGHT_MAX-4,
+	use_texture_alpha = "clip",
+	groups = { snappy = 3, dig_glass=1 },
+	light_source = minetest.LIGHT_MAX-4,
 })
 
 local c_cbox = {
@@ -975,8 +1008,9 @@ homedecor.register("candle_thin", {
 	inventory_image = "homedecor_candle_thin_inv.png",
 	selection_box = c_cbox,
 	walkable = false,
-	groups = { snappy = 3 },
-	light_source = default.LIGHT_MAX-4,
+	use_texture_alpha = "clip",
+	groups = { snappy = 3, dig_glass=1 },
+	light_source = minetest.LIGHT_MAX-4,
 })
 
 local cs_cbox = {
@@ -997,8 +1031,9 @@ homedecor.register("candlestick_wrought_iron", {
 	inventory_image = "homedecor_candlestick_wrought_iron_inv.png",
 	selection_box = cs_cbox,
 	walkable = false,
-	groups = { snappy = 3 },
-	light_source = default.LIGHT_MAX-4,
+	use_texture_alpha = "clip",
+	groups = { snappy = 3, dig_glass=1 },
+	light_source = minetest.LIGHT_MAX-4,
 })
 
 homedecor.register("candlestick_brass", {
@@ -1012,8 +1047,9 @@ homedecor.register("candlestick_brass", {
 	inventory_image = "homedecor_candlestick_brass_inv.png",
 	selection_box = cs_cbox,
 	walkable = false,
-	groups = { snappy = 3 },
-	light_source = default.LIGHT_MAX-4,
+	use_texture_alpha = "clip",
+	groups = { snappy = 3, dig_glass=1 },
+	light_source = minetest.LIGHT_MAX-4,
 })
 
 homedecor.register("wall_sconce", {
@@ -1031,8 +1067,9 @@ homedecor.register("wall_sconce", {
 		fixed = { -0.1875, -0.25, 0.3125, 0.1875, 0.25, 0.5 }
 	},
 	walkable = false,
-	groups = { snappy = 3 },
-	light_source = default.LIGHT_MAX-4,
+	use_texture_alpha = "clip",
+	groups = { snappy = 3, dig_glass=1 },
+	light_source = minetest.LIGHT_MAX-4,
 })
 
 local ol_cbox = {
@@ -1057,9 +1094,11 @@ homedecor.register("oil_lamp", {
 	inventory_image = "homedecor_oil_lamp_inv.png",
 	selection_box = ol_cbox,
 	walkable = false,
-	groups = { snappy = 3 },
-	light_source = default.LIGHT_MAX-3,
-	sounds = default.node_sound_glass_defaults(),
+	groups = { snappy = 3, dig_glass=1 },
+	light_source = minetest.LIGHT_MAX-3,
+	_sound_def = {
+		key = "node_sound_glass_defaults",
+	},
 })
 
 homedecor.register("oil_lamp_tabletop", {
@@ -1069,9 +1108,11 @@ homedecor.register("oil_lamp_tabletop", {
 	inventory_image = "homedecor_oil_lamp_tabletop_inv.png",
 	selection_box = ol_cbox,
 	collision_box = ol_cbox,
-	groups = { snappy = 3 },
-	light_source = default.LIGHT_MAX-3,
-	sounds = default.node_sound_glass_defaults(),
+	groups = { snappy = 3, dig_glass=1 },
+	light_source = minetest.LIGHT_MAX-3,
+	_sound_def = {
+		key = "node_sound_glass_defaults",
+	},
 })
 
 local topchains_sbox = {
@@ -1092,7 +1133,9 @@ minetest.register_node(":homedecor:chain_steel_top", {
 	sunlight_propagates = true,
 	paramtype = "light",
 	inventory_image = "basic_materials_chain_steel_inv.png",
-	groups = {cracky=3},
+	groups = {cracky=3, dig_glass=1, pickaxey=5},
+	is_ground_content = false,
+	_mcl_hardness=1.6,
 	selection_box = topchains_sbox,
 })
 
@@ -1106,7 +1149,9 @@ minetest.register_node(":homedecor:chain_brass_top", {
 	sunlight_propagates = true,
 	paramtype = "light",
 	inventory_image = "basic_materials_chain_brass_inv.png",
-	groups = {cracky=3},
+	groups = {cracky=3, dig_glass=1, pickaxey=5},
+	is_ground_content = false,
+	_mcl_hardness=1.6,
 	selection_box = topchains_sbox,
 })
 
@@ -1132,8 +1177,13 @@ minetest.register_node(":homedecor:chandelier_steel", {
 	},
 	drawtype = "mesh",
 	mesh = "homedecor_chandelier.obj",
-	groups = {cracky=3},
-	sounds =  default.node_sound_stone_defaults(),
+	use_texture_alpha = "clip",
+	groups = {cracky=3, dig_glass=1, pickaxey=5},
+	is_ground_content = false,
+	_mcl_hardness=1.6,
+	_sound_def = {
+		key = "node_sound_stone_defaults",
+	},
 })
 
 minetest.register_node(":homedecor:chandelier_brass", {
@@ -1158,8 +1208,13 @@ minetest.register_node(":homedecor:chandelier_brass", {
 	},
 	drawtype = "mesh",
 	mesh = "homedecor_chandelier.obj",
-	groups = {cracky=3},
-	sounds =  default.node_sound_stone_defaults(),
+	use_texture_alpha = "clip",
+	groups = {cracky=3, dig_glass=1, pickaxey=5},
+	is_ground_content = false,
+	_mcl_hardness=1.6,
+	_sound_def = {
+		key = "node_sound_stone_defaults",
+	},
 })
 
 homedecor.register("torch_wall", {
@@ -1186,7 +1241,8 @@ homedecor.register("torch_wall", {
 		type = "fixed",
 		fixed = { -0.15, -0.45, 0.15, 0.15,0.35, 0.5 },
 	},
-	groups = {cracky=3},
+	use_texture_alpha = "clip",
+	groups = {cracky=3, dig_glass=1},
 })
 
 -- table lamps and standing lamps
@@ -1362,7 +1418,71 @@ minetest.register_lbm({
 	end
 })
 
+-- aliases
 
+minetest.register_alias("chains:chain_top",                    "homedecor:chain_steel_top")
+minetest.register_alias("chains:chain_top_brass",              "homedecor:chain_brass_top")
+
+minetest.register_alias("chains:chandelier",                   "homedecor:chandelier_steel")
+minetest.register_alias("chains:chandelier_steel",             "homedecor:chandelier_steel")
+minetest.register_alias("chains:chandelier_brass",             "homedecor:chandelier_brass")
+
+minetest.register_alias("homedecor:glowlight_half",            "homedecor:glowlight_half_14")
+minetest.register_alias("homedecor:glowlight_quarter",         "homedecor:glowlight_quarter_14")
+minetest.register_alias("homedecor:glowlight_small_cube",      "homedecor:glowlight_small_cube_14")
+minetest.register_alias("homedecor:plasma_lamp",               "homedecor:plasma_lamp_14")
+minetest.register_alias("homedecor:ground_lantern",            "homedecor:ground_lantern_14")
+minetest.register_alias("homedecor:hanging_lantern",           "homedecor:hanging_lantern_14")
+minetest.register_alias("homedecor:ceiling_lantern",           "homedecor:ceiling_lantern_14")
+minetest.register_alias("homedecor:lattice_lantern_large",     "homedecor:lattice_lantern_large_14")
+minetest.register_alias("homedecor:lattice_lantern_small",     "homedecor:lattice_lantern_small_14")
+minetest.register_alias("homedecor:desk_lamp",                 "homedecor:desk_lamp_14")
+minetest.register_alias("homedecor:ceiling_lamp",              "homedecor:ceiling_lamp_14")
+minetest.register_alias("homedecor:table_lamp",                "homedecor:table_lamp_14")
+minetest.register_alias("homedecor:standing_lamp",             "homedecor:standing_lamp_14")
+minetest.register_alias("3dforniture:table_lamp",              "homedecor:table_lamp_14")
+
+minetest.register_alias("3dforniture:torch_wall",              "homedecor:torch_wall")
+minetest.register_alias("torch_wall",                          "homedecor:torch_wall")
+
+minetest.register_alias("homedecor:plasma_ball",               "homedecor:plasma_ball_on")
+minetest.register_alias("homedecor:wall_lamp",                 "homedecor:wall_lamp_on")
+
+minetest.register_alias("homedecor:rope_light_on_floor_0",     "homedecor:rope_light_on_floor_off")
+minetest.register_alias("homedecor:rope_light_on_floor_14",    "homedecor:rope_light_on_floor_on")
+
+minetest.register_alias("homedecor:rope_light_on_ceiling_0",   "homedecor:rope_light_on_ceiling_off")
+minetest.register_alias("homedecor:rope_light_on_ceiling_14",  "homedecor:rope_light_on_ceiling_on")
+
+for name, level in pairs(word_to_bright) do
+	minetest.register_alias("homedecor:glowlight_half_"..name,        "homedecor:glowlight_half_"..level)
+	minetest.register_alias("homedecor:glowlight_quarter_"..name,     "homedecor:glowlight_quarter_"..level)
+	minetest.register_alias("homedecor:glowlight_small_cube_"..name,  "homedecor:glowlight_small_cube_"..level)
+	minetest.register_alias("homedecor:rope_light_on_floor_"..name,   "homedecor:rope_light_on_floor_"..level)
+	minetest.register_alias("homedecor:rope_light_on_ceiling_"..name, "homedecor:rope_light_on_ceiling_"..level)
+	minetest.register_alias("homedecor:plasma_lamp_"..name,           "homedecor:plasma_lamp_"..level)
+	minetest.register_alias("homedecor:plasma_ball_"..name,           "homedecor:plasma_ball_"..level)
+	minetest.register_alias("homedecor:ground_lantern_"..name,        "homedecor:ground_lantern_"..level)
+	minetest.register_alias("homedecor:hanging_lantern_"..name,       "homedecor:hanging_lantern_"..level)
+	minetest.register_alias("homedecor:ceiling_lantern_"..name,       "homedecor:ceiling_lantern_"..level)
+	minetest.register_alias("homedecor:lattice_lantern_large_"..name, "homedecor:lattice_lantern_large_"..level)
+	minetest.register_alias("homedecor:lattice_lantern_small_"..name, "homedecor:lattice_lantern_small_"..level)
+	minetest.register_alias("homedecor:desk_lamp_"..name,             "homedecor:desk_lamp_"..level)
+	minetest.register_alias("homedecor:ceiling_lamp_"..name,          "homedecor:ceiling_lamp_"..level)
+	minetest.register_alias("homedecor:table_lamp_"..name,            "homedecor:table_lamp_"..level)
+	minetest.register_alias("homedecor:standing_lamp_"..name,         "homedecor:standing_lamp_"..level)
+	minetest.register_alias("3dforniture:table_lamp_"..name,          "homedecor:table_lamp_"..level)
+end
+
+if minetest.get_modpath("darkage") then
+	minetest.register_alias("homedecor:lattice_lantern_large",        "darkage:lamp")
+	for n = 0, 14 do
+		minetest.register_alias("homedecor:lattice_lantern_large_"..n, "darkage:lamp")
+	end
+	for name, level in pairs(word_to_bright) do
+		minetest.register_alias("homedecor:lattice_lantern_large_"..name, "darkage:lamp")
+	end
+end
 
 -- crafting
 
@@ -1536,6 +1656,17 @@ end
 
 -- glowlights
 
+unifieddyes.register_color_craft({
+	output = "homedecor:glowlight_half",
+	palette = "wallmounted",
+	type = "shapeless",
+	neutral_node = "homedecor:glowlight_half",
+	recipe = {
+		"NEUTRAL_NODE",
+		"MAIN_DYE"
+	}
+})
+
 minetest.register_craft({
 	output = "homedecor:glowlight_half 6",
 	recipe = {
@@ -1568,10 +1699,10 @@ minetest.register_craft({
 })
 
 unifieddyes.register_color_craft({
-	output = "homedecor:glowlight_half",
+	output = "homedecor:glowlight_quarter",
 	palette = "wallmounted",
 	type = "shapeless",
-	neutral_node = "homedecor:glowlight_half",
+	neutral_node = "homedecor:glowlight_quarter",
 	recipe = {
 		"NEUTRAL_NODE",
 		"MAIN_DYE"
@@ -1586,10 +1717,10 @@ minetest.register_craft({
 })
 
 unifieddyes.register_color_craft({
-	output = "homedecor:glowlight_quarter",
+	output = "homedecor:glowlight_small_cube",
 	palette = "wallmounted",
 	type = "shapeless",
-	neutral_node = "homedecor:glowlight_quarter",
+	neutral_node = "homedecor:glowlight_small_cube",
 	recipe = {
 		"NEUTRAL_NODE",
 		"MAIN_DYE"
@@ -1620,17 +1751,6 @@ minetest.register_craft({
 	}
 })
 
-unifieddyes.register_color_craft({
-	output = "homedecor:glowlight_small_cube",
-	palette = "wallmounted",
-	type = "shapeless",
-	neutral_node = "homedecor:glowlight_small_cube",
-	recipe = {
-		"NEUTRAL_NODE",
-		"MAIN_DYE"
-	}
-})
-
 ----
 
 minetest.register_craft({
@@ -1651,16 +1771,6 @@ minetest.register_craft({
 	}
 })
 
-
-minetest.register_craft({
-	output = "homedecor:desk_lamp 2",
-	recipe = {
-		{ "", "default:steel_ingot", "homedecor:glowlight_small_cube" },
-		{ "", "basic_materials:steel_strip", "" },
-		{ "basic_materials:plastic_sheet", "basic_materials:copper_wire", "basic_materials:plastic_sheet" },
-	},
-})
-
 unifieddyes.register_color_craft({
 	output = "homedecor:desk_lamp",
 	palette = "wallmounted",
@@ -1670,6 +1780,15 @@ unifieddyes.register_color_craft({
 		"NEUTRAL_NODE",
 		"MAIN_DYE"
 	}
+})
+
+minetest.register_craft({
+	output = "homedecor:desk_lamp 2",
+	recipe = {
+		{ "", "default:steel_ingot", "homedecor:glowlight_small_cube" },
+		{ "", "basic_materials:steel_strip", "" },
+		{ "basic_materials:plastic_sheet", "basic_materials:copper_wire", "basic_materials:plastic_sheet" },
+	},
 })
 
 minetest.register_craft({
@@ -1709,11 +1828,38 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
+	output = "homedecor:rope_light_on_floor_off",
+	type= "shapeless",
+	recipe = {
+		"homedecor:rope_light_on_ceiling_off"
+	}
+})
+
+minetest.register_craft({
+	output = "homedecor:rope_light_on_ceiling_off",
+	type= "shapeless",
+	recipe = {
+		homedecor.materials.steel_ingot, "homedecor:ceiling_lamp"
+	}
+})
+
+minetest.register_craft({
 	output = "homedecor:ceiling_lamp",
 	recipe = {
 		{ "", "basic_materials:chain_steel_top_brass", ""},
 		{ "default:glass", "homedecor:glowlight_small_cube", "default:glass"}
 	},
+})
+
+unifieddyes.register_color_craft({
+	output = "homedecor:standing_lamp_hi",
+	palette = "extended",
+	type = "shapeless",
+	neutral_node = "homedecor:standing_lamp_hi",
+	recipe = {
+		"NEUTRAL_NODE",
+		"MAIN_DYE"
+	}
 })
 
 minetest.register_craft({
@@ -1726,10 +1872,10 @@ minetest.register_craft({
 })
 
 unifieddyes.register_color_craft({
-	output = "homedecor:standing_lamp_hi",
+	output = "homedecor:table_lamp_hi",
 	palette = "extended",
 	type = "shapeless",
-	neutral_node = "homedecor:standing_lamp_hi",
+	neutral_node = "homedecor:table_lamp_hi",
 	recipe = {
 		"NEUTRAL_NODE",
 		"MAIN_DYE"
@@ -1778,18 +1924,6 @@ minetest.register_craft({
 	},
 })
 
-unifieddyes.register_color_craft({
-	output = "homedecor:table_lamp_hi",
-	palette = "extended",
-	type = "shapeless",
-	neutral_node = "homedecor:table_lamp_hi",
-	recipe = {
-		"NEUTRAL_NODE",
-		"MAIN_DYE"
-	}
-})
-
-
 minetest.register_craft({
 	output = "homedecor:torch_wall 10",
 	recipe = {
@@ -1797,96 +1931,3 @@ minetest.register_craft({
 		{ "default:steel_ingot" },
 	},
 })
--- aliases
-
-minetest.register_alias("chains:chain_top",                    "homedecor:chain_steel_top")
-minetest.register_alias("chains:chain_top_brass",              "homedecor:chain_brass_top")
-
-minetest.register_alias("chains:chandelier",                   "homedecor:chandelier_steel")
-minetest.register_alias("chains:chandelier_steel",             "homedecor:chandelier_steel")
-minetest.register_alias("chains:chandelier_brass",             "homedecor:chandelier_brass")
-
-minetest.register_alias("homedecor:glowlight_half",            "homedecor:glowlight_half_14")
-minetest.register_alias("homedecor:glowlight_half_max",        "homedecor:glowlight_half_14")
-
-minetest.register_alias("homedecor:glowlight_quarter",         "homedecor:glowlight_quarter_14")
-minetest.register_alias("homedecor:glowlight_quarter_max",     "homedecor:glowlight_quarter_14")
-
-minetest.register_alias("homedecor:glowlight_small_cube",      "homedecor:glowlight_small_cube_14")
-minetest.register_alias("homedecor:glowlight_small_cube_max",  "homedecor:glowlight_small_cube_14")
-
-minetest.register_alias("homedecor:plasma_lamp",               "homedecor:plasma_lamp_14")
-minetest.register_alias("homedecor:plasma_lamp_max",           "homedecor:plasma_lamp_14")
-
-minetest.register_alias("homedecor:ground_lantern",            "homedecor:ground_lantern_14")
-minetest.register_alias("homedecor:ground_lantern_max",        "homedecor:ground_lantern_14")
-
-minetest.register_alias("homedecor:hanging_lantern",           "homedecor:hanging_lantern_14")
-minetest.register_alias("homedecor:hanging_lantern_max",       "homedecor:hanging_lantern_14")
-
-minetest.register_alias("homedecor:ceiling_lantern",           "homedecor:ceiling_lantern_14")
-minetest.register_alias("homedecor:ceiling_lantern_max",       "homedecor:ceiling_lantern_14")
-
-minetest.register_alias("homedecor:lattice_lantern_large",     "homedecor:lattice_lantern_large_14")
-minetest.register_alias("homedecor:lattice_lantern_large_max", "homedecor:lattice_lantern_large_14")
-
-minetest.register_alias("homedecor:lattice_lantern_small",     "homedecor:lattice_lantern_small_14")
-minetest.register_alias("homedecor:lattice_lantern_small_max", "homedecor:lattice_lantern_small_14")
-
-minetest.register_alias("homedecor:desk_lamp",                 "homedecor:desk_lamp_14")
-minetest.register_alias("homedecor:desk_lamp_max",             "homedecor:desk_lamp_14")
-
-minetest.register_alias("homedecor:ceiling_lamp",              "homedecor:ceiling_lamp_14")
-minetest.register_alias("homedecor:ceiling_lamp_max",          "homedecor:ceiling_lamp_14")
-
-minetest.register_alias("homedecor:table_lamp",                "homedecor:table_lamp_14")
-minetest.register_alias("homedecor:table_lamp_max",            "homedecor:table_lamp_14")
-
-minetest.register_alias("homedecor:standing_lamp",             "homedecor:standing_lamp_14")
-minetest.register_alias("homedecor:standing_lamp_max",         "homedecor:standing_lamp_14")
-
-minetest.register_alias("3dforniture:table_lamp",              "homedecor:table_lamp_14")
-minetest.register_alias("3dforniture:table_lamp_max",          "homedecor:table_lamp_14")
-
-minetest.register_alias("3dforniture:torch_wall",              "homedecor:torch_wall")
-minetest.register_alias("torch_wall",                          "homedecor:torch_wall")
-
-minetest.register_alias("homedecor:plasma_ball",               "homedecor:plasma_ball_on")
-minetest.register_alias("homedecor:wall_lamp",                 "homedecor:wall_lamp_on")
-
-minetest.register_alias("homedecor:rope_light_on_floor_0",     "homedecor:rope_light_on_floor_off")
-minetest.register_alias("homedecor:rope_light_on_floor_14",    "homedecor:rope_light_on_floor_on")
-
-minetest.register_alias("homedecor:rope_light_on_ceiling_0",   "homedecor:rope_light_on_ceiling_off")
-minetest.register_alias("homedecor:rope_light_on_ceiling_14",  "homedecor:rope_light_on_ceiling_on")
-
-for name, level in pairs(word_to_bright) do
-	minetest.register_alias("homedecor:glowlight_half_"..name,        "homedecor:glowlight_half_"..level)
-	minetest.register_alias("homedecor:glowlight_quarter_"..name,     "homedecor:glowlight_quarter_"..level)
-	minetest.register_alias("homedecor:glowlight_small_cube_"..name,  "homedecor:glowlight_small_cube_"..level)
-	minetest.register_alias("homedecor:rope_light_on_floor_"..name,   "homedecor:rope_light_on_floor_"..level)
-	minetest.register_alias("homedecor:rope_light_on_ceiling_"..name, "homedecor:rope_light_on_ceiling_"..level)
-	minetest.register_alias("homedecor:plasma_lamp_"..name,           "homedecor:plasma_lamp_"..level)
-	minetest.register_alias("homedecor:plasma_ball_"..name,           "homedecor:plasma_ball_"..level)
-	minetest.register_alias("homedecor:ground_lantern_"..name,        "homedecor:ground_lantern_"..level)
-	minetest.register_alias("homedecor:hanging_lantern_"..name,       "homedecor:hanging_lantern_"..level)
-	minetest.register_alias("homedecor:ceiling_lantern_"..name,       "homedecor:ceiling_lantern_"..level)
-	minetest.register_alias("homedecor:lattice_lantern_large_"..name, "homedecor:lattice_lantern_large_"..level)
-	minetest.register_alias("homedecor:lattice_lantern_small_"..name, "homedecor:lattice_lantern_small_"..level)
-	minetest.register_alias("homedecor:desk_lamp_"..name,             "homedecor:desk_lamp_"..level)
-	minetest.register_alias("homedecor:ceiling_lamp_"..name,          "homedecor:ceiling_lamp_"..level)
-	minetest.register_alias("homedecor:table_lamp_"..name,            "homedecor:table_lamp_"..level)
-	minetest.register_alias("homedecor:standing_lamp_"..name,         "homedecor:standing_lamp_"..level)
-	minetest.register_alias("3dforniture:table_lamp_"..name,          "homedecor:table_lamp_"..level)
-end
-
-if minetest.get_modpath("darkage") then
-	minetest.register_alias("homedecor:lattice_lantern_large",        "darkage:lamp")
-	for n = 0, 14 do
-		minetest.register_alias("homedecor:lattice_lantern_large_"..n, "darkage:lamp")
-	end
-	for name, level in pairs(word_to_bright) do
-		minetest.register_alias("homedecor:lattice_lantern_large_"..name, "darkage:lamp")
-	end
-end
-

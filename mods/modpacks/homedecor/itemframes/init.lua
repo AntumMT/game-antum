@@ -4,12 +4,14 @@ local tmp = {}
 local sd_disallow = minetest.get_modpath("screwdriver") and screwdriver.disallow or nil
 
 minetest.register_entity("itemframes:item",{
-	hp_max = 1,
-	visual="wielditem",
-	visual_size={x = 0.33, y = 0.33},
-	collisionbox = {0, 0, 0, 0, 0, 0},
-	physical = false,
-	textures = {"air"},
+	initial_properties = {
+		hp_max = 1,
+		visual = "wielditem",
+		visual_size = {x = 0.33, y = 0.33},
+		collisionbox = {0, 0, 0, 0, 0, 0},
+		physical = false,
+		textures = {"air"},
+	},
 	on_activate = function(self, staticdata)
 		if tmp.nodename ~= nil and tmp.texture ~= nil then
 			self.nodename = tmp.nodename
@@ -135,9 +137,13 @@ minetest.register_node("itemframes:frame",{
 	paramtype = "light",
 	paramtype2 = "facedir",
 	sunlight_propagates = true,
-	groups = {choppy = 2, dig_immediate = 2},
+	groups = {choppy = 2, dig_immediate = 2, axey=5},
+	is_ground_content = false,
+	_mcl_hardness=1.6,
 	legacy_wallmounted = true,
-	sounds = default.node_sound_wood_defaults(),
+	_sound_def = {
+		key = "node_sound_wood_defaults",
+	},
 	on_rotate = sd_disallow or nil,
 	after_place_node = function(pos, placer, itemstack)
 		local meta = minetest.get_meta(pos)
@@ -213,8 +219,12 @@ minetest.register_node("itemframes:pedestal",{
 	--},
 	tiles = {"itemframes_pedestal.png"},
 	paramtype = "light",
-	groups = {cracky = 3},
-	sounds = default.node_sound_stone_defaults(),
+	groups = {cracky = 3, dig_stone = 2, pickaxey=5},
+	is_ground_content = false,
+	_mcl_hardness=1.6,
+	_sound_def = {
+		key = "node_sound_stone_defaults",
+	},
 	on_rotate = sd_disallow or nil,
 	after_place_node = function(pos, placer, itemstack)
 		local meta = minetest.get_meta(pos)
@@ -308,7 +318,7 @@ minetest.register_craft({
 	output = 'itemframes:frame',
 	recipe = {
 		{'group:stick', 'group:stick', 'group:stick'},
-		{'group:stick', 'default:paper', 'default:stick'},
+		{'group:stick', homedecor.materials.paper, 'default:stick'},
 		{'group:stick', 'group:stick', 'group:stick'},
 	}
 })
@@ -316,9 +326,9 @@ minetest.register_craft({
 minetest.register_craft({
 	output = 'itemframes:pedestal',
 	recipe = {
-		{'default:stone', 'default:stone', 'default:stone'},
-		{'', 'default:stone', ''},
-		{'default:stone', 'default:stone', 'default:stone'},
+		{homedecor.materials.stone, homedecor.materials.stone, homedecor.materials.stone},
+		{'', homedecor.materials.stone, ''},
+		{homedecor.materials.stone, homedecor.materials.stone, homedecor.materials.stone},
 	}
 })
 

@@ -175,7 +175,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [crafting_bench][] -- version: [69083ed Git][ver.crafting_bench] *2020-05-27*
 * [deploy_nodes][] ([BSD 3-Clause][lic.deploy_nodes]) -- version: [b67e162 Git][ver.deploy_nodes] *2017-06-08*
 * [home_workshop][] -- version: [03325e8 Git][ver.home_workshop] *2021-04-15*
-* [homedecor][] ([LGPL / WTFPL / CC BY-SA / CC0][lic.homedecor]) -- version: [f1dc68a Git][ver.homedecor] *2021-05-18* ([patched][patch.homedecor])
+* [homedecor][] ([LGPL / WTFPL / CC BY-SA / CC0][lic.homedecor]) -- version: [2024-12-30][ver.homedecor]
 * [mesecons][] ([LGPL / CC BY-SA][lic.mesecons]) -- version [2025-01-03][ver.mesecons]
 * [moremesecons][] ([MPL][lic.mpl2.0]) -- version: [2024-12-20][ver.moremesecons]
 * [mymods](https://github.com/AntumMT/mp-mymods)
@@ -361,7 +361,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [hidename]: https://content.luanti.org/packages/AntumDeluge/hidename/
 [home_gui]: http://cornernote.github.io/minetest-home_gui/
 [home_workshop]: https://content.luanti.org/packages/VanessaE/home_workshop_modpack/
-[homedecor]: https://content.luanti.org/packages/VanessaE/homedecor_modpack/
+[homedecor]: https://content.luanti.org/packages/mt-mods/homedecor_modpack/
 [hot_air_balloons]: https://content.luanti.org/packages/Eran/hot_air_balloons/
 [hovercraft]: https://forum.luanti.org/viewtopic.php?t=6722
 [hud_compass]: https://content.luanti.org/packages/kestral/hud_compass/
@@ -629,7 +629,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.hidename]: https://github.com/AntumMT/mod-hidename/releases/tag/v1.1
 [ver.home_gui]: https://github.com/cornernote/minetest-home_gui/tree/44c2f1533e1695b923cb3dae03bc6fce1b1b1432
 [ver.home_workshop]: https://gitlab.com/VanessaE/home_workshop_modpack/tree/03325e8
-[ver.homedecor]: https://gitlab.com/VanessaE/homedecor_modpack/tree/f1dc68a
+[ver.homedecor]: https://github.com/mt-mods/homedecor_modpack/tree/f7d51645593600df14e1e693442e5e0d95d63c03
 [ver.hot_air_balloons]: https://notabug.org/NetherEran/hot_air_balloons/src/39a3572ad1bf7fd800525d68b128981e1b2c37d1
 [ver.hovercraft]: https://github.com/stujones11/hovercraft/tree/4d50e68
 [ver.hud_compass]: https://github.com/kestral246/hud_compass/tree/648c744
@@ -727,7 +727,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.glow]: https://github.com/AntumMT/mod-glow/tree/544bfcbfc6498108380aad896b6d2ed8c4e02706
 [patch.helicopter]: https://github.com/AntumMT/mod-helicopter/tree/79d2d3e
 [pathc.home_gui]: https://github.com/AntumMT/mod-home_gui/tree/32b2e355dd6b4bf2e2f0d0a7d62acb87b94c965c
-[patch.homedecor]: https://gitlab.com/AntumMT/mp-homedecor/commit/7728e969
 [patch.hovercraft]: https://github.com/AntumMT/mod-hovercraft/tree/0f864c4
 [patch.hud]: https://github.com/AntumMT/mod-hud/tree/6846e20
 [patch.hud_compass]: https://github.com/AntumMT/mod-hud_compass/tree/3be32e45327c071cbe357f5bed871e47abd401b4

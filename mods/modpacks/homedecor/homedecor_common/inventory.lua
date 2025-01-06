@@ -1,51 +1,58 @@
 local S = minetest.get_translator("homedecor_common")
 
+local has_hopper = minetest.get_modpath("hopper")
+local has_safe_hopper = has_hopper and
+	-- mod from https://github.com/minetest-mods/hopper respects the owner
+	(hopper.neighbors or
+	-- mod from https://notabug.org/TenPlus1/hopper respects the owner since 20220123
+	(hopper.version and hopper.version >= "20220123"))
+
 local default_can_dig = function(pos,player)
 	local meta = minetest.get_meta(pos)
 	return meta:get_inventory():is_empty("main")
 end
 
-local background = default.gui_bg .. default.gui_bg_img .. default.gui_slots
+local default_can_interact_with_node = xcompat.functions.can_interact_with_node
+
 local default_inventory_formspecs = {
-	["4"]="size[8,6]".. background ..
+	["4"]="size[8,6]"..
 	"list[context;main;2,0;4,1;]" ..
 	"list[current_player;main;0,2;8,4;]" ..
 	"listring[]",
 
-	["6"]="size[8,6]".. background ..
+	["6"]="size[8,6]"..
 	"list[context;main;1,0;6,1;]"..
 	"list[current_player;main;0,2;8,4;]" ..
 	"listring[]",
 
-	["8"]="size[8,6]".. background ..
+	["8"]="size[8,6]"..
 	"list[context;main;0,0;8,1;]"..
 	"list[current_player;main;0,2;8,4;]" ..
 	"listring[]",
 
-	["12"]="size[8,7]".. background ..
+	["12"]="size[8,7]"..
 	"list[context;main;1,0;6,2;]"..
 	"list[current_player;main;0,3;8,4;]" ..
 	"listring[]",
 
-	["16"]="size[8,7]".. background ..
+	["16"]="size[8,7]"..
 	"list[context;main;0,0;8,2;]"..
 	"list[current_player;main;0,3;8,4;]" ..
 	"listring[]",
 
-	["24"]="size[8,8]".. background ..
+	["24"]="size[8,8]"..
 	"list[context;main;0,0;8,3;]"..
 	"list[current_player;main;0,4;8,4;]" ..
 	"listring[]",
 
-	["32"]="size[8,9]".. background ..
+	["32"]="size[8,9]"..
 	"list[context;main;0,0.3;8,4;]"..
 	"list[current_player;main;0,4.85;8,1;]"..
 	"list[current_player;main;0,6.08;8,3;8]"..
 	"listring[context;main]" ..
-	"listring[current_player;main]" ..
-	default.get_hotbar_bg(0,4.85),
+	"listring[current_player;main]",
 
-	["50"]="size[10,10]".. background ..
+	["50"]="size[10,10]"..
 	"list[context;main;0,0;10,5;]"..
 	"list[current_player;main;1,6;8,4;]" ..
 	"listring[]",
@@ -97,6 +104,23 @@ function homedecor.handle_inventory(name, def, original_def)
 	end
 
 	local locked = inventory.locked
+
+	if has_hopper and (not locked or has_safe_hopper) then
+		if inventory.size then
+			hopper:add_container({
+				{"top",  "homedecor:"..name, "main"},
+				{"bottom", "homedecor:"..name, "main"},
+				{"side", "homedecor:"..name, "main"},
+			})
+		elseif original_def.is_furnace then
+			hopper:add_container({
+				{"top", "homedecor:"..name, "dst"},
+				{"bottom", "homedecor:"..name, "src"},
+				{"side", "homedecor:"..name, "fuel"},
+			})
+		end
+	end
+
 	if locked then
 		local after_place_node = def.after_place_node
 		def.after_place_node = function(pos, placer)
@@ -110,7 +134,7 @@ function homedecor.handle_inventory(name, def, original_def)
 
 		local allow_move = def.allow_metadata_inventory_move
 		def.allow_metadata_inventory_move = function(pos, from_list, from_index, to_list, to_index, count, player)
-			if not default.can_interact_with_node(player, pos) then
+			if not default_can_interact_with_node(player, pos) then
 				minetest.log("action", player:get_player_name().." tried to access a "..name.." belonging to "
 					..minetest.get_meta(pos):get_string("owner").." at "..minetest.pos_to_string(pos))
 				return 0
@@ -121,7 +145,7 @@ function homedecor.handle_inventory(name, def, original_def)
 
 		local allow_put = def.allow_metadata_inventory_put
 		def.allow_metadata_inventory_put = function(pos, listname, index, stack, player)
-			if not default.can_interact_with_node(player, pos) then
+			if not default_can_interact_with_node(player, pos) then
 				minetest.log("action", player:get_player_name().." tried to access a "..name.." belonging to"
 					..minetest.get_meta(pos):get_string("owner").." at "..minetest.pos_to_string(pos))
 				return 0
@@ -132,7 +156,7 @@ function homedecor.handle_inventory(name, def, original_def)
 
 		local allow_take = def.allow_metadata_inventory_take
 		def.allow_metadata_inventory_take = function(pos, listname, index, stack, player)
-			if not default.can_interact_with_node(player, pos) then
+			if not default_can_interact_with_node(player, pos) then
 				minetest.log("action", player:get_player_name().." tried to access a "..name.." belonging to"
 					..minetest.get_meta(pos):get_string("owner").." at ".. minetest.pos_to_string(pos))
 				return 0
@@ -143,7 +167,7 @@ function homedecor.handle_inventory(name, def, original_def)
 
 		local can_dig = def.can_dig or default_can_dig
 		def.can_dig = function(pos, player)
-			return default.can_interact_with_node(player, pos) and (can_dig and can_dig(pos, player) == true)
+			return default_can_interact_with_node(player, pos) and (can_dig and can_dig(pos, player) == true)
 		end
 
 		def.on_key_use = function(pos, player)
@@ -187,7 +211,7 @@ function homedecor.handle_inventory(name, def, original_def)
 	if lockable then
 		local locked_def = table.copy(original_def)
 		locked_def.description = S("@1 (Locked)", def.description or name)
-
+		locked_def.crafts = nil
 		local locked_inventory = locked_def.inventory
 		locked_inventory.locked = true
 		locked_inventory.lockable = nil -- avoid loops of locked locked stuff
