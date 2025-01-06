@@ -80,7 +80,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [moreores][] ([zlib][lic.moreores] / [CC BY-SA][lic.ccbysa3.0]) -- version: [2.1.0][ver.moreores] *2021-06-28* ([patched][patch.moreores])
   * [quartz][] ([MIT][lic.quartz]) -- version: [72ec06f Git][ver.quartz] *2021-01-04* ([patched][patch.quartz])
   * [rainbow_ore][] ([LGPL][lic.rainbow_ore]) -- version: [830ac09 Git][ver.rainbow_ore] *2021-07-25*
-  * [unifieddyes][] ([GPL][lic.gpl2.0]) -- version: [2024-04-20][ver.unifieddyes]
+  * [unifieddyes][] ([GPL][lic.gpl2.0]) -- version: [2024-04-20][ver.unifieddyes] ([patched][patch.unifieddyes])
 * misc/
   * [ambience][] ([MIT][lic.ambience] / [CC BY / CC BY-SA / CC BY-NC-SA / CC0][lic.ambience_sounds]) -- version: [2021-07-13][ver.ambience]
   * [asm_spawneggs][] ([MIT][lic.asm_spawneggs]) -- version: [1.2][ver.asm_spawneggs] *2021-08-03*
@@ -749,4 +749,5 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.snowdrift]: https://github.com/AntumMT/mod-snowdrift/tree/0b35cc3
 [patch.technic_armor]: https://github.com/AntumMT/mod-technic_armor/tree/7434d00ebcf161179fbfd180c48f0fc42c3a7676
 [patch.throwing]: https://github.com/AntumMT/mod-throwing/tree/6f55c67
+[patch.unifieddyes]: https://github.com/AntumMT/mod-unifieddyes/tree/3dc9ff1d8efccf402bbd0a9ac521d8caab008f9b
 [patch.windmill]: https://github.com/AntumMT/mod-windmill/tree/35e18f9c6e9bee1bb27ebfc39bfd424d6357b113
