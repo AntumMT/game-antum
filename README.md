@@ -42,7 +42,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [equip_wear][] ([MIT][lic.equip_wear]) -- version: [0.1][ver.equip_wear] *2021-07-14*
   * [lighted_helmets][] ([MIT][lic.lighted_helmets]) -- version: [1.1][ver.lighted_helmets] *2021-08-03*
   * [slingshot][] ([MIT][lic.slingshot] / [CC0][lic.cc0]) -- version [0.3][ver.slingshot] *2021-06-10*
-  * [technic_armor][] ([LGPL / WTFPL][lic.technic_armor]) -- version [2024-03-24][ver.technic_armor]
+  * [technic_armor][] ([LGPL / WTFPL][lic.technic_armor]) -- version [2024-03-24][ver.technic_armor] ([patched][patch.technic_armor])
   * [throwing][] ([WTFPL][lic.wtfpl]) -- version: [90bcf43 Git][ver.throwing] *2013-09-27* ([patched][patch.throwing])
   * [xtraarmor][] ([CC BY-SA][lic.ccbysa3.0]) -- version: 0.3
 * furniture/
@@ -743,6 +743,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.quartz]: https://github.com/AntumMT/mod-quartz/tree/adc759e
 [patch.simple_protection]: https://github.com/AntumMT/mod-simple_protection/tree/be873b5
 [patch.snowdrift]: https://github.com/AntumMT/mod-snowdrift/tree/0b35cc3
+[patch.technic_armor]: https://github.com/AntumMT/mod-technic_armor/tree/7434d00ebcf161179fbfd180c48f0fc42c3a7676
 [patch.throwing]: https://github.com/AntumMT/mod-throwing/tree/6f55c67
 [patch.unifieddyes]: https://github.com/AntumMT/mod-unifieddyes/tree/3013964
 [patch.windmill]: https://github.com/AntumMT/mod-windmill/tree/7756ab4

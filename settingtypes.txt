@@ -2169,6 +2169,7 @@ armor_material_gold (Enable gold armor) bool true
 armor_material_mithril (Enable mithril armor) bool true
 armor_material_crystal (Enable crystal armor) bool true
 armor_material_nether (Enable nether armor) bool true
+armor_material_technic (Enable technic armor) bool true
 
 # Increase this if you get initialization glitches when a player first joins.
 armor_init_delay (Initialization delay) int 2
@@ -2222,12 +2223,6 @@ armor_transparent (Transparent armor) bool false
 [**shields]
 
 shields_disable_sounds (Disable shield sounds) bool false
-
-
-[**technic_armor]
-
-# Enable or disable technic_armor.
-armor_enable_technic (Enable technic armor) bool true
 
 
 [**wieldview]

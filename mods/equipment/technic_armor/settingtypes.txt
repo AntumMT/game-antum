@@ -1,0 +1,3 @@
+
+# Enable or disable technic_armor.
+armor_material_technic (Enable technic armor) bool true
