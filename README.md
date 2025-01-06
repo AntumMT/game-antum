@@ -64,6 +64,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [mobkit][] ([MIT][lic.mobkit]) -- version: [ddea141 Git][ver.mobkit] *2021-02-01*
   * [mobs_redo][] ([MIT][lic.mobs_redo] / [CC BY][lic.ccby3.0] / [CC0][lic.cc0]) -- version: [db3831d Git][ver.mobs_redo] *2021-07-14*
   * [signs_lib][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2024-09-07][ver.signs_lib]
+  * [xcompat][] ([MIT][lic.xcompat]) -- version: [2024-09-25][ver.xcompat]
 * lighting/
   * [3d_armor_light][] ([MIT][lic.3d_armor_light]) -- version: [1.0][ver.3d_armor_light] *2021-07-17*
   * [glow][] ([GPL][lic.gpl2.0]) -- version: [4c015a0 Git][ver.glow] *2019-02-05* ([patched][patch.glow])
@@ -438,6 +439,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [wielded_light]: https://content.luanti.org/packages/bell07/wielded_light/
 [windmill]: https://content.luanti.org/packages/Sokomine/windmill/
 [workbench]: https://github.com/AntumMT/mod-workbench
+[xcompat]: https://content.luanti.org/packages/mt-mods/xcompat/
 [xtraarmor]: https://forum.luanti.org/viewtopic.php?t=16645
 
 [lic.3d_armor]: mods/modpacks/3d_armor/LICENSE.md
@@ -529,6 +531,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.whitelist]: mods/admin/whitelist/LICENSE.txt
 [lic.windmill]: mods/buildings/windmill/README.md
 [lic.workbench]: mods/tools/workbench/LICENSE.txt
+[lic.xcompat]: mods/libs/xcompat/LICENSE
 
 [lic.cc0]: doc/licenses/CC0.txt
 [lic.ccby]: doc/licenses/CC_BY-4.0.txt
@@ -703,6 +706,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.wielded_light]: https://github.com/minetest-mods/wielded_light/tree/3dfc2623598e095954b0a97f6bac6da7096cdf10
 [ver.windmill]: https://github.com/Sokomine/windmill/tree/9311f53f1bf0dadee89e9a5c70a848d210aaef3b
 [ver.workbench]: https://github.com/AntumMT/mod-workbench/releases/tag/v1.0
+[ver.xcompat]: https://github.com/mt-mods/xcompat/tree/7a136dc7393dcb8d50d34f55aa357b15811cbc59
 
 [patch.airtanks]: https://github.com/AntumMT/mod-airtanks/tree/8b7fd12
 [patch.amber]: https://github.com/AntumMT/mod-amber/tree/39b852a
