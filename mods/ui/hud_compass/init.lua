@@ -16,25 +16,35 @@ local storage = minetest.get_mod_storage()
 local default_corner = tonumber(minetest.settings:get("compass_default_corner") or -2)
 
 local lookup_compass = {
-	{hud_elem_type="image", text="", position={x=1,y=0}, scale={x=4,y=4}, alignment={x=-1,y=1}, offset={x=-8,y=4}},
-	{hud_elem_type="image", text="", position={x=1,y=1}, scale={x=4,y=4}, alignment={x=-1,y=-1}, offset={x=-8,y=-4}},
-	{hud_elem_type="image", text="", position={x=0,y=1}, scale={x=4,y=4}, alignment={x=1,y=-1}, offset={x=8,y=-4}},
-	{hud_elem_type="image", text="", position={x=0,y=0}, scale={x=4,y=4}, alignment={x=1,y=1}, offset={x=8,y=4}},
-	{hud_elem_type="image", text="", position={x=1,y=0}, scale={x=4,y=4}, alignment={x=-1,y=1}, offset={x=-76,y=4}},
-	{hud_elem_type="image", text="", position={x=1,y=1}, scale={x=4,y=4}, alignment={x=-1,y=-1}, offset={x=-76,y=-4}},
-	{hud_elem_type="image", text="", position={x=0,y=1}, scale={x=4,y=4}, alignment={x=1,y=-1}, offset={x=76,y=-4}},
-	{hud_elem_type="image", text="", position={x=0,y=0}, scale={x=4,y=4}, alignment={x=1,y=1}, offset={x=76,y=4}}
+	{type="image", text="", position={x=1,y=0}, scale={x=4,y=4}, alignment={x=-1,y=1}, offset={x=-8,y=4}},
+	{type="image", text="", position={x=1,y=1}, scale={x=4,y=4}, alignment={x=-1,y=-1}, offset={x=-8,y=-4}},
+	{type="image", text="", position={x=0,y=1}, scale={x=4,y=4}, alignment={x=1,y=-1}, offset={x=8,y=-4}},
+	{type="image", text="", position={x=0,y=0}, scale={x=4,y=4}, alignment={x=1,y=1}, offset={x=8,y=4}},
+	{type="image", text="", position={x=1,y=0}, scale={x=4,y=4}, alignment={x=-1,y=1}, offset={x=-76,y=4}},
+	{type="image", text="", position={x=1,y=1}, scale={x=4,y=4}, alignment={x=-1,y=-1}, offset={x=-76,y=-4}},
+	{type="image", text="", position={x=0,y=1}, scale={x=4,y=4}, alignment={x=1,y=-1}, offset={x=76,y=-4}},
+	{type="image", text="", position={x=0,y=0}, scale={x=4,y=4}, alignment={x=1,y=1}, offset={x=76,y=4}}
 }
 local lookup_clock = {
-	{hud_elem_type="image", text="", position={x=1,y=0}, scale={x=4,y=4}, alignment={x=-1,y=1}, offset={x=-8,y=4}},
-	{hud_elem_type="image", text="", position={x=1,y=1}, scale={x=4,y=4}, alignment={x=-1,y=-1}, offset={x=-8,y=-4}},
-	{hud_elem_type="image", text="", position={x=0,y=1}, scale={x=4,y=4}, alignment={x=1,y=-1}, offset={x=8,y=-4}},
-	{hud_elem_type="image", text="", position={x=0,y=0}, scale={x=4,y=4}, alignment={x=1,y=1}, offset={x=8,y=4}},
-	{hud_elem_type="image", text="", position={x=1,y=0}, scale={x=4,y=4}, alignment={x=-1,y=1}, offset={x=-8,y=4}},
-	{hud_elem_type="image", text="", position={x=1,y=1}, scale={x=4,y=4}, alignment={x=-1,y=-1}, offset={x=-8,y=-4}},
-	{hud_elem_type="image", text="", position={x=0,y=1}, scale={x=4,y=4}, alignment={x=1,y=-1}, offset={x=8,y=-4}},
-	{hud_elem_type="image", text="", position={x=0,y=0}, scale={x=4,y=4}, alignment={x=1,y=1}, offset={x=8,y=4}}
+	{type="image", text="", position={x=1,y=0}, scale={x=4,y=4}, alignment={x=-1,y=1}, offset={x=-8,y=4}},
+	{type="image", text="", position={x=1,y=1}, scale={x=4,y=4}, alignment={x=-1,y=-1}, offset={x=-8,y=-4}},
+	{type="image", text="", position={x=0,y=1}, scale={x=4,y=4}, alignment={x=1,y=-1}, offset={x=8,y=-4}},
+	{type="image", text="", position={x=0,y=0}, scale={x=4,y=4}, alignment={x=1,y=1}, offset={x=8,y=4}},
+	{type="image", text="", position={x=1,y=0}, scale={x=4,y=4}, alignment={x=-1,y=1}, offset={x=-8,y=4}},
+	{type="image", text="", position={x=1,y=1}, scale={x=4,y=4}, alignment={x=-1,y=-1}, offset={x=-8,y=-4}},
+	{type="image", text="", position={x=0,y=1}, scale={x=4,y=4}, alignment={x=1,y=-1}, offset={x=8,y=-4}},
+	{type="image", text="", position={x=0,y=0}, scale={x=4,y=4}, alignment={x=1,y=1}, offset={x=8,y=4}}
 }
+
+-- backward compatibility (core version < 5.9.0)
+if not core.has_feature("hud_def_type_field") then
+	for _, t in pairs({lookup_compass, lookup_clock}) do
+		for _, def in pairs(t) do
+			def.hud_elem_type = def.type
+			def.type = nil
+		end
+	end
+end
 
 minetest.register_on_joinplayer(function(player)
 	local pname = player:get_player_name()

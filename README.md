@@ -147,8 +147,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [bookmarks_gui][] ([BSD 3-Clause][lic.bookmarks_gui]) -- version: [f7ae10a Git][ver.bookmarks_gui] *2017-08-29* ([patched][patch.bookmarks_gui])
   * [hbarmor][] ([MIT][lic.mit] / [CC BY-SA][lic.ccbysa3.0]) -- version: [1.0.0][ver.hbarmor] *2019-04-01*
   * [home_gui][] ([BSD 3-Clause][lic.home_gui]) -- version: [44c2f15 Git][ver.home_gui] *2021-06-16* ([patched][patch.home_gui])
-  * [hud_compass][] (MIT / [CC BY-SA ][lic.ccbysa3.0]) -- version: [648c744
- Git][ver.hud_compass] *2020-04-23*
+  * [hud_compass][] ([MIT][lic.hud_compass] / [CC BY-SA ][lic.ccbysa3.0]) -- version: [648c744 Git][ver.hud_compass] _2020-04-23_ ([patched][patch.hud_compass])
   * [hudbars][] ([MIT][lic.mit] / [CC BY-SA][lic.ccbysa3.0]) -- version: [2.3.6][ver.hudbars] *2024-09-16*
   * [pbmarks][] ([MIT][lic.pbmarks]) -- version: [1.0][ver.pbmarks] *2021-06-15*
 * world/
@@ -486,6 +485,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.hidename]: mods/antum/hidename/LICENSE.txt
 [lic.homedecor]: mods/modpacks/homedecor/LICENSE
 [lic.hovercraft]: mods/transport/hovercraft/LICENSE.txt
+[lic.hud_compass]: mods/ui/hud_compass/README.md#L47
 [lic.invisibility]: mods/player/visuals/invisibility/license.txt
 [lic.jukebox]: mods/furniture/jukebox/README.txt
 [lic.lighted_helmets]: mods/equipment/lighted_helmets/LICENSE.txt
@@ -730,6 +730,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.homedecor]: https://gitlab.com/AntumMT/mp-homedecor/commit/7728e969
 [patch.hovercraft]: https://github.com/AntumMT/mod-hovercraft/tree/0f864c4
 [patch.hud]: https://github.com/AntumMT/mod-hud/tree/6846e20
+[patch.hud_compass]: https://github.com/AntumMT/mod-hud_compass/tree/3be32e45327c071cbe357f5bed871e47abd401b4
 [patch.invisibility]: https://github.com/AntumMT/mod-invisibility/tree/00c0638
 [patch.ilights]: https://github.com/AntumMT/mod-ilights/tree/fe1dae4
 [patch.minetest_game]: https://github.com/AntumMT/mtgame-minetest/tree/014188d
