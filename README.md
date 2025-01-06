@@ -25,7 +25,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [fort_spikes][] ([MIT][lic.fort_spikes] / [CC0][lic.cc0]) -- version: [7c011f8 Git][ver.fort_spikes] *2019-10-06* ([patched][patch.fort_spikes])
   * [glass][] ([LGPL][lic.lgpl2.1]) -- version: [1.1][ver.glass] *2021-05-26*
   * [moreblocks][] ([zlib][lic.moreblocks]) -- version: [3b97ea5 Git][ver.moreblocks] *2021-03-19*
-  * [windmill][] ([WTFPL][lic.windmill]) -- version: [47b029d Git][ver.windmill] *2014-08-21* ([patched][patch.windmill])
+  * [windmill][] ([WTFPL][lic.windmill]) -- version: [9311f53 Git][ver.windmill] _2023-01-22_ ([patched][patch.windmill])
 * chat/
   * [away][] ([GPL][lic.gpl2.0]) -- version: [4c1e5a9 Git][ver.away] *2012-03-09* ([patched][patch.away])
   * [chatlog][] ([MIT][lic.chatlog]) -- version: [1.1][ver.chatlog] *2021-05-31*
@@ -702,7 +702,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.whinny]: https://github.com/AntumMT/mod-whinny/tree/32f2d9f
 [ver.whitelist]: https://github.com/AntumMT/mod-whitelist/releases/tag/v1.1
 [ver.wielded_light]: https://github.com/minetest-mods/wielded_light/tree/3dfc2623598e095954b0a97f6bac6da7096cdf10
-[ver.windmill]: https://github.com/Sokomine/windmill/tree/47b029d
+[ver.windmill]: https://github.com/Sokomine/windmill/tree/9311f53f1bf0dadee89e9a5c70a848d210aaef3b
 [ver.workbench]: https://github.com/AntumMT/mod-workbench/releases/tag/v1.0
 
 [patch.airtanks]: https://github.com/AntumMT/mod-airtanks/tree/8b7fd12
@@ -746,4 +746,4 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.technic_armor]: https://github.com/AntumMT/mod-technic_armor/tree/7434d00ebcf161179fbfd180c48f0fc42c3a7676
 [patch.throwing]: https://github.com/AntumMT/mod-throwing/tree/6f55c67
 [patch.unifieddyes]: https://github.com/AntumMT/mod-unifieddyes/tree/3013964
-[patch.windmill]: https://github.com/AntumMT/mod-windmill/tree/7756ab4
+[patch.windmill]: https://github.com/AntumMT/mod-windmill/tree/35e18f9c6e9bee1bb27ebfc39bfd424d6357b113
