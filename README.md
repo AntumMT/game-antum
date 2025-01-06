@@ -42,6 +42,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [equip_wear][] ([MIT][lic.equip_wear]) -- version: [0.1][ver.equip_wear] *2021-07-14*
   * [lighted_helmets][] ([MIT][lic.lighted_helmets]) -- version: [1.1][ver.lighted_helmets] *2021-08-03*
   * [slingshot][] ([MIT][lic.slingshot] / [CC0][lic.cc0]) -- version [0.3][ver.slingshot] *2021-06-10*
+  * [technic_armor][] ([LGPL / WTFPL][lic.technic_armor]) -- version [694642f Git][ver.technic_armor} *2018-02-11*
   * [throwing][] ([WTFPL][lic.wtfpl]) -- version: [90bcf43 Git][ver.throwing] *2013-09-27* ([patched][patch.throwing])
   * [xtraarmor][] ([CC BY-SA][lic.ccbysa3.0]) -- version: 0.3
 * furniture/
@@ -419,6 +420,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [spectator_mode]: https://content.luanti.org/packages/jp/spectator_mode/
 [mobs_monster]: https://content.luanti.org/packages/TenPlus1/mobs_monster/
 [technic]: https://content.luanti.org/packages/RealBadAngel/technic/
+[technic_armor]: https://content.luanti.org/packages/mt-mods/technic_armor/
 [throwing]: https://forum.luanti.org/viewtopic.php?t=687
 [tnt]: https://forum.luanti.org/viewtopic.php?id=2902
 [tools_obsidian]: https://content.luanti.org/packages/Dragonop/tools_obsidian/
@@ -517,6 +519,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.asm_spawneggs]: mods/spawning/asm_spawneggs/LICENSE.txt
 [lic.sounds]: mods/audio/sounds/LICENSE.txt
 [lic.spectator_mode]: mods/admin/spectator_mode/LICENSE
+[lic.technic_armor]: mods/equipment/technic_armor/LICENSE.txt
 [lic.tools_obsidian]: mods/tools/tools_obsidian/README.md
 [lic.trash_can]: mods/furniture/trash_can/LICENSE.txt
 [lic.tree_monster]: mods/mobiles/tree_monster/license.txt
@@ -685,6 +688,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.asm_spawneggs]: https://github.com/AntumMT/mod-asm_spawneggs/releases/tag/v1.2
 [ver.spectator_mode]: https://github.com/minetest-mods/spectator_mode/tree/3648371
 [ver.technic]: https://github.com/minetest-mods/technic/tree/1c21948
+[ver.technic_armor]: https://github.com/mt-mods/technic_armor/tree/694642f5619aa31ef81caadbddade5d007527ae9
 [ver.throwing]: https://github.com/PilzAdam/throwing/tree/90bcf43
 [ver.tnt]: https://github.com/PilzAdam/TNT/tree/d6a0b7d
 [ver.tools_obsidian]: https://github.com/Dragonop/tools_obsidian/releases/tag/1.0
