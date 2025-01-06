@@ -1,10 +1,12 @@
+local strip_color_codes = minetest.settings:get_bool("strip_color_codes", false)
+
 local function initialize_data(meta)
 	local NEAREST_MAX_DISTANCE = moremesecons.setting("commandblock", "nearest_max_distance", 8, 1)
 
 	local commands = meta:get_string("commands")
 	meta:set_string("formspec",
-		"invsize[9,5;]" ..
-		"textarea[0.5,0.5;8.5,4;commands;Commands;"..commands.."]" ..
+		"size[9,5]" ..
+		"textarea[0.5,0.5;8.5,4;commands;Commands;"..minetest.formspec_escape(commands).."]" ..
 		"label[1,3.8;@nearest is replaced by the nearest player name ("..tostring(NEAREST_MAX_DISTANCE).." nodes max for the nearest distance)".."]" ..
 		"button_exit[3.3,4.5;2,1;submit;Submit]")
 	local owner = meta:get_string("owner")
@@ -46,17 +48,21 @@ local function receive_fields(pos, _, fields, player)
 	and player:get_player_name() ~= owner then
 		return
 	end
-	meta:set_string("commands", fields.commands)
+	if strip_color_codes then
+		meta:set_string("commands", minetest.strip_colors(fields.commands))
+	else
+		meta:set_string("commands", fields.commands)
+	end
 
 	initialize_data(meta)
 end
 
 local function resolve_commands(commands, pos)
-	local nearest = nil
+	local nearest = ""
 	local min_distance = math.huge
 	local players = minetest.get_connected_players()
 	for _, player in pairs(players) do
-		local distance = vector.distance(pos, player:getpos())
+		local distance = vector.distance(pos, player:get_pos())
 		if distance < min_distance then
 			min_distance = distance
 			nearest = player:get_player_name()

@@ -177,7 +177,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [home_workshop][] -- version: [03325e8 Git][ver.home_workshop] *2021-04-15*
 * [homedecor][] ([LGPL / WTFPL / CC BY-SA / CC0][lic.homedecor]) -- version: [f1dc68a Git][ver.homedecor] *2021-05-18* ([patched][patch.homedecor])
 * [mesecons][] ([LGPL / CC BY-SA][lic.mesecons]) -- version [2025-01-03][ver.mesecons]
-* [moremesecons][] ([MPL][lic.mpl2.0]) -- version: [1dab017 Git][ver.moremesecons] *2021-04-14*
+* [moremesecons][] ([MPL][lic.mpl2.0]) -- version: [2024-12-20][ver.moremesecons]
 * [mymods](https://github.com/AntumMT/mp-mymods)
   * [mydoors][] ([CC-BY / CC-BY-SA][lic.mydoors] / [WTFPL][lic.wtfpl] / [DWYWFPL][lic.dwywpl]) -- version: [eef3b5f Git][ver.mydoors] *2018-06-12*
   * [myfences][] ([DWYWPL][lic.dwywpl]) -- version: [c6e529a Git][ver.myfences] *2016-04-04*
@@ -653,7 +653,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.monsters_passive]: https://github.com/AntumMT/mp-monsters_passive/tree/b07fe19
 [ver.more_chests]: https://github.com/minetest-mods/more_chests/tree/6be8145
 [ver.moreblocks]: https://github.com/minetest-mods/moreblocks/tree/3b97ea5
-[ver.moremesecons]: https://github.com/minetest-mods/MoreMesecons/tree/1dab017
+[ver.moremesecons]: https://github.com/minetest-mods/MoreMesecons/tree/3e93b939f3bae14fb7a8c3f94e8db5d8fc0b2c24
 [ver.moreores]: https://github.com/minetest-mods/moreores/releases/tag/v2.1.0
 [ver.motorbike]: https://github.com/Extex101/motorbike/tree/f918701
 [ver.mydoors]: https://github.com/minetest-mods/mydoors/tree/eef3b5f
