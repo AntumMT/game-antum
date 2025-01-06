@@ -74,7 +74,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [amber][] ([LGPL][lic.lgpl2.1]) -- version: [56627fa Git][ver.amber] *2017-10-29* ([patched][patch.amber])
   * [basic_materials][] ([LGPL][lic.lgpl3.0]) -- version: [2021-01-30][ver.basic_materials]
   * [bonemeal][] ([MIT][lic.bonemeal]) -- version: [2021-06-20][ver.bonemeal]
-  * [coloredwood][] ([LGPL][lic.lgpl3.0]) -- version: [2021-01-30][ver.coloredwood]
+  * [coloredwood][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2024-03-02][ver.coloredwood]
   * [gems_encrustable][] ([WTFPL][lic.wtfpl]) -- version: [81d513d Git][ver.gems_encrustable] *2012-07-31* ([patched][patch.gems_encrustable])
   * [gems_tools][] ([GPL][lic.gpl3.0]) -- version: [b375432 Git][ver.gems_tools] *2016-09-03* ([patched][patch.gems_tools])
   * [moreores][] ([zlib][lic.moreores] / [CC BY-SA][lic.ccbysa3.0]) -- version: [2.1.0][ver.moreores] *2021-06-28* ([patched][patch.moreores])
@@ -326,7 +326,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [cleaner]: https://content.luanti.org/packages/AntumDeluge/cleaner/
 [cmer_skeleton]: https://content.luanti.org/packages/AntumDeluge/skeleton/
 [cmer_spider]: https://github.com/AntumMT/mod-spider
-[coloredwood]: https://content.luanti.org/packages/VanessaE/coloredwood/
+[coloredwood]: https://content.luanti.org/packages/mt-mods/coloredwood/
 [compass]: https://forum.luanti.org/viewtopic.php?t=3785
 [compassgps]: https://forum.luanti.org/viewtopic.php?t=9373
 [config]: https://content.luanti.org/packages/sorcerykid/config/
@@ -600,7 +600,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.cmer_skeleton]: https://github.com/AntumMT/mod-skeleton/tree/e6448f5
 [ver.cmer_spider]: https://github.com/AntumMT/mod-cmer_spider/tree/134aeae
 [ver.cmer_zombie]: https://github.com/AntumMT/mod-cmer/tree/3dd783c
-[ver.coloredwood]: https://gitlab.com/VanessaE/coloredwood/tags/2021-01-30
+[ver.coloredwood]: https://github.com/mt-mods/coloredwood/tree/1aeb88d6fdb4b9e1d7190432c2e4b1f8f04475df
 [ver.compassgps]: https://github.com/Kilarin/compassgps/tree/567b95f
 [ver.crafting_bench]: https://github.com/minetest-mods/crafting_bench/tree/5d97e6d401d8d9788064d127e774453fed6913c9
 [ver.craftguide]: https://github.com/minetest-mods/craftguide/tree/f379998

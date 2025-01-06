@@ -7,11 +7,9 @@
 -- All materials are flammable and can be used as fuel.
 
 
-coloredwood = {}
-
-coloredwood.enable_stairsplus = true
+local enable_stairsplus = true
 if minetest.settings:get_bool("coloredwood_enable_stairsplus") == false or not minetest.get_modpath("moreblocks") then
-	coloredwood.enable_stairsplus = false
+	enable_stairsplus = false
 end
 
 -- helper functions
@@ -28,7 +26,6 @@ local function is_stairsplus(name, colorized)
 
 	local class = string.sub(name, a+1, b-1) -- from colon to underscore is the class
 	local shape = ""
-	local rest
 	local colorshape
 
 	if class == "stair"
@@ -64,6 +61,7 @@ minetest.register_node("coloredwood:wood_block", {
 	walkable = true,
 	sunlight_propagates = false,
 	groups = groups,
+	is_ground_content = false,
 	sounds = default.node_sound_wood_defaults(),
 })
 
@@ -71,7 +69,7 @@ for _, color in ipairs(unifieddyes.HUES_WITH_GREY) do
 
 	-- moreblocks/stairsplus support
 
-	if coloredwood.enable_stairsplus then
+	if enable_stairsplus then
 
 	--	stairsplus:register_all(modname, subname, recipeitem, {fields})
 
@@ -85,11 +83,14 @@ for _, color in ipairs(unifieddyes.HUES_WITH_GREY) do
 				paramtype = "light",
 				paramtype2 = "colorfacedir",
 				palette = "unifieddyes_palette_"..color.."s.png",
-				after_place_node = function(pos, placer, itemstack, pointed_thing)
+				after_place_node = function(_, placer, itemstack, pointed_thing)
 					minetest.rotate_node(itemstack, placer, pointed_thing)
 				end,
 				on_dig = unifieddyes.on_dig,
-				groups = {snappy=1,choppy=2,oddly_breakable_by_hand=2,flammable=2, not_in_creative_inventory=1, ud_param2_colorable = 1},
+				groups = {
+					snappy=1, choppy=2, oddly_breakable_by_hand=2, flammable=2,
+					not_in_creative_inventory=1, ud_param2_colorable = 1
+				},
 			}
 		)
 	end
@@ -100,7 +101,7 @@ local coloredwood_cuts = {}
 -- force settings for stairsplus default wood stair/slab/etc nodes
 -- and fix other stuff for colored versions of stairsplus nodes
 
-if coloredwood.enable_stairsplus then
+if enable_stairsplus then
 
 	local groups2 = table.copy(minetest.registered_items["default:wood"].groups)
 	groups2.wood = nil
@@ -171,7 +172,10 @@ default.register_fence("coloredwood:fence", {
 	texture = "coloredwood_fence_base.png",
 	paramtype2 = "color",
 	palette = "unifieddyes_palette_extended.png",
-	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, ud_param2_colorable = 1, not_in_creative_inventory=1},
+	groups = {
+		choppy = 2, oddly_breakable_by_hand = 2, flammable = 2,
+		ud_param2_colorable = 1, not_in_creative_inventory=1
+	},
 	sounds = default.node_sound_wood_defaults(),
 	material = "coloredwood:wood_block",
 	on_dig = unifieddyes.on_dig,
@@ -226,5 +230,3 @@ if minetest.get_modpath("signs_lib") then
 		check_for_pole = true
 	})
 end
-
-print("[Colored Wood] Loaded!")
