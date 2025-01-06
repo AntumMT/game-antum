@@ -26,7 +26,7 @@ minetest.register_node('desert_life:barrel_cacti_'..num, {
    description = desc,
    drawtype = 'mesh',
    mesh = 'dl_barrel_cacti_'..num..'.obj',
-   tiles = {name='dl_barrel_cacti.png'},
+   tiles = {'dl_barrel_cacti.png'},
    groups = {oddly_breakable_by_hand=3, choppy=1},
    paramtype = 'light',
    paramtype2 = 'facedir',
@@ -56,35 +56,36 @@ minetest.register_node('desert_life:barrel_cacti_'..num..'_sp', {
 end
 
 minetest.register_decoration({
-		deco_type = "simple",
-		place_on = {"default:desert_sand"},
-		sidelen = 16,
-		noise_params = {
-			offset = 0,
-			scale = 0.01,
-			spread = {x = 100, y = 100, z = 100},
-			seed = 29,
-			octaves = 3,
-			persist = 0.6
-		},
-		y_min = 1,
-		y_max = 30,
-		decoration = "desert_life:barrel_cacti_1_sp",
+      deco_type = "simple",
+      place_on = {"default:desert_sand"},
+      sidelen = 16,
+      noise_params = {
+         offset = .005,
+         scale = 0.002,
+         spread = {x = 150, y = 150, z = 150},
+         seed = 35746584,
+         octaves = 3,
+         persist = 0.6
+      },
+      y_min = -10,
+      y_max = 60,
+      decoration = "desert_life:barrel_cacti_1_sp",
+      param2 = 0,
+      param2_max = 3,
+      biomes = {'desert'},
 })
 
 minetest.register_abm{
-	nodenames = {"group:dl_bc"},
-	interval = 40,
-	chance = 30,
-	action = function(pos)
+   nodenames = {"group:dl_bc"},
+   interval = 40,
+   chance = 30,
+   action = function(pos)
       local node = minetest.get_node(pos)
       if node.name == 'desert_life:barrel_cacti_1_sp' then
-		minetest.set_node(pos, {name = "desert_life:barrel_cacti_2_sp", param2 = node.param2})
-      end
-      if node.name == 'desert_life:barrel_cacti_2_sp' then
-		minetest.set_node(pos, {name = "desert_life:barrel_cacti_3_sp", param2 = node.param2})
-      end
-      if node.name == 'desert_life:barrel_cacti_3_sp' then
+         minetest.set_node(pos, {name = "desert_life:barrel_cacti_2_sp", param2 = node.param2})
+      elseif node.name == 'desert_life:barrel_cacti_2_sp' then
+         minetest.set_node(pos, {name = "desert_life:barrel_cacti_3_sp", param2 = node.param2})
+      elseif node.name == 'desert_life:barrel_cacti_3_sp' then
          desert_life.spread('desert_life:barrel_cacti_1_sp', pos, 2, 'default:desert_sand', 'air', 48)
    end
 end,

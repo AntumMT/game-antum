@@ -7,26 +7,19 @@ function desert_life.spread(nodename, pos, spread, undernode, replacing, needed_
    local location = {}
    if ran_num == 1 then
       location = {x=pos.x+spread, y=pos.y, z=pos.z}
-   end
-   if ran_num == 2 then
+   elseif ran_num == 2 then
       location = {x=pos.x+spread, y=pos.y, z=pos.z+spread}
-   end
-   if ran_num == 3 then
+   elseif ran_num == 3 then
       location = {x=pos.x, y=pos.y, z=pos.z+spread}
-   end
-   if ran_num == 4 then
+   elseif ran_num == 4 then
       location = {x=pos.x-spread, y=pos.y, z=pos.z+spread}
-   end
-   if ran_num == 5 then
+   elseif ran_num == 5 then
       location = {x=pos.x-spread, y=pos.y, z=pos.z}
-   end
-   if ran_num == 6 then
+   elseif ran_num == 6 then
       location = {x=pos.x-spread, y=pos.y, z=pos.z-spread}
-   end
-   if ran_num == 7 then
+   elseif ran_num == 7 then
       location = {x=pos.x, y=pos.y, z=pos.z-spread}
-   end
-   if ran_num == 8 then
+   elseif ran_num == 8 then
       location = {x=pos.x+spread, y=pos.y, z=pos.z-spread}
    end
    local under_location = ({x=location.x, y=location.y-1, z=location.z})
@@ -39,8 +32,8 @@ function desert_life.spread(nodename, pos, spread, undernode, replacing, needed_
       if location_name.name == replacing then
          local diff = spread + 1
          local pos1 = {x=location.x+diff, y=location.y, z=location.z+diff}
-   		local pos0 = {x=location.x-diff, y=location.y, z=location.z-diff}
-   		local can_replace = minetest.find_nodes_in_area(pos0, pos1, replacing)
+         local pos0 = {x=location.x-diff, y=location.y, z=location.z-diff}
+         local can_replace = minetest.find_nodes_in_area(pos0, pos1, replacing)
          local replace_num = #can_replace
          if replace_num >= needed_air then --increase to decrease number of plants.
             local face_ran = math.random(0,3)

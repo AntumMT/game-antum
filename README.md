@@ -152,7 +152,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [pbmarks][] ([MIT][lic.pbmarks]) -- version: [1.0][ver.pbmarks] *2021-06-15*
 * world/
   * [bright_night][] ([Unlicense][lic.unlicense]) -- version: [69b750a Git][ver.bright_night] *2018-06-03* ([patched][patch.bright_night])
-  * [desert_life][] ([CC BY-SA][lic.ccbysa4.0]) -- version: [188f984 Git][ver.desert_life] *2020-01-24*
+  * [desert_life][] ([CC BY-SA][lic.ccbysa4.0]) -- version: [7dc671c Git][ver.desert_life] _2023-11-22_
   * [ethereal][] ([MIT][lic.ethereal]) -- version: [2021-07-18][ver.ethereal] ([patched][patch.ethereal])
   * [nether][] ([ISC / CC BY / CC BY-SA / CC0][lic.nether]) -- version: [3.1][ver.nether] *2021-07-31* ([patched][patch.nether])
   * [snowdrift][] ([MIT / CC BY / CC BY-SA][lic.snowdrift]) -- version: [3342939 Git][ver.snowdrift] *2020-04-24* ([patched][patch.snowdrift])
@@ -605,7 +605,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.crops]: https://github.com/minetest-mods/crops/tree/v1
 [ver.currency]: https://github.com/mt-mods/currency/tree/d97edda151a0dcd26f3c0d192e2a9a64b5843ffb
 [ver.deploy_nodes]: https://github.com/cornernote/minetest-deploy_nodes/tree/b67e162
-[ver.desert_life]: https://github.com/NathanSalapat/desert_life/tree/188f984
+[ver.desert_life]: https://github.com/NathanSalapat/desert_life/tree/7dc671ca9df8b8c2b3a8603c5fb797c146b3b7cd
 [ver.dinosaurs_aggressive]: https://github.com/AntumMT/mp-dinosaurs_aggressive/tree/874f299
 [ver.dirt_monster]: https://github.com/AntumMT/mod-mob_dirt_monster/tree/40c48e0
 [ver.doors]: https://notabug.org/TenPlus1/doors/src/f0fef3f66c4e002e37a27808719f9983ee630fb7
