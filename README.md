@@ -60,6 +60,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * libs/
   * [cmer][creatures] ([zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [2843875 Git][ver.cmer] *2021-06-01*
   * [config][] ([MIT][lic.config]) -- version: 1.1 *2020-03-26*
+  * [fakelib][] ([MIT][lic.fakelib]) -- version: [1.0.0][ver.fakelib] _2024-05-19_
   * [formspecs][] ([MIT][lic.formspecs]) -- version: 2.6 *2020-03-12*
   * [mobkit][] ([MIT][lic.mobkit]) -- version: [ddea141 Git][ver.mobkit] *2021-02-01*
   * [mobs_redo][] ([MIT][lic.mobs_redo] / [CC BY][lic.ccby3.0] / [CC0][lic.cc0]) -- version: [db3831d Git][ver.mobs_redo] *2021-07-14*
@@ -345,6 +346,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [equip_exam]: https://content.luanti.org/packages/AntumDeluge/equip_exam/
 [equip_wear]: https://content.luanti.org/packages/AntumDeluge/equip_wear/
 [ethereal]: https://content.luanti.org/packages/TenPlus1/ethereal/
+[fakelib]: https://content.luanti.org/packages/OgelGames/fakelib/
 [farlands]: https://forum.luanti.org/viewtopic.php?t=16921
 [farming]: https://content.luanti.org/packages/TenPlus1/farming/
 [folks]: https://content.luanti.org/packages/SonoMichele/folks/
@@ -478,6 +480,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.equip_exam]: mods/tools/equip_exam/LICENSE.txt
 [lic.equip_wear]: mods/equipment/equip_wear/LICENSE.txt
 [lic.ethereal]: mods/world/ethereal/license.txt
+[lic.fakelib]: mods/libs/fakelib/LICENSE
 [lic.farming]: mods/horticulture/farming/license.txt
 [lic.formspecs]: mods/libs/formspecs/README.txt
 [lic.fort_spikes]: mods/buildings/fort_spikes/LICENSE
@@ -617,6 +620,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.equip_exam]: https://github.com/AntumMT/mod-equip_exam/releases/tag/v1.6
 [ver.equip_wear]: https://github.com/AntumMT/mod-equip_wear/releases/tag/v0.1
 [ver.ethereal]: https://notabug.org/TenPlus1/ethereal/src/0373b40d70fd05137ef31e774488b3f86c85e758
+[ver.fakelib]: https://github.com/OgelGames/fakelib/tree/80ea83f1c1d411fbe5c648ca02214ae524cc53d7
 [ver.farming]: https://notabug.org/TenPlus1/farming/src/328e8b3223a7568ab3f07b16c341ee547694d225
 [ver.folks]: https://gitlab.com/SonoMichele/folks/tags/v0.2.0
 [ver.fort_spikes]: https://github.com/xeranas/fort_spikes/tree/7c011f88eb070eac568aeacc359be3c655a28e09
