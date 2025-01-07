@@ -748,7 +748,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.moreores]: https://github.com/AntumMT/mod-moreores/tree/0b5a48ecbbc0e82f45e7c270f5b35b235c52e39e
 [patch.motorbike]: https://github.com/AntumMT/mod-motorbike/tree/0aa5c9c
 [patch.mypaths]: https://github.com/AntumMT/mod-mypaths/tree/8f1cb9c05adb749abae82a9083399bf7a195fa37
-[patch.mywoodslopes]: https://github.com/AntumMT/mod-mywoodslopes/tree/bddb95d224f8a8365353e8859c8fd081c9497647
+[patch.mywoodslopes]: https://github.com/AntumMT/mod-mywoodslopes/tree/629a58c68bd52f90975d6777544fa761e8dd5406
 [patch.nether]: https://github.com/AntumMT/mod-nether/tree/7a84ddd
 [patch.painting]: https://github.com/AntumMT/mod-painting/tree/bdcb6727c49ee49d4d40c0a616464f8ac4b78cf3
 [patch.quartz]: https://github.com/AntumMT/mod-quartz/tree/adc759e
