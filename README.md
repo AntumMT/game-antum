@@ -92,7 +92,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [intllib][] ([Unlicense][lic.unlicense]) -- version: [6ebdc53][ver.intllib] *2021-02-23* ***DEPRECATED***
   * [listitems][] ([MIT][lic.listitems]) -- version: [1.1][ver.listitems] *2021-08-04*
   * [painting][] (WTFPL) -- version: [da8f4ba Git][ver.painting] *2021-06-25* ([patched][patch.painting])
-  * [pipeworks][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [48b082e Git][ver.pipeworks] _2021-05-13_
+  * [pipeworks][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2024-12-18][ver.pipeworks]
   * [simple_models][] ([CC0][lic.cc0]) -- version: [2021-08-16][ver.simple_models]
   * [wdata][] ([MIT][lic.wdata]) -- version: [1.1][ver.wdata] *2021-06-15*
 * mobiles/
@@ -670,7 +670,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.no_fall_damage]: https://repo.or.cz/minetest_no_fall_damage.git/shortlog/refs/tags/1.0.0
 [ver.painting]: https://github.com/minetest-mods/painting/tree/da8f4ba
 [ver.pbmarks]: https://github.com/AntumMT/mod-pbmarks/releases/tag/v1.0
-[ver.pipeworks]: https://github.com/mt-mods/pipeworks/tree/48b082e01440a253b04d79ae17e2a8e237e07018
+[ver.pipeworks]: https://github.com/mt-mods/pipeworks/tree/858154cb78ae773768956cf132886bc6a3e89027
 [ver.player_monoids]: https://github.com/minetest-mods/player_monoids/tree/ed11a73
 [ver.pvp_areas]: https://github.com/everamzah/pvp_areas/tree/4eafdee7a9ff1d8e285fa0323d4bc5544c2830de
 [ver.quartz]: https://github.com/minetest-mods/quartz/tree/72ec06f

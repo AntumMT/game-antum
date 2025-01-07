@@ -229,11 +229,13 @@ end
 -------------------------
 
 local function safe_print(param)
-	local string_meta = getmetatable("")
-	local sandbox = string_meta.__index
-	string_meta.__index = string -- Leave string sandbox temporarily
-	print(dump(param))
-	string_meta.__index = sandbox -- Restore string sandbox
+	if (minetest.settings:get("pipeworks_lua_tube_print_behavior") or "log") == "log" then
+		local string_meta = getmetatable("")
+		local sandbox = string_meta.__index
+		string_meta.__index = string -- Leave string sandbox temporarily
+		minetest.log("action", string.format("[pipeworks.tubes.lua] print(%s)", dump(param)))
+		string_meta.__index = sandbox -- Restore string sandbox
+	end
 end
 
 local function safe_date()
@@ -370,7 +372,10 @@ local function clean_and_weigh_digiline_message(msg, back_references)
 		return msg, #msg + 25
 	elseif t == "number" then
 		-- Numbers are passed by value so need not be touched, and cost 8 bytes
-		-- as all numbers in Lua are doubles.
+		-- as all numbers in Lua are doubles. NaN values are removed.
+		if msg ~= msg then
+			return nil, 0
+		end
 		return msg, 8
 	elseif t == "boolean" then
 		-- Booleans are passed by value so need not be touched, and cost 1
@@ -425,7 +430,7 @@ end
 
 -- itbl: Flat table of functions to run after sandbox cleanup, used to prevent various security hazards
 local function get_digiline_send(pos, itbl, send_warning)
-	if not minetest.global_exists("digilines") then return end
+	if not minetest.get_modpath("digilines") then return end
 	local chan_maxlen = mesecon.setting("luacontroller_digiline_channel_maxlen", 256)
 	local maxlen = mesecon.setting("luacontroller_digiline_maxlen", 50000)
 	return function(channel, msg)
@@ -600,7 +605,7 @@ local function save_memory(pos, meta, mem)
 		meta:set_string("lc_memory", memstring)
 		meta:mark_as_private("lc_memory")
 	else
-		print("Error: lua_tube memory overflow. "..memsize_max.." bytes available, "
+		minetest.log("info", "lua_tube memory overflow. "..memsize_max.." bytes available, "
 				..#memstring.." required. Controller overheats.")
 		burn_controller(pos)
 	end
@@ -865,7 +870,7 @@ for white  = 0, 1 do
 	tiles[3] = tiles[3]..tiles_on_off.R270:format(white == 1 and "on" or "off");
 	tiles[4] = tiles[4]..tiles_on_off.R_90:format(white == 1 and "on" or "off");
 
-	local groups = {snappy = 3, tube = 1, tubedevice = 1, overheat = 1}
+	local groups = {snappy = 3, tube = 1, tubedevice = 1, overheat = 1, dig_generic = 4, axey=1, handy=1, pickaxey=1}
 	if red + blue + yellow + green + black + white ~= 0 then
 		groups.not_in_creative_inventory = 1
 	end
@@ -912,13 +917,16 @@ for white  = 0, 1 do
 		paramtype = "light",
 		is_ground_content = false,
 		groups = groups,
+		_mcl_hardness=0.8,
 		drop = BASENAME.."000000",
 		sunlight_propagates = true,
 		selection_box = selection_box,
 		node_box = node_box,
 		on_construct = reset_meta,
 		on_receive_fields = on_receive_fields,
-		sounds = default.node_sound_wood_defaults(),
+		_sound_def = {
+			key = "node_sound_wood_defaults",
+		},
 		mesecons = mesecons,
 		digiline = digiline,
 		-- Virtual portstates are the ports that
@@ -942,7 +950,7 @@ for white  = 0, 1 do
 		tube = {
 			connect_sides = {front = 1, back = 1, left = 1, right = 1, top = 1, bottom = 1},
 			priority = 50,
-			can_go = function(pos, node, velocity, stack)
+			can_go = function(pos, node, velocity, stack, tags)
 				local src = {name = nil}
 				-- add color of the incoming tube explicitly; referring to rules, in case they change later
 				for _, rule in pairs(rules) do
@@ -957,12 +965,33 @@ for white  = 0, 1 do
 					itemstring = stack:to_string(),
 					item = stack:to_table(),
 					velocity = velocity,
+					tags = table.copy(tags),
+					side = src.name,
 				})
-				if not succ or type(msg) ~= "string" then
+				if not succ then
 					return go_back(velocity)
 				end
-				local r = rules[msg]
-				return r and {r} or go_back(velocity)
+				if type(msg) == "string" then
+					local side = rules[msg]
+					return side and {side} or go_back(velocity)
+				elseif type(msg) == "table" then
+					if pipeworks.enable_item_tags then
+						local new_tags
+						if type(msg.tags) == "table" or type(msg.tags) == "string" then
+							new_tags = pipeworks.sanitize_tags(msg.tags)
+						elseif type(msg.tag) == "string" then
+							new_tags = pipeworks.sanitize_tags({msg.tag})
+						end
+						if new_tags then
+							for i=1, math.max(#tags, #new_tags) do
+								tags[i] = new_tags[i]
+							end
+						end
+					end
+					local side = rules[msg.side]
+					return side and {side} or go_back(velocity)
+				end
+				return go_back(velocity)
 			end,
 		},
 		after_place_node = pipeworks.after_place,
@@ -1021,14 +1050,17 @@ minetest.register_node(BASENAME .. "_burnt", {
 	is_burnt = true,
 	paramtype = "light",
 	is_ground_content = false,
-	groups = {snappy = 3, tube = 1, tubedevice = 1, not_in_creative_inventory=1},
+	groups = {snappy = 3, tube = 1, tubedevice = 1, not_in_creative_inventory=1, dig_generic = 4, axey=1, handy=1, pickaxey=1},
+	_mcl_hardness=0.8,
 	drop = BASENAME.."000000",
 	sunlight_propagates = true,
 	selection_box = selection_box,
 	node_box = node_box,
 	on_construct = reset_meta,
 	on_receive_fields = on_receive_fields,
-	sounds = default.node_sound_wood_defaults(),
+	_sound_def = {
+        key = "node_sound_wood_defaults",
+    },
 	virtual_portstates = {red = false, blue = false, yellow = false,
 		green = false, black = false, white = false},
 	mesecons = {

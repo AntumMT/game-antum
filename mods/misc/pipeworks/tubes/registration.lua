@@ -61,13 +61,13 @@ local register_one_tube = function(name, tname, dropname, desc, plain, noctrs, e
 		outimgs[vti[v]] = ends[v]
 	end
 
-	local tgroups = {snappy = 3, tube = 1, tubedevice = 1, not_in_creative_inventory = 1}
+	local tgroups = {snappy = 3, tube = 1, tubedevice = 1, not_in_creative_inventory = 1, dig_generic = 4, axey=1, handy=1, pickaxey=1}
 	local tubedesc = string.format("%s %s", desc, dump(connects))
 	local iimg = type(plain[1]) == "table" and plain[1].name or plain[1]
 	local wscale = {x = 1, y = 1, z = 1}
 
 	if #connects == 0 then
-		tgroups = {snappy = 3, tube = 1, tubedevice = 1}
+		tgroups = {snappy = 3, tube = 1, tubedevice = 1, dig_generic = 4, axey=1, handy=1, pickaxey=1}
 		tubedesc = desc
 		iimg=inv
 		outimgs = {
@@ -78,6 +78,10 @@ local register_one_tube = function(name, tname, dropname, desc, plain, noctrs, e
 		outboxes = { -24/64, -9/64, -9/64, 24/64, 9/64, 9/64 }
 		outsel = { -24/64, -10/64, -10/64, 24/64, 10/64, 10/64 }
 		wscale = {x = 1, y = 1, z = 0.01}
+	end
+
+	for i, tile in ipairs(outimgs) do
+		outimgs[i] = pipeworks.make_tube_tile(tile)
 	end
 
 	local rname = string.format("%s_%s", name, tname)
@@ -102,9 +106,12 @@ local register_one_tube = function(name, tname, dropname, desc, plain, noctrs, e
 			fixed = outboxes
 		},
 		groups = tgroups,
-		sounds = default.node_sound_wood_defaults(),
+		is_ground_content = false,
+		_mcl_hardness=0.8,
+		_sound_def = {
+			key = "node_sound_wood_defaults",
+		},
 		walkable = true,
-		stack_max = 99,
 		basename = name,
 		style = style,
 		drop = string.format("%s_%s", name, dropname),
@@ -220,6 +227,7 @@ local register_all_tubes = function(name, desc, plain, noctrs, ends, short, inv,
 				description = S("Pneumatic tube segment (legacy)"),
 				after_place_node = pipeworks.after_place,
 				groups = {not_in_creative_inventory = 1, tube_to_update = 1, tube = 1},
+				is_ground_content = false,
 				tube = {connect_sides = {front = 1, back = 1, left = 1, right = 1, top = 1, bottom = 1}},
 				drop = name.."_1",
 			})
