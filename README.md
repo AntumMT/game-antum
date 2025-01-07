@@ -59,7 +59,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [sfinv_buttons][] ([MIT][lic.mit]) -- version [1.1.2][ver.sfinv_buttons] *2023-04-20*
 * libs/
   * [cmer][creatures] ([zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [2843875 Git][ver.cmer] *2021-06-01*
-  * [config][] ([MIT][lic.config]) -- version: 1.1 *2020-03-26*
+  * [config][] ([MIT][lic.config]) -- version: [1.1][ver.config] _2020-03-26_ ([patched][patch.config])
   * [fakelib][] ([MIT][lic.fakelib]) -- version: [1.0.0][ver.fakelib] _2024-05-19_
   * [formspecs][] ([MIT][lic.formspecs]) -- version: 2.6 *2020-03-12*
   * [mobkit][] ([MIT][lic.mobkit]) -- version: [ddea141 Git][ver.mobkit] *2021-02-01*
@@ -605,6 +605,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.cmer_zombie]: https://github.com/AntumMT/mod-cmer/tree/3dd783c
 [ver.coloredwood]: https://github.com/mt-mods/coloredwood/tree/1aeb88d6fdb4b9e1d7190432c2e4b1f8f04475df
 [ver.compassgps]: https://github.com/Kilarin/compassgps/tree/567b95f
+[ver.config]: https://bitbucket.org/sorcerykid/config/src/a6d0493df96ca394652425c8f5e2795e8fffc3ae/
 [ver.crafting_bench]: https://github.com/minetest-mods/crafting_bench/tree/5d97e6d401d8d9788064d127e774453fed6913c9
 [ver.craftguide]: https://github.com/minetest-mods/craftguide/tree/f379998
 [ver.crops]: https://github.com/minetest-mods/crops/tree/v1
@@ -726,6 +727,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.castle_weapons]: https://github.com/AntumMT/mod-castle_weapons/tree/e8827d7781e3a36996a4c8f6d2ce0bdaec7536cf
 [patch.christmas]: https://github.com/AntumMT/mod-christmas/tree/50bda80
 [patch.compassgps]: https://github.com/AntumMT/mod-compassgps/tree/8a98085c482c360b53bd231195065d581dd89961
+[patch.config]: https://github.com/AntumMT/mod-config/tree/bf8ba4e96f95fd7722f30c4e4749056e7302371e
 [patch.craftguide]: https://github.com/AntumMT/mod-craftguide/tree/aef18f2
 [patch.crops]: https://github.com/AntumMT/mod-crops/tree/a1cce06
 [patch.drawers]: https://github.com/AntumMT/mod-drawers/tree/a77f809
