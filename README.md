@@ -78,7 +78,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [coloredwood][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2024-03-02][ver.coloredwood]
   * [gems_encrustable][] ([WTFPL][lic.wtfpl]) -- version: [81d513d Git][ver.gems_encrustable] *2012-07-31* ([patched][patch.gems_encrustable])
   * [gems_tools][] ([GPL][lic.gpl3.0]) -- version: [b375432 Git][ver.gems_tools] *2016-09-03* ([patched][patch.gems_tools])
-  * [moreores][] ([zlib][lic.moreores] / [CC BY-SA][lic.ccbysa3.0]) -- version: [2.1.0][ver.moreores] *2021-06-28* ([patched][patch.moreores])
+  * [moreores][] ([zlib][lic.moreores] / [CC BY-SA][lic.ccbysa3.0]) -- version: [2024-12-14][ver.moreores] ([patched][patch.moreores])
   * [quartz][] ([MIT][lic.quartz]) -- version: [72ec06f Git][ver.quartz] *2021-01-04* ([patched][patch.quartz])
   * [rainbow_ore][] ([LGPL][lic.rainbow_ore]) -- version: [830ac09 Git][ver.rainbow_ore] *2021-07-25*
   * [unifieddyes][] ([GPL][lic.gpl2.0]) -- version: [2024-04-20][ver.unifieddyes] ([patched][patch.unifieddyes])
@@ -661,7 +661,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.more_chests]: https://github.com/minetest-mods/more_chests/tree/6be8145
 [ver.moreblocks]: https://github.com/minetest-mods/moreblocks/tree/3b97ea5
 [ver.moremesecons]: https://github.com/minetest-mods/MoreMesecons/tree/3e93b939f3bae14fb7a8c3f94e8db5d8fc0b2c24
-[ver.moreores]: https://github.com/minetest-mods/moreores/releases/tag/v2.1.0
+[ver.moreores]: https://github.com/minetest-mods/moreores/tree/31e9d09355282e1157b96475676640df2e6c7250
 [ver.motorbike]: https://github.com/Extex101/motorbike/tree/f918701
 [ver.mydoors]: https://github.com/minetest-mods/mydoors/tree/5d78183cf2d3eebc58dcbcd7cada378ca1004208
 [ver.myfences]: https://github.com/DonBatman/myfences/tree/c6e529a
@@ -745,7 +745,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.invisibility]: https://github.com/AntumMT/mod-invisibility/tree/00c0638
 [patch.minetest_game]: https://github.com/AntumMT/mtgame-minetest/tree/014188d
 [patch.moreblocks]: https://github.com/AntumMT/mod-moreblocks/tree/6dda839
-[patch.moreores]: https://github.com/AntumMT/mod-moreores/tree/a92c7e2
+[patch.moreores]: https://github.com/AntumMT/mod-moreores/tree/0b5a48ecbbc0e82f45e7c270f5b35b235c52e39e
 [patch.motorbike]: https://github.com/AntumMT/mod-motorbike/tree/0aa5c9c
 [patch.mywoodslopes]: https://github.com/AntumMT/mod-mywoodslopes/tree/bddb95d224f8a8365353e8859c8fd081c9497647
 [patch.nether]: https://github.com/AntumMT/mod-nether/tree/7a84ddd
