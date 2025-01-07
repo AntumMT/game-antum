@@ -92,7 +92,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [intllib][] ([Unlicense][lic.unlicense]) -- version: [6ebdc53][ver.intllib] *2021-02-23* ***DEPRECATED***
   * [listitems][] ([MIT][lic.listitems]) -- version: [1.1][ver.listitems] *2021-08-04*
   * [painting][] (WTFPL) -- version: [da8f4ba Git][ver.painting] *2021-06-25* ([patched][patch.painting])
-  * [pipeworks][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2670fd8 Git][ver.pipeworks] *2021-05-06* ([patched][patch.pipeworks])
+  * [pipeworks][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [48b082e Git][ver.pipeworks] _2021-05-13_
   * [simple_models][] ([CC0][lic.cc0]) -- version: [2021-08-16][ver.simple_models]
   * [wdata][] ([MIT][lic.wdata]) -- version: [1.1][ver.wdata] *2021-06-15*
 * mobiles/
@@ -399,7 +399,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [no_fall_damage]: https://content.luanti.org/packages/Wuzzy/no_fall_damage/
 [painting]: https://github.com/minetest-mods/painting
 [pbmarks]: https://content.luanti.org/packages/AntumDeluge/pbmarks/
-[pipeworks]: https://content.luanti.org/packages/VanessaE/pipeworks/
+[pipeworks]: https://content.luanti.org/packages/mt-mods/pipeworks/
 [player_monoids]: https://content.luanti.org/packages/Byakuren/player_monoids/
 [pvp_areas]: https://forum.luanti.org/viewtopic.php?t=15480
 [quartz]: https://content.luanti.org/packages/Evergreen/quartz/
@@ -670,7 +670,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.no_fall_damage]: https://repo.or.cz/minetest_no_fall_damage.git/shortlog/refs/tags/1.0.0
 [ver.painting]: https://github.com/minetest-mods/painting/tree/da8f4ba
 [ver.pbmarks]: https://github.com/AntumMT/mod-pbmarks/releases/tag/v1.0
-[ver.pipeworks]: https://gitlab.com/VanessaE/pipeworks/tree/2670fd8
+[ver.pipeworks]: https://github.com/mt-mods/pipeworks/tree/48b082e01440a253b04d79ae17e2a8e237e07018
 [ver.player_monoids]: https://github.com/minetest-mods/player_monoids/tree/ed11a73
 [ver.pvp_areas]: https://github.com/everamzah/pvp_areas/tree/4eafdee7a9ff1d8e285fa0323d4bc5544c2830de
 [ver.quartz]: https://github.com/minetest-mods/quartz/tree/72ec06f
@@ -745,7 +745,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.mywoodslopes]: https://github.com/AntumMT/mod-mywoodslopes/tree/bddb95d224f8a8365353e8859c8fd081c9497647
 [patch.nether]: https://github.com/AntumMT/mod-nether/tree/7a84ddd
 [patch.painting]: https://github.com/AntumMT/mod-painting/tree/bdcb6727c49ee49d4d40c0a616464f8ac4b78cf3
-[patch.pipeworks]: https://gitlab.com/AntumMT/mod-pipeworks/tree/48b082e
 [patch.quartz]: https://github.com/AntumMT/mod-quartz/tree/adc759e
 [patch.snowdrift]: https://github.com/AntumMT/mod-snowdrift/tree/0b35cc3
 [patch.technic_armor]: https://github.com/AntumMT/mod-technic_armor/tree/7434d00ebcf161179fbfd180c48f0fc42c3a7676
