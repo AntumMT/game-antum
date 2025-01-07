@@ -718,7 +718,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.atm]: https://github.com/AntumMT/mod-atm/tree/7f022f99da367fe557a86e7fd465df5e9b6614f4
 [patch.away]: https://github.com/AntumMT/mod-away/tree/ea80cdeeddd5f25526d3f1bc506f5bfa4c7fee0a
 [patch.bags]: https://github.com/AntumMT/mod-bags/tree/db216eebc2e63a68061d9f865f649c0ae3490bdd
-[patch.beds]: https://github.com/AntumMT/mod-beds/commit/88155ca
+[patch.beds]: https://github.com/AntumMT/mod-beds/tree/53c4db01435df21f1d4c8e9fe9875582c245e789
 [patch.boats2]: https://github.com/AntumMT/mod-boats2/tree/4160a597b90d15a8b9447690caf0ee9f6c5b919f
 [patch.bookmarks_gui]: https://github.com/AntumMT/mod-bookmarks_gui/tree/8250b0169239b777a84d4b85d72ee4faed2a43eb
 [patch.bridges]: https://github.com/AntumMT/mod-bridges/tree/36b71392e218aac13ed5f0f2a7cd7e4a7667b9ed

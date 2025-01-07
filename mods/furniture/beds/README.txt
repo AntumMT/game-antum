@@ -1,12 +1,12 @@
 Beds Redux Mod v1.0
 By Leslie E. Krause
 
-Beds Redux is a complete rewrite of the Beds mod from Minetest Game. That's right, beds 
+Beds Redux is a complete rewrite of the Beds mod from Minetest Game. That's right, beds
 got a complete makeover from the ground up!
 
-While striving to improve the beds mod for the JT2 server, I realized that the original 
-source code was becoming too unmanageable. So in January, I decided to start from scratch 
-developing Beds Redux with a fully revamped API and many new and exciting features both 
+While striving to improve the beds mod for the JT2 server, I realized that the original
+source code was becoming too unmanageable. So in January, I decided to start from scratch
+developing Beds Redux with a fully revamped API and many new and exciting features both
 for developers and players alike.
 
 Note: Since Beds Redux overrides the builtin respawn function of Minetest, it is strongly
@@ -52,7 +52,6 @@ Stairs Redo Mod (optional)
 Installation
 ----------------------
 
-  1) Backup the original "beds" mod to a safe location.
   1) Unzip the archive into the mods directory of your game.
   2) Rename the beds-master directory to "beds".
   3) Create a file named "player_spawns.txt" in the world directory.
@@ -161,7 +160,7 @@ Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
 	/sounds/respawn_whoosh.ogg
 	by tim.kahn
 	obtained from https://freesound.org/people/tim.kahn/sounds/128590/
-	modified by sorcerykid	
+	modified by sorcerykid
 
 You are free to:
 Share — copy and redistribute the material in any medium or format.
