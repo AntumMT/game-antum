@@ -30,7 +30,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [away][] ([GPL][lic.gpl2.0]) -- version: [4c1e5a9 Git][ver.away] *2012-03-09* ([patched][patch.away])
   * [chatlog][] ([MIT][lic.chatlog]) -- version: [1.1][ver.chatlog] *2021-05-31*
 * commerce/
-  * [atm][] ([GPL][lic.gpl3.0]) -- version: [1.0.4][ver.atm] *2021-04-21* ([patched][patch.atm])
+  * [atm][] ([GPL][lic.gpl3.0]) -- version: [1.0.4][ver.atm] _2021-04-28_ ([patched][patch.atm])
   * [currency][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2024-02-29][ver.currency]
   * [server_shop][] ([MIT][lic.server_shop]) -- version: [1.6][ver.server_shop] *2021-08-18*
 * core/
@@ -715,7 +715,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 
 [patch.airtanks]: https://github.com/AntumMT/mod-airtanks/tree/8b7fd12
 [patch.amber]: https://github.com/AntumMT/mod-amber/tree/39b852a
-[patch.atm]: https://github.com/AntumMT/mod-atm/tree/2ab0e78
+[patch.atm]: https://github.com/AntumMT/mod-atm/tree/7f022f99da367fe557a86e7fd465df5e9b6614f4
 [patch.away]: https://github.com/AntumMT/mod-away/tree/ea80cdeeddd5f25526d3f1bc506f5bfa4c7fee0a
 [patch.bags]: https://github.com/AntumMT/mod-bags/tree/db216eebc2e63a68061d9f865f649c0ae3490bdd
 [patch.beds]: https://github.com/AntumMT/mod-beds/commit/88155ca
