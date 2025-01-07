@@ -116,7 +116,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [spider][cmer_spider] ([unilicense][lic.cmer_spider]) -- version: [134aeae Git][ver.cmer_spider] *2021-07-10*
   * [stone_monster][mobs_monster] ([MIT][lic.stone_monster]) -- version: [fa52f6f Git][ver.stone_monster] *2021-05-20*
   * [tree_monster][mobs_monster] ([MIT][lic.tree_monster]) -- version: [f2977ff Git][ver.tree_monster] *2021-05-20*
-  * velociraptor ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- forked from *mobs_farlands* (part of [farlands][] sub-game)
+  * velociraptor ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- forked from *mobs_farlands* (part of [farlands][] sub-game), version [339e18f Git][ver.velociraptor] _2025-01-07_
   * [whinny][] ([MIT][lic.whinny]) -- version: [32f2d9f Git][ver.whinny] *2021-05-29*
   * [zombie][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [3dd783c Git][ver.cmer_zombie] *2021-05-25*
 * player/action/
@@ -703,6 +703,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.trash_can]: https://github.com/minetest-mods/trash_can/tree/423b0f2
 [ver.tree_monster]: https://github.com/AntumMT/mod-mob_tree_monster/tree/f2977ff
 [ver.unifieddyes]: https://github.com/mt-mods/unifieddyes/tree/de6e2e0e35f2f14390ef1d7ccdb0d7bc1acce2f8
+[ver.velociraptor]: https://github.com/AntumMT/mp-dinosaurs_aggressive/tree/339e18f8145bbb87788ab80ce976f92b2fa3f489
 [ver.waffles]: https://github.com/GreenXenith/waffles/tree/f9ee9962795a44585a7584af34226acaa8bf9d77
 [ver.wardrobe]: https://github.com/AntumMT/mod-wardrobe/tree/0500a78
 [ver.wdata]: https://github.com/AntumMT/mod-wdata/releases/tag/v1.1
