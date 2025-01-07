@@ -184,7 +184,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [mydoors][] ([CC-BY / CC-BY-SA][lic.mydoors] / [WTFPL][lic.wtfpl] / [DWYWFPL][lic.dwywpl]) -- version: [2024-11-16][ver.mydoors]
   * [myfences][] ([DWYWPL][lic.dwywpl]) -- version: [c6e529a Git][ver.myfences] _2016-04-04_ ([patched][patch.myfences])
   * [mylights][] ([DWYWPL][lic.dwywpl]) -- version: [0d734b7 Git][ver.mylights] _2017-07-14_ ([patched][patch.mylights])
-  * [mypaint][] ([DWYWPL][lic.dwywpl]) -- version: [9288e8d Git][ver.mypaint] *2017-11-16*
+  * [mypaint][] ([DWYWPL][lic.dwywpl]) -- version: [9288e8d Git][ver.mypaint] _2017-11-16_ ([patched][patch.mypaint])
   * [mypaths][] ([DWYWPL][lic.dwywpl]) -- version: [078f52c Git][ver.mypaths] _2024-02-29_ ([patched][patch.mypaths])
   * [myroofs][] ([DWYWPL][lic.dwywpl]) -- version: [fe98461 Git][ver.myroofs] _2017-07-14_ ([patched][patch.myroofs])
   * [mysheetmetal][] ([DWYWPL][lic.dwywpl]) -- version: [2ffb3a2 Git][ver.mysheetmetal] _2018-02-16_
@@ -749,6 +749,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.motorbike]: https://github.com/AntumMT/mod-motorbike/tree/0aa5c9c
 [patch.myfences]: https://github.com/AntumMT/mod-myfences/tree/d28f844c73bfa84922711d0bd1224621620be9ab
 [patch.mylights]: https://github.com/AntumMT/mod-mylights/tree/095ea5f16d146975e0504fb70f13036ef261dd02
+[patch.mypaint]: https://github.com/AntumMT/mod-mypaint/tree/d347667be5f26c37fb0588722bbfe6b2a7ba9e16
 [patch.mypaths]: https://github.com/AntumMT/mod-mypaths/tree/8f1cb9c05adb749abae82a9083399bf7a195fa37
 [patch.myroofs]: https://github.com/AntumMT/mod-myroofs/tree/4af8dbc8ffe712522104d05b16831996ecf23662
 [patch.mywoodslopes]: https://github.com/AntumMT/mod-mywoodslopes/tree/629a58c68bd52f90975d6777544fa761e8dd5406
