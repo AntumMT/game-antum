@@ -74,7 +74,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * materials/
   * [amber][] ([LGPL][lic.lgpl2.1]) -- version: [56627fa Git][ver.amber] *2017-10-29* ([patched][patch.amber])
   * [basic_materials][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2024-02-27][ver.basic_materials]
-  * [bonemeal][] ([MIT][lic.bonemeal]) -- version: [2021-06-20][ver.bonemeal]
+  * [bonemeal][] ([MIT / CC0][lic.bonemeal]) -- version: [2024-07-23][ver.bonemeal]
   * [coloredwood][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2024-03-02][ver.coloredwood]
   * [gems_encrustable][] ([WTFPL][lic.wtfpl]) -- version: [81d513d Git][ver.gems_encrustable] *2012-07-31* ([patched][patch.gems_encrustable])
   * [gems_tools][] ([GPL][lic.gpl3.0]) -- version: [b375432 Git][ver.gems_tools] *2016-09-03* ([patched][patch.gems_tools])
@@ -578,7 +578,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.bike]: https://gitlab.com/h2mm/bike/tags/1.2.1
 [ver.biofuel]: https://github.com/APercy/minetest_biofuel/tree/ca480ce
 [ver.boats2]: https://github.com/amadin/boats/tree/b83231e
-[ver.bonemeal]: https://notabug.org/TenPlus1/bonemeal/src/75ec006643e9d5520436f327a3c33831e9d7bbf9
+[ver.bonemeal]: https://codeberg.org/tenplus1/bonemeal/src/commit/0d852bff0ab1c870520f51d15d761aefe466e294
 [ver.bookmarks_gui]: https://github.com/cornernote/minetest-bookmarks_gui/tree/f7ae10a
 [ver.bridges]: https://github.com/mt-historical/bridges/tree/7748488b9cd991cb3bd58af86fe703172a556710
 [ver.bright_night]: https://github.com/Yukitty/minetest-bright_night/tree/69b750a

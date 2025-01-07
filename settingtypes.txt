@@ -1621,6 +1621,12 @@ bike_water_friction (Water friction) float 13.8
 bike_offroad_friction (Offroad friction) float 1.62
 
 
+[*bonemeal]
+
+# Disable recipe for bones:bones to craft into bonemeal
+bonemeal.disable_deathbones_recipe (Disable recipe for death bones into bonemeal) bool false
+
+
 [*bright_night]
 
 # Minimum light level for night time. Must be between 3 and 15.
