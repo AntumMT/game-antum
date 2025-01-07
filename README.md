@@ -24,7 +24,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [elevator][] ([WTFPL][lic.elevator])
   * [fort_spikes][] ([MIT][lic.fort_spikes] / [CC0][lic.cc0]) -- version: [7c011f8 Git][ver.fort_spikes] *2019-10-06* ([patched][patch.fort_spikes])
   * [glass][] ([LGPL][lic.lgpl2.1]) -- version: [1.1][ver.glass] *2021-05-26*
-  * [moreblocks][] ([zlib][lic.moreblocks]) -- version: [3b97ea5 Git][ver.moreblocks] *2021-03-19*
+  * [moreblocks][] ([zlib][lic.moreblocks]) -- version: [2022-08-03][ver.moreblocks]
   * [windmill][] ([WTFPL][lic.windmill]) -- version: [9311f53 Git][ver.windmill] _2023-01-22_ ([patched][patch.windmill])
 * chat/
   * [away][] ([GPL][lic.gpl2.0]) -- version: [4c1e5a9 Git][ver.away] *2012-03-09* ([patched][patch.away])
@@ -659,7 +659,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.monsters_aggressive]: https://github.com/AntumMT/mp-monsters_aggressive/tree/89a8187
 [ver.monsters_passive]: https://github.com/AntumMT/mp-monsters_passive/tree/b07fe19
 [ver.more_chests]: https://github.com/minetest-mods/more_chests/tree/6be8145
-[ver.moreblocks]: https://github.com/minetest-mods/moreblocks/tree/3b97ea5
+[ver.moreblocks]: https://github.com/minetest-mods/moreblocks/tree/dce587cf3397dca7e242455cd017cba50ee28a5b
 [ver.moremesecons]: https://github.com/minetest-mods/MoreMesecons/tree/3e93b939f3bae14fb7a8c3f94e8db5d8fc0b2c24
 [ver.moreores]: https://github.com/minetest-mods/moreores/tree/31e9d09355282e1157b96475676640df2e6c7250
 [ver.motorbike]: https://github.com/Extex101/motorbike/tree/f918701
@@ -745,7 +745,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.hud_compass]: https://github.com/AntumMT/mod-hud_compass/tree/3be32e45327c071cbe357f5bed871e47abd401b4
 [patch.invisibility]: https://github.com/AntumMT/mod-invisibility/tree/00c0638
 [patch.minetest_game]: https://github.com/AntumMT/mtgame-minetest/tree/014188d
-[patch.moreblocks]: https://github.com/AntumMT/mod-moreblocks/tree/6dda839
 [patch.moreores]: https://github.com/AntumMT/mod-moreores/tree/0b5a48ecbbc0e82f45e7c270f5b35b235c52e39e
 [patch.motorbike]: https://github.com/AntumMT/mod-motorbike/tree/0aa5c9c
 [patch.mywoodslopes]: https://github.com/AntumMT/mod-mywoodslopes/tree/bddb95d224f8a8365353e8859c8fd081c9497647
