@@ -714,7 +714,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.xtraarmor]: https://codeberg.org/AntumLuanti/mod-xtraarmor/commit/8f18f34fa405fa33959e800533905805bc603b86
 
 [patch.airtanks]: https://github.com/AntumMT/mod-airtanks/tree/8b7fd12
-[patch.amber]: https://github.com/AntumMT/mod-amber/tree/39b852a
+[patch.amber]: https://github.com/AntumMT/mod-amber/tree/54c92f26f75b4062674100e1a5e723c0098099fb
 [patch.atm]: https://github.com/AntumMT/mod-atm/tree/7f022f99da367fe557a86e7fd465df5e9b6614f4
 [patch.away]: https://github.com/AntumMT/mod-away/tree/ea80cdeeddd5f25526d3f1bc506f5bfa4c7fee0a
 [patch.bags]: https://github.com/AntumMT/mod-bags/tree/db216eebc2e63a68061d9f865f649c0ae3490bdd
