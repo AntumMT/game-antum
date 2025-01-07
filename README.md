@@ -187,7 +187,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [mypaint][] ([DWYWPL][lic.dwywpl]) -- version: [9288e8d Git][ver.mypaint] _2017-11-16_ ([patched][patch.mypaint])
   * [mypaths][] ([DWYWPL][lic.dwywpl]) -- version: [078f52c Git][ver.mypaths] _2024-02-29_ ([patched][patch.mypaths])
   * [myroofs][] ([DWYWPL][lic.dwywpl]) -- version: [fe98461 Git][ver.myroofs] _2017-07-14_ ([patched][patch.myroofs])
-  * [mysheetmetal][] ([DWYWPL][lic.dwywpl]) -- version: [2ffb3a2 Git][ver.mysheetmetal] _2018-02-16_
+  * [mysheetmetal][] ([DWYWPL][lic.dwywpl]) -- version: [2ffb3a2 Git][ver.mysheetmetal] _2018-02-16_ ([patched][patch.mysheetmetal])
   * [mywoodslopes][] ([DWYWPL][lic.dwywpl]) -- version: [b661b28 Git][ver.mywoodslopes] _2021-04-28_ ([patched][patch.mywoodslopes])
 * [technic][] ([LGPL][lic.lgpl2.0]) -- version: [2024-12-17][ver.technic]
 
@@ -752,6 +752,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.mypaint]: https://github.com/AntumMT/mod-mypaint/tree/d347667be5f26c37fb0588722bbfe6b2a7ba9e16
 [patch.mypaths]: https://github.com/AntumMT/mod-mypaths/tree/8f1cb9c05adb749abae82a9083399bf7a195fa37
 [patch.myroofs]: https://github.com/AntumMT/mod-myroofs/tree/4af8dbc8ffe712522104d05b16831996ecf23662
+[patch.mysheetmetal]: https://github.com/AntumMT/mod-mysheetmetal/tree/6ad423ddf800e6091ebc4100fac052bd78a4aa20
 [patch.mywoodslopes]: https://github.com/AntumMT/mod-mywoodslopes/tree/629a58c68bd52f90975d6777544fa761e8dd5406
 [patch.nether]: https://github.com/AntumMT/mod-nether/tree/7a84ddd
 [patch.painting]: https://github.com/AntumMT/mod-painting/tree/bdcb6727c49ee49d4d40c0a616464f8ac4b78cf3
