@@ -92,7 +92,7 @@ local dirtab = {
 
 local tube = {
 	insert_object = function(pos, node, stack, direction)
-		print(minetest.pos_to_string(direction), dirtab[direction.x+2+(direction.z+2)*2], node.param2)
+		--print(minetest.pos_to_string(direction), dirtab[direction.x+2+(direction.z+2)*2], node.param2)
 		if direction.y == 1
 			or (direction.y == 0 and dirtab[direction.x+2+(direction.z+2)*2] == node.param2) then
 			return stack
@@ -106,7 +106,7 @@ local tube = {
 		end
 	end,
 	can_insert = function(pos, node, stack, direction)
-		print(minetest.pos_to_string(direction), dirtab[direction.x+2+(direction.z+2)*2], node.param2)
+		--print(minetest.pos_to_string(direction), dirtab[direction.x+2+(direction.z+2)*2], node.param2)
 		if direction.y == 1
 			or (direction.y == 0 and dirtab[direction.x+2+(direction.z+2)*2] == node.param2) then
 			return false
@@ -192,10 +192,10 @@ function technic.register_battery_box(data)
 	end
 
 	local run = function(pos, node)
-		local below = minetest.get_node({x=pos.x, y=pos.y-1, z=pos.z})
-		local meta           = minetest.get_meta(pos)
+		local meta = minetest.get_meta(pos)
+		local network_id = tonumber(meta:get_string(tier.."_network"))
 
-		if not technic.is_tier_cable(below.name, tier) then
+		if not technic.networks[network_id] then
 			meta:set_string("infotext", S("%s Battery Box Has No Network"):format(tier))
 			return
 		end
@@ -304,9 +304,9 @@ function technic.register_battery_box(data)
 			drop = "technic:"..ltier.."_battery_box0",
 			on_construct = function(pos)
 				local meta = minetest.get_meta(pos)
-				local EU_upgrade, tube_upgrade = 0, 0
+				local EU_upgrade, _ = 0
 				if data.upgrade then
-					EU_upgrade, tube_upgrade = technic.handle_machine_upgrades(meta)
+					EU_upgrade, _ = technic.handle_machine_upgrades(meta)
 				end
 				local max_charge = data.max_charge * (1 + EU_upgrade / 10)
 				local charge = meta:get_int("internal_EU_charge")
@@ -345,9 +345,9 @@ function technic.register_battery_box(data)
 					meta = minetest.get_meta(pos)
 					if not pipeworks.may_configure(pos, sender) then return end
 					fs_helpers.on_receive_fields(pos, fields)
-					local EU_upgrade, tube_upgrade = 0, 0
+					local EU_upgrade, _ = 0
 					if data.upgrade then
-						EU_upgrade, tube_upgrade = technic.handle_machine_upgrades(meta)
+						EU_upgrade, _ = technic.handle_machine_upgrades(meta)
 					end
 					local max_charge = data.max_charge * (1 + EU_upgrade / 10)
 					local charge = meta:get_int("internal_EU_charge")
@@ -409,6 +409,25 @@ minetest.register_on_player_receive_fields(
 	end
 )
 
+function technic.get_charge(itemstack)
+	-- check if is chargable
+	local tool_name = itemstack:get_name()
+	if not technic.power_tools[tool_name] then
+		return 0, 0
+	end
+	local item_meta = technic.get_stack_meta(itemstack)
+	return item_meta:get_int("technic:charge"), technic.power_tools[tool_name]
+end
+
+function technic.set_charge(itemstack, charge)
+	local tool_name = itemstack:get_name()
+	if technic.power_tools[tool_name] then
+		technic.set_RE_wear(itemstack, charge, technic.power_tools[tool_name])
+	end
+	local item_meta = technic.get_stack_meta(itemstack)
+	item_meta:set_int("technic:charge", charge)
+end
+
 function technic.charge_tools(meta, batt_charge, charge_step)
 	local inv = meta:get_inventory()
 	if inv:is_empty("src") then
@@ -416,18 +435,18 @@ function technic.charge_tools(meta, batt_charge, charge_step)
 	end
 	local src_stack = inv:get_stack("src", 1)
 
-	local tool_name = src_stack:get_name()
-	if not technic.power_tools[tool_name] then
+	-- get callbacks
+	local src_def = src_stack:get_definition()
+	local technic_get_charge = src_def.technic_get_charge or technic.get_charge
+	local technic_set_charge = src_def.technic_set_charge or technic.set_charge
+
+	-- get tool charge
+	local tool_charge, item_max_charge = technic_get_charge(src_stack)
+	if item_max_charge==0 then
 		return batt_charge, false
 	end
-	-- Set meta data for the tool if it didn't do it itself
-	local src_meta = minetest.deserialize(src_stack:get_metadata()) or {}
-	if not src_meta.charge then
-		src_meta.charge = 0
-	end
+
 	-- Do the charging
-	local item_max_charge = technic.power_tools[tool_name]
-	local tool_charge     = src_meta.charge
 	if tool_charge >= item_max_charge then
 		return batt_charge, true
 	elseif batt_charge <= 0 then
@@ -437,9 +456,7 @@ function technic.charge_tools(meta, batt_charge, charge_step)
 	charge_step = math.min(charge_step, item_max_charge - tool_charge)
 	tool_charge = tool_charge + charge_step
 	batt_charge = batt_charge - charge_step
-	technic.set_RE_wear(src_stack, tool_charge, item_max_charge)
-	src_meta.charge = tool_charge
-	src_stack:set_metadata(minetest.serialize(src_meta))
+	technic_set_charge(src_stack, tool_charge)
 	inv:set_stack("src", 1, src_stack)
 	return batt_charge, (tool_charge == item_max_charge)
 end
@@ -450,21 +467,20 @@ function technic.discharge_tools(meta, batt_charge, charge_step, max_charge)
 	if inv:is_empty("dst") then
 		return batt_charge, false
 	end
-	local srcstack = inv:get_stack("dst", 1)
-	local toolname = srcstack:get_name()
-	if technic.power_tools[toolname] == nil then
+	local src_stack = inv:get_stack("dst", 1)
+
+	-- get callbacks
+	local src_def = src_stack:get_definition()
+	local technic_get_charge = src_def.technic_get_charge or technic.get_charge
+	local technic_set_charge = src_def.technic_set_charge or technic.set_charge
+
+	-- get tool charge
+	local tool_charge, item_max_charge = technic_get_charge(src_stack)
+	if item_max_charge==0 then
 		return batt_charge, false
-	end
-	-- Set meta data for the tool if it didn't do it itself :-(
-	local src_meta = minetest.deserialize(srcstack:get_metadata())
-	src_meta = src_meta or {}
-	if not src_meta.charge then
-		src_meta.charge = 0
 	end
 
 	-- Do the discharging
-	local item_max_charge = technic.power_tools[toolname]
-	local tool_charge     = src_meta.charge
 	if tool_charge <= 0 then
 		return batt_charge, true
 	elseif batt_charge >= max_charge then
@@ -474,10 +490,8 @@ function technic.discharge_tools(meta, batt_charge, charge_step, max_charge)
 	charge_step = math.min(charge_step, tool_charge)
 	tool_charge = tool_charge - charge_step
 	batt_charge = batt_charge + charge_step
-	technic.set_RE_wear(srcstack, tool_charge, item_max_charge)
-	src_meta.charge = tool_charge
-	srcstack:set_metadata(minetest.serialize(src_meta))
-	inv:set_stack("dst", 1, srcstack)
+	technic_set_charge(src_stack, tool_charge)
+	inv:set_stack("dst", 1, src_stack)
 	return batt_charge, (tool_charge == 0)
 end
 

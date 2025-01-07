@@ -188,7 +188,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [myroofs][] ([DWYWPL][lic.dwywpl]) -- version: [fe98461 Git][ver.myroofs] *2017-07-14*
   * [mysheetmetal][] ([DWYWPL][lic.dwywpl]) -- version: [2ffb3a2 Git][ver.mysheetmetal] _2018-02-16_
   * [mywoodslopes][] ([DWYWPL][lic.dwywpl]) -- version: [b661b28 Git][ver.mywoodslopes] _2021-04-28_ ([patched][patch.mywoodslopes])
-* [technic][] ([LGPL][lic.lgpl2.0]) -- version: [1c21948 Git][ver.technic] *2021-04-14*
+* [technic][] ([LGPL][lic.lgpl2.0]) -- version: [2024-12-17][ver.technic]
 
 
 ---
@@ -689,7 +689,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.stone_monster]: https://github.com/AntumMT/mod-mob_stone_monster/tree/fa52f6f
 [ver.asm_spawneggs]: https://github.com/AntumMT/mod-asm_spawneggs/releases/tag/v1.2
 [ver.spectator_mode]: https://github.com/minetest-mods/spectator_mode/tree/3648371
-[ver.technic]: https://github.com/minetest-mods/technic/tree/1c21948
+[ver.technic]: https://github.com/minetest-mods/technic/tree/3bece9cec5807a73dc764bdf43ad0d1d3441904e
 [ver.technic_armor]: https://github.com/mt-mods/technic_armor/tree/e581a7102a62bd9dec072198d2562a9ff7900654
 [ver.throwing]: https://github.com/PilzAdam/throwing/tree/90bcf43
 [ver.tnt]: https://github.com/PilzAdam/TNT/tree/d6a0b7d
