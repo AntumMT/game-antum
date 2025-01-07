@@ -69,7 +69,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * lighting/
   * [3d_armor_light][] ([MIT][lic.3d_armor_light]) -- version: [1.0][ver.3d_armor_light] *2021-07-17*
   * [glow][] ([GPL][lic.gpl2.0]) -- version: [4c015a0 Git][ver.glow] *2019-02-05* ([patched][patch.glow])
-  * [ilights][] ([LGPL][lic.lgpl3.0]) -- version: [2021-02-25-01][ver.ilights] ([patched][patch.ilights])
+  * [ilights][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2024-12-28][ver.ilights]
   * [wielded_light][] ([GPL][lic.gpl3.0]) -- version: [2023-11-26][ver.wielded_light]
 * materials/
   * [amber][] ([LGPL][lic.lgpl2.1]) -- version: [56627fa Git][ver.amber] *2017-10-29* ([patched][patch.amber])
@@ -368,7 +368,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [hovercraft]: https://forum.luanti.org/viewtopic.php?t=6722
 [hud_compass]: https://content.luanti.org/packages/kestral/hud_compass/
 [hudbars]: https://content.luanti.org/packages/Wuzzy/hudbars/
-[ilights]: https://content.luanti.org/packages/VanessaE/ilights/
+[ilights]: https://content.luanti.org/packages/mt-mods/ilights/
 [intllib]: https://content.luanti.org/packages/kaeza/intllib/
 [invisibility]: https://content.luanti.org/packages/TenPlus1/invisibility/
 [jukebox]: https://forum.luanti.org/viewtopic.php?t=13505
@@ -640,7 +640,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.hovercraft]: https://github.com/stujones11/hovercraft/tree/4d50e68
 [ver.hud_compass]: https://github.com/kestral246/hud_compass/tree/648c744
 [ver.hudbars]: https://codeberg.org/Wuzzy/minetest_hudbars/src/tag/2.3.6
-[ver.ilights]: https://gitlab.com/VanessaE/ilights/tags/2021-02-25-01
+[ver.ilights]: https://github.com/mt-mods/ilights/tree/0a8ff658c3638ddff952c6de9d5914c9783fb877
 [ver.intllib]: https://github.com/minetest-mods/intllib/tree/6ebdc53
 [ver.invisibility]: https://notabug.org/TenPlus1/invisibility/src/65c0823d6a28b62046cdadc67ff1e462d37e3643
 [ver.jukebox]: https://github.com/minetest-mods/jukebox/tree/0d871f2
@@ -741,7 +741,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.hud]: https://github.com/AntumMT/mod-hud/tree/6846e20
 [patch.hud_compass]: https://github.com/AntumMT/mod-hud_compass/tree/3be32e45327c071cbe357f5bed871e47abd401b4
 [patch.invisibility]: https://github.com/AntumMT/mod-invisibility/tree/00c0638
-[patch.ilights]: https://github.com/AntumMT/mod-ilights/tree/fe1dae4
 [patch.minetest_game]: https://github.com/AntumMT/mtgame-minetest/tree/014188d
 [patch.moreblocks]: https://github.com/AntumMT/mod-moreblocks/tree/6dda839
 [patch.moreores]: https://github.com/AntumMT/mod-moreores/tree/a92c7e2
