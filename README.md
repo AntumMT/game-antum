@@ -131,7 +131,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [pvp_areas][] ([LGPL][lic.lgpl2.1]) -- version: [4eafdee Git][ver.pvp_areas] *2025-01-03*
   * [simple_protection][] ([CC0][lic.cc0]) -- version: [d357ba1 Git][ver.simple_protection] _2024-09-06_
 * storage/
-  * [drawers][] ([MIT / CC0 / CC BY][lic.drawers]) -- version: [0.6.2][ver.drawers] *2021-03-27*
+  * [drawers][] ([MIT / CC0 / CC BY][lic.drawers]) -- version: [2023-01-20][ver.drawers]
   * [more_chests][] ([GPL][lic.gpl2.0]) -- version: [6be8145 Git][ver.more_chests] *2021-04-05*
 * tools/
   * [compassgps][] ([WTFPL][lic.wtfpl] / [CC0][lic.cc0] / [CC BY-SA][lic.ccbysa]) -- version: [567b95f Git][ver.compassgps] *2018-09-24* ([patched][patch.compassgps])
@@ -614,7 +614,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.dinosaurs_aggressive]: https://github.com/AntumMT/mp-dinosaurs_aggressive/tree/874f299
 [ver.dirt_monster]: https://github.com/AntumMT/mod-mob_dirt_monster/tree/40c48e0
 [ver.doors]: https://notabug.org/TenPlus1/doors/src/f0fef3f66c4e002e37a27808719f9983ee630fb7
-[ver.drawers]: https://github.com/minetest-mods/drawers/releases/tag/v0.6.2
+[ver.drawers]: https://github.com/minetest-mods/drawers/tree/c46e246b0444ed62445c8a45a1e8a2f9b4e0da5d
 [ver.dungeon_master]: https://github.com/AntumMT/mod-mob_dungeon_master/tree/00c890f
 [ver.enchanting]: https://github.com/AntumMT/mod-enchanting/tree/dee7dde
 [ver.equip_exam]: https://github.com/AntumMT/mod-equip_exam/releases/tag/v1.6

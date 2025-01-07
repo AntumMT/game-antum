@@ -24,9 +24,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ]]
 
--- Load support for intllib.
-local MP = core.get_modpath(core.get_current_modname())
-local S, NS = dofile(MP.."/intllib.lua")
+local S = minetest.get_translator('drawers')
 
 core.register_entity("drawers:visual", {
 	initial_properties = {
@@ -374,7 +372,7 @@ core.register_entity("drawers:visual", {
 		local dropPos = core.find_node_near(self.drawer_pos, 1, {"air"}, false)
 		-- if no pos found then drop on the top of the drawer
 		if not dropPos then
-			dropPos = self.pos
+			dropPos = self.object:get_pos()
 			dropPos.y = dropPos.y + 1
 		end
 		-- drop the item stack

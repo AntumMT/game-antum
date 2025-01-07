@@ -39,14 +39,13 @@ deposit an item in certain situations. The table is only updated on an as needed
 basis, not by a specific time/interval. Controllers that have no items will not
 continue scanning drawers. ]]--
 
--- Load support for intllib.
-local MP = core.get_modpath(core.get_current_modname())
-local S, NS = dofile(MP.."/intllib.lua")
+local S = minetest.get_translator('drawers')
 
 local default_loaded = core.get_modpath("default") and default
 local mcl_loaded = core.get_modpath("mcl_core") and mcl_core
 local pipeworks_loaded = core.get_modpath("pipeworks") and pipeworks
 local digilines_loaded = core.get_modpath("digilines") and digilines
+local techage_loaded = core.get_modpath("techage") and techage
 
 local function controller_formspec(pos)
 	local formspec =
@@ -401,6 +400,9 @@ local function controller_on_digiline_receive(pos, _, channel, msg)
 end
 
 local function controller_on_receive_fields(pos, formname, fields, sender)
+	if core.is_protected(pos, sender:get_player_name()) then
+		return
+	end
 	local meta = core.get_meta(pos)
 	if fields.saveChannel then
 		meta:set_string("digilineChannel", fields.digilineChannel)
@@ -476,7 +478,7 @@ local function register_controller()
 		end
 
 		def.tube.can_insert = function(pos, node, stack, tubedir)
-			return controller_allow_metadata_inventory_put(pos, "src", nil, stack, nil)
+			return controller_allow_metadata_inventory_put(pos, "src", nil, stack, nil) > 0
 		end
 
 		def.tube.connect_sides = {
@@ -497,6 +499,14 @@ local function register_controller()
 	end
 
 	core.register_node("drawers:controller", def)
+
+	if techage_loaded then
+		techage.register_node({"drawers:controller"}, {
+			on_push_item = function(pos, in_dir, stack)
+				return controller_insert_to_drawers(pos, stack)
+			end
+		})
+	end
 end
 
 -- register drawer controller
