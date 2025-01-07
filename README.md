@@ -73,7 +73,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [wielded_light][] ([GPL][lic.gpl3.0]) -- version: [2023-11-26][ver.wielded_light]
 * materials/
   * [amber][] ([LGPL][lic.lgpl2.1]) -- version: [56627fa Git][ver.amber] *2017-10-29* ([patched][patch.amber])
-  * [basic_materials][] ([LGPL][lic.lgpl3.0]) -- version: [2021-01-30][ver.basic_materials]
+  * [basic_materials][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2024-02-27][ver.basic_materials]
   * [bonemeal][] ([MIT][lic.bonemeal]) -- version: [2021-06-20][ver.bonemeal]
   * [coloredwood][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2024-03-02][ver.coloredwood]
   * [gems_encrustable][] ([WTFPL][lic.wtfpl]) -- version: [81d513d Git][ver.gems_encrustable] *2012-07-31* ([patched][patch.gems_encrustable])
@@ -304,7 +304,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [awards]: https://content.luanti.org/packages/rubenwardy/awards/
 [away]: https://forum.luanti.org/viewtopic.php?t=1211
 [bags]: http://cornernote.github.io/minetest-bags/
-[basic_materials]: https://content.luanti.org/packages/VanessaE/basic_materials/
+[basic_materials]: https://content.luanti.org/packages/mt-mods/basic_materials/
 [beds]: https://content.luanti.org/packages/sorcerykid/beds/
 [bike]: https://content.luanti.org/packages/Hume2/bike/
 [biofuel]: https://forum.luanti.org/viewtopic.php?t=24622
@@ -574,7 +574,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.awards]: https://github.com/rubenwardy/awards/tree/v3.4.0
 [ver.away]: https://github.com/kahrl/minetest-mod-away/tree/4c1e5a9
 [ver.bags]: https://github.com/cornernote/minetest-bags/tree/bc87b45
-[ver.basic_materials]: https://gitlab.com/VanessaE/basic_materials/-/tags/2021-01-30
+[ver.basic_materials]: https://github.com/mt-mods/basic_materials/tree/800310c0fa2522d04409d95676d1d0e9ed3964db
 [ver.bike]: https://gitlab.com/h2mm/bike/tags/1.2.1
 [ver.biofuel]: https://github.com/APercy/minetest_biofuel/tree/ca480ce
 [ver.boats2]: https://github.com/amadin/boats/tree/b83231e
