@@ -749,6 +749,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.quartz]: https://github.com/AntumMT/mod-quartz/tree/adc759e
 [patch.snowdrift]: https://github.com/AntumMT/mod-snowdrift/tree/0b35cc3
 [patch.technic_armor]: https://github.com/AntumMT/mod-technic_armor/tree/7434d00ebcf161179fbfd180c48f0fc42c3a7676
-[patch.throwing]: https://github.com/AntumMT/mod-throwing/tree/6f55c67
+[patch.throwing]: https://github.com/AntumMT/mod-throwing/tree/2a0e3c593a23f024ac19c6bdfc3fcd55bc674b14
 [patch.unifieddyes]: https://github.com/AntumMT/mod-unifieddyes/tree/3dc9ff1d8efccf402bbd0a9ac521d8caab008f9b
 [patch.windmill]: https://github.com/AntumMT/mod-windmill/tree/35e18f9c6e9bee1bb27ebfc39bfd424d6357b113
