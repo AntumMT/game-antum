@@ -182,7 +182,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [moremesecons][] ([MPL][lic.mpl2.0]) -- version: [2024-12-20][ver.moremesecons]
 * [mymods](https://github.com/AntumMT/mp-mymods)
   * [mydoors][] ([CC-BY / CC-BY-SA][lic.mydoors] / [WTFPL][lic.wtfpl] / [DWYWFPL][lic.dwywpl]) -- version: [2024-11-16][ver.mydoors]
-  * [myfences][] ([DWYWPL][lic.dwywpl]) -- version: [c6e529a Git][ver.myfences] *2016-04-04*
+  * [myfences][] ([DWYWPL][lic.dwywpl]) -- version: [c6e529a Git][ver.myfences] _2016-04-04_ ([patched][patch.myfences])
   * [mylights][] ([DWYWPL][lic.dwywpl]) -- version: [0d734b7 Git][ver.mylights] _2017-07-14_ ([patched][patch.mylights])
   * [mypaint][] ([DWYWPL][lic.dwywpl]) -- version: [9288e8d Git][ver.mypaint] *2017-11-16*
   * [mypaths][] ([DWYWPL][lic.dwywpl]) -- version: [078f52c Git][ver.mypaths] _2024-02-29_ ([patched][patch.mypaths])
@@ -747,6 +747,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.minetest_game]: https://github.com/AntumMT/mtgame-minetest/tree/014188d
 [patch.moreores]: https://github.com/AntumMT/mod-moreores/tree/0b5a48ecbbc0e82f45e7c270f5b35b235c52e39e
 [patch.motorbike]: https://github.com/AntumMT/mod-motorbike/tree/0aa5c9c
+[patch.myfences]: https://github.com/AntumMT/mod-myfences/tree/d28f844c73bfa84922711d0bd1224621620be9ab
 [patch.mylights]: https://github.com/AntumMT/mod-mylights/tree/095ea5f16d146975e0504fb70f13036ef261dd02
 [patch.mypaths]: https://github.com/AntumMT/mod-mypaths/tree/8f1cb9c05adb749abae82a9083399bf7a195fa37
 [patch.myroofs]: https://github.com/AntumMT/mod-myroofs/tree/4af8dbc8ffe712522104d05b16831996ecf23662
