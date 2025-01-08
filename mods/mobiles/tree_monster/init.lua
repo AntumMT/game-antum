@@ -48,7 +48,7 @@ local tree_types = {
 
 -- Tree Monster (or Tree Gollum) by PilzAdam
 
-mobs:register_mob(":mobs:tree_monster", {
+mobs:register_mob("mobs:tree_monster", {
 	type = "monster",
 	passive = false,
 	attack_type = "dogfight",
@@ -156,7 +156,7 @@ mobs:register_mob(":mobs:tree_monster", {
 if not mobs.custom_spawn_monster then
 
 	mobs:spawn({
-		name = ":mobs:tree_monster",
+		name = "mobs:tree_monster",
 		nodes = {"group:leaves"},
 		max_light = 7,
 		chance = 7000,

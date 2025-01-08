@@ -760,7 +760,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.snowdrift]: https://github.com/AntumMT/mod-snowdrift/tree/0b35cc3
 [patch.stone_monster]: https://github.com/AntumMT/mod-stone_monster/tree/f27156df6cb957c5b12b87b22003c84fbdf9ddb3
 [patch.technic_armor]: https://github.com/AntumMT/mod-technic_armor/tree/7434d00ebcf161179fbfd180c48f0fc42c3a7676
-[patch.tree_monster]: https://github.com/AntumMT/mod-tree_monster/tree/1126cab551d840a10ccc6a3df23f3281f2a938c5
+[patch.tree_monster]: https://github.com/AntumMT/mod-tree_monster/tree/f268bf41773b5a8e5e4f0efaec1050f10d3987ce
 [patch.throwing]: https://github.com/AntumMT/mod-throwing/tree/2a0e3c593a23f024ac19c6bdfc3fcd55bc674b14
 [patch.unifieddyes]: https://github.com/AntumMT/mod-unifieddyes/tree/3dc9ff1d8efccf402bbd0a9ac521d8caab008f9b
 [patch.windmill]: https://github.com/AntumMT/mod-windmill/tree/35e18f9c6e9bee1bb27ebfc39bfd424d6357b113
