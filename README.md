@@ -105,7 +105,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [folks][] ([GPL][lic.gpl3.0]) -- version: [0.2.0][ver.folks] *2021-02-23*
   * [ghost][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [2f70906 Git][ver.cmer_ghost] *2021-05-25*
   * [kitten][mobs_animal] ([MIT][lic.mobs_kitten]) -- version: [b3bf401 Git][ver.mobs_kitten] *2021-05-25*
-  * [mese_monster][mobs_monster] ([MIT][lic.mese_monster]) -- version: [cd02839 Git][ver.mese_monster] *2021-05-20*
+  * [mese_monster][mobs_monster] ([MIT / CC0 / WTFPL][lic.mese_monster]) -- version: [2025-01-01][ver.mobs_monster] ([patched][patch.mese_monster])
   * [oerkki][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [f7c5586 Git][ver.cmer_oerkki] *2021-06-01*
   * [rat][mobs_rat] ([MIT][lic.mobs_rat]) -- version: [2a8d115 Git][ver.mobs_rat] *2021-05-20*
   * [sand_monster][mobs_monster] ([MIT / CC0 / WTFPL][lic.sand_monster]) -- version: [2025-01-01][ver.mobs_monster] ([patched][patch.sand_monster])
@@ -646,7 +646,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.jukebox]: https://github.com/minetest-mods/jukebox/tree/0d871f2
 [ver.lighted_helmets]: https://github.com/AntumMT/mod-lighted_helmets/releases/tag/v1.1
 [ver.listitems]: https://github.com/AntumMT/mod-listitems/releases/tag/v1.1
-[ver.mese_monster]: https://github.com/AntumMT/mod-mob_mese_monster/tree/cd02839
 [ver.mesecons]: https://github.com/minetest-mods/mesecons/tree/1f9e86c3da08acb9e63e07c980a19097f6a125e2
 [ver.minetest_game]: https://github.com/minetest/minetest_game/tree/9270188
 [ver.mobkit]: https://github.com/TheTermos/mobkit/tree/ddea141
@@ -742,6 +741,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.hud]: https://github.com/AntumMT/mod-hud/tree/6846e20
 [patch.hud_compass]: https://github.com/AntumMT/mod-hud_compass/tree/3be32e45327c071cbe357f5bed871e47abd401b4
 [patch.invisibility]: https://github.com/AntumMT/mod-invisibility/tree/00c0638
+[patch.mese_monster]: https://github.com/AntumMT/mod-mese_monster/tree/93f3148e29f14709bf8aacd0029519374bc7241e
 [patch.minetest_game]: https://github.com/AntumMT/mtgame-minetest/tree/014188d
 [patch.moreores]: https://github.com/AntumMT/mod-moreores/tree/0b5a48ecbbc0e82f45e7c270f5b35b235c52e39e
 [patch.motorbike]: https://github.com/AntumMT/mod-motorbike/tree/0aa5c9c

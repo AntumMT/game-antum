@@ -19,3 +19,14 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
+
+Textures and Model created by SirrobZeroone (CC0)
+  mobs_mese_monster_red.png
+  mobs_mese_monster_blue.png
+  mobs_mese_monster_green.png
+  mobs_mese_monster_purple.png
+  mobs_mese_arrow.png
+  mobs_mese_monster.b3d
+
+Sounds by Cyberpangolin (WTFPL) https://forum.minetest.net/viewtopic.php?t=10798
+  mobs_mesemonster.ogg
