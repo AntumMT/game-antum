@@ -1,4 +1,4 @@
-## Sand Monster mod for [Luanti (Minetest)](https://luanti.org)
+## Sand Monster mod for [Luanti (Minetest)](https://luanti.org/)
 
 
 ---

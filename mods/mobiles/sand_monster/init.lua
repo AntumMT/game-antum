@@ -31,7 +31,7 @@ end
 
 -- Sand Monster by PilzAdam
 
-mobs:register_mob(":mobs:sand_monster", {
+mobs:register_mob("mobs:sand_monster", {
 	type = "monster",
 	passive = false,
 	attack_type = "dogfight",
@@ -114,7 +114,7 @@ mobs:register_mob(":mobs:sand_monster", {
 if not mobs.custom_spawn_monster then
 
 	mobs:spawn({
-		name = ":mobs:sand_monster",
+		name = "mobs:sand_monster",
 		nodes = {"default:desert_sand"},
 		chance = 7000,
 		active_object_count = 2,
