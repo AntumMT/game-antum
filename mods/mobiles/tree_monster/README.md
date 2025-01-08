@@ -27,7 +27,7 @@ __Mob description:__
 ### **Licensing:**
 
 - code: [MIT](license.txt)
-- media: [MIT / CC BY-SA / CC0 / WTFPL](license.txt#L23)
+- media: [WTFPL](license.txt#L23)
 
 
 [asm_spawneggs]: https://content.luanti.org/packages/AntumDeluge/asm_spawneggs/

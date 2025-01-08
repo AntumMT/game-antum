@@ -115,7 +115,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [sneeker][] ([MIT][lic.sneeker]) -- version: [1.1-1][ver.sneeker] *2021-07-20*
   * [spider][cmer_spider] ([unilicense][lic.cmer_spider]) -- version: [134aeae Git][ver.cmer_spider] *2021-07-10*
   * [stone_monster][mobs_monster] ([MIT / CC0 / WTFPL][lic.stone_monster]) -- version: [2025-01-01][ver.mobs_monster] ([patched][patch.stone_monster])
-  * [tree_monster][mobs_monster] ([MIT / CC BY-SA / CC0 / WTFPL][lic.tree_monster]) -- version: [2025-01-01][ver.mobs_monster] ([patched][patch.tree_monster])
+  * [tree_monster][mobs_monster] ([MIT / WTFPL][lic.tree_monster]) -- version: [2025-01-01][ver.mobs_monster] ([patched][patch.tree_monster])
   * velociraptor ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- forked from *mobs_farlands* (part of [farlands][] sub-game), version [339e18f Git][ver.velociraptor] _2025-01-07_
   * [whinny][] ([MIT][lic.whinny]) -- version: [32f2d9f Git][ver.whinny] *2021-05-29*
   * [zombie][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [3dd783c Git][ver.cmer_zombie] *2021-05-25*
@@ -760,7 +760,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.snowdrift]: https://github.com/AntumMT/mod-snowdrift/tree/0b35cc3
 [patch.stone_monster]: https://github.com/AntumMT/mod-stone_monster/tree/a1f6f89d43a27c78831d3a5494b825ae8a4964bf
 [patch.technic_armor]: https://github.com/AntumMT/mod-technic_armor/tree/7434d00ebcf161179fbfd180c48f0fc42c3a7676
-[patch.tree_monster]: https://github.com/AntumMT/mod-tree_monster/tree/f268bf41773b5a8e5e4f0efaec1050f10d3987ce
+[patch.tree_monster]: https://github.com/AntumMT/mod-tree_monster/tree/2ac89e279c260e8c8d7cdb07da1826a33cc0b446
 [patch.throwing]: https://github.com/AntumMT/mod-throwing/tree/2a0e3c593a23f024ac19c6bdfc3fcd55bc674b14
 [patch.unifieddyes]: https://github.com/AntumMT/mod-unifieddyes/tree/3dc9ff1d8efccf402bbd0a9ac521d8caab008f9b
 [patch.windmill]: https://github.com/AntumMT/mod-windmill/tree/35e18f9c6e9bee1bb27ebfc39bfd424d6357b113
