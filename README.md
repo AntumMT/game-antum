@@ -100,7 +100,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [bee][mobs_animal] ([MIT][lic.mobs_bee]) -- version: [671c6c1 Git][ver.mobs_bee] *2021-06-02*
   * [chicken][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [085706f Git][ver.cmer_chicken] *2021-05-25*
   * [cow][mobs_animal] ([MIT][lic.mobs_cow]) -- version: [85af09a Git][ver.mobs_cow] *2021-05-19*
-  * [dirt_monster][mobs_monster] ([MIT][lic.dirt_monster] -- version: [40c48e0 Git][ver.dirt_monster] *2021-05-20*
+  * [dirt_monster][mobs_monster] ([MIT / WTFPL][lic.dirt_monster] -- version: [2025-01-01][ver.mobs_monster] ([patched][patch.dirt_monster])
   * [dungeon_master][mobs_monster] ([MIT][lic.dungeon_master] -- version: [00c890f Git][ver.dungeon_master] *2021-05-20*
   * [folks][] ([GPL][lic.gpl3.0]) -- version: [0.2.0][ver.folks] *2021-02-23*
   * [ghost][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [2f70906 Git][ver.cmer_ghost] *2021-05-25*
@@ -613,7 +613,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.deploy_nodes]: https://github.com/cornernote/minetest-deploy_nodes/tree/b67e162
 [ver.desert_life]: https://github.com/NathanSalapat/desert_life/tree/7dc671ca9df8b8c2b3a8603c5fb797c146b3b7cd
 [ver.dinosaurs_aggressive]: https://github.com/AntumMT/mp-dinosaurs_aggressive/tree/874f299
-[ver.dirt_monster]: https://github.com/AntumMT/mod-mob_dirt_monster/tree/40c48e0
 [ver.doors]: https://notabug.org/TenPlus1/doors/src/f0fef3f66c4e002e37a27808719f9983ee630fb7
 [ver.drawers]: https://github.com/minetest-mods/drawers/tree/c46e246b0444ed62445c8a45a1e8a2f9b4e0da5d
 [ver.dungeon_master]: https://github.com/AntumMT/mod-mob_dungeon_master/tree/00c890f
@@ -731,6 +730,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.craftguide]: https://github.com/AntumMT/mod-craftguide/tree/aef18f2
 [patch.crops]: https://github.com/AntumMT/mod-crops/tree/a1cce06
 [patch.drawers]: https://github.com/AntumMT/mod-drawers/tree/a77f809
+[patch.dirt_monster]: https://github.com/AntumMT/mod-dirt_monster/tree/5a247b7393e231012dcf938b179ba337c5194db3
 [patch.ethereal]: https://github.com/AntumMT/mod-ethereal/tree/0d418d4
 [patch.fort_spikes]: https://github.com/AntumMT/mod-fort_spikes/tree/154c8c289989d0936c4f7b374569209021d3f84e
 [patch.gems_encrustable]: https://github.com/AntumMT/mod-gems_encrustable/tree/773355a51a169469a9aea9c032dddd4af5aea5d5
