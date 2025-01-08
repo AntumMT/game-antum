@@ -114,7 +114,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [skeleton][cmer_skeleton] ([MIT][lic.cmer_skeleton]) -- version: [e6448f5 Git][ver.cmer_skeleton] *2021-06-01*
   * [sneeker][] ([MIT][lic.sneeker]) -- version: [1.1-1][ver.sneeker] *2021-07-20*
   * [spider][cmer_spider] ([unilicense][lic.cmer_spider]) -- version: [134aeae Git][ver.cmer_spider] *2021-07-10*
-  * [stone_monster][mobs_monster] ([MIT][lic.stone_monster]) -- version: [fa52f6f Git][ver.stone_monster] *2021-05-20*
+  * [stone_monster][mobs_monster] ([MIT / CC BY-SA / CC0 / WTFPL][lic.stone_monster]) -- version: [2025-01-01][ver.mobs_monster] ([patched][patch.stone_monster])
   * [tree_monster][mobs_monster] ([MIT / CC BY-SA / CC0 / WTFPL][lic.tree_monster]) -- version: [2025-01-01][ver.mobs_monster] ([patched][patch.tree_monster])
   * velociraptor ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- forked from *mobs_farlands* (part of [farlands][] sub-game), version [339e18f Git][ver.velociraptor] _2025-01-07_
   * [whinny][] ([MIT][lic.whinny]) -- version: [32f2d9f Git][ver.whinny] *2021-05-29*
@@ -692,7 +692,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.sneeker]: https://github.com/AntumMT/mod-sneeker/releases/tag/v1.1-1
 [ver.snowdrift]: https://github.com/paramat/snowdrift/tree/3342939
 [ver.sounds]: https://github.com/AntumMT/mod-sounds/releases/tag/v1.6
-[ver.stone_monster]: https://github.com/AntumMT/mod-mob_stone_monster/tree/fa52f6f
 [ver.asm_spawneggs]: https://github.com/AntumMT/mod-asm_spawneggs/releases/tag/v1.2
 [ver.spectator_mode]: https://github.com/minetest-mods/spectator_mode/tree/3648371
 [ver.technic]: https://github.com/minetest-mods/technic/tree/3bece9cec5807a73dc764bdf43ad0d1d3441904e
@@ -759,6 +758,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.painting]: https://github.com/AntumMT/mod-painting/tree/bdcb6727c49ee49d4d40c0a616464f8ac4b78cf3
 [patch.quartz]: https://github.com/AntumMT/mod-quartz/tree/adc759e
 [patch.snowdrift]: https://github.com/AntumMT/mod-snowdrift/tree/0b35cc3
+[patch.stone_monster]: https://github.com/AntumMT/mod-stone_monster/tree/f27156df6cb957c5b12b87b22003c84fbdf9ddb3
 [patch.technic_armor]: https://github.com/AntumMT/mod-technic_armor/tree/7434d00ebcf161179fbfd180c48f0fc42c3a7676
 [patch.tree_monster]: https://github.com/AntumMT/mod-tree_monster/tree/1126cab551d840a10ccc6a3df23f3281f2a938c5
 [patch.throwing]: https://github.com/AntumMT/mod-throwing/tree/2a0e3c593a23f024ac19c6bdfc3fcd55bc674b14
