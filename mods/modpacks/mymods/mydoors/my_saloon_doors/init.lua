@@ -1,13 +1,13 @@
 local rotate_simple = rawget(_G, "screwdriver") and screwdriver.rotate_simple or nil
 
 local doorcol = {
-	{"white",	"White",	"^[colorize:white:120", "my_door_wood:wood_white"},
-	{"red",		"Red",		"^[colorize:red:120", "my_door_wood:wood_red"},
-	{"black",	"Black",	"^[colorize:black:220", "my_door_wood:wood_black"},
-	{"brown",	"Brown",	"^[colorize:black:180", "my_door_wood:wood_brown"},
-	{"grey",	"Grey",		"^[colorize:white:120^[colorize:black:120", "my_door_wood:wood_grey"},
-	{"dark_grey",	"Dark grey",	"^[colorize:white:120^[colorize:black:200", "my_door_wood:wood_dark_grey"},
-	{"yellow",	"Yellow",	"^[colorize:yellow:100", "my_door_wood:wood_yellow"},
+	{"white",	"White",	"^[colorize:white:120", "coloredwood:wood_white"},
+	{"red",		"Red",		"^[colorize:red:120", "coloredwood:wood_red"},
+	{"black",	"Black",	"^[colorize:black:220", "coloredwood:wood_black"},
+	{"brown",	"Brown",	"^[colorize:black:180", "coloredwood:wood_brown"},
+	{"grey",	"Grey",		"^[colorize:white:120^[colorize:black:120", "coloredwood:wood_grey"},
+	{"dark_grey",	"Dark grey",	"^[colorize:white:120^[colorize:black:200", "coloredwood:wood_dark_grey"},
+	{"yellow",	"Yellow",	"^[colorize:yellow:100", "coloredwood:wood_yellow"},
 }
 
 local function add_door(col, des, tint, craft)

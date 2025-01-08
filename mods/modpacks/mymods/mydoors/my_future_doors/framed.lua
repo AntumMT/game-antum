@@ -202,9 +202,9 @@ local function add_door(col)
 	minetest.register_craft({
 		output = "my_future_doors:door1a_"..col.." 1",
 		recipe = {
-			{"my_door_wood:wood_"..col, "wool:"..col, "my_door_wood:wood_"..col},
-			{"wool:"..col, "my_door_wood:wood_"..col, "wool:"..col},
-			{"my_door_wood:wood_"..col, "wool:"..col, "my_door_wood:wood_"..col}
+			{"coloredwood:wood_"..col, "wool:"..col, "coloredwood:wood_"..col},
+			{"wool:"..col, "coloredwood:wood_"..col, "wool:"..col},
+			{"coloredwood:wood_"..col, "wool:"..col, "coloredwood:wood_"..col}
 		}
 	})
 end

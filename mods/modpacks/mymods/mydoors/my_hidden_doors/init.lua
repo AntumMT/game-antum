@@ -112,8 +112,8 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "my_hidden_doors:hidden_door_grey 1",
 	recipe = {
-		{"my_door_wood:wood_dark_grey", "my_door_wood:wood_dark_grey", ""},
-		{"my_door_wood:wood_dark_grey", "my_door_wood:wood_dark_grey", ""},
-		{"my_door_wood:wood_dark_grey", "my_door_wood:wood_dark_grey", ""}
+		{"coloredwood:wood_dark_grey", "coloredwood:wood_dark_grey", ""},
+		{"coloredwood:wood_dark_grey", "coloredwood:wood_dark_grey", ""},
+		{"coloredwood:wood_dark_grey", "coloredwood:wood_dark_grey", ""}
 	}
 })

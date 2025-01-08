@@ -26,18 +26,18 @@ end
 minetest.register_craft({
 	output = "my_misc_doors:door1 1",
 	recipe = {
-		{"my_door_wood:wood_white", "my_door_wood:wood_white", ""},
-		{"my_door_wood:wood_white", "my_door_wood:wood_white", ""},
-		{"my_door_wood:wood_white", "my_door_wood:wood_white", ""}
+		{"coloredwood:wood_white", "coloredwood:wood_white", ""},
+		{"coloredwood:wood_white", "coloredwood:wood_white", ""},
+		{"coloredwood:wood_white", "coloredwood:wood_white", ""}
 	}
 })
 
 minetest.register_craft({
 	output = "my_misc_doors:door2 1",
 	recipe = {
-		{"my_door_wood:wood_grey", "my_door_wood:wood_grey", ""},
-		{"my_door_wood:wood_grey", "my_door_wood:wood_grey", ""},
-		{"my_door_wood:wood_grey", "my_door_wood:wood_grey", ""}
+		{"coloredwood:wood_grey", "coloredwood:wood_grey", ""},
+		{"coloredwood:wood_grey", "coloredwood:wood_grey", ""},
+		{"coloredwood:wood_grey", "coloredwood:wood_grey", ""}
 	}
 })
 minetest.register_craft({
@@ -59,9 +59,9 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "my_misc_doors:door5 1",
 	recipe = {
-		{"my_door_wood:wood_white", "wool:red", ""},
-		{"my_door_wood:wood_white", "my_door_wood:wood_white", ""},
-		{"my_door_wood:wood_white", "wool:red", ""}
+		{"coloredwood:wood_white", "wool:red", ""},
+		{"coloredwood:wood_white", "coloredwood:wood_white", ""},
+		{"coloredwood:wood_white", "wool:red", ""}
 	}
 })
 minetest.register_craft({
