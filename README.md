@@ -108,7 +108,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [mese_monster][mobs_monster] ([MIT][lic.mese_monster]) -- version: [cd02839 Git][ver.mese_monster] *2021-05-20*
   * [oerkki][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [f7c5586 Git][ver.cmer_oerkki] *2021-06-01*
   * [rat][mobs_rat] ([MIT][lic.mobs_rat]) -- version: [2a8d115 Git][ver.mobs_rat] *2021-05-20*
-  * [sand_monster][mobs_monster] ([MIT][lic.sand_monster]) -- version: [3dd5954 Git][ver.sand_monster] *2021-05-20*
+  * [sand_monster][mobs_monster] ([MIT / CC0 / WTFPL][lic.sand_monster]) -- version: [2025-01-01][ver.mobs_monster] ([patched][patch.sand_monster])
   * [shark][] ([CC0 / CC BY-SA][lic.cmer_shark]) -- version: [0805b84 Git][ver.cmer_shark] *2021-06-01*
   * [sheep][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [e5e0e31 Git][ver.cmer_sheep] *2021-05-25*
   * [skeleton][cmer_skeleton] ([MIT][lic.cmer_skeleton]) -- version: [e6448f5 Git][ver.cmer_skeleton] *2021-06-01*
@@ -680,7 +680,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.pvp_areas]: https://github.com/everamzah/pvp_areas/tree/4eafdee7a9ff1d8e285fa0323d4bc5544c2830de
 [ver.quartz]: https://github.com/minetest-mods/quartz/tree/72ec06f
 [ver.rainbow_ore]: https://github.com/FsxShader2012/rainbow_ore/tree/830ac09
-[ver.sand_monster]: https://github.com/AntumMT/mod-mob_sand_monster/tree/3dd5954
 [ver.server_shop]: https://github.com/AntumMT/mod-server_shop/releases/tag/v1.6
 [ver.sfinv]: https://github.com/rubenwardy/sfinv/tree/dbe59fd71b45542fe086bb18dfc0421aa323ca05
 [ver.sfinv_buttons]: https://codeberg.org/Wuzzy/minetest_sfinv_buttons/src/commit/1.1.2
@@ -757,6 +756,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.nether]: https://github.com/AntumMT/mod-nether/tree/7a84ddd
 [patch.painting]: https://github.com/AntumMT/mod-painting/tree/bdcb6727c49ee49d4d40c0a616464f8ac4b78cf3
 [patch.quartz]: https://github.com/AntumMT/mod-quartz/tree/adc759e
+[patch.sand_monster]: https://github.com/AntumMT/mod-sand_monster/tree/0c688699284787ae826f86c3bfdee3bfb41ed458
 [patch.snowdrift]: https://github.com/AntumMT/mod-snowdrift/tree/0b35cc3
 [patch.stone_monster]: https://github.com/AntumMT/mod-stone_monster/tree/f27156df6cb957c5b12b87b22003c84fbdf9ddb3
 [patch.technic_armor]: https://github.com/AntumMT/mod-technic_armor/tree/7434d00ebcf161179fbfd180c48f0fc42c3a7676

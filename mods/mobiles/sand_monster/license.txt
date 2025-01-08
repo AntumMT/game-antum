@@ -19,3 +19,13 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
+
+Textures by Sirrobzeroone (CC0 1.0 Universal)
+  mobs_sand_monster.png
+
+Pavel_S and PilzAdam (WTFPL)
+  mobs_sand_monster.b3d [edited by SirrobZeroone]
+  mobs_sand_monster2.png
+
+Sounds by Cyberpangolin (WTFPL) https://forum.minetest.net/viewtopic.php?t=10798
+  mobs_sandmonster.ogg
