@@ -1,4 +1,4 @@
-## Dirt Monster mod for [Luanti (Minetest)](https://luanti.org)
+## Dirt Monster mod for [Luanti (Minetest)](https://luanti.org/)
 
 
 ---
