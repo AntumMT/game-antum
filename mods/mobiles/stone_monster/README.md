@@ -1,4 +1,4 @@
-## Stone Monster mod for [Luanti (Minetest)](https://luanti.org)
+## Stone Monster mod for [Luanti (Minetest)](https://luanti.org/)
 
 
 ---
@@ -27,7 +27,7 @@ __Mob description:__
 ### **Licensing:**
 
 - code: [MIT](license.txt)
-- textures: [MIT / CC BY-SA / CC0 / WTFPL](license.txt#L23)
+- media: [MIT / CC0 / WTFPL](license.txt#L23)
 
 
 [asm_spawneggs]: https://content.luanti.org/packages/AntumDeluge/asm_spawneggs/

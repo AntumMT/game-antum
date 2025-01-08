@@ -26,7 +26,7 @@ local stone_types = {
 
 -- Stone Monster by PilzAdam
 
-mobs:register_mob(":mobs:stone_monster", {
+mobs:register_mob("mobs:stone_monster", {
 	type = "monster",
 	passive = false,
 	attack_type = "dogfight",
@@ -105,7 +105,7 @@ mobs:register_mob(":mobs:stone_monster", {
 if not mobs.custom_spawn_monster then
 
 	mobs:spawn({
-		name = ":mobs:stone_monster",
+		name = "mobs:stone_monster",
 		nodes = {"default:stone", "default:desert_stone", "default:sandstone",
 				"default:permafrost_with_stones"},
 		max_light = 7,
