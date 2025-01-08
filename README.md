@@ -468,7 +468,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.cmer_spider]: mods/mobiles/spider/LICENSE
 [lic.config]: mods/libs/config/README.txt#L129
 [lic.craftguide]: mods/crafting/craftguide/license.txt
-[lic.creatures]: mods/mobiles/engine/creatures/LICENSE.txt
+[lic.creatures]: mods/mobiles/libs/cmer/LICENSE.txt
 [lic.crops]: mods/farming/crops/LICENSE
 [lic.deploy_nodes]: mods/modpacks/deploy_nodes/LICENSE
 [lic.dirt_monster]: mods/mobiles/dirt_monster/license.txt
@@ -496,7 +496,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.listitems]: mods/antum/listitems/LICENSE.txt
 [lic.mese_monster]: mods/mobiles/mese_monster/license.txt
 [lic.mesecons]: mods/modpacks/mesecons/COPYING.txt
-[lic.mobkit]: mods/mobiles/engine/mobkit/LICENSE
+[lic.mobkit]: mods/mobiles/libs/mobkit/LICENSE
 [lic.mobs_bee]: mods/mobiles/bee/license.txt
 [lic.mobs_cow]: mods/mobiles/cow/license.txt
 [lic.mobs_kitten]: mods/mobiles/kitten/license.txt
