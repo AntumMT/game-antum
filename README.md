@@ -741,7 +741,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.hud]: https://github.com/AntumMT/mod-hud/tree/6846e20
 [patch.hud_compass]: https://github.com/AntumMT/mod-hud_compass/tree/3be32e45327c071cbe357f5bed871e47abd401b4
 [patch.invisibility]: https://github.com/AntumMT/mod-invisibility/tree/00c0638
-[patch.mese_monster]: https://github.com/AntumMT/mod-mese_monster/tree/d21deee022ffddca791c76ae43acf67cd8dcd9d2
+[patch.mese_monster]: https://github.com/AntumMT/mod-mese_monster/tree/df9fffedc51525b67eac9824b99d10f62eaf64c4
 [patch.minetest_game]: https://github.com/AntumMT/mtgame-minetest/tree/014188d
 [patch.moreores]: https://github.com/AntumMT/mod-moreores/tree/0b5a48ecbbc0e82f45e7c270f5b35b235c52e39e
 [patch.motorbike]: https://github.com/AntumMT/mod-motorbike/tree/0aa5c9c

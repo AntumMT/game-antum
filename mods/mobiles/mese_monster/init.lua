@@ -271,7 +271,7 @@ mobs:register_mob("mobs:mese_monster", {
 
 -- mese arrow item
 
-minetest.register_craftitem("mobs:mese_crystal_fragment_arrow", {
+minetest.register_craftitem(":mobs:mese_crystal_fragment_arrow", {
 	description = S("Mese Monster Arrow"),
 	inventory_image = "mobs_mese_arrow.png",
 	groups = {not_in_creative_inventory = 1}
