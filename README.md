@@ -115,7 +115,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [sneeker][] ([MIT][lic.sneeker]) -- version: [1.1-1][ver.sneeker] *2021-07-20*
   * [spider][cmer_spider] ([unilicense][lic.cmer_spider]) -- version: [134aeae Git][ver.cmer_spider] *2021-07-10*
   * [stone_monster][mobs_monster] ([MIT][lic.stone_monster]) -- version: [fa52f6f Git][ver.stone_monster] *2021-05-20*
-  * [tree_monster][mobs_monster] ([MIT][lic.tree_monster]) -- version: [f2977ff Git][ver.tree_monster] *2021-05-20*
+  * [tree_monster][mobs_monster] ([MIT / CC BY-SA / CC0 / WTFPL][lic.tree_monster]) -- version: [2025-01-01][ver.mobs_monster] ([patched][patch.tree_monster])
   * velociraptor ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- forked from *mobs_farlands* (part of [farlands][] sub-game), version [339e18f Git][ver.velociraptor] _2025-01-07_
   * [whinny][] ([MIT][lic.whinny]) -- version: [32f2d9f Git][ver.whinny] *2021-05-29*
   * [zombie][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [3dd783c Git][ver.cmer_zombie] *2021-05-25*
@@ -656,6 +656,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.mobs_kitten]: https://github.com/AntumMT/mod-mobs_animal/tree/b3bf401
 [ver.mobs_rat]: https://github.com/AntumMT/mod-mobs_animal/tree/2a8d115
 [ver.mobs]: https://codeberg.org/tenplus1/mobs_redo/src/commit/57fe6cf2e343923ac6b83f4186123b4d01f106be
+[ver.mobs_monster]: https://codeberg.org/tenplus1/mobs_monster/src/commit/edc86fec21699463fa03d7fee121fe79a54e423b
 [ver.monsters_aggressive]: https://github.com/AntumMT/mp-monsters_aggressive/tree/89a8187
 [ver.monsters_passive]: https://github.com/AntumMT/mp-monsters_passive/tree/b07fe19
 [ver.more_chests]: https://github.com/minetest-mods/more_chests/tree/6be8145
@@ -701,7 +702,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.tools_obsidian]: https://github.com/Dragonop/tools_obsidian/releases/tag/1.0
 [ver.trampoline]: https://github.com/AntumMT/mod-trampoline/releases/tag/v0.3
 [ver.trash_can]: https://github.com/minetest-mods/trash_can/tree/423b0f2
-[ver.tree_monster]: https://github.com/AntumMT/mod-mob_tree_monster/tree/f2977ff
 [ver.unifieddyes]: https://github.com/mt-mods/unifieddyes/tree/de6e2e0e35f2f14390ef1d7ccdb0d7bc1acce2f8
 [ver.velociraptor]: https://github.com/AntumMT/mp-dinosaurs_aggressive/tree/339e18f8145bbb87788ab80ce976f92b2fa3f489
 [ver.waffles]: https://github.com/GreenXenith/waffles/tree/f9ee9962795a44585a7584af34226acaa8bf9d77
@@ -760,6 +760,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.quartz]: https://github.com/AntumMT/mod-quartz/tree/adc759e
 [patch.snowdrift]: https://github.com/AntumMT/mod-snowdrift/tree/0b35cc3
 [patch.technic_armor]: https://github.com/AntumMT/mod-technic_armor/tree/7434d00ebcf161179fbfd180c48f0fc42c3a7676
+[patch.tree_monster]: https://github.com/AntumMT/mod-tree_monster/tree/1126cab551d840a10ccc6a3df23f3281f2a938c5
 [patch.throwing]: https://github.com/AntumMT/mod-throwing/tree/2a0e3c593a23f024ac19c6bdfc3fcd55bc674b14
 [patch.unifieddyes]: https://github.com/AntumMT/mod-unifieddyes/tree/3dc9ff1d8efccf402bbd0a9ac521d8caab008f9b
 [patch.windmill]: https://github.com/AntumMT/mod-windmill/tree/35e18f9c6e9bee1bb27ebfc39bfd424d6357b113
