@@ -63,7 +63,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [fakelib][] ([MIT][lic.fakelib]) -- version: [1.0.0][ver.fakelib] _2024-05-19_
   * [formspecs][] ([MIT][lic.formspecs]) -- version: 2.6 *2020-03-12*
   * [mobkit][] ([MIT][lic.mobkit]) -- version: [ddea141 Git][ver.mobkit] *2021-02-01*
-  * [mobs][] ([MIT][lic.mobs] / [CC BY][lic.ccby3.0] / [CC0][lic.cc0]) -- version: [db3831d Git][ver.mobs] _2021-07-14_
+  * [mobs][] ([MIT][lic.mobs] / [CC BY][lic.ccby3.0] / [CC0][lic.cc0]) -- version: [2024-12-28][ver.mobs]
   * [signs_lib][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2024-09-07][ver.signs_lib]
   * [xcompat][] ([MIT][lic.xcompat]) -- version: [2024-09-25][ver.xcompat]
 * lighting/
@@ -655,7 +655,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.mobs_cow]: https://github.com/AntumMT/mod-mobs_animal/tree/85af09a
 [ver.mobs_kitten]: https://github.com/AntumMT/mod-mobs_animal/tree/b3bf401
 [ver.mobs_rat]: https://github.com/AntumMT/mod-mobs_animal/tree/2a8d115
-[ver.mobs]: https://codeberg.org/tenplus1/mobs_redo/src/commit/db3831dccf3616e3baaad325fede487d38954191
+[ver.mobs]: https://codeberg.org/tenplus1/mobs_redo/src/commit/57fe6cf2e343923ac6b83f4186123b4d01f106be
 [ver.monsters_aggressive]: https://github.com/AntumMT/mp-monsters_aggressive/tree/89a8187
 [ver.monsters_passive]: https://github.com/AntumMT/mp-monsters_passive/tree/b07fe19
 [ver.more_chests]: https://github.com/minetest-mods/more_chests/tree/6be8145
