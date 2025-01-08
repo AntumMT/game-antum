@@ -15,7 +15,7 @@ local master_types = {
 
 -- Dungeon Master by PilzAdam
 
-mobs:register_mob(":mobs:dungeon_master", {
+mobs:register_mob("mobs:dungeon_master", {
 	type = "monster",
 	passive = false,
 	damage = 6,
@@ -25,7 +25,7 @@ mobs:register_mob(":mobs:dungeon_master", {
 	dogshoot_count2_max = 3, -- dogfight for 3 seconds
 	reach = 3,
 	shoot_interval = 2.2,
-	arrow = ":mobs:fireball",
+	arrow = "mobs:fireball",
 	friendly_fire = false,
 	shoot_offset = 1,
 	hp_min = 42,
@@ -97,7 +97,7 @@ mobs:register_mob(":mobs:dungeon_master", {
 if not mobs.custom_spawn_monster then
 
 	mobs:spawn({
-		name = ":mobs:dungeon_master",
+		name = "mobs:dungeon_master",
 		nodes = {"default:stone", "nether:rack", "nether:rack_deep"},
 		max_light = 5,
 		chance = 9000,
@@ -112,7 +112,7 @@ end
 
 -- fireball arrow
 
-mobs:register_arrow(":mobs:fireball", {
+mobs:register_arrow("mobs:fireball", {
 	visual = "sprite",
 	visual_size = {x = 1, y = 1},
 	textures = {"mobs_fireball.png"},

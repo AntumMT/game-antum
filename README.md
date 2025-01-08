@@ -728,7 +728,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.crops]: https://github.com/AntumMT/mod-crops/tree/a1cce06
 [patch.drawers]: https://github.com/AntumMT/mod-drawers/tree/a77f809
 [patch.dirt_monster]: https://github.com/AntumMT/mod-dirt_monster/tree/55d96d6ca3be573900ef32c135c5c84b6ce0093a
-[patch.dungeon_master]: https://github.com/AntumMT/mod-dungeon_master/tree/ed44e03aa8600c8e778358a0757ab518b2dfe483
+[patch.dungeon_master]: https://github.com/AntumMT/mod-dungeon_master/tree/a82fa300d8b8bfaafd0ae2281dbf9478bed8e9d6
 [patch.ethereal]: https://github.com/AntumMT/mod-ethereal/tree/0d418d4
 [patch.fort_spikes]: https://github.com/AntumMT/mod-fort_spikes/tree/154c8c289989d0936c4f7b374569209021d3f84e
 [patch.gems_encrustable]: https://github.com/AntumMT/mod-gems_encrustable/tree/773355a51a169469a9aea9c032dddd4af5aea5d5
