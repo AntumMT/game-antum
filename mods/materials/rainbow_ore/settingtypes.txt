@@ -1,9 +1,9 @@
 
 # Determines the item used as "stick" component in rainbow tool craft recipes.
 # Default is "default:stick". If default mod is not available, then default
-# is "rainbow_ore:rainbow_ore_block".
+# is "rainbow_ore:block".
 rainbow_ore.stick (Stick item for rainbow tools recipes) string default:stick
 
-# Determines node that will be replaced with "rainbow_ore:rainbow_ore_block"
+# Determines node that will be replaced with "rainbow_ore:block"
 # when ore is spawned.
 rainbow_ore.spawn_within (Rainbow ore spawns within) string default:stone

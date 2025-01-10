@@ -756,7 +756,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.nether]: https://github.com/AntumMT/mod-nether/tree/7a84ddd
 [patch.painting]: https://github.com/AntumMT/mod-painting/tree/bdcb6727c49ee49d4d40c0a616464f8ac4b78cf3
 [patch.quartz]: https://github.com/AntumMT/mod-quartz/tree/adc759e
-[patch.rainbow_ore]: https://github.com/AntumMT/mod-rainbow_ore/tree/bb603f85998d57f14cb97c91524d74c467c56bc6
+[patch.rainbow_ore]: https://github.com/AntumMT/mod-rainbow_ore/tree/591dfa54e1c9f334a31df745cb19aa05a0d67a9a
 [patch.sand_monster]: https://github.com/AntumMT/mod-sand_monster/tree/e4c9f3ba412431776c86fe6c6eda207c75dd1675
 [patch.snowdrift]: https://github.com/AntumMT/mod-snowdrift/tree/0b35cc3
 [patch.stone_monster]: https://github.com/AntumMT/mod-stone_monster/tree/a1f6f89d43a27c78831d3a5494b825ae8a4964bf

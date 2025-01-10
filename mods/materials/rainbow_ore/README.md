@@ -19,7 +19,7 @@ Smelt "Rainbow Ore Block" --> "Rainbow Ingots"
 
 - Tools:
 	- crafted as always but with "Rainbow Ingots" as material instead.
-	- if default mod is not available, "default:stick" is replaced with "rainbow_ore:rainbow_ore_ingot".
+	- if default mod is not available, "default:stick" is replaced with "rainbow_ore:ingot".
 - Armor:
 	- crafted like Armor but with "Rainbow Ingots" as material instead.
 - Shield:
