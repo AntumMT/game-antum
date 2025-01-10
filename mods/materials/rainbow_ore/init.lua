@@ -1,42 +1,49 @@
 -- Rainbow_Ore Test Mod ----------- Copyright Robin Kuhn 2015
 
+rainbow_ore = {}
+rainbow_ore.modname = core.get_current_modname()
+rainbow_ore.modpath = core.get_modpath(rainbow_ore.modname)
+
 --Check for mods
-if minetest.get_modpath("3d_armor") then
-dofile(minetest.get_modpath("rainbow_ore").."/rainbow_armor.lua")
+if core.get_modpath("3d_armor") then
+dofile(rainbow_ore.modpath.."/rainbow_armor.lua")
 end
 
-if minetest.get_modpath("shields") then
-dofile(minetest.get_modpath("rainbow_ore").."/rainbow_shield.lua")
+if core.get_modpath("shields") then
+dofile(rainbow_ore.modpath.."/rainbow_shield.lua")
 end
+
+
+local S = core.get_translator(rainbow_ore.modname)
 
 -- Define Rainbow_Ore_Block node
-minetest.register_node("rainbow_ore:rainbow_ore_block", {
-	description = "Rainbow Ore",
+core.register_node("rainbow_ore:block", {
+	description = S("Rainbow Ore"),
 	tiles = {"rainbow_ore_block.png"},
 	groups = {stone=2, cracky=3},
-	drop = "rainbow_ore:rainbow_ore_block",
+	drop = "rainbow_ore:block",
 	is_ground_content = true,
 })
 
 
 --Define Rainbow_Ore_Ingot node
-minetest.register_craftitem("rainbow_ore:rainbow_ore_ingot", {
-	description = "Rainbow Ore Ingot",
+core.register_craftitem("rainbow_ore:ingot", {
+	description = S("Rainbow Ore Ingot"),
 	inventory_image = "rainbow_ore_ingot.png",
 })
 
 --Define Rainbow_Ore Smelt Recipe
-minetest.register_craft({
+core.register_craft({
 	type = "cooking",
-	output = "rainbow_ore:rainbow_ore_ingot",
-	recipe = "rainbow_ore:rainbow_ore_block",
+	output = "rainbow_ore:ingot",
+	recipe = "rainbow_ore:block",
 	cooktime = 10,
 })
 
 
 --Register Rainbow Pickaxe
-minetest.register_tool("rainbow_ore:rainbow_ore_pickaxe", {
-	description = "Rainbow Pickaxe",
+core.register_tool("rainbow_ore:pick", {
+	description = S("Rainbow Pickaxe"),
 	inventory_image = "rainbow_ore_pickaxe.png",
 	tool_capabilities = {
 		full_punch_interval = 0.9,
@@ -49,20 +56,29 @@ minetest.register_tool("rainbow_ore:rainbow_ore_pickaxe", {
 })
 
 
+local stick = core.settings:get("rainbow_ore.stick")
+if not stick then
+	if core.registered_items["default:stick"] then
+		stick = "default:stick"
+	else
+		stick = "rainbow_ore:rainbow_ore_ingot"
+	end
+end
+
 --Define Rainbow_Ore_Pickaxe crafting recipe
-minetest.register_craft({
-	output = "rainbow_ore:rainbow_ore_pickaxe",
+core.register_craft({
+	output = "rainbow_ore:pick",
 	recipe = {
-		{"rainbow_ore:rainbow_ore_ingot", "rainbow_ore:rainbow_ore_ingot", "rainbow_ore:rainbow_ore_ingot"},
-		{"", "default:stick", ""},
-		{"", "default:stick", ""}
+		{"rainbow_ore:ingot", "rainbow_ore:ingot", "rainbow_ore:ingot"},
+		{"", stick, ""},
+		{"", stick, ""}
 	}
 })
 
 
 --Register Rainbow Axe
-minetest.register_tool("rainbow_ore:rainbow_ore_axe", {
-	description = "Rainbow Axe",
+core.register_tool("rainbow_ore:axe", {
+	description = S("Rainbow Axe"),
 	inventory_image = "rainbow_ore_axe.png",
 	tool_capabilities = {
 		full_punch_interval = 0.9,
@@ -76,28 +92,28 @@ minetest.register_tool("rainbow_ore:rainbow_ore_axe", {
 
 
 --Define Rainbow Axe crafting recipe
-minetest.register_craft({
-	output = "rainbow_ore:rainbow_ore_axe",
+core.register_craft({
+	output = "rainbow_ore:axe",
 	recipe = {
-		{"rainbow_ore:rainbow_ore_ingot", "rainbow_ore:rainbow_ore_ingot", ""},
-		{"rainbow_ore:rainbow_ore_ingot", "default:stick", ""},
-		{"", "default:stick", ""}
+		{"rainbow_ore:ingot", "rainbow_ore:ingot", ""},
+		{"rainbow_ore:ingot", stick, ""},
+		{"", stick, ""}
 	}
 })
 
-minetest.register_craft({
-	output = "rainbow_ore:rainbow_ore_axe",
+core.register_craft({
+	output = "rainbow_ore:axe",
 	recipe = {
-		{"", "rainbow_ore:rainbow_ore_ingot", "rainbow_ore:rainbow_ore_ingot"},
-		{"", "default:stick", "rainbow_ore:rainbow_ore_ingot"},
-		{"", "default:stick", ""}
+		{"", "rainbow_ore:ingot", "rainbow_ore:ingot"},
+		{"", stick, "rainbow_ore:ingot"},
+		{"", stick, ""}
 	}
 })
 
 
 --Register Rainbow shovel
-minetest.register_tool("rainbow_ore:rainbow_ore_shovel", {
-	description = "Rainbow Shovel",
+core.register_tool("rainbow_ore:shovel", {
+	description = S("Rainbow Shovel"),
 	inventory_image = "rainbow_ore_shovel.png",
 	wield_image = "rainbow_ore_shovel.png^[transformR90",
 	tool_capabilities = {
@@ -112,19 +128,19 @@ minetest.register_tool("rainbow_ore:rainbow_ore_shovel", {
 
 
 --Define Rainbow shovel crafting recipe
-minetest.register_craft({
-	output = "rainbow_ore:rainbow_ore_shovel",
+core.register_craft({
+	output = "rainbow_ore:shovel",
 	recipe = {
-		{"", "rainbow_ore:rainbow_ore_ingot", ""},
-		{"", "default:stick", ""},
-		{"", "default:stick", ""}
+		{"", "rainbow_ore:ingot", ""},
+		{"", stick, ""},
+		{"", stick, ""}
 	}
 })
 
 
 --Register Rainbow sword
-minetest.register_tool("rainbow_ore:rainbow_ore_sword", {
-	description = "Rainbow Sword",
+core.register_tool("rainbow_ore:sword", {
+	description = S("Rainbow Sword"),
 	inventory_image = "rainbow_ore_sword.png",
 	tool_capabilities = {
 		full_punch_interval = 0.7,
@@ -138,35 +154,75 @@ minetest.register_tool("rainbow_ore:rainbow_ore_sword", {
 
 
 --Define Rainbow sword crafting recipe
-minetest.register_craft({
-	output = "rainbow_ore:rainbow_ore_sword",
+core.register_craft({
+	output = "rainbow_ore:sword",
 	recipe = {
-		{"", "rainbow_ore:rainbow_ore_ingot", ""},
-		{"", "rainbow_ore:rainbow_ore_ingot", ""},
-		{"", "default:stick", ""}
+		{"", "rainbow_ore:ingot", ""},
+		{"", "rainbow_ore:ingot", ""},
+		{"", stick, ""}
 	}
 })
 
 
 --Define Nyan Rainbow crafting recipe
-minetest.register_craft({
+core.register_craft({
 	output = "default:nyancat_rainbow",
 	recipe = {
-		{"rainbow_ore:rainbow_ore_ingot", "rainbow_ore:rainbow_ore_ingot", "rainbow_ore:rainbow_ore_ingot"},
-		{"rainbow_ore:rainbow_ore_ingot", "rainbow_ore:rainbow_ore_ingot", "rainbow_ore:rainbow_ore_ingot"},
-		{"rainbow_ore:rainbow_ore_ingot", "rainbow_ore:rainbow_ore_ingot", "rainbow_ore:rainbow_ore_ingot"}
+		{"rainbow_ore:ingot", "rainbow_ore:ingot", "rainbow_ore:ingot"},
+		{"rainbow_ore:ingot", "rainbow_ore:ingot", "rainbow_ore:ingot"},
+		{"rainbow_ore:ingot", "rainbow_ore:ingot", "rainbow_ore:ingot"}
 	}
 })
 
 
 --Make Rainbow Ore spawn
-minetest.register_ore({
-	ore_type = "scatter",
-	ore = "rainbow_ore:rainbow_ore_block",
-	wherein = "default:stone",
-	clust_scarcity = 17*17*17,
-	clust_num_ores = 3,
-	clust_size = 3,
-	y_min = -31000,
-	y_max = -200,
-})
+local spawn_within = core.settings:get("rainbow_ore.spawn_within") or "default:stone"
+core.log("action", "[rainbow_ore] ore set to spawn within " .. spawn_within
+	.. ", this can be changed with rainbow_ore.spawn_within setting")
+
+core.register_on_mods_loaded(function()
+	if core.registered_nodes[spawn_within] then
+		core.register_ore({
+			ore_type = "scatter",
+			ore = "rainbow_ore:block",
+			wherein = spawn_within,
+			clust_scarcity = 17*17*17,
+			clust_num_ores = 3,
+			clust_size = 3,
+			y_min = -31000,
+			y_max = -200,
+		})
+	else
+		core.log("warning", "[rainbow_ore] " .. spawn_within .. " is not a registered node, rainbow ore will not spawn")
+	end
+end)
+
+
+-- backward compatibility
+
+local aliases = {
+	"ingot",
+	"pickaxe",
+	"axe",
+	"shovel",
+	"sword",
+	"block",
+	-- xdecor nodes
+	"block_cube",
+	"block_doublepanel",
+	"block_halfstair",
+	"block_micropanel",
+	"block_microslab",
+	"block_nanoslab",
+	"block_panel",
+	"block_thinstair",
+}
+
+for _, al in ipairs(aliases) do
+	local tgt = al
+	if tgt == "pickaxe" then
+		tgt = "pick"
+	end
+
+	core.register_alias("rainbow_ore:rainbow_ore_"..al, "rainbow_ore:"..tgt)
+end

@@ -1,7 +1,7 @@
 Rainbow Ore
 ===========
 
-This mod features a new ore called "Rainbow Ore" (as if you guessed it :D) wich is pretty rare but also pretty powerful.
+This mod features a new ore called "Rainbow Ore" (as if you guessed it :D) which is pretty rare but also pretty powerful.
 
 License
 =======
@@ -17,10 +17,12 @@ Crafting:
 
 Smelt "Rainbow Ore Block" --> "Rainbow Ingots"
 
-Tools are crafted as always but with "Rainbow Ingots" as material instead.
-
-Armor is crafted like Armor but with "Rainbow Ingots" as material instead.
-
-Shield are crafted like a shield but with "Rainbow Ingots" as material instead.
+- Tools:
+	- crafted as always but with "Rainbow Ingots" as material instead.
+	- if default mod is not available, "default:stick" is replaced with "rainbow_ore:rainbow_ore_ingot".
+- Armor:
+	- crafted like Armor but with "Rainbow Ingots" as material instead.
+- Shield:
+	- crafted like a shield but with "Rainbow Ingots" as material instead.
 
 You can craft Nyancat_rainbow blocks like any other "solid" blocks but with "Rainbow Ingots" as material instead.

@@ -1,0 +1,16 @@
+# textdomain:rainbow_ore
+
+# Translators:
+
+
+Rainbow Ore=
+Rainbow Ore Ingot=
+Rainbow Pickaxe=
+Rainbow Axe=
+Rainbow Shovel=
+Rainbow Sword=
+Rainbow Helmet=
+Rainbow Chestplate=
+Rainbow Leggings=
+Rainbow Boots=
+Rainbow Shield=
