@@ -1,3 +1,7 @@
+
+All my models (K Pavel) and change code on valid license The MIT License
+
+
 The MIT License (MIT)
 
 Copyright (c) 2014 Krupnov Pavel and 2016 TenPlus1
@@ -19,3 +23,13 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
+
+Models/Textures by Jordach/BFD (WTFPL)
+  mobs_kitten.b3d
+  mobs_kitten_striped.png
+  mobs_kitten_splotchy.png
+  mobs_kitten_ginger.png
+  mobs_kitten_sandy.png
+
+Sounds by lolamadeus (CC0) http://freesound.org/people/lolamadeus/sounds/196251/
+  mobs_kitten.ogg

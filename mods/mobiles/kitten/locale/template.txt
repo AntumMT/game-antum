@@ -1,0 +1,4 @@
+# textdomain:mobs_kitten
+
+Hairball=
+Kitten=

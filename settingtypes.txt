@@ -1321,17 +1321,7 @@ ghost.spawn_chance (Spawn chance) int 7300 1
 
 [**kitten]
 
-# Spawn interval in seconds.
-#
-# type:    int
-# default: 60
-kitten.spawn_interval (Spawn interval) int 60 1
-
-# Chance of spawn at interval.
-#
-# type:    int
-# default: 10000
-kitten.spawn_chance (Spawn chance) int 10000 1
+mobs.kitten (Enable Kitten) bool true
 
 
 [**oerkki]

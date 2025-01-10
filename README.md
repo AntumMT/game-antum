@@ -104,7 +104,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [dungeon_master][mobs_monster] ([MIT / CC0 / WTFPL][lic.dungeon_master] -- version: [2025-01-01][ver.mobs_monster] ([patched][patch.dungeon_master])
   * [folks][] ([GPL][lic.gpl3.0]) -- version: [0.2.0][ver.folks] *2021-02-23*
   * [ghost][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [2f70906 Git][ver.cmer_ghost] *2021-05-25*
-  * [kitten][mobs_animal] ([MIT][lic.mobs_kitten]) -- version: [b3bf401 Git][ver.mobs_kitten] *2021-05-25*
+  * [kitten][mobs_animal] ([MIT / CC0 / WTFPL][lic.kitten]) -- version: [2025-01-01][ver.kitten] ([patched][patch.kitten])
   * [mese_monster][mobs_monster] ([MIT / CC0 / WTFPL][lic.mese_monster]) -- version: [2025-01-01][ver.mobs_monster] ([patched][patch.mese_monster])
   * [oerkki][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [f7c5586 Git][ver.cmer_oerkki] *2021-06-01*
   * [rat][mobs_rat] ([MIT][lic.mobs_rat]) -- version: [2a8d115 Git][ver.mobs_rat] *2021-05-20*
@@ -492,6 +492,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.hud_compass]: mods/ui/hud_compass/README.md#L47
 [lic.invisibility]: mods/player/visuals/invisibility/license.txt
 [lic.jukebox]: mods/furniture/jukebox/README.txt
+[lic.kitten]: mods/mobiles/kitten/license.txt
 [lic.lighted_helmets]: mods/equipment/lighted_helmets/LICENSE.txt
 [lic.listitems]: mods/antum/listitems/LICENSE.txt
 [lic.mese_monster]: mods/mobiles/mese_monster/license.txt
@@ -499,7 +500,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [lic.mobkit]: mods/mobiles/libs/mobkit/LICENSE
 [lic.mobs_bee]: mods/mobiles/bee/license.txt
 [lic.mobs_cow]: mods/mobiles/cow/license.txt
-[lic.mobs_kitten]: mods/mobiles/kitten/license.txt
 [lic.mobs_rat]: mods/mobiles/rat/licenset.txt
 [lic.mobs]: mods/mobiles/libs/mobs/license.txt
 [lic.moreblocks]: mods/buildings/moreblocks/LICENSE.md
@@ -643,6 +643,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.intllib]: https://github.com/minetest-mods/intllib/tree/6ebdc53
 [ver.invisibility]: https://notabug.org/TenPlus1/invisibility/src/65c0823d6a28b62046cdadc67ff1e462d37e3643
 [ver.jukebox]: https://github.com/minetest-mods/jukebox/tree/0d871f2
+[ver.kitten]: https://codeberg.org/tenplus1/mobs_animal/src/commit/3792d1cf3cf137a4c1c219370c4ddde15dbce4fc
 [ver.lighted_helmets]: https://github.com/AntumMT/mod-lighted_helmets/releases/tag/v1.1
 [ver.listitems]: https://github.com/AntumMT/mod-listitems/releases/tag/v1.1
 [ver.mesecons]: https://github.com/minetest-mods/mesecons/tree/1f9e86c3da08acb9e63e07c980a19097f6a125e2
@@ -650,7 +651,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.mobkit]: https://github.com/TheTermos/mobkit/tree/ddea141
 [ver.mobs_bee]: https://github.com/AntumMT/mod-mobs_animal/tree/671c6c1
 [ver.mobs_cow]: https://github.com/AntumMT/mod-mobs_animal/tree/85af09a
-[ver.mobs_kitten]: https://github.com/AntumMT/mod-mobs_animal/tree/b3bf401
 [ver.mobs_rat]: https://github.com/AntumMT/mod-mobs_animal/tree/2a8d115
 [ver.mobs]: https://codeberg.org/tenplus1/mobs_redo/src/commit/57fe6cf2e343923ac6b83f4186123b4d01f106be
 [ver.mobs_monster]: https://codeberg.org/tenplus1/mobs_monster/src/commit/edc86fec21699463fa03d7fee121fe79a54e423b
@@ -741,6 +741,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.hud]: https://github.com/AntumMT/mod-hud/tree/6846e20
 [patch.hud_compass]: https://github.com/AntumMT/mod-hud_compass/tree/3be32e45327c071cbe357f5bed871e47abd401b4
 [patch.invisibility]: https://github.com/AntumMT/mod-invisibility/tree/00c0638
+[patch.kitten]: https://codeberg.org/AntumLuanti/mod-kitten/src/commit/8d743de533b992bbaa0ce13b554a19d2dd37883a
 [patch.mese_monster]: https://github.com/AntumMT/mod-mese_monster/tree/df9fffedc51525b67eac9824b99d10f62eaf64c4
 [patch.minetest_game]: https://github.com/AntumMT/mtgame-minetest/tree/014188d
 [patch.moreores]: https://github.com/AntumMT/mod-moreores/tree/0b5a48ecbbc0e82f45e7c270f5b35b235c52e39e
