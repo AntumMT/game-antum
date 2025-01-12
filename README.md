@@ -117,7 +117,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [stone_monster][mobs_monster] ([MIT / CC0 / WTFPL][lic.stone_monster]) -- version: [2025-01-01][ver.mobs_monster] ([patched][patch.stone_monster])
   * [tree_monster][mobs_monster] ([MIT / WTFPL][lic.tree_monster]) -- version: [2025-01-01][ver.mobs_monster] ([patched][patch.tree_monster])
   * velociraptor ([LGPL][lic.lgpl2.1] / [CC BY-SA][lic.ccbysa3.0]) -- forked from *mobs_farlands* (part of [farlands][] sub-game), version [339e18f Git][ver.velociraptor] _2025-01-07_
-  * [whinny][] ([MIT][lic.whinny]) -- version: [32f2d9f Git][ver.whinny] *2021-05-29*
+  * [whinny][] ([MIT][lic.whinny]) -- version: [2025-01-12][ver.whinny]
   * [zombie][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [3dd783c Git][ver.cmer_zombie] *2021-05-25*
 * player/action/
   * [hbsprint][] ([LGPL][lic.lgpl2.1]) -- version: [f566d0f Git][ver.hbsprint] *2021-02-18*
@@ -436,7 +436,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [wardrobe.old]: https://forum.luanti.org/viewtopic.php?t=9680
 [wdata]: https://content.luanti.org/packages/AntumDeluge/wdata/
 [weather]: https://content.luanti.org/packages/theFox/weather/
-[whinny]: https://github.com/AntumMT/mod-whinny
+[whinny]: https://content.luanti.org/packages/AntumDeluge/whinny/
 [whitelist]: https://content.luanti.org/packages/AntumDeluge/whitelist/
 [wielded_light]: https://content.luanti.org/packages/bell07/wielded_light/
 [windmill]: https://content.luanti.org/packages/Sokomine/windmill/
@@ -702,7 +702,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.waffles]: https://github.com/GreenXenith/waffles/tree/f9ee9962795a44585a7584af34226acaa8bf9d77
 [ver.wardrobe]: https://github.com/AntumMT/mod-wardrobe/tree/0500a78
 [ver.wdata]: https://github.com/AntumMT/mod-wdata/releases/tag/v1.1
-[ver.whinny]: https://github.com/AntumMT/mod-whinny/tree/32f2d9f
+[ver.whinny]: https://codeberg.org/AntumLuanti/mod-whinny/src/commit/7df131668fc5a67c6ef9028d240ed16f2cd01200
 [ver.whitelist]: https://github.com/AntumMT/mod-whitelist/releases/tag/v1.1
 [ver.wielded_light]: https://github.com/minetest-mods/wielded_light/tree/3dfc2623598e095954b0a97f6bac6da7096cdf10
 [ver.windmill]: https://github.com/Sokomine/windmill/tree/9311f53f1bf0dadee89e9a5c70a848d210aaef3b

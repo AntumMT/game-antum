@@ -1512,6 +1512,23 @@ whinny.spawn_height_min (Spawn min height) int -500
 # Maximum height at which entity can spawn.
 whinny.spawn_height_max (Spawn max height) int 500
 
+# Comma-separated list of nodes on which horses can spawn.
+whinny.spawn_nodes (Whinny spawn nodes) string default:dirt_with_grass,default:dirt_with_dry_grass
+
+# Comma-separated list of key=value pairs of items used to tame horses.
+#
+# - key: item name
+# - value: filling value (higher means less required to tame)
+whinny.eats (Items used to tame horses) string default:apple=2,farming:wheat=1,farming:barley=3,farming:oat=5,farming:carrot=4,farming:carrot_gold=5,farming:cucumber=2
+
+# Value required to tame horse with food.
+#
+# Must be 1 or more.
+whinny.appetite (Horse appetite) int 40 1
+
+# Name of item that player can wield to place horse in inventory.
+whinny.pickup_with (Item used to "pick up" horse) string mobs:lasso
+
 
 [**zombie]
 

@@ -5,45 +5,33 @@ local S = core.get_translator(whinny.modname)
 local use_player_api = core.global_exists("player_api")
 local rot_compensate = math.rad(90) -- FIXME: no idea why I need to add rotation compensation
 
--- name, fill value
-local fill_values = {
-	["default:apple"] = 2,
-	["farming:wheat"] = 1,
-	["farming:barley"] = 3,
-	["farming:oat"] = 5,
-	["farming:carrot"] = 4,
-	["farming:carrot_gold"] = 5,
-	["farming:cucumber"] = 2,
-}
+core.register_on_mods_loaded(function()
+	local can_feed = false
+	for food in pairs(whinny.fill_values) do
+		if core.registered_items[food] then
+			can_feed = true
+			break
+		end
+	end
+
+	if not can_feed then
+		whinny.log("warning", "no compatible foods registered, cannot tame horses.")
+	end
+end)
 
 local horse_likes = {}
-for iname, fill in pairs(fill_values) do
-	if core.registered_items[iname] then
-		table.insert(horse_likes, iname)
-	else
-		whinny.log("warning", "\"" .. iname
-			.. "\" is not a registered item, removing it from items that horse will follow")
-	end
+for iname, fill in pairs(whinny.fill_values) do
+	table.insert(horse_likes, iname)
 end
 
-local sounds = {
-	neigh = {
-		name = "whinny_horse_neigh_01",
-		gain = 1.0,
-	},
-	snort1 = {
-		name = "whinny_horse_snort_01",
-		gain = 1.0,
-	},
-	snort2 = {
-		name = "whinny_horse_snort_02",
-		gain = 1.0,
-	},
-	distress = {
-		name = "whinny_horse_neigh_02",
-		gain = 1.0,
-	},
-}
+
+local sounds_enabled = core.global_exists("sounds")
+local sound_horse = sounds_enabled and sounds.horse
+local sound_horse_snort = sounds_enabled and sounds.horse_snort
+local sound_horse_neigh = sounds_enabled and sounds.horse_neigh
+local sound_gallop = sounds_enabled and sounds.gallop
+local sound_apple_bite = sounds_enabled and sounds.bite
+local sound_entity_hit = sounds_enabled and sounds.entity_hit
 
 
 -- galloping sounds
@@ -92,31 +80,25 @@ local function register_wildhorse(color)
 	whinny:register_mob("whinny:horse_" .. color, {
 		type = "animal",
 		hp_min = 10,
-		hp_max = 10,
-		appetite = 40,
-		collisionbox = {-.5, -0.01, -.5, .5, 1.4, .5},
+		initial_properties = {
+			hp_max = 10,
+			collisionbox = {-.5, -0.01, -.5, .5, 1.4, .5},
+			visual = "mesh",
+			mesh = "whinny_horse_wild.x",
+			makes_footstep_sound = true
+		},
+		appetite = whinny.appetite,
 		available_textures = {
 			total = 1,
 			texture_1 = {"whinny_horse_" .. color .. "_mesh.png"},
 		},
-		visual = "mesh",
 		drops = horse_drops,
-		mesh = "horsemob.x",
-		makes_footstep_sound = true,
 		walk_velocity = 1,
 		armor = 100,
 		drawtype = "front",
 		water_damage = 1,
 		lava_damage = 5,
 		light_damage = 0,
-		sounds = {
-			on_damage = sounds.distress,
-			on_death = sounds.snort2,
-			random = {
-				stand = sounds.snort1,
-				walk = sounds.neigh,
-			}
-		},
 		animation = {
 			speed_normal = 20,
 			stand_start = 300,
@@ -144,11 +126,13 @@ local function register_wildhorse(color)
 			end
 
 			if wants then
-				local fills = fill_values[item_name]
+				local fills = whinny.fill_values[item_name]
 				if not fills then fills = 1 end
 
 				self.appetite = self.appetite - fills
-				core.sound_play("whinny_apple_bite", {object=self.object})
+				if sound_apple_bite then
+					sound_apple_bite(1, {object=self.object})
+				end
 
 				if not whinny.creative then
 					item:take_item()
@@ -254,13 +238,14 @@ local function register_basehorse(name, craftitem, horse)
 	end
 
 	function horse:start_gallop(stage)
-		local to_play = "whinny_gallop_0" .. tostring(stage)
-		if stage == 1 and self.gallop_handle_1 < 0 then
-			self.gallop_handle_1 = core.sound_play(to_play, {object=self.object, loop=true})
-			return self.gallop_handle_1 >= 0
-		elseif stage == 2 and self.gallop_handle_2 < 0 then
-			self.gallop_handle_2 = core.sound_play(to_play, {object=self.object, loop=true})
-			return self.gallop_handle_2 >= 0
+		if sound_gallop then
+			if stage == 1 and self.gallop_handle_1 < 0 then
+				self.gallop_handle_1 = sound_gallop(stage, {object=self.object, loop=true})
+				return self.gallop_handle_1 and self.gallop_handle_1 >= 0
+			elseif stage == 2 and self.gallop_handle_2 < 0 then
+				self.gallop_handle_2 = sound_gallop(stage, {object=self.object, loop=true})
+				return self.gallop_handle_2 and self.gallop_handle_2 >= 0
+			end
 		end
 	end
 
@@ -347,10 +332,9 @@ local function register_basehorse(name, craftitem, horse)
 				self.speed = self.speed * 0.90
 			end
 
-			if self.sounds and self.sounds.random and math.random(1, 100) <= 1 then
-				local to_play = self.sounds.random.stand
-				if to_play then
-					core.sound_play(to_play.name, {object=self.object, to_play.gain})
+			if sound_horse then
+				if math.random(1, 500) == 1 then
+					sound_horse({object=self.object})
 				end
 			end
 		end
@@ -440,8 +424,7 @@ local function register_basehorse(name, craftitem, horse)
 			local pname = clicker:get_player_name()
 
 			local wielded = clicker:get_wielded_item():get_name()
-			-- FIXME: use other items if "mobs:lasso" not available (or any item named "lasso")
-			if wielded == "mobs:lasso" then
+			if wielded == whinny.pickup_with then
 				if self.owner and self.owner ~= pname then
 					core.chat_send_player(pname, S("You cannot take @1's horse.", self.owner))
 				else
@@ -528,15 +511,15 @@ local function register_basehorse(name, craftitem, horse)
 		local hp = self.object:get_hp()
 
 		if hp > 0 then
-			core.sound_play("player_damage", {object=self.object,})
-			if self.sounds and self.sounds.on_damage then
-				core.sound_play(self.sounds.on_damage.name,
-					{object=self.object, self.sounds.on_damage.gain})
+			if sound_entity_hit then
+				sound_entity_hit({object=self.object})
+			end
+			if sound_horse_neigh then
+				sound_horse_neigh(2, {object=self.object})
 			end
 		else
-			if self.sounds.on_death ~= nil then
-				core.sound_play(self.sounds.on_death.name,
-					{object=self.object, self.sounds.on_death.gain})
+			if sound_horse_snort then
+				sound_horse_snort(2, {object=self.object})
 			end
 
 			local pos = self.object:get_pos()
@@ -565,20 +548,14 @@ local function register_tamehorse(color, description)
 			inventory_image = "whinny_horse_" .. color .. "_inv.png",
 		},
 		{
-			physical = true,
-			collisionbox = {-.5, -0.01, -.5, .5, 1.4, .5},
-			visual = "mesh",
-			stepheight = 1.1,
-			visual_size = {x=1, y=1},
-			mesh = "horse.x",
-			textures = {"whinny_horse_" .. color .. "_mesh.png"},
-			sounds = {
-				on_damage = sounds.distress,
-				on_death = sounds.snort2,
-				random = {
-					stand = sounds.snort1,
-					walk = sounds.neigh,
-				}
+			initial_properties = {
+				physical = true,
+				collisionbox = {-.5, -0.01, -.5, .5, 1.4, .5},
+				visual = "mesh",
+				visual_size = {x=1, y=1},
+				mesh = "whinny_horse_tame.x",
+				textures = {"whinny_horse_" .. color .. "_mesh.png"},
+				stepheight = 1.1
 			},
 			animation = {
 				speed_normal = 20,
@@ -602,16 +579,11 @@ local function register_tamehorse(color, description)
 	)
 end
 
-local spawn_nodes = {
-	"default:dirt_with_grass",
-	"default:dirt_with_dry_grass",
-}
-
 for color, name in pairs({["brown"]="Brown Horse", ["white"]="White Horse", ["black"]="Black Horse",}) do
 	register_tamehorse(color, name)
 	register_wildhorse(color)
 
-	whinny:register_spawn("whinny:horse_" .. color, spawn_nodes, 20, 6,
+	whinny:register_spawn("whinny:horse_" .. color, whinny.spawn_nodes, 20, 6,
 		whinny.spawn_chance, 1, whinny.spawn_height_min, whinny.spawn_height_max)
 
 	-- to simplify item handling

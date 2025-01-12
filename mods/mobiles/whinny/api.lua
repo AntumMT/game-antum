@@ -1,18 +1,26 @@
 
 local yaw = {}
 
+local sounds_enabled = core.global_exists("sounds")
+local sound_horse = sounds_enabled and sounds.horse
+local sound_horse_snort = sounds_enabled and sounds.horse_snort
+local sound_horse_neigh = sounds_enabled and sounds.horse_neigh
+local sound_entity_hit = sounds_enabled and sounds.entity_hit
+
 function whinny:register_mob(name, def)
 	core.register_entity(name, {
 		name = name,
 		hp_min = def.hp_min,
-		hp_max = def.hp_max,
+		initial_properties = {
+			hp_max = def.hp_max,
+			physical = true,
+			collisionbox = def.collisionbox,
+			visual = def.visual,
+			visual_size = def.visual_size,
+			mesh = def.mesh,
+			makes_footstep_sound = def.makes_footstep_sound
+		},
 		appetite = def.appetite,
-		physical = true,
-		collisionbox = def.collisionbox,
-		visual = def.visual,
-		visual_size = def.visual_size,
-		mesh = def.mesh,
-		makes_footstep_sound = def.makes_footstep_sound,
 		view_range = def.view_range,
 		walk_velocity = def.walk_velocity,
 		run_velocity = def.run_velocity,
@@ -245,10 +253,9 @@ function whinny:register_mob(name, def)
 				self.timer = 0
 			end
 
-			if self.sounds and self.sounds.random and math.random(1, 100) <= 1 then
-				local to_play = self.sounds.random[self.state]
-				if to_play then
-					core.sound_play(to_play.name, {object=self.object, to_play.gain})
+			if sound_horse then
+				if math.random(1, 500) == 1 then
+					sound_horse({object=self.object})
 				end
 			end
 
@@ -638,7 +645,8 @@ function whinny:register_mob(name, def)
 					end
 
 					local p = self.object:get_pos()
-					p.y = p.y + (self.collisionbox[2] + self.collisionbox[5]) / 2
+					local box = self.object:get_properties().collisionbox
+					p.y = p.y + (box[2] + box[5]) / 2
 					local obj = core.add_entity(p, self.arrow)
 					local amount = (vec.x^2 + vec.y^2 + vec.z^2)^0.5
 					local v = obj:get_luaentity().velocity
@@ -655,7 +663,8 @@ function whinny:register_mob(name, def)
 			-- reset HP
 			local pos = self.object:get_pos()
 			local distance_rating = ((get_distance({x=0, y=0, z=0}, pos)) / 20000)
-			local newHP = self.hp_min + math.floor(self.hp_max * distance_rating)
+			local props = self.object:get_properties()
+			local newHP = self.hp_min + math.floor(props.hp_max * distance_rating)
 			self.object:set_hp(newHP)
 
 			self.object:set_armor_groups({fleshy=self.armor})
@@ -715,21 +724,19 @@ function whinny:register_mob(name, def)
 			if weapon:get_definition().sounds ~= nil then
 				local s = math.random(0, #weapon:get_definition().sounds)
 				core.sound_play(weapon:get_definition().sounds[s], {object=puncher,})
-			else
-				core.sound_play("player_damage", {object=puncher,})
+			elseif sound_entity_hit then
+				sound_entity_hit({object=puncher})
 			end
 
 			local hp = self.object:get_hp()
 
 			if hp > 0 then
-				if self.sounds and self.sounds.on_damage then
-					core.sound_play(self.sounds.on_damage.name,
-						{object=self.object, self.sounds.on_damage.gain})
+				if sound_entity_hit then
+					sound_entity_hit({object=self.object})
 				end
 			else
-				if self.sounds.on_death ~= nil then
-					core.sound_play(self.sounds.on_death.name,
-						{object=self.object, self.sounds.on_death.gain})
+				if sound_horse_snort then
+					sound_horse_snort(2, {object=self.object})
 				end
 
 				local pos = self.object:get_pos()
@@ -835,7 +842,8 @@ function whinny:register_spawn(name, nodes, max_light, min_light, chance, active
 			local distance_rating = ((get_distance({x=0,y=0,z=0}, pos)) / 15000)
 			if mob then
 				mob = mob:get_luaentity()
-				local newHP = mob.hp_min + math.floor(mob.hp_max * distance_rating)
+				local props = mob.object:get_properties()
+				local newHP = mob.hp_min + math.floor(props.hp_max * distance_rating)
 				mob.object:set_hp(newHP)
 			end
 
@@ -845,10 +853,12 @@ end
 
 function whinny:register_arrow(name, def)
 	core.register_entity(name, {
-		physical = false,
-		visual = def.visual,
-		visual_size = def.visual_size,
-		textures = def.textures,
+		initial_properties = {
+			physical = false,
+			visual = def.visual,
+			visual_size = def.visual_size,
+			textures = def.textures
+		},
 		velocity = def.velocity,
 		hit_player = def.hit_player,
 		hit_node = def.hit_node,

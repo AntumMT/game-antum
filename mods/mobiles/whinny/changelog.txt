@@ -1,17 +1,32 @@
 
-1.2
+next
+----
+- item used to place horse in inventory configured from settings
+
+
+2025-01-10
+----------
+- increased delay between random sounds
+- uses sounds mod
+- items that horses like & appetite configured from settings
+
+
+v1.2
+----
 - use setting "mount_turn_player_look" instead of "whinny.enable_mouse_ctrl"
 - used proper method for setting rotation compensation between rider & horse
 - added localization support
 
 
-1.1
+v1.1
+----
 - player "sits" on horse if player_api mod is available
 - fixed drops
 - added mobs:leather to drops if available
 
 
-1.0
+v1.0
+----
 - forked from original whinny mod
 - updated for 0.4.16/5.x Minetest
 - renamed horses
