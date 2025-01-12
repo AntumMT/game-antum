@@ -125,7 +125,7 @@ end
 -- @tparam string cmd_name
 -- @tparam table def
 local function registerChatCommand(cmd_name, def)
-	listitems.logInfo("Registering chat command \"" .. cmd_name .. "\"")
+	listitems.log("info", "Registering chat command \"" .. cmd_name .. "\"")
 	core.register_chatcommand(cmd_name, def)
 end
 

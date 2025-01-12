@@ -91,7 +91,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [craftguide][] ([MIT][lic.craftguide]) -- version: [f379998 Git][ver.craftguide] *2021-02-08* ([patched][patch.craftguide])
   * [enchanting][] ([GPL / WTFPL / CC BY-SA-NA][lic.enchanting]) -- version: [dee7dde Git][ver.enchanting] *2021-06-04*
   * [intllib][] ([Unlicense][lic.unlicense]) -- version: [6ebdc53][ver.intllib] *2021-02-23* ***DEPRECATED***
-  * [listitems][] ([MIT][lic.listitems]) -- version: [1.1][ver.listitems] *2021-08-04*
+  * [listitems][] ([MIT][lic.listitems]) -- version: [2025-01-12][ver.listitems]
   * [painting][] (WTFPL) -- version: [da8f4ba Git][ver.painting] *2021-06-25* ([patched][patch.painting])
   * [pipeworks][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2024-12-18][ver.pipeworks]
   * [simple_models][] ([CC0][lic.cc0]) -- version: [2021-08-16][ver.simple_models]
@@ -645,7 +645,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.jukebox]: https://github.com/minetest-mods/jukebox/tree/0d871f2
 [ver.kitten]: https://codeberg.org/tenplus1/mobs_animal/src/commit/3792d1cf3cf137a4c1c219370c4ddde15dbce4fc
 [ver.lighted_helmets]: https://github.com/AntumMT/mod-lighted_helmets/releases/tag/v1.1
-[ver.listitems]: https://github.com/AntumMT/mod-listitems/releases/tag/v1.1
+[ver.listitems]: https://codeberg.org/AntumLuanti/mod-listitems/src/commit/3a90db2f2dc0e050069b2bef3009b7b79ef7f322
 [ver.mesecons]: https://github.com/minetest-mods/mesecons/tree/1f9e86c3da08acb9e63e07c980a19097f6a125e2
 [ver.minetest_game]: https://github.com/minetest/minetest_game/tree/9270188
 [ver.mobkit]: https://github.com/TheTermos/mobkit/tree/ddea141

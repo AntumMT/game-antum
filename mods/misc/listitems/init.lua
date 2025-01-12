@@ -47,4 +47,4 @@ for index, script in ipairs(scripts) do
 end
 
 -- DEBUG:
-listitems.logDebug("Loaded")
+listitems.log("debug", "Loaded")

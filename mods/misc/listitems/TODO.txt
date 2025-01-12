@@ -3,3 +3,15 @@ TODO:
 - show formspec when "/list" called with no parameters
 - optimize search with regular expressions
 - clean up & optimize code
+- add support for:
+	- biomes
+	- aliases
+	- craftitems
+	- object_refs
+	- abms
+	- lbms
+	- decorations
+	- schematics
+	- chatcommands
+	- privileges
+	- callbacks?

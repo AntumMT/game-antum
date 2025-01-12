@@ -207,7 +207,7 @@ function listitems.list(player, l_type, switches, params, nocase)
 	nocase = nocase == nil or nocase == true
 
 	if not aux.listContains(aux.known_types, l_type) then
-		listitems.logWarn("listitems.list called with unknown list type: " .. tostring(l_type))
+		listitems.log("warn", "listitems.list called with unknown list type: " .. tostring(l_type))
 		return false
 	end
 

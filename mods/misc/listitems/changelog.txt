@@ -1,4 +1,9 @@
 
+2025-01-11
+----------
+- deprecation fixes
+
+
 v1.1
 ----
 - added missing "textdomain" line to localization files
