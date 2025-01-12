@@ -29,18 +29,19 @@ local translate_name = dofile(cmer.modpath .. "/misc_functions.lua")
 
 local function translate_def(def)
 	local new_def = {
-		physical = true,
-		visual = "mesh",
-		stepheight = 0.6, -- ensure we get over slabs/stairs
-		automatic_face_movement_dir = def.model.rotation or 0.0,
-
-		mesh = def.model.mesh,
-		textures = def.model.textures,
-		collisionbox = def.model.collisionbox or {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5},
-		visual_size = def.model.scale or {x=1, y=1},
-		backface_culling = def.model.backface_culling or false,
-		collide_with_objects = def.model.collide_with_objects or true,
-		makes_footstep_sound = true,
+		initial_properties = {
+			physical = true,
+			collisionbox = def.model.collisionbox or {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5},
+			visual = "mesh",
+			visual_size = def.model.scale or {x=1, y=1},
+			mesh = def.model.mesh,
+			textures = def.model.textures,
+			stepheight = 0.6, -- ensure we get over slabs/stairs
+			collide_with_objects = def.model.collide_with_objects or true,
+			makes_footstep_sound = true,
+			automatic_face_movement_dir = def.model.rotation or 0.0,
+			backface_culling = def.model.backface_culling or false
+		},
 
 		nametag = cmer.nametags and def.nametag or nil,
 		ownable = def.ownable,
@@ -96,12 +97,12 @@ local function translate_def(def)
 
 	if def.stats.can_jump and type(def.stats.can_jump) == "number" then
 		if def.stats.can_jump > 0 then
-			new_def.stepheight = def.stats.can_jump + 0.1
+			new_def.initial_properties.stepheight = def.stats.can_jump + 0.1
 		end
 	end
 
 	if def.stats.sneaky or def.stats.can_fly then
-		new_def.makes_footstep_sound = false
+		new_def.initial_properties.makes_footstep_sound = false
 	end
 
 
@@ -472,15 +473,17 @@ local function makeSpawnerEntiy(mob_name, model)
 	local t_name = translate_name(mob_name)
 
 	core.register_entity(mob_name .. "_spawner_dummy", {
-		hp_max = 1,
-		physical = false,
-		collide_with_objects = false,
-		collisionbox = nullVec,
-		visual = "mesh",
-		visual_size = {x = 0.42, y = 0.42},
-		mesh = model.mesh,
-		textures = model.textures,
-		makes_footstep_sound = false,
+		initial_properties = {
+			hp_max = 1,
+			physical = false,
+			collisionbox = nullVec,
+			visual = "mesh",
+			visual_size = {x = 0.42, y = 0.42},
+			mesh = model.mesh,
+			textures = model.textures,
+			collide_with_objects = false,
+			makes_footstep_sound = false
+		},
 		automatic_rotate = math.pi * -2.9,
 		mob_name = "_" .. t_name .. "_dummy",
 
@@ -617,12 +620,14 @@ end
 
 local function register_alias_entity(old_mob, new_mob)
 	core.register_entity(":" .. old_mob, {
-		physical = false,
-		collisionbox = {0, 0, 0, 0, 0, 0},
-		visual = "sprite",
-		visual_size = {x = 0, y = 0},
-		textures = {"creatures_spawner.png"}, -- dummy texture
-		makes_footstep_sound = false,
+		initial_properties = {
+			physical = false,
+			collisionbox = {0, 0, 0, 0, 0, 0},
+			visual = "sprite",
+			visual_size = {x = 0, y = 0},
+			textures = {"creatures_spawner.png"}, -- dummy texture
+			makes_footstep_sound = false
+		},
 
 		on_activate = function(self)
 			local pos = self.object:get_pos()
