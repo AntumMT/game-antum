@@ -110,7 +110,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [rat][mobs_rat] ([MIT][lic.mobs_rat]) -- version: [2a8d115 Git][ver.mobs_rat] *2021-05-20*
   * [sand_monster][mobs_monster] ([MIT / CC0 / WTFPL][lic.sand_monster]) -- version: [2025-01-01][ver.mobs_monster] ([patched][patch.sand_monster])
   * [shark][] ([CC0 / CC BY-SA][lic.cmer_shark]) -- version: [0805b84 Git][ver.cmer_shark] *2021-06-01*
-  * [sheep][creatures] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [e5e0e31 Git][ver.cmer_sheep] *2021-05-25*
+  * [sheep][cmer_sheep] ([Zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [7d8f941 Git][ver.cmer_sheep] _2025-01-12_
   * [skeleton][cmer_skeleton] ([MIT][lic.cmer_skeleton]) -- version: [e6448f5 Git][ver.cmer_skeleton] *2021-06-01*
   * [sneeker][] ([MIT][lic.sneeker]) -- version: [1.1-1][ver.sneeker] *2021-07-20*
   * [spider][cmer_spider] ([unilicense][lic.cmer_spider]) -- version: [134aeae Git][ver.cmer_spider] *2021-07-10*
@@ -325,6 +325,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [chatlog]: https://content.luanti.org/packages/AntumDeluge/chatlog/
 [christmas]: https://forum.luanti.org/viewtopic.php?t=3950
 [cleaner]: https://content.luanti.org/packages/AntumDeluge/cleaner/
+[cmer_sheep]: https://codeberg.org/AntumDeluge/mod-cmer_sheep
 [cmer_skeleton]: https://content.luanti.org/packages/AntumDeluge/skeleton/
 [cmer_spider]: https://github.com/AntumMT/mod-spider
 [coloredwood]: https://content.luanti.org/packages/mt-mods/coloredwood/
@@ -599,7 +600,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.cmer_ghost]: https://github.com/AntumMT/mod-cmer/tree/2f70906
 [ver.cmer_oerkki]: https://github.com/AntumMT/mod-cmer/tree/f7c5586
 [ver.cmer_shark]: https://github.com/AntumMT/mod-cmer_shark/tree/0805b84
-[ver.cmer_sheep]: https://github.com/AntumMT/mod-cmer/tree/e5e0e31
+[ver.cmer_sheep]: https://codeberg.org/AntumDeluge/mod-cmer_sheep/src/commit/7d8f941c002ec089aa9574eb4463d61b51983355
 [ver.cmer_skeleton]: https://github.com/AntumMT/mod-skeleton/tree/e6448f5
 [ver.cmer_spider]: https://github.com/AntumMT/mod-cmer_spider/tree/134aeae
 [ver.cmer_zombie]: https://github.com/AntumMT/mod-cmer/tree/3dd783c
