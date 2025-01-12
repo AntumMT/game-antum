@@ -154,7 +154,14 @@ end
 --  @tparam pos pos Where to drop items.
 --  @tparam table drops List of item `DropDef`.
 function cmer.dropItems(pos, drops)
-	if not pos or not drops then
+	if not pos then
+		cmer.log("error", "failed to determine entity position")
+		core.log(debug.traceback())
+		return
+	end
+	if not drops then
+		cmer.log("error", "failed to determine items to drop")
+		core.log(debug.traceback())
 		return
 	end
 

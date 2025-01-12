@@ -115,7 +115,8 @@ end
 
 local dropItems = cmer.dropItems
 
-local function killMob(me, def)
+local function killMob(self, def)
+	local me = self.object
 	if not def then
 		if me then
 			me:remove()
@@ -124,9 +125,6 @@ local function killMob(me, def)
 	local pos = me:get_pos()
 	me:set_velocity(nullVec)
 	me:set_properties({collisionbox=nullVec})
-	me:set_hp(0)
-	-- Must be non-zero otherwise mob is removed before death animation.
-	me:set_hp(1)
 
 	if def.sounds and def.sounds.on_death then
 		local death_snd = def.sounds.on_death
@@ -137,21 +135,26 @@ local function killMob(me, def)
 			})
 	end
 
+	if def.drops then
+		if type(def.drops) == "function" then
+			def.drops(me)
+		else
+			dropItems(pos, def.drops)
+		end
+	end
+
 	if def.model.animations.death then
 		local dur = def.model.animations.death.duration or 0.5
 		update_animation(me, "death", def.model.animations["death"])
 		core.after(dur, function()
+			self:on_death()
+			me:set_hp(hp)
 			me:remove()
 		end)
 	else
+		self:on_death()
+		me:set_hp(hp)
 		me:remove()
-	end
-	if def.drops then
-		if type(def.drops) == "function" then
-			def.drops(me:get_luaentity())
-		else
-			dropItems(pos, def.drops)
-		end
 	end
 end
 
@@ -184,8 +187,7 @@ local function onDamage(self, hp, hitsound)
 
 	if hp <= 0 then
 		self.stunned = true
-			self:on_death()
-			killMob(me, def)
+		killMob(self, def)
 	else
 		on_hit(me) -- red flashing
 		if def.sounds then
@@ -209,9 +211,10 @@ local function changeHP(self, value, hitsound)
 	local me = self.object
 	local hp = me:get_hp()
 	hp = hp + math.floor(value)
-	me:set_hp(hp)
 	if value < 0 then
 		onDamage(self, hp, hitsound)
+	else
+		me:set_hp(hp)
 	end
 end
 
