@@ -16,3 +16,4 @@ TODO:
 - respect "max_objects_per_block" setting
 - inflict variable amount of damage based on damage level of weapon
 - add range attacks
+- add flag for floating

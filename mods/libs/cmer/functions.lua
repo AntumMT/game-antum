@@ -23,7 +23,7 @@
 -- Localizations
 local rnd = math.random
 
-local translate_name = dofile(cmer.modpath .. "/misc_functions.lua")
+local translate_name, is_water_node, is_burning_node = dofile(cmer.modpath .. "/misc_functions.lua")
 
 
 local function knockback(selfOrObject, dir, old_dir, strengh)
@@ -321,7 +321,11 @@ cmer.on_punch = function(self, puncher, tflp, tc, dir)
 end
 
 cmer.on_death = function(self, killer)
-	if self.object:get_nametag_attributes().text then
+	local attributes = self.object:get_nametag_attributes()
+	if attributes == nil then
+		return
+	end
+	if attributes.text ~= nil then
 		-- clear nametag
 		self.object:set_nametag_attributes({text=nil})
 	end
@@ -699,31 +703,28 @@ cmer.on_step = function(self, dtime)
 	--swim
 	if self.can_swim and self.swimtimer > 0.8 and self.last_node then
 		self.swimtimer = 0
-		local name = self.last_node.name
-		if name then
-			if name == "default:water_source" then
-				self.air_cnt = 0
-				local vel = me:get_velocity()
-				update_velocity(me, {x=vel.x, y=0.9, z=vel.z}, 1)
-				me:set_acceleration({x=0, y=-1.2, z=0})
-				self.in_water = true
-				-- play swimming sounds
-				if def.sounds and def.sounds.swim then
-					local swim_snd = def.sounds.swim
-					core.sound_play(swim_snd.name, {
-						pos = current_pos,
-						gain = swim_snd.gain or 1,
-						max_hear_distance = swim_snd.distance or 10,
-						})
-				end
-				spawnParticles(current_pos, vel, "bubble.png")
-			else
-				self.air_cnt = self.air_cnt + 1
-				if self.in_water == true and self.air_cnt > 5 then
-					self.in_water = false
-					if not self.can_fly then
-						me:set_acceleration({x=0, y=-15, z=0})
-					end
+		if is_water_node(self.last_node) then
+			self.air_cnt = 0
+			local vel = me:get_velocity()
+			update_velocity(me, {x=vel.x, y=0.9, z=vel.z}, 1)
+			me:set_acceleration({x=0, y=-1.2, z=0})
+			self.in_water = true
+			-- play swimming sounds
+			if def.sounds and def.sounds.swim then
+				local swim_snd = def.sounds.swim
+				core.sound_play(swim_snd.name, {
+					pos = current_pos,
+					gain = swim_snd.gain or 1,
+					max_hear_distance = swim_snd.distance or 10,
+					})
+			end
+			spawnParticles(current_pos, vel, "bubble.png")
+		else
+			self.air_cnt = self.air_cnt + 1
+			if self.in_water == true and self.air_cnt > 5 then
+				self.in_water = false
+				if not self.can_fly then
+					me:set_acceleration({x=0, y=-15, z=0})
 				end
 			end
 		end
@@ -732,13 +733,10 @@ cmer.on_step = function(self, dtime)
 	-- Add damage when drowning or in lava
 	if self.env_damage and self.envtimer > 1 and self.last_node then
 		self.envtimer = 0
-		local name = self.last_node.name
-		if not self.can_swim and name == "default:water_source" then
+		if not self.can_swim and is_water_node(self.last_node) then
 			changeHP(self, -1)
-		elseif self.can_burn then
-			if name == "fire:basic_flame" or name == "default:lava_source" then
-				changeHP(self, -4)
-			end
+		elseif self.can_burn and is_burning_node(self.last_node) then
+			changeHP(self, -4)
 		end
 
 		-- add damage when light is too bright or too dark

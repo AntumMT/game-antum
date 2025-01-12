@@ -58,7 +58,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [sfinv][] ([MIT][lic.sfinv] -- version: [2023-04-14][ver.sfinv]
   * [sfinv_buttons][] ([MIT][lic.mit]) -- version [1.1.2][ver.sfinv_buttons] *2023-04-20*
 * libs/
-  * [cmer][creatures] ([zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [2843875 Git][ver.cmer] *2021-06-01*
+  * [cmer][creatures] ([zlib][lic.creatures] / [CC BY-SA][lic.ccbysa3.0]) -- version: [27a2714 Git][ver.cmer] _2025-01-03_
   * [config][] ([MIT][lic.config]) -- version: [1.1][ver.config] _2020-03-26_ ([patched][patch.config])
   * [fakelib][] ([MIT][lic.fakelib]) -- version: [1.0.0][ver.fakelib] _2024-05-19_
   * [formspecs][] ([MIT][lic.formspecs]) -- version: 2.6 *2020-03-12*
@@ -594,7 +594,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.chatlog]: https://github.com/AntumMT/mod-chatlog/tree/v1.1
 [ver.christmas]: https://github.com/TheZenKitteh/minetest-christmas/tree/d3bd872
 [ver.cleaner]: https://github.com/AntumMT/mod-cleaner/releases/tag/v1.2
-[ver.cmer]: https://github.com/AntumMT/mod-cmer/tree/2843875
+[ver.cmer]: https://codeberg.org/AntumLuanti/mod-cmer/src/commit/27a2714859c9ec979a36d71c785ec03962950807
 [ver.cmer_chicken]: http://github.com/AntumMT/mod-cmer/tree/085706f
 [ver.cmer_ghost]: https://github.com/AntumMT/mod-cmer/tree/2f70906
 [ver.cmer_oerkki]: https://github.com/AntumMT/mod-cmer/tree/f7c5586
