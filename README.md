@@ -18,7 +18,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * audio/
   * [sounds][] ([MIT][lic.sounds] / [CC BY-SA][lic.ccbysa3.0]) -- version: [1.6][ver.sounds] *2021-08-13*
 * buildings/
-  * [bridges][] ([GPL][lic.gpl3.0]) -- version: [1.0.0][ver.bridges] *2023-02-13* ([patched][patch.bridges])
+  * [bridges][] ([GPL][lic.gpl3.0]) -- version: [2025-01-05][ver.bridges]
   * [christmas][] ([MIT][lic.christmas]) -- version [d3bd872 Git][ver.christmas] *2013-01-11* ([patched][patch.christmas])
   * [doors][] ([MIT][lic.doors] / [CC BY-SA][lic.ccbysa3.0]) -- version: 2024-11-09
   * [elevator][] ([WTFPL][lic.elevator])
@@ -581,7 +581,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.boats2]: https://github.com/amadin/boats/tree/b83231e
 [ver.bonemeal]: https://codeberg.org/tenplus1/bonemeal/src/commit/0d852bff0ab1c870520f51d15d761aefe466e294
 [ver.bookmarks_gui]: https://github.com/cornernote/minetest-bookmarks_gui/tree/f7ae10a
-[ver.bridges]: https://github.com/mt-historical/bridges/tree/7748488b9cd991cb3bd58af86fe703172a556710
+[ver.bridges]: https://github.com/mt-historical/bridges/tree/4cd68c037cc6e917f6f8ff5eb29105bea5bc1124
 [ver.bright_night]: https://github.com/Yukitty/minetest-bright_night/tree/69b750a
 [ver.campfire]: https://github.com/Napiophelios/campfire/tree/1058f1d
 [ver.castle_farming]: https://github.com/minetest-mods/castle_farming/tree/a2d5d22008ef85d51e9465498dd68369cd144104
@@ -719,7 +719,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.beds]: https://github.com/AntumMT/mod-beds/tree/53c4db01435df21f1d4c8e9fe9875582c245e789
 [patch.boats2]: https://github.com/AntumMT/mod-boats2/tree/4160a597b90d15a8b9447690caf0ee9f6c5b919f
 [patch.bookmarks_gui]: https://github.com/AntumMT/mod-bookmarks_gui/tree/8250b0169239b777a84d4b85d72ee4faed2a43eb
-[patch.bridges]: https://github.com/AntumMT/mod-bridges/tree/36b71392e218aac13ed5f0f2a7cd7e4a7667b9ed
 [patch.bright_night]: https://github.com/AntumMT/mod-bright_night/tree/d39f20d0cc5a78c2cde282f4150260a2cb40bb4e
 [patch.castle_weapons]: https://github.com/AntumMT/mod-castle_weapons/tree/e8827d7781e3a36996a4c8f6d2ce0bdaec7536cf
 [patch.christmas]: https://github.com/AntumMT/mod-christmas/tree/50bda80
