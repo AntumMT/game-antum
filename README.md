@@ -149,7 +149,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [bookmarks_gui][] ([BSD 3-Clause][lic.bookmarks_gui]) -- version: [f7ae10a Git][ver.bookmarks_gui] *2017-08-29* ([patched][patch.bookmarks_gui])
   * [hbarmor][] ([MIT][lic.mit] / [CC BY-SA][lic.ccbysa3.0]) -- version: [1.0.0][ver.hbarmor] *2019-04-01*
   * [home_gui][] ([BSD 3-Clause][lic.home_gui]) -- version: [44c2f15 Git][ver.home_gui] *2021-06-16* ([patched][patch.home_gui])
-  * [hud_compass][] ([MIT][lic.hud_compass] / [CC BY-SA ][lic.ccbysa3.0]) -- version: [648c744 Git][ver.hud_compass] _2020-04-23_ ([patched][patch.hud_compass])
+  * [hud_compass][] ([MIT][lic.hud_compass] / [CC BY-SA ][lic.ccbysa3.0]) -- version: [be2ad93 Git][ver.hud_compass] _2025-01-06_
   * [hudbars][] ([MIT][lic.mit] / [CC BY-SA][lic.ccbysa3.0]) -- version: [2.3.6][ver.hudbars] *2024-09-16*
   * [pbmarks][] ([MIT][lic.pbmarks]) -- version: [1.0][ver.pbmarks] *2021-06-15*
 * world/
@@ -638,7 +638,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.homedecor]: https://github.com/mt-mods/homedecor_modpack/tree/b30d7b532bfe57ce157c59fbea82244f0684fcab
 [ver.hot_air_balloons]: https://notabug.org/NetherEran/hot_air_balloons/src/39a3572ad1bf7fd800525d68b128981e1b2c37d1
 [ver.hovercraft]: https://github.com/stujones11/hovercraft/tree/4d50e68
-[ver.hud_compass]: https://github.com/kestral246/hud_compass/tree/648c744
+[ver.hud_compass]: https://github.com/kestral246/hud_compass/tree/be2ad93635241df3663c1d085f71c21c3bfcd0f1
 [ver.hudbars]: https://codeberg.org/Wuzzy/minetest_hudbars/src/tag/2.3.6
 [ver.ilights]: https://github.com/mt-mods/ilights/tree/0a8ff658c3638ddff952c6de9d5914c9783fb877
 [ver.intllib]: https://github.com/minetest-mods/intllib/tree/6ebdc53
@@ -739,7 +739,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.homedecor]: https://github.com/AntumMT/mp-homedecor/tree/dea94e6955ddde5bfb86cd4f26938ceed1d551c6
 [patch.hovercraft]: https://github.com/AntumMT/mod-hovercraft/tree/0f864c4
 [patch.hud]: https://github.com/AntumMT/mod-hud/tree/6846e20
-[patch.hud_compass]: https://github.com/AntumMT/mod-hud_compass/tree/3be32e45327c071cbe357f5bed871e47abd401b4
 [patch.invisibility]: https://github.com/AntumMT/mod-invisibility/tree/00c0638
 [patch.kitten]: https://codeberg.org/AntumLuanti/mod-kitten/src/commit/8d743de533b992bbaa0ce13b554a19d2dd37883a
 [patch.mese_monster]: https://github.com/AntumMT/mod-mese_monster/tree/df9fffedc51525b67eac9824b99d10f62eaf64c4
