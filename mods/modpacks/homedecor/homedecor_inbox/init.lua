@@ -79,7 +79,9 @@ homedecor.register("inbox", {
 			if inv:room_for_item("main", stack) then
 				return -1
 			else
-				core.chat_send_player(player:get_player_name(), S("The mailbox is full."))
+				if core.settings:get_bool("homedecor.verbose_messages", false) then
+					core.chat_send_player(player:get_player_name(), S("This mailbox is full."))
+				end
 				return 0
 			end
 		end

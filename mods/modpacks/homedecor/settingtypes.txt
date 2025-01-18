@@ -1,0 +1,3 @@
+
+# Enables extra messages to players for certain actions.
+homedecor.verbose_messages (Verbose messages) bool false

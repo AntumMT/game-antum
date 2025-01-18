@@ -2332,6 +2332,12 @@ castle_masonry_murderhole (Murder holes and machicolations) bool true
 crafting_bench_crafting_rate (Crafting rate) int 5 1 60
 
 
+[*homedecor]
+
+# Enables extra messages to players for certain actions.
+homedecor.verbose_messages (Verbose messages) bool false
+
+
 [*Mesecons]
 
 [**mesecons]
