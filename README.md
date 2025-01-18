@@ -177,7 +177,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [crafting_bench][] -- version: [2024-11-03][ver.crafting_bench]
 * [deploy_nodes][] ([BSD 3-Clause][lic.deploy_nodes]) -- version: [b67e162 Git][ver.deploy_nodes] *2017-06-08*
 * [home_workshop][] -- version: [2024-04-23][ver.home_workshop]
-* [homedecor][] ([LGPL / WTFPL / CC BY-SA / CC0][lic.homedecor]) -- version: [2024-12-30][ver.homedecor] ([patched][patch.homedecor])
+* [homedecor][] ([LGPL / WTFPL / CC BY-SA / CC0][lic.homedecor]) -- version: [2025-01-10][ver.homedecor] ([patched][patch.homedecor])
 * [mesecons][] ([LGPL / CC BY-SA][lic.mesecons]) -- version [2025-01-03][ver.mesecons]
 * [moremesecons][] ([MPL][lic.mpl2.0]) -- version: [2024-12-20][ver.moremesecons]
 * [mymods](https://github.com/AntumMT/mp-mymods)
@@ -635,7 +635,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.hidename]: https://github.com/AntumMT/mod-hidename/releases/tag/v1.1
 [ver.home_gui]: https://github.com/cornernote/minetest-home_gui/tree/44c2f1533e1695b923cb3dae03bc6fce1b1b1432
 [ver.home_workshop]: https://github.com/mt-mods/home_workshop_modpack/tree/c3f11977c710f6ef626f1f11d2920fbdb773a187
-[ver.homedecor]: https://github.com/mt-mods/homedecor_modpack/tree/f7d51645593600df14e1e693442e5e0d95d63c03
+[ver.homedecor]: https://github.com/mt-mods/homedecor_modpack/tree/b30d7b532bfe57ce157c59fbea82244f0684fcab
 [ver.hot_air_balloons]: https://notabug.org/NetherEran/hot_air_balloons/src/39a3572ad1bf7fd800525d68b128981e1b2c37d1
 [ver.hovercraft]: https://github.com/stujones11/hovercraft/tree/4d50e68
 [ver.hud_compass]: https://github.com/kestral246/hud_compass/tree/648c744
@@ -736,7 +736,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.glow]: https://github.com/AntumMT/mod-glow/tree/544bfcbfc6498108380aad896b6d2ed8c4e02706
 [patch.helicopter]: https://github.com/AntumMT/mod-helicopter/tree/79d2d3e
 [patch.home_gui]: https://github.com/AntumMT/mod-home_gui/tree/32b2e355dd6b4bf2e2f0d0a7d62acb87b94c965c
-[patch.homedecor]: https://github.com/AntumMT/mp-homedecor/commit/ca1024ccf151059e4db47408bf7d1c2fd9a74723
+[patch.homedecor]: https://github.com/AntumMT/mp-homedecor/tree/dea94e6955ddde5bfb86cd4f26938ceed1d551c6
 [patch.hovercraft]: https://github.com/AntumMT/mod-hovercraft/tree/0f864c4
 [patch.hud]: https://github.com/AntumMT/mod-hud/tree/6846e20
 [patch.hud_compass]: https://github.com/AntumMT/mod-hud_compass/tree/3be32e45327c071cbe357f5bed871e47abd401b4
