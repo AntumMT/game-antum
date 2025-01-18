@@ -134,7 +134,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [drawers][] ([MIT / CC0 / CC BY][lic.drawers]) -- version: [2023-01-20][ver.drawers]
   * [more_chests][] ([GPL][lic.gpl2.0]) -- version: [6be8145 Git][ver.more_chests] *2021-04-05*
 * tools/
-  * [compassgps][] ([WTFPL][lic.wtfpl] / [CC0][lic.cc0] / [CC BY-SA][lic.ccbysa]) -- version: [567b95f Git][ver.compassgps] *2018-09-24* ([patched][patch.compassgps])
+  * [compassgps][] ([WTFPL][lic.wtfpl] / [CC0][lic.cc0] / [CC BY-SA][lic.ccbysa]) -- version: [e80c496 Git][ver.compassgps] _2025-01-12_
   * [equip_exam][] ([MIT][lic.equip_exam]) - version: [1.6][ver.equip_exam] *2021-07-19*
   * [tools_obsidian][] ([LGPL / CC BY-SA][lic.tools_obsidian]) -- version: [1.0][ver.tools_obsidian] *2021-01-15*
   * [workbench][] ([BSD][lic.workbench]) -- version: [1.0][ver.workbench] *2021-06-10*
@@ -605,7 +605,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.cmer_spider]: https://github.com/AntumMT/mod-cmer_spider/tree/134aeae
 [ver.cmer_zombie]: https://github.com/AntumMT/mod-cmer/tree/3dd783c
 [ver.coloredwood]: https://github.com/mt-mods/coloredwood/tree/1aeb88d6fdb4b9e1d7190432c2e4b1f8f04475df
-[ver.compassgps]: https://github.com/Kilarin/compassgps/tree/567b95f
+[ver.compassgps]: https://github.com/Kilarin/compassgps/tree/e80c4966c6614e6a2aedb9a07260e151a2464c84
 [ver.config]: https://bitbucket.org/sorcerykid/config/src/a6d0493df96ca394652425c8f5e2795e8fffc3ae/
 [ver.crafting_bench]: https://github.com/minetest-mods/crafting_bench/tree/5d97e6d401d8d9788064d127e774453fed6913c9
 [ver.craftguide]: https://github.com/minetest-mods/craftguide/tree/f379998
@@ -723,7 +723,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.bright_night]: https://github.com/AntumMT/mod-bright_night/tree/d39f20d0cc5a78c2cde282f4150260a2cb40bb4e
 [patch.castle_weapons]: https://github.com/AntumMT/mod-castle_weapons/tree/e8827d7781e3a36996a4c8f6d2ce0bdaec7536cf
 [patch.christmas]: https://github.com/AntumMT/mod-christmas/tree/50bda80
-[patch.compassgps]: https://github.com/AntumMT/mod-compassgps/tree/8a98085c482c360b53bd231195065d581dd89961
 [patch.config]: https://github.com/AntumMT/mod-config/tree/bf8ba4e96f95fd7722f30c4e4749056e7302371e
 [patch.craftguide]: https://github.com/AntumMT/mod-craftguide/tree/aef18f2
 [patch.crops]: https://github.com/AntumMT/mod-crops/tree/a1cce06
