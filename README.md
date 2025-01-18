@@ -81,7 +81,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [moreores][] ([zlib][lic.moreores] / [CC BY-SA][lic.ccbysa3.0]) -- version: [2024-12-14][ver.moreores] ([patched][patch.moreores])
   * [quartz][] ([MIT][lic.quartz]) -- version: [72ec06f Git][ver.quartz] *2021-01-04* ([patched][patch.quartz])
   * [rainbow_ore][] ([LGPL][lic.rainbow_ore]) -- version: [2021-08-05][ver.rainbow_ore] ([patched][patch.rainbow_ore])
-  * [unifieddyes][] ([GPL][lic.gpl2.0]) -- version: [2024-04-20][ver.unifieddyes] ([patched][patch.unifieddyes])
+  * [unifieddyes][] ([GPL][lic.gpl2.0]) -- version: [2025-01-10][ver.unifieddyes]
 * misc/
   * [ambience][] ([MIT][lic.ambience] / [CC BY / CC BY-SA / CC BY-NC-SA / CC0][lic.ambience_sounds]) -- version: [2021-07-13][ver.ambience]
   * [asm_spawneggs][] ([MIT][lic.asm_spawneggs]) -- version: [1.2][ver.asm_spawneggs] *2021-08-03*
@@ -698,7 +698,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.tools_obsidian]: https://github.com/Dragonop/tools_obsidian/releases/tag/1.0
 [ver.trampoline]: https://github.com/AntumMT/mod-trampoline/releases/tag/v0.3
 [ver.trash_can]: https://github.com/minetest-mods/trash_can/tree/423b0f2
-[ver.unifieddyes]: https://github.com/mt-mods/unifieddyes/tree/de6e2e0e35f2f14390ef1d7ccdb0d7bc1acce2f8
+[ver.unifieddyes]: https://github.com/mt-mods/unifieddyes/tree/82f026fc7e7c77149803eb2bfb0a7297070f7865
 [ver.velociraptor]: https://github.com/AntumMT/mp-dinosaurs_aggressive/tree/339e18f8145bbb87788ab80ce976f92b2fa3f489
 [ver.waffles]: https://github.com/GreenXenith/waffles/tree/f9ee9962795a44585a7584af34226acaa8bf9d77
 [ver.wardrobe]: https://github.com/AntumMT/mod-wardrobe/tree/0500a78
@@ -764,5 +764,4 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.technic_armor]: https://github.com/AntumMT/mod-technic_armor/tree/7434d00ebcf161179fbfd180c48f0fc42c3a7676
 [patch.tree_monster]: https://github.com/AntumMT/mod-tree_monster/tree/2ac89e279c260e8c8d7cdb07da1826a33cc0b446
 [patch.throwing]: https://github.com/AntumMT/mod-throwing/tree/2a0e3c593a23f024ac19c6bdfc3fcd55bc674b14
-[patch.unifieddyes]: https://github.com/AntumMT/mod-unifieddyes/tree/3dc9ff1d8efccf402bbd0a9ac521d8caab008f9b
 [patch.windmill]: https://github.com/AntumMT/mod-windmill/tree/35e18f9c6e9bee1bb27ebfc39bfd424d6357b113
