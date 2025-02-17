@@ -181,7 +181,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [mesecons][] ([LGPL / CC BY-SA][lic.mesecons]) -- version [2025-01-03][ver.mesecons]
 * [moremesecons][] ([MPL][lic.mpl2.0]) -- version: [2024-12-20][ver.moremesecons]
 * [mymods](https://github.com/AntumMT/mp-mymods)
-  * [mydoors][] ([CC-BY / CC-BY-SA][lic.mydoors] / [WTFPL][lic.wtfpl] / [DWYWFPL][lic.dwywpl]) -- version: [2024-11-16][ver.mydoors] ([patched][patch.mydoors])
+  * [mydoors][] ([CC-BY / CC-BY-SA][lic.mydoors] / [WTFPL][lic.wtfpl] / [DWYWFPL][lic.dwywpl]) -- version: [2025-01-26][ver.mydoors] ([patched][patch.mydoors])
   * [myfences][] ([DWYWPL][lic.dwywpl]) -- version: [c6e529a Git][ver.myfences] _2016-04-04_ ([patched][patch.myfences])
   * [mylights][] ([DWYWPL][lic.dwywpl]) -- version: [0d734b7 Git][ver.mylights] _2017-07-14_ ([patched][patch.mylights])
   * [mypaint][] ([DWYWPL][lic.dwywpl]) -- version: [9288e8d Git][ver.mypaint] _2017-11-16_ ([patched][patch.mypaint])
@@ -662,7 +662,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.moremesecons]: https://github.com/minetest-mods/MoreMesecons/tree/3e93b939f3bae14fb7a8c3f94e8db5d8fc0b2c24
 [ver.moreores]: https://github.com/minetest-mods/moreores/tree/31e9d09355282e1157b96475676640df2e6c7250
 [ver.motorbike]: https://github.com/Extex101/motorbike/tree/f918701
-[ver.mydoors]: https://github.com/minetest-mods/mydoors/tree/5d78183cf2d3eebc58dcbcd7cada378ca1004208
+[ver.mydoors]: https://github.com/minetest-mods/mydoors/tree/eb371b550c0c8200d9316aa4659af69c4de4734b
 [ver.myfences]: https://github.com/DonBatman/myfences/tree/c6e529a
 [ver.mylights]: https://github.com/minetest-mods/mylights/tree/0d734b7
 [ver.mypaint]: https://github.com/DonBatman/mypaint/tree/9288e8d
@@ -744,7 +744,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.minetest_game]: https://github.com/AntumMT/mtgame-minetest/tree/014188d
 [patch.moreores]: https://github.com/AntumMT/mod-moreores/tree/0b5a48ecbbc0e82f45e7c270f5b35b235c52e39e
 [patch.motorbike]: https://github.com/AntumMT/mod-motorbike/tree/0aa5c9c
-[patch.mydoors]: https://github.com/AntumMT/mp-mydoors/tree/044ee1ba7b2b5b930dc84c06a4b8453d0df75eb0
+[patch.mydoors]: https://github.com/AntumMT/mp-mydoors/tree/a9e0a34c96b712aed60ed549877032baeb26d395
 [patch.myfences]: https://github.com/AntumMT/mod-myfences/tree/d28f844c73bfa84922711d0bd1224621620be9ab
 [patch.mylights]: https://github.com/AntumMT/mod-mylights/tree/095ea5f16d146975e0504fb70f13036ef261dd02
 [patch.mypaint]: https://github.com/AntumMT/mod-mypaint/tree/d347667be5f26c37fb0588722bbfe6b2a7ba9e16
