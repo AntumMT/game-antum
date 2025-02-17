@@ -183,7 +183,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * [mymods](https://github.com/AntumMT/mp-mymods)
   * [mydoors][] ([CC-BY / CC-BY-SA][lic.mydoors] / [WTFPL][lic.wtfpl] / [DWYWFPL][lic.dwywpl]) -- version: [2025-01-26][ver.mydoors] ([patched][patch.mydoors])
   * [myfences][] ([DWYWPL][lic.dwywpl]) -- version: [c6e529a Git][ver.myfences] _2016-04-04_ ([patched][patch.myfences])
-  * [mylights][] ([DWYWPL][lic.dwywpl]) -- version: [0d734b7 Git][ver.mylights] _2017-07-14_ ([patched][patch.mylights])
+  * [mylights][] ([DWYWPL][lic.dwywpl]) -- version: [32c6855 Git][ver.mylights] _2025-01-27_
   * [mypaint][] ([DWYWPL][lic.dwywpl]) -- version: [9288e8d Git][ver.mypaint] _2017-11-16_ ([patched][patch.mypaint])
   * [mypaths][] ([DWYWPL][lic.dwywpl]) -- version: [078f52c Git][ver.mypaths] _2024-02-29_ ([patched][patch.mypaths])
   * [myroofs][] ([DWYWPL][lic.dwywpl]) -- version: [fe98461 Git][ver.myroofs] _2017-07-14_ ([patched][patch.myroofs])
@@ -664,7 +664,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.motorbike]: https://github.com/Extex101/motorbike/tree/f918701
 [ver.mydoors]: https://github.com/minetest-mods/mydoors/tree/eb371b550c0c8200d9316aa4659af69c4de4734b
 [ver.myfences]: https://github.com/DonBatman/myfences/tree/c6e529a
-[ver.mylights]: https://github.com/minetest-mods/mylights/tree/0d734b7
+[ver.mylights]: https://github.com/minetest-mods/mylights/tree/32c6855ac9ba910da0cea8ed6534dc1223a83b6c
 [ver.mypaint]: https://github.com/DonBatman/mypaint/tree/9288e8d
 [ver.mypaths]: https://github.com/minetest-mods/mypaths/tree/078f52ce7d6bb993e2687a5643c8eab6a44804b1
 [ver.myroofs]: https://github.com/minetest-mods/myroofs/tree/fe98461
@@ -746,7 +746,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.motorbike]: https://github.com/AntumMT/mod-motorbike/tree/0aa5c9c
 [patch.mydoors]: https://github.com/AntumMT/mp-mydoors/tree/a9e0a34c96b712aed60ed549877032baeb26d395
 [patch.myfences]: https://github.com/AntumMT/mod-myfences/tree/d28f844c73bfa84922711d0bd1224621620be9ab
-[patch.mylights]: https://github.com/AntumMT/mod-mylights/tree/095ea5f16d146975e0504fb70f13036ef261dd02
 [patch.mypaint]: https://github.com/AntumMT/mod-mypaint/tree/d347667be5f26c37fb0588722bbfe6b2a7ba9e16
 [patch.mypaths]: https://github.com/AntumMT/mod-mypaths/tree/8f1cb9c05adb749abae82a9083399bf7a195fa37
 [patch.myroofs]: https://github.com/AntumMT/mod-myroofs/tree/4af8dbc8ffe712522104d05b16831996ecf23662
