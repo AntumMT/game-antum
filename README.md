@@ -188,7 +188,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [mypaths][] ([DWYWPL][lic.dwywpl]) -- version: [961cab0 Git][ver.mypaths] _2025-01-27_
   * [myroofs][] ([DWYWPL][lic.dwywpl]) -- version: [92e0b77 Git][ver.myroofs] _2025-01-27_
   * [mysheetmetal][] ([DWYWPL][lic.dwywpl]) -- version: [6670086 Git][ver.mysheetmetal] _2025-01-27_
-  * [mywoodslopes][] ([DWYWPL][lic.dwywpl]) -- version: [b661b28 Git][ver.mywoodslopes] _2021-04-28_ ([patched][patch.mywoodslopes])
+  * [mywoodslopes][] ([DWYWPL][lic.dwywpl]) -- version: [15902f4 Git][ver.mywoodslopes] _2025-01-27_ ([patched][patch.mywoodslopes])
 * [technic][] ([LGPL][lic.lgpl2.0]) -- version: [2024-12-17][ver.technic]
 
 
@@ -669,7 +669,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.mypaths]: https://github.com/minetest-mods/mypaths/tree/961cab0dc2830ff35bca30eeb453e33f64704089
 [ver.myroofs]: https://github.com/minetest-mods/myroofs/tree/92e0b770a551e1116873536642c4eb50620ee09a
 [ver.mysheetmetal]: https://github.com/minetest-mods/mysheetmetal/tree/667008668f39a541471dfa45694aaa8d7cec36a8
-[ver.mywoodslopes]: https://github.com/minetest-mods/mywoodslopes/tree/b661b28582e0c3bd93199cb735bb81832d57a292
+[ver.mywoodslopes]: https://github.com/minetest-mods/mywoodslopes/tree/15902f4d818c25031237a066a710476175e533af
 [ver.nether]: https://github.com/minetest-mods/nether/tree/v3.1
 [ver.no_fall_damage]: https://repo.or.cz/minetest_no_fall_damage.git/shortlog/refs/tags/1.0.0
 [ver.painting]: https://github.com/minetest-mods/painting/tree/cb3a1117d6405c8f3c98b09b7e9e75bb50e23af8
@@ -747,7 +747,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.mydoors]: https://github.com/AntumMT/mp-mydoors/tree/a9e0a34c96b712aed60ed549877032baeb26d395
 [patch.myfences]: https://github.com/AntumMT/mod-myfences/tree/d28f844c73bfa84922711d0bd1224621620be9ab
 [patch.mypaint]: https://github.com/AntumMT/mod-mypaint/tree/d347667be5f26c37fb0588722bbfe6b2a7ba9e16
-[patch.mywoodslopes]: https://github.com/AntumMT/mod-mywoodslopes/tree/629a58c68bd52f90975d6777544fa761e8dd5406
+[patch.mywoodslopes]: https://github.com/AntumMT/mod-mywoodslopes/tree/f87a700f264c329d876f8c2a0eb09c8a88af8bd5
 [patch.nether]: https://github.com/AntumMT/mod-nether/tree/7a84ddd
 [patch.quartz]: https://github.com/AntumMT/mod-quartz/tree/adc759e
 [patch.rainbow_ore]: https://github.com/AntumMT/mod-rainbow_ore/tree/591dfa54e1c9f334a31df745cb19aa05a0d67a9a
