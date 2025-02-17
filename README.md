@@ -92,7 +92,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [enchanting][] ([GPL / WTFPL / CC BY-SA-NA][lic.enchanting]) -- version: [dee7dde Git][ver.enchanting] *2021-06-04*
   * [intllib][] ([Unlicense][lic.unlicense]) -- version: [6ebdc53][ver.intllib] *2021-02-23* ***DEPRECATED***
   * [listitems][] ([MIT][lic.listitems]) -- version: [2025-01-12][ver.listitems]
-  * [painting][] (WTFPL) -- version: [da8f4ba Git][ver.painting] *2021-06-25* ([patched][patch.painting])
+  * [painting][] (WTFPL) -- version: [cb3a111 Git][ver.painting] _2025-02-01_
   * [pipeworks][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2024-12-18][ver.pipeworks]
   * [simple_models][] ([CC0][lic.cc0]) -- version: [2021-08-16][ver.simple_models]
   * [wdata][] ([MIT][lic.wdata]) -- version: [1.1][ver.wdata] *2021-06-15*
@@ -672,7 +672,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.mywoodslopes]: https://github.com/minetest-mods/mywoodslopes/tree/b661b28582e0c3bd93199cb735bb81832d57a292
 [ver.nether]: https://github.com/minetest-mods/nether/tree/v3.1
 [ver.no_fall_damage]: https://repo.or.cz/minetest_no_fall_damage.git/shortlog/refs/tags/1.0.0
-[ver.painting]: https://github.com/minetest-mods/painting/tree/da8f4ba
+[ver.painting]: https://github.com/minetest-mods/painting/tree/cb3a1117d6405c8f3c98b09b7e9e75bb50e23af8
 [ver.pbmarks]: https://github.com/AntumMT/mod-pbmarks/releases/tag/v1.0
 [ver.pipeworks]: https://github.com/mt-mods/pipeworks/tree/858154cb78ae773768956cf132886bc6a3e89027
 [ver.player_monoids]: https://github.com/minetest-mods/player_monoids/tree/ed11a73
@@ -753,7 +753,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.mysheetmetal]: https://github.com/AntumMT/mod-mysheetmetal/tree/6ad423ddf800e6091ebc4100fac052bd78a4aa20
 [patch.mywoodslopes]: https://github.com/AntumMT/mod-mywoodslopes/tree/629a58c68bd52f90975d6777544fa761e8dd5406
 [patch.nether]: https://github.com/AntumMT/mod-nether/tree/7a84ddd
-[patch.painting]: https://github.com/AntumMT/mod-painting/tree/bdcb6727c49ee49d4d40c0a616464f8ac4b78cf3
 [patch.quartz]: https://github.com/AntumMT/mod-quartz/tree/adc759e
 [patch.rainbow_ore]: https://github.com/AntumMT/mod-rainbow_ore/tree/591dfa54e1c9f334a31df745cb19aa05a0d67a9a
 [patch.sand_monster]: https://github.com/AntumMT/mod-sand_monster/tree/e4c9f3ba412431776c86fe6c6eda207c75dd1675
