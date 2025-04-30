@@ -68,7 +68,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [xcompat][] ([MIT][lic.xcompat]) -- version: [2024-09-25][ver.xcompat]
 * lighting/
   * [3d_armor_light][] ([MIT][lic.3d_armor_light]) -- version: [1.0][ver.3d_armor_light] *2021-07-17*
-  * [glow][] ([GPL][lic.gpl2.0]) -- version: [4c015a0 Git][ver.glow] *2019-02-05* ([patched][patch.glow])
+  * [glow][] ([GPL][lic.gpl2.0]) -- version: [db06cac Git][ver.glow] _2025-02-20_
   * [ilights][] ([LGPL][lic.lgpl3.0] / [CC BY-SA][lic.ccbysa4.0]) -- version: [2024-12-28][ver.ilights]
   * [wielded_light][] ([GPL][lic.gpl3.0]) -- version: [2023-11-26][ver.wielded_light]
 * materials/
@@ -627,7 +627,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.gems_encrustable]: https://github.com/wowiamdiamonds/gems/tree/81d513d
 [ver.gems_tools]: https://github.com/captainLAD/gems/tree/b375432
 [ver.glass]: https://github.com/AntumMT/mod-glass/releases/tag/v1.1
-[ver.glow]: https://github.com/bdjnk/glow/tree/4c015a0
+[ver.glow]: https://github.com/bdjnk/glow/tree/db06cac75ba202cefdc8083469f688ef3a6a5781
 [ver.hbarmor]: http://repo.or.cz/minetest_hbarmor.git/tree/93d994c
 [ver.hbsprint]: https://github.com/tacotexmex/hbsprint/tree/f566d0f
 [ver.headanim]: https://github.com/LoneWolfHT/headanim/tree/580816fb3a492d1ceca4e6cd2a1c0dc796e5c9f9
@@ -730,7 +730,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.fort_spikes]: https://github.com/AntumMT/mod-fort_spikes/tree/154c8c289989d0936c4f7b374569209021d3f84e
 [patch.gems_encrustable]: https://github.com/AntumMT/mod-gems_encrustable/tree/773355a51a169469a9aea9c032dddd4af5aea5d5
 [patch.gems_tools]: https://github.com/AntumMT/mod-gems_tools/tree/d9a3a726dc542171d7cf64c3692f3ac4c7c3630b
-[patch.glow]: https://github.com/AntumMT/mod-glow/tree/544bfcbfc6498108380aad896b6d2ed8c4e02706
 [patch.helicopter]: https://github.com/AntumMT/mod-helicopter/tree/79d2d3e
 [patch.home_gui]: https://github.com/AntumMT/mod-home_gui/tree/32b2e355dd6b4bf2e2f0d0a7d62acb87b94c965c
 [patch.homedecor]: https://github.com/AntumMT/mp-homedecor/tree/315aed3dc03be56b790568916444ea56e4800a9a
