@@ -146,7 +146,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [hovercraft][] ([LGPL / CC BY-SA / CC0][lic.hovercraft]) -- version: [4d50e68 Git][ver.hovercraft] *2017-05-14* ([patched][patch.hovercraft])
   * [motorbike][] ([MIT][lic.motorbike]) -- version: [f918701 Git][ver.motorbike] *2021-05-22* ([patched][patch.motorbike])
 * ui/
-  * [bookmarks_gui][] ([BSD 3-Clause][lic.bookmarks_gui]) -- version: [f7ae10a Git][ver.bookmarks_gui] *2017-08-29* ([patched][patch.bookmarks_gui])
+  * [bookmarks_gui][] ([BSD 3-Clause][lic.bookmarks_gui]) -- version: [c880a19 Git][ver.bookmarks_gui] _2025-03-26_
   * [hbarmor][] ([MIT][lic.mit] / [CC BY-SA][lic.ccbysa3.0]) -- version: [1.0.0][ver.hbarmor] *2019-04-01*
   * [home_gui][] ([BSD 3-Clause][lic.home_gui]) -- version: [44c2f15 Git][ver.home_gui] *2021-06-16* ([patched][patch.home_gui])
   * [hud_compass][] ([MIT][lic.hud_compass] / [CC BY-SA ][lic.ccbysa3.0]) -- version: [be2ad93 Git][ver.hud_compass] _2025-01-06_
@@ -580,7 +580,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.biofuel]: https://github.com/APercy/minetest_biofuel/tree/ca480ce
 [ver.boats2]: https://github.com/amadin/boats/tree/b83231e
 [ver.bonemeal]: https://codeberg.org/tenplus1/bonemeal/src/commit/0d852bff0ab1c870520f51d15d761aefe466e294
-[ver.bookmarks_gui]: https://github.com/cornernote/minetest-bookmarks_gui/tree/f7ae10a
+[ver.bookmarks_gui]: https://github.com/cornernote/minetest-bookmarks_gui/tree/c880a1956f6caab67d55ce7b26b72a5d6508feb1
 [ver.bridges]: https://github.com/mt-historical/bridges/tree/4cd68c037cc6e917f6f8ff5eb29105bea5bc1124
 [ver.bright_night]: https://github.com/Yukitty/minetest-bright_night/tree/69b750a
 [ver.campfire]: https://github.com/Napiophelios/campfire/tree/1058f1d
@@ -718,7 +718,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.bags]: https://github.com/AntumMT/mod-bags/tree/db216eebc2e63a68061d9f865f649c0ae3490bdd
 [patch.beds]: https://github.com/AntumMT/mod-beds/tree/53c4db01435df21f1d4c8e9fe9875582c245e789
 [patch.boats2]: https://github.com/AntumMT/mod-boats2/tree/4160a597b90d15a8b9447690caf0ee9f6c5b919f
-[patch.bookmarks_gui]: https://github.com/AntumMT/mod-bookmarks_gui/tree/8250b0169239b777a84d4b85d72ee4faed2a43eb
 [patch.bright_night]: https://github.com/AntumMT/mod-bright_night/tree/d39f20d0cc5a78c2cde282f4150260a2cb40bb4e
 [patch.castle_weapons]: https://github.com/AntumMT/mod-castle_weapons/tree/e8827d7781e3a36996a4c8f6d2ce0bdaec7536cf
 [patch.christmas]: https://github.com/AntumMT/mod-christmas/tree/50bda80
