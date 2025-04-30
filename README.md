@@ -184,7 +184,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
   * [mydoors][] ([CC-BY / CC-BY-SA][lic.mydoors] / [WTFPL][lic.wtfpl] / [DWYWFPL][lic.dwywpl]) -- version: [2025-01-26][ver.mydoors] ([patched][patch.mydoors])
   * [myfences][] ([DWYWPL][lic.dwywpl]) -- version: [c6dfbf7 Git][ver.myfences] _2025-02-23_
   * [mylights][] ([DWYWPL][lic.dwywpl]) -- version: [32c6855 Git][ver.mylights] _2025-01-27_
-  * [mypaint][] ([DWYWPL][lic.dwywpl]) -- version: [9288e8d Git][ver.mypaint] _2017-11-16_ ([patched][patch.mypaint])
+  * [mypaint][] ([DWYWPL][lic.dwywpl]) -- version: [050be91 Git][ver.mypaint] _2025-03-03_
   * [mypaths][] ([DWYWPL][lic.dwywpl]) -- version: [961cab0 Git][ver.mypaths] _2025-01-27_
   * [myroofs][] ([DWYWPL][lic.dwywpl]) -- version: [92e0b77 Git][ver.myroofs] _2025-01-27_
   * [mysheetmetal][] ([DWYWPL][lic.dwywpl]) -- version: [6670086 Git][ver.mysheetmetal] _2025-01-27_
@@ -665,7 +665,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.mydoors]: https://github.com/minetest-mods/mydoors/tree/eb371b550c0c8200d9316aa4659af69c4de4734b
 [ver.myfences]: https://github.com/DonBatman/myfences/tree/c6dfbf7bc0bd49711875c5a18e308cd5519bc0aa
 [ver.mylights]: https://github.com/minetest-mods/mylights/tree/32c6855ac9ba910da0cea8ed6534dc1223a83b6c
-[ver.mypaint]: https://github.com/DonBatman/mypaint/tree/9288e8d
+[ver.mypaint]: https://github.com/DonBatman/mypaint/tree/050be916b79575bcd07a4403d856b5b0cb13d847
 [ver.mypaths]: https://github.com/minetest-mods/mypaths/tree/961cab0dc2830ff35bca30eeb453e33f64704089
 [ver.myroofs]: https://github.com/minetest-mods/myroofs/tree/92e0b770a551e1116873536642c4eb50620ee09a
 [ver.mysheetmetal]: https://github.com/minetest-mods/mysheetmetal/tree/667008668f39a541471dfa45694aaa8d7cec36a8
@@ -743,7 +743,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.moreores]: https://github.com/AntumMT/mod-moreores/tree/0b5a48ecbbc0e82f45e7c270f5b35b235c52e39e
 [patch.motorbike]: https://github.com/AntumMT/mod-motorbike/tree/0aa5c9c
 [patch.mydoors]: https://github.com/AntumMT/mp-mydoors/tree/a9e0a34c96b712aed60ed549877032baeb26d395
-[patch.mypaint]: https://github.com/AntumMT/mod-mypaint/tree/d347667be5f26c37fb0588722bbfe6b2a7ba9e16
 [patch.mywoodslopes]: https://github.com/AntumMT/mod-mywoodslopes/tree/f87a700f264c329d876f8c2a0eb09c8a88af8bd5
 [patch.nether]: https://github.com/AntumMT/mod-nether/tree/7a84ddd
 [patch.quartz]: https://github.com/AntumMT/mod-quartz/tree/adc759e
