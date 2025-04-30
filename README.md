@@ -54,7 +54,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 * horticulture/
   * [farming][] ([MIT][lic.farming]) -- version: [2021-07-18][ver.farming]
 * inventory/
-  * [bags][] ([BSD 3-Clause][lic.bags]) -- version: [bc87b45 Git][ver.bags] *2018-04-11* ([patched][patch.bags])
+  * [bags][] ([BSD 3-Clause][lic.bags]) -- version: [769685f Git][ver.bags] _2025-03-26_
   * [sfinv][] ([MIT][lic.sfinv] -- version: [2023-04-14][ver.sfinv]
   * [sfinv_buttons][] ([MIT][lic.mit]) -- version [1.1.2][ver.sfinv_buttons] *2023-04-20*
 * libs/
@@ -574,7 +574,7 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [ver.atm]: https://github.com/Git-Forked/atm/releases/tag/v1.0.4
 [ver.awards]: https://github.com/rubenwardy/awards/tree/v3.4.0
 [ver.away]: https://github.com/kahrl/minetest-mod-away/tree/4c1e5a9
-[ver.bags]: https://github.com/cornernote/minetest-bags/tree/bc87b45
+[ver.bags]: https://github.com/cornernote/minetest-bags/tree/769685fceae66fc94b6c4e2548ab47eea897a94b
 [ver.basic_materials]: https://github.com/mt-mods/basic_materials/tree/800310c0fa2522d04409d95676d1d0e9ed3964db
 [ver.bike]: https://gitlab.com/h2mm/bike/tags/1.2.1
 [ver.biofuel]: https://github.com/APercy/minetest_biofuel/tree/ca480ce
@@ -715,7 +715,6 @@ The game includes the mods from the default [minetest_game](https://github.com/m
 [patch.amber]: https://github.com/AntumMT/mod-amber/tree/54c92f26f75b4062674100e1a5e723c0098099fb
 [patch.atm]: https://github.com/AntumMT/mod-atm/tree/7f022f99da367fe557a86e7fd465df5e9b6614f4
 [patch.away]: https://github.com/AntumMT/mod-away/tree/ea80cdeeddd5f25526d3f1bc506f5bfa4c7fee0a
-[patch.bags]: https://github.com/AntumMT/mod-bags/tree/db216eebc2e63a68061d9f865f649c0ae3490bdd
 [patch.beds]: https://github.com/AntumMT/mod-beds/tree/53c4db01435df21f1d4c8e9fe9875582c245e789
 [patch.boats2]: https://github.com/AntumMT/mod-boats2/tree/4160a597b90d15a8b9447690caf0ee9f6c5b919f
 [patch.bright_night]: https://github.com/AntumMT/mod-bright_night/tree/d39f20d0cc5a78c2cde282f4150260a2cb40bb4e
